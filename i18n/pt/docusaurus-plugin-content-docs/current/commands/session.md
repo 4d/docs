@@ -35,7 +35,7 @@ Dependendo do processo a partir do qual o comando é chamado, a sessão atual do
 - the stored procedures session,
 - the *designer* session in a standalone application.
 
-For more information, see the [Session types](../API/SessionClass.md#session-types) paragraph.
+Para obter mais informações, consulte [Tipos de sessão](../API/SessionClass.md#session-types).
 
 If the command is called from a non supported context (e.g. scalable sessions disabled), it returns *Null*.
 
@@ -101,3 +101,10 @@ IP:port/4DACTION/action_Session
 [Session storage](session-storage.md)\
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1714                            |
+| Thread safe    | &amp;check; |

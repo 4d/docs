@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | Paramètres | Type   |   | Description                                                |
 | ---------- | ------ | - | ---------------------------------------------------------- |
-| id         | Text   | → | Unique identifier (UUID) of the session |
-| Résultat   | Object | ← | Storage object of the session                              |
+| id         | Text   | → | Identifiant unique (UUID) de la session |
+| Résultat   | Object | ← | Objet de stockage de la session                            |
 
 <!-- END REF-->
 
@@ -62,3 +62,10 @@ This method modifies the value of a "settings" property stored in the storage ob
 
 [Process activity](process-activity.md)\
 [Session](../API/SessionClass.md#session)
+
+#### Propriétés
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Numéro de commande | 1839                            |
+| Thread safe        | &amp;cross; |

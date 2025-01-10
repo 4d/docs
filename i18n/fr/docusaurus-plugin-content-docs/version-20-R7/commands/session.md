@@ -63,7 +63,7 @@ Pour plus d'informations sur les sessions utilisateur distantes, veuillez vous r
 
 Tous les process des procédures stockées partagent la même session d'utilisateur virtuel. L'objet `Session` des procédures stockées est disponible depuis :
 
-- methods called with the [`Execute on server`](../commands-legacy/execute-on-server.md) command,
+- les méthodes appelées avec la commande [`Execute on server`](../commands-legacy/execute-on-server.md),
 - Les méthodes base `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, et `On System event`.
 
 Pour des informations sur la session d'utilisateur virtuel des procédures stockées, veuillez vous référer à la page [4D Server et langage 4D](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
@@ -95,3 +95,10 @@ IP:port/4DACTION/action_Session
 [Session storage](../commands-legacy/session-storage.md)\
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1714                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

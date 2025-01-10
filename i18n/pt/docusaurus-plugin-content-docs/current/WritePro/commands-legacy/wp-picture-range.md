@@ -21,7 +21,7 @@ displayed_sidebar: docs
 #### Descrição 
 
 O novo comando **WP Picture range** devolve uma faixa de objeto específica que se refere unicamente as imagens contidas em *faixaObj*   
-que foi passada como parâmetro. A gama de objetos imagem devolvida deve ser utilizado por [WP GET ATTRIBUTES](wp-get-attributes.md) e [WP SET ATTRIBUTES](wp-set-attributes.md) para manejar os atributos imagem unicamente.
+que foi passada como parâmetro. A gama de objetos imagem devolvida deve ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) e [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar os atributos imagem unicamente.
 
 Em *faixaObj*, pode passar:
 
@@ -41,8 +41,8 @@ Se quiser mudar apenas a cor da borda das imagens:
 
 *Gerenciar Imagens*  
 *Utilizar os comandos do tema Texto com estilo*  
-[WP Add picture](wp-add-picture.md)  
-[WP INSERT PICTURE](wp-insert-picture.md)  
+[WP Add picture](../commands/wp-add-picture.md)  
+[WP INSERT PICTURE](../commands/wp-insert-picture.md)  
 [WP Paragraph range](wp-paragraph-range.md)  
 [WP Selection range](wp-selection-range.md)  
 [WP Text range](wp-text-range.md)  

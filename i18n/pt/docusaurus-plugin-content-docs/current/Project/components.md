@@ -5,13 +5,13 @@ title: Componentes
 
 Um componente 4D é um conjunto de código 4D e/ou formulários que representam uma ou mais funcionalidades que pode adicionar e usar nos seus projetos. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\\&type=Repositories).
+You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\\\\\&type=Repositories).
 
 When developing in 4D, the component files can be transparently stored in your computer or on a Github repository.
 
 ## Componentes interpretados e compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md).
+Os componentes podem ser interpretados ou [compilados](../Desktop/building.md).
 
 - A 4D project running in interpreted mode can use either interpreted or compiled components.
 - A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
@@ -20,7 +20,7 @@ Components can be interpreted or [compiled](../Desktop/building.md).
 
 The package folder of a component (_MyComponent.4dbase_ folder) can contain:
 
-- for **interpreted components**: a standard [Project folder](../Project/architecture.md)
+- for **interpreted components**: a standard [Project folder](../Project/architecture.md). The package folder name must be suffixed with **.4dbase** if you want to install it in the [**Components** folder of your project](architecture.md#components).
 - for **compiled components**:
   - either a "Contents" folder containing a .4DZ file, a _Resources_ folder, an _Info.plist_ file (recommended architecture)
   - or directly a .4DZ file with other folders such as _Resources_.
@@ -46,7 +46,7 @@ Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D
 
 To load a component in your 4D project, you can either:
 
-- copie os arquivos de componentes na pasta [**Components** do seu projeto] (architecture.md#components),
+- copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
 - or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
 
 Os componentes declarados no arquivo **dependencies.json** podem ser armazenados em locais diferentes:
@@ -226,7 +226,7 @@ Você declara um componente armazenado no GitHub no arquivo [**dependencies.json
 
 When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
 
-- **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
+- **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
 
 ```json
 {
@@ -280,11 +280,11 @@ Para fazer isso, em sua conta GitHub, crie um token **classic** com direitos de 
 
 :::note
 
-For more information, please refer to the [GitHub token interface](https://github.com/settings/tokens).
+Para mais informações, consulte a [interface de token do GitHub](https://github.com/settings/tokens).
 
 :::
 
-You then need to [provide your connection token](#providing-your-github-access-token) to the Dependency manager.
+Em seguida, você precisa [fornecer seu token de conexão](#providing-your-github-access-token) para o gerenciador de dependências.
 
 #### Cache local para dependências
 
@@ -401,7 +401,7 @@ If the selected item is not valid, an error message is displayed.
 Clique em **Adicionar** para adicionar a dependência ao projeto.
 
 - If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
-- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).
+- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). O painel Dependências pergunta se você deseja salvar um [caminho relativo ou absoluto](#relative-paths-vs-absolute-paths).
 
 :::note
 
@@ -479,17 +479,17 @@ In addition, you can check for updates at any moment, for a single dependency or
 
 - To check for updates of a single dependency, right-click on the dependency and select **Check for updates** in the contextual menu.
 
-![check component](../assets/en/Project/check-component-one.png)
+![componente de verificação](../assets/en/Project/check-component-one.png)
 
 - To check for updates of all dependencies, click on the **options** menu at the bottom of the Dependency manager window and select **Check for updates**.
 
-![check components](../assets/en/Project/check-component-all.png)
+![componentes de verificação](../assets/en/Project/check-component-all.png)
 
 If a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is detected on GitHub, a specific dependency status is displayed:
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 
-You can decide to [update the component](#updating-dependencies) or not.
+Você pode decidir [atualizar o componente](#updating-dependencies) ou não.
 
 If you do not want to use a component update (for example you want to stay with a specific version), just let the current status (make sure the [**Automatic update**](#automatic-update) feature is not checked).
 
@@ -501,7 +501,7 @@ You can update dependencies at any moment, for a single dependency or for all de
 
 - To update a single dependency, right-click on the dependency and select **Update \<component name\> on next startup** in the contextual menu or in the **options** menu at the bottom of the Dependency manager window:
 
-![check component](../assets/en/Project/update-component-one.png)
+![componente de verificação](../assets/en/Project/update-component-one.png)
 
 - To update all dependencies at once, click on the **options** menu at the bottom of the Dependency manager window and select **Update all remote dependencies on next startup**:
 
@@ -526,7 +526,7 @@ When this option is unchecked, a new component version matching your [component 
 
 Registering your personal access token in the Dependency manager is:
 
-- mandatory if the component is stored on a [private GitHub repository](#private-repositories),
+- obrigatório se o componente estiver armazenado em um [repositório GitHub privado](#private-repositories),
 - recommended for a more frequent [checking of dependency updates](#updating-github-dependencies).
 
 To provide your GitHub access token, you can either:

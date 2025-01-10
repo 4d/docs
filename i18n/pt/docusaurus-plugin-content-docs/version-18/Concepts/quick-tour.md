@@ -169,6 +169,14 @@ $f:=New object
 $f.message:=New formula(ALERT("Hello world!"))
 $myText:="hello"
 $myText:=Do_Something($myText) //Call the Do_Something method
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
 ```
 
 Para aceder a um elemento da collection, é necessário passar o número do elemento entre parênteses rectos:

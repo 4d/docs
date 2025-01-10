@@ -47,7 +47,7 @@ O método objeto de coluna obtém os eventos que ocorrem em seu [cabeçalho](#li
 
 ### Tipos de List box
 
-Há vários tipos de list boxes com seus próprios comportamentos e propriedades específicos. O tipo de list box depende de sua propriedade [Data Source](properties_Object.md#data-source):
+Há vários tipos de list boxes com seus próprios comportamentos e propriedades específicos. Há vários tipos de list boxes com seus próprios comportamentos e propriedades específicos.
 
 - **Arrays**: cada coluna é vinculada a um array 4D. Os list boxes baseados em arrays podem ser exibidas como [list boxes hierárquicos](listbox_overview.md#hierarchical-list-boxes).
 - **Seleção** (**Seleção atual** ou **Seleção temporária**): cada coluna é vinculada a uma expressão (por exemplo, um campo) avaliada para cada registro da seleção.
@@ -88,7 +88,7 @@ LIST TO ARRAY("ListName";varCol)
 
 ### List box de tipo seleção
 
-Nesse tipo de list box, cada coluna pode ser associada com um campo (por exemplo, `[Employees]LastName)` ou uma expressão. A expressão pode ser baseada em um ou mais campos (por exemplo, `[Employees]FirstName+" "[Employees]LastName`) ou pode ser simplesmente uma fórmula (por exemplo, `String(Milliseconds)`). A expressão também pode ser um método de proejeto, uma variável ou um item array. Você pode usar os comandos `LISTBOX SET COLUMN FORMULA` e `LISTBOX INSERT COLUMN FORMULA` para modificar colunas programaticamente.
+Nesse tipo de list box, cada coluna pode ser associada com um campo (por exemplo, `[Employees]LastName)` ou uma expressão. A expressão pode ser baseada em um ou mais campos (por exemplo, `[Employees]FirstName+" "[Employees]LastName`) ou pode ser simplesmente uma fórmula (por exemplo, `String(Milliseconds)`). A expressão também pode ser um método de proejeto, uma variável ou um item array. A expressão também pode ser um método de proejeto, uma variável ou um item array.
 
 O conteúdo de cada linha é então avaliado de acordo com uma seleção de registros: a **seleção atual** de uma tabela ou uma **seleção nomeada**.
 
@@ -98,7 +98,7 @@ No caso de uma list box baseada na seleção atual de uma tablea, qualquer modif
 
 Nesse tipo de list box, cada coluna deve ser associada a uma expressão. Os conteúdos de cada linha são então avaliados por elemento de coleção ou por entidade da seleção de entidade.
 
-Cada elemento da coleção ou cada entidade está disponível como um objeto que pode ser acessado por meio da palavra-chave [This](../Concepts/classes.md#this). Uma expressão de coluna pode ser um caminho de propriedade, um método projeto, uma variável ou qualquer fórmula, acessando cada entidade ou objeto de elemento de coleção por `This`, por exemplo, `This.<propertyPath>` (ou `This.value` no caso de uma coleção de valores escalares). Você pode usar os comandos `LISTBOX SET COLUMN FORMULA` e `LISTBOX INSERT COLUMN FORMULA` para modificar colunas programaticamente.
+Cada elemento da coleção ou cada entidade está disponível como um objeto que pode ser acessado por meio da palavra-chave [This](../Concepts/classes.md#this). Uma expressão de coluna pode ser um caminho de propriedade, um método projeto, uma variável ou qualquer fórmula, acessando cada entidade ou objeto de elemento de coleção por `This`, por exemplo, `This.<propertyPath>` (ou `This.value` no caso de uma coleção de valores escalares). A expressão também pode ser um método de proejeto, uma variável ou um item array.
 
 Quando a fonte de dados for uma seleção de entidades, qualquer modificação feita no lado da list box são salvas automaticamente na database. Do outro lado, modificações feitas na database são visíveis na list box depois que as entidades tocadas foram recarregadas.
 
@@ -108,7 +108,7 @@ When entities are deleted, their references remain in the entity selection with 
 
 :::
 
-Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. Por outro lado, se forem feitas modificações na coleção usando, por exemplo, as várias funções da [classe Collection] (.../API/CollectionClass.md), você precisará notificar explicitamente o 4D reatribuindo a variável da coleção a ela mesma, para que o conteúdo do list box seja atualizado. Por exemplo:
+Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. Por exemplo:
 
 ```4d
 myCol:=myCol.push("new value") //exibir novo valor na list box
@@ -181,15 +181,15 @@ Propriedades compatíveis dependem do tipo de list box.
 | [Ação padrão](properties_Action.md#standard-action)                                                                                                                                                       | X              |                  |                                      |
 | [Expressão de estilo](properties_Text.md#style-expression)                                                                                                                                                |                | X                | X                                    |
 | [Top](properties_CoordinatesAndSizing.md#top)                                                                                                                                                             | X              | X                | X                                    |
-| [Transparent](properties_BackgroundAndBorder.md#transparent)                                                                                                                                              | X              | X                | X                                    |
+| [Transparente](properties_BackgroundAndBorder.md#transparent)                                                                                                                                             | X              | X                | X                                    |
 | [Tipo](properties_Object.md#type)                                                                                                                                                                         | X              | X                | X                                    |
 | [Sublinhado](properties_Text.md#underline)                                                                                                                                                                | X              | X                | X                                    |
-| [Variable or Expression](properties_Object.md#variable-or-expression)                                                                                                                                     | X              | X                |                                      |
+| [Variável ou Expressão](properties_Object.md#variable-or-expression)                                                                                                                                      | X              | X                |                                      |
 | [Alinhamento vertical](properties_Text.md#vertical-alignment)                                                                                                                                             | X              | X                | X                                    |
-| [Vertical Line Color](properties_Gridlines.md#vertical-line-color)                                                                                                                                        | X              | X                | X                                    |
+| [Cor da linha vertical](properties_Gridlines.md#vertical-line-color)                                                                                                                                      | X              | X                | X                                    |
 | [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding)                                                                                                                                   | X              | X                | X                                    |
-| [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar)                                                                                                                                       | X              | X                | X                                    |
-| [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing)                                                                                                                                          | X              | X                | X                                    |
+| [Barra de rolagem vertical](properties_Appearance.md#vertical-scroll-bar)                                                                                                                                 | X              | X                | X                                    |
+| [Tamanho Vertical](properties_ResizingOptions.md#vertical-sizing)                                                                                                                                         | X              | X                | X                                    |
 | [Visibilidade](properties_Display.md#visibility)                                                                                                                                                          | X              | X                | X                                    |
 | [Largura](properties_CoordinatesAndSizing.md#width)                                                                                                                                                       | X              | X                | X                                    |
 
@@ -401,10 +401,13 @@ Seleções são gerenciadas diretamente, dependendo de se a list box é a basead
 
 - **Caixa de listagem de seleção de coleção/entidade**: As seleções são gerenciadas por meio de propriedades dedicadas da caixa de listagem:
   - [Current item](properties_DataSource.md#current-item) é um objeto que receberá o elemento/entidade selecionado
-  - [Selected Items](properties_DataSource.md#selected-items) is a collection/entity selection object of selected items
+  - [Itens selecionados](properties_DataSource.md#selected-items) é um objeto de seleção de coleção/entidade dos itens selecionados
   - [Current item position](properties_DataSource.md#current-item-position) retorna a posição do elemento ou da entidade selecionada.
 
 - **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.
+  **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.
+  A [variável vinculada ao objeto da caixa de listagem] (properties_Object.md#variable-or-expression) é usada para obter, definir ou armazenar seleções de linhas do objeto.
+  **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.
   A [variável vinculada ao objeto da caixa de listagem] (properties_Object.md#variable-or-expression) é usada para obter, definir ou armazenar seleções de linhas do objeto. Esta variável corresponde a um array de booleanos que é criado e mantido automaticamente por 4D. O tamanho deste array vem determinado pelo tamanho do list box: contém o mesmo número de elementos que o menor array associado às colunas.
   Cada elemento dessa matriz contém `True` se a linha correspondente for selecionada e `False` caso contrário. 4D atualiza o conteúdo deste array em função das ações de usuário. Do lado contrário, pode mduar o valor dos elementos array para mudar a seleção na list box.
   Mas não se pode inserir nem apagar linhas nesse array; nem se pode reescrever as linhas. O comando `Count in array` pode ser usado para descobrir o número de linhas selecionadas.
@@ -567,11 +570,11 @@ O valor da [variável de cabeçalho de coluna] (properties_Object.md#variable-or
 - Se a variável for estabelecida como 0, a coluna não é ordenada e a flecha de ordenação não é exibida;\
   ![](../assets/en/FormObjects/sorticon0.png)
 
-- Se a variável for definida como 1, a coluna será classificada em ordem crescente e a seta de classificação será exibida.
-  ![](../assets/en/FormObjects/sorticon1.png)
-
 - If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
   ![](../assets/en/FormObjects/sorticon2.png)
+
+- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
+  ![](../assets/en/FormObjects/sorticon1.png)
 
 > Somente [variáveis] declaradas ou dinâmicas (Concepts/variables.md) podem ser usadas como variáveis de coluna de cabeçalho. Outros tipos de [expressions](Aceitações/quick-tour.md#expressions) como `Form.sortValue` não são suportados.
 
@@ -655,7 +658,7 @@ Nesse modo:
 
 - A altura do objeto list box é reduzida automaticamente quando o número de linhas a ser impresso for menor que a altura original do objeto (não há linhas "em branco" impressas). Por outro lado a altura não aumenta automaticamente de acordo com os conteúdos do objeto. O tamanho do objeto realmente impresso pode ser obtido por meio do comando `LISTBOX GET PRINT INFORMATION`.
 - The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the <code>OBJECT SET SCROLL POSITION</code> command before launching the printing, the first row printed in the list box will be the one designated by the command.
-  Esses parâmetros também incluem a primeira linha a ser impressa: se você chamar o comando `OBJECT SET SCROLL POSITION` antes de iniciar a impressão, a primeira linha impressa na caixa de listagem será a designada pelo comando.
+  These parameters also include the first row to be printed: if you call the <code>OBJECT SET SCROLL POSITION</code> command before launching the printing, the first row printed in the list box will be the one designated by the command.
 - Um mecanismo automático facilita a impressão de caixas de listagem que contêm mais linhas do que é possível exibir: chamadas sucessivas para `Print object` podem ser usadas para imprimir um novo conjunto de linhas a cada vez. O comando `LISTBOX GET PRINT INFORMATION` pode ser usado para verificar o status da impressão enquanto ela estiver em andamento.
 
 ## List box hierárquicos.
@@ -1137,7 +1140,7 @@ You want to display a combo box based on a "colors" list defined in the Tool box
 Você pode usar atributos específicos para adicionar unidades associadas aos valores das células (por exemplo: "10 cm", "20 pixels" etc.). Para definir a lista de unidades, pode utilizar um dos seguintes atributos:
 
 - "unitsList": an array containing the x elements used to define the available units (e.g.: "cm", "inches", "km", "miles", etc.). Utilize este atributo para definir unidades no interior do objeto.
-- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use esse atributo para definir unidades com uma lista 4D criada com o comando [New list] (https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html).
+- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis.
 - "unitsListName": a name of a design-based 4D list that contains available units. Utilize este atributo para definir unidades com uma lista 4D criada na caixa de ferramentas.
 
 Regardless of the way the unit list is defined, it can be associated with the following attribute:

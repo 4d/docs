@@ -48,11 +48,11 @@ Con 4D en modo remoto, estos archivos deben estar ubicados en la carpeta de recu
 
 ## Conjunto de caracteres
 
-| Pode ser definido com              | Nome                                                                                 | Comentários                    |
-| ---------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------ |
-| objeto webServer                   | `characterSet`                                                                       | Integer MIBEnum ou string Name |
-| `WEB SET OPTION`                   | `Web character set`                                                                  | Integer MIBEnum ou string Name |
-| Caixa de diálogos de configurações | [Options (II) page/Standard Set](../settings/web.md#standard-set) | Menu pop-up                    |
+| Pode ser definido com              | Nome                                                                                     | Comentários                    |
+| ---------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------ |
+| objeto webServer                   | `characterSet`                                                                           | Integer MIBEnum ou string Name |
+| `WEB SET OPTION`                   | `Web character set`                                                                      | Integer MIBEnum ou string Name |
+| Caixa de diálogos de configurações | [Página Opções (II)/Conjunto padrão](../settings/web.md#standard-set) | Menu pop-up                    |
 
 Define o conjunto de caracteres a serem usados pelo servidor web 4D. O valor padrão realmente depende da linguagem do SO.
 
@@ -70,11 +70,11 @@ Lista de criptogramas  usada para o protocolo seguro; define a prioridade dos al
 
 ## Parâmetros CORS
 
-| Pode ser definido com              | Nome                                                                                                                               | Comentários                                                                                                                                             |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                               | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
-| `WEB SET OPTION`                   | `Web CORS settings`                                                                                                                | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
-| Caixa de diálogos de configurações | [Options (II) page/Domain names and HTTP methods allowed](../settings/web.md#domain-names-HTTP-methods-allowed) | Clique no botão [+] para adicionar um nome de domínio permitido e seu método (s) |
+| Pode ser definido com              | Nome                                                                                                                                      | Comentários                                                                                                                                             |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                      | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
+| `WEB SET OPTION`                   | `Web CORS settings`                                                                                                                       | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
+| Caixa de diálogos de configurações | Página [Opções (II) /Nomes de domínio e métodos HTTP permitidos](../settings/web.md#domain-names-HTTP-methods-allowed) | Clique no botão [+] para adicionar um nome de domínio permitido e seu método (s) |
 
 Lista de hosts e métodos permitidos para o serviço CORS.
 
@@ -155,11 +155,11 @@ Si no se especifica ninguna página de inicio por defecto, se llama al método b
 
 ## Ativar CORS
 
-| Pode ser definido com              | Nome                                                                               | Comentários                                                                 |
-| ---------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| objeto webServer                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled)                                 | Booleano, true para ativar o CORS (false por defeito)    |
-| `WEB SET OPTION`                   | `Web CORS enabled`                                                                 | 0 (desativado, padrão) ou 1 (ativado) |
-| Caixa de diálogos de configurações | [Options (II) page/Enable CORS](../settings/web.md#enable-cors) | Não seleccionado por defeito                                                |
+| Pode ser definido com              | Nome                                                                                | Comentários                                                                 |
+| ---------------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| objeto webServer                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled)                                  | Booleano, true para ativar o CORS (false por defeito)    |
+| `WEB SET OPTION`                   | `Web CORS enabled`                                                                  | 0 (desativado, padrão) ou 1 (ativado) |
+| Caixa de diálogos de configurações | Página [Opções (II)/Ativar CORS](../settings/web.md#enable-cors) | Não seleccionado por defeito                                                |
 
 O servidor web 4D implementa o compartilhamento de recursos entre origens (CORS) para permitir que páginas web específicas servidas de outro domínio acessem os recursos do aplicativo web atual por meio de chamadas XHR, por exemplo, usando REST. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Quando ativado, chamadas XHR (por exemplo, Solicitações REST) de páginas da Web fora do domínio podem ser permitidas na sua aplicação (você precisa definir a lista de endereços permitidos na lista de domínio CORS, veja as configurações do CORS abaixo). Neste caso, se um domínio ou método não permitido enviar uma solicitação de um site cruzado, será rejeitado com uma resposta de erro "403 - proibida".
 

@@ -36,13 +36,13 @@ title: VP EXPORT TO BLOB
 
 | 引数     |                               | 型                       | 説明                                |
 | :----- | :---------------------------- | :---------------------- | :-------------------------------- |
-| param1 |                               | text                    | 4D View Pro オブジェクト名               |
+| param1 |                               | テキスト                    | 4D View Pro オブジェクト名               |
 | param2 |                               | 4D.blob | エクスポートされた Blob                    |
 | param3 |                               | object                  | コマンドの *paramObj* 引数への参照           |
 | param4 |                               | object                  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
-|        | .success      | boolean                 | 書き出しに成功した場合は true 、それ以外の場合は false |
+|        | .success      | ブール                     | 書き出しに成功した場合は true 、それ以外の場合は false |
 |        | .errorCode    | integer                 | エラーコード。                           |
-|        | .errorMessage | text                    | エラーメッセージ。                         |
+|        | .errorMessage | テキスト                    | エラーメッセージ。                         |
 
 #### 例題
 

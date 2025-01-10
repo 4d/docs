@@ -133,7 +133,7 @@ Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed ho
   - 192.168.\*
   - 192.168.\*:8081
   - <http://192.168.5.17:8081>
-  - <http://\\\\\*.myDomain.com>
+  - <http://\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*.myDomain.com>
   - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com
@@ -280,7 +280,7 @@ O padrão = 443
 
 <!-- REF #WebServerClass.inactiveProcessTimeout.Syntax -->**.inactiveProcessTimeout** : Number<!-- END REF -->
 
-> This property is not returned in [scalable sessions mode](#scalablesession).
+> Essa propriedade não é retornada no [modo de sessões dimensionáveis](#scalablesession).
 
 The <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->life duration (in minutes) of the inactive legacy session processes<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
 
@@ -294,7 +294,7 @@ Default = 480 minutos
 
 <!-- REF #WebServerClass.inactiveSessionTimeout.Syntax -->**.inactiveSessionTimeout** : Number<!-- END REF -->
 
-> This property is not returned in [scalable sessions mode](#scalablesession).
+> Essa propriedade não é retornada no [modo de sessões dimensionáveis](#scalablesession).
 
 The <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->life duration (in minutes) of inactive legacy sessions (duration set in cookie)<!-- END REF -->. No final do período, o cookie da sessão expira e não é mais enviada pelo cliente HTTP.
 
@@ -386,7 +386,7 @@ Valores possíveis: 500000 - 2147483647
 
 <!-- REF #WebServerClass.maxSessions.Syntax -->**.maxSessions** : Number<!-- END REF -->
 
-> This property is not returned in [scalable sessions mode](#scalablesession).
+> Essa propriedade não é retornada no [modo de sessões dimensionáveis](#scalablesession).
 
 Contains the <!-- REF #WebServerClass.maxSessions.Summary -->maximum number of simultaneous legacy sessions<!-- END REF -->. When you reach the limit, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the total number of web processes (`maxConcurrentProcesses` property, 100 by default)
 

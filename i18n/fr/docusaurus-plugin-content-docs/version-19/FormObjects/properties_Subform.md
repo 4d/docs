@@ -20,7 +20,7 @@ Indique si l’utilisateur peut supprimer des sous-enregistrements dans un sous-
 
 
 ---
-## Formulaire détaillé
+## Formulaire de détail
 
 Cette option permet de désigner un formulaire détaillé à utiliser dans un sous-formulaire. Il peut être :
 
@@ -112,7 +112,7 @@ Lorsque cette propriété est activée pour un sous-formulaire de liste, l'utili
 
 
 ---
-## List Form
+## Formulaire de liste
 
 Cette option permet de désigner un formulaire liste à utiliser dans un sous-formulaire. Un sous-formulaire en liste vous permet de saisir, visualiser et modifier des données dans d’autres tables.
 

@@ -58,7 +58,7 @@ El botón **Iniciar copia de seguridad** permite realizar una copia de seguridad
 
 This area indicates the server log files recording duration (when log files are activated) and allows you to control their activation.
 
-Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section for details on log files.
+Consulte a seção [**Descrição dos arquivos de log**](Debugging/debugLogFiles.md) para obter detalhes sobre os arquivos de log.
 
 ### Start/Stop Request and Debug Logs
 

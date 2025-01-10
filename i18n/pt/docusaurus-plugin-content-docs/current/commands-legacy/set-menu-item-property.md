@@ -28,12 +28,13 @@ Em *menu*, pode passar uma referencia de menu ([MenuRef](# "Unique ID (16-charac
 No parâmetro *propriedade*, passe a propriedade cujo valor quer modificar e passe o novo valor em *valor*. Para o parâmetro *propriedade*, pode utilizar uma propriedade padrão (uma das constantes de tema “*Propriedades de item de menu*”) ou uma propriedade personalizada:
 
 * Propriedade padrão: as constantes do tema “*Propriedades de item de menu* assim como suas possíveis valores são descritos a continuação.  
+
 | Constante                  | Tipo   | Valor                            | Comentário                                                                                                                                                                                                                      |  
 | -------------------------- | ------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Access privileges          | Cadeia | 4D\_access\_group                | Ativar a opção "Iniciar um novo processo"<br/>0 = Não, 1 = Sim                                                                                                                                                          |  
 | Associated standard action | Cadeia | 4D\_standard\_action             | Associar uma ação padrão à linha de menu<br/>Ver as constantes de tema "*Ação estandarte*"                                                                                                                              |  
-| n/a                        | Cadeia | 4D\_execute\_without\_validating | Ativar a opção **[Execute without validating](https://developer.4d.com/docs/Menus/properties#execute-without-validating)** (para itens de menu associados à ações padrão). <br/>True=ativado, False (padrão)=desativado |  
-| Start a new process        | Cadeia | 4D\_start\_new\_process          | Ativar a opção "Start New Process"<br/>0 = Não, 1 = Sim                                                                                                                                                                 |  
+| n/a                        | Cadeia | 4D\_execute\_without\_validating | Ativar a opção [**Execute without validating**](../Menus/properties.md#executar-sem-validar) (para itens de menu associados à ações padrão). <br/>True=ativado, False (padrão)=desativado |  
+| Start a new process        | Cadeia | 4D\_start\_new\_process          | Ativar a opção "Start New Process"<br/>0 = Não, 1 = Sim   |  
     
 Considere que no caso da propriedade Associated Standard Action, pode passar no parâmetro valor um nome de ação padrão.
 
@@ -41,9 +42,21 @@ Considere que no caso da propriedade Associated Standard Action, pode passar no 
   
  Nota de compatibilidade: em versões anteriores, as constantes de tema *Valores para ação padrão associada* se utilizaram no parâmetro valor (Inteiro longo). A partir de 4D v16 R3, são obsoletas, mas ainda são suportadas por compatibilidade.  
   
-Note: ISe o item menu corresponder ao título do submenu hierárquico, a ação padrão não será chamada quando o item menu for selecionado
+Note: se o item menu corresponder ao título do submenu hierárquico, a ação padrão não será chamada quando o item menu for selecionado
 
 Proprierdade personalizada - Nesta propriedade pode passar qualquer texto personalizado e associar um valor do texto, núemro ou tipo Booleano. Este valor será armazenado com o item e pode ser recuperado usando o comando [GET MENU ITEM PROPERTY](get-menu-item-property.md). Pode usar qualquer string personalziada na propriedade parâmetro, simplesmente tenha certeza de não usar um título usado por 4D (por convenção, propriedades estabelecidas por 4D começam com “4D\_”).
+
+#### Exemplo
+
+```4d
+  // Ação padrão
+  // Associar um item
+  APPEND MENU ITEM(myMenu; ak standard action title)
+  SET MENU ITEM PROPERTY(myMenu; -1; Associated standard action; ak copy)
+  // Associar um sub menu
+  APPEND MENU ITEM(myMenu; ak standard action title)
+  SET MENU ITEM PROPERTY(myMenu; -1; Associated standard action; ak font style)
+```
 
 #### Ver também 
 

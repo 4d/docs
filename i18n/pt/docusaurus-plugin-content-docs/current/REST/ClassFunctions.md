@@ -69,7 +69,7 @@ All functions allowed to be called directly from HTTP REST requests (`POST` or `
 exposed Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
-See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+Consulte a seção [Funções expostas vs. não expostas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
 ### `onHttpGet`
 

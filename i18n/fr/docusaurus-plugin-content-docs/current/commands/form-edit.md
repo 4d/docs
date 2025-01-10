@@ -11,24 +11,22 @@ displayed_sidebar: docs
 | Paramètres | Type  |   | Description                                                                                                                 |
 | ---------- | ----- | - | --------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Table | → | Table à laquelle appartient le formulaire; Si omis : Table par défaut ou utilisation d'un formulaire projet |
-| form       | Text  | → | Form name                                                                                                                   |
-| object     | Text  | → | Form object name or group name                                                                                              |
+| form       | Text  | → | Nom du formulaire                                                                                                           |
+| object     | Text  | → | Nom de l'objet du formulaire ou nom du groupe                                                                               |
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
 <details><summary>Historique</summary>
 
-| Release | Modifications                 |
-| ------- | ----------------------------- |
-| 20 R8   | Support of *object* parameter |
+| Release | Modifications                         |
+| ------- | ------------------------------------- |
+| 20 R8   | Prise en charge du paramètre *object* |
 
 </details>
 
 #### Description
 
-<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected. Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
+<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.La commande **FORM EDIT** ouvre le *formulaire* associé à *aTable* dans l'éditeur de formulaire 4D, avec optionnellement *object* sélectionné. Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
 
 The command is asynchronous: it returns immediately to the calling method and does not wait for the form to be open.
 
@@ -50,13 +48,13 @@ To open the *Contacts* table *Address* form:
  FORM EDIT([Contacts];"Address")
 ```
 
-To open the *ContactList* project form:
+Pour ouvrir le formulaire de projet *ContactList* :
 
 ```4d
  FORM EDIT("ContactList")
 ```
 
-To open the *ContactPage* project form with "name-input" object selected:
+Pour ouvrir le formulaire de projet *ContactPage* avec l'objet "name-input" sélectionné:
 
 ```4d
  FORM EDIT("ContactList"; "name-input")
@@ -65,3 +63,10 @@ To open the *ContactPage* project form with "name-input" object selected:
 #### Voir également
 
 *Design Object Access Commands*
+
+#### Propriétés
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Numéro de commande | 1749                            |
+| Thread safe        | &amp;cross; |

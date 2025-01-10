@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | area | Integer | &#8594;  | Reference of the area |
 | colNum | Integer | &#8594;  | Column number |
 | breakNum | Integer | &#8594;  | Break number |
-| operator &#124; value | Longint, String | &#8594;  | Operator value for the cell or Cell content |
+| operator &#124; value | Integer, Text | &#8594;  | Operator value for the cell or Cell content |
 
 <!-- END REF-->
 

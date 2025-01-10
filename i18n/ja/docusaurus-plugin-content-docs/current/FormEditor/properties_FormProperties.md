@@ -9,7 +9,7 @@ title: フォームプロパティ
 
 > 配色プロパティは、macOS でのみ適用されます。
 
-このプロパティは、フォームのカラースキームを定義します。 By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/set-application-color-scheme.md)). これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
+このプロパティは、フォームのカラースキームを定義します。 このプロパティが設定されていない場合のデフォルトでは、カラースキームの値は **継承済み** です (フォームは [アプリケーションレベル](../commands-legacy/set-application-color-scheme.md) で定義されたカラースキームを使用します)。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
 
 - dark - 暗い背景に明るいテキスト
 - light - 明るい背景に暗いテキスト
@@ -38,33 +38,33 @@ title: フォームプロパティ
 
 ---
 
-## Form Class
+## フォームクラス
 
-Name of an existing [user class](../Concepts/classes.md#class-definition) to associate to the form . The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
+フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 ユーザークラスはホストプロジェクトのものでも[コンポーネント](../Extensions/develop-components.md#sharing-of-classes) のものでも使用可能です。後者の場合は正式なシンタックスは"[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className" となります。
 
-Associating a class to the form provides the following benefits:
+フォームにクラスを割り当てることで、以下のような利点があります:
 
-- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression**...). Errors are displayed in red and warnings are displayed in yellow in the left column of the Property list and you can hover it to get explanations:
+- [フォームエディター](../FormEditor/formEditor.md) を使用する際、割り当てられたクラスは[式](../Concepts/quick-tour.md#expressions) をサポートする[プロパティリスト](../FormEditor/formEditor.md#property-list) の全てのエリア(例: **変数または式**、**フォントカラー式**...)において、`Form.myProperty` のような式に対する正確なシンタックスチェックを行うのに使用されます。 エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます:
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 
-- The detection of errors in the code of form object expressions by the [compiler](../Project/compiler.md) is improved.
+- [コンパイラー](../Project/compiler.md) による、フォームオブジェクトの式内でのコードのエラー検知は改善されました。
 
-- You can also to benefit from [autocompletion features](../code-editor/write-class-method.md#autocomplete-functions) in the code editor.
+- またコードエディター内での[自動補完機能](../code-editor/write-class-method.md#autocomplete-functions) を利用することもできます。
 
-- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a _formData_ object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands.
+- フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、あるいは [`FORM LOAD`](../commands/form-load.md) といったコマンドに_formData_ オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。
 
 :::note
 
-See [this blog post](http://blog.4d.com/empower-your-development-process-with-your-forms) for an illustration of this feature.
+この新機能の説明に関しては、[こちらのblog 記事](http://blog.4d.com/empower-your-development-process-with-your-forms) を参照してください。
 
 :::
 
 #### JSON 文法
 
-| 名称        | データタイプ | とりうる値                                                                                                                   |
-| --------- | ------ | ----------------------------------------------------------------------------------------------------------------------- |
-| formClass | string | name of an existing user class ("_className_" or "_componentNameSpace_._className_") |
+| 名称        | データタイプ | とりうる値                                                                                                  |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------ |
+| formClass | string | 既存のユーザークラスの名前("_className_" または "_componentNameSpace_._className_") |
 
 ---
 
@@ -163,9 +163,9 @@ See [this blog post](http://blog.4d.com/empower-your-development-process-with-yo
 
 #### JSON 文法
 
-| 名称     | データタイプ  | とりうる値       |
-| ------ | ------- | ----------- |
-| shared | boolean | true, false |
+| 名称     | データタイプ | とりうる値       |
+| ------ | ------ | ----------- |
+| shared | ブール    | true, false |
 
 ---
 
@@ -182,9 +182,9 @@ See [this blog post](http://blog.4d.com/empower-your-development-process-with-yo
 
 #### JSON 文法
 
-| 名称               | データタイプ  | とりうる値       |
-| ---------------- | ------- | ----------- |
-| memorizeGeometry | boolean | true, false |
+| 名称               | データタイプ | とりうる値       |
+| ---------------- | ------ | ----------- |
+| memorizeGeometry | ブール    | true, false |
 
 #### 参照
 

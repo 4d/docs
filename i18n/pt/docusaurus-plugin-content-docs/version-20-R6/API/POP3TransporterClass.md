@@ -111,7 +111,7 @@ A função retorna um [**objeto POP3 transporter**](#pop3-transporter-object). T
 
 #### Descrição
 
-The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summary -->creates and returns a new object of the `4D.POP3Transporter` type<!-- END REF -->. It is identical to the [`POP3 New transporter`](#pop3-new-transporter) command (shortcut).
+The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summary -->creates and returns a new object of the `4D.POP3Transporter` type<!-- END REF -->. É idêntico ao comando (atalho) [`POP3 New transporter`](#pop3-new-transporter).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 

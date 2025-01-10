@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current item in the list |
+| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current item in the list |
 | newItemText | Text | &#8594;  | New item text |
 | newItemRef | Integer | &#8594;  | New item reference number |
 | sublist | Integer | &#8594;  | New sublist attached to item, or 0 for no sublist (detaching current one, if any), or -1 for no change |

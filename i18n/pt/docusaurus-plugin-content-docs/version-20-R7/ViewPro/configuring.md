@@ -51,7 +51,7 @@ Both the Ribbon and the Toolbar interfaces group related features into tabs:
 
 Os seguintes eventos de formulário estão disponíveis na lista de propriedades para as áreas 4D View Pro.
 
-Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Some standard form events provide extended information in the object returned by the [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific or provide additional information to 4D View Pro areas:
+Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. The following table shows which events are standard and which are specific or provide additional information to 4D View Pro areas:
 
 | Eventos 4D ‘standard’                           | Eventos 4D View Pro específicos e alargados           |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -410,7 +410,7 @@ Os objetos estilo contêm os parâmetros de estilo. Podem ser utilizados numa fo
 
 Una **hoja de estilo** agrupa una combinación de propiedades en un objeto estilo para especificar el aspecto de todas las celdas de sus documentos 4D View Pro. Style sheets saved with the document can be used to set the properties for a single sheet, multiple sheets, or an entire workbook. When created, a 4D View Pro style sheet is given a name which is saved within the style sheet in the "name" property. This allows a style sheet to be easily used and, if thoughtfully selected, can facilitate its identification and purpose (e.g., Letterhead\_internal, Letterhead_external).
 
-Style sheets are created with the [VP ADD STYLESHEET](commands/vp-add-stylesheet.md) command and applied with the the [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) or [VP SET CELL STYLE](commands/vp-set-cell-style.md) commands. You can  remove a style sheet with the [VP REMOVE STYLESHEET](commands/vp-remove-stylesheet.md) command.
+Style sheets are created with the [VP ADD STYLESHEET](commands/vp-add-stylesheet.md) command and applied with the the [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) or [VP SET CELL STYLE](commands/vp-set-cell-style.md) commands. Você pode remover uma folha de estilos com o comando [VP REMOVE STYLESHEET](commands/vp-remove-stylesheet.md).
 
 The [VP Get stylesheet](commands/vp-get-stylesheet.md) command can be used to return the style object of a single style sheet or you can use the [VP Get stylesheets](commands/vp-get-stylesheets.md) command to retrieve a collection of style objects for multiple style sheets.
 

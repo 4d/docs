@@ -145,7 +145,7 @@ With remote client and stored procedure sessions, this function returns a collec
 
 :::info
 
-Privileges are assigned to a Session using the [`setPrivileges()`](#setprivileges) function.
+Os privilégios são atribuídos a uma sessão usando a função [`setPrivileges()`](#setprivileges).
 
 :::
 

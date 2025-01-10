@@ -13,7 +13,7 @@ El evento `On Header` se llama cuando un registro está a punto de ser visualiza
 
 > Este evento não pode ser selecionado para formulários projeto, está disponível apenas com **formulários tabela**.
 
-In this context, the following sequence of calls to methods and form events is triggered:
+Neste contexto, a seguinte sequência de chamadas para os métodos e eventos de formulário é ativada:
 
 - Para cada objecto na área do cabeçalho:
   - Método objeto con el evento `On Header`

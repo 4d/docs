@@ -19,7 +19,7 @@ displayed_sidebar: docs
 | Parâmetro  | Tipo                               |     | Descrição                                                                         |
 | ---------- | ---------------------------------- | :-: | --------------------------------------------------------------------------------- |
 | server     | Object                             |  →  | Informação de servidor de correio                                                 |
-| Resultados | 4D.IMAPTransporter |  ←  | [IMAP transporter object](../API/IMAPTransporterClass.md#imap-transporter-object) |
+| Resultados | 4D.IMAPTransporter |  ←  | [Objeto IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object) |
 
 <!-- END REF -->
 
@@ -68,3 +68,10 @@ If(Not($status.success))
    ALERT("An error occurred: "+$status.statusText)
 End if
 ```
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1723                            |
+| Thread safe    | &amp;check; |

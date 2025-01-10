@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-The **WP Paragraph range** command returns a specific range object that addresses only the paragraphs that intersect with the *targetObj* you passed as parameter. The paragraph range object returned can be used by [WP GET ATTRIBUTES](wp-get-attributes.md) and [WP SET ATTRIBUTES](wp-set-attributes.md) to handle paragraph attributes only. 
+The **WP Paragraph range** command returns a specific range object that addresses only the paragraphs that intersect with the *targetObj* you passed as parameter. The paragraph range object returned can be used by [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) and [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) to handle paragraph attributes only. 
 
 In *targetObj*, you can pass:
 

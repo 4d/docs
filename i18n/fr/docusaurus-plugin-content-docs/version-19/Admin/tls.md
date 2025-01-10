@@ -49,7 +49,7 @@ Pour obtenir un certificat numérique :
 
 :::caution
 
-For security reasons, the private key should always be kept secret. En fait, elle ne doit pas quitter le poste serveur. Pour le serveur Web, le fichier Key.pem doit être placé dans le dossier de la structure du projet.
+Pour des raisons de sécurité, la clé privée doit toujours être gardée secrète. En fait, elle ne doit pas quitter le poste serveur. Pour le serveur Web, le fichier Key.pem doit être placé dans le dossier de la structure du projet.
 
 :::
 

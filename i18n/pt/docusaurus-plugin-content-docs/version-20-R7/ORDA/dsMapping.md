@@ -3,7 +3,7 @@ id: dsmapping
 title: Objetos Data Model
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying 4D structure. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). As a result, ORDA exposes the whole database as a set of data model objects.
+A tecnologia ORDA baseia-se em um mapeamento automático de uma estrutura de banco de dados subjacente. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). As a result, ORDA exposes the whole database as a set of data model objects.
 
 ## Mapeamento da estrutura
 
@@ -160,7 +160,7 @@ In addition, the following relation attributes will also be automatically availa
 - en la dataclass Project: el atributo **theClient**, del tipo "relatedEntity"; hay como máximo una Empresa para cada Proyecto (el cliente)
 - en la dataclass Company: el atributo **companyProjects**, del tipo "relatedEntities"; para cada empresa existe un cierto número de proyectos relacionados.
 
-> \> > The Manual or Automatic property of a database relation has no effect in ORDA.
+> The Manual or Automatic property of a database relation has no effect in ORDA.
 
 Todos os atributos da dataclass são expostos como propriedades da dataclass:
 
@@ -170,7 +170,7 @@ Keep in mind that these objects describe attributes, but do not give access to d
 
 #### Atributos computados e alias
 
-Los [atributos calculados](ordaClasses.md#computed-attributes) y [alias](ordaClasses.md#alias-attributes) son atributos "virtuales". O seu valor não é armazenado, mas avaliado sempre que são acedidos. They do not belong to the underlying database structure, but are built upon it and can be used as any attribute of the data model.
+Los [atributos calculados](ordaClasses.md#computed-attributes) y [alias](ordaClasses.md#alias-attributes) son atributos "virtuales". O seu valor não é armazenado, mas avaliado sempre que são acedidos. Eles não pertencem à estrutura de banco de dados subjacente, mas são construídos sobre ela e podem ser usados como qualquer atributo do modelo de dados.
 
 ### Entity
 
@@ -239,8 +239,7 @@ As selecções de entidades não ordenadas são criadas nos seguintes casos:
 
 > Las siguientes selecciones de entidades son siempre **ordenadas**:
 >
-> - \>
->   \> \* > > \* entity selections returned by 4D Server to a remote client > \* entity selections built upon remote datastores.
+> - entity selections returned by 4D Server to a remote client
 > - selecções de entidades construídas em datastores remotos.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.

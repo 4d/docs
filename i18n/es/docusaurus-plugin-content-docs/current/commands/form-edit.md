@@ -16,8 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                |
@@ -65,3 +63,10 @@ To open the *ContactPage* project form with "name-input" object selected:
 #### Ver también
 
 *Design Object Access Commands*
+
+#### Propiedades
+
+|                |                                                                 |
+| -------------- | --------------------------------------------------------------- |
+| Command number | 1749                                                            |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

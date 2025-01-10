@@ -43,7 +43,7 @@ No parâmetro server, passe um objeto contendo as propriedades abaixo:
 
 #### Resultados
 
-The function returns a [**POP3 transporter object**](../API/POP3TransporterClass.md#pop3-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
+A função retorna um [**objeto POP3 transporter**](../API/POP3TransporterClass.md#pop3-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 > A conexão POP3 é fechada automaticamente quando o objeto transportador for destruído.
 
@@ -66,3 +66,10 @@ The function returns a [**POP3 transporter object**](../API/POP3TransporterClass
     ALERT("An error occurred receiving the mail: "+$status.statusText)
  End if
 ```
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1697                            |
+| Thread safe    | &amp;check; |

@@ -53,7 +53,7 @@ Any dataclass attribute is available as a property of an entity, which <!-- REF 
 
 > Atributos de Dataclass também podem ser alcançados usando a sintaxe alternativa com \[ ].
 
-The attribute value type depends on the attribute [kind](DataClassClass.md#attributename) (relation or storage):
+O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attributename) (relação ou armazenamento):
 
 - Se o tipo de *attributeName* for **storage**:
   `.attributeName` retorna um valor do mesmo tipo que *attributeName*.
@@ -100,7 +100,7 @@ The attribute value type depends on the attribute [kind](DataClassClass.md#attri
 
 The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->.
 
-This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+Esta função permite que você atualize as entidades separadamente. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
 
 > Tenha em mente que quaisquer modificações feitas em entidades serão salvas no registro referenciado somente quando a função [`.save()`](#save) for executada.
 
@@ -953,7 +953,7 @@ Other processes will see this record as locked (the `result.success` property wi
 
 Um registro bloqueado por `.lock()` é desbloqueado:
 
-- when the [`unlock()`](#unlock) function is called on a matching entity in the same process
+- quando a função [`unlock()`](#unlock) é chamada em uma entidade correspondente no mesmo processo
 - automaticamente, quando já não é referenciado por nenhuma entidade em memória. Por exemplo, se a fechadura for colocada apenas numa referência local de uma entidade, a entidade é desbloqueada quando a função termina. Enquanto houver referências à entidade em memória, o registo permanece bloqueado.
 
 > An entity can also be [locked by a REST session](../REST/$lock.md), in which case it can only be unlocked by the session.
@@ -1359,7 +1359,7 @@ If no filter is specified, or if the *filterString* parameter contains an empty 
 
 - todos os atributos de entidade de armazenagem
 - attributes of the `relatedEntity` [kind](DataClassClass.md#attributename): you get a property with the same name as the related entity (name of the many-to-one link). Atributo é extraido com um formulário simples.
-- attributes of the `relatedEntities` [kind](DataClassClass.md#attributename): attribute is not returned.
+- atributos de `relatedEntities` [kind](DataClassClass.md#attributename): o atributo não é retornado.
 
 No primeiro par|âmetro, passa os atributos entidade a extrair. Pode passar:
 
@@ -1372,7 +1372,7 @@ Se um filtro for especificado para os atributos onde [kind](DataClassClass.md#at
 - propertyPath = "relatedEntity.\*" -> todas as propriedades são extraídas
 - propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> só se extraem essas propriedades
 
-If a filter is specified for attributes of the relatedEntities [kind](DataClassClass.md#attributename):
+Se um filtro for especificado para atributos cujo [kind](DataClassClass.md#attributename) é relatedEntities:
 
 - propertyPath = "relatedEntities.\*" -> all the properties are extracted
 - propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> só se extraem essas propriedades

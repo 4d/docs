@@ -12,7 +12,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 
 > Você também pode criar um novo objeto `Email` em branco e preenchê-lo com [propriedades do objeto Email](#email-object).
 
-You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send) function.
+Você envia objetos `Email` usando a função SMTP [`.send()`](SMTPTransporterClass.md#send).
 
 [`MAIL Convert from MIME`](#mail-convert-from-mime) and [`MAIL Convert to MIME`](#mail-convert-to-mime) commands can be used to convert `Email` objects to and from MIME contents.
 
@@ -20,7 +20,7 @@ You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send
 
 Objetos de e-mail fornecem as seguintes propriedades:
 
-> 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the Email object.
+> 4D segue a [especificação JMAP](https://jmap.io/spec-mail.html) para formatar o objeto Email.
 
 |                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Um objeto com duas propriedades:
 
 Uma coleção de objetos de endereço.
 
-### Gesttão do corpo do correio eletrônico
+### Gestão do corpo do correio eletrônico
 
 The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used with the [SMTP.send()](SMTPTransporterClass.md#send) function to allow sending simple mails. Quando ambas as propriedades são preenchidas, o tipo de conteúdo MIME multiparte/alternativo é utilizada. O cliente de email deve reconhecer a parte multiparte/alternativa e exibir a parte do texto ou html conforme necessário.
 
@@ -126,7 +126,7 @@ The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind
 
 #### Descrição
 
-The `.bodyStructure` property contains the <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
+The `.bodyStructure` property contains the <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. Consulte a seção [Gerenciamento do corpo](#handling-body-part).
 
 O objeto `.bodyStructure` contém as seguintes propriedades:
 
@@ -148,7 +148,7 @@ O objeto `.bodyStructure` contém as seguintes propriedades:
 
 #### Descrição
 
-The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
+The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. Consulte a seção [Gerenciamento do corpo](#handling-body-part).
 
 O objeto `.bodyValues` contém as seguintes propriedades:
 
@@ -175,7 +175,7 @@ The `.comments` property contains an <!-- REF #EmailObjectClass.comments.Summary
 
 Os comentários só aparecem na seção de cabeçalho da mensagem (mantendo o corpo da mensagem intocado).
 
-For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
+Para requisitos específicos de formatação, consulte a [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
 ## .from
 
@@ -204,10 +204,10 @@ The `.headers` property contains a <!-- REF #EmailObjectClass.headers.Summary --
 
 Cada objeto da coleção de cabeçalhos pode conter as propriedades abaixo:
 
-| Propriedade                                                                  | Tipo | Valor                                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [].name  | text | (mandatory) Header field name as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322). Caso seja nulo ou indefinido, o campo cabeçalho não será adicionado ao cabeçalho MIME. |
-| [].value | text | Valores do campo de cabeçalho conforme definido em [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                                                                     |
+| Propriedade                                                                  | Tipo | Valor                                                                                                                                                                                                                                                  |
+| ---------------------------------------------------------------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [].name  | text | (obrigatório) Nome do campo cabeçalho, conforme definido na [RFC#5322](https://tools.ietf.org/html/rfc5322). Caso seja nulo ou indefinido, o campo cabeçalho não será adicionado ao cabeçalho MIME. |
+| [].value | text | Valores do campo de cabeçalho conforme definido em [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                                                                                     |
 
 ## .htmlBody
 
@@ -215,7 +215,7 @@ Cada objeto da coleção de cabeçalhos pode conter as propriedades abaixo:
 
 #### Descrição
 
-The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
+The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. Consulte a seção [Gerenciamento do corpo](#handling-body-part).
 
 ## .id
 
@@ -235,7 +235,7 @@ The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique 
 
 The `.inReplyTo` property contains the <!-- REF #EmailObjectClass.inReplyTo.Summary -->message identifier(s) of the original message(s) to which the current message is a reply<!-- END REF -->.
 
-For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
+Para requisitos específicos de formatação, consulte a [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
 ## .keywords
 
@@ -245,7 +245,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary -->set of keywords as an object, where each property name is a keyword and each value is true<!-- END REF -->.
 
-This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/html/rfc4021)).
+Essa propriedade é o cabeçalho "keywords" (consulte [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
 | Propriedade                                             | Tipo    | Valor                                                                  |
 | ------------------------------------------------------- | ------- | ---------------------------------------------------------------------- |
@@ -294,7 +294,7 @@ The `.receivedAt` property contains the <!-- REF #EmailObjectClass.receivedAt.Su
 
 The `.references` property contains the <!-- REF #EmailObjectClass.references.Summary -->Collection of all message-ids of messages in the preceding reply chain<!-- END REF -->.
 
-For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
+Para requisitos específicos de formatação, consulte a [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
 ## .replyTo
 
@@ -351,7 +351,7 @@ The `.subject` property contains the <!-- REF #EmailObjectClass.subject.Summary 
 
 #### Descrição
 
-The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
+The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. Consulte a seção [Gerenciamento do corpo](#handling-body-part).
 
 ## .to
 
@@ -386,7 +386,7 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 
 The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL Convert from MIME.Summary -->converts a MIME document into a valid email object<!-- END REF -->.
 
-> 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the returned email object.
+> O formato dos objetos de email 4D segue a [especificação JMAP](https://jmap.io/spec-mail.html).
 
 Passe em *mime* um documento MIME válido para converter. Pode ser fornecido por qualquer servidor de correio ou aplicativo. Você pode passar um BLOB ou um parâmetro *mime*. Se o MIME vier de um arquivo, é recomendado utilizar um parâmetro BLOB para evitar problemas relacionados ao conjunto de caracteres e conversões de quebra de linha.
 

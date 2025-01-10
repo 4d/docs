@@ -1032,18 +1032,18 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
  $vSingles:=ds.Person.query("spouse = null") //syntaxe valide
 ```
 
-#### Not equal to null or undefined values
+#### Différent des valeurs null ou undefined
 
 The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
+$notMarried:=ds.Person.query("info.married#true") //trouve des personnes dont la valeur d'attribut est false
 ```
 
 If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //trouve les attributs false, null et undefined
 ```
 
 #### Not equal to et les collections
@@ -1150,7 +1150,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 #### Recherches dans les relations N vers N
 
-ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur `AND` MAIS dans le même attribut. Par exemple, considérez la structure suivante :
+ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur `AND` MAIS dans le même attribut. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur `AND` MAIS dans le même attribut. Par exemple, considérez la structure suivante :
 
 ![alt-text](../assets/en/API/manytomany.png)
 
@@ -1226,7 +1226,7 @@ Dans le paramètre *querySettings* vous pouvez passer un objet contenant des opt
 
 #### A propos de queryPlan et queryPath
 
-Les informations enregistrées dans `queryPlan` et `queryPath` incluent le type de recherche (indexée ou séquentielle), chaque sous-recherche nécessaire, ainsi que les opérateurs de conjonction. Les query paths contiennent également le nombre d'entités trouvées et la durée d'exécution de chaque critère de recherche. Il peut être utile d'analyser ces informations lors du développement de vos applications. Généralement, la description du plan de recherche (queryPlan) et son chemin réel (queryPath) sont identiques mais ils peuvent différer car 4D peut intégrer des optimisations dynamiques lorsqu'une requête est exécutée, afin d'améliorer les performances. Par exemple, le moteur 4D peut convertir dynamiquement une requête indexée en requête séquentielle s'il estime qu'elle sera plus rapide. Ce cas particulier peut se produire lorsque le nombre d'entités recherchées est faible.
+Les informations enregistrées dans `queryPlan` et `queryPath` incluent le type de recherche (indexée ou séquentielle), chaque sous-recherche nécessaire, ainsi que les opérateurs de conjonction. Les query paths contiennent également le nombre d'entités trouvées et la durée d'exécution de chaque critère de recherche. Les query paths contiennent également le nombre d'entités trouvées et la durée d'exécution de chaque critère de recherche. Généralement, la description du plan de recherche (queryPlan) et son chemin réel (queryPath) sont identiques mais ils peuvent différer car 4D peut intégrer des optimisations dynamiques lorsqu'une requête est exécutée, afin d'améliorer les performances. Par exemple, le moteur 4D peut convertir dynamiquement une requête indexée en requête séquentielle s'il estime qu'elle sera plus rapide. Ce cas particulier peut se produire lorsque le nombre d'entités recherchées est faible.
 
 Par exemple, si vous exécutez la recherche suivante :
 

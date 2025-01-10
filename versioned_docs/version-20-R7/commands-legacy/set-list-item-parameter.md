@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
+| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
 | selector | Text | &#8594;  | Parameter constant |
 | value | Text, Boolean, Real | &#8594;  | Value of the parameter |
 
@@ -29,8 +29,8 @@ Lastly, you can pass *\** in *itemRef*: in this case, the command is applied to 
 
 In *selector*, you can pass either:
 
-* one of the following constants (found in the “*Hierarchical Lists*” theme):  
-
+* one of the following constants (found in the “*Hierarchical Lists*” theme):
+  
 | Constant                   | Type   | Value                      | Comment                                                                                                                                                                                                                                                                                 |  
 | -------------------------- | ------ | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Additional text            | Text | 4D\_additional\_text       | This constant is used to add text to the right of the *itemRef* item. This additional title will always be displayed in the right part of the list, even when the user moves the horizontal scrolling cursor. When you use this constant, pass the text to be displayed in *value*.     |  

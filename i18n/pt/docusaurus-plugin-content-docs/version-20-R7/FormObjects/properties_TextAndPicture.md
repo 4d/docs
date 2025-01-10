@@ -110,8 +110,8 @@ A imagem pode conter de 2 a 6 estados.
 
 :::note
 
-- button not clicked / check box unchecked (variable value=0)
-- button clicked / check box checked (variable value=1)
+- "false" significa que o botão não foi clicado/não foi selecionado ou que a caixa de seleção não foi marcada (valor da variável=0)
+- "true" significa botão clicado/selecionado ou caixa de seleção verificada (variável valor=1)
 
 :::
 
@@ -183,7 +183,7 @@ Esta propiedad permite definir si el título y la imagen del botón deben estar 
 
 Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título).
 
-By default, when a button contains a title and a picture, the elements are joined. El siguiente gráfico muestra el efecto de la propiedad `imageHugsTitle` (true cuando la propiedad está activada) con diferentes alineaciones de los botones:
+Por padrão, quando um botão contém um título e uma imagem, os elementos são unidos. El siguiente gráfico muestra el efecto de la propiedad `imageHugsTitle` (true cuando la propiedad está activada) con diferentes alineaciones de los botones:
 
 ![](../assets/en/FormObjects/hugs.png)
 

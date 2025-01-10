@@ -14,5 +14,5 @@ The `On Printing Footer` event can only be used in the context of an **output fo
 
 This event can be triggered in the context of a `PRINT SELECTION` command.
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> Este evento não pode ser selecionado para formulários projeto, está disponível apenas com **formulários tabela**.
 

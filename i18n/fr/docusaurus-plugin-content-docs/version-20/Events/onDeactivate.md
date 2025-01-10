@@ -15,4 +15,4 @@ Si la fenêtre d'un formulaire était la fenêtre de premier plan, cet événeme
 Cet événement s'applique au formulaire dans son ensemble et non à un objet particulier. Par conséquent, si la propriété de l'événement formulaire `On Deactivate` est sélectionnée, seul le formulaire verra sa méthode formulaire appelée.
 
 ### Voir également
-[Sur activation](onActivate.md)
+[On Activate](onActivate.md)

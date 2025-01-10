@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | localID | Text | &#8594;  | Local ID of the remote datastore to return |
-| Result | DataStore | &#8592; | Reference to the datastore |
+| Result | cs.DataStore | &#8592; | Reference to the datastore |
 
 <!-- END REF-->
 

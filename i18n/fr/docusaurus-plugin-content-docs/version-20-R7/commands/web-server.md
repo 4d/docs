@@ -15,8 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
 <details><summary>Historique</summary>
 
 | Release | Modifications                                             |
@@ -38,7 +36,7 @@ Par défaut, si le paramètre *option* est omis, la commande renvoie une référ
 | `Web server host database`     | 2      | Le serveur Web de la base hôte du composant                                 |
 | `Web server receiving request` | 3      | Le serveur Web ayant reçu la requête (serveur Web cible) |
 
-The **returned Web server object** contains the current values of the [Web server properties](../API/WebServerClass.md).
+L'objet **Web server retourné** contient les valeurs courantes des [propriétés du serveur Web](../API/WebServerClass.md).
 
 #### Exemple
 
@@ -57,3 +55,10 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 
 [WEB Server list](web-server-list.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
+
+#### Propriétés
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Numéro de commande | 1674                            |
+| Thread safe        | &amp;cross; |

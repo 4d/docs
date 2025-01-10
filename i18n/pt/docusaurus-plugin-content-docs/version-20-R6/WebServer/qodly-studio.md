@@ -123,15 +123,15 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 ### Comparação de funcionalidades
 
-|                                                                                         | Qodly Studio para desenvolvedores 4D que usam o IDE 4D                                                         | Qodly Studio para desenvolvedores Qodly                                                |
-| --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Visualizar e editar tabelas (classes de dados), atributos e relações | Editor de estrutura 4D(1)                                                                   | Qodly Studio Model Editor                                                              |
-| Páginas Qodly                                                                           | Editor de páginas Qodly Studio                                                                                 | Editor de páginas Qodly Studio                                                         |
-| Formulários para desktop                                                                | 4D IDE                                                                                                         | *não suportado*                                                                        |
-| Linguagem de programação                                                                | Linguagem 4D com ORDA                                                                                          | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) apresentando ORDA |
-| IDE de codificação                                                                      | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                                                          |
-| Depurador                                                                               | Depurador 4D IDE                                                                                               | Depurador Qodly Studio                                                                 |
-| Funções e privilégios REST/Web                                                          | roles.json direct edit/Qodly Studio roles and privileges editor                                | Qodly Studio role and privileges editor                                                |
+|                                                                                         | Qodly Studio para desenvolvedores 4D que usam o IDE 4D                                                            | Qodly Studio para desenvolvedores Qodly                                                |
+| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Visualizar e editar tabelas (classes de dados), atributos e relações | Editor de estrutura 4D(1)                                                                      | Qodly Studio Model Editor                                                              |
+| Páginas Qodly                                                                           | Editor de páginas Qodly Studio                                                                                    | Editor de páginas Qodly Studio                                                         |
+| Formulários para desktop                                                                | 4D IDE                                                                                                            | *não suportado*                                                                        |
+| Linguagem de programação                                                                | Linguagem 4D com ORDA                                                                                             | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) apresentando ORDA |
+| IDE de codificação                                                                      | Editor de código 4D IDE/VS Code com [extensão 4D](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                                                          |
+| Depurador                                                                               | Depurador 4D IDE                                                                                                  | Depurador Qodly Studio                                                                 |
+| Funções e privilégios REST/Web                                                          | roles.json direct edit/Qodly Studio roles and privileges editor                                   | Qodly Studio role and privileges editor                                                |
 
 (1) Se você clicar no botão **Model** no Qodly Studio, nada acontecerá.
 (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
@@ -142,7 +142,7 @@ The following commands and classes are dedicated to the server-side management o
 
 - Comando [`Web Form`](../API/WebFormClass.md#web-form): retorna a página Qodly como um objeto.
 - comando [`Web Event`](../API/WebFormClass.md#web-event): retorna eventos acionados nos componentes da página Qodly.
-- [`WebForm`](../API/WebFormClass.md) class: functions and properties to manage the rendered Qodly page.
+- clase [`WebForm`](../API/WebFormClass.md): funções e propriedades para gerenciar a página Qodly renderizada.
 - Classe [`WebFormItem`](../API/WebFormItemClass.md): funções e propriedades para gerenciar componentes de página Qodly.
 
 ### Uso de métodos projeto

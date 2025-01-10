@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared collection.Params-->
 
-| Paramètres | Type                                                                |   | Description                                            |
-| ---------- | ------------------------------------------------------------------- | - | ------------------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | → | Valeur(s) de la collection partagée |
-| Résultat   | Collection                                                          | ← | New shared collection                                  |
+| Paramètres | Type                                                  |   | Description                                            |
+| ---------- | ----------------------------------------------------- | - | ------------------------------------------------------ |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection | → | Valeur(s) de la collection partagée |
+| Résultat   | Collection                                            | ← | New shared collection                                  |
 
 <!-- END REF-->
 
@@ -31,7 +31,7 @@ Si vous ne passez aucun paramètre, `New shared collection` crée une collection
 
 Vous devez affecter la référence retournée à une variable 4D de type Collection.
 
-> Keep in mind that `var : Collection` statement declares a variable of the `Collection` type but does not create any collection.
+> N'oubliez pas que l'instruction `var : Collection` déclare une variable de type `Collection` mais ne crée pas de collection.
 
 Optionnellement, vous pouvez préremplir la nouvelle collection partagée en passant une ou plusieurs *value*(s) comme paramètre(s). Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement via l'assignation en notation objet (cf. exemple).
 
@@ -68,3 +68,10 @@ Contrairement aux collections standard (non partagées), les collections partag�
 [New collection](new-collection.md)\
 [New shared object](../commands-legacy/new-shared-object.md)\
 *Shared objects and shared collections*
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1527                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

@@ -3,9 +3,9 @@ id: dataExplorer
 title: Explorateur de données Web
 ---
 
-> **Aperçu** : L'Explorateur de données Web est fourni à titre d'aperçu. Using this feature in a production purpose is not recommended; final implementation could be slightly different.
+> **Aperçu** : L'Explorateur de données Web est fourni à titre d'aperçu. L'utilisation de cette fonctionnalité dans un but de production n'est pas recommandée ; l'implémentation finale pourrait être légèrement différente.
 
-L'Explorateur de données fournit une interface web pour visualiser et rechercher les données de votre datastore. Grâce à cet outil, vous pouvez facilement naviguer parmi toutes vos entités et rechercher, ordonner ou filtrer les valeurs des attributs. It helps you to control data and quickly identify issues at any steps of the development process.
+L'Explorateur de données fournit une interface web pour visualiser et rechercher les données de votre datastore. Grâce à cet outil, vous pouvez facilement naviguer parmi toutes vos entités et rechercher, ordonner ou filtrer les valeurs des attributs. Il vous aide à contrôler les données et à identifier rapidement les problèmes rencontrés à chaque étape du développement.
 
 ![alt-text](../assets/en/Admin/dataExplorer1.png)
 

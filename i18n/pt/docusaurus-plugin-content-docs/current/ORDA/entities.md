@@ -305,7 +305,7 @@ Exemplo:
 
 ```4d
 var $toModify : cs.CompanySelection
-$toModify:=ds.Company.all().copy() //$toModify is alterable
+$toModify:=ds.Company.all().copy() //$toModify é alternável
 ```
 
 Una nueva entity selection **hereda** de la naturaleza de la entity selection original en los siguientes casos:
@@ -334,7 +334,7 @@ $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 
 :::note Entity selections devolvidas pelo servidor
 
-In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. Para tornar essa seleção de entidade alterável no cliente, você precisa executar [`copy()`](API/EntitySelectionClass.md#copy) no lado do cliente. Exemplo:
+In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. Para tornar essa seleção de entidade alterável no cliente, você precisa executar [`copy()`](API/EntitySelectionClass.md#copy) no lado do cliente. Exemplo: Exemplo: Exemplo: Exemplo:
 
 ```4d
 	//a function is always executed on the server
@@ -528,7 +528,7 @@ Los filtros no se aplican a las selecciones heredadas de registros manejadas a t
 | [entitySelection.query()](../API/EntitySelectionClass.md#query)       |                                                                                                                                                                                                                                                                                                                       |
 | [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | Filtro aplicado si _attributeName_ es una entidad relacionada o entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                      |
 | [entity.attributeName](../API/EntityClass.md#attributename)                              | Filtro aplicado si _attributeName_ corresponde a entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                                     |
-| [Create entity selection](../commands/create-entity-selection.md)                                        |                                                                                                                                                                                                                                                                                                                       |
+| [Criar seleção de entidade](../commands/create-entity-selection.md)                                      |                                                                                                                                                                                                                                                                                                                       |
 
 Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. Por exemplo, a função [`entity.next()`](../API/EntityClass.md#next) retornará a próxima entidade na seleção de entidade já filtrada. Por outro lado, se a seleção de entidade não estiver filtrada, [`entity.next()`](../API/EntityClass.md#next) funcionará em entidades não filtradas.
 
@@ -609,5 +609,5 @@ Estes princípios são apresentados no diagrama seguinte:
 
 Los **bloqueos de transacciones** también se aplican tanto a los comandos clásicos como a los comandos ORDA. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
 
-- Example with a lock set by a classic command:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
-- Example with a lock set by an ORDA function:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+- Exemplo com um conjunto de bloqueio por um comando clássico:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
+- Exemplo com um bloqueio definido por uma função ORDA:<br/><br/>![](../assets/en/ORDA/concurrent3.png)

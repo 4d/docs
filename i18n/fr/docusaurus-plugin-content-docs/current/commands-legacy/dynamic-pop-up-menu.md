@@ -36,7 +36,7 @@ Si vous souhaitez afficher un pop up associé à un bouton 3D, il suffit de ne p
 
 Si une ligne de menu a été sélectionnée, la commande retourne sa chaîne de caractères personnalisée associée (telle que définie à l’aide de la commande [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)). Sinon, la commande retourne une chaîne vide.
 
-**A partir de 4D v16 R3** : si une action standard est associée à une ligne de menu, elle est prise en compte par la commande **Dynamic pop up menu** à différents niveaux :
+Si une action standard est associée à une ligne de menu, elle est prise en compte par la commande **Dynamic pop up menu** à différents niveaux :
 
 * Si une action standard n'est pas activée (c'est-à-dire ne peut pas être appelée) dans le contexte du pop-up menu, le libellé est automatiquement caché. Vous pouvez savoir si une action est disponible en utilisant la commande [Action info](action-info.md).
 * Les propriétés liées à une action associée sont automatiquement "checked", "unchecked" ou "mixed" selon la sélection.

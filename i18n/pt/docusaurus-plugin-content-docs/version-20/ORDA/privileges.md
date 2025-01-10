@@ -4,19 +4,19 @@ title: Privilégios
 ---
 
 
-Protecting data while allowing fast and easy access to authorized users is a major challenge for web applications. The ORDA security architecture is implemented at the heart of your datastore and allows you to define specific privileges to all user sessions for the various resources in your project (datastore, dataclasses, functions, etc.).
+Proteger dados enquanto permitir acesso rápido e fácil para usuários autorizados é um desafio importante para aplicações web. A arquitetura de segurança ORDA é implementada no cerne do seu datastore e permite que você defina privilégios específicos para todas as sessões de usuário para os vários recursos no seu projeto (datastore, dataclasses, funções, etc.).
 
 
 
 ## Visão Geral
 
-The ORDA security architecture is based upon the concepts of privileges, permission actions (read, create, etc.), and resources.
+A arquitetura de segurança da ORDA é baseada nos conceitos de privilégios, ações de permissão (ler, criar, etc.) e recursos.
 
-When users get logged, their session is automatically loaded with associated privilege(s). Privileges are assigned to the session using the [`session.setPrivileges()`](../API/SessionClass.md#setprivileges) function.
+Quando os usuários são registrados, sua sessão é automaticamente carregada com os privilégios associados. Os privilégios são atribuídos à sessão usando a função [`session.setPrivileges()`](../API/SessionClass.md#setprivileges).
 
-Every user request sent within the session is evaluated against privileges defined in the project's `roles.json` file.
+Cada solicitação de usuário enviada na sessão é avaliada em relação aos privilégios definidos no arquivo `roles.json` do projeto.
 
-If a user attempts to execute an action and does not have the appropriate access rights, a privilege error is generated or, in the case of missing Read permission on attributes, they are not sent.
+Se um usuário tentar executar uma ação e não tiver os direitos de acesso adequados, um erro de privilégio é gerado ou, no caso de falta de permissão de leitura nos atributos, eles não são enviados.
 
 ![esquema](../assets/en/ORDA/privileges-schema.png)
 
@@ -24,20 +24,20 @@ If a user attempts to execute an action and does not have the appropriate access
 
 ## Resources
 
-You can assign specific permission actions to the following resources in your project:
+Você pode atribuir ações de permissão específicas aos seguintes recursos em seu projeto:
 
-- o armazenamento de dados
+- o datastore
 - uma classe de dados
 - um atributo (inclusive calculado e aliases)
 - uma função de classe de modelo de dados
 
-Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
+Cada vez que um recurso é acessado em uma sessão (independentemente da forma como é acessado), 4D verifica se a sessão tem as permissões apropriadas e rejeita o acesso se não for autorizado.
 
-A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
+Uma ação de permissão definida em um determinado nível é herdada por padrão em níveis inferiores, mas várias permissões podem ser configuradas:
 
-- A permission action defined at the datastore level is automatically assigned to all dataclasses.
-- Uma ação de permissão definida ao nível da classe de dados substitui a definição do armazenamento de dados (se existir). By default, all attributes of the dataclass inherit from the dataclass permission(s).
-- Unlike dataclass permissions, a permission action defined at the attribute level does not override the parent dataclass permission(s), but is added to. For example, if you assigned the "general" privilege to a dataclass and the "detail" privilege to an attribute of the dataclass, both "general" and "detail" privileges must be set to the session to access the attribute.
+- Uma ação de permissão definida no nível do datastore é automaticamente atribuída a todas as dataclasses.
+- Uma ação de permissão definida ao nível da classe de dados substitui a definição do armazenamento de dados (se existir). Por padrão, todos os atributos do dataclass herdam das permissões de banco de dados.
+- Ao contrário das permissões da classe de dados, uma ação de permissão definida no nível do atributo não substitui a(s) permissão(ões) pai da classe de dados, mas é adicionada a ela. Por exemplo, se você atribuiu o privilégio "geral" a uma classe de dados e o privilégio "detalhe" a um atributo da classe de dados, ambos os privilégios "geral" e "detalhe" devem ser definidos na sessão para acessar o atributo.
 
 
 ## Acções de autorização
@@ -45,25 +45,25 @@ A permission action defined at a given level is inherited by default at lower le
 
 As ações disponíveis estão relacionadas com o recurso alvo.
 
-| Acções       | armazém de dados                                                                     | dataclass                                                                                                                                            | atributo                                                                                                              | função de modelo de dados                                                                                                                                                                                                                                             |
-| ------------ | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **create**   | Criar entidade em qualquer classe de dados                                           | Criar entidade nesta classe de dados                                                                                                                 | Create an entity with a value different from default value allowed for this attribute (ignored for alias attributes). | n/a                                                                                                                                                                                                                                                                   |
-| **read**     | Ler atributos em qualquer dataclass                                                  | Ler atributos nesta classe de dados                                                                                                                  | Leia o conteúdo desse atributo                                                                                        | n/a                                                                                                                                                                                                                                                                   |
-| **update**   | Atualizar atributos em qualquer classe de dados.                                     | Atualiza os atributos nesta classe de dados.                                                                                                         | Atualiza o conteúdo deste atributo (ignorado para atributos alias).                                                   | n/a                                                                                                                                                                                                                                                                   |
-| **drop**     | Eliminar dados em qualquer classe de dados.                                          | Eliminar dados nesta classe de dados.                                                                                                                | Delete a not null value for this attribute (except for alias and computed attribute).                                 | n/a                                                                                                                                                                                                                                                                   |
-| **execute**  | Execute any function on the project (datastore, dataclass, entity selection, entity) | Executa qualquer função na classe de dados. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions | n/a                                                                                                                   | Executar esta função                                                                                                                                                                                                                                                  |
-| **describe** | Todas as classes de dados estão disponíveis na /rest/$catalog API                    | Esta dataclass está disponível na API /rest/$catalog                                                                                                 | Esse atributo está disponível na API /rest/$catalog.                                                                  | Esta função de classe de dados está disponível na API /rest/$catalog                                                                                                                                                                                                  |
-| **promote**  | n/a                                                                                  | n/a                                                                                                                                                  | n/a                                                                                                                   | Associa um determinado privilégio durante a execução da função. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session. |
+| Acções       | armazém de dados                                                                          | dataclass                                                                                                                                                                    | atributo                                                                                                                | função de modelo de dados                                                                                                                                                                                                                                        |
+| ------------ | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **create**   | Criar entidade em qualquer classe de dados                                                | Criar entidade nesta classe de dados                                                                                                                                         | Criar uma entidade com um valor diferente do valor padrão permitido para este atributo (ignorado para atributos alias). | n/a                                                                                                                                                                                                                                                              |
+| **read**     | Ler atributos em qualquer dataclass                                                       | Ler atributos nesta classe de dados                                                                                                                                          | Leia o conteúdo desse atributo                                                                                          | n/a                                                                                                                                                                                                                                                              |
+| **update**   | Atualizar atributos em qualquer classe de dados.                                          | Atualiza os atributos nesta classe de dados.                                                                                                                                 | Atualiza o conteúdo deste atributo (ignorado para atributos alias).                                                     | n/a                                                                                                                                                                                                                                                              |
+| **drop**     | Eliminar dados em qualquer classe de dados.                                               | Eliminar dados nesta classe de dados.                                                                                                                                        | Excluir um valor não nulo para este atributo (exceto para alias e atributo calculado).                                  | n/a                                                                                                                                                                                                                                                              |
+| **execute**  | Executar qualquer função no projeto (datastore, dataclass, seleção de entidade, entidade) | Executa qualquer função na classe de dados. Funções de Dataclass e funções de seleção de entidades, e funções de seleção de entidades são tratadas como funções de dataclass | n/a                                                                                                                     | Executar esta função                                                                                                                                                                                                                                             |
+| **describe** | Todas as classes de dados estão disponíveis na /rest/$catalog API                         | Esta dataclass está disponível na API /rest/$catalog                                                                                                                         | Esse atributo está disponível na API /rest/$catalog.                                                                    | Esta função de classe de dados está disponível na API /rest/$catalog                                                                                                                                                                                             |
+| **promote**  | n/a                                                                                       | n/a                                                                                                                                                                          | n/a                                                                                                                     | Associa um determinado privilégio durante a execução da função. O privilégio é temporariamente adicionado à sessão e removido no final da execução da função. Por segurança, só o processo de execução da função é acrescentado o privilégio, não toda a sessão. |
 
 **Notas:**
 
-- An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
-- A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
-- Default values: in the current implementation, only *Null* is available as default value.
+- Um alias pode ser lido assim que os privilégios de sessão permitir o acesso ao alias em si, Mesmo que os privilégios de sessão não permitam o acesso aos atributos que resolvem o alias.
+- Um atributo calculado pode ser acessado mesmo que não haja permissões sobre os atributos sobre os quais ele é construído.
+- Valores padrão: na implementação atual, apenas *Null* está disponível como valor padrão.
 
 A definição das permissões deve ser coerente, nomeadamente:
 
-- **update** and **drop** permissions also need **read** permission (but **create** does not need it)
+- As permissões **update** e **drop** também precisam de permissão **read** (mas **create** não precisa)
 - **promote** permission also need **describe** permission.
 
 
@@ -72,9 +72,9 @@ A definição das permissões deve ser coerente, nomeadamente:
 
 A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Basically, a role gathers several privileges to define a business user profile. For example, "manageInvoices" could be a privilege while "secretary" could be a role (which includes "manageInvoices" and other privileges).
 
-A privilege or a role can be associated to several "action + resource" combinations. Podem ser associados vários privilégios a uma ação. Um privilégio pode incluir outros privilégios.
+Um privilégio ou um papel pode ser associado a várias combinações de "ação + recurso". Podem ser associados vários privilégios a uma ação. Um privilégio pode incluir outros privilégios.
 
-- You **create** privileges and/or roles in the `roles.json` file (see below). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
+- You **create** privileges and/or roles in the `roles.json` file (see below). Você **configurou** o escopo dele, atribuindo-lhes a ação de permissão aplicada aos recursos.
 
 - You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
 
@@ -110,11 +110,11 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 ## ficheiro `roles.json`
 
 
-The `roles.json` file describes the whole security settings for the project.
+O arquivo `roles.json` descreve todas as configurações de segurança do projeto.
 
 :::note
 
-In a context other than *Qodly* (cloud), you have to create this file at the following location: `<project folder>/Project/Sources/`. Ver a seção [Arquitetura](../Project/architecture.md#sources).
+Em um contexto diferente de *Qodly* (cloud), é necessário criar esse arquivo no seguinte local: `<project folder>/Project/Sources/`. Ver a seção [Arquitetura](../Project/architecture.md#sources).
 
 :::
 
@@ -145,17 +145,17 @@ A sintaxe do ficheiro `roles.json` é a seguinte:
 :::caution Lembrete
 
 - O nome do privilégio "WebAdmin" está reservado à aplicação. Não se recomenda a utilização deste nome para privilégios personalizados.
-- `privileges` and `roles` names are case insensitive.
+- Os nomes `privileges` e `roles` não diferenciam maiúsculas de minúsculas.
 
 :::
 
 ### ficheiro `Roles_Errors.json`
 
-O arquivo `roles.json` é analisado por 4D na inicialização. You need to restart the application if you want modifications in this file to be taken into account.
+O arquivo `roles.json` é analisado por 4D na inicialização. Você precisa reiniciar o aplicativo se quiser que as modificações neste arquivo sejam consideradas.
 
-In case of error(s) when parsing the `roles.json` file, 4D loads the project but disables the global access protection - this allows the developer to access the files and to fix the error. An error file named `Roles_Errors.json` is generated in the [`Logs` folder of the project](../Project/architecture.md#logs) and describes the error line(s). This file is automatically deleted when the `roles.json` file no longer contains error(s).
+Em caso de erro(s) ao analisar o arquivo `roles.json`, 4D carrega o projeto, mas desabilita a proteção de acesso global - isso permite ao desenvolvedor acessar os arquivos e corrigir o erro. Um arquivo de erro chamado `Roles_Errors.json` é gerado na pasta [`Logs` do projeto](../Project/architecture.md#logs) e descreve a(s) linha(s) de erro. Este arquivo é automaticamente excluído quando o arquivo `roles.json` não contém mais erro(s).
 
-It is recommended to check at startup if a `Roles_Errors.json` file exists in the [Logs folder](../Project/architecture.md#logs), which means that there was a parsing error and that accesses will not limited. Pode escrever, por exemplo:
+Recomenda-se verificar na inicialização se existe um arquivo `Roles_Errors.json` na [pasta Logs](../Project/architecture.md#logs), o que significa que houve um erro de análise e que os acessos não serão limitados. Pode escrever, por exemplo:
 
 ```4d title="/Sources/DatabaseMethods/onStartup.4dm"
 If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
@@ -168,9 +168,9 @@ Else // you can prevent the project to open
 
 ## Inicialização de privilégios para implantação
 
-By default, if no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses.
+Por padrão, se nenhum parâmetro específico for definido no arquivo `roles.json`, os acessos não serão limitados. Essa configuração permite que você desenvolva a aplicação sem ter que se preocupar com os acessos.
 
-However, when the application is about to be deployed, a good practice is to lock all privileges and then, to configure the file to only open controlled parts to authorized sessions. To lock all privileges on all resources, put the following `roles.json` file in your project folder (it includes examples of methods):
+No entanto, quando a aplicação estiver prestes a ser implantado, uma boa prática é bloquear todos os privilégios e, em seguida, configurar o arquivo para abrir apenas as partes controladas para sessões autorizadas. Para bloquear todos os privilégios em todos os recursos, coloque o seguinte arquivo `roles.json` na pasta do seu projeto (ele inclui exemplos de métodos):
 
 ```json title="/Project/Sources/roles.json"
 {

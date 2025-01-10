@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 **アーカイブオブジェクト**
 
-返されたオブジェクトは単一の[`root`](../API/ZipArchiveClass.md#root) プロパティだけを格納しており、その値は`4D.ZipFolder` オブジェクトです。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。
+返されたオブジェクトは単一の[`root`](../API/ZipArchiveClass.md#root) プロパティだけを格納しており、その値は`4D.ZipFolder` オブジェクトです。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。
 
 #### 例題
 
@@ -84,3 +84,10 @@ root フォルダーから取り出します:
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1637                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

@@ -18,17 +18,17 @@ Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de 
     - imagem(2)
     - collection
 
-(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. Um erro será retornado se você tentar fazer isso; no entanto, eles são totalmente compatíveis com as variáveis do objeto **** na memória.
+(1) Os **objetos não racionalizáveis** tais como objetos ORDA ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [web server](../API/WebServerClass.md)... não pode ser armazenado em **campos objeto**. Um erro será retornado se você tentar fazer isso; no entanto, eles são totalmente compatíveis com as variáveis do objeto **** na memória.
 
-(*)Quando se expõe como texto no depurador ou se exporta a JSON, as propriedades dos objetos imagem imprimem "[objeto Imagem]".
+(2) Quando se expõe como texto no depurador ou se exporta a JSON, as propriedades dos objetos imagem imprimem "[object Picture]".
 
 **Aviso:** tenha em mente que os nomes de atributo diferenciam entre maiúsculas e minúsculas.
 
-You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the classic commands available in the **Objects (Language)** theme. Gerencia variáveis do tipo Objecto, campos ou expressões usando a notação de objecto [](dt_object.md#syntax-basics) ou os comandos clássicos disponíveis no tema **Objects (Language)** .
+Você gerencia variáveis de tipo de objeto, campos ou expressões usando a [notação objeto](dt_object.md#syntax-basics) ou os comandos clássicos disponíveis no tema **Objetos (linguagem)**. Gerencia variáveis do tipo Objecto, campos ou expressões usando a notação de objecto [](dt_object.md#syntax-basics) ou os comandos clássicos disponíveis no tema **Objects (Language)** .
 
 Cada valor de propriedade acessado através da notação de objeto é considerado uma expressão. Quando a notação de objeto for ativada em seu banco de dados (ver abaixo), pode usar esses valores sempre que expressões 4D forem esperadas:
 
-- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
+- em código 4D, quer escritos nos métodos (Editor de método) ou externalizados (fórmulas, ficheiros de etiquetas 4D processados por `PROCESS 4D TAGS` ou no Servidor Web, arquivos de exportação, documentos 4D Write Pro...),
 - nas áreas de expressão do depurador e do explorador de Runtime,
 - na lista de propriedades do editor de formulários para objectos de formulários: Variável ou Campo de expressão, bem como várias caixas de selecção e expressões de colunas (Fonte de dados, cor de fundo, estilo, ou cor da fonte).
 
@@ -153,7 +153,7 @@ Para mais informações, consulte a descrição de comando `Null`.
 
 A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. Normalmente ao tentar ler ou atribuir expressões indefinidas, 4D gera erros. Isso não acontece nos casos abaixo:
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling `CLEAR VARIABLE` with them:
+- Ler uma propriedade de um objeto ou valor indefinido retorna indefinido; atribuir um valor indefinido as variáveis (exceto arrays) tem o mesmo efeito que chamar `CLEAR VARIABLE` com eles:
 
 ```4d
      C_OBJECT($o)

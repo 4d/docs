@@ -76,7 +76,7 @@ Na depuração remota, se o método for executado no servidor, o método princip
 
 Quando uma linha que chama outro método (sub-rotina ou função) é executada, clique neste botão para exibir o outro método e percorrê-lo.
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+O novo método torna-se o atual (topo) método no [Painel de cadeia de chamadas](#call-chain-pane) da janela do Depurador.
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
@@ -311,7 +311,7 @@ O Painel de controle personalizado é útil para avaliar expressões. É semelha
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-É possível avaliar qualquer expressão que possa ser apresentada sob a forma de texto. Isto não abrange os campos ou variáveis imagem e BLOB. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands-legacy/blob-to-text.md).
+É possível avaliar qualquer expressão que possa ser apresentada sob a forma de texto. Isto não abrange os campos ou variáveis imagem e BLOB. Para exibir o conteúdo do BLOB, você pode usar comandos BLOB, como [BLOB to text](../commands-legacy/blob-to-text.md).
 
 ### Display mode
 
@@ -333,7 +333,7 @@ Whatever the display mode, you can add custom expressions at any moment.
 
 ### Manuseamento de expressões
 
-You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pin-an-expression).
+You can enter any expression to evaluate. Uma expressão personalizada só é exibida na janela atual do depurador, exceto se você [fixá-la](#pin-an-expression).
 
 Existem várias formas de adicionar expressões à lista:
 

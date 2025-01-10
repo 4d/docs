@@ -69,19 +69,19 @@ O objeto retornado contém as propriedades abaixo:
 | platforms           | collection of strings  | License platform(s)                                                                                                                                                                                                                                         | \["macOS", "windows"\]      |
 | expirationDate      | object                 | Date of expiration (optional)                                                                                                                                                                                                                               | {"day":2, "month":6, "year":2018} |
 | renewalFailureCount | number                 | Number of unsuccessful automatic renewal attempts for at least one of the product licenses (optional)                                                                                                                                                       | 3                                                                                 |
-| products            | uma coleção de objetos | Description of product license (one element per product license). See below.                                                                                                                                                |                                                                                   |
+| products            | uma coleção de objetos | Description of product license (one element per product license). Ver abaixo.                                                                                                                                               |                                                                                   |
 
 Each object of the `products` collection can have the following properties:
 
-| **Property** |                                                                                            | **Tipo**               | **Description**                                                             | **Exemplo**                                                                                              |
-| ------------ | ------------------------------------------------------------------------------------------ | ---------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| id           |                                                                                            | number                 | License number                                                              | For available values, see the [Is license available](../commands-legacy/is-license-available.md) command |
-| name         |                                                                                            | string                 | License name                                                                | "4D Write - 4D Write Pro"                                                                                |
-| usedCount    |                                                                                            | number                 | Number of consumed connections                                              | 8                                                                                                        |
-| allowedCount |                                                                                            | number                 | Total connections allowed for the product against the expiry dates          | 15                                                                                                       |
-| rights       |                                                                                            | uma coleção de objetos | Rights for the product (one element per expiration date) |                                                                                                          |
-|              | \[ \].count          | number                 | Number of allowed connections                                               | 15 (32767 significa ilimitado)                                                        |
-|              | \[ \].expirationDate | object                 | Date of expiration (optional, same format as above)      | {"day":1, "month":11, "year":2017}                       |
+| **Property** |                                                                                            | **Tipo**               | **Description**                                                             | **Exemplo**                                                                                                              |
+| ------------ | ------------------------------------------------------------------------------------------ | ---------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| id           |                                                                                            | number                 | License number                                                              | Para saber os valores disponíveis, consulte o comando [Is license available](../commands-legacy/is-license-available.md) |
+| name         |                                                                                            | string                 | License name                                                                | "4D Write - 4D Write Pro"                                                                                                |
+| usedCount    |                                                                                            | number                 | Number of consumed connections                                              | 8                                                                                                                        |
+| allowedCount |                                                                                            | number                 | Total connections allowed for the product against the expiry dates          | 15                                                                                                                       |
+| rights       |                                                                                            | uma coleção de objetos | Rights for the product (one element per expiration date) |                                                                                                                          |
+|              | \[ \].count          | number                 | Number of allowed connections                                               | 15 (32767 significa ilimitado)                                                                        |
+|              | \[ \].expirationDate | object                 | Date of expiration (optional, same format as above)      | {"day":1, "month":11, "year":2017}                                       |
 
 #### Exemplo
 
@@ -134,3 +134,10 @@ You want to get information on your current 4D Server license:
 [CHANGE LICENSES](../commands-legacy/change-licenses.md)\
 [Is license available](../commands-legacy/is-license-available.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1489                            |
+| Thread safe    | &amp;check; |

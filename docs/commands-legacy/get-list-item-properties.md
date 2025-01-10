@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &#8594;  | Item reference number, or 0 for last list item added, or * for the current list item |
+| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number, or 0 for last list item added, or * for the current list item |
 | enterable | Boolean | &#8592; | TRUE = Enterable, FALSE = Non-enterable |
 | styles | Integer | &#8592; | Font style for the item |
 | icon | Text, Integer | &#8592; | Picture name or number |

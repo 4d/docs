@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 #### Description
 
-The `New collection` command <!--REF #_command_.New collection.Summary-->creates a new empty or prefilled collection and returns its reference.<!-- END REF--> Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md).
+La commande `New collection` <!--REF #_command_.New collection.Summary-->crée une nouvelle collection vide ou pré-remplie et retourne sa référence.<!-- END REF--> Les collections peuvent être manipulées à l'aide des propriétés et des fonctions de l'[API classe Collection](../API/CollectionClass.md).
 
 Si vous ne passez aucun paramètre, `New collection` crée une collection vide et retourne sa référence.
 
 Vous devez affecter la référence retournée à une variable 4D de type Collection.
 
-> Keep in mind that `var : Collection` statement declares a variable of the `Collection` type but does not create any collection.
+> N'oubliez pas que l'instruction `var : Collection` déclare une variable de type `Collection` mais ne crée pas de collection.
 
 Optionnellement, vous pouvez préremplir la nouvelle collection en passant une ou plusieurs *value*(s) comme paramètre(s).
 
@@ -80,3 +80,10 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 [New shared collection](new-shared-collection.md)\
 [Type](../commands-legacy/type.md)
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1472                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

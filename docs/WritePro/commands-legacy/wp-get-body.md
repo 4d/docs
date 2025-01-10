@@ -22,7 +22,7 @@ This element can be passed to the:
 
 * [WP SELECT](wp-select.md) command to select the body of the document.
 * [WP Text range](wp-text-range.md) command to define the body as a range.
-* [WP SET ATTRIBUTES](wp-set-attributes.md) and [WP GET ATTRIBUTES](wp-get-attributes.md) commands to handle the body's attributes.
+* [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) and [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) commands to handle the body's attributes.
 
 #### Example 
 

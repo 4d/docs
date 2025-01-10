@@ -14,8 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
-
 <details><summary>履歴</summary>
 
 | リリース  | 内容           |
@@ -26,7 +24,7 @@ displayed_sidebar: docs
 
 #### 説明
 
-<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).**Form** コマンドはカレントフォームに割り当てられている(*formData* 引数、またはフォームエディターで割り当てられたユーザークラスによってインスタンス化された)オブジェクトを返します。 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます: 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます:
+<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).**Form** コマンドはカレントフォームに割り当てられている(*formData* 引数、またはフォームエディターで割り当てられたユーザークラスによってインスタンス化された)オブジェクトを返します。 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます: 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます: 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます: 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます: 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます: 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます: 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます:
 
 - カレントフォームが、[`DIALOG`](dialog.md)、[`Print form`](print-form.md) あるいは [`FORM LOAD`](form-load.md) コマンドのいずれか一つによってロードされた場合。
 - カレントフォームがサブフォームである場合。
@@ -46,6 +44,11 @@ displayed_sidebar: docs
 
 - 親コンテナに割り当てられている変数がオブジェクト型であった場合、**Form** はその変数の値を返します。\
   この場合、**Form** から返されるオブジェクトは、以下の式から返されるものと同じになります:\
+  In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:\
+  In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:\
+  In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:\
+  In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:\
+  In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:\
   In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
 ```4d
@@ -58,7 +61,7 @@ displayed_sidebar: docs
 
 ##### テーブルフォーム
 
-**Form** は画面に表示されているテーブルフォームに割り当てられているオブジェクトを返します。 **Form** は画面に表示されているテーブルフォームに割り当てられているオブジェクトを返します。 出力フォームから表示された入力フォームのコンテキスト(つまりレコードをダブルクリックした後)の場合、返されるオブジェクトには以下のプロパティが格納されています:
+**Form** は画面に表示されているテーブルフォームに割り当てられているオブジェクトを返します。 **Form** は画面に表示されているテーブルフォームに割り当てられているオブジェクトを返します。 出力フォームから表示された入力フォームのコンテキスト(つまりレコードをダブルクリックした後)の場合、返されるオブジェクトには以下のプロパティが格納されています: **Form** は画面に表示されているテーブルフォームに割り当てられているオブジェクトを返します。 出力フォームから表示された入力フォームのコンテキスト(つまりレコードをダブルクリックした後)の場合、返されるオブジェクトには以下のプロパティが格納されています: **Form** は画面に表示されているテーブルフォームに割り当てられているオブジェクトを返します。 出力フォームから表示された入力フォームのコンテキスト(つまりレコードをダブルクリックした後)の場合、返されるオブジェクトには以下のプロパティが格納されています:
 
 | **プロパティ**  | **型**  | **Description**         |
 | ---------- | ------ | ----------------------- |
@@ -113,3 +116,10 @@ displayed_sidebar: docs
 #### 参照
 
 [DIALOG](dialog.md)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1466                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

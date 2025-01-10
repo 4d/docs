@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Arquivo de histórico
 ---
 
-Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Os logs geralmente são iniciados ou parados usando seletores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), ou [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
+Aplicações 4D podem gerar vários arquivos de histórico ou log úteis para depuração e otimizar sua execução. Os logs geralmente são iniciados ou parados usando seletores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), ou [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
 
 Informação gravada precisa ser analisada para detectar e corrigir os problemas. Esta seção oferece uma descrição detalhada dos arquivos de log abaixo:
 
@@ -69,7 +69,7 @@ Para cada petição, os campos abaixo estão logados:
 | request                                                                        | [ID da petição C/S u ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) ou mensagem para as solicitações SQL ou mensagens `LOG EVENT`                                                                                                                                                                                                                                                                                                                  |
 | bytes_in                                                  | Número de bytes recebidos                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | bytes_out                                                 | Número de bytes enviados                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| server\_duration \| exec\_duration | Depende de onde o registro é gerado:<li>*server\_duration* quando gerado no cliente --Tempo gasto em microssegundos para que o servidor processe a solicitação e retorne uma resposta. B to F in image below, OR</li><li>*exec\_duration* when generated on the server --Time taken in microseconds for the server to process the request. B a E na imagem abaixo.</li> |
+| server\_duration \| exec\_duration | Depende de onde o registro é gerado:<li>_server\*duration* quando gerado no cliente --Tempo gasto em microssegundos para que o servidor processe a solicitação e retorne uma resposta. B to F in image below, OR</li><li>_exec\*duration* when generated on the server --Time taken in microseconds for the server to process the request. B a E na imagem abaixo.</li> |
 | write\_duration                                          | Tempo em microssegundos para enviar a:<li>Solicitação (quando executado no cliente). A to B in image below.</li><li>Response (when run on the server). E a F na imagem abaixo.</li>                                                                                                                                                                           |
 | task_kind                                                 | Preemptivo ou cooperativo (respectivamente 'p' ou 'c')                                                                                                                                                                                                                                                                                                                                                                                                           |
 | rtt                                                                            | Tempo estimado em microssegundos para o cliente enviar a petição e o servidor para reconhecê-la. De A a D e de E a H na imagem abaixo.<li>Somente medido ao usar a camada de rede ServerNet, retorna 0 quando usado com a camada de rede legada.</li><li>Para as versões de Windows anteriores a Windows 10 ou Windows Server 2016, a chamada retornará 0.</li>                                                     |
@@ -281,7 +281,7 @@ Esses históricos registram cada troca entre a aplicação 4D e o servidor de ma
 
 - SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
 - POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
+- IMAP - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
 
 Os arquivos de histórico podem ser produzidos em duas versões:
 
@@ -628,7 +628,7 @@ O arquivo de configuração do registo é um arquivo `.json` que deve estar em c
 
 :::note
 
-- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\`,...).
+- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\`,...).
 - For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
 

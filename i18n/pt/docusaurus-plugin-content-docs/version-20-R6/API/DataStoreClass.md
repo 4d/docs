@@ -1257,7 +1257,7 @@ Para criar um registro de pedidos ORDA no lado do servidor, chame essa função 
 
 #### Exemplo 1
 
-Se quiser registras as petições dos clientes ORDA em um arquivo e usar o número de sequencia do registro:
+Se quiser registras as petições dos clientes ORDA em um arquivo e usar o número de sequência do registro:
 
 ```4d
  var $file : 4D.File

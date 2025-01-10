@@ -146,7 +146,7 @@ With remote client, stored procedure and standalone sessions, this function retu
 
 :::info
 
-Privileges are assigned to a Session using the [`setPrivileges()`](#setprivileges) function.
+Os privilégios são atribuídos a uma sessão usando a função [`setPrivileges()`](#setprivileges).
 
 :::
 
