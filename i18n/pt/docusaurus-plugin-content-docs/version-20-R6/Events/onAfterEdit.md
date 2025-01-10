@@ -11,11 +11,11 @@ title: On After Edit
 
 ### Caso geral
 
-This event can be used filter the data entry in keyboard enterable objects at the lowest level.
+Este evento pode ser usado para filtrar a entrada de dados nos objetos digitáveis do teclado no nível mais baixo.
 
 Quando é usado, este evento é gerado após cada alteração feita no conteúdo de um objeto inserível, independentemente da ação que causou a alteração, *ou seja*:
 
-- Standard editing actions which modify content like paste, cut, delete or cancel;
+- Ações de edição padrão que modificam conteúdo como colar, cortar, excluir ou cancelar;
 - Eliminar um valor (ação semelhante a colar);
 - Qualquer entrada de teclado feita pelo usuário; neste caso, o evento `On After Edit` é gerado após os eventos [`On Before Keystroke`](onBeforeKeystroke.md) e [`On After Keystroke`](onAfterKeystroke.md), se eles forem utilizados.
 - Qualquer modificação feita usando um comando de linguagem que simula uma ação do usuário (ou seja, `POST KEY`).
