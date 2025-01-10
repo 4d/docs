@@ -11,7 +11,7 @@ title: On After Keystroke
 
 | Release | Mudanças                                                                               |
 | ------- | -------------------------------------------------------------------------------------- |
-| 18 R5   | - Support in non-enterable list boxes- The event is now triggered after IME validation |
+| 18 R5   | - Suporte em list boxes não entráveis - O evento agora é acionado após a validação IME |
 </details>
 
 ## Descrição
