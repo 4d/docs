@@ -15,8 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
 <details><summary>Historique</summary>
 
 | Release | Modifications                                             |
@@ -57,3 +55,10 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 
 [WEB Server list](web-server-list.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
+
+#### Propriétés
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Numéro de commande | 1674                            |
+| Thread safe        | &amp;cross; |
