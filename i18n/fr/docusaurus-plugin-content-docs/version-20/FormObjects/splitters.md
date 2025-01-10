@@ -19,7 +19,7 @@ Les caractéristiques générales des séparateurs sont les suivantes :
 *   Les butées des séparateurs sont calculées de manière à ce que les objets déplacés restent entièrement visibles dans le formulaire ou ne passent pas sous/à côté d’un autre séparateur. Lorsque la propriété [Pousseur](properties_ResizingOptions.md#pusher) est associée à un séparateur, son déplacement vers la droite ou vers le bas ne rencontre pas de butée.
 *   Les redimensionnements effectués dans les formulaires à l’aide des séparateurs ne sont conservés que durant l’affichage du formulaire. Une fois le formulaire refermé, les dimensions initiales sont restaurées.
 
-Une fois inséré, un séparateur se présente sous la forme d’un trait. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md#line-color).
+Une fois inséré, un séparateur se présente sous la forme d’un trait. Vous pouvez modifier son [style de bordure](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) pour obtenir une ligne plus fine ou [changer sa couleur](properties_BackgroundAndBorder.md#line-color).
 
 #### Exemple JSON :
 
