@@ -1,25 +1,27 @@
 ---
 id: wp-reset-attributes
 title: WP RESET ATTRIBUTES
-slug: /WritePro/commands/wp-reset-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP RESET ATTRIBUTES.Syntax-->**WP RESET ATTRIBUTES** ( *targetObj* ; *attribName* {; *attribName2* ; ... ; *attribNameN*} )<br/> **WP RESET ATTRIBUTES** ( *section* {; *attribName* }{; *attribName2* ; ... ; *attribNameN*} )<!-- END REF-->
+<!--REF #_command_.WP RESET ATTRIBUTES.Syntax-->**WP RESET ATTRIBUTES** ( *targetObj* ; *attribName* {; *attribName2* ; ... ; *attribNameN*} )<br/> **WP RESET ATTRIBUTES** ( *sectionOrSubsection* {; *attribName* }{; *attribName2* ; ... ; *attribNameN*} )<br/>**WP RESET ATTRIBUTES** ( *targetObj* ; *attribColl* )<br/> **WP RESET ATTRIBUTES** ( *sectionOrSubsection* {; *attribColl*})<!-- END REF-->
 
 <!--REF #_command_.WP RESET ATTRIBUTES.Params-->
 
-| 引数                  | 型      |   | 説明                                  |
-| ------------------- | ------ | - | ----------------------------------- |
-| targetObj           | Object | → | レンジまたは要素または4D Write Pro ドキュメント      |
-| sectionOrSubsection | Object | → | 4D Write Pro ドキュメントのセクションまたはサブセクション |
-| attribName          | Text   | → | 削除したい属性の名前                          |
+| 引数                  | 型          |   | 説明                                  |
+| ------------------- | ---------- | - | ----------------------------------- |
+| targetObj           | Object     | → | レンジまたは要素または4D Write Pro ドキュメント      |
+| sectionOrSubsection | Object     | → | 4D Write Pro ドキュメントのセクションまたはサブセクション |
+| attribName          | Text       | → | 削除したい属性の名前                          |
+| attribColl          | Collection | → | Collection of attributes to remove  |
 
 <!-- END REF-->
 
 #### 説明
 
-**WP RESET ATTRIBUTES** コマンドは<!--REF #_command_.WP RESET ATTRIBUTES.Summary-->引数として渡されたレンジ、要素、またはドキュメントの1つ以上の値をリセットすることができます。<!-- END REF-->このコマンドは任意の4D Write Pro 内部属性(文字、段落、ドキュメント、表または画像)を削除することができます。 リセットしたい属性の名前を*attribName* 引数に渡すことができます。あるいは削除したいのがセクションまたはサブセクションの場合、*sectionOrSubsection* オブジェクト単体を渡すだけで、全ての属性を一度にリセットすることができます。
+**WP RESET ATTRIBUTES** コマンドは<!--REF #_command_.WP RESET ATTRIBUTES.Summary-->引数として渡されたレンジ、要素、またはドキュメントの1つ以上の値をリセットすることができます。<!-- END REF-->このコマンドは任意の4D Write Pro 内部属性(文字、段落、ドキュメント、表または画像)を削除することができます。 You can pass the attribute name to be reset in *attribName* or you can pass a collection of attributes in *attribColl* to reset multiple attributes at once.
+
+> In the case of a section or a subsection, the *sectionOrSubsection* object can be passed alone and all the attributes are reset at once.
 
 *targetObj* 引数には、以下のいずれかを渡すことができます:
 
@@ -62,6 +64,17 @@ displayed_sidebar: docs
 
 #### 例題 2
 
+You want to remove several attributes using a collection:
+
+```4d
+$myRange:=WP Get selection(*;"WParea")
+$myCollection:=New collection(wk font size; wk background color; wk border style)
+WP RESET ATTRIBUTES($myRange; $myCollection)
+ 
+```
+
+#### 例題 3
+
 ```4d
 $section:=WP Get section($document; 3)
 WP RESET ATTRIBUTES($section)  // セクションの全ての属性が削除される
@@ -72,5 +85,5 @@ WP RESET ATTRIBUTES($subSection) // サブセクションの全ての属性が�
 #### 参照
 
 *4D Write Pro Attributes*\
-[WP GET ATTRIBUTES](../commands-legacy/wp-get-attributes.md)\
-[WP SET ATTRIBUTES](../commands-legacy/wp-set-attributes.md)
+[WP GET ATTRIBUTES](wp-get-attributes.md)\
+[WP SET ATTRIBUTES](wp-set-attributes.md)
