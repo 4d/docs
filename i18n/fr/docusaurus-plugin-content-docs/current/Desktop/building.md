@@ -85,7 +85,7 @@ Cette fonctionnalité crée un fichier _.4dz_ dans un dossier `Compiled Database
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
-Un fichier .4dz est essentiellement une version compressée du dossier du projet. Les fichiers .4dz peuvent être utilisés par 4D Server, 4D Volume Desktop (applications fusionnées) et 4D. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
+Un fichier .4dz est essentiellement une version compressée du dossier du projet. .4dz files can be used by 4D Server, 4D Volume Desktop (merged applications), and 4D. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
 
 > Lors de la génération de fichiers .4dz, 4D utilise par défaut un format zip **standard**. L'avantage de ce format est qu'il est facilement lisible par tout outil de dézippage. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual).
 
@@ -122,20 +122,18 @@ Cet onglet vous permet de créer une version monoposte autonome de votre applica
 
 ### Créer une application autonome
 
-Cochez l'option **Créer une application autonome** et cliquez sur **Générer** pour créer une application autonome (double-cliquable) directement à partir de votre projet d'application.
+Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project. Sous Windows, cette fonctionnalité crée un fichier exécutable (.exe). Sous macOS, il gère la création de progiciels.
 
-Les éléments suivants sont requis pour la création :
+The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine). Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. Pour plus d’informations sur ce point, reportez-vous à la documentation commerciale et au site Internet de [4D Sas (http://www.4d.com/)](http://www.4d.com/).
 
-- 4D Volume Desktop (le moteur de base de données 4D),
-- une [licence appropriée](#licenses)
+- Vous pouvez définir un fichier de données par défaut ou permettre aux utilisateurs de [créer et utiliser leur propre fichier de données](#gestion-des-fichiers-de-données).
+- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**About licenses**](#about-licenses) paragraph).
 
-Sous Windows, cette fonctionnalité crée un fichier exécutable (.exe). Sous macOS, il gère la création de progiciels.
-
-Le principe consiste à fusionner le fichier 4D Volume Desktop avec votre fichier de structure compilé. Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. Pour plus d’informations sur ce point, reportez-vous à la documentation commerciale et au site Internet de [4D Sas (http://www.4d.com/)](http://www.4d.com/).
-
-Vous pouvez définir un fichier de données par défaut ou permettre aux utilisateurs de [créer et utiliser leur propre fichier de données](#gestion-des-fichiers-de-données).
+:::note
 
 Il est possible d'[automatiser la mise à jour des applications fusionnées pour un seul utilisateur](#automatic-updating-of-server-or-single-user-applications) grâce à une séquence de commandes du langage.
+
+:::
 
 #### Emplacement du 4D Volume Desktop
 
@@ -148,7 +146,7 @@ Pour sélectionner le dossier de 4D Volume Desktop, cliquez sur le bouton **[...
 
 Une fois le dossier sélectionné, son chemin d’accès complet est affiché et, s’il contient effectivement 4D Volume Desktop, l’option de génération d’application exécutable est activée.
 
-> Le numéro de version de 4D Volume Desktop doit correspondre à celui du 4D Developer Edition. Par exemple, si vous utilisez 4D Developer v18, vous devez sélectionner un 4D Volume Desktop v18.
+> Le numéro de version de 4D Volume Desktop doit correspondre à celui du 4D Developer Edition. For example, if you use 4D 20, you must select a 4D Volume Desktop 20.
 
 #### Mode de liaison des données
 
@@ -169,10 +167,10 @@ Si vous avez nommé votre application "MyProject", vous trouverez les fichiers s
 - _Windows_
   - MonAppli.exe qui est votre exécutable et MonAppli.Rsr qui contient les ressources de l’application
   - Les dossiers 4D Extensions et Resources ainsi que les diverses librairies (DLL), le dossier Native Components et SAS Plugins -fichiers nécessaires au fonctionnement de l’application
-  - Un dossier Database contenant notamment un dossier Resources et un fichier MyProject.4DZ. Ils constituent la structure compilée du projet et son dossier Resources.
+  - Database folder - Includes a Resources folder and  MyProject.4DZ file. Ils constituent la structure compilée du projet et son dossier Resources.
     **Note** : Ce dossier contient également le dossier _Default Data_, s'il a été défini (cf. [Gestion du fichier de données dans les applications finales](#data-file-management-in-final-applicatons)).
   - (Facultatif) Un dossier Components et/ou un dossier Plugins contenant les fichiers des composants et/ou des plug-ins éventuellement inclus dans le projet. Pour plus d’informations sur ce point, reportez-vous à la section [Plugins et composants](#plugins-and-components).
-  - Un dossier Licences contenant, sous forme de fichier XML, la liste des numéros de licence ayant été intégrés dans l’application. Pour plus d’informations sur ce point, reportez-vous à la section [Licences & Certificat](#licenses-and-certificate).
+  - (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. Pour plus d’informations sur ce point, reportez-vous à la section [Licences & Certificat](#licenses-and-certificate).
   - Les éléments supplémentaires éventuellement ajoutés dans le dossier 4D Volume Desktop (cf. paragraphe [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
 
 Tous ces éléments doivent être conservés dans le même dossier afin que l’exécutable fonctionne.
@@ -185,7 +183,7 @@ Tous ces éléments doivent être conservés dans le même dossier afin que l’
 Lors de la construction de l’application exécutable, 4D duplique le contenu du dossier 4D Volume Desktop dans le dossier _Final Application_. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. Vous pouvez, par exemple :
 
 - Installer une version de 4D Volume Desktop correspondant à une langue spécifique ;
-- Ajouter un dossier _PlugIns_ personnalisé ;
+- Add a custom _Plugins_ folder;
 - Personnaliser le contenu du dossier _Resources_.
 
 > Dans macOS, 4D Volume Desktop est fourni sous la forme d'un package. Pour le modifier, vous devez d'abord afficher son contenu (**Contrôle+clic** sur l'icône).
@@ -201,6 +199,16 @@ Des éléments doivent être installés :
 
 - **Sous Windows** : dans le sous-dossier _Final Application\MonAppli\Database_.
 - **Sous macOS** : à côté du progiciel _MonProjet.app_.
+
+#### About licenses
+
+A stand-alone application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+
+| Deployment license     | Description                                                        | Where to enter it                                                                          |
+| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| _4D OEM Desktop_       | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
+| _4D Unlimited Desktop_ | **Discontinued** - Embedded custom license                         | [Licenses page](#licenses) of the Build application dialog                                 |
+| _4D Desktop_           | Per-user license, allowing them to use stand-alone 4D applications | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
 
 ## Page Client/Serveur
 
@@ -298,7 +306,7 @@ Vous pouvez cocher cette option :
 
 Désigne l'emplacement sur votre disque de l'application 4D Volume Desktop à utiliser pour construire la partie cliente de votre application.
 
-> Le numéro de version de 4D Volume Desktop doit correspondre à celui du 4D Developer Edition. Par exemple, si vous utilisez 4D v19, vous devez sélectionner un 4D Volume Desktop v19.
+> Le numéro de version de 4D Volume Desktop doit correspondre à celui du 4D Developer Edition. For example, if you use 4D 20, you must select a 4D Volume Desktop 20.
 
 Ce 4D Volume Desktop doit correspondre à la plate-forme courante (qui sera également la plate-forme de l’application cliente). Si vous souhaitez générer une version de l’application cliente pour la plate-forme “concurrente”, vous devez répéter l'opération en utilisant une application 4D tournant sur cette plate-forme.
 
@@ -472,7 +480,7 @@ La page liste les éléments chargés par l'application 4D courante :
 
 ### Ajout de plugins ou de composants
 
-Si vous souhaitez intégrer d’autres plug-ins ou composants dans l’application exécutable, il vous suffit de les placer dans un dossier **PlugIns** ou **Components** à côté de l’application 4D Volume Desktop ou de l’application 4D Server. Le mécanisme de copie du contenu du dossier de l’application source (cf. paragraphe [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) permet d’intégrer tout type de fichier à l’application exécutable.
+If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **Plugins** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. Le mécanisme de copie du contenu du dossier de l’application source (cf. paragraphe [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) permet d’intégrer tout type de fichier à l’application exécutable.
 
 En cas de conflit entre deux versions différentes d’un même plug-in (l’une chargée par 4D et l’autre placée dans le dossier de l’application source), la priorité revient au plug-in installé dans le dossier de 4D Volume Desktop/4D Server. En revanche, la présence de deux instances d’un même composant empêchera l’ouverture de l’application.
 
@@ -498,20 +506,28 @@ Les modules optionnels suivants peuvent être désélectionnés :
 
 La page Licences & Certificat vous permet de :
 
-- spécifier le ou les numéro(s) de licence que vous souhaitez intégrer dans votre application exécutable monoposte
+- designate the license number(s) that you want to integrate into your single-user [stand-alone application](#application-page),
 - signer l'application à l'aide d'un certificat sous macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licences
 
-Cet onglet affiche la liste des licences de déploiement disponibles que vous pouvez intégrer dans votre application. Par défaut, la liste est vide. Vous devez explicitement ajouter votre licence _4D Developer Professional_ ainsi que chaque licence\* 4D Desktop Volume\* liée à utiliser dans l’application générée. Vous pouvez ajouter un numéro 4D Developer Professional et ses licences associées autres que ceux en cours d’utilisation.
+This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. Par défaut, la liste est vide.
+
+:::info
+
+If you keep the list empty, you build a stand-alone application without embedded deployment license. In this case, the end-user will have to purchase and enter a per-user _4D Desktop_ license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. For more information, see the [**About licenses**](#about-licenses) paragraph.
+
+:::
+
+Your current _4D Developer Professional_ license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
 
 Pour ajouter ou supprimer des licences, utilisez les boutons **[+]** et **[-]** situés en bas de la fenêtre.
 
 Lorsque vous cliquez sur le bouton \[+], une boîte de dialogue d’ouverture de document apparaît, affichant par défaut le contenu du dossier _[Licenses]_ de votre poste. For more information about the location of this folder, refer to the [Get 4D folder](../commands-legacy/get-4d-folder.md) command.
 
-Vous devez désigner les fichiers contenant votre licence Developer et ainsi que vos licences de déploiement. Ces fichiers ont été générés ou mis à jour au moment de l’acquisition de la licence _4D Developer Professional_ et des licences _4D Desktop Volume_.
+Vous devez désigner les fichiers contenant votre licence Developer et ainsi que vos licences de déploiement. These files were generated or updated when the _4D Developer Professional_ license and the deployment licenses were purchased.
 
 Une fois que vous avez sélectionné un fichier, la liste indique les caractéristiques de la licence qu’il contient.
 
@@ -526,7 +542,7 @@ Vous pouvez désigner autant de fichiers valides que vous voulez. Lors de la gé
 
 > Des licences "R" dédiées sont requises pour générer des applications basées sur des versions "R-release" (les numéros de licence des produits "R" débutent par "R-4DDP").
 
-A l’issue de la génération, un nouveau fichier de licence de déploiement est automatiquement inclus dans un dossier Licences placé à côté de l’application exécutable (Windows) ou dans le progiciel (macOS).
+After a licensed application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
 
 ### macOS signing certificate
 
