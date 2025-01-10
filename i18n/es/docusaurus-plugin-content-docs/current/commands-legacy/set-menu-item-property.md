@@ -42,6 +42,18 @@ En el caso de la propiedad Associated standard action, puede pasar en el paráme
 **Nota:** si la línea de menú corresponde al título de un submenú jerárquico, la acción estándar no se llamará cuando se seleccione la línea de menú.
 * **Propiedad personalizada**: en *propiedad*, puede pasar todo texto personalizado y asociar un *valor* de tipo texto, numérico o booleano. Este *valor* será almacenado con el elemento y puede ser recuperado utilizando el comando [GET MENU ITEM PROPERTY](get-menu-item-property.md). En el parámetro *propiedad* puede utilizar toda cadena personalizada, simplemente asegúrese de utilizar un título utilizado por 4D (por convención, las propiedades definidas por 4D comienzan por “4D\_”).
 
+#### Ejemplo
+
+```4d
+  // Acción estándar
+  // Asociar un elemento
+  APPEND MENU ITEM(myMenu; ak standard action title)
+  SET MENU ITEM PROPERTY(myMenu; -1; Associated standard action; ak copy)
+  // Asociar un sub menú
+  APPEND MENU ITEM(myMenu; ak standard action title)
+  SET MENU ITEM PROPERTY(myMenu; -1; Associated standard action; ak font style)
+```
+
 #### Ver también 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
