@@ -14,8 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones     |
@@ -113,3 +111,10 @@ If values are edited and the OK button is clicked, the field is updated (the par
 #### Ver también
 
 [DIALOG](dialog.md)
+
+#### Propiedades
+
+|                |                                                                 |
+| -------------- | --------------------------------------------------------------- |
+| Command number | 1466                                                            |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
