@@ -159,10 +159,10 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 <!-- REF #_command_.New shared collection.Params -->
 
-| Parâmetro  | Tipo                                                                |                             | Descrição                        |
-| ---------- | ------------------------------------------------------------------- | :-------------------------: | -------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection |              ->             | Valores da collection compartida |
-| Resultados | Collection                                                          | <- | A nova coleção compartilhada     |
+| Parâmetro  | Tipo                                                  |                             | Descrição                        |
+| ---------- | ----------------------------------------------------- | :-------------------------: | -------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection |              ->             | Valores da collection compartida |
+| Resultados | Collection                                            | <- | A nova coleção compartilhada     |
 
 <!-- END REF -->
 

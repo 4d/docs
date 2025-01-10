@@ -1,54 +1,54 @@
 ---
 id: markers
-title: Markers
+title: Taquets
 ---
 
 
-These properties let you specify the precise location of markers on the vertical ruler of a **table form**. Markers are mainly used in output forms. They control the information that is listed and set header, breaks, detail and footer areas of the form. Any object that placed in these areas is displayed or printed at the appropriate location.
+Ces propriétés vous permettent de spécifier l'emplacement précis des taquets sur la règle verticale d'un **formulaire table**. Les taquets sont principalement utilisés dans les formulaires de sortie. Ils contrôlent les informations listées et définissent les zones d'en-tête, de ruptures, de détail et de pied de page du formulaire. Tout objet placé dans ces zones est affiché ou imprimé à l'endroit approprié.
 
-Whenever any form is used for output, either for screen display or printing, the output marker lines take effect and the areas display or print at designated locations. The markers also take effect when a form is used as the List form in a subform area. However, they have no effect when a form is used for input.
+Chaque fois qu'un formulaire est utilisé pour la sortie, que ce soit pour l'affichage ou l'impression, les lignes de taquet de sortie prennent effet et les zones sont affichées ou imprimées aux endroits désignés. Les taquets prennent également effet lorsqu'un formulaire est utilisé comme formulaire liste dans une zone de sous-formulaire. Ils n'ont aucun effet quand un formulaire est utilisé pour la saisie.
 
-Methods that are associated with objects in these areas are executed when the areas are printed or displayed as long as the appropriate events have been activated. For example, a object method placed in the Header area is executed when the `On Header` event takes place.
+Les méthodes qui sont associées à des objets dans ces zones sont exécutées lorsque les zones sont imprimées ou affichées tant que les événements appropriés ont été activés. Par exemple, une méthode objet placée dans la zone d'en-tête est exécutée lorsque l'événement `On Header` a lieu.
 
 ---
 
-## Form Break
+## Zone de rupture
 
-Form Break areas are displayed once at the end of the list of records and are printed once after the records have been printed in a report.
+Les zones de rupture sont affichées une fois à la fin de la liste des enregistrements et sont imprimées une fois après que les enregistrements ont été imprimés dans un état.
 
-The Break area is defined as the area between the Detail control line and the Break control line. There can be [several Break areas](#additional-areas) in your report.
+La zone de rupture est située entre la ligne du taquet du corps et la ligne du taquet de la zone de rupture. Il peut y avoir [plusieurs zones de rupture](#additional-areas) dans un état.
 
-You can make Break areas smaller or larger. You can use a Break area to display information that is not part of the records (instructions, current date, current time, etc.), or to display a line or other graphic element that concludes the screen display. In a printed report, you can use a Break area for calculating and printing subtotals and other summary calculations.
+Vous agrandissez ou réduisez la zone de rupture en faisant glisser le taquet vers le bas ou vers le haut. Vous pouvez utiliser une zone de rupture pour afficher des informations qui ne font pas partie des enregistrements (instructions, date courante, heure courante, etc.) ou pour afficher un trait ou un autre élément graphique qui marque la fin de l’affichage écran. Dans un état imprimé, vous pouvez utiliser une zone de rupture pour calculer et imprimer des sous-totaux et des calculs globaux.
 
 #### Grammaire JSON
 
-| Nom         | Type de données                   | Valeurs possibles                                                                                   |
-| ----------- | --------------------------------- | --------------------------------------------------------------------------------------------------- |
-| markerBreak | integer &#x7c; integer collection | Break marker position or collection of break marker positions in pixels.<br/>Minimum value: 0 |
+| Nom         | Type de données                   | Valeurs possibles                                                                                                        |
+| ----------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| markerBreak | integer &#x7c; integer collection | Position du taquet de rupture ou collection des positions de taquets de rupture en pixels.<br/>Valeur minimale : 0 |
 
 ---
 
-## Form Detail
+## Zone de corps
 
-The form Detail area is displayed on the screen and printed once for each record in a report. The Detail area is defined as the area between the Header control line and the Detail control line.
+La zone de corps (ou de détail) du formulaire est affichée à l'écran et imprimée une fois pour chacun des enregistrements d’un état. La zone de corps est définie comme étant la zone comprise entre le taquet de la zone d’en-tête et le taquet de la zone de corps.
 
-You can make the Detail area smaller or larger. Whatever you place in the Detail area is displayed or printed once for each record. Most often you place fields or variables in the Detail area so that the information in each record is displayed or printed, but you can place other elements in the Detail area as well.
+Vous agrandissez ou réduisez la taille de cette zone en faisant glisser le taquet C vers le bas ou vers le haut. Tout élément placé dans cette zone est affiché ou imprimé une fois pour chacun des enregistrements. La plupart du temps, vous placez des champs ou des variables dans cette zone afin que les données de chaque enregistrement soient imprimées ou affichées, mais il est aussi possible d’y placer d’autres éléments.
 
 #### Grammaire JSON
 
-| Nom        | Type de données | Valeurs possibles                          |
-| ---------- | --------------- | ------------------------------------------ |
-| markerBody | integer         | Position du marqueur de détail. Minimum: 0 |
+| Nom        | Type de données | Valeurs possibles                       |
+| ---------- | --------------- | --------------------------------------- |
+| markerBody | integer         | Position du taquet de corps. Minimum: 0 |
 
 ---
 
-## Form Footer
+## Zone de pied de page
 
-The Form Footer area is displayed on screen under the list of records. It is always printed at the bottom of every page of a report. The Footer area is defined as the area between the Break control line and the Footer control line.
+La zone de pied de page est affichée à l’écran sous la liste des enregistrements. Elle est toujours imprimée en bas de chaque page d’un état. La zone pied de page est définie comme étant la zone située entre le taquet de la zone de rupture (R) et le taquet de pied de page (P).
 
-You make the Footer area smaller or larger.
+Pour agrandir ou réduire la taille de cette zone, faites glisser le taquet vers le bas ou vers le haut.
 
-You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. Active objects are accepted.
+Vous pouvez utiliser la zone de pied de page pour imprimer la date courante, le numéro de page, des éléments graphiques ou tout texte que vous souhaitez voir apparaître en bas de chaque page de votre état. Pour les formulaires de sortie conçus pour être utilisés à l’écran, la zone de pied de page peut contenir des boutons permettant de lancer une recherche ou un tri, d’imprimer des enregistrements ou de quitter le formulaire courant. Tous les objets actifs sont acceptés.
 
 #### Grammaire JSON
 
@@ -58,58 +58,58 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 ---
 
-## Form Header
+## Zone d’en-tête
 
-The form Header area is displayed at the top of each screen and is printed at the top of each page of a report. The Header area is defined as the area above the Header control line.
+La zone d’en-tête est affichée en haut de chaque écran et est imprimée en haut de chaque page de l’état. C’est la zone située au dessus du taquet E.
 
-You can make the Header area smaller or larger. You can use the Header area for column names, for instructions, additional information, or even a graphic such as a company logo or a decorative pattern.
+Vous agrandissez ou réduisez sa taille en déplaçant ce taquet vers le bas ou vers le haut. Vous pouvez utiliser la zone d’en-tête pour les noms de colonnes, les instructions, des informations supplémentaires ou des images telles qu’un logo ou un motif de décoration.
 
-You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. The following active objects can be inserted:
+Vous pouvez également placer et utiliser des objets actifs dans les en-têtes des formulaires sortie affichés comme sous-formulaires, dans la fenêtre d’affichage des enregistrements ou par les commandes `DISPLAY SELECTION` et `MODIFY SELECTION`. Les objets actifs suivants sont acceptés :
 
-- Buttons, picture buttons,
-- Combo boxes, drop-down lists,  picture pop-up menus,
-- hierarchical lists, list boxes
-- Radio buttons, check boxes, 3D check boxes,
-- Progress indicators, rulers, steppers, spinners.
+- Boutons, boutons image,
+- Combo boxes, drop-down lists, picture pop-up menus,
+- listes hiérarchiques, list boxes
+- Boutons radio, cases à cocher, cases à cocher 3D,
+- Indicateurs de progression, règles, steppers, spinners.
 
-Standard actions such as `Add Subrecord`, `Cancel` (lists displayed using `DISPLAY SELECTION` and `MODIFY SELECTION`) or `Automatic splitter` can be assigned to the inserted buttons. The following events apply to the active objects you insert in the Header area: `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. Keep in mind that the form method is called with the `On Header` event after calling the object methods of the area.
+Des actions standard telles que `Add Subrecord`, `Cancel` (listes affichées à l'aide de `DISPLAY SELECTION` et `MODIFY SELECTION`) ou `Automatic splitter` peuvent être assignées aux boutons insérés. En outre, tous ces objets acceptent les événements formulaire suivants : `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. A noter que la méthode formulaire est appelée avec l’événement `On Header` après l’appel des méthodes de tous les objets de la zone.
 
-The form can contains [additional header areas](#additional-areas) to be associated with additional breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
+Le formulaire peut contenir des [zones d'en-tête supplémentaires](#additional-areas) à associer à des ruptures supplémentaires. Un en-tête de niveau 1 est imprimé juste avant que les enregistrements regroupés par le premier champ trié soient imprimés.
 
 #### Grammaire JSON
 
-| Nom          | Type de données                   | Valeurs possibles                                                                                     |
-| ------------ | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.<br/>Minimum value: 0 |
+| Nom          | Type de données                   | Valeurs possibles                                                                                                      |
+| ------------ | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| markerHeader | integer &#x7c; integer collection | Position du taquet d'en-tête ou collection des positions de taquets d'en-tête en pixels.<br/>Valeur minimale : 0 |
 
 ---
 
-## Additional areas
+## Zones supplémentaires
 
-You can create additional Break areas and Header areas for a report. These additional areas allow you to print subtotals and other calculations in a report and to display other information effectively.
+Vous pouvez créer des zones de rupture et d'en-tête supplémentaires pour un rapport. Ces zones supplémentaires vous permettent d'imprimer des sous-totaux et d'autres calculs dans un rapport et d'afficher efficacement d'autres informations.
 
-Additional areas are defined when you use a collection of positions in the [Form Break](#form-break) and [Form Header](#form-header) properties.
+Les zones supplémentaires sont définies lorsque vous utilisez une collection de positions dans les propriétés [Zone de rupture](#form-break) et [Zone d'en-tête](#form-header).
 
-> In the 4D Form editor, you create additional control lines by holding down the **Alt** key while clicking the appropriate control marker.
+> Dans l'éditeur de formulaires 4D, vous créez des lignes de contrôle supplémentaires en maintenant enfoncée la touche **Alt** tout en cliquant sur le taquet de contrôle approprié.
 
-A form always starts with a Header, Detail, Break level 0, and Footer areas.
+Un formulaire commence toujours par les zones entête, corps, niveau de rupture 0, et pied de page.
 
-Break at level 0 zero takes in all the records; it occurs after all the records are printed. Additional Break areas can be added, i.e. a Break level 1, Break level 2, etc.
+Le niveau de rupture 0 englobe tous les enregistrements ; il prend place une fois que tous les enregistrements ont été imprimés. Les taquets de rupture supplémentaires sont désignés par des nombres, un taquet libellé R1 a pour signification "Rupture de niveau 1", etc.
 
-A Break level 1 occurs after the records grouped by the first sorted field are printed.
+Une rupture de niveau 1 prend place après l’impression des enregistrements groupés par le premier argument du tri.
 
-| Label        | Description      | Prints after groups created by: |
-| ------------ | ---------------- | ------------------------------- |
-| Form Break 1 | Break at level 1 | First sorted field              |
-| Form Break 2 | Break at level 2 | Second sorted field             |
-| Form Break 3 | Break at level 3 | Third sorted field              |
+| Libellé | Description         | S’imprime après le groupe créé par : |
+| ------- | ------------------- | ------------------------------------ |
+| R1      | Rupture de niveau 1 | Premier argument de tri              |
+| R2      | Rupture de niveau 2 | Deuxième argument de tri             |
+| R3      | Rupture de niveau 3 | Troisième argument de tri            |
 
-Additional Header areas are associated with Breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
+Des taquets de contrôle supplémentaires des en-têtes sont associés aux ruptures. Un en-tête de niveau 1 est imprimé juste avant que les enregistrements regroupés par le premier champ trié soient imprimés.
 
-| Label         | Description       | Prints after groups created by: |
-| ------------- | ----------------- | ------------------------------- |
-| Form Header 1 | Header at level 1 | First sorted field              |
-| Form Header 2 | Header at level 2 | Second sorted field             |
-| Form Header 3 | Header at level 3 | Third sorted field              |
+| Libellé | Description         | S’imprime après le groupe créé par : |
+| ------- | ------------------- | ------------------------------------ |
+| E1      | En-tête de niveau 1 | Premier argument de tri              |
+| E2      | En-tête de niveau 2 | Deuxième argument de tri             |
+| E3      | En-tête de niveau 3 | Troisième argument de tri            |
 
-If you use the `Subtotal` function to initiate Break processing, you should create a Break area for every level of Break that will be generated by the sort order, minus one. If you do not need anything printed in one of the Break areas, you can reduce its size to nothing by placing its marker on top of another control line. If you have more sort levels than Break areas, the last Break area will be repeated during printing.
+Si vous utilisez la fonction `Subtotal` pour initialiser le traitement des ruptures, vous devez créer autant de zones de ruptures que de niveaux de ruptures générés par le tri, moins une. Si vous n’avez pas besoin d’une zone de rupture, vous pouvez réduire sa taille en faisant coïncider son taquet de contrôle avec celui d’une autre zone. S’il y a davantage de niveaux de tri que de zones de rupture, la dernière zone de rupture sera répétée lors de l’impression.

@@ -79,11 +79,11 @@ O operador da divisão de longint retorna valores significativos apenas com núm
 
 ### Comparação real
 
-To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. Veja o comando [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html).
+Para comparar dois reais por igualdade, a linguagem 4D realmente compara o valor absoluto da diferença com *epsilon*. Veja o comando [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html).
 
 :::note
 
-For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the `SET REAL COMPARISON LEVEL` setting into account.
+Para consistência, o mecanismo de banco de dados 4D sempre compara os campos do banco de dados do tipo real usando um valor 10^-6 para *epsilon* e não leva o parâmetro `SET REAL COMPARISON LEVEL` definindo em conta.
 
 :::
 

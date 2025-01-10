@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared collection.Params-->
 
-| 引数    | 型                                                                   |   | 説明         |
-| ----- | ------------------------------------------------------------------- | - | ---------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | → | 共有コレクションの値 |
-| 戻り値   | Collection                                                          | ← | 新規共有コレクション |
+| 引数    | 型                                                     |   | 説明         |
+| ----- | ----------------------------------------------------- | - | ---------- |
+| value | Number, Text, Date, Time, Boolean, Object, Collection | → | 共有コレクションの値 |
+| 戻り値   | Collection                                            | ← | 新規共有コレクション |
 
 <!-- END REF-->
 
@@ -40,9 +40,9 @@ displayed_sidebar: docs
 以下のサポートされる型であれば、いくつでも値を渡すことができます:
 
 - 数値 (実数、倍長整数...)。 数値は常に実数として保存されます。
-- text
-- boolean
-- date
+- テキスト
+- ブール
+- 日付
 - 時間 (ミリ秒の数 (実数) として保存されます)。
 - null
 - 共有オブジェクト
@@ -68,3 +68,10 @@ displayed_sidebar: docs
 [New collection](new-collection.md)\
 [New shared object](../commands-legacy/new-shared-object.md)\
 *共有オブジェクトと共有コレクション*
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1527                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

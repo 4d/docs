@@ -16,7 +16,7 @@ title: Variant
 - ピクチャー
 - ポインター
 - real
-- text
+- テキスト
 - 時間
 - null
 - 未定義

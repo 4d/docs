@@ -22,9 +22,9 @@ Each event is returned as an object by the [`FORM Event`](../commands/form-event
 
 | プロパティ       | 型       | 説明                                                                |
 | ----------- | ------- | ----------------------------------------------------------------- |
-| objectName  | text    | イベントをトリガーしているオブジェクト名。フォームによってトリガーされている場合には含まれていません。               |
+| objectName  | テキスト    | イベントをトリガーしているオブジェクト名。フォームによってトリガーされている場合には含まれていません。               |
 | code        | longint | フォームイベントの数値。 `Form event code` によっても返されます。                        |
-| description | text    | フォームイベント名 (例: "On After Edit") |
+| description | テキスト    | フォームイベント名 (例: "On After Edit") |
 
 イベントが発生したオブジェクトによっては追加のプロパティが含まれていることがあります。 特に:
 

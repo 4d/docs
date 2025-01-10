@@ -16,8 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
 <details><summary>Historique</summary>
 
 | Release | Modifications                         |
@@ -28,7 +26,7 @@ displayed_sidebar: docs
 
 #### Description
 
-<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->La commande **FORM EDIT** ouvre le *formulaire* associé à *aTable* dans l'éditeur de formulaire 4D, avec optionnellement *object* sélectionné. Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
+<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.La commande **FORM EDIT** ouvre le *formulaire* associé à *aTable* dans l'éditeur de formulaire 4D, avec optionnellement *object* sélectionné. Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
 
 The command is asynchronous: it returns immediately to the calling method and does not wait for the form to be open.
 
@@ -65,3 +63,10 @@ Pour ouvrir le formulaire de projet *ContactPage* avec l'objet "name-input" sél
 #### Voir également
 
 *Design Object Access Commands*
+
+#### Propriétés
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Numéro de commande | 1749                            |
+| Thread safe        | &amp;cross; |

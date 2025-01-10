@@ -134,7 +134,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 ---
 
-## Expression Type
+## Type d’expression
 
 > Cette propriété est intitulée [**Data Type**](properties_DataSource.md#data-type-expression-type) dans la Liste de Propriétés pour les colonnes de listbox de type [selection](listbox_overview.md#selection-list-boxes) et [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) et pour les [Listes déroulantes](dropdownList_Overview.md) associées à un [objet](FormObjects/dropdownList_Overview.md#using-an-object) ou à un [tableau](FormObjects/dropdownList_Overview.md#using-an-array).
 

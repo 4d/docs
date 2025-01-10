@@ -420,7 +420,7 @@ Function query <attributeName>($event : Object) -> $result : Object
 
 Esta função suporta três sintaxes:
 
-- Com a primeira sintaxe, você manipula toda a consulta através da propriedade de objeto$event.result\\\`.
+- Com a primeira sintaxe, você manipula toda a consulta através da propriedade de objeto$event.result\\\\`.
 - Com a segunda e terceira sintaxes, a função retorna um valor em *$result*:
 
   - Se *$result* é um Texto, deve ser uma string de consulta válida
