@@ -6,10 +6,32 @@ const darkTheme = themes.palenight;
 
 const isProduction = process.env.GITHUB_REPOSITORY_OWNER === '4d';
 const router = process.env.DOCUSAURUS_ROUTER
+const isStatic = process.env.DOCUSAURUS_ROUTER === "hash"
+const language = process.env.DOCUSAURUS_LANGUAGE ?? "en"
+
+const locales = isStatic ? [language] : ["en", "fr", "es", "ja", "pt"]
+const localeConfigs = isStatic ? {} : {
+  en: {
+    label: "English",
+  },
+  fr: {
+    label: "Français",
+  },
+  es: {
+    label: "Español",
+  },
+  ja: {
+    label: "日本語",
+  },
+  pt: {
+    label: "Português",
+  },
+}
+
 module.exports = {
   title: "4D Docs",
   tagline: "Documentation for 4D developers",
-  baseUrl: router ? "" : "/docs/",
+  baseUrl: isStatic ? "/" : "/docs/",
   //url: "https://4d.github.io/",
   url: "https://developer.4d.com/",
   organizationName: "4D",
@@ -82,25 +104,9 @@ module.exports = {
     experimental_router: router,
   },
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "fr", "es", "ja", "pt"],
-    localeConfigs: {
-      en: {
-        label: "English",
-      },
-      fr: {
-        label: "Français",
-      },
-      es: {
-        label: "Español",
-      },
-      ja: {
-        label: "日本語",
-      },
-      pt: {
-        label: "Português",
-      },
-    },
+    defaultLocale: language,
+    locales: locales,
+    localeConfigs: localeConfigs,
   },
   plugins: [
     [
@@ -251,5 +257,5 @@ module.exports = {
       maintainCase: false,
     },
   },
- themes: ['@docusaurus/theme-mermaid'],
+  themes: ['@docusaurus/theme-mermaid'],
 }
