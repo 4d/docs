@@ -87,7 +87,7 @@ The function returns a [**SMTP transporter object**](../API/SMTPTransporterClass
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1608                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                |                                                                     |
+| -------------- | ------------------------------------------------------------------- |
+| Command number | 1608                                                                |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
