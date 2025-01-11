@@ -70,7 +70,7 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1482                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                |                                                                     |
+| -------------- | ------------------------------------------------------------------- |
+| Command number | 1482                                                                |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
