@@ -71,7 +71,7 @@ End if
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1723                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                |                                                                     |
+| -------------- | ------------------------------------------------------------------- |
+| Command number | 1723                                                                |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
