@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected. Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
+<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected. Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
 
 The command is asynchronous: it returns immediately to the calling method and does not wait for the form to be open.
 
@@ -66,7 +66,7 @@ To open the *ContactPage* project form with "name-input" object selected:
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1749                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                |                                                                     |
+| -------------- | ------------------------------------------------------------------- |
+| Command number | 1749                                                                |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
