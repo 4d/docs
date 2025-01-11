@@ -65,7 +65,7 @@ This method modifies the value of a "settings" property stored in the storage ob
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1839                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                |                                                                     |
+| -------------- | ------------------------------------------------------------------- |
+| Command number | 1839                                                                |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
