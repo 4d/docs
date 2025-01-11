@@ -48,9 +48,9 @@ USE ENTITY SELECTION($entitySel) //Se actualiza la selección actual de la tabla
 
 #### Propiedades
 
-|                           |                                                                 |
-| ------------------------- | --------------------------------------------------------------- |
-| Command number            | 1513                                                            |
-| Thread safe               | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
-| Changes current record    |                                                                 |
-| Changes current selection |                                                                 |
+|                           |                                                                     |
+| ------------------------- | ------------------------------------------------------------------- |
+| Command number            | 1513                                                                |
+| Thread safe               | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Changes current record    |                                                                     |
+| Changes current selection |                                                                     |
