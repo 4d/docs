@@ -44,8 +44,7 @@ jobs:
       with:
         tag_name: "main"
         files: |
-          release/*
-          release/static-doc-en
+          release/*/*
         token: ${{ secrets.GITHUB_TOKEN }}
         prerelease: true
 
