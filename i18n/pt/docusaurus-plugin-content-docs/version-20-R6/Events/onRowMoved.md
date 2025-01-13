@@ -9,6 +9,6 @@ title: On Row Moved
 
 ## Descrição
 
-Este evento se genera cuando una línea de list box ([sólo tipo array](FormObjects/listbox_overview.md#array-list-boxes)) es movida por el usuario mediante la función de arrastrar y soltar ([si se permite](FormObjects/properties_Action.md#movable-rows). It is not generated if the row is dragged and then dropped in its initial location.
+Este evento se genera cuando una línea de list box ([sólo tipo array](FormObjects/listbox_overview.md#array-list-boxes)) es movida por el usuario mediante la función de arrastrar y soltar ([si se permite](FormObjects/properties_Action.md#movable-rows). Não é gerado se a linha for arrastada e depois largada na sua localização inicial.
 
 El comando `LISTBOX MOVED ROW NUMBER` devuelve la nueva posición de la línea.
