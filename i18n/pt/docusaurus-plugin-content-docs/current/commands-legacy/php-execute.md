@@ -50,7 +50,7 @@ Os parâmetros *param1...N* são enviados em PHP no formato JSON em UTF-8\. Eles
 
 **Nota:** por razões técnicas, o tamanho dos parâmetros passados através do protocolo FastCGI não deve passar os 64 KB. Deve considerar esta limitação se utiliza parâmetros de tipo Texto.
 
-O comando devolve True se a execução for realizada corretamente do lado de 4D, em outras palavras, se o lançamento do ambiente de execução, a abertura do script e o estabelecimento da comunicação com o intérprete PHP foram exitosos. Do contrário, se gera um erro, que pode interceptar com o comando [ON ERR CALL](on-err-call.md "ON ERR CALL") e analizar com [Last errors](get-last-error-stack.md "Last errors").   
+O comando devolve True se a execução for realizada corretamente do lado de 4D, em outras palavras, se o lançamento do ambiente de execução, a abertura do script e o estabelecimento da comunicação com o intérprete PHP foram exitosos. Do contrário, se gera um erro, que pode interceptar com o comando [ON ERR CALL](on-err-call.md "ON ERR CALL") e analizar com [Last errors](last-errors.md).   
 Além disso, o script mesmo pode gerar erros PHP. Neste caso, deve utilizar o comando [PHP GET FULL RESPONSE](php-get-full-response.md "PHP GET FULL RESPONSE") para analizar a fonte do erro (ver exemplo 4). 
 
 **Nota:** PHP permite configurar a gestão de erros. Para maior informação, consulte por exemplo a página: <http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting>.

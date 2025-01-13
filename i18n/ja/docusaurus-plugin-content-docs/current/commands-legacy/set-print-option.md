@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.SET PRINT OPTION.Summary-->**SET PRINT OPTION** コマンドを使用し、プログラムから印刷オプションの値を変更することができます。<!-- END REF-->プリントパラメーターを変更する他のコマンド ([PRINT SETTINGS](print-settings.md)、*\>* 引数を使用しない [PRINT SELECTION](print-selection.md)) が呼び出されない限り、このコマンドを使用して定義された各オプションは、[カレントの 4D 印刷設定](https://developer.4d.com/docs/settings/compatibility/) に対して適用されます。印刷ジョブが(例えば[OPEN PRINTING JOB](open-printing-job.md) などによって)開かれている間は、ジョブが終わるまではこのオプションを変更することはできません(ただしOrientation option を除く、以下参照)。
+<!--REF #_command_.SET PRINT OPTION.Summary-->**SET PRINT OPTION** コマンドを使用し、プログラムから印刷オプションの値を変更することができます。<!-- END REF-->プリントパラメーターを変更する他のコマンド ([PRINT SETTINGS](print-settings.md)、*\>* 引数を使用しない [PRINT SELECTION](print-selection.md)) が呼び出されない限り、このコマンドを使用して定義された各オプションは、[カレントの 4D 印刷設定](../settings/compatibility.md) に対して適用されます。印刷ジョブが(例えば[OPEN PRINTING JOB](open-printing-job.md) などによって)開かれている間は、ジョブが終わるまではこのオプションを変更することはできません(ただしOrientation option を除く、以下参照)。
 
 ##### オプションおよび値 
 

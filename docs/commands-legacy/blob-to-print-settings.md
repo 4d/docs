@@ -24,7 +24,7 @@ The *params* parameter allows you to define how to handle the basic "number of c
 * If you pass 0 or omit this parameter, the values stored in the BLOB are restored,
 * If you pass 1, the values are reset to default: the number of copies is set to 1 and the page range is set to "all pages".
 
-The parameters are applied to the [current 4D printing settings](https://developer.4d.com/docs/settings/compatibility/) as long as no command such as *\_o\_PAGE SETUP*, [SET PRINT OPTION](set-print-option.md) or [PRINT SELECTION](print-selection.md) without the > parameter modifies them. The parameters set are used more particularly by the [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md) and [QR REPORT](qr-report.md) commands, as well as by the menu commands of 4D, including those of the Design environment.
+The parameters are applied to the [current 4D printing settings](../settings/compatibility.md) as long as no command such as *\_o\_PAGE SETUP*, [SET PRINT OPTION](set-print-option.md) or [PRINT SELECTION](print-selection.md) without the > parameter modifies them. The parameters set are used more particularly by the [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md) and [QR REPORT](qr-report.md) commands, as well as by the menu commands of 4D, including those of the Design environment.
 
 The [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), and [PRINT RECORD](print-record.md) commands must be called with the *\>* parameter (if applicable) in order for the settings defined by **BLOB to print settings** to be kept.
 

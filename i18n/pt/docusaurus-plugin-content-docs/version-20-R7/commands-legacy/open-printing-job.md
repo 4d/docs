@@ -24,7 +24,7 @@ Deve chamar ao comando [CLOSE PRINTING JOB](close-printing-job.md) para determin
 
 OPEN PRINTING JOB utiliza os parâmetros de impressão atuais (parâmetros padrão ou definidos através dos comandos *\_o\_PAGE SETUP* ou [SET PRINT OPTION](set-print-option.md)). Os comandos que modificam os parâmetros de impressão devem ser chamados antes de OPEN PRINTING JOB. Do contrário, um erro é gerado (excepción: Orientation option pode ser chamado pelo comando [SET PRINT OPTION](set-print-option.md) dentro de um trabalho de impressão).
 
-**Nota de compatibilidade:** A partir de 4D v20 R4, trabalhos de impressão não bloqueiam nos novos projetos. Para saber mais veja [Non-blocking printing option](https://developer.4d.com/docs/settings/compatibility/) .
+**Nota de compatibilidade:** A partir de 4D v20 R4, trabalhos de impressão não bloqueiam nos novos projetos. Para saber mais veja [Non-blocking printing option](../settings/compatibility.md) .
 
 #### Variáveis e conjuntos do sistema 
 

@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 **OPEN PRINTING JOB** はカレントの印刷設定を使用します (デフォルト設定または[SET PRINT OPTION](set-print-option.md) コマンドで設定された設定)。印刷設定を変更するコマンドは**OPEN PRINTING JOB** が呼ばれる前に実行されなければなりません。そうでなければエラーが生成されます(例外として、Orientation option は[SET PRINT OPTION](set-print-option.md) コマンドを使用することで印刷ジョブ内でも設定することが可能です)。
 
-**互換性に関する注意:** 4D v20 R4 以降、新規プロジェクトにおいては印刷ジョブはノンブロッキングとなります。詳細な情報については、互換性の設定の[ノンブロッキング印刷オプション](https://developer.4d.com/docs/settings/compatibility/) のドキュメンテーションを参照してください。
+**互換性に関する注意:** 4D v20 R4 以降、新規プロジェクトにおいては印刷ジョブはノンブロッキングとなります。詳細な情報については、互換性の設定の[ノンブロッキング印刷オプション](../settings/compatibility.md) のドキュメンテーションを参照してください。
 
 #### システム変数およびセット 
 
