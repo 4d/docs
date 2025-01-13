@@ -35,8 +35,10 @@ jobs:
       with:
         pattern: static-doc-*
     - name: Upload Release Asset
+      if: startsWith(github.ref, 'refs/tags/')
       uses: softprops/action-gh-release@v2
       with:
+        tag_name: "main"
         files: |
           static-doc-*
         token: ${{ secrets.GITHUB_TOKEN }}
