@@ -71,10 +71,10 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 `Sous-formulaires liste`
 
-Définit l'action à réaliser lorsqu'un utilisateur double-clique sur une ligne dans un sous-formulaire liste. The available options are:
+Définit l'action à réaliser lorsqu'un utilisateur double-clique sur une ligne dans un sous-formulaire liste. Les options disponibles sont :
 
 - **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-- **Modifier enregistrement** : Un double-clic sur une ligne permet d'afficher l'enregistrement correspondant dans le [ formulaire détaillé défini pour le sous-formulaire liste](#detail-form). The record is opened in read-write mode so it can be modified.
+- **Modifier enregistrement** : Un double-clic sur une ligne permet d'afficher l'enregistrement correspondant dans le [ formulaire détaillé défini pour le sous-formulaire liste](#detail-form). L'enregistrement est ouvert en lecture-écriture afin qu'il puisse être modifié.
 - **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
 
 Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
@@ -151,10 +151,10 @@ Spécifie la table à laquelle appartient le sous-formulaire Liste (le cas éch�
 
 ## Mode de sélection
 
-Designates the option for allowing users to select rows:
+Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
 
 - **None**: Rows cannot be selected if this mode is chosen. Cliquer sur la liste n'aura aucun effet à moins que l'option [Saisissable en liste](subform_overview.md#enterable-in-list) soit activée. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-- **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
+- **Single**: One row at a time can be selected in this mode. Un clic sur une ligne la sélectionne. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
   The Up and Down arrow keys select the previous/next row in the list. Les autres touches de navigation font défiler la liste. The `On Selection Change` form event is generated every time the current row is changed.
 - **Multiple**: Several rows can be selected simultaneously in this mode.
   - Les sous-enregistrements sélectionnés sont retournés par la commande `GET HIGHLIGHTED RECORDS`.
