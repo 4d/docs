@@ -59,12 +59,12 @@ Para mais informações, consulte por favor [Páginas formulário](forms.md#form
 
 ## Nome do formulário
 
-This property is the name of the form itself and is used to refer to the form by name using the 4D language. The form name must comply with the [rules specified for identifiers](Concepts/identifiers.md) in 4D.
+Essa propriedade é o nome do próprio formulário sendo usada para fazer referência ao formulário pelo nome usando a linguagem 4D. O nome do formulário deve estar em conformidade com as [regras especificadas para identificadores](Concepts/identifiers.md) em 4D.
 
 
 #### Gramática JSON
 
-The form name is defined by the name of the folder that contains the form.4Dform file. See [project architecture](Project/architecture.md#sources-folder) for more information.
+O nome do formulário é definido pelo nome da pasta que contém o arquivo form.4Dform. See [project architecture](Project/architecture.md#sources-folder) for more information.
 
 ---
 
@@ -110,9 +110,9 @@ Para remover a herança, selecione `\&#060;None&#062;` na Lista de Propriedades 
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                                                                                                  |
-| ------------- | ------------- | ------------------------------------------------------------------------------------------------------------------ |
-| inheritedForm | string        | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
+| Nome          | Tipo de dados | Valores possíveis                                                                                                                                     |
+| ------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| inheritedForm | string        | Nome do formulário da tabela ou do projeto OU um caminho POSIX para um arquivo .json que descreve o formulário OU um objeto que descreve o formulário |
 
 ---
 
@@ -121,7 +121,7 @@ Para remover a herança, selecione `\&#060;None&#062;` na Lista de Propriedades 
 
 Esta propriedade específica a tabela da base de dados da qual para [herda um formulário](forms.md#inherited-forms) no formulário atual.
 
-Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited from a project form.
+Defina como \ `&#060;None&#062;` na Lista de Propriedades (ou " " em JSON) para herdar de um formulário projeto.
 
 
 
@@ -137,7 +137,7 @@ Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited fr
 
 ## Publicado como subformulário
 
-For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host application, it must have been explicitly shared. When this property is selected, the form will be published in the host application.
+Para que um formulário de componente seja selecionado como um [subformulário](FormObjects/subform_overview.md) em uma aplicação host, ele deve ter sido explicitamente compartilhado. Quando esta propriedade for selecionada, o formulário será publicado na aplicação host.
 
 Apenas os projetos formulário podem ser especificados como subformulários publicados.
 
@@ -158,9 +158,9 @@ Quando a opção é usada, se a janela for aberta usando o comando `Open form wi
 
 *   a página atual,
 *   a posição, tamanho e visibilidade de cada objecto de formulário (incluindo o tamanho e visibilidade das colunas da lista box).
-> > > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+> Esta opção não considera objetos gerados usando o comando `OBJECT DUPLICATE`. Para que um usuário recupere seu ambiente ao usar este comando, o desenvolvedor deve repetir a sequência de criação, definição e posicionamento dos objetos.
 
-When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
+Quando essa opção é selecionada, a opção [Save Value](FormObjects/properties_Object.md#save-value) fica disponível para determinados objetos.
 
 #### Gramática JSON
 
@@ -176,13 +176,13 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 ## Título da janela
 
-The window title is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. O título da janela aparece na barra de título da janela.
+O título da janela é usado quando o formulário é aberto usando os comandos `Open form window` e `Open window` 4D no ambiente da aplicação. O título da janela aparece na barra de título da janela.
 
-You can use dynamic references to set the window titles for forms, *i.e.*:
+Você pode usar referências dinâmicas para definir os títulos das janelas dos formulários, *ou seja*:
 
 *   Uma referência XLIFF padrão armazenada na pasta Resources.
-*   A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
-*   A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. The current value of the field or variable will be displayed in the window title.
+*   Um rótulo de tabela ou campo: a sintaxe a ser aplicada é `<?[TableNum]FieldNum>` ou `<?[TableName]FieldName>`.
+*   Uma variável ou um campo: a sintaxe a ser aplicada é \ `&#060;VariableName&#062;` ou `&#060;[TableName]FieldName&#062;`. O valor atual do campo ou variável será exibido no título da janela.
 
 > O número de caracteres para um título de janela é limitado a 31.
 
