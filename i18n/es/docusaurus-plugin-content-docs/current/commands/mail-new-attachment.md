@@ -151,7 +151,7 @@ $transporter.send($email)
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1644                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                |                                                                     |
+| -------------- | ------------------------------------------------------------------- |
+| Command number | 1644                                                                |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

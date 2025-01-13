@@ -137,7 +137,7 @@ You want to get information on your current 4D Server license:
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1489                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                |                                                                     |
+| -------------- | ------------------------------------------------------------------- |
+| Command number | 1489                                                                |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

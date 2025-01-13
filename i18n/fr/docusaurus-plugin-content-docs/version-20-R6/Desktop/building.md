@@ -118,7 +118,7 @@ Cet onglet vous permet de créer une version monoposte autonome de votre applica
 
 ### Créer une application autonome
 
-Cochez l'option **Créer une application autonome** et cliquez sur **Générer** pour créer une application autonome (double-cliquable) directement à partir de votre projet d'application.
+Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project.
 
 Les éléments suivants sont requis pour la création :
 

@@ -3,7 +3,7 @@ id: writeProAreaOverview
 title: Zone 4D Write Pro
 ---
 
-4D Write Pro offers 4D users an advanced word-processing tool, fully integrated with your 4D application. En utilisant 4D Write Pro, vous pouvez rédiger des e-mails et/ou des lettres pré-configurés contenant des images, une signature, du texte formaté et des placeholders pour des variables dynamiques. Vous pouvez également générer dynamiquement des factures ou des rapports, contenant du texte et des images formatés.
+4D Write Pro offre aux utilisateurs 4D un outil de traitement de texte avancé, entièrement intégré à votre application 4D. En utilisant 4D Write Pro, vous pouvez rédiger des e-mails et/ou des lettres pré-configurés contenant des images, une signature, du texte formaté et des placeholders pour des variables dynamiques. Vous pouvez également générer dynamiquement des factures ou des rapports, contenant du texte et des images formatés.
 
 ![](../assets/en/FormObjects/writePro2.png)
 

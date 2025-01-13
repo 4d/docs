@@ -1066,7 +1066,7 @@ Le paramètre optionnel *options* vous permet de définir les parties de message
 
 | Propriété | Type       | Description                                                                                                                            |
 | --------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| liste     | Collection | Collection d'objets [`Email`](EmailObjectClass.md#email-object). Si aucun objet Email n'est trouvé, une collection vide est retournée. |
+| list      | Collection | Collection d'objets [`Email`](EmailObjectClass.md#email-object). Si aucun objet Email n'est trouvé, une collection vide est retournée. |
 | notFound  | Collection | Collection de :<br/><ul><li>première syntaxe - IDs de messages passés antérieurement qui n'existent pas</li><li>deuxième syntaxe - numéros de séquence des messages entre startMsg et endMsg qui n'existent pas</li></ul>Une collection vide est retournée si tous les messages sont trouvés.               |
 
 #### Exemple

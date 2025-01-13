@@ -3,9 +3,9 @@ id: pluginAreaOverview
 title: Área de plug-in
 ---
 
-Un área de plug-in es un área en el formulario que está completamente controlada por un plug-in. La capacidad de integrar plug-ins en los formularios le ofrece posibilidades ilimitadas a la hora de crear aplicaciones personalizadas. Un plug-in puede realizar una tarea sencilla, como mostrar un reloj digital en un formulario, o una tarea compleja, como ofrecer funciones completas de procesamiento de textos, hojas de cálculo o gráficos.
+A plug-in area is an area on the form that is completely controlled by a [plug-in](../Extensions/develop-plug-ins.md). La capacidad de integrar plug-ins en los formularios le ofrece posibilidades ilimitadas a la hora de crear aplicaciones personalizadas.
 
-Al abrir una aplicación, 4D crea una lista interna de los plug-ins [instalados en la aplicación](#installing-plug-ins). Una vez que haya insertado un área de plug-in en un formulario, puede asignar un plug-in al área directamente en la lista **Tipo** en la lista de propiedades:
+When opening an application, 4D creates an internal list of the plug-ins [installed in your application](../Concepts/plug-ins.md#installing-plug-ins). Una vez que haya insertado un área de plug-in en un formulario, puede asignar un plug-in al área directamente en la lista **Tipo** en la lista de propiedades:
 
 ![](../assets/en/FormObjects/pluginArea.png)
 
@@ -16,14 +16,6 @@ Si dibuja un área de plug-in demasiado pequeña, 4D la mostrará como un botón
 ## Propiedades avanzadas
 
 Si el autor del plug-in proporciona opciones avanzadas, se puede activar un tema **Plug-in** que contenga un botón [**Propiedades avanzadas**](properties_Plugins.md) en la lista de propiedades. En este caso, puede hacer clic en este botón para definir estas opciones, normalmente a través de una caja de diálogo personalizada.
-
-## Instalar un plug-in
-
-Para añadir un plug-in en tu entorno 4D, primero tiene que salir de 4D. Los plug-ins se cargan al iniciar 4D. Para más información sobre la instalación de plug-ins, consulte [Instalación de plug-ins o componentes](https://doc.4d.com/4Dv17R6/4D/17-R6/Installing-plugins-or-components.300-4354866.en.html).
-
-## Crear plug-ins
-
-Si está interesado en diseñar sus propios plug-ins, puede recibir amplia información sobre cómo escribir e implementar plug-ins. 4D ofrece un [kit completo (en github)](https://github.com/4d/4D-Plugin-SDK) para ayudarle a escribir plug-ins personalizados.
 
 ## Propiedades soportadas
 

@@ -17,7 +17,7 @@ Un objet texte vous permet d'afficher du contenu écrit statique (*ex :* instruc
                 "top": 160, 
                 "width": 100,
                 "height": 20,
-                "stroke": "#ff0000"  //text color   
+                "stroke": "#ff0000"  //couleur texte    
                 "fontWeight": "bold"
                 }
 ```
