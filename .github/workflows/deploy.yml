@@ -9,6 +9,8 @@ jobs:
     uses: ./.github/workflows/workflow-syntax-check.yml
   workflow-build:
     uses: ./.github/workflows/workflow-build.yml
+  workflow-static:
+    uses: ./.github/workflows/workflow-build-static.yml
 
   gh-release:
     needs: [workflow-build]
@@ -22,3 +24,21 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build/
+
+  publish-release:
+    needs: [workflow-static]
+    name: 'Publish Release'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        pattern: static-doc-*
+    - name: Upload Release Asset
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          static-doc-*
+        token: ${{ secrets.GITHUB_TOKEN }}
+        prerelease: true
+
