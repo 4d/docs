@@ -19,7 +19,7 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 ---
 
-## Height
+## Alto
 
 This property is used to set the row height for a list box header in **pixels** or **text lines** (when displayed). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
 
