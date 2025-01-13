@@ -35,12 +35,17 @@ jobs:
       with:
         pattern: static-doc-*
         path: ./release
+    - name: Echo
+      run: |
+        ls ./release
+        pwd
     - name: Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
         tag_name: "main"
         files: |
-          ./release/*
+          release/*
+          release/static-doc-en
         token: ${{ secrets.GITHUB_TOKEN }}
         prerelease: true
 
