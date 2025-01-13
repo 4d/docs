@@ -127,7 +127,7 @@ The namespace of a [compiled](#protection-of-components-compilation) component i
 
 Obviamente, é recomendável usar um nome distinto para evitar qualquer conflito. If a user class with the same name as a component namespace already exists in the project, the user class is taken into account and the component classes are ignored.
 
-As classes ORDA de um componente não estão disponíveis no seu projeto host. Por exemplo, se houver uma classe de dados chamada Employees em seu componente, você não poderá usar uma classe "cs.Mycomponent.Employee" no projeto host.
+As classes ORDA de um componente não estão disponíveis no seu projeto host. Por exemplo, se houver uma classe de dados chamada Employees em seu componente, você não poderá usar uma classe "cs. Mycomponent. Employee" no projeto host.
 
 ### Classes ocultas
 
