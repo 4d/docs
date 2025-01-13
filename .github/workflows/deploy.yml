@@ -37,10 +37,10 @@ jobs:
         path: ./release
     - name: Zip
       run: |
-        for dir in ./release/*; do
+        cd release
+        for dir in *; do
           zip -r "$dir.zip" "$dir"
         done
-        ls ./release
     - name: Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
