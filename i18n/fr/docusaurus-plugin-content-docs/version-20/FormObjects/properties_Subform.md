@@ -67,15 +67,15 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 `Sous-formulaires liste`
 
-Définit l'action à réaliser lorsqu'un utilisateur double-clique sur une ligne dans un sous-formulaire liste. The available options are:
+Définit l'action à réaliser lorsqu'un utilisateur double-clique sur une ligne dans un sous-formulaire liste. Les options disponibles sont :
 
-*   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*   **Modifier enregistrement** : Un double-clic sur une ligne permet d'afficher l'enregistrement correspondant dans le [ formulaire détaillé défini pour le sous-formulaire liste](#detail-form). The record is opened in read-write mode so it can be modified.
-*   **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
+*   **Ne rien faire** (par défaut) : Un double-clic sur une ligne ne déclenche aucune action automatique.
+*   **Modifier enregistrement** : Un double-clic sur une ligne permet d'afficher l'enregistrement correspondant dans le [ formulaire détaillé défini pour le sous-formulaire liste](#detail-form). L'enregistrement est ouvert en lecture-écriture afin qu'il puisse être modifié.
+*   **Afficher l'enregistrement**: Identique à l'action précédente, sauf que l'enregistrement est ouvert en mode lecture seule et ne peut donc pas être modifié.
 
-Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
+Quelle que soit l'action sélectionnée/choisie, l'événement formulaire " `On Double clicked"` est généré.
 
-For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+Pour les deux dernières actions, l'événement formulaire " `On Open Detail` est également généré. L'événement `On Close Detail` est alors généré lorsqu'un enregistrement affiché dans le formulaire détaillé associé à la list box est sur le point d'être fermé (que l'enregistrement ait été modifié ou non).
 
 #### Grammaire JSON
 
@@ -148,11 +148,11 @@ Spécifie la table à laquelle appartient le sous-formulaire Liste (le cas éch�
 ---
 ## Mode de sélection
 
-Designates the option for allowing users to select rows:
-- **None**: Rows cannot be selected if this mode is chosen. Cliquer sur la liste n'aura aucun effet à moins que l'option [Saisissable en liste](subform_overview.md#enterable-in-list) soit activée. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-- **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
-  The Up and Down arrow keys select the previous/next row in the list. Les autres touches de navigation font défiler la liste. The `On Selection Change` form event is generated every time the current row is changed.
-- **Multiple**: Several rows can be selected simultaneously in this mode.
+Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
+- **Aucun** : Les lignes ne peuvent pas être sélectionnées si ce mode est choisi. Cliquer sur la liste n'aura aucun effet à moins que l'option [Saisissable en liste](subform_overview.md#enterable-in-list) soit activée. Les touches de navigation ne font que faire défiler la liste ; l'événement formulaire " `On Selection Change"` n'est pas généré.
+- **Ligne unique** : Ce mode permet de sélectionner une ligne à la fois. Un clic sur une ligne la sélectionne. Un **Ctrl+clic** (Windows) ou **Command+clic** (macOS) sur une ligne fait basculer son état (sélectionnée ou non).  
+  Les touches fléchées Haut et Bas permettent de sélectionner la ligne précédente/suivante dans la liste. Les autres touches de navigation font défiler la liste. L'événement formulaire `On Selection Change` est généré chaque fois que la ligne courante est modifié.
+- **Multilignes** : Ce mode permet de sélectionner simultanément plusieurs lignes.
     - Les sous-enregistrements sélectionnés sont retournés par la commande `GET HIGHLIGHTED RECORDS`.
     - Cliquer sur l'enregistrement permettra de le sélectionner, mais ne modifiera pas l'enregistrement courant.
     - Si vous pressez **Ctrl+clic** (Windows) ou **Commande+clic** (macOS) sur un enregistrement, cela fera basculer son état (entre sélectionné ou non). Les touches fléchées Haut et Bas sélectionnent l'enregistrement précédent/suivant dans la liste. Les autres touches de navigation font défiler la liste. L'événement formulaire `On Selection Change` est généré chaque fois que l'enregistrement sélectionné est modifié.
