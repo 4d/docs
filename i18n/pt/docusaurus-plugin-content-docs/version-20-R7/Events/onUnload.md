@@ -9,16 +9,16 @@ title: On Unload
 
 ## Descrição
 
-This event is triggered when the form is being exited released.
+Este evento é acionado quando o formulário é libertado.
 
 Todos os objetos do formulário (de qualquer página) cuja propriedade de evento de objeto `On Unload` estiver selecionada terão seu método objeto chamado.
 Então, se a propriedade de evento formulário `On Unload` for selecionada, o formulário terá seu método formulário chamado.
 
-> Os eventos [`On Load`](onLoad.md) e [`On Unload`] são gerados para objetos se estiverem ativados tanto para os objetos quanto para o formulário ao qual os objetos pertencem. If the events are enabled for objects only, they will not occur; these two events must also be enabled at the form level.
+> Os eventos [`On Load`](onLoad.md) e [`On Unload`] são gerados para objetos se estiverem ativados tanto para os objetos quanto para o formulário ao qual os objetos pertencem. Se os eventos estiverem ativados somente para objetos, eles não ocorrerão; esses dois eventos também devem ser ativados no nível do formulário.
 
 ### Subformulário
 
-O evento `On Unload` é gerado quando o subformulário é fechado (esse evento também deve ter sido ativado no nível do formulário pai para ser considerado). O evento é gerado antes dos eventos do formulário principal. The event is generated before those of the parent form.
+O evento `On Unload` é gerado quando o subformulário é fechado (esse evento também deve ter sido ativado no nível do formulário pai para ser considerado). O evento é gerado antes dos eventos do formulário principal. Observe também que, conforme os princípios de funcionamento dos eventos de formulário, se o subformulário for colocado em uma página diferente da página 0 ou 1, este evento só será gerado quando a página for fechada (e não quando o formulário for fechado).
 
 ### Veja também
 
