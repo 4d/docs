@@ -34,12 +34,13 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         pattern: static-doc-*
+        path: ./release
     - name: Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
         tag_name: "main"
         files: |
-          static-doc-*
+          ./release/*
         token: ${{ secrets.GITHUB_TOKEN }}
         prerelease: true
 
