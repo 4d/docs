@@ -19,7 +19,7 @@ Essa propriedade é usada para exibir ou ocultar [os rodapés de coluna list box
 
 ---
 
-## Height
+## Alto
 
 Esta propriedade é usada para definir a altura da linha para um rodapé de list box em **píxeis** ou em **linhas de texto** (quando exibido). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
 
