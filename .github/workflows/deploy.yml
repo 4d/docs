@@ -35,16 +35,18 @@ jobs:
       with:
         pattern: static-doc-*
         path: ./release
-    - name: Echo
+    - name: Zip
       run: |
+        for dir in ./release/*; do
+          zip -r "$dir.zip" "$dir"
+        done
         ls ./release
-        pwd
     - name: Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
         tag_name: "main"
         files: |
-          release/*/*
+          release/*.zip
         token: ${{ secrets.GITHUB_TOKEN }}
         prerelease: true
 
