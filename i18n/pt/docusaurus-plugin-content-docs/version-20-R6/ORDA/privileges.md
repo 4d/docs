@@ -45,7 +45,7 @@ Permissões controlam o acesso a objetos ou funções de armazenamento de dados.
 
 :::
 
-## Acções de autorização
+## Ações de permissão
 
 As ações disponíveis estão relacionadas com o recurso alvo.
 
@@ -72,9 +72,9 @@ A definição das permissões deve ser coerente, nomeadamente:
 - Permissões de **atualização** e **drop** também precisam da permissão **read** (mas **create** não precisa dela)
 - Para funções do modelo de dados, permissão de **promoção** também precisa de permissão **descrever**.
 
-## Privilégios e roles
+## Privilégios e funções
 
-Um **privilégio** é a habilidade técnica de executar **ações** em **recursos**, enquanto um **cargo** é um privilégio posto de uso por um administrador. Basically, a role gathers several privileges to define a business user profile. For example, "manageInvoices" could be a privilege while "secretary" could be a role (which includes "manageInvoices" and other privileges).
+Um **privilégio** é a habilidade técnica de executar **ações** em **recursos**, enquanto um **cargo** é um privilégio posto de uso por um administrador. Basicamente, uma função reúne vários privilégios para definir um perfil de usuário corporativo. Por exemplo, "manageInvoices" poderia ser um privilégio enquanto "secretary" poderia ser uma função (que inclui "manageInvoices" e outros privilégios).
 
 Um privilégio ou um papel pode ser associado a várias combinações de "ação + recurso". Podem ser associados vários privilégios a uma ação. Um privilégio pode incluir outros privilégios.
 
