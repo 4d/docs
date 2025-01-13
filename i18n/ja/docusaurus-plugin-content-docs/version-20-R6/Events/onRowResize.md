@@ -18,7 +18,7 @@ title: On Row Resize
 | objectName  | text    | 4D View Pro エリア名                                                     |
 | sheetName   | text    | イベントが発生したシート名                                                        |
 | range       | object  | 高さが変更された行のセルレンジ                                                      |
-| header      | ブール     | カラムヘッダー行 (最初の行) がリサイズされた場合には true、それ以外の場合には false |
+| header      | boolean | カラムヘッダー行 (最初の行) がリサイズされた場合には true、それ以外の場合には false |
 
 #### 例題
 

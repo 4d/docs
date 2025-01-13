@@ -22,13 +22,13 @@ title: VP SET ROW ATTRIBUTES
 
 *propertyObj* 引数は、*rangeObj* 引数のレンジ内の行に対して適用する属性を指定します。 指定できる属性は以下の通りです:
 
-| プロパティ     | 型      | 説明                                        |
-| --------- | ------ | ----------------------------------------- |
-| height    | number | 行の高さ (ピクセル単位)          |
-| pageBreak | ブール    | レンジ内の先頭行の前に改ページを挿入する場合には true、それ以外は false |
-| visible   | ブール    | 行が表示状態であれば true、それ以外は false               |
-| resizable | ブール    | 行がリサイズ可能であれば true、それ以外は false             |
-| header    | text   | 行ヘッダーのテキスト                                |
+| プロパティ     | 型       | 説明                                        |
+| --------- | ------- | ----------------------------------------- |
+| height    | number  | 行の高さ (ピクセル単位)          |
+| pageBreak | boolean | レンジ内の先頭行の前に改ページを挿入する場合には true、それ以外は false |
+| visible   | boolean | 行が表示状態であれば true、それ以外は false               |
+| resizable | boolean | 行がリサイズ可能であれば true、それ以外は false             |
+| header    | text    | 行ヘッダーのテキスト                                |
 
 #### 例題
 

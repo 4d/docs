@@ -9,7 +9,7 @@ title: On Printing Footer
 
 ## Descrição
 
-El evento `On Printing Footer` sólo puede utilizarse en el contexto de un **formulario de salida**. It is triggered when the footer area the output form is about to be printed, so that you can evaluate the footer values.
+El evento `On Printing Footer` sólo puede utilizarse en el contexto de un **formulario de salida**. É acionado quando a área do rodapé o formulário de saída está prestes a ser impresso, para você poder avaliar os valores de rodapé.
 
 Este evento puede activarse en el contexto de un comando `PRINT SELECTION`.
 

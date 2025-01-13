@@ -245,7 +245,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | footerName       | テキスト    | フッターの名称                                                          |
 | headerName       | テキスト    | ヘッダーの名称                                                          |
 | horizontalScroll | longint | 右方向スクロールの場合は正の数値、左方向の場合は負の数値                                     |
-| isRowSelected    | ブール     | 行が選択されていれば true、でなければ false                                      |
+| isRowSelected    | boolean | 行が選択されていれば true、でなければ false                                      |
 | newPosition      | longint | 列あるいは行の変更後の位置                                                    |
 | newSize          | longint | 列または行の変更後のサイズ (ピクセル単位)                        |
 | oldPosition      | longint | 列あるいは行の変更前の位置                                                    |
@@ -950,7 +950,7 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 | テキスト      | テキスト入力                                     | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)                    |
 | real      | 管理されたテキスト入力 (数字とセパレーター) | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)                    |
 | integer   | 管理されたテキスト入力 (数字のみ)      | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト) またはスリーステートチェックボックス |
-| ブール       | チェックボックス                                   | ドロップダウンメニュー (指定リスト)                                                          |
+| boolean   | チェックボックス                                   | ドロップダウンメニュー (指定リスト)                                                          |
 | color     | 背景色                                        | テキスト                                                                                            |
 | event     | ラベル付ボタン                                    |                                                                                                 |
 |           |                                            | すべてのウィジェットには、単位切り替えボタン または 省略ボタン を追加でセルに付属させることができます                                            |
@@ -978,25 +978,25 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 唯一必須の属性は "valueType" であり、サポートされる値は "text"、"real"、"integer"、"boolean"、"color" そして "event"です。 以下の表には、リストボックスオブジェクト配列において "valueType"の値に応じてサポートされるすべての属性がまとめてあります (他の属性はすべて無視されます)。 表示フォーマットに関しては、その更に下に詳細な説明と例があります。
 
-|                       | valueType                                   | テキスト | real | integer | ブール | color | event |
-| --------------------- | ------------------------------------------- | ---- | ---- | ------- | --- | ----- | ----- |
-| *属性*                  | *説明*                                        |      |      |         |     |       |       |
-| value                 | セルの値 (入力または出力)           | ○    | ○    | ○       |     |       |       |
-| min                   | 最小値                                         |      | ○    | ○       |     |       |       |
-| max                   | 最大値                                         |      | ○    | ○       |     |       |       |
-| behavior              | "スリーステート" の値                                |      |      | ○       |     |       |       |
-| requiredList          | オブジェクト内で定義されたドロップダウンリスト                     | ○    | ○    | ○       |     |       |       |
-| choiceList            | オブジェクト内で定義されたコンボボックス                        | ○    | ○    | ○       |     |       |       |
-| requiredListReference | 4D リスト参照 ("saveAs"の値による) | ○    | ○    | ○       |     |       |       |
-| requiredListName      | 4D リスト名 ("saveAs"の値による)  | ○    | ○    | ○       |     |       |       |
-| saveAs                | "reference" または "value"                     | ○    | ○    | ○       |     |       |       |
-| choiceListReference   | 4D リスト参照、コンボボックスを表示                         | ○    | ○    | ○       |     |       |       |
-| choiceListName        | 4D リスト名、コンボボックスを表示                          | ○    | ○    | ○       |     |       |       |
-| unitList              | X要素の配列                                      | ○    | ○    | ○       |     |       |       |
-| unitReference         | 選択された要素のインデックス                              | ○    | ○    | ○       |     |       |       |
-| unitsListReference    | 単位の4D リスト参照                                 | ○    | ○    | ○       |     |       |       |
-| unitsListName         | 単位の4D リスト名                                  | ○    | ○    | ○       |     |       |       |
-| alternateButton       | 切り替えボタンを追加                                  | ○    | ○    | ○       | ○   | ○     |       |
+|                       | valueType                                   | テキスト | real | integer | boolean | color | event |
+| --------------------- | ------------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
+| *属性*                  | *説明*                                        |      |      |         |         |       |       |
+| value                 | セルの値 (入力または出力)           | ○    | ○    | ○       |         |       |       |
+| min                   | 最小値                                         |      | ○    | ○       |         |       |       |
+| max                   | 最大値                                         |      | ○    | ○       |         |       |       |
+| behavior              | "スリーステート" の値                                |      |      | ○       |         |       |       |
+| requiredList          | オブジェクト内で定義されたドロップダウンリスト                     | ○    | ○    | ○       |         |       |       |
+| choiceList            | オブジェクト内で定義されたコンボボックス                        | ○    | ○    | ○       |         |       |       |
+| requiredListReference | 4D リスト参照 ("saveAs"の値による) | ○    | ○    | ○       |         |       |       |
+| requiredListName      | 4D リスト名 ("saveAs"の値による)  | ○    | ○    | ○       |         |       |       |
+| saveAs                | "reference" または "value"                     | ○    | ○    | ○       |         |       |       |
+| choiceListReference   | 4D リスト参照、コンボボックスを表示                         | ○    | ○    | ○       |         |       |       |
+| choiceListName        | 4D リスト名、コンボボックスを表示                          | ○    | ○    | ○       |         |       |       |
+| unitList              | X要素の配列                                      | ○    | ○    | ○       |         |       |       |
+| unitReference         | 選択された要素のインデックス                              | ○    | ○    | ○       |         |       |       |
+| unitsListReference    | 単位の4D リスト参照                                 | ○    | ○    | ○       |         |       |       |
+| unitsListName         | 単位の4D リスト名                                  | ○    | ○    | ○       |         |       |       |
+| alternateButton       | 切り替えボタンを追加                                  | ○    | ○    | ○       | ○       | ○     |       |
 
 #### value
 

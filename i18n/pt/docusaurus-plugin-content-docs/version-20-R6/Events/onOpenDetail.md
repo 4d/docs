@@ -3,9 +3,9 @@ id: onOpenDetail
 title: On Open Detail
 ---
 
-| Code | Pode ser chamado por                                     | Definição                                                                                                   |
-| ---- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| 25   | Formulario - [List Box](FormObjects/listbox_overview.md) | The detail form associated with the output form or with the list box is about to be opened. |
+| Code | Pode ser chamado por                                     | Definição                                                                                                        |
+| ---- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| 25   | Formulario - [List Box](FormObjects/listbox_overview.md) | O formulário detalhado associado ao formulário de saída ou o list box está prestes a ser aberto. |
 
 ## Descrição
 

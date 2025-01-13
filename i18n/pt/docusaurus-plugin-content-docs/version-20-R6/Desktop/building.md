@@ -118,7 +118,7 @@ Essa guia permite que você crie uma versão autônoma e de usuário único do s
 
 ### Criar uma aplicação autónoma
 
-Ao marcar a opção **Construir aplicação autônoma** e clicar em **Construir**, será criada uma aplicação autônoma (clique duplo) diretamente do seu projeto de aplicação.
+Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project.
 
 Os seguintes elementos são necessários para a construção:
 
