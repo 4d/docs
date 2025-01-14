@@ -55,7 +55,7 @@ Vous pouvez passer des paramètres à la méthode process. Vous pouvez le faire 
 
 **Note** **:** Si vous passez des paramètres à la méthode process, vous devez passer le paramètre *nom*, il ne peut être omis dans ce cas. 
 
-Si vous passez un objet 4D ([C\_OBJECT](c-object.md)) ou une collection ([C\_COLLECTION](c-collection.md)) comme *param*, une copie est envoyée (et non une référence) et la forme JSON est utilisée en utf-8 pour le serveur. Si l’objet ou la collection contient des pointeurs, leur valeurs dépointées sont envoyées, pas les pointeurs eux-mêmes.
+Si vous passez un objet 4D (*C\_OBJECT*) ou une collection (*C\_COLLECTION*) comme *param*, une copie est envoyée (et non une référence) et la forme JSON est utilisée en utf-8 pour le serveur. Si l’objet ou la collection contient des pointeurs, leur valeurs dépointées sont envoyées, pas les pointeurs eux-mêmes.
 
 ##### Paramètre optionnel \* 
 

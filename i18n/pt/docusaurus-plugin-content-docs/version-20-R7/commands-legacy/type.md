@@ -60,7 +60,7 @@ Se pode aplicar a função Type a campos, variáveis interprocesso, variáveis p
 **Nota:** 
 
 * Não se pode aplicar a função **Type** a expressões escalares tais como propriedades de objeto (*emp.name*) ou itens coleção (*myColl\[5\]*). Para fazer isso, deve usar o comando [Value type](value-type.md)
-* Em modo compilado, chamar **Type** em um parâmetro método ($0, $1...) declarado como [C\_VARIANT](c-variant.md) não retorna Is variante sim o tipo de dados (mesma coisa que chamar [Value type](value-type.md))
+* Em modo compilado, chamar **Type** em um parâmetro método ($0, $1...) declarado como *C\_VARIANT* não retorna Is variante sim o tipo de dados (mesma coisa que chamar [Value type](value-type.md))
 
 #### Exemplo 1 
 

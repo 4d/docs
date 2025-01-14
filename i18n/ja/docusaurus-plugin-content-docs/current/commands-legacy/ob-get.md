@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Get.Summary-->**OB Get**コマンドは、 *object* 引数で指定したオブジェクトの *property* のカレントの値を返します。<!-- END REF-->任意の *type* 引数で指定した型へと変換することもできます。
 
-*object* で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
+*object* で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
 
 **注:** このコマンドは (*WP GET ATTRIBUTES*コマンドと同様に) 4D Write Pro *objects* に定義されている属性をサポートします (例題9を参照ください)。
 
