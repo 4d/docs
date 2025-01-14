@@ -34,7 +34,7 @@ title: 入力
 - スタイルの変更をおこなうためのコマンド: スタイル、サイズ、カラー、背景色。
   このポップアップメニューを使用してユーザーがスタイル属性を編集する と、4D は `On After Edit` フォームイベントを生成します。
 
-[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 コンテキストメニューへのアクセスは [`WA SET PREFERENCE`](https://doc.4d.com/4Dv18/4D/18/WA-SET-PREFERENCE.301-4504849.ja.html) コマンドを使用して制御できます。
+[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 
 #### JSON 文法
 
@@ -242,7 +242,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 この場合、"プレースホルダー" のフィールドには参照のみを渡します。参照と静的なテキストを組み合わせることはできません。
 
-> プレースホルダーのテキストは、[OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-PLACEHOLDER.301-4505467.ja.html) と [OBJECT Get placeholder](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-placeholder.301-4505473.ja.html) コマンドを使って、プログラミングによって設定・取得することができます。
+> You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) and [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) commands.
 
 #### JSON 文法
 
@@ -284,9 +284,9 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 ![](../assets/en/FormObjects/property_shortcut.png)
 
-> カスタムメニューコマンドにもショートカットを割り当てることができます。 2つのショートカットに衝突がある場合には、アクティブオブジェクトが優先されます。 メニューへのショートカットの割り当てについては [メニュープロパティを設定する](https://doc.4d.com/4Dv18/4D/18/Setting-menu-properties.300-4575512.ja.html) を参照してください。
+> カスタムメニューコマンドにもショートカットを割り当てることができます。 2つのショートカットに衝突がある場合には、アクティブオブジェクトが優先されます。 For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
 
-4D のデザイン環境で使用できるショートカットの一覧は、環境設定ダイアログの [ショートカットページ](https://doc.4d.com/4Dv18/4D/18/Shortcuts-Page.300-4575689.ja.html) にて確認できます。
+To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](../Preferences/shortcuts.md) in the Preferences dialog box.
 
 #### JSON 文法
 
