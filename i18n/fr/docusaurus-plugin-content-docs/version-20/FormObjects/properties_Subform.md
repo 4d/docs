@@ -33,9 +33,9 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 
 #### Grammaire JSON
 
-| Nom        | Type de données | Valeurs possibles                                                                                                                   |
-| ---------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string          | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Nom        | Type de données | Valeurs possibles                                                                                                                        |
+| ---------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| detailForm | string          | Nom de formulaire table ou projet, ou chemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ou objet décrivant le formulaire |
 
 #### Objets pris en charge
 
@@ -44,7 +44,7 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 ---
 ## Double-clic sur ligne vide
 
-Action to perform in case of a double-click on an empty line of a list subform. Les options suivantes sont disponibles :
+Action à effectuer en cas de double-clic sur une ligne vide d'un sous-formulaire de liste. Les options suivantes sont disponibles :
 - Ne rien faire : ignore le double-clic.
 - Ajouter un enregistrement : crée un nouvel enregistrement dans le sous-formulaire et passe en mode édition. The record will be created directly in the list if the [Enterable in List](#enterable-in-list) property is enabled. Sinon, il sera créé en mode page, dans le [formulaire détaillé](#detail-form) associé au sous-formulaire.
 
@@ -120,9 +120,9 @@ Les sous-formulaires de liste peuvent être utilisés pour la saisie de données
 
 #### Grammaire JSON
 
-| Nom      | Type de données | Valeurs possibles                                                                                                                   |
-| -------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| listForm | string          | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Nom      | Type de données | Valeurs possibles                                                                                                                        |
+| -------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| listForm | string          | Nom de formulaire table ou projet, ou chemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ou objet décrivant le formulaire |
 
 #### Objets pris en charge
 
