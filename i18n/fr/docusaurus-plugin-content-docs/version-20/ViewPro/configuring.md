@@ -359,7 +359,7 @@ Paper size attributes are used to specify the dimensions or model of paper to us
   * one of the formats in the [SpreadJS format list](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Print.PaperKind.html)
   * one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command. In that case, [`VP Get print info`](./method-list.md#vp-get-print-info) returns the corresponding format with the height and width.
 
-### Echelle
+### Graduation
 
 Scale attributes are used to specify printing optimization and adjustments.
 
