@@ -4,9 +4,9 @@ title: Macros do editor de formulários
 ---
 
 
-O editor de formulários 4D suporta macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
+O editor de formulários 4D suporta macros. Uma macro é um conjunto de instruções para executar uma ação ou uma sequência de ações. Quando chamada, a macro executará suas instruções e realizará automaticamente a(s) ação(ões).
 
-For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. É possível criar macros para o editor de 4D Form que podem:
+Por exemplo, se você tiver um relatório recorrente com formatação específica (por exemplo, determinado texto deve aparecer em vermelho e determinado texto deve aparecer em verde), poderá criar uma macro para definir automaticamente a cor. É possível criar macros para o editor de 4D Form que podem:
 
 * Criar e executar código 4D
 * Exibir diálogos
@@ -14,15 +14,15 @@ For example if you have a recurring report with specific formatting (e.g., certa
 * Adicionar / excluir / modificar formulários, objetos de formulário e suas propriedades
 * Modificar ficheiros de projeto (atualizar, apagar)
 
-Macros code supports [class functions](Concepts/classes.md) and [form object properties in JSON](FormObjects/properties_Reference.md) to let you define any custom feature in the Form editor.
+O código de macros suporta [funções de classe](Concepts/classes.md) e [propriedades de objeto de formulário em JSON](FormObjects/properties_Reference.md) para permitir que você defina qualquer recurso personalizado no editor de formulários.
 
-Macros can been defined for the host project or for components within the project. Usually, you will create a macro and install it within the components you use for development.
+As macros podem ser definidas para o projeto host ou para componentes do projeto. Normalmente, você vai criar uma macro e instalá-la nos componentes que você usa para o desenvolvimento.
 
 Quando chamada, uma macro substitui qualquer comportamento especificado anteriormente.
 
 ## Exemplo prático
 
-In this short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form.
+Neste pequeno exemplo, você verá como criar e chamar uma macro que adiciona um botão de alerta "Hello World!" no canto superior esquerdo do seu formulário.
 
 1. Num ficheiro `formMacros.json` dentro da pasta `Sources` do seu projecto, escreve:
 
@@ -45,7 +45,7 @@ Function onInvoke($editor : Object)->$result : Object
 
  var $btnHello : Object
 
- // Create a "Hello" button
+ // Criar um botão "Hello"
  $btnHello:=New object("type"; "button"; \
  "text"; "Hello World!"; \
  "method"; New object("source"; "ALERT(\"Hello World!\")"); \
@@ -55,37 +55,37 @@ Function onInvoke($editor : Object)->$result : Object
  "top"; 0; \
  "left"; 0) 
 
- // Add button in the current page
+ // Adicionar botão na página atual
  $editor.editor.currentPage.objects.btnHello:=$btnHello 
 
- // Select the new button in the form editor
+ // Selecionar o novo botão no editor de formulários
  $editor.editor.currentSelection.clear() //unselect elements
  $editor.editor.currentSelection.push("btnHello") 
 
- // Notify the modification to the 4D Form editor
+ // Notificar a modificação no editor de formulários 4D
  $result:=New object("currentSelection"; $editor.editor.currentSelection;\  
   "currentPage"; $editor.editor.currentPage)
 ```
 
-You can then call the macro: ![](../assets/en/FormEditor/macroex1.png) ![](../assets/en/FormEditor/macroex2.png)
+Você pode então chamar a macro: ![](../assets/en/FormEditor/macroex1.png) ![](../assets/en/FormEditor/macroex2.png)
 
 ## Chamar macros no editor de formulários
 
-When macros are defined in your 4D project, you can call a macro using the contextual menu of the Form editor:
+Quando as macros são definidas no seu projeto 4D, você pode chamar uma macro usando o menu contextual do editor de formulário:
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macros). Os itens de macro estão ordenados por ordem alfabética.
+Esse menu é construído com base no(s) [arquivo(s) de definição de macro](#location-of-macros) `formMacros.json`. Os itens de macro estão ordenados por ordem alfabética.
 
-Este menu pode ser chamado numa área vazia ou numa seleção no formulário. Selected object are passed to `$editor.currentSelection` or `$editor.target` in the [`onInvoke`](#oninvoke) function of the macro.
+Este menu pode ser chamado numa área vazia ou numa seleção no formulário. O objeto selecionado é passado para `$editor.currentSelection` ou `$editor.target` no [`onInvoke`](#oninvoke) da macro.
 
-Uma única macro pode executar várias operações. If selected, the **Undo** feature of the Form editor can be used to reverse macro operations globally.
+Uma única macro pode executar várias operações. Se selecionado, a função **Desfazer** do editor de formulários pode ser usado para reverter as operações macro globalmente.
 
 ## Localização do ficheiro macro
 
-All 4D Form Editor macros are defined within a single JSON file per project or component: `FormMacros.json`.
+Todas as macros do 4D Form Editor são definidas em um único arquivo JSON por projeto ou componente: `FormMacros.json`.
 
-This file must be located in the host or component's **Project** > **Sources** folder:
+Esse arquivo deve estar localizado na pasta **Project** > **Sources** do host ou do componente:
 
 ![](../assets/en/FormEditor/macroStructure.png)
 
@@ -113,7 +113,7 @@ Eis a descrição do conteúdo do ficheiro JSON:
 |          |                     | "class"                  | string | nome da classe macro                                 |
 |          |                     | `<customProperty>` | any    | (opcional) valor personalizado a obter no construtor |
 
-Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
+As propriedades personalizadas, quando usadas, são passadas para a função [constructor](#class-constructor) da macro.
 
 ### Exemplo
 
@@ -137,7 +137,7 @@ Custom properties, when used, are passed to the [constructor](#class-constructor
 
 ## Instanciando macros em 4D
 
-Each macro you want to instantiate in your project or component must be declared as a [4D class](Concepts/classes.md).
+Cada macro que você deseja instanciar em seu projeto ou componente deve ser declarada como uma [classe 4D](Concepts/classes.md).
 
 The class name must match the name defined using the [class](#creating-macros) attribute of the `formMacros.json` file.
 
