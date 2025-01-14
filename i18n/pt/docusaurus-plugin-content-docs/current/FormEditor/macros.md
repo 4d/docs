@@ -3,9 +3,9 @@ id: macros
 title: Macros do editor de formulários
 ---
 
-O editor de formulários 4D suporta macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
+O editor de formulários 4D suporta macros. Uma macro é um conjunto de instruções para executar uma ação ou uma sequência de ações. Quando chamada, a macro executará suas instruções e realizará automaticamente a(s) ação(ões).
 
-For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. É possível criar macros para o editor de 4D Form que podem:
+Por exemplo, se você tiver um relatório recorrente com formatação específica (por exemplo, determinado texto deve aparecer em vermelho e determinado texto deve aparecer em verde), poderá criar uma macro para definir automaticamente a cor. É possível criar macros para o editor de 4D Form que podem:
 
 - Criar e executar código 4D
 - Exibir diálogos
@@ -15,13 +15,13 @@ For example if you have a recurring report with specific formatting (e.g., certa
 
 O código de macros suporta [funções de classe] (Concepts/classes.md) e [propriedades de objeto de formulário em JSON] (FormObjects/properties_Reference.md) para permitir que você defina qualquer recurso personalizado no editor de formulários.
 
-Macros can been defined for the host project or for components within the project. Usually, you will create a macro and install it within the components you use for development.
+As macros podem ser definidas para o projeto host ou para componentes do projeto. Normalmente, você vai criar uma macro e instalá-la nos componentes que você usa para o desenvolvimento.
 
 Quando chamada, uma macro substitui qualquer comportamento especificado anteriormente.
 
 ## Exemplo prático
 
-In this short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form.
+Neste pequeno exemplo, você verá como criar e chamar uma macro que adiciona um botão de alerta "Hello World!" no canto superior esquerdo do seu formulário.
 
 1. Em um arquivo `formMacros.json` na pasta `Sources` do seu projeto, você escreve:
 
@@ -72,7 +72,7 @@ Em seguida, você pode chamar a macro:
 
 ## Chamar macros no editor de formulários
 
-When macros are defined in your 4D project, you can call a macro using the contextual menu of the Form editor:
+Quando as macros são definidas no seu projeto 4D, você pode chamar uma macro usando o menu contextual do editor de formulário:
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
@@ -158,7 +158,7 @@ Toda classe de macro pode conter um construtor `Class` e duas funções: `onInvo
 
 As macros são instanciadas usando uma função [construtor de classe] (Concepts/classes.md#class-constructor), se ela existir.
 
-The class constructor is called once during class instantiation, which occurs at application startup.
+O class constructor é chamado uma vez durante a instanciação das classes, que ocorre na inicialização da aplicação.
 
 As propriedades personalizadas adicionadas à [declaração de macro] (#declaring-macros) são retornadas no parâmetro da função do construtor da classe.
 
@@ -198,21 +198,21 @@ A função `onInvoke` é executada automaticamente sempre que a macro for chamad
 
 Quando a função for chamada, ela recebe na propriedade `$editor.editor` uma cópia de todos os elementos do formulário com seus valores atuais. Pode então executar qualquer operação sobre estas propriedades.
 
-Depois que as operações forem concluídas, se a macro resultar na modificação, adição ou remoção de objetos, você poderá passar as propriedades editadas resultantes em `$result`. The macro processor will parse the returned properties and apply necessary operations in the form. Obviously, the less properties you return, the less time processing will require.
+Depois que as operações forem concluídas, se a macro resultar na modificação, adição ou remoção de objetos, você poderá passar as propriedades editadas resultantes em `$result`. O processador macro analisará as propriedades retornadas e aplicará as operações necessárias no formulário. Obviamente, quanto menos propriedades você retornar, menos tempo o processamento exigirá.
 
 Aqui estão as propriedades retornadas no parâmetro _$editor_:
 
-| Propriedade                                                      | Tipo       | Descrição                                                                         |
-| ---------------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| $editor.editor.form              | Object     | O formulário completo                                                             |
-| $editor.editor.file              | File       | Objeto File do ficheiro do formulário                                             |
-| $editor.editor.name              | Text       | Nome do formulário                                                                |
-| $editor.editor.table             | number     | Número da tabela do formulário, 0 para formulário projecto                        |
-| $editor.editor.currentPageNumber | number     | O número da página actual                                                         |
-| $editor.editor.currentPage       | Object     | The current page, containing all the form objects and the entry order of the page |
-| $editor.editor.currentSelection  | Collection | Colecção de nomes de objectos seleccionados                                       |
-| $editor.editor.formProperties    | Object     | Propriedades do formulário atual                                                  |
-| $editor.editor.target            | string     | Nome do objeto sob o rato quando clicado numa macro                               |
+| Propriedade                                                      | Tipo       | Descrição                                                                              |
+| ---------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| $editor.editor.form              | Object     | O formulário completo                                                                  |
+| $editor.editor.file              | File       | Objeto File do ficheiro do formulário                                                  |
+| $editor.editor.name              | Text       | Nome do formulário                                                                     |
+| $editor.editor.table             | number     | Número da tabela do formulário, 0 para formulário projecto                             |
+| $editor.editor.currentPageNumber | number     | O número da página actual                                                              |
+| $editor.editor.currentPage       | Object     | A página atual, contendo todos os objetos de formulário e a ordem de entrada da página |
+| $editor.editor.currentSelection  | Collection | Colecção de nomes de objectos seleccionados                                            |
+| $editor.editor.formProperties    | Object     | Propriedades do formulário atual                                                       |
+| $editor.editor.target            | string     | Nome do objeto sob o rato quando clicado numa macro                                    |
 
 Aqui estão as propriedades que você pode passar no objeto `$result` se quiser que o processador de macro execute uma modificação. Todas as propriedades são opcionais:
 
