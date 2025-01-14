@@ -40,7 +40,7 @@ title: VP IMPORT FROM BLOB
 | param2 |                               | 4D.Blob | インポートされた Blob                     |
 | param3 |                               | object                  | コマンドの *paramObj* 引数への参照           |
 | param4 |                               | object                  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
-|        | .success      | ブール                     | 読み込みに成功した場合は true 、それ以外の場合は false |
+|        | .success      | boolean                 | 読み込みに成功した場合は true 、それ以外の場合は false |
 |        | .errorCode    | integer                 | エラーコード。                           |
 |        | .errorMessage | テキスト                    | エラーメッセージ。                         |
 
