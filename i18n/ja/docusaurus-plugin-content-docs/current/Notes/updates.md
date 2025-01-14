@@ -41,6 +41,7 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - Qodly Studio: [Qodly Studio デバッガーを 4D Server で有効化](../WebServer/qodly-studio.md#4d-server-で-qodlyデバッガーを使用する) できるようになりました。
 - 4Dクライアントアプリケーション用の新しいアプリケーションビルド XMLキー: 接続時にサーバーから送信される証明書について、認証局の&#x20;
   署名 や [ドメイン](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.ja.html) を検証するためのキーが追加されました。
+- Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
 - 4D Language:
   - New commands: [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
   - Modified commands: [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
