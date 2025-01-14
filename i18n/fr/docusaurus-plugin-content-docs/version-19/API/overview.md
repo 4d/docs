@@ -188,7 +188,7 @@ En plus des fonctions de classe intégrées, le langage 4D contient des centaine
 | [`CREATE THUMBNAIL`](https://doc.4d.com/4dv19/help/command/en/page679.html)                        | 679    |
 | [`cs`](https://doc.4d.com/4dv19/help/command/en/page1710.html)                                     | 1710   |
 | [`Current client authentication`](https://doc.4d.com/4dv19/help/command/en/page1355.html)          | 1355   |
-| [`Current date`](https://doc.4d.com/4dv19/help/command/en/page33.html)                             | 33     |
+| [`Date courante`](https://doc.4d.com/4dv19/help/command/en/page33.html)                            | 33     |
 | [`Current default table`](https://doc.4d.com/4dv19/help/command/en/page363.html)                   | 363    |
 | [`Current form name`](https://doc.4d.com/4dv19/help/command/en/page1298.html)                      | 1298   |
 | [`Current form table`](https://doc.4d.com/4dv19/help/command/en/page627.html)                      | 627    |
@@ -199,7 +199,7 @@ En plus des fonctions de classe intégrées, le langage 4D contient des centaine
 | [`Current process`](https://doc.4d.com/4dv19/help/command/en/page322.html)                         | 322    |
 | [`Current process name`](https://doc.4d.com/4dv19/help/command/en/page1392.html)                   | 1392   |
 | [`Current system user`](https://doc.4d.com/4dv19/help/command/en/page484.html)                     | 484    |
-| [`Current time`](https://doc.4d.com/4dv19/help/command/en/page178.html)                            | 178    |
+| [`Heure courante`](https://doc.4d.com/4dv19/help/command/en/page178.html)                          | 178    |
 | [`Current user`](https://doc.4d.com/4dv19/help/command/en/page182.html)                            | 182    |
 | [`CUT NAMED SELECTION`](https://doc.4d.com/4dv19/help/command/en/page334.html)                     | 334    |
 | <a name="D">**D**</a>                                                                          |        |
@@ -1034,7 +1034,7 @@ En plus des fonctions de classe intégrées, le langage 4D contient des centaine
 | [`SEND PACKET`](https://doc.4d.com/4dv19/help/command/en/page103.html)                             | 103    |
 | [`SEND RECORD`](https://doc.4d.com/4dv19/help/command/en/page78.html)                              | 78     |
 | [`SEND VARIABLE`](https://doc.4d.com/4dv19/help/command/en/page80.html)                            | 80     |
-| [`Sequence number`](https://doc.4d.com/4dv19/help/command/en/page244.html)                         | 244    |
+| [`Numéro de séquence`](https://doc.4d.com/4dv19/help/command/en/page244.html)                      | 244    |
 | [`Session`](https://doc.4d.com/4dv19/help/command/en/page1714.html)                                | 1714   |
 | [`SET ABOUT`](https://doc.4d.com/4dv19/help/command/en/page316.html)                               | 316    |
 | [`SET ALLOWED METHODS`](https://doc.4d.com/4dv19/help/command/en/page805.html)                     | 805    |
