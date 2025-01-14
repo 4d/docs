@@ -180,7 +180,7 @@ Os métodos com a propriedade "Pode ser executado em processos preemptivos" ser�
 
 :::
 
-O [arquivo de símbolos](../Project/compiler.md/#complete-list-of-methods), se ativado, também contém o estado de segurança de thread para cada método.
+O [arquivo de símbolos](../Project/compiler.md#complete-list-of-methods), se ativado, também contém o estado de segurança de thread para cada método.
 
 ### Interface do usuário
 
