@@ -28,9 +28,9 @@ Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la col
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles                          |
-| ------------ | --------------- | ------------------------------------------ |
-| border-style | string          | une valeur css; "transparent"; "automatic" |
+| Nom  | Type de données | Valeurs possibles                          |
+| ---- | --------------- | ------------------------------------------ |
+| fill | string          | une valeur css; "transparent"; "automatic" |
 
 #### Objets pris en charge
 
@@ -205,9 +205,9 @@ Définit l'arrière-plan de la list box sur "Transparent". Lorsque cette propri�
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles |
-| ------------ | --------------- | ----------------- |
-| border-style | text            | "transparent"     |
+| Nom  | Type de données | Valeurs possibles |
+| ---- | --------------- | ----------------- |
+| fill | text            | "transparent"     |
 
 #### Objets pris en charge
 
