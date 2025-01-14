@@ -364,7 +364,7 @@ Paper size attributes are used to specify the dimensions or model of paper to us
   - un des formats retournés par la commande [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/fr/page785.html).
     Dans ce cas, [`VP Get print info`](./commands/vp-get-print-info.md) retourne le format correspondant avec la hauteur et la largeur.
 
-### Echelle
+### Graduation
 
 Scale attributes are used to specify printing optimization and adjustments.
 
