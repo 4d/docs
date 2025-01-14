@@ -33,7 +33,7 @@ Pour une [zone de saisie](input_overview.md) de type texte et [multi-style](prop
 - **Polices récentes**: affiche les noms des polices récentes sélectionnées pendant la session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. Vous pouvez gérer cette liste en utilisant les commandes `SET RECENT FONTS` et `FONT LIST`.
 - commandes pour les modifications de style prises en charge : police, taille, style, couleur et couleur d'arrière-plan. Lorsque l'utilisateur modifie un attribut de style via ce menu contextuel, 4D génère l'événement formulaire `On After Edit`.
 
-Pour une [Zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. Il est possible de contrôler l'accès au menu contextuel via la commande [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html).
+Pour une [Zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 
 #### Grammaire JSON
 
@@ -219,7 +219,7 @@ Vous pouvez utiliser une référence XLIFF sous la forme ":xliff:resname" en tan
  :xliff:PH_Lastname
 
 Vous passez seulement la référence dans le champ "Texte exemple" ; il n'est pas possible de combiner une référence avec du texte statique.
-> Vous pouvez également définir et lire le texte exemple par programmation en utilisant les commandes [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv20/4D/20/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) et [OBJECT Get placeholder](https://doc.4d.com/4Dv20/4D/20/OBJECT-Get-placeholder.301-4128249.en.html).
+> You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) and [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) commands.
 
 #### Grammaire JSON
 
@@ -260,9 +260,9 @@ Cette propriété permet d'associer des touches (raccourcis clavier) aux [bouton
 Vous pouvez configurer cette option en cliquant sur le bouton [...] de la propriété Equivalent clavier de la Liste des propriétés.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
-> Vous pouvez également assigner un raccourci à une commande de menu personnalisée. S'il y a un conflit entre deux raccourcis, l'objet actif a la priorité. Pour plus d'informations sur l'association des raccourcis avec les menus, reportez-vous à la section [Définition des propriétés du menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+> Vous pouvez également assigner un raccourci à une commande de menu personnalisée. S'il y a un conflit entre deux raccourcis, l'objet actif a la priorité. For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
 
-Pour afficher une liste de tous les raccourcis utilisés dans l'environnement de développement de 4D, consultez la page [Raccourcis](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) dans la boîte de dialogue Préférences.
+To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](../Preferences/shortcuts.md) in the Preferences dialog box.
 
 #### Grammaire JSON
 
