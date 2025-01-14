@@ -99,7 +99,7 @@ Também pode utilizar outros comandos, tais como [PRINT SELECTION](print-selecti
 #### Ver também 
 
 *Conjuntos*  
-[Form event code](../commands/form-event-code.md)"  
+[Form event code](../commands/form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
 
 #### Propriedades

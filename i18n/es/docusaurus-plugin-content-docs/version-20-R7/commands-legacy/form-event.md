@@ -24,7 +24,7 @@ Cada objeto devuelto incluye las siguientes propiedades principales:
 | **Propiedad** | **Tipo**     | **Descripción**                                                                                            |
 | ------------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
 | objectName    | texto        | Nombre del objeto que desencadena el evento: no se incluye si el evento es desencadenado por el formulario |
-| code          | entero largo | Valor numérico del evento de formulario. Ver [Form event code](../commands/form-event-code.md)"                         |
+| code          | entero largo | Valor numérico del evento de formulario. Ver [Form event code](../commands/form-event-code.md)                         |
 | description   | texto        | Nombre del evento del formulario (por ejemplo, "On After Edit").                                           |
 
 Por ejemplo, en el caso de hacer clic en un botón, el objeto contiene las siguientes propiedades:
@@ -96,7 +96,7 @@ El list box resultante cuando se seleccionan las líneas:
 
 #### Ver también 
 
-[Form event code](../commands/form-event-code.md)"  
+[Form event code](../commands/form-event-code.md)  
 
 #### Propiedades
 

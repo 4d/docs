@@ -43,7 +43,7 @@ Imaginemos que usted quiere, cuando un formulario aparece en pantalla, que el or
 
 #### Ver también 
 
-[Form event code](../commands/form-event-code.md)"  
+[Form event code](../commands/form-event-code.md)  
 [REDRAW](redraw.md)  
 
 #### Propiedades

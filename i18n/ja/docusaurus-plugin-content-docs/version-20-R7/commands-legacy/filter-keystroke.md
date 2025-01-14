@@ -245,7 +245,7 @@ Get highlighted text メソッド:
 
 #### 参照 
 
-[Form event code](../commands/form-event-code.md)"  
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 [Is editing text](is-editing-text.md)  
 [Keystroke](keystroke.md)  

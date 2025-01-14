@@ -22,13 +22,13 @@ displayed_sidebar: docs
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-Cette commande doit être utilisée en combinaison avec l’événement formulaire On Column Moved (cf. commande [Form event code](../commands/form-event-code.md)"). 
+Cette commande doit être utilisée en combinaison avec l’événement formulaire On Column Moved (cf. commande [Form event code](../commands/form-event-code.md)). 
 
 **Note :** Cette commande tient compte des colonnes invisibles.
 
 #### Voir aussi 
 
-[Form event code](../commands/form-event-code.md)"  
+[Form event code](../commands/form-event-code.md)  
 [LISTBOX MOVED ROW NUMBER](listbox-moved-row-number.md)  
 
 #### Propriétés

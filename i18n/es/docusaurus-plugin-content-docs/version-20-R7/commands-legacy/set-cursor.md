@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CURSOR.Summary-->El comando SET CURSOR cambia el puntero (gráfico) del ratón por el del sistema cuyo número de identificación se pasa en *cursor*.<!-- END REF-->
 
-Este comando debe llamarse en el contexto del [Form event code](../commands/form-event-code.md)" On Mouse Move. 
+Este comando debe llamarse en el contexto del [Form event code](../commands/form-event-code.md) On Mouse Move. 
 
 Para restablecer el cursor de ratón estándar, llame el comando sin parámetro.
 

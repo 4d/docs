@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 **In break** 実行サイクルを生成させるには、デザインモードでそのフォームやオブジェクトでOn Printing Breakイベントプロパティを必ず選択してください。
 
-**注:** このコマンドは、[Form event code](../commands/form-event-code.md)" コマンドを用いてOn Printing Break イベントを返すかどうかをテストするのと同等と言えます。
+**注:** このコマンドは、[Form event code](../commands/form-event-code.md) コマンドを用いてOn Printing Break イベントを返すかどうかをテストするのと同等と言えます。
 
 #### 参照 
 

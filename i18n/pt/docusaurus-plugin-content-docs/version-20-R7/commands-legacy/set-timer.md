@@ -43,7 +43,7 @@ Imaginemos que você queira, quando um formulário aparece em tela, que o comput
 
 #### Ver também 
 
-[Form event code](../commands/form-event-code.md)"  
+[Form event code](../commands/form-event-code.md)  
 [REDRAW](redraw.md)  
 
 #### Propriedades

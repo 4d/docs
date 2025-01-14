@@ -19,11 +19,11 @@ displayed_sidebar: docs
 
 **Outside call** 実行サイクルが生成されるためには、デザイン環境においてOn Outside call イベントプロパティがフォーム・オブジェクトに対して選択されていることを確認して下さい。
 
-**注:** このコマンドは、[Form event code](../commands/form-event-code.md)" コマンドを使用して、On Outside call イベントを返すかどうかを試すのと同じであると言えます。
+**注:** このコマンドは、[Form event code](../commands/form-event-code.md) コマンドを使用して、On Outside call イベントを返すかどうかを試すのと同じであると言えます。
 
 #### 参照 
 
-[Form event code](../commands/form-event-code.md)"  
+[Form event code](../commands/form-event-code.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
 
 #### プロパティ

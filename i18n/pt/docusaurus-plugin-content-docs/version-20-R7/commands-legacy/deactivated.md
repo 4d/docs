@@ -19,12 +19,12 @@ displayed_sidebar: docs
 
 Para que seja gerado o ciclo de execução Deactivated, tenha certeza de que o evento On Deactivate, tenha sido selecionado no ambiente Desenho, nas propriedades do formulário ou dos objetos. 
 
-**Nota:** este comando é equivalente a utilizar [Form event code](../commands/form-event-code.md)" e provar se devolve o evento On Deactivate.
+**Nota:** este comando é equivalente a utilizar [Form event code](../commands/form-event-code.md) e provar se devolve o evento On Deactivate.
 
 #### Ver também 
 
 [Activated](activated.md)  
-[Form event code](../commands/form-event-code.md)"  
+[Form event code](../commands/form-event-code.md)  
 
 #### Propriedades
 

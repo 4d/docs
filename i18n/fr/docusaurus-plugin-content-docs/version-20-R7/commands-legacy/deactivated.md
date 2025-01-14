@@ -19,12 +19,12 @@ displayed_sidebar: docs
 
 Si vous voulez que le cycle d'exécution **Deactivated** soit généré, vérifiez que la propriété d'événement On Deactivate du formulaire et/ou des objets est sélectionnée en mode Développement. 
 
-**Note :** Cette commande équivaut à utiliser la fonction [Form event code](../commands/form-event-code.md)" et tester si elle retourne l'événement On Deactivate.
+**Note :** Cette commande équivaut à utiliser la fonction [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Deactivate.
 
 #### Voir aussi 
 
 [Activated](activated.md)  
-[Form event code](../commands/form-event-code.md)"  
+[Form event code](../commands/form-event-code.md)  
 
 #### Propriétés
 

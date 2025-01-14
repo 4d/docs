@@ -41,7 +41,7 @@ Se passar uma string vazia ("") em *titulo*, lhe indica a 4D que utilize os valo
 **Importante**: o título como padrão do formulário se aplicará à janela apenas se chama previamente ao comando [FORM SET INPUT](form-set-input.md) para o formulário a mostrar e lhe passa o parâmetro opcional \* a [FORM SET INPUT](form-set-input.md).  
 * O parâmetro *caixaFechar* é opcional e designa o método para fechar a janela. Se for especificado este parâmetro, a caixa do menu Control (Windows) ou a caixa Fechar (Macintosh) se adiciona à janela. Quando o usuário der um clique duplo na caixa de menu Control (Windows) ou clique na Caixa fechar (Macintosh), se chama ao método passado em *caixaFechar*.
 
-**Nota**: também pode administrar o fechamento da janela desde o método do formulário mostrado na janela quando ocorrer um evento On Close Box. Para maior informação, consulte o comando [Form event code](../commands/form-event-code.md)"  
+**Nota**: também pode administrar o fechamento da janela desde o método do formulário mostrado na janela quando ocorrer um evento On Close Box. Para maior informação, consulte o comando [Form event code](../commands/form-event-code.md)  
   
  Se for aberta mais de uma janela para um processo, a última janela aberta é a janela ativa (do primeiro plano) para ese processo. Apenas pode ser modificada a informação dentro da janela ativa. Todas as demais janelas podem ser visualizadas. Quando o usuário digitar, a janela ativa sempre passará ao primeiro plano, se já não estiver lá.
 

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CURSOR.Summary-->La commande **SET CURSOR** remplace le pointeur (graphique) de la souris par le pointeur système dont vous avez passé le numéro d'ID dans le paramètre *curseur*.<!-- END REF-->
 
-Cette commande doit être appelée dans le contexte de l'[Form event code](../commands/form-event-code.md)" On Mouse Move.
+Cette commande doit être appelée dans le contexte de l'[Form event code](../commands/form-event-code.md) On Mouse Move.
 
 Pour restaurer le pointeur de souris standard, appelez la commande sans paramètre. 
 
