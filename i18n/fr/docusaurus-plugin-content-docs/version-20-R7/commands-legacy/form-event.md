@@ -24,7 +24,7 @@ Chaque objet retourné inclut les propriétés principales suivantes :
 | **Propriété** | **Type**    | **Description**                                                                                    |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------- |
 | objectName    | texte       | Nom de l'objet déclenchant l'événement - Non inclus si l'événement est déclenché par le formulaire |
-| code          | entier long | Valeur numérique de l'événement formulaire. Voir [Form event code](form-event-code.md)             |
+| code          | entier long | Valeur numérique de l'événement formulaire. Voir [Form event code](../commands/form-event-code.md)"             |
 | description   | texte       | Nom de l'événement formulaire (*ex :* "Sur après modification").                                   |
 
 Par exemple, si un bouton est cliqué, l'objet contient les propriétés suivantes :
@@ -96,7 +96,7 @@ La list box résultante s'affichera comme suit lorsque les lignes sont sélectio
 
 #### Voir aussi 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)"  
 
 #### Propriétés
 

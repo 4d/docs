@@ -28,7 +28,7 @@ Este comando deve ser utilizado com o evento de formulário On column moved (ver
 
 #### Ver também 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)"  
 [LISTBOX MOVED ROW NUMBER](listbox-moved-row-number.md)  
 
 #### Propriedades

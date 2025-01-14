@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)"  
 [LISTBOX MOVED COLUMN NUMBER](listbox-moved-column-number.md)  
 
 #### プロパティ

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Activated.Summary-->**Activated** コマンドは、(廃止予定)フォームを含むウインドウがプロセスの最前面のウインドウになると、そのフォームメソッドで**True** を返します。<!-- END REF-->
 
-**注:** このコマンドは、[Form event code](form-event-code.md) コマンドを用いてOn Activate イベントを返すかどうかをテストするのと同等と言えます。
+**注:** このコマンドは、[Form event code](../commands/form-event-code.md)" コマンドを用いてOn Activate イベントを返すかどうかをテストするのと同等と言えます。
 
 **警告:** フォームの**Activated** フェーズに[TRACE](trace.md) または[ALERT](alert.md)を置かないでください。入れると無限ループになります。
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 #### 参照 
 
 [Deactivated](deactivated.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)"  
 
 #### プロパティ
 

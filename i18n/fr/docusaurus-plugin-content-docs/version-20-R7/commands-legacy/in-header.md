@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 Si vous souhaitez que le cycle d'exécution **In header** soit généré, assurez-vous que l'événement formulaire On Header a bien été activé dans la boîte de dialogue des propriétés du formulaire ou du (des) objet(s) sélectionné(s), en mode Développement.
 
-**Note :** Cette commande équivaut à utiliser la commande [Form event code](form-event-code.md) et tester si elle retourne l'événement On Header.
+**Note :** Cette commande équivaut à utiliser la commande [Form event code](../commands/form-event-code.md)" et tester si elle retourne l'événement On Header.
 
 #### Voir aussi 
 

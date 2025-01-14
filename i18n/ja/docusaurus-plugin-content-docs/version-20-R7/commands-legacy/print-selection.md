@@ -31,7 +31,7 @@ displayed_sidebar: docs
 * On Printing Breakイベントはブレークエリアを印刷する直前に生成されます。
 * On Printing Footerイベントははフッタを印刷する直前に生成されます。
 
-**PRINT SELECTION** が最初のヘッダーを印刷しているかどうかは、On Headerイベントで [Before selection](before-selection.md) を判定することによって調べることができます。またOn Printing Footerイベントで [End selection](end-selection.md) を判定することによって、最後のフッターかどうかをチェックすることができます。これら関数の詳細は、それぞれのコマンドや [Form event code](form-event-code.md)、[Level](level.md) の説明を参照してください。
+**PRINT SELECTION** が最初のヘッダーを印刷しているかどうかは、On Headerイベントで [Before selection](before-selection.md) を判定することによって調べることができます。またOn Printing Footerイベントで [End selection](end-selection.md) を判定することによって、最後のフッターかどうかをチェックすることができます。これら関数の詳細は、それぞれのコマンドや [Form event code](../commands/form-event-code.md)"、[Level](level.md) の説明を参照してください。
 
 **PRINT SELECTION** を使用し、小計やブレーク付きでセレクションを印刷するには、まずそのセレクションをソートしなければなりません。次に、レポートの各ブレークエリアに、小計を変数に代入するオブジェクトメソッドを持つ変数を配置します。変数に値を代入する、[Sum](sum.md) や [Average](average.md) のような統計関数と算術関数を使用することもできます。詳細は[Subtotal](subtotal.md)、[BREAK LEVEL](break-level.md)、[ACCUMULATE](accumulate.md) コマンドの説明を参照してください。
 

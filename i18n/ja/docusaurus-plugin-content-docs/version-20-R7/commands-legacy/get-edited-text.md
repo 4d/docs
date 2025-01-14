@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get edited text.Summary-->**Get edited text**コマンドは、主にOn After Edit フォームイベントで入力中のテキストを取得するために使用します。<!-- END REF-->またOn Before Keystroke および On After Keystroke フォームイベントで使用することもできます。これらのフォームイベントについてのより詳細な情報は[Form event code](form-event-code.md)の説明を参照してください。
+<!--REF #_command_.Get edited text.Summary-->**Get edited text**コマンドは、主にOn After Edit フォームイベントで入力中のテキストを取得するために使用します。<!-- END REF-->またOn Before Keystroke および On After Keystroke フォームイベントで使用することもできます。これらのフォームイベントについてのより詳細な情報は[Form event code](../commands/form-event-code.md)"の説明を参照してください。
 
 このコマンドとOn Before Keystroke または On After Keystroke フォームイベントの組み合わせは、以下の用に動作します:
 
@@ -63,7 +63,7 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)"  
 [Is editing text](is-editing-text.md)  
 
 #### プロパティ

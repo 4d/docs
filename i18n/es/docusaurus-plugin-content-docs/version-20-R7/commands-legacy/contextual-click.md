@@ -38,7 +38,7 @@ Este método, combinado con un área desplegable, le permite cambiar el valor de
 
 #### Ver también 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)"  
 [Right click](right-click.md)  
 
 #### Propiedades
