@@ -71,7 +71,7 @@ Available actions are related to target resource.
 - A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
 - You can assign a permission action to a singleton class (`singleton` type), in which case it will be applied to all its exposed functions, or to a singleton function (`singletonMethod` type).
 - Default values: in the current implementation, only *Null* is available as default value.
-- In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
+- In REST [force login mode](../REST/authUsers.md#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
 
 Setting permissions requires to be consistent, in particular:
 

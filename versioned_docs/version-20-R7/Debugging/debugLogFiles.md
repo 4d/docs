@@ -290,7 +290,7 @@ These log files record each exchange between the 4D application and the mail ser
 
 * SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
 * POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-* IMAP  - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
+* IMAP  - [IMAP New transporter](../commands/imap-new-transporter.md)
 
 The log files can be produced in two versions:
 

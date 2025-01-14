@@ -30,12 +30,12 @@ Si el backup se realiza correctamente, la variable del sistema OK toma el valor 
 
 #### Gestión de errores 
 
-En caso de que se presenten incidentes durante el backup, la información relativa al incidente se escribe en el diario de backup y el error de más alto nivel se envía únicamente al [Método base On Backup Shutdown](metodo-base-on-backup-shutdown.md). Por lo tanto es importante utilizar este método base para poder administrar por programación los errores relacionados con el backup.
+En caso de que se presenten incidentes durante el backup, la información relativa al incidente se escribe en el diario de backup y el error de más alto nivel se envía únicamente al [Método base On Backup Shutdown](on-backup-shutdown-database-method.md). Por lo tanto es importante utilizar este método base para poder administrar por programación los errores relacionados con el backup.
 
 #### Ver también 
 
 [BACKUP INFO](backup-info.md)  
-*Método de base de datos On Backup Startup*  
+[Método base On Backup Startup](on-backup-startup-database-method.md)
 [RESTORE](restore.md)  
 
 #### Propiedades
