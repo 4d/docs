@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.HTTP Parse message.Summary-->このコマンドのドキュメントは、[developer.<!-- END REF-->4d.com](https://developer.4d.com/docs/API/HTTPRequestClass/) にあります。
+<!--REF #_command_.HTTP Parse message.Summary-->このコマンドのドキュメントは、[developer.<!-- END REF-->4d.com](../API/HTTPRequestClass.md) にあります。
 
 
 #### プロパティ

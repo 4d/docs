@@ -70,7 +70,7 @@ Times:
 | System time long             | 11    | 1:02:03 AM HNEC (Mac only)                                                                                                                                                                                                            |  
 | System time long abbreviated | 10    | 1•02•03 AM (Mac only)                                                                                                                                                                                                                 |  
 | System time short            | 9     | 01:02:03                                                                                                                                                                                                                              |
-* or a [customized format built upon a pattern](https://developer.4d.com/docs/Project/date-time-formats.md) (string value). For example:  
+* or a [customized format built upon a pattern](../Project/date-time-formats.md) (string value). For example:  
     
 ```4d  
  OBJECT SET FORMAT(*;"myDate";"dd/MM/yyyy")  
@@ -282,7 +282,7 @@ The following line of code formats the *\[Employee\]Date Hired* field to the fif
 
 #### Example 2 
 
-This example formats a date variable and a time variable using [customized formats](https://developer.4d.com/docs/Project/date-time-formats.md): 
+This example formats a date variable and a time variable using [customized formats](../Project/date-time-formats.md): 
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12

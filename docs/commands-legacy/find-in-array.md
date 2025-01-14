@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Find in array can be used with Text, Numeric, Date, Pointer, Object, and Boolean arrays. The *array* and *value* parameters must be of the same type.
 
-*value* must match exactly the element to find (the same rules as for the equality operator are applied, see [Basic operators](https://developer.4d.com/docs/Concepts/operators#basic-operators)). If no match is found, Find in array returns -1.
+*value* must match exactly the element to find (the same rules as for the equality operator are applied, see [Basic operators](../Concepts/operators.md#basic-operators)). If no match is found, Find in array returns -1.
 
 **Note:** With Object arrays, you can only use object references in the *value* parameter. 
 

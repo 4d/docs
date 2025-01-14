@@ -70,7 +70,7 @@ Times:
 | System time long             | 11    |                                                                                                                                                                                                                        |  
 | System time long abbreviated | 10    |                                                                                                                                                                                                                        |  
 | System time short            | 9     |                                                                                                                                                                                                                        |
-* ou um [formato personalizado construido sobre um padrão](https://developer.4d.com/docs/Project/date-time-formats.md) (valor de string). Por exemplo:  
+* ou um [formato personalizado construido sobre um padrão](../Project/date-time-formats.md) (valor de string). Por exemplo:  
     
 ```4d  
  OBJECT SET FORMAT(*;"myDate";"dd/MM/yyyy")  
@@ -288,7 +288,7 @@ A linha de código a seguir dá formato ao campo *\[Empregados\]Data Contratado*
 
 #### Exemplo 2 
 
-Este exemplo formata uma variável data e uma variável hora utilizando [formatos personalizados](https://developer.4d.com/docs/Project/date-time-formats.md): 
+Este exemplo formata uma variável data e uma variável hora utilizando [formatos personalizados](../Project/date-time-formats.md): 
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12

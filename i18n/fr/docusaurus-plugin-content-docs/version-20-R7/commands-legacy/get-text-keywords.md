@@ -23,7 +23,7 @@ Le découpage en mots est effectué à l’aide du même algorithme que celui qu
 
 **Note :** A la demande des utilisateurs, une exception a été introduite pour les langages français et italien : le caractère apostrophe ' suivi d’une voyelle ou de la lettre h est considéré comme séparateur de mot. Par exemple, les chaînes "L'homme" ou "l'arbre" seront bien découpées en "L’"+"homme" et "l'"+"arbre".
 
-L’algorithme utilisé diffère si l’option **N’utiliser que les caractères non alphanumériques pour les mots-clés** est cochée ou non dans les [Propriétés de la base](https://developer.4d.com/docs/fr/settings/database/#comparaison-de-texte).
+L’algorithme utilisé diffère si l’option **N’utiliser que les caractères non alphanumériques pour les mots-clés** est cochée ou non dans les [Propriétés de la base](../settings/database.md#comparaison-de-texte).
 
 Passez dans le paramètre *texte* le texte original à découper. Ce texte peut être stylé, dans ce cas les balises de style sont simplement ignorées. 
 
