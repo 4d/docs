@@ -20,7 +20,7 @@ Algumas das características gerais do repartidor:
 
 Uma vez inserido, o separador aparece como uma linha. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md#line-color).
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```4d
 "mySplitter": {
