@@ -24,7 +24,7 @@ By default, the current cache memory is left untouched, which means that its dat
 
 **Note:** Passing a parameter to this command is reserved for testing purposes. For performance reasons, it is not recommended to free up the cache in the production environment.
 
-In normal cases, you should not call this command, as 4D saves data modifications on a regular basis. The **Flush Cache every X Seconds (Minutes)** option on the [Database page](https://developer.4d.com/docs/settings/database#memory-page) of the Database Settings, which specifies how often to save, is typically used to control cache flushing. We recommend using the default value of 20 seconds. Note also that the Cache flush periodicity parameter can be set and read using the [SET DATABASE PARAMETER](set-database-parameter.md) and [Get database parameter](get-database-parameter.md) commands.
+In normal cases, you should not call this command, as 4D saves data modifications on a regular basis. The **Flush Cache every X Seconds (Minutes)** option on the [Database page](../settings/database.md#memory-page) of the Database Settings, which specifies how often to save, is typically used to control cache flushing. We recommend using the default value of 20 seconds. Note also that the Cache flush periodicity parameter can be set and read using the [SET DATABASE PARAMETER](set-database-parameter.md) and [Get database parameter](get-database-parameter.md) commands.
 
 #### See also 
 

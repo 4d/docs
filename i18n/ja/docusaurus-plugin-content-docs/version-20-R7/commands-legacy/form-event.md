@@ -24,7 +24,7 @@ displayed_sidebar: docs
 | **プロパティ**   | **型** | **詳細**                                                    |
 | ----------- | ----- | --------------------------------------------------------- |
 | objectName  | テキスト  | イベントをトリガーしているオブジェクト名。フォームによってトリガーされている場合には含まれていません。       |
-| code        | 倍長整数  | フォームイベントの数値。[Form event code](form-event-code.md) を参照のこと。 |
+| code        | 倍長整数  | フォームイベントの数値。[Form event code](../commands/form-event-code.md) を参照のこと。 |
 | description | テキスト  | フォームイベント名(*例:* "On After Edit")                           |
 
 例えば、ボタンをクリックした場合、オブジェクトには以下のプロパティが格納されます:
@@ -96,7 +96,7 @@ On Header Click イベントを使用してカラムをソートすることが�
 
 #### 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 
 #### プロパティ
 

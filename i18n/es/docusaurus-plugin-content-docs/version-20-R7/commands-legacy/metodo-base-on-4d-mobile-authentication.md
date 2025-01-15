@@ -21,4 +21,4 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Metodo base On 4D Mobile Authentication.Summary-->El **Método base On 4D Mobile Authentication** está obsoleto en los proyectos a partir de 4D 20 R6.<!-- END REF-->
 
-La [autenticación de inicio de sesión Force](https://developer.4d.com/docs/REST/authUsers) es ahora muy recomendable. En los proyectos convertidos, puede actualizar su configuración haciendo clic en el botón [**Activate REST authentication through ds.authentify() function**](https://developer.4d.com/docs/settings/web#access). Ver también [esta entrada de blog](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications) para saber cómo migrar su código si es necesario.
+La [autenticación de inicio de sesión Force](../REST/authUsers.md) es ahora muy recomendable. En los proyectos convertidos, puede actualizar su configuración haciendo clic en el botón [**Activate REST authentication through ds.authentify() function**](../settings/web.md#access). Ver también [esta entrada de blog](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications) para saber cómo migrar su código si es necesario.

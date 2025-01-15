@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CURSOR.Summary-->O comando SET CURSOR muda o cursor do mouse para o cursos do sistema cujo número de ID você passar em *cursor*.<!-- END REF-->
 
-O comando deve ser chamado no contexto de On Mouse Move [Form event code](form-event-code.md). 
+O comando deve ser chamado no contexto de On Mouse Move [Form event code](../commands/form-event-code.md). 
 
 Para restaurar o cursor padrão do mouse, chame o comando sem parâmetros.
 

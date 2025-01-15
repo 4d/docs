@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 *Conjuntos*  
 [DISPLAY SELECTION](display-selection.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 
 #### Propriedades
 

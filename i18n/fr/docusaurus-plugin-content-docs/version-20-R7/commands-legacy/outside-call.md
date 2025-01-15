@@ -19,11 +19,11 @@ displayed_sidebar: docs
 
 Si vous voulez que le cycle d'exécution **Outside call** soit généré, vérifiez que la propriété d'événement On Outside Call du formulaire et/ou des objets est sélectionnée en mode Développement. 
 
-**Note :** Cette fonction équivaut à utiliser la fonction [Form event code](form-event-code.md) et tester si elle retourne un événement tel que On Outside Call.
+**Note :** Cette fonction équivaut à utiliser la fonction [Form event code](../commands/form-event-code.md) et tester si elle retourne un événement tel que On Outside Call.
 
 #### Voir aussi 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
 
 #### Propriétés

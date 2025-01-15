@@ -30,7 +30,7 @@ En todos los casos, utilice el comando [Old](old.md) apara detectar si el valor 
 
 **Nota:** aunque **Modified** puede aplicarse a todo tipo de campo, si lo utiliza con el comando [Old](old.md), debe tener en cuenta las restricciones que aplican al comando [Old](old.md). Para más detalles, ver la descripción del comando [Old](old.md).
 
-Durante la entrada de datos, generalmente es más fácil realizar operaciones en métodos objeto con ayuda del comando [Form event code](form-event-code.md) que utilizar la función **Modified** en los métodos formulario. Como un método de objeto recibe el evento On Data Change cuando se modifica un campo, el uso de un método de objeto es equivalente a utilizar **Modified** en un método de formulario.
+Durante la entrada de datos, generalmente es más fácil realizar operaciones en métodos objeto con ayuda del comando [Form event code](../commands/form-event-code.md) que utilizar la función **Modified** en los métodos formulario. Como un método de objeto recibe el evento On Data Change cuando se modifica un campo, el uso de un método de objeto es equivalente a utilizar **Modified** en un método de formulario.
 
 **Nota:** para funcionar correctamente, el comando **Modified** debe utilizarse únicamente en un método de formulario o en un método llamado por un método de formulario.
 
@@ -65,7 +65,7 @@ Selecciona un registro para la tabla *\[unaTabla\]*, luego llama múltiples subr
 
 #### Ver también 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
 
 #### Propiedades

@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Summary-->**Session storage** コマンドは*id* 引数に渡した固有のIDを持つセッションのStorage オブジェクトを返します。<!-- END REF-->
 
-引数には、Storage を取得したいセッションのUUID を渡します。これはサーバーによって自動的に割り当てられ、[session オブジェクト](https://developer.4d.com/docs/ja/API/SessionClass) の [**.id**](https://developer.4d.com/docs/ja/API/SessionClass/#id) プロパティ内に保存されています。指定したセッションがサーバー上に存在しない場合、コマンドは**Null** を返します。
+引数には、Storage を取得したいセッションのUUID を渡します。これはサーバーによって自動的に割り当てられ、[session オブジェクト](../API/SessionClass.md) の [**.id**](../API/SessionClass.md#id) プロパティ内に保存されています。指定したセッションがサーバー上に存在しない場合、コマンドは**Null** を返します。
 
 **注意:** セッションの識別子は[Process activity](../commands/process-activity.md) コマンドを使用することで取得できます。
 
-返されるオブジェクトはセッションの[**.storage**](https://developer.4d.com/docs/ja/API/SessionClass/#storage) プロパティです。これはセッションの全てのプロセスから利用可能な情報を保存するための共有オブジェクトです。
+返されるオブジェクトはセッションの[**.storage**](../API/SessionClass.md#storage) プロパティです。これはセッションの全てのプロセスから利用可能な情報を保存するための共有オブジェクトです。
 
 #### 例題 
 

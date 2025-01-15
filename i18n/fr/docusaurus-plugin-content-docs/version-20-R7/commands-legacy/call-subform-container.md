@@ -27,7 +27,7 @@ Vous pouvez passer dans *événement* tout événement formulaire prédéfini de
 
 #### Voir aussi 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [GOTO OBJECT](goto-object.md)  
 
 #### Propriétés

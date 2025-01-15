@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.HTTP Parse message.Summary-->La documentación de este comando está disponible en [developer.<!-- END REF-->4d.com.](https://developer.4d.com/docs/API/HTTPRequestClass#http-parse-messege)
+<!--REF #_command_.HTTP Parse message.Summary-->La documentación de este comando está disponible en [developer.<!-- END REF-->4d.com.](../API/HTTPRequestClass.md#http-parse-messege)
 
 
 #### Propiedades

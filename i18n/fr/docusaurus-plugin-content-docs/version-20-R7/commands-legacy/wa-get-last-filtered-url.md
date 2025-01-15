@@ -25,7 +25,7 @@ L’URL peut avoir été filtré pour l’une des raisons suivantes :
 * le lien est ouvert dans le navigateur par défaut (commande [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)),
 * l’URL tentait d’ouvrir une fenêtre pop up.
 
-Il est judicieux d’appeler cette commande dans le contexte des événements formulaire On URL Filtering, On Open External Link et On Window Opening Denied afin de connaître l’URL filtré. Pour plus d’informations, reportez-vous à la description de la commande [Form event code](form-event-code.md).
+Il est judicieux d’appeler cette commande dans le contexte des événements formulaire On URL Filtering, On Open External Link et On Window Opening Denied afin de connaître l’URL filtré. Pour plus d’informations, reportez-vous à la description de la commande [Form event code](../commands/form-event-code.md).
 
 #### Voir aussi 
 

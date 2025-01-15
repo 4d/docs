@@ -249,7 +249,7 @@ displayed_sidebar: docs
 
 #### 例題 2 
 
-This example formats a date variable and a time variable using [customized formats](https://developer.4d.com/docs/Project/date-time-formats.md): 
+This example formats a date variable and a time variable using [customized formats](../Project/date-time-formats.md): 
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12

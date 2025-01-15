@@ -82,7 +82,7 @@ Examples:
  $vsResult:=String(!2023-11-27!;Internal date long) // "November 27, 2023"  
  $vsResult:=String(!2023-11-27!;ISO Date GMT) // "2023-11-26T23:00:00Z" in French timezone  
 ```
-* or a [customized format built upon a pattern](https://developer.4d.com/docs/Project/date-time-formats) (string value)  
+* or a [customized format built upon a pattern](../Project/date-time-formats.md) (string value)  
 Examples:  
     
 ```4d  
@@ -158,7 +158,7 @@ Examples:
  $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
 ```
 
-* or a [customized format built upon a pattern](https://developer.4d.com/docs/Project/date-time-formats) (string value)  
+* or a [customized format built upon a pattern](../Project/date-time-formats.md) (string value)  
 Examples:  
     
 ```4d  

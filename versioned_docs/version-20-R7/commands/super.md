@@ -17,7 +17,7 @@ The `Super` keyword <!-- REF #_command_.Super.Summary -->allows calls to the `su
 
 `Super` serves two different purposes:
 
-1. Inside a [constructor code]((../Concepts/classes.md#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
+1. Inside a [constructor code](../Concepts/classes.md#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
 
 - If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
 - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.

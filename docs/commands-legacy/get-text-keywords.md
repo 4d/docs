@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 **Note:** At the request of users, we introduced an exception for French and Italian: the apostrophe (') followed by either a vowel or the letter "h" is considered as a word separator. For example, the strings "L'homme" or "l'arbre" are split into "L’"+"homme" and "l'"+"arbre".
 
-The algorithm used differs according to whether or not the **Consider only non-alphanumeric chars for keywords** option is checked in the [Database settings](https://developer.4d.com/docs/settings/database#text-comparison).
+The algorithm used differs according to whether or not the **Consider only non-alphanumeric chars for keywords** option is checked in the [Database settings](../settings/database.md#text-comparison).
 
 In the *text* parameter, pass the original text to be split into words. This can be styled text, in which case style tags are ignored. 
 

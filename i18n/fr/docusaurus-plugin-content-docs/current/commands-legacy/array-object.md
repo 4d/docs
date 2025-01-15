@@ -66,7 +66,7 @@ Création et remplissage d’un tableau local d’objets :
 
 #### Voir aussi 
 
-[C\_OBJECT](c-object.md)  
+*C\_OBJECT*  
 *Créer des tableaux*  
 *Objets (Langage)*  
 

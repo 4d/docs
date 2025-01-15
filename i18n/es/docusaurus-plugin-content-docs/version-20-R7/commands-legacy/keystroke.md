@@ -166,7 +166,7 @@ Utilizando las habilidades de la comunicación interproceso de 4D, puede constru
 #### Ver también 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 
 #### Propiedades

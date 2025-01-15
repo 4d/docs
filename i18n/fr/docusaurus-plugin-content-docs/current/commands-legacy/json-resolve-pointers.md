@@ -74,7 +74,7 @@ Un pointeur JSON est, à proprement parler, une chaîne composée de parties sé
 Les pointeurs JSON sont résolus récursivement, ce qui signifie que si un pointeur résolu contient lui-même des pointeurs, ils sont résolus et ainsi de suite jusqu'à ce que tous les pointeurs soient résolus. Dans ce contexte, tous les chemins de fichiers situés dans les URIs des pointeurs JSON peuvent être relatifs ou absolus. Ils doivent utiliser le "/" en tant que délimiteur de chemin et sont résolus selon les principes suivants :
 
 * Un chemin relatif ne doit pas débuter par '/'. Il est résolu relativement au document JSON contenant la chaîne du chemin.
-* Un chemin absolu débute par '/'. Seuls les [chemins des filesystem](https://developer.4d.com/docs/fr/Concepts/paths/#chemins-des-filesystem) sont acceptés comme chemins absolus. Par exemple, "/RESOURCES/templates/myfile.json" pointe vers le fichier "myfile.json" situé dans le dossier Resources de la base courante.
+* Un chemin absolu débute par '/'. Seuls les [chemins des filesystem](../Concepts/paths.md#chemins-des-filesystem) sont acceptés comme chemins absolus. Par exemple, "/RESOURCES/templates/myfile.json" pointe vers le fichier "myfile.json" situé dans le dossier Resources de la base courante.
 
 **Notes :**
 

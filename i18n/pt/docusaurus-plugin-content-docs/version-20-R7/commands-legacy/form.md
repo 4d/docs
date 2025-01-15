@@ -29,7 +29,7 @@ Se o formulário atual for mostrado mediante uma chamada ao comando [DIALOG](dia
 
 Se o formulàrio atual for um subformulário, o objeto devolvido depende da variável container pai:
 
-* Se a variável associada ao container principal tiver sido escrita como um objeto ([C\_OBJECT](c-object.md)), **Form** devolve o valor desta variável.  
+* Se a variável associada ao container principal tiver sido escrita como um objeto (*C\_OBJECT*), **Form** devolve o valor desta variável.  
 Neste caso, o objeto devolvido por **Form** é o mesmo que o devolvido pela expressão abaixo:  
 ```4d  
  (OBJECT Get pointer(Object subform container))->  

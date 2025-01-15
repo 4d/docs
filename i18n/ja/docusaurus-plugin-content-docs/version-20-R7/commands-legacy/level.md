@@ -64,7 +64,7 @@ displayed_sidebar: docs
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
 
 #### プロパティ

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Get edited text.Summary-->El comando **Get edited text** se utiliza principalmente con el evento formulario On After Edit para recuperar el texto a medida que es introducido.<!-- END REF--> También puede utilizarse con los eventos formulario On Before Keystroke y On After Keystroke. Para mayor información sobre estos eventos formulario, por favor consulte la descripción del comando [Form event code](form-event-code.md).
+<!--REF #_command_.Get edited text.Summary-->El comando **Get edited text** se utiliza principalmente con el evento formulario On After Edit para recuperar el texto a medida que es introducido.<!-- END REF--> También puede utilizarse con los eventos formulario On Before Keystroke y On After Keystroke. Para mayor información sobre estos eventos formulario, por favor consulte la descripción del comando [Form event code](../commands/form-event-code.md).
 
 La combinación de este comando con los eventos formulario On Before Keystroke y On After Keystroke funciona de la siguiente manera:
 
@@ -63,7 +63,7 @@ Este es un ejemplo de cómo procesar inmediatamente los caracteres introducidos 
 
 #### Ver también 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Is editing text](is-editing-text.md)  
 
 #### Propiedades

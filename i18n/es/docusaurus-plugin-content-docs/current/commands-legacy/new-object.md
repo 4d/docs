@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New object.Summary-->El comando **New object** crea un nuevo objeto vacío o prellenado y devuelve su referencia.<!-- END REF-->
 
-Si no pasa ningún parámetro, **New object** crea un objeto vacío y devuelve su referencia. Debe asignar esta referencia a una variable 4D declarada con [C\_OBJECT](c-object.md) o un campo objeto 4D.
+Si no pasa ningún parámetro, **New object** crea un objeto vacío y devuelve su referencia. Debe asignar esta referencia a una variable 4D declarada con *C\_OBJECT* o un campo objeto 4D.
 
-**Nota:** [C\_OBJECT](c-object.md) declara una variable del tipo [Objeto](# "Datos estructurados como forma de objeto nativo 4D") pero no crea ningún objeto.
+**Nota:** *C\_OBJECT* declara una variable del tipo [Objeto](# "Datos estructurados como forma de objeto nativo 4D") pero no crea ningún objeto.
 
 Opcionalmente, puede prefijar el nuevo objeto pasando uno o varios pares *propiedad*/*valor* como parámetros:
 
