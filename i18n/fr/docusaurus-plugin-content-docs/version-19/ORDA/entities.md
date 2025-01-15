@@ -190,10 +190,10 @@ Une "entity selection" peut être **partageable** (lisible par plusieurs process
 Une entity selection **partageable** a les caractéristiques suivantes :
 
 * elle peut être stockée dans un objet partagé ou une collection partagée, et peut être passée comme paramètre entre plusieurs process ou workers ;
-* it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group;
+* elle peut être stockée dans plusieurs objets partagés ou collections partagées, ou dans un objet partagé ou une collection partagée qui appartient déjà à un groupe ;
 * elle ne permet pas d'ajouter de nouvelles entités. Essayer d'ajouter une entité à une entity selection partageable génèrera une erreur (1637 - Cette entity selection ne peut pas être modifiée). Pour ajouter une entité à une entity selection partageable, vous devez d'abord la transformer en une entity selection non partageable à l'aide de la fonction [`.copy()`](API/EntitySelectionClass.md#copy), avant d'appeler [`.add()`](API/EntitySelectionClass.md#add).
 
-> the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
+> La plupart des fonctions d'entity selection (telles que [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) prennent en charge les entity selection partageables car elles n'ont pas besoin de modifier l'entity selection d'origine (elles en retournent une nouvelle).
 
 Une entity selection **modifiable** a les caractéristiques suivantes :
 
@@ -213,22 +213,22 @@ Une nouvelle entity selection est **partageable** dans les cas suivants :
 Voici un exemple :
 
 ```4d
-$myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
-$employees:=$myComp.employees //$employees is shareable
+$myComp:=ds.Company.get(2) //$myComp n'appartient pas à une entity selection
+$employees:=$myComp.employees //$employees est partageable
 ```
 
 Une nouvelle entity selection est **modifiable** dans les cas suivants :
 
-* la nouvelle "entity selection" crée un espace vide à l'aide de la fonction [dataClass.newSelection()](API/DataClassClass.md#newselection) ou de la commande `Create entity selection`,
-* la nouvelle "entity selection" est explicitement copiée comme modifiable avec [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (c'est-à-dire sans l'option `ck shared`).
+* la nouvelle entity selection est créée vide à l'aide de la fonction [dataClass.newSelection()](API/DataClassClass.md#newselection) ou de la commande `Create entity selection`,
+* la nouvelle entity selection est explicitement copiée comme modifiable avec [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (c'est-à-dire sans l'option `ck shared`).
 
 Voici un exemple :
 
 ```4d
-$toModify:=ds.Company.all().copy() //$toModify is alterable
+$toModify:=ds.Company.all().copy() //$toModify est modifiable
 ```
 
-A new entity selection **inherits** from the original entity selection nature in the following cases:
+Une nouvelle entity selection **hérite** de la nature de l'entity selection originale dans les cas suivants :
 
 * la nouvelle entity selection résulte de l'une des diverses fonctions de classes ORDA appliquées à une entity selection existante ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 * la nouvelle entity selection est basée sur une relation :
@@ -239,31 +239,31 @@ A new entity selection **inherits** from the original entity selection nature in
 Exemples :
 
 ```4d
-$highSal:=ds.Employee.query("salary >= :1"; 1000000)   
- //$highSal is shareable because of the query on dataClass
-$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
+$highSal:=ds.Employee.query("salary >= :1" ; 1000000)   
+ //$highSal est partageable à cause de la requête sur dataClass
+$comp:=$highSal.employer //$comp est partageable parce que $highSal est partageable
 
-$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
- //$lowSal is alterable because of the copy()
-$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
+$lowSal:=ds.Employee.query("salary <= :1" ; 10000).copy() 
+ //$lowSal est modifiable à cause du copy()
+$comp2:=$lowSal.employer //$comp2 est modifiable parce que $lowSal est modifiable
 ```
 
-:::note Entity selections returned from the server
+:::note Entity selections renvoyées par le serveur
 
-In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. Voici un exemple :
+Dans l'architecture client/serveur, les entity selections renvoyées par le serveur sont toujours partageables sur le client, même si \[`copy()`\](../API/EntitySelectionClass.md#copy) a été appelée sur le serveur. Pour rendre une telle entity selection modifiable côté client, vous devez exécuter \[`copy()`\](../API/EntitySelectionClass.md#copy) côté client. Voici un exemple :
 
 ```4d
-    //a function is always executed on the server
+    //une fonction est toujours exécutée sur le serveur
 exposed Function getSome() : cs.MembersSelection
-    return This.query("ID >= :1"; 15).orderBy("ID ASC")
+    return This.query("ID >= :1" ; 15).orderBy("ID ASC")
 
-    //in a method, executes on the remote side
+    //dans une méthode, exécutée du côté distant
 var $result : cs.MembersSelection
 var $alterable : Boolean
-$result:=ds.Members.getSome() //$result is shareable
+$result :=ds.Members.getSome() // $result est partageable
 $alterable:=$result.isAlterable() //False
 
-$result:=ds.Members.getSome().copy() // $result is now alterable
+$result:=ds.Members.getSome().copy() // $result est maintenant modifiable
 $alterable:=$result.isAlterable() // True
 ```
 
@@ -277,25 +277,25 @@ Vous travaillez avec deux entity selections que vous souhaitez transmettre à un
 ```4d
 
 var $paid; $unpaid : cs.InvoicesSelection
-//We get entity selections for paid and unpaid invoices
-$paid:=ds.Invoices.query("status=:1"; "Paid")
-$unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
+//Nous obtenons les entity selections pour les factures payées et non payées
+$paid:=ds.Invoices.query("status=:1" ; "Paid")
+$unpaid:=ds.Invoices.query("status=:1" ; "Unpaid")
 
-//We pass entity selection references as parameters to the worker
-CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
+//Nous transmettons les références des entity selection comme paramètres au worker
+CALL WORKER("mailing" ; "sendMails" ; $paid; $unpaid)
 
 ```
 
-The `sendMails` method:
+La méthode `sendMails` :
 
 ```4d
 
- #DECLARE ($paid : cs.InvoicesSelection; $unpaid : cs.InvoicesSelection)
+ #DECLARE ($paid : cs.InvoicesSelection ; $unpaid : cs.InvoicesSelection)
  var $invoice : cs.InvoicesEntity
 
  var $server; $transporter; $email; $status : Object
 
-  //Prepare emails
+  //Préparation des emails
  $server:=New object()
  $server.host:="exchange.company.com"
  $server.user:="myName@company.com"
@@ -304,16 +304,16 @@ The `sendMails` method:
  $email:=New object()
  $email.from:="myName@company.com"
 
-  //Loops on entity selections
+  //Boucle sur les entity selections
  For each($invoice;$paid)
-    $email.to:=$invoice.customer.address // email address of the customer
-    $email.subject:="Payment OK for invoice # "+String($invoice.number)
+    $email.to:=$invoice.customer.address // adresse email du client
+    $email.subject:="Paiement OK pour la facture #"+String($invoice.number)
     $status:=$transporter.send($email)
  End for each
 
  For each($invoice;$unpaid)
-    $email.to:=$invoice.customer.address // email address of the customer
-    $email.subject:="Please pay invoice # "+String($invoice.number)
+    $email.to:=$invoice.customer.address // adresse email du client
+    $email.subject:="Veuillez payer la facture #"+String($invoice.number)
     $status:=$transporter.send($email)
  End for each
 ```
@@ -390,7 +390,7 @@ Lorsque cette situation se produit, vous pouvez, par exemple, recharger l'entit�
 
 Vous pouvez verrouiller et déverrouiller des entités à la demande lorsque vous accédez aux données. Lorsqu'une entité est verrouillée par un process, elle est chargée en lecture/écriture dans ce process mais elle est verrouillée pour tous les autres process. L'entité peut être chargée uniquement en mode lecture seule dans ces process; ses valeurs ne peuvent pas être modifiées ou enregistrées.
 
-This feature is based upon two methods of the `Entity` class:
+Cette fonctionnalité est basée sur deux méthodes de la classe `Entity` :
 
 * `entity.lock()`
 * `entity.unlock()`
@@ -447,7 +447,7 @@ Considérons le code suivant :
  End for each
 ```
 
-Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in *$sel* after a learning phase.
+Grâce à l'optimisation, cette requête récupérera uniquement les données des attributs utilisés (firstname, lastname, employer, employer.name) dans *$sel* après la phase d'apprentissage.
 
 ### Utilisation de la propriété context
 
@@ -461,20 +461,20 @@ Une même propriété de contexte d'optimisation peut être passée à un nombre
 ```4d
  var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object
  var $data : Collection
- $querysettings:=New object("context";"shortList")
- $querysettings2:=New object("context";"longList")
+ $querysettings:=New object("context" ; "shortList")
+ $querysettings2:=New object("context" ; "longList")
 
- $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // In extractData method an optimization is triggered and associated to context "shortList"
+ $sel1:=ds.Employee.query("lastname = S@" ;$querysettings)
+ $data:=extractData($sel1) // Dans la méthode extractData, une optimisation est déclenchée et associée au contexte "shortList"
 
- $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // In extractData method the optimization associated to context "shortList" is applied
+ $sel2:=ds.Employee.query("lastname = Sm@" ;$querysettings)
+ $data:=extractData($sel2) // Dans la méthode extractData l'optimisation associée au contexte "shortList" est appliquée
 
- $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization is triggered and associated to context "longList"
+ $sel3:=ds.Employee.query("lastname = Smith" ;$querysettings2)
+ $data:=extractDetailedData($sel3) // Dans la méthode extractDetailedData une optimisation est déclenchée et associée au contexte "longList"
 
- $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization associated to context "longList" is applied
+ $sel4:=ds.Employee.query("lastname = Brown" ;$querysettings2)
+ $data:=extractDetailedData($sel4) // Dans la méthode extractDetailedData l'optimisation associée au contexte "longList" est appliquée
 ```
 
 ### List box de type entity selection
