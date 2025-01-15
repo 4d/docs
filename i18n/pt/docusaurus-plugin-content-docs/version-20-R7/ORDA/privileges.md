@@ -64,7 +64,7 @@ As ações disponíveis estão relacionadas com o recurso alvo.
 - Um atributo calculado pode ser acessado mesmo que não haja permissões sobre os atributos sobre os quais ele é construído.
 - Você pode atribuir uma ação de permissão a uma classe de singleton (tipo `singleton`), nesse caso ele será aplicado a todas as suas funções expostas, ou a uma função de singleton (tipo `singletonMethod`).
 - Valores padrão: na implementação atual, apenas *Null* está disponível como valor padrão.
-- No REST [modo de login](../REST/authUsers.md/#force-login-mode), a [função `authentify()`](../REST/authUsers.md#function-authentify) é sempre executável por usuários convidados, independentemente da configuração das permissões.
+- In REST [force login mode](../REST/authUsers.md#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
 
 Setting permissions requires to be consistent, in particular **update** and **drop** permissions also need **read** permission (but **create** does not need it).
 
