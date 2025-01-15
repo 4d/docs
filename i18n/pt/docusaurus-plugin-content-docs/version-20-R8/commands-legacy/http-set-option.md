@@ -1,0 +1,56 @@
+---
+id: http-set-option
+title: HTTP SET OPTION
+slug: /commands/http-set-option
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.HTTP SET OPTION.Syntax-->**HTTP SET OPTION** ( *opção* ; *valor* )<!-- END REF-->
+<!--REF #_command_.HTTP SET OPTION.Params-->
+| Parâmetro | Tipo |  | Descrição |
+| --- | --- | --- | --- |
+| opção | Integer | &#8594;  | Código da opção a definir |
+| valor | Integer | &#8594;  | Valor da opção |
+
+<!-- END REF-->
+
+:::info Compatibilidade
+
+Esse comando é mantido apenas por motivos de compatibilidade. Agora é recomendável usar [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+
+:::
+
+
+#### Descrição 
+
+<!--REF #_command_.HTTP SET OPTION.Summary-->O comando **HTTP SET OPTION** permite definir diferentes opções utilizadas durante a próxima solicitação disparada pelos comandos [HTTP Get](http-get.md) ou [HTTP Request](http-request.md).<!-- END REF--> Você pode chamar este comando quantas vezes como opções a definir.  
+  
+**Nota**: as opções definidas são locais ao processo atual. Para componentes, são locais ao componente em execução.   
+  
+Passe no parâmetro *opção* o número da opção a definir e no parâmetro *valor* o novo valor desta opção. Pode utilizar para o parâmetro *opção* uma das seguintes constantes, que se encontram no tema *HTTP Client*:
+
+| Constante                | Tipo          | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------ | ------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| HTTP client log          | Inteiro longo | 7     | *value* \= uma das constantes abaixo: HTTP disable log: HTTP client debug log é desativado (padrão normal) HTTP enable log with all body parts: HTTP client debug log é ativado com partes do corpo em resposta e petição HTTP enable log with request body: HTTP client debug log é ativado com partes do corpo apenas por petição HTTP enable log with response body: HTTP client debug log é ativado com partes do corpo apenas por resposta HTTP enable log without body: HTTP client debug log é ativado sem partes do corpo (tamanho do corpo é fornecido neste caso) Permite obter ou estabelecer o estado arquivo de histórico da petição do cliente HTTP. Quando ativado, este arquivo chamado "4DHTTPClientLog\_nn.txt", é armazenado na pasta "Logs" da aplicação (nn é o número de arquivo). É útil para depurar problemas com petições de cliente HTTP. Registra cada petição em modo raw. Petições inteiras, incluindo cabeçalhos, são armazenadas: partes do corpo também podem ser registradas, para saber mais veja *Description of log files*. |
+| HTTP compression         | Inteiro longo | 6     | *valor* \= 0 (não comprimir) ou 1 (comprimir). Por defeito: 0<br/>Esta opção ativa ou desativa o mecanismo de compreensão das petições entre o cliente e o servidor, para acelerar os intercâmbios. Quando este mecanismo está ativo, o cliente HTTP utiliza a compreensão deflate ou GZIP em função da resposta do servidor.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| HTTP display auth dial   | Inteiro longo | 4     | *valor* \= 0 (não mostrar o diálogo) ou 1 (mostrar o diálogo). Por defeito: 0<br/>Esta opção controla a visualização da caixa de diálogo de autenticação ao executar o comando [HTTP Get](http-get.md "HTTP Get") ou [HTTP Request](http-request.md "HTTP Request"). Por defeito, este comando não provoca a visualização da caixa de diálogo, normalmente deve utilizar o comando [HTTP AUTHENTICATE](http-authenticate.md "HTTP AUTHENTICATE"). Entretanto, se deseja que apareça uma caixa de diálogo de autenticação do usuário para que introduza seu nome de usuário e senha, passe 1 em *valor*. A caixa de diálogo aparece somente se a solicitação requer autenticação.                                                                                                                                                                                                                                                                                                                                                                         |
+| HTTP follow redirect     | Inteiro longo | 2     | *valor* \= 0 (não aceita redirecionamentos) o 1 (aceita redirecionamentos).<br/>Valor por defeito = 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| HTTP max redirect        | Inteiro longo | 3     | *valor* \= número máximo de redirecionamentos aceitos<br/>Valor por defeito = 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| HTTP reset auth settings | Inteiro longo | 5     | *valor* \= 0 (não apagar a informação) ou 1 (apagar). Por defeito: 0<br/>Esta opção permite indicar a 4D memorizar a informação de autenticação do usuário (nome de usuário, senha, método, etc.) Com a finalidade de voltar a usar-los mais a frente. Por defeito, esta informação é apagada depois de cada execução do comando *HTTP Get* ou *HTTP Request*. Passe 0 em *valor* para memorizar-los e para apagar-los. Tenha em conta que quando passa 0, a informação é conservada durante a seção, mas não é guardada.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| HTTP timeout             | Inteiro longo | 1     | *valor* \= timeout da solicitação do cliente, expressada em segundos. O time out é o tempo de espera do cliente HTTP no caso de não haver resposta por parte do servidor. Ao final deste período, o cliente fecha a seção, e o pedido é perdido.<br/>Por defeito, este tempo é de 120 segundos. Pode ser mudado em função de características específicas (estado da rede, características da aplicação, etc).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+
+Não importa a ordem das opções de chamada. Se a mesma opção é definida mais de uma vez, apenas uma é considera o valor da última chamada.
+
+#### Ver também 
+
+[HTTP AUTHENTICATE](http-authenticate.md)  
+[HTTP GET OPTION](http-get-option.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1160 |
+| Thread-seguro | &check; |
+
+
