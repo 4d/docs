@@ -14,7 +14,7 @@ Além disso, as entradas podem ser [editáveis ou não](properties_Entry.md#ente
 
 Pode gerir os dados com objectos ou formulários [métodos](Concepts/methods.md).
 
-### JSON Exemplo
+### Exemplo JSON
 
 ```4d
  "myText": {
@@ -38,5 +38,5 @@ Pode gerir os dados com objectos ou formulários [métodos](Concepts/methods.md)
 Também pode representar expressões de campo e variáveis nos seus formulários utilizando objectos alternativos, mais particularmente:
 
 * Pode exibir e introduzir dados de campos de bases de dados directamente em colunas de [tipo List box](listbox_overview.md).
-* You can represent a list field or variable directly in a form using [Pop-up Menus/Drop-down Lists](popupMenuDropdownList_overview) and [Combo Boxes](comboBox_overview.md) objects.
+* Pode representar um campo ou variável de lista directamente num formulário usando [Menus Pop-up/Drop-down Lists](popupMenuDropdownList_overview) e [Combo Boxes](comboBox_overview.md) objectos.
 * Pode representar uma expressão booleana como um [caixa de verificação](checkbox_overview.md) ou como um objecto de rádio [](radio_overview.md).
