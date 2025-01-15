@@ -23,7 +23,7 @@ Un attribut est la plus petite cellule de stockage dans une base de données rel
 
 ## AttributePath
 
-Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou d'une entité donnée. See also [PropertyPath](#propertypath).
+Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou d'une entité donnée. Voir aussi [PropertyPath](#propertypath).
 
 
 ## Class code
@@ -94,7 +94,7 @@ Une entité est un objet qui correspond à un modèle de dataclass. Une entité 
 
 Une entité peut être vue comme une instance de la dataclass, comme un enregistrement de la table correspondante à la dataclass dans son datastore associé. Cependant, une entité contient également des données connexes. Le but de l'entité est de gérer les données (créer, mettre à jour, supprimer).
 
-Pour plus d'informations, voir le chapitre Entités.
+Pour plus d'informations, voir [entities](entities.md).
 
 ## Entity selection
 
@@ -164,7 +164,7 @@ The ability to run one or more [actions](#actions) on [resources](#resource). Se
 ## Propriété
 
 Voir [Attribut](#attribute).
-> > Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+> Les attributs et les propriétés sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## PropertyPath
 
