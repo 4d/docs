@@ -5,7 +5,7 @@ title: Release Notes
 
 :::tip
 
-Read [**What’s new in 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), the blog post that lists all new features and enhancements in 4D 19 LTS.
+Lisez [**Les nouveautés de 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), l'article de blog qui répertorie toutes les nouvelles fonctionnalités et améliorations de 4D 19 LTS.
 
 :::
 
@@ -15,7 +15,7 @@ Read [**What’s new in 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), t
 
 #### Points forts
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.8): list of all bugs that have been fixed in 4D 19.8.
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=19.8) : liste de tous les bugs corrigés dans 4D 19.8.
 
 
 ## 4D 19.7 LTS
@@ -28,24 +28,24 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 
 :::
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.7): list of all bugs that have been fixed in 4D 19.7.
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=19.7) : liste de tous les bugs corrigés dans 4D 19.7.
 
 
 ## 4D 19.6 LTS
 
 #### Points forts
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.6): list of all bugs that have been fixed in 4D 19.6.
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=19.6) : liste de tous les bugs corrigés dans 4D 19.6.
 
 
 ## 4D 19.5 LTS
 
 #### Points forts
 
-- 4D 19.5 is certified on Windows 11 22H2
-- 4D 19.5 is certified on macOS Ventura (macOS 13)
+- 4D 19.5 est certifié sur Windows 11 22H2
+- 4D 19.5 est certifié sur macOS Ventura (macOS 13)
 - La version de SpreadJS a été mise à jour (14.1.6).
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.5): list of all bugs that have been fixed in 4D 19.5.
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=19.5) : liste de tous les bugs corrigés dans 4D 19.5.
 
 
 ## 4D 19.x LTS
@@ -54,7 +54,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 
 - [Classe IMAPTransporter](../API/IMAPTransporterClass.md): nouvelles fonctions `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, et `.unsubscribe()` .
 - [Classe File](../API/FileClass.md) : nouvelles fonctions `setAppInfo()` et `getAppInfo()`.
-- New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
+- Nouvelle balise de transformation [4DEACH](../Tags/tags.md#4deach-and-4dendeach).
 - Serveur Web : nouveau paramètre [SameSite pour les cookies de session](../WebServer/webServerConfig.md#session-cookie-samesite).
 - Prise en charge des couleurs dark et light pour les [formulaires](../FormEditor/properties_FormProperties.md#color-scheme) et les [feuilles de style](../FormEditor/stylesheets#media-queries)
 - Nouveaux thèmes dark et light par défaut dans les [préférences de l'éditeur de code](../Preferences/methods.md#theme-list).
@@ -77,7 +77,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 ## Versions précédentes
 
 
-- See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) on doc.4d.com.
+- Voir les [**notes de versions précédentes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) sur doc.4d.com.
 
 
 ## Tableau des bibliothèques
