@@ -89,7 +89,7 @@ Une entité est un objet qui correspond à un modèle de dataclass. Une entité 
 
 Une entité peut être vue comme une instance de la dataclass, comme un enregistrement de la table correspondante à la dataclass dans son datastore associé. Cependant, une entité contient également des données connexes. Le but de l'entité est de gérer les données (créer, mettre à jour, supprimer).
 
-Pour plus d'informations, voir le chapitre Entités.
+For more information, see [entities](entities.md).
 
 ## Entity selection
 
