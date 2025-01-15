@@ -37,7 +37,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 *(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "List Box": {
