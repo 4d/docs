@@ -31,7 +31,7 @@ Para ativar este terceiro estado, deve selecionar a propriedade [Três estados](
 Essa propriedade só está disponível para caixas de seleção regulares e planas associadas a [variáveis ou expressões](properties_Object.md#variable-or-expression) — as caixas de seleção de expressões booleanas não podem usar a propriedade [Três Estados](properties_Display.md#three-states)  (uma expressão Booleana não pode estar em um estado intermediário).
 
 A variável associada à caixa de seleção devolve o valor 2 quando a caixa estiver no terceiro estado.
-> In entry mode, the Three-States check boxes display each state sequentially, in the following order: unchecked / checked / intermediary / unchecked, etc. The intermediary state is generally not very useful in entry mode; in the code, simply force the value of the variable to 0 when it takes the value of 2 in order to pass directly from the checked state to the unchecked state.
+> No modo de entrada, as caixas de seleção dos três Estados exibem cada estado sequencialmente, na seguinte ordem: desmarcado / verificado / intermediário / desmarcado, etc. O estado intermediário não é geralmente muito útil no modo entrada; no código, simplesmente force o valor da variável para 0 quando tomar o valor de 2 para passar diretamente de um estado marcado para o estado desmarcado.
 
 ## Usar uma ação padrão
 
@@ -86,7 +86,7 @@ O estilo Clássico de caixa de seleção corresponde a um sistema de caixa de se
 
 ![](../assets/en/FormObjects/checkbox_regular.png)
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "myCheckBox": {
@@ -108,7 +108,7 @@ O estilo de caixa de seleção Plano tem uma aparência minimalista. A natureza 
 
 ![](../assets/en/FormObjects/checkbox_flat.png)
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "myCheckBox": {
@@ -133,7 +133,7 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ![](../assets/en/FormObjects/checkbox_toolbar.png)
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "myCheckBox": {
@@ -159,7 +159,7 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ![](../assets/en/FormObjects/checkbox_bevel.png)
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "myCheckBox": {
@@ -187,7 +187,7 @@ Exemplo em macOS:
 
 > em Windows, o estilo Bevel arredondado é idêntico ao estilo [Bevel](#bevel).
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```4d
  "myCheckBox": {
@@ -213,7 +213,7 @@ O estilo Gradient OS X tem um fundo cinza claro com um título e se mostra como 
 
 > Em Windows, este estilo é idêntico ao estilo [Bevel](#bevel).
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "myCheckBox": {
@@ -243,7 +243,7 @@ Como padrão, o estilo OS X Textured aparece como:
 
   ![](../assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "myCheckBox": {
@@ -271,7 +271,7 @@ As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas 
 
   ![](../assets/en/FormObjects/checkbox_officexp_mac.png)
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "myCheckBox": {
@@ -300,7 +300,7 @@ Este estilo de caixa de seleção pode ser usado para adicionar um ícone padrã
 
   ![](../assets/en/FormObjects/checkbox_collapse_mac.png)
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "myCheckBox": {
@@ -326,7 +326,7 @@ Em macOS e Windows, uma caixa de seleção com o estilo de botão "Divulgação"
 
  ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "myCheckBox": {
@@ -346,11 +346,11 @@ O estilo de botão Personalizado aceita uma imagem de fundo personalizada e perm
 
 - [Rota de acesso ao Fundo](properties_TextAndPicture.md#background-pathname)
 - [Offset do ícone](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) e [margem vertical](properties_TextAndPicture.md#vertical-margin)
 
-It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
+Geralmente está associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states), que pode ser usada em conjunto com uma [imagem de fundo ](properties_TextAndPicture.md#background-pathname) [4 estados](properties_TextAndPicture.md#number-of-states).
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "myCheckbox": {
@@ -360,7 +360,7 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
   "icon": "/RESOURCES/smiley.jpg", 
   "iconFrame": 4, 
   "customBackgroundPicture": "/RESOURCES/paper.jpg", 
-  "iconOffset": 5, //custom icon offset when clicked
+  "iconOffset": 5, //deslocamento do ícone personalizado quando clicado
   "left": 60, 
   "top": 160, 
   "width": 100,  
@@ -374,10 +374,10 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
 
 Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas:
 
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Enterable](properties_Entry.md#enterable) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Negrito](properties_Text.md#bold) - [Parte inferior](properties_CoordinatesAndSizing.md#bottom) - [Estilo do botão](properties_TextAndPicture.md#button-style) - [Classe](properties_Object.md#css-class) - [Digitável](properties_Entry.md#enterable) - [Tipo de expressão](properties_Object.md#expression-type) - [Foco](properties_Entry.md#focusable) - [Fonte](properties_Text.md#font) - [Cor da fonte](properties_Text.md#font-color) - [Tamanho da fonte](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dica de ajuda](properties_Help.md#help-tip) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálico](properties_Text.md#italic) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Nome do objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - [Salvar valor](properties_Object.md#save-value) - [Atalho](properties_Entry.md#shortcut) - [Ação padrão](properties_Action.md#standard-action) - [Título](properties_Object.md#title) - [Parte superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Sublinhado](properties_Text.md#underline) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Dimensionamento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
 
 Propriedades específicas adicionais estão disponíveis, dependendo do [estilo botão](#button-styles):
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
+- [Nome do caminho do plano de fundo](properties_TextAndPicture.md#background-pathname) - [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) - [Deslocamento do ícone](properties_TextAndPicture.md#icon-offset) - [Margem vertical](properties_TextAndPicture.md#vertical-margin) (personalizada)
 - [Três estados](properties_Display.md#three-states) (plano, clássico)
 - [Número de estados](properties_TextAndPicture.md#number-of-states) - [Caminho da imagem](properties_TextAndPicture.md#picture-pathname) - [Título/posição da imagem](properties_TextAndPicture.md#titlepicture-position) (Botão da barra de ferramentas, Bevel, Rounded Bevel, Gradiente X, OS X Textured, Office XP, Personalizado)
