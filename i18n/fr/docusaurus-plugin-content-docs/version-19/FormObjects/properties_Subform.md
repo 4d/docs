@@ -46,7 +46,7 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 
 Action à effectuer en cas de double-clic sur une ligne vide d'un sous-formulaire de liste. Les options suivantes sont disponibles :
 - Ne rien faire : ignore le double-clic.
-- Ajouter un enregistrement : crée un nouvel enregistrement dans le sous-formulaire et passe en mode édition. L'enregistrement sera créé directement dans la liste si la propriété [Saisissable dans la liste] est activée. Sinon, il sera créé en mode page, dans le [formulaire détaillé](detail-form) associé au sous-formulaire.
+- Ajouter un enregistrement : crée un nouvel enregistrement dans le sous-formulaire et passe en mode édition. L'enregistrement sera créé directement dans la liste si la propriété [Saisissable dans la liste] est activée. Sinon, il sera créé en mode page, dans le [formulaire détaillé](#detail-form) associé au sous-formulaire.
 
 
 #### Grammaire JSON
