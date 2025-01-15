@@ -28,7 +28,7 @@ Pode criar diferentes tipos de listas pendentes com diferentes funcionalidades. 
 
 > Esta funcionalidade só está disponível em projectos 4D.
 
-Um [objeto](Concepts/dt_object.md) que encapsula uma [coleção](Concepts/dt_collection) pode ser usado como a fonte de dados de uma lista suspensa. O objeto deve conter as seguintes propriedades:
+An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) can be used as the data source of a drop-down list. O objeto deve conter as seguintes propriedades:
 
 | Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                               |
 | -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -159,7 +159,7 @@ Você pode criar automaticamente uma lista suspensa usando uma [ação padrão] 
 - Uso de uma ação padrão que exibe uma sub-lista de itens, por exemplo, `backgroundColor`. Essa funcionalidade exige que:
   - uma área de texto com estilo ([4D Write Pro area](writeProArea_overview.md) ou [input](input_overview.md) com a propriedade [multistyle](properties_Text.md#multi-style)) está presente no formulário como o alvo da ação padrão.
   - A propriedade [focusable](properties_Entry.md#focusable) não esteja definida para a lista suspensa.
-    At runtime the drop-down list will display an automatic list of values, e.g. background colors. Pode substituir esta lista automática atribuindo além disso uma lista de seleção na qual cada elemento tenha atribuída uma ação padrão personalizada.
+    Em tempo de execução, a lista suspensa exibirá uma lista automática de valores, por exemplo, cores de fundo. Pode substituir esta lista automática atribuindo além disso uma lista de seleção na qual cada elemento tenha atribuída uma ação padrão personalizada.
 
 > Esta funcionalidade não pode ser utilizada com uma lista pendente hierárquica.
 
