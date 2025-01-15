@@ -61,7 +61,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 :::info Compatibilidad
 
-This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. Para más información sobre este botón, consulte la [documentación de versiones anteriores de 4D](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](../Project/compiler.md#generate-typing).
 
 :::
 
@@ -131,7 +131,7 @@ In projects converted from 4D versions prior to 20 R7, additional compilation op
 - **Declaración de tipos por defecto**
 - **Métodos Compilador para...**
 
-Estas opciones solo se mantienen por compatibilidad con código antiguo. Para más información, consulte la [documentación de versiones anteriores de 4D](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
+Estas opciones solo se mantienen por compatibilidad con código antiguo. For more information, please refer to the [documentation of previous 4D releases](../Project/compiler.md#compiler-settings).
 
 En proyectos convertidos, se recomienda [habilitar el modo de escritura directa](#enabling-direct-typing) y escribir código de declaración conforme, por ejemplo:
 
