@@ -544,20 +544,14 @@
   "Release Notes": {
     "message": "Notas del lanzamiento"
   },
-  "homepage.sections.core-development.langage-ref-url": {
-    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Language-Reference.100-6957482.en.html"
-  },
-  "homepage.sections.textensions.4D-Write-Pro-Reference-url": {
-    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Write-Pro-Reference.100-6993921.en.html"
-  },
   "homepage.sections.textensions.4D-Progress-url": {
-    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Progress.100-7183762.en.html"
+    "message": "https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Progress.100-7476284.en.html"
   },
   "homepage.sections.textensions.4D-SVG-Component-url": {
-    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-SVG-Component.100-7184636.en.html"
+    "message": "https://doc.4d.com/4Dv20R8/4D/20-R8/4D-SVG-Component.100-7477155.en.html"
   },
   "homepage.sections.textensions.4D-Widgets-url": {
-    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Widgets.100-7185285.en.html"
+    "message": "https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Widgets.100-7477804.en.html"
   },
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url": {
     "message": "https://developer.4d.com/4d-for-ios/docs/en/overview.html"
@@ -625,5 +619,40 @@
   },
   "Language": {
     "message": "Lenguaje"
+  },
+  "4D Language": {
+    "message": "Lenguaje 4D"
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Authors",
+    "description": "The title of the authors page"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "View all authors",
+    "description": "The label of the link targeting the blog authors page"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "This author has not written any posts yet.",
+    "description": "The text for authors with 0 blog post"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "Página no listada",
+    "description": "The unlisted content banner title"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "Esta página no está en la lista. Los motores de búsqueda no lo indexarán, y sólo los usuarios que tengan un enlace directo pueden acceder a ella.",
+    "description": "The unlisted content banner message"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Draft page",
+    "description": "The draft content banner title"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "description": "The draft content banner message"
   }
 }
