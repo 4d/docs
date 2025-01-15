@@ -112,7 +112,7 @@ Cuando esta propiedad no se aplica al splitter, el resultado es el siguiente:
 
 #### Objetos soportados
 
-[Separador](splitterTabControlOverview#splitters)
+[Separador](splitters.md)
 
 ---
 
