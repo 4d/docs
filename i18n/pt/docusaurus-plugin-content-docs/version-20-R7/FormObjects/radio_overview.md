@@ -48,13 +48,13 @@ El estilo de botón radio Plano es un botón sistema estándar (\*es decir, \*, 
 
 ![](../assets/en/FormObjects/radio_flat.png)
 
-Por padrão, o estilo Plano tem um aspeto minimalista. The Flat button style's graphic nature is particularly useful for forms that will be printed.
+Por padrão, o estilo Plano tem um aspeto minimalista. A natureza gráfica do estilo Plano é especialmente útil para os formulários que vão ser impressos.
 
 ### Barra de ferramentas
 
 O estilo de botão rádio está pensado principalmente para sua integração em uma barra de ferramentas.
 
-By default, the Toolbar style has a transparent background with a label in the center. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
+Por padrão, o estilo da barra de ferramentas tem um fundo transparente com um rótulo no centro. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
 - *Windows* - o botão é destacado.
 
