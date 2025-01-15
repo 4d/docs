@@ -200,7 +200,7 @@ Quando [HTTPS estiver ativado](#enable-https), lembre-se de que se [HTTP também
 
 O HSTS permite que o servidor web 4D declare que os navegadores só devem interagir com ele por meio de conexões HTTPS seguras. Uma vez ativado, o servidor 4D da web irá adicionar automaticamente informações relacionadas ao HSTS em todos os cabeçalhos de resposta. Navegadores gravarão as informações de HSTS na primeira vez que receberem uma resposta do servidor da web 4D, então quaisquer futuras solicitações HTTP serão automaticamente transformadas em solicitações HTTPS. O tempo que esta informação é armazenada pelo navegador é especificado com a configuração da Web **HSTS idade máxima**.
 
-> A ativação do HSTS exige que o HTTPS esteja [ativado](enable-https) no servidor. [O HTTP](enable-http) também deve ser ativado para permitir conexões iniciais do cliente.
+> HSTS requires that HTTPS is [enabled](#enable-https) on the server. [O HTTP](#enable-http) também deve ser ativado para permitir conexões iniciais do cliente.
 
 > Você pode obter o modo de conexão atual usando o comando `WEB Is secured connection` .
 
