@@ -6,7 +6,7 @@ title: Mode SDI sous Windows
 
 Sous Windows, les Développeurs 4D peuvent configurer leurs applications fusionnées pour qu'elles fonctionnent en tant qu'applications SDI (Single-Document Interface). Dans les applications SDI, chaque fenêtre est indépendante des autres et peut avoir sa propre barre de menus. Les applications SDI sont opposées aux applications MDI (Multiple Documents Interface), où toutes les fenêtres sont contenues dans une fenêtre principale, et en dépendent.
 
-> Le concept SDI/MDI n'existe pas sur macOS. Cette fonctionnalité concerne uniquement des applications Windows, et les options s'y référant sont ignorées sous macOS.
+> The concept of sdi.mdI does not exist on macOS. Cette fonctionnalité concerne uniquement des applications Windows, et les options s'y référant sont ignorées sous macOS.
 
 ## Disponibilité du mode SDI
 
