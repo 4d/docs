@@ -153,7 +153,7 @@ As macros são instanciadas no arranque da aplicação. Consequentemente, se voc
 
 ## Funções macro
 
-Every macro class can contain a `Class constructor` and two functions: `onInvoke()` and `onError()`.
+Toda classe de macro pode conter um `Class constructor` e duas funções: `onInvoke()` e `onError()`.
 
 
 ### Class constructor
@@ -164,11 +164,11 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 | --------- | ------ | ------------------------------------------------------------ |
 | $macro    | Object | Objeto de declaração de macro (no arquivo `formMacros.json`) |
 
-Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
+As macros são instanciadas usando uma função [class constructor](Concepts/classes.md#class-constructor), se ela existir.
 
-The class constructor is called once during class instantiation, which occurs at application startup.
+O class constructor é chamado uma vez durante a instanciação das classes, que ocorre na inicialização da aplicação.
 
-Custom properties added to the [macro declaration](#declaring-macros) are returned in the parameter of the class contructor function.
+As propriedades personalizadas adicionadas à [declaração macro](#declaring-macros) são retornadas no parâmetro da função class contructor.
 
 
 
@@ -209,23 +209,23 @@ A função `onInvoke` é executada automaticamente sempre que a macro é chamada
 
 Quando a função é chamada, recebe na propriedade `$editor.editor` uma cópia de todos os elementos do formulário com os seus valores atuais. Pode então executar qualquer operação sobre estas propriedades.
 
-Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in `$result`. The macro processor will parse the returned properties and apply necessary operations in the form. Obviously, the less properties you return, the less time processing will require.
+Depois que as operações forem concluídas, se a macro resultar na modificação, adição ou remoção de objetos, você poderá passar as propriedades editadas resultantes em `$result`. O processador macro analisará as propriedades retornadas e aplicará as operações necessárias no formulário. Obviamente, quanto menos propriedades você retornar, menos tempo o processamento exigirá.
 
 Aqui estão as propriedades retornadas no parâmetro *$editor*:
 
-| Propriedade                      | Tipo       | Descrição                                                                         |
-| -------------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| $editor.editor.form              | Object     | O formulário completo                                                             |
-| $editor.editor.file              | File       | Objeto File do ficheiro do formulário                                             |
-| $editor.editor.name              | Text       | Nome do formulário                                                                |
-| $editor.editor.table             | number     | Número da tabela do formulário, 0 para formulário projecto                        |
-| $editor.editor.currentPageNumber | number     | O número da página actual                                                         |
-| $editor.editor.currentPage       | Object     | The current page, containing all the form objects and the entry order of the page |
-| $editor.editor.currentSelection  | Collection | Colecção de nomes de objectos seleccionados                                       |
-| $editor.editor.formProperties    | Object     | Propriedades do formulário atual                                                  |
-| $editor.editor.target            | string     | Nome do objeto sob o rato quando clicado numa macro                               |
+| Propriedade                      | Tipo       | Descrição                                                                              |
+| -------------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| $editor.editor.form              | Object     | O formulário completo                                                                  |
+| $editor.editor.file              | File       | Objeto File do ficheiro do formulário                                                  |
+| $editor.editor.name              | Text       | Nome do formulário                                                                     |
+| $editor.editor.table             | number     | Número da tabela do formulário, 0 para formulário projecto                             |
+| $editor.editor.currentPageNumber | number     | O número da página actual                                                              |
+| $editor.editor.currentPage       | Object     | A página atual, contendo todos os objetos de formulário e a ordem de entrada da página |
+| $editor.editor.currentSelection  | Collection | Colecção de nomes de objectos seleccionados                                            |
+| $editor.editor.formProperties    | Object     | Propriedades do formulário atual                                                       |
+| $editor.editor.target            | string     | Nome do objeto sob o rato quando clicado numa macro                                    |
 
-Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. Todas as propriedades são opcionais:
+Aqui estão as propriedades que você pode passar no objeto `$result` se quiser que o processador de macro execute uma modificação. Todas as propriedades são opcionais:
 
 | Propriedade       | Tipo       | Descrição                                                              |
 | ----------------- | ---------- | ---------------------------------------------------------------------- |
@@ -248,9 +248,9 @@ Por exemplo, se objectos da página actual e grupos tiverem sido modificados, po
 
 #### atributo `method`
 
-When handling the `method` attribute of form objects, you can define the attribute value in two ways in macros:
+Ao lidar com o atributo `method` dos objetos de formulário, você pode definir o valor do atributo de duas maneiras nas macros:
 
-- Using a [string containing the method file name/path](FormObjects/properties_Action.md#method).
+- Usando uma [cadeia de caracteres que contém o nome/caminho do arquivo do método](FormObjects/properties_Action.md#method).
 
 - Utilizar um objeto com a seguinte estrutura:
 
@@ -259,20 +259,20 @@ When handling the `method` attribute of form objects, you can define the attribu
 |             |      |           |
  source|Text|method code|
 
-4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. Esta funcionalidade só está disponível para o código macro.
+O 4D criará um arquivo usando o nome do objeto na pasta "objectMethods" com o conteúdo do atributo `source`. Esta funcionalidade só está disponível para o código macro.
 
 #### Propriedade `$4dId` em `currentPage.objects`
 
 A propriedade `$4dId` define um ID único para cada objecto na página actual. Esta chave é utilizada pelo macro processador para controlar as alterações em `$result.currentPage`:
 
 - se a chave `$4dId` estiver em falta tanto na forma como num objecto em `$result`, o objecto é criado.
-- if the `$4dId` key exists in the form but is missing in `$result`, the object is deleted.
-- if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
+- se a chave `$4dId` existir no formulário, mas estiver ausente em `$result`, o objeto será excluído.
+- se a chave `$4dId` existir tanto no formulário quanto em um objeto em `$result`, o objeto será modificado.
 
 
 #### Exemplo
 
-You want to define a macro function that will apply the red color and italic font style to any selected object(s).
+Você deseja definir uma função de macro que aplicará vermelho e o estilo de fonte itálico a qualquer objeto selecionado.
 
 ```4d
 Function onInvoke($editor : Object)->$result : Object
@@ -318,7 +318,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 A função `onError` é executada quando o processador de macros encontra um erro.
 
-When executing a macro, if 4D encounters an error which prevents the macro from being cancelled, it does not execute the macro. É o caso, por exemplo, se a execução de uma macro resultar em:
+Ao executar uma macro, se a 4D encontrar um erro que impeça a macro de ser cancelada, ela não executa o macro. É o caso, por exemplo, se a execução de uma macro resultar em:
 
 - eliminar ou modificar um script cujo ficheiro é só de leitura.
 - criar dois objectos com o mesmo ID interno.
