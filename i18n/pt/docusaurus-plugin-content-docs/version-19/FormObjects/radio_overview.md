@@ -47,13 +47,13 @@ The Flat radio button style is a standard system button (*i.e.*, a small bullsey
 
 ![](../assets/en/FormObjects/radio_flat.png)
 
-Por padrão, o estilo Plano tem um aspeto minimalista. The Flat button style's graphic nature is particularly useful for forms that will be printed.
+Por padrão, o estilo Plano tem um aspeto minimalista. A natureza gráfica do estilo Plano é especialmente útil para os formulários que vão ser impressos.
 
 ### Barra de ferramentas
 
 O estilo de botão rádio está pensado principalmente para sua integração em uma barra de ferramentas.
 
-By default, the Toolbar style has a transparent background with a label in the center. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
+Por padrão, o estilo da barra de ferramentas tem um fundo transparente com um rótulo no centro. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
 - *Windows* - o botão é realçado.
 
@@ -85,7 +85,7 @@ The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style 
 
 - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
-- *macOS* - the button is displayed as a two-tone system button.
+- *macOS* - o botão é exibido como um botão de sistema de dois tons.
 
 ### OS X Texturizado
 
@@ -135,5 +135,5 @@ Todos os botões rádio partilham o mesmo conjunto de propriedades básicas:
 
 Propriedades específicas adicionais estão disponíveis dependendo do [estilo botão](#button-styles):
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
+- [Nome do caminho do plano de fundo](properties_TextAndPicture.md#background-pathname) - [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) - [Deslocamento do ícone](properties_TextAndPicture.md#icon-offset) - [Margem vertical](properties_TextAndPicture.md#vertical-margin) (personalizada)
 - [Número de estados](properties_TextAndPicture.md#number-of-states) - [Caminho da imagem](properties_TextAndPicture.md#picture-pathname) - [Título/posição da imagem](properties_TextAndPicture.md#titlepicture-position) (Botão da barra de ferramentas, Bevel, Rounded Bevel, Gradiente X, OS X Textured, Office XP, Personalizado)
