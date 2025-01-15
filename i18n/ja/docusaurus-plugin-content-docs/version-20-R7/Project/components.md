@@ -144,7 +144,7 @@ flowchart TB
 
 :::note
 
-**environment4d.json** ファイルで定義されたコンポーネントのパスが、プロジェクトの開始時に見つからない場合、コンポーネントは読み込まれず、*Not found* [ステータス](#依存関係のステータス) が表示されます。
+If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the *Not found* [status](#dependency-status), even if a version of the component exists next to the project's package folder.
 
 :::
 
