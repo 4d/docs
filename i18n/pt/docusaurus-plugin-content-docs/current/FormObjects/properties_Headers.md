@@ -39,7 +39,7 @@ Note that converting back and forth may lead to an end result that is different 
 - (fonte Arial 18)\*: 52 pixels -> 2 linhas -> 40 pixels
 - (fonte Arial 12)\*: 3 pixels -> 0.4 linha arredondada para 1 linha -> 19 pixels
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "List Box": {
