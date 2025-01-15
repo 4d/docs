@@ -144,7 +144,7 @@ Ejemplos:
 
 :::note
 
-Si desea personalizar la ubicación de los componentes locales, declare las rutas de las dependencias que no se almacenan en el mismo nivel que la carpeta del proyecto en el archivo [**environment4d.json**](#environment4djson).
+If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the *Not found* [status](#dependency-status), even if a version of the component exists next to the project's package folder.
 
 :::
 
