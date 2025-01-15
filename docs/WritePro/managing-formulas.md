@@ -3,7 +3,7 @@ id: managing-formulas
 title: Managing formulas
 ---
 
-#### Overview
+## Overview
 
 4D Write Pro documents can contain references to 4D formulas such as variables, fields, expressions, project methods, or 4D commands. Specific information such as the page number can also be referenced through formulas (see [Inserting document and page expressions](#inserting-date-and-time-formulas) below).
 
@@ -28,7 +28,7 @@ Formulas become static values if you call the [**WP FREEZE FORMULAS**](commands-
 
 **Compatibility Note**: *Handling expressions using the [**ST INSERT EXPRESSION**](../commands-legacy/st-insert-expression.md), [**ST Get expression**](../commands-legacy/st-get-expression.md), [**ST COMPUTE EXPRESSIONS**](../commands-legacy/st-compute-expressions.md), and [**ST FREEZE EXPRESSIONS**](../commands-legacy/st-freeze-expressions.md) commands is deprecated, however, it is still supported in 4D Write Pro for compatibility*.
 
-##### Example
+### Example
 
 You want to replace the selection in a 4D Write Pro area with the contents of a variable:
 
@@ -43,7 +43,7 @@ You want to replace the selection in a 4D Write Pro area with the contents of a 
  End case
 ```
 
-#### Formula context object
+## Formula context object
 
 You can insert special expressions related to document attributes in any document area (body, header, footer) using the [WP Insert formula](commands/wp-insert-formula.md) command. Within a formula, a formula context object is automatically exposed. You can use the properties of this object through [**This**](../commands/this.md):
 
@@ -84,7 +84,7 @@ For example, to insert the page number in the footer area:
   //would not work correctly
 ```
 
-#### Inserting date and time formulas
+## Inserting date and time formulas
 
 **Date**
 
@@ -108,7 +108,7 @@ When the [**Current time**](../commands-legacy/current-time.md) command, a time 
  
 ```
 
-#### Support of virtual structure
+## Support of virtual structure
 
 Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. The virtual structure exposed to formulas is defined through [**SET FIELD TITLES**](../commands-legacy/set-field-titles.md)(...;\*) and [**SET TABLE TITLES**](../commands-legacy/set-table-titles.md)(...;\*) commands.
 
@@ -124,14 +124,14 @@ When a document is displayed in "display expressions" mode, references to tables
 
 :::
 
-#### Displaying formulas
+## Displaying formulas
 
 You can control how formulas are displayed in your documents:
 
 - as *values* or as *references*
 - when shown as references, display source text, symbol, or name.
 
-##### References or Values
+### References or Values
 
 By default, 4D formulas are displayed as values. When you insert a 4D formula, 4D Write Pro computes and displays its current value.  If you wish to know which formula is used or what is its name, you need to display it as a reference.
 
@@ -148,7 +148,7 @@ Formula references can be displayed as:
 - symbols
 - names
 
-##### References as source texts (default)
+### References as source texts (default)
 
 When formulas are displayed as references, by default the source text of the formula appear in your document, with a default gray background (can be customized using the `wk formula highlight` selector). 
 
@@ -160,7 +160,7 @@ When you display formulas as references, the **source** of the formula is displa
 
 ![](../assets/en/WritePro/wp-formulas2.png)
 
-##### References as symbols 
+### References as symbols 
 
 When formula source texts are displayed in a document, the design could be confusing if you work on sophisticated templates using tables for example, and when formulas are complex:
 
@@ -176,7 +176,7 @@ To display formula references as symbols, you can:
 - use the displayFormulaAsSymbol standard action (see *Using 4D Write Pro standard actions*), or
 - use the [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) command with the `wk display formula as symbol` selector to **True**.
 
-##### References as names 
+### References as names 
 
 You can assign names to formulas, making 4D Write Pro template documents easier to read and understand for end-users. When formulas are displayed as references (and not displayed as symbols) and you have defined a name for a formula, the formula name is displayed. 
 
@@ -206,7 +206,7 @@ Only inline formulas can have a name (formulas for anchored images, break rows, 
 
 :::
 
-##### Formula tips
+### Formula tips
 
 Whatever the formula display mode, you can get additional information on formulas through **tips** that are displayed when you hover on formulas.
 
