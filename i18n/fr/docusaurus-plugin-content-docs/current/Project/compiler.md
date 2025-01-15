@@ -61,7 +61,7 @@ Le contrôle syntaxique peut également être lancé directement à l'aide de la
 
 :::info Compatibilité
 
-This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](../Project/compiler.md#generate-typing).
 
 :::
 
@@ -131,7 +131,7 @@ In projects converted from 4D versions prior to 20 R7, additional compilation op
 - **Default typing**
 - **Compiler Methods for...**
 
-These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
+These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](../Project/compiler.md#compiler-settings).
 
 In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
 
