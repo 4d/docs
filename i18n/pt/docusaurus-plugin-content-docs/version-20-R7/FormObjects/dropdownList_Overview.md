@@ -140,7 +140,7 @@ Quando você tiver associado uma lista suspensa a uma lista de opções e a um c
 
 ### Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
 
-A hierarchical drop-down list has a sublist associated with each item in the list. Eis um exemplo de uma lista pendente hierárquica:
+Uma lista suspensa hierárquica tem uma sub-lista associada a cada item da lista. Eis um exemplo de uma lista pendente hierárquica:
 
 ![](../assets/en/FormObjects/popupDropdown_hierar.png)
 
@@ -154,7 +154,7 @@ Pode gerenciar as listas suspensas hierárquicas usando os comandos **listas hie
 
 Você pode criar automaticamente uma lista suspensa usando uma [ação padrão] (properties_Action.md#standard-action). Esta funcionalidade é suportada nos seguintes contextos:
 
-- Uso da ação padrão `gotoPage`. Nesse caso, o 4D exibirá automaticamente a [página do formulário] (FormEditor/forms.md#form-pages) que corresponde ao número do item selecionado. For example, if the user selects the 3rd item, 4D will display the third page of the current form (if it exists). At runtime, by default the drop-down list displays the page numbers (1, 2...).
+- Uso da ação padrão `gotoPage`. Nesse caso, o 4D exibirá automaticamente a [página do formulário] (FormEditor/forms.md#form-pages) que corresponde ao número do item selecionado. Por exemplo, se o usuário selecionar o terceiro item, 4D exibirá a terceira página do formulário atual (se existir). No tempo de execução, por padrão a lista suspensa exibe os números de página (1, 2...).
 
 - Uso de uma ação padrão que exibe uma sub-lista de itens, por exemplo, `backgroundColor`. Essa funcionalidade exige que:
   - uma área de texto com estilo ([4D Write Pro area](writeProArea_overview.md) ou [input](input_overview.md) com a propriedade [multistyle](properties_Text.md#multi-style)) está presente no formulário como o alvo da ação padrão.
