@@ -579,7 +579,7 @@ A gestão das vistas é efetuada através da paleta de vistas.
 
 Existem três formas de aceder à paleta de vistas:
 
-- **Barra de ferramentas**: Clique no ícone Views na barra de ferramentas do Form Editor. (This icon appears gray when at least one object belongs to a view other than the default view.)
+- **Barra de ferramentas**: Clique no ícone Views na barra de ferramentas do Form Editor. (Este ícone aparece cinza quando pelo menos um objeto pertence a uma visualização diferente da visualização padrão.)
 
 |                 Vista por defeito apenas                |                 Com vistas adicionais                 |
 | :-----------------------------------------------------: | :---------------------------------------------------: |
@@ -631,11 +631,11 @@ Não há limite para o número de vistas.
 
 #### Renomear vistas
 
-By default views are named as "View" + the view number, however you can change these names to improve readability and better suit your needs.
+Por padrão, as visualizações são nomeadas como "Vista" + o número da visualização, mas você pode alterar esses nomes para melhorar a legibilidade e atender melhor às suas necessidades.
 
 Para mudar o nome de uma vista, pode utilizar:
 
-- Double-click directly on the view name (the selected view in this case). O nome torna-se então editável:
+- Clique duas vezes diretamente no nome da visualização (a visualização selecionada, nesse caso). O nome torna-se então editável:
 
 ![](../assets/en/FormEditor/rename.png)
 
@@ -645,7 +645,7 @@ Para mudar o nome de uma vista, pode utilizar:
 
 #### Reordenação de visualizações
 
-You can change the display order of views by dragging/dropping them within the View palette.
+Você pode alterar a ordem de exibição das exibições arrastando-as/soltando-as na paleta Exibir.
 
 Note-se que a vista padrão não é alterada:
 
@@ -685,7 +685,7 @@ Para criar um objeto em outra visualização, basta selecionar a visualização 
 
 #### Mover objectos entre vistas
 
-It's also possible to move one or more objects from one view to another. No formulário, selecionar o(s) objeto(s) cuja vista se pretende alterar. The view list indicates, using a symbol, the view to which the selection belongs:
+Também é possível mover um ou mais objetos de uma visualização para outra. No formulário, selecionar o(s) objeto(s) cuja vista se pretende alterar. A lista de visualizações indica, por um símbolo, a visualização à qual a seleção pertence:
 
 ![](../assets/en/FormEditor/symbol.png)
 
@@ -713,7 +713,7 @@ Você também pode mover um objeto para outra visualização por meio do menu de
 
 #### Seleccionar todos os objectos de uma vista
 
-You can select all objects belong to the same view in the current page of the form. This function is useful for applying global changes to a set of objects.
+Você pode selecionar todos os objetos que pertencem à mesma exibição na página atual do formulário. Essa função é útil para aplicar alterações globais a um conjunto de objetos.
 
 Para fazer isso, clique com o botão direito do mouse no modo de exibição em que você deseja selecionar todos os objetos, clique em **Selecionar todos**:
 
@@ -725,7 +725,7 @@ Também pode utilizar o botão na parte inferior da paleta de vistas:
 
 #### Mostrar ou esconder objectos de uma vista
 
-You can show or hide objects belonging to a view at any time in the form's current page. Essa função pode ser usada, por exemplo, para focar em determinados objetos ao modificar o formulário.
+Você pode mostrar ou ocultar objetos pertencentes a uma visualização a qualquer momento na página atual do formulário. Essa função pode ser usada, por exemplo, para focar em determinados objetos ao modificar o formulário.
 
 Por padrão, todas as exibições são mostradas, conforme indicado pelo ícone *Show/Hide*:
 
@@ -757,12 +757,12 @@ Para desbloquear una vista que está bloqueada, basta con seleccionarla o hacer 
 
 ## Zoom
 
-Pode fazer zoom no formulário atual. Switch to “Zoom” mode by clicking on the magnifying glass icon or clicking directly on the desired percentage bar (50%, 100%, 200%, 400% and 800%):
+Pode fazer zoom no formulário atual. Alterne para o modo "Zoom" clicando no ícone da lupa ou clicando diretamente na barra de porcentagem desejada (50%, 100%, 200%, 400% e 800%):
 
 ![](../assets/en/FormEditor/zoom.png)
 
 - Quando se clica na lupa, o cursor transforma-se numa lupa. Pode então clicar no formulário para aumentar a visualização ou manter premida a tecla Shift e clicar para reduzir a percentagem de visualização.
-- When you click on a percentage bar, the display is immediately modified.
+- Quando você clica em uma barra de porcentagem, a exibição é imediatamente modificada.
 
 No modo Zoom, todas as funções do editor de formulários permanecem disponíveis(\*).
 
