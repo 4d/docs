@@ -28,7 +28,7 @@ Puede crear diferentes tipos de listas desplegables con distintas funcionalidade
 
 > Esta funcionalidad sólo está disponible en proyectos 4D.
 
-Un [objeto](Concepts/dt_object.md) encapsulando una [colección](Concepts/dt_collection) puede utilizarse como fuente de datos de una lista desplegable. El objeto debe contener las siguientes propiedades:
+An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) can be used as the data source of a drop-down list. El objeto debe contener las siguientes propiedades:
 
 | Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                                             |
 | -------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
