@@ -8,7 +8,7 @@ A group box is a static object that allows you to visually assemble multiple for
 ![](../assets/en/FormObjects/groupBox.png)
 > The name of a group box is static text; you can use a “localizable” reference as with any 4D label (see [Using references in static text](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html) and *XLIFF Architecture* section in 4D Design Reference.
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "myGroup": {
