@@ -88,7 +88,7 @@ Cada formulário é composto por, pelo menos, duas páginas:
 
 - Coloque as informações mais importantes na primeira página e as informações menos importantes nas outras páginas.
 - Organize cada tópico na sua própria página.
-- Reduza ou elimine a rolagem durante a entrada de dados definindo a [ordem de entrada](../FormEditor/formEditor.html#data-entry-order).
+- Reduce or eliminate scrolling during data entry by setting the [entry order](formEditor.md#data-entry-order).
 - Fornece espaço em torno dos elementos de formulário para um design de tela atrativo.
 
 As páginas múltiplas são uma conveniência utilizada apenas para formulários de introdução. Não são para produção impressa. Quando um formulário de várias páginas é impresso, apenas a primeira página é impressa.
@@ -112,7 +112,7 @@ Quando um formulário é executado, os objetos são carregados e combinados na s
 3. Página zero do formulário aberto
 4. Página actual do formulário aberto.
 
-Esta ordem determina a [ordem de entrada](../FormEditor/formEditor.html#data-entry-order) padrão dos objetos no formulário.
+This order determines the default [entry order](formEditor.md#data-entry-order) of objects in the form.
 
 > Apenas as páginas 0 e 1 de um formulário herdado podem aparecer noutros formulários.
 
