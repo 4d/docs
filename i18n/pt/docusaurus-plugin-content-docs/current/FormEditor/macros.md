@@ -257,7 +257,7 @@ A propriedade `$4dId` define um ID exclusivo para cada objeto na página atual. 
 
 #### Exemplo
 
-You want to define a macro function that will apply the red color and italic font style to any selected object(s).
+Você deseja definir uma função de macro que aplicará vermelho e o estilo de fonte itálico a qualquer objeto selecionado.
 
 ```4d
 Função onInvoke($editor : Objeto)->$result : Objeto
@@ -294,7 +294,7 @@ Função onInvoke($editor : Objeto)->$result : Objeto
 
 A função `onError` é executada quando o processador de macros encontra um erro.
 
-When executing a macro, if 4D encounters an error which prevents the macro from being cancelled, it does not execute the macro. É o caso, por exemplo, se a execução de uma macro resultar em:
+Ao executar uma macro, se a 4D encontrar um erro que impeça a macro de ser cancelada, ela não executa o macro. É o caso, por exemplo, se a execução de uma macro resultar em:
 
 - eliminar ou modificar um script cujo ficheiro é só de leitura.
 - criar dois objectos com o mesmo ID interno.
