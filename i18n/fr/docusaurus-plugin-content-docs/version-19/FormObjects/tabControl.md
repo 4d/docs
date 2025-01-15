@@ -48,7 +48,7 @@ Pour fournir les étiquettes d'un onglet, vous pouvez utiliser :
 
 ### Utiliser un objet
 
-Vous pouvez affecter un [objet](Concepts/dt_object.md) encapsulant une [collection](Concepts/dt_collection) comme [source de données](properties_Object.md#variable-or-expression) de l'onglet. Cet objet doit avoir les propriétés suivantes :
+You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) as the [data source](properties_Object.md#variable-or-expression) of the tab control. Cet objet doit avoir les propriétés suivantes :
 
 | Propriété      | Type       | Description                                                                                                                                                          |
 | -------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
