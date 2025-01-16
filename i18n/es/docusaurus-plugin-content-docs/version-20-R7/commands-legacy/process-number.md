@@ -66,3 +66,12 @@ Con esta función, el método de proyecto listado pega el texto recibido como pa
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 372 |
+| Hilo seguro | &check; |
+
+

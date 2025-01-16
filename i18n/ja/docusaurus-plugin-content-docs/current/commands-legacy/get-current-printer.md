@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Get current printer.Summary-->**Get current printer** コマンドは、4Dアプリケーションに定義されたカレントプリンター名を返します。<!-- END REF-->デフォルトで4Dの起動時には、システムで定義されたプリンターがカレントプリンターとなります。
@@ -34,3 +31,12 @@ displayed_sidebar: docs
 
 [PRINTERS LIST](printers-list.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 788 |
+| スレッドセーフである | &cross; |
+
+

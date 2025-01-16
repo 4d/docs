@@ -32,3 +32,13 @@ L'exemple suivant récupère l'enregistrement d'un client dans la pile :
 
 [PUSH RECORD](push-record.md)  
 *Utiliser la pile d'enregistrements*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 177 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+
+

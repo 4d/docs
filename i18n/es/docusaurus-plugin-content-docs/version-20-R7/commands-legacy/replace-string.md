@@ -72,3 +72,12 @@ El siguiente ejemplo ilustra el uso del parámetro \* en el caso de una evaluaci
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 233 |
+| Hilo seguro | &check; |
+
+

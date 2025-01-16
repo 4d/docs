@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SELECT ROW.Summary-->O comando  LISTBOX SELECT ROW seleciona a fila cujo número é passado em *posição* no list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
@@ -56,3 +53,12 @@ Depois da execução do método, os arrays são sincronizados: se o array fonte 
 [LISTBOX SELECT BREAK](listbox-select-break.md)  
 [LISTBOX SELECT ROWS](listbox-select-rows.md)  
 [OBJECT SET SCROLL POSITION ](object-set-scroll-position.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 912 |
+| Thread-seguro | &cross; |
+
+

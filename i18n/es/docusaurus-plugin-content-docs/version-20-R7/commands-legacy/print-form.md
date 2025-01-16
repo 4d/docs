@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Print form.Summary-->Print form simplemente imprime *formulario* con los valores actuales de los campos y variables.<!-- END REF--> Generalmente este comando se utiliza para imprimir informes muy complejos que necesiten un control total del proceso de impresión. Print form no procesa registros, ni rupturas o saltos de páginas. Estas operaciones son su responsabilidad. Print form imprime campos y variables en un marco de tamaño fijo únicamente.
@@ -183,3 +180,12 @@ El código que llama al diálogo luego imprime su cuerpo:
 [PAGE BREAK](page-break.md)  
 [PRINT SETTINGS](print-settings.md)  
 [SET PRINT OPTION](set-print-option.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 5 |
+| Hilo seguro | &cross; |
+
+

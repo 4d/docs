@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->The **OBJECT GET PRINT VARIABLE FRAME** command gets the current configuration of the variable frame print options for the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
@@ -39,3 +36,12 @@ If the *object* is a subform and if variable frame printing is disabled (**False
 #### See also 
 
 [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1241 |
+| Thread safe | &cross; |
+
+

@@ -30,3 +30,12 @@ El siguiente ejemplo utiliza un valor monetario expresado como un número real, 
 #### Ver también 
 
 [Int](int.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 9 |
+| Hilo seguro | &check; |
+
+

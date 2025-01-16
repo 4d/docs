@@ -19,31 +19,7 @@ title: オブジェクト
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) -
-[4D Write Pro エリア](writeProArea_overview.md) -
-[ボタン](button_overview.md) -
-[ボタングリッド](buttonGrid_overview.md) -
-[チェックボックス](checkbox_overview.md) -
-[コンボボックス](comboBox_overview.md) -
-[ドロップダウンリスト](dropdownList_Overview.md) -
-[グループボックス](groupBox.md) -
-[階層リスト](list_overview.md) -
-[リストボックス](listbox_overview.md) -
-[リストボックス列](listbox_overview.md#リストボックス列) -
-[リストボックスフッター](listbox_overview.md#リストボックスフッター) -
-[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) -
-[ピクチャーボタン](pictureButton_overview.md) -
-[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
-[プラグインエリア](pluginArea_overview.md) -
-[進捗インジケーター](progressIndicator.md) -
-[ラジオボタン](radio_overview.md) -
-[スピナー](spinner.md) -
-[スプリッター](splitters.md) -
-[スタティックピクチャー](staticPicture.md) -
-[ステッパー](stepper.md) -
-[サブフォーム](subform_overview.md) -
-[タブコントロール](tabControl.md) -
-[テキストエリア](text.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) -[Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -53,7 +29,7 @@ title: オブジェクト
 
 > オブジェクト名のサイズ上限は 255バイトです。
 
-4Dランゲージを使用する際、オブジェクト名を使用してアクティブフォームオブジェクトを参照できます (詳細については 4Dランゲージリファレンスの [オブジェクトプロパティ](https://doc.4d.com/4Dv18/4D/18/Object-Properties.300-4505419.ja.html) を参照ください)。
+When using 4D’s language, you can refer to an active form object by its object name (see [Object (Forms) commands](../category/object-forms)).
 
 フォームオブジェクトの命名規則については [識別子](Concepts/identifiers.md) の章を参照してください。
 
@@ -65,32 +41,7 @@ title: オブジェクト
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) -
-[4D Write Pro エリア](writeProArea_overview.md) -
-[ボタン](button_overview.md) -
-[ボタングリッド](buttonGrid_overview.md) -
-[チェックボックス](checkbox_overview.md) -
-[コンボボックス](comboBox_overview.md) -
-[ドロップダウンリスト](dropdownList_Overview.md) -
-[グループボックス](groupBox.md) -
-[階層リスト](list_overview.md) -
-[リストボックス](listbox_overview.md) -
-[リストボックス列](listbox_overview.md#リストボックス列) -
-[リストボックスフッター](listbox_overview.md#リストボックスフッター) -
-[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) -
-[ピクチャーボタン](pictureButton_overview.md) -
-[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
-[プラグインエリア](pluginArea_overview.md) -
-[進捗インジケーター](progressIndicator.md) -
-[スピナー](spinner.md) -
-[スプリッター](splitters.md) -
-[スタティックピクチャー](staticPicture.md) -
-[ステッパー](stepper.md) -
-[ラジオボタン](radio_overview.md) -
-[サブフォーム](subform_overview.md) -
-[タブコントロール](tabControl.md) -
-[テキストエリア](text.md) -
-[Web エリア](webArea_overview.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -185,28 +136,7 @@ title: オブジェクト
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) -
-[4D Write Pro エリア](writeProArea_overview.md) -
-[ボタン](button_overview.md) -
-[ボタングリッド](buttonGrid_overview.md) -
-[チェックボックス](checkbox_overview.md) -
-[コンボボックス](comboBox_overview.md) -
-[ドロップダウンリスト](dropdownList_Overview.md) -
-[階層リスト](list_overview.md) -
-[リストボックス](listbox_overview.md) -
-[リストボックス列](listbox_overview.md#リストボックス列) -
-[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) -
-[リストボックスフッター](listbox_overview.md#リストボックスフッター) -
-[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
-[プラグインエリア](pluginArea_overview.md) -
-[進捗インジケーター](progressIndicator.md) -
-[ラジオボタン](radio_overview.md) -
-[スピナー](spinner.md) -
-[スプリッター](splitters.md) -
-[ステッパー](stepper.md) -
-[サブフォーム](subform_overview.md) -
-[タブコントロール](tabControl.md) -
-[Web エリア](webArea_overview.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -220,7 +150,7 @@ title: オブジェクト
 
 - **[ダイナミック変数](#ダイナミック変数)**: このプロパティを使って、ダイナミック変数の型を宣言することができます。
 - **[リストボックス列](listbox_overview.md#リストボックス列)**: このプロパティは列データに表示フォーマットを関連づけるのに使用されます。 提供されるフォーマットは変数型 (配列型のリストボックス) またはデータ/フィールド型 (セレクションおよびコレクション型のリストボックス) により異なります。 使用できる標準の 4D フォーマットはテキスト、数値、整数、日付、時間、ピクチャー、そしてブールです。 テキストの場合は専用の表示フォーマットがありません。 標準フォーマットのほかに、定義したカスタムフォーマットも選択することができます。
-- **[ピクチャー変数](input_overview.md)**: このプロパティを使うと、インタープリタモードにおいてフォームロード前に変数を宣言することができます。 フォーム上のピクチャー変数にピクチャーを表示する際には特別なメカニズムが使用されます。 そのため、他の型の変数とは違って、ピクチャー変数の宣言は、フォームロード前 (`On Load` フォームイベントよりも先) におこなう必要があります。 このため、フォームを呼び出す前 (たとえば `DIALOG` コマンドを呼び出す前) に`C_PICTURE(varName)` を実行するか、あらかじめプロパティリストの式の型にピクチャーを選択しておく必要があります。
+- **[ピクチャー変数](input_overview.md)**: このプロパティを使うと、インタープリタモードにおいてフォームロード前に変数を宣言することができます。 フォーム上のピクチャー変数にピクチャーを表示する際には特別なメカニズムが使用されます。 そのため、他の型の変数とは違って、ピクチャー変数の宣言は、フォームロード前 (`On Load` フォームイベントよりも先) におこなう必要があります。 To do this, you need either for the statement `var varName : Picture` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property.
   このいずれかをおこなわない場合、ピクチャー変数はピクチャーを正しく表示できません (インタープリターモードのみ)。
 
 #### JSON 文法
@@ -260,24 +190,7 @@ title: オブジェクト
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) -
-[4D Write Pro エリア](writeProArea_overview.md) -
-[ボタン](button_overview.md) -
-[ボタングリッド](buttonGrid_overview.md) -
-[チェックボックス](checkbox_overview.md) -
-[コンボボックス](comboBox_overview.md) -
-[ドロップダウンリスト](dropdownList_Overview.md) -
-[グループボックス](groupBox.md) -
-[階層リスト](list_overview.md) -
-[リストボックス](listbox_overview.md) -
-[ピクチャーボタン](pictureButton_overview.md) -
-[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
-[プラグインエリア](pluginArea_overview.md) -
-[ラジオボタン](radio_overview.md) -
-[スタティックピクチャー](staticPicture.md) -
-[サブフォーム](subform_overview.md) -
-[テキストエリア](text.md) -
-[Web エリア](webArea_overview.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Radio Button](radio_overview.md) - [Static Picture](staticPicture.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
@@ -397,15 +310,15 @@ title: オブジェクト
 
 | 計算タイプ                                    | Num | Text | Date | Time | Bool | ピクチャー | フッター変数の型 |
 | ---------------------------------------- | --- | ---- | ---- | ---- | ---- | ----- | -------- |
-| 最小                                       | ○   | ○    | ○    | ○    | ○    |       | 列の型と同じ   |
-| 最大                                       | ○   | ○    | ○    | ○    | ○    |       | 列の型と同じ   |
-| 合計                                       | ○   |      |      | ○    | ○    |       | 列の型と同じ   |
-| カウント                                     | ○   | ○    | ○    | ○    | ○    | ○     | Integer  |
-| 平均                                       | ○   |      |      | ○    |      |       | Real     |
-| 標準偏差(\*)              | ○   |      |      | ○    |      |       | Real     |
-| 分散(\*)                | ○   |      |      | ○    |      |       | Real     |
-| 平方和(\*)               | ○   |      |      | ○    |      |       | Real     |
-| カスタム (JSON では "none") | ○   | ○    | ○    | ○    | ○    | ○     | 制限なし     |
+| 最小                                       | X   | X    | X    | X    | X    |       | 列の型と同じ   |
+| 最大                                       | X   | X    | X    | X    | X    |       | 列の型と同じ   |
+| 合計                                       | X   |      |      | X    | X    |       | 列の型と同じ   |
+| カウント                                     | X   | X    | X    | X    | X    | X     | Integer  |
+| 平均                                       | X   |      |      | X    |      |       | Real     |
+| 標準偏差(\*)              | X   |      |      | X    |      |       | Real     |
+| 分散(\*)                | X   |      |      | X    |      |       | Real     |
+| 平方和(\*)               | X   |      |      | X    |      |       | Real     |
+| カスタム (JSON では "none") | X   | X    | X    | X    | X    | X     | 制限なし     |
 
 (\*) 配列型のリストボックスのみ
 

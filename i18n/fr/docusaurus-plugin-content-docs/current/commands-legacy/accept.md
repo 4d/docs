@@ -12,15 +12,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.ACCEPT.Summary-->La commande **ACCEPT** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour :
 
 * valider un enregistrement ou un sous-enregistrement créé ou modifié — dont les données ont été saisies à l'aide de [ADD RECORD](add-record.md) ou de [MODIFY RECORD](modify-record.md).<!-- END REF-->
-* valider un formulaire affiché par l'intermédiaire de la commande [DIALOG](dialog.md).
+* valider un formulaire affiché par l'intermédiaire de la commande [DIALOG](../commands/dialog.md).
 * quitter un formulaire affichant une sélection d'enregistrements — à l'aide de [DISPLAY SELECTION](display-selection.md) ou [MODIFY SELECTION](modify-selection.md).
 
 **ACCEPT** effectue la même action que lorsque l'utilisateur appuie sur la touche **Entrée**. Une fois que le formulaire a été validé, la variable système OK prend la valeur 1.
@@ -38,3 +35,13 @@ La commande **ACCEPT** est autorisée en mode headless, dans le contexte des zon
 #### Voir aussi 
 
 [CANCEL](cancel.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 269 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.HIGHLIGHT TEXT.Summary-->O comando HIGHLIGHT TEXT seleciona uma parte de texto em *objeto*.<!-- END REF-->  
@@ -64,3 +61,12 @@ Ver o exemplo do comando [FILTER KEYSTROKE](filter-keystroke.md "FILTER KEYSTROK
 #### Ver também 
 
 [GET HIGHLIGHT](get-highlight.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 210 |
+| Thread-seguro | &cross; |
+
+

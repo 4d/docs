@@ -13,14 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Current form name.Summary-->**Current form name**コマンドは、プロセスのために定義されたカレントのフォームの名前を返します。<!-- END REF-->カレントフォームはプロジェクトフォームでもテーブルフォームでも可能です。
 
-[FORM LOAD](form-load.md) コマンドをカレントプロセス中に使用していなければ、デフォルトでのカレントフォームは表示または印刷されているフォームです。[FORM LOAD](form-load.md) コマンドをカレントプロセス中に呼び出していた場合、カレントフォームはこのコマンドによって設定されたフォームとなり、[FORM UNLOAD](form-unload.md) (または [CLOSE PRINTING JOB](close-printing-job.md))コマンドを呼ぶまでそれが維持されます。
+[FORM LOAD](../commands/form-load.md) コマンドをカレントプロセス中に使用していなければ、デフォルトでのカレントフォームは表示または印刷されているフォームです。[FORM LOAD](../commands/form-load.md) コマンドをカレントプロセス中に呼び出していた場合、カレントフォームはこのコマンドによって設定されたフォームとなり、[FORM UNLOAD](form-unload.md) (または [CLOSE PRINTING JOB](close-printing-job.md))コマンドを呼ぶまでそれが維持されます。
 
 コマンドは、以下のいづれかを返します:
 
@@ -59,4 +56,13 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1298 |
+| スレッドセーフである | &cross; |
+
+

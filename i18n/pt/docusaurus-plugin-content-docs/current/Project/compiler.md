@@ -31,7 +31,7 @@ If errors are detected, the process is stopped and the "Compilation failed" mess
 
 ![](../assets/en/Project/compilerWin2.png)
 
-Double-click on each error detected to open the method or class concerned directly in the 4D method editor. The line containing the error is highlighted and the type of error is displayed in the syntax area of the window.
+Clique duas vezes em cada erro detectado para abrir o método ou a classe em questão diretamente no Editor de Código 4D. The line containing the error is highlighted and the type of error is displayed in the syntax area of the window.
 
 Utilice los comandos **Error anterior** / **Error siguiente** del menú **Método** para navegar de un error a otro.
 
@@ -53,7 +53,7 @@ Além do botão [**Compilar**](#compilar), a janela Compilador oferece recursos 
 
 ### Verificar sintaxe
 
-El botón **Verificar la sintaxis** lanza la ejecución de la fase de verificación de la sintaxis. At the end of the checking process, any errors detected are listed in the information area. You can double–click on an error line in order to display the corresponding method.
+El botón **Verificar la sintaxis** lanza la ejecución de la fase de verificación de la sintaxis. At the end of the checking process, any errors detected are listed in the information area. You can double–click on an error line in order to display the corresponding method or form object.
 
 El control sintáctico también puede lanzarse directamente con el comando **Verificar sintaxis** asociado al botón de la barra de herramientas **Compilador**. This option is the only one available if you do not have a suitable license to allow the compilation of applications.
 
@@ -61,7 +61,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 :::info Compatibidade
 
-This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](../Project/compiler.md#generate-typing).
 
 :::
 
@@ -91,7 +91,7 @@ The "Compiler" tab of the Settings dialog box lets you set parameters related to
 
 This area groups the generic options used during the compilation process.
 
-#### Generate symbol file
+#### Gerar o arquivo de símbolo
 
 Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. Used to generate the symbol file (see [symbol file](#symbol-file)).
 
@@ -131,11 +131,11 @@ In projects converted from 4D versions prior to 20 R7, additional compilation op
 - **Default typing**
 - **Métodos Compilador para...**
 
-These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
+These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](../Project/compiler.md#compiler-settings).
 
 In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
 
-- declare explicitely all variables [using `var` keywords](../Concepts/variables.md#declaring-variables)
+- declarar explicitamente todas as variáveis [usando palavras-chave `var`](../Concepts/variables.md#declaring-variables)
 - declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
 
 #### Enabling direct typing
@@ -231,7 +231,7 @@ Estas duas listas contêm quatro colunas:
 - Tipo da variável. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. Se o tipo de uma variável não puder ser determinado, a coluna estará vazia.
 - Número de dimensões se a variável for um array.
 - Reference to the context in which the compiler established the type of the variable. If the variable is used in several contexts, the context mentioned is the one used by the compiler to determine its type.
-  - If the variable was found in a database method, the database method name is given, preceded by (M)\*.
+  - Se a variável foi encontrada em um método de banco de dados, o nome do método de banco de dados é dado, precedido por (M)\*.
   - If the variable was found in a project method, the method is identified as it has been defined in 4D, preceded by (M).
   - If the variable was found in a trigger, the table name is given, preceded by (TM).
   - If the variable was found in a form method, the form name is given, preceded by the table name and (FM).
@@ -287,7 +287,7 @@ Si su proyecto no tiene errores generales, el archivo no tendrá una sección _E
 
 Um ficheiro de erros pode conter três tipos de mensagens:
 
-- **Errores asociados a una línea específica**: estos errores se muestran en contexto -la línea en la que se encontraron y con una explicación. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Method editor, with the line containing the error highlighted.
+- **Errores asociados a una línea específica**: estos errores se muestran en contexto -la línea en la que se encontraron y con una explicación. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. Na janela do compilador, clique duas vezes em cada erro detectado para abrir o método em questão diretamente no Editor de Código 4D, com a linha que contém o erro destacado.
 
 - **Errores generales**: son errores que imposibilitan la compilación del proyecto. Há dois casos em que o compilador informa um erro geral:
   - Não foi possível determinar o tipo de dados de uma variável processo.
@@ -295,7 +295,7 @@ Um ficheiro de erros pode conter três tipos de mensagens:
 
 General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
 
-- **Avisos**: los avisos no son errores. They do not prevent the project from being compiled, but simply point out potential code errors. Na janela do compilador, os avisos aparecem em itálico. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
+- **Avisos**: los avisos no son errores. They do not prevent the project from being compiled, but simply point out potential code errors. Na janela do compilador, os avisos aparecem em itálico. Clique duas vezes em cada aviso para abrir o método em questão diretamente no Editor de Código 4D, com a linha que contém o aviso destacado.
 
 ### Controlo de execução
 

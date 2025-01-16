@@ -42,3 +42,12 @@ En alguna parte de su código, diferente del *Método base On Server Startup*, d
 
 [Application version](application-version.md)  
 [Version type](version-type.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 494 |
+| Hilo seguro | &check; |
+
+

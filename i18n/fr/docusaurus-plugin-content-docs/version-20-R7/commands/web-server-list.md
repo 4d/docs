@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server list.Params-->
 
-| Paramètres | Type       |   | Description                                    |
-| ---------- | ---------- | - | ---------------------------------------------- |
-| Résultat   | Collection | ← | Collection of the available Web Server objects |
+| Paramètres | Type       |   | Description                                  |
+| ---------- | ---------- | - | -------------------------------------------- |
+| Résultat   | Collection | ← | Collection des objets Web Server disponibles |
 
 <!-- END REF-->
 
@@ -33,9 +33,9 @@ Une application 4D peut contenir de un à plusieurs serveurs Web :
 
 Tous les serveurs Web disponibles sont renvoyés par la commande `WEB Server list` , qu'ils soient en cours d'exécution ou non.
 
-> L'objet serveur Web par défaut est automatiquement chargé par 4D au démarrage. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](web-server.md) command.
+> L'objet serveur Web par défaut est automatiquement chargé par 4D au démarrage. D'un autre côté, chaque serveur Web composant que vous voulez utiliser doit être instancié en utilisant la commande [`WEB Server`](web-server.md).
 
-You can use the [.name](../API/WebServerClass.md#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
+Vous pouvez utiliser la propriété [.name](../API/WebServerClass.md#name) de l'objet serveur Web pour identifier le projet ou le composant auquel chaque objet serveur Web de la liste est attaché.
 
 #### Exemple
 
@@ -54,3 +54,10 @@ Nous voulons savoir combien de serveurs web en fonctionnement sont disponibles :
 
 [WEB Server](web-server.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1716                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

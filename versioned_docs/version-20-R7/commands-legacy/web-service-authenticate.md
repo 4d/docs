@@ -52,3 +52,12 @@ Authentication with a Web Service located behind a proxy:
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE Get info](web-service-get-info.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 786 |
+| Thread safe | &check; |
+
+

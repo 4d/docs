@@ -61,7 +61,6 @@ Available actions are related to target resource.
 |**update**|Update attributes in any dataclass. |Update attributes in this dataclass.|Update this attribute content (ignored for alias attributes).|n/a|
 |**drop**|Delete data in any dataclass. |Delete data in this dataclass. |Delete a not null value for this attribute (except for alias and computed attribute).|n/a|
 |**execute**|Execute any function on the project (datastore, dataclass, entity selection, entity)|Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions|n/a|Execute this function|
-|**describe**|All the dataclasses are available in the /rest/$catalog API|This dataclass is available in the /rest/$catalog API|This attribute is available in the /rest/$catalog API. |This dataclass function is available in the /rest/$catalog API (not available with singletons)|
 |**promote**|n/a|n/a|n/a|Associates a given privilege during the execution of the function. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session.|
 
 **Notes:**
@@ -72,10 +71,7 @@ Available actions are related to target resource.
 - Default values: in the current implementation, only *Null* is available as default value.
 - In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
 
-Setting permissions requires to be consistent, in particular:
-
-- **update** and **drop** permissions also need **read** permission (but **create** does not need it)
-- For data model functions, **promote** permission also needs **describe** permission.
+Setting permissions requires to be consistent, in particular **update** and **drop** permissions also need **read** permission (but **create** does not need it).
 
 
 
@@ -150,7 +146,6 @@ The default file has the following contents:
                 "create": ["none"],
                 "update": ["none"],
                 "drop": ["none"],
-                "describe": ["none"],
                 "execute": ["none"],
                 "promote": ["none"]                
             }
@@ -203,7 +198,6 @@ The `roles.json` file syntax is the following:
 |||\[].create|Collection of strings||List of privileges|
 |||\[].update|Collection of strings||List of privileges|
 |||\[].drop|Collection of strings||List of privileges|
-|||\[].describe|Collection of strings||List of privileges|
 |||\[].execute|Collection of strings||List of privileges|
 |||\[].promote|Collection of strings||List of privileges|
 |forceLogin|||Boolean||True to enable the ["forceLogin" mode](../REST/authUsers.md#force-login-mode) |
@@ -265,9 +259,6 @@ The good practice is to keep all data access locked by default thanks to the "no
           "none"
         ],
         "execute": [
-          "none"
-        ],
-        "describe": [
           "none"
         ],
         "promote": [

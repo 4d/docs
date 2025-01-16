@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LIST TO BLOB.Summary-->La commande **LIST TO BLOB** stocke la liste hiérarchique *liste* dans le BLOB *blob*.<!-- END REF-->
@@ -48,3 +45,13 @@ Reportez-vous à l'exemple de la fonction [BLOB to list](blob-to-list.md).
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [SAVE LIST](save-list.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 556 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

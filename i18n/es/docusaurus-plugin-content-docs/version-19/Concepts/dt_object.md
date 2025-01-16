@@ -20,7 +20,7 @@ Las variables, campos o expresiones de tipo objeto pueden contener datos de dive
 
 (1) **Objetos no transmitibles** como objetos ORDA ([entidades](ORDA/dsMapping.md#entity), [selecciones de entidades](ORDA/dsMapping.md#entity-selection), etc.), [servidor web](../API/WebServerClass.md)... no se pueden almacenar en **campos objeto**. Se devuelve un error si intentas hacerlo; sin embargo, están completamente soportados en **variables objeto** en la memoria.
 
-(2) Cuando se expone como texto en el depurador o se exporta a JSON, las propiedades de los objetos de tipo imagen indican "[objeto Imagen]".
+(2) Cuando se expone como texto en el depurador o se exporta a JSON, las propiedades de los objetos de tipo imagen indican "[object Picture]".
 
 **Atención:** recuerde que los nombres de atributos diferencian entre mayúsculas y minúsculas.
 

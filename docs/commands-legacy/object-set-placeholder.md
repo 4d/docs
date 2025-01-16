@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Summary-->The **OBJECT SET PLACEHOLDER** command associates placeholder text with the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
@@ -47,3 +44,12 @@ You want to display "Search" as placeholder text in a combo box:
 #### See also 
 
 [OBJECT Get placeholder](object-get-placeholder.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1295 |
+| Thread safe | &cross; |
+
+

@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET COORDINATES.Summary-->The **OBJECT SET COORDINATES** command modifies the location and, optionally, the size of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
@@ -38,7 +35,7 @@ You can also pass absolute coordinate values in the *right* and *bottom* paramet
 This command only functions in the following contexts:
 
 * Input forms in entry mode,
-* Forms displayed using the [DIALOG](dialog.md) command,
+* Forms displayed using the [DIALOG](../commands/dialog.md) command,
 * Headers and footers of output forms displayed by the [MODIFY SELECTION](modify-selection.md) or [DISPLAY SELECTION](display-selection.md) command,
 * Forms being printed.
 
@@ -57,3 +54,12 @@ A seguinte declaração localiza oi objeto "button\_1" nas coordenadas (10,20) (
 [CONVERT COORDINATES](convert-coordinates.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1248 |
+| Thread-seguro | &cross; |
+
+

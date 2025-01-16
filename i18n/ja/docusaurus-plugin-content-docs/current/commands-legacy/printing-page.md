@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Printing page.Summary-->Printing pageは、印刷中のページ番号を返します。<!-- END REF-->このコマンドは、[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドまたはデザインモードのプリント...メニューの選択によって印刷する場合にのみ使用することができます。
@@ -40,3 +37,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [PRINT SELECTION](print-selection.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 275 |
+| スレッドセーフである | &cross; |
+
+

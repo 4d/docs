@@ -33,3 +33,12 @@ The description of the last query path can be compared to the description of the
 
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
 [Last query plan](last-query-plan.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1045 |
+| Thread safe | &check; |
+
+

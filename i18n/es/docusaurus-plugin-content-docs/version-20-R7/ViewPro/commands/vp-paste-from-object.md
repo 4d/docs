@@ -21,7 +21,7 @@ title: VP PASTE FROM OBJECT
 | ---------- | ------- | -- | ------------------------------------- | ---------------- |
 | rangeObj   | Object  | -> | Objeto de rango de celda              |                  |
 | dataObject | Object  | -> | Objeto que contiene los datos a pegar |                  |
-| options    | Longint | -> | Especifica lo que se pega             | <!-- END REF --> |
+| options    | Integer | -> | Especifica lo que se pega             | <!-- END REF --> |
 
 #### Descripción
 

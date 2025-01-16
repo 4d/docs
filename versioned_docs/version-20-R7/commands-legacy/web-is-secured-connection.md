@@ -27,3 +27,12 @@ This command allows, for example, denying connections made in a non-secured mode
 #### See also 
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 698 |
+| Thread safe | &check; |
+
+

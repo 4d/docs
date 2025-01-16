@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.QR GET SORTS.Summary-->QR GET SORTS コマンドは、次の2つの配列を作成します:
@@ -38,3 +35,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR SET SORTS](qr-set-sorts.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 753 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | error |
+
+

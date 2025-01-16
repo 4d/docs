@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SHOW MENU BAR.Summary-->El comando SHOW MENU BAR hace visible la barra de menús.<!-- END REF--> 
@@ -30,3 +27,13 @@ Ver el ejemplo del comando [HIDE MENU BAR](hide-menu-bar.md "HIDE MENU BAR").
 [HIDE MENU BAR](hide-menu-bar.md)  
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 431 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

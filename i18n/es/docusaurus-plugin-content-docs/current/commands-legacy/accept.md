@@ -12,15 +12,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.ACCEPT.Summary-->El comando **ACCEPT** se utiliza en métodos de objeto o de formulario (o en subrutinas) para:
 
 * validar un registro o subregistro creado o modificado, para el cual la entrada de datos ha sido inicializada utilizando [ADD RECORD](add-record.md), [MODIFY RECORD](modify-record.md), *\_o\_ADD SUBRECORD* o *\_o\_MODIFY SUBRECORD*.<!-- END REF-->
-* validar un formulario mostrado por el comando [DIALOG](dialog.md).
+* validar un formulario mostrado por el comando [DIALOG](../commands/dialog.md).
 * salir de un formulario que muestra una selección de registros, utilizando [DISPLAY SELECTION](display-selection.md) o [MODIFY SELECTION](modify-selection.md).
 
 **ACCEPT** efectúa la misma acción que si un usuario hubiera presionado la tecla **Intro**. Después de que el formulario es aceptado, la variable sistema OK toma el valor 1.
@@ -38,3 +35,13 @@ El comando **ACCEPT** se permite en modo sin interfaz, en el contexto de las ár
 #### Ver también 
 
 [CANCEL](cancel.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 269 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

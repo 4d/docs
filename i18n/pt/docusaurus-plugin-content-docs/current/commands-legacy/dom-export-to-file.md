@@ -62,3 +62,13 @@ Se gera um erro quando:
 
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 862 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get help tip.Summary-->The **OBJECT Get help tip** command returns the help message associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
@@ -39,3 +36,12 @@ The title of a picture button is stored as a help message. This title is stored 
 #### See also 
 
 [OBJECT SET HELP TIP](object-set-help-tip.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1182 |
+| Thread safe | &cross; |
+
+

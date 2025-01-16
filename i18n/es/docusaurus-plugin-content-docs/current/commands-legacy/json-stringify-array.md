@@ -108,3 +108,12 @@ Conversión de una selección 4D en un array objeto:
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1228 |
+| Hilo seguro | &check; |
+
+

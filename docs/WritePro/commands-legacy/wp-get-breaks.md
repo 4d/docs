@@ -80,4 +80,4 @@ You want to replace all line breaks with paragraph breaks in the document:
 #### See also 
 
 [WP Get elements](wp-get-elements.md)  
-[WP INSERT BREAK](wp-insert-break.md)  
+[WP INSERT BREAK](../commands/wp-insert-break.md)  

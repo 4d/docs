@@ -41,3 +41,12 @@ Este método de mantenimiento permite solicitar la compactación del archivo de 
 #### Ver también 
 
 [Compact data file](compact-data-file.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1127 |
+| Hilo seguro | &check; |
+
+

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE INDEX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr &#124; indexName | Pointer, String | &#8594;  | Pointer to field whose indexes are to be deleted or Name of index to be deleted |
+| fieldPtr &#124; indexName | Pointer, Text | &#8594;  | Pointer to field whose indexes are to be deleted or Name of index to be deleted |
 | * | Operator | &#8594;  | If passed = asynchronous operation |
 
 <!-- END REF-->
@@ -46,3 +46,12 @@ This example illustrates both syntaxes of the command:
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
 [SET INDEX](set-index.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 967 |
+| Thread safe | &check; |
+
+

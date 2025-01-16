@@ -50,3 +50,12 @@ Conversão de uma imagem com qualidade de 60%:
 #### Ver também 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1002 |
+| Thread-seguro | &check; |
+
+

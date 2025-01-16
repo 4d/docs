@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Printing page.Summary-->**Printing page** retourne le numéro de la page en cours d'impression.<!-- END REF--> Cette fonction vous permet de numéroter automatiquement les pages d'une impression en cours à l'aide de [PRINT SELECTION](print-selection.md) ou du menu Impression dans le mode Développement.
@@ -40,3 +37,12 @@ L'exemple suivant change la position des numéros de page sur un état pour que 
 #### Voir aussi 
 
 [PRINT SELECTION](print-selection.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 275 |
+| Thread safe | &cross; |
+
+

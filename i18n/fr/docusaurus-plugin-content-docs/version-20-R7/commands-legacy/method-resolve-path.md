@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD RESOLVE PATH.Summary-->La commande **METHOD RESOLVE PATH** analyse le chemin d’accès interne passé dans le paramètre *chemin* et retourne ses différentes composantes dans les paramètres *typeMéthode*, *ptrTable*, *nomObjet* et *nomObjetForm*.<!-- END REF-->
@@ -85,3 +82,12 @@ Résolution d’un chemin d’objet de méthode formulaire table :
 #### Voir aussi 
 
 [METHOD Get path](method-get-path.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1165 |
+| Thread safe | &cross; |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->The **LISTBOX GET GRID COLORS** command returns the color of the horizontal and vertical lines making up the grid of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
@@ -33,3 +30,12 @@ In *hColor* and *vColor*, the command returns the values of the RGB colors. The 
 #### See also 
 
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1200 |
+| Thread safe | &cross; |
+
+

@@ -31,3 +31,12 @@ Pase el tipo de información a obtener en *selector*. El tipo y el contenido de 
 #### Ver también 
 
 [RESTORE](restore.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 888 |
+| Hilo seguro | &cross; |
+
+

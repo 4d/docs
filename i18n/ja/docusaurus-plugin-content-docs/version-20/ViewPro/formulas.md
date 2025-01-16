@@ -47,7 +47,7 @@ title: フォーミュラとファンクション
 | [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (加法)<br/>- (減法)<br/>* (乗法)<br/>/ (除法)<br/>^ (べき乗、数値を自身に対してかける回数)<br/>% (パーセント -- 演算子の前の数値を100で割る) |
 | [Date](Concepts/dt_date.md)       | 10/24/2017                                            | + (日付 + 日数 -> 日付)<br/>+ (日付 + 時間 -> 日付 + その日の時間)<br/>- (日付 - 日数 -> 日付)<br/>- (日付 - 日付 -> 2つの日付間の日数)             |
 | [Time](Concepts/dt_time.md)       | 10:12:10                                              | 経過時間演算子:<br/>+ (加法)<br/>- (減法)<br/>* (経過時間 * 数値 -> 経過時間)<br/>/ (経過時間 / 数値 -> 経過時間)                      |
-| [String](Concepts/dt_string.md)   | 'Sophie' または "Sophie"                                 | & (連結)                                                                                                                            |
+| [文字列](Concepts/dt_string.md)      | 'Sophie' または "Sophie"                                 | & (連結)                                                                                                                            |
 | [Boolean](Concepts/dt_boolean.md) | TRUE または FALSE                                        | -                                                                                                                                 |
 
 

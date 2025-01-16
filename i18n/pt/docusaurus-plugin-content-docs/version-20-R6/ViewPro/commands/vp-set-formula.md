@@ -24,9 +24,9 @@ Em *rangeObj*, passe um intervalo de células (criado, por exemplo, com [`VP Cel
 The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
 
 > If the *formula* is a string, use the period `.` as numerical separator and the comma `,` as parameter separator.
-> If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
+> Se um método 4D for usado, ele deverá ser permitido com o comando [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md).
 
-The optional *formatPattern* defines a [pattern](../configuring.md#cell-format) for the *formula*.
+O *formatPattern* opcional define um [padrão](../configuring.md#cell-format) para a *fórmula*.
 
 You remove the formula in *rangeObj* by replacing it with an empty string ("").
 

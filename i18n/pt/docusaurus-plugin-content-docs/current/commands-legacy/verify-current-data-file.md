@@ -42,3 +42,13 @@ Se o método de callback não existir, a verificação não é efetuada, é gera
 #### Ver também 
 
 [VERIFY DATA FILE](verify-data-file.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1008 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, Document, error |
+
+

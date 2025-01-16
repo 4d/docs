@@ -67,3 +67,12 @@ Se quiser saber se a ação copiar está disponível (ou seja, se foram selecion
 
 [INVOKE ACTION](invoke-action.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1442 |
+| Thread-seguro | &cross; |
+
+

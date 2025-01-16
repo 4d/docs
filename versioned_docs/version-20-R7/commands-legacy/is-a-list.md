@@ -14,21 +14,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Is a list.Summary-->The Is a list command returns TRUE if the value you pass in *list* is a valid reference to a hierarchical list.<!-- END REF--> Otherwise, it returns FALSE.
 
-#### Example 1 
+#### Example
 
 See example for the [CLEAR LIST](clear-list.md) command.
 
-#### Example 2 
 
-See examples for the *\_o\_DRAG AND DROP PROPERTIES* command.
 
-#### See also 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 621 |
+| Thread safe | &cross; |
+
+

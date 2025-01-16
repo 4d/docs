@@ -26,3 +26,12 @@ You then need to reload the data using the **RELOAD EXTERNAL DATA** command to u
 #### See also 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1135 |
+| Thread safe | &check; |
+
+

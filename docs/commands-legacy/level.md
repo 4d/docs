@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Level.Summary-->Level is used to determine the current header or break level.<!-- END REF--> It returns the level number during the On Header and On Printing Break events.
@@ -67,5 +64,14 @@ This example is a template for a form method. It shows each of the possible even
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 101 |
+| Thread safe | &cross; |
+
+

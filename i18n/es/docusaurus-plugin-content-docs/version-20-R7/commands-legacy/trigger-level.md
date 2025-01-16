@@ -24,3 +24,12 @@ Para mayor información sobre niveles de ejecución, consulte el tema *Triggers 
 [Trigger event](trigger-event.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 *Triggers*  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 398 |
+| Hilo seguro | &check; |
+
+

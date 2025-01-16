@@ -38,3 +38,13 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 729 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+
+

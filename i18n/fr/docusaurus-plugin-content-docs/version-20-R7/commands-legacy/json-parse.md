@@ -189,3 +189,12 @@ beta[1].golf:{line:10,offset:12}}}
 [JSON Stringify](json-stringify.md)  
 [JSON Validate](json-validate.md)  
 *Types champs et variables*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1218 |
+| Thread safe | &check; |
+
+

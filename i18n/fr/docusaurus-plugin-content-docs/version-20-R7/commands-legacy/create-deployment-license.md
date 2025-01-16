@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Create deployment license.Summary-->La commande **Create deployment license** crée un fichier de licence intégré dans le dossier Licences de l'application construite par la *mergedApp*.<!-- END REF--> Si le dossier Licences n'existe pas dans la *mergedApp*, il est créé par la commande.
@@ -61,3 +58,12 @@ La commande renvoie un objet *status* contenant les propriétés suivantes :
 #### Voir aussi 
 
   
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1811 |
+| Thread safe | &cross; |
+
+

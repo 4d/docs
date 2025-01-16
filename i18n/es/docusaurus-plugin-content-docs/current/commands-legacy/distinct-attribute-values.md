@@ -64,3 +64,12 @@ El array *aLAges* obtiene los siguientes 9 elementos:
 
   
 [DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1397 |
+| Hilo seguro | &check; |
+
+

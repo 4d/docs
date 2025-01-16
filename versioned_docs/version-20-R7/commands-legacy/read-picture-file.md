@@ -40,3 +40,13 @@ If the command is executed successfully, the system variable Document contains t
 [PICTURE CODEC LIST](picture-codec-list.md)  
 *Pictures*  
 [WRITE PICTURE FILE](write-picture-file.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 678 |
+| Thread safe | &check; |
+| Modifies variables | OK, Document |
+
+

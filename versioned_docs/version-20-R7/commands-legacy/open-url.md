@@ -80,3 +80,12 @@ The *appName* parameter lets you open the same text file using different applica
 #### See also 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 673 |
+| Thread safe | &check; |
+
+

@@ -65,3 +65,12 @@ Vous voulez savoir si l'action standard **Copier** est disponible (c'est-à-dire
 
 [INVOKE ACTION](invoke-action.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1442 |
+| Thread safe | &cross; |
+
+

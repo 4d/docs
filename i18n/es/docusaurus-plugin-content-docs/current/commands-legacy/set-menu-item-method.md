@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET MENU ITEM METHOD.Summary-->El comando SET MENU ITEM METHOD puede utilizarse para modificar el método de proyecto 4D asociado a la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF--> 
@@ -38,3 +35,12 @@ Consulte el ejemplo del comando [SET MENU BAR](set-menu-bar.md "SET MENU BAR").
 #### Ver también 
 
 [Get menu item method](get-menu-item-method.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 982 |
+| Hilo seguro | &cross; |
+
+

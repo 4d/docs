@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->O comando **METHOD SET ATTRIBUTE** permite definir o valor do atributo tipoAtrib para o método projeto designado pelo parâmetro *rota*.<!-- END REF--> Este comando somente funciona com métodos projeto. Se passar uma rota não válida, um erro é gerado.
@@ -70,3 +67,12 @@ Definição de vários pares de atributos/valores:
 *Design Object Access*  
 [METHOD Get attribute](method-get-attribute.md)  
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1192 |
+| Thread-seguro | &cross; |
+
+

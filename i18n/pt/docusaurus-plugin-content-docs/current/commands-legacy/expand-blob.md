@@ -64,3 +64,13 @@ A variável OK é definida como 1 se o BLOB foi expandido com êxito, caso contr
 
 [BLOB PROPERTIES](blob-properties.md)  
 [COMPRESS BLOB](compress-blob.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 535 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.ARRAY DATE.Summary-->El comando ARRAY DATE crea y/o redimensiona un array de elementos de tipo Fecha en memoria.<!-- END REF-->
-
-* El parámetro *nombreArray* es el nombre del array.
+<!--REF #_command_.ARRAY DATE.Summary-->El comando ARRAY DATE crea y/o redimensiona un array de elementos de tipo Fecha en memoria.<!-- END REF-->es el nombre del array.
 * El parámetro *tamaño* es el número de elementos en el array.
 * El parámetro *tamaño2* es opcional; si se especifica *tamaño2*, el comando crea un array bidimensional. En este caso, *tamaño* especifica el número de filas y *tamaño2* especifica el número de columnas en cada array. Cada fila en un array bidimensional puede tratarse como un elemento y como un array. Esto significa que mientras trabaja con la primera dimensión del array, puede utilizar otros comandos de array para insertar y borrar arrays enteros en un array bidimensional.
 
@@ -54,3 +52,13 @@ Este ejemplo crea un array interproceso de 50 elementos de tipo Fecha y asigna a
     ◊adValores{$vlElem}:=Current date+$vlElem
  End for
 ```
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 224 |
+| Hilo seguro | &check; |
+
+

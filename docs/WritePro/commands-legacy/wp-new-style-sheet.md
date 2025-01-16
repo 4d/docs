@@ -35,7 +35,7 @@ Pass a name for the style sheet in the *styleSheetName* parameter. The style she
 * it must not start with "section", which is reserved
 * the "\_" is replaced by a space and trailing spaces are removed.
 
-You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](wp-set-attributes.md) command or the object notation (see *4D Write Pro Attributes*). For the list of available attributes, see the *Style sheet attributes* section.
+You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) command or the object notation (see *4D Write Pro Attributes*). For the list of available attributes, see the *Style sheet attributes* section.
 
 **Notes**: 
 

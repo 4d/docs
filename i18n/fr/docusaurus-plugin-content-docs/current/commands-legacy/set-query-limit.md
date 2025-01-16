@@ -63,3 +63,12 @@ Référez-vous au deuxième exemple de la commande [SET QUERY DESTINATION](set-q
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY DESTINATION](set-query-destination.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 395 |
+| Thread safe | &check; |
+
+

@@ -28,7 +28,7 @@ Basically in this mode, it's up to the developer to define how to authenticate u
 Este modo de autenticação é o mais flexível porque permite que você:
 
 - ou delegar a autenticação do usuário a um aplicativo de terceiros (por exemplo, uma rede social, SSO);
-- o bien, ofrecer una interfaz al usuario (por ejemplo, un formulario web) para que pueda crear su cuenta en su base de datos clientes; luego, puede autenticar a los usuarios con cualquier algoritmo personalizado (ver [este ejemplo](sessions.md#example) del O importante é que você nunca armazene a senha de forma não protegida, usando esse código:
+- o bien, ofrecer una interfaz al usuario (por ejemplo, un formulario web) para que pueda crear su cuenta en su base de datos clientes; luego, puede autenticar a los usuarios con cualquier algoritmo personalizado (ver [este ejemplo](sessions.md#example) del O importante é que você nunca armazene a senha de forma não protegida, usando esse código: O importante é que você nunca armazene a senha de forma não protegida, usando esse código:
 
 ```4d
 //... criar conta de usuário
@@ -52,7 +52,7 @@ Os valores introduzidos são então avaliados:
 
 - Si la opción **Incluir contraseñas de 4D** está marcada, las credenciales de los usuarios se evaluarán primero contra la [tabla interna de usuarios 4D](Users/overview.md).
   - Se o nome de usuário enviado pelo navegador existir na tabela de usuários 4D e a senha estiver correta, a conexão será aceita. Se a palavra-passe estiver incorreta, a ligação é recusada.
-  - If the user name does not exist in the table of 4D users, the [`On Web Authentication`](#on-web-authentication) database method is called. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
+  - Se o nome de usuário não existir na tabela de usuários 4D, o método de banco de dados [`On Web Authentication`](#on-web-authentication) será chamado. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
 - If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) para que você possa processá-los. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
 
 > Com o servidor da Web 4D Client, lembre-se de que todos os sites publicados pelas máquinas 4D Client compartilharão a mesma tabela de usuários. Validação de usuários/senhas é realizada pela aplicação 4D Server.
@@ -61,7 +61,7 @@ Os valores introduzidos são então avaliados:
 
 This mode provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher.
 
-Como no modo BASIC, os usuários devem digitar seu nome e senha ao se conectarem. The [`On Web Authentication`](#on-web-authentication) database method is then called. When the DIGEST mode is activated, the $6 parameter (password) is always returned empty. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). Por lo tanto, en este caso es imprescindible evaluar las solicitudes de conexión mediante el comando `WEB Validate digest`.
+Como no modo BASIC, os usuários devem digitar seu nome e senha ao se conectarem. O método banco de dados [`On Web Authentication`](#on-web-authentication) é então chamado. When the DIGEST mode is activated, the $6 parameter (password) is always returned empty. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). Por lo tanto, en este caso es imprescindible evaluar las solicitudes de conexión mediante el comando `WEB Validate digest`.
 
 > Você deve reiniciar o servidor Web para que as alterações feitas nesses parâmetros sejam levadas em conta.
 

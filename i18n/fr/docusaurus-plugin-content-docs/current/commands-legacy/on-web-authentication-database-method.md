@@ -89,7 +89,7 @@ La [On Web Connection database method](on-web-connection-database-method.md) n�
 
 **Notes :**
 
-* N’appelez aucun élément d’interface dans la **On Web Authentication database method** (([ALERT](alert.md), [DIALOG](dialog.md), etc.), sinon son exécution sera interrompue et la connexion refusée. Il en est de même si une erreur se produit durant son traitement.
+* N’appelez aucun élément d’interface dans la **On Web Authentication database method** (([ALERT](alert.md), [DIALOG](../commands/dialog.md), etc.), sinon son exécution sera interrompue et la connexion refusée. Il en est de même si une erreur se produit durant son traitement.
 * Il est possible d'interdire l'exécution par *4DACTION* ou *4DSCRIPT* de chaque méthode projet à l'aide de l'option “Disponible via les balises HTML et URLs 4D (4DACTION...)” dans la boîte de dialogue des Propriétés des méthodes. Pour plus d'informations sur ce point, reportez-vous à la section *Sécurité des connexions*.
 
 #### Appels de la Méthode base Sur authentification Web 

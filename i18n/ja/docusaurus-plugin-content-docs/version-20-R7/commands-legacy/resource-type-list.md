@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->RESOURCE TYPE LIST コマンドは、現在開いているリソースファイルの中に存在するリソースのリソースタイプによる*resTypes*配列を作成します。<!-- END REF-->
@@ -83,3 +80,12 @@ RESOURCE TYPE LISTを呼び出す前に、*resTypes*配列を文字列配列ま�
 #### 参照 
 
 [RESOURCE LIST](resource-list.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 499 |
+| スレッドセーフである | &cross; |
+
+

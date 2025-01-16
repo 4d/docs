@@ -26,3 +26,12 @@ Use READ ONLY when you do not need to modify the record or records.
 [Read only state](read-only-state.md)  
 [READ WRITE](read-write.md)  
 *Record Locking*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 145 |
+| Thread safe | &check; |
+
+

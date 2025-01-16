@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET HIGHLIGHT.Summary-->El comando GET HIGHLIGHT permite determinar el texto seleccionado actualmente en *objeto*.<!-- END REF-->  
@@ -41,8 +38,10 @@ Si el objeto designado por el parámetro *objeto* no se encuentra en el formular
 El siguiente ejemplo obtiene el texto seleccionado en el campo *\[Productos\]Comentarios*: 
 
 ```4d
- GET HIGHLIGHT([Productos]Comentarios;vFirst;vLast)
- If(vFirst<vlast)     alert("el="" texto="" seleccionado="" es:="" "+substring([productos]comentarios;vprimerot;vultimo-vprimero))=""  end="" if<="" pre=""></vlast)>
+GET HIGHLIGHT([Products]Comments;vFirst;vLast)
+If(vFirst < vlast)
+    ALERT("The selected text is:"+Substring([Products]Comments;vFirst;vLast-vFirst))
+End if
 ```
 
 #### Ejemplo 2 
@@ -63,3 +62,12 @@ Modificación del estilo del texto resaltado:
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 209 |
+| Hilo seguro | &cross; |
+
+

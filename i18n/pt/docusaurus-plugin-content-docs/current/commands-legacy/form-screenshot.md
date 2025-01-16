@@ -16,15 +16,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.FORM SCREENSHOT.Summary-->O comando **FORM SCREENSHOT** retorna um formulário em forma de imagem.<!-- END REF--> Este comando aceita duas sintaxes diferentes: em função da sintaxe utilizada, você obtém ou uma imagem do formulário em execução ou uma imagem do formulário no editor de formulários.
 
 * FORM SCREENSHOT ( *imagF* *orm* )  
-Esta sintaxe permite obter uma captura de tela exata da página atual do formulário em execução ou carregado sob o comando [FORM LOAD](form-load.md): a imagem retorna no parâmetro   *imagForm* contém todos os objetos visíveis do formulário com os valores atuais dos campos e das variáveis do formulário, subformulário, etc. O formulário é retornado em sua totalidade, sem considerar o tamanho da janela que o contenha.  
+Esta sintaxe permite obter uma captura de tela exata da página atual do formulário em execução ou carregado sob o comando [FORM LOAD](../commands/form-load.md): a imagem retorna no parâmetro   *imagForm* contém todos os objetos visíveis do formulário com os valores atuais dos campos e das variáveis do formulário, subformulário, etc. O formulário é retornado em sua totalidade, sem considerar o tamanho da janela que o contenha.  
 Considere que esta sintaxe só funciona com formulários de entrada.
 * FORM SCREENSHOT ( {*tabela* ;} nomeForm; *imagForm*{; *pagNum*} )  
 Esta sintaxe permite obter uma captura de tela (screensho) de um formulário "modelo" do modo como é exibido no Editor de formulários. Todos os objetos visíveis são desenhados da mesma forma que no editor; os comandos consideram os formulários herdados e os objetos localizados na página 0.  
@@ -38,4 +35,13 @@ Automaticamente, o comando retorna uma captura de tela da página 1 do formulár
 
 #### Ver também 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 940 |
+| Thread-seguro | &cross; |
+
+

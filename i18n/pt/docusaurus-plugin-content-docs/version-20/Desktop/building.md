@@ -301,7 +301,7 @@ Se você deseja que o aplicativo cliente se conecte ao servidor usando um endere
 
 As opções desta área configuram o mecanismo para atualizar as partes do cliente do(s) seus aplicativos cliente/servidor usando a rede toda vez que uma nova versão do aplicativo for gerada. Estas opções só são ativadas quando a opção **cliente de compilação** é marcada.
 
-* **Permitir atualização automática do aplicativo cliente Windows** - Marque esta opção para construir um `. Arquivo darchive` que pode ser enviado para o aplicativo cliente na plataforma Windows em caso de atualização.
+* **Permitir atualização automática da aplicação cliente Windows** - Marque esta opção para construir um `.4darchive` que pode ser enviado para as aplicações cliente na plataforma Windows em caso de atualização.
 * **Permitir atualização automática do aplicativo cliente Macintosh** - Marque esta opção para construir um `. arquivo darchive` que pode ser enviado para os seus aplicativos cliente na plataforma Macintosh em caso de atualização.
 
 O ficheiro `.4darchive` é copiado para a seguinte localização:

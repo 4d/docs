@@ -33,3 +33,12 @@ displayed_sidebar: docs
 [Cos](cos.md)  
 [Sin](sin.md)  
 [Tan](tan.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 20 |
+| スレッドセーフである | &check; |
+
+

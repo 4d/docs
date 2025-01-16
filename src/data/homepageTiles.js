@@ -28,7 +28,7 @@ const localizedLinks = {
     id: 'homepage.sections.mobile-applications.4D-for-iOS-Archive-url',
   }),
   "homepage.sections.mobile-applications.go-mobile-url" : translate({
-    message: 'https://developer.4d.com/go-mobile/',
+    message: 'https://developer.4d.com/go-mobile',
     id: 'homepage.sections.mobile-applications.go-mobile-url',
   })
 };
@@ -156,7 +156,7 @@ const Sections = [
        <Link to="https://github.com/4d/4D-Mobile-App-Server">
           <Translate>4D Mobile App Server</Translate>
         </Link>
-        <Link to="https://developer.4d.com/4D-NetKit/">
+        <Link to="https://developer.4d.com/4D-NetKit">
           <Translate>4D NetKit</Translate>
         </Link>
         <Link to={localizedLinks["homepage.sections.textensions.4D-Progress-url"]}>

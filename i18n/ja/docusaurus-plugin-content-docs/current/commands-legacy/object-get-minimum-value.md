@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Summary-->**OBJECT GET MINIMUM VALUE**コマンドは、引数 *object* と *\** で指定したオブジェクトの最小値を、 *minValue* 変数の中に返します。<!-- END REF-->
@@ -30,3 +27,12 @@ displayed_sidebar: docs
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1243 |
+| スレッドセーフである | &cross; |
+
+

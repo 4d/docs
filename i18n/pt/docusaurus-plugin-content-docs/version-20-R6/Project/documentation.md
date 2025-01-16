@@ -3,11 +3,11 @@ id: documentation
 title: Documentar um projecto
 ---
 
-In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
+Nos projetos de aplicação, você pode documentar seus métodos e suas classes, formulários, tabelas ou campos. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
 
 Os seguintes elementos do projeto aceitam documentação:
 
-- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
+- Métodos (métodos banco de dados, métodos componentes, métodos projeto, métodos formulário, métodos 4D Mobile e triggers)
 - Classes
 - Formulários
 - Tabela
@@ -159,10 +159,10 @@ _italic_
 - A etiqueta de tabela é suportada:
 
 ```md
-| Parâmetro | Tipo | Descrição |
+| Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
-| wpArea | String |Área de escrita profissional|
-| toolbar | String |Nome da barra de ferramentas |
+| wpArea    | Text |Write pro area|
+| toolbar   | Text |Toolbar name  |
 ```
 
 - A etiqueta de ligação é suportada:
@@ -204,7 +204,7 @@ GetLogo (size) -> logo
 
 | Parameter | Type   | in/out | Description |
 | --------- | ------ | ------ | ----------- |
-| size      | Longint | in | Logo style selector (1 to 5)  |
+| size      | Integer | in | Logo style selector (1 to 5)  |
 | logo      | Picture | out | Selected logo |
 
 

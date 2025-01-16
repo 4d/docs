@@ -132,3 +132,12 @@ Cet exemple compare les différents résultats de la commande [Undefined](undefi
 [Is field value Null](is-field-value-null.md)  
 [OB SET NULL](ob-set-null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1517 |
+| Thread safe | &check; |
+
+

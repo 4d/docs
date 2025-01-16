@@ -139,3 +139,10 @@ Chamar uma fórmula usando notação de objeto:
 [4D Blog - Formula: Think outside the box](https://blog.4d.com/new-formula-think-outside-the-box/)\
 [4D Blog - Write your own methods for objects](https://blog.4d.com/write-your-own-methods-for-objects/)\
 [Formula from string](formula-from-string.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1597                            |
+| Thread safe    | &amp;check; |

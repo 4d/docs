@@ -7,7 +7,7 @@ La clase `SMTPTransporter` permite configurar conexiones SMTP y enviar correos e
 
 ### Objeto SMTP Transporter
 
-SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command. Ofrecen las siguientes propiedades y funciones:
+Los objetos SMTP Transporter son instanciados con el comando [`SMTP New transporter`](../commands/smtp-new-transporter.md). Ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -40,7 +40,7 @@ SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../c
 
 #### Descripción
 
-La función `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary -->crea y devuelve un nuevo objeto del tipo `4D.SMTPTransporter`<!-- END REF -->. It is identical to the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command (shortcut).
+La función `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary -->crea y devuelve un nuevo objeto del tipo `4D.SMTPTransporter`<!-- END REF -->. Es idéntico al comando [`SMTP New transporter`](../commands/smtp-new-transporter.md) (acceso directo).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 

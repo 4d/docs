@@ -56,3 +56,12 @@ You want to export the current database structure in html format:
 #### See also 
 
 [IMPORT STRUCTURE](import-structure.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1311 |
+| Thread safe | &check; |
+
+

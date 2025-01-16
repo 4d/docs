@@ -46,3 +46,12 @@ Example of method for importing large amounts of data:
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1293 |
+| Thread safe | &check; |
+
+

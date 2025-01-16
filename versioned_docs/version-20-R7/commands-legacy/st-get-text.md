@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.ST Get text.Summary-->The ST Get text command returns the styled text found in the text field or variable designated by the *object* parameter.<!-- END REF--> 
@@ -62,3 +59,13 @@ In the case of an error, the variable is not changed. When an error occurs on a 
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1116 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

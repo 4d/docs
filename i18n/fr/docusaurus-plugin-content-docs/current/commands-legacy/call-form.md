@@ -100,4 +100,13 @@ Vous pouvez alors ajouter d'autres messages en exécutant à nouveau la commande
 
   
 [CALL WORKER](call-worker.md)  
-[DIALOG](dialog.md)  
+[DIALOG](../commands/dialog.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1391 |
+| Thread safe | &check; |
+
+

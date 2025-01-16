@@ -37,3 +37,12 @@ L'exemple suivant illustre la manière dont Arrondi fonctionne dans différents 
 #### Voir aussi 
 
 [Trunc](trunc.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 94 |
+| Thread safe | &check; |
+
+

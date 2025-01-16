@@ -58,3 +58,12 @@ The following example reads 20 Long Integer values from a BLOB, starting at the 
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 551 |
+| Thread safe | &check; |
+
+

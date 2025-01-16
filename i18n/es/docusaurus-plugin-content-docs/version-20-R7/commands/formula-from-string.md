@@ -38,8 +38,8 @@ Si la fórmula se crea en un componente, puede considerar utilizar el parámetro
 
 | Constante                        | Tipo    | Descripción                                                                               |
 | -------------------------------- | ------- | ----------------------------------------------------------------------------------------- |
-| `sk execute in current database` | Longint | (por defecto) La fórmula se ejecutará en el contexto en el que se creó |
-| `sk execute in host database`    | Longint | La fórmula se ejecutará en el contexto de la base de datos local                          |
+| `sk execute in current database` | Integer | (por defecto) La fórmula se ejecutará en el contexto en el que se creó |
+| `sk execute in host database`    | Integer | La fórmula se ejecutará en el contexto de la base de datos local                          |
 
 #### Ejemplo
 
@@ -65,3 +65,10 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 
 [Formula](formula.md)\
 [Parse formula](../commands-legacy/parse-formula.md)
+
+#### Propiedades
+
+|                |                                                                     |
+| -------------- | ------------------------------------------------------------------- |
+| Command number | 1601                                                                |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

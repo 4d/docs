@@ -30,3 +30,12 @@ Geralmente não precisa chamar este comando, já que 4D salva modificações de 
 
 [Get database parameter](get-database-parameter.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 297 |
+| Thread-seguro | &check; |
+
+

@@ -204,3 +204,14 @@ Sem importar como se defina a ordenação, se a operação de ordenação vai a 
 #### Ver também 
 
 [ORDER BY FORMULA](order-by-formula.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 49 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Modificar o registro atual ||
+
+

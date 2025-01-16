@@ -67,3 +67,12 @@ The following example turns off the progress meter before doing a sort, and then
 #### See also 
 
 [MESSAGES ON](messages-on.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 175 |
+| Thread safe | &check; |
+
+

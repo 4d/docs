@@ -45,3 +45,13 @@ La variable système OK prend la valeur 1 si les variables ont été correctemen
 [DOCUMENT TO BLOB](document-to-blob.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 74 |
+| Thread safe | &check; |
+| Modifie les variables | OK, Document |
+
+

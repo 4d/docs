@@ -30,3 +30,12 @@ Dependiendo del ancla puede pasar valores positivos o negativos en *offset*.
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 482 |
+| Hilo seguro | &check; |
+
+

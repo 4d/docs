@@ -38,3 +38,12 @@ Ver o exemplo do comando [Current date](current-date.md "Current date").
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 25 |
+| Thread-seguro | &check; |
+
+

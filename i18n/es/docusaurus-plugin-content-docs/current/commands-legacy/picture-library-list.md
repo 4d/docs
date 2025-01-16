@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.PICTURE LIBRARY LIST.Summary-->El comando PICTURE LIBRARY LIST devuelve los números de referencia y los nombres de las imágenes almacenadas en la librería de imágenes de la base de datos.<!-- END REF--> 
@@ -95,3 +92,12 @@ El siguiente ejemplo exporta la librería de imágenes a un documento almacenado
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 564 |
+| Hilo seguro | &cross; |
+
+

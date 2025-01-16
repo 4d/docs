@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get name.Summary-->O comando OBJECT Get name retorna o nome de um objeto de formulário.<!-- END REF-->   
@@ -41,3 +38,12 @@ Depois da execução deste método objeto, a variável *$btnName* contém o valo
 [OBJECT Get pointer](object-get-pointer.md)  
 *Objetos (Formulários)*  
 *Objetos de formulário (Acesso)*  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1087 |
+| Thread-seguro | &cross; |
+
+

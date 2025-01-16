@@ -55,3 +55,12 @@ Vous souhaitez sauvegarder une clé de chiffrement dans un fichier .4DKeyChain :
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [Register data key](register-data-key.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1611 |
+| Thread safe | &check; |
+
+

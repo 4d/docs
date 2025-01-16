@@ -62,3 +62,13 @@ Se o usuário clicar no botão Deter no termômetro de progressão, a variável 
 
 *Conjuntos*  
 [EDIT FORMULA](edit-formula.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 70 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

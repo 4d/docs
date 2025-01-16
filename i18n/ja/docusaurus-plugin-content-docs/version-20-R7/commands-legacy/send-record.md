@@ -34,3 +34,12 @@ displayed_sidebar: docs
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND VARIABLE](send-variable.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 78 |
+| スレッドセーフである | &check; |
+
+

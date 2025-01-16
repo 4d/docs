@@ -19,3 +19,12 @@ displayed_sidebar: docs
 #### Ver também 
 
 [MESSAGES OFF](messages-off.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 181 |
+| Thread-seguro | &check; |
+
+

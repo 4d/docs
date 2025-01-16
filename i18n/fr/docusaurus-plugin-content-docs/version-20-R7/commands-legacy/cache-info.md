@@ -53,3 +53,12 @@ Vous souhaitez obtenir des informations sur la base courante et tous les composa
 #### Voir aussi 
 
 [MEMORY STATISTICS](memory-statistics.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1402 |
+| Thread safe | &check; |
+
+

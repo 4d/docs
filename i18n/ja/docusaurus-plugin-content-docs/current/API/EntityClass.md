@@ -58,7 +58,7 @@ title: Entity
 - *attributeName* で指定した属性がストレージ型の場合:
   `.attributeName` は *attributeName* と同じ型の値を返します。
 - *attributeName* で指定した属性がリレートエンティティ型の場合:
-  `.attributeName` はリレートエンティティを返します。 リレートエンティティの値は、ドット記法でプロパティを繋げることでアクセス可能です。例: "myEntity.employer.employees[0].lastname"
+  `.attributeName` はリレートエンティティを返します。 リレート先のエンティティそのものが変更された場合 (外部キーの変更)、リレーションの名称とそのプライマリーキー名が <em x-id="3">attributeName</em> プロパティに返されます (リレーション名についての <em x-id="3">value</em> および <em x-id="3">otherValue</em> は空になります)。
 - *attributeName* で指定した属性がリレートエンティティズ型の場合:
   `.attributeName` はリレートエンティティの新しいエンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
 
@@ -98,9 +98,11 @@ title: Entity
 
 #### 説明
 
-`.clone()` 関数は、<!-- REF #EntityClass.clone().Summary -->対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します<!-- END REF -->。 このメソッドを使用するとエンティティを個別に更新することができます。
+The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->.
 
-> エンティティに対して何らかの変更をおこなった場合、それらは [`.save( )`](#save) 関数が実行されたときのみ、参照先のレコードに保存されるという点に注意してください。
+This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+
+> Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save()`](#save) function is executed.
 
 この関数は、すでにデータベースに保存されているエンティティに対してのみ使用可能です。 新規に作成されたエンティティ([`.isNew()`](#isnew) が **true** を返すもの) に対して呼び出すことはできません。
 
@@ -289,7 +291,7 @@ vCompareResult2 ($attributesToInspect についての差異のみ返されます
 ]
 ```
 
-vCompareResult3 ($e1 において更新された (touch された) 属性のみが返されます)
+vCompareResult1 (すべての差異が返されています):
 
 ```4d
 [
@@ -344,7 +346,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.drop()` 関数は、データクラスに対応するテーブルにおいて、<!-- REF #EntityClass.drop().Summary -->データストアのエンティティに格納されているデータを削除します<!-- END REF -->。 エンティティそのものはメモリ内に残るという点に注意してください。
+`.drop()` 関数は、データクラスに対応するテーブルにおいて、<!-- REF #EntityClass.drop().Summary -->データストアのエンティティに格納されているデータを削除します<!-- END REF -->。 データクラスに対応するテーブルからエンティティが削除される一方、 エンティティそのものはメモリ内に残るという点に注意してください。
 
 マルチユーザー、あるいはマルチプロセスアプリケーションにおいて、`.drop()` 関数は ["オプティミスティック・ロック"](ORDA/entities.md#entity-locking) 機構のもとで実行されます。これはレコードが保存されるたびに内部的なロックスタンプが自動的に増分していくという機構です。
 
@@ -1354,7 +1356,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### 説明
 
-`.toObject()` 関数は、<!-- REF #EntityClass.toObject().Summary -->エンティティからビルトされたオブジェクトを返します<!-- END REF -->。 オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
+`.toObject()` 関数は、<!-- REF #EntityClass.toObject().Summary -->エンティティからビルトされたオブジェクトを返します<!-- END REF -->。 エンティティの属性値を格納します
 
 *filterString* 引数が空の文字列、あるいは "\*" の場合、以下のいずれかが返されます:
 
@@ -1768,7 +1770,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 ロックしているプロセス内のどのエンティティからもレコードが参照されなくなった場合、自動的にレコードロックが解除されます (たとえば、エンティティのローカル参照に対してのみロックがかかっていた場合、プロセスが終了すればエンティティおよびレコードのロックは解除されます)。
 
-> レコードがロックされている場合、ロックしているプロセスから、ロックされたエンティティ参照に対してロックを解除する必要があります: 例:
+> レコードがロックされている場合、ロックしているプロセスから、ロックされたエンティティ参照に対してロックを解除する必要があります: 例: 例:
 
 ```4d
  $e1:=ds.Emp.all()[0]

@@ -250,7 +250,7 @@ Consulte la descripción del evento [`On Alternative Click`](../Events/onAlterna
 
 ### Gestión del menú emergente
 
-Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el aspecto gráfico del botón. La visualización del menú emergente y sus valores deben ser manejados enteramente por el desarrollador, más particularmente utilizando los comandos`form events` y [`Dynamic pop menu`](https://doc. d.com/4dv19R7/help/command/en/page1006.html) y [`Menú emergente`](https://doc.4d.com/4dv19R7/help/command/en/page542.html).
+Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el aspecto gráfico del botón. La visualización del menú emergente y sus valores deben ser manejados enteramente por el desarrollador, más particularmente utilizando los comandos`form events` y [`Dynamic pop menu`](https://doc.md.com/4dv19R7/help/command/en/page1006.html) y [`Menú emergente`](https://doc.4d.com/4dv19R7/help/command/en/page542.html).
 
 #### Gramática JSON
 
@@ -260,4 +260,4 @@ Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el 
 
 #### Objetos soportados
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)
+[Botón de barra de herramientas](button_overview.md#toolbar) - [Botón biselado](button_overview.md#bevel) - [Botón biselado redondeado](button_overview.md#rounded-bevel) - [Botón de degradado OS X](button_overview.md#os-x-gradient) - [Botón con textura OS X](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-xp) - [Botón circular](button_overview.md#circle) - [Personalizado](button_overview.md#custom)

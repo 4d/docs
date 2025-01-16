@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Get list item font.Summary-->Get list item font コマンドは、リスト参照またはオブジェクト名で指定した*list*リストの、*itemRef* 引数で指定した項目のフォント名を返します。<!-- END REF-->
@@ -33,3 +30,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET LIST ITEM FONT](set-list-item-font.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 954 |
+| スレッドセーフである | &cross; |
+
+

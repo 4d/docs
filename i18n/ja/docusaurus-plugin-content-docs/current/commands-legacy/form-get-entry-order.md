@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->**FORM GET ENTRY ORDER** コマンドは フォーム上のオブジェクトの名前を、その入力順に並べて *objectNames* に返します。<!-- END REF-->
@@ -54,3 +51,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [FORM SET ENTRY ORDER](form-set-entry-order.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1469 |
+| スレッドセーフである | &cross; |
+
+

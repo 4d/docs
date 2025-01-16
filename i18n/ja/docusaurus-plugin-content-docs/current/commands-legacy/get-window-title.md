@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Get window title.Summary-->Get window title コマンドは、*window*に渡されたウィンドウ参照番号を持つウィンドウのタイトルを返します。<!-- END REF-->ウィンドウが存在しない場合、空の文字列が返されます。 
@@ -30,3 +27,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET WINDOW TITLE](set-window-title.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 450 |
+| スレッドセーフである | &cross; |
+
+

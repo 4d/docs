@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET PRINT PREVIEW.Summary-->La commande **SET PRINT PREVIEW** vous permet de sélectionner ou de désélectionner l'option d'**aperçu** dans la boîte de dialogue standard d'impression.<!-- END REF--> Si vous passez Vrai dans *aperçu*, l'option "à l'écran" sera cochée. Si vous passez Faux, elle ne sera pas cochée. Ce paramétrage est local au process et n'affecte pas les autres process ou utilisateurs.
@@ -39,3 +36,12 @@ L'exemple suivant sélectionne l'option **A l'écran** pour afficher le résulta
 
 [Get print preview](get-print-preview.md)  
 [Is in print preview](is-in-print-preview.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 364 |
+| Thread safe | &cross; |
+
+

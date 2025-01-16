@@ -26,3 +26,13 @@ Si PREVIOUS RECORD mueve el puntero del registro actual antes de la selección a
 [FIRST RECORD](first-record.md)  
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 110 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+
+

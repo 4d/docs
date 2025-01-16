@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->The **METHOD GET MODIFICATION DATE** command returns, in the *modDate* and *modTime* parameters, the dates and times of the last modification of the method(s) designated by the *path* parameter.<!-- END REF-->
@@ -70,3 +67,13 @@ You want to get modification dates for methods in a module that are prefixed wit
 ```
 
   
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1170 |
+| Thread safe | &cross; |
+
+

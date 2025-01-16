@@ -32,3 +32,12 @@ Dans l'exemple suivant, la valeur [True](true.md) est assignée à une variable.
 
 [False](false.md)  
 [True](true.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 34 |
+| Thread safe | &check; |
+
+

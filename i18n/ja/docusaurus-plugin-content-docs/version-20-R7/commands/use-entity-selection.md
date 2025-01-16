@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明
 
-The `USE ENTITY SELECTION` command <!--REF #_command_.USE ENTITY SELECTION.Summary-->updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection<!-- END REF-->.
+`USE ENTITY SELECTION` コマンドは、<!--REF #_command_.USE ENTITY SELECTION.Summary-->*entitySelection* 引数のデータクラスに合致するテーブルのカレントセレクションを、渡したエンティティセレクションの内容で更新します<!-- END REF-->。
 
 [リモートデータストア](../ORDA/remoteDatastores.md) の場合は、このコマンドは使用できません。
 
@@ -45,3 +45,12 @@ USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレ�
 #### 参照
 
 [Create entity selection](create-entity-selection.md)
+
+#### プロパティ
+
+|                           |                                                                 |
+| ------------------------- | --------------------------------------------------------------- |
+| コマンド番号                    | 1513                                                            |
+| スレッドセーフ                   | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Changes current record    |                                                                 |
+| Changes current selection |                                                                 |

@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.SORT ARRAY.Summary-->The SORT ARRAY command sorts one or more arrays into ascending or descending order.<!-- END REF--> 
-
-**Notes:** 
+<!--REF #_command_.SORT ARRAY.Summary-->The SORT ARRAY command sorts one or more arrays into ascending or descending order.<!-- END REF-->
 
 * You cannot sort [Pointer](# "A reference to another variable (including arrays and array elements), table, or field") or [Picture](# "Can be any Windows or Macintosh picture") arrays. You can sort the elements of a two-dimensional array (i.e., *a2DArray{$vlThisElem}*) but you cannot sort the two-dimensional array itself (i.e., *a2DArray*).
 * You can sort [Object](# "Data structured as a native 4D object") arrays. Null elements are grouped and array elements are sorted with an internal order.
@@ -82,3 +80,12 @@ You display the names from a *\[People\]* table in a floating window. When you c
 [MULTI SORT ARRAY](multi-sort-array.md)  
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 229 |
+| Thread safe | &check; |
+
+

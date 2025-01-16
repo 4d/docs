@@ -161,8 +161,8 @@ _italic_
 ```md
 | Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
-| wpArea    | String |Write pro area|
-| toolbar   | String |Toolbar name  |
+| wpArea    | Text |Write pro area|
+| toolbar   | Text |Toolbar name  |
 ```
 
 - La etiqueta del enlace es soportada:
@@ -204,7 +204,7 @@ GetLogo (size) -> logo
 
 | Parámetro | Tipo   | Entrada/Salida | Descripción |
 | --------- | ------ | -------------- | ----------- |
-| size      | Longint | Entrada | Selector de estilo de logo (1 a 5)  |
+| size      | Integer  | Entrada | Selector de estilo de logo (1 a 5)  |
 | logo      | Picture | Salida | Logo seleccionado |
 
 

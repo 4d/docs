@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->The **METHOD GET CODE** command returns, in the *code* parameter, the contents of the method(s) designated by the *path* parameter.<!-- END REF--> This command can return the code of all types of methods: database methods, class definitions, triggers, project methods, form methods and object methods.
@@ -121,3 +118,12 @@ The resulting document will contain:
 
 [METHOD SET CODE](method-set-code.md)  
 *Using tokens in formulas*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1190 |
+| Thread safe | &cross; |
+
+

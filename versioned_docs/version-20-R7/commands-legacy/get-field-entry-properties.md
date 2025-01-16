@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr&#124;tableNum | Pointer, Longint | &#8594;  | Field pointer or table number |
+| fieldPtr&#124;tableNum | Pointer, Integer | &#8594;  | Field pointer or table number |
 | fieldNum | Integer | &#8594;  | Field number if the table number is passed as first parameter |
 | list | Text | &#8592; | Associated choice list name or empty string |
 | mandatory | Boolean | &#8592; | True = Mandatory, False = Optional |
@@ -17,9 +17,6 @@ displayed_sidebar: docs
 | nonModifiable | Boolean | &#8592; | True = Non-modifiable, False = Modifiable |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -44,3 +41,12 @@ If there is no choice list associated to the field or if the field type is not s
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [GET TABLE PROPERTIES](get-table-properties.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 685 |
+| Thread safe | &cross; |
+
+

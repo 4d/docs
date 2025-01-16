@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->La commande **OBJECT SET CORNER RADIUS** vous permet de modifier le rayon des angles du ou des objet(s) que vous avez passés dans le paramètre *objet*.<!-- END REF--> Le nouveau rayon est défini pour le process uniquement, il n'est pas stocké dans le formulaire. 
@@ -69,3 +66,12 @@ Notez que pour les zones de texte (ainsi que pour les zones de saisie), contrair
 #### Voir aussi 
 
 [OBJECT Get corner radius](object-get-corner-radius.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1323 |
+| Thread safe | &cross; |
+
+

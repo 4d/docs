@@ -13,17 +13,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Before.Summary-->**Before** retourne Vrai pour le cycle d'exécution Avant.<!-- END REF-->
 
 Si vous souhaitez que la phase **Before** du cycle d'exécution soit générée, assurez-vous que l'événement On Load a bien été sélectionné, en mode Développement, dans les propriétés du formulaire et/ou des objets concernés.
 
-**Note :** Cette commande équivaut à utiliser la fonction [Form event code](form-event-code.md) et tester si elle retourne l'événement On Load.
+**Note :** Cette commande équivaut à utiliser la fonction [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Load.
 
 #### Voir aussi 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 29 |
+| Thread safe | &cross; |
+
+

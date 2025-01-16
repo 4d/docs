@@ -22,7 +22,7 @@ Esta referencia se puede pasar a:
 
 * el comando [WP SELECT](wp-select.md) para seleccionar el cuerpo del documento.
 * el comando [WP Text range](wp-text-range.md) para definir el cuerpo como un rango.
-* los comandos [WP SET ATTRIBUTES](wp-set-attributes.md) y [WP GET ATTRIBUTES](wp-get-attributes.md) para manejar los atributos del cuerpo.
+* los comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) y [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) para manejar los atributos del cuerpo.
 
 #### Ejemplo 
 

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Drop position.Summary-->**Drop position** permet de connaître l'emplacement, dans un objet de destination “complexe”, auquel un objet a été (glissé et) déposé.<!-- END REF--> Généralement, vous utiliserez **Drop position** pendant le traitement d'un événement glisser-déposer qui s'est produit dans un tableau, une list box, une liste hiérarchique, un champ texte ou une image.
@@ -93,5 +90,13 @@ La méthode objet de la list box de gauche (destination) contient le code suivan
 
 #### Voir aussi 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 *Présentation du Glisser-Déposer*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 608 |
+| Thread safe | &cross; |
+
+

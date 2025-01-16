@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT GET SCROLLBAR.Summary-->The OBJECT GET SCROLLBAR command is used to find out the displayed/hidden status of the horizontal and vertical scrollbars of the object or group of objects designated by *object*.<!-- END REF--> 
@@ -48,3 +45,12 @@ For more information, refer to the description of the [OBJECT SET SCROLLBAR](obj
 #### See also 
 
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1076 |
+| Thread safe | &cross; |
+
+

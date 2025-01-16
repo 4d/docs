@@ -81,3 +81,13 @@ When all the metadata are handled via a DOM element reference, the tags are stor
 [GET PICTURE METADATA](get-picture-metadata.md)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1121 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

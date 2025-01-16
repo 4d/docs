@@ -36,3 +36,12 @@ Vous souhaitez rejeter les nouvelles requêtes reçues par votre serveur Web Ser
 
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [WEB Get server info](web-get-server-info.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1636 |
+| Thread safe | &check; |
+
+

@@ -35,3 +35,13 @@ displayed_sidebar: docs
   // この行は$vdTomorrow:=Current 日付+1と同等です
  $vdTomorrow:=Add to date(Current date;0;0;1)
 ```
+
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 393 |
+| スレッドセーフである | &check; |
+
+

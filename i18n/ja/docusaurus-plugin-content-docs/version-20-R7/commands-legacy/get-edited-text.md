@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Get edited text.Summary-->**Get edited text**コマンドは、主にOn After Edit フォームイベントで入力中のテキストを取得するために使用します。<!-- END REF-->またOn Before Keystroke および On After Keystroke フォームイベントで使用することもできます。これらのフォームイベントについてのより詳細な情報は[Form event code](form-event-code.md)の説明を参照してください。
@@ -68,3 +65,12 @@ displayed_sidebar: docs
 
 [Form event code](form-event-code.md)  
 [Is editing text](is-editing-text.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 655 |
+| スレッドセーフである | &cross; |
+
+

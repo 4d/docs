@@ -63,7 +63,7 @@ Lista de valores estáticos a serem usados como etiquetas para o objeto de contr
 
 #### Objectos suportados
 
-[Tab Control](tabControl.md)
+[Controle de guias](tabControl.md)
 
 ---
 

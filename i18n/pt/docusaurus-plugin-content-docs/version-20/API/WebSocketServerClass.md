@@ -190,19 +190,19 @@ Evento emitido quando ocorre um erro no servidor WebSocket.
 Este exemplo de um recurso básico de bate-papo ilustra como lidar com conexões de servidor WebSocket em uma classe *WSSHandler* .
 
 ```4d
-//myWSServerHandler class
+//Classe myWSServerHandler 
 
 Function onConnection($wss : Object; $event : Object) : Object
 
     If (VerifyAddress($event.request.remoteAddress))
-        // The VerifyAddress method validates the client address
-        // The returned WSConnectionHandler object will be used
-        // by 4D to instantiate the 4D.WebSocketConnection object
-        // related to this connection
+        // O método VerifyAddress valida o endereço do cliente
+        // O objeto WSConnectionHandler retornado será usado
+        // por 4D para instanciar o objeto 4D.WebSocketConnection
+        // relacionado a essa conexão
         return cs.myConnectionHandler.new()   
-        // See connectionHandler object
+        // Veja o objeto connectionHandler
     Else
-        // The connection is cancelled      
+        // A conexão é cancelada      
         return Null
     End if
 

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.On System Event database method.Summary-->**On System Event データベースメソッド** はシステムイベントが発生するたびに呼び出されます。<!-- END REF-->すべてのモードの4D、4D Server、4D Volume Desktopが統合されたコンパイル済みアプリケーションなど、すべての4D環境で有効です。

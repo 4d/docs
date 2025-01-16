@@ -21,3 +21,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Begin SQL](begin-sql.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 949 |
+| スレッドセーフである | &check; |
+
+

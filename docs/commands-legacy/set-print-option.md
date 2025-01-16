@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET PRINT OPTION.Summary-->The **SET PRINT OPTION** command is used to modify, by programming, the value of a print option.<!-- END REF--> Each option defined using this command is applied to the[ current 4D printing settings](https://developer.4d.com/docs/settings/compatibility/) as long as no other command that modifies print parameters ([PRINT SETTINGS](print-settings.md), [PRINT SELECTION](print-selection.md) without the *\>* parameter, etc.) is called. If a print job has been opened (e.g. with [OPEN PRINTING JOB](open-printing-job.md)), the option is set for the job and cannot be modified as long as the job has not terminated (except for the Orientation option, see below).
@@ -40,7 +37,7 @@ The *option* parameter allows you to indicate the option to be modified. You can
 | Legacy printing layer option | 16    | (Windows only) *value1* only: 1=select the GDI-based legacy printing layer for the subsequent printing jobs. 0=select the D2D printing layer (default). This selector is mainly intended to allow legacy plug-ins to print inside 4D jobs in 4D applications on Windows.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | Print preview option         | 18    | (Windows only) *value1*: Format to use for print previews on Windows. Available values: kp preview automatic (default): Use XPS printer and viewer if available, otherwise use PDF printer or viewer if available, otherwise generate an error. kp preview XPS: Use XPS printer and viewer if available, otherwise generate an error. kp preview PDF: Use PDF printer and viewer if available, otherwise generate an error. *value2* (can be used with [GET PRINT OPTION](get-print-option.md) only): Print preview format actually used on Windows (can differ from *value1* depending on the configuration). Available values: kp preview none: No format available. kp preview XPS: XPS printer and viewer used. kp preview PDF: PDF printer and viewer used.                                                                                                                               |
 
-Once set using this command, a print option is kept throughout the duration of the session for the entire 4D application. It will be used by the [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](print-form.md), [QR REPORT](qr-report.md) and [WP PRINT](../WritePro/commands-legacy/wp-print.md) commands, as well as for all 4D printing, including that in Design mode.
+Once set using this command, a print option is kept throughout the duration of the session for the entire 4D application. It will be used by the [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md), [QR REPORT](qr-report.md) and [WP PRINT](../WritePro/commands-legacy/wp-print.md) commands, as well as for all 4D printing, including that in Design mode.
 
 **Notes:** 
 
@@ -77,7 +74,17 @@ If the value passed for an *option* is invalid or if it is not available on the 
 #### See also 
 
 [GET PRINT OPTION](get-print-option.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [PRINT OPTION VALUES](print-option-values.md)  
 *Print Options*  
 [SET CURRENT PRINTER](set-current-printer.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 733 |
+| Thread safe | &cross; |
+| Modifies variables | OK, error |
+
+

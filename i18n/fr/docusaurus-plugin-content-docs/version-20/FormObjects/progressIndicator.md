@@ -18,7 +18,7 @@ La variable associée à l'indicateur contrôle l’affichage. Vous pouvez y pla
  vTherm:=[Employees]Salary
 ```
 
-Cette méthode affecte à la variable vTherm la valeur du champ Salaire. Cette méthode est associée au champ Salaire.
+Cette méthode affecte la valeur du champ Salary à la variable vTherm. Cette méthode est associée au champ Salary.
 
 Réciproquement, vous pouvez utiliser un indicateur pour contrôler la valeur d’un champ. L’utilisateur se sert alors de l'indicateur pour saisir la valeur du champ. Dans ce cas la méthode devient :
 
@@ -26,10 +26,10 @@ Réciproquement, vous pouvez utiliser un indicateur pour contrôler la valeur d�
  [Employees]Salary:=vTherm
 ```
 
-La méthode affecte la valeur de l'indicateur au champ Salaire. Lorsque l’utilisateur modifie la valeur affichée par l'indicateur, la valeur du champ Salaire est modifiée.
+La méthode affecte la valeur de l'indicateur au champ Salary. Lorsque l’utilisateur modifie la valeur affichée par l'indicateur, la valeur du champ Salary est modifiée.
 
 
-## Le thermomètre par défaut
+## Thermomètre par défaut
 
 ![](../assets/en/FormObjects/indicator_progressBar.png)
 
@@ -54,7 +54,7 @@ Le barber shop affiche une animation continue, telle que le [spinner](spinner.md
 
 A l’exécution du formulaire, l'objet n’est pas animé. Vous devez gérer l’animation en passant une valeur à [la variable ou expression qui lui est associée](properties_Object.md#variable-or-expression) :
 
-* 1 = Start animation,
+* 1 = Démarrer l'animation,
 * 0 = Stopper l’animation.
 
 

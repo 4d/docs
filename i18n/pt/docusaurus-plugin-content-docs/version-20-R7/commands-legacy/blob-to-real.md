@@ -59,3 +59,12 @@ O exemplo a seguir lê 20 valores Reais de um BLOB, iniciando no offset 0x200:
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 553 |
+| Thread-seguro | &check; |
+
+

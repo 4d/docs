@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->O comando **GET LIST ITEM PARAMETER ARRAYS** permite recuperar somente em uma chamada o conjunto dos parâmetros (também como, opcionalmente, seus valores) associados ao elemento *refElemento* da lista hierárquica cuja referencia ou nome de objeto se passou no parâmetro *lista*.<!-- END REF-->
@@ -78,3 +75,12 @@ Caso também queiras obter os valores dos parâmetros, escreva:
 #### Ver também 
 
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1195 |
+| Thread-seguro | &cross; |
+
+

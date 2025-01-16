@@ -52,3 +52,12 @@ displayed_sidebar: docs
 
   
 [Process activity](../commands/process-activity.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1839 |
+| スレッドセーフである | &cross; |
+
+

@@ -74,7 +74,7 @@ Designa a colocação de um ícone em relação ao objeto formulário.
 
 #### Objectos suportados
 
-[List Box Header](listbox_overview.md#list-box-headers)
+[Cabeçalho do list box](listbox_overview.md#list-box-headers)
 
 ---
 
@@ -110,8 +110,8 @@ A imagem pode conter de 2 a 6 estados.
 
 :::note
 
-- button not clicked / check box unchecked (variable value=0)
-- button clicked / check box checked (variable value=1)
+- "false" significa que o botão não foi clicado/não foi selecionado ou que a caixa de seleção não foi marcada (valor da variável=0)
+- "true" significa botão clicado/selecionado ou caixa de seleção verificada (variável valor=1)
 
 :::
 
@@ -183,7 +183,7 @@ Esta propiedad permite definir si el título y la imagen del botón deben estar 
 
 Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título).
 
-By default, when a button contains a title and a picture, the elements are joined. El siguiente gráfico muestra el efecto de la propiedad `imageHugsTitle` (true cuando la propiedad está activada) con diferentes alineaciones de los botones:
+Por padrão, quando um botão contém um título e uma imagem, os elementos são unidos. El siguiente gráfico muestra el efecto de la propiedad `imageHugsTitle` (true cuando la propiedad está activada) con diferentes alineaciones de los botones:
 
 ![](../assets/en/FormObjects/hugs.png)
 
@@ -239,7 +239,7 @@ To attach a pop-up menu symbol to a button, there are two display options availa
 
 Each option specifies the relation between the button and the attached pop-up menu:
 
-- When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.
+- Quando o menu pop-up é **separado**, clicar na parte esquerda do botão executa diretamente a ação atual do botão; essa ação pode ser modificada usando o menu pop-up acessível na parte direita do botão.
 - Quando o menu pop-up está **vinculado**, um simples clique no botão exibe apenas o menu pop-up. Only the selection of the action in the pop-up menu causes its execution.
 
 :::info

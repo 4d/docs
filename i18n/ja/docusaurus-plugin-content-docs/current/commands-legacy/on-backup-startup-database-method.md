@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 
 
 <!--REF #_command_.On Backup Startup database method.Summary-->**On Backup Startupデータベースメソッド**は、データベースのバックアップを開始しようとするたびに呼び出されます（手動でのバックアップ、定期的自動バックアップ、または[BACKUP](backup.md "BACKUP") コマンドによるバックアップ）。<!-- END REF-->  

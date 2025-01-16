@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SHOW TOOL BAR.Summary-->O comando **SHOW TOOL BAR** \[#descn\] a visualização das barras de ferramentas personalizadas criadas pelo comando [Open form window](open-form-window.md) para o processo atual\[#/descv\].<!-- END REF-->
@@ -28,3 +25,12 @@ Consulte o exemplo do comando [HIDE TOOL BAR](hide-tool-bar.md).
 #### Ver também 
 
 [HIDE TOOL BAR](hide-tool-bar.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 433 |
+| Thread-seguro | &cross; |
+
+

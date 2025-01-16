@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Day number.Summary-->El comando Day number devuelve un número que representa el día de la semana que corresponde a la *f* *echa*.<!-- END REF-->  
-
-**Nota:** Day Number devuelve *2* para fechas nulas. 
+<!--REF #_command_.Day number.Summary-->El comando Day number devuelve un número que representa el día de la semana que corresponde a la *f* *echa*.<!-- END REF-->Day Number devuelve *2* para fechas nulas. 
 
 4D ofrece las siguientes constantes predefinidas:
 
@@ -61,3 +59,12 @@ El siguiente ejemplo es una función que devuelve el día actual como una cadena
 #### Ver también 
 
 [Day of](day-of.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 114 |
+| Hilo seguro | &check; |
+
+

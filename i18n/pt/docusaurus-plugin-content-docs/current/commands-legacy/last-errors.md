@@ -33,3 +33,12 @@ Este comando deve ser chamado desde um método de chamada de erro instalado pelo
 
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1799 |
+| Thread-seguro | &check; |
+
+

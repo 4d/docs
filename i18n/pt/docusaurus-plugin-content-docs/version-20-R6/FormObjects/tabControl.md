@@ -25,7 +25,7 @@ If the tab control is wide enough to display all the tabs with both the labels a
 
 Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
 
-### JSON Exemplo
+### Exemplo JSON:
 
 ```4d
 	"myTab": {

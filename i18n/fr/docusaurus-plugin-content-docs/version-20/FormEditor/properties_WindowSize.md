@@ -1,6 +1,6 @@
 ---
 id: windowSize
-title: Window Size
+title: Taille de la Fenêtre
 ---
 
 

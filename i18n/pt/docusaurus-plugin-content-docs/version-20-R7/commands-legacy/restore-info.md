@@ -35,3 +35,12 @@ O tipo e o conteúdo dos parâmetros *info1* e *info2* dependem do valor do *sel
 #### Ver também 
 
 [RESTORE](restore.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 889 |
+| Thread-seguro | &cross; |
+
+

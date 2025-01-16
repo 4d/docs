@@ -38,3 +38,13 @@ Dans un tableau d'entier longs, si un numéro d'enregistrement est invalide (enr
 
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 641 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+
+

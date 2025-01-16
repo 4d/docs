@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR REPORT TO BLOB.Summary-->El comando QR REPORT TO BLOB coloca el informe cuya referencia se pasó en *area* en un BLOB (variable o campo).<!-- END REF-->
@@ -34,3 +31,13 @@ La siguiente instrucción asigna el informe rápido almacenado en el área MiAre
 #### Ver también 
 
 [QR BLOB TO REPORT](qr-blob-to-report.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 770 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

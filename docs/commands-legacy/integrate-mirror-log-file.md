@@ -98,6 +98,14 @@ If the integration is carried out correctly, the system variable OK is set to 1;
 
 #### See also 
 
-  
-*\_o\_INTEGRATE LOG FILE*  
 [LOG FILE TO JSON](log-file-to-json.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1312 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+
+

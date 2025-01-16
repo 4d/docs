@@ -83,3 +83,12 @@ Para calcular as estatísticas, se quiser ordenar o número de valores distintos
 [ON ERR CALL](on-err-call.md)  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 339 |
+| Thread-seguro | &check; |
+
+

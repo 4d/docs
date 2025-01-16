@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->The **SELECT LOG FILE** command creates, or closes the log file according to the value you pass in *logFile*.<!-- END REF-->
@@ -41,3 +38,13 @@ An error -4447 is generated if the operation cannot be performed because the dat
 #### See also 
 
 [ON ERR CALL](on-err-call.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 345 |
+| Thread safe | &cross; |
+| Modifies variables | OK, error |
+
+

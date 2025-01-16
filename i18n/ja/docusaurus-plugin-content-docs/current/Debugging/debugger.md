@@ -3,16 +3,22 @@ id: debugger
 title: デバッガー
 ---
 
-デバッガーは、エラーを発見したり、メソッドの実行を監視する必要がある場合に便利です。 デバッガーを使って、コードをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。
+The 4D debugger is useful when you need to spot errors or monitor the execution of methods. デバッガーを使って、コードをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
+
+:::info
+
+If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+
+:::
 
 ## デバッガーの呼び出し
 
 デバッガーを開くには、次のような方法があります:
 
 - [シンタックスエラーウィンドウ](basics.md#シンタックスエラーウィンドウ) で **トレース** ボタンをクリックする。
-- [`TRACE`](https://doc.4d.com/4dv19/help/command/ja/page157.html) コマンドを使用する。
+- Using the [`TRACE`](../commands-legacy/trace.md) command
 - メソッド実行ウィンドウで **デバッグ** ボタンをクリックする、またはコードエディターで **実行してデバッグ** ボタンを選択する。
 - メソッド実行中に **Alt+Shift+右クリック** (Windows) または **Ctrl+Option+Cmd+クリック** (Macintosh) をおこない、表示されるポップアップウィンドウ内でトレースするプロセスを選択する:
 
@@ -23,8 +29,8 @@ title: デバッガー
 
 デバッガーウィンドウは、現在トレースしているメソッドまたはクラス関数の名前や、デバッガーが表示される原因となったアクションの情報を表示します。 上のウィンドウの例では、次の情報が表示されています:
 
-- 現在トレースされているメソッドは _Clients_BuildLogo_ メソッドです。
-- デバッガーウィンドウが表示されているのは、キャッチコマンドの対象に設定された `C_PICTURE` コマンドへの呼び出しが検出されたためです。
+- _drop_ is the method being traced
+- The debugger window appeared because of a break point.
 
 新しいデバッガーウィンドウの表示には、同じセッション内で表示された最後のデバッガーウィンドウと同じ構成 (ウィンドウのサイズと位置、分割線の配置および式評価エリアの内容) を使用します。 複数のユーザープロセスを実行した場合には、それぞれのプロセスを個別にトレースできます。つまり、各プロセスにつき 1つのデバッガーウィンドウを表示できます。
 
@@ -46,39 +52,43 @@ title: デバッガー
 
 ![execution-control-toolbar-buttons](../assets/en/Debugging/executionToolbarButtons.png)
 
-> デフォルトのショートカットは、環境設定ダイアログボックスのショートカットページで変更できます。
+:::note
+
+Default shortcuts can be customized in the [Shortcuts Page](../Preferences/shortcuts.md) of the Preferences dialog box.
+
+:::
 
 #### トレース終了
 
 トレースが停止され、通常のメソッド実行が再開されます。
 
-> **Shift** + **F5** または **Shift** を押しながら **トレース終了** ボタンをクリックすると、実行が再開されます。 この操作により、以降のカレントプロセスでの全ての TRACE 呼び出しが無効になります。
+> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. この操作により、以降のカレントプロセスでの全ての TRACE 呼び出しが無効になります。
 
 #### 次行に進む
 
 現在のメソッド行 (プログラムカウンターと呼ばれる黄色い矢印で示されている行) が実行されます。 その後、デバッガは次の行に移動します。
 
-"次の行に進む" ボタンは、サブルーチンや関数に移動することはなく、現在トレースの対象となっているメソッドのレベルにとどまります。 呼び出されるサブルーチンや関数もトレースしたい場合には、**呼び出しメソッドもトレース** ボタンを使用します。
+"次の行に進む" ボタンは、サブルーチンや関数に移動することはなく、現在トレースの対象となっているメソッドのレベルにとどまります。 If you want to also trace subroutines and functions calls, use the **Step Into** button.
 
-リモートデバッグにおいて、メソッドがサーバー上で実行されていた場合には、メソッドの最後の行の実行後にその親メソッドが呼ばれます。 その時、親メソッドがリモート側で実行されていた場合には、このボタンは **トレース終了** ボタンと同じように振る舞います。
+リモートデバッグにおいて、メソッドがサーバー上で実行されていた場合には、メソッドの最後の行の実行後にその親メソッドが呼ばれます。 If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
 
 #### 呼び出しメソッドもトレース
 
 別のメソッド (サブルーチンまたは関数) を呼び出す行が実行される時にこのボタンを使用すると、呼び出されたメソッドがデバッガーウィンドウに表示され、ステップ実行できます。
 
-デバッガーウィンドウの [呼び出し連鎖エリア](#呼び出し連鎖エリア) では、新しく呼び出されたメソッドがカレント (一番上) となります。
+The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
 
-別のメソッドを呼び出していない行が実行される場合には、このボタンは **次行に進む** ボタンと同じように振る舞います。
+When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
-#### 呼び出し元に進む
+#### Step Out
 
-サブルーチンや関数をトレースしている場合にこのボタンをクリックすると、現在トレース中のメソッド全体を実行し、呼び出し元メソッドに戻ることができます。 デバッガーウィンドウは、コールチェーンの一つ前のメソッドに戻ります。 トレース中のメソッドがコールチェーンの最後のメソッドである場合には、デバッガーウィン ドウが閉じられます。
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
 
-リモートデバッグにおいては、メソッドの最後の行の実行時に、サーバー上でメソッドが実行されている場合には、親メソッドが呼び出されます。 その時、親メソッドがリモート側で実行されていた場合には、このボタンは トレース終了 ボタンと同じように振る舞います。
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
 
-#### 別プロセスもトレース
+#### Step Into Process
 
-新しいプロセスを作成する (New process コマンドを呼び出す) 行を実行する際にこのボタンを使用すると新しいデバッガーウィンドウが表示され、作成されたプロセスでトレースを続行することができます。 新しいプロセスを作成しない行を実行する際には、このボタンは 次行に進む ボタンと同等に動作します。
+On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
 
 #### 中断
 
@@ -89,9 +99,9 @@ title: デバッガー
 
 #### 中断＆編集
 
-コードエディターウィンドウが開いて、**中断＆編集** ボタンがクリックされた時点で実行していたメソッドを表示します。
+The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 
-> **Tip**: このボタンは、コードにどのような変更が必要かが明らかであり、メソッドのテストを続行するためにその変更が必要な場合に使用してください。 変更が完了したら、メソッドを再実行できます。
+> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. 変更が完了したら、メソッドを再実行できます。
 
 #### 編集
 
@@ -99,18 +109,20 @@ title: デバッガー
 
 このボタンをクリックしてメソッドを編集した場合には、現在の実行は中断されないため、編集内容の反映は次回実行時になります。
 
-> **Tip**: このボタンは、コードに必要な変更内容がわかっている場合で、その変更がコードの残り部分の実行やトレースの妨げにならない場合に使用します。
+> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
-#### 設定保存
+## Auto-saving
 
-現在のデバッガウィンドウの構成を、デフォルト構成として保存します。 構成には次の内容が含まれます:
+The current state of the debugger window is automatically saved in the project. 構成には次の内容が含まれます:
 
-- ウィンドウのサイズと位置
-- 分割線の配置および式評価エリアの内容
+- the size and position of the window,
+- the position of the division lines,
+- the [display mode](#display-mode),
+- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pin-an-expression) to keep it displayed in all contexts.
 
-これらは、プロジェクト内に保存されます。
+The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
 
-このアクションはリモートデバッグモードでは利用できません ([リモートマシンからのデバッグ](debugging-remote.md) 参照)。
+![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
 
 ## ウォッチエリア
 
@@ -128,9 +140,9 @@ title: デバッガー
 
 ### 式リスト
 
-#### ラインオブジェクト
+#### Line Expressions
 
-このテーマには、次のような要素や式の値が表示されます:
+This theme lets you keep track of the values of expressions:
 
 - 実行されるコードの行 (プログラムカウンターにより、[ソースコードエリア](#ソースコードエリア) 内で黄色の矢印でマークされている行) で使用されている。
 - コードの前の行で使用されている。
@@ -288,8 +300,9 @@ You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1
 
 カスタムウォッチエリアは、式を評価するために使用します。 [ウォッチエリア](#ウォッチエリア) と似ていますが、ここでは任意の式を表示することができます。 どのようなタイプの式でも評価できます:
 
-- フィールド
 - 変数
+- object and object property
+- フィールド
 - ポインター
 - 演算
 - 4Dコマンド
@@ -298,39 +311,70 @@ You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-テキスト形式で表示できる式であれば、どのような式でも評価することができます。 ピクチャーや BLOBフィールドおよび変数は表示できません。 BLOB の内容を表示するには、[BLOB to text](https://doc.4d.com/4dv19/help/command/ja/page555.html) のような BLOBコマンドを使用してください。
+テキスト形式で表示できる式であれば、どのような式でも評価することができます。 ピクチャーや BLOBフィールドおよび変数は表示できません。 To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands-legacy/blob-to-text.md).
+
+### Display mode
+
+You select the display mode to be used for all debugger windows using the **Display** option of the Custom Watch pane's [contextual menu](#contextual-menu).
+
+![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane-display-menu.png)
+
+次のオプションから選択することができます:
+
+- **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code.
+- **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List.
+- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+
+:::note
+
+Whatever the display mode, you can add custom expressions at any moment.
+
+:::
 
 ### 新しい式の挿入
+
+You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pin-an-expression).
 
 リストに式を追加する方法は複数あります:
 
 - ウォッチエリアまたは呼び出し連鎖エリアから項目や式をドラッグ＆ドロップします。
 - [ソースコードエリア](#ソースコードエリア) で式を選択し、**ctrl+D**  (Windows) または **cmd+D** (macOS) を押します。
 - カスタムウォッチエリアの空スペースのどこかをダブルクリックします (プレースホルダー名を持つ編集可能な式が追加されます)。
-
-値を返すフォーミュラであれば、なんでも追加できます。
+- Select a [display option](#display-mode) that automatically inserts expressions.
+- Select **New Expression...** in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**. 値を返すフォーミュラであれば、なんでも追加できます。
 
 式を編集するには、その式をクリックして選択し、再びクリックすると (または**Enter**キーを押す) 編集モードになります。
 
-式を削除するには、その式をクリックして選択し、**Backspace** または **Delete**キーを押します。
+To delete a custom expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard, or click on the **x** icon.
 
-> **警告**: システム変数 (たとえば OK変数) の値を変更するような 4D式を評価する場合、その後のメソッド実行に影響することに注意してください。
+:::warning
+
+Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+
+:::
+
+### Pinning an expression
+
+You can click on the pushpin icon to pin an expression:
+
+![pinning-expression](../assets/en/Debugging/pin-expression.png)
+
+The expression will then be displayed in all debugger windows.
 
 ### コンテキストメニュー
 
-カスタムウォッチエリアのコンテキストメニューを使って、4D のフォーミュラエディターにアクセスできます:
+The Custom Watch Pane’s menu is available on a contextual click or using the ![menu](../assets/en/Debugging/custom-watch-pane-menu.png) icon:
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-**新しい式...**: 新しい式を挿入し、4D のフォーミュラエディターを表示します。
+- **Display**: Selects the [display mode](#display-mode) to be used for all debugger windows.
+- **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
+  ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
+  For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
-![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
-
-フォーミュラエディターの詳細については、[4Dデザインリファレンスマニュアル](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.ja.html) を参照ください。
-
-- **コマンド挿入...**: 4Dコマンドを新しい式として挿入するためのショートカット。
-- **すべて削除**: 現在カスタムウォッチエリアに表示されている式をすべて削除します。
-- **標準式**: ウォッチエリアの式リストをコピーします。
+* **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
+* **すべて削除**: 現在カスタムウォッチエリアに表示されている式をすべて削除します。
+* **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
 
 > このオプションは [リモートデバッグモード](debugging-remote.md)では利用できません。
 
@@ -346,6 +390,12 @@ You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1
 ソースコードエリアには、トレース中のメソッドや関数のソースコードが表示されます。
 
 このエリアでは、[**ブレークポイント**](breakpoints.md) の追加や削除も可能です。
+
+### Prototype
+
+The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
+
+![prototype](../assets/en/Debugging/prototype.png)
 
 ### Tips
 
@@ -404,12 +454,9 @@ You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-- **定義に移動...**: 選択された要素の定義に移動します。 このコマンドは以下の要素に使用できます:
-  - _プロジェクトメソッド_: 新しいコードエディターウィンドウにメソッドの内容を表示します。
-  - _フィールド_: ストラクチャーウィンドウのインスペクターにフィールドプロパティを表示します。
-  - _テーブル_: ストラクチャーウィンドウのインスペクターにテーブルプロパティを表示します。
-  - _フォーム_: フォームエディターにフォームを表示します。
-  - _変数_ (ローカル、プロセス、インタープロセス、$n 引数): カレントメソッド内の宣言行を表示、または変数が宣言されたコンパイラーメソッドを表示します。
+- **Show documentation**: Opens the documentation for the target element. このコマンドは以下の要素に使用できます:
+  - _Project methods_, _user classes_: Selects the method in the Explorer and switches to the documentation tab
+  - _4D commands, functions, class names:_ Displays the online documentation.
 - **参照を検索...** (コードエディターでも利用可能): 現在の要素が参照されているすべてのメソッドとフォームを検索します。 現在の要素とは、選択されているものまたはカーソルが置かれているものをいいます。 これにはフィールド、変数、コマンド、文字列等が含まれます。 検索結果は、標準の検索結果ウィンドウに表示されます。
 - **コピー**: 選択された式が標準のペーストボードへとコピーされます。
 - **式ペインにコピー**: 選択された式をカスタムウォッチエリアにコピーします。

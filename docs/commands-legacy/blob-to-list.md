@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.BLOB to list.Summary-->The BLOB to list command creates a new hierarchical list with the data stored within the BLOB *blob* at the byte offset (starting at zero) specified by *offset* and returns a List Reference number for that new list.<!-- END REF-->
@@ -62,3 +59,13 @@ The OK variable is set to 1 if the list has been successfully created, otherwise
 #### See also 
 
 [LIST TO BLOB](list-to-blob.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 557 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

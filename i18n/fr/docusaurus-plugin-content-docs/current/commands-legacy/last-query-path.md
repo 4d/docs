@@ -33,3 +33,12 @@ La description du chemin de la dernière recherche peut être comparée à la de
 
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
 [Last query plan](last-query-plan.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1045 |
+| Thread safe | &check; |
+
+

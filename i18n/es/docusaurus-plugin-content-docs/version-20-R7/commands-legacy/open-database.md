@@ -69,3 +69,13 @@ Desea seleccionar un servidor al inicio desde una aplicación mono usuario. Pued
     QUIT 4D
  End if
 ```
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1321 |
+| Hilo seguro | &check; |
+
+

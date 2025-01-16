@@ -194,3 +194,13 @@ Vous obtenez le résultat suivant (objet stringifié) :
 ```
 
 **Note :** Pour plus d'informations sur le format de l'[objet](# "Données structurées sous forme d'objet natif 4D") retourné, veuillez contacter les services techniques de 4D. 
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1528 |
+| Thread safe | &check; |
+
+

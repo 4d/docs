@@ -121,7 +121,7 @@ title: Index
 [`Command name`](../commands-legacy/command-name.md)<br/>
 [`Compact data file`](../commands-legacy/compact-data-file.md)<br/>
 [`Compare strings`](../commands-legacy/compare-strings.md)<br/>
-[`Compile project`](../commands-legacy/compile-project.md)<br/>
+[`Compile project`](compile-project.md)<br/>
 [`COMPONENT LIST`](../commands-legacy/component-list.md)<br/>
 [`COMPRESS BLOB`](../commands-legacy/compress-blob.md)<br/>
 [`CONFIRM`](../commands-legacy/confirm.md)<br/>
@@ -207,7 +207,7 @@ title: Index
 [`Delete string`](../commands-legacy/delete-string.md)<br/>
 [`DELETE USER`](../commands-legacy/delete-user.md)<br/>
 [`DESCRIBE QUERY EXECUTION`](../commands-legacy/describe-query-execution.md)<br/>
-[`DIALOG`](../commands-legacy/dialog.md)<br/>
+[`DIALOG`](dialog.md)<br/>
 [`DIFFERENCE`](../commands-legacy/difference.md)<br/>
 [`DISABLE MENU ITEM`](../commands-legacy/disable-menu-item.md)<br/>
 [`Discover data key`](../commands-legacy/discover-data-key.md)<br/>
@@ -313,11 +313,11 @@ title: Index
 [`Font file`](../commands-legacy/font-file.md)<br/>
 [`FONT LIST`](../commands-legacy/font-list.md)<br/>
 [`FONT STYLE LIST`](../commands-legacy/font-style-list.md)<br/>
-[`Form`](../commands-legacy/form.md)<br/>
+[`Form`](form.md)<br/>
 [`FORM Convert to dynamic`](../commands-legacy/form-convert-to-dynamic.md)<br/>
-[`FORM EDIT`](../commands-legacy/form-edit.md)<br/>
-[`FORM Event`](../commands-legacy/form-event.md)<br/>
-[`Form event code`](../commands-legacy/form-event-code.md)<br/>
+[`FORM EDIT`](form-edit.md)<br/>
+[`FORM Event`](form-event.md)<br/>
+[`Form event code`](form-event-code.md)<br/>
 [`FORM FIRST PAGE`](../commands-legacy/form-first-page.md)<br/>
 [`FORM Get color scheme`](../commands-legacy/form-get-color-scheme.md)<br/>
 [`FORM Get current page`](../commands-legacy/form-get-current-page.md)<br/>
@@ -329,7 +329,7 @@ title: Index
 [`FORM GET VERTICAL RESIZING`](../commands-legacy/form-get-vertical-resizing.md)<br/>
 [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md)<br/>
 [`FORM LAST PAGE`](../commands-legacy/form-last-page.md)<br/>
-[`FORM LOAD`](../commands-legacy/form-load.md)<br/>
+[`FORM LOAD`](form-load.md)<br/>
 [`FORM NEXT PAGE`](../commands-legacy/form-next-page.md)<br/>
 [`FORM PREVIOUS PAGE`](../commands-legacy/form-previous-page.md)<br/>
 [`FORM SCREENSHOT`](../commands-legacy/form-screenshot.md)<br/>
@@ -885,7 +885,7 @@ title: Index
 [`POST KEY`](../commands-legacy/post-key.md)<br/>
 [`POST OUTSIDE CALL`](../commands-legacy/post-outside-call.md)<br/>
 [`PREVIOUS RECORD`](../commands-legacy/previous-record.md)<br/>
-[`Print form`](../commands-legacy/print-form.md)<br/>
+[`Print form`](print-form.md)<br/>
 [`PRINT LABEL`](../commands-legacy/print-label.md)<br/>
 [`Print object`](../commands-legacy/print-object.md)<br/>
 [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md)<br/>
@@ -1063,7 +1063,7 @@ title: Index
 [`Sequence number`](../commands-legacy/sequence-number.md)<br/>
 [`Session`](session.md)<br/>
 [`Session info`](session-info.md) - **new 4D 20 R7**<br/> 
-[`Session storage`](../commands-legacy/session-storage.md)<br/>
+[`Session storage`](session-storage.md)<br/>
 [`SET ABOUT`](../commands-legacy/set-about.md)<br/>
 [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md)<br/>
 [`SET APPLICATION COLOR SCHEME`](../commands-legacy/set-application-color-scheme.md)<br/>

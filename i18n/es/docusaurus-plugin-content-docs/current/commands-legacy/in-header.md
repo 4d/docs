@@ -13,19 +13,24 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.In header.Summary-->**In header** devuelve True para el ciclo de ejecución In header.<!-- END REF--> 
 
 Para que se genere el ciclo de ejecución **In header**, asegúrese de que la propiedad del evento On Header para el formulario y/o los objetos haya sido seleccionada en el entorno Diseño.
 
-**Nota:** este comando es equivalente a utilizar [Form event code](form-event-code.md) y probar si devuelve el evento On Header.
+**Nota:** este comando es equivalente a utilizar [Form event code](../commands/form-event-code.md) y probar si devuelve el evento On Header.
 
 #### Ver también 
 
-*\_o\_During*  
 [In break](in-break.md)  
 [In footer](in-footer.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 112 |
+| Hilo seguro | &cross; |
+
+

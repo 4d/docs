@@ -36,3 +36,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [RESTORE](restore.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 889 |
+| スレッドセーフである | &cross; |
+
+

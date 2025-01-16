@@ -27,3 +27,13 @@ Si el comando se ha ejecutado correctamente, la variable sistema OK toma el valo
 
 [DOM Parse XML source](dom-parse-xml-source.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 722 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+
+

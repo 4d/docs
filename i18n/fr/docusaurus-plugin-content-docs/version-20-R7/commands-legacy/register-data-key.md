@@ -48,3 +48,12 @@ Passez le paramètre *phraseSecrèteCour* ou *cléDonnéesCour*, qui définit la
 
   
 [New data key](new-data-key.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1638 |
+| Thread safe | &check; |
+
+

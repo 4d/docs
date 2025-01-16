@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT Get list reference.Summary-->**OBJECT Get list reference**コマンドは、引数 *object* と *\** で指定したオブジェクトまたはオブジェクトのグループに関連付けられた階層リストの参照番号(ListRef)を返します。<!-- END REF-->
@@ -39,3 +36,12 @@ displayed_sidebar: docs
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1267 |
+| スレッドセーフである | &cross; |
+
+

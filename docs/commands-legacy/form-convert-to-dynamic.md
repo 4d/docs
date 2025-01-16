@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->The **FORM Convert to dynamic** command converts the *formName* (classic form) to a dynamic form and returns it in an object.<!-- END REF-->
@@ -26,7 +23,7 @@ displayed_sidebar: docs
 
 If you want to convert a table form, pass the form table in the *aTable* parameter and then pass its name as a string in *formName*. For a project form, pass the form name directly in *formName*.
 
-In order to be able to run the form directly by passing the resulting object to the [DIALOG](dialog.md) command, **FORM Convert to dynamic** applies specific rules when converting the form:
+In order to be able to run the form directly by passing the resulting object to the [DIALOG](../commands/dialog.md) command, **FORM Convert to dynamic** applies specific rules when converting the form:
 
 * References to lists are exported by name instead of a JSON pointer referencing the lists.json file.
 * References to named filters and named display formats (using the '|' prefix character) are exported by value instead of a JSON pointer referencing the filters.json file.
@@ -62,5 +59,14 @@ If you execute the code:
 
 #### See also 
 
-[DIALOG](dialog.md)  
+[DIALOG](../commands/dialog.md)  
 [Export structure file](export-structure-file.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1570 |
+| Thread safe | &cross; |
+
+

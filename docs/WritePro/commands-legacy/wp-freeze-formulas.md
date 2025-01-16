@@ -60,4 +60,4 @@ To freeze all formulas in the first section of a document without recomputing:
 
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP Get formulas](wp-get-formulas.md)  
-[WP INSERT FORMULA](wp-insert-formula.md)  
+[WP INSERT FORMULA](../commands/wp-insert-formula.md)  

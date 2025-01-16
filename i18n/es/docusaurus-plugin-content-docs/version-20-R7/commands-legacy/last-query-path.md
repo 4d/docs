@@ -33,3 +33,12 @@ La descripción de la ruta de la última búsqueda puede compararse con la descr
 
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
 [Last query plan](last-query-plan.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1045 |
+| Hilo seguro | &check; |
+
+

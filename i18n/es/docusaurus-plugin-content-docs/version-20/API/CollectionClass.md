@@ -171,10 +171,10 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| Parámetros | Tipo                                                                |    | Descripción                                              |
-| ---------- | ------------------------------------------------------------------- |:--:| -------------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valor(es) de la collection compartida                    |
-| Result     | Collection                                                          | <- | La nueva colección compartida|<!-- END REF -->
+| Parámetros | Tipo                                                  |    | Descripción                                              |
+| ---------- | ----------------------------------------------------- |:--:| -------------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection | -> | Valor(es) de la collection compartida                    |
+| Result     | Collection                                            | <- | La nueva colección compartida|<!-- END REF -->
 
 
 |
@@ -268,13 +268,7 @@ La función devuelve Undefined si el *index* sobrepasa los límites de la colecc
 #### Ejemplo
 
 ```4d
-var $col : Collection
-$col:=New collection(10; 20; 30; 40; 50)
-$element:=$col.at(0) // 10
-$element:=$col.at(1) // 20
-$element:=$col.at(-1) // 50
-$element:=$col.at(-2) // 40
-$element:=$col.at(10) // indefinido
+Lanzamiento
 ```
 
 <!-- END REF -->
@@ -2262,8 +2256,8 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 
     | Constante     | Tipo    | Valor | Comentario                                                 |
     | ------------- | ------- | ----- | ---------------------------------------------------------- |
-    | ck ascending  | Longint | 0     | Los elementos se ordenan de forma ascendente (por defecto) |
-    | ck descending | Longint | 1     | Los elementos se ordenan de forma descendente              |
+    | ck ascending  | Integer | 0     | Los elementos se ordenan de forma ascendente (por defecto) |
+    | ck descending | Integer | 1     | Los elementos se ordenan de forma descendente              |
 
     Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados).
 

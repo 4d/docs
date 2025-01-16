@@ -50,3 +50,13 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 
 [SAX GET XML ELEMENT VALUE](sax-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 855 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

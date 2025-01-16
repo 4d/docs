@@ -75,7 +75,7 @@ O parâmetro opcional *paramObj* permite que você defina várias propriedades p
 
 **Notas sobre o formato de arquivo SpreadJS**:
 
-- [SpreadJS files](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) are zipped files.
+- Os [arquivos SpreadJS](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) são arquivos compactados.
 - Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.

@@ -12,15 +12,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ACCEPT.Summary-->**ACCEPT** コマンドは以下の目的で、フォームメソッドまたはオブジェクトメソッド（またはサブルーチン）で使用されます：
 
 * [ADD RECORD](add-record.md)、[MODIFY RECORD](modify-record.md)、*\_o\_ADD SUBRECORD*、*\_o\_MODIFY SUBRECORD* を使用して開始されたレコードやサブレコードのデータ新規あるいは更新入力を受け入れる。<!-- END REF-->
-* [DIALOG](dialog.md) コマンドで表示されたフォームを受け入れる。
+* [DIALOG](../commands/dialog.md) コマンドで表示されたフォームを受け入れる。
 * [DISPLAY SELECTION](display-selection.md) や [MODIFY SELECTION](modify-selection.md) でレコードセレクションを表示したフォームを閉じる。
 
 **ACCEPT** はユーザがEnterキーを押したのと同じ動作をします。フォームが受け入れられると、OKシステム変数に1が設定されます。
@@ -38,3 +35,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [CANCEL](cancel.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 269 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

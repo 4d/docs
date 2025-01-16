@@ -48,7 +48,7 @@ Este comando só funciona quando [estão ativadas as sessões escaláveis](WebSe
 Quando se habilitam as sessões escaláveis, o objeto `Sessão` está disponível desde qualquer processo web nos seguintes contextos:
 
 - `On Web Authentication`, `On Web Connection`, e métodos database`On REST Authentication`,
-- As [funções Data Model Class](ORDA/ordaClasses.md) ORDA chamadas pelas petições REST,
+- as [funções Data Model Class](ORDA/ordaClasses.md) ORDA chamadas pelas petições REST,
 - código processado a través das etiquetas 4D nas páginas semidinâmicas (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
 - os métodos projeto com o atributo "Available through 4D tags and URLs (4DACTION...)" e chamados através de 4DACTION/ urls.
 
@@ -167,10 +167,9 @@ Se quiser comprovar se o privilégio "WebAdmin" está associado à sessão:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
- //Access is granted, do nothing
+ //O acesso é concedido, não faça nada
 Else
- //Display an authentication page
-
+ //Exibir uma página de autenticação
 End if
 ```
 
@@ -205,10 +204,10 @@ Essa propriedade é**apenas escrita**.
 
 ```4d
 If (Session.isGuest())
-  // A Guest session will close after 60 minutes of inactivity
+  // Uma sessão de convidado será fechada após 60 minutos de inatividade
  Session.idleTimeout:=60
 Else
-  // Other sessions will close after 120 minutes of inactivity
+  // Outras sessões serão fechadas após 120 minutos de inatividade
  Session.idleTimeout:=120
 End if
 
@@ -238,7 +237,7 @@ End if
 
 #### Descrição
 
-A função `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->retorna Verdadeiro se a sessão for uma sessão de Convidado (ou seja, não tem privilégios)<!-- END REF -->.
+A função `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->retorna True se a sessão for uma sessão de Convidado (ou seja, não tem privilégios)<!-- END REF -->.
 
 #### Exemplo
 
@@ -289,11 +288,11 @@ A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->
 | privileges  | Text ou Collection | <li>Strings contendo um nome de privilégio ou</li><li>Collection de strings contendo nomes de privilégios</li> |
 | userName    | Text               | Nome de usuário associado à sessão (opcional)      |
 
-If the `privileges` property contains an invalid privilege name, it is ignored.
+Se a propriedade `privileges` contém um nome de privilégio inválido, ele é ignorado.
 
-> In the current implementation, only the "WebAdmin" privilege is available.
+> Na implementação atual, apenas o privilégio "WebAdmin" está disponível.
 
-By default when no privilege is associated to the session, the session is a [Guest session](#isguest).
+Por padrão quando nenhum privilégio está associado à sessão, a sessão é uma [Sessão Convidado](#isguest).
 
 A propriedade [`userName`](#username) está disponível no nível do objeto da sessão (apenas leitura).
 
@@ -371,6 +370,6 @@ A propriedade `.userName` contém <!-- REF #SessionClass.userName.Summary -->o n
 
 Essa propriedade é uma string vazia como padrão. Pode ser estabelecida usando a propriedade `privileges` da função [`setPrivileges()`](#setprivileges).
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->

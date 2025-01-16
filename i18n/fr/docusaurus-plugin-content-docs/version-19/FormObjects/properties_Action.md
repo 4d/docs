@@ -126,7 +126,7 @@ Autorise le déplacement des lignes pendant l'exécution. Cette option est séle
 
 ## Multi-sélectionnable
 
-Allows the selection of multiple records/options in a [hierarchical list](list_overview.md).
+Permet la sélection de plusieurs enregistrements/options dans une [liste hiérarchique](list_overview.md).
 
 #### Grammaire JSON
 

@@ -29,3 +29,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET BLOB SIZE](set-blob-size.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 605 |
+| スレッドセーフである | &check; |
+
+

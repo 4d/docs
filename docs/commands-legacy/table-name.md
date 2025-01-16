@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Table name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum &#124; tablePtr | Longint, Pointer | &#8594;  | Table number or Table pointer |
+| tableNum &#124; tablePtr | Integer, Pointer | &#8594;  | Table number or Table pointer |
 | Function result | Text | &#8592; | Name of the table |
 
 <!-- END REF-->
@@ -38,3 +38,12 @@ The following is an example of a generic method that displays the records of a t
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 [Table](table.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 256 |
+| Thread safe | &check; |
+
+

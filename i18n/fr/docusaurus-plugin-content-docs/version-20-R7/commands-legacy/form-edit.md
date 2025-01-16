@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM EDIT.Summary-->La commande **FORM EDIT** ouvre le *formulaire* associé à *uneTable* dans l'éditeur de formulaire 4D.<!-- END REF--> A noter que vous devez avoir accès à l'environnement de développement, sinon l'erreur -9804 ("Impossible d'ouvrir le formulaire") sera générée.
@@ -44,3 +41,12 @@ Pour ouvrir le formulaire projet *ContactList* :
 #### Voir aussi 
 
 *Commandes du thème Accès objets développement*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1749 |
+| Thread safe | &cross; |
+
+

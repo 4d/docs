@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.MODIFY SELECTION.Summary-->MODIFY SELECTION é quase idêntico ao comando [DISPLAY SELECTION](display-selection.md).<!-- END REF--> Consulte a descrição do comando [DISPLAY SELECTION](display-selection.md) para uma descrição detalhada. As diferenças entre os dois comandos são: .   
@@ -33,3 +30,13 @@ displayed_sidebar: docs
 *Conjuntos*  
 [DISPLAY SELECTION](display-selection.md)  
 [Form event code](form-event-code.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 204 |
+| Thread-seguro | &cross; |
+| Proibido no servidor ||
+
+

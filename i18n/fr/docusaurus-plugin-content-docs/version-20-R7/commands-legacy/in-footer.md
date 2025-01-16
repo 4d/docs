@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.In footer.Summary-->**In footer** retourne Vrai pour le cycle d'exécution En pied.<!-- END REF-->
@@ -26,6 +23,14 @@ Si vous voulez que le cycle d'exécution **In footer** soit généré, vérifiez
 
 #### Voir aussi 
 
-*\_o\_During*  
 [In break](in-break.md)  
 [In header](in-header.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 191 |
+| Thread safe | &cross; |
+
+

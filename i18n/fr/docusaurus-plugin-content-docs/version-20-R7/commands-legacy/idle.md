@@ -52,3 +52,12 @@ La méthode METHODE EVENEMENT :
 
 *Commandes du thème Compilateur*  
 [ON EVENT CALL](on-event-call.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 311 |
+| Thread safe | &check; |
+
+

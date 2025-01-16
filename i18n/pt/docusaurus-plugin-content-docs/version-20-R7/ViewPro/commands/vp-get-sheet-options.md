@@ -27,7 +27,7 @@ No parâmetro opcional *sheet*, pode designar uma planilha específica (a contag
 
 O método devolve um objeto que contém os valores atuais de todas as opções de folha disponíveis An option value may have been modified by the user or by the [VP SET SHEET OPTIONS](vp-set-sheet-options.md) method.
 
-To view the full list of the options, see [Sheet Options](../configuring.md#sheet-options).
+Para ver a lista completa das opções, consulte [Opções folha](../configuring.md#sheet-options).
 
 #### Exemplo
 

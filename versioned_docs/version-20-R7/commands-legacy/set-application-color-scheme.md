@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Summary-->The **SET APPLICATION COLOR SCHEME** command defines the color scheme to use at the application level for the current session.<!-- END REF--> This scheme will be applied to forms that do not already declare a specific scheme (a color scheme defined at the form level takes priority over the application level).
@@ -39,3 +36,12 @@ In the *colorScheme* parameter, pass a color scheme to apply:
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [Get application color scheme](get-application-color-scheme.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1762 |
+| Thread safe | &cross; |
+
+

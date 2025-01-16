@@ -21,7 +21,7 @@ title: VP PASTE FROM OBJECT
 | ---------- | ------- | -- | -------------------- | ---------------- |
 | rangeObj   | Object  | -> | セルレンジオブジェクト          |                  |
 | dataObject | Object  | -> | ペーストするデータを格納したオブジェクト |                  |
-| options    | Longint | -> | ペーストする内容を指定します       | <!-- END REF --> |
+| options    | Integer | -> | ペーストする内容を指定します       | <!-- END REF --> |
 
 #### 説明
 

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Summary-->The **SPELL GET DICTIONARY LIST** command returns, in the *langID*, *langFiles* and *langNames* arrays, the IDs, file names and language names corresponding to the Hunspell dictionary files installed on the machine.<!-- END REF-->
@@ -54,3 +51,12 @@ You put "fr-classic+reform1990.aff" and "fr-classic+reform1990.dic" as well as "
 #### See also 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1204 |
+| Thread safe | &cross; |
+
+

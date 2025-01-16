@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Summary-->El comando **SPELL SET CURRENT DICTIONARY** reemplaza el diccionario actual por el especificado en el parámetro *diccionario*.<!-- END REF--> El diccionario actual se utiliza para la corrección ortográfica integrada de 4D (para mayor información, consulte el *Manual de Diseño*) como también de 4D Write Pro. La modificación del diccionario actual repercute inmediatamente en todos los procesos de la base para la sesión, así como también en las áreas 4D Write Pro.   
@@ -53,3 +50,13 @@ Carga del diccionario "fr-classic" presente en la carpeta Hunspell:
 [SPELL CHECKING](spell-checking.md)  
 [SPELL Get current dictionary](spell-get-current-dictionary.md)  
 [SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 904 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

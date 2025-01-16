@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->**OBJECT SET STYLE SHEET**コマンドは、引数 *object* と *\** で指定したオブジェクトと関連付けられたスタイルシートを、カレントのプロセスにおいて変更します。<!-- END REF-->スタイルシートを変更すると、フォント、フォントサイズ、そしてフォントスタイルが変更されます(ただし自動スタイルシートではフォントスタイルは除く)。
@@ -51,3 +48,12 @@ displayed_sidebar: docs
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT Get style sheet](object-get-style-sheet.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1257 |
+| スレッドセーフである | &cross; |
+
+

@@ -60,3 +60,12 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
 #### Voir aussi 
 
 *Créer des tableaux*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1222 |
+| Thread safe | &check; |
+
+

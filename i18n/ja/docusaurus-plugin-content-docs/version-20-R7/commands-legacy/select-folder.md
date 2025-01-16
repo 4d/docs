@@ -86,3 +86,13 @@ displayed_sidebar: docs
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 670 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

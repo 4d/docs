@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Insert string.Summary-->**Insert string** inserts a string into *source* and returns the resulting string.<!-- END REF--> **Insert string** inserts the string *what* before the character at position *where*.
+<!--REF #_command_.Insert string.Summary-->**Insert string** inserts a string into *source* and returns the resulting string.<!-- END REF-->inserts the string *what* before the character at position *where*.
 
 If *what* is an empty string (""), **Insert string** returns *source* unchanged.
 
@@ -41,3 +41,12 @@ The following example illustrates the use of **Insert string**. The results are 
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Replace string](replace-string.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 231 |
+| Thread safe | &check; |
+
+

@@ -78,4 +78,4 @@ displayed_sidebar: docs
 #### 参照 
 
 [WP Get elements](wp-get-elements.md)  
-[WP INSERT BREAK](wp-insert-break.md)  
+[WP INSERT BREAK](../commands/wp-insert-break.md)  

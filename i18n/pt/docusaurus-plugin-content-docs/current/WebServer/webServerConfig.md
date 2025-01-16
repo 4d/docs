@@ -11,7 +11,7 @@ Há diferentes maneiras de configurar as definições do servidor web 4D, depend
 
 | Localização do parâmetro                                                                      | Âmbito                                                                 | Servidor Web a ser usado                                       |
 | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------- |
-| [webServer object](webServerObject.md)                                                        | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
+| [objeto webServer](webServerObject.md)                                                        | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
 | `WEB SET OPTION` o comando `WEB XXX`                                                          | Temporário (sessão atual)                           | Servidor principal                                             |
 | [Caixa de diálogo **Configurações**](../settings/web.md) (páginas **Web**) | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
 
@@ -48,11 +48,11 @@ Con 4D en modo remoto, estos archivos deben estar ubicados en la carpeta de recu
 
 ## Conjunto de caracteres
 
-| Pode ser definido com              | Nome                                                                                 | Comentários                    |
-| ---------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------ |
-| objeto webServer                   | `characterSet`                                                                       | Integer MIBEnum ou string Name |
-| `WEB SET OPTION`                   | `Web character set`                                                                  | Integer MIBEnum ou string Name |
-| Caixa de diálogos de configurações | [Options (II) page/Standard Set](../settings/web.md#standard-set) | Menu pop-up                    |
+| Pode ser definido com              | Nome                                                                                     | Comentários                    |
+| ---------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------ |
+| objeto webServer                   | `characterSet`                                                                           | Integer MIBEnum ou string Name |
+| `WEB SET OPTION`                   | `Web character set`                                                                      | Integer MIBEnum ou string Name |
+| Caixa de diálogos de configurações | [Página Opções (II)/Conjunto padrão](../settings/web.md#standard-set) | Menu pop-up                    |
 
 Define o conjunto de caracteres a serem usados pelo servidor web 4D. O valor padrão realmente depende da linguagem do SO.
 
@@ -64,17 +64,17 @@ Define o conjunto de caracteres a serem usados pelo servidor web 4D. O valor pad
 | --------------------- | -------------------------------------------------- | ----------- |
 | objeto webServer      | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Text        |
 
-Lista de criptogramas  usada para o protocolo seguro; define a prioridade dos algoritmos de cifra implementados pelo servidor da Web. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). See the [ciphers page](https://www.openssl.org/docs/manmaster/man1/ciphers.html) on the OpenSSL site.
+Lista de criptogramas  usada para o protocolo seguro; define a prioridade dos algoritmos de cifra implementados pelo servidor da Web. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a [página ciphers](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
 
 > The default cipher list used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server, client/server connections, as well as the HTTP client and all the 4D commands that make use of the secure protocol.
 
 ## Parâmetros CORS
 
-| Pode ser definido com              | Nome                                                                                                                               | Comentários                                                                                                                                             |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                               | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
-| `WEB SET OPTION`                   | `Web CORS settings`                                                                                                                | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
-| Caixa de diálogos de configurações | [Options (II) page/Domain names and HTTP methods allowed](../settings/web.md#domain-names-HTTP-methods-allowed) | Clique no botão [+] para adicionar um nome de domínio permitido e seu método (s) |
+| Pode ser definido com              | Nome                                                                                                                                      | Comentários                                                                                                                                             |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                      | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
+| `WEB SET OPTION`                   | `Web CORS settings`                                                                                                                       | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
+| Caixa de diálogos de configurações | Página [Opções (II) /Nomes de domínio e métodos HTTP permitidos](../settings/web.md#domain-names-HTTP-methods-allowed) | Clique no botão [+] para adicionar um nome de domínio permitido e seu método (s) |
 
 Lista de hosts e métodos permitidos para o serviço CORS.
 
@@ -131,11 +131,11 @@ Status of the HTTP request log file of the web server ([_HTTPDebugLog_nn.txt_](.
 
 ## Defaut Home page
 
-| Pode ser definido com              | Nome                                                                         | Comentários                               |
-| ---------------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------- |
-| objeto webServer                   | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                   | Text                                      |
-| `WEB SET HOME PAGE`                |                                                                              | Pode ser diferente para cada processo web |
-| Caixa de diálogos de configurações | [Configuration page/Default Home Page](../settings/web.md#default-home-page) |                                           |
+| Pode ser definido com              | Nome                                                                              | Comentários                               |
+| ---------------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------- |
+| objeto webServer                   | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                        | Text                                      |
+| `WEB SET HOME PAGE`                |                                                                                   | Pode ser diferente para cada processo web |
+| Caixa de diálogos de configurações | [Página Configuração/Página inicial padrão](../settings/web.md#default-home-page) |                                           |
 
 Designar uma página inicial padrão para o servidor Web. Esta página pode ser estática ou [semi-dynamic].
 
@@ -155,11 +155,11 @@ Si no se especifica ninguna página de inicio por defecto, se llama al método b
 
 ## Ativar CORS
 
-| Pode ser definido com              | Nome                                                                               | Comentários                                                                 |
-| ---------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| objeto webServer                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled)                                 | Booleano, true para ativar o CORS (false por defeito)    |
-| `WEB SET OPTION`                   | `Web CORS enabled`                                                                 | 0 (desativado, padrão) ou 1 (ativado) |
-| Caixa de diálogos de configurações | [Options (II) page/Enable CORS](../settings/web.md#enable-cors) | Não seleccionado por defeito                                                |
+| Pode ser definido com              | Nome                                                                                | Comentários                                                                 |
+| ---------------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| objeto webServer                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled)                                  | Booleano, true para ativar o CORS (false por defeito)    |
+| `WEB SET OPTION`                   | `Web CORS enabled`                                                                  | 0 (desativado, padrão) ou 1 (ativado) |
+| Caixa de diálogos de configurações | Página [Opções (II)/Ativar CORS](../settings/web.md#enable-cors) | Não seleccionado por defeito                                                |
 
 O servidor web 4D implementa o compartilhamento de recursos entre origens (CORS) para permitir que páginas web específicas servidas de outro domínio acessem os recursos do aplicativo web atual por meio de chamadas XHR, por exemplo, usando REST. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Quando ativado, chamadas XHR (por exemplo, Solicitações REST) de páginas da Web fora do domínio podem ser permitidas na sua aplicação (você precisa definir a lista de endereços permitidos na lista de domínio CORS, veja as configurações do CORS abaixo). Neste caso, se um domínio ou método não permitido enviar uma solicitação de um site cruzado, será rejeitado com uma resposta de erro "403 - proibida".
 
@@ -351,11 +351,11 @@ Estado do gerenciamento de sessão antigo para o servidor Web 4D (obsoleto).
 
 ## Log Recording
 
-| Pode ser definido com              | Nome                                                                | Comentários |
-| ---------------------------------- | ------------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`logRecording`](API/WebServerClass.md#logrecording)                |             |
-| `WEB SET OPTION`                   | `Web log recording`                                                 |             |
-| Caixa de diálogos de configurações | [Log (type) page](../settings/web.md#log-format) | Menu pop-up |
+| Pode ser definido com              | Nome                                                                  | Comentários |
+| ---------------------------------- | --------------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`logRecording`](API/WebServerClass.md#logrecording)                  |             |
+| `WEB SET OPTION`                   | `Web log recording`                                                   |             |
+| Caixa de diálogos de configurações | [Página Log (type)](../settings/web.md#log-format) | Menu pop-up |
 
 Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo _logweb.txt_ y define su formato. Por padrão, os pedidos não são registados (0/No Log File). Cuando se activa, el archivo _logweb.txt_ se coloca automáticamente en la carpeta Logs.
 
@@ -506,7 +506,7 @@ Neste caso, os robots não estão autorizados a aceder a todo o sítio.
 | ---------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | objeto webServer                   | [`rootFolder`](API/WebServerClass.md#rootfolder)                             | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the _settings_ parameter of the `start()` function |
 | `WEB SET ROOT FOLDER`              |                                                                              |                                                                                                                                       |
-| Caixa de diálogos de configurações | [Configuration page/Default HTML Root](../settings/web.md#default-html-root) |                                                                                                                                       |
+| Caixa de diálogos de configurações | [Página Configuração/raiz HTML padrão](../settings/web.md#default-html-root) |                                                                                                                                       |
 
 Caminho da pasta raiz do servidor web, ou seja, a pasta na qual 4D procurará as páginas HTML estáticas e semidinâmicas, imagens, etc., para enviar aos navegadores. O caminho é formatado no caminho completo POSIX. O servidor da Web precisará ser reiniciado para que a nova pasta raiz seja levada em consideração.
 

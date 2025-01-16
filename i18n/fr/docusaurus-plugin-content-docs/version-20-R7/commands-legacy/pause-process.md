@@ -31,3 +31,12 @@ Lorsqu'un process est suspendu, les fenêtres qui lui appartiennent ne sont pas 
 [DELAY PROCESS](delay-process.md)  
 [HIDE PROCESS](hide-process.md)  
 [RESUME PROCESS](resume-process.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 319 |
+| Thread safe | &check; |
+
+

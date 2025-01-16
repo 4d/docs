@@ -27,3 +27,12 @@ Depois que o comando for executado, as estatísticas são fornecidas nos arrays 
 #### Ver também 
 
 [Cache info](cache-info.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1118 |
+| Thread-seguro | &check; |
+
+

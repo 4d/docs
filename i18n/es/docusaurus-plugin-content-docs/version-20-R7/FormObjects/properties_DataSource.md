@@ -167,7 +167,7 @@ La utilización de la opción **Referencia del elemento seleccionado** requiere 
 
 ## Valores por defecto (lista de)
 
-Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Utilizando el lenguaje, se puede gestionar el objeto haciendo referencia a este array.
+Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Utilizando el lenguaje, se puede gestionar el objeto haciendo referencia a este array.
 
 > No confunda esta propiedad con la propiedad "[valor por defecto](properties_RangeOfValues.md#default-list-of-values)" que permite definir un valor de campo en los nuevos registros.
 
@@ -185,7 +185,7 @@ Debe introducir una lista de valores. En el editor de formularios, un diálogo e
 
 #### Objetos soportados
 
-[List Box Column (array type only)](listbox_overview.md#list-box-columns)
+[Columna List Box (sólo tipo array)](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -206,7 +206,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
   - Boolean\
     Puede utilizar campos de la tabla maestra o de otras tablas.
 
-- Una **expresión 4D** (expresión simple, fórmula o método 4D). La expresión debe devolver un valor. El valor se evaluará en los eventos `On Display Detail` y `On Data Change`. El resultado de la expresión se mostrará automáticamente cuando cambie al modo Aplicación. La expresión se evaluará para cada registro de la selección (actual o temporal) de la tabla maestra (para list boxes de tipo selección), cada elemento de la colección (para list boxes de tipo colección) o cada entidad de la selección (para list boxes selección de entidades). Si está vacía, la columna no mostrará ningún resultado.
+- Una **expresión 4D** (expresión simple, fórmula o método 4D). La expresión debe devolver un valor. La expresión debe devolver un valor. El resultado de la expresión se mostrará automáticamente cuando cambie al modo Aplicación. La expresión se evaluará para cada registro de la selección (actual o temporal) de la tabla maestra (para list boxes de tipo selección), cada elemento de la colección (para list boxes de tipo colección) o cada entidad de la selección (para list boxes selección de entidades). Si está vacía, la columna no mostrará ningún resultado.
   Se soportan los siguientes tipos de expresiones:
   - String
   - Numeric
@@ -215,6 +215,8 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
   - Boolean
 
 Para los list boxes colección/entity selection, Null o tipos no soportados se muestran como cadenas vacías.\
+Cuando utilice colecciones o selecciones de entidades, normalmente declarará la propiedad del elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).\
+Cuando utilice colecciones o selecciones de entidades, normalmente declarará la propiedad del elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).\
 Cuando utilice colecciones o selecciones de entidades, normalmente declarará la propiedad del elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` es un comando 4D dedicado que devuelve una referencia al elemento actualmente procesado. Por ejemplo, puede utilizar `This.\<propertyPath>` donde `\<propertyPath>` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad.
 Si utiliza una colección de valores escalares, 4D creará un objeto para cada elemento de la colección con una única propiedad (llamada "valor"), llenada con el valor del elemento. En este caso, utilizará `This.value` como expresión.
 
@@ -298,9 +300,9 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles                           |
-| ------------------- | -------------- | ------------------------------------------ |
-| selectedItemsSource | string         | Assignable collection or object expression |
+| Nombre              | Tipos de datos | Valores posibles                          |
+| ------------------- | -------------- | ----------------------------------------- |
+| selectedItemsSource | string         | Colección asignable o expresión de objeto |
 
 #### Objetos soportados
 

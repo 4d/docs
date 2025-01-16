@@ -151,10 +151,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| 引数    | 型                                                                   |    | 説明                                     |
-| ----- | ------------------------------------------------------------------- |:--:| -------------------------------------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値                             |
-| 戻り値   | Collection                                                          | <- | 新規の共有コレクション|<!-- END REF -->
+| 引数    | 型                                                     |    | 説明                                     |
+| ----- | ----------------------------------------------------- |:--:| -------------------------------------- |
+| value | Number, Text, Date, Time, Boolean, Object, Collection | -> | 共有コレクションの値                             |
+| 戻り値   | Collection                                            | <- | 新規の共有コレクション|<!-- END REF -->
 
 |
 
@@ -178,8 +178,8 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 * 数値 (実数、倍長整数...)。 数値は常に実数として保存されます。
 * テキスト
-* ブール
-* 日付
+* boolean
+* date
 * 時間 (ミリ秒の数 (実数) として保存されます)。
 * null
 * 共有オブジェクト
@@ -1704,8 +1704,8 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
  | 定数            | 型       | 値 | 説明                   |
  | ------------- | ------- | - | -------------------- |
- | ck ascending  | Longint | 0 | 要素は昇順に並べられます (デフォルト) |
- | ck descending | Longint | 1 | 要素は降順に並べられます         |
+ | ck ascending  | Integer | 0 | 要素は昇順に並べられます (デフォルト) |
+ | ck descending | Integer | 1 | 要素は降順に並べられます         |
 
  このシンタックスは、コレクション内のスカラー値のみを並べ替えます (オブジェクトやコレクションなどの他の型は内部的な順序で返されます)。
 

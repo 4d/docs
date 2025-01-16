@@ -491,7 +491,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 | プロパティ        | 値の型       | 説明                    |
 | ------------ | --------- | --------------------- |
-| version      | Longint   | 内部コンポーネントのバージョン       |
+| version      | Integer   | 内部コンポーネントのバージョン       |
 | dateCreation | Timestamp | 作成日                   |
 | dateModified | Timestamp | 最終更新日                 |
 | meta         | Object    | 4Dデベロッパー専用の任意コンテンツ    |

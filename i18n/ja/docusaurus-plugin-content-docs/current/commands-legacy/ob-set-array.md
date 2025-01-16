@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.OB SET ARRAY.Summary-->**OB SET ARRAY**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中の *property* と関連付ける配列 *array* を定義します。<!-- END REF-->
-
-*object* で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
+<!--REF #_command_.OB SET ARRAY.Summary-->**OB SET ARRAY**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中の *property* と関連付ける配列 *array* を定義します。<!-- END REF-->で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
 
 *property* 引数には、作成または修正したいプロパティのラベル(名前)を渡して下さい。オブジェクト内に指定されたプロパティが存在する場合、その値は指定した値で上書きされます。プロパティが存在しない場合、新たにプロパティが作成されます。  
 *property* 引数では、大文字と小文字は区別されることに注意して下さい。
@@ -134,3 +132,12 @@ displayed_sidebar: docs
 [OB GET ARRAY](ob-get-array.md)  
 [OB SET](ob-set.md)  
 *コレクションと4D配列間での型の変換*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1227 |
+| スレッドセーフである | &check; |
+
+

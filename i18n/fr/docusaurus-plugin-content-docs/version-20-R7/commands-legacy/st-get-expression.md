@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.ST Get expression.Summary-->La commande **ST Get expression** retourne la première expression présente dans la sélection courante du champ ou de la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 
@@ -94,3 +91,13 @@ Vous souhaitez exécuter une méthode 4D en réponse à un clic sur un lien util
 #### Voir aussi 
 
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1287 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

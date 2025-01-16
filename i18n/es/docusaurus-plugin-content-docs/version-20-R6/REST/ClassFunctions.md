@@ -45,7 +45,7 @@ Las funciones son llamadas en el objeto correspondiente en el almacén de datos 
 > `/rest/\{dataClass\}/Function` puede utilizarse para llamar a una función de dataclass o de entity selection (`/rest/\{dataClass\}` devuelve todas las entidades de la dataClass como una selección de entidades).\
 > La función se busca primero en la clase de selección de entidades. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
 
-> Todo el código 4D llamado desde las peticiones REST **debe ser hilo-seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
+> Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
 
 ## Parámetros
 
@@ -78,7 +78,7 @@ También puede pasar valores para todos los atributos de la entidad. Estos valor
 | Propiedades                                           | Tipo                                                        | Descripción                                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Atributos de la entidad                               | mixto                                                       | Opcional - Valores a modificar                                              |
-| __DATACLASS | String                                                      | Obligatorio - Indica la Dataclass de la entidad                             |
+| __DATACLASS | Text                                                        | Obligatorio - Indica la Dataclass de la entidad                             |
 | __ENTITY    | Boolean                                                     | Obligatorio - True para indicar al servidor que el parámetro es una entidad |
 | __KEY       | mixto (mismo tipo que la llave primaria) | Opcional - llave primaria de la entidad                                     |
 
@@ -102,7 +102,7 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 | Propiedades                                          | Tipo    | Descripción                                                                                |
 | ---------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------ |
 | Atributos de la entidad                              | mixto   | Opcional - Valores a modificar                                                             |
-| __DATASET  | String  | Obligatorio - entitySetID (UUID) de la selección de entidades           |
+| __DATASET  | Text    | Obligatorio - entitySetID (UUID) de la selección de entidades           |
 | __ENTITIES | Boolean | Obligatorio - True para indicar al servidor que el parámetro es una selección de entidades |
 
 Ver ejemplo para [recibir una selección de entidades](#receiving-an-entity-selection-as-parameter).

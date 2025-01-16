@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Summary-->O comando **OBJECT SET TEXT ORIENTATION** modifica a orientação do conteúdo do objeto ou dos objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->
@@ -52,3 +49,12 @@ Deseja aplicar uma orientação de 270° a uma variável em seu formulário:
 #### Ver também 
 
 [OBJECT Get text orientation](object-get-text-orientation.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1284 |
+| Thread-seguro | &cross; |
+
+

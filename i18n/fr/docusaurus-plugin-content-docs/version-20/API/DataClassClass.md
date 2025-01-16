@@ -522,7 +522,7 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 <!-- REF #DataClassClass.getCount().Params -->
 | Paramètres | Type    |    | Description                                                   |
 | ---------- | ------- | -- | ------------------------------------------------------------- |
-| result     | Integer | <- | Nombre d'entités dans la dataclass|<!-- END REF -->
+| Résultat   | Integer | <- | Nombre d'entités dans la dataclass|<!-- END REF -->
 
 |
 
@@ -689,7 +689,7 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retourne 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 | Paramètres | Type   |    | Description                                                                            |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
-| result     | Object | <- | Objet décrivant le contenu du cache ORDA pour la dataclass.|<!-- END REF -->
+| Résultat   | Object | <- | Objet décrivant le contenu du cache ORDA pour la dataclass.|<!-- END REF -->
 
 
 |
@@ -725,9 +725,9 @@ L'objet `data` de chaque entrée contient les propriétés suivantes :
 
 | Propriété              | Type    | Description                                                                                                                                    |
 | ---------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| __KEY                  | String  | Clé primaire de l'entité                                                                                                                       |
-| __STAMP                | Longint | Stamp de l'entité dans la base de données                                                                                                      |
-| __TIMESTAMP            | String  | Timestamp de l'entité dans la base de données (le format est YYYY-MM-DDTHH:MM:SS:ms:Z)                                                         |
+| __KEY                  | Text    | Clé primaire de l'entité                                                                                                                       |
+| __STAMP                | Integer | Stamp de l'entité dans la base de données                                                                                                      |
+| __TIMESTAMP            | Text    | Timestamp de l'entité dans la base de données (le format est YYYY-MM-DDTHH:MM:SS:ms:Z)                                                         |
 | dataClassAttributeName | Variant | S'il y a des données dans le cache pour un attribut de dataclass, il est retourné dans une propriété du même type que dans la base de données. |
 
 Les données concernant les entités liées sont stockées dans le cache de l'objet data.
@@ -927,7 +927,7 @@ où :
  | Inclus parmi                            | IN          | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)                                                 |
  | Contient mot-clé                        | %           | Les mots-clés peuvent être utilisés avec les attributs de type texte ou image                                                                                                                  |
 
-* **value** : valeur à comparer à la valeur courante de l'attribut de chaque entité de la sélection ou élément de la collection. Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
+* **value** : valeur à comparer à la valeur courante de l'attribut de chaque entité de la sélection ou élément de la collection. Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de **value** dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet. Par exemple, si la chaîne "v20" est entrée en tant que **value** pour la comparer avec un attribut Integer, elle sera convertie en nombre 20. Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
   * Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
   * Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
   * Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
@@ -1017,6 +1017,21 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
 ```4d
  $vSingles:=ds.Person.query("spouse = null") //syntaxe valide
 ```
+
+#### Différent des valeurs null ou undefined
+
+Le comparateur "différent de *value*" (`#` ou `!`) ne renvoie pas d'attributs dont la valeur est null ou undefined. Par exemple, la requête suivante ne renverra que les personnes dont le statut "info.married" est `false` et pas les personnes dont la propriété "info.married" est "null" ou manquante :
+
+```4d
+$notMarried:=ds.Person.query("info.married#true") //trouve des personnes dont la valeur d'attribut est false
+```
+
+Si vous voulez trouver des personnes dont le statut "info.married" est `false`, null ou indéfini, vous devez écrire :
+
+```4d
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //trouve les attributs false, null et undefined
+```
+
 
 #### Not equal to et les collections
 

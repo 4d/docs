@@ -5,16 +5,39 @@ const darkTheme = themes.palenight;
 
 
 const isProduction = process.env.GITHUB_REPOSITORY_OWNER === '4d';
+const router = process.env.DOCUSAURUS_ROUTER
+const isStatic = process.env.DOCUSAURUS_ROUTER === "hash"
+const language = process.env.DOCUSAURUS_LANGUAGE ?? "en"
+
+const locales = isStatic ? [language] : ["en", "fr", "es", "ja", "pt"]
+const localeConfigs = isStatic ? {} : {
+  en: {
+    label: "English",
+  },
+  fr: {
+    label: "Français",
+  },
+  es: {
+    label: "Español",
+  },
+  ja: {
+    label: "日本語",
+  },
+  pt: {
+    label: "Português",
+  },
+}
 
 module.exports = {
   title: "4D Docs",
   tagline: "Documentation for 4D developers",
-  baseUrl: "/docs/",
+  baseUrl: isStatic ? "/" : "/docs/",
   //url: "https://4d.github.io/",
   url: "https://developer.4d.com/",
   organizationName: "4D",
   projectName: "docs",
   favicon: "img/favicon/4d.gif",
+  trailingSlash: false,
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   noIndex: isProduction ? false : true,
@@ -41,7 +64,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
             '20-R7': {
-              label: '20 R7 BETA',
+              label: '20 R7',
               banner: 'none',
             },
             '20-R6': {
@@ -78,27 +101,12 @@ module.exports = {
       rspackBundler: true,
       mdxCrossCompilerCache: true,
     },
+    experimental_router: router,
   },
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "fr", "es", "ja", "pt"],
-    localeConfigs: {
-      en: {
-        label: "English",
-      },
-      fr: {
-        label: "Français",
-      },
-      es: {
-        label: "Español",
-      },
-      ja: {
-        label: "日本語",
-      },
-      pt: {
-        label: "Português",
-      },
-    },
+    defaultLocale: language,
+    locales: locales,
+    localeConfigs: localeConfigs,
   },
   plugins: [
     [
@@ -249,5 +257,5 @@ module.exports = {
       maintainCase: false,
     },
   },
- themes: ['@docusaurus/theme-mermaid'],
+  themes: ['@docusaurus/theme-mermaid'],
 }

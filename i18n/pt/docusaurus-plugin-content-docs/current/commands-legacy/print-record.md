@@ -14,14 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.PRINT RECORD.Summary-->PRINT RECORD imprime o registro atual de *tabela*, sem modificar a seleção atual.<!-- END REF--> O formulário de saída atual se utiliza para a impressão. Se não houver registro atual para *tabela*, PRINT RECORD não faz nada.
 
-Pode imprimir sub-formulários e objetos externos com o comando PRINT RECORD . Isto não é possível com [Print form](print-form.md).
+Pode imprimir sub-formulários e objetos externos com o comando PRINT RECORD . Isto não é possível com [Print form](../commands/print-form.md).
 
 **Nota:** se houver modificações no registro que não foram guardadas, este comando imprime os valores dos campos modificados, não os valores em disco.
 
@@ -37,7 +34,7 @@ Pode eliminar estas caixas de diálogo utilizando o parâmetro opcional asterisc
 * Tenha certeza de que nenhuma caixa caixa de diálogo apareça na máquina servidor (exceto para uma necessidade específica). Para fazer isto, é necessário chamar ao comando com o parâmetro *\** ou *\>*.
 * Em caso de um problema com a impressora (sem papel, impressora desconectada, etc.), não gera mensagem de erro.
 
-**Aviso:** Não use o comando [PAGE BREAK](page-break.md) com PRINT RECORD. [PAGE BREAK](page-break.md) é reservado exclusivamente para uso combinado com o comando [Print form](print-form.md).
+**Aviso:** Não use o comando [PAGE BREAK](page-break.md) com PRINT RECORD. [PAGE BREAK](page-break.md) é reservado exclusivamente para uso combinado com o comando [Print form](../commands/print-form.md).
 
 #### Exemplo 1 
 
@@ -66,4 +63,13 @@ O exemplo a seguir imprime o mesmo registro atual em dois formulários diferente
 
 #### Ver também 
 
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 71 |
+| Thread-seguro | &cross; |
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SET PRINT PREVIEW.Summary-->SET PRINT PREVIEW lhe permite selecionar ou desmarcar por programação a opção de pré-visualização em tela.<!-- END REF--> Se passar TRUE em *vistaprevia*, se selecionar Pré-visualização em tela, se passar FALSE, será desmarcado. Este parâmetro é local para um processo e não afeta a impressão de outros processos ou usuários.
@@ -39,3 +36,12 @@ O exemplo a seguir seleciona a opção Pré-visualização em tela para mostrar 
 
 [Get print preview](get-print-preview.md)  
 [Is in print preview](is-in-print-preview.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 364 |
+| Thread-seguro | &cross; |
+
+

@@ -28,3 +28,12 @@ See the example of the [DOM Insert XML element](dom-insert-xml-element.md "DOM I
 #### See also 
 
 [DOM Insert XML element](dom-insert-xml-element.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1082 |
+| Thread safe | &check; |
+
+

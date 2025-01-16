@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OB Values.Summary-->El comando **OB Values** devuelve una colección de variantes que contiene todos los valores de propiedad enumerables del *objeto*.<!-- END REF--> 
@@ -47,3 +44,12 @@ Desea una colección con todos los valores de propiedad de un objeto:
 
 [OB Entries](ob-entries.md)  
 [OB Keys](ob-keys.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1718 |
+| Hilo seguro | &cross; |
+
+

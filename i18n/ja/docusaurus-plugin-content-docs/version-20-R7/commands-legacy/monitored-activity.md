@@ -139,3 +139,12 @@ displayed_sidebar: docs
 
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1713 |
+| スレッドセーフである | &check; |
+
+

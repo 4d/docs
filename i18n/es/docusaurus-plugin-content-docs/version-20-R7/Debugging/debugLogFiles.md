@@ -285,7 +285,7 @@ Estos archivos de registro registran cada intercambio entre la aplicación 4D y 
 
 - SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
 - POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
+- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.md)
 
 Los archivos de historial pueden producirse en dos versiones:
 

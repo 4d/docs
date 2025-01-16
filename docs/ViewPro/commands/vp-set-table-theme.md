@@ -12,7 +12,7 @@ title: VP SET TABLE THEME
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
-**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme )<!-- END REF -->
+**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme {; *sheet* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
 
@@ -20,7 +20,9 @@ title: VP SET TABLE THEME
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
-|options|[cs.ViewPro.TableTheme](../classes.md#tabletheme)|->|Table theme properties to modify|<!-- END REF -->
+|options|[cs.ViewPro.TableTheme](../classes.md#tabletheme)|->|Table theme properties to modify|
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+<!-- END REF -->
 
 
 #### Description
@@ -31,6 +33,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the n
 
 In the *options* parameter, pass an object of the [`cs.ViewPro.TableTheme` class](../classes.md#tabletheme) that contains the theme properties to modify. 
 
+In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
 
 #### Example 1
 

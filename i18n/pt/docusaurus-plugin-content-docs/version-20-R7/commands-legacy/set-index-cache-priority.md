@@ -48,3 +48,12 @@ Em , se quiser estabelecer uma alta prioridade para os índices campo \[Customer
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1401 |
+| Thread-seguro | &check; |
+
+

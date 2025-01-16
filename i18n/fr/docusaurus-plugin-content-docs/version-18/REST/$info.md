@@ -23,8 +23,8 @@ Pour chaque sélection d'entités stocké dans le cache de 4D Server, les inform
 
 | Propriété     | Type    | Description                                                                                                                                                                                                                                                                                               |
 | ------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id            | String  | Un UUID qui référence l'entity set.                                                                                                                                                                                                                                                                       |
-| dataClass     | String  | Nom de la dataclass.                                                                                                                                                                                                                                                                                      |
+| id            | Text    | Un UUID qui référence l'entity set.                                                                                                                                                                                                                                                                       |
+| dataClass     | Text    | Nom de la dataclass.                                                                                                                                                                                                                                                                                      |
 | selectionSize | Number  | Nombre d'entités dans l'entity set.                                                                                                                                                                                                                                                                       |
 | sorted        | Boolean | Retourne vrai si l'ensemble a été trié (à l'aide de `$orderby`) ou faux s'il n'est pas trié.                                                                                                                                                                                                              |
 | refreshed     | Date    | Date de la création ou de la dernière utilisation de l'entity set.                                                                                                                                                                                                                                        |
@@ -40,8 +40,8 @@ Pour chaque session utilisateur, les informations suivantes sont retournées dan
 
 | Propriété  | Type   | Description                                                       |
 | ---------- | ------ | ----------------------------------------------------------------- |
-| sessionID  | String | Un UUID qui référence la session.                                 |
-| userName   | String | Nom de l'utilisateur qui lance la session.                        |
+| sessionID  | Text   | Un UUID qui référence la session.                                 |
+| userName   | Text   | Nom de l'utilisateur qui lance la session.                        |
 | lifeTime   | Number | La durée d'une session utilisateur en secondes (3600 par défaut). |
 | expiration | Date   | Date et heure d'expiration courante de la session utilisateur.    |
 

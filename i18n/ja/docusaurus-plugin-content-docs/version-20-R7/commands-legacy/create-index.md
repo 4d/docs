@@ -87,3 +87,12 @@ displayed_sidebar: docs
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 [SET INDEX](set-index.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 966 |
+| スレッドセーフである | &check; |
+
+

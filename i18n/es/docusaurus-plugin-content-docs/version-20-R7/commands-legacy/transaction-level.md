@@ -22,3 +22,12 @@ displayed_sidebar: docs
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 *Utilización de transacciones*  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 961 |
+| Hilo seguro | &check; |
+
+

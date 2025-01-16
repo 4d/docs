@@ -12,8 +12,8 @@ title: VP Cell
 | Parâmetro  | Tipo    |                             | Descrição                                                   |
 | ---------- | ------- | --------------------------- | ----------------------------------------------------------- |
 | vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |
-| column     | Longint | ->                          | Índice de coluna                                            |
-| row        | Longint | ->                          | Índice de linha                                             |
+| column     | Integer | ->                          | Índice de coluna                                            |
+| row        | Integer | ->                          | Índice de linha                                             |
 | sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |
 | Resultados | Object  | <- | Objeto intervalo de uma única célula                        |
 
@@ -23,7 +23,7 @@ title: VP Cell
 
 O comando `VP Cell` <!-- REF #_method_.VP Cell.Summary -->retorna um novo objeto de intervalo que faz referência a uma célula específica<!-- END REF -->.
 
-> Este comando destina-se a intervalos de uma única célula. To create a range object for multiple cells, use the [VP Cells](vp-cells.md) command.
+> Este comando destina-se a intervalos de uma única célula. Para criar um objeto de intervalo para várias células, use o comando [VP Cells](vp-cells.md).
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 

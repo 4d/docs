@@ -89,3 +89,13 @@ O exemplo abaixo lhe permite selecionar a pasta na qual serão armazenadas as im
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 670 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+
+

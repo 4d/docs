@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->The **ON EVENT CALL** command installs the method, whose name you pass in *eventMethod*, as the method for catching (trapping) events.<!-- END REF--> This method is called the **event-handling method** or **event-catching method**. 
@@ -108,7 +105,7 @@ If **Ctrl+period** has been pressed, the event-handling method sets *◊vbWeStop
  End if
 ```
 
-Note that this example uses **ON EVENT CALL** because it performs a special printing report using the *\_o\_PAGE SETUP*, [Print form](print-form.md) and [PAGE BREAK](page-break.md) commands with a [ARRAY TO LIST](array-to-list.md) loop. 
+Note that this example uses **ON EVENT CALL** because it performs a special printing report using the *\_o\_PAGE SETUP*, [Print form](../commands/print-form.md) and [PAGE BREAK](page-break.md) commands with a [ARRAY TO LIST](array-to-list.md) loop. 
 
 If you print a report using [PRINT SELECTION](print-selection.md), you do NOT need to handle events that let the user interrupt the printing; this command does that for you.
 
@@ -118,3 +115,13 @@ If you print a report using [PRINT SELECTION](print-selection.md), you do NOT ne
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 190 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

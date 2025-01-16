@@ -38,5 +38,5 @@ Vous pouvez gérer les données avec des [méthodes](Concepts/methods.md) objet 
 Vous pouvez également représenter des expressions de champ et de variable dans vos formulaires à l'aide d'objets alternatifs, plus particulièrement :
 
 * Vous pouvez afficher et saisir des données à partir des champs de la base de données directement dans des colonnes [de type List box](listbox_overview.md).
-* Vous pouvez représenter un champ de liste ou une variable directement dans un formulaire à l'aide d'objets [Pop-up menus/Listes déroulantes](popupMenuDropdownList_overview) et [Combo box](comboBox_overview.md).
+* Vous pouvez représenter un champ ou une variable liste directement dans un formulaire à l'aide des objets [Pop-up Menus/Listes déroulantes](dropdownList_Overview.md) et [Combo Boxes](comboBox_overview.md).
 * Vous pouvez représenter une expression booléenne sous forme de [case à cocher](checkbox_overview.md) ou de [bouton radio](radio_overview.md).

@@ -364,7 +364,7 @@ La fonction `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->déplace ou d
 
 Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
-Par défaut, le dossier garde le même nom lorsqu'il est déplacé. Si vous souhaitez renommer le dossier déplacé, passez le nouveau nom complet dans le paramètre *newName*. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
+Par défaut, le dossier garde le même nom lorsqu'il est déplacé. Par défaut, le dossier garde le même nom lorsqu'il est déplacé. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
 **Objet retourné**
 

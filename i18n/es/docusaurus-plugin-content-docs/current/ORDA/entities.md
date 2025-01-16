@@ -239,7 +239,7 @@ Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) 
 
 - Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
 - Uso de la función dataclass [`.all()`](API/DataClassClass.md#all) para seleccionar todas las entidades de una dataclass;
-- Using the [`Create entity selection`](../commands/create-entity-selection.md) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+- Usando el comando [`Create entity selection`](../commands/create-entity-selection.md) o la función [`.newSelection()`](API/DataClassClass.md#newselection) de la dataclass para crear una selección de entidades en blanco;
 - Utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar una entity selection existente;
 - Utilizando una de las diversas funciones de la [clase Entity selection](API/EntitySelectionClass.md) que devuelve una nueva selección de entidades, como [`.or()`](API/EntitySelectionClass.md#or);
 - Utilizando un atributo de relación de tipo "related entities" (ver abajo).
@@ -266,7 +266,7 @@ Una entity selection puede ser **compartible** (legible por múltiples procesos,
 
 Una entity selection **compartible** tiene las siguientes características:
 
-- puede almacenarse en un objeto compartido o en una colección compartida, y puede pasarse como parámetro entre varios procesos o trabajadores;
+- puede almacenarse en un objeto compartido o en una colección compartida, y puede pasarse como parámetro entre varios procesos o workers;
 - puede almacenarse en varios objetos o colecciones compartidos, o en un objeto o colección compartido que ya pertenezca a un grupo;
 - no permite la adición de nuevas entidades. Al intentar añadir una entidad a una entity selection compartibles se producirá un error (1637 - Esta entity selection no puede modificarse). Para añadir una entidad a unaentity selection compartible, primero debe transformarla en una entity selection no compartible utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy), antes de llamar a [`.add()`](API/EntitySelectionClass.md#add).
 

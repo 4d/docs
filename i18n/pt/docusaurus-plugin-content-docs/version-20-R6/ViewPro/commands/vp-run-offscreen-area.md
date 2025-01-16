@@ -130,4 +130,4 @@ $result:=VP Run offscreen area($o)
 
 #### Veja também
 
-[Blog post: End of document loading](https://blog.4d.com/4d-view-pro-end-of-document-loading/)
+[Publicação de blog: fim de carregamento de documentos](https://blog.4d.com/4d-view-pro-end-of-document-loading/)

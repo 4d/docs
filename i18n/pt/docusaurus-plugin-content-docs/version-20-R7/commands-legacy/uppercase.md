@@ -37,3 +37,12 @@ Ver o exemplo para [Lowercase](lowercase.md "Lowercase").
 #### Ver também 
 
 [Lowercase](lowercase.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 13 |
+| Thread-seguro | &check; |
+
+

@@ -19,7 +19,7 @@ Catching a command enables you to start tracing the execution of any process as 
 
 To create a break point, click in the left margin of the Source Code pane in the debugger or in the Code Editor. 
 
-In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If ($in.dataClass#Null)`:
+In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If (Value type(request.reponse.headers...`:
 
 ![break-point](../assets/en/Debugging/break.png)
 

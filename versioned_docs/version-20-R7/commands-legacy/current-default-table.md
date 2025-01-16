@@ -30,3 +30,12 @@ Provided a default table has been set, the following line of code sets the windo
 [DEFAULT TABLE](default-table.md)  
 [Table](table.md)  
 [Table name](table-name.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 363 |
+| Thread safe | &check; |
+
+

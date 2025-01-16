@@ -35,7 +35,7 @@ Pase un nombre para la hoja de estilo en el parámetro *nomHojaEstilo*. El nombr
 * no debe empezar por "section", que está reservado
 * el carácter "\_" se sustituye por un espacio y se eliminan los espacios finales.
 
-Puede especificar los atributos de la hoja de estilo utilizando el comando [WP SET ATTRIBUTES](wp-set-attributes.md) o la notación de objetos (consulte *Atributos 4D Write Pro*). Para ver la lista de atributos disponibles, consulte la sección *Style sheet attributes*.
+Puede especificar los atributos de la hoja de estilo utilizando el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) o la notación de objetos (consulte *Atributos 4D Write Pro*). Para ver la lista de atributos disponibles, consulte la sección *Style sheet attributes*.
 
 **Notas**: 
 

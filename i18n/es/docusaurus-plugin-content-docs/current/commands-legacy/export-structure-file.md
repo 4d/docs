@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Export structure file.Summary-->El comando **Export structure file** divide la estructura actual de la base 4D en un conjunto de archivos de texto o archivos de imagen nativos y los almacena en la *rutaCarpeta* especificada.<!-- END REF--> Por defecto, se exporta la totalidad de la estructura de la base (métodos, formularios, catálogo, etc.). Puede filtrar los contenidos a exportar utilizando el parámetro *opciones* (ver abajo).
@@ -116,3 +113,12 @@ Desea exportar solo los métodos proyecto y base, y un archivo de registro:
 #### Ver también 
 
 [FORM Convert to dynamic](form-convert-to-dynamic.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1565 |
+| Hilo seguro | &cross; |
+
+

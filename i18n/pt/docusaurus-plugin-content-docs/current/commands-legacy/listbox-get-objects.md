@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->O comando **LISTBOX GET OBJECTS** devolve um array que contém os nomes de todos os objetos que compõem o list box designado pelos parâmetros *objeto* e *\** .<!-- END REF-->  
@@ -37,7 +34,7 @@ Em *arrayNomObjeto*, passe um array texto que é enchido automaticamente pelo co
 
 O array devolve os nomes dos objetos de todas as colunas (incluindo os pés de coluna), independentemente de se são ou não visíveis.  
   
-Este comando é útil no contexto da análise de um formulário utilizando os comandos [FORM LOAD](form-load.md), [FORM GET OBJECTS](form-get-objects.md) e [OBJECT Get type](object-get-type.md). Se pode utilizar, quando seja necessário, para obter os nomes dos sub objetos dos list box.
+Este comando é útil no contexto da análise de um formulário utilizando os comandos [FORM LOAD](../commands/form-load.md), [FORM GET OBJECTS](form-get-objects.md) e [OBJECT Get type](object-get-type.md). Se pode utilizar, quando seja necessário, para obter os nomes dos sub objetos dos list box.
 
 #### Exemplo 
 
@@ -60,5 +57,14 @@ Você quer carregar um formulário e obter a lista de todos os objetos dos list 
 
 #### Ver também 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  
 [OBJECT Get type](object-get-type.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1302 |
+| Thread-seguro | &cross; |
+
+

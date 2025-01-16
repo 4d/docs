@@ -94,3 +94,13 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 719 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

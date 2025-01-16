@@ -34,6 +34,14 @@ As datas e horas de criação e última modificação são administradas pelo ad
 
 #### Ver também 
 
-*\_o\_SET DOCUMENT CREATOR*  
-*\_o\_SET DOCUMENT TYPE*  
 [GET DOCUMENT PROPERTIES](get-document-properties.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 478 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+
+

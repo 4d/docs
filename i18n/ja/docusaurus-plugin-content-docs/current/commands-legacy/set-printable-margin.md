@@ -16,12 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
-<!--REF #_command_.SET PRINTABLE MARGIN.Summary-->SET PRINTABLE MARGIN コマンドを使用すると、[Print form](print-form.md)、[PRINT SELECTION](print-selection.md)または [PRINT RECORD](print-record.md) コマンドの使用時に、各種印刷マージンの値を設定することができます。<!-- END REF-->
+<!--REF #_command_.SET PRINTABLE MARGIN.Summary-->SET PRINTABLE MARGIN コマンドを使用すると、[Print form](../commands/print-form.md)、[PRINT SELECTION](print-selection.md)または [PRINT RECORD](print-record.md) コマンドの使用時に、各種印刷マージンの値を設定することができます。<!-- END REF-->
 
 引数*left*, *top*, *right*, *bottom*には、以下の値のいずれかを渡すことができます:
 
@@ -59,4 +56,13 @@ displayed_sidebar: docs
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Get printed height](get-printed-height.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 710 |
+| スレッドセーフである | &cross; |
+
+

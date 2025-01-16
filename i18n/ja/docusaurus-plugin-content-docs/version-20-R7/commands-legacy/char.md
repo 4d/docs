@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Char.Summary-->**Char** コマンド は文字コードが*charCode*である文字を返します。<!-- END REF-->
-
-*charCode* にはUTF-16値(1から65535の間) を渡します。
+<!--REF #_command_.Char.Summary-->**Char** コマンド は文字コードが*charCode*である文字を返します。<!-- END REF-->にはUTF-16値(1から65535の間) を渡します。
 
 **Tip:** メソッド作成時、 **Char** は通常キーボードから入力できない文字や、メソッドエディタでは編集コマンドとして解釈される文字を指定するために使用します。
 
@@ -35,3 +33,12 @@ displayed_sidebar: docs
 [Character code](character-code.md)  
 *Unicodeコード*  
 *文字参照記号*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 90 |
+| スレッドセーフである | &check; |
+
+

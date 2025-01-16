@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.On System Event database method.Summary-->The **On System Event database method** is called each time a system event occurs.<!-- END REF--> This concerns all 4D environments: 4D (all modes) and 4D Server, as well as 4D applications that are compiled and merged with 4D Volume Desktop.

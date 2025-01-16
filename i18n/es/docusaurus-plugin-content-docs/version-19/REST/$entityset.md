@@ -22,7 +22,7 @@ Esta sintaxis permite ejecutar cualquier operación sobre un conjunto de entidad
 
 Como los conjuntos de entidades tienen un límite de tiempo (ya sea por defecto o después de llamar a `$timeout` con su propio límite), puede llamar a `$savedfilter` y a `$savedorderby` para guardar el filtro y ordenar por instrucciones cuando cree un conjunto de entidades.
 
-Cuando se recupera un conjunto de entidades existente almacenado en la caché de 4D Server, también se puede aplicar cualquiera de los siguientes elementos al conjunto de entidades: [`$expand`]($expand.md), [`$filter`]($filter), [`$orderby`]($orderby), [`$skip`]($skip.md), y [`$top/$limit`]($top_$limit.md).
+Cuando se recupera un conjunto de entidades existente almacenado en la caché de 4D Server, también se puede aplicar cualquiera de los siguientes elementos al conjunto de entidades: [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md) y [`$top/$limit`]($top_$limit.md).
 
 ### Ejemplo
 
@@ -34,10 +34,10 @@ Después de crear un conjunto de entidades, el ID del conjunto de entidades se d
 
 Cree otro conjunto de entidades basado en conjuntos de entidades creados anteriormente
 
-| Parámetros       | Tipo   | Descripción                                                                 |
-| ---------------- | ------ | --------------------------------------------------------------------------- |
-| $operator        | String | Uno de los operadores lógicos para probar con el otro conjunto de entidades |
-| $otherCollection | String | ID del conjunto de entidades                                                |
+| Parámetros       | Tipo | Descripción                                                                 |
+| ---------------- | ---- | --------------------------------------------------------------------------- |
+| $operator        | Text | Uno de los operadores lógicos para probar con el otro conjunto de entidades |
+| $otherCollection | Text | ID del conjunto de entidades                                                |
 
 ### Descripción
 

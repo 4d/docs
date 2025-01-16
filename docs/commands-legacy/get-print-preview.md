@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Get print preview.Summary-->The **Get print preview** command returns True if the [SET PRINT PREVIEW](set-print-preview.md) command was called with the **True** value in the current process.<!-- END REF-->
@@ -26,3 +23,12 @@ Note that the user can modify this option before validating the dialog box. To g
 
 [Is in print preview](is-in-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1197 |
+| Thread safe | &cross; |
+
+

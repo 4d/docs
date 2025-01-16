@@ -46,3 +46,12 @@ El siguiente ejemplo devuelve el número de columnas de una fila en un array bid
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 274 |
+| Hilo seguro | &check; |
+
+

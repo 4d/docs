@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 詳細 
 
 <!--REF #_command_.On Host Database Event database method.Summary-->**On Host Database Event データベースメソッド** はデータベースが開いた時と閉じられた時に 4D コンポーネントにコードを実行させることが出来るようになりました。<!-- END REF-->

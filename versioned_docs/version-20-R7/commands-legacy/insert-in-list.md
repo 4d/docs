@@ -11,16 +11,13 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| beforeItemRef &#124; * | Longint, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the currently selected list item |
+| beforeItemRef &#124; * | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the currently selected list item |
 | itemText | Text | &#8594;  | Text for the new list item |
 | itemRef | Integer | &#8594;  | Unique reference number for the new list item |
 | sublist | Integer | &#8594;  | Optional sublist to attach to the new list item |
 | expanded | Boolean | &#8594;  | Indicates if the sublist will be expanded or collapsed |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -53,3 +50,12 @@ The following code inserts an item (with no attached sublist) just before the cu
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 625 |
+| Thread safe | &cross; |
+
+

@@ -51,3 +51,12 @@ El siguiente método de objeto para el botón *bUnBoton* efectúa diferentes acc
 [Macintosh option down](macintosh-option-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 543 |
+| Hilo seguro | &check; |
+
+

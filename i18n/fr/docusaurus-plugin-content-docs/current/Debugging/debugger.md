@@ -3,16 +3,22 @@ id: debugger
 title: Débogueur
 ---
 
-Le débogueur est utile lorsque vous devez repérer des erreurs ou surveiller l'exécution de méthodes. Il vous permet d'avancer pas à pas dans le code et d'examiner les informations. Ce processus est appelé le "traçage".
+The 4D debugger is useful when you need to spot errors or monitor the execution of methods. Il vous permet d'avancer pas à pas dans le code et d'examiner les informations. Ce processus est appelé le "traçage".
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
+
+:::info
+
+If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+
+:::
 
 ## Appeler le débogueur
 
 Il existe plusieurs façons d'afficher le débogueur :
 
 - En cliquant sur le bouton **Trace** dans [la fenêtre des erreurs de syntaxe](basics.md#syntax-error-window)
-- En utilisant la commande [`TRACE`](https://doc.4d.com/4dv19/help/command/fr/page157.html)
+- Using the [`TRACE`](../commands-legacy/trace.md) command
 - En cliquant sur le bouton **Debug** dans la fenêtre d'exécution de méthode ou en sélectionnant le bouton **Run and debug...** dans l'éditeur de code
 - En utilisant **Alt+Shift+Clic** droit (Windows) ou **Ctrl+Option+Cmd+Clic (macOS)** pendant l'exécution d'une méthode, puis en sélectionnant le processus à suivre dans le menu contextuel :
 
@@ -23,8 +29,8 @@ Il existe plusieurs façons d'afficher le débogueur :
 
 Lorsqu'il est appelé, la fenêtre du débogueur fournit le nom de la méthode ou de la fonction de classe que vous êtes en train de tracer, ainsi que l'action qui a provoqué l'apparition initiale de la fenêtre du débogueur. Par exemple, dans la fenêtre du débogueur ci-dessus :
 
-- _Clients_BuildLogo_ est la méthode en cours de traçage
-- La fenêtre du débogueur s'est affichée parce qu'elle a détecté un appel à la commande `C_PICTURE`, qui faisait partie des commandes à identifier
+- _drop_ is the method being traced
+- The debugger window appeared because of a break point.
 
 L'affichage d'une nouvelle fenêtre de débogage utilise la même configuration que la dernière fenêtre affichée dans la même session. Si vous exécutez plusieurs process utilisateur, vous pouvez les tracer indépendamment et avoir une fenêtre de débogage ouverte pour chaque process.
 
@@ -46,39 +52,43 @@ La barre d'outils du débogueur comprend plusieurs boutons, associés aux raccou
 
 ![execution-control-toolbar-buttons](../assets/en/Debugging/executionToolbarButtons.png)
 
-> Les raccourcis par défaut peuvent être personnalisés dans la page Raccourcis de la boîte de dialogue Préférences.
+:::note
+
+Default shortcuts can be customized in the [Shortcuts Page](../Preferences/shortcuts.md) of the Preferences dialog box.
+
+:::
 
 #### Reprendre exécution
 
 Arrêt du mode Trace et reprise du cours normal de l’exécution de la méthode.
 
-> La combinaison **Maj**+**F5** ou **Maj**+clic sur le bouton **Reprendre exécution** provoque la reprise de l’exécution avec désactivation de tous les appels à TRACE suivants dans le process courant. avec désactivation de tous les appels à TRACE suivants dans le process courant.
+> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. avec désactivation de tous les appels à TRACE suivants dans le process courant.
 
 #### Exécuter pas à pas
 
 Exécute la ligne de méthode en cours, indiquée par le compteur de programme (la flèche jaune). Le débogueur passe à la ligne suivante.
 
-Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les fonctions. Il reste au niveau de la méthode que vous êtes en train de tracer. Si vous souhaitez également tracer les appels aux sous-routines et aux fonctions, utilisez le bouton **Pas à pas détaillé**.
+Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les fonctions. Il reste au niveau de la méthode que vous êtes en train de tracer. If you want to also trace subroutines and functions calls, use the **Step Into** button.
 
-Dans le débogage distant, lors de l'exécution de la méthode sur le serveur, la méthode parente est appelée après l'exécution de la dernière ligne de méthode enfant. Si la méthode parente est exécutée du côté distant, le bouton agit de la même manière que le bouton **Reprendre exécution**.
+Dans le débogage distant, lors de l'exécution de la méthode sur le serveur, la méthode parente est appelée après l'exécution de la dernière ligne de méthode enfant. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
 
 #### Exécuter pas à pas détaillé
 
 Lors de l’exécution d’une ligne qui appelle une autre méthode (sous-routine ou fonction), ce bouton provoque l’affichage de la méthode appelée dans la fenêtre du débogueur, et permet au développeur de passer pas à pas dans cette méthode.
 
-La nouvelle méthode devient la méthode courante (en haut) dans la sous-fenêtre Fenêtre de [chaîne d'appel](#call-chain-pane) de la fenêtre du débogueur.
+The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
 
-Lors de l’exécution d’une ligne qui n’appelle pas une autre méthode, ce bouton se comporte comme le bouton **Exécuter pas à pas**.
+When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
-#### Exécuter et sortir
+#### Step Out
 
-Si vous tracez des sous-routines et des fonctions, cliquer sur ce bouton vous permet d'exécuter l’intégralité de la méthode qui est en train d'être tracée, et de revenir à la méthode appelante. La fenêtre du débogueur retourne à la méthode précédente dans la chaîne d’appel. Si la méthode courante est la dernière méthode de la chaîne d’appel, la fenêtre du débogueur se referme.
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
 
-Dans le débogage distant, lors de l'exécution de la dernière ligne de la méthode, si la méthode est exécutée sur le serveur, la méthode parente est appelée. Si la méthode parente est exécutée du côté distant, le bouton agit de la même manière que le bouton Reprendre exécution.
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
 
-#### Pas à pas nouveau process
+#### Step Into Process
 
-Lors de l’exécution d’une ligne qui crée un nouveau process (par exemple qui appelle la commande New process), ce bouton ouvre une nouvelle fenêtre du débogueur qui vous permet de tracer la méthode de gestion du process que vous venez de créer. Lors de l’exécution d’une ligne qui ne crée pas de nouveau process, ce bouton se comporte comme le bouton Exécuter pas à pas.
+On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
 
 #### Stopper exécution
 
@@ -89,9 +99,9 @@ La méthode s’arrête et vous retournez là où vous étiez avant son exécuti
 
 #### Stopper et éditer
 
-La méthode qui s'exécute lorsque vous cliquez sur ce bouton s'ouvre dans l'éditeur de code.
+The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 
-> **Conseil** : Utilisez ce bouton lorsque vous connaissez les modifications à apporter à votre code, et le moment où elles doivent être effectuées pour pouvoir poursuivre le test de vos méthodes. Une fois vos modifications effectuées, ré-exécutez la méthode.
+> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. Une fois vos modifications effectuées, ré-exécutez la méthode.
 
 #### Editer méthode
 
@@ -99,18 +109,20 @@ La méthode qui s'exécute au moment où vous cliquez sur le bouton Éditer s'ou
 
 Si vous utilisez ce bouton pour modifier une méthode, les modifications ne seront effectives que la prochaine fois qu'elle sera exécutée.
 
-> **Astuce :** Utilisez ce bouton lorsque vous savez quels changements sont requis dans votre code et quand ils n'interfèrent pas avec le reste du code à exécuter ou à tracer.
+> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
-#### Enregistrer paramètres
+## Auto-saving
 
-Ce bouton permet de sauvegarder la configuration courante de la fenêtre du débogueur (taille et position de la fenêtre, emplacement des lignes de division et contenu de la zone d’évaluation des expressions). Elle sera alors utilisée par défaut à chaque ouverture de la base. Cela inclut :
+The current state of the debugger window is automatically saved in the project. Cela inclut :
 
-- la taille et la position de la fenêtre
-- la position des lignes de division et le contenu de la zone qui évalue les expressions
+- the size and position of the window,
+- the position of the division lines,
+- the [display mode](#display-mode),
+- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pin-an-expression) to keep it displayed in all contexts.
 
-Ces paramétrages sont stockés dans le projet.
+The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
 
-Cette action n'est pas disponible en mode débogueur distant (voir [Débogage depuis des machines distantes](./debugging-remote)).
+![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
 
 ## Fenêtre d'expression
 
@@ -128,9 +140,9 @@ La colonne **Expression** affiche les noms des objets et des expressions. La col
 
 ### Liste Expression
 
-#### Objets courants
+#### Line Expressions
 
-Ce thème vous permet de garder une trace des valeurs des objets ou des expressions :
+This theme lets you keep track of the values of expressions:
 
 - utilisé(e) s dans la ligne de code à exécuter (celle qui est indiquée par le compteur de programme — la flèche jaune dans la [Fenêtre d'évaluation du code](#fenetre-devaluation-du-code)),
 - utilisé(e) s dans la ligne de code précédente
@@ -288,8 +300,9 @@ You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1
 
 Le fenêtre d'évaluation sert à évaluer les expressions. Elle est similaire au [fenêtre Expression](#fenetre-dexpression), sauf que vous décidez quelles expressions sont affichées. Tout type d'expression peut être évalué :
 
-- champ
 - variable
+- object and object property
+- champ
 - pointer
 - calcul
 - commande 4D
@@ -298,39 +311,70 @@ Le fenêtre d'évaluation sert à évaluer les expressions. Elle est similaire a
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-Vous pouvez évaluer toute expression qui peut être affichée sous forme de texte. Ceci n'inclut pas les champs et les variables image et BLOB. Pour afficher le contenu du BLOB, vous pouvez utiliser les commandes BLOB, telles que [BLOB to text](https://doc.4d.com/4dv20/help/command/fr/page555.html).
+Vous pouvez évaluer toute expression qui peut être affichée sous forme de texte. Ceci n'inclut pas les champs et les variables image et BLOB. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands-legacy/blob-to-text.md).
+
+### Display mode
+
+You select the display mode to be used for all debugger windows using the **Display** option of the Custom Watch pane's [contextual menu](#contextual-menu).
+
+![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane-display-menu.png)
+
+Les options suivantes sont disponibles :
+
+- **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code.
+- **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List.
+- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+
+:::note
+
+Whatever the display mode, you can add custom expressions at any moment.
+
+:::
 
 ### Gestion des expressions
+
+You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pin-an-expression).
 
 Il y a plusieurs façons d'ajouter des expressions à la liste :
 
 - Glisser et déposer un objet ou une expression depuis la fenêtre d'expression ou la fenêtre de chaîne d'appel
 - Sélectionner une expression dans le volet [source](#source-code-pane) et appuyer sur **ctrl+D** (Windows) ou **cmd+D** (macOS)
 - Double-cliquer quelque part dans l'espace vide du volet (ajoute une expression avec un nom de paramètre fictif que vous pouvez modifier)
-
-Vous pouvez entrer n'importe quelle formule qui renvoie un résultat.
+- Select a [display option](#display-mode) that automatically inserts expressions.
+- Select **New Expression...** in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**. Vous pouvez entrer n'importe quelle formule qui renvoie un résultat.
 
 Pour modifier une expression, cliquez dessus pour la sélectionner, puis cliquez à nouveau ou appuyez sur **Enter** sur votre clavier.
 
-Pour supprimer une expression, cliquez dessus pour la sélectionner, puis appuyez sur **Backspace** ou **Delete** sur votre clavier.
+To delete a custom expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard, or click on the **x** icon.
 
-> **Attention :** Soyez prudent lorsque vous évaluez une expression 4D modifiant la valeur d'une des variables système (par exemple, la variable OK) car l'exécution du reste de la méthode peut être altérée.
+:::warning
+
+Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+
+:::
+
+### Pinning an expression
+
+You can click on the pushpin icon to pin an expression:
+
+![pinning-expression](../assets/en/Debugging/pin-expression.png)
+
+The expression will then be displayed in all debugger windows.
 
 ### Menu contextuel
 
-Le menu contextuel de la fenêtre vous donne accès à l'éditeur de formule 4D et à d'autres options :
+The Custom Watch Pane’s menu is available on a contextual click or using the ![menu](../assets/en/Debugging/custom-watch-pane-menu.png) icon:
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-**Nouvelle expression**: insère une nouvelle expression et affiche l'Éditeur de formules 4D.
+- **Display**: Selects the [display mode](#display-mode) to be used for all debugger windows.
+- **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
+  ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
+  For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
-![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
-
-Pour plus d'informations sur l'Éditeur de formules, consultez le [manuel Mode Développement](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
-
-- **Insérer commande** : Raccourci pour insérer une commande 4D en tant qu'expression.
-- **Supprimer tout** : Supprime toutes les expressions de la fenêtre d"évaluation.
-- **Expressions par défaut** : Copie la liste des expressions de la fenêtre d'expression.
+* **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
+* **Supprimer tout** : Supprime toutes les expressions de la fenêtre d"évaluation.
+* **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
 
 > Cette option n'est pas disponible en [mode débogueur distant](debugging-remote.md).
 
@@ -346,6 +390,12 @@ Pour plus d'informations sur l'Éditeur de formules, consultez le [manuel Mode D
 Ce panneau affiche le code source de la méthode ou de la fonction en cours de traçage.
 
 Cette zone vous permet également d'ajouter ou de supprimer des [**points d'arrêt**](breakpoints.md).
+
+### Prototype
+
+The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
+
+![prototype](../assets/en/Debugging/prototype.png)
 
 ### Infobulle
 
@@ -404,12 +454,9 @@ Le menu contextuel de la Fenêtre d'évaluation du code donne accès à plusieur
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-- **Aller à définition** : permet d’accéder à la définition de l’objet sélectionné. Cette commande est disponible avec les objets suivants :
-  - _Méthode projet :_ affiche le contenu de la méthode dans une nouvelle fenêtre de l'éditeur de code
-  - _Champ_ : affiche les propriétés du champ dans l’inspecteur de la fenêtre de structure
-  - _table_ : affiche les propriétés de la table dans l’inspecteur de la fenêtre de structure
-  - _formulaire_ : affiche le formulaire dans l’éditeur de formulaires
-  - _variable_ (locale, process, interprocess ou paramètre $n) : affiche la ligne de déclaration de la variable dans la méthode courante ou parmi les méthodes compilateur
+- **Show documentation**: Opens the documentation for the target element. Cette commande est disponible avec les objets suivants :
+  - _Project methods_, _user classes_: Selects the method in the Explorer and switches to the documentation tab
+  - _4D commands, functions, class names:_ Displays the online documentation.
 - **Chercher les références** (cette fonction est également accessible depuis l’Editeur de code) : rechercher tous le projet (méthodes et formulaires) dans lesquels l’élément courant de la méthode est référencé. L’élément courant est l’élément sélectionné ou l’élément dans lequel se trouve le curseur. Il peut s’agir d’un nom de champ, de variable, de commande, d’une chaîne, etc. Le résultat de la recherche est affiché dans une nouvelle fenêtre de résultat standard.
 - **Copier** : copie standard de l'expression sélectionnée dans le conteneur de données.
 - **Copier dans la fenêtre d'expression** : copie l'expression sélectionnée dans la Fenêtre d'évaluation.

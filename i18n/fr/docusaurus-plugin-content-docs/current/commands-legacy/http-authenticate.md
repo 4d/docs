@@ -56,3 +56,12 @@ Exemples de requêtes avec authentification :
 #### Voir aussi 
 
 [HTTP SET OPTION](http-set-option.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1161 |
+| Thread safe | &check; |
+
+

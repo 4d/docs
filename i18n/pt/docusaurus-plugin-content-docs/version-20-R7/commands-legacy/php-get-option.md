@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 :::info Compatibilidade
 
 **PHP está obsoleto em 4D**. Recomenda-se usar a classe [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
@@ -37,3 +34,12 @@ Passe no parâmetro *opção* uma constante do tema "*PHP*" para designar a opç
 
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1060 |
+| Thread-seguro | &cross; |
+
+

@@ -199,3 +199,14 @@ displayed_sidebar: docs
 #### 参照 
 
 [ORDER BY FORMULA](order-by-formula.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 49 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| カレントレコードを変更する ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->**ON EVENT CALL** コマンドは、イベントを検知するメソッドである*eventMethod*をインストールします。<!-- END REF-->このメソッドは、**イベント処理メソッド**または**イベントキャッチメソッド**と呼ばれます。
@@ -107,7 +104,7 @@ Ctrl+ピリオドが押されると、イベント処理メソッド内で*<>vbW
  End if
 ```
 
-この例題では、ON EVENT CALLが使用されている点に注意してください。これは、ループで*PAGE SETUP*、[PRINT FORM](print-form.md "PRINT FORM")、[PAGE BREAK](page-break.md "PAGE BREAK")コマンドを使い、特別な印刷用レポートを生成しているためです。
+この例題では、ON EVENT CALLが使用されている点に注意してください。これは、ループで*PAGE SETUP*、[PRINT FORM](../commands/print-form.md "PRINT FORM")、[PAGE BREAK](page-break.md "PAGE BREAK")コマンドを使い、特別な印刷用レポートを生成しているためです。
 
 [PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドを使ってレポートを印刷する場合、ユーザに印刷を中断させるようなイベント処理を実行する必要はありません。この処理は[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドにより自動的に行われます。
 
@@ -117,3 +114,13 @@ Ctrl+ピリオドが押されると、イベント処理メソッド内で*<>vbW
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 190 |
+| スレッドセーフである | &cross; |
+| サーバー上での使用は不可 ||
+
+

@@ -58,3 +58,12 @@ The *passPhrase* and *salt* used for decryption are identical to the *passPhrase
 [Encrypt data file](encrypt-data-file.md)  
 [Encrypt your own data with the 4D algorithm](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm)  
 [New data key](new-data-key.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1774 |
+| Thread safe | &check; |
+
+

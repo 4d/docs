@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Parse formula.Summary-->A função **Parse formula** analisa a *fórmula* 4D, verifica sua sintaxe e devolve seu formulário normalizado.<!-- END REF--> Isto permite que a fórmula continue sendo válida no caso de que se mude o nome de uma linguagem 4D ou elemento de estrutura (comando, constante, tabela, campo ou0 Plugin 4D). 
@@ -109,3 +106,12 @@ O parâmetro opcional *mensagemE* *rro* receberá uma mensagem de erro se houver
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *Usar tokens em fórmulas*  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1576 |
+| Thread-seguro | &cross; |
+
+

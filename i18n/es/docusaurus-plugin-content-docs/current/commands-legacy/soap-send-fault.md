@@ -43,3 +43,12 @@ Regresando al ejemplo del servicio Web “Raiz\_cuadrada” de la descripción d
 
 [SOAP DECLARATION](soap-declaration.md)  
 [SOAP get info](soap-get-info.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 781 |
+| Hilo seguro | &check; |
+
+

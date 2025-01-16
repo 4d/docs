@@ -82,3 +82,12 @@ Este exemplo mostra uma forma padrão de estabelecer valores de **Armazenamento*
 #### Ver também 
 
 *Objetos compartidos e Coleções compartidas*  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1525 |
+| Thread-seguro | &check; |
+
+

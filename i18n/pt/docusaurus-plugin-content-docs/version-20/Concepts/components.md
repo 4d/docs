@@ -12,9 +12,15 @@ Criar e instalar componentes 4D é realizado diretamente a partir de 4D. Basicam
 
 ## Instalação de componentes
 
-Para instalar um componente, basta copiar os ficheiros do componente para a pasta [`Components` do projeto](Project/architecture.md). Pode usar pseudónimos ou atalhos.
+To install a component, you simply need to copy the component package folder into the [`Components` folder of the project](Project/architecture.md). Pode usar pseudónimos ou atalhos.
 
 Um projecto anfitrião executado em modo interpretado pode utilizar componentes interpretados ou compilados. Um projecto anfitrião executado em modo compilado não pode utilizar componentes interpretados. Por isso não pode ser usado em um componente.
+
+:::note
+
+Interpreted component package folder name must be suffixed ".4dbase".
+
+:::
 
 ## Utilização de componentes
 

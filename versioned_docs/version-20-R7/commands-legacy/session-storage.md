@@ -52,3 +52,12 @@ This method modifies the value of a "settings" property stored in the storage ob
 
 [Process activity](../commands/process-activity.md)  
 [Session](https://developer.4d.com/docs/API/SessionClass#session)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1839 |
+| Thread safe | &cross; |
+
+

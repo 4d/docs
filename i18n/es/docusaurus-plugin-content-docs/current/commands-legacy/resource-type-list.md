@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->El comando RESOURCE TYPE LIST llena el array *resTipos* con los tipos de recursos presentes en el (los) archivo(s) de recursos abierto(s).<!-- END REF--> 
@@ -83,3 +80,12 @@ Una vez este método de proyecto se implementa en una base, puede escribir:
 #### Ver también 
 
 [RESOURCE LIST](resource-list.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 499 |
+| Hilo seguro | &cross; |
+
+

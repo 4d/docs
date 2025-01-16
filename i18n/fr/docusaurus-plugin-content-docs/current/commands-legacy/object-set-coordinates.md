@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET COORDINATES.Summary-->La commande **OBJECT SET COORDINATES** permet de modifier l’emplacement et, optionnellement, la taille de l’objet ou des objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF-->
@@ -38,7 +35,7 @@ Vous pouvez également passer des valeurs de coordonnées absolues dans les para
 Cette commande fonctionne uniquement dans les contextes suivants :
 
 * Formulaires entrée en mode saisie,
-* Formulaires affichés via la commande [DIALOG](dialog.md),
+* Formulaires affichés via la commande [DIALOG](../commands/dialog.md),
 * En-têtes et pieds de page des formulaires sortie affichés par la commande [MODIFY SELECTION](modify-selection.md) ou [DISPLAY SELECTION](display-selection.md),
 * Formulaires en cours d'impression.
 
@@ -57,3 +54,12 @@ L’instruction suivante place l’objet "bouton\_1" aux coordonnées (10,20) (3
 [CONVERT COORDINATES](convert-coordinates.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1248 |
+| Thread safe | &cross; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET ACTION.Summary-->El comando **OBJECT SET ACTION** modifica, para el proceso actual, la acción estándar asociada al objeto o a los objetos designado(s) por los parámetros *objeto* y *\** .<!-- END REF-->  
@@ -43,5 +40,13 @@ Usted desea asociar la acción estándar **Validate** con un botón:
 
 #### Ver también 
 
-*\_o\_OBJECT Get action*  
 [OBJECT Get action](object-get-action.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1259 |
+| Hilo seguro | &cross; |
+
+

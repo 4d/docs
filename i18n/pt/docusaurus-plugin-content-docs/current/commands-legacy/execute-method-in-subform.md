@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->O comando EXECUTE METHOD IN SUBFORM pode ser utilizado para executar o método de projeto *nomeMetodo no* contexto do sub formulário *objetoSubform*.<!-- END REF-->
@@ -77,3 +74,14 @@ Se este método foi utilizado diretamente no método do formulário Calendar, po
 #### Variáveis e conjuntos do sistema 
 
 Se este comando é executado corretamente, a variável sistema OK toma o valor 1; do contrário toma o valor 0.
+
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1085 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

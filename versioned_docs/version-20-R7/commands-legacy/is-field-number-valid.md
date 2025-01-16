@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is field number valid.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum &#124; tablePtr | Longint, Pointer | &#8594;  | Table number or Pointer to table |
+| tableNum &#124; tablePtr | Integer, Pointer | &#8594;  | Table number or Pointer to table |
 | fieldNum | Integer | &#8594;  | Field number |
 | Function result | Boolean | &#8592; | True = field exists in the table False = field does not exist in the table |
 
@@ -25,3 +25,12 @@ This command can be used to detect any field deletions, which create gaps in the
 
 [Last table number](last-table-number.md)  
 [Is table number valid](is-table-number-valid.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1000 |
+| Thread safe | &check; |
+
+

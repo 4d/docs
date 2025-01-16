@@ -33,7 +33,7 @@ Si presiona el botón **Rechazar nuevas conexiones**:
 - O nome do projeto já não aparece na caixa de diálogo da ligação remota.
 - Os clientes de ambiente de trabalho que já estão ligados não são desligados e podem continuar a trabalhar normalmente.
 
-> You can perform the same action with the [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/en/page1635.html) command.
+> Você pode executar a mesma ação com o comando [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/en/page1635.html).
 
 - Si presiona el botón **Aceptar nuevas conexiones**, el servidor de aplicaciones vuelve a su estado por defecto.
 

@@ -9,7 +9,7 @@ La gestion des erreurs répond à deux besoins principaux :
 
 - rechercher et corriger les éventuels bugs et erreurs dans votre code pendant la phase de développement,
 - détecter et récupérer des erreurs inattendues dans les applications déployées; vous pouvez notamment remplacer les boîtes de dialogue d'erreur système (disque plein, fichier manquant, etc.) par votre propre interface.
-> > > It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. Cette méthode éviterait d'afficher des boîtes de dialogue inattendues sur le serveur et pourrait consigner les erreurs dans un fichier consacré en vue d'analyses ultérieures.
+> Il est fortement recommandé d'installer une méthode de gestion des erreurs sur 4D Server, pour tout le code exécuté sur le serveur. Cette méthode évitera d'afficher des boîtes de dialogue inattendues sur le serveur et pourra consigner les erreurs dans un fichier dédié en vue d'analyses ultérieures.
 
 
 ## Erreur ou statut
@@ -23,10 +23,10 @@ D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le
 
 Dans 4D, toutes les erreurs peuvent être capturées et traitées dans une méthode projet spécifique, la méthode de **gestion des erreurs** (ou méthode de **capture d'erreurs**).
 
-Cette méthode projet est installée pour le process en cours et sera automatiquement appelée pour toute erreur survenant dans le process, en mode interprété ou compilé. Pour *installer* cette méthode projet, il vous suffit d’appeler la commande `APPELER SUR ERREUR` avec le nom de la méthode projet en paramètre. Par exemple :
+Cette méthode projet est installée pour le process en cours et sera automatiquement appelée pour toute erreur survenant dans le process, en mode interprété ou compilé. Pour *installer* cette méthode projet, il vous suffit d’appeler la commande `ON ERR CALL` avec le nom de la méthode projet en paramètre. Par exemple :
 
 ```4d
-APPELER SUR ERREUR("IO_ERRORS") //Installe la méthode de gestion des erreurs
+ON ERR CALL("IO_ERRORS") //Installe la méthode de gestion des erreurs
 ```
 
 Pour ne plus détecter d'erreurs et redonner le contrôle à 4D, appelez la méthode `ON ERR CALL` à l'aide d'une chaîne vide :
@@ -50,7 +50,7 @@ La commande `Method called on error` vous permet de connaître le nom de la mét
 
 Vous pouvez définir une seule méthode de gestion des erreurs pour l'ensemble de l'application ou différentes méthodes par module d'application. Cependant, une seule méthode peut être installée par processus.
 
-Une méthode de gestion des erreurs installée par la commande `APPELER SUR ERREUR` s'applique uniquement à l'application en cours d'exécution. En cas d'erreur générée par un **composant**, la méthode `APPELER SUR ERREUR` de l'application hôte n'est pas appelée, et inversement.
+Une méthode de gestion des erreurs installée par la commande `ON ERR CALL` s'applique uniquement à l'application en cours d'exécution. En cas d'erreur générée par un **composant**, la méthode `ON ERR CALL` de l'application hôte n'est pas appelée, et inversement.
 
 
 ### Gérer les erreurs dans une méthode
@@ -66,15 +66,19 @@ Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs info
 
 :::info
 
-4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs. :::
+4D gère automatiquement un certain nombre de variables appelées**variables système**, répondant à différents besoins. :::</p> 
 
 - La commande `GET LAST ERROR STACK` qui retourne les informations sur la pile d'erreur courant de l'application 4D.
 - la commande `Get call chain` qui retourne une collection d'objets décrivant chaque étape de la chaîne d'appel de la méthode dans le process courant.
 
 
+
+
 #### Exemple
 
 Voici un système de gestion des erreurs simple :
+
+
 
 ```4d
 //installer la méthode de gestion d'erreur
@@ -83,6 +87,9 @@ ON ERR CALL("errorMethod")
  ON ERR CALL("") //redonner le contrôle à 4D
 ```
 
+
+
+
 ```4d
 // méthode projet errorMethod
  If(Error#1006) //ceci n'est pas une interruption générée par l'utilisateur
@@ -90,9 +97,14 @@ ON ERR CALL("errorMethod")
  End if
 ```
 
+
+
+
 ### Utiliser une méthode de gestion des erreurs vide
 
 Si vous souhaitez essentiellement masquer la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. La variable système `Error` peut être testée dans n'importe quelle méthode, c'est-à-dire en dehors de la méthode de gestion d'erreurs :
+
+
 
 ```4d
 ON ERR CALL("emptyMethod") //emptyMethod existe mais est vide

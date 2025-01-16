@@ -9,7 +9,7 @@ title: 4D Write Pro Commands
 
 <a id="A"><b>A</b></a>
 
-[`WP Add picture`](../commands-legacy/wp-add-picture.md)
+[`WP Add picture`](wp-add-picture.md) ***Modified 4D 20 R8***
 
 <a id="B"><b>B</b></a>
 
@@ -32,7 +32,7 @@ title: 4D Write Pro Commands
 
 <a id="E"><b>E</b></a>
 
-[`WP EXPORT DOCUMENT`](../commands-legacy/wp-export-document.md)<br/>
+[`WP EXPORT DOCUMENT`](wp-export-document.md) ***Modified 4D 20 R8***<br/>
 [`WP EXPORT VARIABLE`](../commands-legacy/wp-export-variable.md)
 
 <a id="F"><b>F</b></a>
@@ -44,7 +44,7 @@ title: 4D Write Pro Commands
 
 <a id="G"><b>G</b></a>
 
-[`WP GET ATTRIBUTES`](../commands-legacy/wp-get-attributes.md)<br/>
+[`WP GET ATTRIBUTES`](wp-get-attributes.md) ***Modified 4D 20 R8***<br/>
 [`WP Get body`](../commands-legacy/wp-get-body.md)<br/>
 [`WP GET BOOKMARKS`](../commands-legacy/wp-get-bookmarks.md)<br/>
 [`WP Get breaks`](../commands-legacy/wp-get-breaks.md)<br/>
@@ -68,12 +68,12 @@ title: 4D Write Pro Commands
 
 <a id="I"><b>I</b></a>
 
-[`WP Import document`](../commands-legacy/wp-import-document.md)<br/>
+[`WP Import document`](wp-import-document.md) ***Modified 4D 20 R8***<br/>
 [`WP IMPORT STYLE SHEETS`](../commands-legacy/wp-import-style-sheets.md)<br/>
-[`WP INSERT BREAK`](../commands-legacy/wp-insert-break.md)<br/>
-[`WP INSERT DOCUMENT`](../commands-legacy/wp-insert-document.md)<br/>
-[`WP INSERT FORMULA`](../commands-legacy/wp-insert-formula.md)<br/>
-[`WP INSERT PICTURE`](../commands-legacy/wp-insert-picture.md)<br/>
+[`WP INSERT BREAK`](wp-insert-break.md) ***Modified 4D 20 R8***<br/>
+[`WP Insert document body`](wp-insert-document-body.md) ***Modified 4D 20 R8***<br/>
+[`WP INSERT FORMULA`](wp-insert-formula.md) ***Modified 4D 20 R8***<br/>
+[`WP INSERT PICTURE`](wp-insert-picture.md) ***Modified 4D 20 R8***<br/>
 [`WP Insert table`](../commands-legacy/wp-insert-table.md)<br/>
 [`WP Is font style supported`](../commands-legacy/wp-is-font-style-supported.md)
 
@@ -95,13 +95,13 @@ title: 4D Write Pro Commands
 
 <a id="R"><b>R</b></a>
 
-[`WP RESET ATTRIBUTES`](wp-reset-attributes.md) ***Modified 4D 20 R7***
+[`WP RESET ATTRIBUTES`](wp-reset-attributes.md)  ***Modified 4D 20 R8***
 
 <a id="S"><b>S</b></a>
 
 [`WP SELECT`](../commands-legacy/wp-select.md)<br/>
 [`WP Selection range`](../commands-legacy/wp-selection-range.md)<br/>
-[`WP SET ATTRIBUTES`](../commands-legacy/wp-set-attributes.md)<br/>
+[`WP SET ATTRIBUTES`](wp-set-attributes.md) ***Modified 4D 20 R8***<br/>
 [`WP SET DATA CONTEXT`](../commands-legacy/wp-set-data-context.md)<br/>
 [`WP SET FRAME`](../commands-legacy/wp-set-frame.md)<br/>
 [`WP SET LINK`](../commands-legacy/wp-set-link.md)<br/>
@@ -110,7 +110,7 @@ title: 4D Write Pro Commands
 
 <a id="T"><b>T</b></a>
 
-[`WP Table append row`](../commands-legacy/wp-table-append-row.md)<br/>
+[`WP Table append row`](wp-table-append-row.md) ***Modified 4D 20 R8***<br/>
 [`WP TABLE DELETE COLUMNS`](../commands-legacy/wp-table-delete-columns.md)<br/>
 [`WP TABLE DELETE ROWS`](../commands-legacy/wp-table-delete-rows.md)<br/>
 [`WP Table get cells`](../commands-legacy/wp-table-get-cells.md)<br/>

@@ -35,7 +35,7 @@ Passe um nome para a folha de estilo no parâmetro *nomeFolhaEstilo*. O nome da 
 * não pode começar com "section", que é reservado
 * "\_" é substituído por um espaço e espaços no final da linha são removidos.
 
-Pode especificar os atributos da folha de estilo utilizando o comando [WP SET ATTRIBUTES](wp-set-attributes.md) ou a notação de objetos (consulte *Atributos 4D Write Pro*). Para ver a lista de atributos disponíveis, consulte a seção *Style sheet attributes*.
+Pode especificar os atributos da folha de estilo utilizando o comando [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) ou a notação de objetos (consulte *Atributos 4D Write Pro*). Para ver a lista de atributos disponíveis, consulte a seção *Style sheet attributes*.
 
 **Notas**: 
 

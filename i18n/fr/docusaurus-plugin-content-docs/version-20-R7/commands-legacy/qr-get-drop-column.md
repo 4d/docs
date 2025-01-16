@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR Get drop column.Summary-->La commande **QR Get drop column** retourne une valeur indiquant l'emplacement auquel un “déposer” a été effectué dans *zone* :
@@ -29,3 +26,13 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 #### Voir aussi 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 747 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

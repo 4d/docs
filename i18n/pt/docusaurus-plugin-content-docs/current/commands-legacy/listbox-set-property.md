@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Summary-->O comando **LISTBOX SET PROPERTY** define o *valor* da *propriedade* da coluna list box ou list box especificada utilizando os parâmetros *objeto* e *\**.<!-- END REF-->
@@ -87,3 +84,12 @@ Se quiser definir a largura máxima da coluna "ProductNumber":
   
 *List box*  
 [LISTBOX Get property](listbox-get-property.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1440 |
+| Thread-seguro | &cross; |
+
+

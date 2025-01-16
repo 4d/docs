@@ -45,3 +45,14 @@ L'exemple suivant trie les enregistrements de la table \[Personnes\] dans l'ordr
 #### Voir aussi 
 
 [ORDER BY](order-by.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 300 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Change l'enregistrement courant ||
+
+

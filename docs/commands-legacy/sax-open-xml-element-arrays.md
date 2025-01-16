@@ -54,3 +54,12 @@ The following method:
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 921 |
+| Thread safe | &check; |
+
+

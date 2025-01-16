@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Count parameters.Summary-->The Count parameters command returns the number of parameters passed to a project method.<!-- END REF--> 
-
-**WARNING:** Count parameters is meaningful only in a project method that has been called by another method (project method or other). If the project method calling this command is associated with a menu, it returns 0.
+<!--REF #_command_.Count parameters.Summary-->The Count parameters command returns the number of parameters passed to a project method.<!-- END REF-->Count parameters is meaningful only in a project method that has been called by another method (project method or other). If the project method calling this command is associated with a menu, it returns 0.
 
 #### Example 1 
 
@@ -95,3 +93,12 @@ or:
 
 *Compiler Commands*  
 [Copy parameters](copy-parameters.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 259 |
+| Thread safe | &check; |
+
+

@@ -107,9 +107,9 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 
 <!-- REF #_command_.cs.Params -->
 
-| Parâmetro  | Tipo   |                                | Descrição                                           |                  |
-| ---------- | ------ | ------------------------------ | --------------------------------------------------- | ---------------- |
-| classStore | Object | &amp;larr; | Class store de usuário para o projeto ou componente | <!-- END REF --> |
+| Parâmetro  | Tipo   |   | Descrição                                           |                  |
+| ---------- | ------ | - | --------------------------------------------------- | ---------------- |
+| classStore | Object | ← | Class store de usuário para o projeto ou componente | <!-- END REF --> |
 
 O comando `cs` <!-- REF #_command_.cs.Summary -->devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Ele retorna todas as classes de usuários [definidas](#class-definition) no projeto ou componente aberto. Por padrão, apenas as classes [ORDA do projeto](ORDA/ordaClasses.md) estão disponíveis.
 
@@ -127,9 +127,9 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Parâmetro  | Tipo   |                                | Descrição      |                  |
-| ---------- | ------ | ------------------------------ | -------------- | ---------------- |
-| classStore | Object | &amp;larr; | Class store 4D | <!-- END REF --> |
+| Parâmetro  | Tipo   |   | Descrição      |                  |
+| ---------- | ------ | - | -------------- | ---------------- |
+| classStore | Object | ← | Class store 4D | <!-- END REF --> |
 
 O comando `4D` <!-- REF #_command_.4D.Summary -->retorna a classe store para as classes 4D incorporadas disponíveis<!-- END REF -->. Ele permite acesso a APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
 
@@ -158,7 +158,7 @@ Quando uma classe é [definida](#class-definition) no projeto, ela é carregada 
 - [`new()`](API/ClassClass.md#new) função, permitindo instanciar objetos de classe
 - Propriedade [`isShared`](API/ClassClass.md#isshared), true se a classe é [compartilhada](#classes-compartilhadas)
 - Propriedade [`isSingleton`](API/ClassClass.md#issingleton), true se a classe define uma [singleton](#singleton-classes).
-- [`isSectionSingleton`](API/ClassClass.md#issectionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
+- propriedade [`isSectionSingleton`](API/ClassClass.md#issectionsingleton), true se a classe definir um [session singleton](#singleton-classes).
 - Propriedade [`me`](API/ClassClass.md#me), permitindo instanciar e acessar [singletons](#singleton-classes).
 
 Além disso, um objeto de classe pode fazer referência a um objeto [`construtor`](#class-constructor) (opcional).
@@ -191,9 +191,15 @@ As palavras-chave 4D específicas podem ser utilizadas nas definições de class
 // code
 ```
 
+:::note
+
+There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+
+:::
+
 As funções de classe são propriedades específicas da classe. Eles são objetos da classe [4D.Function](API/FunctionClass.md). No arquivo de definição de classe, as declarações de funções usam a palavra-chave `Function` seguida pelo nome da função.
 
-Se a função for declarada em uma [classe compartilhada](#shared-classes), você pode usar a palavra-chave `shared` para que a função possa ser chamada sem [`Use. .Finalizar estrutura`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
+Usando a palavra-chave `compartilhado` cria uma **classe compartilhada**, usada apenas para instanciar objetos compartilhados. Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
 O nome da função deve estar em conformidade com as [regras de nomenclatura de objetos](Concepts/identifiers.md#object-properties).
 
@@ -270,7 +276,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 Você também pode declarar o parâmetro de retorno adicionando apenas `: type` e usar a [`return expression`](parameters.md#return-expression) (ele também encerrará a execução da função). Por exemplo:
 
 ```4d
-Function add($x : Variant; $y : Integer)-&gt;$result : Integer
+Function add($x : Variant; $y : Integer)-&amp;gt;$result : Integer
 ```
 
 #### Exemplo 1
@@ -323,11 +329,17 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 // code
 ```
 
+:::note
+
+There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+
+:::
+
 Uma função construtora de classe aceita [parâmetros](#parameters) opcionais e pode ser usada para criar e inicializar objetos da classe de usuário.
 
 Quando você chama a função [`new()`](API/ClassClass.md#new), o construtor da classe é chamado com os parâmetros opcionalmente passados para a função `new()`.
 
-Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado). Um construtor pode utilizar a palavra-chave [`Super`](#super) para chamar o construtor da superclasse.
+Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado). The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function.
 
 É possível criar e digitar propriedades de instância dentro do construtor (ver exemplo). Em alternativa, se os valores das propriedades de instância não dependem dos parâmetros passados ao construtor, você pode defini-los usando a palavra-chave [`property`](#property).
 
@@ -493,7 +505,7 @@ No arquivo de definição de classe, as declarações de propriedade computadas 
 
 `A função get` devolve um valor do tipo de propriedade e `A função set` recebe um parâmetro do tipo de propriedade. Ambos os argumentos devem estar em conformidade com os [parâmetros de função] padrão (#parâmetros).
 
-Quando ambas as funções são definidas, a propriedade computada é **read-write**. Se apenas uma `Function get` for definida, a propriedade computada será **somente leitura**. Neste caso, é devolvido um erro se o código tentar modificar a propriedade. Se apenas um `Function set` estiver definido, 4D devolve _undefined_ quando a propriedade é lida.
+Quando ambas as funções são definidas, a propriedade computada é **read-write**. Se apenas uma `Function get` for definida, a propriedade computada será **somente leitura**. Neste caso, é devolvido um erro se o código tentar modificar a propriedade. Neste caso, é devolvido um erro se o código tentar modificar a propriedade.
 
 Se as funções forem declaradas em uma [classe compartilhada](#shared-class-constructor), você pode usar a palavra-chave `shared` com elas para que elas possam ser chamadas sem [`Use. .Finalizar estrutura`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
@@ -596,13 +608,13 @@ The following commands have specific features when they are used within class fu
 
 ### `Super`
 
-The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. It can be called in the [class constructor](#class-constructor) or in a class function code.
+The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
 
-For more details, see the [`Super`](../commands/super.md) command description.
+Para obter mais detalhes, consulte a descrição do comando [`Super`](../commands/super.md).
 
 ### `This`
 
-The [`This`](../commands/this.md) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
+O comando [`This`](../commands/this.md) retorna uma referência ao objeto processado no momento. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
 
 Exemplo:
 
@@ -622,7 +634,7 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-For more details, see the [`This`](../commands/this.md) command description.
+Para obter mais detalhes, consulte a descrição do comando [`This`](../commands/this.md).
 
 ## Comandos de classe
 
@@ -717,17 +729,17 @@ As classes Singleton não são suportadas por [classes baseadas em ORDA](../ORDA
 
 The following table indicates the scope of a singleton instance depending on where it was created:
 
-| Singleton criado em  | Scope of process singleton                                                                                 | Scope of shared singleton | Scope of session singleton                                            |
-| -------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
-| **4D usuário único** | Processo                                                                                                   | Aplicação                 | Application or Web/REST session                                       |
-| **4D Server**        | Processo                                                                                                   | Máquina 4D Server         | Client/server session or Web/REST session or Stored procedure session |
-| **Modo remoto 4D**   | Process (_nota_: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D         | 4D remote machine or Web/REST session                                 |
+| Singleton criado em  | Scope of process singleton                                                                                 | Escopo do singleton compartilhado | Scope of session singleton                                            |
+| -------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------- | --------------------------------------------------------------------- |
+| **4D usuário único** | Processo                                                                                                   | Aplicação                         | Application or Web/REST session                                       |
+| **4D Server**        | Processo                                                                                                   | Máquina 4D Server                 | Client/server session or Web/REST session or Stored procedure session |
+| **Modo remoto 4D**   | Process (_nota_: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D                 | 4D remote machine or Web/REST session                                 |
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
-### Creating and using singletons
+### Criação e uso de singletons
 
-You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
+Você declara classes singleton adicionando a(s) palavra(s)-chave apropriada(s) antes do [`Class constructor`](#class-constructor):
 
 - To declare a (process) singleton class, write `singleton Class Constructor()`.
 - To declare a shared singleton class, write `shared singleton Class constructor()`.
@@ -736,7 +748,7 @@ You declare singleton classes by adding appropriate keyword(s) before the [`Clas
 :::note
 
 - Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
-- Singleton shared functions support [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
+- As funções compartilhadas Singleton suportam a palavra-chave `onHttpGet`(../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 

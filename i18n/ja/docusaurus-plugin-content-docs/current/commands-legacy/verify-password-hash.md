@@ -53,3 +53,12 @@ displayed_sidebar: docs
 
   
 [Generate password hash](generate-password-hash.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1534 |
+| スレッドセーフである | &check; |
+
+

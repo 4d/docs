@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR SET REPORT TABLE.Summary-->The QR SET REPORT TABLE command sets the current table for the report area whose reference was passed in *area* to the table whose number was passed in *aTable*.<!-- END REF-->
@@ -29,3 +26,13 @@ If you pass an invalid *table* value, the error -9852 will be generated.
 #### See also 
 
 [QR Get report table](qr-get-report-table.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 757 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

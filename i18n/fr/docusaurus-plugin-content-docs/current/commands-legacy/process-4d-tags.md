@@ -72,3 +72,12 @@ Cet exemple permet de générer un texte à l'aide de données dans des tableaux
 #### Voir aussi 
 
 *Balises de transformation 4D*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 816 |
+| Thread safe | &check; |
+
+

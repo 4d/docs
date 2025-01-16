@@ -42,3 +42,12 @@ Os campos estão numerados na ordem na qual foram criados. Se nenhum campo foi a
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 255 |
+| Thread-seguro | &check; |
+
+

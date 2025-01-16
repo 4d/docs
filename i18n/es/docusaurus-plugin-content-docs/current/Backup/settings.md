@@ -25,7 +25,7 @@ Las opciones que se encuentran en esta pestaña le permiten establecer y configu
 
 - **Nunca**: la función de copia de seguridad programada está inactiva.
 - **Cada hora**: programa una copia de seguridad automática cada hora, a partir de la hora siguiente.
-- **Cada día**: programa una copia de seguridad automática cada día. A continuación, puede introducir la hora a la que debe comenzar la copia de seguridad.
+- Backups periódicos A continuación, puede introducir la hora a la que debe comenzar la copia de seguridad.
 - **Todas las semanas**: programa una copia de seguridad automática cada semana. Dos áreas de entrada adicionales le permiten indicar el día y la hora en que debe comenzar la copia de seguridad.
 - **Todos los meses**: programa una copia de seguridad automática cada mes. Dos áreas de entrada adicionales le permiten indicar el día del mes y la hora en que debe comenzar la copia de seguridad.
 - **Personalizado**: sirve para configurar las copias de seguridad automáticas "a medida". Al seleccionar esta opción, aparecen varias áreas de entrada adicionales:
@@ -55,7 +55,7 @@ Esta área le permite determinar qué archivos y/o carpetas deben copiarse duran
 - **Archivo de estructura usuario (sólo para bases binaria)**: _funcionalidad obsoleta_
 - **Adjuntos**: esta área permite especificar un conjunto de archivos y/o carpetas que se respaldarán al mismo tiempo que la aplicación. Estos archivos pueden ser de cualquier tipo (documentos o plantillas de plug-ins, etiquetas, informes, imágenes, etc.). Puede definir archivos individuales o carpetas cuyo contenido se respaldará completamente. Cada elemento adjunto aparece con su ruta de acceso completa en el área "Adjuntos ".
   - **Eliminar**: retira el archivo seleccionado de la lista de archivos adjuntos.
-  - **Añadir carpeta...**: muestra una caja de diálogo que permite seleccionar una carpeta para añadirla a la copia de seguridad. En el caso de una restitución, la carpeta se recuperará con su estructura interna. Puede seleccionar toda carpeta o volumen conectado a la máquina, a excepción de la carpeta que contiene los archivos de la aplicación.
+  - Gestión del archivo de historial En el caso de una restitución, la carpeta se recuperará con su estructura interna. Puede seleccionar toda carpeta o volumen conectado a la máquina, a excepción de la carpeta que contiene los archivos de la aplicación.
   - **Añadir archivo...**: muestra una caja de diálogo que permite seleccionar un archivo para añadirlo a la copia de seguridad.
 
 ### Carpeta de destino del archivo de copia de seguridad
@@ -123,7 +123,7 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 
 #### Restaurar la última copia de seguridad si la base de datos está dañada
 
-When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the application, if an anomaly is detected (corrupted file, for example) during application launch. No se requiere ninguna intervención por parte del usuario; sin embargo, la operación se registra en el diario de copias de seguridad.
+Cuando se marca esta opción, el programa inicia automáticamente la restauración del archivo de datos de la última copia de seguridad válida de la aplicación, si se detecta una anomalía (archivo dañado, por ejemplo) durante el lanzamiento de la aplicación. No se requiere ninguna intervención por parte del usuario; sin embargo, la operación se registra en el diario de copias de seguridad.
 
 #### Integrar los últimos registros si la base de datos está incompleta
 

@@ -388,9 +388,9 @@ Le style de case à cocher personnalisé accepte une image d'arrière-plan perso
 
 - [Chemin d'accès arrière-plan](properties_TextAndPicture.md#background-pathname)
 - [Décalage icône](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- [Marge horizontale](properties_TextAndPicture.md#horizontal-margin) et [Marge verticale](properties_TextAndPicture.md#vertical-margin)
 
-It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
+Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states), qui peut être utilisée en conjonction avec une [image d'arrière-plan ](properties_TextAndPicture.md#background-pathname) [à 4 états](properties_TextAndPicture.md#number-of-states).
 
 #### Exemple JSON :
 

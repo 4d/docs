@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.STOP SQL SERVER.Summary-->STOP SQL SERVERコマンドは、実行済み4Dアプリケーションの統合SQLサーバを停止します。<!-- END REF-->
@@ -26,3 +23,12 @@ SQLサーバが起動していた場合、すべてのSQL接続が中断しま�
 #### 参照 
 
 [START SQL SERVER](start-sql-server.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 963 |
+| スレッドセーフである | &cross; |
+
+

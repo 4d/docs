@@ -94,7 +94,7 @@ Dans l'exemple suivant, le texte de l'objet portant le nom "okButton" sera affic
 
 Class correspond au **sélecteur class** CSS et définit un objet le style de tous les objets formulaires de l'attribut `class`.
 
-Vous pouvez spécifier les classes à utiliser avec un caractère "." suivi du nom de la classe et, entre accolades, déclarez le(s) style(s) à appliquer.
+Vous pouvez spécifier les classes à utiliser avec un caractère "." suivi du nom de la classe et, entre accolades, déclarer le(s) style(s) à appliquer.
 
 Dans l'exemple suivant, le texte de tous les objets de la classe `okButtons` sera affiché dans la police Helvetica Neue, avec une taille de 20 pixels, alignée au centre :
 
@@ -195,7 +195,7 @@ text[text|=Hello]
 
 ### Media Queries
 
-Les requêtes de média sont utilisées pour appliquer des schémas de couleurs à une application.
+Les Media queries sont utilisées pour appliquer des schémas de couleurs à une application.
 
 Une requête média est composée d'une fonctionnalité média et d'une valeur (`\<fonctionnalité média>:\<valeur>`).
 

@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->O comando OPEN PRINTING JOB abre uma tarefa de impressão e empilha todas as ordens de impressão executadas até que se chame o comando [CLOSE PRINTING JOB](close-printing-job.md).<!-- END REF--> Este comando lhe permite controlar os trabalhos de impressão e, mais particularmente, ter certeza que nenhuma tarefa de impressão "parasita" possa ser inserida em uma sequência de impressão.
@@ -39,3 +36,13 @@ A variável sistema OK se estabelece em 1 se o trabalho de impressão foi aberto
 #### Ver também 
 
 [CLOSE PRINTING JOB](close-printing-job.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 995 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get placeholder.Summary-->La commande **OBJECT Get placeholder** retourne le texte d’exemple associé à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> Si aucun texte d’exemple n’est associé à l’objet, la commande retourne une chaîne vide.
@@ -39,3 +36,12 @@ Vous souhaitez lire le texte exemple d’un champ :
 #### Voir aussi 
 
 [OBJECT SET PLACEHOLDER](object-set-placeholder.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1296 |
+| Thread safe | &cross; |
+
+

@@ -61,3 +61,12 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 553 |
+| スレッドセーフである | &check; |
+
+

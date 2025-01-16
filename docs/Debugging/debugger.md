@@ -3,16 +3,22 @@ id: debugger
 title: Debugger
 ---
 
-The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
+The 4D debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
+
+:::info
+
+If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension. 
+
+:::
 
 ## Calling the Debugger
 
 There are multiple ways to get the Debugger to display:
 
 * Clicking the **Trace** button in the [Syntax Error window](basics.md#syntax-error-window)
-* Using the [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html) command
+* Using the [`TRACE`](../commands-legacy/trace.md) command
 * Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Code Editor
 * Using **Alt+Shift+Right click** (Windows) or **Ctrl+Option+Cmd+Click** (macOS) while a method is executing, then selecting the process to trace in the pop-up menu:
 
@@ -23,8 +29,8 @@ There are multiple ways to get the Debugger to display:
 
 When called, the debugger window provides the name of the method or class function you're currently tracing, and the action causing the initial appearance of the Debugger window. For example, in the above debugger window:
 
-* *Clients_BuildLogo* is the method being traced
-* The debugger window appeared because it detected a call to the `C_PICTURE` command and this command was one of the commands to be caught
+* *drop* is the method being traced
+* The debugger window appeared because of a break point. 
 
 Displaying a new debugger window uses the same configuration as the last window displayed in the same session. If you run several user processes, you can trace them independently and have one debugger window open for each process.
 
@@ -46,7 +52,11 @@ The debugger's tool bar includes several buttons, associated with default shortc
 
 ![execution-control-toolbar-buttons](../assets/en/Debugging/executionToolbarButtons.png)
 
-> Default shortcuts can be customized in the Shortcuts Page of the Preferences dialog box.
+:::note
+
+Default shortcuts can be customized in the [Shortcuts Page](../Preferences/shortcuts.md) of the Preferences dialog box.
+
+:::
 
 #### No Trace
 
@@ -103,16 +113,20 @@ If you use this button to modify a method, the modifications are only effective 
 
 > **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
-#### Save Settings  
+## Auto-saving  
 
-Saves the current configuration of the debugger window  and makes it the default configuration. This includes:
+The current state of the debugger window is automatically saved in the project. This includes:
 
-* the size and position of the window
-* the position of the division lines and the contents of the area that evaluates the expressions
+- the size and position of the window,
+- the position of the division lines,
+- the [display mode](#display-mode),
+- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pin-an-expression) to keep it displayed in all contexts. 
 
-These parameters are stored in the project.
 
-This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote)).
+The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself). 
+
+![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
+
 
 ## Watch Pane
 
@@ -130,9 +144,9 @@ At any point, you can drag and drop themes, theme sublists (if any), and theme i
 
 ### Expression list
 
-#### Line Objects
+#### Line Expressions
 
-This theme lets you keep track of the values of the objects or expressions:
+This theme lets you keep track of the values of expressions:
 
 * used in the line of code to be executed (the one marked with the program counter—the yellow arrow in the [Source Code Pane](#source-code-pane)),
 * used in the previous line of code
@@ -290,8 +304,9 @@ You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1
 
 The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
 
-* field
 * variable
+* object and object property
+* field
 * pointer
 * calculation
 * 4D command
@@ -300,39 +315,71 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
+You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands-legacy/blob-to-text.md).
+
+### Display mode
+
+You select the display mode to be used for all debugger windows using the **Display** option of the Custom Watch pane's [contextual menu](#contextual-menu). 
+
+![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane-display-menu.png)
+
+The following options are available:
+
+- **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code. 
+- **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List. 
+- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png). 
+
+:::note
+
+Whatever the display mode, you can add custom expressions at any moment. 
+
+:::
+
 
 ### Handling expressions
+
+You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pin-an-expression). 
 
 There are several ways to add expressions to the list:
 
 * Drag and drop an object or expression from the Watch Pane or the Call Chain Pane
 * Select an expression in the [Source Code pane](#source-code-pane) and press **ctrl+D**  (Windows) or **cmd+D** (macOS)
 * Double-click somewhere in the empty space of the Custom Watch Pane (adds an expression with a placeholder name that you can edit)
-
-You can enter any formula that returns a result.
+* Select a [display option](#display-mode) that automatically inserts expressions. 
+* Select **New Expression...** in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**. You can enter any formula that returns a result.
 
 To edit an expression, click on it to select it, then click again or press **Enter** on your keyboard.
 
-To delete an expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard.
+To delete a custom expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard, or click on the **x** icon.
 
->**Warning:** Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+:::warning
+
+Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+
+:::
+
+### Pinning an expression
+
+You can click on the pushpin icon to pin an expression: 
+
+![pinning-expression](../assets/en/Debugging/pin-expression.png)
+
+The expression will then be displayed in all debugger windows. 
 
 ### Contextual Menu
 
-The Custom Watch Pane’s context menu gives you access the 4D formula editor and other options:
+The Custom Watch Pane’s menu is available on a contextual click or using the ![menu](../assets/en/Debugging/custom-watch-pane-menu.png) icon:
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-**New Expression**: This inserts a new expression and displays the 4D Formula Editor.
-
+- **Display**: Selects the [display mode](#display-mode) to be used for all debugger windows.
+- **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
+For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
-For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
-
-* **Insert Command**: Shortcut for inserting a 4D command as a new expression.
+* **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
 * **Delete All**: Removes all expressions from the Custom Watch Pane.
-* **Standard Expressions**: Copies the Watch Pane's list of expressions.
+* **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
 
 > This option is not available in [remote debugging mode](debugging-remote.md).
 
@@ -343,11 +390,19 @@ For more information on the Formula Editor, see the [4D Design Reference manual]
 * **Sorted Tables and Fields**: Displays the table and fields in alphabetical order.
 * **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
 
+
 ## Source Code Pane
 
 The Source Code Pane shows the source code of the method or function currently being traced.
 
 This area also allows you to add or remove [**break points**](breakpoints.md).
+
+### Prototype
+
+The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
+
+![prototype](../assets/en/Debugging/prototype.png)
+
 
 ### Tool tip
 
@@ -406,12 +461,9 @@ The contextual menu of the Source Code Pane provides access to several functions
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-* **Goto Definition**: Goes to where the selected object is defined. This command is available for:
-  * *Project methods:* displays method contents in a new window of the Code Editor
-  * *Fields:* Displays field properties in the inspector of the Structure window
-  * *Tables:* Displays table properties in the inspector of the Structure window
-  * *Forms:* Displays form in the Form editor
-  * *Variables* (local, process, interprocess or $n parameter): displays the line in the current method or among the compiler methods where the variable is declared
+* **Show documentation**: Opens the documentation for the target element. This command is available for:
+  * *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
+  * *4D commands, functions, class names:* Displays the online documentation.
 * **Search References** (also available in Code Editor): Searches all project objects (methods and forms) in which the current element of the method is referenced. The current element is the one selected or the one where the cursor is located. This can be the name of a field, variable, command, string, and so on. Search results are displayed in a new standard results window.
 * **Copy**: Standard copy of the selected expression to the pasteboard.
 * **Copy to Expression Pane**: Copy the selected expression to the Custom Watch Pane.

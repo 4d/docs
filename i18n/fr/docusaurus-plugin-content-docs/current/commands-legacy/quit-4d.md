@@ -64,3 +64,12 @@ La méthode projet suivante est associée à la commande **Quitter** du menu **F
 #### Voir aussi 
 
 [On Exit database method](on-exit-database-method.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 291 |
+| Thread safe | &check; |
+
+

@@ -89,3 +89,12 @@ Creación de un índice de palabras claves:
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 344 |
+| Hilo seguro | &check; |
+
+

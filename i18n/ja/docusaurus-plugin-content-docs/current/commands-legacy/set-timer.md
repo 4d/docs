@@ -13,14 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET TIMER.Summary-->**SET TIMER** コマンドは、On Timerフォームイベントを有効にし、カレントプロセスのカレントフォームでOn Timerフォームイベント間の間隔Tick数を設定します。<!-- END REF--> 
 
-**Note:** このフォームイベントに関する詳細は、[Form event code](form-event-code.md) コマンドの説明を参照してください。
+**Note:** このフォームイベントに関する詳細は、[Form event code](../commands/form-event-code.md) コマンドの説明を参照してください。
 
 このコマンドをフォームを表示していないコンテキストで呼び出しても、効果はありません。
 
@@ -46,5 +43,14 @@ On Timerフォームイベントの生成を取り消すには、*tickCount*に0
 
 #### 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [REDRAW](redraw.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 645 |
+| スレッドセーフである | &cross; |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR Get command status.Summary-->The **QR Get command status** command returns 0 if the *command* is disabled or 1 if it is enabled.<!-- END REF-->
@@ -39,3 +36,13 @@ If you pass an invalid *command* number, the error -9852 will be generated.
 
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR ON COMMAND](qr-on-command.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 792 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

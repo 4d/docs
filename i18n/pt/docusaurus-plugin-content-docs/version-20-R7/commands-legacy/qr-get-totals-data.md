@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR GET TOTALS DATA.Summary-->##### List Mode 
@@ -74,3 +71,13 @@ Se o parâmetro *numQuebra* é incorreto, se gera o erro -9853.
 #### Ver também 
 
 [QR SET TOTALS DATA](qr-set-totals-data.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 768 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET GROUP LIST.Summary-->GET GROUP LIST llena los arrays *nomGrupos y* *numGrupos* con los nombres y los números de referencia únicos de los grupos tal como aparecen en la ventana del editor de contraseñas.<!-- END REF-->
@@ -35,3 +32,13 @@ Si no tiene privilegios de acceso para llamar al comando GET GROUP LIST o si otr
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 610 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

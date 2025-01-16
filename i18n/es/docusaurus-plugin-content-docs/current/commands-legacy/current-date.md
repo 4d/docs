@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Current date.Summary-->El comando Current date devuelve la fecha actual tal como está definida en el reloj del sistema.<!-- END REF-->
-
-**4D Server:** si pasa el parámetro asterisco (\*) durante la ejecución de esta función en un equipo cliente 4D Client, la función devuelve la fecha actual del servidor.
+<!--REF #_command_.Current date.Summary-->El comando Current date devuelve la fecha actual tal como está definida en el reloj del sistema.<!-- END REF-->si pasa el parámetro asterisco (\*) durante la ejecución de esta función en un equipo cliente 4D Client, la función devuelve la fecha actual del servidor.
 
 #### Ejemplo 1 
 
@@ -98,3 +96,12 @@ El siguiente método de proyecto permite hacerlo:
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 33 |
+| Hilo seguro | &check; |
+
+

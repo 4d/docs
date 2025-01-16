@@ -120,6 +120,6 @@ O exemplo abaixo:
 #### Ver também 
 
 [WP Insert table](wp-insert-table.md)  
-[WP Table append row](wp-table-append-row.md)  
+[WP Table append row](../commands/wp-table-append-row.md)  
 [WP Table get cells](wp-table-get-cells.md)  
 [WP Table get columns ](wp-table-get-columns.md)  

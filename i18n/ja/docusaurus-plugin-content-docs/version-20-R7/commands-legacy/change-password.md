@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.CHANGE PASSWORD.Summary-->CHANGE PASSWORD コマンドを使用して、カレントユーザのパスワードを変更できます。<!-- END REF-->このコマンドは現在のパスワードを、引数 *password* に渡した新しいパスワードに置き換えます。 
@@ -45,3 +42,12 @@ displayed_sidebar: docs
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [OBJECT SET FONT](object-set-font.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 186 |
+| スレッドセーフである | &cross; |
+
+

@@ -12,15 +12,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
-<!--REF #_command_.FORM UNLOAD.Summary-->O comando **FORM UNLOAD** libera da memória o formulário atual designado utilizando o comando [FORM LOAD](form-load.md).<!-- END REF-->
+<!--REF #_command_.FORM UNLOAD.Summary-->O comando **FORM UNLOAD** libera da memória o formulário atual designado utilizando o comando [FORM LOAD](../commands/form-load.md).<!-- END REF-->
 
-Chamar este comando é necessário quando se utiliza o comando [FORM LOAD](form-load.md) fora do contexto de impressão (no caso da impressão, o formulário atual é novamente fechado de forma automática quando o comando for chamado [CLOSE PRINTING JOB](close-printing-job.md)).
+Chamar este comando é necessário quando se utiliza o comando [FORM LOAD](../commands/form-load.md) fora do contexto de impressão (no caso da impressão, o formulário atual é novamente fechado de forma automática quando o comando for chamado [CLOSE PRINTING JOB](close-printing-job.md)).
 
 #### Ver também 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1299 |
+| Thread-seguro | &cross; |
+
+

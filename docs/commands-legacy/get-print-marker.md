@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Get print marker.Summary-->The **Get print marker** command enables you to get the current position of a marker during printing.<!-- END REF--> 
@@ -24,7 +21,7 @@ displayed_sidebar: docs
 This command can be used in two contexts:
 
 * During the On Header form event, in the context of [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.
-* During the On Printing Detail form event, in the context of the [Print form](print-form.md) command.
+* During the On Printing Detail form event, in the context of the [Print form](../commands/print-form.md) command.
 
 The coordinates are returned in pixels (1 pixel = 1/72 inch). 
 
@@ -64,3 +61,12 @@ Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 708 |
+| Thread safe | &cross; |
+
+

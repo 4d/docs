@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.CALL SUBFORM CONTAINER.Summary-->**CALL SUBFORM CONTAINER** コマンドを使用してサブフォームインスタンスからそれを含むサブフォームコンテナにイベントを送信できます。<!-- END REF-->そしてサブフォームコンテナは親フォームのコンテキストでイベントを処理できます。
@@ -30,5 +27,14 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [GOTO OBJECT](goto-object.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1086 |
+| スレッドセーフである | &cross; |
+
+

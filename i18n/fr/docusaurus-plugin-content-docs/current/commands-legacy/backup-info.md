@@ -31,3 +31,12 @@ Passez dans le paramètre *sélecteur* le type d’information à récupérer. L
 #### Voir aussi 
 
 [RESTORE](restore.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 888 |
+| Thread safe | &cross; |
+
+

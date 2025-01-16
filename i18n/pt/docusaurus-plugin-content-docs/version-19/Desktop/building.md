@@ -35,7 +35,7 @@ A geração do banco de dados só pode ser realizado quando o banco de dados for
 
 ### Parâmetros do gerador de aplicações
 
-Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the `Settings` folder of the project.
+Cada parâmetro de geração da aplicação é armazenado como uma chave XML no arquivo da aplicação chamada `buildApp.4DSettings`, localizado na pasta `Settings` do projeto.
 
 Os parâmetros padrão são utilizados na primeira vez que a caixa de diálogo Criar aplicação é utilizada. O conteúdo do ficheiro é atualizado, se necessário, quando se clica em **Criar** ou **Salvar os parâmetros**. Pode definir vários outros ficheiros de parâmetros XML para o mesmo projeto e utilizá-los utilizando o comando [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
 
@@ -73,7 +73,7 @@ Essa guia permite que você crie um arquivo de estrutura compilado padrão ou um
 
 Gera um banco de dados que contém apenas código compilado.
 
-This feature creates a `.4dz`file within a `Compiled Database/<project name>` folder. Por exemplo, se nomeou a sua aplicação como "MyProject", 4D irá criar:
+Esta funcionalidade cria um arquivo `.4dz`na pasta `Banco de dados compilado /<project name>`. Por exemplo, se nomeou a sua aplicação como "MyProject", 4D irá criar:
 
 *<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
@@ -207,7 +207,7 @@ Além disso, o aplicativo cliente/servidor é personalizado e fácil de usar:
 * Para iniciar a parte do servidor, o usuário simplesmente clica duas vezes no aplicativo do servidor. The database does not need to be selected.
 * Para iniciar a parte do cliente, o usuário simplesmente clica duas vezes no aplicativo cliente, que se conecta diretamente ao aplicativo do servidor. Você não precisa escolher um servidor em uma caixa de diálogo de conexão. O cliente direciona o servidor usando seu nome, quando o cliente e o servidor estão na mesma sub-rede, ou usando seu endereço IP, que é definido usando a chave `IPAddress` XML no arquivo buildapp.4DSettings. Se a conexão falhar, mecanismos alternativos específicos do [podem ser implementados](#management-of-client-connections). Você pode "forçar" a exibição da caixa de diálogo de conexão padrão segurando a tecla **Opção** (macOS) ou **Alt** (Windows) enquanto inicia a aplicação cliente. Apenas a parte do cliente pode conectar à parte do servidor correspondente. Se um usuário tentar conectar à parte do servidor usando uma aplicação 4D padrão, uma mensagem de erro é retornada e a conexão é impossível.
 * Um aplicativo cliente/servidor pode ser definido para que a parte do cliente [possa ser atualizada automaticamente através da rede](#copy-of-client-applications-in-the-server-application). Você só precisa criar e distribuir uma versão inicial do aplicativo cliente, atualizações subsequentes são tratadas usando o mecanismo de atualização automática.
-* It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) and [RESTART 4D](https://doc.4d.com/4dv19/help/command/en/page1292.html)).
+* Também é possível automatizar a atualização da parte do servidor por meio do uso de uma sequência de comandos da linguagem ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) e [RESTART 4D](https://doc.4d.com/4dv19/help/command/en/page1292.html)).
 
 ### Criar aplicação servidor
 
@@ -219,7 +219,7 @@ Clique no botão **[...]** e use *Procurar pasta* para localizar o aplicativo 4D
 
 #### Versão atual
 
-Utilizado para indicar o número da versão atual da aplicação gerada. Pode então aceitar ou rejeitar ligações de aplicações cliente conforme o seu número de versão. The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings)).
+Utilizado para indicar o número da versão atual da aplicação gerada. Pode então aceitar ou rejeitar ligações de aplicações cliente conforme o seu número de versão. O intervalo de compatibilidade para aplicações cliente e servidor é estabelecido usando [XML keys](#build-application-settings)).
 
 #### Modo de ligação de dados
 
@@ -254,7 +254,7 @@ Se você deseja que o aplicativo cliente se conecte ao servidor usando um endere
 
 As opções desta área configuram o mecanismo para atualizar as partes do cliente do(s) seus aplicativos cliente/servidor usando a rede toda vez que uma nova versão do aplicativo for gerada. Estas opções só são ativadas quando a opção **cliente de compilação** é marcada.
 
-* **Permitir atualização automática do aplicativo cliente Windows** - Marque esta opção para construir um `. Arquivo darchive` que pode ser enviado para o aplicativo cliente na plataforma Windows em caso de atualização.
+* **Permitir atualização automática da aplicação cliente Windows** - Marque esta opção para construir um `.4darchive` que pode ser enviado para as aplicações cliente na plataforma Windows em caso de atualização.
 * **Permitir atualização automática do aplicativo cliente Macintosh** - Marque esta opção para construir um `. arquivo darchive` que pode ser enviado para os seus aplicativos cliente na plataforma Macintosh em caso de atualização.
 
 O ficheiro `.4darchive` é copiado para a seguinte localização:
@@ -298,11 +298,11 @@ Em alguns casos, poderá querer impedir que as aplicações cliente possam cance
 
 Para forçar a atualização, basta excluir o número da versão atual das aplicações cliente (X-1 e anteriores) no intervalo de números de versão compatível com a aplicação do servidor. Neste caso, o mecanismo de atualização não permitirá a conexão de aplicativos cliente não atualizados. Por exemplo, se a nova versão do aplicativo cliente-servidor for 6, pode estipular-se que qualquer aplicativo cliente com um número de versão inferior a 6 não será autorizado a ligar.
 
-O número da versão [atual](#current_version) é definido na página do Cliente/Servidor da caixa de diálogo da aplicação de construção. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
+O número da versão [atual](#current_version) é definido na página do Cliente/Servidor da caixa de diálogo da aplicação de construção. Os intervalos de números autorizados estão definidos no projeto de aplicação usando as chaves [XML específicas](#build-application-settings).
 
 #### Erro de actualização
 
-If 4D cannot carry out the update of the client application, the client machine displays the following error message: “The update of the client application failed. A aplicação vai agora desistir."
+Se 4D não puder realizar a atualização do aplicativo cliente, a máquina do cliente exibe a seguinte mensagem de erro: "A atualização da aplicação do cliente falhou. A aplicação vai agora desistir."
 
 Existem muitas causas possíveis para este erro. Quando você receber esta mensagem, é aconselhável verificar os seguintes parâmetros primeiro:
 
@@ -335,12 +335,13 @@ Se o servidor e/ou cliente parte do seu aplicativo clicável duplo for usado com
 Os elementos devem ser instalados:
 
 * **em Windows**
-  * **Server application** - in the `Client Server executable\&#060;ApplicationName&#062;Server\Server Database` subfolder.
-  * **Client application** - in the `Client Server executable\&#060;ApplicationName&#062;Client` subfolder.
+  * **Aplicação do servidor** - na subpasta `Client Server
+executable\&#060;ApplicationName&#062;Server\Server Database`.
+  * **Aplicación cliente** - na subpasta `Client Server executable\&#060;ApplicationName&#062;Client`.
 
 * **no macOS**
-  * **Server application** - next to the `<ApplicationName>Server`software package.
-  * **Client application** - next to the `<ApplicationName>Client`software package.
+  * **Aplicação do servidor** - com o pacote de software `<ApplicationName>Server`.
+  * **Aplicação cliente** - ao lado do pacote de software `<ApplicationName>Client`.
 
 ### Incorporar uma aplicação cliente usuário único
 
@@ -401,7 +402,7 @@ Personalizar o nome da pasta de cache no lado do servidor é útil quando você 
 
 ## Página Plugins e componentes
 
-On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
+Nesta aba, você define cada [plug-in](Concepts/plug-ins.md) e cada componente [](Concepts/components.md) que você usará em sua aplicação autônoma ou cliente/servidor.
 
 A página lista os elementos carregados pela aplicação 4D atual:
 
@@ -409,16 +410,16 @@ A página lista os elementos carregados pela aplicação 4D atual:
 
 * Coluna **Active** - Indica que os itens serão integrados no pacote de aplicação compilado. Todos os itens são marcados por padrão. Para excluir um plug-in ou um componente, desmarque a caixa de seleção ao lado dele.
 
-* **Plugins and components** column - Displays the name of the plug-in/component.
+* **Plugins e componentes** coluna - Exibe o nome do plug-in/component.
 
-* **ID** column - Displays the plug-in/component's identification number (if any).
+* **ID** coluna - Exibe o número de identificação do plug-in/componente (se houver).
 
-* **Type** column - Indicates the type of item: plug-in or component.
+* A coluna **Type** - Indica o tipo de item: plug-in ou componente.
 
 Se você quer integrar outros plugins ou componentes na aplicação executável, você só precisa colocá-los em uma pasta **PlugIns** ou **Components** ao lado da aplicação 4D Volume Desktop ou ao lado da aplicação 4D Server O mecanismo para copiar o conteúdo da pasta do aplicativo de origem (ver [Personalizando a pasta desktop de volume 4D](#customizing-4d-volume-desktop-folder)) pode ser usado para integrar qualquer tipo de arquivo na aplicação executável.
 
 Se houver um conflito entre duas versões diferentes do mesmo plug-in (uma carregada por 4D e a outra localizada na pasta do aplicativo de origem), prioridade vai para o plug-in instalado na pasta Volume Desktop/4D do Servidor. No entanto, se houver duas instâncias do mesmo componente, o aplicativo não abrirá.
-> The use of plug-ins and/or components in a deployment version requires the necessary license numbers.
+> O uso de plug-ins e/ou componentes em uma versão de desenvolvimento requer os números de licença necessários.
 
 ## Página Licenças e certificados
 
@@ -455,7 +456,7 @@ Depois que o aplicativo é construído, um novo arquivo de licença de implanta�
 
 ### Certificação de aplicativos OS X
 
-The application builder can sign merged 4D applications under macOS (single-user applications, 4D Server and client parts under macOS). A assinatura de um aplicativo autoriza que ele seja executado usando a funcionalidade de Gatekeeper do macOS quando a opção "Mac App Store e Desenvolvedores identificados" estiver selecionada (veja "Sobre Gatekeeper" abaixo).
+O construtor de aplicações pode assinar aplicações 4D mesclados no macOS (aplicações de usuário único, servidor 4D e partes de clientes sob macOS). A assinatura de um aplicativo autoriza que ele seja executado usando a funcionalidade de Gatekeeper do macOS quando a opção "Mac App Store e Desenvolvedores identificados" estiver selecionada (veja "Sobre Gatekeeper" abaixo).
 
 * Verifique a opção do Sinal **** para incluir certificação no procedimento de construtor de aplicativos para OS X. 4D irá verificar a disponibilidade de elementos necessários para a certificação quando a compilação ocorrer:
 
@@ -590,9 +591,9 @@ A gestão de conexões por aplicativos cliente cobre os mecanismos pelos quais u
 
 O procedimento de conexão para aplicativos cliente mesclados suporta casos onde o servidor dedicado não está disponível. O cenário de inicialização de um aplicação cliente 4D é o seguinte:
 
-* The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).  
-  OR  
-  If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
+* A aplicaçao cliente tenta se conectar ao servidor usando o serviço de descoberta (baseado no nome do servidor, transmitido na mesma subnet).  
+  OU  
+  Se informações válidas de conexão forem armazenadas no "EnginedServer. Arquivo DLink" dentro da aplicaçao cliente, a aplicaçao cliente tenta se conectar ao endereço especificado do servidor.
 * Se isso falhar, o aplicativo cliente tenta se conectar ao servidor usando informações armazenadas na pasta de preferências do usuário do aplicativo ("lastServer. ml" arquivo, veja a última etapa).
 * Se isso falhar, o aplicativo cliente exibe uma caixa de diálogo de erro de conexão.
   * Se o usuário clicar no **Select... Botão** (quando permitido pelo desenvolvedor 4D na etapa de compilação, veja abaixo), a caixa de diálogo padrão "conexão do servidor" é exibida.

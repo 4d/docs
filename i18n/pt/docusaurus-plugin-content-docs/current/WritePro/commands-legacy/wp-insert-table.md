@@ -48,9 +48,9 @@ No parâmetro *modo*, passe uma das seguintes constantes para indicar o modo de 
 Se não passar um parâmetro *atRange*, de forma pré-determinada, a tabela inserida é incluida na range resultante.
 * se *alvoObj* não for uma range, *rangeUpdate* é ignorada.
 
-Pode passar em *numCol* e *numFilas* o número de colunas e filas a definir na tabela. Como padrão, se forem omimtidos *numCol* e *numFilas*, se cria uma nova tabela com coluna 0 e fila 0\. A seguir, poderá agregar estes elementos utilizando o comando [WP Table append row](wp-table-append-row.md).
+Pode passar em *numCol* e *numFilas* o número de colunas e filas a definir na tabela. Como padrão, se forem omimtidos *numCol* e *numFilas*, se cria uma nova tabela com coluna 0 e fila 0\. A seguir, poderá agregar estes elementos utilizando o comando [WP Table append row](../commands/wp-table-append-row.md).
 
-O comando devolve a nova tabela como um objeto de tabela, que pode passar a seguir aos demais comandos de tabela WP. A tabela foi criada com os atributos predeterminados de fonte, borda e cor que pode personalizar utilizando o comando [WP SET ATTRIBUTES](wp-set-attributes.md).
+O comando devolve a nova tabela como um objeto de tabela, que pode passar a seguir aos demais comandos de tabela WP. A tabela foi criada com os atributos predeterminados de fonte, borda e cor que pode personalizar utilizando o comando [WP SET ATTRIBUTES](../commands/wp-set-attributes.md).
 
 #### Exemplo 
 
@@ -68,5 +68,5 @@ Resultado:
 
 #### Ver também 
 
-[WP Table append row](wp-table-append-row.md)  
+[WP Table append row](../commands/wp-table-append-row.md)  
 [WP Table get rows](wp-table-get-rows.md)  

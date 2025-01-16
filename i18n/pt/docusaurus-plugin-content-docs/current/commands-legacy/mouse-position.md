@@ -41,3 +41,12 @@ Ver o exemplo do comando [Pop up menu](pop-up-menu.md).
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 468 |
+| Thread-seguro | &cross; |
+
+

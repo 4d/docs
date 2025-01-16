@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Get print marker.Summary-->Get print marker コマンドを使用し、印刷中にマーカの現在位置を取得することができます。<!-- END REF-->
@@ -24,7 +21,7 @@ displayed_sidebar: docs
 このコマンドは次の2つの状況で使用することができます:
 
 * [PRINT SELECTION](print-selection.md "PRINT SELECTION")および[PRINT RECORD](print-record.md "PRINT RECORD")コマンドのコンテキストでのOn Headerフォームイベント中で。
-* [Print form](print-form.md "Print form")コマンドのコンテキストでのOn Printing Detailフォームイベント中で。
+* [Print form](../commands/print-form.md "Print form")コマンドのコンテキストでのOn Printing Detailフォームイベント中で。
 
 座標はピクセル単位で返されます (1ピクセル＝1/72インチ)。
 
@@ -64,3 +61,12 @@ displayed_sidebar: docs
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 708 |
+| スレッドセーフである | &cross; |
+
+

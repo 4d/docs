@@ -41,3 +41,12 @@ Ao iniciar seu banco de dados em Windows, você precisa verificar se uma bibliot
 
 [Data file](data-file.md)  
 [Structure file](structure-file.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 491 |
+| Thread-seguro | &check; |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->El comando QR SET HTML TEMPLATE define la plantilla HTML a utilizar para el área de informe rápido referenciada por *area*.<!-- END REF--> Esta plantilla se utilizará durante la creación del informe en formato HTML. 
@@ -76,3 +73,13 @@ Si pasa un número de *area* inválido, se genera el error -9850.
 #### Ver también 
 
 [QR Get HTML template](qr-get-html-template.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 750 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

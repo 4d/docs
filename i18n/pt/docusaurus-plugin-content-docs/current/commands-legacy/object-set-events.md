@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET EVENTS.Summary-->O comando **OBJECT SET EVENTS** modifica, para o processo atual, a configuração dos eventos formulário do formulário, dos objetos designados pelos parâmetros *objeto* e *\** .<!-- END REF-->
@@ -108,3 +105,12 @@ Desativação de um só evento do formulário sem modificar os outros:
 
 *Form event*  
 [OBJECT GET EVENTS](object-get-events.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1239 |
+| Thread-seguro | &cross; |
+
+

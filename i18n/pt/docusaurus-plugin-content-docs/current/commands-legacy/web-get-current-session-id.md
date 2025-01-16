@@ -23,3 +23,12 @@ Se este comando se chama fora do contexto de uma sessão web, devolve uma cadeia
 
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
 *Web Sessions Management (Legacy)*  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1162 |
+| Thread-seguro | &check; |
+
+

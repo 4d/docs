@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->El comando OBJECT MOVE permite mover los objetos en el formulario actual, definido por los parámetros *\** y *objeto, moveH* píxeles horizontalmente y *moveV* píxeles verticalmente.<!-- END REF-->   
@@ -44,7 +41,7 @@ Por defecto, los valores *moveH*, *moveV*, *redimH* y *redimV* modifican las coo
 Este comando funciona en los siguientes contextos:
 
 * Formularios de entrada en modo entrada de datos,
-* Formularios mostrados utilizando el comando [DIALOG](dialog.md "DIALOG"),
+* Formularios mostrados utilizando el comando [DIALOG](../commands/dialog.md "DIALOG"),
 * Encabezados y pies de página de formularios de salida mostrados por los comandos [MODIFY SELECTION](modify-selection.md "MODIFY SELECTION") o [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION"),
 * Formularios en curso de impresión.
 
@@ -69,3 +66,12 @@ La siguiente instrucción mueve el botón “boton\_1” a las siguientes coorde
 [OBJECT DUPLICATE](object-duplicate.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 664 |
+| Hilo seguro | &cross; |
+
+

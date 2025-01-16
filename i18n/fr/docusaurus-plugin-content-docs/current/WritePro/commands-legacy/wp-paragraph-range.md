@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-La commande **WP Paragraph range** retourne un objet plage qui référence uniquement les paragraphes qui intersectent l'*objCible* que vous avez passé en paramètre. La plage de paragraphes retournée peut être utilisée avec [WP GET ATTRIBUTES](wp-get-attributes.md) et [WP SET ATTRIBUTES](wp-set-attributes.md) afin de manipuler les attributs de paragraphes uniquement.
+La commande **WP Paragraph range** retourne un objet plage qui référence uniquement les paragraphes qui intersectent l'*objCible* que vous avez passé en paramètre. La plage de paragraphes retournée peut être utilisée avec [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) et [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) afin de manipuler les attributs de paragraphes uniquement.
 
 Dans *objCible*, vous pouvez passer :
 

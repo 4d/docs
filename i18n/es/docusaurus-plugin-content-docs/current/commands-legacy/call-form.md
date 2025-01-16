@@ -100,4 +100,13 @@ Luego puede añadir otros mensajes ejecutando el comando **CALL FORM** nuevament
 
   
 [CALL WORKER](call-worker.md)  
-[DIALOG](dialog.md)  
+[DIALOG](../commands/dialog.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1391 |
+| Hilo seguro | &check; |
+
+

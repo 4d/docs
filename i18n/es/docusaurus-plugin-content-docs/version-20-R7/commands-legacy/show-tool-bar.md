@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SHOW TOOL BAR.Summary-->El comando **SHOW TOOL BAR** maneja la visualización de las barras de herramientas personalizadas creadas por el comando [Open form window](open-form-window.md) para el proceso actual.<!-- END REF-->
@@ -28,3 +25,12 @@ Consulte el ejemplo del comando [HIDE TOOL BAR](hide-tool-bar.md).
 #### Ver también 
 
 [HIDE TOOL BAR](hide-tool-bar.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 433 |
+| Hilo seguro | &cross; |
+
+

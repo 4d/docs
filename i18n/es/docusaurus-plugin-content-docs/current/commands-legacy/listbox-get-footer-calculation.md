@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LISTBOX Get footer calculation.Summary-->El nuevo comando **LISTBOX Get footer calculation** devuelve el tipo de cálculo asociado al área de pie de página del list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  
@@ -33,3 +30,12 @@ Puede comparar el valor devuelto con las constantes del tema *List box cálculo 
 #### Ver también 
 
 [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1150 |
+| Hilo seguro | &cross; |
+
+

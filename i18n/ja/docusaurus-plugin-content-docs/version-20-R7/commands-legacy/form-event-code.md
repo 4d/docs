@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 互換性に関する注意 
 
 <!--REF #_command_.Form event code.Summary-->**Form event code** は以前のバージョンの4D では**Form event** という名前でした。<!-- END REF-->これはオブジェクト型を返す[FORM Event](form-event.md) コマンドが追加されたときに、分かりやすさのために名称が変更されました。
@@ -840,7 +837,6 @@ On Before Keystroke と On After Keystroke イベントを処理する方法は[
 
 #### 参照 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [Current form table](current-form-table.md)  
 [FILTER KEYSTROKE](filter-keystroke.md)  
@@ -849,3 +845,12 @@ On Before Keystroke と On After Keystroke イベントを処理する方法は[
 [Keystroke](keystroke.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
 [SET TIMER](set-timer.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 388 |
+| スレッドセーフである | &cross; |
+
+

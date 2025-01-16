@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->La commande **ST SET ATTRIBUTES** permet de modifier un ou plusieurs attribut(s) de style dans le ou les objet(s) de formulaire désigné(s) par *objet*.<!-- END REF--> 
@@ -103,3 +100,13 @@ A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une 
 
 [FONT LIST](font-list.md)  
 [ST GET ATTRIBUTES](st-get-attributes.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1093 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

@@ -1108,7 +1108,7 @@ Sin embargo, hay una diferencia entre ambas afirmaciones cuando la selección es
 
 #### Descripción
 
-La función `.getDataClass()` <!-- REF #EntitySelectionClass.getDataClass().Summary -->The `.getDataClass()` function<!-- END REF -->.
+La función `.isNew()` <!-- REF #EntitySelectionClass.getDataClass().Summary -->The `.getDataClass()` function<!-- END REF -->.
 
 Esta función es principalmente útil en el contexto del código genérico.
 

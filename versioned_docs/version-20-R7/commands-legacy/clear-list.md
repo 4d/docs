@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.CLEAR LIST.Summary-->The **CLEAR LIST** command deletes the hierarchical list whose list reference number you pass in *list*.<!-- END REF-->
@@ -55,3 +52,12 @@ See example for the [BLOB to list](blob-to-list.md) command.
 [BLOB to list](blob-to-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 377 |
+| Thread safe | &cross; |
+
+

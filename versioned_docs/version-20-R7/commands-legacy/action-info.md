@@ -65,3 +65,12 @@ You want to know if the copy action is available (i.e. if some data is selected)
 
 [INVOKE ACTION](invoke-action.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1442 |
+| Thread safe | &cross; |
+
+

@@ -1,6 +1,6 @@
 ---
 id: onLosingFocus
-title: Sur perte focus
+title: On Losing focus
 ---
 
 | Code | Peut être appelé par                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Définition                        |

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Printing page.Summary-->Printing page devolvido o número da página em impressão.<!-- END REF--> Pode ser utilizado só quando esteja imprimindo com [PRINT SELECTION](print-selection.md) ou com o menu Impressão no ambiente Usuário.
@@ -40,3 +37,12 @@ O exemplo a seguir muda a posição dos números de página em um relatório de 
 #### Ver também 
 
 [PRINT SELECTION](print-selection.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 275 |
+| Thread-seguro | &cross; |
+
+

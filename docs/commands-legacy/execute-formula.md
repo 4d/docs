@@ -62,3 +62,12 @@ You want to execute a formula including calls to 4D commands and tables. Since t
 [Command name](command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 63 |
+| Thread safe | &check; |
+
+

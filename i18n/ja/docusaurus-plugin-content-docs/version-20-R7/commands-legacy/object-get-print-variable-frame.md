@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->**OBJECT GET PRINT VARIABLE FRAME**コマンドは、引数 *object* と *\** で指定したオブジェクトの印刷時可変オプションのカレントの設定を取得します。<!-- END REF-->
@@ -39,3 +36,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1241 |
+| スレッドセーフである | &cross; |
+
+

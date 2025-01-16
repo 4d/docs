@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->El comando **CONVERT COORDINATES**convierte las coordenadas (x,y) de un punto de un sistema de coordenadas a otro.<!-- END REF--> Los sistemas de coordenadas de entrada y salida soportados son los formularios (y subformularios), las ventanas y la pantalla. Por ejemplo, puede utilizar este comando para obtener las coordenadas en el formulario principal de un objeto perteneciente a un subformulario. Este principio facilita la creación de menús contextuales en cualquier posición personalizada.
@@ -87,3 +84,12 @@ Usted quiere abrir una ventana emergente en la posición del cursor del ratón. 
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1365 |
+| Hilo seguro | &cross; |
+
+

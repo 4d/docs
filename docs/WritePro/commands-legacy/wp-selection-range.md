@@ -30,7 +30,7 @@ If you pass the optional *\** parameter, you indicate that *wpArea* is a form ob
 
 **Note**: This command can only be used if the *wpArea* is associated with a form object (*i.e.* it is displayed in the current form/page).
 
-If an anchored image (picture at a fixed location) is selected in *wpArea*, **WP Selection range** returns a picture reference object and not a range object (for more information, please refer to the [WP Add picture](wp-add-picture.md) command description). Otherwise, **WP Selection range** returns a new range object. For more information on range objects, please refer to *Range handling commands*.
+If an anchored image (picture at a fixed location) is selected in *wpArea*, **WP Selection range** returns a picture reference object and not a range object (for more information, please refer to the [WP Add picture](../commands/wp-add-picture.md) command description). Otherwise, **WP Selection range** returns a new range object. For more information on range objects, please refer to *Range handling commands*.
 
 #### Example 
 

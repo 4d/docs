@@ -8,7 +8,7 @@ Windows において、組みこみ 4Dアプリケーションを SDI (シング
 
 :::info
 
-SDI/MDI という概念は macOS には存在しません。 この機能は Windows用アプリケーション専用のもので、関連オプションは macOS においてはすべて無視されます。
+The concept of sdi.mdI does not exist on macOS. この機能は Windows用アプリケーション専用のもので、関連オプションは macOS においてはすべて無視されます。
 
 :::
 

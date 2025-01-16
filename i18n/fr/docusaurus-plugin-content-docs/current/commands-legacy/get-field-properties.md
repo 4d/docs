@@ -74,3 +74,12 @@ L'exemple suivant récupère dans les variables *vType*, *vLong*, *vIndex*, *vUn
 [Field](field.md)  
 [Field name](field-name.md)  
 [SET INDEX](set-index.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 258 |
+| Thread safe | &check; |
+
+

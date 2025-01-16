@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->**INVOKE ACTION**コマンドは*action* 引数で定義された標準アクションを、任意の*target* 引数で指定したコンテキストでトリガーします。<!-- END REF-->
@@ -66,3 +63,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Action info](action-info.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1439 |
+| スレッドセーフである | &cross; |
+
+

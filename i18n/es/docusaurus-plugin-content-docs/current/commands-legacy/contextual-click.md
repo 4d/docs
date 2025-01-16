@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Contextual click.Summary-->El comando Contextual click devuelve Verdadero si un se ha efectuado un clic contextual:
@@ -41,5 +38,14 @@ Este método, combinado con un área desplegable, le permite cambiar el valor de
 
 #### Ver también 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Right click](right-click.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 713 |
+| Hilo seguro | &cross; |
+
+

@@ -805,7 +805,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 データコンテキストを使用した表組みを作成します:
 
 ```4d
-// データコンテキストを設定します
+// Set a data context
 var $data : Object
 
 $data:=New object()
@@ -816,16 +816,16 @@ $data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"
 
 VP SET DATA CONTEXT("ViewProArea"; $data)
 
-// 表の列を定義します
+// Define the columns for the table
 var $options : cs.ViewPro.TableOptions
 
 $options:=cs.ViewPro.TableOptions.new()
 $options.tableColumns:=New collection()
-$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "First name"; "dataField"; "firstName"))
-$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Last name"; "dataField"; "lastName"))
-$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Email"; "dataField"; "email"))
+$options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "First name"; "dataField"; "firstName"))
+$options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "Last name"; "dataField"; "lastName"))
+$options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "Email"; "dataField"; "email"))
 
-// "people" コレクションから表を作成します
+// Create a table from the "people" collection
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
 ```
 
@@ -6397,12 +6397,12 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 | セレクター                 | 説明                                                                                                         | *vPos* で利用可 | *hPos* で利用可 |
 | --------------------- | ---------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| `vk position bottom`  | セルあるいは行の下辺に対する垂直揃え。                                                                                        | ○           |             |
-| `vk position center`  | 中央揃え。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 - セルあるいは行</li><li>横方向の表示位置 - セルあるいはカラム</li>                        | ○           | ○           |
-| `vk position left`    | セルあるいはカラムの左辺に対する水平揃え。                                                                                      |             | ○           |
-| `vk position nearest` | 一番近い基準に対する位置揃え (上、下、左、右、中央)。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 (上、中央、下) - セルあるいは行 </li><li>横方向の表示位置 (左、中央、右) - セルあるいはカラム</li> | ○           | ○           |
-| `vk position right`   | セルあるいはカラムの右辺に対する水平揃え。                                                                                      |             | ○           |
-| `vk position top`     | セルあるいは行の上辺に対する垂直揃え。                                                                                        | ○           |             |
+| `vk position bottom`  | セルあるいは行の下辺に対する垂直揃え。                                                                                        | X           |             |
+| `vk position center`  | 中央揃え。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 - セルあるいは行</li><li>横方向の表示位置 - セルあるいはカラム</li>                        | X           | X           |
+| `vk position left`    | セルあるいはカラムの左辺に対する水平揃え。                                                                                      |             | X           |
+| `vk position nearest` | 一番近い基準に対する位置揃え (上、下、左、右、中央)。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 (上、中央、下) - セルあるいは行 </li><li>横方向の表示位置 (左、中央、右) - セルあるいはカラム</li> | X           | X           |
+| `vk position right`   | セルあるいはカラムの右辺に対する水平揃え。                                                                                      |             | X           |
+| `vk position top`     | セルあるいは行の上辺に対する垂直揃え。                                                                                        | X           |             |
 > このコマンドは、表示位置の変更が可能な場合にのみ動作します。 たとえば、*rangeObj* が現在のシートの A1 セル (先頭カラムと先頭行) の場合、すでに縦および横方向の限界に接している (つまり、上にも左にもこれ以上スクロールできない) ため、表示位置を変更しても何も変わりません。 *rangeObj* が C3 セルの場合に、表示位置を中央または右下に変えても同じことが言えます。 表示は変更されません。
 
 #### 例題

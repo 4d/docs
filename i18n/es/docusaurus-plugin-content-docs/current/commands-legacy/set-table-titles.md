@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET TABLE TITLES.Summary-->SET TABLE TITLES permite ocultar, renombrar y reordenar las tablas de su base cuando aparecen en las cajas de diálogo estándar de 4D en el entorno Aplicación(es decir, cuando el modo de inicio es **Aplicación**, o después de seleccionar **Probar aplicación** en el menú **Ejecutar**).<!-- END REF--> Por ejemplo, este comando puede modificar la visualización de tablas en el editor búsquedas en modo Aplicación.
@@ -185,3 +182,12 @@ Desea eliminar todos los nombres de tablas y campos personalizados definidos:
 [Parse formula](parse-formula.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [Table name](table-name.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 601 |
+| Hilo seguro | &cross; |
+
+

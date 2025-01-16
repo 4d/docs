@@ -42,7 +42,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [**OB
 
 ## Italique
 
-Le texte sélectionné est légèrement penché vers la droite.
+Fait pencher le texte sélectionné légèrement vers la droite.
 
 Vous pouvez également définir cette propriété à l'aide de la commande [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 > This is normal text.<br/> *This is text in italics.*
@@ -245,7 +245,7 @@ Emplacement horizontal du texte dans la zone où il apparait.
 :::note
 
 - "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
-- "justify" is only supported by [inputs](input_overview.md) and [text areas](text.md)
+- "justify" n'est pris en charge que par [les entrées](input_overview.md) et [les zones de texte](text.md)
 
 :::
 
@@ -287,7 +287,7 @@ Indique une expression ou une variable qui sera évaluée pour chaque ligne affi
 | Nom de propriété | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | stroke           | string  | Couleur de la police. Toute couleur CSS (ex : "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                        |
-| border-style     | string  | Couleur de fond. Toute couleur CSS (ex : "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                             |
+| fill             | string  | Couleur de fond. Toute couleur CSS (ex : "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                             |
 | fontStyle        | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | fontWeight       | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | textDecoration   | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                                                        |

@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Summary-->The OBJECT GET RGB COLORS command returns the foreground and background colors of the object or group of objects designated by *object*.<!-- END REF-->
@@ -38,3 +35,12 @@ For more information about the format of the *foregroundColor*, *backgroundColor
 #### See also 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1074 |
+| Thread safe | &cross; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Summary-->**OBJECT SET ENTERABLE** rend saisissable ou non saisissable le ou les objet(s) de formulaire désigné(s) par *objet* et peut fixer l'attribut saisissable.<!-- END REF-->
@@ -75,3 +72,12 @@ Voici la méthode objet d’une case à cocher placée dans l’en-tête d’une
 
 [OBJECT Get enterable](object-get-enterable.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 238 |
+| Thread safe | &cross; |
+
+

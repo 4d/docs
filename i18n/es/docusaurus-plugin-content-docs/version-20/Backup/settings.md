@@ -118,7 +118,7 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 
 #### Restaurar la última copia de seguridad si la base de datos está dañada
 
-When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the application, if an anomaly is detected (corrupted file, for example) during application launch. No se requiere ninguna intervención por parte del usuario; sin embargo, la operación se registra en el diario de copias de seguridad.
+Cuando se marca esta opción, el programa inicia automáticamente la restauración del archivo de datos de la última copia de seguridad válida de la aplicación, si se detecta una anomalía (archivo dañado, por ejemplo) durante el lanzamiento de la aplicación. No se requiere ninguna intervención por parte del usuario; sin embargo, la operación se registra en el diario de copias de seguridad.
 
 #### Integrar los últimos registros si la base de datos está incompleta
 

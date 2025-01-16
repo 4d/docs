@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get text orientation.Summary-->El comando **OBJECT Get text orientation** devuelve el valor de orientación actual aplicado al texto del objeto o de los objetos designado(s) por los parámetros *objeto* y *\**.<!-- END REF-->
@@ -58,3 +55,12 @@ Cuando se ejecuta el formulario, si se llama a la siguiente declaración:
 #### Ver también 
 
 [OBJECT SET TEXT ORIENTATION](object-set-text-orientation.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1283 |
+| Hilo seguro | &cross; |
+
+

@@ -69,3 +69,12 @@ Création et remplissage d’un tableau local d’objets :
 [C\_OBJECT](c-object.md)  
 *Créer des tableaux*  
 *Objets (Langage)*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1221 |
+| Thread safe | &check; |
+
+

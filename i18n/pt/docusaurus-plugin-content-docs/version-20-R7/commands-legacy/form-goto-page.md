@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** modifica a página atual de um formulário para mostrar a página especificada por *numPag*.<!-- END REF-->
@@ -51,3 +48,12 @@ O exemplo a seguir é um método de objeto para um botão que mostra uma página
 [LAST PAGE](last-page.md)  
 [NEXT PAGE](next-page.md)  
 [PREVIOUS PAGE](previous-page.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 247 |
+| Thread-seguro | &cross; |
+
+

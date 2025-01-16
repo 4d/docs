@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 **WP Text range**コマンドは*targetObj* 引数の4D Write Proエリア内から、*startRange* と*endRange* の間に含まれるセレクションを新しいレンジオブジェクトを返します。
 
-**4D Write Pro レンジオブジェクト**を使用するとテキストのセレクションの属性を管理することができます(具体的には[WP GET ATTRIBUTES](wp-get-attributes.md) and [WP SET ATTRIBUTES](wp-set-attributes.md) コマンドを使用します)。詳細な情報については、*セレクションレンジコマンド* の段落を参照してください。
+**4D Write Pro レンジオブジェクト**を使用するとテキストのセレクションの属性を管理することができます(具体的には[WP GET ATTRIBUTES](../commands/wp-get-attributes.md) and [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) コマンドを使用します)。詳細な情報については、*セレクションレンジコマンド* の段落を参照してください。
 
 *targetObj* 引数には以下のものを渡すことができます:
 

@@ -42,3 +42,12 @@ En el parámetro *formato*, pase el tipo del parámetro del que quiere conocer e
 #### Ver también 
 
 [OBJECT SET FORMAT](object-set-format.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 994 |
+| Hilo seguro | &check; |
+
+

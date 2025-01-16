@@ -70,27 +70,27 @@ La ventana de error de sintaxis propone varias opciones:
 
 - **Continuar**: la ejecución continua. La línea con el error puede ser parcialmente ejecutada, dependiendo de donde se encuentre el error. Continúe con precaución: el error puede impedir que el resto de su método se ejecute correctamente. Recomendamos hacer clic en **Continuar** sólo si el error está en una llamada trivial (como `SET WINDOW TITLE`) que no impide ejecutar y probar el resto de su código.
 
-> Consejo: para ignorar un error que ocurre repetidamente (por ejemplo, en bucles), puede convertir el botón **Continuar** en un botón **Ignorar**. Mantenga presionada la tecla **Alt** (Windows) u **Opción** (macOS) y haga clic en el botón **Continuar** la primera vez que aparece. La etiqueta del botón cambia a **Ignorar** si el diálogo es llamado de nuevo por el mismo error.
+> Consejo: para ignorar un error que ocurre repetidamente (por ejemplo, en bucles), puede convertir el botón **Continuar** en un botón **Ignorar**. Hold down **Alt** (Windows) or **Option** (macOS) key and click the **Continue** button the first time it appears. The button label changes to **Ignore** if the dialog is called again for the same error.
 
-- **Abandonar**: detiene la ejecución del método y devuelve al estado antes del inicio de la ejecución del método:
+- **Abort**: Stops method execution and returns to the state before the method started executing:
 
   - Si un método formulario o método objeto se está ejecutando en respuesta a un evento, se detiene y se vuelve al formulario.
   - Si el método se está ejecutando desde dentro del entorno de la aplicación, volverá a ese entorno.
 
-- **Copiar**: copia la información de depuración en el portapapeles. La información describe el entorno interno del error (número, componente interno, etc.). Está formateado como texto tabulado.
+- **Copy**: Copies the debugging information into the clipboard. La información describe el entorno interno del error (número, componente interno, etc.). Está formateado como texto tabulado.
 
-- **Guardar...**: guarda el contenido de la ventana de error de sintaxis y la cadena de llamadas en un archivo `.txt`.
+- **Save...**: Saves the contents of the syntax error window and the call chain in a `.txt` file.
 
 ## Debugger
 
-Un error común de los principiantes al tratar con la detección de errores es hacer clic en **Abandonar** en la ventana de error de sintaxis, volver al editor de código, y tratar de averiguar lo que está pasando mirando el código. ¡No lo haga! Ahorrará mucho tiempo y energía utilizando siempre el **Depurador**.
+A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. ¡No lo haga! Ahorrará mucho tiempo y energía utilizando siempre el **Depurador**.
 
 El depurador le permite pasar lentamente por los métodos. Muestra toda la información que necesita para entender por qué ha ocurrido un error. Una vez que tiene esta información, usted sabe cómo arreglar el error.
 
-Otra razón para usar el Depurador es el desarrollo del código. A veces se puede escribir un algoritmo que es más complejo de lo habitual. A pesar de todos los sentimientos de cumplimiento, no puede estar totalmente seguro de que su codificación sea 100% correcta. En lugar de ejecutarlo "ciego", puede utilizar el comando `TRACE` al comienzo de su código, luego ejecutarlo paso a paso para mantener un ojo en lo que sucede.
+Otra razón para usar el Depurador es el desarrollo del código. A veces se puede escribir un algoritmo que es más complejo de lo habitual. A pesar de todos los sentimientos de cumplimiento, no puede estar totalmente seguro de que su codificación sea 100% correcta. Instead of running it "blind", you can use the `TRACE` command at the beginning of your code, then execute it step by step to keep an eye on what happens.
 
 ## Rupturas
 
 En el proceso de depuración, puede que necesite saltar el seguimiento de algunas partes del código hasta una línea determinada. O, puede querer rastrear el código cuando una expresión dada tiene un determinado valor (e.. "$myVar > 1000"), o cada vez que se llama un comando 4D específico.
 
-Estas necesidades están cubiertas por **puntos de interrupción** y las funciones de **captura de comando**. Pueden configurarse desde el editor de código, el depurador o el explorador de ejecución.
+These needs are covered by **breakpoints** and **command catching** features. Pueden configurarse desde el editor de código, el depurador o el explorador de ejecución.

@@ -105,3 +105,13 @@ displayed_sidebar: docs
 以下の様な配列が返されます:
 
 ![](../assets/en/commands/pict1213741.en.png)
+
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1277 |
+| スレッドセーフである | &check; |
+
+

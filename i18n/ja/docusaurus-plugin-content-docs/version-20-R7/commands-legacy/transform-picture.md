@@ -21,9 +21,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.TRANSFORM PICTURE.Summary-->TRANSFORM PICTURE コマンドは、*picture*引数に渡したピクチャに、*operator*タイプの変換を適用するために使用します。<!-- END REF--> 
-
-**Note:** このコマンドはピクチャ変換演算子 (+/ 等, [C\_BOOLEAN](c-boolean.md) の節参照) で提供される機能を拡張します。これらの演算子は4D でも利用可能です。
+<!--REF #_command_.TRANSFORM PICTURE.Summary-->TRANSFORM PICTURE コマンドは、*picture*引数に渡したピクチャに、*operator*タイプの変換を適用するために使用します。<!-- END REF-->このコマンドはピクチャ変換演算子 (+/ 等, [C\_BOOLEAN](c-boolean.md) の節参照) で提供される機能を拡張します。これらの演算子は4D でも利用可能です。
 
 コマンド実行後、ソース*picture*は 直接更新されます。一部の操作は可逆的で、反対の処理を行うか“Reset”処理を行うことで元に戻すことができます。例えば、1%に縮小されたピクチャ は後で100倍することで、変換されることなく元のサイズに戻せます。変換は元のピクチャタイプを変更しません。例えばベクタピクチャは変換後もベクタピ クチャです。 
 
@@ -73,3 +71,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [COMBINE PICTURES](combine-pictures.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 988 |
+| スレッドセーフである | &check; |
+
+

@@ -25,3 +25,12 @@ Cette commande permet de détecter d’éventuelles suppressions de champs, ce q
 
 [Last table number](last-table-number.md)  
 [Is table number valid](is-table-number-valid.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1000 |
+| Thread safe | &check; |
+
+

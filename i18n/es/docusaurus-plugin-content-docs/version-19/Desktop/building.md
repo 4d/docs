@@ -414,7 +414,7 @@ La página lista los elementos cargados por la aplicación 4D actual:
 
 * Columna **ID** - Muestra el número de identificación del plug-in/componente (si existe).
 
-* **Tipo** columna - Indica el tipo de elemento: plug-in o componente.
+* La columna**Type** Indica el tipo de elemento: plug-in o componente.
 
 Si desea integrar otros plug-ins o componentes en la aplicación ejecutable, sólo tiene que colocarlos en una carpeta **PlugIns** o **Components** junto a la aplicación 4D Volume Desktop o junto a la aplicación 4D Server. El mecanismo para copiar el contenido de la carpeta de la aplicación fuente (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) puede utilizarse para integrar todo tipo de archivo en la aplicación ejecutable.
 

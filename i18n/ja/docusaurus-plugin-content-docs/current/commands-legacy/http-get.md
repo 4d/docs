@@ -29,9 +29,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.HTTP Get.Summary-->**HTTP Get**コマンドは指定したURLにHTTP GETリクエストを送信し、HTTPサーバーからのレスポンスを処理します。<!-- END REF-->
-
-*url* 引数にはリクエストの送信先URLを渡します。シンタックスは以下の通りです:
+<!--REF #_command_.HTTP Get.Summary-->**HTTP Get**コマンドは指定したURLにHTTP GETリクエストを送信し、HTTPサーバーからのレスポンスを処理します。<!-- END REF-->引数にはリクエストの送信先URLを渡します。シンタックスは以下の通りです:
 
 ```RAW
 http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
@@ -105,3 +103,13 @@ RFCを取得する:
 #### 参照 
 
 [HTTP Request](http-request.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1157 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+
+

@@ -58,3 +58,12 @@ Usted desea seleccionar estilos de la familia de fuentes "Verdana" (si está dis
 #### Ver también 
 
 [FONT LIST](font-list.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1362 |
+| Hilo seguro | &check; |
+
+

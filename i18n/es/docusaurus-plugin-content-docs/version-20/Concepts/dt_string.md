@@ -38,8 +38,8 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 
 | Operación              | Sintaxis         | Devuelve | Expression              | Valor    |
 | ---------------------- | ---------------- | -------- | ----------------------- | -------- |
-| Concatenación          | Cadena + Cadena  | String   | "abc" + "def"           | "abcdef" |
-| Repetición             | Cadena * Número  | String   | "ab" * 3                | "ababab" |
+| Concatenación          | Cadena + Cadena  | Text     | "abc" + "def"           | "abcdef" |
+| Repetición             | Cadena * Número  | Text     | "ab" * 3                | "ababab" |
 | Igual                  | Cadena = Cadena  | Boolean  | "abc" = "abc"           | True     |
 |                        |                  |          | "abc" = "abd"           | False    |
 | Desigualdad            | Cadena # Cadena  | Boolean  | "abc" # "abd"           | True     |

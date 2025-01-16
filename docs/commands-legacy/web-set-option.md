@@ -80,3 +80,12 @@ A log entry looks like this:
 
 [WEB GET OPTION](web-get-option.md)  
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 5 |
+| Thread safe | &check; |
+
+

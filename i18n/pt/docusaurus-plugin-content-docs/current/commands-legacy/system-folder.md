@@ -49,3 +49,12 @@ Se omitido o parâmetro *tipo*, a função devolverá a rota à pasta sistema at
 
 [Get 4D folder](get-4d-folder.md)  
 [Temporary folder](temporary-folder.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 487 |
+| Thread-seguro | &check; |
+
+

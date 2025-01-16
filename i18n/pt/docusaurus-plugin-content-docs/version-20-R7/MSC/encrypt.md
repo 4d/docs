@@ -103,7 +103,7 @@ Esta operação remove toda a encriptação do ficheiro de dados. Se já não pr
 1. Haga clic en **Desencriptar todos los datos**.
 2. Introduzir a chave de encriptação de dados atual (ver Fornecer a chave de encriptação de dados atual).
 
-The data file is fully decrypted and a confirmation message is displayed:
+O arquivo de dados é totalmente descriptografado e uma mensagem de confirmação é exibida:
 ![](../assets/en/MSC/MSC_encrypt10.png)
 
 > Quando o arquivo de dados for desencriptado, o estado de encriptação das tabelas não corresponde aos seus atributos Encryptable. Para restablecer un estado coincidente, debe anular la selección de todos los atributos **Encriptable** al nivel de la estructura de la base.

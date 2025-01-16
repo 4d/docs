@@ -19,7 +19,7 @@ title: Restaurar um backup
 
 Pode restaurar manualmente os conteúdos de um arquivo gerado pelo módulo de cópia de segurança. Uma restauração manual pode ser necessária, por exemplo, para restaurar os conteúdos completos de um arquivo (arquivos projetos e arquivos anexos) ou, para o propósito de realizar pesquisas entre os arquivos. A restauração manual pode também ser realizada junto com a integração do arquivo de histórico atual.
 
-The manual restore of backups can be carried out either via the standard Open document dialog box, or via the [Restore](MSC/restore) page of the MSC. A restauração através do MSC oferece mais opções e permite pré-visualizar os conteúdos dos arquivos. Restoring via the MSC provides more options and allows the archive contents to be previewed.
+A restauração manual de backups pode ser realizada via a caixa de diálogo de Abertura de documento ou através da página [Restaurar](MSC/restore) do CSM. A restauração através do MSC oferece mais opções e permite pré-visualizar os conteúdos dos arquivos. Restoring via the MSC provides more options and allows the archive contents to be previewed.
 
 Para restaurar um banco de dados manualmente via uma caixa de diálogo padrão:
 

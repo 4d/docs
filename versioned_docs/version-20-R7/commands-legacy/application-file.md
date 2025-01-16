@@ -16,8 +16,6 @@ displayed_sidebar: docs
 #### Description 
 
 <!--REF #_command_.Application file.Summary-->The Application file command returns the long name of the 4D executable file or application you are running.<!-- END REF--> 
-
-*On Windows*  
 If, for example, you are running 4D located at \\PROGRAMS\\4D on the volume E, the command returns E:\\PROGRAMS\\4D\\4D.EXE.
 
 *On Macintosh*  
@@ -41,3 +39,12 @@ At startup on Windows, you need to check if a DLL Library is correctly located a
 
 [Data file](data-file.md)  
 [Structure file](structure-file.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 491 |
+| Thread safe | &check; |
+
+

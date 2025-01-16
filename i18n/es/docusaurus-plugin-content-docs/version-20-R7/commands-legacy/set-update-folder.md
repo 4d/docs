@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET UPDATE FOLDER.Summary-->El comando **SET UPDATE FOLDER** especifica la carpeta que contiene la actualización de la aplicación 4D fusionada actual.<!-- END REF--> Esta información se almacena en la sesión 4D hasta que se llama el método [RESTART 4D](restart-4d.md). Si se sale de la aplicación manualmente, esta información no se conserva.  
@@ -56,3 +53,13 @@ Usted creó una carpeta "MyUpdates" en su disco, en la cual ubicó una nueva ver
 
 [Get last update log path](get-last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1291 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK, error |
+
+

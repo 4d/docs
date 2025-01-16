@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Create document.Summary-->**Create document**コマンドは新しいドキュメントを作成し、ドキュメント参照番号を返します。<!-- END REF--> 
-
-*document*には新しいドキュメントの名前、または完全なパス名を渡します。*document*が既にディスクに存在する場合、それは上書きされます。しかし*document* がロックされていたり既に開いている場合は、エラーが生成されます。
+<!--REF #_command_.Create document.Summary-->**Create document**コマンドは新しいドキュメントを作成し、ドキュメント参照番号を返します。<!-- END REF-->がロックされていたり既に開いている場合は、エラーが生成されます。
 
 *document*に空の文字列を渡すと、別名で保存ダイアログボックスが表示され、作成したいドキュメントの名前を入力できます。ダイアログをキャンセルした場合ドキュメントは作成されません。**Create document**はヌルDocRefを返し、OK変数に0を代入します。
 
@@ -71,3 +69,13 @@ Windowsでは、Windowsのファイル拡張子を渡すか、*\_o\_MAP FILE TYP
 
 [Append document](append-document.md)  
 [Open document](open-document.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 266 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、Document、error |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR Get drop column.Summary-->O comando QR Get drop column devolve um valor dependendo de onde se realiza uma ação soltar:
@@ -29,3 +26,13 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 #### Ver também 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 747 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

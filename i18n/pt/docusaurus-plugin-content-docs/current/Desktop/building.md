@@ -20,7 +20,7 @@ O construtor de aplicações permite-lhe:
 
 A cria de um pacote de projetos pode ser efetuada utilizando:
 
-- ou o comando [`BUILD APPLICATION`] (https://doc.4d.com/4dv20/help/command/en/page871.html),
+- ou o comando [`BUILD APPLICATION`](../commands-legacy/build-application.md),
 - ou na [caixa de diálogo Criar aplicativo] (#application-builder).
 
 :::tip
@@ -45,9 +45,9 @@ A geração do banco de dados só pode ser realizado quando o banco de dados for
 
 Cada parâmetro do geração da aplicação é armazenado como uma chave XML no arquivo XML `buildApp.4DSettings`, localizado na [pasta `Settings` do projeto](../Project/architecture.md#settings-1).
 
-Os parâmetros padrão são utilizados na primeira vez que a caixa de diálogo Criar aplicação é utilizada. O conteúdo do arquivo de projeto é atualizado, se necessário, quando você clica em **Build** ou **Save settings**. Você pode definir vários outros arquivos de configurações XML para o mesmo projeto e utilizá-los utilizando o comando [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/pt-BR/page871.html).
+Os parâmetros padrão são utilizados na primeira vez que a caixa de diálogo Criar aplicação é utilizada. O conteúdo do arquivo de projeto é atualizado, se necessário, quando você clica em **Build** ou **Save settings**. You can define several other XML settings file for the same project and employ them using the [`BUILD APPLICATION`](../commands-legacy/build-application.md) command.
 
-As chaves XML oferecem opções adicionais além daquelas exibidas na caixa de diálogo Criar aplicativo. A descrição dessas chaves estão detalhadas no manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html).
+As chaves XML oferecem opções adicionais além daquelas exibidas na caixa de diálogo Criar aplicativo. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual.
 
 ### Arquivo histórico
 
@@ -59,9 +59,9 @@ Quando uma aplicação é construída, 4D gera um arquivo de log chamado _BuildA
 - Todos os erros que forem produzidos.
 - Quaisquer problemas de assinatura (por exemplo, um plug-in não assinado).
 
-A verificação desse arquivo pode ajudá-lo a economizar tempo durante as etapas de implantação subsequentes, por exemplo, se você pretende notarizar o aplicativo.
+Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to [notarize](#about-notarization) your application on macOS.
 
-> Use o comando `Get 4D file (Build application log file)` para obter o local do arquivo de registro.
+> Use the `Get 4D file(Build application log file)` statement to get the log file location.
 
 ## Nome da aplicação e pasta de destino
 
@@ -85,9 +85,9 @@ Esta funcionalidad crea un archivo _.4dz_ en una carpeta `Compiled Database/<pro
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
-Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. A .4dz file is essentially a zipped (packed) version of the project folder. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar.
+Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. .4dz files can be used by 4D Server, 4D Volume Desktop (merged applications), and 4D. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar.
 
-> Quando gerar arquivos .4dz, 4D usa um formato zip **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. Se não quiser usar esse formato padrão, adicione a chave XML `UseStandardZipFormat` com o valor `False` em seu arquivo [`buildApp.4DSettings`](#build-application-settings) (para obter mais informações, consulte o manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
+> Quando gerar arquivos .4dz, 4D usa um formato zip **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual).
 
 #### Incluir pastas relacionadas
 
@@ -99,16 +99,20 @@ Constrói um componente compilado a partir da estrutura.
 
 Um [componente](../Extensions/develop-components.md) é um projeto padrão 4D onde foram desenvolvidas funcionalidades específicas. Once the component has been configured and [installed in another 4D project](../Project/components.md#basics) (the host application project), its functionalities are accessible from the host project.
 
-Se você nomeou seu aplicativo, _MyComponent_, 4D irá criar uma pasta de _Componentes_ contendo a pasta _MyComponent.4dbase_:
+If you have named your application _MyComponent_, 4D will automatically create a _Components_ folder with the following structure:
 
-`<destination>/Components/MyComponent.4dbase/MyComponent.4DZ`.
+`<destination_folder>/Components/MyComponent.4dbase/Contents/`.
 
-A pasta _MyComponent.4dbase_ contém:
+The _MyComponent.4dbase_ folder is the [package folder of the compiled component](../Project/components.md#package-folder).
 
-- _MyComponent.4DZ_ file
+The _Contents_ folder contains:
+
+- _MyComponent.4DZ_ file - the [compiled structure](#build-compiled-structure).
 - Uma pasta _Resources_ - quaisquer Recursos associados são automaticamente copiados para esta pasta. Quaisquer outros componentes e/ou pastas de plug-ins não são copiados (um componente não pode utilizar plug-ins ou outros componentes).
-
-A pasta _MyComponent.4dbase_ é a [pasta do pacote do componente compilado](../Project/components.md).
+- An _Info.plist_ file - this file is required to build [notarizeable and stapleable](#about-notarization) components for macOS (it is ignored on Windows). The following [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) are prefilled:
+  - `CFBundleDisplayName` and `CFBundleName` for the application name,
+  - `NSHumanReadableCopyright`, can be [set using an XML key](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html).
+  - `CFBundleShortVersionString` and `CFBundleVersion` for the application version (x.x.x format, e.g. 1.0.5), can be [set using an XML key](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html).
 
 ## Página Aplicação
 
@@ -118,20 +122,18 @@ Essa guia permite que você crie uma versão autônoma e de usuário único do s
 
 ### Criar uma aplicação autónoma
 
-Ao marcar a opção **Construir aplicação autônoma** e clicar em **Construir**, será criada uma aplicação autônoma (clique duplo) diretamente do seu projeto de aplicação.
+Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project. No Windows, esta funcionalidade cria um ficheiro executável (.exe). Em macOS, trata da criação de pacotes de software.
 
-Os seguintes elementos são necessários para a construção:
+The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine). A funcionalidade fornecida pelo ficheiro 4D Volume Desktop está ligada à oferta do produto a que se subscreveu. Para mais informações sobre este ponto, consulte a documentação de vendas e a [4D Store](http://www.4d.com/).
 
-- 4D Volume Desktop (o motor de base de dados 4D),
-- uma [licença apropriada](#licenses)
+- Você pode definir um arquivo de dados padrão ou permitir que os usuários [criem e usem seu próprio arquivo de dados](#management-of-data-files).
+- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**About licenses**](#about-licenses) paragraph).
 
-No Windows, esta funcionalidade cria um ficheiro executável (.exe). Em macOS, trata da criação de pacotes de software.
-
-O princípio consiste em fundir um ficheiro de estrutura compilado com 4D Volume Desktop. A funcionalidade fornecida pelo ficheiro 4D Volume Desktop está ligada à oferta do produto a que se subscreveu. Para mais informações sobre este ponto, consulte a documentação de vendas e a [4D Store](http://www.4d.com/).
-
-Você pode definir um arquivo de dados padrão ou permitir que os usuários [criem e usem seu próprio arquivo de dados](#management-of-data-files).
+:::note
 
 É possível [automatizar a atualização de aplicativos mesclados de usuário único](#atualização-automática-de-aplicativos-de-servidor-ou-de-usuário-único) por meio de uma sequência de comandos de linguagem.
+
+:::
 
 #### Localização do 4D Volume Desktop
 
@@ -144,7 +146,7 @@ Para selecionar a pasta Desktop de volume 4D, clique no botão **[...]**. Uma ca
 
 Depois que a pasta for selecionada, o nome completo do caminho será exibido e, se realmente conter 4D Volume Desktop, a opção para a construção de uma aplicação executável é ativada.
 
-> O número da versão do 4D Volume Desktop deve corresponder ao número da versão do 4D Developer Edition. Por exemplo, se você usar o 4D Developer v18, deverá selecionar um 4D Volume Desktop v18.
+> O número da versão do 4D Volume Desktop deve corresponder ao número da versão do 4D Developer Edition. For example, if you use 4D 20, you must select a 4D Volume Desktop 20.
 
 #### Modo de ligação de dados
 
@@ -165,23 +167,23 @@ Se você tiver especificado "MyProject" como o nome do aplicativo, encontrará o
 - _Windows_
   - MyProject.exe - Seu executável e um MyProject.rsr (os recursos da aplicação)
   - Pasta 4D Extensions, pasta Resources, várias bibliotecas (DLL), pasta Native Components, pasta SASL Plugins - Arquivos necessários para a operação do aplicativo
-  - Uma pasta Database - Inclui uma pasta Resources e um arquivo MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file.
+  - Database folder - Includes a Resources folder and  MyProject.4DZ file. Database folder  - Includes a Resources folder and  MyProject.4DZ file.
     **Observação**: Essa pasta também contém a pasta _Default Data_, se ela tiver sido definida (consulte [Gerenciamento de arquivos de dados em aplicativos finais](#data-file-management-in-final-applicatons)).
   - (Opcional) Pasta Components e/ou pasta Plugins - Contém todos os componentes e/ou arquivos de plug-in incluídos no banco de dados. Para mais informações sobre isso, consulte a seção [Plugins e componentes](#plugins-and-components).
-  - Pasta de licenças - Um arquivo XML com números de licença integrados ao aplicativo. Para obter mais informações sobre isso, consulte a seção [Licenças e Certificado](#licenses-and-certificate).
+  - (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. Para obter mais informações sobre isso, consulte a seção [Licenças e Certificado](#licenses-and-certificate).
   - Itens adicionais adicionados à pasta da Área de Trabalho de Volume 4D, se houver (veja [Personalizando a pasta 4D Volume Desktop)](#customizing-4d-volume-desktop-folder)).
 
 Todos estes itens devem ser mantidos na mesma pasta para que o executável possa operar.
 
 - _macOS_
-  - Um pacote de software chamado MyProject.app que contém seu aplicativo e todos os itens necessários para sua operação, incluindo os plug-ins, componentes e licenças. Para obter mais informações sobre a integração de plug-ins e componentes, consulte a seção [Plugins e componentes](#plugins-and-components). Para obter mais informações sobre a integração de licenças, consulte a seção [Licenças e Certificado](#licenses-and-certificate). \*\*Nota: No macOS, o comando Application file do idioma 4D retorna o caminho do arquivo ApplicationName (localizado na pasta Contents:macOS do pacote do software) e não o do arquivo .comp (Pasta Contents:Resources do pacote de software).
+  - Um pacote de software chamado MyProject.app que contém seu aplicativo e todos os itens necessários para sua operação, incluindo os plug-ins, componentes e licenças. Para obter mais informações sobre a integração de plug-ins e componentes, consulte a seção [Plugins e componentes](#plugins-and-components). Para obter mais informações sobre a integração de licenças, consulte a seção [Licenças e Certificado](#licenses-and-certificate). **Note**: In macOS, the [Application file](../commands-legacy/application-file.md) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
 
 #### Personalização da pasta 4D Volume Desktop
 
 Ao criar um aplicativo autônomo, o 4D copia o conteúdo da pasta 4D Volume Desktop para a pasta Destination > _Final Application_ folder. Então, você será capaz de personalizar o conteúdo da pasta original de volume da área de trabalho 4D de acordo com suas necessidades. Pode, por exemplo:
 
 - Instalar uma versão 4D Volume Desktop correspondente a um idioma específico;
-- Adicionar uma pasta personalizada _PlugIns_;
+- Add a custom _Plugins_ folder;
 - Personalize o conteúdo da pasta _Resources_.
 
 > No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. Para modificá-lo, você deve primeiro exibir seu conteúdo (**Control+clique** no ícone).
@@ -197,6 +199,16 @@ Os elementos devem ser instalados:
 
 - **No Windows**: na subpasta _Final Application\MyProject\Database_.
 - **no macOS**: ao lado do pacote de software _MyProject.app_.
+
+#### About licenses
+
+A stand-alone application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+
+| Deployment license     | Descrição                                                          | Where to enter it                                                                          |
+| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| _4D OEM Desktop_       | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
+| _4D Unlimited Desktop_ | **Discontinued** - Embedded custom license                         | [Licenses page](#licenses) of the Build application dialog                                 |
+| _4D Desktop_           | Per-user license, allowing them to use stand-alone 4D applications | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
 
 ## Página cliente/servidor
 
@@ -222,7 +234,7 @@ Além disso, o aplicativo cliente/servidor é personalizado e fácil de usar:
 - Para iniciar a parte do cliente, o usuário simplesmente clica duas vezes no aplicativo cliente, que se conecta diretamente ao aplicativo do servidor. Você não precisa escolher um servidor em uma caixa de diálogo de conexão. O cliente direciona o servidor usando seu nome, quando o cliente e o servidor estão na mesma sub-rede, ou usando seu endereço IP, que é definido usando a chave `IPAddress` XML no arquivo buildapp.4DSettings. Se a conexão falhar, [mecanismos alternativos específicos](#management-of-client-connections) podem ser implementados). Você pode "forçar" a exibição da caixa de diálogo de conexão padrão segurando a tecla **Option** (macOS) ou **Alt** (Windows) enquanto inicia a aplicação cliente.
   Apenas a parte do cliente pode conectar à parte do servidor correspondente. Se um usuário tentar conectar à parte do servidor usando uma aplicação 4D padrão, uma mensagem de erro é retornada e a conexão é impossível.
 - Uma aplicação cliente/servidor pode ser configurada para que a parte do cliente [possa ser atualizada automaticamente através da rede](#cópia-dos-aplicativos-cliente-na-aplicação-servidor). Você só precisa criar e distribuir uma versão inicial do aplicativo cliente, atualizações subsequentes são tratadas usando o mecanismo de atualização automática.
-- Também é possível automatizar a atualização da parte do servidor por meio do uso de uma sequência de comandos de linguagem ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) e [RESTART 4D](https://doc.4d.com/4dv19/help/command/en/page1292.html)).
+- It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](../commands-legacy/set-update-folder.md) and [RESTART 4D](../commands-legacy/restart-4d.md).
 
 ### Criar aplicação servidor
 
@@ -230,7 +242,7 @@ Marque esta opção para gerar a parte do servidor da sua aplicação durante a 
 
 #### Localização do 4D Server
 
-Clique no \*\* Botão[...]\*\* e use a caixa de diálogo _Procurar pasta_ para localizar o aplicativo 4D Server No macOS, deve selecionar o pacote 4D Server diretamente.
+Clique no \*\* Botão[...]\*\* e use a caixa de diálogo _Procurar pasta_ para localizar o aplicativo 4D Server Clique no \*\* Botão[...]\*\* e use a caixa de diálogo _Procurar pasta_ para localizar o aplicativo 4D Server No macOS, deve selecionar o pacote 4D Server diretamente.
 
 #### Versão atual
 
@@ -294,11 +306,11 @@ Pode selecionar esta opção:
 
 Designa a localização no seu disco da aplicação 4D Volume Desktop a ser usada para construir a parte cliente da sua aplicação.
 
-> O número da versão do 4D Volume Desktop deve corresponder ao número da versão do 4D Developer Edition. Por exemplo, se você usar 4D v19, você deve selecionar um volume 4D na área de trabalho v19.
+> O número da versão do 4D Volume Desktop deve corresponder ao número da versão do 4D Developer Edition. For example, if you use 4D 20, you must select a 4D Volume Desktop 20.
 
 A Área de Trabalho de Volume 4D deve corresponder à plataforma atual (que também será a plataforma do aplicativo cliente). Se você deseja criar um aplicativo cliente para a plataforma "simultânea", você deve realizar uma operação de construção adicional usando uma aplicação 4D em execução nessa plataforma.
 
-Se você deseja que o aplicativo cliente se conecte ao servidor usando um endereço específico (diferente do nome do servidor publicado na sub-rede), você deve usar a chave `IPAddress` XML no arquivo buildapp.4DSettings. Para obter mais informações sobre este arquivo, consulte a descrição do comando [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html). Você também pode implementar mecanismos específicos em caso de falha na conexão. Os diferentes cenários propostos são descritos no [Gerenciamento de conexões por aplicativos cliente](#management-of-client-connections) parágrafo.
+Se você deseja que o aplicativo cliente se conecte ao servidor usando um endereço específico (diferente do nome do servidor publicado na sub-rede), você deve usar a chave `IPAddress` XML no arquivo buildapp.4DSettings. Para obter mais informações sobre esse arquivo, consulte a descrição do comando [`BUILD APPLICATION`](../commands-legacy/build-application.md). Você também pode implementar mecanismos específicos em caso de falha na conexão. Os diferentes cenários propostos são descritos no [Gerenciamento de conexões por aplicativos cliente](#management-of-client-connections) parágrafo.
 
 #### Cópia de aplicativos cliente dentro do aplicativo servidor
 
@@ -369,7 +381,7 @@ A pasta `<ApplicationName>Cliente` contém a porção do cliente do aplicativo c
 
 O conteúdo dessas pastas varia dependendo da plataforma atual:
 
-- _Windows_ - Cada pasta contém o arquivo executável da aplicação, chamado `<ApplicationName>Cliente. xe` para a parte do cliente e `<ApplicationName>Servidor.exe` para a parte do servidor, bem como os arquivos .rsr correspondentes. As pastas também contêm vários arquivos e pastas necessários para que os aplicativos funcionem e itens personalizados que podem estar na pasta de Volume 4D e no Servidor 4D.
+- Se você quiser integrar outros plugins ou componentes na aplicação executável, você só precisa colocá-los em uma pasta **Plugins** ou **Components** ao lado da aplicação 4D Volume Desktop ou ao lado do aplicativo 4D do servidor. O mecanismo para copiar o conteúdo da pasta do aplicativo de origem (ver [Personalizando a pasta 4D Volume Deskto](#customizing-4d-volume-desktop-folder)) pode ser usado para integrar qualquer tipo de arquivo no aplicativo executável.
 - _macOS_ - Cada pasta contém apenas o pacote de aplicação, chamado `<ApplicationName> Client` para a parte do cliente e `<ApplicationName> Server` para a parte do servidor. Cada pacote contém todos os itens necessários para que a aplicação funcione. No macOS, inicie um pacote fazendo duplo clique no mesmo.
 
 > Os pacotes macOS construídos contêm os mesmos itens que as subpastas do Windows. Você pode exibir seus conteúdos (**Control+click** no ícone) para poder modificá-los.
@@ -391,7 +403,7 @@ Os elementos devem ser instalados:
 
 - **no macOS**
   - **Aplicativo do servidor** - ao lado do pacote de software `<ApplicationName>Server`.
-  - **Aplicação de cliente** - ao lado do pacote de software \`<ApplicationName>cliente.
+  - **Aplicação de cliente** - ao lado do pacote de software \\`<ApplicationName>cliente.
 
 ### Incorporar uma aplicação cliente usuário único
 
@@ -418,7 +430,7 @@ O cenário básico é o seguinte:
 - a chave `PublishName` não é copiada no _info.plist_ do cliente mesclado
 - Se o aplicativo de usuário único não tiver uma pasta "Dados padrão", o cliente mesclado será executado sem dados.
 
-Funções automáticas do servidor 4D ([Versão atual](#current-version) número, `SET UPDATE FOLDER`...) funciona com aplicação de usuário único como com aplicação remota padrão. Na conexão, o aplicativo de usuário único compara sua chave `CurrentVers` com o intervalo de versão do 4D Server. Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local.
+Automatic update 4D Server features ([Current version](#current-version) number, [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md) command...) funciona com aplicação de usuário único como com aplicação remota padrão. Na conexão, o aplicativo de usuário único compara sua chave `CurrentVers` com o intervalo de versão do 4D Server. Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local.
 
 ### Personalização dos nomes da pasta de cache cliente e/ou servidor
 
@@ -468,7 +480,7 @@ A página lista os elementos carregados pela aplicação 4D atual:
 
 ### Adicionar plug-ins ou componentes
 
-Se você quiser integrar outros plugins ou componentes na aplicação executável, você só precisa colocá-los em uma pasta **Plugins** ou **Components** ao lado da aplicação 4D Volume Desktop ou ao lado do aplicativo 4D do servidor. O mecanismo para copiar o conteúdo da pasta do aplicativo de origem (ver [Personalizando a pasta 4D Volume Deskto](#customizing-4d-volume-desktop-folder)) pode ser usado para integrar qualquer tipo de arquivo no aplicativo executável.
+If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **Plugins** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. O mecanismo para copiar o conteúdo da pasta do aplicativo de origem (ver [Personalizando a pasta 4D Volume Deskto](#customizing-4d-volume-desktop-folder)) pode ser usado para integrar qualquer tipo de arquivo no aplicativo executável.
 
 Se houver um conflito entre duas versões diferentes do mesmo plug-in (uma carregada por 4D e a outra localizada na pasta do aplicativo de origem), prioridade vai para o plug-in instalado na pasta Volume Desktop/4D do Servidor. No entanto, se houver duas instâncias do mesmo componente, o aplicativo não abrirá.
 
@@ -494,20 +506,28 @@ Os seguintes módulos opcionais podem ser desmarcados:
 
 A página de Licenças e Certificados pode ser usada:
 
-- designar o(s) número(s) da licença que você deseja integrar em seu aplicativo de stand-alone de usuário único
+- designate the license number(s) that you want to integrate into your single-user [stand-alone application](#application-page),
 - assinar a aplicação através de um certificado no macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licenças
 
-Esta aba exibe a lista de licenças de implantação disponíveis que você poderá integrar ao seu aplicativo. Por padrão, a lista está vazia. Você deve adicionar explicitamente sua licença _4D Developer Professional_ bem como cada licença _4D Desktop Volume_ para ser usada na aplicação criada. Você pode adicionar outro número de Profissional de Desenvolvedor 4D e suas licenças associadas, além da que está sendo usada atualmente.
+This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. Por padrão, a lista está vazia.
+
+:::info
+
+If you keep the list empty, you build a stand-alone application without embedded deployment license. In this case, the end-user will have to purchase and enter a per-user _4D Desktop_ license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. For more information, see the [**About licenses**](#about-licenses) paragraph.
+
+:::
+
+Your current _4D Developer Professional_ license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
 
 Para remover ou adicionar uma licença, use os **[+]** e **[-]** botões na parte inferior da janela.
 
-Quando você clicar no botão \[+], uma caixa de diálogo 'Abrir arquivo' aparece exibindo por padrão o conteúdo da pasta _Licenças_ do seu computador. Para mais informações sobre a localização desta pasta, consulte o comando [Obter pasta 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html).
+Quando você clicar no botão \[+], uma caixa de diálogo 'Abrir arquivo' aparece exibindo por padrão o conteúdo da pasta _Licenças_ do seu computador. For more information about the location of this folder, refer to the [Get 4D folder](../commands-legacy/get-4d-folder.md) command.
 
-Você deve designar os arquivos que contêm sua licença de desenvolvedor, bem como os que contém suas licenças de implantação. Estes arquivos foram gerados ou atualizados quando a licença _4D Developer Professional_ e as licenças de _Volume 4D Desktop_ foram adquiridas.
+Você deve designar os arquivos que contêm sua licença de desenvolvedor, bem como os que contém suas licenças de implantação. These files were generated or updated when the _4D Developer Professional_ license and the deployment licenses were purchased.
 
 Depois de selecionar um arquivo, a lista indicará as características da licença que ele contém.
 
@@ -522,13 +542,13 @@ Pode designar o número de ficheiros válidos que desejar. Ao construir uma apli
 
 > Licenças "R" dedicadas são necessárias para criar aplicativos com base nas versões de "R-release" (números de licença para "R" produtos começam com "R-4DP").
 
-Depois que o aplicativo é construído, um novo arquivo de licença de implantação é automaticamente incluído na pasta Licenças ao lado do aplicativo executável (Windows) ou no pacote (macOS).
+After a licensed application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
 
-### Certificação de aplicativos OS X
+### macOS signing certificate
 
 O construtor de aplicativos pode assinar aplicativos 4D mesclados no macOS (aplicativos de usuário único, componentes, servidor 4D e partes de clientes sob macOS). A assinatura de um aplicativo autoriza que ele seja executado usando a funcionalidade de Gatekeeper do macOS quando a opção "Mac App Store e Desenvolvedores identificados" estiver selecionada (veja "Sobre Gatekeeper" abaixo).
 
-- Verifique a opção **Assinar aplicativo** para incluir a certificação no procedimento de construção do aplicativo para o OS X. O 4D verificará a disponibilidade dos elementos necessários para a certificação quando a compilação ocorrer:
+- Check the **Sign application** option to include certification in the application builder procedure for macOS. 4D will check the availability of elements required for certification when the build occurs:
 
 ![](../assets/en/Admin/buildapposxcertProj.png)
 
@@ -550,7 +570,7 @@ Para obter um certificado de desenvolvedor da Apple, Inc., você pode usar os co
 
 #### Sobre Gatekeeper
 
-Gatekeeper é um recurso de segurança do OS X que controla a execução de aplicativos baixados da internet. Se um aplicativo baixado não vem da Apple Store ou não estiver assinado, será rejeitado e não poderá ser iniciado.
+Gatekeeper is a security feature of macOS that controls the execution of applications downloaded from the Internet. Se um aplicativo baixado não vem da Apple Store ou não estiver assinado, será rejeitado e não poderá ser iniciado.
 
 > Nas máquinas do Apple Silicon, os [componentes](#components) do 4D precisam ser realmente assinados. Um componente não assinado irá gerar um erro ao iniciar o aplicativo ("lib4d-arm64.dylib não pode ser aberto...").
 
@@ -560,9 +580,11 @@ A aplicação Sinal opção do construtor de aplicação 4D permite que você ge
 
 A notarização de aplicação é altamente recomendada pela Apple a partir do macOS 10.14.5 (Mojave) e 10. 5 (Catalina), pois aplicativos não notariados implantados através da internet são bloqueados por padrão.
 
-Os [recursos de assinatura integrados](#os-x-signing-certificate) do 4D foram adaptados para atender a todos os requisitos da Apple para permitir o uso do serviço de notários da Apple. A notarização em si deve ser conduzida pelo desenvolvedor e é independente da 4D (note também que ela requer a instalação do Xcode). Por favor, consulte [este post no blog 4D](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) que fornece uma descrição passo a passo do processo de notarização.
+The 4D [built-in signing features](#macos-signing-certificate) have been adapted to meet all of Apple's requirements to allow using the Apple notary service. A notarização em si deve ser conduzida pelo desenvolvedor e é independente da 4D (note também que ela requer a instalação do Xcode). Por favor, consulte [este post no blog 4D](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) que fornece uma descrição passo a passo do processo de notarização.
 
 Para mais informações sobre o conceito de notarização, por favor consulte [esta página no site de desenvolvedores da Apple](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
+
+For more information on the stapling concept, please read [this Apple forum post](https://forums.developer.apple.com/forums/thread/720093).
 
 ## Personalizar ícones de uma aplicação
 
@@ -572,13 +594,13 @@ Para mais informações sobre o conceito de notarização, por favor consulte [e
 
 > A Apple, Inc. fornece uma ferramenta específica para a construção de arquivos de ícones _icns_ (para mais informações, consulte a [documentação da Apple](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#/apple_ref/doc/uid/TP40012302-CH7-SW2)).
 
-Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão .ico. 4D leva automaticamente este arquivo em conta ao construir o aplicativo clicável duplo (o arquivo _.icns_ é renomeado _ApplicationName. cns_ e copiados para a pasta Repositório; a entrada _CFBundleFileIcon_ do arquivo _info.plist_ é atualizada).
+Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão _.ico_. 4D leva este arquivo automaticamente em conta ao construir um aplicativo clicável duplo.
 
 - **Windows** - Ao construir uma aplicação clicável e dupla, o 4D lida com a personalização do seu ícone. Para fazer isso, você deve criar um arquivo de ícone (_.ico_ extensão), antes de construir o arquivo do aplicativo e colocá-lo ao lado da pasta do projeto.
 
-Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão _.ico_. 4D leva este arquivo automaticamente em conta ao construir um aplicativo clicável duplo.
+Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão .ico. 4D leva automaticamente este arquivo em conta ao construir o aplicativo clicável duplo (o arquivo _.icns_ é renomeado _ApplicationName.
 
-Você também pode definir as [chaves XML](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) específicas no arquivo buildApp.4DSettings para designar cada ícone a usar. Estão disponíveis as seguintes chaves:
+You can also set specific [XML keys](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) in the buildApp.4DSettings file to designate each icon to use. Estão disponíveis as seguintes chaves:
 
 - RuntimeVLIconWinPath
 - RuntimeVLIconMacPath
@@ -671,6 +693,8 @@ O procedimento de conexão para aplicativos cliente mesclados suporta casos onde
 
 1. Se informações de conexão válidas forem armazenadas no arquivo "EnginedServer.4DLink" dentro do aplicativo cliente, o aplicativo cliente se conecta ao endereço do servidor especificado.\
    OU
+   O aplicativo cliente tenta se conectar ao servidor usando o serviço de descoberta (com base no nome do servidor, transmitido na mesma sub-rede).\
+   OU
    O aplicativo cliente tenta se conectar ao servidor usando o serviço de descoberta (com base no nome do servidor, transmitido na mesma sub-rede).
 
 2. Se isso falhar, o aplicativo cliente tenta se conectar ao servidor usando informações armazenadas na pasta de preferências do usuário do aplicativo ("lastServer. ml" arquivo, veja a última etapa).
@@ -696,14 +720,15 @@ userPrefs:=Get 4D folder(Pasta 4D activa)
 
 Este mecanismo aborda o caso de o servidor principal alvo estar temporariamente indisponível por algum motivo (modo de manutenção, por exemplo). Quando este caso ocorre pela primeira vez, a caixa de diálogo de seleção do servidor é exibida (se permitido, veja abaixo) e o usuário pode selecionar manualmente um servidor alternativo, cujo caminho é então salvo se a conexão for bem-sucedida. Qualquer não-disponibilidade subsequente seria tratada automaticamente através da informação do caminho "lastServer.xml".
 
-> - Quando aplicativos do cliente não podem se beneficiar permanentemente do serviço de descoberta, por exemplo, por causa da configuração de rede, é recomendável que o desenvolvedor forneça um nome de host no tempo de compilação usando o [IPAddress](https://doc. d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) no arquivo "BuildApp.4DSettings". O mecanismo aborda os casos de indisponibilidade temporária.
+> - When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is recommended that the developer provide a host name at build time using the [IPAddress](https://doc.4d.com/4Dv20/4D/20/IPAddress.300-6335763.en.html) key in the "BuildApp.4DSettings" file. O mecanismo aborda os casos de indisponibilidade temporária.
 > - Pressionar a tecla **Alt/Option** durante a inicialização para exibir a caixa de diálogo de seleção do servidor ainda é suportada em todos os casos.
 
 ### Disponibilidade da caixa de diálogo de seleção do servidor em caso de erro
 
-Você pode escolher se deseja ou não exibir a caixa de diálogo de seleção padrão do servidor em aplicações cliente mescladas quando o servidor não pode ser alcançado. A configuração depende do valor da chave XML [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) no computador em que a aplicação foi criada:
+Você pode escolher se deseja ou não exibir a caixa de diálogo de seleção padrão do servidor em aplicações cliente mescladas quando o servidor não pode ser alcançado. The configuration depends on the value of the [ServerSelectionAllowed](https://doc.4d.com/4Dv20/4D/20/ServerSelectionAllowed.300-6335767.en.html) XML key on the machine where the application was built:
 
 - **exibir uma mensagem de erro sem acesso possível à caixa de diálogo de seleção do servidor**. Operação padrão. A aplicação só pode encerrar.\
+  A aplicação só pode encerrar.\
   `ServerSelectionAllowed`: **False** or key omitted
   ![](../assets/en/Project/connect1.png)
 
@@ -716,9 +741,9 @@ Você pode escolher se deseja ou não exibir a caixa de diálogo de seleção pa
 
 Em princípio, atualizar aplicativos do servidor ou fundir aplicativos de único usuário requer a intervenção do usuário (ou programar sistemas personalizados rotinas): sempre que uma nova versão do aplicativo mesclado estiver disponível, você tem que sair da aplicação em produção e substituir manualmente os arquivos antigos pelos novos; então reinicie o aplicativo e selecione o arquivo de dados atual.
 
-Você pode automatizar este procedimento em grande medida usando os seguintes comandos de idioma: [`SET UPDATE FOLDER`](https://doc.4d.com/4dv19/help/command/en/page1291.html), [`RESTART 4D`](https://doc. d.com/4dv19/help/command/en/page1292.html), e também [`Obter última atualização log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) para operações de monitoramento. A ideia é implementar uma função em seu aplicativo 4D ativando a sequência de atualização automática descrita abaixo. Pode ser um comando de menu ou um processo sendo executado em segundo plano e verificando, em intervalos regulares, a presença de um arquivo em um servidor.
+You can automate this procedure to a large extent using the following language commands: [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md), [`RESTART 4D`](../commands-legacy/restart-4d.md), and also [`Get last update log path`](../commands-legacy/get-last-update-log-path.md) for monitoring operations. A ideia é implementar uma função em seu aplicativo 4D ativando a sequência de atualização automática descrita abaixo. Pode ser um comando de menu ou um processo sendo executado em segundo plano e verificando, em intervalos regulares, a presença de um arquivo em um servidor.
 
-> Você também tem chaves XML para elevar os privilégios de instalação para que você possa usar arquivos protegidos no Windows (consulte o manual [4D Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
+> You also have XML keys to elevate installation privileges so that you can use protected files under Windows (see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual).
 
 Este é o cenário para atualizar um servidor ou aplicação mesclada usuário único:
 
@@ -734,4 +759,4 @@ O procedimento de instalação produz um arquivo de log detalhando as operaçõe
 
 O log de atualização é chamado `YYYY-MM-DD_HH-MM-SS_log_X.txt`, por exemplo, `2021-08-25_14-23-00_log_1.txt` para um arquivo criado em 25 de agosto de 2021 às 14:23.
 
-Este arquivo é criado na pasta de aplicativos "Atualizadores", dentro da pasta de usuário do sistema. Você pode descobrir a localização deste arquivo a qualquer momento usando o comando [`Obter último caminho de log de atualização`](https://doc.4d.com/4dv19/help/command/en/page1301.html).
+Este arquivo é criado na pasta de aplicativos "Atualizadores", dentro da pasta de usuário do sistema. You can find out the location of this file at any time using the [`Get last update log path`](../commands-legacy/get-last-update-log-path.md) command.

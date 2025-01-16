@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Summary-->La commande **OBJECT GET SCROLL POSITION** retourne dans les paramètres *positionLigne* et *positionH* des informations relatives à la position des barres de défilement de l’objet de formulaire désigné par les paramètres *\** et *objet*.<!-- END REF-->
@@ -34,3 +31,12 @@ Si *objet* désigne une image (variable ou champ), *positionLigne* retourne le d
 #### Voir aussi 
 
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1114 |
+| Thread safe | &cross; |
+
+

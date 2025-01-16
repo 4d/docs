@@ -22,7 +22,7 @@ title: '$entityset'
 
 エンティティセットには (デフォルトの、または `$timeout` で指定した) タイムリミットが設定されるため、`$savedfilter` や `$savedorderby` を使って、エンティティセットを作成する際に使用したフィルターや並べ替えの詳細を保存しておくこともできます。
 
-4D Server のキャッシュに保存された既存のエンティティセットを取得する際に、次のいずれもエンティティセットに適用することができます: [`$expand`]($expand.md), [`$filter`]($filter), [`$orderby`]($orderby), [`$skip`]($skip.md), [`$top/$limit`]($top_$limit.md)。
+4D Server のキャッシュに保存された既存のエンティティセットを取得する際に、次のいずれもエンティティセットに適用することができます: [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), [`$top/$limit`]($top_$limit.md)。
 
 ### 例題
 
@@ -34,10 +34,10 @@ title: '$entityset'
 
 複数の既存エンティティセットに基づいて新たなエンティティセットを作成します。
 
-| 引数               | 型      | 説明                        |
-| ---------------- | ------ | ------------------------- |
-| $operator        | String | 既存のエンティティセットに対して使用する論理演算子 |
-| $otherCollection | String | エンティティセットID               |
+| 引数               | 型    | 説明                        |
+| ---------------- | ---- | ------------------------- |
+| $operator        | Text | 既存のエンティティセットに対して使用する論理演算子 |
+| $otherCollection | Text | エンティティセットID               |
 
 ### 説明
 

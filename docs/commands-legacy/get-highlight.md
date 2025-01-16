@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GET HIGHLIGHT.Summary-->The GET HIGHLIGHT command is used to determine what text is currently highlighted in *object*.<!-- END REF--> 
@@ -42,8 +39,10 @@ If the object designated by the *object* parameter is not found in the form, the
 The following example gets the highlighted selection from the field called *\[Products\]Comments*: 
 
 ```4d
- GET HIGHLIGHT([Products]Comments;vFirst;vLast)
- If(vFirst<vlast)     alert("the="" selected="" text="" is:="" "+substring([products]comments;vfirst;vlast-vfirst))=""  end="" if<="" pre=""></vlast)>
+GET HIGHLIGHT([Products]Comments;vFirst;vLast)
+If(vFirst < vlast)
+    ALERT("The selected text is:"+Substring([Products]Comments;vFirst;vLast-vFirst))
+End if
 ```
 
 #### Example 2 
@@ -64,3 +63,12 @@ Modification of highlighted text style:
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 209 |
+| Thread safe | &cross; |
+
+

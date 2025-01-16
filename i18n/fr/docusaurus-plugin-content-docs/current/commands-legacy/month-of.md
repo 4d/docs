@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Month of.Summary-->**Month of** retourne un nombre représentant le numéro du mois de *laDate*.<!-- END REF-->
-
-**Note :** C'est le numéro du mois est retourné, et non son nom (reportez-vous à l'exemple ci-dessous).
+<!--REF #_command_.Month of.Summary-->**Month of** retourne un nombre représentant le numéro du mois de *laDate*.<!-- END REF-->C'est le numéro du mois est retourné, et non son nom (reportez-vous à l'exemple ci-dessous).
 
 Pour comparer la valeur retournée par cette fonction, 4D fournit les constantes prédéfinies suivantes, placées dans le thème "*Jours et mois*" :
 
@@ -54,3 +52,12 @@ Reportez-vous à l'exemple de la fonction [Current date](current-date.md).
 
 [Day of](day-of.md)  
 [Year of](year-of.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 24 |
+| Thread safe | &check; |
+
+

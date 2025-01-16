@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.FORM GET PROPERTIES.Summary-->O comando FORM GET PROPERTIES retorna as propriedades do formulário *nomForm*.<!-- END REF-->
@@ -44,3 +41,12 @@ O parâmetro *título* retorna o título da janela do formulário, tal como foi 
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
 [Open form window](open-form-window.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 674 |
+| Thread-seguro | &cross; |
+
+

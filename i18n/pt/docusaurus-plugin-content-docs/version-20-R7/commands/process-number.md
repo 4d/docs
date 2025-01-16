@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | name      | Text     | → | Nome do processo para o qual se deseja recuperar o número do processo |
 | id        | Text     | → | ID do processo para o qual se deseja recuperar o número do processo   |
 | \*        | Operador | → | Retorna o número do processo do servidor                              |
-| Resultado | Longint  | ← | Process number                                                        |
+| Resultado | Integer  | ← | Process number                                                        |
 
 <!-- END REF-->
 
@@ -39,3 +39,10 @@ Se o comando for executado com o parâmetro \* de um processo no computador do s
 [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md)\
 [Process state](../commands-legacy/process-state.md)\
 [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 372                             |
+| Thread safe    | &amp;check; |

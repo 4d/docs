@@ -47,7 +47,7 @@ displayed_sidebar: docs
  $o.myFormula() // 3 を返します
 ```
 
-フォーミュラには [引数](#引数の受け渡し) を渡すことができます ([例題4](#例題-4) 参照)。
+`フォーミュラ`には [引数](#引数の受け渡し) を渡すことができます ([例題4](#例題-4) 参照)。
 
 フォーミュラの実行対象となるオブジェクトを指定することができます ([例題5](#例題-5) 参照)。 このオブジェクトのプロパティは、`This` コマンドでアクセス可能です。
 
@@ -74,8 +74,6 @@ displayed_sidebar: docs
 ローカル変数を使用するフォーミュラの例:
 
 ```4d
-
-
  $value:=10
  $o:=New object("f";Formula($value))
  $value:=20
@@ -135,7 +133,14 @@ displayed_sidebar: docs
 
 #### 参照
 
-[4D Blog - Formula: More power behind simplicity](https://blog.4d.com/new-formula-more-power-behind-simplicity/)\
-[4D Blog - Formula: Think outside the box](https://blog.4d.com/new-formula-think-outside-the-box/)\
-[4D Blog - Write your own methods for objects](https://blog.4d.com/write-your-own-methods-for-objects/)\
+[4D Blog - フォーミュラ: シンプルさの裏にある、さらなるパワー](https://blog.4d.com/ja/new-formula-more-power-behind-simplicity/)\
+[4D Blog - フォーミュラ: 既成概念にとらわれない発想](https://blog.4d.com/ja/new-formula-think-outside-the-box/)\
+[4D Blog - 独自のメソッドをオブジェクトにカプセル化する](https://blog.4d.com/ja/write-your-own-methods-for-objects/)\
 [Formula from string](formula-from-string.md)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1597                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

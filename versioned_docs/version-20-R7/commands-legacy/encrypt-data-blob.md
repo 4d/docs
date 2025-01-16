@@ -59,3 +59,12 @@ Encrypt a text file located in the RESOURCES folder of the database:
 [Encrypt data file](encrypt-data-file.md)  
 [Encrypt your own data with the 4D algorithm (blog post)](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm)  
 [New data key](new-data-key.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1773 |
+| Thread safe | &check; |
+
+

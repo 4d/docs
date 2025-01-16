@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->O comando SET PICTURE TO LIBRARY cria uma nova imagem ou substitui uma imagem existente na biblioteca de imagens.<!-- END REF-->
@@ -95,3 +92,14 @@ Se não houver suficiente memória para adicionar a imagem à biblioteca de imag
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 566 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+| Proibido no servidor ||
+
+

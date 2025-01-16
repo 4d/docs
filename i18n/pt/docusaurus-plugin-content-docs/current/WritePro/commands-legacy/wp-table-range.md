@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-O comando **WP Table range** devolve um objeto de range que trata só as tabelas contidas em *objRange* passado como parâmetro. Devolverá uma range de wk type table, mesmo se *objRange* passado como parâmetro não contiver uma tabela. O objeto de range de tabela devolvido pode ser utilizado por [WP GET ATTRIBUTES](wp-get-attributes.md) e [WP SET ATTRIBUTES](wp-set-attributes.md) para manejar os atributos que são aplicados às tabelas e aos conteúdos da tabela.
+O comando **WP Table range** devolve um objeto de range que trata só as tabelas contidas em *objRange* passado como parâmetro. Devolverá uma range de wk type table, mesmo se *objRange* passado como parâmetro não contiver uma tabela. O objeto de range de tabela devolvido pode ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) e [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar os atributos que são aplicados às tabelas e aos conteúdos da tabela.
 
 No parâmetro *objRange*, pode passar:
 

@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.ST Get text.Summary-->El comando ST Get text devuelve el texto con estilo encontrado en el campo o variable de texto designado por el parámetro *objeto*.<!-- END REF--> 
@@ -63,3 +60,13 @@ En caso de error, no cambia la variable. Cuando ocurre un error en una variable 
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1116 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

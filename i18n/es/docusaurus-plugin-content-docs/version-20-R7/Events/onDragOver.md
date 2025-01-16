@@ -29,10 +29,10 @@ El código que maneja un evento `On Drag Over` debe ser corto y ejecutarse rápi
 ### Ejemplo
 
 ```4d
-//Destination object method
+/Método del objeto destino
  #DECLARE : Integer
  If(Form event code=On Drag Over)
-    //returns 0 by default
+    //devuelve 0 por defecto
     ...
     If($DataType=Is picture)
        return -1

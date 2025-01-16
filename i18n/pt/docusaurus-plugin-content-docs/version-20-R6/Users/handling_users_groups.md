@@ -120,7 +120,7 @@ Para criar um gurpo:
 1. Seleccione **Caja de herramientas > Grupos** en el menú **Diseño** o haga clic en el botón **Caja de herramientas** de la barra de herramientas de 4D luego haga clic en el botón **Grupos**.
    4D exibe a janela de editor de grupos. A lista de grupos exibe todos os grupos do banco de dados.
 
-2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.\
+2. Clique no botão ![](../assets/en/Users/PlussNew.png) localizado abaixo da lista dos grupos.\
    OR\
    Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
 

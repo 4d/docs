@@ -45,3 +45,13 @@ Si l'utilisateur clique sur **Annuler** dans une des boîtes de dialogue (de sé
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 665 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

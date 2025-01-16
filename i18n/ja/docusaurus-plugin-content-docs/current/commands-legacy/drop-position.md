@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Drop position.Summary-->**Drop position**コマンドは、 “複合” オブジェクトに対して行われたドロップのドロップ位置を知るために使用します。<!-- END REF-->
@@ -94,5 +91,13 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 *ドラッグ＆ドロップ*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 608 |
+| スレッドセーフである | &cross; |
+
+

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | wpDoc | Object | &#8594;  | 4D Write Pro variable |
 | filePath | Text | &#8594;  | Path of exported file |
 | format | Integer | &#8594;  | Document output format |
-| option | Object, Longint | &#8594;  | Export options |
+| option | Object, Integer | &#8594;  | Export options |
 
 <!-- END REF-->
 

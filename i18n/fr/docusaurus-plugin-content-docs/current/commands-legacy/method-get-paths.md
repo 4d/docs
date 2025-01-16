@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD GET PATHS.Summary-->La commande **METHOD GET PATHS** remplit le tableau *tabChemins* avec les chemins d’accès internes et les noms des méthodes de l’application du type défini par le paramètre *typeMéthode*.<!-- END REF-->
@@ -87,3 +84,12 @@ Reportez-vous à l'exemple de la commande [METHOD SET CODE](method-set-code.md).
 
 [Current method path](current-method-path.md)  
 [METHOD GET FOLDERS](method-get-folders.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1163 |
+| Thread safe | &cross; |
+
+

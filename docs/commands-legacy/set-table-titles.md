@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET TABLE TITLES.Summary-->**SET TABLE TITLES** lets you mask, rename, and reorder the tables of your database that appear in standard 4D dialog boxes within the Application environment (i.e. when the startup mode is **Application**, or after you select **Test application** in the **Run** menu).<!-- END REF--> For example, this command can modify the display of tables in the Query editor in Application mode.
@@ -189,3 +186,12 @@ You want to remove all defined custom field and table names:
 [Parse formula](parse-formula.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [Table name](table-name.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 601 |
+| Thread safe | &cross; |
+
+

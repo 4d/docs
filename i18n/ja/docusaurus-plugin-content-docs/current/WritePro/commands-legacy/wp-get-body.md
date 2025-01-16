@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 * [WP SELECT](wp-select.md) コマンドに渡してドキュメントのボディを選択
 * [WP Text range](wp-text-range.md) コマンドに渡してボディをレンジとして定義
-* [WP SET ATTRIBUTES](wp-set-attributes.md) と [WP GET ATTRIBUTES](wp-get-attributes.md) コマンドに渡してボディの属性を管理
+* [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) と [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) コマンドに渡してボディの属性を管理
 
 #### 例題 
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | localID | Text | &#8594;  | Local ID of the remote datastore to return |
-| Result | DataStore | &#8592; | Reference to the datastore |
+| Result | cs.DataStore | &#8592; | Reference to the datastore |
 
 <!-- END REF-->
 
@@ -68,3 +68,12 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 #### See also 
 
 [Open datastore](open-datastore.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1482 |
+| Thread safe | &check; |
+
+

@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->La commande **OB GET PROPERTY NAMES** retourne dans *tabPropriétés* les noms des propriétés contenues dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF--> 
-
-*objet* doit avoir été défini via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D.
+<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->La commande **OB GET PROPERTY NAMES** retourne dans *tabPropriétés* les noms des propriétés contenues dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D.
 
 Passez dans le paramètre *tabPropriétés* un tableau texte. Si le tableau n’existe pas, la commande le crée et le dimensionne automatiquement. 
 
@@ -98,3 +96,12 @@ Utilisation d’un élément de tableau d’objets :
 
 [OB Get type](ob-get-type.md)  
 [OB SET NULL](ob-set-null.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1232 |
+| Thread safe | &check; |
+
+

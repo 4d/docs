@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.ARRAY INTEGER.Summary-->El comando ARRAY INTEGER crea y/o redimensiona un array de elementos de tipo [Entero](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)") de 2 bytes en memoria.<!-- END REF-->
-
-* El parámetro *nombreArray* es el nombre del array.
+<!--REF #_command_.ARRAY INTEGER.Summary-->El comando ARRAY INTEGER crea y/o redimensiona un array de elementos de tipo [Entero](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)") de 2 bytes en memoria.<!-- END REF-->es el nombre del array.
 * El parámetro *tamaño* es el número de elementos en el array.
 * El parámetro *tamaño2* es opcional; si especifica *tamaño2*, el comando crea un array de dos dimensiones. En este caso, *tamaño* especifica el número de filas y *tamaño2* el número de columnas en cada array. Cada fila en un array de dos dimensiones puede tratarse como un elemento y como un array. Esto significa que mientras trabaja con la primera dimensión del array, puede utilizar otros comando de array para insertar y borrar arrays enteros en un array de dos dimensiones.
 
@@ -59,3 +57,12 @@ Este ejemplo crea un array interproceso de 2 bytes de 50 elementos de tipo [Ente
 
 [ARRAY LONGINT](array-longint.md)  
 [ARRAY REAL](array-real.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 220 |
+| Hilo seguro | &check; |
+
+

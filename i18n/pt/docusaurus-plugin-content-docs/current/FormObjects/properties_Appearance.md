@@ -301,7 +301,7 @@ Quando os controles de aba com uma direção personalizada são exibidos no Wind
 
 #### Objectos suportados
 
-[Tab Control](tabControl.md)
+[Controle de guias](tabControl.md)
 
 ---
 

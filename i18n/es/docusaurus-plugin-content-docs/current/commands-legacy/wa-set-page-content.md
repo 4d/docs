@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Nota de compatibilidad 
 
 <!--REF #_command_.WA SET PAGE CONTENT.Summary-->Este comando histórico ya no es realmente útil.<!-- END REF--> A medida que se refuerza la seguridad en los navegadores modernos, hay cada vez más restricciones para modificar el contenido de las páginas "sobre la marcha". Un enfoque más confiable es crear un archivo local (por ejemplo, en la carpeta temporal) y utilizar [WA OPEN URL](wa-open-url.md) para cargarlo. Para borrar el contenido, basta con llamar a WA OPEN URL(myArea; "about:blank").
@@ -48,3 +45,12 @@ Mostrar la frase "¡Hola mundo!" y definición de un URL de base "file:///" base
 #### Ver también 
 
 [WA Get page content](wa-get-page-content.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1037 |
+| Hilo seguro | &cross; |
+
+

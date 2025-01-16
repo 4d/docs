@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX GET HIERARCHY.Summary-->O comando LISTBOX GET HIERARCHY permite buscar as propriedades hierárquicas do objeto list box designado pelos parámetros *objeto* e *\** .<!-- END REF-->  
@@ -37,3 +34,12 @@ Se o list box está em modo hierárquico, o comando preenche o array *hierarquia
 #### Ver também 
 
 [LISTBOX SET HIERARCHY](listbox-set-hierarchy.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1099 |
+| Thread-seguro | &cross; |
+
+

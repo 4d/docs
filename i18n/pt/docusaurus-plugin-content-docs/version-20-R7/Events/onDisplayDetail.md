@@ -3,9 +3,9 @@ id: onDisplayDetail
 title: On Display Detail
 ---
 
-| Code | Pode ser chamado por                                     | Definição                                                                                                         |
-| ---- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| 8    | Formulario - [List Box](FormObjects/listbox_overview.md) | A record is about to be displayed in a list form or a row is about to be displayed in a list box. |
+| Code | Pode ser chamado por                                     | Definição                                                                                                                                |
+| ---- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| 8    | Formulario - [List Box](FormObjects/listbox_overview.md) | Um registro está prestes a ser exibido em um formulário de lista ou uma linha está prestes a ser exibida em um list box. |
 
 ## Descrição
 
@@ -17,7 +17,7 @@ Um registro está prestes a ser exibido em um formulário de lista exibido via `
 
 > Este evento não pode ser selecionado para formulários projeto, está disponível apenas com **formulários tabela**.
 
-In this context, the following sequence of calls to methods and form events is triggered:
+Neste contexto, a seguinte sequência de chamadas para os métodos e eventos de formulário é ativada:
 
 - Para cada registo:
   - Para cada objecto na área de detalhes:
@@ -34,4 +34,4 @@ Este evento é gerado quando uma linha de um [**tipo de seleção**](FormObjects
 
 ### Número de linha apresentado
 
-O comando `Número de linha exibido` 4D funciona com o evento de formulário `Detalhes de Exibição`. It returns the number of the row being processed while a list of records or list box rows is displayed on screen.
+O comando `Número de linha exibido` 4D funciona com o evento de formulário `Detalhes de Exibição`. Ele retorna o número da linha sendo processada enquanto uma lista de registros ou linhas de list box é exibida na tela.

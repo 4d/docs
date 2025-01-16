@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LDAP SEARCH ALL.Summary-->The **LDAP SEARCH ALL** command searches in the target LDAP server for all occurrences matching the criteria defined.<!-- END REF--> This command must be executed within a connection to an LDAP server opened with [LDAP LOGIN](ldap-login.md); otherwise a 1003 error is returned.
@@ -118,3 +115,12 @@ These examples illustrate the use of the *attributesAsArray* parameter:
 
 *LDAP*  
 [LDAP Search](ldap-search.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1329 |
+| Thread safe | &cross; |
+
+

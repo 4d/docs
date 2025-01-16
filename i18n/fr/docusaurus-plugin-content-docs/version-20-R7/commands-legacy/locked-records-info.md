@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Locked records info.Summary-->La commande **Locked records info** retourne un [objet](# "Données structurées sous forme d'objet natif 4D") décrivant le ou les enregistrement(s) actuellement verrouillé(s) dans *laTable*.<!-- END REF-->
-
-**Note :** Cette commande fonctionne uniquement avec 4D et 4D Server. Elle retourne toujours un objet invalide lorsqu'elle est appelée depuis un 4D distant. Elle peut toutefois être appelée depuis un 4D distant si la méthode d'appel dispose de l'option "Exécuter sur serveur" ; elle retourne dans ce cas les informations relatives au serveur. Lorsqu'elle est appelée depuis un composant, elle s'applique à la base hôte.
+<!--REF #_command_.Locked records info.Summary-->La commande **Locked records info** retourne un [objet](# "Données structurées sous forme d'objet natif 4D") décrivant le ou les enregistrement(s) actuellement verrouillé(s) dans *laTable*.<!-- END REF-->Cette commande fonctionne uniquement avec 4D et 4D Server. Elle retourne toujours un objet invalide lorsqu'elle est appelée depuis un 4D distant. Elle peut toutefois être appelée depuis un 4D distant si la méthode d'appel dispose de l'option "Exécuter sur serveur" ; elle retourne dans ce cas les informations relatives au serveur. Lorsqu'elle est appelée depuis un composant, elle s'applique à la base hôte.
 
 L'objet retourné contient une propriété "records" qui est une collection d'objets :
 
@@ -90,3 +88,12 @@ Si le code est exécuté sur 4D Server et que le verrouillage est causé par un 
 #### Voir aussi 
 
 [Locked](locked.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1316 |
+| Thread safe | &check; |
+
+

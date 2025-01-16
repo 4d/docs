@@ -112,3 +112,12 @@ Los registros están en el siguiente orden:
 #### Ver también 
 
   
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1407 |
+| Hilo seguro | &check; |
+
+

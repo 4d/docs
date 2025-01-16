@@ -137,11 +137,11 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
     Else //Se não for 1, 2, ou 3, exibe um alerta
        ALERT("It was not one, two, or three.")
  //statement(s)
- End case //If it is 2, display an alert
-    :(vResult=3) //Test if the number is 3
-       ALERT("Three.") //If it is 3, display an alert
-    Else //If it is not 1, 2, or 3, display an alert
-       ALERT("It was not one, two, or three.")
+ End case //Se for 2, mostrar um alerta
+    :(vResult=3) //Testar se o número é 3
+       ALERT("Three.") //Se for 3, exiba um alerta
+    Else //Se não for 1, 2 ou 3, exibir um alerta
+       ALERT("Não foram um, dois ou três.")
  //statement(s)
  End case
 ```
@@ -162,12 +162,12 @@ For comparison, here is the `If... Else... End if` version of the same method:
           ALERT("It was not one, two, or three.")
        End if
     End if
- End if //If it is 2, display an alert
+ End if //Se for 2, exibir um alerta
     Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
-          ALERT("It was not one, two, or three.")
+       If(vResult=3) //Testa se o número é 3
+          ALERT("Três.") //Se for 3, exiba um alerta
+    Else //Se não for 1, 2 ou 3, exibir um alerta
+       ALERT("Não foram um, dois ou três.")
        End if
     End if
  End if

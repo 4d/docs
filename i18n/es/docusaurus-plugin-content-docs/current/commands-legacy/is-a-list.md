@@ -14,21 +14,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Is a list.Summary-->El comando Is a list devuelve TRUE si el valor pasado en *lista* es una referencia válida a una lista jerárquica.<!-- END REF--> De lo contrario, devuelve FALSE.
 
-#### Ejemplo 1 
+#### Ejemplo 
 
 Ver el ejemplo del comando [CLEAR LIST](clear-list.md "CLEAR LIST").
 
-#### Ejemplo 2 
 
-Ver los ejemplos del comando DRAG AND DROP PROPERTIES.
 
-#### Ver también 
+#### Propiedades
 
-*\_o\_DRAG AND DROP PROPERTIES*  
+|  |  |
+| --- | --- |
+| Número de comando | 621 |
+| Hilo seguro | &cross; |
+
+

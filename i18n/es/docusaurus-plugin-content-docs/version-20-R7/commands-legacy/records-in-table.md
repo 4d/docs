@@ -29,3 +29,12 @@ El siguiente ejemplo muestra una alerta que indica el número de registros en la
 #### Ver también 
 
 [Records in selection](records-in-selection.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 83 |
+| Hilo seguro | &check; |
+
+

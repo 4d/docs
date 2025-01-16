@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->**FORM Convert to dynamic** コマンドは、*formName* 引数で指定したフォーム(クラシックフォーム)をダイナミックフォームへと変換し、それをオブジェクト型で返します。<!-- END REF-->
@@ -26,7 +23,7 @@ displayed_sidebar: docs
 
 テーブルフォームを変換したい場合、*aTable* 引数にフォームテーブルを渡し、*formName* 引数にフォーム名を文字列として渡します。プロジェクトフォームの場合、フォーム名を直接*formName* 引数に渡します。
 
-[DIALOG](dialog.md) コマンドに対して返されたオブジェクトを渡せば直接フォームが実行されるようにするために、**FORM Convert to dynamic** はいくつかのルールを適用しながらフォームを変換します:
+[DIALOG](../commands/dialog.md) コマンドに対して返されたオブジェクトを渡せば直接フォームが実行されるようにするために、**FORM Convert to dynamic** はいくつかのルールを適用しながらフォームを変換します:
 
 * リスト参照は、lists.json ファイルを参照するJSON ポインターではなく、リスト名として書き出されます。
 * 命名フィルターおよび命名表示フォーマット(の接頭辞を使用しているもの)はfilters.json ファイルを参照するJSON ポインターではなく、値として書き出されます。
@@ -60,5 +57,14 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[DIALOG](dialog.md)  
+[DIALOG](../commands/dialog.md)  
 [Export structure file](export-structure-file.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1570 |
+| スレッドセーフである | &cross; |
+
+

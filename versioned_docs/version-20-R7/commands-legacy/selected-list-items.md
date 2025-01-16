@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Selected list items.Summary-->The **Selected list items** command returns the position or reference of the selected item in the list whose reference number or object name you pass in *list*.<!-- END REF--> 
@@ -86,3 +83,12 @@ Here a list named *hList,* shown in the Application environment:
 
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 379 |
+| Thread safe | &cross; |
+
+

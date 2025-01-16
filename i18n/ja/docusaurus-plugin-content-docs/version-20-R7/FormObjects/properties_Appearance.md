@@ -90,7 +90,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 | 名称                  | データタイプ | とりうる値                            |
 | ------------------- | ------ | -------------------------------- |
-| scrollbarHorizontal | text   | "visible", "hidden", "automatic" |
+| scrollbarHorizontal | テキスト   | "visible", "hidden", "automatic" |
 
 #### 対象オブジェクト
 
@@ -319,7 +319,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 | 名称            | データタイプ | とりうる値                                                  |
 | ------------- | ------ | ------------------------------------------------------ |
-| userInterface | text   | "none" (デフォルト), "ribbon", "toolbar" |
+| userInterface | テキスト   | "none" (デフォルト), "ribbon", "toolbar" |
 
 #### 対象オブジェクト
 
@@ -351,7 +351,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 | 名称                | データタイプ | とりうる値                            |
 | ----------------- | ------ | -------------------------------- |
-| scrollbarVertical | text   | "visible", "hidden", "automatic" |
+| scrollbarVertical | テキスト   | "visible", "hidden", "automatic" |
 
 #### 対象オブジェクト
 
@@ -380,7 +380,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 | 名称         | データタイプ | とりうる値                       |
 | ---------- | ------ | --------------------------- |
-| layoutMode | text   | "page", "draft", "embedded" |
+| layoutMode | テキスト   | "page", "draft", "embedded" |
 
 #### 対象オブジェクト
 

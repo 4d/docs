@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET TABLE TITLES.Summary-->GET TABLE TITLES コマンドを使用して、ストラクチャウィンドウで、または[SET TABLE TITLES](set-table-titles.md "SET TABLE TITLES") コマンドを用いて定義されたデータベーステーブルの番号と名前を配列 *tableTitles* と *tableNums* に取得します。<!-- END REF-->これら2つの配列の内容は同期化されています。
@@ -28,3 +25,12 @@ displayed_sidebar: docs
 
 [GET FIELD TITLES](get-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 803 |
+| スレッドセーフである | &cross; |
+
+

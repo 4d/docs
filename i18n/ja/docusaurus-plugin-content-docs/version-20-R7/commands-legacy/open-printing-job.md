@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->**OPEN PRINTING JOB** コマンドはプリントジョブを開き、[CLOSE PRINTING JOB](close-printing-job.md) コマンドが呼ばれるまで、続くすべてのプリント命令をスタックします。<!-- END REF-->このコマンドはプリントジョブのコントロールを可能にし、特に印刷中に他のプリントジョブが予期せず挿入されないようにします。
@@ -39,3 +36,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [CLOSE PRINTING JOB](close-printing-job.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 995 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

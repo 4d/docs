@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.RELEASE MENU.Summary-->El comando RELEASE MENU borra de la memoria el menú cuya referencia se pasa en *menu*.<!-- END REF-->. La regla es la siguiente: a cada [Create menu](create-menu.md) debe corresponder un [RELEASE MENU](release-menu.md). 
@@ -57,3 +54,12 @@ Este ejemplo muestra las diferentes formas de utilizar este comando:
 #### Ver también 
 
 [Create menu](create-menu.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 978 |
+| Hilo seguro | &cross; |
+
+

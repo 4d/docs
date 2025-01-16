@@ -84,3 +84,12 @@ Le code suivant :
 
 [Char](char.md)  
 *Symboles d'indice de chaîne*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 91 |
+| Thread safe | &check; |
+
+

@@ -48,3 +48,13 @@ If a form object method is executed, the call chain could contain (for example):
 ```json
 [   {    "type":"formObjectMethod",    "name":"detailForm.Button",    "line":1,    "database":"myDatabase"   },   {    "type":"formMethod",    "name”:"detailForm",    "line":2,    "database":"myDatabase"   },   {    "type":"projectMethod",    "name”:"showDetailForm",    "line":2,    "database":"myDatabase”   }]
 ```
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1662 |
+| Thread safe | &check; |
+
+

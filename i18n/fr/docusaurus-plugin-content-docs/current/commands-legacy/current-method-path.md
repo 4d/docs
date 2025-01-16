@@ -15,11 +15,18 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Current method path.Summary-->La commande **Current method path** retourne le chemin d’accès interne de la méthode base, du trigger, de la méthode projet, méthode formulaire ou méthode objet en cours d’exécution.<!-- END REF--> 
-
-**Note :** Dans le contexte des macro-commandes 4D, la balise *<method\_path>* est remplacée par le chemin d’accès complet du code en cours d’édition. 
+<!--REF #_command_.Current method path.Summary-->La commande **Current method path** retourne le chemin d’accès interne de la méthode base, du trigger, de la méthode projet, méthode formulaire ou méthode objet en cours d’exécution.<!-- END REF-->Dans le contexte des macro-commandes 4D, la balise *<method\_path>* est remplacée par le chemin d’accès complet du code en cours d’édition. 
 
 #### Voir aussi 
 
 [METHOD Get path](method-get-path.md)  
 [METHOD GET PATHS](method-get-paths.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1201 |
+| Thread safe | &check; |
+
+

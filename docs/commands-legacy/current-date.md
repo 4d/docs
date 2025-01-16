@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Current date.Summary-->The Current date command returns the current date as kept by the system clock.<!-- END REF-->
-
-**4D Server:** If you use the asterisk (\*) parameter when executing this function on a 4D Client machine, it returns the current date from the server.
+<!--REF #_command_.Current date.Summary-->The Current date command returns the current date as kept by the system clock.<!-- END REF-->If you use the asterisk (\*) parameter when executing this function on a 4D Client machine, it returns the current date from the server.
 
 #### Example 1 
 
@@ -98,3 +96,12 @@ The following project method allows you to do so:
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 33 |
+| Thread safe | &check; |
+
+

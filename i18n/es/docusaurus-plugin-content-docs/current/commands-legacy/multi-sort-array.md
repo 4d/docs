@@ -110,3 +110,12 @@ Si quiere que el array de nombres se utilice como tercer criterio de ordenación
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SORT ARRAY](sort-array.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 718 |
+| Hilo seguro | &check; |
+
+

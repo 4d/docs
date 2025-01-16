@@ -80,3 +80,13 @@ Lorsque toutes les métadonnées sont manipulées via une référence d’élém
 [GET PICTURE METADATA](get-picture-metadata.md)  
 *Noms des métadonnées images*  
 *Valeurs des métadonnées images*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1121 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

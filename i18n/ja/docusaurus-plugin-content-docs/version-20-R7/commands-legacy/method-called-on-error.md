@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Method called on error.Summary-->**Method called on error** コマンドはカレントプロセス、または*scope* 引数で指定したスコープにおいて[ON ERR CALL](on-err-call.md) コマンドでインストールされたメソッドの名前を返します。<!-- END REF-->
-
-*scope* 引数には、エラー処理メソッドの名前を取得したい実行コンテキストを渡します。以下の定数のいずれか1つを使用することができます:
+<!--REF #_command_.Method called on error.Summary-->**Method called on error** コマンドはカレントプロセス、または*scope* 引数で指定したスコープにおいて[ON ERR CALL](on-err-call.md) コマンドでインストールされたメソッドの名前を返します。<!-- END REF-->引数には、エラー処理メソッドの名前を取得したい実行コンテキストを渡します。以下の定数のいずれか1つを使用することができます:
 
 | 定数                        | 値 | コメント                                             |
 | ------------------------- | - | ------------------------------------------------ |
@@ -45,3 +43,12 @@ displayed_sidebar: docs
 
 *Error Handler*  
 [ON ERR CALL](on-err-call.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 704 |
+| スレッドセーフである | &check; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET PROCESS VARIABLE.Summary-->GET PROCESS VARIABLE コマンドは、*process*引数に渡した番号のソースプロセスから*srcVar* (*srvVar2*等) プロセス変数を読み込み、その現在の値をカレントプロセスの*dstVar* (*dstVar2*等) 変数に返します。<!-- END REF-->
@@ -114,9 +111,17 @@ DRAG AND DROP PROPERTIESコマンドの例題参照
 
 #### 参照 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 [POST OUTSIDE CALL](post-outside-call.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
 *ドラッグ＆ドロップ*  
 *プロセス*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 371 |
+| スレッドセーフである | &cross; |
+
+

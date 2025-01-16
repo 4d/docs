@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET PRINTABLE AREA.Summary-->El comando GET PRINTABLE AREA devuelve el tamaño en píxeles del área de impresión en los parámetros *altura* y *largo* el tamaño.<!-- END REF--> Este tamaño depende de los parámetros de impresión actuales, la orientación del papel, etc. 
@@ -41,3 +38,12 @@ Para saber el tamaño total de la página, puede:
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Print form](print-form.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 703 |
+| Hilo seguro | &cross; |
+
+

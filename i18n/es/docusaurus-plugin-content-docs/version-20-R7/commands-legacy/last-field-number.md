@@ -42,3 +42,12 @@ El siguiente método de proyecto crea el array *asCampos*, con los nombres de lo
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 255 |
+| Hilo seguro | &check; |
+
+

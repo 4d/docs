@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Encrypt data file.Summary-->El comando **Encrypt data file** se utiliza para cifrar o volver a cifrar el archivo de datos designado por el parámetro *rutaDatos* asociado al parámetro *rutaEstructura*.<!-- END REF--> También se puede utilizar para eliminar el cifrado de la base de datos. El comando no modifica los archivos originales, devuelve el nombre de ruta completo de la carpeta creada para respaldar el archivo de datos original.
@@ -134,3 +131,12 @@ Vuelva a cifrar un archivo de datos encriptados con la llave actual (por ejemplo
 [Decrypt data BLOB](decrypt-data-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [New data key](new-data-key.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1610 |
+| Hilo seguro | &cross; |
+
+

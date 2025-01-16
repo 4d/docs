@@ -19,14 +19,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Print object.Summary-->The **Print object** command lets you print the form object(s) designated by the *object* and *\** parameters, at the location set by the *posX* and *posY* parameters.<!-- END REF-->
 
-Before calling the **Print object** command, you must designate the table or project form containing the objects to be printed, using the [FORM LOAD](form-load.md) command. 
+Before calling the **Print object** command, you must designate the table or project form containing the objects to be printed, using the [FORM LOAD](../commands/form-load.md) command. 
 
 If you pass the optional *\** parameter, you indicate that the object parameter is an object name (character string). If you do not pass the *\** parameter, you indicate that object is a variable. In this case, you pass a variable reference (object type only) instead of a string.
 
@@ -98,4 +95,13 @@ Example of printing a complete list box:
 
 #### See also 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1095 |
+| Thread safe | &cross; |
+
+

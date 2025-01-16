@@ -943,7 +943,7 @@ attributePath|formula 比較演算子 値
 | 含まれる          | IN                          | コレクション、あるいは複数の値のうち、どれか一つの値と等しいデータを取得します。ワイルドカード (@) をサポートします。                              |
 | キーワードを含む      | %                           | キーワードは、文字列あるいはピクチャー型の属性内で使用されるものが対象です。                                                                                     |
 
-- **値** (value): エンティティコレクションの各エンティティの属性のカレント値に対して比較する値。 **プレースホルダー** (後述の **プレースホルダーの使用** 参照) か、あるいはデータ型プロパティと同じ型の式を使用することができます。
+- **値** (value): エンティティコレクションの各エンティティの属性のカレント値に対して比較する値。 **プレースホルダー** (後述の **プレースホルダーの使用** 参照) か、あるいはデータ型プロパティと同じ型の式を使用することができます。 Note that, in case of type mismatch with scalar types (text, date, number...), 4D will try to convert the **value** type to the attribute data type whenever possible, for an easier handling of values coming from the Internet. For example, if the string "v20" is entered as **value** to compare with an integer attribute, it will be converted to 20.
   定数値を使用する場合、以下の原則に従う必要があります:
   - **テキスト** テキスト型の定数値の場合は単一引用符つき、あるいはなしでも渡すことができます(後述の **引用符を使用する** 参照)。 文字列中の文字列を検索する ("含まれる" クエリ) には、ワイルドカード記号 (@) を使用して検索文字列を指定します (例: "@Smith@")。 また以下のキーワードはテキスト定数においては使用できません: true, false。
   - **ブール** 型の定数値: **true** または **false** (文字の大小を区別します)
@@ -1036,6 +1036,20 @@ $vSingles:=ds.Person.query("spouse = :1";Null) // 機能しません
 
 ```4d
  $vSingles:=ds.Person.query("spouse = null") // 正しいシンタックス
+```
+
+#### Not equal to null or undefined values
+
+The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
+```
+
+If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
 ```
 
 #### コレクションにおける "等しくない"

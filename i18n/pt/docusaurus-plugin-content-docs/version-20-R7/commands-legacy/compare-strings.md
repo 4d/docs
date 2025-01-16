@@ -103,3 +103,12 @@ Os exemplos abaixo ilustram o impacto específico das opções no **contexto da 
 #### Ver também 
 
 [Position](position.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1756 |
+| Thread-seguro | &check; |
+
+

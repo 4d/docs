@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET DATA SOURCE.Summary-->El comando **OBJECT SET DATA SOURCE** modifica la fuente de datos de los objetos designados por los parámetros *objeto* y *\** .<!-- END REF-->  
@@ -52,3 +49,12 @@ Cambio de la fuente de datos para un área de entrada:
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
 [OBJECT Get data source](object-get-data-source.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1264 |
+| Hilo seguro | &cross; |
+
+

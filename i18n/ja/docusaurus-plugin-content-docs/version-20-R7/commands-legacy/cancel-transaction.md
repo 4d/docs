@@ -25,3 +25,12 @@ displayed_sidebar: docs
 [Transaction level](transaction-level.md)  
 [VALIDATE TRANSACTION](validate-transaction.md)  
 *トランザクションを使用する*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 241 |
+| スレッドセーフである | &check; |
+
+

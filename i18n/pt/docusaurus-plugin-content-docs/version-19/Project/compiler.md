@@ -191,7 +191,7 @@ Estas duas listas contêm quatro colunas:
 - Tipo da variável. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. Se o tipo de uma variável não puder ser determinado, a coluna estará vazia.
 - Número de dimensões se a variável for um array.
 - Reference to the context in which the compiler established the type of the variable. If the variable is used in several contexts, the context mentioned is the one used by the compiler to determine its type.
-  - If the variable was found in a database method, the database method name is given, preceded by (M)*.
+  - Se a variável foi encontrada em um método de banco de dados, o nome do método de banco de dados é dado, precedido por (M)*.
   - If the variable was found in a project method, the method is identified as it has been defined in 4D, preceded by (M).
   - If the variable was found in a trigger, the table name is given, preceded by (TM).
   - If the variable was found in a form method, the form name is given, preceded by the table name and (FM).

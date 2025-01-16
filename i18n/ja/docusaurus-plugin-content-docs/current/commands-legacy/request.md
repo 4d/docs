@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 **Tip:** フォームあるいはオブジェクトメソッド中で、On Activate や On Deactivateを処理するセクションから**Request**コマンドを呼ばないでください。これは永久ループを引き起こします。
 
-**Tip:** ユーザから複数の情報を得なければならない場合、**Request**ダイアログボックスを何度も表示するのではなく、そのためのフォームを作成して[DIALOG](dialog.md)でそれを表示します。
+**Tip:** ユーザから複数の情報を得なければならない場合、**Request**ダイアログボックスを何度も表示するのではなく、そのためのフォームを作成して[DIALOG](../commands/dialog.md)でそれを表示します。
 
 #### 例題 1 
 
@@ -80,3 +80,13 @@ displayed_sidebar: docs
 
 [ALERT](alert.md)  
 [CONFIRM](confirm.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 163 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

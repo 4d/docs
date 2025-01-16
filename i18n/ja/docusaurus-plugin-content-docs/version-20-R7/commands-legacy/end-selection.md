@@ -61,3 +61,12 @@ displayed_sidebar: docs
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 36 |
+| スレッドセーフである | &check; |
+
+

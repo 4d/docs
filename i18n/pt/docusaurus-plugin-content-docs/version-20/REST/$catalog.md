@@ -29,11 +29,11 @@ Nesta lista apenas são mostrados os dataclasses expostos para a datastore do se
 Aqui está uma descrição das propriedades devolvidas para cada dataclass na datastore do seu projecto:
 
 
-| Propriedade | Tipo   | Descrição                                                                        |
-| ----------- | ------ | -------------------------------------------------------------------------------- |
-| name        | String | Nome da dataclass.                                                               |
-| uri         | String | Um URI que lhe permite obter informações sobre o |dataclass e os seus atributos. |
-| dataURI     | String | Uma URI que lhe permite visualizar os dados no dataclass.                        |
+| Propriedade | Tipo | Descrição                                                                        |
+| ----------- | ---- | -------------------------------------------------------------------------------- |
+| name        | Text | Nome da dataclass.                                                               |
+| uri         | Text | Um URI que lhe permite obter informações sobre o |dataclass e os seus atributos. |
+| dataURI     | Text | Uma URI que lhe permite visualizar os dados no dataclass.                        |
 
 
 ### Exemplo
@@ -193,11 +193,11 @@ As seguintes propriedades são devolvidas para um dataclass exposto:
 
 | Propriedade    | Tipo   | Descrição                                                                                                 |
 | -------------- | ------ | --------------------------------------------------------------------------------------------------------- |
-| name           | String | Nome da dataclass                                                                                         |
-| collectionName | String | Nome de uma selecção de entidade no dataclass                                                             |
+| name           | Text   | Nome da dataclass                                                                                         |
+| collectionName | Text   | Nome de uma selecção de entidade no dataclass                                                             |
 | tableNumber    | Number | Número da tabela na base de dados 4D                                                                      |
-| scope          | String | Alcance da classe de dados (lembre que só são mostradas as classes de dados cujo **Alcance** for público) |
-| dataURI        | String | Um URI para os dados no dataclass                                                                         |
+| scope          | Text   | Alcance da classe de dados (lembre que só são mostradas as classes de dados cujo **Alcance** for público) |
+| dataURI        | Text   | Um URI para os dados no dataclass                                                                         |
 
 
 ### Atributo(s)
@@ -206,16 +206,16 @@ Aqui estão as propriedades para cada atributo exposto que são devolvidas:
 
 | Propriedade | Tipo       | Descrição                                                                                                                                                            |
 | ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | String     | o nome de atributo.                                                                                                                                                  |
-| kind        | String     | Tipo de atributo (armazenamento ou relatedEntity).                                                                                                                   |
+| name        | Text       | o nome de atributo.                                                                                                                                                  |
+| kind        | Text       | Tipo de atributo (armazenamento ou relatedEntity).                                                                                                                   |
 | fieldPos    | Number     | Posição do campo na tabela da base de dados).                                                                                                                        |
-| scope       | String     | Âmbito do atributo (apenas aparecerão os atributos cujo âmbito seja Público).                                                                                        |
-| indexed     | String     | Se algum **Index Kind** foi seleccionado, esta propriedade voltará a ser verdadeira. Caso contrário, esta propriedade não aparece.                                   |
-| type        | String     | Tipo de atributo (booleano, blob, byte, data, duração, imagem, long, long64, número, string, uuid ou palavra) ou a classe de dados para um atributo de relação N->1. |
+| scope       | Text       | Âmbito do atributo (apenas aparecerão os atributos cujo âmbito seja Público).                                                                                        |
+| indexed     | Text       | Se algum **Index Kind** foi seleccionado, esta propriedade voltará a ser verdadeira. Caso contrário, esta propriedade não aparece.                                   |
+| type        | Text       | Tipo de atributo (booleano, blob, byte, data, duração, imagem, long, long64, número, string, uuid ou palavra) ou a classe de dados para um atributo de relação N->1. |
 | identifying | Parâmetros | Esta propriedade retorna True se o atributo for a chave primária. Caso contrário, esta propriedade não aparece.                                                      |
-| path        | String     | Nome da relação de um atributo relatedEntity ou relateEntities.                                                                                                      |
-| foreignKey  | String     | foreignKey|String   |For a relatedEntity attribute, name of the related attribute.|                                                                                  |
-| inverseName | String     | inverseName |String |Name of the opposite relation for a relatedEntity or relateEntities attribute.|                                                                 |
+| path        | Text       | Nome da relação de um atributo relatedEntity ou relateEntities.                                                                                                      |
+| foreignKey  | Text       | foreignKey|String   |For a relatedEntity attribute, name of the related attribute.|                                                                                  |
+| inverseName | Text       | inverseName |String |Name of the opposite relation for a relatedEntity or relateEntities attribute.|                                                                 |
 
 
 ### Chave primária

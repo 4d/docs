@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.CHANGE CURRENT USER.Summary-->**CHANGE CURRENT USER** permet de changer l'identité de l'utilisateur courant dans la base, sans devoir la quitter.<!-- END REF--> Le changement d'identité peut être effectué par l'utilisateur lui-même via la boîte de dialogue de connexion à la base (lorsque la commande est appelée sans paramètres) ou directement par la commande. Lorsqu'il change d'identité, l'utilisateur abandonne ses anciens privilèges au profit de ceux de l'utilisateur choisi.
@@ -47,7 +44,7 @@ Le principe est le suivant :
 
 **1.** L’entrée dans la base s’effectue directement en mode “Utilisateur par défaut”, sans boîte de dialogue. 
 
-**2.** Dans la , le développeur provoque l’affichage d’une boîte de dialogue personnalisée de saisie du nom d’utilisateur et du mot de passe (à l’aide de la commande [DIALOG](dialog.md) ou [ADD RECORD](add-record.md) par exemple). Tout type de traitement peut être envisagé dans la boîte de dialogue :   
+**2.** Dans la , le développeur provoque l’affichage d’une boîte de dialogue personnalisée de saisie du nom d’utilisateur et du mot de passe (à l’aide de la commande [DIALOG](../commands/dialog.md) ou [ADD RECORD](add-record.md) par exemple). Tout type de traitement peut être envisagé dans la boîte de dialogue :   
 \- Il est possible d’afficher la liste des utilisateurs de la base, comme dans la boîte de dialogue d’accès standard de 4D, à l’aide de la commande [GET USER LIST](get-user-list.md).   
 \- Le champ de saisie du mot de passe peut contenir divers contrôles afin de vérifier la validité des caractères saisis (nombre minimum de caractères, unicité...).   
 \- Pour les caractères du mot de passe saisi soient brouillés à l'écran, vous pouvez utiliser la commande [FILTER KEYSTROKE](filter-keystroke.md).   
@@ -69,3 +66,12 @@ L'exemple suivant affiche simplement la boîte de dialogue de connexion :
 
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 289 |
+| Thread safe | &cross; |
+
+

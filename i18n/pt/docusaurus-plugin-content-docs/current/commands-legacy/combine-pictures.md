@@ -51,3 +51,12 @@ Resultado:
 #### Ver também 
 
 [TRANSFORM PICTURE](transform-picture.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 987 |
+| Thread-seguro | &check; |
+
+

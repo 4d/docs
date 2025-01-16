@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.DISPLAY RECORD.Summary-->**DISPLAY RECORD** affiche l'enregistrement courant de *laTable* dans le formulaire entrée courant.<!-- END REF--> L'enregistrement reste affiché jusqu'à ce qu'un événement provoque un redessinement de la fenêtre. Cet événement peut être l'exécution d'un [ADD RECORD](add-record.md), le retour au formulaire entrée ou à la barre de menus. **DISPLAY RECORD** ne fait rien s'il n'y a pas d'enregistrement courant.
@@ -41,3 +38,12 @@ L'exemple suivant affiche une série d'enregistrements sous forme de slide show 
 #### Voir aussi 
 
 [MESSAGE](message.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 105 |
+| Thread safe | &cross; |
+
+

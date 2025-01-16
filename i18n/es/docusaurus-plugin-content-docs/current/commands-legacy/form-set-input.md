@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.FORM SET INPUT.Summary-->El comando FORM SET INPUT define el formulario de entrada actual de *tabla* para *form* o *formUsuario*.<!-- END REF--> El formulario debe pertenecer a *tabla*.
@@ -98,7 +95,6 @@ que devuelve:
 
 #### Ver también 
 
-*\_o\_CREATE USER FORM*  
 [ADD RECORD](add-record.md)  
 [DISPLAY RECORD](display-record.md)  
 [DISPLAY SELECTION](display-selection.md)  
@@ -110,3 +106,12 @@ que devuelve:
 [MODIFY SELECTION](modify-selection.md)  
 [Open window](open-window.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 55 |
+| Hilo seguro | &cross; |
+
+

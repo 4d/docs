@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.HIDE TOOL BAR.Summary-->**HIDE TOOL BAR** コマンドは、カレントプロセスにおいて[Open form window](open-form-window.md) コマンドで作成されたカスタムのツールバーの表示を管理します。<!-- END REF-->
@@ -42,3 +39,12 @@ OS X において、カスタムのツールバーとHas full screen mode Mac �
 #### 参照 
 
 [SHOW TOOL BAR](show-tool-bar.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 434 |
+| スレッドセーフである | &cross; |
+
+

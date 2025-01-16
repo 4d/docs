@@ -30,7 +30,7 @@ Si pasa el parámetro opcional *\**, indica que *wpArea* es un nombre de objeto 
 
 **Nota**: este comando sólo puede utilizarse si *wpArea* está asociada con un objeto de formulario (es decir, se muestra en el formulario/página actual).
 
-Si se selecciona una imagen anclada (imagen en una ubicación fija) en *wpArea*, **WP Selection range** devuelve un objeto de referencia de imagen y no un objeto rango (para más información, consulte la descripción del comando [WP Add picture](wp-add-picture.md). De lo contrario, **WP Selection range** devuelve un nuevo objeto de rango. Para mayor información sobre objetos de rango, consulte *Comandos de gestión de rangos*.
+Si se selecciona una imagen anclada (imagen en una ubicación fija) en *wpArea*, **WP Selection range** devuelve un objeto de referencia de imagen y no un objeto rango (para más información, consulte la descripción del comando [WP Add picture](../commands/wp-add-picture.md). De lo contrario, **WP Selection range** devuelve un nuevo objeto de rango. Para mayor información sobre objetos de rango, consulte *Comandos de gestión de rangos*.
 
 #### Ejemplo 
 

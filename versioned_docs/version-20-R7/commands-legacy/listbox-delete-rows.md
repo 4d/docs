@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->The **LISTBOX DELETE ROWS** command deletes one or several row(s) starting at *rowPosition* row (visible or not) from the list box set in the *object* and *\** parameters.<!-- END REF-->
@@ -39,3 +36,13 @@ If the *rowPosition* value is higher than the total number of rows in the list b
 
 [LISTBOX Get number of rows](listbox-get-number-of-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 914 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

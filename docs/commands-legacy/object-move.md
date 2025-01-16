@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->The OBJECT MOVE command allows you to move the object(s) in the current form, defined by the *\** and *object* parameters *moveH* pixels horizontally and *moveV* pixels vertically.<!-- END REF--> 
@@ -44,7 +41,7 @@ By default, the values *moveH*, *moveV*, *resizeH* and *resizeV* modify the coor
 This command works in the following contexts:
 
 * Data entering in Input forms,
-* Forms displayed using the [DIALOG](dialog.md) command,
+* Forms displayed using the [DIALOG](../commands/dialog.md) command,
 * Headers and footers of Output forms displayed with [MODIFY SELECTION](modify-selection.md) or [DISPLAY SELECTION](display-selection.md) commands,
 * Form printing events.
 
@@ -70,3 +67,12 @@ The following statement moves “button\_1” to the following coordinates (10;2
 [OBJECT DUPLICATE](object-duplicate.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 664 |
+| Thread safe | &cross; |
+
+

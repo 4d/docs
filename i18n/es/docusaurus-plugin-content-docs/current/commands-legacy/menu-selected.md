@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Menu selected.Summary-->Menu selected se utiliza sólo cuando se muestran formularios.<!-- END REF--> Esta función detecta el comando de menú elegido en un menú y en el caso de un submenú jerárquico, devuelve la referencia del submenú. 
@@ -62,3 +59,13 @@ El siguiente método de formulario utiliza Menu selected para proporcionar los a
 #### Ver también 
 
 *Gestión de menús*  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 152 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

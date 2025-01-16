@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->El comando **SPELL ADD TO USER DICTIONARY** añade una o más palabras al diccionario usuario actual.<!-- END REF-->  
@@ -39,3 +36,12 @@ Adición de nombres propios al diccionario de usuario:
 #### Ver también 
 
 [SPELL CHECK TEXT](spell-check-text.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1214 |
+| Hilo seguro | &cross; |
+
+

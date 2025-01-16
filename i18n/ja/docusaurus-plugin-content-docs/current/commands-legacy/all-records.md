@@ -34,3 +34,14 @@ displayed_sidebar: docs
 [QUERY](query.md)  
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 47 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+| カレントセレクションを変更する ||
+
+

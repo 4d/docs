@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->El comando GET HIGHLIGHTED RECORDS  guarda en el conjunto designado por el parámetro *nomConjunto* los registros seleccionados (es decir, los registros seleccionados por el usuario en el formulario listado) de la *tabla* pasada como parámetro.<!-- END REF--> Si el parámetro *tabla* se omite, se utiliza la tabla del formulario o del subformulario actual. 
@@ -46,3 +43,13 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 #### Ver también 
 
 [HIGHLIGHT RECORDS](highlight-records.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 902 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

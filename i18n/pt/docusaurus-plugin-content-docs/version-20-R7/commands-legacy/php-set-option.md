@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 :::info Compatibilidade
 
 **PHP está obsoleto em 4D**. Recomenda-se usar a classe [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
@@ -41,3 +38,12 @@ Como padrão, PHP SET OPTION define a opção para todas as chamadas a [PHP Exec
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1059 |
+| Thread-seguro | &cross; |
+
+

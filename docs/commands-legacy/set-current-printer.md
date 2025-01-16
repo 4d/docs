@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->The **SET CURRENT PRINTER** command designates the printer to be used for printing with the current 4D application.<!-- END REF-->
@@ -30,7 +27,7 @@ You can also designate the generic PDF printer automatically, regardless of the 
 
 The **SET CURRENT PRINTER** command must be called before [SET PRINT OPTION](set-print-option.md), so that the options available correspond to the selected printer. On the other hand, **SET CURRENT PRINTER** must be called after *\_o\_PAGE SETUP*, otherwise the print settings are lost.
 
-This command can be used with the [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](print-form.md), and [QR REPORT](qr-report.md) commands, and is applied to all 4D printing, including that in Design mode.  
+This command can be used with the [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md), and [QR REPORT](qr-report.md) commands, and is applied to all 4D printing, including that in Design mode.  
 It is imperative for print commands to be called with the *\>* parameter (where applicable) so that the specified settings are not lost.
 
 #### System variables and sets 
@@ -55,3 +52,13 @@ Creation of a PDF document under Windows:
 
 [Get current printer](get-current-printer.md)  
 [PRINTERS LIST](printers-list.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 787 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

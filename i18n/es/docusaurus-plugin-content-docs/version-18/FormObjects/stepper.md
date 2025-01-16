@@ -16,7 +16,7 @@ Puede asignar la variable asociada al objeto a un área introducible (campo o va
 Se puede asociar un stepper directamente a una variable numérica, hora o fecha.
 
 * Para los valores de tipo hora, las propiedades Mínimo, Máximo y Paso representan segundos. Por ejemplo, para programar un paso de 8:00 a 18:00 con pasos de 10 minutos:
-  * [minimum](properties_Scale.md#minimum) = 28 800 (8*60*60)
+  * [mínimo](properties_Scale.md#minimum) = 28 800 (8*60*60)
   * [máximo](properties_Scale.md#maximum) = 64 800 (18*60*60)
   * [paso](properties_Scale.md#step) = 600 (10*60)
 * Para los valores de tipo fecha, el valor introducido en la propiedad [paso](properties_Scale.md#step) representa días. Las propiedades Mínimo y Máximo se ignoran.

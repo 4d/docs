@@ -13,16 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
-<!--REF #_command_.Get printed height.Summary-->O comando Get printed height devolve a altura global (em píxels) da seção impressa pelo comando [Print form](print-form.md).<!-- END REF-->
+<!--REF #_command_.Get printed height.Summary-->O comando Get printed height devolve a altura global (em píxels) da seção impressa pelo comando [Print form](../commands/print-form.md).<!-- END REF-->
 
 O valor devolvido estará entre 0 (a borda superior da página) e a altura total devolvida pelo comando [GET PRINTABLE AREA](get-printable-area.md) (o tamanho máximo da área de impressão). 
 
-Se imprime uma nova seção utilizando o comando [Print form](print-form.md) , a altura da nova seção se adiciona a este valor. Se a área de impressão disponível for insuficiente para conter esta seção, é gerado uma nova página e o valor devolvido é 0.
+Se imprime uma nova seção utilizando o comando [Print form](../commands/print-form.md) , a altura da nova seção se adiciona a este valor. Se a área de impressão disponível for insuficiente para conter esta seção, é gerado uma nova página e o valor devolvido é 0.
 
 As margens de impressão direita e esquerda não influem no valor devolvido, diferente das margens inferior e superior (as quais podem ser definidas utilizando o comando [SET PRINTABLE MARGIN](set-printable-margin.md) ).
 
@@ -31,5 +28,14 @@ As margens de impressão direita e esquerda não influem no valor devolvido, dif
 #### Ver também 
 
 [GET PRINTABLE AREA](get-printable-area.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 702 |
+| Thread-seguro | &cross; |
+
+

@@ -25,7 +25,7 @@ Ao escrever uma fórmula, pode utilizar diferentes atalhos:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. To do so, enter these formulas using the [VP ADD FORMULA NAME](commands/vp-add-formula-name.md) command.
+Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. Para fazer isso, insira essas fórmulas usando o comando [VP ADD FORMULA NAME](commands/vp-add-formula-name.md).
 
 ### Operadores e Operandos
 
@@ -135,7 +135,7 @@ O 4D View Pro permite que você defina e chame **funções personalizadas 4D**, 
 
 As funções personalizadas 4D podem receber [parâmetros](#parameters) da área 4D View Pro e retornar valores.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions) command. Exemplos:
+Você declara todas as suas funções usando o comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions). Exemplos:
 
 ```4d
 $o:=New object
@@ -221,14 +221,14 @@ If you do not declare parameters, values can be sequentially passed to methods (
 
 Os parâmetros Date e Object são tratados da seguinte maneira:
 
-- Dates in _jstype_ will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:
+- As datas em _jstype_ serão passadas como [objeto](Concepts/dt_object.md) no código 4D com duas propriedades:
 
 | Propriedade | Tipo | Descrição         |
 | ----------- | ---- | ----------------- |
 | value       | Date | Valor data        |
 | time        | Real | Tempo em segundos |
 
-- Objects will be passed as [object](Concepts/dt_object.md) with a  `.value` property containing the parameter:
+- Os objetos serão passados como [object](Concepts/dt_object.md) com uma propriedade `.value` contendo o parâmetro:
 
 | Propriedade | Tipo   | Descrição        |
 | ----------- | ------ | ---------------- |
@@ -239,12 +239,12 @@ Os parâmetros Date e Object são tratados da seguinte maneira:
 4D project methods can also return values in the 4D View Pro cell formula via $0. São suportados os seguintes tipos de dados para os parâmetros devolvidos:
 
 - [text](Aceitar/dt_string.md) (convertido em string em 4D View Pro)
-- [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converted to number in 4D View Pro)
-- [date](Concepts/dt_date.md) (converted to JS Date type in 4D View Pro - hour, minute, sec = 0)
+- [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (convertido em número no 4D View Pro)
+- [date](Concepts/dt_date.md) (convertido para o tipo JS Date no 4D View Pro - hora, minuto, segundo = 0)
 - [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
 - [boolean](Concepts/dt_boolean.md) (convertido em bool no 4D View Pro)
 - [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
-- [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
+- [object](Concepts/dt_object.md) com as duas propriedades a seguir (permitindo a passagem de uma data e hora):
 
   | Propriedade | Tipo | Descrição         |
   | ----------- | ---- | ----------------- |
@@ -276,7 +276,7 @@ $o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information
 
 ## Compatibidade
 
-Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. However, using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md) command is recommended.
+Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. No entanto, é recomendável usar o comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md).
 
 ### Referência a campos utilizando a estrutura virtual
 

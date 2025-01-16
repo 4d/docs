@@ -34,6 +34,14 @@ L'heure et la date de création et de dernière modification sont gérées par l
 
 #### Voir aussi 
 
-*\_o\_SET DOCUMENT CREATOR*  
-*\_o\_SET DOCUMENT TYPE*  
 [GET DOCUMENT PROPERTIES](get-document-properties.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 478 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+
+

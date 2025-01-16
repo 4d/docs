@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Compile project.Summary-->**Compile project** permite compialr o projeto do host atual ou o projeto especificado no parâmetro *projectFile*.<!-- END REF--> Para saber mais sobre compilação, veja *a página de compilação em developer.4d.com*.
@@ -172,3 +169,12 @@ Compile um projeto e declare seus componentes:
 #### Ver também 
 
 [BUILD APPLICATION](build-application.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1760 |
+| Thread-seguro | &cross; |
+
+

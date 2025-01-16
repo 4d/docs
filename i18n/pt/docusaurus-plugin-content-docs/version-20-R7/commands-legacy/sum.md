@@ -73,3 +73,13 @@ Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descri
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

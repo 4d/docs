@@ -72,3 +72,12 @@ O exemplo abaixo ilustra o uso do parâmetro \* no caso de uma avaliação diacr
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 233 |
+| Thread-seguro | &check; |
+
+

@@ -43,3 +43,13 @@ displayed_sidebar: docs
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
 [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 731 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

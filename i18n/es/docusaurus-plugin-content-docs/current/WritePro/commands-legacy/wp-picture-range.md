@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-El nuevo comando **WP Picture range** devuelve un objeto rango específico que referencia únicamente las imágenes contenidas en *rangoObj* que haya pasado en parámetro. El objeto rango de imágenes devuelto debe ser utilizado con [WP GET ATTRIBUTES](wp-get-attributes.md) y [WP SET ATTRIBUTES](wp-set-attributes.md) para manejar los atributos de imágenes.
+El nuevo comando **WP Picture range** devuelve un objeto rango específico que referencia únicamente las imágenes contenidas en *rangoObj* que haya pasado en parámetro. El objeto rango de imágenes devuelto debe ser utilizado con [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) y [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar los atributos de imágenes.
 
 En *rangoObj*, puede pasar:
 
@@ -40,8 +40,8 @@ Usted desea cambiar el color del borde de las imágenes únicamente:
 
 *Gestión de imágenes*  
 *Utilizar los comandos del tema Texto con estilo*  
-[WP Add picture](wp-add-picture.md)  
-[WP INSERT PICTURE](wp-insert-picture.md)  
+[WP Add picture](../commands/wp-add-picture.md)  
+[WP INSERT PICTURE](../commands/wp-insert-picture.md)  
 [WP Paragraph range](wp-paragraph-range.md)  
 [WP Selection range](wp-selection-range.md)  
 [WP Text range](wp-text-range.md)  

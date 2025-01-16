@@ -28,3 +28,12 @@ O valor NULL é utilizado pelo motor SQL de 4D. Para maior informação, consult
 
 [Is field value Null](is-field-value-null.md)  
 [Null](null.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 965 |
+| Thread-seguro | &check; |
+
+

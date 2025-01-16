@@ -50,3 +50,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [Test path name](test-path-name.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 159 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

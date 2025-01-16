@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->The LISTBOX COLLAPSE command is used to collapse the break rows of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
@@ -53,3 +50,12 @@ This example collapses the first level of the break rows of the selection in the
 #### See also 
 
 [LISTBOX EXPAND](listbox-expand.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1101 |
+| Thread safe | &cross; |
+
+

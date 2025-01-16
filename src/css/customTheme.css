@@ -35,6 +35,14 @@ details {
   margin: 10px auto !important;
 }
 
+details[data-value='properties'] > div > div {
+  border: none !important;
+}
+
+details[data-value='properties'] > div > div > table > thead {
+  visibility: collapse;
+  line-height: 0;
+}
 
 .details > summary {
   position: relative;

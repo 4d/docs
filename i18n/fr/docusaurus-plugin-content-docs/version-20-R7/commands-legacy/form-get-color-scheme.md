@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM Get color scheme.Summary-->La commande **FORM Get color scheme** retourne le nom du schéma de couleurs du formulaire actuellement affiché .<!-- END REF--> S'il n'existe pas de formulaire courant, la commande retourne une chaîne vide.
@@ -46,3 +43,12 @@ Vous souhaitez charger une image en fonction du schéma courant du formulaire :
 
 [Get application color scheme](get-application-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1761 |
+| Thread safe | &cross; |
+
+

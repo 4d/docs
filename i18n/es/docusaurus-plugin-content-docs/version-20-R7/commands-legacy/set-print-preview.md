@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET PRINT PREVIEW.Summary-->**SET PRINT PREVIEW** le permite seleccionar o deseleccionar por programación la opción de previsualización en pantalla de la caja de diálogo de impresión.<!-- END REF--> Si pasa TRUE en *vista previa*, se selecciona Previsualización en pantalla, si pasa FALSE, se deseleccionará. Este parámetro es local para un proceso y no afecta la impresión de otros procesos o usuarios.
@@ -39,3 +36,12 @@ El siguiente ejemplo selecciona la opción Previsualización en pantalla para mo
 
 [Get print preview](get-print-preview.md)  
 [Is in print preview](is-in-print-preview.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 364 |
+| Hilo seguro | &cross; |
+
+

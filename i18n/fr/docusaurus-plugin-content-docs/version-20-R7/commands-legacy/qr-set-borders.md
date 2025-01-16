@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR SET BORDERS.Summary-->La commande **QR SET BORDERS** permet de définir le style d'encadrement d'une cellule spécifique.<!-- END REF--> 
@@ -78,3 +75,13 @@ Si le paramètre *épaisseur* est incorrect, l’erreur -9855 est générée.
 #### Voir aussi 
 
 [QR GET BORDERS](qr-get-borders.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 797 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

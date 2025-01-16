@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.WA Run offscreen area.Summary-->**WA Run offscreen area** コマンドは、メモリ内にWeb エリアを作成します。<!-- END REF-->このWeb エリアはWeb ページを自動的に読み込んで解析することなどに使用できます。
@@ -95,6 +92,16 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[FORM Event](form-event.md)  
+[FORM Event](../commands/form-event.md)  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
 *Webエリアのプログラムによる管理*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1727 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

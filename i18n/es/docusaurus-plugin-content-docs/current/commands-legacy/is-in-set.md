@@ -34,3 +34,12 @@ El siguiente ejemplo es un método de objeto de un botón que prueba si el regis
 
 [ADD TO SET](add-to-set.md)  
 [REMOVE FROM SET](remove-from-set.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 273 |
+| Hilo seguro | &check; |
+
+

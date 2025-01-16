@@ -48,3 +48,12 @@ displayed_sidebar: docs
 
   
 [New data key](new-data-key.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1638 |
+| スレッドセーフである | &check; |
+
+

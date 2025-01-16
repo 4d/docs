@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->**ST GET ATTRIBUTES** コマンドは、*object*で指定したフォームオブジェクト中で選択されたテキストのスタイル属性を取得するために使用します。<!-- END REF--> 
@@ -102,3 +99,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [ST SET ATTRIBUTES](st-set-attributes.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1094 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

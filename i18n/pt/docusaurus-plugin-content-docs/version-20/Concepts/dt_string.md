@@ -8,7 +8,7 @@ String é um termo genérico que significa:
 - Campos ou variáveis texto: um campo, uma variável ou uma expressão texto pode conter de 0 a 2 GB de texto.
 - Campos alfanuméricos: um campo alfanumérico pode conter de 0 a 255 caracteres (limite estabelecido aquando da definição do campo).
 
-## Constantes literais String
+## String literals
 
 Uma constante string é colocada entre aspas duplas e rectas ("..."). Eis alguns exemplos:
 
@@ -38,8 +38,8 @@ As seguintes sequências de escape podem ser utilizadas em strings de caracteres
 
 | Operação             | Sintaxe          | Retorna    | Expression              | Valor    |
 | -------------------- | ---------------- | ---------- | ----------------------- | -------- |
-| Concatenação         | String + String  | String     | "abc" + "def"           | "abcdef" |
-| Repetição            | String * Number  | String     | "ab" * 3                | "ababab" |
+| Concatenação         | String + String  | Text       | "abc" + "def"           | "abcdef" |
+| Repetição            | String * Number  | Text       | "ab" * 3                | "ababab" |
 | Igual                | String = String  | Parâmetros | "abc" = "abc"           | True     |
 |                      |                  |            | "abc" = "abd"           | False    |
 | Desigualdade         | String # String  | Parâmetros | "abc" # "abd"           | True     |

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Pasteboard data size.Summary-->The **Pasteboard data size** command checks whether there is any data of the type you passed in *dataType* present in the pasteboard.<!-- END REF--> 
@@ -94,3 +91,13 @@ See the example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 *Pasteboard*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 400 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

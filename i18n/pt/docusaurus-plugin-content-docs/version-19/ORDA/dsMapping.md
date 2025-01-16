@@ -159,7 +159,7 @@ In addition, the following relation attributes will also be automatically availa
 
 * in the Project dataclass: **theClient** attribute, of the "relatedEntity" kind; there is at most one Company for each Project (the client)
 * in the Company dataclass: **companyProjects** attribute, of the "relatedEntities" kind; for each Company there is any number of related Projects.
-> > > The Manual or Automatic property of a database relation has no effect in ORDA.
+> The Manual or Automatic property of a database relation has no effect in ORDA.
 
 Todos os atributos da dataclass são expostos como propriedades da dataclass:
 
@@ -231,9 +231,9 @@ As selecções de entidades não ordenadas são criadas nos seguintes casos:
 * result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
 * resultado do método `newSelection()` sem opção,
 * result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
-> > > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> The following entity selections are always **ordered**:
 > 
-> * > > * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> * entity selections returned by 4D Server to a remote client
 > * selecções de entidades construídas em datastores remotos.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.

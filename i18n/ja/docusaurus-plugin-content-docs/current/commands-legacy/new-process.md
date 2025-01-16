@@ -105,3 +105,12 @@ displayed_sidebar: docs
 [Execute on server](execute-on-server.md)  
 *プリエンプティブ4Dプロセス*  
 *プロセス*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 317 |
+| スレッドセーフである | &check; |
+
+

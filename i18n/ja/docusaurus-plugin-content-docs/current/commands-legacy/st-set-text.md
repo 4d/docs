@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ST SET TEXT.Summary-->**ST SET TEXT** コマンドは*object*引数で指定されたスタイル付きのフィールドや変数に、 *newText*引数で渡されたテキストを挿入します。<!-- END REF--> このコマンドは*object*引数のプレーンテキストにのみ適用され、含まれるスタイルタグは更新しません。このコマンドはスクリーンに表示されているスタ イル付きテキストをプログラムで変更するために使用できます。 
@@ -94,3 +91,13 @@ displayed_sidebar: docs
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1115 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

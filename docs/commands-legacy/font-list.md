@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fonts | Text array | &#8592; | Array of font names |
-| listType &#124; * | Longint, Operator | &#8594;  | Font type list to return or * to return font names under OS X |
+| listType &#124; * | Integer, Operator | &#8594;  | Font type list to return or * to return font names under OS X |
 
 <!-- END REF-->
 
@@ -68,9 +68,17 @@ You want to get a list of recent fonts:
 
 #### See also 
 
-*\_o\_Font name*  
 [FONT STYLE LIST](font-style-list.md)  
 *Font Type List*  
 [OBJECT SET FONT](object-set-font.md)  
 [SET RECENT FONTS](set-recent-fonts.md)  
 [ST SET ATTRIBUTES](st-set-attributes.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 460 |
+| Thread safe | &check; |
+
+

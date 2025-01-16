@@ -150,3 +150,13 @@ displayed_sidebar: docs
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 79 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

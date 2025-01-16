@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** は、*aTable*のレコードを検索します。<!-- END REF-->**QUERY SELECTION** はカレントプロセスの*aTable*のカレントセレクションを変更し、セレクションの先頭のレコ－ドをカレントレコ－ドにします。 
+<!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** は、*aTable*のレコードを検索します。<!-- END REF-->はカレントプロセスの*aTable*のカレントセレクションを変更し、セレクションの先頭のレコ－ドをカレントレコ－ドにします。 
 
 **QUERY SELECTION** は、[QUERY](query.md)と同じような動作を実行します。相違点は検索する範囲が異なるだけです:
 
@@ -43,3 +43,15 @@ displayed_sidebar: docs
 #### 参照 
 
 [QUERY](query.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 341 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| カレントレコードを変更する ||
+| カレントセレクションを変更する ||
+
+

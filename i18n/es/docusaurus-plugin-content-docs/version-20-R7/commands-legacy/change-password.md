@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.CHANGE PASSWORD.Summary-->CHANGE PASSWORD cambia la contraseña del usuario actual.<!-- END REF--> Este comando reemplaza la contraseña actual con la nueva contraseña que se pasa en *contraseña*. 
@@ -45,3 +42,12 @@ El siguiente ejemplo permite al usuario cambiar su contraseña.
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [OBJECT SET FONT](object-set-font.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 186 |
+| Hilo seguro | &cross; |
+
+

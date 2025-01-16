@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Summary-->The **OBJECT SET HORIZONTAL ALIGNMENT** command allows you to set the type of horizontal alignment applied to the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
@@ -58,3 +55,12 @@ The form objects to which alignment can be applied are as follows:
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 706 |
+| Thread safe | &cross; |
+
+

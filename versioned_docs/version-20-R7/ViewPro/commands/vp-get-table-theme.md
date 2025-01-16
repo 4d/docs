@@ -12,7 +12,7 @@ title: VP Get table theme
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
 
-**VP Get table theme** ( *vpAreaName* : Text ; *tableName* : Text ) : cs.ViewPro.TableTheme<!-- END REF -->
+**VP Get table theme** ( *vpAreaName* : Text ; *tableName* : Text {; *sheet* : Integer } ) : cs.ViewPro.TableTheme<!-- END REF -->
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
@@ -20,6 +20,7 @@ title: VP Get table theme
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
 |Result|[cs.ViewPro.TableTheme](../classes.md#tabletheme)|<-|Current table theme property values|<!-- END REF -->
 
 
@@ -28,6 +29,8 @@ title: VP Get table theme
 The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](vp-create-table.md) or [`VP SET TABLE THEME`](vp-set-table-theme.md) commands, or through the interface. 
 
 In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table. 
+
+In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
 
 The command returns an object of the [cs.ViewPro.TableTheme](../classes.md#tabletheme) class with properties and values that describe the current table theme. 
 

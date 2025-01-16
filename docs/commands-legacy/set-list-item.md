@@ -11,16 +11,13 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current item in the list |
+| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current item in the list |
 | newItemText | Text | &#8594;  | New item text |
 | newItemRef | Integer | &#8594;  | New item reference number |
 | sublist | Integer | &#8594;  | New sublist attached to item, or 0 for no sublist (detaching current one, if any), or -1 for no change |
 | expanded | Boolean | &#8594;  | Indicates if the optional sublist will be expanded or collapsed |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -80,3 +77,12 @@ See example for the [APPEND TO LIST](append-to-list.md) command.
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 385 |
+| Thread safe | &cross; |
+
+

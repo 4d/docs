@@ -275,7 +275,7 @@ Cette propriété est en **lecture/écriture**.
 
 :::caution
 
-Lorsqu'un file handle est créé, la valeur `.offset` est un nombre d'octets. Cependant, l'unité de mesure du décalage diffère selon la fonction de lecture : avec [`readBlob()`](#readblob), `.offset` est un nombre d'octets, alors qu'avec [`readText()`](#readtext)/[`readLine()`](#readline), c'est un nombre de caractères. Selon le jeu de caractères du fichier, un caractère correspond à un ou plusieurs octets. Ainsi, si vous commencez la lecture avec `readBlob()` et que vous appelez ensuite `readText()`, la lecture du texte commencera à une position incohérente. Il est donc essentiel de définir vous-même la propriété `.offset` si vous passez de la lecture/écriture de blob à la lecture/écriture de texte dans le même filehandle. Par exemple :
+Lorsqu'un file handle est créé, la valeur `.offset` est un nombre d'octets. Cependant, l'unité de mesure du décalage diffère selon la fonction de lecture : avec [`readBlob()`](#readblob), `.offset` est un nombre d'octets, alors qu'avec [`readText()`](#readtext)/[`readLine()`](#readline), c'est un nombre de caractères. Selon le jeu de caractères du fichier, un caractère correspond à un ou plusieurs octets. Selon le jeu de caractères du fichier, un caractère correspond à un ou plusieurs octets. Selon le jeu de caractères du fichier, un caractère correspond à un ou plusieurs octets. Par exemple :
 
 ```4d
   // Ouvrir un fichier texte européen en utilisant l'encodage utf-16 (2 octets par caractère)
@@ -306,7 +306,7 @@ $s:=$fh.readText()
 
 </details>
 
-<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
+<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : 4D.Blob <!-- END REF -->
 
 <!--REF #FileHandleClass.readBlob().Params -->
 

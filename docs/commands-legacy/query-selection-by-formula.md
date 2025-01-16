@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->**QUERY SELECTION BY FORMULA** looks for records in *aTable*.<!-- END REF--> **QUERY SELECTION BY FORMULA** changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record. 
+<!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->**QUERY SELECTION BY FORMULA** looks for records in *aTable*.<!-- END REF-->changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record. 
 
 **QUERY SELECTION BY FORMULA** performs the same actions as [QUERY BY FORMULA](query-by-formula.md). The difference between the two commands is the scope of the query:
 
@@ -30,3 +30,14 @@ For more information, see the description of the [QUERY BY FORMULA](query-by-for
 [QUERY](query.md)  
 [QUERY BY FORMULA](query-by-formula.md)  
 [QUERY SELECTION](query-selection.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 207 |
+| Thread safe | &check; |
+| Changes current record ||
+| Changes current selection ||
+
+

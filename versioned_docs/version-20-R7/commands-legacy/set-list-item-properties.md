@@ -11,16 +11,13 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current list item |
+| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current list item |
 | enterable | Boolean | &#8594;  | TRUE = Enterable, FALSE = Non-enterable |
 | styles | Integer | &#8594;  | Font style for the item |
 | icon | Text, Integer | &#8594;  | Picture name or number ("" or 0 for no icon) |
 | color | Integer | &#8594;  | RGB color value or -1 = reset to original color |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -80,3 +77,12 @@ The following example changes the text of the current item of *list* to bold and
 *Hierarchical Lists*  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 386 |
+| Thread safe | &cross; |
+
+

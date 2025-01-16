@@ -32,3 +32,12 @@ This command must be called from an on error call method installed by the [ON ER
 
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1799 |
+| Thread safe | &check; |
+
+

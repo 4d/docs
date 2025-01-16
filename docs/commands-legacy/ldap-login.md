@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LDAP LOGIN.Summary-->The **LDAP LOGIN** command opens a read-only connection to the LDAP server specified in the *url* parameter with the *login* and *password* identifiers provided.<!-- END REF--> If accepted by the server, this connection will be used for any LDAP searches executed subsequently in the current process until the [LDAP LOGOUT](ldap-logout.md) command is executed (or until the process is closed). 
@@ -98,3 +95,12 @@ This example tries to connect to an application:
 
 *LDAP*  
 [LDAP LOGOUT](ldap-logout.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1326 |
+| Thread safe | &cross; |
+
+

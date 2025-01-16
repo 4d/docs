@@ -13,21 +13,24 @@ title: VP Get table theme
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
 
-**VP Get table theme** ( *vpAreaName* : Text ; *tableName* : Text ) : cs.ViewPro.TableTheme<!-- END REF -->
+**VP Get table theme** ( *vpAreaName* : Text ; *tableName* : Text {; *sheet* : Integer } ) : cs.ViewPro.TableTheme<!-- END REF -->
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
-| Parâmetro  | Tipo                                                                              |                             | Descrição                                      |                  |
-| ---------- | --------------------------------------------------------------------------------- | --------------------------- | ---------------------------------------------- | ---------------- |
-| vpAreaName | Text                                                                              | ->                          | Nome de objeto formulário área 4D View Pro     |                  |
-| tableName  | Text                                                                              | ->                          | Nome da tabela                                 |                  |
-| Resultados | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | <- | Valores de propriedade do tema da tabela atual | <!-- END REF --> |
+| Parâmetro  | Tipo                                                                              |                             | Descrição                                                   |                  |
+| ---------- | --------------------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
+| vpAreaName | Text                                                                              | ->                          | Nome de objeto formulário área 4D View Pro                  |                  |
+| tableName  | Text                                                                              | ->                          | Nome da tabela                                              |                  |
+| sheet      | Integer                                                                           | ->                          | Índice da folha (folha atual se omitida) |                  |
+| Resultados | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | <- | Valores de propriedade do tema da tabela atual              | <!-- END REF --> |
 
 #### Descrição
 
 The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](vp-create-table.md) or [`VP SET TABLE THEME`](vp-set-table-theme.md) commands, or through the interface.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro e, em *tableName*, o nome da tabela.
+
+Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
 The command returns an object of the [cs.ViewPro.TableTheme](../classes.md#tabletheme) class with properties and values that describe the current table theme.
 

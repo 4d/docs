@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Descrição de arquivos de histórico
 ---
 
-Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Os históricos são normalmente iniciados ou interrompidos utilizando os selectores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), ou [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
+Aplicações 4D podem gerar vários arquivos de histórico ou log úteis para depuração e otimizar sua execução. Os históricos são normalmente iniciados ou interrompidos utilizando os selectores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), ou [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
 
 Informação gravada precisa ser analisada para detectar e corrigir os problemas. Esta seção oferece uma descrição detalhada dos arquivos de log abaixo:
 
@@ -354,11 +354,9 @@ O registo ORDA do lado do cliente regista cada pedido ORDA enviado a partir de u
 Como iniciar esse log:
 
 ```4d
-    //on a remote machine
-SET DATABASE PARAMETER(Client Log Recording;1)  
+    //on a remote machine SET DATABASE PARAMETER(Client Log Recording;1)  
 ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
-    //can be also sent to memory
-SET DATABASE PARAMETER(Client Log Recording;0)  
+    //can be also sent to memory SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
 
 :::note
@@ -404,11 +402,9 @@ O registo ORDA do lado do servidor regista cada pedido ORDA processado pelo serv
 Como iniciar esse log:
 
 ```4d
-    //on the server
-SET DATABASE PARAMETER(4D Server log recording;1)
+    //on the server SET DATABASE PARAMETER(4D Server log recording;1)
 ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
-    //srl... parameter is optional
-SET DATABASE PARAMETER(4D Server log recording;0)
+    //srl... parameter is optional SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
 :::note

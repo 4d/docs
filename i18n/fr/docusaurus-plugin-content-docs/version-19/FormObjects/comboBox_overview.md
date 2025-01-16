@@ -15,11 +15,11 @@ Utilisez l’événement formulaire [`On Data Change`](Events/onDataChange.md) p
 
 L'initialisation d'une combo box se fait exactement de la même manière que celle d'une [liste déroulante](dropdownList_Overview.md#overview) : en utilisant un objet, un tableau ou une liste de choix.
 
-### Utilisation d'un objet
+### Utiliser un objet
 
 > Cette fonctionnalité n'est disponible que dans les projets 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a combo box. Cet objet doit avoir les propriétés suivantes :
+An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) can be used as the data source of a combo box. Cet objet doit avoir les propriétés suivantes :
 
 | Propriété      | Type                   | Description                                                                                                                                                                                                                                                                   |
 | -------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

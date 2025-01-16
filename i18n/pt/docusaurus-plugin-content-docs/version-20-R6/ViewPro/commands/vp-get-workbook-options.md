@@ -25,7 +25,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 O objeto devolvido contém todas as opções de workbook (padrão e modificadas) no workbook.
 
-The list of workbook options is referenced in [`VP SET WORKBOOK OPTIONS`'s description](vp-set-workbook-options.md).
+A lista de opções de pasta de trabalho é referenciada na descrição de [`VP SET WORKBOOK OPTIONS`](vp-set-workbook-options.md).
 
 #### Exemplo
 

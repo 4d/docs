@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->**METHOD SET ATTRIBUTE**コマンドは*path*引数で指定されたプロジェクトメソッドの*attribType*属性の値を設定します。<!-- END REF-->このコマンドはプロジェクトメソッドに対してのみ動作します。無効な *path*を渡すとエラーが生成されます。
@@ -70,3 +67,12 @@ displayed_sidebar: docs
 *Design Object Access*  
 [METHOD Get attribute](method-get-attribute.md)  
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1192 |
+| スレッドセーフである | &cross; |
+
+

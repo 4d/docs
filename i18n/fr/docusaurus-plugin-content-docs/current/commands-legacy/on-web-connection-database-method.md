@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### 
 
 <!--REF #_command_.On Web Connection database method.Summary-->La **On Web Connection database method** peut être appelée dans les cas suivants :
@@ -102,7 +99,7 @@ Cette boîte de dialogue apparaît pour chaque connexion dès que l’option **U
 
 La **On Web Connection database method** peut être utilisée comme point d'entrée dans le serveur Web 4D, soit à l'aide de l'URL spécial *4DCGI*, soit à l'aide d'URLs de commande personnalisés.
 
-**Attention :** L’appel d’une commande 4D affichant un élément d’interface ([DIALOG](dialog.md), [ALERT](alert.md)...) entraîne l’arrêt du traitement de la méthode.
+**Attention :** L’appel d’une commande 4D affichant un élément d’interface ([DIALOG](../commands/dialog.md), [ALERT](alert.md)...) entraîne l’arrêt du traitement de la méthode.
 
 La **On Web Connection database method** est donc appelée dans les cas suivants :
 

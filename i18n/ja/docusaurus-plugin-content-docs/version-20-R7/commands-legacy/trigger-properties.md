@@ -39,3 +39,12 @@ displayed_sidebar: docs
 [Trigger level](trigger-level.md)  
 *トリガ*  
 *レコード番号について*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 399 |
+| スレッドセーフである | &check; |
+
+

@@ -107,3 +107,14 @@ Rajouter une étoile à la fin d’une des deux syntaxes précédentes.
 #### Gestion des erreurs 
 
 En cas d’erreur, la commande génère une erreur que vous pouvez intercepter via une méthode installée par la commande APPELER SUR ERREUR.
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1019 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+
+

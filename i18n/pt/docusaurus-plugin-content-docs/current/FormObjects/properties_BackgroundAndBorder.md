@@ -220,4 +220,4 @@ Define o fundo do list box como "Transparent". When set, any [alternate backgrou
 
 #### Veja também
 
-[Background Color / Fill Color](#background-color--fill-color)
+[Cor de fundo / Cor de preenchimento](#background-color--fill-color)

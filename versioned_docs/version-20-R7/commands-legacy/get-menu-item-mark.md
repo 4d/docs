@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Get menu item mark.Summary-->The **Get menu item mark** command returns the check mark of the menu item whose number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
@@ -42,3 +39,13 @@ The following example toggles the check mark of a menu item:
 #### See also 
 
 [SET MENU ITEM MARK](set-menu-item-mark.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 428 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Get print marker.Summary-->O comando Get print marker permite obter a posição atual de um marcador durante uma impressão.<!-- END REF--> 
@@ -24,7 +21,7 @@ displayed_sidebar: docs
 Este comando pode ser utilizado nos dois contextos:
 
 * Durante o evento de formulário On Header, no contexto dos comandos [PRINT SELECTION](print-selection.md) e [PRINT RECORD](print-record.md)
-* Durante o evento de formulário On Printing Detail, no contexto do comando [Print form](print-form.md)
+* Durante o evento de formulário On Printing Detail, no contexto do comando [Print form](../commands/print-form.md)
 Se devolvem as coordenadas em píxels (1 píxel = 1/72 polegadas). 
 
 Passe uma das constantes do tema *Área de formulário* no parâmetro *numeroMarc*:
@@ -63,3 +60,12 @@ Consulte o exemplo do comando [SET PRINT MARKER](set-print-marker.md).
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 708 |
+| Thread-seguro | &cross; |
+
+

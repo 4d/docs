@@ -70,27 +70,27 @@ La fenêtre d'erreur de syntaxe propose plusieurs options :
 
 - **Continuer** : L'exécution se poursuit. La ligne contenant l'erreur peut être partiellement exécutée, selon l'endroit où se trouve l'erreur. Continuez avec prudence : l'erreur peut empêcher le reste de votre méthode de s'exécuter correctement. Nous vous recommandons de cliquer sur **Continuer** uniquement si l'erreur se trouve dans un appel trivial (tel que `SET WINDOW TITLE`) qui n'empêche pas d'exécuter et de tester le reste de votre code.
 
-> Astuce : pour ignorer une erreur qui se répète (par exemple, dans les boucles), vous pouvez transformer le bouton **Continuer** en bouton **Ignorer**. Maintenez la touche **Alt** (Windows) ou **Option** (macOS) enfoncée et cliquez sur le bouton **Continuer** la première fois qu'il apparaît. L'étiquette du bouton devient **Ignorer** si la boîte de dialogue est appelée à nouveau pour la même erreur.
+> Astuce : pour ignorer une erreur qui se répète (par exemple, dans les boucles), vous pouvez transformer le bouton **Continuer** en bouton **Ignorer**. Hold down **Alt** (Windows) or **Option** (macOS) key and click the **Continue** button the first time it appears. The button label changes to **Ignore** if the dialog is called again for the same error.
 
-- **Abandonner** : Stoppe l'exécution de la méthode et revient à l'état antérieur au début de l'exécution de la méthode :
+- **Abort**: Stops method execution and returns to the state before the method started executing:
 
   - Si une méthode formulaire ou méthode objet s'exécute en réponse à un événement, elle est arrêtée et vous revenez au formulaire.
   - Si la méthode est exécutée à partir de l'environnement de l'application, vous revenez à cet environnement.
 
-- **Copier** : Copie les informations de débogage dans le presse-papiers. L'info décrit l'environnement interne de l'erreur (numéro, composant interne, etc.). Elles sont formatées sous forme de texte tabulé.
+- **Copy**: Copies the debugging information into the clipboard. L'info décrit l'environnement interne de l'erreur (numéro, composant interne, etc.). Elles sont formatées sous forme de texte tabulé.
 
-- **Enregistrer...** : Enregistre le contenu de la fenêtre d'erreur syntaxique et de la chaîne d'appel dans un fichier `.txt`.
+- **Save...**: Saves the contents of the syntax error window and the call chain in a `.txt` file.
 
 ## Débogueur
 
-Une erreur courante des débutants en matière de détection des erreurs consiste à cliquer sur **Abandonner** dans la fenêtre d'erreur de syntaxe, à revenir à l'éditeur de code et à essayer de comprendre ce qui se passe en regardant le code. Ne faites pas ça ! Vous économiserez beaucoup de temps et d'énergie en utilisant toujours le **Débogueur**.
+A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. Ne faites pas ça ! Vous économiserez beaucoup de temps et d'énergie en utilisant toujours le **Débogueur**.
 
 Le débogueur vous permet d'avancer lentement dans les méthodes. Il affiche toutes les informations dont vous avez besoin pour comprendre pourquoi une erreur s'est produite. Une fois que vous avez ces informations, vous savez comment corriger l'erreur.
 
-Une autre raison d'utiliser le débogueur est le développement du code. Il peut arriver que vous écriviez un algorithme plus complexe que d'habitude. Malgré tous les sentiments d'accomplissement, vous ne pouvez pas être totalement sûr que votre codage est 100% correct. Au lieu de l'exécuter "à l'aveugle", vous pouvez utiliser la commande `TRACE` au début de votre code, puis l'exécuter pas à pas pour garder un œil sur ce qui se passe.
+Une autre raison d'utiliser le débogueur est le développement du code. Il peut arriver que vous écriviez un algorithme plus complexe que d'habitude. Malgré tous les sentiments d'accomplissement, vous ne pouvez pas être totalement sûr que votre codage est 100% correct. Instead of running it "blind", you can use the `TRACE` command at the beginning of your code, then execute it step by step to keep an eye on what happens.
 
 ## Ruptures/sauts
 
 Dans le processus de débogage, vous pouvez avoir besoin de sauter le traçage de certaines parties du code jusqu'à une certaine ligne. Ou bien, vous pouvez vouloir tracer le code lorsqu'une expression donnée a une certaine valeur (par exemple "$myVar > 1000"), ou chaque fois qu'une commande 4D spécifique est appelée.
 
-Ces besoins sont couverts par les fonctions **points d'arrêt** et **points d'arrêt sur commande**. Ils peuvent être configurés à partir de l'éditeur de code, du débogueur ou de l'explorateur d'exécution.
+These needs are covered by **breakpoints** and **command catching** features. Ils peuvent être configurés à partir de l'éditeur de code, du débogueur ou de l'explorateur d'exécution.

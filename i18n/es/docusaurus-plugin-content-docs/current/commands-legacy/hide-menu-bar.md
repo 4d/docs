@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.HIDE MENU BAR.Summary-->El comando HIDE MENU BAR vuelve invisible la barra de menús.<!-- END REF--> 
@@ -46,3 +43,13 @@ El siguiente método muestra un registro en toda la pantalla (Macintosh) hasta q
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 432 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

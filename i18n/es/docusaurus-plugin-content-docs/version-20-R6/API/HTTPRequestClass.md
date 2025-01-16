@@ -478,7 +478,7 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : HTTPRequestClass<!-- END REF -->
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
@@ -499,6 +499,6 @@ Si se pasa un parámetro *time*, la función esperará como máximo el número d
 
 Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
 
-During a `.wait()` execution, callback functions are executed, whether from other `HTTPRequest` or [`SystemWorker`](SystemWorkerClass.md) instances, or other `CALL WORKER` calls. Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
+Durante una ejecución `.wait()`, las funciones de retrollamada se ejecutan, ya sea desde otras instancias `HTTPRequest` o [`SystemWorker`](SystemWorkerClass.md) u otras llamadas `CALL WORKER`. Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
 
 <!-- END REF -->

@@ -26,3 +26,12 @@ Vous pouvez utiliser **READ ONLY** lorsqu'il n'est pas utile de modifier les enr
 [Read only state](read-only-state.md)  
 [READ WRITE](read-write.md)  
 *Verrouillage d'enregistrements*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 145 |
+| Thread safe | &check; |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Modified.Summary-->**Modified** はデータ入力中、プログラムを使用して*field* に値が代入されていたり、データ入力中に値が編集された場合に、[True](true.md "True")を返します。<!-- END REF-->**Modified** コマンドはフォームメソッド（またはフォームメソッドから呼ばれたサブルーチン）で使用されなければなりません。 
@@ -33,7 +30,7 @@ displayed_sidebar: docs
 
 **注:** **Modified** はあらゆるタイプのフィールドに対して適用できますが、このコマンドを[Old](old.md) コマンドと組み合わせて使用する場合には、[Old](old.md) コマンドの制約に注意してください。詳細については[Old](old.md) コマンドの説明を参照してください。
 
-データ入力時には、フォームメソッドで**Modified** を使用するよりも、オブジェクトメソッドで[Form event code](form-event-code.md) を使用して処理を実行する方が簡単です。フィールドが修正される度にOn Data Changeイベントがオブジェクトメソッドに送信されるので、オブジェクトメソッドの利用はフォームメソッドで**Modified** を使用したのと同じ意味を持ちます。
+データ入力時には、フォームメソッドで**Modified** を使用するよりも、オブジェクトメソッドで[Form event code](../commands/form-event-code.md) を使用して処理を実行する方が簡単です。フィールドが修正される度にOn Data Changeイベントがオブジェクトメソッドに送信されるので、オブジェクトメソッドの利用はフォームメソッドで**Modified** を使用したのと同じ意味を持ちます。
 
 **注:** 処理を正しく実行するため、**Modified** コマンドはフォームメソッドまたは、フォームメソッドから呼び出されるメソッド内でのみ使用します。
 
@@ -68,5 +65,14 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 32 |
+| スレッドセーフである | &cross; |
+
+

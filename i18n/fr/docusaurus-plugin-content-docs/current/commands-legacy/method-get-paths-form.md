@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD GET PATHS FORM.Summary-->La commande **METHOD GET PATHS FORM** remplit le tableau *tabChemins* avec les chemins d’accès internes et les noms des méthodes de tous les objets des formulaires, ainsi que des méthodes formulaire.<!-- END REF--> Les méthodes formulaire sont libellées {formMethod}. 
@@ -71,3 +68,12 @@ Liste de tous les objets des formulaires "input" de la table \[Emp\] à partir d
 #### Voir aussi 
 
 [FORM GET NAMES](form-get-names.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1168 |
+| Thread safe | &cross; |
+
+

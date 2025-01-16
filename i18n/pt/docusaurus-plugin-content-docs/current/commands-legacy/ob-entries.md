@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OB Entries.Summary-->O comando **OB Entries** retorna uma coleção de objetos contendo os conteúdos de *objeto* como pares de propriedade key/value.<!-- END REF--> 
@@ -57,3 +54,12 @@ Usando um objeto com um map hash (sistema key/value) oferece um acesso rápido e
 
 [OB Keys](ob-keys.md)  
 [OB Values](ob-values.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1720 |
+| Thread-seguro | &cross; |
+
+

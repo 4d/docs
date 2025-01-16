@@ -8,7 +8,7 @@ O servidor web 4D oferece recursos integrados para gerenciar **sessões web**. C
 As sessões Web permitem:
 
 - manipular várias solicitações simultaneamente do mesmo cliente web através de um número ilimitado de processos preventivos (sessões web são **escaláveis**),
-- manage session through a `Session` object and the [Session API](API/SessionClass.md),
+- gerenciar a sessão por um objeto `Session` e da [API de session](API/SessionClass.md),
 - store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
 - associate privileges to the user running the session.
 
@@ -38,21 +38,21 @@ In any cases, the setting is local to the machine; so it can be different on the
 
 ## Session implementation
 
-Cuando [se habilitan las sesiones](#enabling-sessions), se implementan mecanismos automáticos, basados en una cookie privada establecida por el propio 4D: "4DSID_*AppName*", donde *AppName* es el nombre del proyecto de la aplicación. Este cookie faz referência à sessão web atual da aplicação.
+Cuando [se habilitan las sesiones](#enabling-sessions), se implementan mecanismos automáticos, basados en una cookie privada establecida por el propio 4D: "4DSID__AppName_", donde *AppName* es el nombre del proyecto de la aplicación. Este cookie faz referência à sessão web atual da aplicação.
 
 :::info
 
-The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) property.
+O nome do cookie pode ser obtido usando a propriedade [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename).
 
 :::
 
-1. En cada petición del cliente web, el servidor web comprueba la presencia y el valor de la cookie privada "4DSID_*AppName*".
+1. En cada petición del cliente web, el servidor web comprueba la presencia y el valor de la cookie privada "4DSID__AppName_".
 
 2. If the cookie has a value, 4D looks for the session that created this cookie among the existing sessions; if this session is found, it is reused for the call.
 
 3. Se a solicitação do cliente não corresponder a uma sessão já aberta:
 
-- se crea una nueva sesión con una cookie privada "4DSID_*AppName*" en el servidor web
+- se crea una nueva sesión con una cookie privada "4DSID__AppName_" en el servidor web
 - se crea un nuevo objeto Guest `Session` dedicado a la sesión web escalable.
 
 :::note
@@ -86,7 +86,7 @@ The lifespan of an inactive cookie is 60 minutes by default, which means that th
 
 This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
 
-When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
+Quando uma sessão Web é fechada, se o comando [`Session`](API/SessionClass.md#session) for chamado posteriormente:
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - a propriedade [`storage`](API/SessionClass.md#storage) está vazia
@@ -94,7 +94,7 @@ When a web session is closed, if the [`Session`](API/SessionClass.md#session) co
 
 :::info
 
-You can close a session from a Qodly form using the [**logout**](qodly-studio.md#logout) feature.
+Você pode fechar uma sessão em um formulário Qodly usando o recurso [**logout**](qodly-studio.md#logout).
 
 :::
 

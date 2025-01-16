@@ -81,3 +81,13 @@ DOM参照を使用してGPSブロックを設定します:
 [GET PICTURE METADATA](get-picture-metadata.md)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1121 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

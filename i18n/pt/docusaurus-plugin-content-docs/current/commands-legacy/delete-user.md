@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.DELETE USER.Summary-->O comando [ON ERR CALL](on-err-call.md) apaga o usuário cujo número se passa em *refUsuario*.<!-- END REF--> Deve passar um número válido de usuário retornado pelo comando [GET USER LIST](get-user-list.md).   
@@ -36,3 +33,13 @@ Se não tiver os privilégios de acesso para chamar DELETE USER ou se outro proc
 [GET USER PROPERTIES](get-user-properties.md)  
 [Is user deleted](is-user-deleted.md)  
 [Set user properties](set-user-properties.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 615 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

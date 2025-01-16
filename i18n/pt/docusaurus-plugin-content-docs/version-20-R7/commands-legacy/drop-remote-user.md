@@ -43,3 +43,12 @@ Se quiser eliminar um usu\[ario remoto específico:
 
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [SEND MESSAGE TO REMOTE USER](send-message-to-remote-user.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1633 |
+| Thread-seguro | &check; |
+
+

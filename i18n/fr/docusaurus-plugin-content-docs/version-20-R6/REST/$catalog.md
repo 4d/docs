@@ -26,11 +26,11 @@ Seules les dataclass exposées apparaissent dans cette liste pour le datastore d
 
 Voici une description des propriétés retournées pour chaque dataclass dans le datastore de votre projet :
 
-| Propriété | Type   | Description                                                                                          |
-| --------- | ------ | ---------------------------------------------------------------------------------------------------- |
-| name      | String | Nom de la dataclass.                                                                 |
-| uri       | String | Un URI vous permettant d'obtenir des informations sur la dataclass et ses attributs. |
-| dataURI   | String | URI vous permettant d'afficher les données dans la dataclass.                        |
+| Propriété | Type | Description                                                                                          |
+| --------- | ---- | ---------------------------------------------------------------------------------------------------- |
+| name      | Text | Nom de la dataclass.                                                                 |
+| uri       | Text | Un URI vous permettant d'obtenir des informations sur la dataclass et ses attributs. |
+| dataURI   | Text | URI vous permettant d'afficher les données dans la dataclass.                        |
 
 ### Exemple
 
@@ -195,11 +195,11 @@ Les propriétés suivantes sont retournées pour une dataclass exposée :
 
 | Propriété      | Type   | Description                                                                                                                                             |
 | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name           | String | Nom de la dataclass                                                                                                                                     |
-| collectionName | String | Nom d'une entity selection dans la dataclass                                                                                                            |
+| name           | Text   | Nom de la dataclass                                                                                                                                     |
+| collectionName | Text   | Nom d'une entity selection dans la dataclass                                                                                                            |
 | tableNumber    | Number | Numéro de la table dans la base 4D                                                                                                                      |
-| scope          | String | Scope de la dataclass (à noter que seules les dataclasses dont le **Scope** (portée) est publique sont affichées) |
-| dataURI        | String | Un URI aux données de la dataclass                                                                                                                      |
+| scope          | Text   | Scope de la dataclass (à noter que seules les dataclasses dont le **Scope** (portée) est publique sont affichées) |
+| dataURI        | Text   | Un URI aux données de la dataclass                                                                                                                      |
 
 ### Attribut(s)
 
@@ -207,16 +207,16 @@ Voici les propriétés de chaque attribut exposé qui sont retournées :
 
 | Propriété   | Type    | Description                                                                                                                                                                                                |
 | ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | String  | Le nom de l’attribut.                                                                                                                                                                      |
-| kind        | String  | Type d'attribut (stockage ou relatedEntity).                                                                                                                            |
+| name        | Text    | Le nom de l’attribut.                                                                                                                                                                      |
+| kind        | Text    | Type d'attribut (stockage ou relatedEntity).                                                                                                                            |
 | fieldPos    | Number  | Position du champ dans la table de la base.                                                                                                                                                |
-| scope       | String  | Portée de l'attribut (seuls les attributs dont la portée est publique apparaîtront).                                                                                    |
-| indexed     | String  | Si un **type d'index** a été sélectionné, cette propriété retournera true. Sinon, cette propriété n'apparaîtra pas.                                                        |
-| type        | String  | Type d'attribut de chaîne (booléen, blob, octet, date, durée, image, long, long64, numérique, chaîne, uuid ou mot) ou la dataclasse pour un attribut de relation N-> 1. |
+| scope       | Text    | Portée de l'attribut (seuls les attributs dont la portée est publique apparaîtront).                                                                                    |
+| indexed     | Text    | Si un **type d'index** a été sélectionné, cette propriété retournera true. Sinon, cette propriété n'apparaîtra pas.                                                        |
+| type        | Text    | Type d'attribut de chaîne (booléen, blob, octet, date, durée, image, long, long64, numérique, chaîne, uuid ou mot) ou la dataclasse pour un attribut de relation N-> 1. |
 | identifying | Boolean | Cette propriété retourne True si l'attribut est la clé primaire. Sinon, cette propriété n'apparaîtra pas.                                                                  |
-| path        | String  | Nom de la dataclass pour un attribut relatedEntity, ou nom de la relation pour un attribut relatedEntities.                                                                                |
-| foreignKey  | String  | Pour un attribut relatedEntity, nom de l'attribut associé.                                                                                                                                 |
-| inverseName | String  | Nom de la relation opposée pour un attribut relatedEntity ou relatedEntities.                                                                                                              |
+| path        | Text    | Nom de la dataclass pour un attribut relatedEntity, ou nom de la relation pour un attribut relatedEntities.                                                                                |
+| foreignKey  | Text    | Pour un attribut relatedEntity, nom de l'attribut associé.                                                                                                                                 |
+| inverseName | Text    | Nom de la relation opposée pour un attribut relatedEntity ou relatedEntities.                                                                                                              |
 
 ### Clé primaire
 

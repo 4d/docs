@@ -133,3 +133,12 @@ displayed_sidebar: docs
 [Is field value Null](is-field-value-null.md)  
 [OB SET NULL](ob-set-null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1517 |
+| スレッドセーフである | &check; |
+
+

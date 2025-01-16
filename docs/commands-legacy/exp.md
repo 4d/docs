@@ -31,3 +31,12 @@ The following example assigns the exponential of 1 to *vrE* (the log of *vrE* is
 #### See also 
 
 [Log](log.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 21 |
+| Thread safe | &check; |
+
+

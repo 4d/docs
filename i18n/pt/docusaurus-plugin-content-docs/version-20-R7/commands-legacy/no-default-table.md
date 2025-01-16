@@ -42,3 +42,12 @@ Em um banco que contenha um formulário de projeto chamado "oFormulário" e um f
 #### Ver também 
 
 [DEFAULT TABLE](default-table.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 993 |
+| Thread-seguro | &check; |
+
+

@@ -36,3 +36,12 @@ The type and content of the *info1* and *info2* parameters depend on the value o
 #### See also 
 
 [RESTORE](restore.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 889 |
+| Thread safe | &cross; |
+
+

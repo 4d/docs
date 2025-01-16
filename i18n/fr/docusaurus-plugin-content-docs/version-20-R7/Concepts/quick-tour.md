@@ -4,7 +4,7 @@ title: Tour d'horizon
 sidebar_label: Tour d'horizon
 ---
 
-En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode de projet :
+En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode projet :
 
 ```4d
 ALERT("Hello, World!")
@@ -264,7 +264,7 @@ Souvent, les mêmes symboles sont utilisés pour des opérations différentes, e
 | Type de données   | Opération        | Exemple                                                                                                           |
 | ----------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Number            | Addition         | 1 + 2 ajoute les nombres, le résultat est 3                                                                       |
-| String            | Concaténation    | “Bonjour” + “à tous” concatène (met bout à bout) les chaînes, le résultat est “Bonjour à tous” |
+| Text              | Concaténation    | “Bonjour” + “à tous” concatène (met bout à bout) les chaînes, le résultat est “Bonjour à tous” |
 | Date et Numérique | Addition de date | !1989-01-01! + 20 ajoute 20 jours à la date 1 janvier 1989, le résultat est la date 21 janvier 1989               |
 
 ## Expressions
@@ -273,13 +273,13 @@ Pour parler simplement, les expressions retournent une valeur. En fait, lorsque 
 
 Les expressions peuvent être constituées de presque tous les éléments du langage : commandes, opérateurs, variables, champs, propriétés d'objets et éléments de collection. Vous utilisez des expressions pour écrire des lignes de code, qui sont à leur tour utilisées pour construire des méthodes. Des expressions sont employées à chaque fois que le langage 4D a besoin de connaître la valeur d’une donnée.
 
-Les expressions sont rarement «autonomes». Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. Cela inclut :
+Les expressions sont rarement «autonomes». Il existe plusieurs endroits dans 4D où une expression peut être utilisée seule. Cela inclut :
 
-- Editeur de formule (apply formula, query with formula, order by formula)
+- L'éditeur de formule (apply formula, query with formula, order by formula)
 - La commande `EXECUTE FORMULA`
 - La liste de propriétés, où une expression peut être utilisée en tant que source de données pour la plupart des widgets
-- Dans la fenêtre du Débogueur où la valeur des expressions peut être évaluée
-- Dans l’éditeur d’états semi-automatiques en tant que formule dans une colonne
+- La fenêtre du Débogueur où la valeur des expressions peut être évaluée
+- L'éditeur d’états semi-automatiques en tant que formule dans une colonne
 
 ### Types d’expressions
 
@@ -287,10 +287,10 @@ Vous vous référez à une expression via le type de données qu’elle retourne
 
 | Expression                                                                                  | Type                  | Description                                                                                                                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Bonjour”                                                                                   | String                | Le mot Bonjour est une constante chaîne, signalée par les guillemets.                                                                                                                                                                         |
-| “Bonjour ” + “à tous”                                                                       | String                | Deux chaînes, “Bonjour ” et “à tous”, sont mises bout à bout (concaténées) à l'aide de l'opérateur de concaténation de chaînes (+). La chaîne “Bonjour à tous” est retournée.           |
-| “Mr. ” + [Personnes]Nom | String                | Deux chaînes sont concaténées : la chaîne "Mr." et la valeur courante du champ Nom dans la table Personnes. Si le champ contient “Dupont”, l'expression retourne “M. Dupont”. |
-| Uppercase("smith")                                                       | String                | Cette expression utilise `Uppercase`, une commande du langage, pour convertir la chaîne "dupont" en majuscules. Elle retourne “DUPONT”.                                                                                       |
+| “Bonjour”                                                                                   | Text                  | Le mot Bonjour est une constante chaîne, signalée par les guillemets.                                                                                                                                                                         |
+| “Bonjour ” + “à tous”                                                                       | Text                  | Deux chaînes, “Bonjour ” et “à tous”, sont mises bout à bout (concaténées) à l'aide de l'opérateur de concaténation de chaînes (+). La chaîne “Bonjour à tous” est retournée.           |
+| “Mr. ” + [Personnes]Nom | Text                  | Deux chaînes sont concaténées : la chaîne "Mr." et la valeur courante du champ Nom dans la table Personnes. Si le champ contient “Dupont”, l'expression retourne “M. Dupont”. |
+| Uppercase("smith")                                                       | Text                  | Cette expression utilise `Uppercase`, une commande du langage, pour convertir la chaîne "dupont" en majuscules. Elle retourne “DUPONT”.                                                                                       |
 | 4                                                                                           | Number                | C'est une constante numérique, 4.                                                                                                                                                                                                             |
 | 4 \* 2                                                                                      | Number                | Deux nombres, 4 et 2, sont multipliés à l'aide de l'opérateur de multiplication (\*). Le résultat est le nombre 8.                                                                                         |
 | MonBouton                                                                                   | Number                | C'est le nom d'un bouton. Il retourne la valeur courante du bouton : 1 s'il y a eu un clic sur le bouton, 0 sinon.                                                                                            |

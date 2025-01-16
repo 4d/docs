@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.WA OPEN URL.Summary-->El comando **WA OPEN URL** carga en el área web designada por los parámetros *\** y *objeto* el URL pasado en el parámetro *url*.<!-- END REF-->
@@ -50,3 +47,12 @@ Es equivalente a:
 [OPEN URL](open-url.md)  
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1020 |
+| Hilo seguro | &cross; |
+
+

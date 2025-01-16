@@ -54,8 +54,8 @@ Hay otros modos disponibles:
 - [Switch back when Released](properties_Animation.md#switch-back-when-released)
 - [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
 - [Desplazamiento continuo en clics](properties_Animation.md#switch-continuously-on-clicks)
-- [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
 - [Utilizar el Último cuadro como Desactivado](properties_Animation.md#use-last-frame-as-disabled)
+- [Cambiar cada x ticks](./properties_Animation.md#switch-every-x-ticks)
 > [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. La numeración de las imágenes en la tabla empieza por 0.
 
 ## Propiedades soportadas

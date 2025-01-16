@@ -67,9 +67,17 @@ Vous souhaitez obtenir la liste des polices récentes :
 
 #### Voir aussi 
 
-*\_o\_Font name*  
 [FONT STYLE LIST](font-style-list.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [SET RECENT FONTS](set-recent-fonts.md)  
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 *Type de liste des polices*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 460 |
+| Thread safe | &check; |
+
+

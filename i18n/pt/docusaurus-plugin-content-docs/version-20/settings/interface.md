@@ -64,7 +64,7 @@ Os seguintes esquemas estão disponíveis:
 O esquema de aplicação principal será aplicado aos formulários por defeito. No entanto, ele pode ser substituído:
 
 -   pelo comando [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/en/page1762.html) no nível da sessão de trabalho;
--   using by the [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) form property at each form level (highest priority level). **Note:** When printed, forms always use the "Light" scheme.
+-   usando pela propriedade de formulário [esquema de cores](../FormEditor/propertiesForm.html#color-scheme) em cada nível de formulário (nível de prioridade mais alta). **Note:** When printed, forms always use the "Light" scheme.
 
 ## Atalhos
 

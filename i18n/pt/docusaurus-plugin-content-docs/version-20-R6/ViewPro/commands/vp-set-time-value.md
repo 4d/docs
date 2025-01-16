@@ -23,7 +23,7 @@ Em *rangeObj*, passe um intervalo de células (criado, por exemplo, com [`VP Cel
 
 The *timeValue* parameter specifies a time expressed in seconds to be assigned to the *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](../configuring.md#cell-format) for the *timeValue* parameter.
+O *formatPattern* opcional define um [padrão](../configuring.md#cell-format) para o parâmetro *timeValue*.
 
 #### Exemplo
 

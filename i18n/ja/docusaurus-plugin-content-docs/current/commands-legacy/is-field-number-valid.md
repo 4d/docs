@@ -25,3 +25,12 @@ displayed_sidebar: docs
 
 [Last table number](last-table-number.md)  
 [Is table number valid](is-table-number-valid.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1000 |
+| スレッドセーフである | &check; |
+
+

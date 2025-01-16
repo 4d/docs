@@ -66,3 +66,13 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 866 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

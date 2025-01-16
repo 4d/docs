@@ -57,7 +57,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](../com
 
 #### Descrição
 
-A função `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary -->cria e retorna um novo objeto do tipo `4D.IMAPTransporter`<!-- END REF -->. It is identical to the [`IMAP New transporter`](../commands/imap-new-transporter.md) command (shortcut).
+A função `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary -->cria e retorna um novo objeto do tipo `4D.IMAPTransporter`<!-- END REF -->. É idêntico ao comando [`IMAP New transporter`](../commands/imap-new-transporter.md) (atalho).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 

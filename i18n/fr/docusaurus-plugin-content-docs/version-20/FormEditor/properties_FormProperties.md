@@ -24,16 +24,16 @@ Cette propriété définit la palette de couleurs du formulaire. Par défaut, lo
 
 ## CSS
 
-This property allows you to load specific CSS file(s) for the form.
+Cette propriété vous permet de charger le(s) fichier(s) CSS spécifiques pour le formulaire.
 
-A CSS file defined at the form level will override default style sheet(s). For more information, please refer to [Style sheets](createStylesheet.md) page.
+Un fichier CSS défini au niveau du formulaire remplacera la ou les feuilles de style par défaut. Pour plus d'informations, veuillez vous référer à la page [Feuilles de style](createStylesheet.md).
 
 
 #### Grammaire JSON
 
-| Nom | Type de données      | Valeurs possibles                                                                                        |
-| --- | -------------------- | -------------------------------------------------------------------------------------------------------- |
-| css | string or collection | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
+| Nom | Type de données      | Valeurs possibles                                                                                                       |
+| --- | -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| css | string ou collection | Chemin du fichier CSS fourni sous forme de :<li>chaîne (un fichier pour les deux plateformes)</li><li>collection de chaînes (une liste de fichiers pour les deux plateformes)</li><li>collection d'objets {"path":string;"media":"mac" &#124; "win"} </li> |
 
 ---
 
@@ -57,38 +57,38 @@ Pour plus d'informations, veuillez consulter le thème [Pages formulaire](forms.
 ---
 
 
-## Form Name
+## Nom du formulaire
 
-This property is the name of the form itself and is used to refer to the form by name using the 4D language. The form name must comply with the [rules specified for identifiers](Concepts/identifiers.md) in 4D.
+Cette propriété est le nom du formulaire lui-même et est utilisée pour faire référence au formulaire par son nom dans le langage 4D. Le nom du formulaire doit respecter les [règles spécifiées pour les identifiants](Concepts/identifiers.md) dans 4D.
 
 
 #### Grammaire JSON
 
-The form name is defined by the name of the folder that contains the form.4Dform file. See [project architecture](Project/architecture.md#sources-folder) for more information.
+Le nom du formulaire est défini par le nom du dossier qui contient le fichier form.4Dform. Voir la page [Architecture d'un projet](Project/architecture.md#sources-folder) pour plus d'informations.
 
 ---
 
-## Form Type
+## Type de formulaire
 
-The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
+Le type de formulaire, *i.e.* sa destination, définit les fonctionnalités qui seront disponibles pour le formulaire. Par exemple, les [marqueurs ](properties_Markers.md) ne peuvent être définis que pour les formulaires table en liste (sortie).
 
-Each table in a database generally has at least two table forms. One for listing records on-screen and the other for displaying one record at a time (used for data entry and modifications):
+Chaque table dans une base de données a généralement au moins deux formulaires table. Un pour lister les enregistrements à l'écran et l'autre pour afficher un enregistrement à la fois (utilisé pour la saisie et les modifications) :
 
-- Output form - the *output form* or *list form* displays a list of records, with a single line per record. The results of queries are shown in an output form and users can double-click a line to display the input form for that record. ![](../assets/en/FormObjects/formOutput.png)
+- Formulaire de sortie - le *formulaire de sortie* ou *formulaire liste* affiche une liste d'enregistrements, avec une seule ligne par enregistrement. Les résultats des recherches sont affichés dans un formulaire de sortie et les utilisateurs peuvent double-cliquer sur une ligne pour afficher le formulaire d'entrée pour cet enregistrement. ![](../assets/en/FormObjects/formOutput.png)
 
-- Input form - used for data entry. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](../assets/en/FormObjects/formInput.png)
-
-
-Supported types depend on the form category:
+- Formulaire d'entrée ou formulaire détail - utilisé pour la saisie des données. Il affiche un seul enregistrement par écran et comporte généralement des boutons permettant de sauvegarder et d'annuler les modifications apportées à l'enregistrement et de naviguer d'un enregistrement à l'autre (*i.e.*, Premier enregistrement, Dernier enregistrement, Enregistrement précédent, Enregistrement suivant). ![](../assets/en/FormObjects/formInput.png)
 
 
-| Form Type                | JSON grammar     | Description                                                   | Supported with              |
-| ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
-| Formulaire détaillé      | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
-| Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
-| List Form                | listScreen       | A form for listing records on the screen                      | Table forms                 |
-| List Form for Printing   | listPrinter      | A printed report that list records                            | Table forms                 |
-| Aucun                    | *no destination* | A form with no specific feature                               | Project forms - Table forms |
+Les types pris en charge dépendent de la catégorie de formulaire :
+
+
+| Type de formulaire                     | Grammaire JSON       | Description                                                             | Prise en charge avec                   |
+| -------------------------------------- | -------------------- | ----------------------------------------------------------------------- | -------------------------------------- |
+| Formulaire de détail                   | detailScreen         | Un formulaire d'affichage pour la saisie et la modification des données | Formulaires projet - Formulaires table |
+| Formulaire de détail pour l'impression | detailPrinter        | Un rapport imprimé avec une page par enregistrement, comme une facture  | Formulaires projet - Formulaires table |
+| Formulaire de liste                    | listScreen           | Un formulaire pour lister les enregistrements à l'écran                 | Formulaires table                      |
+| Formulaire de liste pour l'impression  | listPrinter          | Un rapport imprimé qui liste les enregistrements                        | Formulaires table                      |
+| Aucun                                  | *pas de destination* | Un formulaire sans fonction spécifique                                  | Formulaires projet - Formulaires table |
 
 
 #### Grammaire JSON
@@ -99,38 +99,38 @@ Supported types depend on the form category:
 
 ---
 
-## Inherited Form Name
+## Nom du formulaire hérité
 
-This property designates the [form to inherit](forms.md#inherited-forms) in the current form.
+Cette propriété désigne le [formulaire duquel hériter](forms.md#inherited-forms) dans le formulaire actuel.
 
-To inherit from a table form, set the table in the [Inherited Form Table](#inherited-form-table) property.
+Pour hériter d'un formulaire table, définissez la table dans la propriété [Table de formulaire hérité](#inherited-form-table).
 
-To remove inheritance, select `\&#060;None&#062;` in the Property List (or " " in JSON).
+Pour supprimer l'héritage, sélectionnez `\&#060;None&#062;` dans la liste des propriétés (ou " " en JSON).
 
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles                                                                                                  |
-| ------------- | --------------- | ------------------------------------------------------------------------------------------------------------------ |
-| inheritedForm | string          | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
+| Nom           | Type de données | Valeurs possibles                                                                                                             |
+| ------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| inheritedForm | string          | Nom du formulaire table ou projet OU chemin POSIX d'un fichier .json décrivant le formulaire OU objet décrivant le formulaire |
 
 ---
 
 
-## Inherited Form Table
+## Table du formulaire hérité
 
-This property specifies the database table from which to [inherit a form](forms.md#inherited-forms) in the current form.
+Cette propriété spécifie la table de la base de données dont un formulaire [est hérité](forms.md#inherited-forms) dans le formulaire actuel.
 
-Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited from a project form.
+Passez `\&#060;Aucun&#062;` dans la liste des propriétés (ou " " en JSON) pour hériter d'un formulaire projet.
 
 
 
 
 #### Grammaire JSON
 
-| Nom                | Type de données  | Valeurs possibles          |
-| ------------------ | ---------------- | -------------------------- |
-| inheritedFormTable | string or number | table name or table number |
+| Nom                | Type de données  | Valeurs possibles      |
+| ------------------ | ---------------- | ---------------------- |
+| inheritedFormTable | string ou number | nom ou numéro de table |
 
 
 ---

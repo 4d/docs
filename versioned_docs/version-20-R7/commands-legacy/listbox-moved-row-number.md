@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX MOVED ROW NUMBER.Summary-->The **LISTBOX MOVED ROW NUMBER** command returns two numbers in *oldPosition* and *newPosition* indicating respectively the previous position and the new position of the row moved in the list box, specified by the *object* and *\** parameters.<!-- END REF-->
@@ -27,11 +24,20 @@ displayed_sidebar: docs
 
 If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
 
-This command must be used with the form event On Row Moved (see the [Form event code](form-event-code.md) command). 
+This command must be used with the form event On Row Moved (see the [Form event code](../commands/form-event-code.md) command). 
 
 **Note:** This command does not take into account any hidden/displayed states of list box rows. 
 
 #### See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [LISTBOX MOVED COLUMN NUMBER](listbox-moved-column-number.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 837 |
+| Thread safe | &cross; |
+
+

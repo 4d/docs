@@ -14,14 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE**コマンドは、現在表示されているフォームページを*pageNumber*で指定したフォームページに変更します。<!-- END REF--> 
 
-フォームが表示されていない場合や[FORM LOAD](form-load.md) コマンドによってフォームがロードされていない場合、または*pageNumber* が現在のページである場合、**FORM GOTO PAGE**コマンドは何も行いません。*pageNumber*がフォームページ数よりも大きければ、最終ページを表示します。*pageNumber* に1未満の数が指定されると、先頭のフォームページを表示します。
+フォームが表示されていない場合や[FORM LOAD](../commands/form-load.md) コマンドによってフォームがロードされていない場合、または*pageNumber* が現在のページである場合、**FORM GOTO PAGE**コマンドは何も行いません。*pageNumber*がフォームページ数よりも大きければ、最終ページを表示します。*pageNumber* に1未満の数が指定されると、先頭のフォームページを表示します。
 
 *\** 引数は、複数のページを含むサブフォームタイプのページのコンテキストでコマンドが呼び出される場合に使用します。この場合、この引数を渡すと、コマンドは (コマンドを呼び出した) カレントサブフォームのページを変更します。*\** が省略された場合、デフォルトでコマンドは常に親フォームに適用されます。
 
@@ -50,3 +47,12 @@ displayed_sidebar: docs
 [FORM LAST PAGE](form-last-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 247 |
+| スレッドセーフである | &cross; |
+
+

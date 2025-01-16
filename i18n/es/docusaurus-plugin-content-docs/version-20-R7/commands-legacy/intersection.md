@@ -49,3 +49,12 @@ El siguiente ejemplo busca los clientes que son atendidos por dos representantes
 
 [DIFFERENCE](difference.md)  
 [UNION](union.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 121 |
+| Hilo seguro | &check; |
+
+

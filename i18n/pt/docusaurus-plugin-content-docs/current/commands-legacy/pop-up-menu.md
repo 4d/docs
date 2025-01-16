@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Pop up menu.Summary-->O comando Pop up menu mostra um menu pop up na localização atual do mouse ou na localização definida pelos parâmetros opcionais *coordX* e *coordY*.<!-- END REF-->  
@@ -80,12 +77,26 @@ O método de projeto MEU MENU RAPIDO faz aparecer um menu de navegação pop up:
 ```4d
   // Método de projeto MEU MENU RAPIDO
  MOUSE POSITION($vlMouseX;$vlMouseY;$vlBotao)
- If(Macintosh control down&NBSP;|&NBSP;($vlBotao=2))
-    $vtElementos:="Sobre este banco...<i;(-;!-outras opções;(-"=""     for($vltabela;1;get="" last="" table="" number)=""        if(is="" number="" valid($vltabela))=""           $vtelementos:="$vtElementos+";"+Table" name($vltabela)=""        end="" if=""     end="" for=""     $vlescolhausuario:="Pop" up="" menu($vtelementos)=""     case="" of=""        :($vlescolhausuario="1)"   //="" mostrar="" informação="" as="" opções=""        else=""           if($vlescolhausuario="">0)
-  // Ir a tabela cujo número for $vlEscolhaUsuario-4
-          End if
-    End case
- End if</i;(-;!-outras>
+  If(Macintosh control down&NBSP;|&NBSP;($vlBotao=2))
+    $vtElementos:="Sobre este banco...<I;(-;!-Outras opções;(-"
+    For($vlTabela;1;Get last table number)
+       If(Is table number valid($vlTabela))
+          $vtElementos:=$vtElementos+";"+Table name($vlTabela)
+       End if
+    End for
+    $vlEscolhaUsuario:=Pop up menu($vtElementos)
+    Case of
+       :($vlEscolhaUsuario=1)
+  ` Mostrar informação
+       :($vlEscolhaUsuario=2)
+  ` Mostrar as opções
+       Else
+          If($vlEscolhaUsuario>0)
+  ` Ir a tabela cujo número for $vlEscolhaUsuario-4
+          End if
+    End case
+ End if
+
 ```
 
 Este método de projeto pode ser chamado desde:
@@ -106,3 +117,12 @@ O próximo é o menu pop-up tal como aparece em Windows (esquerda) e Macintosh (
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [MOUSE POSITION](mouse-position.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 542 |
+| Thread-seguro | &cross; |
+
+

@@ -51,8 +51,8 @@ Las aplicaciones del entorno 4D utilizan una carpeta especifica para almacenar l
 
 La carpeta 4D activa es creada por defecto en la siguiente ubicación:
 
-* En Windows: *{Disk}:\\Users\\* *<userName>\\AppData\\Roaming\\<applicationName>*
-* En macOS: *{Disk}:Users:* *<userName>:Library:Application Support:<applicationName>*
+* En Windows: *{Disk}:\\Users\\{userName}\\AppData\\Roaming\\{applicationName}*
+* En macOS: *{Disk}:Users:{userName}:Library:Application Support:{applicationName}*
 
 ##### Carpeta Licencias 
 
@@ -208,3 +208,13 @@ Si el parámetro *carpeta* no es válido o si la ruta de acceso devuelta está v
 [Temporary folder](temporary-folder.md)  
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 485 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

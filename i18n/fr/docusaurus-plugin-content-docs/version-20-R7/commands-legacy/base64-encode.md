@@ -39,3 +39,12 @@ Par défaut, si le paramètre *\** est omis, la commande utilise un encodage Bas
 [Generate digest](generate-digest.md)  
 *Présentation des commandes XML DOM*  
 [XML DECODE](xml-decode.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 895 |
+| Thread safe | &check; |
+
+

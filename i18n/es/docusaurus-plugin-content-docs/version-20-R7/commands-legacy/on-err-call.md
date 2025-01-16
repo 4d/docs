@@ -184,3 +184,12 @@ El siguiente método de gestión de errores ignora las interrupciones del usuari
 [Last errors](last-errors.md)  
 [Method called on error](method-called-on-error.md)  
 *Variables sistema*  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 155 |
+| Hilo seguro | &check; |
+
+

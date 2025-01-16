@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 
 
 <!--REF #_command_.On Web Connection database method.Summary-->**On Web Connectionデータベースメソッド**は以下のケースで呼び出されます:

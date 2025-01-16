@@ -26,7 +26,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 O parâmetro *styleName* permite que você atribua um nome à folha de estilos. Se o nome já estiver sendo usado no mesmo escopo, a nova folha de estilo substituirá a existente. Note que pode utilizar o mesmo nome para diferentes âmbitos (ver abaixo).
 
-No *styleObj*, designe as configurações da folha de estilo (por exemplo, fonte, decoração de texto, alinhamento, bordas etc.). For the full list of style properties, see [Style object properties](../configuring.md#style-object-properties).
+No *styleObj*, designe as configurações da folha de estilo (por exemplo, fonte, decoração de texto, alinhamento, bordas etc.). Para obter a lista completa de propriedades de estilo, consulte [Propriedades dos objetos de estilo](../configuring.md#style-object-properties).
 
 Você pode designar onde definir a folha de estilos no parâmetro opcional sheet usando o índice da folha (a indexação começa em 0) ou com as seguintes constantes:
 

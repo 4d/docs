@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 
 
 <!--REF #_command_.On Drop database method.Summary-->**On Dropデータベースメソッド**はローカルおよびリモートモードの4Dで使用できます。<!-- END REF-->

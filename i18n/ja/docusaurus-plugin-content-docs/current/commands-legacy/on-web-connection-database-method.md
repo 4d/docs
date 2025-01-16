@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 
 
 <!--REF #_command_.On Web Connection database method.Summary-->**On Web Connectionデータベースメソッド**は以下のケースで呼び出されます:
@@ -105,7 +102,7 @@ $5 と $6 引数は、ブラウザが表示する標準の認証ダイアログ�
 
 **On Web Connectionデータベースメソッド** は*4DCGI* URLまたはカスタマイズされたコマンドURLを使用したWebサーバーへのアクセスのエントリポイントとして使用できます。
 
-**警告:** インタフェース要素を表示する4D コマンド ([DIALOG](dialog.md)、[ALERT](alert.md)...) を呼び出すと、メソッド処理が終了します。
+**警告:** インタフェース要素を表示する4D コマンド ([DIALOG](../commands/dialog.md)、[ALERT](alert.md)...) を呼び出すと、メソッド処理が終了します。
 
 **On Web Connectionデータベースメソッド** は以下のケースで呼び出されます:
 

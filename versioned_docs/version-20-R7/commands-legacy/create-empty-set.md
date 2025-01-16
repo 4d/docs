@@ -28,3 +28,12 @@ Please refer to the examples of the *Sets* section.
 
 [CLEAR SET](clear-set.md)  
 [CREATE SET](create-set.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 140 |
+| Thread safe | &check; |
+
+

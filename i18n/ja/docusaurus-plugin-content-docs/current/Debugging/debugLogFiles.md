@@ -3,7 +3,7 @@ id: debugLogFiles
 title: ログファイル
 ---
 
-4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 ログは通常 [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html),、[WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html)、あるいは [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) コマンドのセレクターを使用して開始・停止され、プロジェクトの [Logsフォルダー](Project/architecture.md#logs) 内に保存されます。
+4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 記録された情報は、問題の検知と修正のためには分析する必要があります。 この章では、以下のログファイルの詳細を説明します:
 
@@ -284,7 +284,7 @@ SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 
 - SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
 - POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
+- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.md)
 
 2種類のログファイルを生成することができます:
 

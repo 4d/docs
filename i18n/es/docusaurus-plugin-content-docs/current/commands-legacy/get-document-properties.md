@@ -207,6 +207,14 @@ Una vez implementado en la base, tenemos todo lo que necesitamos para escribir e
 
 #### Ver también 
 
-*\_o\_Document creator*  
-*\_o\_Document type*  
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 477 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+
+

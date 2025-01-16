@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->The **OPEN PRINTING JOB** command opens a print job and stacks all the subsequent printing orders there until the [CLOSE PRINTING JOB](close-printing-job.md) command is called.<!-- END REF--> This command lets you control the print jobs and, more particularly, ensure that no other unexpected print job can be inserted into a printing sequence.
@@ -39,3 +36,13 @@ The OK system variable is set to 1 if the print job has been successfully open. 
 #### See also 
 
 [CLOSE PRINTING JOB](close-printing-job.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 995 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Print settings to BLOB.Summary-->**Print settings to BLOB** コマンドは4Dのカレントのプリント設定を *printSettings* BLOBに格納します。<!-- END REF-->*printSettings* は、印刷で使用されるすべての設定を格納します:
@@ -55,3 +52,12 @@ BLOB が正しく生成されるとコマンドは 1を返します。カレン�
 
   
 [BLOB to print settings](blob-to-print-settings.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1433 |
+| スレッドセーフである | &cross; |
+
+

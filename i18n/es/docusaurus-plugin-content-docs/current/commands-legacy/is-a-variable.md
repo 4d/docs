@@ -24,3 +24,12 @@ Si quiere conocer el nombre de la variable que está siendo apuntada o el númer
 
 [Is nil pointer](is-nil-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 294 |
+| Hilo seguro | &check; |
+
+

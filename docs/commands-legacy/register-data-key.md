@@ -48,3 +48,12 @@ In the first parameter, pass the *curPassPhrase* or *curDataKey* that defines th
 
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
 [New data key](new-data-key.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1638 |
+| Thread safe | &check; |
+
+

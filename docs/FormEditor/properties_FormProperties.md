@@ -9,7 +9,7 @@ title: Form Properties
 
 >Color scheme property is only applied on macOS.
 
-This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](https://doc.4d.com/4dv19/help/command/en/page1762.html)). This can be changed for the form to one of the following two options:
+This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/set-application-color-scheme.md)). This can be changed for the form to one of the following two options:
 
 *	dark - light text on a dark background 
 *	light - dark text on a light background
@@ -40,23 +40,39 @@ A CSS file defined at the form level will override default style sheet(s). For m
 ---
 
 
-## Pages
 
-Each form has is made of at least two pages:
 
-- a page 0 (background page)
-- a page 1 (main page)
+## Form Class
 
-For more information, please refer to [Form pages](forms.md#form-pages).
+Name of an existing [user class](../Concepts/classes.md#class-definition) to associate to the form . The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
 
+Associating a class to the form provides the following benefits:
+
+- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression**...). Errors are displayed in red and warnings are displayed in yellow in the left column of the Property list and you can hover it to get explanations: 
+
+![](../assets/en/FormObjects/warning-proplist.png)
+
+- The detection of errors in the code of form object expressions by the [compiler](../Project/compiler.md) is improved. 
+ 
+- You can also to benefit from [autocompletion features](../code-editor/write-class-method.md#autocomplete-functions) in the code editor. 
+
+- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a *formData* object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands. 
+
+:::note
+
+See [this blog post](http://blog.4d.com/empower-your-development-process-with-your-forms) for an illustration of this feature.
+
+:::
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|pages |collection |Collection of pages (each page is an object, page 0 is the first element|
+|formClass |string |name of an existing user class ("*className*" or "*componentNameSpace*.*className*")|
 
 ---
+
+
 
 
 ## Form Name
@@ -75,6 +91,7 @@ The form name is defined by the name of the folder that contains the form.4Dform
 The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
 
 Each table in a database generally has at least two table forms. One for listing records on-screen and the other for displaying one record at a time (used for data entry and modifications):
+
 
 - Output form - the *output form* or *list form* displays a list of records, with a single line per record. The results of queries are shown in an output form and users can double-click a line to display the input form for that record.
 ![](../assets/en/FormObjects/formOutput.png)	
@@ -136,6 +153,24 @@ Set to `\<None>` in the Property List (or " " in JSON) to inherited from a proje
 |---|---|---|
 |inheritedFormTable|string or number |table name or table number|
 
+
+---
+
+## Pages
+
+Each form has is made of at least two pages:
+
+- a page 0 (background page)
+- a page 1 (main page)
+
+For more information, please refer to [Form pages](forms.md#form-pages).
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|pages |collection |Collection of pages (each page is an object, page 0 is the first element|
 
 ---
 

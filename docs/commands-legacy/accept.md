@@ -12,15 +12,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.ACCEPT.Summary-->The **ACCEPT** command is used in form or object methods (or in subroutines) to:
 
 * accept a new or modified record, for which data entry has been initiated using [ADD RECORD](add-record.md) or [MODIFY RECORD](modify-record.md).<!-- END REF-->
-* accept a form displayed with the [DIALOG](dialog.md) command.
+* accept a form displayed with the [DIALOG](../commands/dialog.md) command.
 * exit a form displaying a selection of records, using [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md).
 
 **ACCEPT** performs the same action as if a user had pressed the Enter key. After the form is accepted, the OK system variable is set to 1.
@@ -38,3 +35,13 @@ The **ACCEPT** command is allowed in headless mode, in the context of offscreen 
 #### See also 
 
 [CANCEL](cancel.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 269 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

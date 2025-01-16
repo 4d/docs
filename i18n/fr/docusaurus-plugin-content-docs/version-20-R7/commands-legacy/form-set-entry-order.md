@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM SET ENTRY ORDER.Summary-->La commande **FORM SET ENTRY ORDER** permet de fixer dynamiquement l'ordre de saisie du formulaire courant pour le process en cours, basé sur le tableau *nomsObjets*.<!-- END REF--> 
@@ -55,3 +52,12 @@ Vous souhaitez fixer l'ordre de saisie des objets du formulaire en vous basant s
 #### Voir aussi 
 
 [FORM GET ENTRY ORDER](form-get-entry-order.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1468 |
+| Thread safe | &cross; |
+
+

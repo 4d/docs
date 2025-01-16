@@ -48,3 +48,12 @@ Vous passez dans *type* un code représentant le type de dossier. 4D fournit les
 
 [Get 4D folder](get-4d-folder.md)  
 [Temporary folder](temporary-folder.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 487 |
+| Thread safe | &check; |
+
+

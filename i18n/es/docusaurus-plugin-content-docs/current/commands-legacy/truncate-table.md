@@ -39,3 +39,15 @@ Si el comando se ha ejecutado correctamente, la variable sistema OK toma el valo
 #### Ver también 
 
 [DELETE SELECTION](delete-selection.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1051 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+
+

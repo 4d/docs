@@ -34,6 +34,14 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_SET DOCUMENT CREATOR*  
-*\_o\_SET DOCUMENT TYPE*  
 [GET DOCUMENT PROPERTIES](get-document-properties.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 478 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+
+

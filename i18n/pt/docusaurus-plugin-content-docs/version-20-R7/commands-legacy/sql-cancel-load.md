@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SQL CANCEL LOAD.Summary-->O comando SQL CANCEL LOAD finaliza a solicitação *SELECT* atual e inicializa os parâmetros.<!-- END REF-->  
@@ -54,3 +51,13 @@ Se o comando for executado corretamente, a variável sistema OK retorna 1\. Do c
 
 [SQL LOAD RECORD](sql-load-record.md)  
 [SQL LOGIN](sql-login.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 824 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

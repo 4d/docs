@@ -30,6 +30,14 @@ Se você está trabalhando, por exemplo, com o banco na pasta Documentos:MeusCDs
 
 #### Ver também 
 
-*\_o\_DATA SEGMENT LIST*  
 [Application file](application-file.md)  
 [Structure file](structure-file.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 490 |
+| Thread-seguro | &check; |
+
+

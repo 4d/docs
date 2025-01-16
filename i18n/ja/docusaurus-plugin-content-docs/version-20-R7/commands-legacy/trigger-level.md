@@ -24,3 +24,12 @@ displayed_sidebar: docs
 [Trigger event](trigger-event.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 *トリガ*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 398 |
+| スレッドセーフである | &check; |
+
+

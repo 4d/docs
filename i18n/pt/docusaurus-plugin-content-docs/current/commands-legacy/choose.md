@@ -80,3 +80,13 @@ Este código é estritamente equivalente a:
        vEstado:="Separado"
  End case
 ```
+
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 955 |
+| Thread-seguro | &check; |
+
+

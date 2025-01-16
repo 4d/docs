@@ -5,7 +5,7 @@ title: ZIPArchive
 
 A 4D ZIP archive is a `File` or `Folder` object containing one or more files or folders, which are compressed to be smaller than their original size. Esses arquivos são criados com uma extensão ".zip" e podem ser usados para poupar espaço em disco ou transferir arquivos via meios que tenham limitações de tamanho (por exemplo, um email ou por uma rede).
 
-- You create a 4D ZIP archive with the [ZIP Create archive](#zip-create-archive) command.
+- Você cria um arquivo ZIP 4D com o comando [ZIP Create archive](#zip-create-archive).
 - 4D [`ZIPFile`](ZipFileClass.md) and [`ZIPFolder`](ZipFolderClass.md) instances are available through the [`root`](#root) property (`ZIPFolder`) of the object returned by [ZIP Read archive](#zip-read-archive) command.
 
 ### Exemplo
@@ -81,7 +81,7 @@ You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parame
 
 In the *destinationFile* parameter, pass a `4D.File` object describing the ZIP archive to create (name, location, etc.). É recomendado usar a extensão ".zip" se quiser que o arquivo ZIP seja processado automaticamente por um software.
 
-Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive) command to access it.
+Depois que um arquivo é criado, você pode usar o comando [ZIP Read archive](#zip-read-archive) para acessá-lo.
 
 **Status object**
 
@@ -221,7 +221,7 @@ If the *zipFile* is password protected, you need to use the optional *password* 
 
 **Objeto arquivo**
 
-The returned `4D.ZipArchive` object contains a single [`root`](#root) property whose value is a `4D.ZipFolder` object. Esta pasta descreve todo o conteúdo do ficheiro ZIP.
+O objeto retornado `4D.ZipArchive` contém uma única propriedade [`root`](#root) cujo valor é um objeto `4D.ZipFolder`. Esta pasta descreve todo o conteúdo do ficheiro ZIP.
 
 #### Exemplo
 

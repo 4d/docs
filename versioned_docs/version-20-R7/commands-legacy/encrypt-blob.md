@@ -181,3 +181,12 @@ A company wants to use the Internet to exchange information. Each subsidiary rec
 [DECRYPT BLOB](decrypt-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 689 |
+| Thread safe | &check; |
+
+

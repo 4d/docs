@@ -28,3 +28,12 @@ Si no pasa el parámetro *\**, el comando prueba el archivo buscando su extensi�
 #### Ver también 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1113 |
+| Hilo seguro | &check; |
+
+

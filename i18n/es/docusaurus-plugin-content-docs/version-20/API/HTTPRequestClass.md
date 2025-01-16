@@ -387,6 +387,6 @@ Si se pasa un parámetro *time*, la función esperará como máximo el número d
 
 Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
 
-During a `.wait()` execution, callback functions are executed, whether from other `HTTPRequest` or [`SystemWorker`](SystemWorkerClass.md) instances, or other `CALL WORKER` calls. Se puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde una retrollamada.
+Durante la ejecución de `.wait()`, se ejecutan funciones de retrollamada, ya sean de otros `HTTPRequest` o [`SystemWorker`](SystemWorkerClass.md) u otras llamadas `CALL WORKER`. Se puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde una retrollamada.
 
 <!-- END REF -->

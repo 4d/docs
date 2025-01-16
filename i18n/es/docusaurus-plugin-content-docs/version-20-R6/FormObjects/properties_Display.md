@@ -131,7 +131,7 @@ En cada uno de los formatos de visualización de números, el signo número (#),
 
 (1) El signo de intercalación (^) genera un caracter de espacio que ocupa el mismo ancho que un dígito en la mayoría de los tipos de fuente.
 
-Por ejemplo, si desea mostrar números de tres digitos, puede utilizar el formato ###. Si el usuario introduce más dígitos de los que permite el formato, 4D muestra <<< en el campo para indicar que se han introducido más dígitos de los especificados en el formato de visualización.
+Por ejemplo, si desea mostrar números de tres digitos, puede utilizar el formato ###. Si el usuario introduce más caracteres de los que permite el formato, 4D muestra los últimos caracteres.
 
 Si el usuario introduce un número negativo, el caracter situado más a la izquierda se muestra como un signo menos (a menos que se haya especificado un formato de visualización negativo). Si ##0 es el formato, menos 26 se muestra como -26 y menos 260 se muestra como <<< porque el signo menos ocupa un marcador de posición y sólo hay tres marcadores de posición.
 
@@ -413,7 +413,7 @@ Utilizado para asociar un formato de visualización con los datos de la columna.
 
 Las columnas booleanas y numéricas (números o enteros) pueden mostrarse como casillas de verificación. En este caso, se puede definir la propiedad [Título](#title).
 
-Las columnas booleanas también pueden mostrarse como menús emergentes. In this case, the [Text when False and Text when True](#text-when-falsetext-when-true) properties must be defined.
+Las columnas booleanas también pueden mostrarse como menús emergentes. En este caso, deben definirse las propiedades [Text cuando False y Text cuando True](#text-when-falsetext-when-true).
 
 #### Gramática JSON
 
@@ -529,7 +529,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
 
 ---
 

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT SET DATA SOURCE.Summary-->**OBJECT SET DATA SOURCE**コマンドは、引数 *object* と *\** で指定したオブジェクトのデータソースを変更します。<!-- END REF-->
@@ -52,3 +49,12 @@ displayed_sidebar: docs
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
 [OBJECT Get data source](object-get-data-source.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1264 |
+| スレッドセーフである | &cross; |
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.CLOSE WINDOW.Summary-->**CLOSE WINDOW** closes the active window opened by the [Open window](open-window.md) or [Open form window](open-form-window.md) command in the current process.<!-- END REF--> **CLOSE WINDOW** has no effect if a custom window is not open; it does not close system windows. **CLOSE WINDOW** also has no effect if called while a form is active in the window. You must call **CLOSE WINDOW** when you are done using a window opened by [Open window](open-window.md) or [Open form window](open-form-window.md).
@@ -41,3 +38,12 @@ The following example opens a form window and adds new records with the [ADD REC
 
 [Open form window](open-form-window.md)  
 [Open window](open-window.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 154 |
+| Thread safe | &cross; |
+
+

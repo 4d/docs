@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.DISPLAY SELECTION.Summary-->DISPLAY SELECTION は、出力フォームを使用して、*aTable*の カレントセレクションを表示します。<!-- END REF-->レコードはデザインモードの一覧に類似のスクロール可能な一覧として表示されます。ユーザがレコー ドをダブルクリックすると、デフォルトでそのレコードはカレント入力フォーム上に表示されます。リストは最前面にあるウインドウに表示されます。 
@@ -66,7 +63,7 @@ DISPLAY SELECTION の実行中と後、ユーザが選択したレコードは U
 
 #### 例題 2 
 
-[Form event](form-event.md "Form event")の6番目の例題を参照してください。この例題ではDISPLAY SELECTIONコマンドの実行中に発生するイベントをすべて監視するためのあらゆるチェックが示されています。
+[Form event](../commands/form-event.md "Form event")の6番目の例題を参照してください。この例題ではDISPLAY SELECTIONコマンドの実行中に発生するイベントをすべて監視するためのあらゆるチェックが示されています。
 
 #### 例題 3 
 
@@ -94,6 +91,16 @@ c. 以下のプロジェクトメソッドをメニューに関連付けます:
 
 #### 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
 *セット*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 59 |
+| スレッドセーフである | &cross; |
+| サーバー上での使用は不可 ||
+
+

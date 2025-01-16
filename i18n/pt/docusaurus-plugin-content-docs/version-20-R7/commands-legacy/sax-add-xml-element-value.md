@@ -52,3 +52,13 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 
 [SAX GET XML ELEMENT VALUE](sax-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 855 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SQL LOGIN.Summary-->**SQL LOGIN**コマンドを使用すると、*dataEntry*引数で指定されたSQLデータソースへ接続することができます。<!-- END REF-->このコマンドは、カレントプロセスでこのコマンドの後に実行される以下のSQLクエリの対象を指定します:
@@ -207,3 +204,13 @@ IPv6アドレス 2a01:e35:2e41:c960:dc39:3eb0:f29b:3747のマシン、およびT
 [Begin SQL](begin-sql.md)  
 [End SQL](end-sql.md)  
 [SQL LOGOUT](sql-logout.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 817 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

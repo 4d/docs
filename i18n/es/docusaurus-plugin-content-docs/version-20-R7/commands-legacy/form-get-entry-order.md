@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->El comando **FORM GET ENTRY ORDER** devuelve en *nomObjetos* los nombres ordenados de los objetos que definen el orden de entrada del formulario.<!-- END REF--> 
@@ -54,3 +51,12 @@ Puede excluir ciertos objetos del orden de entrada:
 #### Ver también 
 
 [FORM SET ENTRY ORDER](form-set-entry-order.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1469 |
+| Hilo seguro | &cross; |
+
+

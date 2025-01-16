@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->The OBJECT SET LIST BY NAME command sets, replaces or disassociates the *list* associated with the object or group of objects specified by *object*.<!-- END REF--> The list whose name is passed in the *list* parameter must have been created using the List Editor in the Design environment.
@@ -92,3 +89,12 @@ You want to remove the list associations:
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 237 |
+| Thread safe | &cross; |
+
+

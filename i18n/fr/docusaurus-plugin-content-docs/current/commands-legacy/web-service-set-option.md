@@ -61,3 +61,12 @@ Utilisation de la version 1.2 du protocole SOAP :
 #### Voir aussi 
 
 [WEB SERVICE CALL](web-service-call.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 901 |
+| Thread safe | &check; |
+
+

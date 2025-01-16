@@ -21,7 +21,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 ---
 
-## Background Color / Fill Color
+## Couleur de fond
 
 Définit la couleur de fond d'un objet.
 
@@ -31,9 +31,9 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles                          |
-| ------------ | --------------- | ------------------------------------------ |
-| border-style | string          | une valeur css; "transparent"; "automatic" |
+| Nom  | Type de données | Valeurs possibles                          |
+| ---- | --------------- | ------------------------------------------ |
+| fill | string          | une valeur css; "transparent"; "automatic" |
 
 #### Objets pris en charge
 
@@ -121,7 +121,7 @@ Vous pouvez supprimer ces lignes vides en sélectionnant cette option. Le bas de
 
 ---
 
-## Line Color
+## Couleur du trait
 
 Désigne la couleur des lignes de l'objet.
 La couleur peut être spécifiée par :
@@ -146,7 +146,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 ---
 
-## Line Width
+## Epaisseur du trait
 
 Désigne l'épaisseur d'une ligne.
 
@@ -190,7 +190,7 @@ Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orang
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) and [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html) commands. Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont plutôt créés dynamiquement par les commandes.
+You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) and [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html) commands. Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont créés dynamiquement par les commandes.
 
 #### Grammaire JSON
 
@@ -210,9 +210,9 @@ Définit l'arrière-plan de la list box sur "Transparent". When set, any [altern
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles |
-| ------------ | --------------- | ----------------- |
-| border-style | text            | "transparent"     |
+| Nom  | Type de données | Valeurs possibles |
+| ---- | --------------- | ----------------- |
+| fill | text            | "transparent"     |
 
 #### Objets pris en charge
 

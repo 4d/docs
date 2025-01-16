@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.EDIT ACCESS.Summary-->EDIT ACCESS コマンドを使用して、ユーザにパスワードシステムの編集環境を提供します。<!-- END REF-->このコマンドが実行されると、ユーザとユーザグループページのみから成るツールボックスウィンドウが表示されます。
@@ -37,3 +34,13 @@ DesignerとAdministratorは新規ユーザの追加、およびグループへ�
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [CHANGE PASSWORD](change-password.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 281 |
+| スレッドセーフである | &cross; |
+| サーバー上での使用は不可 ||
+
+

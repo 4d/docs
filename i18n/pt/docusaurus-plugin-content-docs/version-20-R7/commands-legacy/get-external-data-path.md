@@ -31,3 +31,12 @@ Este comando devolve uma cadeia vazia nos seguintes casos:
 #### Ver também 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1133 |
+| Thread-seguro | &check; |
+
+

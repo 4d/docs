@@ -37,3 +37,12 @@ En *selector*, pase una de las constantes del tema *XML* indicando la opción a 
 #### Ver también 
 
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1096 |
+| Hilo seguro | &check; |
+
+

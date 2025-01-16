@@ -40,3 +40,12 @@ Vous souhaitez changer temporairement de dossier de certificats :
 #### Voir aussi 
 
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1307 |
+| Thread safe | &check; |
+
+

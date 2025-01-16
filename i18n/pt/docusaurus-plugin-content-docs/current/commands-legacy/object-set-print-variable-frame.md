@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Summary-->O comando **OBJECT SET PRINT VARIABLE FRAME** modifica a propriedade de marco de impressão variável do objeto ou dos objetos designados pelos parâmetros *objeto* e *\**.<!-- END REF-->
@@ -43,3 +40,12 @@ O parâmetro opcional *subformFixo* lhe permite configurar uma opção adicional
 #### Ver também 
 
 [OBJECT GET PRINT VARIABLE FRAME](object-get-print-variable-frame.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1240 |
+| Thread-seguro | &cross; |
+
+

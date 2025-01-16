@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.WA Run offscreen area.Summary-->La commande **WA Run offscreen area** crée une zone web dans la mémoire qui peut être utilisée pour charger et parser automatiquement des pages web.<!-- END REF-->
@@ -98,3 +95,13 @@ La variable système OK est définie sur 0 si le timeout a été atteint ou si l
 [FORM Event](form-event.md)  
 *Gestion programmée des zones Web*  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1727 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

@@ -38,3 +38,12 @@ Usted quiere cambiar temporalmente la carpeta de certificados:
 #### Ver también 
 
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1307 |
+| Hilo seguro | &check; |
+
+

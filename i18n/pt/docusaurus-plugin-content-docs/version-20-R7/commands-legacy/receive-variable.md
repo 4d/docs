@@ -41,3 +41,13 @@ A variável de sistema OK é definida como 1 se a variável for recebida. Caso c
 [RECEIVE RECORD](receive-record.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 81 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+
+

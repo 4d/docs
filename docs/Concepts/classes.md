@@ -117,7 +117,7 @@ Available classes are accessible from their class stores. Two class stores are a
 <!-- REF #_command_.cs.Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|&larr;|User class store for the project or component|<!-- END REF -->
+|classStore|Object|&#8592;|User class store for the project or component|<!-- END REF -->
 
 The `cs` command <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
 
@@ -136,7 +136,7 @@ $instance:=cs.myClass.new()
 <!-- REF #_command_.4D.Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|&larr;|4D class store|<!-- END REF -->
+|classStore|Object|&#8592;|4D class store|<!-- END REF -->
 
 The `4D` command <!-- REF #_command_.4D.Summary -->returns the class store for available built-in 4D classes<!-- END REF -->. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
 
@@ -198,6 +198,12 @@ Specific 4D keywords can be used in class definitions:
 {shared} Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
+
+:::note
+
+There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file. 
+
+:::
 
 Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md) class. In the class definition file, function declarations use the `Function` keyword followed by the function name.
 
@@ -286,6 +292,8 @@ Function add($x : Variant; $y : Integer): Integer
  return $x+$y
 ```
 
+
+
 #### Example 1
 
 ```4d
@@ -335,6 +343,12 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 {shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
 // code
 ```
+
+:::note
+
+There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file. 
+
+:::
 
 A class constructor function accepts optional [parameters](#parameters) and can be used to create and initialize objects of the user class.  
 

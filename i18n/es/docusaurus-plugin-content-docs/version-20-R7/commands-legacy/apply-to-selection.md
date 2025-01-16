@@ -62,3 +62,13 @@ Si el usuario hace clic en el botón Detener en el termómetro de progresión, l
 
 *Conjuntos*  
 [EDIT FORMULA](edit-formula.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 70 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

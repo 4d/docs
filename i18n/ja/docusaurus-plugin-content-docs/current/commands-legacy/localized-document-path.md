@@ -66,3 +66,12 @@ Resources フォルダの中身は以下のようになっています:
 #### 参照 
 
 [Get database localization](get-database-localization.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1105 |
+| スレッドセーフである | &check; |
+
+

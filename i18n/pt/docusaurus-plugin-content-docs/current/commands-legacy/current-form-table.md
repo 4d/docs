@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Current form table.Summary-->O comando Current form table retorna o ponteiro para a tabela do formulário em tela ou impresso no processo atual.<!-- END REF-->  
@@ -60,7 +57,16 @@ Para isso, utilize o método de objeto para criar a variável *vstRegistroAtual*
 
 #### Ver também 
 
-[DIALOG](dialog.md)  
+[DIALOG](../commands/dialog.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [FORM SET INPUT](form-set-input.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 627 |
+| Thread-seguro | &cross; |
+
+

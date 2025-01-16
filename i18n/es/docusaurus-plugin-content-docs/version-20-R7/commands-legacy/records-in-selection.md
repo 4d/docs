@@ -33,3 +33,12 @@ El siguiente ejemplo muestra una técnica de bucle actualmente utilizada para mo
 #### Ver también 
 
 [Records in table](records-in-table.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 76 |
+| Hilo seguro | &check; |
+
+

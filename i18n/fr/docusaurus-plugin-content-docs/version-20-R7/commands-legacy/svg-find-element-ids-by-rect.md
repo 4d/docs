@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SVG Find element IDs by rect.Summary-->La commande **SVG Find element IDs by rect** remplit le tableau texte *tabIds* avec les IDs (attribut "id" ou "xml:id") des éléments XML dont le rectangle englobant est en intersection avec le rectangle de sélection à l’emplacement défini par les paramètres *x* et *y*.<!-- END REF-->
@@ -43,3 +40,12 @@ Tous les ID d’éléments dont le rectangle englobant est en intersection avec 
 #### Voir aussi 
 
 [SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1109 |
+| Thread safe | &cross; |
+
+

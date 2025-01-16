@@ -11,10 +11,10 @@ This parameter allows you to define the format to use to return data of your dat
 
 São suportados os seguintes formatos:
 
-| Formato  | Descrição                                                                                         |
-| -------- | ------------------------------------------------------------------------------------------------- |
-| `json`   | Formato padrão do servidor 4D REST (usado por padrão)                          |
-| `looker` | JSON format compliant with the [Looker Studio](https://lookerstudio.google.com/). |
+| Formato  | Descrição                                                                                        |
+| -------- | ------------------------------------------------------------------------------------------------ |
+| `json`   | Formato padrão do servidor 4D REST (usado por padrão)                         |
+| `looker` | Formato JSON compatível com o [Looker Studio](https://lookerstudio.google.com/). |
 
 ## Exemplo
 

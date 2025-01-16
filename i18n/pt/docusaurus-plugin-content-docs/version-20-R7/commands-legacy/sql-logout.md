@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SQL LOGOUT.Summary-->O comando SQL LOGOUT fecha a conexão com uma fonte ODBC aberta no processo atual (se aplicado).<!-- END REF--> Se não há conexão ODBC aberta, o comando não faz nada.
@@ -26,3 +23,13 @@ Se o logout é feito corretamente, a variável Sistema OK assume o valor 1; do c
 #### Ver também 
 
 [SQL LOGIN](sql-login.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 872 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK, error |
+
+

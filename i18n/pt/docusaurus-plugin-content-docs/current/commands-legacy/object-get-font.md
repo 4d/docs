@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get font.Summary-->O comando OBJECT Get font devolve o nome da fonte utilizada pelo objeto de formulário designado por *objeto*.<!-- END REF-->
@@ -27,3 +24,12 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro objeto é um nome d
 #### Ver também 
 
 [OBJECT SET FONT](object-set-font.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1069 |
+| Thread-seguro | &cross; |
+
+

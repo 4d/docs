@@ -34,7 +34,7 @@ Em *filePath*, passe o caminho de destino e o nome do documento a ser importado.
 - Os documentos 4D View Pro (extensão ".4vp")
 - Microsoft Excel (extensão ".xlsx")
 - documentos textos (extensão ".txt", ".csv", o documento deve ser em utf-8)
-- [SpreadJS documents](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
+- [Documentos SpreadJS](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extensão ".sjs")
 
 If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. Deve passar uma rota completa, a não ser que o documento esteja localizado no mesmo nível que a pasta Project, em cujo caso pode passar apenas seu nome.
 

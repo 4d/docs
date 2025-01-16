@@ -118,7 +118,7 @@ title: アプリケーションビルド
 
 ### スタンドアロンアプリケーションをビルド
 
-**スタンドアロンアプリケーションをビルド** オプションを選択して **ビルド** ボタンをクリックすると、スタンドアロンの (つまり、ダブルクリックで起動可能な) アプリケーションがアプリケーションプロジェクトをもとに作成されます。
+Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project.
 
 ビルドには次のものが必要です:
 

@@ -96,3 +96,13 @@ Blobおよびピクチャーフィールドの場合、保存場所によって�
 
   
 [INTEGRATE MIRROR LOG FILE](integrate-mirror-log-file.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1352 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、Document |
+
+

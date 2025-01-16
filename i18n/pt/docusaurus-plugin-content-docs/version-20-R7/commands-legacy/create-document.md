@@ -72,3 +72,13 @@ Se o documento for criado corretamente, a variável sistema OK assume o valor 1 
 
 [Append document](append-document.md)  
 [Open document](open-document.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 266 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, Document, error |
+
+

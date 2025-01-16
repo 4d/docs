@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->La commande **SET DATABASE PARAMETER** permet de modifier divers paramètres internes de la base de données 4D.<!-- END REF-->
@@ -150,3 +147,12 @@ Vous souhaitez exporter des données en JSON contenant une date 4D convertie. A 
 [Get database parameter](get-database-parameter.md)  
 [LOG EVENT](log-event.md)  
 [QUERY SELECTION](query-selection.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 642 |
+| Thread safe | &cross; |
+
+

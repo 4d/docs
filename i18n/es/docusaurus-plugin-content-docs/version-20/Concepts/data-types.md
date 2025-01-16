@@ -41,7 +41,7 @@ El valor por defecto depende del tipo de variable:
 | ---------- | ----------------- |
 | Booleano   | False             |
 | Fecha      | 00-00-00          |
-| Longint    | 0                 |
+| Integer    | 0                 |
 | Hora       | 00:00:00          |
 | Picture    | picture size=0    |
 | Real       | 0                 |

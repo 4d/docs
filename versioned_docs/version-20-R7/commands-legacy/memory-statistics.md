@@ -27,3 +27,12 @@ After the command has been executed, the statistics are provided in the *arrName
 #### See also 
 
 [Cache info](cache-info.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1118 |
+| Thread safe | &check; |
+
+

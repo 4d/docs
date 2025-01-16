@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | wpDoc | Object | &#8594;  | 4D Write Pro variable |
 | destination | Text variable, BLOB variable | &#x1F858; | Variable to receive exported contents |
 | format | Integer | &#8594;  | Variable output format |
-| option | Object, Longint | &#8594;  | Export options |
+| option | Object, Integer | &#8594;  | Export options |
 
 <!-- END REF-->
 

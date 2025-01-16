@@ -41,3 +41,13 @@ The OK variable is set to 1 if the variable has been successfully rewritten, oth
 #### See also 
 
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 533 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

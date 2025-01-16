@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.On Host Database Event database method.Summary-->The **On Host Database Event database method** allows 4D components to execute code when the host database is opened and closed.<!-- END REF-->

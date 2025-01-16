@@ -3,7 +3,7 @@ id: httpRequests
 title: HTTPリクエストの処理
 ---
 
-4D Webサーバーは、HTTPリクエストを処理するための機能を複数備えています:
+The 4D web server provides several built-in features to handle HTTP requests:
 
 - Webアプリケーションのルーターとなる `On Web Connection` データベースメソッド。
 - サーバーサイドコードを呼び出すための `/4DACTION` URL。
@@ -11,13 +11,21 @@ title: HTTPリクエストの処理
 - `WEB GET HTTP BODY`、`WEB GET HTTP HEADER`、`WEB GET BODY PART` などのコマンドによって、リクエスト処理をカスタマイズすることができます (cookie 含む)。
 - 変数を宣言するための _COMPILER_WEB_ プロジェクトメソッド。
 
+:::info
+
+You can also implement your own HTTP request handlers for a customized control over incoming requests and outgoing responses. When a custom HTTP request handler is triggered, no database method is called. See [**HTTP Request Handler**](http-request-handler.md) section.
+
+:::
+
 ## On Web Connection
 
 `On Web Connection` データベースメソッドは、4D Webサーバーのエントリーポイントとして使用できます。
 
 ### データベースメソッドの呼び出し
 
-`On Web Connection` データベースメソッドは、サーバー上に存在しないページへのパスをサーバーが URL として受け取った場合に、自動的に呼び出されます。 データベースメソッドは、URL とともに呼び出されます。
+The `On Web Connection` database method is automatically called when the server receives any URL that is not a valid path to an existing page on the server (and is not a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md)).
+
+データベースメソッドは、URL とともに呼び出されます。
 
 たとえば、"_a/b/c_" という URL はデータベースメソッドを呼び出しますが、[WebFolder](webServerConfig.md#ルートフォルダー) の "a/b" サブフォルダーに "c.html" というページが存在する場合、"_a/b/c.html_" はデータベースメソッドを呼び出しません。
 
@@ -25,28 +33,18 @@ title: HTTPリクエストの処理
 
 ### シンタックス
 
-**On Web Connection**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text )
+**On Web Connection**( _$url_ : Text; _$header_ : Text; _$BrowserIP_ : Text; _$ServerIP_ : Text; _$user_ : Text; _$password_ : Text )
 
-| 引数 | 型    |                             | 説明                                              |
-| -- | ---- | :-------------------------: | ----------------------------------------------- |
-| $1 | Text | <- | URL                                             |
-| $2 | Text | <- | HTTPヘッダー + HTTPボディ (32 KBまで) |
-| $3 | Text | <- | Webクライアント (ブラウザー) の IPアドレス   |
-| $4 | Text | <- | サーバーの IPアドレス                                    |
-| $5 | Text | <- | ユーザー名                                           |
-| $6 | Text | <- | パスワード                                           |
+| 引数         | 型    |                             | 説明                                              |
+| ---------- | ---- | :-------------------------: | ----------------------------------------------- |
+| $url       | Text | <- | URL                                             |
+| $header    | Text | <- | HTTPヘッダー + HTTPボディ (32 KBまで) |
+| $BrowserIP | Text | <- | Webクライアント (ブラウザー) の IPアドレス   |
+| $ServerIP  | Text | <- | サーバーの IPアドレス                                    |
+| $user      | Text | <- | ユーザー名                                           |
+| $password  | Text | <- | パスワード                                           |
 
-これらの引数を以下のように宣言しなければなりません:
-
-```4d
-// On Web Connection データベースメソッド
-
- C_TEXT($1;$2;$3;$4;$5;$6)
-
-// メソッドのコード
-```
-
-あるいは、[名前付き引数](Concepts/parameters.md#名前付き引数) シンタックスを利用することもできます:
+You must declare these parameters:
 
 ```4d
 // On Web Connection データベースメソッド
@@ -57,15 +55,15 @@ title: HTTPリクエストの処理
 
 ```
 
-> インターフェース要素 を表示する 4Dコマンド (`DIALOG`、`ALERT` など)  の呼び出しは許可されず、メソッドの処理を終了します。
+> インターフェース要素 を表示する 4Dコマンド (`DIALOG`、`ALERT` など)  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。
 
-### $1 - URL追加データ
+### $url - URL extra data
 
-最初の引数 ($1) は、ユーザーが Webブラウザーのアドレスエリアに入力した URL からホストのアドレスを取り除いたものです。
+The first parameter ($url) is the URL entered by users in the address area of their web browser, without the host address.
 
-イントラネット接続の場合を見てみましょう。 4D Webサーバーマシンの IPアドレスを 123.4.567.89 とします。 以下の表は Webブラウザーに入力された URL に対して、$1 が受け取る値を示しています:
+イントラネット接続の場合を見てみましょう。 4D Webサーバーマシンの IPアドレスを 123.4.567.89 とします。 イントラネット接続の場合を見てみましょう。 4D Webサーバーマシンの IPアドレスを 123.4.567.89 とします。 The following table shows the values of $url depending on the URL entered in the web browser:
 
-| Webブラウザーに入力された値                                                                                                                                   | $1 の値                                                                                 |
+| Webブラウザーに入力された値                                                                                                                                   | Value of parameter $url                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.4.567.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |
@@ -75,29 +73,29 @@ title: HTTPリクエストの処理
 
 この引数は必要に応じて自由に利用できます。 4D は単に URL のホスト部より後の部分を無視し、$1 に渡します。 たとえば、値 "_/Customers/Add_" が "`[Customers]` テーブルに新規レコードを直接追加する" ということを意味するような、オリジナルのルールを作成できます。 利用可能な値やデフォルトブックマークを Webユーザーに提供することで、アプリケーションの異なる部分へのショートカットを提供できます。 このようにして、Webユーザーは新しく接続するたびにナビゲーションを通過することなく、素早く Webサイトのリソースにアクセスできます。
 
-### $2 - HTTPリクエストのヘッダーとボディ
+### $header - Header and Body of the HTTP request
 
-二番目の引数 ($2) は、Webブラウザーから送信された HTTPリクエストのヘッダーとボディです。 この情報は `On Web Connection` データベースメソッドに "そのまま" 渡されることに留意してください。 その内容は、接続を試みた Webブラウザーの仕様により異なります。
+The second parameter ($header) is the header and the body of the HTTP request sent by the web browser. この情報は `On Web Connection` データベースメソッドに "そのまま" 渡されることに留意してください。 その内容は、接続を試みた Webブラウザーの仕様により異なります。 その内容は、接続を試みた Webブラウザーの仕様により異なります。
 
 アプリケーションでこの情報を使用するには、開発者がヘッダーとボディを解析しなければなりません。 `WEB GET HTTP HEADER` や `WEB GET HTTP BODY` コマンドを使うことができます。
 
-> パフォーマンス上の理由により、$2 を介して渡されるデータのサイズは 32KB 以下でなくてはなりません。 これを超過する分は、4D HTTPサーバーにより切り取られます。
+> For performance reasons, the size of data passing through the $header parameter must not exceed 32 KB. これを超過する分は、4D HTTPサーバーにより切り取られます。
 
-### $3 - Webクライアントの IPアドレス
+### $BrowserIP - Web client IP address
 
-$3 引数はブラウザーマシンの IPアドレスを受け取ります。 この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。
+The $BrowserIP parameter receives the IP address of the browser’s machine. この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。
 
 > 4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、[IPv6 のサポートについて](webServerConfig.md#IPv6-のサポートについて) の章を参照ください。
 
-### $4 - サーバー IPアドレス
+### $ServerIP - Server IP address
 
-$4 引数は 4D Webサーバーによってリクエストされた IPアドレスを受け取ります。 4D はマルチホーミングをサポートしており、複数の IPアドレスを持つマシンを使用できます。 詳細は [設定ページ](webServerConfig.md#リクエストを受け付ける-IPアドレス) を参照ください。
+The $ServerIP parameter receives the IP address requested by the 4D Web Server. 4D はマルチホーミングをサポートしており、複数の IPアドレスを持つマシンを使用できます。 詳細は [設定ページ](webServerConfig.md#リクエストを受け付ける-IPアドレス) を参照ください。
 
-### $5 と $6 - ユーザー名とパスワード
+### $user and $password - User Name and Password
 
-`$5` と `$6` 引数は、ブラウザーが表示する標準の認証ダイアログにユーザーが入力したユーザー名とパスワードを受け取ります (入力されていれば; [認証ページ](authentication.md) 参照)。
+The $user and $password parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
 
-> ブラウザーから送信されたユーザー名が 4D に存在する場合、$6 引数 (ユーザーパスワード) はセキュリティのため渡されません。
+> If the user name sent by the browser exists in 4D, the $password parameter (the user’s password) is not returned for security reasons.
 
 ## /4DACTION
 
@@ -111,9 +109,9 @@ $4 引数は 4D Webサーバーによってリクエストされた IPアドレ�
 
 **利用法**: URL またはフォームアクション
 
-この URL を使用して、任意の _Param_ テキスト引数とともに _MethodName_ に指定した 4Dプロジェクトメソッドを呼び出すことができます。 このメソッドは引数を _$1_ に受け取ります。
+この URL を使用して、任意の _Param_ テキスト引数とともに _MethodName_ に指定した 4Dプロジェクトメソッドを呼び出すことができます。 The method will receive this parameter. The method will receive this parameter.
 
-- 4Dプロジェクトメソッドは、[Webリクエスト用に許可](allowProject.md)されていなければなりません。メソッドのプロパティで "公開オプション: 4DタグとURL(4DACTION...)" 属性がチェックされている必要があります。 属性がチェックされていない場合、Webリクエストは拒否されます。
+- 4Dプロジェクトメソッドは、[Webリクエスト用に許可](allowProject.md)されていなければなりません。メソッドのプロパティで "公開オプション: 4DタグとURL(4DACTION...)" 属性がチェックされていない場合、Webリクエストは拒否されます。
 - `/4DACTION/MyMethod/Param` リクエストを受け取ると、4D は `On Web Authentication` データベースメソッド (あれば) を呼び出します。
 
 `4DACTION/` は、スタティックな Webページの URL に割り当てることもできます:
@@ -122,13 +120,13 @@ $4 引数は 4D Webサーバーによってリクエストされた IPアドレ�
 <A HREF="/4DACTION/MyMethod/hello">Do Something</A>
 ```
 
-`MyMethod` プロジェクトメソッドは通常レスポンスを返すべきです (`WEB SEND FILE` や `WEB SEND BLOB` で HTMLページを送信するなど)。 ブラウザーをブロックしないように、処理は可能な限り短時間でおこなわれるようにします。
+`MyMethod` プロジェクトメソッドは通常レスポンスを返すべきです (`WEB SEND FILE` や `WEB SEND BLOB` で HTMLページを送信するなど)。 ブラウザーをブロックしないように、処理は可能な限り短時間でおこなわれるようにします。 ブラウザーをブロックしないように、処理は可能な限り短時間でおこなわれるようにします。
 
 > `4DACTION/` から呼び出されるメソッドは、インタフェース要素 (`DIALOG`, `ALERT` など) を呼び出してはいけません。
 
 #### 例題
 
-この例題は、HTMLピクチャーオブジェクトに `/4DACTION/` URL を割り当て、ページ上でピクチャーを動的に表示する方法を説明しています。 スタティック HTMLページに以下のコードを記述します:
+この例題は、HTMLピクチャーオブジェクトに `/4DACTION/` URL を割り当て、ページ上でピクチャーを動的に表示する方法を説明しています。 スタティック HTMLページに以下のコードを記述します: スタティック HTMLページに以下のコードを記述します:
 
 ```html
 <IMG SRC="/4DACTION/getPhoto/smith">
@@ -137,16 +135,16 @@ $4 引数は 4D Webサーバーによってリクエストされた IPアドレ�
 `getPhoto` メソッドは以下のとおりです:
 
 ```4d
-C_TEXT($1) // この引数は常に宣言する必要があります
+#DECLARE ($url : Text) // This parameter must always be declared
 var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- // Resources フォルダー内の Images フォルダー内でピクチャーを探します
-$path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
+ //find the picture in the Images folder within the Resources folder
+$path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$url+".psd"
 
-READ PICTURE FILE($path;$PictVar) // ピクチャーをピクチャー変数に入れます
-PICTURE TO BLOB($PictVar;$BLOB;".png") // ピクチャーを ".png" 形式に変換します
+READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable
+PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format
 WEB SEND BLOB($BLOB;"image/png")
 ```
 
@@ -183,7 +181,7 @@ Webアプリケーションにおいて、スタティックなHTMLページを�
 </FORM>
 ```
 
-データ入力エリアに "ABCD" とタイプし、"Whole word (句として検索)" オプションをチェックして **Search** (検索) ボタンをクリックします。 Webサーバーに送信されるリクエスト内部は以下の通りです:
+データ入力エリアに "ABCD" とタイプし、"Whole word (句として検索)" オプションをチェックして **Search** (検索) ボタンをクリックします。 Webサーバーに送信されるリクエスト内部は以下の通りです: Webサーバーに送信されるリクエスト内部は以下の通りです:
 
 ```
 vName="ABCD"
@@ -194,15 +192,15 @@ OK="Search"
 4D は `On Web Authentication` データベースメソッドを (あれば) 呼び出し、そして以下の`processForm` プロジェクトメソッドを呼び出します:
 
 ```4d
-C_TEXT($1) // コンパイルモードの場合必須
- C_LONGINT($vName)
- C_TEXT(vName;vLIST)
+ #DECLARE ($url : Text) //mandatory for compiled mode
+ var $vName : Integer
+ var vName;vLIST : Text
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrVals;0)
- WEB GET VARIABLES($arrNames;$arrVals) // フォーム上の変数をすべて取得します
+ WEB GET VARIABLES($arrNames;$arrVals) //we retrieve all the variables of the form
  $vName:=Find in array($arrNames;"vName")
  vName:=$arrVals{$vName}
- If(Find in array($arrNames;"vExact")=-1) // オプションがチェックされていない場合
+ If(Find in array($arrNames;"vExact")=-1) //If the option has not been checked
     vName:=vName+"@"
  End if
  QUERY([Jockeys];[Jockeys]Name=vName)
@@ -211,21 +209,20 @@ C_TEXT($1) // コンパイルモードの場合必須
     vLIST:=vLIST+[Jockeys]Name+" "+[Jockeys]Tel+"<br/>"
     NEXT RECORD([Jockeys])
  End while
- WEB SEND FILE("results.htm") // 検索結果が挿入される results.htm を送信します
-  // このページには変数 vLIST の参照が含まれています
-  // たとえば <!--4DHTML vLIST--> など
+ WEB SEND FILE("results.htm") //Send the list to the results.htm form
+  //which contains a reference to the variable vLIST,
+  //for example <!--4DHTML vLIST-->
   //...
 End if
-
 ```
 
 ## HTTPリクエストから値を取得する
 
 4D Web サーバーでは、Webフォームや URL を介して POST や GET リクエストで送信されたデータを復元することができます。
 
-ヘッダーや URL にデータが含まれたリクエストを Webサーバーが受信すると、4D はそれに含まれる HTMLオブジェクトの値を受け取ることができます。 たとえば `WEB SEND FILE` コマンドまたは `WEB SEND BLOB` コマンドで送信され、ユーザーが値を入力・修正して確定ボタンをクリックするような Webフォームにおいてもこの原理は使用可能です。
+ヘッダーや URL にデータが含まれたリクエストを Webサーバーが受信すると、4D はそれに含まれる HTMLオブジェクトの値を受け取ることができます。 This principle can be implemented in the case of a Web form, sent for example using [`WEB SEND FILE`](../commands-legacy/web-send-file.md) or [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md), where the user enters or modifies values, then clicks on the validation button.
 
-この場合 4D は `WEB GET VARIABLES` コマンドを使って、リクエスト内の HTMLオブジェクトの値を取得することができます。 `WEB GET VARIABLES` コマンドは、値をテキストとして受け取ります。
+In this case, 4D can retrieve the values of the HTML objects found in the request using the [`WEB GET VARIABLES`](../commands-legacy/web-get-variables.md) command. `WEB GET VARIABLES` コマンドは、値をテキストとして受け取ります。
 
 以下の HTMLページのソースコードがあるとき:
 
@@ -279,40 +276,41 @@ return false
 このページの主な特徴は:
 
 - 送信のための **Submit** ボタンが 3つあります: `vsbLogOn`, `vsbRegister` そして `vsbInformation`。
-- **Log On** をクリックすると、フォームからの送信はまず初めに JavaScript関数 `LogOn` によって処理されます。 名前が入力されていない場合、フォームは 4Dに送信すらされず、JavaScript による警告が表示されます。
+- **Log On** をクリックすると、フォームからの送信はまず初めに JavaScript関数 `LogOn` によって処理されます。 名前が入力されていない場合、フォームは 4Dに送信すらされず、JavaScript による警告が表示されます。 名前が入力されていない場合、フォームは 4Dに送信すらされず、JavaScript による警告が表示されます。
 - フォームは POST 4Dメソッドに加えて、ブラウザープロパティを _vtNav_App_ から始まる名称の 4つの隠しオブジェクトへとコピーする投稿スクリプト (_GetBrowserInformation_) を持っています。
+  また、このページには `vtUserName` オブジェクトも含まれます。
   また、このページには `vtUserName` オブジェクトも含まれます。
 
 ユーザーが HTMLフォーム上のボタンのどれかをクリックした際に呼び出される `WWW_STD_FORM_POST` という 4Dメソッドを検証してみましょう。
 
 ```4d
-  // 変数の値を取得します
+  // Retrieval of value of variables
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
- C_LONGINT($user)
+ var $user : Integer
 
  Case of
 
-  // Log On ボタンがクリックされた場合
+  // The Log On button was clicked
     :(Find in array($arrNames;"vsbLogOn")#-1)
        $user :=Find in array($arrNames;"vtUserName")
        QUERY([WWW Users];[WWW Users]UserName=$arrValues{$user})
        $0:=(Records in selection([WWW Users])>0)
        If($0)
           WWW POST EVENT("Log On";WWW Log information)
-  // WWW POST EVENT メソッドが情報をデータベースのテーブルに保存します
+  // The WWW POST EVENT method saves the information in a database table
        Else
 
           $0:=WWW Register
-  // WWW Register メソッドは新規 Webユーザーの登録を処理します
+  // The WWW Register method lets a new Web user register
        End if
 
-  // Register ボタンがクリックされた場合
+  // The Register button was clicked
     :(Find in array($arrNames;"vsbRegister")#-1)
        $0:=WWW Register
 
-  // Information ボタンがクリックされた場合
+  // The Information button was clicked
     :(Find in array($arrNames;"vsbInformation")#-1)
        WEB SEND FILE("userinfos.html")
  End case
@@ -323,21 +321,21 @@ return false
 - 変数 _vtNav_appName_, _vtNav_appVersion_, _vtNav_appCodeName_, そして _vtNav_userAgent_ の値 (同じ名前を持つ HTMLオブジェクトにそれぞれバインドされています) は 、`WEB GET VARIABLES` コマンドを使用することによって JavaScript のスクリプト _GetBrowserInformation_ で作成された HTMLオブジェクトから取得することができます。
 - 3つの投稿ボタンにバインドされている変数 _vsbLogOn_, _vsbRegister_ と _vsbInformation_ のうち、クリックされたボタンに対応するもののみが `WEB GET VARIABLES` コマンドによって取得されます。 この 3つのうちいずれかのボタンによって投稿がおこなわれたとき、ブラウザーはクリックされたボタンの値を 4D に返します。 これにより、どのボタンがクリックされたのかが分かります。
 
-HTMLではすべてのオブジェクトがテキストオブジェクトであることに留意が必要です。 SELECT要素を使用した場合、 `WEB GET VARIABLES` コマンドで返されるのはオブジェクト内でハイライトされている要素の値であり、4D のように配列内の要素の位置を返すわけではありません。 `WEB GET VARIABLES` コマンドは必ずテキスト型の値を返します。
+HTMLではすべてのオブジェクトがテキストオブジェクトであることに留意が必要です。 HTMLではすべてのオブジェクトがテキストオブジェクトであることに留意が必要です。 SELECT要素を使用した場合、 `WEB GET VARIABLES` コマンドで返されるのはオブジェクト内でハイライトされている要素の値であり、4D のように配列内の要素の位置を返すわけではありません。 `WEB GET VARIABLES` コマンドは必ずテキスト型の値を返します。 `WEB GET VARIABLES` コマンドは必ずテキスト型の値を返します。
 
 ## その他の Webサーバーコマンド
 
 4D Webサーバーには、リクエストの処理をカスタマイズするための、低レベル Webコマンドがいくつか用意されています。
 
-- `WEB GET HTTP BODY` コマンドは、ボディをそのままの状態でテキストとして返します。これを必要に応じて解析することができます。
-- `WEB GET HTTP HEADER` コマンドは、リクエストのヘッダーを返します。 カスタムcookie などを処理するのに便利です (`WEB SET HTTP HEADER` コマンドも使用できます)。
-- `WEB GET BODY PART` と `WEB Get body part count` コマンドは、マルチパートリクエストのボディパートを解析して、テキスト値を取得するだけでなく、ポストされたファイルもBLOBに取得します。
+- the [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md) command returns the body as raw text, allowing any parsing you may need
+- the [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md) command return the headers of the request. カスタムcookie などを処理するのに便利です (`WEB SET HTTP HEADER` コマンドも使用できます)。
+- the [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) and [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
 
 これらのコマンドは次の図にまとめられています:
 
 ![](../assets/en/WebServer/httpCommands.png)
 
-4D Webサーバーは、どの Webクライアントからでもチャンクド・エンコーディングでアップロードされたファイルをサポートするようになりました。 チャンクド・エンコーディングは HTTP/1.1 にて定義されているデータ転送方式です。 これを使用することにより、最終的なデータサイズを知る事なく、データを複数の "チャンク" (部分) に分けて転送することができます。 4D Webサーバーでは、サーバーから Webクライアントへのチャンクド・エンコーディングもサポートしています (`WEB SEND RAW DATA` を使用します)。
+4D Webサーバーは、どの Webクライアントからでもチャンクド・エンコーディングでアップロードされたファイルをサポートするようになりました。 チャンクド・エンコーディングは HTTP/1.1 にて定義されているデータ転送方式です。 これを使用することにより、最終的なデータサイズを知る事なく、データを複数の "チャンク" (部分) に分けて転送することができます。 The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data.md)).
 
 ## COMPILER_WEB プロジェクトメソッド
 

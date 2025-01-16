@@ -26,6 +26,7 @@ Especifica se o utilizador pode eliminar sub-registos num subformulário lista.
 Esta propriedade é utilizada para declarar o formulário detalhado a utilizar no subformulário. Pode ser:
 
 - um widget, ou seja, um subformulário de tipo página, dotado de funções específicas. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
+  You can select a component form name when it is published in the component.\
   You can select a component form name when it is published in the component.
 
 > Para ello, basta con hacer dos clics en el campo a modificar para que pase al modo edición (asegúrese de dejar suficiente tiempo entre los dos clics para no generar un doble clic).
@@ -34,9 +35,9 @@ Esta propriedade é utilizada para declarar o formulário detalhado a utilizar n
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                                                                                                                                                         |
-| ---------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string        | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Nome       | Tipo de dados | Valores possíveis                                                                                                                                                                                                    |
+| ---------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| detailForm | string        | Nome (string) da tabela ou formulário projeto, um caminho POSIX (string) para um arquivo .json descrevendo o formulário, ou um objeto descrevendo o formulário |
 
 #### Objectos suportados
 
@@ -46,7 +47,7 @@ Esta propriedade é utilizada para declarar o formulário detalhado a utilizar n
 
 ## Duplo clique numa linha vazia
 
-Action to perform in case of a double-click on an empty line of a list subform. As opções abaixo estão disponíveis:
+Ação a ser executada no caso de um clique duplo em uma linha vazia de um subformulário lista. As opções abaixo estão disponíveis:
 
 - Não fazer nada: Ignora o duplo clique.
 - Add Record: Creates a new record in the subform and changes to editing mode. El registro se creará directamente en la lista si la propiedad [Editable en la lista](#enterable-in-list) está activada. En caso contrario, se creará en modo página, en el [formulario detallado](#detail-form) asociado al subformulario.
@@ -93,7 +94,7 @@ Para as duas últimas ações, o evento do formulário `On Open Detail` também 
 
 #### Veja também
 
-[Double click on empty row](#double-click-on-empty-row)
+[Clique duas vezes na linha vazia](#double-click-on-empty-row)
 
 ---
 
@@ -123,9 +124,9 @@ Los subformularios de lista pueden utilizarse para la entrada de datos de dos ma
 
 #### Gramática JSON
 
-| Nome     | Tipo de dados | Valores possíveis                                                                                                                                                                         |
-| -------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| listForm | string        | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Nome     | Tipo de dados | Valores possíveis                                                                                                                                                                                                    |
+| -------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| listForm | string        | Nome (string) da tabela ou formulário projeto, um caminho POSIX (string) para um arquivo .json descrevendo o formulário, ou um objeto descrevendo o formulário |
 
 #### Objectos suportados
 

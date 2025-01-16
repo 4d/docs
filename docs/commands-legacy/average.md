@@ -89,3 +89,13 @@ You can perform the following computations:
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 [Sum](sum.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 2 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

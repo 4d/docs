@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.EDIT FORMULA.Summary-->El comando EDIT FORMULA muestra el editor de fórmulas con el fin de permitir al usuario escribir o modificar una fórmula.<!-- END REF--> El editor contiene al abrir:
@@ -56,3 +53,13 @@ Si el usuario valida la caja de diálogo, la variable sistema OK toma el valor 1
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 806 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

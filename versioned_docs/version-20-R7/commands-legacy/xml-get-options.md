@@ -37,3 +37,12 @@ In selector, pass a constant of the "*XML*" theme indicating the option to get. 
 #### See also 
 
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1096 |
+| Thread safe | &check; |
+
+

@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Selected list items.Summary-->El comando Selected list items devuelve la posición o referencia del elemento seleccionado en la lista cuyo número de referencia o nombre de objeto se pasa en *lista*.<!-- END REF--> 
@@ -87,3 +84,12 @@ Esta es una lista llamada *hList,* mostrada en el entorno Aplicación:
 
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 379 |
+| Hilo seguro | &cross; |
+
+

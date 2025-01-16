@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LISTBOX INSERT ROWS.Summary-->El comando **LISTBOX INSERT ROWS** inserta una o varias nuevas líneas en el list box designado por los parámetros *objeto* y *\**.<!-- END REF-->
@@ -36,3 +33,13 @@ Si el valor de *posicionL* es mayor que el número total de filas en el list box
 #### Ver también 
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 913 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

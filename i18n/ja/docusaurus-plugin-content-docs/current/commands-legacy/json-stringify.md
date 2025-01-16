@@ -173,3 +173,12 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1217 |
+| スレッドセーフである | &check; |
+
+

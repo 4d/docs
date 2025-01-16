@@ -28,3 +28,12 @@ Ver el ejemplo de [Semaphore](semaphore.md "Semaphore").
 *Semáforos y señales*  
 [Semaphore](semaphore.md)  
 [Test semaphore](test-semaphore.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 144 |
+| Hilo seguro | &check; |
+
+

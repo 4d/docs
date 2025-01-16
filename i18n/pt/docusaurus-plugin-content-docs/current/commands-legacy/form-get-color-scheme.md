@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.FORM Get color scheme.Summary-->O comando **FORM Get color scheme** retorna o nome do esquema atual de cores do formulário atualmente sendo exibido .<!-- END REF--> Se não houver formulário atual, o comando retorna uma string vazia.
@@ -46,3 +43,12 @@ Se quiser carregar uma imagem dependendo do esquema atual do formulário:
 
 [Get application color scheme](get-application-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1761 |
+| Thread-seguro | &cross; |
+
+

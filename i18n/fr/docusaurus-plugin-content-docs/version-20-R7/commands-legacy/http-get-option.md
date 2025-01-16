@@ -43,3 +43,12 @@ Passez dans le paramètre *valeur* une variable qui recevra la valeur courante d
 #### Voir aussi 
 
 [HTTP SET OPTION](http-set-option.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1159 |
+| Thread safe | &check; |
+
+

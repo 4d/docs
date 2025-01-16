@@ -38,10 +38,10 @@ A ORDA fornece **classes genéricas** expostas através da **loja de classes `4D
 
 Todas as classes do modelo de dados ORDA são expostas como propriedades do **`cs`** armazenamento de classes. Estão disponíveis as seguintes classes ORDA:
 
-| Class                                       | Nome do exemplo                       | Instanciado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cs. DataStore               | cs. DataStore         | [`ds`](commands/ds.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| cs._DataClassName_          | cs. Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Class                                                                                 | Nome do exemplo                       | Instanciado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| cs. DataStore                                                         | cs. DataStore         | [`ds`](commands/ds.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| cs._DataClassName_                                                    | cs. Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | cs._DataClassName_Entity    | cs. EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
 | cs._DataClassName_Selection | cs. EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
 
@@ -260,7 +260,7 @@ End if
 
 Ao criar ou editar classes de modelo de dados, é necessário preste atenção às seguintes regras:
 
-- Como eles são usados para definir nomes automáticos de classe de DataClass nos **cs** [loja de classe](Concepts/classes. d#class-stores), tabelas 4D devem ser nomeadas para evitar qualquer conflito no namespace **cs**. Em particular:
+- Como eles são usados para definir nomes automáticos de classe de DataClass nos **cs** [loja de classe](Concepts/classes.md#class-stores), tabelas 4D devem ser nomeadas para evitar qualquer conflito no namespace **cs**. Em particular:
   - Não dê o mesmo nome a uma tabela 4D e a um [nome de classe de usuário](Concepts/classes.md#class-names). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
   - Não use um nome reservado para uma tabela 4D (por exemplo, "DataClass").
 
@@ -291,7 +291,7 @@ Um atributo calculado também pode implementar uma função `set`, que é execut
 
 Assim como os atributos de armazenamento, atributos calculados podem ser incluídos em **consultas**. Como padrão, quando um atributo calculado for utilizado numa consulta ORDA, o atributo é calculado uma vez por entidade examinada. Em alguns casos, isto é suficiente. No entanto, para um melhor desempenho, especialmente em cliente/servidor, os atributos computados podem implementar uma função `query` que se baseia nos atributos reais da classe de dados e beneficia dos seus índices.
 
-Da mesma forma, atributos calculados podem ser incluídos em **ordenações**. Quando um atributo calculado é utilizado numa ordenação ORDA, o atributo é calculado uma vez por entidade examinada. Assim como nas consultas, atributos calculados podem implementar uma função `orderBy` que substitui outros atributos durante a ordenação, aumentando assim o desempenho.
+Da mesma forma, atributos calculados podem ser incluídos em **ordenações**. Quando um atributo calculado é utilizado numa ordenação ORDA, o atributo é calculado uma vez por entidade examinada. Quando um atributo calculado é utilizado numa ordenação ORDA, o atributo é calculado uma vez por entidade examinada.
 
 ### Como definir atributos computados
 
@@ -420,7 +420,7 @@ Function query <attributeName>($event : Object) -> $result : Object
 
 Esta função suporta três sintaxes:
 
-- Com a primeira sintaxe, você manipula toda a consulta através da propriedade de objeto$event.result\`.
+- Com a primeira sintaxe, você manipula toda a consulta através da propriedade de objeto$event.result\\\\`.
 - Com a segunda e terceira sintaxes, a função retorna um valor em _$result_:
 
   - Se _$result_ é um Texto, deve ser uma string de consulta válida
@@ -585,7 +585,7 @@ El parámetro _$event_ contiene las siguientes propiedades:
 
 > Você pode usar o `operador` ou a propriedade `descendente`. É essencialmente uma questão de estilo de programação (ver exemplos).
 
-Você pode retornar a string `orderBy` na propriedade de objeto$event.result`ou no resultado da função *$result. Se a função devolver um valor em *$result* e outro valor for atribuído à propriedade`$event.result`, a prioridade é dada a `$event.result\`.
+Você pode retornar a string `orderBy` na propriedade de objeto$event.result`ou no resultado da função *$result. Se a função devolver um valor em _$result_ e outro valor for atribuído à propriedade `$event.result`, a prioridade é dada a `$event.result\`.
 
 #### Exemplo
 
@@ -819,12 +819,12 @@ $id:=$remoteDS. Schools.computeIDNumber() // Error "Unknown member method"
 
 ## onHttpGet keyword
 
-Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class.
+Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
 
 The `onHttpGet` keyword is available with:
 
 - ORDA Data model class functions
-- [Singletons class functions](../Concepts/classes.md#singleton-classes)
+- [Funções classe Singletons](../Concepts/classes.md#singleton-classes)
 
 A sintaxe formal é:
 
@@ -847,7 +847,7 @@ As this type of call is an easy offered action, the developer must ensure no sen
 
 ### params
 
-A function with `onHttpGet` keyword accepts [parameters](../Concepts/parameters.md).
+Uma função com a palavra-chave `onHttpGet` aceita [parâmetros](../Concepts/parameters.md).
 
 In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
 
@@ -863,7 +863,7 @@ Uma função com a palavra-chave `onHttpGet` pode retornar qualquer valor de um 
 
 :::info
 
-You can return a value of the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
+You can return a value of the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
 
 :::
 
@@ -897,7 +897,7 @@ IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'
 
 Por padrão na arquitetura cliente/servidor, funções do modelo de dados da ORDA são executadas **no servidor**. Normalmente, proporciona o melhor desempenho, uma vez que apenas o pedido de função e o resultado são enviados através da rede.
 
-No entanto, pode acontecer que uma função seja totalmente executável no lado do cliente (por exemplo, quando processa dados que já estão na cache local). Neste caso, você pode salvar as solicitações para o servidor e, assim, aprimorar o desempenho da aplicação ao inserir a palavra-chave `local`. A sintaxe formal é:
+No entanto, pode acontecer que uma função seja totalmente executável no lado do cliente (por exemplo, quando processa dados que já estão na cache local). No entanto, pode acontecer que uma função seja totalmente executável no lado do cliente (por exemplo, quando processa dados que já estão na cache local). A sintaxe formal é:
 
 ```4d
 // declarar uma função para executar localmente no cliente/servidor
@@ -979,7 +979,7 @@ If ($status.success)
 
 ### Ficheiros de classe (class files)
 
-Uma classe de usuário do modelo de dados ORDA é definida por adicionar, no [mesmo local dos arquivos de classes normais](Concepts/classes. d#class-files) (_e._ na pasta `/Sources/Classes` da pasta do projeto), um arquivo .4dm com o nome da classe. Por exemplo, uma classe de entidade para o dataclass `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm`.
+Uma classe de usuário do modelo de dados ORDA é definida por adicionar, no [mesmo local dos arquivos de classes normais](Concepts/classes.md#class-files) (_e._ na pasta `/Sources/Classes` da pasta do projeto), um arquivo .4dm com o nome da classe. Por exemplo, uma classe de entidade para o dataclass `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm`.
 
 ### Criação de classes
 
@@ -994,7 +994,7 @@ As classes de utilizadores ORDA têm um ícone diferente das classes normais. As
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-Para criar um arquivo de classe ORDA, basta fazer duplo clique na classe predefinida correspondente no Explorador. 4D crea el archivo de clase y añade el código `extends`. Por exemplo, para uma classe Entity:
+Para criar um arquivo de classe ORDA, basta fazer duplo clique na classe predefinida correspondente no Explorador. Para criar um arquivo de classe ORDA, basta fazer duplo clique na classe predefinida correspondente no Explorador. Por exemplo, para uma classe Entity:
 
 ```
 Class extends Entity

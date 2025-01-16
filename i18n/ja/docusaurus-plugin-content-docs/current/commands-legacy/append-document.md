@@ -38,3 +38,13 @@ Append documentの使用についての詳細は、[Open document](open-document
 
 [Create document](create-document.md)  
 [Open document](open-document.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 265 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、Document、error |
+
+

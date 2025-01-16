@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR SET INFO COLUMN.Summary-->##### List mode 
@@ -109,3 +106,13 @@ If you pass an invalid *colNum* value, the error -9852 will be generated.
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 765 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

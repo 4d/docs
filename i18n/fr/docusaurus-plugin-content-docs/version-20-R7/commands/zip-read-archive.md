@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 La commande `ZIP Read archive` <!-- REF #_command_.ZIP Read archive.Summary -->récupère le contenu de *zipFile* et le renvoie sous forme d'objet `4D.ZipArchive`<!-- END REF -->.
 
-> Cette commande ne décompresse pas l'archive ZIP, elle fournit seulement un aperçu de son contenu. To extract the contents of an archive, you need to use methods such as [file.copyTo()](../API/Document.md#copyto) or [folder.copyTo()](../API/Directory.md#copyto).
+> Cette commande ne décompresse pas l'archive ZIP, elle fournit seulement un aperçu de son contenu. Pour extraire le contenu d'une archive, vous devez utiliser des méthodes telles que [file.copyTo()](../API/Document.md#copyto) ou [folder.copyTo()](../API/Directory.md#copyto).
 
 Passez un objet `4D.File` référençant l'archive ZIP compressée dans le paramètre *zipFile*. Le fichier d'archive cible est ouvert jusqu'à la fin de l'exécution de la commande `ZIP Read archive` et jusqu'à ce que tous les contenus/références soient extrait(e)s/publié(e)s ; il est ensuite fermé automatiquement.
 
@@ -36,7 +36,7 @@ Si le *zipFile* est protégé par un mot de passe, vous devez utiliser le param�
 
 **Objet archive**
 
-The returned `4D.ZipArchive` object contains a single [`root`](../API/ZipArchiveClass.md#root) property whose value is a `4D.ZipFolder` object. Ce dossier décrit le contenu de l'archive ZIP.
+L'objet `4D.ZipArchive` retourné contient une seule propriété [`root`](../API/ZipArchiveClass.md#root) dont la valeur est un objet `4D.ZipFolder`. Ce dossier décrit le contenu de l'archive ZIP.
 
 #### Exemple
 
@@ -84,3 +84,10 @@ Pour extraire à partir du dossier root :
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1637                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

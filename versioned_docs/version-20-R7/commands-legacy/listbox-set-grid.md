@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET GRID.Summary-->The **LISTBOX SET GRID** command allows you to display or hide the horizontal and/or vertical grid lines that make up the grid in the list box object set using the *object* and *\** parameters.<!-- END REF--> 
@@ -32,3 +29,12 @@ Pass the Boolean values in *horizontal* and *vertical* that indicate if the corr
 [LISTBOX GET GRID](listbox-get-grid.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 841 |
+| Thread safe | &cross; |
+
+

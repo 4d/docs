@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 #### Descrição
 
-O comando `Folder` <!-- REF #_command_.Folder.Summary -->cria e retorna um novo objeto do tipo `4D.Folder`<!-- END REF -->. O comando aceita duas sintaxes:
+Parâmetro O comando aceita duas sintaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -74,3 +74,10 @@ If the command is called from a component, pass the optional `*` parameter to ge
 [File](file.md)\
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1567                            |
+| Thread safe    | &amp;check; |

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Get text resource.Summary-->The **Get text resource** command returns the text stored in the text (“TEXT”) resource whose ID is passed in *resID*.<!-- END REF-->
@@ -45,3 +42,13 @@ If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 504 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

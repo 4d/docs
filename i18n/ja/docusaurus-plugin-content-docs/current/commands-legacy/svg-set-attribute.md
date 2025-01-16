@@ -92,3 +92,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [SVG GET ATTRIBUTE](svg-get-attribute.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1055 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX SET GRID.Summary-->**LISTBOX SET GRID**コマンドを使用し、*object*引数および *\** で指定されたリストボックスのグリッドを構成する、横および縦グリッドラインを表示、または非表示に設定することができます。<!-- END REF-->
@@ -32,3 +29,12 @@ displayed_sidebar: docs
 [LISTBOX GET GRID](listbox-get-grid.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 841 |
+| スレッドセーフである | &cross; |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->PRINT SELECTION imprime la selección actual de *tabla*.<!-- END REF--> Los registros se imprimen en el formulario de salida actual de la tabla del proceso actual. PRINT SELECTION realiza la misma acción que el comando Imprimir del entorno Usuario. Si la selección está vacía, PRINT SELECTION no hace nada.
@@ -34,11 +31,11 @@ Durante la impresión, el método de formulario de salida y los métodos de obje
 * Un evento On Printing Break se genera justo antes que un área de ruptura se imprima.
 * Un evento On Printing Footer se genera justo antes que un pie de página se imprima.
 
-Puede saber si PRINT SELECTION está imprimiendo el primer encabezado probando [Before selection](before-selection.md) durante un evento On Header. Igualmente puede verificar el último pie de página, probando [End selection](end-selection.md) durante un evento On Printing Footer. Para mayor información, consulte la descripción de estos comandos, como también de los comandos [Form event code](form-event-code.md) y [Level](level.md).
+Puede saber si PRINT SELECTION está imprimiendo el primer encabezado probando [Before selection](before-selection.md) durante un evento On Header. Igualmente puede verificar el último pie de página, probando [End selection](end-selection.md) durante un evento On Printing Footer. Para mayor información, consulte la descripción de estos comandos, como también de los comandos [Form event code](../commands/form-event-code.md) y [Level](level.md).
 
 Para imprimir una selección ordenada con subtotales o rupturas utilizando PRINT SELECTION, debe primero ordenar la selección. Luego, en cada área de ruptura del informe, incluir una variable con un método de objeto que asigne el subtotal a la variable. Igualmente puede utilizar funciones estadísticas y aritméticas como [Sum](sum.md) y [Average](average.md) para asignar valores a las variables. Para mayor información, consulte las descripciones de [Subtotal](subtotal.md), [BREAK LEVEL](break-level.md) y [ACCUMULATE](accumulate.md).
 
-**Advertencia:** no utilice el comando [PAGE BREAK](page-break.md) con el comando PRINT SELECTION. [PAGE BREAK](page-break.md) está reservado para ser utilizado con el comando [Print form](print-form.md).
+**Advertencia:** no utilice el comando [PAGE BREAK](page-break.md) con el comando PRINT SELECTION. [PAGE BREAK](page-break.md) está reservado para ser utilizado con el comando [Print form](../commands/print-form.md).
 
 Después de un llamado a PRINT SELECTION, la variable OK toma el valor 1 si la impresión se ha completado. Si la impresión fue interrumpida, la variable OK toma el valor 0 (cero) (por ejemplo si el usuario hizo clic en Cancelar en la caja de diálogo de impresión).
 
@@ -60,8 +57,17 @@ El siguiente ejemplo selecciona todos los registros en la tabla \[Personas\]. El
 
 #### Ver también 
 
-*\_o\_PAGE SETUP*  
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [Subtotal](subtotal.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 60 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

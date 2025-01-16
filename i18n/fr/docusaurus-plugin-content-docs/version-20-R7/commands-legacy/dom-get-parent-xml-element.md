@@ -34,3 +34,13 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 [DOM Get last child XML element](dom-get-last-child-xml-element.md)  
 [DOM Get Root XML element](dom-get-root-xml-element.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 923 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

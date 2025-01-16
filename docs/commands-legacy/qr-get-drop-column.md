@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR Get drop column.Summary-->The QR Get drop column command returns a value depending on where the drop was performed:
@@ -29,3 +26,13 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 #### See also 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 747 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

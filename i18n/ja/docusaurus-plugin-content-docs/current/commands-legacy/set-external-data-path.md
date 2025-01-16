@@ -59,3 +59,12 @@ displayed_sidebar: docs
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1134 |
+| スレッドセーフである | &check; |
+
+

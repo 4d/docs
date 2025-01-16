@@ -3,7 +3,7 @@ id: shared
 title: Objetos e coleções compartilhados
 ---
 
-**Objetos compartilhados** e **coleções compartilhadas** são específicos [objects](Conceps/dt_object.md) e [collections](Concepts/dt_collection.md) cujo conteúdo é compartilhado entre processos. Em contraste com [variáveis de interprocesso](Concepts/variáveis. d#interprocess-variáveis), objetos compartilhados e coleções compartilhadas têm a vantagem de ser compatíveis com **processos 4D preemptivos**: eles podem ser passados por referência para comandos como [`Novo processo`](https://doc. d.com/4dv20/help/command/en/page317.html) ou [`TODO WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html).
+**Objetos compartilhados** e **coleções compartilhadas** são específicos [objects](Conceps/dt_object.md) e [collections](Concepts/dt_collection.md) cujo conteúdo é compartilhado entre processos. Em contraste com [variáveis de interprocesso](Concepts/variáveis.md#interprocess-variáveis), objetos compartilhados e coleções compartilhadas têm a vantagem de ser compatíveis com **processos 4D preemptivos**: eles podem ser passados por referência para comandos como [`Novo processo`](https://doc.md.com/4dv20/help/command/en/page317.html) ou [`TODO WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html).
 
 Objetos compartilhados e coleções compartilhadas são armazenados em variáveis padrão [`Object`](dt_object.md) e [`Collection`](dt_collection.md) do tipo, mas devem ser instanciados usando comandos específicos:
 

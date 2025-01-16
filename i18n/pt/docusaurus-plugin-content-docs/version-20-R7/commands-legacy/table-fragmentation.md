@@ -41,3 +41,12 @@ Este método lhe permite requisitar a compactação do arquivo de dados no caso 
 #### Ver também 
 
 [Compact data file](compact-data-file.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1127 |
+| Thread-seguro | &check; |
+
+

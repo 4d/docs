@@ -92,8 +92,10 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 #### Descrição
 
-A função `.isNew()` <!-- REF #EntityClass.clone().Summary -->retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore.<!-- END REF -->. .
-> Tenha em mente que quaisquer modificações feitas a entidades serão salvas no registro referenciado somente quando o [`. ave( )`](#save) função for executada.
+A função `.isNew()` <!-- REF #EntityClass.clone().Summary -->retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore.<!-- END REF -->.
+
+Esta função permite que você atualize as entidades separadamente. No entanto, por razões de desempenho, a nova entidade compartilha a mesma referência de atributos de objeto que a entidade clonada.
+> Tenha em mente que quaisquer modificações feitas a entidades serão salvas no registro referenciado somente quando a função [`.save()`](#save) for executada.
 
 Esta função só pode ser usada com entidades já salvas no banco de dados. Ele não pode ser chamado em uma entidade recém-criada (para a qual [`.isNew()`](#isnew) retorna **Verdadeiro**).
 
@@ -145,7 +147,7 @@ As diferenças são retornadas como uma coleção de objetos cujas propriedades 
 
 | Nome da propriedade | Tipo                              | Descrição                              |
 | ------------------- | --------------------------------- | -------------------------------------- |
-| attributeName       | String                            | Nome do atributo                       |
+| attributeName       | Text                              | Nome do atributo                       |
 | value               | any - Depende do tipo de atributo | Valor do atributo na entidade          |
 | otherValue          | any - Depende do tipo de atributo | Valor do atributo em *entityToCompare* |
 
@@ -166,7 +168,7 @@ Se uma das entidades comparadas for **Null**, um erro é gerado.
  employee.lastName:="SOPHIE"
  employee.salary:=500
  $diff1:=$clone.diff(employee) // All differences are returned
- $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
+ $diff2:=$clone.diff(employee;New collection("firstName";"lastName"))
   // Only differences on firstName and lastName are returned
 ```
 
@@ -780,9 +782,9 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 
 <!-- REF #EntityClass.isNew().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                                             |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | É verdade se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso.|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                                                          |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
+| Resultados | Parâmetros | <- | É True se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, False.|<!-- END REF -->
 
 |
 
@@ -1248,11 +1250,11 @@ Atualizar uma entidade com a opção `dk auto merge` :
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| Parâmetro    | Tipo       |    | Descrição                                                                                                |
-| ------------ | ---------- |:--:| -------------------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | Atributos a extrair (string separada por vírgulas)                                                       |
-| filterCol    | Collection | -> | Coleção de atributos a extrair                                                                           |
-| options      | Integer    | -> | `dk with primary key`: adds the \_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
+| Parâmetro    | Tipo       |    | Descrição                                                                                                          |
+| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
+| filterString | Text       | -> | Atributos a extrair (string separada por vírgulas)                                                                 |
+| filterCol    | Collection | -> | Coleção de atributos a extrair                                                                                     |
+| options      | Integer    | -> | `dk with primary key`: adiciona a propriedade \_KEY;<br/>`dk with stamp`: adiciona a propriedade \_STAMP |
 | Resultados   | Object     | <- | Objeto criado a partir da entidade|<!-- END REF -->
 
 |
@@ -1676,9 +1678,9 @@ Um registro é destrancado automaticamente quando não for mais referenciado por
 
 O objeto retornado por `.unlock()` contém a propriedade abaixo:
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                     |
-| ----------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success     | Parâmetros | Verdadeiro se a ação de destrancar for bem-sucedida, Falso caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
+| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                               |
+| ----------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success     | Parâmetros | True se a ação de destrancar for bem-sucedida, False caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
 
 #### Exemplo
 

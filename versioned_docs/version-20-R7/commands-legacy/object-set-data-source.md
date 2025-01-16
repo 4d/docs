@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET DATA SOURCE.Summary-->The **OBJECT SET DATA SOURCE** command modifies the data source of the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
@@ -52,3 +49,12 @@ Modification of the data source for an entry area:
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
 [OBJECT Get data source](object-get-data-source.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1264 |
+| Thread safe | &cross; |
+
+

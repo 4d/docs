@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT GET COORDINATES.Summary-->OBJECT GET COORDINATES コマンドは、引数 *\** および*object*によって指定された、現在のフォームのオブジェクトの*left*, *top*, *right* および *bottom*の座標 (ポイント) を返します。<!-- END REF-->
@@ -87,3 +84,12 @@ displayed_sidebar: docs
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 663 |
+| スレッドセーフである | &cross; |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Get print marker.Summary-->La commande **Get print marker** permet de récupérer la position courante d’un taquet lors d’une impression.<!-- END REF--> Les coordonnées sont retournées en pixels (1 pixel = 1/72 pouce). 
@@ -24,7 +21,7 @@ displayed_sidebar: docs
 Cette commande peut être appelée dans deux contextes :
 
 * lors de l’événement formulaire On Header, dans le cadre de l’utilisation des commandes [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md).
-* lors de l’événement formulaire On Printing Detail, dans le cadre de l’utilisation de la commande [Print form](print-form.md).
+* lors de l’événement formulaire On Printing Detail, dans le cadre de l’utilisation de la commande [Print form](../commands/print-form.md).
 
 Passez dans le paramètre *numTaquet* une des constantes du thème "*Zone de formulaire*" :
 
@@ -62,3 +59,12 @@ Reportez-vous à l’exemple de la commande [SET PRINT MARKER](set-print-marker.
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 708 |
+| Thread safe | &cross; |
+
+

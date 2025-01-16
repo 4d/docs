@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD SET CODE.Summary-->The **METHOD SET CODE** command modifies the code of the method(s) designated by the *path* parameter with the contents passed in the *code* parameter.<!-- END REF--> 
@@ -100,3 +97,12 @@ This example exports and imports all the project methods of an application:
 #### See also 
 
 [METHOD GET CODE](method-get-code.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1194 |
+| Thread safe | &cross; |
+
+

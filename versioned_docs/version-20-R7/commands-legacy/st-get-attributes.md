@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->The ST GET ATTRIBUTES command is used to recover the current value of a style attribute in a selection of text of the form object(s) designated by *object*.<!-- END REF--> 
@@ -103,3 +100,13 @@ In the case of an error, the variable is not changed. When an error occurs on a 
 #### See also 
 
 [ST SET ATTRIBUTES](st-set-attributes.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1094 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

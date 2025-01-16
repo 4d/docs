@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FILTER EVENT.Summary-->**FILTER EVENT** コマンドは、[ON EVENT CALL](on-event-call.md) コマンドでインストールされたイベント処理プロジェクトメソッドから呼び出されます。<!-- END REF-->
@@ -41,3 +38,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [ON EVENT CALL](on-event-call.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 321 |
+| スレッドセーフである | &cross; |
+| サーバー上での使用は不可 ||
+
+

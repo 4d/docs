@@ -39,3 +39,12 @@ The following example builds an array, named asTables*,* with the names of table
 [Last field number](last-field-number.md)  
 [Is table number valid](is-table-number-valid.md)  
 [Table name](table-name.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 254 |
+| Thread safe | &check; |
+
+

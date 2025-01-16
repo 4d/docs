@@ -15,8 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 <details><summary>História</summary>
 
 | Release | Mudanças                                            |
@@ -35,7 +33,7 @@ By default, if the *option* parameter is omitted, the command returns a referenc
 | Parâmetros                                   | Valor | Comentário                                                                     |
 | -------------------------------------------- | ----- | ------------------------------------------------------------------------------ |
 | `Web server database`                        | 1     | Servidor Web de banco de dados atual (padrão caso omitido)  |
-| `<a href="#keepsession">.keepSession</a>`    | 2     | Servidor Web do banco de dados de host de um componente                        |
+| Parâmetros                                   | 2     | Servidor Web do banco de dados de host de um componente                        |
 | `Solicitação de recebimento do servidor web` | 3     | Servidor web que recebeu o pedido (servidor Web de destino) |
 
 The **returned Web server object** contains the current values of the [Web server properties](../API/WebServerClass.md).
@@ -57,3 +55,10 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 [WEB Server list](web-server-list.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1674                            |
+| Thread safe    | &amp;cross; |

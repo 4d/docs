@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SELECT ROW.Summary-->The LISTBOX SELECT ROW command selects the row whose number is passed in *position* in the list box set in the *object* and *\** parameters.<!-- END REF-->
@@ -55,3 +52,12 @@ After execution of the method, the arrays are synchronized: if the source array 
 [LISTBOX SELECT BREAK](listbox-select-break.md)  
 [LISTBOX SELECT ROWS](listbox-select-rows.md)  
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 912 |
+| Thread safe | &cross; |
+
+

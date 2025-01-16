@@ -46,3 +46,13 @@ displayed_sidebar: docs
 [READ PICTURE FILE](read-picture-file.md)  
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
 *ピクチャ*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 680 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、Document |
+
+

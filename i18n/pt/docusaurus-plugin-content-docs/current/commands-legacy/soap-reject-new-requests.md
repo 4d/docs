@@ -36,3 +36,12 @@ Se quiser recusar qualquer petição nova a seu servidor de serviços web:
 
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [WEB Get server info](web-get-server-info.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1636 |
+| Thread-seguro | &check; |
+
+

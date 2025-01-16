@@ -115,3 +115,13 @@ Después de un llamado a RECEIVE PACKET, la variable sistema OK toma el valor 1 
 [SET DOCUMENT POSITION](set-document-position.md)  
 [SET TIMEOUT](set-timeout.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 104 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

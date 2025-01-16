@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QUERY BY EXAMPLE.Summary-->QUERY BY EXAMPLE efectúa la misma acción que el comando de menú Búsqueda por formulario.<!-- END REF-->.. en el entorno Diseño. Este comando muestra el formulario de entrada actual como ventana de búsqueda. QUERY BY EXAMPLE busca en *tabla* los datos que el usuario introduce en la ventana de búsqueda. El formulario debe contener los campos que usted quiere utilizar para efectuar la búsqueda. La búsqueda se optimiza; los campos indexados se utilizan automáticamente para optimizar la búsqueda.
@@ -43,3 +40,16 @@ Si el usuario hace clic en el botón Aceptar o presionan la tecla Enter, la vari
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 292 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+| Prohibido en el servidor ||
+
+

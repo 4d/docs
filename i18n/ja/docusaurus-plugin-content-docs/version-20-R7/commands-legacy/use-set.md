@@ -35,3 +35,14 @@ displayed_sidebar: docs
 
 [CLEAR SET](clear-set.md)  
 [LOAD SET](load-set.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 118 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+| カレントセレクションを変更する ||
+
+

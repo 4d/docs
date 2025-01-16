@@ -39,3 +39,12 @@ El siguiente ejemplo inicializa los elementos del array *asTablas,* con los nomb
 [Last field number](last-field-number.md)  
 [Is table number valid](is-table-number-valid.md)  
 [Table name](table-name.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 254 |
+| Hilo seguro | &check; |
+
+

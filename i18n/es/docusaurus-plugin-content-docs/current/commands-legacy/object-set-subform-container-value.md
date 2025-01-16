@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Summary-->The **OBJECT SET SUBFORM CONTAINER VALUE** command sets the current value of the data source bound with the subform container displayed in the parent form.<!-- END REF-->
@@ -32,5 +29,14 @@ A detailed example is available in the [OBJECT Get subform container value](obje
 
 #### Ver también 
 
-[Form](form.md)  
+[Form](../commands/form.md)  
 [OBJECT Get subform container value](object-get-subform-container-value.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1784 |
+| Hilo seguro | &cross; |
+
+

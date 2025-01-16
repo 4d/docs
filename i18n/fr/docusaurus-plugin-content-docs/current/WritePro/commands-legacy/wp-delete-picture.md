@@ -36,4 +36,4 @@ Vous souhaitez supprimer une image à l'aide de son ID :
 #### Voir aussi 
 
 *Manipuler des images*  
-[WP Add picture](wp-add-picture.md)  
+[WP Add picture](../commands/wp-add-picture.md)  

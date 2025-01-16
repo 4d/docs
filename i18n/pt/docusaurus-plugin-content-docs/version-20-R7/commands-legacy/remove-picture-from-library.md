@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Summary-->O comando REMOVE PICTURE FROM LIBRARY elimina da biblioteca de imagens a imagem cujo número de referência se passa em *refImag* ou cujo nome se passa em *nomImag*.<!-- END REF--> 
@@ -52,3 +49,13 @@ O exemplo a seguir apaga da biblioteca de imagens toda imagem cujo nome comece p
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 567 |
+| Thread-seguro | &cross; |
+| Proibido no servidor ||
+
+

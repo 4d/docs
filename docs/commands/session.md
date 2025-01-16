@@ -16,6 +16,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|20 R8|Support of standalone sessions|
 |20 R5|Support of remote client and stored procedure sessions|
 |18 R6|Added|
 
@@ -29,11 +30,12 @@ Depending on the process from which the command is called, the current user sess
 
 - a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions)),
 - a remote client session,
-- the stored procedures session.
+- the stored procedures session,
+- the *designer* session in a standalone application.
 
-For more information, see the [Session types](../command/session.md-types) paragraph.
+For more information, see the [Session types](../API/SessionClass.md#session-types) paragraph.
 
-If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
+If the command is called from a non supported context (e.g. scalable sessions disabled), it returns *Null*.
 
 #### Web sessions
 
@@ -66,6 +68,12 @@ All stored procedure processes share the same virtual user session. The `Session
 
 For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html) page.
 
+
+#### Standalone session
+
+The `Session` object is available from any process in standalone (single-user) applications so that you can write and test your client/server code using the `Session` object in your 4D development environment.
+
+
 #### Example
 
 You have defined the `action_Session` method with attribute "Available through 4D tags and URLs". You call the method by entering the following URL in your browser:
@@ -90,6 +98,15 @@ IP:port/4DACTION/action_Session
 
 ### See also
 
-[Session storage](../commands-legacy/session-storage.md)  
+[Session storage](session-storage.md)  
 [Session API](../API/SessionClass.md)  
 [Web server user sessions](../WebServer/sessions.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1714 |
+| Thread safe | &check; |
+
+

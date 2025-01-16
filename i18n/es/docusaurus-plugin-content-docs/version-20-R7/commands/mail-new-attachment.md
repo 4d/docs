@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-The `MAIL New attachment` command <!-- REF #_command_.MAIL New attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
+El comando `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->le permite crear un objeto adjunto que puede agregar a un [objeto de Email](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
 
 Para definir el adjunto, puede utilizar:
 
@@ -148,3 +148,10 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 
 $transporter.send($email)
 ```
+
+#### Propiedades
+
+|                |                                                                     |
+| -------------- | ------------------------------------------------------------------- |
+| Command number | 1644                                                                |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

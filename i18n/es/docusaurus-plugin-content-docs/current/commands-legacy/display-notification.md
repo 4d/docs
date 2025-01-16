@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.DISPLAY NOTIFICATION.Summary-->El comando DISPLAY NOTIFICATION muestra un mensaje de notificación al usuario:
@@ -43,3 +40,12 @@ Bajo Windows, se muestra la ventana del mensaje si no se detecta actividad en la
 #### Ver también 
 
 [ALERT](alert.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 910 |
+| Hilo seguro | &cross; |
+
+

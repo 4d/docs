@@ -91,7 +91,7 @@ On Web Authentication database method retorna um booleano em $0:
 **AVISO**: se não for passado nenhum valor em *$0* ou se *$0* não se define no On Web Authentication database method, a conexão se considerará como aceita e se executa o [On Web Connection database method](on-web-connection-database-method.md).  
   
 **Notas**:  
-* Não chame elementos de interface no On Web Authentication database method ([ALERT](alert.md), [DIALOG](dialog.md), etc.) porque do contrário sua execução será interrompida e a conexão será recusada. O mesmo acontece se for apresentado um erro durante seu processo.
+* Não chame elementos de interface no On Web Authentication database method ([ALERT](alert.md), [DIALOG](../commands/dialog.md), etc.) porque do contrário sua execução será interrompida e a conexão será recusada. O mesmo acontece se for apresentado um erro durante seu processo.
 * É possível evitar a execução por *4DACTION* ou *4DSCRIPT* de cada método de projeto com a ajuda da opção “Disponível através das etiquetas HTML e URLs. Para mais informação, consulte *Conexões de Segurança*.
 
 #### On Web Authentication Database Method calls 

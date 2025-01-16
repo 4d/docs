@@ -65,3 +65,12 @@ Si el lenguaje actual es, por ejemplo, francés canadiense (fr-ca), el comando d
 #### Ver también 
 
 [Get database localization](get-database-localization.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1105 |
+| Hilo seguro | &check; |
+
+

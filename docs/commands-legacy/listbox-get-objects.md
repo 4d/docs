@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->The **LISTBOX GET OBJECTS** command returns an array containing the names of each object making up the list box designated by the *object* and *\** parameters.<!-- END REF--> 
@@ -37,7 +34,7 @@ In *arrObjectNames*, you pass a text array that is automatically filled in by th
 
 The array returns the object names for all the columns (including column footers), regardless of whether or not they are visible. 
 
-This command is useful in the context of the parsing of a form using the [FORM LOAD](form-load.md), [FORM GET OBJECTS](form-get-objects.md) and [OBJECT Get type](object-get-type.md) commands. You can use it, when needed, to obtain the names of list box sub-objects.
+This command is useful in the context of the parsing of a form using the [FORM LOAD](../commands/form-load.md), [FORM GET OBJECTS](form-get-objects.md) and [OBJECT Get type](object-get-type.md) commands. You can use it, when needed, to obtain the names of list box sub-objects.
 
 #### Example 
 
@@ -60,5 +57,14 @@ You want to load a form and get a list of all the objects of list boxes that it 
 
 #### See also 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  
 [OBJECT Get type](object-get-type.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1302 |
+| Thread safe | &cross; |
+
+

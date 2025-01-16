@@ -13,17 +13,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Before.Summary-->**Before** devuelve True para el ciclo de ejecución Before.<!-- END REF-->
 
 Para que el ciclo de ejecución **Before** se genere, asegúrese de que la propiedad de evento On Load para el formulario y/o los objetos se haya seleccionado en el entorno Diseño.
 
-**Nota:** este comando es equivalente a usar [Form event code](form-event-code.md) y probar si devuelve el evento On Load.
+**Nota:** este comando es equivalente a usar [Form event code](../commands/form-event-code.md) y probar si devuelve el evento On Load.
 
 #### Ver también 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 29 |
+| Hilo seguro | &cross; |
+
+

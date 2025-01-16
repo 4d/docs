@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR SET REPORT TABLE.Summary-->O comando QR SET REPORT TABLE define a tabela atual para a área do relatório referenciada pelo parâmetro *area* a tabela número *tabela*.<!-- END REF-->  
@@ -30,3 +27,13 @@ Se o parâmetro *tabela* for incorreto, se gera o erro -9852.
 #### Ver também 
 
 [QR Get report table](qr-get-report-table.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 757 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

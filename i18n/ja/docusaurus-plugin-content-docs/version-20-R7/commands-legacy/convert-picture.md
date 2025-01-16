@@ -18,9 +18,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.CONVERT PICTURE.Summary-->CONVERT PICTURE コマンドは*picture*を新しいタイプに変換します。<!-- END REF--> 
-
-*codec* 引数で生成するピクチャのタイプを指定します。Codecには拡張子 (例 “.gif”), またはMimeタイプ(例 “image/jpeg”)が使用できます。利用可能なCodecのリストは [PICTURE CODEC LIST](picture-codec-list.md) コマンドを使用して取得できます。
+<!--REF #_command_.CONVERT PICTURE.Summary-->CONVERT PICTURE コマンドは*picture*を新しいタイプに変換します。<!-- END REF-->引数で生成するピクチャのタイプを指定します。Codecには拡張子 (例 “.gif”), またはMimeタイプ(例 “image/jpeg”)が使用できます。利用可能なCodecのリストは [PICTURE CODEC LIST](picture-codec-list.md) コマンドを使用して取得できます。
 
 *picture* フィールドや変数が複合型 (例えばコピー/ペーストアクションの結果のピクチャ) の場合、codecタイプに対応する情報のみが結果ピクチャに保持されます。
 
@@ -49,3 +47,12 @@ vpPhoto ピクチャをjpegフォーマットに変換:
 #### 参照 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1002 |
+| スレッドセーフである | &check; |
+
+

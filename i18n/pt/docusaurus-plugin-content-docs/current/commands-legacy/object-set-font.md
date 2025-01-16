@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET FONT.Summary-->OBJECT SET FONT mostra *objeto* utilizando a fonte especificada no parâmetro *fonte*.<!-- END REF--> O parâmetro *fonte* deve conter um nome de fonte válido.
@@ -63,3 +60,12 @@ O seguinte exemplo utiliza a opção especial *%password*, desenhada para a entr
 [OBJECT Get font](object-get-font.md)  
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 164 |
+| Thread-seguro | &cross; |
+
+

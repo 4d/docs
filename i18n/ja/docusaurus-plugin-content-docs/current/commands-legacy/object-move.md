@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->OBJECT MOVEコマンドは、 *\** と*object*引数で指定されたカレントフォーム内のオブジェクトを、水平方向に*moveH*ピクセル、垂直方向に*moveV*ピクセル移動させます。<!-- END REF-->  
@@ -43,7 +40,7 @@ displayed_sidebar: docs
 このコマンドは以下のコンテキストで動作します:
 
 * 入力フォームのデータ入力
-* [DIALOG](dialog.md "DIALOG")コマンドを使用して表示されたフォーム
+* [DIALOG](../commands/dialog.md "DIALOG")コマンドを使用して表示されたフォーム
 * [MODIFY SELECTION](modify-selection.md "MODIFY SELECTION")や[DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION")コマンドで表示される出力フォームのヘッダとフッタ
 * フォーム印刷イベント
 
@@ -68,3 +65,12 @@ displayed_sidebar: docs
 [OBJECT DUPLICATE](object-duplicate.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 664 |
+| スレッドセーフである | &cross; |
+
+

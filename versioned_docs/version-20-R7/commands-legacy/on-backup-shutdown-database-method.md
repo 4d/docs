@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### 
 
 <!--REF #_command_.On Backup Shutdown database method.Summary-->The On Backup Shutdown database method is called every time a database backup ends.<!-- END REF--> The reasons for the stoppage of a backup can be the end of the copy, user interruption or an error.  

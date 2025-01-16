@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->**LISTBOX GET OBJECTS** コマンドは 、*object* と*\** 演算子で指定したリストボックスを構成するオブジェクトの、それぞれの名前を含んだ配列を返します。<!-- END REF-->
@@ -37,7 +34,7 @@ displayed_sidebar: docs
 
 配列には、表示非表示に関わらず、全ての列に関して(列のフッターを含む)オブジェクト名が返されます。
 
-このコマンドは [FORM LOAD](form-load.md)、[FORM GET OBJECTS](form-get-objects.md) と [OBJECT Get type](object-get-type.md) コマンドを使用してフォームを解析する際に有用です。必要に応じてリストボックスのサブオブジェクトの名前を取得するために使用することができます。
+このコマンドは [FORM LOAD](../commands/form-load.md)、[FORM GET OBJECTS](form-get-objects.md) と [OBJECT Get type](object-get-type.md) コマンドを使用してフォームを解析する際に有用です。必要に応じてリストボックスのサブオブジェクトの名前を取得するために使用することができます。
 
 #### 例題 
 
@@ -60,5 +57,14 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  
 [OBJECT Get type](object-get-type.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1302 |
+| スレッドセーフである | &cross; |
+
+

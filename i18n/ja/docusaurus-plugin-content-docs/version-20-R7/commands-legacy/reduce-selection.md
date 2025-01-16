@@ -57,3 +57,14 @@ displayed_sidebar: docs
 [QUERY](query.md)  
 [SCAN INDEX](scan-index.md)  
 *セット*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 351 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+| カレントセレクションを変更する ||
+
+

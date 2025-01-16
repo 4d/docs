@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->El comando **ON EVENT CALL** instala el método, cuyo nombre se pasa en *metodoEvento*, como método de gestión de eventos.<!-- END REF--> 
@@ -108,7 +105,7 @@ Si se ha presionado la combinación Ctrl+punto, el método de gestión de evento
  End if
 ```
 
-Note que este ejemplo utiliza ON EVENT CALL porque realiza un informe especial de impresión utilizando los comandos *PAGE SETUP*, [Print form](print-form.md "Print form") y [PAGE BREAK](page-break.md "PAGE BREAK") en una estructura de tipo bucle *For...End for*.   
+Note que este ejemplo utiliza ON EVENT CALL porque realiza un informe especial de impresión utilizando los comandos *PAGE SETUP*, [Print form](../commands/print-form.md "Print form") y [PAGE BREAK](page-break.md "PAGE BREAK") en una estructura de tipo bucle *For...End for*.   
 Si imprime un informe utilizando [PRINT SELECTION](print-selection.md "PRINT SELECTION"), NO necesita administrar los eventos que permiten al usuario interrumpir la impresión; [PRINT SELECTION](print-selection.md "PRINT SELECTION") hace esto por usted.
 
 #### Ver también 
@@ -117,3 +114,13 @@ Si imprime un informe utilizando [PRINT SELECTION](print-selection.md "PRINT SEL
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 190 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

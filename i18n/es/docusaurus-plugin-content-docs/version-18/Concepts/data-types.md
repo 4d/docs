@@ -51,7 +51,7 @@ La siguiente tabla ilustra estos valores por defecto:
 | ---------- | --------------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
 | Booleano   | False                                                                                   | True                        | True (varía)                |
 | Fecha      | 00-00-00                                                                                | 00-00-00                    | 00-00-00                    |
-| Longint    | 0                                                                                       | 1919382119                  | 909540880 (varía)           |
+| Integer    | 0                                                                                       | 1919382119                  | 909540880 (varía)           |
 | Hora       | 00:00:00                                                                                | 533161:41:59                | 249345:34:24 (varía)        |
 | Picture    | picture size=0                                                                          | picture size=0              | picture size=0              |
 | Real       | 0                                                                                       | 1.250753659382e+243         | 1.972748538022e-217 (varía) |
@@ -72,9 +72,9 @@ La siguiente tabla lista los tipos de datos básicos, los tipos de datos a los q
 | Tipos a convertir | en Cadena | en Número | en Fecha | en Hora | en Booleano |
 | ----------------- | --------- | --------- | -------- | ------- | ----------- |
 | String (1)        |           | Num       | Fecha    | Hora    | Bool        |
-| Número (2)        | String    |           |          |         | Bool        |
-| Fecha             | String    |           |          |         | Bool        |
-| Hora              | String    |           |          |         | Bool        |
+| Número (2)        | Text      |           |          |         | Bool        |
+| Fecha             | Text      |           |          |         | Bool        |
+| Hora              | Text      |           |          |         | Bool        |
 | Boolean           |           | Num       |          |         |             |
 
 (1) Las cadenas formateadas en JSON pueden convertirse en datos escalares, objetos o colecciones, utilizando el comando `JSON Parse`.

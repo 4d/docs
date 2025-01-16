@@ -65,3 +65,12 @@ The following project method appends the paragraphs found in the text (passed as
 #### See also 
 
 [Position](position.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 12 |
+| Thread safe | &check; |
+
+

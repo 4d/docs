@@ -49,3 +49,12 @@ Conversion of a picture with 60% quality:
 #### See also 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1002 |
+| Thread safe | &check; |
+
+

@@ -101,6 +101,14 @@ Se a integração é efetuada corretamente, a variável sistema OK recebe o valo
 
 #### Ver também 
 
-  
-*\_o\_INTEGRATE LOG FILE*  
 [LOG FILE TO JSON](log-file-to-json.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1312 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+
+

@@ -3,14 +3,14 @@ id: onLongClick
 title: On Long Click
 ---
 
-| Code | Pode ser chamado por                    | Definição                                                                            |
-| ---- | --------------------------------------- | ------------------------------------------------------------------------------------ |
-| 39   | [Botão](FormObjects/button_overview.md) | A button is clicked and the mouse button remains pushed for a certain length of time |
+| Code | Pode ser chamado por                    | Definição                                                                              |
+| ---- | --------------------------------------- | -------------------------------------------------------------------------------------- |
+| 39   | [Botão](FormObjects/button_overview.md) | Um botão é clicado e o botão do mouse permanece pressionado por um determinado período |
 
 
 ## Descrição
 
-This event is generated when a button receives a click and the mouse button is held for a certain length of time. In theory, the length of time for which this event is generated is equal to the maximum length of time separating a double-click, as defined in the system preferences.
+Esse evento é gerado quando um botão recebe um clique e o botão do mouse é mantido pressionado por um determinado período. Em teoria, o período pelo qual esse evento é gerado é igual ao período máximo de tempo que separa um clique duplo, conforme definido nas preferências do sistema.
 
 Este evento pode ser gerado para os seguintes estilos de botão:
 
@@ -24,7 +24,7 @@ Este evento pode ser gerado para os seguintes estilos de botão:
 - [Círculo](FormObjects/button_overview.md#circle)
 - [Personalizado](FormObjects/button_overview.md#custom)
 
-This event is generally used to display pop-up menus in case of long button clicks. The [`On Clicked`](onClicked.md) event, if enabled, is generated if the user releases the mouse button before the "long click" time limit.
+Este evento é geralmente usado para exibir menus pop-up em caso de clique longo no botão. O evento [`On Clicked`](onClicked.md), se ativado, é gerado se o usuário liberar o botão do mouse antes do tempo do "clique longo".
 
 ### Veja também
 [`On Alternative Click`](onAlternativeClick.md)

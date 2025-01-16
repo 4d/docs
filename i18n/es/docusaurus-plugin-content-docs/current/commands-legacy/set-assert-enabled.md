@@ -38,3 +38,12 @@ Desactivación de aserciones:
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1131 |
+| Hilo seguro | &check; |
+
+

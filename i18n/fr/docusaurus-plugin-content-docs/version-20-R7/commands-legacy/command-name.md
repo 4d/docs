@@ -18,9 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Command name.Summary-->La fonction **Command name** retourne le nom ainsi que (optionnellement) les propriétés de la commande dont le numéro a été passé dans *commande*.<!-- END REF-->
-
-**Note :** Le numéro de chaque commande est indiqué dans l'Explorateur ainsi que dans la zone Propriétés de cette documentation.
+<!--REF #_command_.Command name.Summary-->La fonction **Command name** retourne le nom ainsi que (optionnellement) les propriétés de la commande dont le numéro a été passé dans *commande*.<!-- END REF-->Le numéro de chaque commande est indiqué dans l'Explorateur ainsi que dans la zone Propriétés de cette documentation.
 
 **Note de compatibilité :** Le nom d'une commande pouvant varier au fil des versions de 4D (commandes renommées) ou en fonction de la langue de l'application, cette commande était utilisée dans les versions précédentes du programme pour désigner une commande directement via son numéro, en particulier dans les parties de code non tokenisées. Ce besoin a diminué au fil des évolutions de 4D, car pour les instructions non tokenisées (formules), 4D propose désormais une *syntaxe tokenisée* permettant de s'affranchir des variations des noms de commandes mais aussi des autres éléments comme les tables, tout en permettant de les saisir de façon lisible (pour plus d'informations sur ce point, reportez-vous à la section *Utiliser des tokens dans les formules*). Par ailleurs, par défaut la version anglaise du langage est utilisée à compter de 4D v15 (toutefois l'option "Utiliser langage français et paramètres régionaux système" de la [Is a list](is-a-list.md) des Préférences permet de continuer à utiliser la version française dans un 4D français).
 
@@ -104,3 +102,13 @@ Par exemple, pour la commande "STOCKER ENREGISTREMENT", numéro 53, vous pouvez 
 
 [EXECUTE FORMULA](execute-formula.md)  
 *Process 4D préemptifs*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 538 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

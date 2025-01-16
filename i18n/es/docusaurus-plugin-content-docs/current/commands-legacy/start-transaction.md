@@ -25,3 +25,12 @@ A partir de la versión 11 de 4D, puede anidar varias transacciones (subtransacc
 [Transaction level](transaction-level.md)  
 *Utilización de transacciones*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 239 |
+| Hilo seguro | &check; |
+
+

@@ -104,3 +104,13 @@ Récupération d’une vidéo :
 #### Voir aussi 
 
 [HTTP Request](http-request.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1157 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+
+

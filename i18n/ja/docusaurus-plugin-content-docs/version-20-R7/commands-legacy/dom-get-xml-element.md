@@ -33,3 +33,13 @@ displayed_sidebar: docs
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 725 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+
