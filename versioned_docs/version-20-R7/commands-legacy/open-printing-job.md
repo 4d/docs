@@ -24,7 +24,7 @@ You must call the [CLOSE PRINTING JOB](close-printing-job.md) command to termina
 
 **OPEN PRINTING JOB** uses the current print settings (default settings or set using the [SET PRINT OPTION](set-print-option.md) command). The commands that modify the print settings must be called before **OPEN PRINTING JOB**, otherwise an error is generated (exception: the Orientation option can be called by the [SET PRINT OPTION](set-print-option.md) command within a print job).
 
-**Compatibility Note:** Starting with 4D v20 R4, printing jobs are non-blocking in new projects. For more information, please refer to the [Non-blocking printing option](https://developer.4d.com/docs/settings/compatibility/) documentation in the Compatibility settings.
+**Compatibility Note:** Starting with 4D v20 R4, printing jobs are non-blocking in new projects. For more information, please refer to the [Non-blocking printing option](../settings/compatibility.md) documentation in the Compatibility settings.
 
 #### System variables and sets 
 

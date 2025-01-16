@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.OB Is empty.Summary-->O comando **OB Is empty** devolve **True** se *objeto* não está definido ou está vazio, e **False** se *objeto* está definido (inicializado) e contém ao menos uma propriedade.<!-- END REF-->deve ter sido criado com o comando [C\_OBJECT](c-object.md) ou designar um campo objeto 4D..
+<!--REF #_command_.OB Is empty.Summary-->O comando **OB Is empty** devolve **True** se *objeto* não está definido ou está vazio, e **False** se *objeto* está definido (inicializado) e contém ao menos uma propriedade.<!-- END REF-->deve ter sido criado com o comando *C\_OBJECT* ou designar um campo objeto 4D..
 
 #### Exemplo 
 

@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Summary-->El comando **Session storage** devuelve el objeto de almacenamiento de la sesión cuyo identificador único se pasó en el parámetro *id*.<!-- END REF--> 
 
-En *id*, pase el UUID de la sesión para la que desea obtener el almacenamiento. El servidor lo asigna automáticamente y se almacena en la propiedad [**.id**](https://developer.4d.com/docs/API/SessionClass#id) del [objeto sesión](https://developer.4d.com/docs/API/SessionClass). Si la sesión no existe en el servidor, el comando devuelve **Null**. 
+En *id*, pase el UUID de la sesión para la que desea obtener el almacenamiento. El servidor lo asigna automáticamente y se almacena en la propiedad [**.id**](../API/SessionClass.md#id) del [objeto sesión](../API/SessionClass.md). Si la sesión no existe en el servidor, el comando devuelve **Null**. 
 
 **Nota:** puede obtener los identificadores de sesión utilizando el comando [Process activity](../commands/process-activity.md).
 
-El objeto devuelto es la propiedad [**.storage**](https://developer.4d.com/docs/API/SessionClass#storage) de la sesión. Es un objeto compartido utilizado para almacenar información disponible para todos los procesos de la sesión.
+El objeto devuelto es la propiedad [**.storage**](../API/SessionClass.md#storage) de la sesión. Es un objeto compartido utilizado para almacenar información disponible para todos los procesos de la sesión.
 
 #### Ejemplo 
 

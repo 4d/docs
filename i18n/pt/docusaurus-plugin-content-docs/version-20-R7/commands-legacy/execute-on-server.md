@@ -55,7 +55,7 @@ Você pode omitir este parâmetro; se isso acontecer, o nome do processo é uma 
 
 **Nota:** Se passar parâmetros ao método de processo, deve passar o parâmetro *nome*; neste caso não se pode omitir. 
 
-Se passar um objeto 4D ([C\_OBJECT](c-object.md)) ou uma coleção ([C\_COLLECTION](c-collection.md)) como param, uma cópia é enviada (e não uma referência) e a forma JSON se utiliza em UTF-8 para o servidor. Se o objeto ou coleção contiver ponteiros, se enviam seus valores não referenciados, e não os ponteiros mesmos.
+Se passar um objeto 4D (*C\_OBJECT*) ou uma coleção (*C\_COLLECTION*) como param, uma cópia é enviada (e não uma referência) e a forma JSON se utiliza em UTF-8 para o servidor. Se o objeto ou coleção contiver ponteiros, se enviam seus valores não referenciados, e não os ponteiros mesmos.
 
 ##### Parâmetro opcional \* 
 

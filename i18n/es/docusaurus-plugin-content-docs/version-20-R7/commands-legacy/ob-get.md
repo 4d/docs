@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.OB Get.Summary-->El comando **OB Get** devuelve el valor actual de la *propiedad* del *objeto*, convertido opcionalmente en el *tipo* definido.<!-- END REF-->debe haber sido definido con el comando [C\_OBJECT](c-object.md) o designar un campo objeto 4D.
+<!--REF #_command_.OB Get.Summary-->El comando **OB Get** devuelve el valor actual de la *propiedad* del *objeto*, convertido opcionalmente en el *tipo* definido.<!-- END REF-->debe haber sido definido con el comando *C\_OBJECT* o designar un campo objeto 4D.
 
 **Nota:** este comando soporta definiciones de atributo en *objetos* 4D Write Pro, como el comando *WP GET ATTRIBUTES* (ver el ejemplo 9). 
 

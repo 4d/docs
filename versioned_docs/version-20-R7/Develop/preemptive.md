@@ -188,7 +188,7 @@ It is possible to [disable locally the thread-safety verification](#).
 
 :::
 
-The [symbol file](../Project/compiler.md/#complete-list-of-methods), if enabled, also contains the thread safety status for each method.
+The [symbol file](../Project/compiler.md#complete-list-of-methods), if enabled, also contains the thread safety status for each method.
 
 ### User interface  
 

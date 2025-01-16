@@ -167,9 +167,9 @@ Si l'une des entités comparées vaut **Null**, une erreur est retournée.
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
- $diff1:=$clone.diff(employee) // All differences are returned
+ $diff1:=$clone.diff(employee) // Toutes les différences sont retournées
  $diff2:=$clone.diff(employee;New collection("firstName";"lastName"))
-  // Only differences on firstName and lastName are returned
+  // Seules les différences sur firstName et lastName sont retournées
 ```
 
 $diff1:

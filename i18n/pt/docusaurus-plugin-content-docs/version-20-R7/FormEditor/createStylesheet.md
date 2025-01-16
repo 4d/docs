@@ -193,7 +193,7 @@ text[text|=Hello]
 
 ### Media Queries
 
-Media queries are used to apply color schemes to an application.
+As consultas de mídia são usadas para aplicar esquemas de cores as aplicações.
 
 Una consulta de medios está formada por características y valores de medios (por ejemplo, `\<media feature>:\<value>` ).
 

@@ -49,7 +49,7 @@ Allows setting a list whose values cannot be entered in the object. Si une valeu
 
 | Nom          | Type de données | Valeurs possibles                               |
 | ------------ | --------------- | ----------------------------------------------- |
-| excludedList | liste           | Une liste de valeurs à exclure. |
+| excludedList | list            | Une liste de valeurs à exclure. |
 
 #### Objets pris en charge
 
@@ -70,7 +70,7 @@ Cependant, contrairement à la propriété [Choice List](properties_DataSource.m
 
 | Nom          | Type de données | Valeurs possibles                                  |
 | ------------ | --------------- | -------------------------------------------------- |
-| requiredList | liste           | Une liste de valeurs obligatoires. |
+| requiredList | list            | Une liste de valeurs obligatoires. |
 
 #### Objets pris en charge
 

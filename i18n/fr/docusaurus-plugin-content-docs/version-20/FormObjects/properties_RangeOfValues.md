@@ -48,7 +48,7 @@ Allows setting a list whose values cannot be entered in the object. Si une valeu
 
 | Nom          | Type de données | Valeurs possibles               |
 | ------------ | --------------- | ------------------------------- |
-| excludedList | liste           | Une liste de valeurs à exclure. |
+| excludedList | list            | Une liste de valeurs à exclure. |
 
 #### Objets pris en charge
 
@@ -67,7 +67,7 @@ La création d'une liste obligatoire n'affiche pas automatiquement la liste lors
 
 | Nom          | Type de données | Valeurs possibles                  |
 | ------------ | --------------- | ---------------------------------- |
-| requiredList | liste           | Une liste de valeurs obligatoires. |
+| requiredList | list            | Une liste de valeurs obligatoires. |
 
 #### Objets pris en charge
 

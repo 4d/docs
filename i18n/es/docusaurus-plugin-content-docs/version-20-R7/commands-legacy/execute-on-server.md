@@ -55,7 +55,7 @@ Puede omitir este parámetro; si lo hace, el nombre del proceso será una cadena
 
 **Nota:** si pasa parámetros al método de proceso, debe pasar el parámetro *nombre*; en este caso no se puede omitir. 
 
-Si pasa un objeto ([C\_OBJECT](c-object.md)) o una colección ([C\_COLLECTION](c-collection.md)) como *param*, se envía una copia (y no una referencia) y el formulario JSON se utiliza en UTF-8 para el servidor. Si el objeto o colección contiene punteros, se envían sus valores desreferenciados y no los punteros mismos.
+Si pasa un objeto (*C\_OBJECT*) o una colección (*C\_COLLECTION*) como *param*, se envía una copia (y no una referencia) y el formulario JSON se utiliza en UTF-8 para el servidor. Si el objeto o colección contiene punteros, se envían sus valores desreferenciados y no los punteros mismos.
 
 ##### Parámetro opcional \* 
 

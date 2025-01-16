@@ -60,7 +60,7 @@ This example authorizes all methods starting with “formula” and the “Total
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 805                                                             |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                |                                                                     |
+| -------------- | ------------------------------------------------------------------- |
+| Command number | 805                                                                 |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

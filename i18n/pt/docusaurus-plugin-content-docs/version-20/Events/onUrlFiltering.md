@@ -10,9 +10,9 @@ title: On URL Filtering
 
 ## Descrição
 
-This event is generated when the loading of a URL is blocked by the Web area because of a filter set up using the `WA SET URL FILTERS` command.
+Este evento é gerado quando o carregamento de uma URL é bloqueado pela área Web devido a um filtro configurado usando o comando `WA SET URL FILTERS`.
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+Você pode descobrir o URL bloqueado usando o comando `WA Get last filtered URL`.
 
 ### Veja também
 [`On Open External Link`](onOpenExternalLink.md)

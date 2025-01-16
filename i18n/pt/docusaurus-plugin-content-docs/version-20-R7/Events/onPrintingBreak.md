@@ -9,7 +9,7 @@ title: On Printing Break
 
 ## Descrição
 
-O evento `On Printing Break` só pode ser usado no contexto de um **formulário de saída**. It is triggered each time a break area in the output form is about to be printed, so that you can evaluate the break values, for example.
+O evento `On Printing Break` só pode ser usado no contexto de um **formulário de saída**. É acionado cada vez que uma área de quebra no formulário de saída está prestes a ser impresso, para poder avaliar os valores de ruptura, por exemplo.
 
 Este evento geralmente segue uma chamada para o comando `Subtotal`.
 

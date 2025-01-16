@@ -37,7 +37,7 @@ Aspect général du bouton. Le style du bouton joue également un rôle dans la 
 
 ---
 
-## Horizontal Margin
+## Marge horizontale
 
 Cette propriété permet de définir la taille (en pixels) des marges horizontales du bouton. Cette marge délimite la zone que l'icône et le titre du bouton ne doivent pas dépasser.
 
@@ -151,7 +151,7 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 ---
 
-## Title/Picture Position
+## Position Titre/Image
 
 Cette propriété permet de modifier l’emplacement relatif du titre par rapport à l’icône associée. Cette propriété n’a pas d’effet lorsque le bouton contient uniquement un titre (pas d’image associée) ou une image (pas de titre). Par défaut, lorsqu’un bouton 3D contient un titre et une image, le texte est placé en-dessous de l’image.
 
@@ -199,7 +199,7 @@ By default, when a button contains a title and a picture, the elements are joine
 
 ---
 
-## Vertical Margin
+## Marge verticale
 
 Cette propriété permet de définir la taille (en pixels) des marges verticales du bouton. Cette marge délimite la zone que l'icône et le titre du bouton ne doivent pas dépasser.
 

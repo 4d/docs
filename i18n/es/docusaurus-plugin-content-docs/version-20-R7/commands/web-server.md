@@ -58,7 +58,7 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1674                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                |                                                                     |
+| -------------- | ------------------------------------------------------------------- |
+| Command number | 1674                                                                |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

@@ -111,9 +111,9 @@ When using 4D’s language, you can refer to an active form object by its object
 
 #### JSON 文法
 
-| 名称            | データタイプ | とりうる値       |
-| ------------- | ------ | ----------- |
-| memorizeValue | ブール    | true, false |
+| 名称            | データタイプ  | とりうる値       |
+| ------------- | ------- | ----------- |
+| memorizeValue | boolean | true, false |
 
 #### 対象オブジェクト
 

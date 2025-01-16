@@ -21,4 +21,4 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On 4D Mobile Authentication database method.Summary-->**On 4D Mobile Authentication database method** está obsoleto em projetos desde 4D 20 R6.<!-- END REF-->
 
-A [Force login authentication](https://developer.4d.com/docs/REST/authUsers) é recomendada em seu lugar. Em projetos convertidos, pode atualizar sua configuração clicando no botão das configurações [**Activate REST authentication through ds.authentify() function**](https://developer.4d.com/docs/settings/web#access) Veja também [este artigo](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications) para saber como migrar seu código se necessário.
+A [Force login authentication](../REST/authUsers.md) é recomendada em seu lugar. Em projetos convertidos, pode atualizar sua configuração clicando no botão das configurações [**Activate REST authentication through ds.authentify() function**](../settings/web.md#access) Veja também [este artigo](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications) para saber como migrar seu código se necessário.

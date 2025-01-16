@@ -34,7 +34,7 @@ Sous macOS, les onglets peuvent être orientés, en plus de la position standard
   "top": 160,  
   "width": 100, 
   "height": 20, 
-  "labelsPlacement": "bottom" //define the direction
+  "labelsPlacement": "bottom" //définir la direction
  }
 ```
 

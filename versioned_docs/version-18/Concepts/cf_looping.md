@@ -42,7 +42,7 @@ The formal syntax of the `Repeat...Until` control flow structure is:
     statement(s)
  Until(Boolean_Expression)
 ```
-A `Repeat...Until` loop is similar to a [While...End while](flow-control#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Thus, a `Repeat...Until` loop always executes the loop once, whereas if the Boolean expression is initially False, a `While...End while` loop does not execute the loop at all.
+A `Repeat...Until` loop is similar to a [While...End while](flow-control.md#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Thus, a `Repeat...Until` loop always executes the loop once, whereas if the Boolean expression is initially False, a `While...End while` loop does not execute the loop at all.
 
 The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
 

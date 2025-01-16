@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create deployment license.Summary-->The **Create deployment license** command creates an embedded license file in the Licenses folder of the *mergedApp* built application.<!-- END REF--> If the Licenses folder does not exist the *mergedApp*, it is created by the command.
 
-In *mergedApp*, pass a [4D.Folder](https://developer.4d.com/docs/API/FolderClass) object containing a reference to the folder containing the built application in which you want to embed a license. 
+In *mergedApp*, pass a [4D.Folder](../API/FolderClass.md) object containing a reference to the folder containing the built application in which you want to embed a license. 
 
-In *license*, pass a [4D.File](https://developer.4d.com/docs/API/FileClass) object containing a reference to the license file used to generate the embedded license.
+In *license*, pass a [4D.File](../API/FileClass.md) object containing a reference to the license file used to generate the embedded license.
 
 If the build requires a specific OEM license (*4D OEM XML Keys*) and if no such license is already installed in the Licenses folder of the building machine, you need to pass it using the *oemLicense* parameter. This parameter is useful if you dedicate a machine to build your applications. 
 
@@ -31,7 +31,7 @@ The command returns a *status* object containing the following properties:
 | **Property** | **Type**                                               | **Description**                             |
 | ------------ | ------------------------------------------------------ | ------------------------------------------- |
 | success      | Boolean                                                | True if the license file has been generated |
-| file         | [4D.File](https://developer.4d.com/docs/API/FileClass) | The generated license file                  |
+| file         | [4D.File](../API/FileClass.md) | The generated license file                  |
 | statusText   | Text                                                   | Description of the error if any             |
 | errors       | Collection                                             | Collection of error objects                 |
 | \[\].message | Text                                                   | Error message                               |

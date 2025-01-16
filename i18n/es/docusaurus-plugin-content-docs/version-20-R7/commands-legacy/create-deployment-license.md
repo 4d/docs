@@ -20,16 +20,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create deployment license.Summary-->El comando **Create deployment license** crea un archivo de licencia anidado en la carpeta Licenses de la aplicación creada *mergedApp*.<!-- END REF--> Si la carpeta Licenses no existe en *mergedApp*, el comando la creará.
 
-En *mergedApp*, pase un objeto [4D.Folder](https://developer.4d.com/docs/API/FolderClass) que contenga una referencia a la carpeta que contiene la aplicación creada en la que desea anidar una licencia.
+En *mergedApp*, pase un objeto [4D.Folder](../API/FolderClass.md) que contenga una referencia a la carpeta que contiene la aplicación creada en la que desea anidar una licencia.
 
-En *license*, pase un objeto [4D.File](https://developer.4d.com/docs/API/FileClass) que contenga una referencia al archivo de licencia utilizado para generar la licencia anidada.  
+En *license*, pase un objeto [4D.File](../API/FileClass.md) que contenga una referencia al archivo de licencia utilizado para generar la licencia anidada.  
   
 Si la compilación requiere una licencia OEM específica (*4D OEM XML Keys*) y si dicha licencia no está ya instalada en la carpeta Licenses de la máquina de compilación, necesita pasarla utilizando el parámetro *oemLicense* parameter. TEste parámetro es útil si dedica una máquina a crear sus aplicaciones.
 
 | **Propiedad** | **Tipo**                                               | **Descripción**                               |
 | ------------- | ------------------------------------------------------ | --------------------------------------------- |
 | success       | Booleano                                               | True si se ha generado el archivo de licencia |
-| file          | [4D.File](https://developer.4d.com/docs/API/FileClass) | El archivo de licencia generado               |
+| file          | [4D.File](../API/FileClass.md) | El archivo de licencia generado               |
 | statusText    | Texto                                                  | Descripción del error si lo hay               |
 | errors        | Collection                                             | Colección de objetos de error                 |
 | \[\].message  | Texto                                                  | Mensaje de error                              |

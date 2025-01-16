@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB REMOVE.Summary-->O comando **OB REMOVE** remove a *propriedade* do objeto de linguagem designado pelo parâmetro *objeto*.<!-- END REF--> Este comando remove a propriedade, assim como seu valor atual.  
   
-*objeto* deve ter sido definido utilizando o comando [C\_OBJECT](c-object.md) ou designar um campo objeto 4D.  
+*objeto* deve ter sido definido utilizando o comando *C\_OBJECT* ou designar um campo objeto 4D.  
   
 No parâmetro *propriedade*, passe a etiqueta da propriedade a ler. Tenha em conta que o parâmetro *propriedade* leva em consideração as maiúsculas e minúsculas.
 

@@ -9,10 +9,12 @@ on:
       - '!main'
 
 jobs:
-  workflow-check:
+  check:
     uses: ./.github/workflows/workflow-syntax-check.yml
-  workflow-build:
+  build:
     uses: ./.github/workflows/workflow-build.yml
     concurrency:
-      group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+      group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-build
       cancel-in-progress:  true
+  build-static:
+    uses: ./.github/workflows/workflow-build-static.yml
