@@ -139,7 +139,7 @@ L'exemple suivant montre une méthode formulaire générique qui gère les évé
 
 #### Exemple 5
 
-Pour des exemples de gestion des événements [`On Before Keystroke`](../Events/onBeforeKeystroke.md) et [`On After Keystroke`](../Events/onAfterKeystroke.md), voir les exemples des commandes [Get edited text](../commandes-legacy/get-edited-text.md), [Keystroke](../commandes-legacy/keystroke.md) et [FILTER KEYSTROKE](../commandes-legacy/filter-keystroke.md).
+Pour des exemples de gestion des événements [`On Before Keystroke`](../Events/onBeforeKeystroke.md) et [`On After Keystroke`](../Events/onAfterKeystroke.md), voir les exemples des commandes [Get edited text](../commands-legacy/get-edited-text.md), [Keystroke](../commands-legacy/keystroke.md) et [FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md).
 
 #### Exemple 6
 
