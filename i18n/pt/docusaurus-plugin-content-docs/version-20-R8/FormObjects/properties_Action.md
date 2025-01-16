@@ -64,7 +64,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4
 
 ---
 
-## Executar método objecto
+## Executar método objeto
 
 Quando essa opção está ativada, o método objeto é executado com o evento `On Data Change` *no mesmo momento* em que o usuário altera o valor do indicador. Cuando la opción está desactivada, el método se ejecuta *tras* la modificación.
 
@@ -82,7 +82,7 @@ Quando essa opção está ativada, o método objeto é executado com o evento `O
 
 ## Métodos
 
-Referência de um método ligado ao objeto. Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
+Referência de um método ligado ao objeto. Os métodos do objeto "gerencie" geralmente o objeto enquanto o formulário é exibido ou impresso. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
 
 São suportados vários tipos de referências de métodos:
 
