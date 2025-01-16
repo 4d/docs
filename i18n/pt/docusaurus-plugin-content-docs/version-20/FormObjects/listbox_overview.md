@@ -4,7 +4,7 @@ title: List Box
 ---
 
 
-List boxes são objetos ativos complexos que permitem exibir e ingressar dados como colunas sincronizadas. Podem ser conectadas aos conteúdos de banco de dados como seleções de entidade e seleções de registro, ou para conteúdos de linguagem como coleções e arrays. Incluem características avançadas relativas à entrada de dados, classificação de colunas, gestão de eventos, aspecto personalizado, movimentação de colunas, etc.
+List boxes são objetos ativos complexos que permitem exibir e ingressar dados como colunas sincronizadas. Podem ser conectadas aos conteúdos de banco de dados como seleções de entidade e seleções de registro, ou para conteúdos de linguagem como coleções e arrays. Incluem as funcionalidades avançadas relativas à entrada de dados, classificação de colunas, gerenciamento de eventos, aspecto personalizado, movimentação de colunas, etc.
 
 ![](../assets/en/FormObjects/listbox.png)
 
@@ -101,7 +101,7 @@ Os conteúdos de cada linha são avaliados de acordo com a seleção de registro
 No caso de uma list box baseada na seleção atual de uma tablea, qualquer modificação feita do lado da database é refletida automaticamente na list box e vice versa. A seleção atual é portanto sempre a mesma em ambos os lugares.
 
 
-### List boxes de coleção ou de seleção de entidade
+### List boxes Collection ou Entity selection
 
 Nesse tipo de list box, cada coluna deve ser associada a uma expressão. Os conteúdos de cada linha são então avaliados por elemento de coleção ou por entidade da seleção de entidade.
 
