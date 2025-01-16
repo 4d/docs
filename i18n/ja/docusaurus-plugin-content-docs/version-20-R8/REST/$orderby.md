@@ -3,11 +3,11 @@ id: orderby
 title: $orderby
 ---
 
-指定した属性と並べ替え順に基づいて、返されたデータを並べ替えます (_例_: `$orderby="lastName desc, salary asc"`)
+指定した属性と並べ替え順に基づいて、返されたデータを並べ替えます (*例*: `$orderby="lastName desc, salary asc"`)
 
 ## 説明
 
-`$orderby` は RESTリクエストによって返されるエンティティを並べ替えます。 並べ替えの基準とする各属性について、並べ替え順を指定します。`ASC` ( `asc`) が昇順、`DESC` (`desc`) が降順です。 デフォルトでは、データは昇順に並べ替えられます。 属性を複数指定するには、カンマ区切りにします。_例_: `$orderby="lastName desc, firstName asc"`。
+`$orderby` は RESTリクエストによって返されるエンティティを並べ替えます。 並べ替えの基準とする各属性について、並べ替え順を指定します。`ASC` ( `asc`) が昇順、`DESC` (`desc`) が降順です。 デフォルトでは、データは昇順に並べ替えられます。 属性を複数指定するには、カンマ区切りにします。*例*: `$orderby="lastName desc, firstName asc"`。
 
 ## 例題
 

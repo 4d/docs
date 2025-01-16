@@ -19,7 +19,7 @@ Esta propriedade é usada para exibir ou ocultar [cabeçalhos de coluna listbox]
 
 ---
 
-## Height
+## Alto
 
 Esta propriedade é usada para definir a altura da linha para um cabeçalho de list box em **píxeis** ou **linhas de texto** (quando exibido). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
 
@@ -39,7 +39,7 @@ Note that converting back and forth may lead to an end result that is different 
 - (fonte Arial 18)\*: 52 pixels -> 2 linhas -> 40 pixels
 - (fonte Arial 12)\*: 3 pixels -> 0.4 linha arredondada para 1 linha -> 19 pixels
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "List Box": {

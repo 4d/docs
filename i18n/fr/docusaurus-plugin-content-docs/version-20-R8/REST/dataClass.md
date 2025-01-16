@@ -135,7 +135,7 @@ Retourne toutes les données d'une dataclass spécifique.
 
 ## \{dataClass\}\[{key}]
 
-Returns the data for the specific entity defined by the dataclass's primary key, _e.g._, `Company[22]` or `Company[IT0911AB2200]`
+Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22]` or `Company[IT0911AB2200]`
 
 ### Description
 
@@ -186,7 +186,7 @@ Renvoie les données d'une entité dans laquelle la valeur de l'attribut est dé
 
 ### Description
 
-En passant la _dataClass_ et un _attribut_ avec une valeur, vous pouvez récupérer toutes les informations publiques de cette entité. La valeur est une valeur unique pour l'attribut, mais ce n'est pas la clé primaire.
+En passant la *dataClass* et un *attribut* avec une valeur, vous pouvez récupérer toutes les informations publiques de cette entité. La valeur est une valeur unique pour l'attribut, mais ce n'est pas la clé primaire.
 
 `GET  /rest/Company:companyCode(Acme001)`
 

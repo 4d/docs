@@ -34,7 +34,7 @@ Para habilitar el seguimiento de cambios de datos, la estructura de la aplicaci�
 
 In addition, to ensure proper operation of the feature, the following conditions are required:
 
-- El campo `__GlobalStamp` debe ser del tipo _Entero 64 bits_, con las propiedades _índice automático_, _Exponer como recurso REST_ e _Invisible_ seleccionadas.
+- El campo `__GlobalStamp` debe ser del tipo *Entero 64 bits*, con las propiedades *índice automático*, *Exponer como recurso REST* e *Invisible* seleccionadas.
 - Debe añadirse una tabla `__DeletedRecords`, con los siguientes campos:
 
 | Campo                                                   | Tipo            | Descrição                             |

@@ -19,13 +19,13 @@ Esta propriedade é usada para exibir ou ocultar [cabeçalhos de coluna listbox]
 
 ---
 
-## Height
+## Alto
 
 Esta propriedade é usada para definir a altura da linha para um cabeçalho de list box em **píxeis** ou **linhas de texto** (quando exibido). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
 
-- _Píxel_ - o valor da altura é aplicado diretamente à linha em questão, independentemente do tamanho da fonte contida nas colunas. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
+- *Píxel* - o valor da altura é aplicado diretamente à linha em questão, independentemente do tamanho da fonte contida nas colunas. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
 
-- _Linha_ - a altura é calculada considerando o tamanho da fonte da linha em questão.
+- *Linha* - a altura é calculada considerando o tamanho da fonte da linha em questão.
   - Se mais de um tamanho for definido, 4D usa o maior. Por exemplo, se uma linha contém "Verdana 18", "Geneva 12" e "Arial 9", 4D usa "Verdana 18" para determinar a altura da linha (por exemplo, 25 pixeis). Esta altura é depois multiplicada pelo número de linhas definido.
   - Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
   - In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
@@ -39,7 +39,7 @@ Note that converting back and forth may lead to an end result that is different 
 - (fonte Arial 18)\*: 52 pixels -> 2 linhas -> 40 pixels
 - (fonte Arial 12)\*: 3 pixels -> 0.4 linha arredondada para 1 linha -> 19 pixels
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "List Box": {

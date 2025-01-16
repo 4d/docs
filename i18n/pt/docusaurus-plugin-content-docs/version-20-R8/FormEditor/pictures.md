@@ -31,13 +31,13 @@ O ícone indica que a imagem não pode ser exibida ou manipulada localmente - ma
 
 ### Factor de escala
 
-As telas de alta resolução têm uma densidade de pixels maior do que as telas padrão tradicionais. Para que as imagens sejam renderizadas corretamente em ecrãs de alta resolução, o número de píxeis na imagem deve ser multiplicado pelo _fator de escala_ (_ou seja_, duas vezes maior, três vezes maior, etc.).
+As telas de alta resolução têm uma densidade de pixels maior do que as telas padrão tradicionais. Para que as imagens sejam renderizadas corretamente em ecrãs de alta resolução, o número de píxeis na imagem deve ser multiplicado pelo *fator de escala* (*ou seja*, duas vezes maior, três vezes maior, etc.).
 
-Ao utilizar imagens de alta resolução, pode especificar o fator de escala adicionando "@nx" no nome da imagem (onde _n_ designa o fator de escala). En la tabla siguiente, puede ver que el factor de escala se indica en los nombres de las imágenes de alta resolución, _circle@2x.png_ y _circle@3x.png_.
+Ao utilizar imagens de alta resolução, pode especificar o fator de escala adicionando "@nx" no nome da imagem (onde *n* designa o fator de escala). En la tabla siguiente, puede ver que el factor de escala se indica en los nombres de las imágenes de alta resolución, *circle@2x.png* y *circle@3x.png*.
 
 | Tipo de exibição     | Fator de Escala                                                         | Exemplo                                                                                                                                                                                         |
 | -------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Resolução ‘standard’ | Densidade de pixel 1:1.                 | **1x**<br/>![](../assets/en/FormEditor/pictureScale1.png) _circle.png_                                                                                                          |
+| Resolução ‘standard’ | Densidade de pixel 1:1.                 | **1x**<br/>![](../assets/en/FormEditor/pictureScale1.png) *circle.png*                                                                                                          |
 | Alta resolução       | A densidade de pixels aumentou por um factor de 2 ou 3. | <table><th>2x</th><th>3x</th><tr><td>![](../assets/en/FormEditor/pictureScale2.png)*circle@2x.png*</td><td>![](../assets/en/FormEditor/pictureScale3.png)<br/>*circle@3x.png*</td></tr></table> |
 
 As imagens de alta resolução com a convenção @nx podem ser utilizadas nos seguintes objectos:
@@ -49,7 +49,7 @@ As imagens de alta resolução com a convenção @nx podem ser utilizadas nos se
 - [Cabeçalhos List box](FormObjects/listbox_overview.md#list-box-headers)
 - [Ícones de menu](Menus/properties.md#item-icon)
 
-4D dá automaticamente prioridade às imagens com a resolução mais alta. 4D dá automaticamente prioridade às imagens com a resolução mais alta. Mesmo que um comando ou propriedade especifique _circle.png_, _circle@3x.png_ será usado (se existir).
+4D dá automaticamente prioridade às imagens com a resolução mais alta. 4D dá automaticamente prioridade às imagens com a resolução mais alta. Mesmo que um comando ou propriedade especifique *circle.png*, *circle@3x.png* será usado (se existir).
 
 > Note que a priorização da resolução ocorre apenas para a apresentação de imagens no ecrã, não havendo priorização automática durante a impressão.
 
@@ -62,7 +62,7 @@ Embora 4D priorize automaticamente a resolução mais alta, há, no entanto, alg
 | Soltar o pegar                                                                                                                                                                  | Se a imagem tem:<ul><li>**72dpi ou 96dpi** - A imagem é "[Center](FormObjects/properties_Picture.md#center--trunca-não-centralizado)" formatado e o objeto que contém a imagem tem o mesmo número de pixels.</li><li>**Outros dpi** - A imagem é "[Dimensionada para fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatado e o objeto que contém a imagem é igual (número de pixels \* tela dpi) / (imagem dpi)</li> <li>**Sem dpi** - A imagem é "[Escalonado para caber](FormObjects/properties_Picture.md#escaled-to-fit)" formatado.</li></ul> |
 | [Tamanho automático](https://doc.4d.com/4Dv19/4D/19/Setting-object-display-properties.300-5416671.en.html#148057) (Menu de contexto do Editor de Formulário) | Se o formato de exibição da imagem for:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - O objeto que contém a imagem é redimensionado de acordo com (número de pixels da imagem \* dpi da tela) / (dpi da imagem) </li> <li>**Não dimensionado** - O objeto que contém a imagem tem o mesmo número de pixels que a imagem.</li></ul>                                                                                                                                                                                                                   |
 
-_(\*) Normalmente, macOS = 72 dpi, Windows = 96 dpi_
+*(\*) Normalmente, macOS = 72 dpi, Windows = 96 dpi*
 
 ## Imagens em modo escuro (apenas macOS)
 
@@ -81,6 +81,6 @@ Em tempo de execução, 4D carregará automaticamente a imagem clara ou escura d
 
 4D permite recuperar as coordenadas locais do mouse em um [objeto de entrada](FormObjects/input_overview.md) associado a uma [expressão de imagem](FormObjects/properties_Object.md#expression-type), em caso de um clique ou um mouse, mesmo que um rolagem ou zoom tenha sido aplicado à imagem. Esse mecanismo, similar ao de um mapa de imagens, pode ser utilizado, por exemplo, para manejar barras de botões deslocáveis ou a interface de um software de cartografia.
 
-The coordinates are returned in the _MouseX_ and _MouseY_ [System Variables](../Concepts/variables.md#system-variables). As coordenadas são expressas em píxeis em relação ao canto superior esquerdo da imagem (0,0). Se o mouse estiver fora do sistema de coordenadas da imagem, se devolverá -1 em MouseX e MouseY\*.
+The coordinates are returned in the *MouseX* and *MouseY* [System Variables](../Concepts/variables.md#system-variables). As coordenadas são expressas em píxeis em relação ao canto superior esquerdo da imagem (0,0). Se o mouse estiver fora do sistema de coordenadas da imagem, se devolverá -1 em MouseX e MouseY\*.
 
 Você pode obter o valor dessas variáveis como parte do eventos de formulário [`On Clicked`](Events/onClicked.md), [`On Double Clicked`](Events/onDoubleClicked. d), [`No Mouse up`](Events/onMouseUp.md), [`On Mouse Enter`](Events/onMouseEnter.md), ou [`On Mouse Move`](Events/onMouseMove.md).

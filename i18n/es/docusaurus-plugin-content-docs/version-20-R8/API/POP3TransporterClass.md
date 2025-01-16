@@ -266,7 +266,7 @@ Quiere saber el remitente del primer correo del buzón:
 
 La función `.getMailInfo()`<!-- REF #POP3TransporterClass.getMailInfo().Summary --> devuelve un objeto `mailInfo` correspondiente al *msgNumber* en el buzón designado por el [`transportador POP3`](#pop3-transporter-object)<!-- END REF -->. Esta función permite gestionar localmente la lista de mensajes localizados en el servidor de correo POP3.
 
-En *msgNumber*, pase el número del mensaje a recuperar. Este número es devuelto en la propiedad number por el método[`.getMailInfoList()`](#getmailinfolist).
+En *msgNumber*, pase el número del mensaje a recuperar. Este número es devuelto en la propiedad number por el método [`.getMailInfoList()`](#getmailinfolist).
 
 El objeto `mailInfo` devuelto contiene las siguientes propiedades:
 

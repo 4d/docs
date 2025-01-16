@@ -977,7 +977,7 @@ Code d'appel :
 ```4d
 var $status : Object
 
-//Form.student est chargé avec tous ses a attributs et mis à jour sur un Form
+//Form.student est chargé avec tous ses attributs et mis à jour
 $status:=Form.student.checkData()
 If ($status.success)
     $status:=Form.student.save() // appelle le serveur

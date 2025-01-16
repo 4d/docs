@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| 引数            | 型       |     | 説明         |
-| ------------- | ------- | :-: | ---------- |
-| processNumber | Integer |  →  | プロセス番号     |
-| 戻り値           | Object  |  ←  | プロセスに関する情報 |
+| 引数            | 型       |     | 説明             |
+| ------------- | ------- | :-: | -------------- |
+| processNumber | Integer |  →  | Process number |
+| 戻り値           | Object  |  ←  | プロセスに関する情報     |
 
 <!-- END REF -->
 
@@ -36,8 +36,8 @@ displayed_sidebar: docs
 | creationDateTime | Text (Date ISO 8601) | プロセス作成の日時                                            |
 | ID               | Integer                                 | プロセス固有のID                                            |
 | name             | Text                                    | プロセス名                                                |
-| number           | Integer                                 | プロセス番号                                               |
-| preemptive       | Boolean                                 | プリエンプティブに実行可能ならTrue、それ以外の場合にはfalse                   |
+| number           | Integer                                 | Process number                                       |
+| プリエンプティブ         | Boolean                                 | プリエンプティブに実行可能ならTrue、それ以外の場合にはfalse                   |
 | sessionID        | Text                                    | セッションUUID                                            |
 | state            | Integer                                 | 現在の状態。 取り得る値: 以下を参照のこと               |
 | systemID         | Text                                    | ユーザープロセス、4D プロセス、またはスペアプロセスのID                       |
@@ -93,7 +93,7 @@ displayed_sidebar: docs
 | Method editor macro process   | -17 |
 | Monitor process               | -26 |
 | MSC process                   | -22 |
-| None                          | 0   |
+| なし                            | 0   |
 | On exit process               | -16 |
 | Other 4D process              | -10 |
 | Other internal process        | -40 |

@@ -46,7 +46,7 @@ Esta propiedad se utiliza para declarar el formulario detallado que se utilizar�
 
 Acción a realizar en caso de doble clic en una línea vacía de un subformulario listado. Las siguientes opciones están disponibles:
 - **No hacer nada** (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.
-- Añadir registro: crea un nuevo registro en el subformulario y cambia al modo edición. El registro se creará directamente en la lista si la propiedad [Editable en la lista] está activada. En caso contrario, se creará en modo página, en el [formulario detallado](detail-form) asociado al subformulario.
+- Añadir registro: crea un nuevo registro en el subformulario y cambia al modo edición. El registro se creará directamente en la lista si la propiedad [Editable en la lista] está activada. En caso contrario, se creará en modo página, en el [formulario detallado](#detail-form) asociado al subformulario.
 
 
 #### Gramática JSON

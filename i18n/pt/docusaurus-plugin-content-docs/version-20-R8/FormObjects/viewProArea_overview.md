@@ -3,11 +3,11 @@ id: viewProAreaOverview
 title: Área 4D View Pro
 ---
 
-4D View Pro permite inserir e mostrar uma área de planilha nos seus formulários 4D. Uma planilha é um aplicativo que contém uma grade de células onde você pode inserir informações, executar cálculos ou exibir imagens.
+4D View Pro allows you to insert and display a spreadsheet area in your 4D forms. A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures.
 
 ![](../assets/en/FormObjects/viewPro2.png)
 
-Após utilizar as áreas 4D View Pro nos seus formulários, você pode importar e exportar documentos de planilhas.
+Once you use 4D View Pro areas in your forms, you can import and export spreadsheets documents.
 
 ## Usando as áreas 4D View Pro
 

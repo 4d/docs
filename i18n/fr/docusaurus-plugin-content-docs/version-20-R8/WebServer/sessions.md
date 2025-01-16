@@ -28,7 +28,7 @@ La gestion de session peut être activée et désactivée sur votre serveur Web 
 
 Cette option est sélectionnée par défaut dans les nouveaux projets. Elle peut cependant être désactivée en sélectionnant l'option **Pas de sessions**, auquel cas les fonctionnalités de session web sont désactivées (aucun objet `Session` n'est disponible).
 
-- En utilisant la propriété [`.scalableSession`](API/WebServerClass.md#scalablession) de l'objet Web Server (à passer dans le paramètre _settings_ de la fonction [`.start()`](API/WebServerClass.md#start) ). Dans ce cas, ce paramètre remplace l'option définie dans la boîte de dialogue Propriétés pour l'objet Web Server (il n'est pas stocké sur disque).
+- En utilisant la propriété [`.scalableSession`](API/WebServerClass.md#scalablession) de l'objet Web Server (à passer dans le paramètre *settings* de la fonction [`.start()`](API/WebServerClass.md#start) ). Dans ce cas, ce paramètre remplace l'option définie dans la boîte de dialogue Propriétés pour l'objet Web Server (il n'est pas stocké sur disque).
 
 > La commande `WEB SET OPTION` peut également définir le mode de session pour le serveur Web principal.
 
@@ -38,7 +38,7 @@ Dans tous les cas, ce paramètre est local à la machine ; il peut donc être di
 
 ## Implémentation des sessions
 
-Lorsque [les sessions sont activées](#activation-des-sessions), des mécanismes automatiques sont mis en place, basés sur un cookie privé défini par 4D lui-même : "4DSID__NomApp_", où _NomApp_ est le nom du projet d'application. Ce cookie référence la session web courante pour l'application.
+Lorsque [les sessions sont activées](#activation-des-sessions), des mécanismes automatiques sont mis en place, basés sur un cookie privé défini par 4D lui-même : "4DSID_*NomApp*", où *NomApp* est le nom du projet d'application. Ce cookie référence la session web courante pour l'application.
 
 :::info
 
@@ -46,13 +46,13 @@ Le nom du cookie peut être obtenu en utilisant la propriété [`.sessionCookieN
 
 :::
 
-1. Dans chaque requête de client web, le serveur Web vérifie la présence et la valeur du cookie privé "4DSID__AppName_".
+1. Dans chaque requête de client web, le serveur Web vérifie la présence et la valeur du cookie privé "4DSID_*AppName*".
 
 2. Si le cookie a une valeur, 4D recherche la session qui a créé ce cookie parmi les sessions existantes ; si cette session est trouvée, elle est réutilisée pour l'appel.
 
 3. Si la requête du client ne correspond pas à une session déjà ouverte :
 
-- une nouvelle session avec un cookie privé "4DSID__AppName_" est créée sur le serveur web
+- une nouvelle session avec un cookie privé "4DSID_*AppName*" est créée sur le serveur web
 - un nouvel objet `Session` Guest est créé et est dédié à la session web évolutive.
 
 :::note
@@ -84,7 +84,7 @@ Une session web évolutive est fermée lorsque:
 
 La durée de vie d'un cookie inactif est de 60 minutes par défaut, ce qui signifie que le serveur Web fermera automatiquement les sessions inactives après 60 minutes.
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command.
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore.md) command.
 
 When a web session is closed, if the [`Session`](commands/session.md) command is called afterwards:
 
@@ -136,7 +136,7 @@ http://localhost:8044/authenticate.shtml
 
 > Dans un environnement de production, il est nécessaire d'utiliser une [connexion HTTPS](API/WebServerClass.md#httpsenabled) pour éviter la circulation d'informations non chiffrées sur le réseau.
 
-2. La page `authenticate.shtml` est un formulaire contenant des champs de saisie _userId_ et _password_ et envoie une action POST 4DACTION :
+2. La page `authenticate.shtml` est un formulaire contenant des champs de saisie *userId* et *password* et envoie une action POST 4DACTION :
 
 ```html
 <!DOCTYPE html>
@@ -153,7 +153,7 @@ http://localhost:8044/authenticate.shtml
 
 ![alt-text](../assets/en/WebServer/authenticate.png)
 
-3. La méthode de projet d'authentification recherche la personne _userID_ et valide le mot de passe par rapport à la valeur hachée déjà stockée dans la table _SalesPersons_ :
+3. La méthode de projet d'authentification recherche la personne *userID* et valide le mot de passe par rapport à la valeur hachée déjà stockée dans la table *SalesPersons* :
 
 ```4d
 var $indexUserId; $indexPassword; $userId : Integer

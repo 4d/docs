@@ -80,7 +80,7 @@ Para as duas últimas ações, o evento do formulário `On Open Detail` também 
 
 Esta propriedade é usada para especificar o conjunto a ser usado para gerenciar registros destacados na caixa de listas (quando a fonte de dados **Arrays** é selecionada, um array booleano com o mesmo nome que a caixa de lista é usada).
 
-O 4D cria um conjunto padrão chamado _ListBoxSetN_, em que _N_ começa em 0 e é incrementado de acordo com o número de caixas de listagem no formulário. Se necessário, pode alterar o conjunto predefinido. Pode ser um conjunto local, de processo ou entre processos (recomendamos o uso de um conjunto local, por exemplo, _$LBSet_, para limitar o tráfego de rede). É então mantido automaticamente por 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
+O 4D cria um conjunto padrão chamado *ListBoxSetN*, em que *N* começa em 0 e é incrementado de acordo com o número de caixas de listagem no formulário. Se necessário, pode alterar o conjunto predefinido. Pode ser um conjunto local, de processo ou entre processos (recomendamos o uso de um conjunto local, por exemplo, *$LBSet*, para limitar o tráfego de rede). É então mantido automaticamente por 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
 
 > - The highlighted status of the list box rows and the highlighted status of the table records are completely independent.
 > - If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
@@ -104,7 +104,7 @@ Locked columns and static columns are two separate and independent functionaliti
 - Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
 - As colunas estáticas não podem ser movidas por arrastar e largar dentro do list box.
 
-> É possível definir colunas estáticas e bloqueadas por meio de programação; consulte a seção "Caixa de listagem" no manual _4D Language Reference_.
+> É possível definir colunas estáticas e bloqueadas por meio de programação; consulte a seção "Caixa de listagem" no manual *4D Language Reference*.
 
 Estas propriedades interagem da seguinte forma:
 
@@ -176,7 +176,7 @@ Um array 4D que controla a apresentação das linhas do list box.
 
 Pode definir as propriedades de interface "oculto", "desativado" e "selecionável" para cada linha de um list box baseado num array utilizando este array. Ele também pode ser designado usando o comando `LISTBOX SET ARRAY`.
 
-O array de controlo de linhas deve ser do tipo Longint e incluir o mesmo número de linhas que o list box. Cada elemento da _Row Control Array_ define o status da interface de sua linha correspondente na caixa de listagem. Three interface properties are available using constants in the "List Box" constant theme:
+O array de controlo de linhas deve ser do tipo Longint e incluir o mesmo número de linhas que o list box. Cada elemento da *Row Control Array* define o status da interface de sua linha correspondente na caixa de listagem. Three interface properties are available using constants in the "List Box" constant theme:
 
 | Parâmetros               | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

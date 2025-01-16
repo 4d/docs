@@ -61,7 +61,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 :::info Compatibidade
 
-This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](../Project/compiler.md#generate-typing).
 
 :::
 
@@ -116,9 +116,9 @@ This setting allows you to select the processor family for which your 4D project
 
 Duas opções de alvo estão disponíveis. O resultado depende do processador da máquina em que 4D está em execução.
 
-| _Opção_                                                                   | _no Windows Intel/AMD_                                                             | _macOS Intel_                                                                                    | _no macOS Silicon_                                                                               |
+| *Opção*                                                                   | *no Windows Intel/AMD*                                                             | *macOS Intel*                                                                                    | *no macOS Silicon*                                                                               |
 | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| **Todos os processadores (Intel/AMD e Apple Silicon)** | Código para Intel/AMD<br/>_No es posible producir código Apple Silicon en Windows_ | Código para Apple Silicon + Código para Intel/AMD<br/>_Habrá dos códigos compilados disponibles_ | Código para Apple Silicon + Código para Intel/AMD<br/>_Habrá dos códigos compilados disponibles_ |
+| **Todos os processadores (Intel/AMD e Apple Silicon)** | Código para Intel/AMD<br/>*No es posible producir código Apple Silicon en Windows* | Código para Apple Silicon + Código para Intel/AMD<br/>*Habrá dos códigos compilados disponibles* | Código para Apple Silicon + Código para Intel/AMD<br/>*Habrá dos códigos compilados disponibles* |
 | **O meu processador (processador)**                    | Código para Intel/AMD                                                              | Código para Intel/AMD                                                                            | Código para Apple Silicon                                                                        |
 
 > El objetivo de compilación Apple Silicon requiere que la aplicación **Clang** esté instalada en su máquina. Clang vem com a versão mais recente do Xcode. Ver los [requisitos del compilador Silicon](#requirements) para más información.
@@ -131,7 +131,7 @@ In projects converted from 4D versions prior to 20 R7, additional compilation op
 - **Default typing**
 - **Métodos Compilador para...**
 
-These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
+These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](../Project/compiler.md#compiler-settings).
 
 In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
 
@@ -197,7 +197,7 @@ Para reativar os avisos em uma seção de código, use os seguintes comentários
 Only warnings with numbers can be disabled or enabled. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
 Por exemplo, para desativar o seguinte aviso:
 
-_1: Redefinição da variável $a (550.10)_
+*1: Redefinição da variável $a (550.10)*
 
 ... you just need to write the following comments in your 4D method:
 
@@ -278,12 +278,12 @@ The length of the error file depends on the number of errors and warnings issued
 A estrutura do ficheiro de erros é a seguinte:
 
 - At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D.
-- En la sección _**Errores generales**_ se agrupan todas las imposibilidades de digitación y las ambigüedades de identidad. There are two cases in which the compiler reports a general error:
+- En la sección ***Errores generales*** se agrupan todas las imposibilidades de digitación y las ambigüedades de identidad. There are two cases in which the compiler reports a general error:
   - número da linha no método (0 indica erros gerais)
   - warning attribute indicating whether the detected anomaly is a warning (warning="true") or an error (warning="false")
   - diagnóstico que descreve o erro
 
-Si su proyecto no tiene errores generales, el archivo no tendrá una sección _Errores generales_.
+Si su proyecto no tiene errores generales, el archivo no tendrá una sección *Errores generales*.
 
 Um ficheiro de erros pode conter três tipos de mensagens:
 
@@ -338,7 +338,7 @@ El código compilado resultante se almacena en la carpeta [DerivedData](architec
 
 ### Compilador Silicon
 
-El compilador Silicon genera código compilado nativo para los procesadores Apple Silicon, como _Apple M1_.
+El compilador Silicon genera código compilado nativo para los procesadores Apple Silicon, como *Apple M1*.
 
 El código compilado resultante se almacena en la carpeta [Libraries](architecture.md#libraries) del proyecto.
 
@@ -346,7 +346,7 @@ El código compilado resultante se almacena en la carpeta [Libraries](architectu
 
 - **Ordenador Apple**: el compilador Silicon sólo puede ejecutarse desde una máquina Apple.
 - **Arquitectura proyecto de 4D**: el compilador Silicon sólo está disponible para los desarrollos 4D que utilizan la [arquitectura proyecto](architecture.md).
-- **Herramientas Xcode o Developer**: el compilador Silicon llama al compilador de código abierto de macOS **Clang** para compilar el proyecto a partir de código C++ en el [segundo paso](#compilador-incremental) de la compilación. _clang_ requiere librerías Apple nativas, que son proporcionadas por el paquete **Xcode** o **Developer Tools**.
+- **Herramientas Xcode o Developer**: el compilador Silicon llama al compilador de código abierto de macOS **Clang** para compilar el proyecto a partir de código C++ en el [segundo paso](#compilador-incremental) de la compilación. *clang* requiere librerías Apple nativas, que son proporcionadas por el paquete **Xcode** o **Developer Tools**.
   - **Si ya tiene** Xcode o Developer Tools instalados en su ordenador, sólo tiene que asegurarse de que su versión cumple con los requisitos de 4D.
   - **Si no tiene** ninguna de estas herramientas instaladas en su ordenador, tendrá que descargar una de ellas desde el sitio web Apple Developer.
 

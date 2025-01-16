@@ -180,5 +180,5 @@ displayed_sidebar: docs
 |            |                                                                 |
 | ---------- | --------------------------------------------------------------- |
 | コマンド番号     | 40                                                              |
-| スレッドセーフである | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+| スレッドセーフ    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
 | 更新するシステム変数 | OK, error                                                       |

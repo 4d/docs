@@ -3,7 +3,7 @@ id: expand
 title: $expand
 ---
 
-Extrait une image stockée dans un attribut Image (_par exemple_, `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/>
+Extrait une image stockée dans un attribut Image (*par exemple*, `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/>
 ou<br/>
 Extrait un attribut BLOB pour le sauvegarder.
 

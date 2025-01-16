@@ -19,13 +19,13 @@ Essa propriedade é usada para exibir ou ocultar [os rodapés de coluna list box
 
 ---
 
-## Height
+## Alto
 
 Esta propriedade é usada para definir a altura da linha para um rodapé de list box em **píxeis** ou em **linhas de texto** (quando exibido). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
 
-- _Píxel_ - o valor da altura é aplicado diretamente à linha em questão, independentemente do tamanho da fonte contida nas colunas. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
+- *Píxel* - o valor da altura é aplicado diretamente à linha em questão, independentemente do tamanho da fonte contida nas colunas. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
 
-- _Linha_ - a altura é calculada considerando o tamanho da fonte da linha em questão.
+- *Linha* - a altura é calculada considerando o tamanho da fonte da linha em questão.
   - Se mais de um tamanho for definido, 4D usa o maior. Por exemplo, se uma linha contém "Verdana 18", "Geneva 12" e "Arial 9", 4D usa "Verdana 18" para determinar a altura da linha (por exemplo, 25 pixeis). Esta altura é depois multiplicada pelo número de linhas definido.
   - Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
   - In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
@@ -36,9 +36,9 @@ Conversion of units: When you switch from one unit to the other, 4D converts the
 
 Note that converting back and forth may lead to an end result that is different from the starting value due to the automatic calculations made by 4D. Este facto é ilustrado nas sequências seguintes:
 
-_(font Arial 18)_: 52 pixels -> 2 lines -> 40 pixels _(font Arial 12)_: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
+*(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "List Box": {

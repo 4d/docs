@@ -1002,7 +1002,7 @@ La retrollamada recibe los siguientes parámetros:
 Puede definir los siguientes parámetros:
 
 - Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
-- *$1.stop* (booleano, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
+- *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 Por defecto, `.find()` busca en toda la colección. Opcionalmente, se puede pasar en *startFrom* el índice del elemento desde el que iniciar la búsqueda.
 
@@ -2181,7 +2181,7 @@ En la retrolamada, pase un código que compare dos valores y devuelva **true** s
 La retrollamada recibe los siguientes parámetros:
 
 - $1 (objeto), donde:
-  - *$1.value* (todo tipo): valor del primer elemento a comparar
+  - Lanzamiento
   - Lanzamiento
   - $2...$N (cualquier tipo): parámetros adicionales
 

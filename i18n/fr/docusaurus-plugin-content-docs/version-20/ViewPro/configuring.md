@@ -290,7 +290,7 @@ The following special characters allow the automatic addition or formatting of i
 | P         | Current page                     | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
 | N         | Page count                       | printInfo.headerLeft:="There are &N pages."                            | There are 10 pages.                                  |
 | D         | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                      | It is 2015/6/19.                                     |
-| T         | Current time                     | printInfo.headerLeft:="It is &T."                                      | It is 16:30:36.                                      |
+| T         | Heure courante                   | printInfo.headerLeft:="It is &T."                                      | It is 16:30:36.                                      |
 | G         | Image                            | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S         | Strikethrough                    | printInfo.headerLeft:="&SThis is text."                                | ~~This is text.~~                                    |
 | U         | Souligné                         | printInfo.headerLeft:="&UThis is text."                                | This is text. (Underlined)                           |
@@ -359,7 +359,7 @@ Paper size attributes are used to specify the dimensions or model of paper to us
   * one of the formats in the [SpreadJS format list](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Print.PaperKind.html)
   * one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command. In that case, [`VP Get print info`](./method-list.md#vp-get-print-info) returns the corresponding format with the height and width.
 
-### Echelle
+### Graduation
 
 Scale attributes are used to specify printing optimization and adjustments.
 

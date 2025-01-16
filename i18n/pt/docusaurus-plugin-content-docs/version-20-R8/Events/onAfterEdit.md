@@ -13,7 +13,7 @@ title: On After Edit
 
 Este evento pode ser usado para filtrar a entrada de dados nos objetos digitáveis do teclado no nível mais baixo.
 
-Quando é usado, este evento é gerado após cada alteração feita no conteúdo de um objeto inserível, independentemente da ação que causou a alteração, _ou seja_:
+Quando é usado, este evento é gerado após cada alteração feita no conteúdo de um objeto inserível, independentemente da ação que causou a alteração, *ou seja*:
 
 - Ações de edição padrão que modificam conteúdo como colar, cortar, excluir ou cancelar;
 - Eliminar um valor (ação semelhante a colar);

@@ -15,7 +15,7 @@ Throughout your 4D projects, you might need to format date and/or time values ac
 
 The following table lists all supported patterns for date and time formats.
 
-| Symbol | Meaning                                                                  | Motif         | Example Output                                                        |
+| Symbol | Description                                                              | Motif         | Example Output                                                        |
 | ------ | ------------------------------------------------------------------------ | ------------- | --------------------------------------------------------------------- |
 | G      | era designator                                                           | G, GG, or GGG | AD                                                                    |
 |        |                                                                          | GGGG          | Anno Domini                                                           |
@@ -112,7 +112,7 @@ The following table lists all supported patterns for date and time formats.
 
 ### `L` (stand-alone) vs `M`
 
-In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "_rendez-vous_ in January".
+In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
 
 ### `e` vs `c`
 
@@ -130,7 +130,7 @@ In general, when the number of letters in the formatting string is higher than t
 
 Some parts of the outputs, such as "midnight" or "Tuesday" are localized, according to regional settings.
 
-For example, for the time `13:25:34`, "B" will display _in the afternoon_ on an US system, and _après-midi_ on a French system.
+For example, for the time `13:25:34`, "B" will display *in the afternoon* on an US system, and *après-midi* on a French system.
 
 ### Extra letters
 

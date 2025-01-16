@@ -13,7 +13,7 @@ Por exemplo, se escrever numa página HTML:
 <P>Bem-vindo a <!--#4DTEXT vtSiteName-->!</P>
 ```
 
-El valor de la variable 4D _vtSiteName_ se insertará en la página HTML.
+El valor de la variable 4D *vtSiteName* se insertará en la página HTML.
 
 ## Etiquetas para modelos
 

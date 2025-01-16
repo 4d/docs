@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Archivo de historial
 ---
 
-Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Los registros generalmente se inician o detienen utilizando los selectores de los comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) o [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) y se almacenan en la [carpeta de registros](Project/architecture.md#logs) del proyecto.
+Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 La información histórica debe ser analizada para detectar y solucionar los problemas. Esta sección ofrece una descripción completa de los siguientes archivos de registro:
 
@@ -69,7 +69,7 @@ Para cada petición, se registran los siguientes campos:
 | request                                                                        | [ID de petición C/S u ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) o cadena de mensaje para peticiones SQL o mensajes `LOG EVENT`                                                                                                                                                                                                                                                                                                                                                      |
 | bytes_in                                                  | Número de bytes recibidos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | bytes_out                                                 | Número de bytes enviados                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| server\_duration \| exec\_duration | Depende del lugar donde se genere el registro:<li>_server\_duration_ cuando se genera en el cliente --Time tomado en microsegundos para que el servidor procese la solicitud y devuelva una respuesta. B a F en la imagen de abajo, O</li><li>_exec\_duration_ cuando se genera en el servidor --Tiempo empleado en microsegundos para que el servidor procese la petición. B a E en la imagen de abajo.</li> |
+| server\_duration \| exec\_duration | Depende del lugar donde se genere el registro:<li>*server\_duration* cuando se genera en el cliente --Time tomado en microsegundos para que el servidor procese la solicitud y devuelva una respuesta. B a F en la imagen de abajo, O</li><li>*exec\_duration* cuando se genera en el servidor --Tiempo empleado en microsegundos para que el servidor procese la petición. B a E en la imagen de abajo.</li> |
 | write\_duration                                          | Tiempo tomado en microsegundos para enviar la:<li>Petición (cuando se ejecuta en el cliente). A a B en la imagen debajo.</li><li>Respuesta (cuando se ejecuta en el servidor). E a F en la imagen de abajo.</li>                                                                                                                                                                                    |
 | task_kind                                                 | Apropiativo o cooperativo (respectivamente "p" o "c")                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | rtt                                                                            | Tiempo estimado en microsegundos para que el cliente envíe la solicitud y el servidor la acuse de recibo. A a D y E a H en la imagen de abajo.<li>Solo medido al utilizar la capa de red ServerNet, devuelve 0 cuando se usa con la capa de red antigua.</li><li>Para versiones de Windows anteriores a Windows 10 o Windows Server 2016, la llamada retornará 0.</li>                                                                                    |
@@ -260,7 +260,7 @@ Dependiendo del evento, se pueden incluir otros campos en el registro, como la t
 
 ### Cómo activar el archivo
 
-El archivo _4DDiagnosticLog.txt_ puede registrar diferentes niveles de mensajes, desde `ERROR` (más importante) a `TRACE` (menos importante). Por defecto, se define el nivel `INFO`, lo que significa que el archivo registrará sólo los eventos importantes, incluidos los errores y los resultados inesperados (ver más adelante).
+El archivo *4DDiagnosticLog.txt* puede registrar diferentes niveles de mensajes, desde `ERROR` (más importante) a `TRACE` (menos importante). Por defecto, se define el nivel `INFO`, lo que significa que el archivo registrará sólo los eventos importantes, incluidos los errores y los resultados inesperados (ver más adelante).
 
 Puede seleccionar el nivel de los mensajes utilizando el selector de `nivel de registro de diagnóstico` del comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), en función de sus necesidades. Cuando se selecciona un nivel, los niveles superiores (que son más importantes) también se seleccionan implícitamente. Los siguientes niveles están disponibles:
 
@@ -268,7 +268,7 @@ Puede seleccionar el nivel de los mensajes utilizando el selector de `nivel de r
 | ----------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | `Log error` | Una parte de la aplicación no funciona                                                          | `Log error`                                                   |
 | `Log warn`  | Posible error, uso de una función obsoleta, usos deficientes, situación indeseable o inesperada | `Log error`, `Log warn`                                       |
-| `Log info`  | _Nivel por defecto_ - Evento de aplicación importante                                           | `Log error`, `Log warn`, `Log info`                           |
+| `Log info`  | *Nivel por defecto* - Evento de aplicación importante                                           | `Log error`, `Log warn`, `Log info`                           |
 | `Log debug` | Detalle del flujo de aplicación (para los servicios técnicos 4D)             | `Log error`, `Log warn`, `Log info`, `Log debug`              |
 | `Log trace` | Otra información interna (para los servicios técnicos de 4D)                 | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
 
@@ -285,7 +285,7 @@ Estos archivos de registro registran cada intercambio entre la aplicación 4D y 
 
 - SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
 - POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
+- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.md)
 
 Los archivos de historial pueden producirse en dos versiones:
 
@@ -400,7 +400,7 @@ Este es un ejemplo de un registro de archivo de historial ORDA del lado del clie
 
 ### Del lado del servidor
 
-El registro ORDA del lado del servidor registra cada petición ORDA procesada por el servidor, así como la respuesta del servidor (opcional). La información de registro se guarda en un archivo .jsonl en el disco de la máquina del servidor (por defecto, _ordaRequests.jsonl_).
+El registro ORDA del lado del servidor registra cada petición ORDA procesada por el servidor, así como la respuesta del servidor (opcional). La información de registro se guarda en un archivo .jsonl en el disco de la máquina del servidor (por defecto, *ordaRequests.jsonl*).
 
 Como iniciar este historial:
 

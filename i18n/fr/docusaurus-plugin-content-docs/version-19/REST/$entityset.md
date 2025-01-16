@@ -22,7 +22,7 @@ Cette syntaxe vos permet d'exécuter toute opération sur un entity set défini.
 
 Étant donné que les ensembles d'entités sont limités par le temps (par défaut ou bien après avoir appelé `$timeout` pour définir la limite souhaitée), vous pouvez appeler `$savedfilter` et `$savedorderby` pour sauvegarder le filtre et trier par instructions lorsque vous créez un ensemble d'entités.
 
-Lorsque vous récupérez un ensemble d'entités existant stocké dans le cache de 4D Server, vous pouvez également appliquer l'un des éléments suivants à l'ensemble d'entités : [`$expand`]($expand.md), [`$filter`]($filter), [`$orderby`]($orderby), [`$skip`]($skip.md), et [`$top/$limit`]($top_$limit.md).
+When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), and [`$top/$limit`]($top_$limit.md).
 
 ### Exemple
 

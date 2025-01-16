@@ -68,9 +68,9 @@ Désigne l'emplacement d'une icône par rapport à l'objet formulaire.
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles           |
-| ------------- | --------------- | --------------------------- |
-| iconPlacement | string          | "aucun", "gauche", "droite" |
+| Nom           | Type de données | Valeurs possibles       |
+| ------------- | --------------- | ----------------------- |
+| iconPlacement | string          | "none", "left", "right" |
 
 #### Objets pris en charge
 
@@ -98,7 +98,7 @@ Le titre du bouton sera décalé vers la droite et vers le bas pour le nombre de
 
 ## Nombre d'états
 
-This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md).
+Cette propriété définit le nombre exact d'états présents dans l'image utilisée comme icône pour un [bouton avec icône](button_overview.md), une [case à cocher](checkbox_overview.md) ou un [bouton radio](radio_overview.md) personnalisé.
 
 The picture can contain from 2 to 6 states.
 
@@ -143,9 +143,9 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 #### Grammaire JSON
 
-| Nom   | Type de données | Valeurs possibles                              |
-| ----- | --------------- | ---------------------------------------------- |
-| icône | picture         | Chemin relatif ou filesystem en syntaxe POSIX. |
+| Nom  | Type de données | Valeurs possibles                              |
+| ---- | --------------- | ---------------------------------------------- |
+| icon | picture         | Chemin relatif ou filesystem en syntaxe POSIX. |
 
 #### Objets pris en charge
 

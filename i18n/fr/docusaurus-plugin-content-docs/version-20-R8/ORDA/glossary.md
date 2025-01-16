@@ -89,7 +89,7 @@ Une entité est un objet qui correspond à un modèle de dataclass. Une entité 
 
 Une entité peut être vue comme une instance de la dataclass, comme un enregistrement de la table correspondante à la dataclass dans son datastore associé. Cependant, une entité contient également des données connexes. Le but de l'entité est de gérer les données (créer, mettre à jour, supprimer).
 
-Pour plus d'informations, voir le chapitre Entités.
+For more information, see [entities](entities.md).
 
 ## Entity selection
 
@@ -138,7 +138,7 @@ Dans cette documentation, le type de données "Mixte" est utilisé pour désigne
 - collection
 - image(\*)
 
-_(\*) le type Image n'est pas supporté par des méthodes statistiques telles que dans_ `entitySelection.max()`.
+*(\*) le type Image n'est pas supporté par des méthodes statistiques telles que dans* `entitySelection.max()`.
 
 ## Verrouillage optimiste
 
@@ -156,7 +156,7 @@ La possibilité de lancer une ou plusieurs [actions](#actions) sur des [ressourc
 
 Voir [Attribut](#attribute).
 
-> Les _attributs_ et les _propriétés_ sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+> Les attributs et les propriétés sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## PropertyPath
 

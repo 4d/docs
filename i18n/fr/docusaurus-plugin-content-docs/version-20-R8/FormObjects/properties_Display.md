@@ -66,20 +66,20 @@ Le tableau ci-dessous montre les choix disponibles :
 | Nom du format                                | Chaine JSON                                 | Exemple (système US)                       |
 | -------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------- |
 | Système date court                           | systemShort (par défaut) | 03/25/20                                                      |
-| Système date abrégé _(1)_ | systemMedium                                | Wed, Mar 25, 2020                                             |
+| Système date abrégé *(1)* | systemMedium                                | Wed, Mar 25, 2020                                             |
 | Système date long                            | systemLong                                  | Wednesday, March 25, 2020                                     |
 | RFC 822                                      | rfc822                                      | Tue, 25 Mar 2020 22:00:00 GMT |
-| Siècle court                                 | shortCentury                                | 03/25/20 but 04/25/2032 _(2)_              |
+| Siècle court                                 | shortCentury                                | 03/25/20 but 04/25/2032 *(2)*              |
 | Interne date long                            | long                                        | March 25, 2020                                                |
-| Interne date abrégé _(1)_ | abbreviated                                 | Mar 25, 2020                                                  |
+| Interne date abrégé *(1)* | abbreviated                                 | Mar 25, 2020                                                  |
 | Interne date court                           | short                                       | 03/25/2020                                                    |
-| ISO Date Heure _(3)_      | iso8601                                     | 2020-03-25T00:00:00           |
+| ISO Date Heure *(3)*      | iso8601                                     | 2020-03-25T00:00:00           |
 
-_(1)_ Pour éviter toute ambiguïté et conformément à la pratique actuelle, les formats de date abrégés affichent "jun" pour juin et "jul" pour juillet. Cette particularité ne s'applique qu'aux versions françaises de 4D.
+*(1)* Pour éviter toute ambiguïté et conformément à la pratique actuelle, les formats de date abrégés affichent "jun" pour juin et "jul" pour juillet. Cette particularité ne s'applique qu'aux versions françaises de 4D.
 
-_(2)_ L'année est affichée avec deux chiffres lorsqu'elle appartient à l'intervalle (1930;2029), sinon elle est affichée avec quatre chiffres. Ceci est par défaut mais cela peut être modifié en utilisant la commande [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/fr/page392.html).
+*(2)* L'année est affichée avec deux chiffres lorsqu'elle appartient à l'intervalle (1930;2029), sinon elle est affichée avec quatre chiffres. Ceci est par défaut mais cela peut être modifié en utilisant la commande [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/fr/page392.html).
 
-_(3)_ Le format `ISO Date Time` correspond à la norme XML de représentation de la date et de l'heure (ISO8601). Il est principalement destiné à être utilisé lors de l'import/export de données au format XML et dans les services Web.
+*(3)* Le format `ISO Date Time` correspond à la norme XML de représentation de la date et de l'heure (ISO8601). Il est principalement destiné à être utilisé lors de l'import/export de données au format XML et dans les services Web.
 
 > Quel que soit le format d'affichage, si l'année est saisie avec deux chiffres, 4D considère que le siècle est le 21ème si l'année appartient à l'intervalle (00;29) et le 20e si elle appartient à l'intervalle (30;99). Ceci est le paramètre par défaut mais il peut être modifié en utilisant la commande [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/fr/page392.html).
 
@@ -402,7 +402,7 @@ Lorsqu'une [expression booléenne](properties_Object.md#expression-type) est aff
 
 | Nom           | Type de données | Valeurs possibles                                                                                                                 |
 | ------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| booleanFormat | string          | "\<_textWhenTrue_\>;\<_textWhenFalse_\>", par exemple "Assigné;Non assigné" |
+| booleanFormat | string          | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", par exemple "Assigné;Non assigné" |
 
 #### Objets pris en charge
 

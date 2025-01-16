@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | name | Text    | → | プロセス番号を取得したいプロセスの名前 |
 | id   | Text    | → | プロセス番号を取得したいプロセスのID |
 | \*   | 演算子     | → | サーバーからプロセス番号を返す     |
-| 戻り値  | Integer | ← | プロセス番号              |
+| 戻り値  | Integer | ← | Process number      |
 
 <!-- END REF-->
 

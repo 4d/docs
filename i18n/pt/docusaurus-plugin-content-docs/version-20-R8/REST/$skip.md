@@ -3,7 +3,7 @@ id: skip
 title: $skip
 ---
 
-Inicia la entidad definida por este número en la colección (_por ejemplo_, `$skip=10`)
+Inicia la entidad definida por este número en la colección (*por ejemplo*, `$skip=10`)
 
 ## Descrição
 

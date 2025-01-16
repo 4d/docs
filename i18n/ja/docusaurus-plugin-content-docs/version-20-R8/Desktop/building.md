@@ -12,7 +12,7 @@ title: アプリケーションビルド
 - XML形式のプロジェクトファイル定義を用いて、同じコンパイル済みストラクチャーから異なるアプリケーションのビルド
 - クライアント/サーバーアプリケーションのビルド
 - クライアントとサーバーの自動更新機能を備えたクライアント/サーバーアプリケーションのビルド
-- ビルド設定の保存 (_設定保存_ ボタン)
+- ビルド設定の保存 (*設定保存* ボタン)
 
 > コンパイル済みアプリケーションは、**読み取り専用** である [.4dz files](#コンパイル済みストラクチャーをビルド) ファイルに基づきます。 コンパイル済みアプリケーションの場合、ソースファイルを変更するコマンドや関数 (`CREATE INDEX` や `CREATE TABLE` (SQL)) は、デフォルトでは使用できないことに留意が必要です。 しかしながら、`PackProject` XML キー ([doc.4d.com](https://doc.4d.com) 参照) を使用することで、ローカルな変更をサポートするアプリケーションをビルドすることも可能です。
 
@@ -51,7 +51,7 @@ title: アプリケーションビルド
 
 ### ログファイル
 
-アプリケーションをビルドすると、4D はログファイル (_BuildApp.log.xml_) を生成して、プロジェクトの **Logs** フォルダーに保存します。 ログファイルにはビルド毎に以下の情報が書き込まれます:
+アプリケーションをビルドすると、4D はログファイル (*BuildApp.log.xml*) を生成して、プロジェクトの **Logs** フォルダーに保存します。 ログファイルにはビルド毎に以下の情報が書き込まれます:
 
 - ターゲットビルドの開始と終了
 - 生成されたファイルの名称とフルパス
@@ -81,7 +81,7 @@ Checking this file may help you saving time during the subsequent deployment ste
 
 インタープリターコードを含まないアプリケーションをビルドします。
 
-これにより、`Compiled Database/<project name>` フォルダーの中に _.4dz_ ファイルが作成されます。 たとえば、アプリケーション名を "MyProject" にした場合、4D は次のものを作成します:
+これにより、`Compiled Database/<project name>` フォルダーの中に *.4dz* ファイルが作成されます。 たとえば、アプリケーション名を "MyProject" にした場合、4D は次のものを作成します:
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
@@ -91,7 +91,7 @@ Checking this file may help you saving time during the subsequent deployment ste
 
 #### 関連するフォルダーを含む
 
-このオプションを選択すると、プロジェクトに関連するフォルダーが、Build フォルダーの _Components_ および _Resources_ フォルダーにコピーされます。 これらのフォルダーの詳細については [プロジェクトアーキテクチャーの説明](Project/architecture.md) を参照ください。
+このオプションを選択すると、プロジェクトに関連するフォルダーが、Build フォルダーの *Components* および *Resources* フォルダーにコピーされます。 これらのフォルダーの詳細については [プロジェクトアーキテクチャーの説明](Project/architecture.md) を参照ください。
 
 ### コンポーネントをビルド
 
@@ -99,17 +99,17 @@ Checking this file may help you saving time during the subsequent deployment ste
 
 [コンポーネント](../Extensions/develop-components.md) は特定の機能を実装した標準の 4D プロジェクトです。 ビルドされたコンポーネントを [他の 4Dプロジェクト (ホストアプリケーションプロジェクト) にインストール](../Project/components.md#basics) すると、ホストプロジェクトはその機能を利用できるようになります。
 
-If you have named your application _MyComponent_, 4D will automatically create a _Components_ folder with the following structure:
+If you have named your application *MyComponent*, 4D will automatically create a *Components* folder with the following structure:
 
 `<destination_folder>/Components/MyComponent.4dbase/Contents/`.
 
-The _MyComponent.4dbase_ folder is the [package folder of the compiled component](../Project/components.md#package-folder).
+The *MyComponent.4dbase* folder is the [package folder of the compiled component](../Project/components.md#package-folder).
 
-The _Contents_ folder contains:
+The *Contents* folder contains:
 
-- _MyComponent.4DZ_ file - the [compiled structure](#build-compiled-structure).
-- _Resources_ フォルダー: 関連リソースは自動的にこのフォルダーにコピーされます。 コンポーネントは、他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
-- An _Info.plist_ file - this file is required to build [notarizeable and stapleable](#about-notarization) components for macOS (it is ignored on Windows). The following [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) are prefilled:
+- *MyComponent.4DZ* file - the [compiled structure](#build-compiled-structure).
+- *Resources* フォルダー: 関連リソースは自動的にこのフォルダーにコピーされます。 コンポーネントは、他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
+- An *Info.plist* file - this file is required to build [notarizeable and stapleable](#about-notarization) components for macOS (it is ignored on Windows). The following [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) are prefilled:
   - `CFBundleDisplayName` and `CFBundleName` for the application name,
   - `NSHumanReadableCopyright`, can be [set using an XML key](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html).
   - `CFBundleShortVersionString` and `CFBundleVersion` for the application version (x.x.x format, e.g. 1.0.5), can be [set using an XML key](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html).
@@ -139,8 +139,8 @@ The principle consists of merging a compiled structure file with **4D Volume Des
 
 ダブルクリックで起動されるアプリケーションをビルドするには、まず 4D Volume Desktop が格納されているフォルダーの場所を指定しなければなりません:
 
-- _Windows_ では: 4D Volume Desktop.4DE や 4D Volume Desktop.RSR、その他動作に必要なファイルやフォルダーを含むフォルダーを選択します。 これらは、選択されたフォルダー内で同じ階層に置かれている必要があります。
-- _macOS_ では: ソフトウェアパッケージとして 4D Volume Desktop が提供されているので、このパッケージを選択します。
+- *Windows* では: 4D Volume Desktop.4DE や 4D Volume Desktop.RSR、その他動作に必要なファイルやフォルダーを含むフォルダーを選択します。 これらは、選択されたフォルダー内で同じ階層に置かれている必要があります。
+- *macOS* では: ソフトウェアパッケージとして 4D Volume Desktop が提供されているので、このパッケージを選択します。
 
 4D Volume Desktop フォルダーを選択するには **[...]** ボタンをクリックします。 フォルダーを選択するダイアログが表示されたら、4D Volume Desktop フォルダー (Windows) またはパッケージ (macOS) を選択します。
 
@@ -154,7 +154,7 @@ The principle consists of merging a compiled structure file with **4D Volume Des
 
 - **アプリケーション名** (デフォルト) - このモードでは、4D アプリケーションはストラクチャーファイルに対応する、最後に開かれたデータファイルを開きます。 このモードではアプリケーションパッケージをディスク上で自由に移動させることができます。 アプリケーションを複製する場合を除いて、通常は組み込みアプリに対してこのモードが使用されるべきです。
 
-- **アプリケーションパス** - このモードでは、組み込み 4D アプリケーションは自身に紐づいている _lastDataPath.xml_ ファイルを解析して、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探し、 同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。 ない場合は、最後に開かれたデータファイルを開きます (デフォルトモード)。
+- **アプリケーションパス** - このモードでは、組み込み 4D アプリケーションは自身に紐づいている *lastDataPath.xml* ファイルを解析して、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探し、 同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。 ない場合は、最後に開かれたデータファイルを開きます (デフォルトモード)。
 
 データリンクモードについての詳細は [最後に開かれたデータファイル](#最後に開かれたデータファイル) を参照してください。
 
@@ -164,27 +164,27 @@ The principle consists of merging a compiled structure file with **4D Volume Des
 
 アプリケーション名に "MyProject"と指定した場合、MyProject サブフォルダー内には以下のファイルが置かれます:
 
-- _Windows_
+- *Windows*
   - MyProject.exe - 実行可能ファイル、そして MyProject.rsr (アプリケーションリソースファイル)
   - 4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル
   - Database folder - Includes a Resources folder and  MyProject.4DZ file. これらはプロジェクトのコンパイル済みストラクチャーおよびプロジェクトの Resources フォルダーです。
-    **注**: このフォルダーには、定義されていれば _Default Data_ フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#データファイルの管理)を参照してください)。
+    **注**: このフォルダーには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#データファイルの管理)を参照してください)。
   - (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。
   - (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. この点に関する詳細は [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。
   - 4D Volume Desktop フォルダーに追加されたその他の項目 (あれば) ([4D Volume Desktop フォルダーのカスタマイズ](#4d-volume-desktop-フォルダーのカスタマイズ) 参照)
 
 実行ファイルの動作には、これらすべての項目が同じフォルダー内に必要です。
 
-- _macOS_
+- *macOS*
   - MyProject.app という名称のソフトウェアパッケージに、プラグインやコンポーネント、ライセンスなど必要な項目がすべて格納されます。 プラグインやコンポーネントの統合に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。 ライセンスの統合に関しては [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。 **Note**: In macOS, the [Application file](../commands-legacy/application-file.md) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
 
 #### 4D Volume Desktop フォルダーのカスタマイズ
 
-ダブルクリックで起動可能なアプリケーションをビルドする際、4D は 4D Volume Desktop フォルダーの内容を _Final Application_ 内のアプリケーション名サブフォルダーにコピーします。 必要に応じて、このコピー元である 4D Volume Desktop フォルダーの内容をカスタマイズすることできます。 たとえば:
+ダブルクリックで起動可能なアプリケーションをビルドする際、4D は 4D Volume Desktop フォルダーの内容を *Final Application* 内のアプリケーション名サブフォルダーにコピーします。 必要に応じて、このコピー元である 4D Volume Desktop フォルダーの内容をカスタマイズすることできます。 たとえば:
 
 - 特定の言語バージョンに対応する 4D Volume Desktop をインストールする
-- Add a custom _Plugins_ folder;
-- _Resources_ フォルダーの内容をカスタマイズする
+- Add a custom *Plugins* folder;
+- *Resources* フォルダーの内容をカスタマイズする
 
 > macOS では、4D Volume Desktop はソフトウェアパッケージ形式で提供されています。 内容を変更するにはパッケージを開きます (アイコンを **Control+クリック**)。
 
@@ -192,13 +192,13 @@ The principle consists of merging a compiled structure file with **4D Volume Des
 
 ダブルクリックで起動可能なアプリケーションを Webサーバーとして使用する場合、Web フォルダーやファイルは特定の場所にインストールする必要があります :
 
-- _cert.pem_ と _key.pem_ ファイル (オプション): これらのファイルはTLS接続とデータ暗号化コマンドに使用されます。
+- *cert.pem* と *key.pem* ファイル (オプション): これらのファイルはTLS接続とデータ暗号化コマンドに使用されます。
 - デフォルト Web ルートフォルダー
 
 インストール場所:
 
-- **Windows**: _Final Application\MyProject\Database_ サブフォルダー内
-- **macOS**: _MyProject.app_ ソフトウェアパッケージと同階層
+- **Windows**: *Final Application\MyProject\Database* サブフォルダー内
+- **macOS**: *MyProject.app* ソフトウェアパッケージと同階層
 
 #### About licenses
 
@@ -206,9 +206,9 @@ A stand-alone application requires a deployment license. It can be embedded at b
 
 | Deployment license     | 説明                                                                 | Where to enter it                                                                          |
 | ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| _4D OEM Desktop_       | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
-| _4D Unlimited Desktop_ | **Discontinued** - Embedded custom license                         | [Licenses page](#licenses) of the Build application dialog                                 |
-| _4D Desktop_           | Per-user license, allowing them to use stand-alone 4D applications | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
+| *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
+| *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                         | [Licenses page](#licenses) of the Build application dialog                                 |
+| *4D Desktop*           | Per-user license, allowing them to use stand-alone 4D applications | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
 
 ## クライアント/サーバーページ
 
@@ -289,7 +289,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 - **アプリケーション名** (デフォルト) - このモードでは、4D アプリケーションはストラクチャーファイルに対応する、最後に開かれたデータファイルを開きます。 このモードではアプリケーションパッケージをディスク上で自由に移動させることができます。 アプリケーションを複製する場合を除いて、通常は組み込みアプリに対してこのモードが使用されるべきです。
 
-- **アプリケーションパス** - このモードでは、組み込み 4D アプリケーションは自身に紐づいている _lastDataPath.xml_ ファイルを解析して、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探し、 同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。 ない場合は、最後に開かれたデータファイルを開きます (デフォルトモード)。
+- **アプリケーションパス** - このモードでは、組み込み 4D アプリケーションは自身に紐づいている *lastDataPath.xml* ファイルを解析して、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探し、 同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。 ない場合は、最後に開かれたデータファイルを開きます (デフォルトモード)。
 
 データリンクモードについての詳細は [最後に開かれたデータファイル](#最後に開かれたデータファイル) を参照してください。
 
@@ -336,7 +336,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 | 現在のサーバープラットフォーム | 必要なファイル                                                   | 詳細                                                                                                                                                                                                                                      |
 | --------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| macOS           | Windows用4D Volume Desktop _または_ Windows クライアントアップデートアーカイブ | デフォルトでは、Windows用の `4D Volume Desktop` アプリケーションを選択します。 前もって Windows上で構築された `.4darchive` ファイルを選択するには、**Shift** を押しながら [...] をクリックします。 |
+| macOS           | Windows用4D Volume Desktop *または* Windows クライアントアップデートアーカイブ | デフォルトでは、Windows用の `4D Volume Desktop` アプリケーションを選択します。 前もって Windows上で構築された `.4darchive` ファイルを選択するには、**Shift** を押しながら [...] をクリックします。 |
 | Windows         | macOS クライアントアップデートアーカイブ                                   | 前もって macOS でビルドされた署名入り `.4darchive` ファイルを選択します。                                                                                                                                                                                         |
 
 [クライアントアプリケーションをビルド](#クライアントアプリケーションをビルド) と [自動更新を有効にする](#サーバーアプリケーション内部のクライアントアプリケーションのコピー) オプションのみを選択することで、サーバーとは異なるプラットフォーム上で `.4darchive` ファイルをビルドすることができます。
@@ -345,7 +345,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 サーバーアプリケーションが更新されると、クライアントアプリケーションへの更新通知が自動でおこなわれます。
 
-これは次のように動作します: クライアント/サーバーアプリケーションの新しいバージョンをビルドする際、新しいクライアントは **ApplicationName** Server フォルダー内の **Upgrade4DClient** サブフォルダーに圧縮して格納されます (macOS では、これらのフォルダーはサーバーパッケージ内に配置されます)。 クロスプラットフォームのクライアントアプリケーションを生成した場合には、各プラットフォーム用に _.4darchive_ という更新ファイルが格納されます:
+これは次のように動作します: クライアント/サーバーアプリケーションの新しいバージョンをビルドする際、新しいクライアントは **ApplicationName** Server フォルダー内の **Upgrade4DClient** サブフォルダーに圧縮して格納されます (macOS では、これらのフォルダーはサーバーパッケージ内に配置されます)。 クロスプラットフォームのクライアントアプリケーションを生成した場合には、各プラットフォーム用に *.4darchive* という更新ファイルが格納されます:
 
 クライアントアプリケーションに更新を通知するには、古いサーバーアプリケーションを新しいバージョンで置き換えて起動します。 あとの処理は自動でおこなわれます。
 
@@ -368,7 +368,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 このエラーが発生する原因は複数ありえます。 このエラーが表示されるような場合は、まず次の点をチェックしてみてください:
 
-- **パス名** - アプリケーションビルドダイアログや XMLキー (たとえば _ClientMacFolderToWin_) で指定されたパス名の有効性をチェックしてください。 とくに 4D Volume Desktop へのパスをチェックしてください。
+- **パス名** - アプリケーションビルドダイアログや XMLキー (たとえば *ClientMacFolderToWin*) で指定されたパス名の有効性をチェックしてください。 とくに 4D Volume Desktop へのパスをチェックしてください。
 - **読み書き権限** - クライアントマシン上でカレントユーザーがクライアントアプリケーションを更新する書き込みアクセス権を持っているか確認してください。
 
 ### 生成されるファイル
@@ -381,18 +381,18 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 これらのフォルダーの内容はカレントのプラットフォームにより異なります:
 
-- _Windows_ - 各フォルダーに `<ApplicationName>Client.exe` (クライアント用) あるいは `<ApplicationName>Server.exe` (サーバー用) という名前の実行ファイル、およびそれぞれに対応する.rsrファイルが作成されます。 これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。
-- _macOS_ - 各フォルダーは `<ApplicationName>Client` (クライアント用) と `<ApplicationName>Server` (サーバー用) という名前のアプリケーションパッケージになっています。 各パッケージには動作に必要なすべてのファイルが含まれます。 macOS では、アプリケーションを実行するためにパッケージをダブルクリックします。
+- *Windows* - 各フォルダーに `<ApplicationName>Client.exe` (クライアント用) あるいは `<ApplicationName>Server.exe` (サーバー用) という名前の実行ファイル、およびそれぞれに対応する.rsrファイルが作成されます。 これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。
+- *macOS* - 各フォルダーは `<ApplicationName>Client` (クライアント用) と `<ApplicationName>Server` (サーバー用) という名前のアプリケーションパッケージになっています。 各パッケージには動作に必要なすべてのファイルが含まれます。 macOS では、アプリケーションを実行するためにパッケージをダブルクリックします。
 
 > ビルドされた macOSパッケージには、Windows版のサブフォルダーと同じものが格納されています。 ビルドされた macOS パッケージの内容を表示するにはアイコンを **Control+クリック** して、"パッケージの内容を表示"を選択します。
 
-"クライアントの自動更新を有効にする" オプションを選択している場合、`<ApplicationName>Server` フォルダー/パッケージには追加で _Upgrade4DClient_ サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
+"クライアントの自動更新を有効にする" オプションを選択している場合、`<ApplicationName>Server` フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
 
 #### Webファイルの場所
 
 サーバーやクライアントを Webサーバーとして使用する場合、Webサーバーが使用するファイルを特定の場所に配置しなければなりません :
 
-- _cert.pem_ と _key.pem_ ファイル (オプション): これらのファイルはTLS接続とデータ暗号化コマンドに使用されます。
+- *cert.pem* と *key.pem* ファイル (オプション): これらのファイルはTLS接続とデータ暗号化コマンドに使用されます。
 - デフォルト Web ルートフォルダー (WebFolder)
 
 インストール場所:
@@ -409,7 +409,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 4D ではクライアントアプリケーションにコンパイル済ストラクチャーを埋め込むことができます。 この機能を使用すると、たとえば、`.4dlink` ファイルを `OPEN DATABASE` コマンドで実行することで異なるサーバーアプリケーションにアクセスできるような "ポータル" アプリケーションをユーザーに提供することができます。
 
-この機能を有効化するためには、_buildApp_ 設定ファイルに `DatabaseToEmbedInClientWinFolder` または `DatabaseToEmbedInClientMacFolder` キーを追加します。 いずれかのキーが存在する場合、アプリケーションビルドプロセスの途中で組み込みシングルユーザーアプリケーションが生成され、コンパイルされたストラクチャーが (EnginedServer.4Dlink ファイルの代わりに) "Database" フォルダー内に置かれます。
+この機能を有効化するためには、*buildApp* 設定ファイルに `DatabaseToEmbedInClientWinFolder` または `DatabaseToEmbedInClientMacFolder` キーを追加します。 いずれかのキーが存在する場合、アプリケーションビルドプロセスの途中で組み込みシングルユーザーアプリケーションが生成され、コンパイルされたストラクチャーが (EnginedServer.4Dlink ファイルの代わりに) "Database" フォルダー内に置かれます。
 
 - シングルユーザーアプリケーション内に "Default Data" フォルダーがあれば、アプリケーションにはライセンスが埋め込まれます。
 - シングルユーザーアプリケーション内に "Default Data" フォルダーがなければ、データファイルおよびライセンスなしでアプリケーションが実行されます。
@@ -417,7 +417,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 基本シナリオは以下の通りです:
 
 1. アプリケーションビルド ダイアログボックス内にて、"コンパイルされたストラクチャーをビルド" オプションを選択し、シングルユーザーモードで使用されるアプリケーションの .4DC または .4DZ ファイルを生成します。
-2. クライアント/サーバーアプリケーションの _buildApp.4DSettings_ ファイル内で、コンパイルされたシングルユーザーアプリケーションを格納しているフォルダへのパスを以下の xml キーに指示します:
+2. クライアント/サーバーアプリケーションの *buildApp.4DSettings* ファイル内で、コンパイルされたシングルユーザーアプリケーションを格納しているフォルダへのパスを以下の xml キーに指示します:
 
 - `DatabaseToEmbedInClientWinFolder`
 - `DatabaseToEmbedInClientMacFolder`
@@ -425,9 +425,9 @@ Windows用サーバーアプリケーションのビルドに使用される App
 3. クライアント/サーバーアプリケーションをビルドします。 これは以下のように動作します:
 
 - シングルユーザーアプリケーションのフォルダー全体が、組み込みクライアントの "Database" フォルダー内にコピーされます。
-- "Database" フォルダーの _EnginedServer.4Dlink_ ファイルは生成されません。
+- "Database" フォルダーの *EnginedServer.4Dlink* ファイルは生成されません。
 - シングルユーザーアプリケーションのコピーが持つ .4DC、.4DZ、.4DIndy ファイルは、組み込みクライアントの名前へとファイル名が変更されます。
-- `PublishName` キーは、組み込みクライアントの _info.plist_ にコピーされません。
+- `PublishName` キーは、組み込みクライアントの *info.plist* にコピーされません。
 - シングルユーザーデータベースに "Default Data" フォルダーがない場合、組み込みクライアントはデータなしで実行されます。
 
 Automatic update 4D Server features ([Current version](#current-version) number, [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md) command...) は、シングルユーザーアプリケーションにおいても標準のリモートアプリケーションと同様に動きます。 接続時、シングルユーザーアプリケーションは `CurrentVers` キーを 4D Server バージョンレンジと比較します。 レンジ外だった場合、アップデートされているシングルユーザーアプリケーションがサーバーからダウンロードされ、アップデーターがローカルアップデートプロセスを実行します。
@@ -436,17 +436,17 @@ Automatic update 4D Server features ([Current version](#current-version) number,
 
 クライアントおよびサーバーのキャッシュフォルダーは、リソースやコンポーネントなどの共有要素を格納するのに使用されます。 これらは、サーバーとリモートクライアント間の通信を管理するのに必要です。 クライアント/サーバーアプリケーションは、クライアントおよびサーバーシステム両方のキャッシュフォルダーにデフォルトパス名を使用します。
 
-特殊な場合においては、特定のアーキテクチャーを実装するために、これらのフォルダー名をカスタマイズする必要があるかもしれません (後述参照)。 このため、4D は _buildApp_ 設定ファイルにて使用可能な `ClientServerSystemFolderName` および `ServerStructureFolderName` キーを提供しています。
+特殊な場合においては、特定のアーキテクチャーを実装するために、これらのフォルダー名をカスタマイズする必要があるかもしれません (後述参照)。 このため、4D は *buildApp* 設定ファイルにて使用可能な `ClientServerSystemFolderName` および `ServerStructureFolderName` キーを提供しています。
 
 #### クライアントキャッシュフォルダー
 
 それぞれ異なるデータセットを使用している以外は同様の複数の組み込みサーバーにクライアントアプリケーションが接続するような場合、クライアント側のキャッシュフォルダー名をカスタマイズすると便利かもしれません。 このような場合に、同じローカルリソースを複数回ダウンロードするのを避けるため、同一のローカルキャッシュフォルダーを使用することができます。
 
-- デフォルトの設定 (_サーバーへの接続ごとに専用のキャッシュフォルダーがダウンロード/更新されます_):
+- デフォルトの設定 (*サーバーへの接続ごとに専用のキャッシュフォルダーがダウンロード/更新されます*):
 
 ![](../assets/en/Admin/cachea.png)
 
-- `ClientServerSystemFolderName` キーの使用 (_すべてのサーバーに対して同じキャッシュフォルダーが使用されます_):
+- `ClientServerSystemFolderName` キーの使用 (*すべてのサーバーに対して同じキャッシュフォルダーが使用されます*):
 
 ![](../assets/en/Admin/cacheb.png)
 
@@ -454,11 +454,11 @@ Automatic update 4D Server features ([Current version](#current-version) number,
 
 それぞれ異なる 4Dのバージョンでビルドされた同じサーバーアプリケーションを同一のマシン上で実行する場合、サーバー側のキャッシュフォルダー名をカスタマイズすると便利です。 各サーバーで独自のリソースを使用するには、サーバーキャッシュフォルダーをカスタマイズする必要があります。
 
-- デフォルトの設定 (_同じサーバーアプリケーションは同じキャッシュフォルダーを共有します_):
+- デフォルトの設定 (*同じサーバーアプリケーションは同じキャッシュフォルダーを共有します*):
 
 ![](../assets/en/Admin/cacheServera.png)
 
-- `ServerStructureFolderName` キーの使用 (_各サーバーアプリケーションに専用のキャッシュフォルダーが使用されます_):
+- `ServerStructureFolderName` キーの使用 (*各サーバーアプリケーションに専用のキャッシュフォルダーが使用されます*):
 
 ![](../assets/en/Admin/cacheServerb.png)
 
@@ -517,17 +517,17 @@ This tab displays the list of available [deployment licenses that you can embed]
 
 :::info
 
-If you keep the list empty, you build a stand-alone application without embedded deployment license. In this case, the end-user will have to purchase and enter a per-user _4D Desktop_ license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. For more information, see the [**About licenses**](#about-licenses) paragraph.
+If you keep the list empty, you build a stand-alone application without embedded deployment license. In this case, the end-user will have to purchase and enter a per-user *4D Desktop* license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. For more information, see the [**About licenses**](#about-licenses) paragraph.
 
 :::
 
-Your current _4D Developer Professional_ license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
+Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
 
 ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。
 
-\[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの _Licenses_ フォルダーの内容が表示されます。 For more information about the location of this folder, refer to the [Get 4D folder](../commands-legacy/get-4d-folder.md) command.
+\[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 For more information about the location of this folder, refer to the [Get 4D folder](../commands-legacy/get-4d-folder.md) command.
 
-開発ライセンスとそれに対応した配布ライセンスを選択します。 These files were generated or updated when the _4D Developer Professional_ license and the deployment licenses were purchased.
+開発ライセンスとそれに対応した配布ライセンスを選択します。 These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased.
 
 ファイルを選択すると、リストに選択内容が反映されます:
 
@@ -592,13 +592,13 @@ For more information on the stapling concept, please read [this Apple forum post
 
 - **macOS** - アプリケーションビルドの際にアイコンをカスタマイズするには、 icns タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。
 
-> Apple, Inc. より、_icns_ アイコンファイルを作成するツールが提供されています。 (詳細については、[Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2) を参照してください)
+> Apple, Inc. より、*icns* アイコンファイルを作成するツールが提供されています。 (詳細については、[Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2) を参照してください)
 
-アイコンファイルの名前は、プロジェクトファイル名 + "_.icns_" 拡張子でなければなりません。 4D は自動でこのファイルを認識し、アイコンとして使用します (_.icns_ ファイルは _ApplicationName.icns_ に名称変更されて Resourcesフォルダーに置かれます。さらに _info.plist_ ファイルの _CFBundleFileIcon_ エントリーを更新します)。
+アイコンファイルの名前は、プロジェクトファイル名 + "*.icns*" 拡張子でなければなりません。 4D は自動でこのファイルを認識し、アイコンとして使用します (*.icns* ファイルは *ApplicationName.icns* に名称変更されて Resourcesフォルダーに置かれます。さらに *info.plist* ファイルの *CFBundleFileIcon* エントリーを更新します)。
 
-- **Windows** - アプリケーションビルドの際にアイコンをカスタマイズするには、 _.ico_ タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。
+- **Windows** - アプリケーションビルドの際にアイコンをカスタマイズするには、 *.ico* タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。
 
-アイコンファイルの名前は、プロジェクトファイル名 + "_.ico_" 拡張子でなければなりません。 4Dは自動でこのファイルを認識し、アイコンとして使用します。
+アイコンファイルの名前は、プロジェクトファイル名 + "*.ico*" 拡張子でなければなりません。 4Dは自動でこのファイルを認識し、アイコンとして使用します。
 
 You can also set specific [XML keys](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) in the buildApp.4DSettings file to designate each icon to use. 次のキーが利用できます:
 
@@ -636,7 +636,7 @@ You can also set specific [XML keys](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-データファイルパスは _lastDataPath.xml_ という名前の専用ファイルに保存されます。
+データファイルパスは *lastDataPath.xml* という名前の専用ファイルに保存されます。
 
 これにより、アプリケーションのアップデートを提供したときにも、ローカルのユーザーデータファイル (最後に使用されたデータファイル) が初回の起動から自動的に開かれます。
 
@@ -650,12 +650,12 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 そのため 4D では、アプリケーションパスを使用してデータファイルとリンクすることも可能です。 このとき、データファイルは特定のパスを使用してリンクされるので、最後に開かれたファイルであるかは問われません。 この設定を使うには、データリンクモードの基準を **アプリケーションパス** に設定します。
 
-このモードを使えば、組み込みアプリがいくつあっても、それぞれが専用のデータファイルを使えます。 ただし、デメリットもあります: アプリケーションパッケージを移動させてしまうとアプリケーションパスが変わってしまうため、データファイルを見つけられなくなります。 この場合、ユーザーは開くデータファイルを指定するダイアログを提示され、正しいファイルを選択しなくてはなりません。 一度選択されれば、_lastDataPath.xml_ ファイルが更新され、新しい "executablePath" 属性のエントリーが保存されます。
+このモードを使えば、組み込みアプリがいくつあっても、それぞれが専用のデータファイルを使えます。 ただし、デメリットもあります: アプリケーションパッケージを移動させてしまうとアプリケーションパスが変わってしまうため、データファイルを見つけられなくなります。 この場合、ユーザーは開くデータファイルを指定するダイアログを提示され、正しいファイルを選択しなくてはなりません。 一度選択されれば、*lastDataPath.xml* ファイルが更新され、新しい "executablePath" 属性のエントリーが保存されます。
 
-_データがアプリケーション名でリンクされている場合の複製:_
+*データがアプリケーション名でリンクされている場合の複製:*
 ![](../assets/en/Project/datalinking1.png)
 
-_データがアプリケーションパスでリンクされている場合の複製:_
+*データがアプリケーションパスでリンクされている場合の複製:*
 ![](../assets/en/Project/datalinking2.png)
 
 このデータリンクモードはアプリケーションビルドの際に選択することができます。 これには、次の二つの方法があります:

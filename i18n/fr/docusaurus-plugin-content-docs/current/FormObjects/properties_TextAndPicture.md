@@ -68,9 +68,9 @@ Désigne l'emplacement d'une icône par rapport à l'objet formulaire.
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles           |
-| ------------- | --------------- | --------------------------- |
-| iconPlacement | string          | "aucun", "gauche", "droite" |
+| Nom           | Type de données | Valeurs possibles       |
+| ------------- | --------------- | ----------------------- |
+| iconPlacement | string          | "none", "left", "right" |
 
 #### Objets pris en charge
 
@@ -141,9 +141,9 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 #### Grammaire JSON
 
-| Nom   | Type de données | Valeurs possibles                                              |
-| ----- | --------------- | -------------------------------------------------------------- |
-| icône | picture         | Chemin relatif ou filesystem en syntaxe POSIX. |
+| Nom  | Type de données | Valeurs possibles                                              |
+| ---- | --------------- | -------------------------------------------------------------- |
+| icon | picture         | Chemin relatif ou filesystem en syntaxe POSIX. |
 
 #### Objets pris en charge
 
@@ -239,8 +239,8 @@ Pour associer un symbole de pop up menu à un bouton, vous disposez de deux opti
 
 Chaque option précise la relation entre le bouton et le pop up menu associé :
 
-- When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.
-- When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. Seule la sélection de l’action dans le pop up menu provoque son déclenchement.
+- Lorsque le pop up menu est **séparé**, un clic sur la partie gauche du bouton exécute directement l’action courante du bouton ; cette action peut être modifiée via le pop up menu accessible dans la partie droite du bouton.
+- Lorsque le pop up menu est **lié**, un simple clic sur le bouton ne déclenche aucune autre action que l’affichage du pop up menu. Seule la sélection de l’action dans le pop up menu provoque son déclenchement.
 
 :::info
 

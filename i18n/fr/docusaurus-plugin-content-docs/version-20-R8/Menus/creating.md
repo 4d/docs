@@ -18,11 +18,11 @@ Cela permet à l'utilisateur d'accéder au mode Application dès que le projet e
 
 La barre de menus par défaut contient trois menus : Fichier, Edition et Mode.
 
-- **Fichier** : ce menu comporte uniquement la commande **Quitter**. L’action automatique _Quitter_ est associée à la commande, ce qui a pour effet de provoquer la fermeture de l’application.
+- **Fichier** : ce menu comporte uniquement la commande **Quitter**. L’action automatique *Quitter* est associée à la commande, ce qui a pour effet de provoquer la fermeture de l’application.
 - **Edition** : menu standard et entièrement modifiable. Les fonctions d'édition telles que copier, coller, etc. sont définies à l'aide d'actions standard.
 - **Mode** : par défaut, ce menu contient la commande **Retour au mode Développement**, permettant de sortir du mode Application.
 
-> Les libellés apparaissent _en caractères italiques_ car il s’agit de références et non de textes en dur. Pour plus d’informations sur ce point, reportez-vous à la section [Utiliser des références dans les titres de menus](properties.md#title).
+> Les libellés apparaissent *en caractères italiques* car il s’agit de références et non de textes en dur. Pour plus d’informations sur ce point, reportez-vous à la section [Utiliser des références dans les titres de menus](properties.md#title).
 
 Vous pouvez modifier cette barre de menus comme vous le souhaitez ou créer des barres de menus supplémentaires.
 
@@ -34,14 +34,15 @@ Vous pouvez modifier cette barre de menus comme vous le souhaitez ou créer des 
    OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list.
    Si vous avez créé une barre de menu, une nouvelle barre de menus apparaît dans la liste, contenant les menus par défaut (Fichier et Edition).
 2. (Facultatif) Effectuez un double-clic sur le nom du menu/de la barre de menus afin de le rendre éditable et saisissez un nom personnalisé.
-   OR Enter the custom name in the "Title" area.
+   OU
+   Saisissez le nom personnalisé dans la zone “Titre”.
    Les noms des barres de menu doivent être uniques. Ils peuvent comporter jusqu’à 31 caractères. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
 
 ### A l'aide du langage 4D
 
-Utilisez la commande de `Create menu` pour créer une nouvelle barre de menu ou une référence de menu (_MenuRef_) en mémoire.
+Utilisez la commande de `Create menu` pour créer une nouvelle barre de menu ou une référence de menu (*MenuRef*) en mémoire.
 
-Lorsque les menus sont gérés par des références _MenuRef_, il n'y a pas de différence en soi entre un menu et une barre de menus. Dans les deux cas, il s'agit d'une liste d'éléments. Seul leur utilisation diffère. Dans le cas d'une barre de menus, chaque élément correspond à un menu lui-même composé d'éléments.
+Lorsque les menus sont gérés par des références *MenuRef*, il n'y a pas de différence en soi entre un menu et une barre de menus. Dans les deux cas, il s'agit d'une liste d'éléments. Seul leur utilisation diffère. Dans le cas d'une barre de menus, chaque élément correspond à un menu lui-même composé d'éléments.
 
 `Créer un menu` permet de créer des menus vides (à remplir à l'aide de l'option `APPEND MENU ITEM` ou `INSERT MENU ITEM`) ou des menus créés à partir de menus conçus dans l'éditeur de menus.
 
@@ -60,7 +61,8 @@ Pour ajouter une ligne de menu :
    Click on the add ![](../assets/en/Menus/PlussNew.png) button located below the central list.
    4D ajoute une nouvelle ligne avec le nom par défaut “Ligne X”, où X représente le nombre de lignes déjà créées.
 3. Double-cliquez sur le nom de la commande pour passer en mode édition et saisissez un nom personnalisé.
-   OR Enter the custom name in the "Title" area. Il peut comporter jusqu’à 31 caractères. Vous pouvez saisir le nom comme "en dur" ou saisir une référence (voir ci-dessous).
+   OU
+   Saisissez le nom personnalisé dans la zone “Titre”. Il peut comporter jusqu’à 31 caractères. Vous pouvez saisir le nom comme "en dur" ou saisir une référence (voir ci-dessous).
 
 ### A l'aide du langage 4D
 
@@ -77,7 +79,7 @@ Pour supprimer une barre de menus, un menu ou une ligne de menu, vous disposez d
 - Select the item to be deleted and click on the delete ![](../assets/en/Menus/MinussNew.png) button located beneath the list.
 - ou, utiliser la commande **Supprimer ...** dans le menu contextuel ou le menu d’options de l’éditeur.
 
-> Il est impossible de supprimer Menu Bar #1.
+> Il est impossible de supprimer la Barre #1.
 
 ### A l'aide du langage 4D
 
@@ -113,4 +115,4 @@ Pour détacher un menu, cliquez avec le bouton droit dans la liste centrale sur 
 
 ### A l'aide du langage 4D
 
-Etant donné qu'il n'y a pas de différence entre les menus et les barres de menus dans le langage de 4D, rattacher des menus ou des sous-menus se fait de la même manière : utilisez le paramètre _sous-menu_ de la commande `APPEND MENU ITEM` pour rattacher u
+Etant donné qu'il n'y a pas de différence entre les menus et les barres de menus dans le langage de 4D, rattacher des menus ou des sous-menus se fait de la même manière : utilisez le paramètre *sous-menu* de la commande `APPEND MENU ITEM` pour rattacher u

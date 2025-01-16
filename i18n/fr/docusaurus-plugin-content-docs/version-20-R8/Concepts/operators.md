@@ -242,7 +242,7 @@ Dans ce cas, `$phone` stockera soit un numéro de téléphone, soit la chaîne "
 
 #### Exemple 2
 
-On dispose d'une table appelée Person avec un champ _name_ , ainsi qu'un champ _maiden name_ pour les femmes mariées.
+On dispose d'une table appelée Person avec un champ *name* , ainsi qu'un champ *maiden name* pour les femmes mariées.
 
 L'exemple suivant vérifie s'il y a un nom de jeune fille et le stocke dans une variable, sinon il stocke simplement le nom de la personne :
 
@@ -341,7 +341,7 @@ Toutes les autres valeurs sont considérées comme **truthy**, notamment :
 
 - 0 - zéro numérique (Entier ou autre)
 
-Dans 4D, l'évaluation à **truthy** et **falsy** reflète la **possibilité d'utilisation** d'une valeur, ce qui signifie qu'une valeur truthy existe et peut être traitée par le code sans générer d'erreurs ou de résultats inattendus. L'objectif est de fournir un moyen pratique de gérer les valeurs _undefined_ et _null_ dans les objets et les collections, de sorte qu'un nombre réduit d'instructions [If…Else](flow-control.md#ifelseend-if) soit nécessaire pour éviter les erreurs d'exécut
+Dans 4D, l'évaluation à **truthy** et **falsy** reflète la **possibilité d'utilisation** d'une valeur, ce qui signifie qu'une valeur truthy existe et peut être traitée par le code sans générer d'erreurs ou de résultats inattendus. L'objectif est de fournir un moyen pratique de gérer les valeurs *undefined* et *null* dans les objets et les collections, de sorte qu'un nombre réduit d'instructions [If…Else](flow-control.md#ifelseend-if) soit nécessaire pour éviter les erreurs d'exécut
 
 Par exemple, lorsque vous utilisez un opérateur en [court-circuit OR](#short-circuit-or-operator-) :
 
@@ -349,7 +349,7 @@ Par exemple, lorsque vous utilisez un opérateur en [court-circuit OR](#short-ci
 $value:=$object.value || $defaultValue
 ```
 
-... vous obtenez la valeur par défaut chaque fois que _$object_ ne contient pas la propriété `value` OU quand elle est _null_. Cet opérateur vérifie donc l'existence ou la possibilité d'utilisation de la valeur et non une valeur spécifique. Notez que puisque la valeur numérique 0 existe et est utilisable, elle n'est pas traitée spécialement, donc elle est **truthy**.
+... vous obtenez la valeur par défaut chaque fois que *$object* ne contient pas la propriété `value` OU quand elle est *null*. Cet opérateur vérifie donc l'existence ou la possibilité d'utilisation de la valeur et non une valeur spécifique. Notez que puisque la valeur numérique 0 existe et est utilisable, elle n'est pas traitée spécialement, donc elle est **truthy**.
 
 En ce qui concerne les valeurs représentant des collections, des objets ou des chaînes, les valeurs "vides" sont considérées comme **falsy**. C'est pratique lorsque vous voulez assigner une valeur par défaut chaque fois qu'une valeur vide est rencontrée.
 

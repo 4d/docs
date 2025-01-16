@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Fichiers journaux
 ---
 
-Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les journaux sont généralement démarrés ou arrêtés en utilisant des sélecteurs des commandes [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/fr/page642.html), [`WEB SET OPTION`](https://doc.4d.com/4dv20/help/command/fr/page1210.html) ou [`HTTP SET OPTION`](https://doc.4d.com/4dv20/help/command/fr/page1160.html) et sont stockés dans le dossier [Logs](Project/architecture.md#logs) du projet.
+Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 Les informations stockées dans les journaux doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
 
@@ -285,7 +285,7 @@ Ces fichiers journaux enregistrent chaque échange entre l'application 4D et le 
 
 - SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
 - POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
+- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.md)
 
 Les fichiers peuvent être générés en deux versions :
 

@@ -179,7 +179,7 @@ title: プリエンプティブプロセス
 
 :::
 
-[シンボルファイル](../Project/compiler.md/#メソッドの全リスト) (有効化されていた場合)には、それぞれのメソッドについてのスレッドセーフの状態が含まれます。
+The [symbol file](../Project/compiler.md#complete-list-of-methods), if enabled, also contains the thread safety status for each method.
 
 ### ユーザーインターフェース
 

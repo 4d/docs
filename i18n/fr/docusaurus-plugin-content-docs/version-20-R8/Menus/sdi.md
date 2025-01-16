@@ -7,7 +7,7 @@ Sous Windows, les développeurs 4D peuvent tester et configurer leurs applicatio
 
 :::info
 
-Le concept SDI/MDI n'existe pas sur macOS. Cette fonctionnalité concerne uniquement des applications Windows, et les options s'y référant sont ignorées sous macOS.
+The concept of sdi.mdI does not exist on macOS. Cette fonctionnalité concerne uniquement des applications Windows, et les options s'y référant sont ignorées sous macOS.
 
 :::
 
@@ -71,7 +71,7 @@ Pour gérer cette situation, les applications 4D exécutées en mode SDI incluen
 
 :::note
 
-Lorsqu'un menu avec une action standard associée pour _quitter_ est appelé, l'application quitte et toutes les fenêtres sont fermées, quel que soit l'endroit d'où le menu a été appelé.
+Lorsqu'un menu avec une action standard associée pour *quitter* est appelé, l'application quitte et toutes les fenêtres sont fermées, quel que soit l'endroit d'où le menu a été appelé.
 
 :::
 

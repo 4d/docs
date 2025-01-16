@@ -68,11 +68,11 @@ Trois options d’emplacement sont proposées :
 
 #### Prise en charge de Mecab (version japonaise)
 
-En système japonais, 4D prend en charge la librairie _MeCab_, comportant un algorithme d’indexation des mots-clés particulièrement adapté à la langue japonaise.
+En système japonais, 4D prend en charge la librairie *MeCab*, comportant un algorithme d’indexation des mots-clés particulièrement adapté à la langue japonaise.
 
-Cet algorithme est utilisé par défaut dans les versions japonaises de 4D. Si vous le souhaitez, vous pouvez désactiver l’utilisation de l’algorithme _MeCab_et utiliser la librairie classique _ICU_.
+Cet algorithme est utilisé par défaut dans les versions japonaises de 4D. Si vous le souhaitez, vous pouvez désactiver l’utilisation de l’algorithme *MeCab*et utiliser la librairie classique *ICU*.
 
-Pour désactiver _MeCab_, il vous suffit de cocher l’option **N’utiliser que les caractères non alphanumériques pour les mots-clés** :
+Pour désactiver *MeCab*, il vous suffit de cocher l’option **N’utiliser que les caractères non alphanumériques pour les mots-clés** :
 
 ![](../assets/en/settings/non-alphanumeric-chars.png)
 
@@ -92,9 +92,9 @@ Utilisez les paramètres de cet onglet pour configurer la mémoire cache de la b
     La définition de bornes est particulièrement utile pour les bases de données distribuées sur des machines dont vous ne connaissez pas a priori la configuration mémoire. Dans ce cas, les bornes vous permettent de garantir des performances minimales dans tous les cas. Le schéma suivant illustre ce fonctionnement :
 
   Exemple de calcul de la mémoire cache :
-  _Mémoire physique à réserver = 256 Mo
+  *Mémoire physique à réserver = 256 Mo
   Pourcentage de la mémoire disponible utilisé pour le cache = 50%
-  Taille maximale = 1 Go Taille minimale = 128 Mo_
+  Taille maximale = 1 Go Taille minimale = 128 Mo*
 
   ![](../assets/en/settings/memory-maximum-size.png)
 

@@ -33,7 +33,7 @@ As cópias de segurança são feitas automaticamente na hora definida nessa pág
 
 ## Comando BACKUP
 
-Quando o comando de linguagem 4D `BACKUP` é executado a partir de qualquer método, o backup começa a usar os parâmetros atuais conforme definido nas Configurações. Você pode usar os métodos de banco de dados `On Backup Startup` e `On Backup Shutdown` para lidar com o processo de backup (consulte o manual _4D Language Reference_).
+Quando o comando de linguagem 4D `BACKUP` é executado a partir de qualquer método, o backup começa a usar os parâmetros atuais conforme definido nas Configurações. Você pode usar os métodos de banco de dados `On Backup Startup` e `On Backup Shutdown` para lidar com o processo de backup (consulte o manual *4D Language Reference*).
 
 ## Gerenciar o processo de  backup
 
@@ -81,7 +81,7 @@ O histórico de cópia de segurança é chamado "Backup Journal[001].txt" e fica
 Em determinadas estratégias de copia de segurança (por exemplo, no caso de que se realizem copias de segurança de numerosos arquivos anexos), o histórico de cópias de segurança pode alcançar rapidamente um grande tamanho. Dois mecanismos podem ser usados para controlar este tamanho:
 
 - **Backup automático**: Antes de cada backup, o aplicativo examina o tamanho do arquivo de diário de backup atual. Se for superior a 10 MB, se arquiva o arquivo atual e é criado um arquivo com o número [xxx] incrementado, por exemplo "Backup Journal[002].txt”. Quando o arquivo número 999 for alcançado, a numeração volta para 1 e os arquivos existentes começam a ser substituídos.
-- **Possibilidade de reduzir a quantidade de informações registradas**: Para fazer isso, basta modificar o valor da chave `VerboseMode` no arquivo _Backup.4DSettings_ do projeto. Como padrão, essa chave é definida como True. Se mudar o valor desta chave a False, só se armazenará no diário de copias de segurança a informação principal: data e hora de inicio da operação  e os erros encontrados. As chaves XML relativas à configuração de backup são descritas no manual _Backup das chaves XML 4D_.
+- **Possibilidade de reduzir a quantidade de informações registradas**: Para fazer isso, basta modificar o valor da chave `VerboseMode` no arquivo *Backup.4DSettings* do projeto. Como padrão, essa chave é definida como True. Se mudar o valor desta chave a False, só se armazenará no diário de copias de segurança a informação principal: data e hora de inicio da operação  e os erros encontrados. As chaves XML relativas à configuração de backup são descritas no manual *Backup das chaves XML 4D*.
 
 ## backupHistory.json
 

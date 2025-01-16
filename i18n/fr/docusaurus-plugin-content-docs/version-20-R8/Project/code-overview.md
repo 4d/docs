@@ -30,7 +30,7 @@ Pour plus d'informations, reportez-vous à la section [Classes](../Concepts/clas
 
 Pour supprimer une méthode ou une classe existante, vous pouvez :
 
-- sur votre disque, supprimer le fichier _.4dm_ du dossier "Sources",
+- sur votre disque, supprimer le fichier *.4dm* du dossier "Sources",
 - in the 4D Explorer, select the method or class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
 
 > Pour supprimer une méthode objet, choisissez **Supprimer la méthode objet** dans l'[éditeur de formulaires](../FormEditor/formEditor.md) (menu **Objet** ou menu contextuel).
@@ -46,8 +46,8 @@ La fonction d’import/export est multi-plate-forme : une méthode exportée sou
 
 4D peut exporter et importer les méthodes dans deux formats :
 
-- Méthode 4D (extension _.c4d_) : Dans ce format, les méthodes sont exportées sous forme encodée. Les noms d’objets sont transformés en références (tokens). Ce format permet notamment d’échanger des méthodes entre des applications 4D et des plug-ins dans langues différentes. En revanche, il n’est pas possible de les visualiser dans un éditeur de texte.
-- Texte (extension _.txt_) : Dans ce format, les méthodes sont exportées sous forme de texte uniquement. Dans ce cas, les méthodes sont lisibles à l'aide d'un éditeur de texte standard ou d'un outil de contrôle de sources.
+- Méthode 4D (extension *.c4d*) : Dans ce format, les méthodes sont exportées sous forme encodée. Les noms d’objets sont transformés en références (tokens). Ce format permet notamment d’échanger des méthodes entre des applications 4D et des plug-ins dans langues différentes. En revanche, il n’est pas possible de les visualiser dans un éditeur de texte.
+- Texte (extension *.txt*) : Dans ce format, les méthodes sont exportées sous forme de texte uniquement. Dans ce cas, les méthodes sont lisibles à l'aide d'un éditeur de texte standard ou d'un outil de contrôle de sources.
 
 ## Propriétés des méthodes projet
 
@@ -149,7 +149,7 @@ Pour plus d’informations, reportez-vous à la section [Implémentations du mot
 
 #### Serveur REST
 
-_Cette option est obsolète. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md)._
+*Cette option est obsolète. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
 
 #### Modifier attributs globalement
 

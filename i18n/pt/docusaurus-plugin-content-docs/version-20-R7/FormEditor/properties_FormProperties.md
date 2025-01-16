@@ -57,11 +57,11 @@ Para obter mais informações, consulte [Páginas de formulário] (forms.md#form
 
 ## Nome do formulário
 
-This property is the name of the form itself and is used to refer to the form by name using the 4D language. O nome do formulário deve estar em conformidade com as [regras especificadas para identificadores] (Concepts/identifiers.md) em 4D.
+Essa propriedade é o nome do próprio formulário sendo usada para fazer referência ao formulário pelo nome usando a linguagem 4D. O nome do formulário deve estar em conformidade com as [regras especificadas para identificadores] (Concepts/identifiers.md) em 4D.
 
 #### Gramática JSON
 
-The form name is defined by the name of the folder that contains the form.4Dform file. Consulte [arquitetura do projeto](Project/architecture.md#sources-folder) para obter mais informações.
+O nome do formulário é definido pelo nome da pasta que contém o arquivo form.4Dform. Consulte [arquitetura do projeto](Project/architecture.md#sources-folder) para obter mais informações.
 
 ---
 
@@ -105,9 +105,9 @@ Para remover a herança, selecione `\<None>` na Property List (ou " " em JSON).
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                                                                                                                  |
-| ------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| inheritedForm | string        | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
+| Nome          | Tipo de dados | Valores possíveis                                                                                                                                                     |
+| ------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| inheritedForm | string        | Nome do formulário da tabela ou do projeto OU um caminho POSIX para um arquivo .json que descreve o formulário OU um objeto que descreve o formulário |
 
 ---
 
@@ -127,7 +127,7 @@ Defina como `\<None>` na Property List (ou " " em JSON) para herdar de um formul
 
 ## Publicado como subformulário
 
-Para que um formulário de componente seja selecionado como um [subformulário] (FormObjects/subform_overview.md) em um aplicativo host, ele deve ter sido explicitamente compartilhado. When this property is selected, the form will be published in the host application.
+Para que um formulário de componente seja selecionado como um [subformulário] (FormObjects/subform_overview.md) em um aplicativo host, ele deve ter sido explicitamente compartilhado. Quando esta propriedade for selecionada, o formulário será publicado na aplicação host.
 
 Apenas os projetos formulário podem ser especificados como subformulários publicados.
 
@@ -146,7 +146,7 @@ Quando a opção é usada, se a janela for aberta usando o comando "Abrir janela
 - a página atual,
 - a posição, tamanho e visibilidade de cada objecto de formulário (incluindo o tamanho e visibilidade das colunas da lista box).
 
-> Esta opção não leva em conta objetos gerados usando o comando `OBJECT DUPLICATE`. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+> Esta opção não leva em conta objetos gerados usando o comando `OBJECT DUPLICATE`. Para que um usuário recupere seu ambiente ao usar este comando, o desenvolvedor deve repetir a sequência de criação, definição e posicionamento dos objetos.
 
 Quando essa opção é selecionada, a opção [Save Value] (FormObjects/properties_Object.md#save-value) fica disponível para determinados objetos.
 
@@ -170,7 +170,7 @@ Você pode usar referências dinâmicas para definir os títulos das janelas dos
 
 - Uma referência XLIFF padrão armazenada na pasta Resources.
 - Um rótulo de tabela ou campo: A sintaxe a ser aplicada é `<?[TableNum]FieldNum>` ou `<?[TableName]FieldName>`.
-- Uma variável ou um campo: A sintaxe a ser aplicada é `\<VariableName>` ou `<[TableName]FieldName>`. The current value of the field or variable will be displayed in the window title.
+- Uma variável ou um campo: A sintaxe a ser aplicada é `\<VariableName>` ou `<[TableName]FieldName>`. O valor atual do campo ou variável será exibido no título da janela.
 
 > O número de caracteres para um título de janela é limitado a 31.
 

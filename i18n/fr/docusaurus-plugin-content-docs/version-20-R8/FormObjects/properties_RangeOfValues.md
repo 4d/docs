@@ -15,23 +15,23 @@ La valeur par défaut ne peut être utilisée que si le [type de source de donn�
 - time
 - boolean
 
-4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
+4D fournit des balises pour générer des valeurs par défaut pour la date, l'heure et le numéro de séquence. La date et l'heure proviennent de la date et de l'heure du système. 4D génère automatiquement les numéros de séquence nécessaires. Le tableau ci-dessous indique la balise à utiliser pour générer automatiquement des valeurs par défaut :
 
-| Stamp | Meaning         |
-| ----- | --------------- |
-| #D    | Current date    |
-| #H    | Current time    |
-| #N    | Sequence number |
+| Stamp | Description        |
+| ----- | ------------------ |
+| #D    | Date courante      |
+| #H    | Heure courante     |
+| #N    | Numéro de séquence |
 
-You can use a sequence number to create a unique number for each record in the table for the current data file. A sequence number is a longint that is generated for each new record. The numbers start at one (1) and increase incrementally by one (1). A sequence number is never repeated even if the record it is assigned to is deleted from the table. Each table has its own internal counter of sequence numbers. For more information, refer to the [Autoincrement](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029) paragraph.
+Vous pouvez utiliser un numéro de séquence pour créer un numéro unique pour chaque enregistrement de la table dans le fichier de données courant. Un numéro de séquence est un entier qui est généré pour chaque nouvel enregistrement. Les numéros commencent à un (1) et s'incrémentent de un (1). Un numéro de séquence n'est jamais répété, même si l'enregistrement auquel il est attribué est supprimé de la table. Chaque table possède son propre compteur interne de numéros de séquence. For more information, refer to the [Autoincrement](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029) paragraph.
 
 > Do not make confusion between this property and the "[default values](properties_DataSource.md#default-list-of-values)" property that allows to fill a list box column with static values.
 
 #### Grammaire JSON
 
-| Nom          | Type de données                     | Valeurs possibles                                          |
-| ------------ | ----------------------------------- | ---------------------------------------------------------- |
-| defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
+| Nom          | Type de données                     | Valeurs possibles                                                |
+| ------------ | ----------------------------------- | ---------------------------------------------------------------- |
+| defaultValue | string, number, date, time, boolean | Toute valeur et/ou une balise : "#D", "#H", "#N" |
 
 #### Objets pris en charge
 
@@ -39,11 +39,11 @@ You can use a sequence number to create a unique number for each record in the t
 
 ---
 
-## Excluded List
+## Exclusion
 
-Allows setting a list whose values cannot be entered in the object. Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
+Permet de définir une liste dont les valeurs ne peuvent pas être saisies dans l'objet. Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
 
-> If a specified list is hierarchical, only the items of the first level are taken into account.
+> Si une énumération spécifiée est hiérarchique, seuls les éléments du premier niveau sont pris en compte.
 
 #### Grammaire JSON
 
@@ -57,14 +57,14 @@ Allows setting a list whose values cannot be entered in the object. Si une valeu
 
 ---
 
-## Required List
+## Obligation
 
-Limite les entrées valides aux éléments de la liste. Par exemple, si vous souhaitez utiliser une liste pour les titres de postes, afin que les entrées valides soient limitées aux titres qui ont été approuvés par la direction.
+Limite les entrées valides aux éléments de la liste. Par exemple, vous pouvez souhaiter utiliser une liste pour les titres de postes afin que les entrées valides soient limitées aux intitulés qui ont été approuvés par la direction.
 
 La création d'une liste obligatoire n'affiche pas automatiquement la liste lorsque le champ est sélectionné. Si vous souhaitez afficher la liste requise, assignez la même liste à la propriété [Choice List](properties_DataSource.md#choice-list).
 Cependant, contrairement à la propriété [Choice List](properties_DataSource.md#choice-list), lorsqu'une liste obligatoire est définie, la saisie au clavier n'est plus possible, seule la sélection d'une valeur de liste à l'aide du pop-up menu est autorisée If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
 
-> If a specified list is hierarchical, only the items of the first level are taken into account.
+> Si une énumération spécifiée est hiérarchique, seuls les éléments du premier niveau sont pris en compte.
 
 #### Grammaire JSON
 

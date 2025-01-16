@@ -80,7 +80,7 @@ Function getArea() : Integer
 
 #### 例題 2
 
-参照 関数を持つ `Rectangle` クラスを作成します:
+参照 メンバーメソッドを持つ `Rectangle` クラスを作成します:
 
 ```4d
 //Class: Rectangle
@@ -89,7 +89,7 @@ Function nbSides() : Text
  return "I have 4 sides"
 ```
 
-`Square` クラスには、スーパークラスメソッドを呼び出す関数を定義します:
+`Square` クラスには、スーパークラスメソッドを呼び出すメンバーメソッドを定義します:
 
 ```4d
 //Class: Square

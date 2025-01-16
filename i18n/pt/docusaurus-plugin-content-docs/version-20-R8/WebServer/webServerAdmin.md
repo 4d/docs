@@ -45,7 +45,7 @@ When you select this command, the home page of the website published by the 4D a
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-This command lets you verify that the web server, home page display, etc. work correctly. La página se llama utilizando la URL _localhost_, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
+This command lets you verify that the web server, home page display, etc. work correctly. La página se llama utilizando la URL *localhost*, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
 
 ## Limpar a cache
 
@@ -72,9 +72,9 @@ La página **Watch** (sección **Web**) del Explorador de ejecución muestra la 
 
 ## URLs de administração
 
-Website administration URLS allow you to control the website published on your server. 4D Web Server acepta cuatro URLs específicas: _/4DSTATS_, _/4DHTMLSTATS_, /_4DCACHECLEAR_ y _/4DWEBTEST_.
+Website administration URLS allow you to control the website published on your server. 4D Web Server acepta cuatro URLs específicas: */4DSTATS*, */4DHTMLSTATS*, /*4DCACHECLEAR* y */4DWEBTEST*.
 
-> _/4DSTATS_, _/4DHTMLSTATS_ y _/4DCACHECLEAR_ sólo están disponibles para el diseñador y el administrador de la base de datos. If the 4D password system has not been activated, these URLs are available to all the users. /4DWEBTEST está sempre disponível.
+> */4DSTATS*, */4DHTMLSTATS* y */4DCACHECLEAR* sólo están disponibles para el diseñador y el administrador de la base de datos. If the 4D password system has not been activated, these URLs are available to all the users. /4DWEBTEST está sempre disponível.
 
 ### /4DSTATS
 
@@ -94,7 +94,7 @@ This information can allow you to check the functioning of your server and event
 
 ### /4DHTMLSTATS
 
-La URL _/4DHTMLSTATS_ devuelve, también como una HTML, la misma información que la URL _/4DSTATS_. La diferencia es que el campo **Cached Objects** sólo cuenta las páginas HTML (sin contar los archivos de imágenes). Además, esta URL devuelve el campo **Objetos filtrados**.
+La URL */4DHTMLSTATS* devuelve, también como una HTML, la misma información que la URL */4DSTATS*. La diferencia es que el campo **Cached Objects** sólo cuenta las páginas HTML (sin contar los archivos de imágenes). Además, esta URL devuelve el campo **Objetos filtrados**.
 
 | Elemento                | Descrição                                                               |
 | ----------------------- | ----------------------------------------------------------------------- |
@@ -107,11 +107,11 @@ La URL _/4DHTMLSTATS_ devuelve, también como una HTML, la misma información qu
 
 ### /4DCACHECLEAR
 
-La URL _/4DCACHECLEAR_ elimina inmediatamente las páginas estáticas y las imágenes de la caché. It allows you to therefore “force” the update of the pages that have been modified.
+La URL */4DCACHECLEAR* elimina inmediatamente las páginas estáticas y las imágenes de la caché. It allows you to therefore “force” the update of the pages that have been modified.
 
 ### /4DWEBTEST
 
-La URL _/4DWEBTEST_ permite verificar el estado del servidor web. Quando esse URL é chamado, 4D retorna um arquivo texto com os campos HTTP seguintes preenchidos:
+La URL */4DWEBTEST* permite verificar el estado del servidor web. Quando esse URL é chamado, 4D retorna um arquivo texto com os campos HTTP seguintes preenchidos:
 
 | Campo HTTP | Descrição                                           | Exemplo                                                                                                                                                                                                                                                                                                                                            |
 | ---------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -123,8 +123,8 @@ La URL _/4DWEBTEST_ permite verificar el estado del servidor web. Quando esse UR
 
 4D permite gerar dois logs de pedidos web:
 
-- un historial de depuración, útil en la fase de desarrollo del servidor web (_HTTPDebugLog.txt_),
-- un historial estandarizado de peticiones web, más bien utilizado con fines estadísticos (_logweb.txt_).
+- un historial de depuración, útil en la fase de desarrollo del servidor web (*HTTPDebugLog.txt*),
+- un historial estandarizado de peticiones web, más bien utilizado con fines estadísticos (*logweb.txt*).
 
 Ambos archivos de historial se crean automáticamente en la carpeta **Logs** del proyecto de aplicación.
 
@@ -151,7 +151,7 @@ The [web log recording file](webServerConfig.md#log-recording) can be enabled us
 
 #### CLF/DLF
 
-Each line of the file represents a request, such as: _host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length_ Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length* Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
 
 DLF (Combined Log Format) format is similar to CLF (Common Log Format) format and uses exactly the same structure. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent. Eis a descrição dos formatos CLF/DLF (não personalizáveis):
 
@@ -209,9 +209,9 @@ The following table lists the fields available for each format (in alphabetical 
 
 #### Frequência do backup
 
-Dado que un archivo _logweb.txt_ puede llegar a ser considerablemente grande, es posible establecer un mecanismo de archivo automático. The triggering of a backup can be based on a certain period of time (expressed in hours, days, week or months), or based on the file size; when the set deadline (or file size) is reached, 4D automatically closes and archives the current log file and creates a new one.
+Dado que un archivo *logweb.txt* puede llegar a ser considerablemente grande, es posible establecer un mecanismo de archivo automático. The triggering of a backup can be based on a certain period of time (expressed in hours, days, week or months), or based on the file size; when the set deadline (or file size) is reached, 4D automatically closes and archives the current log file and creates a new one.
 
-Cuando se activa la copia de seguridad del archivo de registro web, el archivo de registro se archiva en una carpeta llamada "Archivos Logweb", que se crea en el mismo nivel que el archivo _logweb.txt_.
+Cuando se activa la copia de seguridad del archivo de registro web, el archivo de registro se archiva en una carpeta llamada "Archivos Logweb", que se crea en el mismo nivel que el archivo *logweb.txt*.
 
 The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_mm_ss.txt.” For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: and 7 seconds: e 7 segundos: “D2020_09_04_T15_50_07.txt.”
 

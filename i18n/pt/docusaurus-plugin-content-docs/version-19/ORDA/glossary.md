@@ -80,7 +80,7 @@ Uma entidade é um objeto que corresponde a um modelo de dataclass. Uma entidade
 
 Uma entidade pode ser vista como uma instância da dataclass, como um registo da tabela que corresponde à dataclass no seu datastore associado. No entanto, uma entidade também contém dados relacionados. O objetivo da entidade é gerir dados (criar, atualizar, apagar).
 
-Para mais informações, consulte Entidades.
+For more information, see [entities](entities.md).
 
 ## Seleção de entidades
 

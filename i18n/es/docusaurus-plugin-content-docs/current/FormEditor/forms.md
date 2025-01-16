@@ -87,7 +87,7 @@ Puede crear varias páginas para un formulario de entrada. Si tiene más campos 
 
 - Coloque la información más importante en la primera página y la menos importante en otras.
 - Organice cada tema en su propia página.
-- Reducir o eliminar el desplazamiento durante la entrada de datos definiendo el [orden de entrada](../FormEditor/formEditor.html#data-entry-order).
+- Reduce or eliminate scrolling during data entry by setting the [entry order](formEditor.md#data-entry-order).
 - Deje espacio alrededor de los elementos del formulario para lograr un diseño de pantalla atractivo.
 
 Las páginas múltiples son útiles sólo para los formularios de entrada. No son para imprimir. Cuando se imprime un formulario de varias páginas, sólo se imprime la primera.
@@ -111,7 +111,7 @@ Cuando se ejecuta un formulario, los objetos se cargan y combinan en el siguient
 3. Página cero del formulario abierto
 4. Página actual del formulario abierto.
 
-Este orden determina el [orden de entrada](../FormEditor/formEditor.html#data-entry-order) de los objetos en el formulario.
+This order determines the default [entry order](formEditor.md#data-entry-order) of objects in the form.
 
 > Sólo las páginas 0 y 1 del formulario heredado pueden aparecer en otros formularios.
 

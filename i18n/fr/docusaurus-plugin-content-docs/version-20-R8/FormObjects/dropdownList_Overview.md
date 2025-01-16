@@ -20,7 +20,7 @@ Vous pouvez créer différents types de listes déroulantes avec différentes fo
 | Enumération enregistrée en tant que valeur    | Construit sur une liste de choix (standard)                             | Liste             | Valeur de l'élément sélectionné    | `dataSourceTypeHint: text` + `saveAs: value`                                                                                          |
 | Enumération enregistrée en tant que référence | Construit sur une liste de choix. La position de l'élément est sauvegardée | Liste             | Référence de l'élément sélectionné | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                   |
 | Enumération hiérarchique                      | Peut afficher un contenu hiérarchique                                                      | Liste             | Référence de liste                 | `dataSourceTypeHint: integer`                                                                                                         |
-| Action standard                               | Construit automatiquement par l'action                                                     | _any_             | _any except List reference_        | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                     |
+| Action standard                               | Construit automatiquement par l'action                                                     | *any*             | *any except List reference*        | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                     |
 
 ## Gestion des listes déroulantes
 
@@ -28,7 +28,7 @@ Vous pouvez créer différents types de listes déroulantes avec différentes fo
 
 > Cette fonctionnalité n'est disponible que dans les projets 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. Cet objet doit avoir les propriétés suivantes :
+An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) can be used as the data source of a drop-down list. Cet objet doit avoir les propriétés suivantes :
 
 | Propriété      | Type                   | Description                                                                                                                                                                                                                                                                   |
 | -------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

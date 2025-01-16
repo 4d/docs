@@ -28,7 +28,7 @@ Para restaurar manualmente una aplicación a través de una caja de diálogo est
    OR Execute the `RESTORE` command from a 4D method.
    Aparece una caja de diálogo estándar de apertura de archivos.
 2. Seleccione un archivo de copia de seguridad (.4bk) o un archivo de copia de seguridad del historial (.4bl) que desee restaurar y haga clic en **Abrir**.
-   Aparece una caja de diálogo que permite especificar la ubicación donde se restaurarán los archivos. Por defecto, 4D restaura los archivos en una carpeta llamada _Nomarchivo_ (sin extensión) situada junto al archivo. Puede mostrar la ruta de acceso:
+   Aparece una caja de diálogo que permite especificar la ubicación donde se restaurarán los archivos. Por defecto, 4D restaura los archivos en una carpeta llamada *Nomarchivo* (sin extensión) situada junto al archivo. Puede mostrar la ruta de acceso:
 
 ![](../assets/en/Backup/backup07.png)
 

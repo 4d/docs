@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Arquivo de histórico
 ---
 
-Aplicações 4D podem gerar vários arquivos de histórico ou log úteis para depuração e otimizar sua execução. Os logs geralmente são iniciados ou parados usando seletores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), ou [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
+Aplicações 4D podem gerar vários arquivos de histórico ou log úteis para depuração e otimizar sua execução. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 Informação gravada precisa ser analisada para detectar e corrigir os problemas. Esta seção oferece uma descrição detalhada dos arquivos de log abaixo:
 
@@ -65,11 +65,11 @@ Para cada petição, os campos abaixo estão logados:
 | time                                                                           | Data e hora usando formato ISO 8601: 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                                                                                                                                                                                                                      |
 | systemid                                                                       | ID de sistema                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | componente                                                                     | Assinatura de componente (por exemplo '4SQLS' ou 'dbmg')                                                                                                                                                                                                                                                                                                                                                                                                         |
-| process\_info_                                                                | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                                                                                                                                                                                                                                       |
+| process\*info*                                                                | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                                                                                                                                                                                                                                       |
 | request                                                                        | [ID da petição C/S u ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) ou mensagem para as solicitações SQL ou mensagens `LOG EVENT`                                                                                                                                                                                                                                                                                                                  |
 | bytes_in                                                  | Número de bytes recebidos                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | bytes_out                                                 | Número de bytes enviados                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| server\_duration \| exec\_duration | Depende de onde o registro é gerado:<li>_server\_duration_ quando gerado no cliente --Tempo gasto em microssegundos para que o servidor processe a solicitação e retorne uma resposta. B to F in image below, OR</li><li>_exec\_duration_ when generated on the server --Time taken in microseconds for the server to process the request. B a E na imagem abaixo.</li> |
+| server\_duration \| exec\_duration | Depende de onde o registro é gerado:<li>_server\*duration* quando gerado no cliente --Tempo gasto em microssegundos para que o servidor processe a solicitação e retorne uma resposta. B to F in image below, OR</li><li>_exec\*duration* when generated on the server --Time taken in microseconds for the server to process the request. B a E na imagem abaixo.</li> |
 | write\_duration                                          | Tempo em microssegundos para enviar a:<li>Solicitação (quando executado no cliente). A to B in image below.</li><li>Response (when run on the server). E a F na imagem abaixo.</li>                                                                                                                                                                           |
 | task_kind                                                 | Preemptivo ou cooperativo (respectivamente 'p' ou 'c')                                                                                                                                                                                                                                                                                                                                                                                                           |
 | rtt                                                                            | Tempo estimado em microssegundos para o cliente enviar a petição e o servidor para reconhecê-la. De A a D e de E a H na imagem abaixo.<li>Somente medido ao usar a camada de rede ServerNet, retorna 0 quando usado com a camada de rede legada.</li><li>Para as versões de Windows anteriores a Windows 10 ou Windows Server 2016, a chamada retornará 0.</li>                                                     |
@@ -256,7 +256,7 @@ Dependendo do evento, vários outros campos podem ser registrados, como task, so
 
 ### Níveis de registo de diagnóstico
 
-O arquivo _4DDiagnosticLog.txt_ pode registrar diferentes níveis de mensagens, de `ERROR` (mais importante) a `TRACE` (menos importante). Por padrão, o nível `INFO` é definido, o que significa que o arquivo registrará apenas eventos importantes, incluindo erros e resultados inesperados (veja abaixo).
+O arquivo *4DDiagnosticLog.txt* pode registrar diferentes níveis de mensagens, de `ERROR` (mais importante) a `TRACE` (menos importante). Por padrão, o nível `INFO` é definido, o que significa que o arquivo registrará apenas eventos importantes, incluindo erros e resultados inesperados (veja abaixo).
 
 Pode selecionar o nível das mensagens utilizando o seletor Diagnostic log level do comando SET DATABASE PARAMETER , consoante as suas necessidades. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
 
@@ -281,7 +281,7 @@ Esses históricos registram cada troca entre a aplicação 4D e o servidor de ma
 
 - SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
 - POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-- IMAP - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
+- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.md)
 
 Os arquivos de histórico podem ser produzidos em duas versões:
 
@@ -396,7 +396,7 @@ Eis um exemplo de um registo de ficheiro de registo ORDA do lado do cliente:
 
 ### Do lado do servidor
 
-O registo ORDA do lado do servidor regista cada pedido ORDA processado pelo servidor, bem como a resposta do servidor (opcional). As informações de registro são salvas em um arquivo .jsonl no disco da máquina do servidor (por padrão, _ordaRequests.jsonl_).
+O registo ORDA do lado do servidor regista cada pedido ORDA processado pelo servidor, bem como a resposta do servidor (opcional). As informações de registro são salvas em um arquivo .jsonl no disco da máquina do servidor (por padrão, *ordaRequests.jsonl*).
 
 Como iniciar esse log:
 

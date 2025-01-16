@@ -5,7 +5,7 @@ title: Fond et bordure
 
 ## Couleur de fond alternée
 
-Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Par défaut, _Automatique_ est sélectionné : la colonne utilise la couleur de fond alternative définie au niveau de la list box.
+Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Par défaut, *Automatique* est sélectionné : la colonne utilise la couleur de fond alternative définie au niveau de la list box.
 
 You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
 
@@ -25,15 +25,15 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 Définit la couleur de fond d'un objet.
 
-Dans le cas d'une list box, par défaut _Automatique_ est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
+Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
 
 You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles                          |
-| ------------ | --------------- | ------------------------------------------ |
-| border-style | string          | une valeur css; "transparent"; "automatic" |
+| Nom  | Type de données | Valeurs possibles                          |
+| ---- | --------------- | ------------------------------------------ |
+| fill | string          | une valeur css; "transparent"; "automatic" |
 
 #### Objets pris en charge
 
@@ -49,7 +49,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 `List box de type collection et de type sélection d'entité`
 
-Une expression ou une variable (les variables de tableau ne peuvent pas être utilisées) pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne de la list box. L'expression ou la variable sera évaluée pour chaque ligne affichée et doit retourner une valeur de couleur RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command in the _4D Language Reference manual_.
+Une expression ou une variable (les variables de tableau ne peuvent pas être utilisées) pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne de la list box. L'expression ou la variable sera évaluée pour chaque ligne affichée et doit retourner une valeur de couleur RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command in the *4D Language Reference manual*.
 
 You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) command with `lk background color expression` constant.
 
@@ -210,9 +210,9 @@ Définit l'arrière-plan de la list box sur "Transparent". When set, any [altern
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles |
-| ------------ | --------------- | ----------------- |
-| border-style | text            | "transparent"     |
+| Nom  | Type de données | Valeurs possibles |
+| ---- | --------------- | ----------------- |
+| fill | text            | "transparent"     |
 
 #### Objets pris en charge
 

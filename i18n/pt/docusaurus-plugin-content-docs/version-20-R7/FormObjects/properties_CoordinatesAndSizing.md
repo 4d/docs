@@ -154,7 +154,7 @@ Você também pode definir essa propriedade usando os comandos [OBJECT Get corne
 
 ---
 
-## Height
+## Alto
 
 Esta propriedade designa o tamanho vertical de um objeto.
 

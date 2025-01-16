@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Fichiers journaux
 ---
 
-Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les journaux sont généralement démarrés ou arrêtés en utilisant des sélecteurs des commandes [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/fr/page642.html), [`WEB SET OPTION`](https://doc.4d.com/4dv20/help/command/fr/page1210.html) ou [`HTTP SET OPTION`](https://doc.4d.com/4dv20/help/command/fr/page1160.html) et sont stockés dans le dossier [Logs](Project/architecture.md#logs) du projet.
+Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 Les informations stockées dans les journaux doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
 
@@ -69,7 +69,7 @@ Pour chaque requête, les champs suivants sont enregistrés :
 | request                                                                        | [ID de la requête C/S ou ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) ou message pour les requêtes SQL ou messages `LOG EVENT`                                                                                                                                                                                                                                                                                                                                                           |
 | bytes_in                                                  | Nombre d'octets reçus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | bytes_out                                                 | Nombre d'octets envoyés                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| server\_duration \| exec\_duration | Dépend de l'endroit où le journal est généré :<li>_server\_duration_ lorsqu'il est généré sur le client --Temps en microsecondes pris par le serveur pour traiter la requête et retourner une réponse. B à F dans l'image ci-dessous, OU</li><li>_exec\_duration_ lors de sa génération sur le serveur --Temps pris en microsecondes pour que le serveur traite la requête. B à E dans l'image ci-dessous.</li> |
+| server\_duration \| exec\_duration | Dépend de l'endroit où le journal est généré :<li>*server\_duration* lorsqu'il est généré sur le client --Temps en microsecondes pris par le serveur pour traiter la requête et retourner une réponse. B à F dans l'image ci-dessous, OU</li><li>*exec\_duration* lors de sa génération sur le serveur --Temps pris en microsecondes pour que le serveur traite la requête. B à E dans l'image ci-dessous.</li> |
 | write\_duration                                          | Temps pris en microsecondes pour l'envoi de la :<li>Requête (lorsqu'elle est exécutée sur le client). A à B dans l'image ci-dessous.</li><li>Réponse (lorsqu'elle est exécutée sur le serveur). E à F dans l'image ci-dessous.</li>                                                                                                                                                                   |
 | task_kind                                                 | Préemptif ou coopératif (respectivement 'p' ou 'c')                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | rtt                                                                            | Temps en microsecondes pris par le client pour envoyer la requête et pour qu'elle soit reçue par le serveur. De A à D et de E à H dans l'image ci-dessous.<li>Seulement mesuré lors de l'utilisation de la couche réseau ServerNet, renvoie 0 lorsqu'il est utilisé avec l'ancienne couche réseau.</li><li>Pour les versions de Windows antérieures à Windows 10 ou Windows Server 2016, l'appel renverra 0.</li>                                           |
@@ -260,7 +260,7 @@ En fonction de l'événement, d'autres champs peuvent également être enregistr
 
 ### Niveaux du journal de diagnostic
 
-Le fichier _4DDiagnosticLog.txt_ peut enregistrer différents niveaux de messages, de `ERROR` (le plus important) à `TRACE` (le moins important). Par défaut, le niveau `INFO` est défini, ce qui signifie que le fichier n'enregistre que les événements importants, y compris les erreurs et les résultats inattendus (voir ci-dessous).
+Le fichier *4DDiagnosticLog.txt* peut enregistrer différents niveaux de messages, de `ERROR` (le plus important) à `TRACE` (le moins important). Par défaut, le niveau `INFO` est défini, ce qui signifie que le fichier n'enregistre que les événements importants, y compris les erreurs et les résultats inattendus (voir ci-dessous).
 
 Vous pouvez sélectionner le niveau des messages à l'aide du sélecteur `Diagnostic log level` de la commande [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), en fonction de vos besoins. Lorsque vous sélectionnez un niveau, les niveaux supérieurs (qui sont plus importants) sont implicitement sélectionnés également. Les niveaux suivants sont disponibles :
 
@@ -285,7 +285,7 @@ Ces fichiers journaux enregistrent chaque échange entre l'application 4D et le 
 
 - SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
 - POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
+- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.md)
 
 Les fichiers peuvent être générés en deux versions :
 
@@ -401,7 +401,7 @@ Voici un exemple d'enregistrement d'un fichier journal ORDA côté client :
 
 ### Côté serveur
 
-Le journal ORDA côté serveur enregistre chaque requête ORDA traitée par le serveur, ainsi que la réponse du serveur (facultatif). Les informations du journal sont enregistrées dans un fichier .jsonl sur le disque de la machine serveur (par défaut, _ordaRequests.jsonl_).
+Le journal ORDA côté serveur enregistre chaque requête ORDA traitée par le serveur, ainsi que la réponse du serveur (facultatif). Les informations du journal sont enregistrées dans un fichier .jsonl sur le disque de la machine serveur (par défaut, *ordaRequests.jsonl*).
 
 Pour lancer ce journal :
 
