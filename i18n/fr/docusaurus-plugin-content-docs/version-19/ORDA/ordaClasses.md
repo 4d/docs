@@ -108,8 +108,8 @@ Chaque table exposée avec ORDA affiche une classe DataClass dans le class store
 
 Class extends DataClass
 
-// Returns companies whose revenue is over the average
-// Returns an entity selection related to the Company DataClass
+// Retourne les entreprises dont le revenu est supérieur à la moyenne
+// Retourne une entity selection relative à la DataClass Company 
 
 Function GetBestOnes()
  $sel:=This.query("revenues >= :1";This.all().average("revenues"));
@@ -174,12 +174,12 @@ Chaque table exposée avec ORDA affiche une classe EntitySelection dans le class
 #### Exemple
 
 ```4d
-// cs.EmployeeSelection class
+// classe cs.EmployeeSelection
 
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection 
+//Extraire de cette entity selection les employés dont le salaire est supérieur à la moyenne.
 
 Function withSalaryGreaterThanAverage
  C_OBJECT($0)
@@ -235,13 +235,13 @@ End if
 
 Lors de la création ou de la modification de classes de modèles de données, vous devez veiller aux règles décrites ci-dessous :
 
-- Puisqu'ils sont utilisés pour définir des noms de classe DataClass automatiques dans le [class store](Concepts/classes.md#class-stores) **cs**, les tables 4D doivent être nommées afin d'éviter tout conflit dans l'espace de nommage **cs**. En particulier :
-  - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](Concepts/classes.md#class-names) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
+- Puisqu'elles sont utilisées pour définir des noms de classe DataClass automatiques dans le [class store](Concepts/classes.md#class-stores) **cs**, les tables 4D doivent être nommées afin d'éviter tout conflit dans l'espace de nommage **cs**. En particulier :
+  - Ne donnez pas le même nom à une table 4D et à une [classe utilisateur](Concepts/classes.md#class-names) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
   - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
 
-- Lors de la définition d'une classe, assurez-vous que l'instruction [`Class extends`](Concepts/classes.md#class-extends-classnameclass) correspond exactement au nom de la classe parente (sensible à la casse). Par exemple, `Class extends EntitySelection` pour une classe de sélection d'entité.
+- Lors de la définition d'une classe, assurez-vous que l'instruction [`Class extends`](Concepts/classes.md#class-extends-classnameclass) correspond exactement au nom de la classe parente (sensible à la casse). Par exemple, `Class extends EntitySelection` pour une classe d'entity selection.
 
-- Vous ne pouvez pas instancier un objet de classe de modèle de données avec le mot clé `new()` (une erreur est retournée). Vous devez utiliser une des méthodes standard listées dans la colonne [`Instanciée par` du tableau des classes ORDA](#architecture).
+- Vous ne pouvez pas instancier un objet de classe de modèle de données avec le mot clé `new()` (une erreur est retournée). Vous devez utiliser une des méthodes standard listées dans la colonne [`Instanciée par`](#architecture) du tableau des classes ORDA.
 
 - Vous ne pouvez pas remplacer une fonction de classe ORDA native du [class store](Concepts/classes.md#class-stores) **`4D`** par une fonction de classe utilisateur de modèle de données.
 
@@ -323,11 +323,11 @@ Avec ce mot-clé, la fonction sera toujours exécutée côté client.
 A noter que la fonction sera exécutée avec succès même si elle nécessite d'accéder au serveur (par exemple si le cache ORDA est expiré). Toutefois, il est fortement recommandé de s'assurer que la fonction locale n'accède pas aux données sur le serveur, sinon l'exécution locale pourrait n'apporter aucun avantage en termes de performances. Une fonction locale qui génère de nombreuses requêtes au serveur est moins efficace qu'une fonction exécutée sur le serveur qui ne retournerait que les valeurs résultantes. Prenons l'exemple suivant, avec une fonction sur l'entité Schools :
 
 ```4d
-// Get the youngest students  
-// Inappropriate use of local keyword
+// Obtenir les étudiants les plus jeunes  
+// Utilisation inappropriée du mot-clé local
 local Function getYoungest
  var $0 : Object
-    $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
+    $0:=This.students.query("birthDate >= :1" ; !2000-01-01 !).orderBy("birthDate desc").slice(0 ; 5)
 ```
 
 - **sans** le mot clé `local`, le résultat est donné en une seule requête
@@ -381,7 +381,7 @@ Code d'appel :
 ```4d
 var $status : Object
 
-//Form.student est chargé avec tous ses a attributs et mis à jour sur un Form
+//Form.student est chargé avec tous ses attributs et mis à jour
 $status:=Form.student.checkData()
 If ($status.success)
     $status:=Form.student.save() // appelle le serveur
