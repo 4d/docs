@@ -5,7 +5,7 @@ title: Fonte de dados
 
 ## Inserção automática
 
-When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory.
+Quando esta opção é selecionada, se usuário insere um valor que não é encontrado na lista associada ao objeto, este valor é automaticamente adicionado à lista armazenada na memória.
 
 Quando a opção **inserção automática** não está definida (padrão), o valor inserido é armazenado no objeto formulário, mas não na lista na memória.
 
