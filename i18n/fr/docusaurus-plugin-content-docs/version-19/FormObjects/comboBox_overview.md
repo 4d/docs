@@ -30,7 +30,7 @@ Si l'objet contient d'autres propriétés, elles sont ignorées.
 
 Lorsque l'utilisateur saisit du texte dans la combo box, la propriété `currentValue` de l'objet reçoit le texte saisi.
 
-### Utiliser un tableau
+### Utiliser une énumération
 
 Veuillez vous référer à **Utiliser un tableau** dans la [page liste déroulante](dropdownList_Overview.md#using-an-array) pour obtenir des informations sur l'initialisation du tableau.
 
@@ -53,7 +53,7 @@ Les objets de type combo box acceptent deux options spécifiques :
 
 - [Insertion automatique](properties_DataSource.md#automatic-insertion) : permet d'ajouter automatiquement une valeur à la source de données lorsque l'utilisateur saisit une valeur qui ne se trouve pas dans la liste associée à la combo box.
 - [Exclusion ](properties_RangeOfValues.md#excluded-list) (liste de valeurs exclues) : permet d'établir une liste dont les valeurs ne peuvent pas être saisies dans la combo box. Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
-> La possibilité d’associer [une liste de valeurs obligatoires](properties_RangeOfValues.md#required-list) n’est pas disponible pour les combo box. Dans une interface, si un objet doit proposer une liste finie de valeurs obligatoires, il faut utiliser un objet de type [liste déroulante](dropdownList_Overview.md#overview).
+> > La possibilité d’associer [une liste de valeurs obligatoires](properties_RangeOfValues.md#required-list) n’est pas disponible pour les combo box. Dans une interface, si un objet doit proposer une liste finie de valeurs obligatoires, il faut utiliser un objet de type [liste déroulante](dropdownList_Overview.md#overview).
 
 ## Propriétés prises en charge
 
