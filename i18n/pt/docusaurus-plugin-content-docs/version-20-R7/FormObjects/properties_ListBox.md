@@ -27,7 +27,7 @@ Para obter uma lista de propriedades compatíveis com os objetos coluna, consult
 
 `List box do tipo selecção`
 
-Specifies the form to use for modifying or displaying individual records of the list box.
+Especifica o formulário a ser usado para modificar ou exibir registros individuais do list box.
 
 O formulário especificado é apresentado:
 
@@ -50,13 +50,13 @@ O formulário especificado é apresentado:
 
 `List box do tipo selecção`
 
-Sets the action to be performed when a user double-clicks on a row in the list box. As opções disponíveis são:
+Define a ação a ser executada quando um usuário clica duas vezes em uma linha no list box. As opções disponíveis são:
 
 - **Não fazer nada** (padrão): clicar duas vezes em uma linha não aciona nenhuma ação automática.
 - **Editar registro**: clicar duas vezes em uma linha exibe o registro correspondente no formulário de detalhes definido [para o list box](#detail-form-name). O registo é aberto em modo de leitura-escrita para poder ser modificado.
 - **Exibir registro**: idêntico à ação anterior, exceto pelo fato de que o registro é aberto no modo somente leitura, de modo que não pode ser modificado.
 
-> \> > Double-clicking an empty row is ignored in list boxes.
+> Clicar duas vezes em uma linha vazia é ignorado nos list boxes.
 
 Independentemente da ação selecionada/escolhida, o evento de formulário `On Double clicked` é gerado.
 
