@@ -211,9 +211,9 @@ End if
 
 The `Try...Catch...End try` structure allows you to test a block code in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed.
 
-Unlike the `Try(expression)` keyword that evaluates a single-line expression, the `Try...Catch...End try` structure allows you to evaluate any code block, from the most simple to the most complex, without requiring an error-handling method. In addition, the `Catch` block can be used to handle the error in any custom way.
+`Try(expression)` キーワードが単一の行の式を評価するのとは異なり、`Try...Catch...End try` 文は、単純なものから複雑なものまで、任意のコードブロックを評価することができます。エラー処理メソッドは必要としない点は同じです。 また、`Catch` ブロックは、任意の方法でエラーを処理するために使用できます。
 
-The formal syntax of the `Try...Catch...End try` structure is:
+`Try...Catch...End try` 構文の正式なシンタックスは、以下の通りです:
 
 ```4d
 
@@ -225,22 +225,22 @@ End try
 
 ```
 
-The code placed between the `Try` and the `Catch` keywords is first executed, then the flow depends on the error(s) encountered during this execution.
+`Try` と `Catch` キーワード間のコードが最初に実行されます。その後のフローは、実行に発生したエラーによって異なります。
 
-- If no error is thrown, the code execution continues after the corresponding `End try` keyword. The code placed between the `Catch` and the `End try` keywords is not executed.
-- If the code block execution throws a _non-deferred error_, the execution flow stops and executes the corresponding `Catch` code block.
-- If the code block calls a method that throws a _deferred error_, the execution flow jumps directly to the corresponding `Catch` code block.
-- If a deferred error is directly thrown from the `Try` block, the execution flow continues until the end of the `Try` block and does not execute the corresponding `Catch` block.
+- エラーがスローされなかった場合には、対応する `End try` キーワードの後へとコード実行が継続されます。 `Catch` と `End try` キーワード間のコードは実行されません。
+- コードブロックの実行が _非遅延エラー_ をスローした場合、実行フローは停止し、対応する `Catch` コードブロックを実行します。
+- コードブロックが _非遅延エラー_ をスローするメソッドを呼び出した場合、実行フローは対応する `Catch` コードブロックへと直接ジャンプします。
+- 遅延エラーが `Try` ブロックから直接スローされた場合、実行フローは `Try` ブロックの終わりまで継続し、対応する `Catch` ブロックは実行しません。
 
 :::note
 
-If a _deferred_ error is thrown outside of the `Try` block, the code execution continues until the end of the method or function.
+_遅延_ エラーが `Try` ブロック外で投げられた場合、メソッドまたは関数の終わりまでコードが実行されます。
 
 :::
 
 :::info
 
-For more information on _deferred_ and _non-deferred_ errors, please refer to the [`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html) command description.
+_遅延_ エラーと _non-deferred_ エラーの詳細については、[`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html) コマンドの説明を参照してください。
 
 :::
 

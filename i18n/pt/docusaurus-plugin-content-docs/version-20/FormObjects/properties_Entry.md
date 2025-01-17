@@ -119,7 +119,7 @@ Aqui está uma tabela que explica cada uma das opções de filtro de entrada na 
 
 #### Objetos compatíveis
 
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Caixa de seleção](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -185,7 +185,7 @@ Esta propriedade está disponível para [objetos de entrada](input_overview.md) 
 
 #### Sim
 
-When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
+Quando esse valor é selecionado, a propriedade é gerenciada pela opção [Envolvimento de palavras](properties_Display.md#wordwrap).
 
 #### Gramática JSON
 
@@ -255,14 +255,14 @@ Essa propriedade mantém a seleção visível dentro do objeto depois que ele pe
 
 ## Atalho
 
-This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
+Essa propriedade permite definir teclas de significado especial (atalhos de teclado) para [botões](button_overview.md), [botões de rádio](radio_overview.md) e [caixas de seleção](checkbox_overview.md). Ele permite que o usuário use o controle usando o teclado em vez de ter que usar o mouse.
 
-You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
+Você pode configurar esta opção clicando no botão [...] na propriedade Atalhos na Lista de Propriedades.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
-> Também é possível atribuir um atalho a um comando de menu personalizado. Se houver um conflito entre dois atalhos, o objeto ativo terá prioridade. For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
+> Também é possível atribuir um atalho a um comando de menu personalizado. Se houver um conflito entre dois atalhos, o objeto ativo terá prioridade. Para obter mais informações sobre como associar atalhos a menus, consulte [Definição das propriedades do menu](../Menus/properties.md).
 
-To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](../Preferences/shortcuts.md) in the Preferences dialog box.
+Para ver uma lista de todos os atalhos usados no ambiente 4D Design , consulte a [Página de atalhos](../Preferences/shortcuts.md) na caixa de diálogo de Preferências.
 
 #### Gramática JSON
 
@@ -278,7 +278,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Botão imagem](pictureButton_overview.md) - [Botão rádio](radio_overview.md)
 
 ---
 
@@ -286,9 +286,9 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 Permite a passagem direta para o modo de edição em list boxes.
 
-When this option is enabled, list box cells switch to edit mode after a single user click, regardless of whether or not this area of the list box was selected beforehand. Note that this option allows cells to be edited even when the list box [selection mode](properties_ListBox.md#selection-mode) is set to "None".
+Quando essa opção está ativada, as células da caixa de listagem mudam para o modo de edição após um único clique do usuário, independentemente de essa área da caixa de listagem ter sido selecionada anteriormente. Observe que essa opção permite que as células sejam editadas mesmo quando o [modo de seleção](properties_ListBox.md#selection-mode) da caixa de listagem estiver definido como "Nenhum".
 
-When this option is not enabled, users must first select the cell row and then click on a cell in order to edit its contents.
+Quando esta opção não está habilitada, os usuários devem primeiro selecionar a linha da célula e, em seguida, clicar em uma célula para editar seu conteúdo.
 
 #### Gramática JSON
 

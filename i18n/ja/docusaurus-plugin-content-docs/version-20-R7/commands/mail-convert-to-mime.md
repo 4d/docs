@@ -49,7 +49,7 @@ var $mail: Object
 var $mime: Text
 $mail:=New object
 
-// Creation of a mail
+// メールの作成
 $mail.from:="tsales@massmarket.com"
 $mail.subject:="Terrific Sale! This week only!"
 $mail.textBody:="Text format email"
@@ -58,10 +58,10 @@ $mail.to:=New collection
 $mail.to.push(New object ("email";"noreply@4d.com"))
 $mail.to.push(New object ("email";"test@4d.com"))
 
-// transform the mail object in MIME
+// メールオブジェクトをMIMEに変換
 $mime:=MAIL Convert to MIME($mail)
 
-// Contents of $mime:
+// $mimeの中身:
 // MIME-Version: 1.0
 // Date: Thu, 11 Oct 2018 15:42:25 GMT
 // Message-ID: <7CA5D25B2B5E0047A36F2E8CB30362E2>

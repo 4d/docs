@@ -82,13 +82,13 @@ Quando essa opção está ativada, o método objeto é executado com o evento `O
 
 ## Métodos
 
-Referência de um método ligado ao objeto. Os métodos do objeto "gerencie" geralmente o objeto enquanto o formulário é exibido ou impresso. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
+Referência de um método ligado ao objeto. Os métodos do objeto "gerencie" geralmente o objeto enquanto o formulário é exibido ou impresso. Você não chama um método objeto — 4D o chama automaticamente quando um evento envolve o objeto ao qual o método objeto é anexado.
 
 São suportados vários tipos de referências de métodos:
 
 - um caminho de arquivo de método objeto padrão, ou seja, que usa o seguinte padrão:\
   `ObjectMethods/objectName.4dm`\
-  ... onde `objectName` é o [nome do objeto](properties_Object.md#object-name). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/_formName_/ObjectMethods/"). In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
+  ... onde `objectName` é o [nome do objeto](properties_Object.md#object-name). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/_formName_/ObjectMethods/"). Nesse caso, 4D trata automaticamente o método objeto quando as operações são executadas no objeto formulário (renomeação, duplicação, copiar/colar...)
 
 - um nome de método projeto: nome de um método projeto existente sem extensão de arquivo, ou seja:
   `myMethod`
@@ -150,12 +150,12 @@ Permite la selección de múltiples registros/opciones en una [lista jerárquica
 
 Permite ordenar dados de coluna clicando em um cabeçalho [listbox](listbox_overview.md). Esta opção é selecionada por defeito. Os arrays de tipo imagem (colunas) não podem ser ordenadas com esta funcionalidade.
 
-In list boxes based on a selection of records, the standard sort function is available only:
+Nos list boxes baseados em uma seleção de registros, a função de classificação padrão está disponível apenas:
 
 - Quando a fonte de dados é _Seleção atual_,
-- With columns associated with fields (of the Alpha, Number, Date, Time or Boolean type).
+- Com colunas associadas com campos (do tipo Alfa, Número, Data, Hora ou Booliano).
 
-In other cases (list boxes based on named selections, columns associated with expressions), the standard sort function is not available. A standard list box sort changes the order of the current selection in the database. However, the highlighted records and the current record are not changed. A standard sort synchronizes all the columns of the list box, including calculated columns.
+Em outros casos (list box baseados em seleções nomeadas, colunas associadas com expressões), a função de classificação padrão não está disponível. Uma classificação de list box padrão altera a ordem da seleção atual no banco de dados. No entanto, os registros destacados e o registro atual não são alterados. Uma classificação padrão sincroniza todas as colunas da list box, incluindo colunas calculadas.
 
 #### Gramática JSON
 
@@ -173,7 +173,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 Atividades típicas a serem executadas por objetos ativos (\*e.g., permitindo que o usuário aceite, cancele ou exclua registros, mova entre registros ou de página para página em um formulário multi-páginas, etc.) foi predefinido por 4D como ações padrão. Eles são descritos em detalhes na seção [Ações padrão](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) do _manual de Desenho_.
 
-You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed.
+Você pode atribuir uma ação padrão e um método projeto de um objeto. Neste caso, a ação padrão é geralmente executada depois que o método e o 4D usa esta ação para ativar/desativar o objeto conforme o contexto atual. Quando um objeto é desativado, o método projeto associado não pode ser executado.
 
 Você também pode definir essa propriedade usando o comando `OBJECT SET ACTION`.
 
