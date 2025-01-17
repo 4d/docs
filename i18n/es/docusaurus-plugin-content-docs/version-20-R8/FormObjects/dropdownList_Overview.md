@@ -121,11 +121,11 @@ Debe seleccionar cada evento que pruebe en sus sentencia Case. Los arrays siempr
 
 ### Utilizar una lista de selección
 
-Si desea utilizar una lista desplegable para gestionar los valores de un área de entrada (campo listado o variable), 4D le permite hacer referencia al campo o variable directamente como [fuente de datos](properties_Object.md#variable-or-expression) de la  Esto facilita la gestión de los campos/variables listados.
+Si desea utilizar una lista desplegable para gestionar los valores de un área de entrada (campo listado o variable), 4D le permite hacer referencia al campo o variable directamente como [fuente de datos](properties_Object.md#variable-or-expression) de la  Esto facilita la gestión de los campos/variables listados. Esto facilita la gestión de los campos/variables listados.
 
 Por ejemplo, en el caso de un campo "Color" que sólo puede contener los valores "Blanco", "Azul", "Verde" o "Rojo", es posible crear una lista que contenga estos valores y asociarla a una lista desplegable que haga referencia al campo "Color" 4D. 4D se encarga entonces de gestionar automáticamente la entrada y la visualización del valor actual en el formulario.
 
-> Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar. If you use a hierarchical list, only the first level is displayed and can be selected.
+> Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar. Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar.
 
 Para asociar una lista desplegable a un campo o variable, introduzca directamente el nombre del campo o variable como campo [Variable o Expresión](properties_Object.md#variable-or-expression) de la lista desplegable en la Lista de propiedades.
 
