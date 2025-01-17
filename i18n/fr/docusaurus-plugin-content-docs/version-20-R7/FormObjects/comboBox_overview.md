@@ -30,7 +30,7 @@ Si l'objet contient d'autres propriétés, elles sont ignorées.
 
 Lorsque l'utilisateur saisit du texte dans la combo box, la propriété `currentValue` de l'objet reçoit le texte saisi.
 
-### Utiliser un tableau
+### Utiliser une énumération
 
 Veuillez vous référer à **Utiliser un tableau** dans la [page liste déroulante](dropdownList_Overview.md#using-an-array) pour obtenir des informations sur l'initialisation du tableau.
 
