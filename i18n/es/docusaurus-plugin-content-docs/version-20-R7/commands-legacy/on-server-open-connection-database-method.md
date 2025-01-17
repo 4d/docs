@@ -5,135 +5,127 @@ slug: /commands/on-server-open-connection-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Server Open Connection database method.Syntax-->$1, $2, $3 -> On Server Open Connection database method -> $0<!-- END REF-->
-<!--REF #_command_.On Server Open Connection database method.Params-->
-| Parameter | Type |  | Description |
+<!--REF #_command_.Metodo base On Server Open Connection.Syntax-->$1, $2, $3 -> Método base On Server Open Connection -> $0<!-- END REF-->
+<!--REF #_command_.Metodo base On Server Open Connection.Params-->
+| Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Integer | &#8592; | User ID number used internally by 4D Server to identify users |
-| $2 | Integer | &#8592; | Connection ID number used internally by 4D Server to identify a connection |
-| $3 | Integer | &#8592; | Obsolete: Always returns 0 (but must be declared) |
-| $0 | Integer | &#8592; | 0 or omitted = connection accepted; other value = connection refused |
+| $1 | Entero largo | &#8592; | Número de usuario utilizado internamente por 4D Server para identificar los usuarios |
+| $2 | Entero largo | &#8592; | Número de conexión utilizado internamente por 4D Server para identificar una conexión |
+| $3 | Entero largo | &#8592; | Obsoleto: devuelve siempre 0 (pero debe declararse) |
+| $0 | Entero largo | &#8592; | 0 o se omite = conexión aceptada; otro valor = conexión rechazada |
 
 <!-- END REF-->
 
-#### When is the On Server Open Connection Database Method Called? 
+#### ¿Cuándo se llama el método base On Server Open Connection? 
 
-<!--REF #_command_.On Server Open Connection database method.Summary-->The **On Server Open Connection database method** is called once on the Server machine each time a connection process is started by a 4D remote workstation.<!-- END REF--> The **On Server Open Connection database method** is NOT invoked by any 4D environment other than 4D Server.
+<!--REF #_command_.Metodo base On Server Open Connection.Summary-->El **Método base On Server Open Connection** se llama una vez en el equipo servidor cada vez que un equipo 4D remoto inicia un proceso de conexión.<!-- END REF--> El **Método base On Server Open Connection** NO se invoca por otro entorno 4D diferente de 4D Server.
 
-The **On Server Open Connection database method** is called each time:
+El **Método base On Server Open Connection** se llama cada vez que:
 
-* a remote 4D connects (because the Application process starts)
-* a remote 4D opens the Design environment (because the Design process starts)
-* a remote 4D starts a global process (whose name does not begin with "$") which requires the creation of a cooperative process on the server **(\*)**. This process can be created using the [New process](new-process.md) command, a menu command or using the Execute Method dialog box.
+* un 4D remoto se conecta (inicio del proceso principal)
+* un 4D remoto abre el entorno Diseño (inicio del proceso de Diseño)
+* un 4D remoto inicia un proceso global, (cuyo nombre o comienza por "$") lo cual necesita de la creación de un proceso cooperativo en el servidor **(\*)**. Este proceso puede crearse utilizando el comando [New process](new-process.md), un comando de menú o la caja de diálogo "Ejecutar un método".
 
-In each case with a remote 4D, several processes are started—One on the client machine and one or two others (as needed) on the server machine. On the client machine, the process executes code and send requests to 4D Server. On the server machine, the **4D Client Process** (preemptive process) maintains the database environment for the client process (i.e., current selections and locking of records for user processes) and replies to requests sent by the process running on the client machine. The **4D Client Database process** (cooperative process) is in charge of monitoring the corresponding 4D Client process.
+En cada caso con un 4D remoto, se inician tres procesos. Uno en la máquina cliente y otros dos en el equipo servidor. En la máquina cliente, el proceso ejecuta el código y envía las peticiones a 4D Server. En el equipo servidor, el **proceso 4D Client** mantiene el entorno de la base de datos del proceso cliente (las selecciones actuales y el bloqueo de registros para el proceso usuario) y responde a las peticiones enviadas por el proceso ejecutado en la máquina cliente. El **proceso base 4D Client** está a cargo de controlar el proceso 4D Client correspondiente.
 
-**(\*)** Beginning with 4D v13, for optimization purposes, the server processes (a preemptive process for access to the database engine and a cooperative process for access to the language) are only created when necessary when executing client-side code. For example, here are the details of a 4D code sequence running in a new client process:  
+**(\*)** A partir de 4D v13, por razones de optimización los procesos servidores (proceso apropiativo para los accesos al motor de la base y proceso cooperativo para el acceso al lenguaje) sólo se crean durante la ejecución del código del lado del cliente. Por ejemplo, estos son los detalles de una secuencia de código 4D que se ejecuta en un nuevo proceso cliente:  
 
 ```4d
-  // global process begins without a new process on the server, like a local process.
+  // el proceso global comienza sin un nuevo proceso en el servidor, como un proceso local.
  CREATE RECORD([Table_1])
  [Table_1])field1_1:="Hello world"
- SAVE RECORD([Table_1]) // creation here of preemptive process on server
- $serverTime:=Current time(*) // creation here of cooperative process on server
-  // call to On Server Open Connection
+ SAVE RECORD([Table_1]) // creación aquí del proceso apropiativo en el servidor
+ $serverTime:=Current time(*) // creación aquí del proceso cooperativo en el servidor
+  // llamada de On Server Open Connection
 ```
 
-**Important**: Web connections and SQL connections do not invoke the **On Server Open Connection database method**. When a Web browser connects to 4D Server, the *On Web Authentication Database Method* (if any) and/or the [On Web Connection database method](on-web-connection-database-method.md) are invoked. When 4D Server receives an SQL query, the [On SQL Authentication database method](on-sql-authentication-database-method.md) (if one exists) is called. For more information, see the description of this database method in the 4D Language Reference manual.
+**Importante**: las conexiones web y las conexiones SQL no provocan la ejecución del **Método base On Server Open Connection**. Cuando un navegador web se conecta a 4D Server, se llaman el *Método de base On Web Authentication* (si lo hay) y/o la [Método base On Web Connection](metodo-base-on-web-connection.md).   
+Cuando 4D Server recibe una petición SQL, se llama el [Método base On SQL Authentication](metodo-base-on-sql-authentication.md)(si existe). Para mayor información, consulte la descripción de este método base en el manual de Lenguaje 4D.
 
-**Important**: When a Stored Procedure is started, the **On Server Open Connection database method** is NOT invoked. *Stored Procedures* are server processes, not 4D Client processes. They execute code on the Server machine, but do not reply to requests exchanged by a 4D client (or other clients) and 4D Server. 
+**Importante**: cuando se inicia un procedimiento almacenado, el **Método base On Server Open Connection** NO se llama. Los *Procedimientos almacenados* son procesos servidor y no procesos 4D Client. Ellos ejecutan el código en el equipo servidor, pero no responden a las peticiones intercambiadas por 4D client (u otros clientes) y 4D Server.
 
-#### How is the On Server Open Connection Database Method Called? 
+#### ¿Cómo se llama al método base On Server Open Connection? 
 
-The **On Server Open Connection database method** is executed on the 4D Server machine within the 4D Client process that provoked the call to the method.
+El Método base On Server Open Connection se ejecuta en el equipo servidor en el proceso 4D Client que provocó la llamada del método. 
 
-For example, if a remote 4D connects to a 4D Server interpreted database, the user process, the Design process and the client registration process (by default) for that client are started. The On Server Open Connection database method is therefore executed three times in a row—the first time within the Application process, the second time within the client registration process, and the third time within the Design process. If the three process are respectively the sixth, seventh and eighth process to be started on the Server machine, and if you call [Current process](current-process.md) from within the **On Server Open Connection database method**, the first time [Current process](current-process.md) returns 6, the second time 7 and the third time 8.
+Por ejemplo, si un 4D remoto se conecta a una base 4D Server interpretada, se inicia el proceso usuario, el proceso de diseño y el proceso de registro del cliente (por defecto). El Método base On Server Open Connection se ejecuta tres veces seguidas. La primera vez dentro del proceso principal, la segunda vez en el proceso de inscripción del cliente y la tercera vez en el proceso de diseño. Si los tres procesos son respectivamente el sexto, séptimo y octavo proceso a iniciar en el equipo servidor, y si llama [Current process](current-process.md) desde el Método base On Server Open Connection, la primera vez [Current process](current-process.md) devuelve 6, la segunda vez 7 y la tercera 8.
 
-Note that **On Server Open Connection database method** executes on the Server machine. It executes within the 4D Client process running on the Server machine, independent of the process running on the client side. In addition, at the moment when the method is invoked, the 4D Client process has not yet been named ([Process info](../commands/process-info.md) will not at this point return the name of the 4D Client process).
+Note que el Método base On Server Open Connection se ejecuta en el equipo servidor, al interior del proceso 4D Client en el servidor, independiente del proceso ejecutado en el cliente. Adicionalmente, en el momento en que se invoca el método, el proceso 4D Client no se ha nombrado aún ([Process info](../commands/process-info.md) no devolverá en este momento el nombre del proceso 4D Client).
 
-The **On Server Open Connection database method** has no access to the process variable table of the process running on the Client side. This table resides on the Client machine, not on the Server machine. 
+El Método base On Server Open Connection no tiene acceso a la tabla de las variables proceso del proceso ejecutado en el client. Esta tabla reside en el equipo client, no en el equipo servidor. 
 
-When the **On Server Open Connection database method** accesses a process variable, it works with a private and dynamically created process variable table for the 4D Client process. 
+Cuando el Método base On Server Open Connection accede a una variable proceso, trabaja con una tabla de variables proceso particular, creada dinámicamente por el proceso 4D Client. 
 
-4D Server passes three Long Integer parameters to the **On Server Open Connection database method** and expects a Long Integer result. The method must therefore be explicitly declared with three Long Integer parameters as well as a Long Integer function result:
+4D Server pasa tres parámetros de tipo Entero largo al Método base On Server Open Connection y espera un resultado Entero largo. El método debe por lo tanto ser declarado explícitamente con tres parámetros Entero largo así como también con un resultado de función Entero largo:
 
 ```4d
  var $0;$1;$2;$3 : Integer
 ```
 
-If you do not return a value in *$0*, thereby leaving the variable undefined or initialized to zero, 4D Server assumes that the database method accepts the connection. If you do not accept the connection, you return a non-null value in *$0*.
+Si no devuelve un valor en *$0*, por consiguiente deja la variable indefinida o inicializada en cero, 4D Server estima que el método base acepta la conexión. Si no acepta la conexión, devuelve un valor no nulo en *$0*.
 
-This table details the information provided by the three parameters passed to the database method:
+Esta tabla detalla la información ofrecida por los tres parámetros pasados en el método base:
 
-| **Parameter** | **Description**                                                            |
-| ------------- | -------------------------------------------------------------------------- |
-| $1            | User ID number used internally by 4D Server to identify users              |
-| $2            | Connection ID number used internally by 4D Server to identify a connection |
-| $3            | Obsolete: Always returns 0 but must be declared                            |
+| **Parámetro** | **Descripción**                                                                       |
+| ------------- | ------------------------------------------------------------------------------------- |
+| $1            | Número de usuario utilizado internamente por 4D Server para identificar los usuarios  |
+| $2            | Número de conexión utilizado internamente por 4D Server para identificar una conexión |
+| $3            | Obsoleto: siempre devuelve 0 pero debe declararse                                     |
 
-These ID numbers are not directly usable as sources of information to be passed as, for example, parameters to a 4D command. However, they provide a way to uniquely identify a 4D Client process between the **On Server Open Connection database method** and the [On Server Close Connection database method](on-server-close-connection-database-method.md). At any moment of a 4D Server session, the combination of these values is unique. By storing this information in an interprocess array or a table, the two database methods can exchange information. In the example at the end of this section, the two database methods use this information to store the date and time of the beginning and end of a connection in the same record of a table.
+Estos números de referencia no son utilizables directamente como fuentes de información a pasar, por ejemplo, como parámetros a un comando 4D. Sin embargo, ofrecen una manera única de identificar un proceso 4D Client entre el Método base On Server Open Connection y el [Método base On Server Close Connection](metodo-base-on-server-close-connection.md). La combinación de estos valores es única en cualquier momento de una sesión 4D Server. Al guardar esta información en una tabla o en un array interproceso, los dos métodos base pueden intercambiar información. En el ejemplo al final de esta sección, los dos métodos base utilizan esta información para almacenar la fecha y hora de inicio y fin de una conexión en el mismo registro de una tabla.
 
-#### Example 1 
+#### Ejemplo 1 
 
-The following example shows how to maintain a log of the connections to the database using the **On Server Open Connection database method** and the **On Server Close Connection Database Method**. The *\[Server Log\]* table (shown below) is used to keep track of the connection processes:
+El siguiente ejemplo muestra cómo mantener un historial de las conexiones a la base de datos utilizando el Método base On Server Open Connection y utilizando el [Método base On Server Close Connection](metodo-base-on-server-close-connection.md). La tabla *\[Server Log\]* (mostrada a continuación) se utiliza para hacer seguimiento a los procesos de conexión: 
 
-![](../assets/en/commands/pict69173.en.png)
+![](../assets/en/commands/pict69173.es.png)
 
-The information stored in this table is managed by the **On Server Open Connection database method** and the **On Server Close Connection Database Method** listed here:
+La información almacenada en esta tabla es administrada por el Método base On Server Open Connection y el [Método base On Server Close Connection](metodo-base-on-server-close-connection.md) listado a continuación:
 
 ```4d
-  // On Server Open Connection Database Method
+  // Método base On Server Open Connection
+ 
  var $0;$1;$2;$3 : Integer
-  // Create a [Server Log] record
+  // Crear un registro [Server Log]
  CREATE RECORD([Server Log])
  [Server Log]Log ID:=Sequence number([Server Log])
-  // Save the Log Date and Time
+  // Guardar el historial Fecha y Hora
  [Server Log]Log Date:=Current date
  [Server Log]Log Time:=Current time
-  // Save the connection information
+  // Guarda la información de conexión
  [Server Log]User ID:=$1
  [Server Log]Connection ID:=$2
  SAVE RECORD([Server Log])
-  // Returns no error so that the connection can continue
+  // No devuelve error de manera que la conexión puede continuar
  $0:=0
  
-  // On Server Close Connection Database Method
+  // Método base On Server Close Connection
  var $1;$2;$3 : Integer
-  // Retrieve the [Server Log] record
+  // Recuperar el registro [Server Log]
  QUERY([Server Log];[Server Log]User ID=$1;*)
- QUERY([Server Log]; & ;[Server Log]Connection ID=$2;*)
- QUERY([Server Log]; & ;[Server Log]Process ID=0)
-  // Save the Exit date and time
+ QUERY([Server Log];&;[Server Log]Connection ID=$2;*)
+ QUERY([Server Log];&;[Server Log]Process ID=0)
+  // Guardar fecha y hora de desconexión
  [Server Log]Exit Date:=Current date
  [Server Log]Exit Time:=Current time
-  // Save the process information
+  // Guardar información proceso
  [Server Log]Process ID:=Current process
  PROCESS PROPERTIES([Server Log]Process ID;$vsProcName;$vlProcState;$vlProcTime)
  [Server Log]Process Name:=$vsProcName
  SAVE RECORD([Server Log])
 ```
 
-Here are some entries in the \[Server Log\] showing several remote connections:
+Estas son algunas entradas en \[Server Log\] mostrando varias conexiones remotas:
 
-![](../assets/en/commands/pict69174.en.png)
+![](../assets/en/commands/pict69174.es.png)
 
-#### Example 2 
+#### Ejemplo 2 
 
-The following example prevents any new connection from 2 to 4 A.M.
+El siguiente ejemplo evita una nueva conexión entre las 2 y 4 A.M. 
 
 ```4d
-  // On Server Open Connection Database Method
+  // Método base On Server Open Connection
  var $0;$1;$2;$3 : Integer
  
  If((?02:00:00?<=Current time)&(Current time
 ```
-
-
-#### Properties
-
-|  |  |
-| --- | --- |
-| Command number | 16001 |
-| Thread safe | &cross; |
-
-

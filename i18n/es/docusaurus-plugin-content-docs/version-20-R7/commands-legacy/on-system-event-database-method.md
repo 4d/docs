@@ -5,43 +5,43 @@ slug: /commands/on-system-event-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On System Event database method.Syntax-->$1 -> On System Event database method<!-- END REF-->
-<!--REF #_command_.On System Event database method.Params-->
-| Parameter | Type |  | Description |
+<!--REF #_command_.Metodo base On System Event.Syntax-->$1 -> Método base On System Event<!-- END REF-->
+<!--REF #_command_.Metodo base On System Event.Params-->
+| Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Integer | &#8592; | Event code |
+| $1 | Entero largo | &#8592; | Código del evento |
 
 <!-- END REF-->
 
-#### Description 
+#### Descripción 
 
-<!--REF #_command_.On System Event database method.Summary-->The **On System Event database method** is called each time a system event occurs.<!-- END REF--> This concerns all 4D environments: 4D (all modes) and 4D Server, as well as 4D applications that are compiled and merged with 4D Volume Desktop.
+<!--REF #_command_.Metodo base On System Event.Summary-->El **Método base On System Event** se llama cada vez que ocurre un evento sistema.<!-- END REF--> Esto concierne a todos los entornos 4D: 4D (todos los modos) y 4D Server, así como también las aplicaciones 4D compiladas y fusionadas con 4D Volume Desktop.
 
-To process an event, you must test the value of the $1 parameter within the method and compare it to one of the following constants, found in the *Database Events* theme:
+Para procesar un evento, debe probar el valor del parámetro $1 al interior del método y compararlo con una de las siguientes constantes, del tema *Eventos de la base*:
 
-| Constant                       | Type    | Value | Comment                                    |
-| ------------------------------ | ------- | ----- | ------------------------------------------ |
-| On application background move | Integer | 1     | The 4D application moves to the background |
-| On application foreground move | Integer | 2     | The 4D application moves to the foreground |
+| Constante                      | Tipo         | Valor | Comentario                            |
+| ------------------------------ | ------------ | ----- | ------------------------------------- |
+| On application background move | Entero largo | 1     | La aplicación 4D pasa al fondo        |
+| On application foreground move | Entero largo | 2     | La aplicación 4D pasa al primer plano |
 
-These events are generated when a 4D application changes level, irrespective of the user action initiating this change. For example: 
+Estos eventos se generan cuando la aplicación 4D cambia de nivel, sin importar la acción del usuario que genera este cambio. Por ejemplo: 
 
-* Clicking the window of the application or of another application,
-* selecting it using the **Alt+Tab** (Windows) or **Command+Tab** (Mac OS) keyboard shortcut,
-* Selecting the **Hide** command in the dock (Mac OS),
-* Clicking the application icon in the dock or task bar,
-* Clicking the minimize button of the main window (Windows).
+* clic en la ventana de la aplicación o de otra aplicación,
+* selección utilizando el atajo de teclado **Alt+Tab** (Windows) o **Comando+Tab** (Mac OS),
+* selección del comando **Ocultar** en el dock (Mac OS),
+* clic en el icono de la aplicación en el dock o la barra de tareas,
+* clic en el botón de minimización de la ventana principal (Windows).
 
-It is absolutely necessary to declare the $1 parameter (longint) in the database method. The structure of the database method code is therefore:
+Es absolutamente necesario declarar el parámetro $1 (entero largo) en el método base. La estructura del código del método base será entonces:
 
 ```4d
-  // On System Event database method
+  // Método base On System Event
  
  var $1 : Integer
  Case of
     :($1=On application background move)
-  //Do something
+  //Hacer algo
     :($1=On application foreground move)
-  //Do something else
+  //Hacer otra cosa
  End case
 ```

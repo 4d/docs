@@ -5,25 +5,25 @@ slug: /commands/on-server-startup-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Server Startup database method.Syntax-->**On Server Startup database method**<!-- END REF-->
-<!--REF #_command_.On Server Startup database method.Params-->
-| Does not require any parameters |  |
+<!--REF #_command_.Metodo base On Server Startup.Syntax-->**Método base On Server Startup**<!-- END REF-->
+<!--REF #_command_.Metodo base On Server Startup.Params-->
+| Este comando no requiere parámetros |  |
 | --- | --- |
 
 <!-- END REF-->
 
 #### 
 
-<!--REF #_command_.On Server Startup database method.Summary-->The **On Server Startup database method** is called once on the server machine when you open a database with 4D Server.<!-- END REF--> The **On Server Startup database method** is NOT invoked by any 4D environment other than 4D Server.
+<!--REF #_command_.Metodo base On Server Startup.Summary-->El Método base On Server Startup se llama una vez en el equipo servidor cuando abre una base con 4D Server.<!-- END REF--> El Método base On Server Startup NO se ejecuta en un entorno diferente a 4D Server.
 
-The **On Server Startup database method** is the perfect place to:
+El Método base On Server Startup es la ubicación ideal para:
 
-* Initialize interprocess variables that you will use during the whole 4D Server session.
-* Start *Stored Procedures* automatically when a database is opened.
-* Load Preferences or Settings saved during the previous 4D Server session.
-* Prevent the opening of the database if a condition is not met (i.e., missing system resources) by explicitly calling [QUIT 4D](quit-4d.md).
-* Perform any other actions that you want performed automatically each time a database is opened.
+* Inicializar las variables interproceso utilizadas durante toda la sesión 4D Server.
+* Iniciar automáticamente los *Procedimientos almacenados* al abrir la base.
+* Cargar preferencias o parámetros guardados durante la sesión anterior de 4D Server.
+* Evitar la apertura de la base si no se cumple una condición (ausencia de recursos sistema) para una llamada explícita a [QUIT 4D](quit-4d.md).
+* Realizar otras acciones que quiera efectuar automáticamente cada vez que se abra la base.
 
-To automatically execute code on a client machine when a remote 4D connects to the server, use the [On Startup database method](on-startup-database-method.md).
+Para ejecutar código automáticamente en un equipo cliente cuando un 4D remoto se conecta al servidor, utilice el Método base On Server Startup.
 
-**Note:** The **On Server Startup database method** is executed automatically, which means that no remote 4D can connect until the method has finished executing.
+**Nota**: el Método base On Server Startup se ejecuta de manera atómica, lo que significa que ningún 4D remoto puede conectarse mientras la ejecución del método no haya terminado.

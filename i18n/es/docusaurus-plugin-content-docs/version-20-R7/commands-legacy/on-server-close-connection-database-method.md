@@ -5,38 +5,38 @@ slug: /commands/on-server-close-connection-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Server Close Connection database method.Syntax-->$1, $2, $3 -> On Server Close Connection database method<!-- END REF-->
-<!--REF #_command_.On Server Close Connection database method.Params-->
-| Parameter | Type |  | Description |
+<!--REF #_command_.Metodo base On Server Close Connection.Syntax-->$1, $2, $3 -> Método base On Server Close Connection<!-- END REF-->
+<!--REF #_command_.Metodo base On Server Close Connection.Params-->
+| Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Integer | &#8592; | User ID number used internally by 4D Server to identify users |
-| $2 | Integer | &#8592; | Connection ID number used internally by 4D Server to identify a connection |
-| $3 | Integer | &#8592; | Obsolete: Always returns 0 but must be declared |
+| $1 | Entero largo | &#8592; | Número de usuario utilizado internamente por 4D Server para identificar los usuarios |
+| $2 | Entero largo | &#8592; | Número de conexión utilizada internamente por 4D Server para identificar una conexión |
+| $3 | Entero largo | &#8592; | Obsoleto: devuelve siempre 0 pero debe declararse |
 
 <!-- END REF-->
 
-#### Description 
+#### Descripción 
 
-<!--REF #_command_.On Server Close Connection database method.Summary-->The **On Server Close Connection database method** is called once on the Server machine each time a 4D Client process ends.<!-- END REF-->
+<!--REF #_command_.Metodo base On Server Close Connection.Summary-->El **Método base On Server Close Connection** se llama en el equipo servidor cada vez que termina un proceso 4D Client.<!-- END REF--> 
 
-As for the [On Server Open Connection database method](on-server-open-connection-database-method.md), 4D Server passes three Long Integer parameters to the **On Server Close Connection database method**. On the other hand, no result is expected by 4D Server.
+Como para el [Método base On Server Open Connection](metodo-base-on-server-open-connection.md), 4D Server pasa tres parámetros de tipo entero largo al **Método base On Server Close Connection**. Por otra parte, 4D Server no espera un resultado en retorno.
 
-The method must therefore be explicitly declared with three Long Integer parameters:
+El método debe contener la declaración explícita de tres parámetros Entero largo:
 
 ```4d
  var $1;$2;$3 : Integer
 ```
 
-This table details the information provided by the three parameters passed to the database method:
+Esta tabla detalla la información ofrecida por los tres parámetros pasados al método base:
 
-| **Parameter** | **Description**                                                            |
-| ------------- | -------------------------------------------------------------------------- |
-| $1            | User ID number used internally by 4D Server to identify users              |
-| $2            | Connection ID number used internally by 4D Server to identify a connection |
-| $3            | Obsolete: Always returns 0 but must be declared                            |
+| **Parámetro** | **Descripción**                                                                        |
+| ------------- | -------------------------------------------------------------------------------------- |
+| $1            | Número de usuario utilizado internamente por 4D Server para identificar usuarios       |
+| $2            | Número de conexión utilizado internamente por 4D Server para identificar una conexiónn |
+| $3            | Obsoleto: devuelve siempre 0 pero debe declararse                                      |
 
-The **On Server Close Connection database method** is the exact counterpoint to the [On Server Open Connection database method](on-server-open-connection-database-method.md). For more information and a description of the **4D Client processes**, see the description of this database method.
+El **Método base On Server Close Connection** es el inverso exacto del [Método base On Server Open Connection](metodo-base-on-server-open-connection.md). Para mayor información y una descripción de este método base, así como para la descripción de los **procesos 4D Client**, ver la descripción de este método base.
 
-#### Example 
+#### Ejemplo 
 
-See the first example for [On Server Open Connection database method](on-server-open-connection-database-method.md).
+Ver el primer ejemplo para [Método base On Server Open Connection](metodo-base-on-server-open-connection.md).

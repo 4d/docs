@@ -5,27 +5,28 @@ slug: /commands/on-backup-startup-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Backup Startup database method.Syntax-->**On Backup Startup database method**  -> $0<!-- END REF-->
-<!--REF #_command_.On Backup Startup database method.Params-->
-| Parameter | Type |  | Description |
+<!--REF #_command_.Metodo base On Backup Startup.Syntax-->**Método base On Backup Startup** : Integer<!-- END REF-->
+<!--REF #_command_.Metodo base On Backup Startup.Params-->
+| Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $0 | Integer | &#8592; | 0 = backup can be launched; value other than 0 = backup not authorized |
+| Resultado | Integer | &#8592; | 0 = backup autorizado; valor diferente de 0 = backup no autorizado |
 
 <!-- END REF-->
 
 #### 
 
-<!--REF #_command_.On Backup Startup database method.Summary-->The **On Backup Startup database method** is called every time a database backup is about to start (manual backup, scheduled automatic backup, or using the [BACKUP](backup.md) command).<!-- END REF-->   
-This concerns all 4D environments: 4D (all modes), 4D Server and databases merged with 4D Volume Desktop.
+<!--REF #_command_.Metodo base On Backup Startup.Summary-->El Método base On Backup Startup se llama cada vez que un backup está a punto de iniciar (backup manual, backup automático programado, o utilizando el comando [BACKUP](backup.md)).<!-- END REF--> 
 
-The **On Backup Startup database method**  allows verifying that the backup started. In this method, you should return a value that authorizes or refuses the backup in the $0 parameter:
+Esto concierne a todos los entornos 4D: 4D en modo local, 4D Server, 4D en modo remoto, 4D Desktop y bases fusionadas con 4D Desktop.
 
-* If $0 = 0, the backup can be launched.
-* If $0 # 0, the backup is not authorized. The operation is cancelled and an error is returned. You can get the error using the [BACKUP INFO](backup-info.md) command.
+El [BACKUP INFO](backup-info.md) permite verificar el inicio del backup. En este método, debe devolver en el parámetro $0 un valor que autorice o rechace el backup:
 
-You can use this database method to verify backup execution conditions (user, date of the last backup, etc.).
+* Si $0 = 0, el backup puede comenzar.
+* Si $0 # 0, el backup no es autorizado. La operación se cancela y devuelve un error. Puede obtener el error utilizando el comando Método base On Backup Startup.
 
-**Note:** You must declare the *$0* parameter (longint) in the database method:
+Puede utilizar este método base para verificar las condiciones de ejecución del backup (usuario, fecha del último, etc.).
+
+**Nota:** debe declarar el parámetro *$0* (entero largo) en el método de la base:
 
 ```4d
  var $0 : Integer.

@@ -5,42 +5,42 @@ slug: /commands/on-drop-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Drop database method.Syntax-->**On Drop database method**<!-- END REF-->
-<!--REF #_command_.On Drop database method.Params-->
-| Does not require any parameters |  |
+<!--REF #_command_.Metodo base On Drop.Syntax-->**Método base On Drop**<!-- END REF-->
+<!--REF #_command_.Metodo base On Drop.Params-->
+| Este comando no requiere parámetros |  |
 | --- | --- |
 
 <!-- END REF-->
 
 #### 
 
-<!--REF #_command_.On Drop database method.Summary-->The **On Drop database method** is available in local or remote 4D applications.<!-- END REF-->
+<!--REF #_command_.Metodo base On Drop.Summary-->El Método base On Drop está disponible en aplicaciones 4D locales o remotas.<!-- END REF-->
 
-This database method is automatically executed in the case of objects being dropped in the 4D application outside of any form or windows context. Different drop actions are supported, depending on the platform and the application type:
+Este método de base se ejecuta automáticamente en el caso de soltar objetos en la aplicación 4D fuera de un contexto formulario o dialogo. Dependiendo de la plataforma y del tipo de aplicación, se soportan diferentes tipos de soltar:
 
-| **Action**                                | **Platform(s)**     | **Comment**                                                                                                                                                                                                                                                                                                     |
-| ----------------------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Drop in an empty area of the MDI window   | Windows             | Not available when the database is executed in SDI mode since there is no MDI window in this context (see *SDI mode on Windows* section).                                                                                                                                                                       |
-| Drop on the 4D icon in the Dock           | macOS               |                                                                                                                                                                                                                                                                                                                 |
-| Drop on the 4D icon in the system desktop | Windows(\*) & macOS | The **On Drop database method** is only called when the application is already launched, except in the case of applications merged with 4D Desktop. In this case, the database method is called even when the application is not launched. This means that it is possible to define custom document signatures. |
+| **Acción**                                         | **Plataforma(s)**   | **Comentario**                                                                                                                                                                                                                                                                                                  |
+| -------------------------------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Soltar en un área vacía de la ventana MDI          | Windows             | No disponible cuando la base se ejecuta en modo SDI ya que no hay ninguna ventana MDI en este contexto (consulte la sección *Modo SDI en Windows*).                                                                                                                                                             |
+| Soltar en el icono 4D en el Dock                   | macOS               |                                                                                                                                                                                                                                                                                                                 |
+| Soltar en el icono 4D en el escritorio del sistema | Windows(\*) y macOS | **Método base On Drop** se llama únicamente, si la aplicación ya ha sido lanzada, excepto en el caso de las aplicaciones fusionadas con 4D Desktop. En este caso, el método base se llama incluso cuando la base no ha sido lanzada. Esto significa que es posible definir firmas de documentos personalizadas. |
 
-(\*) Not supported with 4D Developer 64-bit on Windows because this action launches a new application instance (system feature).
+(\*) No compatible con 4D Developer 64 bits en Windows porque esta acción inicia una nueva instancia de aplicación (funcionalidad del sistema).
 
-On Mac, you need to hold down the **Option**+**Command** keys during the drop in order for the database method to be called. 
+Bajo Mac OS, debe presionar las teclas **Opción**+**Comando** al soltar para que se llame el método de base. 
 
-#### Example 
+#### Ejemplo 
 
-This example can be used to open a 4D Write document that is dropped outside of any form:
-
+Este ejemplo puede ser utilizado para abrir un documento 4D Write que fue soltado fuera de un formulario:   
+  
 ```4d
-  //On Drop database method
- droppedFile:=Get file from pasteboard(1)
- If(Position(".4W7";droppedFile)=Length(droppedFile)-3)
-    externalArea:=Open external window(100;100;500;500;0;droppedFile;"_4D Write")
-    WR OPEN DOCUMENT(externalArea;droppedFile)
+  //Método base On Drop
+ archivoSoltado:=Get file from pasteboard(1)
+ If(Position(".4W7";droppedFile)=Length(archivoSoltado)-3)
+    areaExterna:=Open external window(100;100;500;500;0;archivoSoltado;"_4D Write")
+    WR OPEN DOCUMENT(areaExterna;archivoSoltado)
  End if
 ```
 
-#### See also 
+#### Ver también 
 
-*Drag and Drop*  
+*Arrastrar y soltar*  

@@ -5,21 +5,21 @@ slug: /commands/on-mobile-app-action-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Mobile App Action database method.Syntax-->**mobileInfo** -> On Mobile App Action database method -> $0<!-- END REF-->
-<!--REF #_command_.On Mobile App Action database method.Params-->
-| Parameter | Type |  | Description |
+<!--REF #_command_.Metodo base On Mobile App Action.Syntax-->**mobileInfo** -> Método base On Mobile App Action : Object<!-- END REF-->
+<!--REF #_command_.Metodo base On Mobile App Action.Params-->
+| Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| mobileInfo | Object | &#8594;  | Information passed by the mobile application |
-| $0 | Object | &#8592; | Action status & data synchro |
+| mobileInfo | Object | &#8594;  | Información pasada por la aplicación móvil |
+| Resultado | Object | &#8592; | Estado de acción y sincronización de datos |
 
 <!-- END REF-->
 
-#### Description 
+#### Descripción 
 
-<!--REF #_command_.On Mobile App Action database method.Summary-->**Documentation moved**
+<!--REF #_command_.Metodo base On Mobile App Action.Summary-->**Documentación trasladada**
 
-The documentation for this database method has been updated and moved to [developer.<!-- END REF-->4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action).
+La documentación de este método base ha sido actualizada y trasladada a [developer.<!-- END REF-->4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action).
 
-#### See also 
+#### Ver también 
 
-[On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  
+[Método base On Mobile App Authentication](metodo-base-on-mobile-app-authentication.md)  

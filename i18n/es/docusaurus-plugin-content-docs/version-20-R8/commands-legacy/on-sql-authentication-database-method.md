@@ -5,67 +5,69 @@ slug: /commands/on-sql-authentication-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On SQL Authentication database method.Syntax-->$1, $2, $3 -> On SQL Authentication database method -> $0<!-- END REF-->
-<!--REF #_command_.On SQL Authentication database method.Params-->
-| Parameter | Type |  | Description |
+<!--REF #_command_.Metodo base On SQL Authentication.Syntax-->$1, $2, $3 -> Método base On SQL Authentication : Boolean<!-- END REF-->
+<!--REF #_command_.Metodo base On SQL Authentication.Params-->
+| Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Text | &#8592; | User name |
-| $2 | Text | &#8592; | Password |
-| $3 | Text | &#8592; | (Optional) IP address of client at origin of the request |
-| $0 | Boolean | &#8592; | True = request accepted, False = request refused |
+| $1 | Texto | &#8592; | Nombre de usuario |
+| $2 | Texto | &#8592; | Contraseña |
+| $3 | Texto | &#8592; | (Opcional) Dirección IP del cliente al origen de la petición |
+| Resultado | Boolean | &#8592; | True = petición aceptada, False = petición rechazada |
 
 <!-- END REF-->
 
 #### 
 
-<!--REF #_command_.On SQL Authentication database method.Summary-->The **On SQL Authentication database method** can be used to filter requests sent to the integrated SQL server of 4D.<!-- END REF--> This filtering can be based on the name and password as well as the (optional) IP address of the user. The developer can use their own table of users or that of the 4D users to evaluate the connection identifiers. Once the connection is authenticated, the [CHANGE CURRENT USER](change-current-user.md) command must be called in order to control access of requests within the 4D database. 
+<!--REF #_command_.Metodo base On SQL Authentication.Summary-->El Método base On SQL Authentication puede utilizarse para filtrar las peticiones enviadas al servidor SQL integrado de 4D.<!-- END REF--> Este filtro puede estar basado en el nombre y contraseña como también de manera opcional en la dirección IP del usuario. El desarrollador puede utilizar su propia tabla de usuarios o la de los usuarios 4D para evaluar los identificadores de conexión. Una vez validada la conexión, el comando [CHANGE CURRENT USER](change-current-user.md) puede utilizarse para controlar el acceso de las peticiones dentro de la base 4D. 
 
-When it exists, the **On SQL Authentication database method** is called automatically by 4D or 4D Server on each external connection to the SQL server. The internal system for managing 4D users is therefore not activated. The connection is only accepted if the database method returns **True** in $0 and if the [CHANGE CURRENT USER](change-current-user.md) command has been executed successfully. If one of these conditions is not met, the request is refused.
+Cuando existe, el Método base On SQL Authentication es llamado automáticamente por 4D o 4D Server en cada conexión externa al servidor SQL. Por lo tanto el sistema interno de gestión de los usuarios de 4D no está activado. La conexión se acepta sólo si el método de base devuelve [True](true.md "True") en $0 y si el comando [CHANGE CURRENT USER](change-current-user.md) se ha ejecutado con éxito. Si una de estas condiciones no se cumple, la petición se rechaza.
 
-**Note**: The statement **SQL LOGIN**(**SQL\_INTERNAL**;$user;$password) does not call the **On SQL Authentication database method** since it is an internal connection in this case. 
+**Nota**: la instrucción **SQL LOGIN(SQL\_INTERNAL**;$usuario;$contraseña) no llama al Método base On SQL Authentication ya que es una conexión interna en este caso.
 
-The database method receives up to three parameters of the Text type, passed by 4D ($1, $2 and $3), and returns a Boolean, $0\. Here is a description of these parameters:
+El método de base recibe hasta tres parámetros de tipo Texto, pasados por 4D ($1, $2 y $3) y devuelve un booleano, $0\. Esta es la descripción de estos parámetros:
 
-| **Parameters** | **Type** | **Description**                                              |
-| -------------- | -------- | ------------------------------------------------------------ |
-| $1             | Text     | User name                                                    |
-| $2             | Text     | Password                                                     |
-| $3             | Text     | (optional) IP address of client at origin of the request(\*) |
-| $0             | Boolean  | True = request accepted, False = request refused             |
+| **Parámetros** | **Tipo** | **Descripción**                                                   |
+| -------------- | -------- | ----------------------------------------------------------------- |
+| $1             | Texto    | Nombre de usuario                                                 |
+| $2             | Texto    | Contraseña                                                        |
+| $3             | Texto    | (opcional) Dirección IP del cliente al origen de la petición (\*) |
+| $0             | Booleano | True = petición aceptada, False = petición rechazada              |
 
-(\*) 4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34\. For more information, refer to the *Support of IPv6* section. 
+(\*) 4D devuelve las direcciones IPv4 en un formato híbrido IPv6/IPv4 escrito con un prefijo de 96 bits, por ejemplo ::ffff:192.168.2.34 para la dirección IPv4 192.168.2.34\. Para mayor información, consulte la sección *Soporte de IP v6*. 
 
-You must declare these parameters as follows:
+Debe declarar estos parámetros de esta forma:
 
 ```4d
-  //On SQL Authentication database method
+  // Método de base On Web Authentication
  
- var $1;$2;$3 : Text
+ var $1;$2;$3;$4 : Text
  var $0 : Boolean
-  //Code for method
+  // Código para el método
 ```
 
-The password ($2) is received as standard text. 
+La contraseña ($2) se recibe como texto estándar. 
 
-You must check the identifiers of the SQL connection in the **On SQL Authentication database method**. For example, you can check the name and password using a custom table of users. If the identifiers are valid, pass **True** in $0 to accept the connection. Otherwise, pass **False** in $0; in this case, the connection is refused.
+Debe controlar los identificadores de la conexión SQL en el Método base On SQL Authentication. Por ejemplo, puede verificar el nombre y la contraseña utilizando una tabla de usuarios personalizada. Si los identificadores son válidos, pase [True](true.md "True") en $0 para aceptar la conexión y la petición. 4D abre una sesión SQL para el usuario. De lo contrario, pase [False](false.md "False") en $0; en este caso, la conexión se rechaza. 
 
-**Note:** If the **On SQL Authentication database method** does not exist, the connection is evaluated using the integrated user management system of 4D (if it is activated, in other words, if a password has been assigned to the Designer). If this system is not activated, users are connected with Designer access rights (free access). 
+**Nota:** si el Método base On SQL Authentication no existe, la conexión se evalúa utilizando el sistema integrado de gestión de usuarios de 4D (si está activo, en otras palabras, si una contraseña ha sido asignada al Diseñador). Si este sistema no está activado, los usuarios están conectados con los derechos de acceso del Diseñador (acceso libre).
 
-If you have passed **True** in $0, you must then successfully call the [CHANGE CURRENT USER](change-current-user.md) command in the **On SQL Authentication database method** in order for the request to be accepted and for 4D to open an SQL session for the user*.* 
+Si pasa [True](true.md "True") en $0, debe llamar exitosamente al comando [CHANGE CURRENT USER](change-current-user.md) en el Método base On SQL Authentication para que la petición sea aceptada y para que 4D abra una sesión SQL para el usuario. 
 
-The use of the [CHANGE CURRENT USER](change-current-user.md) command can be used to implement a virtual authentication system which has the double advantage of allowing the control of connection actions and of hiding the connection identifiers from the outside in the 4D SQL session.
+El uso de este comando se recomienda porque permite un mayor nivel de seguridad. Esta autenticación virtual tiene la doble ventaja de permitir el control de las acciones de conexión y de ocultar para el exterior los identificadores de la conexión en la sesión SQL 4D.
 
-This example of the **On SQL Authentication database method** checks whether the connection request comes from the internal network, validates the identifiers and then assigns access rights to the "sql\_user" user for the SQL session.
+Cuando el sistema de contraseñas integrado de 4D no está activo, la ejecución del comando [CHANGE CURRENT USER](change-current-user.md) no tiene efecto; los usuarios se conectan con los derechos de acceso del Diseñador. 
+
+Este ejemplo del Método base On SQL Authentication verifica que la petición de conexión provenga de la red interna, valida los identificadores y luego asigna los derechos de accesos "sql\_user" para la sesión SQL.
 
 ```4d
- var $1;$2;$3 : Text
+ var $1;$2;$3;$4 : Text
  var $0 : Boolean
-  //$1: user
-  //$2: password
-  //{$3: IP address of client}
+  //$1: usuario
+  //$2: contraseña
+  //{$3: dirección IP del cliente}
  ON ERR CALL("SQL_error")
- If(checkInternalIP($3))
-  //The checkInternalIP method checks whether the IP address is internal
+ If(DirIPInterna($3))
+  //El método DirIPInterna verifica si la dirección IP es interna
     If($1="victor") & ($2="hugo")
        CHANGE CURRENT USER("sql_user";"")
        If(OK=1)
