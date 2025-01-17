@@ -45,7 +45,7 @@ Para obter mais informações sobre regras de nomenclatura para objetos de formu
 
 ---
 
-## Guardar valor
+## Salvar valor
 
 Esta propriedade está disponível quando a opção [Salvar Geometria](FormEditor/properties_FormProperties.md#save-geometry) está marcada para o formulário.
 
@@ -309,7 +309,7 @@ Existem vários tipos de cálculos disponíveis. A tabela a seguir mostra quais 
 
 > Sólo las [variables](Concepts/variables.md) declaradas o dinámicas pueden utilizarse para mostrar los cálculos de pie de página. No se soportan otros tipos de [expresiones](Concepts/quick-tour.md#expressions) como `Form.value`.
 
-Note that the calculation does not take the shown/hidden state of list box rows into account. Se você quiser restringir um cálculo para apenas linhas visíveis, você deve usar um cálculo personalizado.
+Os cálculos automáticos ignoram o estado mostrado/oculto das linhas de list box. Se você quiser restringir um cálculo para apenas linhas visíveis, você deve usar um cálculo personalizado.
 
 *Null* no se tienen en cuenta para ningún cálculo.
 
