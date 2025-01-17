@@ -82,7 +82,7 @@ displayed_sidebar: docs
  $vsResult:=String(!2023-11-27!;Internal date long) // "November 27, 2023"  
  $vsResult:=String(!2023-11-27!;ISO Date GMT) // "2023-11-26T23:00:00Z" in French timezone  
 ```
-* または [パターンに基づいてビルトされたカスタマイズされたフォーマット](https://developer.4d.com/docs/Project/date-time-formats) (文字列値)  
+* または [パターンに基づいてビルトされたカスタマイズされたフォーマット](../Project/date-time-formats.md) (文字列値)  
 例:  
     
 ```4d  
@@ -157,7 +157,7 @@ displayed_sidebar: docs
  $vsResult:=String(?17:30:45?;HH MM AM PM) //"5:30 PM"  
  $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
 ```
-* または [パターンに基づいてビルドされたカスタマイズされたフォーマット](https://developer.4d.com/docs/Project/date-time-formats) (文字列値)  
+* または [パターンに基づいてビルドされたカスタマイズされたフォーマット](../Project/date-time-formats.md) (文字列値)  
 例:  
     
 ```4d  

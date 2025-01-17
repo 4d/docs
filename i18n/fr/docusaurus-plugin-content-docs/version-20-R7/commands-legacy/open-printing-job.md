@@ -24,7 +24,7 @@ Vous devez appeler la commande [CLOSE PRINTING JOB](close-printing-job.md) pour 
 
 **OPEN PRINTING JOB** utilise les paramètres d’impression courants (paramètres par défaut ou définis via la commande [SET PRINT OPTION](set-print-option.md)). Les commandes modifiant les paramètres d’impression doivent être appelées avant **OPEN PRINTING JOB**. Dans le cas contraire, une erreur est générée (exception : la constante Orientation option peut être appelée par la commande [SET PRINT OPTION](set-print-option.md) dans une tâche d'impression).
 
-**Note de compatibilité :** À partir de 4D v20 R4, les tâches d'impression sont non-bloquantes dans les nouveaux projets. Pour plus d'informations, veuillez consulter la documentation sur l'[option d'impression non-bloquante](https://developer.4d.com/docs/fr/settings/compatibility/) dans les paramètres de compatibilité.
+**Note de compatibilité :** À partir de 4D v20 R4, les tâches d'impression sont non-bloquantes dans les nouveaux projets. Pour plus d'informations, veuillez consulter la documentation sur l'[option d'impression non-bloquante](../settings/compatibility.md) dans les paramètres de compatibilité.
 
 #### Variables et ensembles système 
 

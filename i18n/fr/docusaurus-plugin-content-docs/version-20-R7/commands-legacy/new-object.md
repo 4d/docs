@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New object.Summary-->La commande **New object** crée un objet vide ou pré-rempli et retourne sa référence.<!-- END REF-->
 
-Si vous ne passez aucun paramètre, **New object** crée un objet vide et retourne sa référence. Vous devez assigner cette référence à une variable 4D déclarée avec [C\_OBJECT](c-object.md) ou un champ objet 4D.
+Si vous ne passez aucun paramètre, **New object** crée un objet vide et retourne sa référence. Vous devez assigner cette référence à une variable 4D déclarée avec *C\_OBJECT* ou un champ objet 4D.
 
-**Note :** [C\_OBJECT](c-object.md) déclare une variable de type [Objet](# "Données structurées sous forme d'objet natif 4D") mais ne crée pas d'objet.
+**Note :** *C\_OBJECT* déclare une variable de type [Objet](# "Données structurées sous forme d'objet natif 4D") mais ne crée pas d'objet.
 
 Optionnellement, vous pouvez pré-remplir le nouvel objet en passant une ou plusieurs paires *propriété*/*valeur* comme paramètres :
 

@@ -8,7 +8,7 @@ On Windows, 4D developers can test and configure their 4D merged applications to
 
 :::info
 
-The concept of SDI/MDI does not exist on macOS. This feature concerns Windows applications only and related options are ignored on macOS.
+The concept of sdi.mdI does not exist on macOS. This feature concerns Windows applications only and related options are ignored on macOS.
 
 :::
 
