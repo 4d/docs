@@ -42,7 +42,7 @@ Para ello, basta con seleccionar la barra de menús y elegir **Probar la barra d
 
 :::info
 
-Si la opción **Utilizar el modo SDI en Windows** está seleccionada en la página ["Interfaz" de la caja de diálogo Configuración](../settings/interface.md#display-windows), el menú **Probar aplicación** le permite probar su aplicación en modo [SDI o MDI](sdi/md) en Windows:
+If the **Use SDI mode on Windows** option is selected in the ["Interface" page of the Settings dialog box](../settings/interface.md#display-windows), the **Test Application** menu allows you to test your application in [SDI or MDI mode](sdi.md) on Windows:
 
 ![](../assets/en/settings/sdi-mdi.png)
 

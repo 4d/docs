@@ -19,7 +19,7 @@ O desenho dos retângulos é controlado através de muitas propriedades (cor, es
 
 ![](../assets/en/FormObjects/shapes_rectangle2.png)
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```4d
  "myRectangle": {
@@ -88,7 +88,7 @@ Uma oval estática é um objeto decorativo para formas. Oval objects can be used
 
 ![](../assets/en/FormObjects/shape_oval.png)
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```4d
  "myOval": {

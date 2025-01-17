@@ -284,7 +284,7 @@ SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 
 - SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
 - POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
+- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.md)
 
 2種類のログファイルを生成することができます:
 

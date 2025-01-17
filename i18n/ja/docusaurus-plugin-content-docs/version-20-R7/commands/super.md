@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 `Super` は次の 2つの目的のために使います:
 
-1. クラスコンストレクター内で `Super` を使う例です。 クラスコンストレクター内で `Super` を使う例です。 `Rectangle` と `Square` クラス の共通要素がコンストラクター内で重複しないよう、このコマンドを呼び出します。 クラスコンストレクター内で `Super` を使う例です。 `Rectangle` と `Square` クラス の共通要素がコンストラクター内で重複しないよう、このコマンドを呼び出します。 クラスコンストレクター内で `Super` を使う例です。 `Rectangle` と `Square` クラス の共通要素がコンストラクター内で重複しないよう、このコマンドを呼び出します。 [コンストラクターコード](../Concepts/classes.md#class-constructor) において、`Super` コマンドを使用すると、そのスーパークラスのコンストラクターを呼び出すことができます。 コンストラクター内でで使用する際には、`Super` コマンドは単独で使用され、また[`This`](this.md) キーワードよりも先に使用される必要があります。 引数 引数 引数 引数 [コンストラクターコード](../Concepts/classes.md#class-constructor) において、`Super` コマンドを使用すると、そのスーパークラスのコンストラクターを呼び出すことができます。 コンストラクター内でで使用する際には、`Super` コマンドは単独で使用され、また[`This`](this.md) キーワードよりも先に使用される必要があります。 引数 引数 引数 引数 [コンストラクターコード](../Concepts/classes.md#class-constructor) において、`Super` コマンドを使用すると、そのスーパークラスのコンストラクターを呼び出すことができます。 コンストラクター内でで使用する際には、`Super` コマンドは単独で使用され、また[`This`](this.md) キーワードよりも先に使用される必要があります。 引数 引数 引数 引数
+1. Inside a [constructor code](../Concepts/classes.md#class-constructor), `Super` is a command that allows to call the constructor of the superclass. [コンストラクターコード](../Concepts/classes.md#class-constructor) において、`Super` コマンドを使用すると、そのスーパークラスのコンストラクターを呼び出すことができます。 コンストラクター内でで使用する際には、`Super` コマンドは単独で使用され、また[`This`](this.md) キーワードよりも先に使用される必要があります。 引数 引数 引数 引数
 
 - 継承ツリーにおいて、すべてのクラスコンストラクターが正しく呼び出されていない場合には、エラー -10748 が生成されます。 呼び出しが有効であることを確認するのは、開発者の役目となります。
 - スーパークラスがコンストラクトされるより先に、`This` コマンドを使った場合には、エラー -10743 が生成されます。
@@ -80,7 +80,7 @@ Function getArea() : Integer
 
 #### 例題 2
 
-参照 メンバーメソッドを持つ `Rectangle` クラスを作成します:
+参照 関数を持つ `Rectangle` クラスを作成します:
 
 ```4d
 //Class: Rectangle
@@ -89,7 +89,7 @@ Function nbSides() : Text
  return "I have 4 sides"
 ```
 
-`Square` クラスには、スーパークラスメソッドを呼び出すメンバーメソッドを定義します:
+`Square` クラスには、スーパークラスメソッドを呼び出す関数を定義します:
 
 ```4d
 //Class: Square

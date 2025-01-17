@@ -9,7 +9,7 @@ The spinner is a circular indicator that displays a continuous animation, like t
 
 You use this type of object to indicate that an operation such as establishing a network connection or a performing a calculation is underway. When this indicator is selected, [graphical Scale properties](properties_Scale.md) are not available.
 
-Quando o formulário é executado, o objeto não é animado. You manage the animation by passing a value to its [associated variable or expression](properties_Object.md#variable-or-expression):
+Quando o formulário é executado, o objeto não é animado. Você gerencia a animação passando um valor para sua [variável ou expressão associada](properties_Object.md#variable-or-expression):
 
 * 1 (ou qualquer valor diferente de 0) = Iniciar a animação,
 * 0 = Parar a animação

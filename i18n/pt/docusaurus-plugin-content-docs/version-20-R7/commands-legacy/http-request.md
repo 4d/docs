@@ -66,14 +66,14 @@ Pode enviar dados de tipo texto, BLOB, imagem ou objeto. Quando o content-type n
 * para os textos: texto/plano - UTF8
 * para os BLOBs: aplicação/byte-stream
 * para as imagens: tipo MIME conhecido (best for Web).
-* para os objetos [C\_OBJECT](c-object.md): aplicação/json
+* para os objetos *C\_OBJECT*: aplicação/json
 
 Depois da execução do comando, o parâmetro *resposta* recupera o resultado do pedido devolvido pelo servidor. Este resultado corresponde ao corpo (body) da resposta, sem os cabeçalhos (headers). Pode passar variáveis de diferentes tipos em *resposta*:
 
 * Texto: quando o resultado se espera em forma de texto codificado em UTF16 ou em forma de referencia árvore XML.
 * BLOB: quando o resultado se espera em forma binária.
 * Imagem: quando o resultado se espera em forma de imagem.
-* Objeto [C\_OBJECT](c-object.md): quando o resultado esperado é um objeto.
+* Objeto *C\_OBJECT*: quando o resultado esperado é um objeto.
 
 **Nota:** quando se passa uma variável de texto em *resposta*, 4D tentará decodificar os dados devolvidos desde o servidor. 4D primeiro tenta recuperar o conjunto de caracteres do cabeçalho de *tipo de conteúdo*, depois do conteúdo utilizando um BOM e, finalmente, busca qualquer atributo *http-equiv charset* (em conteúdo html) ou *codificação* (para xml). Se não puder detectar nenhum charset, 4D tentará decodificar a resposta em ANSI. Se a conversão falhar, o texto resultante ficará vazio. Se não tiver certeza se o servidor devolve uma informação charset ou BOM, mas conhece a codificação, é preciso passar *resposta* em BLOB e chamar ao [Convert to text](convert-to-text.md).
 

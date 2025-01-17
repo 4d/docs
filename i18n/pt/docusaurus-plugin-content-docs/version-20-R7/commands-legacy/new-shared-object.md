@@ -21,9 +21,9 @@ displayed_sidebar: docs
 
 **Nota:** para mais informação sobre objetos compartidos, consulte a página *Objetos compartidos e Coleções compartidas*.
 
-Se não passar nenhum parâmetro, **New shared object** cria um objeto vazio e devolve sua referência. Deve assignar esta referência a uma variável 4D declarada com o comando [C\_OBJECT](c-object.md).
+Se não passar nenhum parâmetro, **New shared object** cria um objeto vazio e devolve sua referência. Deve assignar esta referência a uma variável 4D declarada com o comando *C\_OBJECT*.
 
-**Nota:** [C\_OBJECT](c-object.md) declara uma variável de tipo [Objeto](# "Estruturas de dados como objetos 4D nativos") mas não é criado um objeto.
+**Nota:** *C\_OBJECT* declara uma variável de tipo [Objeto](# "Estruturas de dados como objetos 4D nativos") mas não é criado um objeto.
 
 Opcionalmente, pode preencher o novo objeto passando um ou vários pares de *propriedad*e/*valor* como parâmetros:
 

@@ -68,9 +68,9 @@ Désigne l'emplacement d'une icône par rapport à l'objet formulaire.
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles           |
-| ------------- | --------------- | --------------------------- |
-| iconPlacement | string          | "aucun", "gauche", "droite" |
+| Nom           | Type de données | Valeurs possibles       |
+| ------------- | --------------- | ----------------------- |
+| iconPlacement | string          | "none", "left", "right" |
 
 #### Objets pris en charge
 
@@ -98,7 +98,7 @@ Le titre du bouton sera décalé vers la droite et vers le bas pour le nombre de
 
 ## Nombre d'états
 
-This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). En général, une icône de bouton comprend quatre états : actif, cliqué, survolé et inactif.
+Cette propriété définit le nombre exact d'états présents dans l'image utilisée comme icône pour un [bouton avec icône](button_overview.md), une [case à cocher](checkbox_overview.md) ou un [bouton radio](radio_overview.md) personnalisé. En général, une icône de bouton comprend quatre états : actif, cliqué, survolé et inactif.
 
 Chaque état est représenté par une image différente. Dans l'image source, les états doivent être empilés verticalement :
 
@@ -133,9 +133,9 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 #### Grammaire JSON
 
-| Nom   | Type de données | Valeurs possibles                              |
-| ----- | --------------- | ---------------------------------------------- |
-| icône | picture         | Chemin relatif ou filesystem en syntaxe POSIX. |
+| Nom  | Type de données | Valeurs possibles                              |
+| ---- | --------------- | ---------------------------------------------- |
+| icon | picture         | Chemin relatif ou filesystem en syntaxe POSIX. |
 
 #### Objets pris en charge
 
@@ -208,12 +208,12 @@ Pour associer un symbole de pop up menu à un bouton, vous disposez de deux opti
 
 Chaque option précise la relation entre le bouton et le pop up menu associé :
 
-<li>When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.</li>
-<li>When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. Seule la sélection de l’action dans le pop up menu provoque son déclenchement.</li>
+<li>Lorsque le pop up menu est **séparé**, un clic sur la partie gauche du bouton exécute directement l’action courante du bouton ; cette action peut être modifiée via le pop up menu accessible dans la partie droite du bouton.</li>
+<li>Lorsque le pop up menu est **lié**, un simple clic sur le bouton ne déclenche aucune autre action que l’affichage du pop up menu. Seule la sélection de l’action dans le pop up menu provoque son déclenchement.</li>
 
 ### Gestion du pop up menu
 
-Il est important de noter que la propriété “Avec pop up menu” gère uniquement l’aspect graphique du bouton. L’affichage du pop up menu et de ses valeurs doivent être entièrement gérés par le développeur, notamment à l’aide des `événements formulaire` et des commandes **[Pop up menu dynamique](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** et **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)**.
+Il est important de noter que la propriété “Avec pop up menu” gère uniquement l’aspect graphique du bouton. L’affichage du pop up menu et de ses valeurs doivent être entièrement gérés par le développeur, notamment à l’aide des `événements formulaire` et des commandes **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** et **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)**.
 
 #### Grammaire JSON
 

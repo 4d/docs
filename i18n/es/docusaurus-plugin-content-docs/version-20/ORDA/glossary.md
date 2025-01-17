@@ -94,7 +94,7 @@ Una entidad es un objeto que corresponde a un modelo de dataclass. Una entidad c
 
 Una entidad puede verse como una instancia de la dataclass, como un registro de la tabla correspondiente a la dataclass en su datastore asociado. Sin embargo, una entidad también contiene los datos relacionados. La finalidad de la entidad es gestionar los datos (crear, actualizar, eliminar).
 
-Para más información, consulte Entidades.
+For more information, see [entities](entities.md).
 
 ## Entity selection
 

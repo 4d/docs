@@ -13,11 +13,11 @@ As opções de tamanho dependem do valor da opção **Tamanho baseado em**.
 
 - **Tamanho automático**: o tamanho do formulário será o necessário para exibir todos os objetos, aos quais serão adicionados os valores de margem (em píxeis) inseridos nos campos [**Hor Margin**](#hor-margin) e [**Vert Margin**](#vert-margin).
 
-  Você pode escolher essa opção quando quiser usar objetos ativos colocados em uma área fora da tela (ou seja, fora do retângulo delimitador da janela) com uma janela de tamanho automático. Thanks to this option, the presence of these objects will not modify the size of the window.
+  Você pode escolher essa opção quando quiser usar objetos ativos colocados em uma área fora da tela (ou seja, fora do retângulo delimitador da janela) com uma janela de tamanho automático. Graças a essa opção, a presença desses objetos não modificará o tamanho da janela.
 
 - **Definir tamanho**: o tamanho do formulário será baseado no que você inserir (em píxeis) nos campos [**Largura**](#width) e [**Altura**](#height).
 
-- `<object name>`: o tamanho do formulário será baseado na posição do objeto de formulário selecionado. For example, if you choose an object that is placed in the bottom-right part of the area to be displayed, the form size will consist of a rectangle whose upper left corner will be the origin of the form and the lower right corner will correspond to that of the selected object, plus any margin values.
+- `<object name>`: o tamanho do formulário será baseado na posição do objeto de formulário selecionado. Por exemplo, se você escolher um objeto que esteja posicionado na parte inferior direita da área a ser exibida, o tamanho do formulário consistirá em um retângulo cujo canto superior esquerdo será a origem do formulário e o canto inferior direito corresponderá ao do objeto selecionado, acrescido de quaisquer valores de margem.
 
 > Para formulários de saída, somente os campos [**Margem Hor**](#hor-margin) ou [**Largura**](#width) estão disponíveis.
 
@@ -29,7 +29,7 @@ As opções de tamanho dependem do valor da opção **Tamanho baseado em**.
 
 ---&#x20;
 
-## Height
+## Alto
 
 Altura del formulario (en píxeles) cuando el [tamaño del formulario](#size-based-on) es definido en **Definir tamaño**.
 
@@ -41,11 +41,11 @@ Altura del formulario (en píxeles) cuando el [tamaño del formulario](#size-bas
 
 ---&#x20;
 
-## Margem Margem hor.
+## Margem der.
 
 Valor a añadir (en píxeles) al margen inferior del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o `\<object name>`
 
-This value also determines the right-hand margins of forms used in the Label editor.
+Esse valor também determina as margens do lado direito dos formulários usados no editor de etiquetas.
 
 #### Gramática JSON
 
@@ -55,7 +55,7 @@ This value also determines the right-hand margins of forms used in the Label edi
 
 ---
 
-## Margem Margem hor.
+## Margem der.
 
 Valor a añadir (en píxeles) al margen inferior del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o `\<object name>`.
 

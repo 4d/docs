@@ -48,7 +48,7 @@ macOSの場合、タブコントロールを標準位置 (上) だけでなく�
 
 ### オブジェクトの使用
 
-[コレクション](Concepts/dt_collection) をカプセル化した [オブジェクト](Concepts/dt_object.md) をタブコントロールの [データソース](properties_Object.md#変数あるいは式) として割り当てることができます。 このオブジェクトには、次のプロパティが格納されていなくてはなりません:
+You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) as the [data source](properties_Object.md#variable-or-expression) of the tab control. このオブジェクトには、次のプロパティが格納されていなくてはなりません:
 
 | プロパティ          | 型          | 説明                                                                    |
 | -------------- | ---------- | --------------------------------------------------------------------- |
