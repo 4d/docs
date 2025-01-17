@@ -5,7 +5,7 @@ title: Ajuda
 
 ## Dica de Ajuda
 
-This property allows associating help messages with active objects in your forms. Podem ser apresentados em tempo de execução:
+Essa propriedade permite associar mensagens de ajuda a objetos ativos em seus formulários. Podem ser apresentados em tempo de execução:
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
