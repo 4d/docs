@@ -1,7 +1,7 @@
 ---
-id: metodo-banco-de-dados-on-exit
-title: Metodo banco de dados On Exit
-slug: /commands/metodo-banco-de-dados-on-exit
+id: on-exit-database-method
+title: On Exit database method
+slug: /commands/on-exit-database-method
 displayed_sidebar: docs
 ---
 

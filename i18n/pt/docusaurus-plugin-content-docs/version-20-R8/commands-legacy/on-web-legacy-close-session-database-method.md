@@ -1,7 +1,7 @@
 ---
-id: metodo-banco-de-dados-on-web-legacy-close-session-database-method
-title: Metodo banco de dados On Web Legacy Close Session database method
-slug: /commands/metodo-banco-de-dados-on-web-legacy-close-session-database-method
+id: id: on-web-legacy-close-session-database-method
+title: On Web Legacy Close Session database method
+slug: /commands/on-web-legacy-close-session-database-method
 displayed_sidebar: docs
 ---
 

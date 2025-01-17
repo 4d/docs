@@ -1,7 +1,7 @@
 ---
-id: metodo-base-de-dados-on-system-event
-title: Metodo base de dados On System Event
-slug: /commands/metodo-base-de-dados-on-system-event
+id: on-system-event-database-method
+title: On System Event database method
+slug: /commands/on-system-event-database-method
 displayed_sidebar: docs
 ---
 

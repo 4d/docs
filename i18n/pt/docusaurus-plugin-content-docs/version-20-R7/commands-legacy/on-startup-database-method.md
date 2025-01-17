@@ -1,7 +1,7 @@
 ---
-id: metodo-banco-de-dados-on-startup
-title: Metodo banco de dados On Startup
-slug: /commands/metodo-banco-de-dados-on-startup
+id: on-startup-database-method
+title: On Startup database method
+slug: /commands/on-startup-database-method
 displayed_sidebar: docs
 ---
 
