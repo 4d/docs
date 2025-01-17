@@ -128,8 +128,8 @@ Utilisé pour générer le fichier d'erreurs (voir [fichier d'erreurs](#error-fi
 Permet de définir le nombre de passes (analyse du code) effectuées par le compilateur et donc la durée de la compilation.
 
 - **Effectuer les passes de typage** : Passer par toutes les étapes qui permettent la compilation.
-- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters is not carried out. Cette option peut être utilisée lorsque vous avez déjà effectué le typage de toutes vos variables process et interprocess soit vous-même, soit en utilisant la fonction de génération automatique des méthodes compilateur.
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters is not carried out. Use this option when you are certain that all the process, interprocess and local variables as well as method parameters have been clearly typed.
+- **Les variables process et interprocess sont typées** : la passe de typage des variables process et interprocess ainsi que des paramètres des méthodes n'est pas effectuée. Cette option peut être utilisée lorsque vous avez déjà effectué le typage de toutes vos variables process et interprocess soit vous-même, soit en utilisant la fonction de génération automatique des méthodes compilateur.
+- **Toutes les variables sont typées** : la passe de typage des variables locales, process et interprocess ainsi que des paramètres des méthodes n'est pas effectuée. Utilisez cette option lorsque vous êtes certain que toutes les variables process, interprocess et locales ainsi que les paramètres des méthodes ont été clairement typés.
 
 
 #### Cible de compilation
