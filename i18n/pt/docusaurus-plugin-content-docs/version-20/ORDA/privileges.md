@@ -40,7 +40,7 @@ Uma ação de permissão definida em um determinado nível é herdada por padrã
 - Ao contrário das permissões da classe de dados, uma ação de permissão definida no nível do atributo não substitui a(s) permissão(ões) pai da classe de dados, mas é adicionada a ela. Por exemplo, se você atribuiu o privilégio "geral" a uma classe de dados e o privilégio "detalhe" a um atributo da classe de dados, ambos os privilégios "geral" e "detalhe" devem ser definidos na sessão para acessar o atributo.
 
 
-## Acções de autorização
+## Ações de permissão
 
 
 As ações disponíveis estão relacionadas com o recurso alvo.
@@ -64,19 +64,19 @@ As ações disponíveis estão relacionadas com o recurso alvo.
 A definição das permissões deve ser coerente, nomeadamente:
 
 - As permissões **update** e **drop** também precisam de permissão **read** (mas **create** não precisa)
-- **promote** permission also need **describe** permission.
+- **promover** a permissão também precisa **descrever** a permissão.
 
 
 
-## Privilégios e roles
+## Privilégios e funções
 
-A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Basically, a role gathers several privileges to define a business user profile. For example, "manageInvoices" could be a privilege while "secretary" could be a role (which includes "manageInvoices" and other privileges).
+Um **privilégio** é a capacidade técnica de executar **ações** em **recursos**, enquanto uma **função** é um privilégio estabelecido para ser usado por um administrador. Basicamente, uma função reúne vários privilégios para definir um perfil de usuário corporativo. Por exemplo, "manageInvoices" poderia ser um privilégio enquanto "secretary" poderia ser uma função (que inclui "manageInvoices" e outros privilégios).
 
 Um privilégio ou um papel pode ser associado a várias combinações de "ação + recurso". Podem ser associados vários privilégios a uma ação. Um privilégio pode incluir outros privilégios.
 
-- You **create** privileges and/or roles in the `roles.json` file (see below). Você **configurou** o escopo dele, atribuindo-lhes a ação de permissão aplicada aos recursos.
+- Você **cria** privilégios e/ou funções no arquivo `roles.json` (veja abaixo). Você **configurou** o escopo dele, atribuindo-lhes a ação de permissão aplicada aos recursos.
 
-- You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
+- Você **concede** privilégios e/ou funções a cada sessão de usuário usando o método [`.setPrivileges()`](../API/SessionClass.md#setprivileges) da classe `Session`.
 
 
 ### Exemplo
@@ -121,25 +121,25 @@ Em um contexto diferente de *Qodly* (cloud), é necessário criar esse arquivo n
 
 A sintaxe do ficheiro `roles.json` é a seguinte:
 
-| Nome da propriedade |                 |               | Tipo                             | Obrigatório | Descrição                                                                    |
-| ------------------- | --------------- | ------------- | -------------------------------- | ----------- | ---------------------------------------------------------------------------- |
-| privileges          |                 |               | Coleção de objectos `privilege`  | X           | Lista de privilégios definidos                                               |
-|                     | \[].privilege  |               | Text                             |             | Nome do privilégio                                                           |
-|                     | \[].includes   |               | Coleção de strings               |             | Lista de nomes de privilégios incluídos                                      |
-| roles               |                 |               | Coleção de objetos `role`        |             | Lista de roles definidos                                                     |
-|                     | \[].role       |               | Text                             |             | Nome da role                                                                 |
-|                     | \[].privileges |               | Coleção de strings               |             | Lista de nomes de privilégios incluídos                                      |
-| permissions         |                 |               | Object                           | X           | Lista de acções permitidas                                                   |
-|                     | allowed         |               | Coleção de objectos `permission` |             | Lista de permissões permitidas                                               |
-|                     |                 | \[].applyTo  | Text                             | X           | Nome do [recurso](#resources) alvo                                           |
-|                     |                 | \[].type     | Text                             | X           | [Resource](#resources) type: "datastore", "dataclass", "attribute", "method" |
-|                     |                 | \[].read     | Coleção de strings               |             | Lista de privilégios                                                         |
-|                     |                 | \[].create   | Coleção de strings               |             | Lista de privilégios                                                         |
-|                     |                 | \[].update   | Coleção de strings               |             | Lista de privilégios                                                         |
-|                     |                 | \[].drop     | Coleção de strings               |             | Lista de privilégios                                                         |
-|                     |                 | \[].describe | Coleção de strings               |             | Lista de privilégios                                                         |
-|                     |                 | \[].execute  | Coleção de strings               |             | Lista de privilégios                                                         |
-|                     |                 | \[].promote  | Coleção de strings               |             | Lista de privilégios                                                         |
+| Nome da propriedade |                 |               | Tipo                             | Obrigatório | Descrição                                                                      |
+| ------------------- | --------------- | ------------- | -------------------------------- | ----------- | ------------------------------------------------------------------------------ |
+| privileges          |                 |               | Coleção de objectos `privilege`  | X           | Lista de privilégios definidos                                                 |
+|                     | \[].privilege  |               | Text                             |             | Nome do privilégio                                                             |
+|                     | \[].includes   |               | Coleção de strings               |             | Lista de nomes de privilégios incluídos                                        |
+| roles               |                 |               | Coleção de objetos `role`        |             | Lista de roles definidos                                                       |
+|                     | \[].role       |               | Text                             |             | Nome da role                                                                   |
+|                     | \[].privileges |               | Coleção de strings               |             | Lista de nomes de privilégios incluídos                                        |
+| permissions         |                 |               | Object                           | X           | Lista de acções permitidas                                                     |
+|                     | allowed         |               | Coleção de objectos `permission` |             | Lista de permissões permitidas                                                 |
+|                     |                 | \[].applyTo  | Text                             | X           | Nome do [recurso](#resources) alvo                                             |
+|                     |                 | \[].type     | Text                             | X           | Tipo [de recurso](#resources): "datastore", "dataclass", "attribute", "method" |
+|                     |                 | \[].read     | Coleção de strings               |             | Lista de privilégios                                                           |
+|                     |                 | \[].create   | Coleção de strings               |             | Lista de privilégios                                                           |
+|                     |                 | \[].update   | Coleção de strings               |             | Lista de privilégios                                                           |
+|                     |                 | \[].drop     | Coleção de strings               |             | Lista de privilégios                                                           |
+|                     |                 | \[].describe | Coleção de strings               |             | Lista de privilégios                                                           |
+|                     |                 | \[].execute  | Coleção de strings               |             | Lista de privilégios                                                           |
+|                     |                 | \[].promote  | Coleção de strings               |             | Lista de privilégios                                                           |
 
 
 :::caution Lembrete
@@ -149,7 +149,7 @@ A sintaxe do ficheiro `roles.json` é a seguinte:
 
 :::
 
-### ficheiro `Roles_Errors.json`
+### Arquivo `Roles_Errors.json`
 
 O arquivo `roles.json` é analisado por 4D na inicialização. Você precisa reiniciar o aplicativo se quiser que as modificações neste arquivo sejam consideradas.
 

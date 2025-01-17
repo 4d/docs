@@ -9,7 +9,7 @@ Les heures sont stockées dans un format de 24 heures.
 
 Une valeur de type Heure peut être utilisée en tant que numérique. Le nombre correspondant est le nombre de secondes que cette valeur représente à partir de minuit (00:00:00).
 
-**Note :** Dans le _manuel de référence du langage 4D_, les paramètres de type Heure dans les descriptions des commandes sont appelés Heure, sauf spécification explicite.
+**Note :** Dans le *manuel de référence du langage 4D*, les paramètres de type Heure dans les descriptions des commandes sont appelés Heure, sauf spécification explicite.
 
 ## Constantes littérales de type heure
 

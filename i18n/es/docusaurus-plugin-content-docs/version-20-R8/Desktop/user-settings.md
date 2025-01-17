@@ -5,9 +5,9 @@ title: Propiedades usuario
 
 4D ofrece dos modos de funcionamiento para las Propiedades de los proyectos:
 
-- Modo **Estándar**: todos los [parámetros](../settings/overview.md) se almacenan en el archivo [_settings.4DSettings_ al nivel del proyecto](../Project/architecture.md#sources) y se aplican en todos los casos. Este es el modo por defecto, adecuado para la fase de desarrollo (todas las aplicaciones).
+- Modo **Estándar**: todos los [parámetros](../settings/overview.md) se almacenan en el archivo [*settings.4DSettings* al nivel del proyecto](../Project/architecture.md#sources) y se aplican en todos los casos. Este es el modo por defecto, adecuado para la fase de desarrollo (todas las aplicaciones).
 
-- **Modo propiedades usuario**: una parte de los parámetros personalizados se almacena en un archivo _settings.4DSettings_ [en la carpeta Settings](../Project/architecture.md#settings-user) (para todos los archivos de datos) o [en la carpeta Data](../Project/architecture.md#settings-user-data) (para este archivo de datos) y se utilizan en lugar de los parámetros de estructura. Este modo es adecuado para la fase de despliegue de las aplicaciones de escritorio. Este modo se activa mediante una opción situada en la [página Seguridad](../settings/security.md) de las Propiedades.
+- **Modo propiedades usuario**: una parte de los parámetros personalizados se almacena en un archivo *settings.4DSettings* [en la carpeta Settings](../Project/architecture.md#settings-user) (para todos los archivos de datos) o [en la carpeta Data](../Project/architecture.md#settings-user-data) (para este archivo de datos) y se utilizan en lugar de los parámetros de estructura. Este modo es adecuado para la fase de despliegue de las aplicaciones de escritorio. Este modo se activa mediante una opción situada en la [página Seguridad](../settings/security.md) de las Propiedades.
 
 Al definir las propiedades usuario, puede conservar los parámetros personalizados entre las actualizaciones de sus aplicaciones 4D, o gestionar parámetros diferentes para una misma aplicación 4D desplegada en varios sitios diferentes. También permite utilizar la programación para gestionar los archivos de configuración utilizando XML.
 
@@ -38,7 +38,7 @@ Puede acceder a estas cajas de diálogo utilizando el menú **Diseño > Propieda
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-También puede acceder a estas cajas de diálogo utilizando el comando [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) con el selector _settingsType_ apropiado.
+También puede acceder a estas cajas de diálogo utilizando el comando [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) con el selector *settingsType* apropiado.
 
 La caja de diálogo Propiedades de estructura es idéntica a la caja de diálogo Propiedades estándar, y permite acceder a todas sus propiedades (que pueden ser anuladas por las propiedades usuario).
 
@@ -73,7 +73,7 @@ La siguiente tabla lista las páginas de parámetros que se encuentran en las ca
 | [Página Seguridad](../settings/security.md)                                          | N/a                                                | N/a                                                     |
 | [Página Compatibilidad](../settings/compatibility.md)                                | N/a                                                | N/a                                                     |
 
-Al editar los parámetros en esta caja de diálogo, se almacenan automáticamente en el archivo _settings.4DSettings_ correspondiente (ver más abajo) o en el archivo _Backup.4DSettings_ (consulte la página [Parámetros de backup](../Backup/settings.md) para o
+Al editar los parámetros en esta caja de diálogo, se almacenan automáticamente en el archivo *settings.4DSettings* correspondiente (ver más abajo) o en el archivo *Backup.4DSettings* (consulte la página [Parámetros de backup](../Backup/settings.md) para o
 
 ## `SET DATABASE PARAMETER` y propiedades usuario
 
@@ -93,7 +93,7 @@ El archivo de propiedad usuario estándar se crea automáticamente y se coloca e
 
 [`ProjectFolder/Settings/settings.4DSettings`](../Project/architecture.md#settings-user)
 
-... donde _ProjectFolder_ es el nombre de la carpeta que contiene el archivo de estructura del proyecto.
+... donde *ProjectFolder* es el nombre de la carpeta que contiene el archivo de estructura del proyecto.
 
 En las aplicaciones fusionadas, el archivo de propiedades usuario se coloca en la siguiente ubicación:
 
@@ -106,7 +106,7 @@ El archivo de propiedades usuario vinculado al archivo de datos automáticamente
 
 [`Data/Settings/settings.4DSettings`](../Project/architecture.md#settings-user-data)
 
-... donde _Data_ es el nombre de la carpeta que contiene el archivo de datos actual de la aplicación.
+... donde *Data* es el nombre de la carpeta que contiene el archivo de datos actual de la aplicación.
 
 > Cuando el archivo de datos se encuentra en el mismo nivel que el archivo de estructura del proyecto, los archivos de propiedades usuario basados en la estructura y en los datos comparten la misma ubicación y el mismo archivo. El comando de menú **Propiedades usuario para el archivo de datos...** no se propone.
 
@@ -122,8 +122,8 @@ Las propiedades pueden almacenarse en tres niveles. Cada parámetro definido en 
 
 | **Nivel de prioridad**             | **Name**                                                                                                             | **Ubicación**                                                                                                                                                                                                | **Comments**                                                                                                                                                                              |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 3 (el más bajo) | Parámetros de estructura (o Parámetros cuando la función "Parámetros usuario" no está habilitada) | _**settings.4DSettings**_ en la carpeta Sources (bases proyecto) o en la carpeta Settings al mismo nivel que el archivo de estructura (bases binarias) | Ubicación única cuando los parámetros usuario no están activos. Se aplica a todas las copias de la aplicación.                                            |
-| 2                                  | Propiedades usuario (todos los archivos de datos)                                                 | Archivo _**settings.4DSettings**_ en la carpeta Settings en el mismo nivel que la carpeta Project                                                                                            | Reemplaza las propiedades de estructura. Se almacena en el paquete de la aplicación.                                                                      |
-| 1 (el mayor)    | Propiedades usuario (archivo de datos actual)                                                     | Archivo _**settings.4DSettings**_ en la carpeta Settings al mismo nivel que el archivo de datos                                                                                              | Reemplaza las propiedades de estructura y las propiedades usuario. Se aplica únicamente cuando el archivo de datos asociado se utiliza con la aplicación. |
+| 3 (el más bajo) | Parámetros de estructura (o Parámetros cuando la función "Parámetros usuario" no está habilitada) | ***settings.4DSettings*** en la carpeta Sources (bases proyecto) o en la carpeta Settings al mismo nivel que el archivo de estructura (bases binarias) | Ubicación única cuando los parámetros usuario no están activos. Se aplica a todas las copias de la aplicación.                                            |
+| 2                                  | Propiedades usuario (todos los archivos de datos)                                                 | Archivo ***settings.4DSettings*** en la carpeta Settings en el mismo nivel que la carpeta Project                                                                                            | Reemplaza las propiedades de estructura. Se almacena en el paquete de la aplicación.                                                                      |
+| 1 (el mayor)    | Propiedades usuario (archivo de datos actual)                                                     | Archivo ***settings.4DSettings*** en la carpeta Settings al mismo nivel que el archivo de datos                                                                                              | Reemplaza las propiedades de estructura y las propiedades usuario. Se aplica únicamente cuando el archivo de datos asociado se utiliza con la aplicación. |
 
 Tenga en cuenta que los archivos de propiedades usuario sólo contienen un subconjunto de parámetros relevantes, mientras que el archivo de estructura contiene todos los parámetros personalizados, incluidos los parámetros de bajo nivel.

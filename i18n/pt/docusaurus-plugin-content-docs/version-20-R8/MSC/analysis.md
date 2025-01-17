@@ -45,7 +45,7 @@ This information allows you to identify the source and context of each operation
 - **Usuario 4D**: nombre de usuario 4D del usuario que ha realizado la operación. If an alias is defined for the user, the alias is displayed instead of the 4D user name.
 
 - **Valores**: valores de los campos del registro en caso de adición o de modificación. Os valores são separados por ";". Only values represented in alphanumeric form are displayed.\
-  _**Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column._
+  ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
 
 - **Registros**: número del registro.
 

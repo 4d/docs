@@ -27,7 +27,7 @@ Nomes de função devem estar em conformidade com as regras normais de nomeaçã
 
 ## Propriedades dos objectos
 
-O nome de uma propriedade de objeto (também chamada de _atributo_ de objeto) pode conter até 255 caracteres.
+O nome de uma propriedade de objeto (também chamada de *atributo* de objeto) pode conter até 255 caracteres.
 
 As propriedades dos objetos podem fazer referência a valores escalares, elementos ORDA, funções de classe, outros objetos, etc. Seja qual for sua natureza, os nomes das propriedades do objeto devem seguir as seguintes regras **se você quiser usar a [notação de ponto](dt_object.md#propriedades-do-objeto)**:
 

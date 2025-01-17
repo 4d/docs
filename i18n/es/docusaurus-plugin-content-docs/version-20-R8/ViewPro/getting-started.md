@@ -99,7 +99,7 @@ Un área 4D View Pro maneja varios objetos y elementos.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-La mayoría de los comandos de 4D View Pro requieren un parámetro _vpAreaName_, que es el [**nombre del área de formulario 4D View Pro**](FormObjects/viewProArea_overview.md) (objeto de formulario 4D). Este nombre es la propiedad del [nombre del objeto](FormObjects/properties_Object.md#object-name).
+La mayoría de los comandos de 4D View Pro requieren un parámetro *vpAreaName*, que es el [**nombre del área de formulario 4D View Pro**](FormObjects/viewProArea_overview.md) (objeto de formulario 4D). Este nombre es la propiedad del [nombre del objeto](FormObjects/properties_Object.md#object-name).
 
 Por ejemplo, si quiere definir el número total de columnas de un área llamada "myVpArea", escriba:
 
@@ -111,7 +111,7 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilización de objetos de rango
 
-Algunos comandos 4D View Pro requieren un parámetro _rangeObj_. En 4D View Pro, un rango es un objeto que hace referencia a un área en una hoja de cálculo. Esta área puede estar compuesta de una o varias celdas. Utilizando los comandos 4D View Pro, puede crear rangos y pasarlos a otros comandos para leer o escribir en lugares específicos de su documento.
+Algunos comandos 4D View Pro requieren un parámetro *rangeObj*. En 4D View Pro, un rango es un objeto que hace referencia a un área en una hoja de cálculo. Esta área puede estar compuesta de una o varias celdas. Utilizando los comandos 4D View Pro, puede crear rangos y pasarlos a otros comandos para leer o escribir en lugares específicos de su documento.
 
 Por ejemplo, para crear un objeto rango para las siguientes celdas:
 
@@ -129,7 +129,7 @@ Luego, puede pasar `$myRange` a otro método 4D View Pro para modificar estas ce
 Los objetos rango 4D View Pro se componen de varias propiedades:
 
 - area - El nombre del área 4D View Pro
-- rangos - Una colección de objeto(s) rango. Las propiedades disponibles en cada objeto de rango dependen del tipo de objeto rango. Por ejemplo, un objeto rango de tipo columna sólo incluirá las propiedades _.column_ y _.sheet_.
+- rangos - Una colección de objeto(s) rango. Las propiedades disponibles en cada objeto de rango dependen del tipo de objeto rango. Por ejemplo, un objeto rango de tipo columna sólo incluirá las propiedades *.column* y *.sheet*.
 
 | Propiedad |                                                                                       | Tipo       | Descripción                                                                                                               | Disponible para                                                |
 | --------- | ------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |

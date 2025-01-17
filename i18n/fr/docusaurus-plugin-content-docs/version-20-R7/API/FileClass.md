@@ -73,7 +73,7 @@ Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris
 
 La fonction `4D.File.new()` <!-- REF #4D.File.new().Summary -->crée et retourne un nouvel objet de type `4D.File`<!-- END REF -->. Elle est identique à la commande [`File`](../commands/file.md) (raccourci).
 
-> Il est recommandé d'utiliser la commande [`File`](../commande/file.md) au lieu de `4D.File.new()`.
+> Il est recommandé d'utiliser la commande [`File`](../commands/file.md) au lieu de `4D.File.new()`.
 
 <!-- INCLUDE document.copyTo().Desc -->
 

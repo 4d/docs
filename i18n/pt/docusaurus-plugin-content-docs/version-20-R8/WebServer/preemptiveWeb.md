@@ -14,19 +14,19 @@ The following table indicates whether the preemptive mode is used or is availabl
 | 4D Server             | Interpretado ([asociado al depurador](../Debugging/debugging-remote.md)) | Interpretado (não associado ao depurador) | Compilado          |
 | --------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ------------------ |
 | Servidor REST         | cooperativo                                                                                 | preemptive                                                   | preemptive         |
-| Servidor Web          | cooperativo                                                                                 | cooperativo                                                  | _configuração web_ |
-| Servidor Web Services | cooperativo                                                                                 | cooperativo                                                  | _configuração web_ |
+| Servidor Web          | cooperativo                                                                                 | cooperativo                                                  | *configuração web* |
+| Servidor Web Services | cooperativo                                                                                 | cooperativo                                                  | *configuração web* |
 
 | 4D remoto/usuário único | Interpretado | Compilado          |
 | ----------------------- | ------------ | ------------------ |
 | Servidor REST           | cooperativo  | preemptive         |
-| Servidor Web            | cooperativo  | _configuração web_ |
-| Servidor Web Services   | cooperativo  | _configuração web_ |
+| Servidor Web            | cooperativo  | *configuração web* |
+| Servidor Web Services   | cooperativo  | *configuração web* |
 
 - Servidor REST: gestiona las [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md)
 - Servidor web: maneja las [plantillas web](templates.md), [4DACTION y los métodos base](httpRequests.md)
 - Servidor de serviços Web: trata dos pedidos SOAP
-- _**web setting**_ significa que el modo apropiativo depende de un valor de configuración:
+- ***web setting*** significa que el modo apropiativo depende de un valor de configuración:
   - quando a opção [**Sessões escalonáveis**](sessions.md#enabling-sessions) estiver selecionada, o [modo preventivo é usado automaticamente](sessions.md#preemptive-mode) para processos web.
   - caso contrário, a opção [**Usar processos preventivos**](webServerConfig.md#use-preemptive-processes) é tida em conta.
   - regarding Web service processes (server or client), preemptive mode is supported at method level. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) and make sure they are confirmed thread-safe by the compiler.
@@ -51,7 +51,7 @@ All 4D code executed by the web server must be thread-safe if you want your web 
 
 - [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md) llamadas vía REST
 
-For each of these methods and code parts, the compiler will check if the thread-safety rules are respected, and will return errors in case of issues. Para más información sobre las reglas hilo seguro, consulte el párrafo _Escribir un método hilo seguro_ en el capítulo _Procesos_ del manual de [Lenguaje 4D](https://doc.4d.com).
+For each of these methods and code parts, the compiler will check if the thread-safety rules are respected, and will return errors in case of issues. Para más información sobre las reglas hilo seguro, consulte el párrafo *Escribir un método hilo seguro* en el capítulo *Procesos* del manual de [Lenguaje 4D](https://doc.4d.com).
 
 ## Código web 4D hilo seguro
 
@@ -59,10 +59,10 @@ Most of the web-related 4D commands and functions, database methods and URLs are
 
 ### Comandos 4D e métodos base
 
-Todos los comandos 4D relativos a la web son hilo seguro, _es decir_:
+Todos los comandos 4D relativos a la web son hilo seguro, *es decir*:
 
-- todos los comandos del tema _Servidor Web_,
-- todos los comandos del tema _Cliente HTTP_.
+- todos los comandos del tema *Servidor Web*,
+- todos los comandos del tema *Cliente HTTP*.
 
 Los métodos base relacionados con la web son hilo seguro y pueden utilizarse en modo apropiativo (ver arriba): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 
@@ -72,16 +72,16 @@ Obviamente, o código executado por esses métodos também deve ser thread-safe.
 
 The following 4D Web Server URLs are thread-safe and can be used in preemptive mode:
 
-- _4daction/_ (el método proyecto llamado también debe ser hilo seguro)
-- _4dcgi/_ (los métodos base llamados también deben ser hilo seguro)
-- _4dwebtest/_
-- _4dblank/_
-- _4dstats/_
-- _4dhtmlstats/_
-- _4dcacheclear/_
-- _rest/_
-- _4dimgfield/_ (generado por `PROCESS 4D TAGS` para la petición web en los campos imagen)
-- _4dimg/_ (generado por `PROCESS 4D TAGS` para la petición web en las variables imagen)
+- *4daction/* (el método proyecto llamado también debe ser hilo seguro)
+- *4dcgi/* (los métodos base llamados también deben ser hilo seguro)
+- *4dwebtest/*
+- *4dblank/*
+- *4dstats/*
+- *4dhtmlstats/*
+- *4dcacheclear/*
+- *rest/*
+- *4dimgfield/* (generado por `PROCESS 4D TAGS` para la petición web en los campos imagen)
+- *4dimg/* (generado por `PROCESS 4D TAGS` para la petición web en las variables imagen)
 
 ### Ícone de processo web preemptivo
 

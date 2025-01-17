@@ -40,7 +40,7 @@ Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de 
 
 ## Form Class
 
-Nome de uma [classe usuário](../Concepts/classes.md#class-definition) existente para associar ao formulário. The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
+Nome de uma [classe usuário](../Concepts/classes.md#class-definition) existente para associar ao formulário. The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
 
 Associating a class to the form provides the following benefits:
 
@@ -52,7 +52,7 @@ Associating a class to the form provides the following benefits:
 
 - You can also to benefit from [autocompletion features](../code-editor/write-class-method.md#autocomplete-functions) in the code editor.
 
-- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a _formData_ object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands.
+- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a *formData* object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands.
 
 :::note
 
@@ -64,27 +64,27 @@ See [this blog post](http://blog.4d.com/empower-your-development-process-with-yo
 
 | Nome      | Tipo de dados | Valores possíveis                                                                                                       |
 | --------- | ------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| formClass | string        | name of an existing user class ("_className_" or "_componentNameSpace_._className_") |
+| formClass | string        | name of an existing user class ("*className*" or "*componentNameSpace*.*className*") |
 
 ---
 
 ## Nome do formulário
 
-This property is the name of the form itself and is used to refer to the form by name using the 4D language. O nome do formulário deve estar em conformidade com as [regras especificadas para identificadores] (Concepts/identifiers.md) em 4D.
+Essa propriedade é o nome do próprio formulário sendo usada para fazer referência ao formulário pelo nome usando a linguagem 4D. O nome do formulário deve estar em conformidade com as [regras especificadas para identificadores] (Concepts/identifiers.md) em 4D.
 
 #### Gramática JSON
 
-The form name is defined by the name of the folder that contains the form.4Dform file. Consulte [arquitetura do projeto](Project/architecture.md#sources-folder) para obter mais informações.
+O nome do formulário é definido pelo nome da pasta que contém o arquivo form.4Dform. Consulte [arquitetura do projeto](Project/architecture.md#sources-folder) para obter mais informações.
 
 ---
 
 ## Tipo de formulário
 
-O tipo de formulário, _ou seja_, seu destino, define as características que estarão disponíveis para o formulário. Por exemplo, [markers](properties_Markers.md) só pode ser definido para formulários de tabela de lista (saída).
+O tipo de formulário, *ou seja*, seu destino, define as características que estarão disponíveis para o formulário. Por exemplo, [markers](properties_Markers.md) só pode ser definido para formulários de tabela de lista (saída).
 
 Cada tabela de um banco de dados tem geralmente pelo menos duas formas de tabela. Uma para listar os registos no ecrã e a outra para visualizar um registo de cada vez (utilizada para a introdução de dados e modificações):
 
-- Formulário de saída - o _formulário de saída_ ou _formulário de lista_ exibe uma lista de registros, com uma única linha por registro. Os resultados das consultas são apresentados num formulário de saída e os usuários podem fazer duplo clique numa linha para visualizar o formulário de entrada para esse registo.
+- Formulário de saída - o *formulário de saída* ou *formulário de lista* exibe uma lista de registros, com uma única linha por registro. Os resultados das consultas são apresentados num formulário de saída e os usuários podem fazer duplo clique numa linha para visualizar o formulário de entrada para esse registo.
   ![](../assets/en/FormObjects/formOutput.png)
 
 - Formulário de entrada - utilizado para entrada de dados. Exibe um único registro por tela e, normalmente, tem botões para salvar e cancelar modificações no registro e para navegar de registro em registro (\*primeiro registro, último registro, registro anterior, próximo registro).
@@ -98,7 +98,7 @@ Os tipos suportados dependem da categoria do formulário:
 | Formulário detalhado para impressão | detailPrinter    | Um relatório impresso com uma página por registo, como uma fatura    | Formulários projeto - Formulários tabela |
 | Formulário lista                    | listScreen       | Um formulário para listar os registos no ecrã                        | Formularios tabla                        |
 | Formulário de lista para impressão  | listPrinter      | Um relatório impresso que lista os registos                          | Formularios tabla                        |
-| Nenhum                              | _no destination_ | Um formulário sem caraterística específica                           | Formulários projeto - Formulários tabela |
+| Nenhum                              | *no destination* | Um formulário sem caraterística específica                           | Formulários projeto - Formulários tabela |
 
 #### Gramática JSON
 
@@ -118,9 +118,9 @@ Para remover a herança, selecione `\<None>` na Property List (ou " " em JSON).
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                                                                                                                  |
-| ------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| inheritedForm | string        | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
+| Nome          | Tipo de dados | Valores possíveis                                                                                                                                                     |
+| ------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| inheritedForm | string        | Nome do formulário da tabela ou do projeto OU um caminho POSIX para um arquivo .json que descreve o formulário OU um objeto que descreve o formulário |
 
 ---
 
@@ -157,7 +157,7 @@ Para obter mais informações, consulte [Páginas de formulário] (forms.md#form
 
 ## Publicado como subformulário
 
-Para que um formulário de componente seja selecionado como um [subformulário] (FormObjects/subform_overview.md) em um aplicativo host, ele deve ter sido explicitamente compartilhado. When this property is selected, the form will be published in the host application.
+Para que um formulário de componente seja selecionado como um [subformulário] (FormObjects/subform_overview.md) em um aplicativo host, ele deve ter sido explicitamente compartilhado. Quando esta propriedade for selecionada, o formulário será publicado na aplicação host.
 
 Apenas os projetos formulário podem ser especificados como subformulários publicados.
 
@@ -176,7 +176,7 @@ Quando a opção é usada, se a janela for aberta usando o comando "Abrir janela
 - a página atual,
 - a posição, tamanho e visibilidade de cada objecto de formulário (incluindo o tamanho e visibilidade das colunas da lista box).
 
-> Esta opção não leva em conta objetos gerados usando o comando `OBJECT DUPLICATE`. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+> Esta opção não leva em conta objetos gerados usando o comando `OBJECT DUPLICATE`. Para que um usuário recupere seu ambiente ao usar este comando, o desenvolvedor deve repetir a sequência de criação, definição e posicionamento dos objetos.
 
 Quando essa opção é selecionada, a opção [Save Value] (FormObjects/properties_Object.md#save-value) fica disponível para determinados objetos.
 
@@ -200,7 +200,7 @@ Você pode usar referências dinâmicas para definir os títulos das janelas dos
 
 - Uma referência XLIFF padrão armazenada na pasta Resources.
 - Um rótulo de tabela ou campo: A sintaxe a ser aplicada é `<?[TableNum]FieldNum>` ou `<?[TableName]FieldName>`.
-- Uma variável ou um campo: A sintaxe a ser aplicada é `\<VariableName>` ou `<[TableName]FieldName>`. The current value of the field or variable will be displayed in the window title.
+- Uma variável ou um campo: A sintaxe a ser aplicada é `\<VariableName>` ou `<[TableName]FieldName>`. O valor atual do campo ou variável será exibido no título da janela.
 
 > O número de caracteres para um título de janela é limitado a 31.
 

@@ -366,13 +366,13 @@ Utilisé pour associer un format d'affichage aux données de la colonne. Les for
 
 Les colonnes booléennes et numériques (réel ou entier) peuvent être affichées sous forme de cases à cocher. Dans ce cas, la propriété \[Titre\](#titre) peut être définie.
 
-Les colonnes booléennes peuvent également être affichées sous forme de pop up menus. In this case, the [Text when False and Text when True](#text-when-falsetext-when-true) properties must be defined.
+Les colonnes booléennes peuvent également être affichées sous forme de pop up menus. Dans ce cas, les propriétés \[Texte si Faux et Texte si Vrai\](#texte-si-faux-texte-si-vrai) doivent être définies.
 
 #### Grammaire JSON
 
 | Nom         | Type de données | Valeurs possibles                                  |
 | ----------- | --------------- | -------------------------------------------------- |
-| controlType | string          | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**boolean columns**: "checkbox" (default) or "popup"</li> |
+| controlType | string          | <li>**nombre de colonnes** : "automatic" (par défaut) ou "checkbox"</li><li>**boolean columns**: "checkbox" (par défaut) ou "popup"</li> |
 
 #### Objets pris en charge
 
@@ -493,7 +493,7 @@ Vous pouvez gérer la propriété Visibilité pour la plupart des objets de form
 
 #### Visibilité automatique dans les formulaires liste
 
-In the context of ["list" forms](FormEditor/properties_FormProperties.md#form-type), the Visibility property supports two specific values:
+Dans le contexte des [formulaires liste](FormEditor/properties_FormProperties.md#form-type), la propriété Visibility prend en charge deux valeurs spécifiques :
 
 * **Si enregistrement sélectionné** (nom JSON : "selectedRows")
 * **Si enregistrement non sélectionné** (nom JSON : "unselectedRows")
@@ -502,7 +502,7 @@ Cette propriété est utilisée uniquement lors du dessin d'objets situés dans 
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
+4D ne prend pas en compte cette propriété si l'objet a été masqué à l'aide de la commande [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/fr/page603.html); dans ce cas, l'objet reste invisible quelle que soit la sélection de l'enregistrement.
 
 #### Grammaire JSON
 

@@ -28,7 +28,7 @@ Vous pouvez créer différents types de listes déroulantes avec différentes fo
 
 > Cette fonctionnalité n'est disponible que dans les projets 4D.
 
-Un [objet](Concepts/dt_object.md) encapsulant une [collection ](Concepts/dt_collection) peut être utilisé comme source de données d'une liste déroulante. Cet objet doit avoir les propriétés suivantes :
+Un [objet ](Concepts/dt_object.md) encapsulant une [collection ](Concepts/dt_collection.md) peut être utilisé comme source de données d'une liste déroulante. Cet objet doit avoir les propriétés suivantes :
 
 | Propriété      | Type                   | Description                                                                                                                                                                                                                                                                 |
 | -------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

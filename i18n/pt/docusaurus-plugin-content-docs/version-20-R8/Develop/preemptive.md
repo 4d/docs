@@ -7,9 +7,9 @@ O código 4D compilado pode ser executado em **processos preemptivos**. Graças 
 
 ## O que é um processo preemptivo?
 
-Quando for executado em _modo preemptivo_, um processo estará dedicado a uma CPU. A gestão de processos então é delegada ao sistema, que pode adjudicar por separado cada CPU em uma máquina multi-núcleo.
+Quando for executado em *modo preemptivo*, um processo estará dedicado a uma CPU. A gestão de processos então é delegada ao sistema, que pode adjudicar por separado cada CPU em uma máquina multi-núcleo.
 
-Quando for executado em modo _cooperativo_, todos os processos serão gestionados pelo thread da aplicação pai e compartem a mesma CPU, mesmo em uma máquina multi-núcleo.
+Quando for executado em modo *cooperativo*, todos os processos serão gestionados pelo thread da aplicação pai e compartem a mesma CPU, mesmo em uma máquina multi-núcleo.
 
 Como resultado, no modo apropriativo, o rendimento global da aplicação é incrementado, especialmente em máquinas multi-núcleo, já que múltiplos processos (threads ou fios) podem ser executados simultaneamente. Entretanto, os ganhos reais dependem das operações executadas. Por outro lado, já que no modo apropriativo cada fio é independente dos demais e não é gestionado diretamente pela aplicação, limitações específicas se aplicam aos métodos que queira que sejam compatíveis com o modo apropriativo. Além disso, a execução apropriativa está disponível só em alguns contextos específicos.
 
@@ -180,7 +180,7 @@ Os métodos com a propriedade "Pode ser executado em processos preemptivos" ser�
 
 :::
 
-O [arquivo de símbolos](../Project/compiler.md/#complete-list-of-methods), se ativado, também contém o estado de segurança de thread para cada método.
+The [symbol file](../Project/compiler.md#complete-list-of-methods), if enabled, also contains the thread safety status for each method.
 
 ### Interface do usuário
 

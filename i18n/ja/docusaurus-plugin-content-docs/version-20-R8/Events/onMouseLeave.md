@@ -11,7 +11,7 @@ title: On Mouse Leave
 
 このイベントは、マウスカーソルがフォームオブジェクトの描画エリアから出たときに一度だけ発生します。
 
-`On Mouse Leave` イベントは、_MouseX_ および _MouseY_ システム変数を更新します。
+`On Mouse Leave` イベントは、*MouseX* および *MouseY* システム変数を更新します。
 
 `OBJECT SET VISIBLE` コマンドの使用や、[表示状態](FormObjects/properties_Display.md#表示状態) プロパティの設定によって非表示にされたオブジェクトでは、このイベントは生成されません。
 

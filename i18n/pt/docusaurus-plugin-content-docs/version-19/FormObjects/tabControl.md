@@ -25,7 +25,7 @@ If the tab control is wide enough to display all the tabs with both the labels a
 
 Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
 
-### JSON Exemplo
+### Exemplo JSON
 
 ```4d
  "myTab": {
@@ -48,7 +48,7 @@ To supply the labels for a tab control, you can use:
 
 ### Utilização de um objecto
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. O objeto deve conter as seguintes propriedades:
+You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) as the [data source](properties_Object.md#variable-or-expression) of the tab control. O objeto deve conter as seguintes propriedades:
 
 | Propriedade    | Tipo       | Descrição                                                                                                                                                  |
 | -------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |

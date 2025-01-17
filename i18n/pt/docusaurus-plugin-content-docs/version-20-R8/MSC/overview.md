@@ -21,7 +21,7 @@ In maintenance mode, only the MSC window is displayed (the project is not opened
   ![](../assets/en/MSC/MSC_standardOpen.png)
 - **Help/Maintenance Security Center** menu or **MSC** button in the tool bar (project not open)\
   ![](../assets/en/MSC/mscicon.png)\
-  When you call this function, a standard Open file dialog appears so that you can select the _.4DProject_ or _.4dz_ file of the to be examined. O projeto não será aberto por 4D.
+  When you call this function, a standard Open file dialog appears so that you can select the *.4DProject* or *.4dz* file of the to be examined. O projeto não será aberto por 4D.
 
 ## Acesso ao modo padrão
 

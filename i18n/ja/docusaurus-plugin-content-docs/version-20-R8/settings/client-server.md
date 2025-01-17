@@ -24,7 +24,7 @@ title: クライアント-サーバーページ
 
 #### 公開名
 
-このオプションでは、4D Server データベースの公開名を変更できます。この名前は接続ダイアログボックスの **利用可能** ページに表示されます ([リモートプロジェクトを開く](../Desktop/clientServer/md#リモートプロジェクトを開く) 参照)。 デフォルトで 4D Server はプロジェクトファイル名を使用します。 これを好きな名前に変更できます。
+This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer.md#opening-a-remote-project) paragraph). デフォルトで 4D Server はプロジェクトファイル名を使用します。 これを好きな名前に変更できます。
 
 :::note
 
@@ -56,7 +56,7 @@ TCPプロトコルを使用して、1台のマシン上で複数の 4Dアプリ�
 
 #### ドメインサーバーによるユーザーの認証
 
-このオプションは Windows上の 4D Server データベースにおいて SSO (_Single Sign On_) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.ja.html) を参照ください。
+このオプションは Windows上の 4D Server データベースにおいて SSO (*Single Sign On*) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.ja.html) を参照ください。
 
 #### サービスプリンシパル名 (SPN)
 

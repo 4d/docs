@@ -92,10 +92,10 @@ Quando expressões de um determinado tipo são esperadas em seu código 4D, voc�
 | ------------ | ----------------------- | ---------- | -------------------------------------------------------------- | ----- |
 | Igual        | Null `=` Null           | Parâmetros | a.nullProp `=` b.nullProp      | True  |
 |              | Null `=` Undefined      | Parâmetros | a.nullProp `=` b.undefinedProp | True  |
-|              | Null `=` _scalar value_ | Parâmetros | a.nullProp `=` 42                              | False |
+|              | Null `=` *scalar value* | Parâmetros | a.nullProp `=` 42                              | False |
 | Desigualdade | Null `#` Null           | Parâmetros | a.nullProp `#` b.nullProp      | False |
 |              | Null `#` Undefined      | Parâmetros | a.nullProp `#` b.undefinedProp | False |
-|              | Null `#` _scalar value_ | Parâmetros | a.nullProp `#` 42                              | True  |
+|              | Null `#` *scalar value* | Parâmetros | a.nullProp `#` 42                              | True  |
 
 \*Os valores escalares são valores do tipo string, Date, Time, Boolean, number, ou Blob. Quando declarado, seu [valor padrão] (data-types.md#default-values) não é indefinido nem nulo. Outros tipos (Ponteiro, Imagem, Objecto, Colecção) têm valor por defeito indefinido ou nulo. Ex:
 
@@ -119,10 +119,10 @@ As comparações com os operadores Maior que (`>`), Menor que (`<`), Greater tha
 | -------------------- | ----------------------------------------- | ---------- | ------------------------------------------------------------------- | ----- |
 | Igual                | Undefined `=` Undefined                   | Parâmetros | a.undefinedProp `=` b.undefinedProp | True  |
 |                      | Undefined `=` Null                        | Parâmetros | a.undefinedProp `=` c.nullProp      | True  |
-|                      | Undefined `=` _outros valores_            | Parâmetros | a.undefinedProp `=` 42                              | False |
+|                      | Undefined `=` *outros valores*            | Parâmetros | a.undefinedProp `=` 42                              | False |
 | Desigualdade         | Undefined `#` Undefined                   | Parâmetros | a.undefinedProp `#` b.undefinedProp | False |
 |                      | Undefined `#` Null                        | Parâmetros | a.undefinedProp `#` b.nullProp      | False |
-|                      | Undefined `#` _outros valores_            | Parâmetros | a.undefinedProp `#` 42                              | True  |
+|                      | Undefined `#` *outros valores*            | Parâmetros | a.undefinedProp `#` 42                              | True  |
 | Maior que            | Undefined `>` string, Date, Time, number  | Parâmetros | a.undefinedProp `>` "abc"                           | False |
 | Menor que            | Undefined `<` string, Date, Time, number  | Parâmetros | a.undefinedProp `<` "abc"                           | False |
 | Maior ou igual a     | Undefined `>=` string, Date, Time, number | Parâmetros | a.undefinedProp `>=` "abc"                          | False |

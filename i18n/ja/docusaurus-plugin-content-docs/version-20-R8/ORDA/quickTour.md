@@ -35,10 +35,10 @@ ds.Company.city // 都市の名前を返します
 
 > ORDA は大文字と小文字を区別します。 `ds.company.city` が ds.Company.city 属性を参照することはありません。
 
-また、ds.Company データクラスに `hires` プロパティが追加されていることにお気づきでしょうか。 これはフィールドに対応した属性ではありません。 `hires` は、実際には Company と Employee の間の _1対N_ リレーションの名前です:
+また、ds.Company データクラスに `hires` プロパティが追加されていることにお気づきでしょうか。 これはフィールドに対応した属性ではありません。 `hires` は、実際には Company と Employee の間の *1対N* リレーションの名前です:
 
 ![](../assets/en/ORDA/struc2s.png)
-_Name of the relation as defined in the Inspector_
+*Name of the relation as defined in the Inspector*
 
 つまり、ある会社で働く従業員のリストにアクセスしたいとき、ORDA では次のように書きます:
 

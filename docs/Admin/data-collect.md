@@ -19,7 +19,7 @@ Data is collected during the following events:
 - database startup,
 - database closure,
 - web server startup,
-- php execution,
+- use of specific features such as php, open datastore, remote debugger,
 - client connection,
 - data collection sending.
 
@@ -52,12 +52,27 @@ Some data is also collected at regular intervals.
 |projectMode|Boolean|True if the application is a project|
 |mobile|Collection|Information on mobile sessions|
 
-
 ### Collected at web server startup and data collection sending
 
 |Data|Type|Notes|
 |---|----|---|
 |webServer|Object|"started":true if the web server is starting or started|
+
+### Collected at new web session creation
+
+|Data|Type|Notes|
+|---|----|---|
+|databases.webMaxLicensedSessions|Number|Maximum number of non-REST web sessions on the server that use the webserver license|
+|databases.restMaxLicensedSessions|Number|Maximum number of REST web sessions on the server that use the REST license|
+|databases.webMaxUnlicensedSessions|Number|Maximum number of other non-REST web sessions on the server|
+|databases.restMaxUnlicensedSessions|Number|Maximum number of other REST web sessions on the server|
+
+### Collected at datastore opening
+
+|Data|Type|Notes|
+|---|----|---|
+|databases.externalDatastoreOpened|Number|Number of calls to `Open datastore`|
+|databases.internalDatastoreOpened|Number|Number of times the datastore is opened by an external server|
 
 
 ### Collected at regular intervals
@@ -86,7 +101,8 @@ Some data is also collected at regular intervals.
 |indexSegment.diskWriteBytes|Number|Number of bytes written in the index file |
 |indexSegment.diskReadCount|Number|Number of reads in the index file |
 |indexSegment.diskWriteCount|Number|Number of writes in the index file |
-
+|databases.webScalableSessions|Boolean|True if scalable sessions are activated |
+|databases.webIPAddressesNumber|Number|Number of different IP addresses that made a request to 4D Server |
 
 
 ### Collected at database closure and data collection sending
@@ -100,6 +116,13 @@ Some data is also collected at regular intervals.
 |qodly.webforms|Number|Number of Qodly webforms|
 
 
+### Collected at every new call to the remote debugger 
+
+|Data|Type|Notes|
+|---|----|---|
+|databases.remoteDebugger4DRemoteAttachments|Number|Number of attachments to the remote debugger from a remote 4D|
+|databases.remoteDebuggerQodlyAttachments|Number|Number of attachments to the remote debugger from Qodly|
+|databases.remoteDebuggerVSCodeAttachments|Number|Number of attachments to the remote debugger from VS Code|
 
 
 ### Collected every time PHP execute is called
@@ -121,7 +144,7 @@ Some data is also collected at regular intervals.
 
 ## Where is it stored and sent?
 
-Collected data is written in a text file (JSON format) per database when 4D Server quits. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv20/help/command/en/page485.html), i.e.:
+Collected data is written in a text file (JSON format) per database when 4D Server quits. The file is stored inside the [active 4D folder](../commands-legacy/get-4d-folder.md), i.e.:
 
 - on Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - on macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`

@@ -23,7 +23,7 @@ title: エラー処理
 
 ## エラー/ステータス
 
-`entity.save()` や `transporter.send()` など、おおくの 4D クラス関数は _status_ オブジェクトを返します。 ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。 これらのエラーへの対応は、通常のコードによっておこなうことができます。
+`entity.save()` や `transporter.send()` など、おおくの 4D クラス関数は *status* オブジェクトを返します。 ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。 これらのエラーへの対応は、通常のコードによっておこなうことができます。
 
 ディスク書き込みエラーやネットワークの問題などのイレギュラーな中断は "想定されない" エラーです。 これらのエラーは例外を発生させ、エラー処理メソッドや `Try()` キーワードを介して対応する必要があります。
 
@@ -33,7 +33,7 @@ title: エラー処理
 
 インストールされたエラーハンドラーは、4Dアプリケーションまたはそのコンポーネントでエラーが発生した場合、インタープリターモードまたはコンパイル済モードで自動的に呼び出されます。 実行コンテキストに応じて、異なるエラーハンドラーを呼び出すこともできます (後述参照)。
 
-エラー処理用のプロジェクトメソッドを _実装_ するには、[`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/ja/page155.html) コマンドをコールし、当該プロジェクトメソッド名と (任意で) スコープを引数として渡します。 例:
+エラー処理用のプロジェクトメソッドを *実装* するには、[`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/ja/page155.html) コマンドをコールし、当該プロジェクトメソッド名と (任意で) スコープを引数として渡します。 例:
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッドを実装します
@@ -45,7 +45,7 @@ ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッド�
 ON ERR CALL("";ek local) // ローカルプロセスにおいてエラーの検知を中止します
 ```
 
-The  [`Method called on error`](https://doc.4d.com/4dv20/help/command/en/page704.html) command allows you to know the name of the method installed by `ON ERR CALL` for the current process. このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
+[`Method called on error`](https://doc.4d.com/4dv20/help/command/en/page704.html) コマンドを使用すると、カレントプロセスにおいて`ON ERR CALL` で実装されたメソッドの名前を知ることができます。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -94,7 +94,7 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 
 :::info
 
-4D は、いくつかの [**システム変数**](variables.md#システム変数) と呼ばれる専用の変数を自動的に管理しています。
+4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs.
 :::
 
 - [`Last errors`](https://doc.4d.com/4dv19/help/command/ja/page1799.html) コマンドは、4Dアプリケーションのカレントエラースタックに関する情報をコレクションとして返します。 また同じ情報を配列として返す[`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1015.html) コマンドを使用することもできます。
@@ -149,15 +149,15 @@ Try (expression) : any | Undefined
 
 ```
 
-_expression_ には任意の有効な式を使用できます。
+*expression* には任意の有効な式を使用できます。
 
-実行中にエラーが発生した場合、`Try()` の呼び出し前に [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされたかどうかに関係なく、エラーダイアログは表示されず、エラーはキャッチされます。 _expression_ が値を返す場合、`Try()` は最後に評価された値を返します。値が返されない場合、`Try()` は `Undefined` を返します。
+実行中にエラーが発生した場合、`Try()` の呼び出し前に [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされたかどうかに関係なく、エラーダイアログは表示されず、エラーはキャッチされます。 *expression* が値を返す場合、`Try()` は最後に評価された値を返します。値が返されない場合、`Try()` は `Undefined` を返します。
 
-エラーは、[`Last errors`](https://doc.4d.com/4dv20/help/command/ja/page1799.html) コマンドを使用することで処理できます。 _expression_ が `Try()` のスタック内でエラーをスローした場合、実行フローは停止し、最後に実行された `Try()` (コールスタック内で最初に見つかったもの) に戻ります。
+エラーは、[`Last errors`](https://doc.4d.com/4dv20/help/command/ja/page1799.html) コマンドを使用することで処理できます。 *expression* が `Try()` のスタック内でエラーをスローした場合、実行フローは停止し、最後に実行された `Try()` (コールスタック内で最初に見つかったもの) に戻ります。
 
 :::note
 
-もし _expression_ によって [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされた場合、エラー発生時にはそれが呼び出されます。
+もし *expression* によって [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされた場合、エラー発生時にはそれが呼び出されます。
 
 :::
 
@@ -211,9 +211,9 @@ End if
 
 The `Try...Catch...End try` structure allows you to test a block code in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed.
 
-Unlike the `Try(expression)` keyword that evaluates a single-line expression, the `Try...Catch...End try` structure allows you to evaluate any code block, from the most simple to the most complex, without requiring an error-handling method. In addition, the `Catch` block can be used to handle the error in any custom way.
+`Try(expression)` キーワードが単一の行の式を評価するのとは異なり、`Try...Catch...End try` 文は、単純なものから複雑なものまで、任意のコードブロックを評価することができます。エラー処理メソッドは必要としない点は同じです。 また、`Catch` ブロックは、任意の方法でエラーを処理するために使用できます。
 
-The formal syntax of the `Try...Catch...End try` structure is:
+`Try...Catch...End try` 構文の正式なシンタックスは、以下の通りです:
 
 ```4d
 
@@ -225,22 +225,22 @@ End try
 
 ```
 
-The code placed between the `Try` and the `Catch` keywords is first executed, then the flow depends on the error(s) encountered during this execution.
+`Try` と `Catch` キーワード間のコードが最初に実行されます。その後のフローは、実行に発生したエラーによって異なります。
 
-- If no error is thrown, the code execution continues after the corresponding `End try` keyword. The code placed between the `Catch` and the `End try` keywords is not executed.
-- If the code block execution throws a _non-deferred error_, the execution flow stops and executes the corresponding `Catch` code block.
-- If the code block calls a method that throws a _deferred error_, the execution flow jumps directly to the corresponding `Catch` code block.
-- If a deferred error is directly thrown from the `Try` block, the execution flow continues until the end of the `Try` block and does not execute the corresponding `Catch` block.
+- エラーがスローされなかった場合には、対応する `End try` キーワードの後へとコード実行が継続されます。 `Catch` と `End try` キーワード間のコードは実行されません。
+- コードブロックの実行が *非遅延エラー* をスローした場合、実行フローは停止し、対応する `Catch` コードブロックを実行します。
+- コードブロックが *非遅延エラー* をスローするメソッドを呼び出した場合、実行フローは対応する `Catch` コードブロックへと直接ジャンプします。
+- 遅延エラーが `Try` ブロックから直接スローされた場合、実行フローは `Try` ブロックの終わりまで継続し、対応する `Catch` ブロックは実行しません。
 
 :::note
 
-If a _deferred_ error is thrown outside of the `Try` block, the code execution continues until the end of the method or function.
+*遅延* エラーが `Try` ブロック外で投げられた場合、メソッドまたは関数の終わりまでコードが実行されます。
 
 :::
 
 :::info
 
-For more information on _deferred_ and _non-deferred_ errors, please refer to the [`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html) command description.
+*遅延* エラーと *non-deferred* エラーの詳細については、[`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html) コマンドの説明を参照してください。
 
 :::
 

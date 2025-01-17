@@ -7,9 +7,9 @@ Le code 4D compilé peut être exécuté dans des **process préemptifs**. Grâc
 
 ## Qu'est-ce qu'un process préemptif?
 
-Lorsqu'il est exécuté en mode _préemptif_, un process est dédié à un CPU (i.e. un processeur). La gestion des process est alors déléguée au système, qui peut allouer chaque CPU séparément sur une machine multicoeur.
+Lorsqu'il est exécuté en mode *préemptif*, un process est dédié à un CPU (i.e. un processeur). La gestion des process est alors déléguée au système, qui peut allouer chaque CPU séparément sur une machine multicoeur.
 
-Lorsqu'ils sont exécutés en mode _coopératif_, tous les process sont gérés par le process (thread) de l'application parente et partagent le même processeur, même sur une machine multicœur.
+Lorsqu'ils sont exécutés en mode *coopératif*, tous les process sont gérés par le process (thread) de l'application parente et partagent le même processeur, même sur une machine multicœur.
 
 En conséquence, en mode préemptif, les performances globales de l'application sont améliorées, notamment sur les machines multicœurs, car plusieurs process peuvent réellement s'exécuter simultanément. Cependant, les gains réels dépendent des opérations en cours d'exécution. En contrepartie, étant donné qu'en mode préemptif chaque process est indépendant des autres et n'est pas géré directement par l'application, il y a des contraintes spécifiques appliquées au code que vous souhaitez rendre compatible avec une utilisation en préemptif. De plus, l'exécution en préemptif n'est disponible que dans certains contextes.
 
@@ -88,7 +88,7 @@ L'exécution en préemptif n'est disponible qu'en mode compilé.
 
 :::
 
-En mode compilé, lorsque vous démarrez un process créé à l'aide des commandes `New process` ou `CALL WORKER`, 4D lit la propriété "preemptive" de la méthode du process (également nommée méthode _parente_) et exécute le process en mode préemptif ou coopératif, en fonction de cette propriété :
+En mode compilé, lorsque vous démarrez un process créé à l'aide des commandes `New process` ou `CALL WORKER`, 4D lit la propriété "preemptive" de la méthode du process (également nommée méthode *parente*) et exécute le process en mode préemptif ou coopératif, en fonction de cette propriété :
 
 - Si la méthode du process est thread-safe (validée lors de la compilation), le process est exécuté dans un thread préemptif.
 - Si la méthode du process est thread-unsafe, le process est exécuté dans un thread coopératif.
@@ -179,7 +179,7 @@ Il est possible de [désactiver localement la vérification de la thread-safety]
 
 :::
 
-Le [fichier de symboles](../Project/compiler.md/#complete-list-of-methods), s'il est activé, contient également le statut de thread safety pour chaque méthode.
+The [symbol file](../Project/compiler.md#complete-list-of-methods), if enabled, also contains the thread safety status for each method.
 
 ### Interface utilisateur
 

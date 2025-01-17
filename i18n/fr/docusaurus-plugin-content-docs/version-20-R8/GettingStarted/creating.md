@@ -43,13 +43,13 @@ La boîte de dialogue standard Ouvrir apparaît.
 
    Par défaut, le projet est ouvert avec son fichier de données courant. D'autres types de fichiers sont suggérés :
 
-   - _Fichiers Packed project_ : extension `.4dz` - projets de déploiement
-   - _Fichiers de raccourcis_ : extension `.4DLink` - stocke des paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
-   - _Fichiers binaires_ : extension `.4db` ou `.4dc` - anciens formats de base de données 4D
+   - *Fichiers Packed project* : extension `.4dz` - projets de déploiement
+   - *Fichiers de raccourcis* : extension `.4DLink` - stocke des paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
+   - *Fichiers binaires* : extension `.4db` ou `.4dc` - anciens formats de base de données 4D
 
 ### Options
 
-Outre les options standard du système, la boîte de dialogue _Ouvrir_ de 4D propose deux menus avec des options spécifiques disponibles via le bouton **Ouvrir** et le menu **Data file**.
+Outre les options standard du système, la boîte de dialogue *Ouvrir* de 4D propose deux menus avec des options spécifiques disponibles via le bouton **Ouvrir** et le menu **Data file**.
 
 - **Ouvrir** - mode d'ouverture du projet :
   - **Interprété** ou **Compilé** : Ces options sont disponibles lorsque le projet sélectionné contient à la fois [du code interprété et du code compilé](Concepts/interpreted.md).
@@ -62,8 +62,8 @@ Outre les options standard du système, la boîte de dialogue _Ouvrir_ de 4D pro
 4D offre plusieurs façons d'ouvrir des projets directement sans devoir utiliser la boîte de dialogue Ouvrir :
 
 - via des options de menu :
-  - _Barre de menus_ - **Fichier** > **Ouvrir les projets récents / {project name}**
-  - _Barre d'outils 4D_ - Sélectionner le projet dans le menu associé au bouton **Ouvrir**
+  - *Barre de menus* - **Fichier** > **Ouvrir les projets récents / {project name}**
+  - *Barre d'outils 4D* - Sélectionner le projet dans le menu associé au bouton **Ouvrir**
 
 - via les préférences :
   - Placez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**.

@@ -29,7 +29,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 
 デバッガーウィンドウは、現在トレースしているメソッドまたはクラス関数の名前や、デバッガーが表示される原因となったアクションの情報を表示します。 上のウィンドウの例では、次の情報が表示されています:
 
-- _drop_ is the method being traced
+- *drop* is the method being traced
 - The debugger window appeared because of a break point.
 
 新しいデバッガーウィンドウの表示には、同じセッション内で表示された最後のデバッガーウィンドウと同じ構成 (ウィンドウのサイズと位置、分割線の配置および式評価エリアの内容) を使用します。 複数のユーザープロセスを実行した場合には、それぞれのプロセスを個別にトレースできます。つまり、各プロセスにつき 1つのデバッガーウィンドウを表示できます。
@@ -303,10 +303,10 @@ You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1
 - 変数
 - object and object property
 - フィールド
-- ポインター
+- pointer
 - 演算
 - 4Dコマンド
-- メソッド
+- method
 - ほか値を返すものなら何でも
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
@@ -455,8 +455,8 @@ The prototype of the currently executed method or function in the Call chain is 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Show documentation**: Opens the documentation for the target element. このコマンドは以下の要素に使用できます:
-  - _Project methods_, _user classes_: Selects the method in the Explorer and switches to the documentation tab
-  - _4D commands, functions, class names:_ Displays the online documentation.
+  - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
+  - *4D commands, functions, class names:* Displays the online documentation.
 - **参照を検索...** (コードエディターでも利用可能): 現在の要素が参照されているすべてのメソッドとフォームを検索します。 現在の要素とは、選択されているものまたはカーソルが置かれているものをいいます。 これにはフィールド、変数、コマンド、文字列等が含まれます。 検索結果は、標準の検索結果ウィンドウに表示されます。
 - **コピー**: 選択された式が標準のペーストボードへとコピーされます。
 - **式ペインにコピー**: 選択された式をカスタムウォッチエリアにコピーします。

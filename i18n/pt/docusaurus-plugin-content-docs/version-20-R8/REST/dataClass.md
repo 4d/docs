@@ -20,11 +20,11 @@ Os nomes de dataclass podem ser utilizados diretamente nos pedidos REST para tra
 
 ## \{dataClass\}
 
-Devuelve todos los datos (por defecto las 100 primeras entidades) para una clase de datos específica (_por ejemplo_, `Company`)
+Devuelve todos los datos (por defecto las 100 primeras entidades) para una clase de datos específica (*por ejemplo*, `Company`)
 
 ### Descrição
 
-When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
+Quando você chama este parâmetro em sua solicitação REST as primeiras 100 entidades são retornadas a menos que você tenha especificado um valor usando [`$top/$limit`]($top_$limit.md).
 
 Aqui está uma descrição dos dados retornados:
 
@@ -44,7 +44,7 @@ Cada entidade contém as propriedades abaixo:
 | __TIMESTAMP | Date   | Registro de hora da última modificação da entidade                                                                                 |
 | __STAMP     | Number | Sello interno que se necesita cuando se modifica alguno de los valores de la entidad al utilizar `$method=update`. |
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
+Se você quiser especificar quais atributos você deseja devolver, defina-os usando a seguinte sintaxe [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
 `GET  /rest/Company/name,address`
 
@@ -135,7 +135,7 @@ Retorna todas as datas para uma classe de dados específica.
 
 ## \{dataClass\}\[{key}]
 
-Returns the data for the specific entity defined by the dataclass's primary key, _e.g._, `Company[22]` or `Company[IT0911AB2200]`
+Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22]` or `Company[IT0911AB2200]`
 
 ### Descrição
 
@@ -143,7 +143,7 @@ Passando a classe de dados e uma chave, pode recuperar toda a informação públ
 
 Para más información sobre los datos devueltos, consulte [\{dataClass\}](#dataclass).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
+Se você quiser especificar quais atributos você deseja devolver, defina-os usando a seguinte sintaxe [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
 `GET  /rest/Company[1]/name,address`
 
@@ -186,11 +186,11 @@ Retorna os dados para uma entidade na qual os valores de atributo são definidas
 
 ### Descrição
 
-By passing the _dataClass_ and an _attribute_ along with a value, you can retrieve all the public information for that entity. O valor é um valor único para o atributo, mas não é a chave primária.
+By passing the *dataClass* and an *attribute* along with a value, you can retrieve all the public information for that entity. O valor é um valor único para o atributo, mas não é a chave primária.
 
 `GET  /rest/Company:companyCode(Acme001)`
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
+Se você quiser especificar quais atributos você deseja devolver, defina-os usando a seguinte sintaxe [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
 `GET  /rest/Company:companyCode(Acme001)/name,address`
 

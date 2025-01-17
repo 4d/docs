@@ -52,7 +52,7 @@ Vincular la misma variable o expresión al contenedor del subformulario y a otro
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-En el formulario padre, ambos objetos (área de entrada y contenedor subformulario) **tienen el mismo valor que _Variable o Expresión_**. Puede ser una variable (por ejemplo, `parisTime`), o una expresión (por ejemplo, `Form.parisTime`).
+En el formulario padre, ambos objetos (área de entrada y contenedor subformulario) **tienen el mismo valor que *Variable o Expresión***. Puede ser una variable (por ejemplo, `parisTime`), o una expresión (por ejemplo, `Form.parisTime`).
 
 :::info
 

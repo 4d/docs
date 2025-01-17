@@ -18,7 +18,7 @@ Les données sont collectées lors des événements suivants :
 - démarrage de la base de données,
 - fermeture de la base de données,
 - démarrage du serveur web,
-- exécution php,
+- use of specific features such as php, open datastore, remote debugger,
 - connexion client,
 - envoi de la collecte de données.
 
@@ -38,7 +38,7 @@ Certaines données sont également collectées à intervalles réguliers.
 | license                 | Object                                   | Nom commercial et description des licences des produits                                                                              |
 | isRosetta               | Boolean                                  | True si 4D est émulé par Rosetta sous macOS, False sinon (non émulé ou sous Windows).             |
 | uniqueID                | Text                                     | ID unique du serveur 4D                                                                                                              |
-| id                      | Texte (chaîne hachée) | Identifiant unique associé à la base de données (_Hachage par roulement polynomial du nom de la base de données_) |
+| id                      | Texte (chaîne hachée) | Identifiant unique associé à la base de données (*Hachage par roulement polynomial du nom de la base de données*) |
 | dataFileSize            | Number                                   | Taille du fichier de données en octets                                                                                               |
 | indexesSize             | Number                                   | Taille des index en octets                                                                                                           |
 | cacheSize               | Number                                   | Taille du cache en octets                                                                                                            |
@@ -57,6 +57,22 @@ Certaines données sont également collectées à intervalles réguliers.
 | --------- | ------ | ------------------------------------------------------------------------------------- |
 | webServer | Object | "started":true si le serveur web est en cours de démarrage ou démarré |
 
+### Collected at new web session creation
+
+| Data                                                | Type   | Notes                                                                                |
+| --------------------------------------------------- | ------ | ------------------------------------------------------------------------------------ |
+| databases.webMaxLicensedSessions    | Number | Maximum number of non-REST web sessions on the server that use the webserver license |
+| databases.restMaxLicensedSessions   | Number | Maximum number of REST web sessions on the server that use the REST license          |
+| databases.webMaxUnlicensedSessions  | Number | Maximum number of other non-REST web sessions on the server                          |
+| databases.restMaxUnlicensedSessions | Number | Maximum number of other REST web sessions on the server                              |
+
+### Collected at datastore opening
+
+| Data                                              | Type   | Notes                                                         |
+| ------------------------------------------------- | ------ | ------------------------------------------------------------- |
+| databases.externalDatastoreOpened | Number | Number of calls to `Open datastore`                           |
+| databases.internalDatastoreOpened | Number | Number of times the datastore is opened by an external server |
+
 ### Collectés à intervalles réguliers
 
 | Data                        | Type   | Notes                                        |
@@ -67,21 +83,23 @@ Certaines données sont également collectées à intervalles réguliers.
 
 ### Collecté lors de l'envoi de la collecte de données
 
-| Data                                        | Type   | Notes                                                                                            |
-| ------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------ |
-| uptime                                      | Number | Temps écoulé (en secondes) depuis l'ouverture de la base de données 4D locale |
-| cacheReadBytes                              | Object | Nombre d'octets lus à partir de la mémoire cache                                                 |
-| cacheMissBytes                              | Object | Nombre d'octets manqués dans le cache                                                            |
-| cacheReadCount                              | Object | Nombre de lectures dans le cache                                                                 |
-| cacheMissCount                              | Object | Nombre de lectures manquées dans le cache                                                        |
-| dataSegment1.diskReadBytes  | Object | Nombre d'octets lus dans le fichier de données                                                   |
-| dataSegment1.diskWriteBytes | Object | Nombre d'octets écrits dans le fichier de données                                                |
-| dataSegment1.diskReadCount  | Object | Nombre de lectures dans le fichier de données                                                    |
-| dataSegment1.diskWriteCount | Object | Nombre d'écritures dans le fichier de données                                                    |
-| indexSegment.diskReadBytes  | Number | Nombre d'octets lus dans le fichier d'index                                                      |
-| indexSegment.diskWriteBytes | Number | Nombre d'octets écrits dans le fichier d'index                                                   |
-| indexSegment.diskReadCount  | Number | Nombre de lectures dans le fichier d'index                                                       |
-| indexSegment.diskWriteCount | Number | Nombre d'écritures dans le fichier d'index                                                       |
+| Data                                           | Type    | Notes                                                                                            |
+| ---------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------ |
+| uptime                                         | Number  | Temps écoulé (en secondes) depuis l'ouverture de la base de données 4D locale |
+| cacheReadBytes                                 | Object  | Nombre d'octets lus à partir de la mémoire cache                                                 |
+| cacheMissBytes                                 | Object  | Nombre d'octets manqués dans le cache                                                            |
+| cacheReadCount                                 | Object  | Nombre de lectures dans le cache                                                                 |
+| cacheMissCount                                 | Object  | Nombre de lectures manquées dans le cache                                                        |
+| dataSegment1.diskReadBytes     | Object  | Nombre d'octets lus dans le fichier de données                                                   |
+| dataSegment1.diskWriteBytes    | Object  | Nombre d'octets écrits dans le fichier de données                                                |
+| dataSegment1.diskReadCount     | Object  | Nombre de lectures dans le fichier de données                                                    |
+| dataSegment1.diskWriteCount    | Object  | Nombre d'écritures dans le fichier de données                                                    |
+| indexSegment.diskReadBytes     | Number  | Nombre d'octets lus dans le fichier d'index                                                      |
+| indexSegment.diskWriteBytes    | Number  | Nombre d'octets écrits dans le fichier d'index                                                   |
+| indexSegment.diskReadCount     | Number  | Nombre de lectures dans le fichier d'index                                                       |
+| indexSegment.diskWriteCount    | Number  | Nombre d'écritures dans le fichier d'index                                                       |
+| databases.webScalableSessions  | Boolean | True if scalable sessions are activated                                                          |
+| databases.webIPAddressesNumber | Number  | Number of different IP addresses that made a request to 4D Server                                |
 
 ### Collecté lors de la fermeture de la base de données et de l'envoi de la collecte de données
 
@@ -92,6 +110,14 @@ Certaines données sont également collectées à intervalles réguliers.
 | webserverBytesIn               | Number | Octets reçus par le serveur web pendant la collecte des données    |
 | webserverBytesOut              | Number | Octets envoyés par le serveur web pendant la collecte des données  |
 | qodly.webforms | Number | Nombre de webforms Qodly                                           |
+
+### Collected at every new call to the remote debugger
+
+| Data                                                        | Type   | Notes                                                         |
+| ----------------------------------------------------------- | ------ | ------------------------------------------------------------- |
+| databases.remoteDebugger4DRemoteAttachments | Number | Number of attachments to the remote debugger from a remote 4D |
+| databases.remoteDebuggerQodlyAttachments    | Number | Number of attachments to the remote debugger from Qodly       |
+| databases.remoteDebuggerVSCodeAttachments   | Number | Number of attachments to the remote debugger from VS Code     |
 
 ### Collecté à chaque fois que PHP execute est appelé
 
@@ -109,7 +135,7 @@ Certaines données sont également collectées à intervalles réguliers.
 
 ## Où sont-elles stockées et envoyées ?
 
-Les données collectées sont écrites dans un fichier texte (format JSON) par base de données lorsque 4D Server quitte. Le fichier est stocké dans le [dossier 4D actif](https://doc.4d.com/4dv20/help/command/en/page485.html), c'est-à-dire :
+Les données collectées sont écrites dans un fichier texte (format JSON) par base de données lorsque 4D Server quitte. The file is stored inside the [active 4D folder](../commands-legacy/get-4d-folder.md), i.e.:
 
 - sous Windows : `Users\[userName]\AppData\Roaming\4D Server`
 - sous macOS : `/Users/[userName]/Library/ApplicationSupport/4D Server`

@@ -8,7 +8,7 @@ La page “Informations” fournit diverses informations relatives à l’enviro
 
 ## Programme
 
-Cette page affiche le nom, la version et l’emplacement de l’application ainsi que du dossier 4D actif (pour plus d’informations sur le dossier 4D actif, reportez-vous à la description de la commande `Get 4D folder` du manuel _Langage 4D_).
+Cette page affiche le nom, la version et l’emplacement de l’application ainsi que du dossier 4D actif (pour plus d’informations sur le dossier 4D actif, reportez-vous à la description de la commande `Get 4D folder` du manuel *Langage 4D*).
 
 La partie centrale de la fenêtre affiche le nom et l’emplacement du projet et des fichiers de données ainsi que, le cas échéant, du fichier d'historique. La partie inférieure de la fenêtre indique le nom du propriétaire de la licence 4D, le type de licence et le nom de l'utilisateur 4D courant.
 
@@ -19,7 +19,7 @@ La partie centrale de la fenêtre affiche le nom et l’emplacement du projet et
 
 - **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. Tous les fichiers de licence installés dans votre environnement 4D sont regroupés dans ce dossier, placé sur votre disque dur. Lorsqu’ils sont ouverts avec un navigateur Web, ces fichiers affichent des informations relatives aux licences qu’ils contiennent et à leurs caractéristiques.
   L’emplacement du dossier "Licenses" peut varier en fonction de la version ou de la langue de votre système d’exploitation. Pour plus d'informations sur l'emplacement de ce dossier, reportez-vous à la commande `Get 4D folder`.
-  _**Note :** Vous pouvez également accéder à ce dossier depuis la boîte de dialogue “Mise à jour des licences” (accessible depuis le menu Aide)._
+  ***Note :** Vous pouvez également accéder à ce dossier depuis la boîte de dialogue “Mise à jour des licences” (accessible depuis le menu Aide).*
 
 ## Tables
 
@@ -33,7 +33,7 @@ La page liste toutes les tables de la base (y compris les tables invisibles) ain
 
 - **No.** : Numéros internes des tables.
 - **Tables** : Noms des tables. Les noms des tables supprimées sont affichés entre parenthèses (lorsqu'elles sont dans la corbeille).
-- **Enregistrements** : Nombre total d'enregistrements de chaque table. Si un enregistrement est endommagé ou ne peut pas être lu, le mot _Erreur_ est affiché à la place du total. Dans ce cas, vous devez envisager d'utiliser les outils de vérification et de réparation.
+- **Enregistrements** : Nombre total d'enregistrements de chaque table. Si un enregistrement est endommagé ou ne peut pas être lu, le mot *Erreur* est affiché à la place du total. Dans ce cas, vous devez envisager d'utiliser les outils de vérification et de réparation.
 - **Champs** : Nombre de champs dans la table. Les champs invisibles sont comptés, en revanche les champs supprimés ne le sont pas.
 - **Index** : Nombre d'index de tout type associés à la table
 - **Chiffrable** : Si l'attribut **Chiffrable** est coché, il est sélectionné pour la table au niveau de la structure (voir le paragraphe "Chiffrable" dans le manuel Développement).

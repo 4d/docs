@@ -29,7 +29,7 @@ Há várias formas de exibir o depurador:
 
 Quando chamada, a janela do depurador fornece o nome do método ou da função de classe que rastreia atualmente e a ação que causa o aparecimento inicial da janela do depurador. Por exemplo, na janela do depurador acima:
 
-- _drop_ is the method being traced
+- *drop* is the method being traced
 - The debugger window appeared because of a break point.
 
 A exibição de uma nova janela do depurador utiliza a mesma configuração que a última janela exibida na mesma sessão. Se executar vários processos usuário, pode rastreá-los de forma independente e ter uma janela do depurador aberta para cada processo.
@@ -455,8 +455,8 @@ O menu contextual do painel Código-fonte fornece acesso a várias funções que
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Show documentation**: Opens the documentation for the target element. Este comando está disponível para:
-  - _Project methods_, _user classes_: Selects the method in the Explorer and switches to the documentation tab
-  - _4D commands, functions, class names:_ Displays the online documentation.
+  - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
+  - *4D commands, functions, class names:* Displays the online documentation.
 - **Search References** (também disponível no Editor de código): Pesquisa todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
 - **Cópia**: Cópia padrão da expressão selecionada para a área de transferência.
 - **Copiar para o Painel de Expressão**: Copia a expressão selecionada para o painel de observação personalizado.

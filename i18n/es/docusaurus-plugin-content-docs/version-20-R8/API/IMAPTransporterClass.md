@@ -82,7 +82,7 @@ La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 | ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | msgIDs     | Collection |              ->             | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
 | keywords   | Object     |              ->             | Banderas de palabras claves a añadir                                                                                                                                                                                                                       |
-| Resultado  | Object     | <- | Estado de la operación addFlags                                                                                                                                                                                                                            |
+| Result     | Object     | <- | Estado de la operación addFlags                                                                                                                                                                                                                            |
 
 <!-- END REF -->
 
@@ -851,12 +851,12 @@ Si la cuenta no contiene buzones, se devuelve una colección vacía.
 
 La función `.getDelimiter()` <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->devuelve el caracter utilizado para delimitar niveles de jerarquía en el nombre del buzón<!-- END REF -->.
 
-El delimitador es un caracter que puede utilizarse para:
+El delimitador es un carácter que puede utilizarse para:
 
 - crear buzones de nivel inferior
 - buscar más arriba o más abajo en la jerarquía del buzón
 
-#### Resultado
+#### Result
 
 Caracter delimitador del nombre del buzón.
 
@@ -1103,7 +1103,7 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 > * Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error,
 > * Si no hay ninguna conexión abierta, `.getMIMEAsBlob()` abrirá una conexión el último buzón especificado con `.selectBox()`.
 
-#### Resultado
+#### Result
 
 `.getMIMEAsBlob()` devuelve un `BLOB` que puede almacenarse en una base de datos o convertirse en un objeto [`Email`](EmailObjectClass.md#email-object) con el comando `MAIL Convert from MIME`.
 
@@ -1332,7 +1332,7 @@ La función devuelve una colección de cadenas (IDs únicos).
 
 La función `.removeFlags()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->elimina las banderas de los `msgIDs` para las `keywords` especificadas<!-- END REF -->.
 
-En el parámetro `msgIDs`, puede pasar:
+En el parámetro `msgIDs`, puedes pasar:
 
 - una *colección* que contiene los IDs únicos de mensajes específicos o
 - el ID único (*text*) de un solo mensaje o

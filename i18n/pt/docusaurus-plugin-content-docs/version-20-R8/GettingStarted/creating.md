@@ -43,13 +43,13 @@ Aparece a caixa de diálogo padrão Abrir.
 
    Por padrão, o projeto é aberto com seu arquivo de dados atual. Outros tipos de arquivo são sugeridos:
 
-   - _Archivos de proyectos empaquetados_: extensión `.4dz` - proyectos de despliegue
-   - _Archivos de acceso directo_: extensión `.4DLink` - almacenan los parámetros adicionales necesarios para abrir proyectos o aplicaciones (direcciones, identificadores, etc.)
-   - _Archivos binarios_: extensión `.4db` o `.4dc` - formatos de base de datos 4D heredados
+   - *Archivos de proyectos empaquetados*: extensión `.4dz` - proyectos de despliegue
+   - *Archivos de acceso directo*: extensión `.4DLink` - almacenan los parámetros adicionales necesarios para abrir proyectos o aplicaciones (direcciones, identificadores, etc.)
+   - *Archivos binarios*: extensión `.4db` o `.4dc` - formatos de base de datos 4D heredados
 
 ### Opções
 
-Además de las opciones sistema estándar, la caja de diálogo _Abrir_ de 4D ofrece dos menús con opciones específicas disponibles utilizando el botón **Abrir** y el menú **Archivo de datos**.
+Además de las opciones sistema estándar, la caja de diálogo *Abrir* de 4D ofrece dos menús con opciones específicas disponibles utilizando el botón **Abrir** y el menú **Archivo de datos**.
 
 - **Abrir** - modo de apertura del proyecto:
   - **Interpretado** o **Compilado**: estas opciones están disponibles cuando el proyecto seleccionado contiene [código interpretado y compilado](Concepts/interpreted.md).
@@ -62,8 +62,8 @@ Además de las opciones sistema estándar, la caja de diálogo _Abrir_ de 4D ofr
 4D oferece várias maneiras de abrir projetos diretamente e ignorar o diálogo Aberto:
 
 - através de opções de menu:
-  - _Barra de menús_ - **Archivo** > **Abrir proyectos recientes / {project name}**
-  - _Barra de herramientas 4D_ - Seleccione el proyecto en el menú asociado al botón **Abrir**
+  - *Barra de menús* - **Archivo** > **Abrir proyectos recientes / {project name}**
+  - *Barra de herramientas 4D* - Seleccione el proyecto en el menú asociado al botón **Abrir**
 
 - através das preferências:
   - Fije la preferencia general **Al inicio** en **Abrir el último proyecto utilizado**.

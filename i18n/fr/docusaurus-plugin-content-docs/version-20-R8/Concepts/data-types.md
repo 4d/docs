@@ -29,7 +29,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 
 (1) A noter que ORDA gère les champs de la base via des objets (entités). Par conséquent, seuls les types de données disponibles pour ces objets sont pris en charge. Pour plus d'informations, veuillez vous reporter à la description du type [Object](Concepts/dt_object.md).
 
-(2) Variant n'est pas un type de _données_ à proprement parler mais un type de _variable_ qui peut contenir une valeur de n'importe quel autre type de données.
+(2) Variant n'est pas un type de *données* à proprement parler mais un type de *variable* qui peut contenir une valeur de n'importe quel autre type de données.
 
 ## Valeurs par défaut
 
@@ -54,7 +54,7 @@ La valeur par défaut dépend du type de variable :
 
 ### Null comme valeur par défaut
 
-Les variables de type Object, Collection, Pointer et Picture ont **null** comme valeur par défaut, mais ont en fait un statut intermédiaire lorsqu'elles sont déclarées et non assignées. Elles _se comportent comme_ des valeurs **null**, mais avec quelques différences, générant moins d'erreurs lorsque le code tente d'y accéder.
+Les variables de type Object, Collection, Pointer et Picture ont **null** comme valeur par défaut, mais ont en fait un statut intermédiaire lorsqu'elles sont déclarées et non assignées. Elles *se comportent comme* des valeurs **null**, mais avec quelques différences, générant moins d'erreurs lorsque le code tente d'y accéder.
 
 ## Convertir les types de données
 

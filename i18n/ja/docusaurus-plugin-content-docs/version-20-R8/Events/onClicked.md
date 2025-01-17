@@ -36,9 +36,9 @@ title: On Clicked
 | プロパティ       | 型       | 説明               |
 | ----------- | ------- | ---------------- |
 | code        | longint | On Clicked       |
-| description | text    | "On Clicked"     |
-| objectName  | text    | 4D View Pro エリア名 |
-| sheetName   | text    | イベントが発生したシート名    |
+| description | テキスト    | "On Clicked"     |
+| objectName  | テキスト    | 4D View Pro エリア名 |
+| sheetName   | テキスト    | イベントが発生したシート名    |
 | range       | object  | セルのレンジ           |
 
 #### 例題

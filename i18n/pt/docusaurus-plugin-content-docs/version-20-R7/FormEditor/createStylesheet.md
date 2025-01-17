@@ -210,7 +210,7 @@ Expressões de funcionalidades multimédia disponíveis:
 
 ##### Exemplo
 
-This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
+Esse CSS define uma combinação de cores para o texto e o fundo do texto no esquema claro (padrão) e outra combinação quando o esquema escuro é selecionado:
 
 ```
 @media (prefers-color-scheme: light) {

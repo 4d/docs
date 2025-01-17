@@ -46,7 +46,7 @@ Cada processo contém elementos específicos que podem ser tratados independente
 - Variáveis: Cada processo tem suas próprias [variáveis de processo](../Concepts/variables#process-variables). Variáveis de processo são reconhecidas apenas dentro do domínio de seu processo nativo.
 - Conjuntos de processo: cada processo tem seus próprios conjuntos de processos. `LockedSet` é um conjunto de processos. Os conjuntos processo são apagados assim que o método processo termina.
 - [Método de tratamento de erros](../Concepts/error-handling#installing-an-error-handling-method): Cada processo pode ter seu próprio método de tratamento de erros.
-- [Janela do Depurador](../Depuring/debugger#calling-the-debugger): Cada processo pode ter sua própria janela do Depurador.
+- [Janela do Depurador](../Debugging/debugger#calling-the-debugger): Cada processo pode ter sua própria janela do Depurador.
 
 ### Elementos da interface
 
@@ -117,7 +117,7 @@ Embora tenham sido projetados principalmente para comunicação entre processos 
 
 Um worker é usado para solicitar a um processo que execute métodos projeto. Um worker consiste de:
 
-- um nome único (_warning: o nome diferencia maiúsculas de minúsculas_), também usado para nomear seu processo associado
+- um nome único (*warning: o nome diferencia maiúsculas de minúsculas*), também usado para nomear seu processo associado
 - um processo associado, que pode ou não existir em um determinado momento
 - uma caixa de mensagem
 - um método de inicialização (opcional)
@@ -138,7 +138,7 @@ Os processos trabalhadores podem ser criados no 4D Server por meio de procedimen
 
 Um processo de trabalho é encerrado por meio de uma chamada ao comando [`KILL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1390.html), que esvazia a caixa de mensagens do trabalhador e solicita ao processo associado que pare de processar mensagens e termine sua execução atual assim que a tarefa atual for concluída.
 
-O método de inicialização de um worker é o método usado para criar o trabalhador (na primeira utilização). Se `CALL WORKER` for chamado com um parâmetro _method_ vazio, então o método de inicialização é automaticamente reutilizado como método para executar.
+O método de inicialização de um worker é o método usado para criar o trabalhador (na primeira utilização). Se `CALL WORKER` for chamado com um parâmetro *method* vazio, então o método de inicialização é automaticamente reutilizado como método para executar.
 
 O processo principal criado pelo 4D ao abrir um banco de dados para os modos de usuário e aplicativo é um processo de trabalhador e pode ser chamado usando `CALL WORKER`. Observe que o nome do processo principal pode variar dependendo do idioma de localização do 4D, mas ele sempre tem o número de processo 1; como resultado, é mais conveniente designá-lo pelo número de processo em vez do nome do processo ao chamar `CALL WORKER`.
 

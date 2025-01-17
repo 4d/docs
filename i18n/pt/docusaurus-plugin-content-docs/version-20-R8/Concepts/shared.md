@@ -97,15 +97,15 @@ A sintaxe formal da estrutura `Use...End use` é a seguinte:
  End use
 ```
 
-A estrutura `Use...End use` define uma sequência de instruções que executarão tarefas no parâmetro _Shared_object_or_Shared_collection_ sob a proteção de um semáforo interno. O _Shared_object_or_Shared_collection_ pode ser qualquer objeto compartilhado ou coleção compartilhada válida.
+A estrutura `Use...End use` define uma sequência de instruções que executarão tarefas no parâmetro *Shared_object_or_Shared_collection* sob a proteção de um semáforo interno. O *Shared_object_or_Shared_collection* pode ser qualquer objeto compartilhado ou coleção compartilhada válida.
 
 Objetos compartilhados e coleções compartilhadas são projetados para permitir a comunicação entre processos, em particular, **processos 4D preemptivos**. Podem ser passados por referência como parâmetros de um processo para outro. É obrigatório envolver as modificações em objetos compartilhados ou coleções compartilhadas com as palavras-chave `Use...End use` para evitar o acesso simultâneo entre processos.
 
-- Quando a linha **Use** é executada com sucesso, todas as propriedades/elementos _Shared_object_or_Shared_collection_ são bloqueados para todos os outros processos com acesso de gravação até que a linha `End use` correspondente seja executada.
-- A sequência de _declarações_ pode executar qualquer modificação nas propriedades/elementos do _Shared_object_or_Shared_collection_ sem risco de acesso simultâneo.
-- Se outro objeto ou coleção compartilhada for adicionado como uma propriedade do parâmetro _Shared_object_or_Shared_collection_, eles se tornarão conectados dentro do mesmo grupo compartilhado.
-- Se outro processo tentar acessar uma das propriedades _Shared_object_or_Shared_collection_ ou propriedades conectadas enquanto um **Use. .Fim de uso** a sequência está sendo executada, ela é automaticamente colocada em espera e aguarda até que a sequência atual seja encerrada.
-- A linha **End use** desbloqueia as propriedades _Shared_object_or_Shared_collection_ e todos os objetos do mesmo grupo.
+- Quando a linha **Use** é executada com sucesso, todas as propriedades/elementos *Shared_object_or_Shared_collection* são bloqueados para todos os outros processos com acesso de gravação até que a linha `End use` correspondente seja executada.
+- A sequência de *declarações* pode executar qualquer modificação nas propriedades/elementos do *Shared_object_or_Shared_collection* sem risco de acesso simultâneo.
+- Se outro objeto ou coleção compartilhada for adicionado como uma propriedade do parâmetro *Shared_object_or_Shared_collection*, eles se tornarão conectados dentro do mesmo grupo compartilhado.
+- Se outro processo tentar acessar uma das propriedades *Shared_object_or_Shared_collection* ou propriedades conectadas enquanto um **Use. .Fim de uso** a sequência está sendo executada, ela é automaticamente colocada em espera e aguarda até que a sequência atual seja encerrada.
+- A linha **End use** desbloqueia as propriedades *Shared_object_or_Shared_collection* e todos os objetos do mesmo grupo.
 - Várias estruturas de **Uso...Uso final** podem ser aninhadas no código 4D. No caso de um grupo, cada **Uso** incrementa o contador de bloqueio do grupo e cada **uso final** decreta ele; todas as propriedades/elementos serão liberadas somente quando a última chamada **Final** define o contador de bloqueio como 0.
 
 :::note

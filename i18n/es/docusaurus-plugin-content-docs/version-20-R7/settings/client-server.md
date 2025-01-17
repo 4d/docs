@@ -24,7 +24,7 @@ Si modifica este parámetro, deberá reiniciar la base del servidor para que se 
 
 #### Nombre de publicación
 
-Esta opción permite modificar el nombre de publicación de una base 4D Server, *es decir*, el nombre que aparece en la pestaña dinámica **Disponible** de la caja de diálogo de conexión (ver el párrafo [Apertura de un proyecto remoto](../Desktop/clientServer/md#opening-a-remote-project)). Por defecto, 4D Server utiliza el nombre del archivo de proyecto. Puede introducir cualquier nombre personalizado que desee.
+This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer.md#opening-a-remote-project) paragraph). Por defecto, 4D Server utiliza el nombre del archivo de proyecto. Puede introducir cualquier nombre personalizado que desee.
 
 :::note
 

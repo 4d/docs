@@ -88,7 +88,7 @@ La méthode base `On Web Authentication` n'est PAS appelée :
 
 ### Syntaxe
 
-**On Web Authentication**( _$url_ : Text ; _$content_ : Text ; _$IPClient_ : Text ; _$IPServer_ : Text ; _$user_ : Text ; _$password_ : Text ) -> $accept : Boolean
+**On Web Authentication**( *$url* : Text ; *$content* : Text ; *$IPClient* : Text ; *$IPServer* : Text ; *$user* : Text ; *$password* : Text ) -> $accept : Boolean
 
 | Paramètres | Type    |                             | Description                                                                 |
 | ---------- | ------- | :-------------------------: | --------------------------------------------------------------------------- |

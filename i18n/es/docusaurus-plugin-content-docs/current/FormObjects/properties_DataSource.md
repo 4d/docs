@@ -300,9 +300,9 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles                          |
-| ------------------- | -------------- | ----------------------------------------- |
-| selectedItemsSource | string         | Colección asignable o expresión de objeto |
+| Nombre              | Tipos de datos | Valores posibles                           |
+| ------------------- | -------------- | ------------------------------------------ |
+| selectedItemsSource | string         | Assignable collection or object expression |
 
 #### Objetos soportados
 
@@ -310,13 +310,13 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 ---
 
-## Nombre de selección
+## Selección temporal
 
 `List boxes de tipo selección nombrada`
 
-Especifica la selección con nombre que se utilizará. Debe introducir el nombre de una selección nombrada válida. Puede ser una selección nombrada proceso o interproceso. El contenido del list box se basará en esta selección. La selección elegida debe existir y ser válida en el momento en que se muestre el list box; de lo contrario, el list box se mostrará en blanco.
+Especifica la selección temporal a utilizar. Debe introducir el nombre de una selección temporal válida. Puede ser una selección temporal proceso o interproceso. El contenido del list box se basará en esta selección. La selección elegida debe existir y ser válida en el momento en que se muestre el list box; de lo contrario, el list box se mostrará en blanco.
 
-> Las selecciones con nombre son listas ordenadas de registros. Se utilizan para mantener en memoria el orden y el registro actual de una selección. Para más información, consulte la sección **Selecciones temporales** del manual _Lenguaje 4D_.
+> Las selecciones temporales son listas ordenadas de registros. Se utilizan para mantener en memoria el orden y el registro actual de una selección. Para más información, consulte la sección **Selecciones temporales** del manual _Lenguaje 4D_.
 
 #### Gramática JSON
 

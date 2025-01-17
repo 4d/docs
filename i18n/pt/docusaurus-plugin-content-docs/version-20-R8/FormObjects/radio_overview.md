@@ -48,46 +48,46 @@ El estilo de botón radio Plano es un botón sistema estándar (\*es decir, \*, 
 
 ![](../assets/en/FormObjects/radio_flat.png)
 
-Por padrão, o estilo Plano tem um aspeto minimalista. The Flat button style's graphic nature is particularly useful for forms that will be printed.
+Por padrão, o estilo Plano tem um aspeto minimalista. A natureza gráfica do estilo Plano é especialmente útil para os formulários que vão ser impressos.
 
 ### Barra de ferramentas
 
 O estilo de botão rádio está pensado principalmente para sua integração em uma barra de ferramentas.
 
-By default, the Toolbar style has a transparent background with a label in the center. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
+Por padrão, o estilo da barra de ferramentas tem um fundo transparente com um rótulo no centro. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - o botão é destacado.
+- *Windows* - o botão é destacado.
 
 ![](../assets/en/FormObjects/radio_toolbar.png)
 
-- _macOS_ - o destaque do botão nunca aparece.
+- *macOS* - o destaque do botão nunca aparece.
 
 ### Bevel
 
 El estilo de botón radio Bevel es similar al comportamiento del estilo [Barra de herramientas](#toolbar), excepto que tiene un fondo gris claro y un contorno gris. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - o botão é destacado.
+- *Windows* - o botão é destacado.
 
 ![](../assets/en/FormObjects/radio_bevel.png)
 
-- _macOS_ - o destaque do botão nunca aparece.
+- *macOS* - o destaque do botão nunca aparece.
 
 ### Bevel arredondado
 
 O estilo de botão Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel), exceto que dependendo do sistema operacional, as esquinas do botão podem ser arredondadas.
 
-- _Windows_ - el botón es idéntico al estilo [Bevel](#bevel).
+- *Windows* - el botón es idéntico al estilo [Bevel](#bevel).
 
-- _macOS_ - las esquinas del botón están redondeadas.
+- *macOS* - las esquinas del botón están redondeadas.
   ![](../assets/en/FormObjects/roundedBevel.png)
 
 ### OS X Gradient
 
 El estilol botón OS X Gradient es casi idéntico al estilo [Bevel](#bevel), excepto que, dependiendo del sistema operativo, puede tener una apariencia de dos tonos.
 
-- _Windows_ - el botón es idéntico al estilo [Bevel](#bevel).
+- *Windows* - el botón es idéntico al estilo [Bevel](#bevel).
 
-- _macOS_ - el botón se muestra como un botón de dos tonos.
+- *macOS* - el botón se muestra como un botón de dos tonos.
 
 ### OS X Texturizado
 
@@ -95,9 +95,9 @@ El estilo del botón radio OS X Textured es casi idéntico al estilo [Barra de h
 
 Como padrão, o estilo OS X Textured aparece como:
 
-- _Windows_ -un botón en forma de barra de herramientas con una etiqueta en el centro y el fondo se muestra siempre.
+- *Windows* -un botón en forma de barra de herramientas con una etiqueta en el centro y el fondo se muestra siempre.
 
-- _macOS_ - um botão sistema padrão que mostra uma mudança de cor cinza-claro a cinza-escuro. Sua altura está predefinida: não é possível ampliar ou reduzir.
+- *macOS* - um botão sistema padrão que mostra uma mudança de cor cinza-claro a cinza-escuro. Sua altura está predefinida: não é possível ampliar ou reduzir.
 
 ![](../assets/en/FormObjects/OSXTextured.png)
 
@@ -107,11 +107,11 @@ El estilo de botón Office XP combina la apariencia del estilo [Clásico](#regul
 
 As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas nos sistemas de cores. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - seu fundo só aparece quando o mouse passa por cima.
+- *Windows* - seu fundo só aparece quando o mouse passa por cima.
 
 ![](../assets/en/FormObjects/radio_xp.png)
 
-- _macOS_ - its background is always displayed.
+- *macOS* - its background is always displayed.
 
 ### Contrair/expandir
 

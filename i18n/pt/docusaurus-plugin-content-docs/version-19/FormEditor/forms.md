@@ -88,7 +88,7 @@ Cada formulário é composto por, pelo menos, duas páginas:
 
 - Coloque as informações mais importantes na primeira página e as informações menos importantes nas outras páginas.
 - Organize cada tópico na sua própria página.
-- Reduza ou elimine a rolagem durante a entrada de dados definindo a [ordem de entrada](../FormEditor/formEditor.html#data-entry-order).
+- Reduza ou elimine a rolagem durante a entrada de dados definindo a [ordem de entrada](formEditor.md#data-entry-order).
 - Fornece espaço em torno dos elementos de formulário para um design de tela atrativo.
 
 As páginas múltiplas são uma conveniência utilizada apenas para formulários de introdução. Não são para produção impressa. Quando um formulário de várias páginas é impresso, apenas a primeira página é impressa.
@@ -112,7 +112,7 @@ Quando um formulário é executado, os objetos são carregados e combinados na s
 3. Página zero do formulário aberto
 4. Página actual do formulário aberto.
 
-Esta ordem determina a [ordem de entrada](../FormEditor/formEditor.html#data-entry-order) padrão dos objetos no formulário.
+Esta ordem determina a [ordem de entrada](formEditor.md#data-entry-order) padrão dos objetos no formulário.
 
 > Apenas as páginas 0 e 1 de um formulário herdado podem aparecer noutros formulários.
 
@@ -127,4 +127,4 @@ Para parar de herdar um formulário, selecione `\&#060;None&#062;` na Lista de P
 
 ## Propriedades compatíveis
 
-[Associated Menu Bar](properties_Menu.md#associated-menu-bar) - [Fixed Height](properties_WindowSize.md#fixed-height) - [Fixed Width](properties_WindowSize.md#fixed-width) - [Form Break](properties_Markers.md#form-break) - [Form Detail](properties_Markers.md#form-detail) - [Form Footer](properties_Markers.md#form-footer) - [Form Header](properties_Markers.md#form-header) - [Form Name](properties_FormProperties.md#form-name) - [Form Type](properties_FormProperties.md#form-type) - [Inherited Form Name](properties_FormProperties.md#inherited-form-name) - [Inherited Form Table](properties_FormProperties.md#inherited-form-table) - [Maximum Height](properties_WindowSize.md#maximum-height-minimum-height) - [Maximum Width](properties_WindowSize.md#maximum-width-minimum-width) - [Method](properties_Action.md#method) - [Minimum Height](properties_WindowSize.md#maximum-height-minimum-height) - [Minimum Width](properties_WindowSize.md#maximum-width-minimum-width) - [Pages](properties_FormProperties.md#pages) - [Print Settings](properties_Print.md#settings) - [Published as Subform](properties_FormProperties.md#published-as-subform) - [Save Geometry](properties_FormProperties.md#save-geometry) - [Window Title](properties_FormProperties.md#window-title)
+[Barra de menu associada](properties_Menu.md#associated-menu-bar) - [Altura fixa](properties_WindowSize.md#fixed-height) - [Largura fixa](properties_WindowSize.md#fixed-width) - [Quebra de formulário](properties_Markers.md#form-break) - [Detalhe de formulário](properties_Markers.md#form-detail) - [Rodapé de formulário](properties_Markers.md#form-footer) - [Cabeçalho formulário](properties_Markers.md#form-header) - [Nome de formulário](properties_FormProperties.md#form-name) - [Tipo de formulário](properties_FormProperties.md#form-type) - [Nome de formulário herdado](properties_FormProperties.md#inherited-form-name) - [Tabela de formulário herdado](properties_FormProperties.md#inherited-form-table) - [Altura máxima](properties_WindowSize.md#maximum-height-minimum-height) - [Largura máxima](properties_WindowSize.md#maximum-width-minimum-width) - [Método](properties_Action.md#method) - [Altura mínima](properties_WindowSize.md#maximum-height-minimum-height) - [Largura mínima](properties_WindowSize.md#maximum-width-minimum-width) - [Páginas](properties_FormProperties.md#pages) - [Configurações de impressão](properties_Print.md#settings) - [Publicado como subformulário](properties_FormProperties.md#published-as-subform) - [Salvar geometria](properties_FormProperties.md#save-geometry) - [Título da janela](properties_FormProperties.md#window-title)

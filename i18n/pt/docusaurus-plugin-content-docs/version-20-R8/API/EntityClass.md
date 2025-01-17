@@ -858,9 +858,9 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 <!-- REF #EntityClass.isNew().Params -->
 
-| Parâmetro  | Tipo       |                             | Descrição                                                                                                                  |
-| ---------- | ---------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | É verdade se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso. |
+| Parâmetro  | Tipo       |                             | Descrição                                                                                                               |
+| ---------- | ---------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | É True se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso. |
 
 <!-- END REF -->
 
@@ -1780,9 +1780,9 @@ Um registro é destrancado automaticamente quando não for mais referenciado por
 
 O objeto retornado por `.unlock()` contém a seguinte propriedade:
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                     |
-| ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success     | Parâmetros | Verdadeiro se a ação de destrancar for bem-sucedida, Falso caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
+| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                               |
+| ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success     | Parâmetros | True se a ação de destrancar for bem-sucedida, False caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
 
 #### Exemplo
 

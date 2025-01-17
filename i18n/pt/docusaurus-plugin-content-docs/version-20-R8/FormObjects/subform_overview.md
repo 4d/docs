@@ -52,7 +52,7 @@ A vinculação da mesma variável ou expressão ao contêiner do subformulário 
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-No formulário pai, ambos os objetos (área de entrada e contêiner de subformulário) **possuem o mesmo valor que _Variável ou Expressão_**. Pode ser uma variável (ex: `parisTime`), ou uma expressão (ex: `Form.parisTime`).
+No formulário pai, ambos os objetos (área de entrada e contêiner de subformulário) **possuem o mesmo valor que *Variável ou Expressão***. Pode ser uma variável (ex: `parisTime`), ou uma expressão (ex: `Form.parisTime`).
 
 :::info
 

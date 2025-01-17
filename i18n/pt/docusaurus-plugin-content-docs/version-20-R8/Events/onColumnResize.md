@@ -11,7 +11,7 @@ title: On Column Resize
 
 ### List Box
 
-Este evento é gerado quando a largura de uma coluna na caixa de listagem é modificada por um utilizador. El evento se activa "en directo", _es decir_, se envía continuamente durante el evento, mientras se redimensiona el list box o la columna en cuestión. Este redimensionamiento es realizado manualmente por un usuario, o puede ocurrir como resultado de que el list box y su(s) columna(s) sean redimensionados junto con la propia ventana del formulario (ya sea que el formulario sea redimensionado manualmente
+Este evento é gerado quando a largura de uma coluna na caixa de listagem é modificada por um utilizador. El evento se activa "en directo", *es decir*, se envía continuamente durante el evento, mientras se redimensiona el list box o la columna en cuestión. Este redimensionamiento es realizado manualmente por un usuario, o puede ocurrir como resultado de que el list box y su(s) columna(s) sean redimensionados junto con la propia ventana del formulario (ya sea que el formulario sea redimensionado manualmente
 
 > El evento `On Column Resize` no se activa cuando se redimensiona una [falsa columna](../FormObjects/properties_ResizingOptions.md#about-the-fake-blank-column).
 

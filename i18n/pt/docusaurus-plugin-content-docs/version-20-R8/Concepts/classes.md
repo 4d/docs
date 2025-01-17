@@ -276,7 +276,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 Você também pode declarar o parâmetro de retorno adicionando apenas `: type` e usar a [`return expression`](parameters.md#return-expression) (ele também encerrará a execução da função). Por exemplo:
 
 ```4d
-Function add($x : Variant; $y : Integer)-&amp;gt;$result : Integer
+Function add($x : Variant; $y : Integer)-&gt;$result : Integer
 ```
 
 #### Exemplo 1
@@ -499,9 +499,9 @@ $o.age:="Smith"  //error com a sintaxe checada
 
 Se a propriedade não for acedida, o código nunca é executado.
 
-As propriedades computadas são concebidas para tratar dados que não precisam de ser guardados na memória. São geralmente baseados em propriedades persistentes. Por exemplo, se um objeto de classe contiver como propriedade persistente o _preço bruto_ e a _taxa de IVA_, o _preço líquido_ poderia ser tratado por uma propriedade calculada.
+As propriedades computadas são concebidas para tratar dados que não precisam de ser guardados na memória. São geralmente baseados em propriedades persistentes. Por exemplo, se um objeto de classe contiver como propriedade persistente o *preço bruto* e a *taxa de IVA*, o *preço líquido* poderia ser tratado por uma propriedade calculada.
 
-No arquivo de definição de classe, as declarações de propriedade computadas usam as palavras-chave `Função` (a _getter_) e `Function set` (as _setter_), seguido pelo nome da propriedade. O nome deve estar em conformidade com as [regras de nomenclatura de propriedades](Concepts/identifiers.md#object-properties).
+No arquivo de definição de classe, as declarações de propriedade computadas usam as palavras-chave `Função` (a *getter*) e `Function set` (as *setter*), seguido pelo nome da propriedade. O nome deve estar em conformidade com as [regras de nomenclatura de propriedades](Concepts/identifiers.md#object-properties).
 
 `A função get` devolve um valor do tipo de propriedade e `A função set` recebe um parâmetro do tipo de propriedade. Ambos os argumentos devem estar em conformidade com os [parâmetros de função] padrão (#parâmetros).
 
@@ -509,9 +509,9 @@ Quando ambas as funções são definidas, a propriedade computada é **read-writ
 
 Se as funções forem declaradas em uma [classe compartilhada](#shared-class-constructor), você pode usar a palavra-chave `shared` com elas para que elas possam ser chamadas sem [`Use. .Finalizar estrutura`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
-O tipo da propriedade calculada é definido pela declaração de tipo `$return` do _getter_. Pode ser de qualquer [tipo de propriedade válida](dt_object.md).
+O tipo da propriedade calculada é definido pela declaração de tipo `$return` do *getter*. Pode ser de qualquer [tipo de propriedade válida](dt_object.md).
 
-> A atribuição de _undefined_ a uma propriedade de objeto apaga seu valor enquanto preserva seu tipo. Para fazer isso, a `Function get` é chamada primeiro para recuperar o tipo de valor, em seguida, a `Function set` é chamada com um valor vazio desse tipo.
+> A atribuição de *undefined* a uma propriedade de objeto apaga seu valor enquanto preserva seu tipo. Para fazer isso, a `Function get` é chamada primeiro para recuperar o tipo de valor, em seguida, a `Function set` é chamada com um valor vazio desse tipo.
 
 #### Exemplo 1
 
@@ -733,7 +733,7 @@ The following table indicates the scope of a singleton instance depending on whe
 | -------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------- | --------------------------------------------------------------------- |
 | **4D usuário único** | Processo                                                                                                   | Aplicação                         | Application or Web/REST session                                       |
 | **4D Server**        | Processo                                                                                                   | Máquina 4D Server                 | Client/server session or Web/REST session or Stored procedure session |
-| **Modo remoto 4D**   | Process (_nota_: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D                 | 4D remote machine or Web/REST session                                 |
+| **Modo remoto 4D**   | Process (*nota*: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D                 | 4D remote machine or Web/REST session                                 |
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
@@ -824,7 +824,7 @@ You can then call the **cs.VehicleFactory** singleton to get a new vehicle from 
 $vehicle:=cs.VehicleFactory.me.buildVehicle("caminhão")
 ```
 
-Como a função _buildVehicle()_ modifica o singleton **cs.VehicleFactory** (ao incrementar `This.vehicleBuilt`) você precisa adicionar a palavra-chave `shared` a ela.
+Como a função *buildVehicle()* modifica o singleton **cs.VehicleFactory** (ao incrementar `This.vehicleBuilt`) você precisa adicionar a palavra-chave `shared` a ela.
 
 #### Session singleton
 

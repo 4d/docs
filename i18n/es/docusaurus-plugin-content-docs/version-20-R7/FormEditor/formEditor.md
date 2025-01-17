@@ -155,7 +155,7 @@ Para seleccionar un objeto utilizando la Lista de propiedades:
 1. Seleccione el nombre del objeto en la lista desplegable de objetos situada en la parte superior de la lista de propiedades. Con estos dos métodos, puede seleccionar un objeto que esté oculto por otros objetos o que se encuentre fuera del área visible de la ventana actual.
    Para deseleccionar un objeto, haga clic fuera del límite del objeto o **Mayúsculas+clic** en el objeto.
 
-> \> It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+> También es posible seleccionar objetos haciendo doble clic en la ventana de resultados de la operación "Buscar en diseño".
 
 ### Selección de múltiples objetos
 

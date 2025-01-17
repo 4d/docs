@@ -15,7 +15,7 @@ O valor padrão só poderá ser usado se o [tipo de fonte de dados](properties_O
 - time
 - boolean
 
-4D fornece carimbos para gerar valores padrão para a data, hora e número de sequência. A data e a hora são retiradas da data e da hora do sistema. 4D gera automaticamente os números de sequência necessários. A tabela abaixo mostra o carimbo a ser usado para gerar valores padrão automaticamente:
+4D provides stamps for generating default values for the date, time, and sequence number. A data e a hora são retiradas da data e da hora do sistema. 4D gera automaticamente os números de sequência necessários. The table below shows the stamp to use to generate default values automatically:
 
 | Stamp | Significado         |
 | ----- | ------------------- |
@@ -23,7 +23,7 @@ O valor padrão só poderá ser usado se o [tipo de fonte de dados](properties_O
 | #H    | Hora actual         |
 | #N    | Número de sequência |
 
-É possível usar um número de sequência para criar um número exclusivo para cada registro na tabela do arquivo de dados atual. Um número de sequência é um longint gerado para cada novo registo. Os números começam em um (1) e aumentam gradualmente em um (1). Um número de sequência nunca é repetido, mesmo que o registro ao qual foi atribuído seja excluído da tabela. Cada tabela tem o seu próprio contador interno de números de sequência. Para obter mais informações, consulte o parágrafo [Autoincremento](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029).
+You can use a sequence number to create a unique number for each record in the table for the current data file. Um número de sequência é um longint gerado para cada novo registo. Os números começam em um (1) e aumentam gradualmente em um (1). A sequence number is never repeated even if the record it is assigned to is deleted from the table. Cada tabela tem o seu próprio contador interno de números de sequência. Para obter mais informações, consulte o parágrafo [Autoincremento](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029).
 
 > Não faça confusão entre esta propriedade e a propriedade "[valores padrão](properties_DataSource.md#default-list-of-values)" que permite preencher uma coluna list box com valores estáticos.
 
@@ -59,7 +59,7 @@ Permite definir uma lista cujos valores não podem ser introduzidos no objeto. S
 
 ## Lista obrigatória
 
-Restringe as entradas válidas aos itens da lista. Por exemplo, talvez você queira usar uma lista obrigatória para títulos de cargos, de modo que as entradas válidas sejam limitadas a títulos que tenham sido aprovados pela gerência.
+Restringe as entradas válidas aos itens da lista. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
 
 Tornar uma lista obrigatória não apresenta automaticamente a lista quando o campo é selecionado. Se você deseja exibir a lista obrigatória, atribua a mesma lista à propriedade [Lista de opções](properties_DataSource.md#choice-list).
 No entanto, ao contrário da propriedade [Lista de opções](properties_DataSource.md#choice-list) quando uma lista é definida, a entrada de teclado não é mais possível, apenas a seleção de um valor da lista usando o menu pop-up é permitida. Se listas diferentes forem definidas usando as propriedades da [Lista de Opções](properties_DataSource.md#choice-list) e da Lista exigida, a propriedade da Lista obrigatória tem prioridade.

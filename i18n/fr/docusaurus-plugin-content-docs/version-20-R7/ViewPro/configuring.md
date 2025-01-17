@@ -293,7 +293,7 @@ The following special characters allow the automatic addition or formatting of i
 | P                     | Current page                                        | printInfo.headerLeft:="This is page &P."                                          | This is page 5.                                 |   |
 | N                     | Page count                                          | printInfo.headerLeft:="There are &N pages."                                       | There are 10 pages.                             |   |
 | D                     | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                                 | It is 2015/6/19.                                |   |
-| T                     | Current time                                        | printInfo.headerLeft:="It is &T."                                                 | It is 16:30:36. |   |
+| T                     | Heure courante                                      | printInfo.headerLeft:="It is &T."                                                 | It is 16:30:36. |   |
 | G                     | Image                                               | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G"  | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG)            |   |
 | S                     | Strikethrough                                       | printInfo.headerLeft:="&SThis is text."                                           | ~~This is text.~~                               |   |
 | U                     | Souligné                                            | printInfo.headerLeft:="&UThis is text."                                           | This is text. (Underlined)   |   |
@@ -364,7 +364,7 @@ Paper size attributes are used to specify the dimensions or model of paper to us
   - un des formats retournés par la commande [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/fr/page785.html).
     Dans ce cas, [`VP Get print info`](./commands/vp-get-print-info.md) retourne le format correspondant avec la hauteur et la largeur.
 
-### Echelle
+### Graduation
 
 Scale attributes are used to specify printing optimization and adjustments.
 
