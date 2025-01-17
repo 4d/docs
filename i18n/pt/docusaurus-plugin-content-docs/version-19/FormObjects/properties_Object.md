@@ -19,7 +19,7 @@ Esta propriedade designa o tipo de [objecto formulárioactivo ou inactivo](formO
 
 #### Objectos suportados
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) -[Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botão](button_overview.md) - [Grade de botões](buttonGrid_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé List Box](listbox_overview.md#list-box-footers) - [Cabeçalho List Box](listbox_overview.md#list-box-headers) - [Botão de imagem](pictureButton_overview.md) - [Menu pop-up imagem](picturePopupMenu_overview.md) - [Área de plug-in](pluginArea_overview.md) - [Indicador de progresso](progressIndicator.md) - [Botão de rádio](radio_overview.md) - [Spinner](spinner.md) - [Divisor](splitters.md) - [Imagem estática](staticPicture.md) - [Stepper](stepper.md) - [Subformulário](subform_overview.md) - [Controle de tabulação](tabControl.md) - [Área de texto](text.md) - [Área da Web](webArea_overview.md)
 
 ---
 
@@ -28,9 +28,9 @@ Esta propriedade designa o tipo de [objecto formulárioactivo ou inactivo](formO
 Cada objeto de formulário ativo está associado a um nome de objeto. Cada nome de objeto deve ser único.
 > Os nomes dos objectos estão limitados a um tamanho de 255 bytes.
 
-When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
+Ao usar a linguagem 4D, você pode se referir a um objeto de formulário ativo pelo nome do objeto (para obter mais informações sobre isso, consulte [Propriedades do objeto](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) no manual de referência da linguagem 4D).
 
-For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
+Para obter mais informações sobre regras de nomeação para objetos de formulário, consulte a seção [Identificadores](Concepts/identifiers.md).
 
 #### Gramática JSON
 
@@ -40,15 +40,15 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 #### Objectos suportados
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botão](button_overview.md) - [Grade de botões](buttonGrid_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé List Box](listbox_overview.md#list-box-footers) - [Cabeçalho List Box](listbox_overview.md#list-box-headers) - [Botão de imagem](pictureButton_overview.md) - [Menu pop-up imagem](picturePopupMenu_overview.md) - [Área de plug-in](pluginArea_overview.md) - [Indicador de progresso](progressIndicator.md) - [Spinner](spinner.md) - [Divisor](splitters.md) - [Imagem estática](staticPicture.md) - [Stepper](stepper.md) - [Botão de rádio](radio_overview.md) -[Subformulário](subform_overview.md) - [Controle de tabulação](tabControl.md) - [Área texto](text.md) - [Área Web](webArea_overview.md)
 
 ---
 
-## Guardar valor
+## Salvar valor
 
-This property is available when the [Save Geometry](FormEditor/properties_FormProperties.md#save-geometry) option is checked for the form.
+Essa propriedade está disponível quando a opção [Salvar geometria](FormEditor/properties_FormProperties.md#save-geometry) está marcada para o formulário.
 
-This feature is only supported for objects that contribute to the overall geometry of the form. For example, this option is available for check boxes because their value can be used to hide or display additional areas in the window.
+Essa funcionalidade só é suportada por objetos que contribuam para a geometria geral do formulário. Por exemplo, esta opção está disponível para caixas de seleção porque seu valor pode ser usado para ocultar ou exibir áreas adicionais na janela.
 
 Eis a lista de objetos cujo valor pode ser guardado:
 
@@ -73,31 +73,31 @@ Eis a lista de objetos cujo valor pode ser guardado:
 
 ## Variável ou expressão
 
-> See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.
+> Veja também **[Expression](properties_DataSource.md#expression)** para colunas de list box de tipo seleção e coleção.
 
-Esta propriedade especifica a fonte dos dados. Each active form object is associated with an object name and a variable name. O nome da variável pode diferir do nome do objeto. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
-> O tamanho do nome da variável é limitado a 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
+Esta propriedade especifica a fonte dos dados. Cada objeto de formulário ativo está associado a um nome de objeto e a um nome de variável. O nome da variável pode diferir do nome do objeto. No mesmo formulário, você pode usar a mesma variável várias vezes, mas cada [nome de objeto](#object-name) deve ser exclusivo.
+> O tamanho do nome da variável é limitado a 31 bytes. Consulte a seção [Identificadores](Concepts/identifiers.md) para obter mais informações sobre regras de nomenclatura.
 
-As variáveis de objeto do formulário permitem controlar e monitorar os objetos. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The expression associated with a progress indicator lets you read and change the current setting.
+As variáveis de objeto do formulário permitem controlar e monitorar os objetos. Por exemplo, quando um botão é clicado, sua variável é definida como 1; em todos os outros momentos, ela é 0. A expressão associada a um indicador de progresso permite que você leia e altere a configuração atual.
 
-Variables or expressions can be enterable or non-enterable and can receive data of the Text, Integer, Numeric, Date, Time, Picture, Boolean, or Object type.
+As variáveis ou expressões podem ser digitáveis ou não digitáveis e podem receber dados do tipo Texto, Inteiro, Numérico, Data, Hora, Imagem, Booleano ou Objeto.
 
 #### Gramática JSON
 
 | Nome       | Tipo de dados              | Valores possíveis                                                           |
 | ---------- | -------------------------- | --------------------------------------------------------------------------- |
-| dataSource | string ou array de strings | <li>4D variable, field name, or arbitrary complex language expression. </li><li>Cadeia vazia para [variáveis dinâmicas](#variáveis-dinâmicas). </li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li> |
+| dataSource | string ou array de strings | <li>4D variable, field name, or arbitrary complex language expression. </li><li>Cadeia vazia para [variáveis dinâmicas](#dynamic-variables). </li><li>Array de strings (coleção de nomes de array) para uma coluna de [listbox hierárquico](listbox_overview.md#hierarchical-list-boxes)]</li> |
 
 ### Expressões
 
-You can use an expression as data source for an object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
-> If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
+Você pode usar uma [expressão](Concepts/quick-tour.md#expressions) como fonte de dados para um objeto. Qualquer expressão 4D válida é permitida: expressão simples, propriedade do objeto, fórmula, função 4D, nome do método do projeto ou campo usando a sintaxe padrão `[Table]Field`. A expressão é avaliada quando o formulário é executado e reavaliado para cada evento de formulário. Tenga en cuenta que las expresiones pueden ser [asignables o no asignables](Concepts/quick-tour.md#expressions).
+> Se o valor inserido corresponde a um nome de variável e a um nome de método, 4D considera que você está indicando o método.
 
 ### Variáveis dinâmicas
 
-You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
+Você pode deixar que 4D crie variáveis associadas a seus objetos de formulário (botões, variáveis inseríveis, caixas de seleção, etc.) dinamicamente e de acordo com suas necessidades. Para isso, basta deixar a propriedade "Variable or Expression" (ou o campo JSON `dataSource`) em branco.
 
-When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). Esta variável temporária será destruída quando o formulário for fechado. Para que este princípio funcione em modo compilado, é imperativo que as variáveis dinâmicas sejam explicitamente tipadas. Há duas formas de o fazer:
+Quando uma variável não é nomeada, quando o formulário é carregado, 4D cria uma variável para o objeto, com um nome calculado único no espaço das variáveis de processo do intérprete (o que significa que esse mecanismo pode ser usado mesmo no modo compilado). Esta variável temporária será destruída quando o formulário for fechado. Para que este princípio funcione em modo compilado, é imperativo que as variáveis dinâmicas sejam explicitamente tipadas. Há duas formas de o fazer:
 
 - Pode definir o tipo utilizando a propriedade [Tipo de expressão](#expression-type).
 - É possível utilizar um código de inicialização específico quando o formulário é carregado, que utiliza, por exemplo, o comando `VARIABLE TO VARIABLE`:
@@ -184,7 +184,7 @@ A coleção ou a seleção da entidade deve estar disponível para o formulário
 
 - if you used a collection of objects, you can call **This** in the datasource expression to access each property value, for example `This.<propertyPath>`.
 - if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example `This.<attributePath>`.
-> > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling `This.value` in the datasource expression. However in this case you will not be able to modify values or to access the current object (see below).
+> Se você usou uma coleção de valores escalares (e não objetos), 4D permite que você exiba cada valor chamando **This.value** na expressão de fonte de dados. However in this case you will not be able to modify values or to access the current object (see below).
 
 #### Gramática JSON
 
