@@ -166,10 +166,6 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: '4D Developer Center',
-              to: 'https://developer.4d.com',
-            },
-            {
               label: '4D Blog',
               to: 'https://blog.4d.com',
             },
@@ -182,8 +178,8 @@ module.exports = {
               to: 'https://facebook.com/4Dsoftware',
             },
             {
-              label: 'Twitter',
-              to: 'https://twitter.com/4Dsoftware',
+              label: 'X',
+              to: 'https://x.com/4Dsoftware',
             },
             {
               label: 'Youtube',
@@ -199,6 +195,10 @@ module.exports = {
           title: 'Support',
           items: [
             {
+              label: 'Download this documentation (html)',
+              href: 'https://github.com/4d/docs/releases/download/latest/static-doc-en.zip',
+            },
+            {
               label: '4D Doc Center (Where It All Began)',
               to: 'https://doc.4d.com',
             },
@@ -208,15 +208,15 @@ module.exports = {
             },
             {
               label: 'Downloads',
-              href: 'https://us.4d.com/product-download/Feature-Release',
+              to: 'https://us.4d.com/product-download/Feature-Release',
             },
             {
               label: 'Resources',
-              href: 'https://us.4d.com/resources',
+              to: 'https://us.4d.com/resources',
             },
             {
               label: 'Get Support',
-              href: 'https://us.4d.com/4d-technical-support',
+              to: 'https://us.4d.com/4d-technical-support',
             }
           ],
         },
@@ -225,19 +225,19 @@ module.exports = {
           items: [
             {
               label: 'About 4D',
-              href: 'https://us.4d.com/about-us',
+              to: 'https://us.4d.com/about-us',
             },
             {
               label: 'Contact us',
-              href: 'https://us.4d.com/contact-us',
+              to: 'https://us.4d.com/contact-us',
             },
             {
               label: '4D around the world',
-              href: 'https://us.4d.com/4d-around-the-world',
+              to: 'https://us.4d.com/4d-around-the-world',
             },
             {
               label: 'Careers',
-              href: 'https://us.4d.com/Careers',
+              to: 'https://us.4d.com/Careers',
             },
           ],
         },

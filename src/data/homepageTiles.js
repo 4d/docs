@@ -221,18 +221,6 @@ const Sections = [
         <Link to="FormEditor/forms" >
           <Translate>Forms</Translate>
         </Link>
-        <Link to="FormEditor/jsonReference" >
-          <Translate>Form Properties</Translate>
-        </Link>
-        <Link to="FormObjects/formObjectsOverview" >
-          <Translate>Form Objects</Translate>
-        </Link>
-        <Link to="FormObjects/propertiesReference" >
-          <Translate>Form Object Properties</Translate>
-        </Link>
-        <Link to="Events/overview" >
-          <Translate>Form Events</Translate>
-        </Link>
         <Link to="Menus/overview" >
           <Translate>Menus</Translate>
         </Link>
