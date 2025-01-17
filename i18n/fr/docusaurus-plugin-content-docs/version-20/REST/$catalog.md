@@ -187,7 +187,7 @@ Renvoie des informations sur une dataclass et ses attributs
 
 ### Description
 
-L'appel de `$catalog/\{dataClass\}` pour une dataclass spécifique retournera les informations suivantes sur la dataclass et les attributs qu'elle contient. L'appel de `$catalog/{dataClass}` pour une dataclass spécifique retournera les informations suivantes sur la dataclass et les attributs qu'elle contient.
+L'appel de `$catalog/{dataClass}` pour une dataclass spécifique retournera les informations suivantes sur la dataclass et les attributs qu'elle contient. L'appel de `$catalog/\{dataClass\}` pour une dataclass spécifique retournera les informations suivantes sur la dataclass et les attributs qu'elle contient.
 
 Les informations que vous récupérez concernent :
 
