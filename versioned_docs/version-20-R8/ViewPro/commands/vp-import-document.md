@@ -57,12 +57,24 @@ The optional *paramObj* parameter allows you to define properties for the import
 ||includeStyles|boolean| Whether to include the styles when loading, default is true. |
 ||includeUnusedStyles|boolean|Whether to include the unused name styles when converting excel xml to the json, default is true. |
 ||openMode|integer|<li>0 (normal): normal open mode, without lazy and incremental. When opening file, UI and UI event could be refreshed and responsive at specific time points.</li><li>1 (lazy): lazy open mode. When opening file, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used.</li><li>2 (incremental): incremental open mode. When opening file, UI and UI event could be refreshed and responsive directly.</li>|
+|excelOptions||object|Excel only (optional) - Options for Excel export|
+||includeStyles|boolean|Whether to include the style when importing, default true.|
+||includeFormulas|boolean|Whether to include the formula when importing, default true.|
+||frozenColumnsAsRowHeaders|boolean|Whether to treat the frozen columns as row headers when importing, default false.|
+||frozenRowsAsColumnHeaders|boolean|Whether to treat the frozen rows as column headers when importing, default false.|
+||fullRecalc|boolean|Whether to calculate after loading the json data, false by default.|
+||dynamicReferences|boolean|Whether to calculate functions with dynamic reference, default true.|
+||calcOnDemand|boolean|Whether to calculate formulas only when they are demanded, default false.|
+||includeUnusedStyles|boolean|Whether to include the unused name style when converting excel xml to the json, default true.|
+||password|text|The password to open the workbook.|
+||openMode|text|The open mode of normal, lazy and incremental. By default is normal.|
 
 :::note Notes
 
 - Importing files in .xslx, .csv, and .sjs formats is **asynchronous**. With these formats, you must use the `formula` attribute if you want to start an action at the end of the document processing.
 - When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
+- Using *excelOptions* object is recommended when importing ".xlsx" format. Make sure to not mix this object with legacy first level property *password* to avoid potiental issues.
 
 :::
 
@@ -71,7 +83,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 You want to import a default 4D View Pro document stored on the disk when the form is open:
 
 ```4d
-C_TEXT($docPath)
+var $docPath : text
 If(Form event code=On VP Ready) //4D View Pro area loaded and ready
     $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
     VP IMPORT DOCUMENT("VPArea";$docPath)
@@ -84,12 +96,12 @@ You want to import a password protected Microsoft Excel document into a 4D View 
 
 ```4d
 	//Import code
-var $o : Object
-$o:=New object
-$o.password:="excel123"
+var $o:={}
 $o.formula:=Formula(myImport)
+$excelOptions:={includeStyles:false;includeFormulas:true;password:"excel123"}
+$o.excelOptions:=$excelOptions
  
-VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
+VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfile.xlsx";$o)
 ```
 
 ```4d
@@ -111,7 +123,7 @@ You want to import a `.txt` file that uses a comma (",") as delimiter:
 ![example-import-csv](../../assets/en/ViewPro/vp-import-document-csv.png)
 
 ```4d
-$params:=New object
+var $params:={}
 $params.range:=VP Cells("ViewProArea";0;0;2;5)
 VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOptions";$params))
 ```
@@ -123,5 +135,6 @@ Here's the result:
 
 
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
-[VP NEW DOCUMENT](vp-new-document.md)
+[VP NEW DOCUMENT](vp-new-document.md)<br/>
+[4D View Pro: Excel import/export update (blog post)](https://blog.4d.com/4d-view-pro-excel-import-export-update)
 
