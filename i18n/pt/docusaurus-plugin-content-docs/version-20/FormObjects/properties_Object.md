@@ -160,7 +160,7 @@ No entanto, essa propriedade tem uma função de digitação nos seguintes casos
 
 ## Classe CSS
 
-A list of space-separated words used as class selectors in css files.
+Uma lista de palavras separadas por espaços utilizadas como seletores de classe em [ficheiros css](FormEditor/createStylesheet.md#style-sheet-files).
 
 #### Gramática JSON
 
