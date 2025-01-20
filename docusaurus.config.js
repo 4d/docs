@@ -195,8 +195,8 @@ module.exports = {
           title: 'Support',
           items: [
             {
-              label: 'Download this documentation (html)',
-              href: 'https://github.com/4d/docs/releases/download/latest/static-doc-en.zip',
+              label: 'Documentation download',
+              href: 'https://github.com/4d/docs/releases/tag/latest',
             },
             {
               label: '4D Doc Center (Where It All Began)',
