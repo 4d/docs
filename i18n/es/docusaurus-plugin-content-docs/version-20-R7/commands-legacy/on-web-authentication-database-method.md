@@ -5,193 +5,196 @@ slug: /commands/on-web-authentication-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Web Authentication database method.Syntax-->$1, $2, $3, $4, $5, $6 -> On Web Authentication database method -> $0<!-- END REF-->
-<!--REF #_command_.On Web Authentication database method.Params-->
-| Parameter | Type |  | Description |
+<!--REF #_command_.Metodo base On Web Authentication.Syntax-->$1, $2, $3, $4, $5, $6 -> Método base On Web Authentication : Boolean<!-- END REF-->
+<!--REF #_command_.Metodo base On Web Authentication.Params-->
+| Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Text | &#8592; | URL |
-| $2 | Text | &#8592; | HTTP header + HTTP body |
-| $3 | Text | &#8592; | IP address of browser |
-| $4 | Text | &#8592; | IP address of the server |
-| $5 | Text | &#8592; | User name |
-| $6 | Text | &#8592; | Password |
-| $0 | Boolean | &#8592; | True = request accepted, False = request refused |
+| $1 | Texto | &#8592; | URL |
+| $2 | Texto | &#8592; | Encabezado HTTP + Cuerpo HTTP |
+| $3 | Texto | &#8592; | Dirección IP del navegador |
+| $4 | Texto | &#8592; | Dirección IP del servidor |
+| $5 | Texto | &#8592; | Nombre de usuario |
+| $6 | Texto | &#8592; | Contraseña |
+| Resultado | Boolean | &#8592; | True = petición aceptada, False = petición rechazada |
 
 <!-- END REF-->
 
-#### Description 
+#### Descripción 
 
-<!--REF #_command_.On Web Authentication database method.Summary-->The **On Web Authentication database method** is in charge of managing Web server engine access.<!-- END REF--> It is called by 4D or 4D Server when a Web browser request requires the execution of a 4D method on the server (method called using a *4DACTION* URL, a *4DSCRIPT* tag, etc.). 
+<!--REF #_command_.Metodo base On Web Authentication.Summary-->El Método base On Web Authenticationestá a cargo de administrar el acceso al motor del servidor web.<!-- END REF--> Es llamado automáticamente por 4D o 4D Server cuando una petición de un navegador web requiere la ejecución de un método 4D en el servidor (llamada de un método vía un URL *4DACTION* o  una etiqueta *4DSCRIPT*, etc.). 
 
-This method receives six Text parameters: $1, $2, $3, $4, $5, and $6, and returns one Boolean parameter, $0\. The description of these parameters is as follows:
+Este método recibe seis parámetros de tipo Texto, pasados por 4D: $1, $2, $3, $4, $5, y $6 y devuelve un booleano, $0\. La descripción de estos parámetros es la siguiente:
 
-| **Parameters** | **Type** | **Description**                                   |
-| -------------- | -------- | ------------------------------------------------- |
-| $1             | Text     | URL                                               |
-| $2             | Text     | HTTP header + HTTP body (32 KB maximum)           |
-| $3             | Text     | IP address of the Web client (browser)            |
-| $4             | Text     | IP address of the server                          |
-| $5             | Text     | User name                                         |
-| $6             | Text     | Password                                          |
-| $0             | Boolean  | True = request accepted, False = request rejected |
+| **Parámetros** | **Tipo** | **Descripción**                                      |
+| -------------- | -------- | ---------------------------------------------------- |
+| $1             | Texto    | URL                                                  |
+| $2             | Texto    | Encabezado + Cuerpo HTTP (32 KB máximo)              |
+| $3             | Texto    | Dirección IP del navegador                           |
+| $4             | Texto    | Dirección IP que llama al servidor                   |
+| $5             | Texto    | Nombre del usuario                                   |
+| $6             | Texto    | Contraseña                                           |
+| $0             | Booleano | True = petición aceptada, False = petición rechazada |
 
-You must declare these parameters as follows:
+Debe declarar estos parámetros de esta forma:
 
 ```4d
-  // On Web Authentication Database Method
+  // Método de base On Web Authentication
  
  var $1;$2;$3;$4;$5;$6 : Text
  var $0 : Boolean
  
-  // Code for the method
+  // Código para el método
 ```
 
-**Note:** All the On Web Authentication database method’s parameters are not necessarily filled in. The information received by the database method depends on the options that you have previously selected in the Database Settings dialog box (please refer to the section *Connection Security*).
+**Nota:** todos los parámetros del Método base On Web Authenticationno se llenarán. La información recibida por el método de base depende las opciones que haya seleccionado previamente en la caja de diálogo de Propiedades de la base. Consulte la sección *Seguridad de las conexiones*).
 
-* **URL**  
-The first parameter (*$1*) is the URL entered by the user in the location area of his or her Web browser, from which the host address has been removed.  
-Let’s take the example of an Intranet connection. Suppose that the IP address of your 4D Web Server machine is *123.45.67.89*. The following table shows the values of *$1* depending on the URL entered in the Web browser:
+* **URL**
+
+ El primer parámetro (*$1*) es el URL introducido por el usuario en el área ubicación de su navegador web, menos la dirección local.
+
+ Tomemos el ejemplo de una conexión de Intranet. Supongamos que la dirección IP de su equipo servidor web 4D es *123.45.67.89*. La siguiente tabla muestra los valores de *$1* dependiendo del URL introducido en el navegador web:
+
+| **URL introducido en el navegador web**    | **Valor del parámetro $1**     |
+| ------------------------------------------ | ------------------------------ |
+| 123.45.67.89                               | /                              |
+| http://123.45.67.89                        | /                              |
+| 123.45.67.89/Clientes                      | /Clientes                      |
+| http://123.45.67.89/Clientes               | /Clientes                      |
+| http://123.45.67.89/Clientes/Añadir        | /Clientes/Añadir               |
+| 123.45.67.89/Hacer\_esto/Si\_OK/Hacer\_eso | /Hacer\_esto/Si\_OK/Hacer\_eso |
+
+* **Encabezado y cuerpo de la petición HTTP**
+
+ El segundo parámetro (*$2*) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Note que esta información se pasa al Método base On Web Authentication tal como está. El contenido varía en función del tipo de navegador web que esté intentando la conexión. Si su aplicación manipula esta información, es su decisión si analiza el encabezado y el cuerpo.
+
+**Notas:**
+
+* Por razones de rendimiento, el tamaño de los datos que transita vía el parámetro $2 no debe superar los 32 KB. De lo contrario serán truncados por el servidor HTTP de 4D.
+* Para mayor información sobre este parámetro, consulte la descripción del [Método base On Web Connection](metodo-base-on-web-connection.md).
+* **Dirección IP del navegador**  
+El tercer parámetro $3 recibe la dirección IP del equipo navegador. Esta información permite distinguir entre las conexiones de Intranet e Internet.  
+**Nota:** 4D devuelve las direcciones IPv4 en un formato híbrido IPv6 escritos con un prefijo de 96 bits, por ejemplo ::ffff:192.168.2.34 para la dirección IPv4 192.168.2.34\. Para mayor información, consulte la sección *Soporte de IP v6*.
+* **Dirección IP para llamar al servidor**  
+El cuarto parámetro $4 recibe la dirección IP utilizada para llamar al servidor Web. 4D a partir de la versión 6.5 autoriza el multi-homing, permitiendo explotar equipos con más de una dirección IP. Para mayor información, consulte la sección [QR DELETE COLUMN](qr-delete-column.md).
+* **Nombre del usuario y contraseña**  
+Los parámetros $5 y $6 reciben el nombre de usuario y contraseña introducidos por el usuario en la caja de diálogo estándar de identificación mostrada por el navegador. Esta caja de diálogo aparece para cada conexión, si una opción de gestión de contraseñas ha sido seleccionada en las Propiedades de la base (ver la sección *Seguridad de las conexiones*).
+
+**Nota:** si el nombre de usuario enviado por el navegador existe en 4D, el parámetro $6 (la contraseña del usuario) no se devuelve por razones de seguridad.
+
+**• Parámetro $0**  
   
-| **URL entered in Web browser Location area** | **Value of parameter $1** |  
-| -------------------------------------------- | ------------------------- |  
-| 123.45.67.89                                 | /                         |  
-| http://123.45.67.89                          | /                         |  
-| 123.45.67.89/Customers                       | /Customers                |  
-| http://123.45.67.89/Customers                | /Customers                |  
-| http://123.45.67.89/Customers/Add            | /Customers/Add            |  
-| 123.45.67.89/Do\_This/If\_OK/Do\_That        | /Do\_This/If\_OK/Do\_That |
-* **Header and Body of the HTTP request**  
-The second parameter (*$2*) is the header and the body of the HTTP request sent by the Web browser. Note that this information is passed to your **On Web Authentication database method** as it is. Its contents will vary depending on the nature of the Web browser which is attempting the connection.  
-If your application deals with this information, it is up to you to parse the header and the body.
+ El Método base On Web Authentication devuelve un booleano en $0:
 
-**Notes:** 
+   * Si $0 es [True](true.md "True"), la conexión es aceptada.
+   * Si $0 es [False](false.md "False"), la conexión es rechazada.
 
-* For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
-* For more information about this parameter, please refer to the description of the [On Web Connection database method](on-web-connection-database-method.md).
-* **Web client IP address**  
-The $3 parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between Intranet and Internet connections.  
-**Note:** 4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34\. For more information, refer to the *Support of IPv6* section.
-* **Server IP address**  
-The $4 parameter receives the IP address used to call the Web server. 4D since version 6.5 allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the section *Web Server Settings*
-* **User Name and Password**  
-The $5 and $6 parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if a password management option has been selected in the Database Settings dialog box (see section *Connection Security*).
+El [Método base On Web Connection](metodo-base-on-web-connection.md) sólo se ejecuta si la conexión ha sido aceptada por **On Web Authentication**.
 
-**Note:** If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+**Advertencia:** si no se pasa ningún valor en *$0* o si *$0* no se define en el Método base On Web Authentication, la conexión se considerará como aceptada y se ejecuta el [Método base On Web Connection](metodo-base-on-web-connection.md)*Licenses*.
 
-* **$0 parameter**  
-    
-The **On Web Authentication database method** returns a boolean in $0:  
-   * If $0 is **True**, the connection is accepted.  
-   * If $0 is **False**, the connection is refused.
+**Notas:**
 
-The [On Web Connection database method](on-web-connection-database-method.md) is only executed if the connection has been accepted by **On Web Authentication**.
+* No llame elementos de interfaz en el Método base On Web Authentication ([ALERT](alert.md), [DIALOG](../commands/dialog.md), etc.) porque de lo contrario su ejecución se interrumpirá y la conexión será rechazada. Lo mismo sucede si se presenta un error durante su proceso.
+* Es posible evitar la ejecución por *4DACTION* o *4DSCRIPT* de cada método de proyecto con la ayuda de la opción “Disponible vía las etiquetas HTML y URLs (4DACTION...) en la caja de diálogo de las Propiedades de los métodos. Para mayor información sobre este punto, consulte la sección *Seguridad de las conexiones*.
 
-**WARNING:** If no value is set to *$0* or if *$0* is not defined in the On Web Authentication database method, the connection is considered as accepted and the [On Web Connection database method](on-web-connection-database-method.md) is executed.
+#### Llamadas del método base On Web Authentication 
 
-**Notes :**
+El Método base On Web Authentication se llama automáticamente, sin importar el modo, cuando una petición o proceso requiere la ejecución de un método 4D. También se llama cuando el servidor web recibe un URL estático inválido (por ejemplo, si la página estática solicitada no existe). 
 
-* Do not call any interface elements in the **On Web Authentication database method** ([ALERT](alert.md), [DIALOG](../commands/dialog.md), etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
-* It is possible to prevent execution by *4DACTION* or *4DSCRIPT* for each project method via the “Available through 4D HTML tags and URLs (4DACTION...)” option in the Method properties dialog box. For more information about this point, please refer to the *Connection Security* section.
+Por lo tanto el Método base On Web Authentication se llama en los siguientes casos:
 
-#### On Web Authentication Database Method calls 
+* cuando 4D recibe un URL que comienza por *4DACTION/*
+* cuando 4D recibe un URL que comienza por *4DCGI/*
+* cuando 4D recibe un URL que comienza por *4DSYNC/*
+* cuando 4D recibe un URL solicitando una página estática que no existe
+* cuando 4D recibe un URL de acceso a la raíz y no se ha definido una página de inicio en las propiedades de la base o por medio del comando [WEB SET HOME PAGE](web-set-home-page.md)
+* cuando 4D procesa una etiqueta *4DSCRIPT* en una página semidinámica
+* cuando 4D procesa una etiqueta *4DLOOP* basada en un método en una página semidinámica.
+**Nota de compatibilidad:** el método base también se llama cuando 4D recibe un URL que comienza por *4DMETHOD/*. Este URL es obsoleto y sólo se conserva por razones de compatibilidad.
 
-The On Web Authentication database method is automatically called, regardless of the mode, when a request or processing requires the execution of a 4D method. It is also called when the Web server receives an invalid static URL (for example, if the static page requested does not exist). 
+Note que el Método base On Web Authentication NO se llama cuando el servidor recibe un URL solicitando una página estática válida.
 
-The On Web Authentication database method is therefore called in the following cases:
+#### Ejemplo 1 
 
-* when 4D receives a URL beginning with *4DACTION/*
-* when 4D receives a URL beginning with *4DCGI/*
-* when 4D receives a URL beginning with *4DSYNC/*
-* when 4D receives a URL requesting a static page that does not exist
-* when 4D receives a root access URL and no home page has been set in the Database Settings or by means of the [WEB SET HOME PAGE](web-set-home-page.md) command
-* when 4D processes a *4DSCRIPT* tag in a semi-dynamic page
-* when 4D processes a *4DLOOP* tag based on a method in a semi-dynamic page.
-
-**Compatibility note:** The database method is also called when 4D receives a URL beginning with *4DMETHOD/*. This URL is obsolete and is only kept for compatibility's sake.
-
-Note that the On Web Authentication database method is NOT called when the server receives a URL requesting a valid static page. 
-
-#### Example 1 
-
-Example of the On Web Authentication database method in BASIC mode:
+Ejemplo del *Método de base On Web Authentication* en modo BASIC: 
 
 ```4d
-  //On Web Authentication Database Method
+  //Método de base On Web Authentication
  var $5;$6;$3;$4 : Text
- var $user;$password;$BrowserIP;$ServerIP : Text
- var $4Duser : Boolean
- ARRAY TEXT($users;0)
+ var $usuario;$contraseña;$IPNavegador;$IPServidor : Text
+ var $4Dusuario : Boolean
+ ARRAY TEXT($usuarios;0)
  ARRAY LONGINT($nums;0)
  var $upos : Integer
  var $0 : Boolean
  
  $0:=False
  
- $user:=$5
- $password:=$6
- $BrowserIP:=$3
- $ServerIP:=$4
+ $usuario:=$5
+ $contraseña:=$6
+ $IPNavegador:=$3
+ $IPServidor:=$4
  
-  //For security reasons, refuse names that contain @
- If(WithWildcard($user)|WithWildcard($password))
+  //Por razones de seguridad, rechazar nombres que contengan @
+ If(WithWildcard($usuario)|WithWildcard($contraseña))
     $0:=False
-  //The WithWildcard method is described below
+  //El método WithWildcard se describe a continuación
  Else
-  //Check to see if it’s a 4D user
-    GET USER LIST($users;$nums)
-    $upos:=Find in array($users;$user)
+  //Verificar para ver si es un usuario 4D
+    GET USER LIST($usuarios;$nums)
+    $upos:=Find in array($usuarios;$usuario)
     If($upos >0)
-       $4Duser:=Not(Is user deleted($nums{$upos}))
+       $usuario4D:=Not(Is user deleted($nums{$upos}))
     Else
-       $4Duser:=False
+       $usuario4D:=False
     End if
  
-    If(Not($4Duser))
-  //It is not a user defined 4D, look in the table of Web users
-       QUERY([WebUsers];[WebUsers]User=$user;*)
-       QUERY([WebUsers]; & [WebUsers]Password=$password)
-       $0:=(Records in selection([WebUsers])=1)
+    If(Not($usuario4D))
+  //No es un usuario definido en 4D, buscar en la tabla de usuarios Web
+       QUERY([UsuariosWeb];[UsuariosWeb]usuario=$usuario;*)
+       QUERY([UsuariosWeb]; & [UsuariosWeb]contraseña=$contraseña)
+       $0:=(Records in selection([UsuariosWeb])=1)
     Else
        $0:=True
     End if
  End if
-  //Is this an intranet connection?
- If(Substring($BrowserIP;1;7)#"192.100.")
+  //¿Esta es una conexión de intranet?
+ If(Substring($IPNavegador;1;7)#"192.100.")
     $0:=False
  End if
 ```
 
-#### Example 2 
+#### Ejemplo 2 
 
-Example of the On Web Authentication database method in DIGEST mode:
+Ejemplo del  en modo DIGEST:
 
 ```4d
-  //On Web Authentication Database Method
+  //Método de base On Web Authentication
  var $1;$2;$5;$6;$3;$4 : Text
- var $user : Text
+ var $usuario : Text
  var $0 : Boolean
  $0:=False
- $user:=$5
-  //For security reasons, refuse names that contain @
- If(WithWildcard($user))
+ $usuario:=$5
+  //Por razones de seguridad, rechazar los nombres que contengan @
+ If(WithWildcard($usuario))
     $0:=False
-  //The WithWildcard method is described below
+  //El método WithWildcard se describe a continuación
  Else
-    QUERY([WebUsers];[WebUsers]User=$user)
+    QUERY([UsuariosWeb];[UsuariosWeb]usuario=$usuario)
     If(OK=1)
-       $0:=WEB Validate digest($user;[WebUsers]password)
+       $0:=WEB Validate digest($usuario;[UsuariosWeb]contraseña)
     Else
-       $0:=False //User does not exist
+       $0:=False //Usuario inexistente
     End if
  End if
+ 
+ El método de proyecto WithWildcard es el siguiente:
 ```
 
-The WithWildcard method is as follows:
-
 ```4d
-  //WithWildcard Method
-  //WithWildcard ( String ) -> Boolean
-  //WithWildcard ( Name ) -> Contains a Wilcard character
+  //Método WithWildcard
+  //WithWildcard ( Cadena) -> Booleano
+  //WithWildcard ( Nombre ) -> Contiene un carácter arroba
  
  C_INTEGER($i)
  var $0 : Boolean

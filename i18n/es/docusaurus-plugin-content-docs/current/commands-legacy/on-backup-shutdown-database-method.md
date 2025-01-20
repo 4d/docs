@@ -5,31 +5,31 @@ slug: /commands/on-backup-shutdown-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Backup Shutdown database method.Syntax-->$1 -> On Backup Shutdown database method<!-- END REF-->
-<!--REF #_command_.On Backup Shutdown database method.Params-->
-| Parameter | Type |  | Description |
+<!--REF #_command_.Metodo base On Backup Shutdown.Syntax-->$1 -> Método base On Backup Shutdown<!-- END REF-->
+<!--REF #_command_.Metodo base On Backup Shutdown.Params-->
+| Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Integer | &#8592; | 0 = backup executed correctly; other value = error, interrupted by user or code returned by On Backup Startup |
+| $1 | Entero largo | &#8592; | 0 = backup ejecutado correctamente; otro valor = error, interrumpido por el usuario o código devuelto por On Backup Startup |
 
 <!-- END REF-->
 
 #### 
 
-<!--REF #_command_.On Backup Shutdown database method.Summary-->The On Backup Shutdown database method is called every time a database backup ends.<!-- END REF--> The reasons for the stoppage of a backup can be the end of the copy, user interruption or an error.  
-This concerns all 4D environments: 4D (all modes), 4D Server as well as 4D applications compiled and merged with 4D Volume Desktop. 
+<!--REF #_command_.Metodo base On Backup Shutdown.Summary-->El Método base On Backup Shutdown se llama cada vez que termina un backup de la base.<!-- END REF--> Las razones para detener un backup pueden ser el fin de la copia, la interrupción por parte del usuario o un error.  
+Esto concierne a todos los entornos 4D (todos los modos), 4D Server así como las aplicaciones 4D compiladas y fusionadas con 4D Volume Desktop. 
 
-The On Backup Shutdown database method allows verifying that the backup was executed correctly. It receives, in the *$1* parameter, a value representing the status of the backup once completed:
+El Método base On Backup Shutdown permite verificar que el backup fue ejecutado correctamente. El método recibe, en el parámetro *$1*, un valor indicando el estado del backup una vez terminado:
 
-* If the backup was executed correctly, *$1* equals 0.
-* If the backup was interrupted by the user or following an error, *$1* is different from 0\.  
-   * If the backup was stopped by the *On Backup Startup Database Method* (*$0* \# 0), *$1* gets the value actually returned in the *$0* parameter. This allows you to implement a customized error management system.  
-   * If the backup was stopped due to an error, the error code is returned in *$1*.  
-In any case, you can get information about the error using the [BACKUP INFO](backup-info.md) command.
+* Si el backup se ejecutó correctamente, *$1* es igual a 0.
+* Si el backup fue interrumpido por el usuario o por un error, *$1* es diferente de 0\.
+   * Si el backup fue detenido por el *Método de base de datos On Backup Startup* (*$0* \# 0), *$1* obtiene el valor devuelto en el parámetro *$0*. Esto le permite implementar un sistema de gestión de errores personalizado.
+   * Si el backup fue detenido por un error, el código del error se devuelve en *$1*.
+ En todos los casos, puede obtener información sobre el error utilizando el comando [BACKUP INFO](backup-info.md).
 
-**Note**: You must declare the *$1* parameter (longint) in the database method:
+**Nota**: debe declarar el parámetro *$1* (entero largo) en el método de la base:
 
 ```4d
  var $1 : Integer
 ```
 
-It is important to note that in the case of an error during backup (disk full, support unavailable, etc.), the information related to the error is only displayed in the 4D Server monitor or in the MSC, and copied into the backup log. No alert dialog box appears and the *error* variable is not modified. If you want to be able to notify the administrator that an error has occurred, particularly in the context of an application running in client/server mode, you will need to use the **On Backup Shutdown database method**.
+Es importante notar que en caso de error durante el backup (disco lleno, soporte inaccesible, etc.), la información relativa al error se muestra únicamente en el monitor de 4D Server o en el CSM, y se copia en el historial de backups. No se muestra una caja de diálogo de alerta y la variable *error* no se modifica. Si quiere notificar al administrador que se produjo un error, particularmente en el contexto de una aplicación en modo cliente/servidor, es necesario utilizar el **Método base On Backup Shutdown**.

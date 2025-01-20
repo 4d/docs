@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 | Paramètres | Type                               |     | Description                                                                      |
 | ---------- | ---------------------------------- | :-: | -------------------------------------------------------------------------------- |
-| server     | Object                             |  →  | Informations sur le serveur IMAP                                                 |
+| server     | Object                             |  →  | Informations sur le serveur de messagerie                                        |
 | Résultat   | 4D.IMAPTransporter |  ←  | [Objet IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object) |
 
 <!-- END REF -->

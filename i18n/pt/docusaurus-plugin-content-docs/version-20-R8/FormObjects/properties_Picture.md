@@ -3,7 +3,7 @@ id: propertiesPicture
 title: Imagem
 ---
 
-## Pathname
+## Rota de acesso
 
 Nome do uma imagem source estática para um [botão imagem](pictureButton_overview.md), [menu pop-up imagem](picturePopupMenu_overview.md) ou [imagem estática](staticPicture.md). É necessário utilizar a sintaxe POSIX.
 

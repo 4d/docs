@@ -237,7 +237,7 @@ Você só passa a referência no campo "Placeholder"; não é possível combinar
 
 ---
 
-## Selecção sempre visível
+## Seleção sempre visível
 
 Essa propriedade mantém a seleção visível dentro do objeto depois que ele perde o foco. Isso facilita a implementação de interfaces que permitem que o estilo de texto seja modificado (veja [Multiestilo](properties_Text.md#multi-style)).
 

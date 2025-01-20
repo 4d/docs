@@ -5,52 +5,52 @@ slug: /commands/on-host-database-event-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Host Database Event database method.Syntax-->$1 -> On Host Database Event database method<!-- END REF-->
-<!--REF #_command_.On Host Database Event database method.Params-->
-| Parameter | Type |  | Description |
+<!--REF #_command_.Metodo base On Host Database Event.Syntax-->$1 -> Método base On Host Database Event<!-- END REF-->
+<!--REF #_command_.Metodo base On Host Database Event.Params-->
+| Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Integer | &#8592; | Event code |
+| $1 | Entero largo | &#8592; | Código del evento |
 
 <!-- END REF-->
 
 #### Description 
 
-<!--REF #_command_.On Host Database Event database method.Summary-->The **On Host Database Event database method** allows 4D components to execute code when the host database is opened and closed.<!-- END REF-->
+<!--REF #_command_.Metodo base On Host Database Event.Summary-->El **Método base On Host Database Event** permite a los componentes 4D ejecutar código cuando se abre y cierra la base local.<!-- END REF-->  
+  
+**Nota**: por razones de seguridad, la ejecución de este método base debe ser autorizada explícitamente en la base local. Para obtener más información sobre este punto, consulte el manual de *Diseño*.  
+  
+El **Método base On Host Database Event** se ejecuta automáticamente solamente en bases utilizadas como componentes de bases locales (cuando se autoriza en las propiedades de la base local). Se llama cuando se producen eventos relacionados con la apertura y cierre de la base local.  
+  
+Para procesar un evento, debe probar el valor del parámetro $1 en el método, y compararlo con una de las siguientes constantes, disponibles en el tema "*Eventos de la base*":  
+  
+| Constante                       | Tipo         | Valor | Comentario                                                                                                                                                                                                                                                                                          |
+| ------------------------------- | ------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| On after host database exit     | Entero largo | 4     | El [Semaphore](semaphore.md) de la base local acaba de terminar su ejecución                                                                                                                                                                                                                        |
+| On after host database startup  | Entero largo | 2     | El de la base local acaba de terminar su ejecución                                                                                                                                                                                                                                                  |
+| On before host database exit    | Entero largo | 3     | La base local se está cerrando. El [Semaphore](semaphore.md) de la base local aún no se ha llamado. <br/>El [Semaphore](semaphore.md) de la base loal no se llama mientras el [Método base On Host Database Event](metodo-base-on-host-database-event.md) del componente se esté ejecutando |
+| On before host database startup | Entero largo | 1     | La base local se ha iniciado. El de la base local aún no se ha llamado. <br/>El método base On Startup de la base local no se llama mientras el [Método base On Host Database Event](metodo-base-on-host-database-event.md) del componente se esté ejecutando                               |
 
-**Note:** For security reasons, in order to be able to call this database method, you must explicitly allow its execution in the host database. For more information about this point, refer to the *Design Reference* manual. 
+Esto permite a los componentes 4D cargar y guardar preferencias o estados de usuario relacionados con el funcionamiento de la base local.
 
-The **On Host Database Event database method** is executed automatically only in databases used as components of host databases (when it is authorized in the Settings of the host database). It is called when events related to the opening and closing of the host database occur. 
+#### Ejemplo 
 
-To process an event, you must test the value of the *$1* parameter inside the method, and compare it with one of the following constants, available in the "*Database Events*" theme:
-
-| Constant                        | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| On after host database exit     | Integer | 4     | The [On Exit database method](on-exit-database-method.md) of the host database has just finished running                                                                                                                                                                                                                                                                                                |
-| On after host database startup  | Integer | 2     | The [On Startup database method](on-startup-database-method.md) of the host database just finished running                                                                                                                                                                                                                                                                                              |
-| On before host database exit    | Integer | 3     | The host database is closing. The [On Exit database method](on-exit-database-method.md) of the host database has not yet been called. <br/>The [On Exit database method](on-exit-database-method.md) of the host database is not called while the [On Host Database Event database method](on-host-database-event-database-method.md) of the component is running                               |
-| On before host database startup | Integer | 1     | The host database has just been started. The [On Startup database method](on-startup-database-method.md) method of the host database has not yet been called. <br/>The [On Startup database method](on-startup-database-method.md) of the host database is not called while the [On Host Database Event database method](on-host-database-event-database-method.md) of the component is running |
-
-This allows 4D components to load and save preferences or user states related to the operation of the host database. 
-
-#### Example 
-
-Example of typical structure of an On Host Database Event database method:
+Ejemplo de estructura tipo de un método base On Host Database Event:
 
 ```4d
-  // On Host Database Event database method
+  // Método base On Host Database Event
  var $1 : Integer
  Case of
     :($1=On before host database startup)
-  // put code here that you want to execute before the "On Startup" database method
-  // of the host database
+  // poner aquí el código a ejecutar antes del método base "On Startup"
+  // de la base local
     :($1=On after host database startup)
-  // put code here that you want to execute after the "On Startup"
-  // database method of the host database
+  // poner aquí el código a ejecutar después del método base "On Startup"
+  // de la base local
     :($1=On before host database exit)
-  // put code here that you want to execute before the "On Exit"
-  // database method of the host database
+  // poner aquí el código a ejecutar antes del método base "On Exit"
+  // de la base local
     :($1=On after host database exit)
-  // put code here that you want to execute after the "On Exit"
-  // database method of the host database
+  // poner aquí el código a ejecutar después del método base "On Exit"
+  // de la base local
  End case
 ```

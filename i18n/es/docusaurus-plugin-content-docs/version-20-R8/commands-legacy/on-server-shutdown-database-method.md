@@ -5,31 +5,30 @@ slug: /commands/on-server-shutdown-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Server Shutdown database method.Syntax-->**On Server Shutdown database method**<!-- END REF-->
-<!--REF #_command_.On Server Shutdown database method.Params-->
-| Does not require any parameters |  |
+<!--REF #_command_.Metodo base On Server Shutdown.Syntax-->**Método base On Server Shutdown**<!-- END REF-->
+<!--REF #_command_.Metodo base On Server Shutdown.Params-->
+| Este comando no requiere parámetros |  |
 | --- | --- |
 
 <!-- END REF-->
 
 #### 
 
-<!--REF #_command_.On Server Shutdown database method.Summary-->The On Server Shutdown database method is called once on the server machine when the current database is closed on 4D Server.<!-- END REF--> The On Server Shutdown database method is NOT invoked by any 4D environment other than 4D Server.
+<!--REF #_command_.Metodo base On Server Shutdown.Summary-->El Método base On Server Shutdown se llama una vez en el equipo servidor cuando la base actual se cierra en 4D Server.<!-- END REF--> El Método base On Server Shutdown NO es llamado por otro entorno 4D diferente de 4D Server.
 
-To close the current database on the server, you can select the **Close Database...**  menu command on the server. You can also choose the **Quit** command or call the [QUIT 4D](quit-4d.md) command within a stored procedure executed on the server.
+Para cerrar la base actual en el servidor, puede seleccionar el comando de menú **Cerrar la base...** en el servidor. También puede elegir el comando **Salir** o llamar al comando [QUIT 4D](quit-4d.md) dentro de un procedimiento almacenado ejecutado en el servidor.
 
-When the exit from the database is initiated, 4D performs the following actions:
+Cuando se inicia el proceso de cierre de la base, 4D efectúa las siguientes acciones:
 
-* If there is no On Server Shutdown database method, 4D Server aborts each running process one by one, without distinction.
-* If there is an On Server Shutdown database method, 4D Server starts executing this method within a newly created local process. You can therefore use this database method to inform other processes, via interprocess communication, that they must stop executing. Note that 4D Server will eventually quit — the On Server Shutdown database method can perform all the cleanup or closing operations you want, but it cannot refuse the quit, and will at some point end.
+* Si no hay un Método base On Server Shutdown, 4D Server aborta cada proceso en ejecución uno por uno, sin distinción.
+* Si existe un Método base On Server Shutdown, 4D Server ejecuta este método en un nuevo proceso local. Por lo tanto puede utilizar este método base para informar los otros procesos, vía la comunicación interproceso, que deben detener su ejecución. Note que 4D Server saldrá finalmente, el Método base On Server Shutdown puede efectuar todas las operaciones de limpieza o cierre que usted quiera, pero no puede rehusarse a salir y en algún momento terminará.
 
-The On Server Shutdown database method is the perfect place to:
+El Método base On Server Shutdown es el lugar ideal para:
 
-* Stop store procedures automatically started when the database was opened.
-* Save (locally, on disk) Preferences or Settings to be reused at the beginning of the next session in the *On Server Startup Database Method*.
-* Perform any other actions that you want to be done automatically each time a database is exited.
+* Detener los procedimientos almacenados lanzados automáticamente cuando se abre la base.
+* Guardar (localmente, en disco) las preferencias o los parámetros a reutilizar al inicio de la sesión siguiente en el *Método base On Server Startup*.
+* Efectuar cualquier otra acción que quiera activar automáticamente cada vez que salga de la base.
 
-**Warning:** If you use the On Server Shutdown database method to close stored procedures, keep in mind that the server quits once the On Server Shutdown database method (and not the stored procedures) is executed. If some stored procedures are still running at this point, they will be killed.  
-Consequently, if you want to make sure that the stored procedures are fully executed before being killed by the server, the On Server Shutdown database method should indicate to the stored procedures that they must end their execution (for example, using an interprocess variable) and should allow them to close (through a x seconds loop or another interprocess variable).
+**Importante:** si utiliza el Método base On Server Shutdown para cerrar los procedimientos almacenados, recuerde que el servidor sale una vez se ejecuta el Método base On Server Shutdown (y no los procedimientos almacenados). Si los procedimientos almacenados aún están corriendo en este momento, se abortarán. Por lo tanto, si quiere asegurarse de que los procedimientos almacenados se ejecuten completamente antes de ser abortados por el servidor, el Método base On Server Shutdown debe indicar a los procedimientos almacenados que deben terminar su ejecución (por ejemplo, utilizando una variable interproceso) y debe permitirles cerrar (por medio de un bucle de x segundos u otra variable interproceso).
 
-If you want code to be executed automatically on a client machine when a remote 4D stops connecting to the server, use the [Semaphore](semaphore.md).
+Si quiere que el código se ejecute automáticamente en un equipo cliente cuando un 4D remoto deja de conectarse al servidor, utilice el [Semaphore](semaphore.md).

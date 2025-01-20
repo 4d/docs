@@ -50,7 +50,7 @@ Esta propriedade é utilizada para declarar o formulário detalhado a utilizar n
 Ação a ser executada no caso de um clique duplo em uma linha vazia de um subformulário lista. As opções abaixo estão disponíveis:
 
 - Não fazer nada: Ignora o duplo clique.
-- Add Record: Creates a new record in the subform and changes to editing mode. El registro se creará directamente en la lista si la propiedad [Editable en la lista](#enterable-in-list) está activada. En caso contrario, se creará en modo página, en el [formulario detallado](#detail-form) asociado al subformulario.
+- Adicionar registro: cria um registro no subformulário e muda para o modo edição. El registro se creará directamente en la lista si la propiedad [Editable en la lista](#enterable-in-list) está activada. En caso contrario, se creará en modo página, en el [formulario detallado](#detail-form) asociado al subformulario.
 
 #### Gramática JSON
 
@@ -72,7 +72,7 @@ Ação a ser executada no caso de um clique duplo em uma linha vazia de um subfo
 
 `Subformulário lista`
 
-Sets the action to be performed when a user double-clicks on a row in a list subform. As opções disponíveis são:
+Define a ação a ser executada quando um usuário clica duas vezes em uma linha no subformulário lista. As opções disponíveis são:
 
 - **Não fazer nada** (padrão): clicar duas vezes em uma linha não aciona nenhuma ação automática.
 - **Editar registro**: al hacer doble clic en una línea se muestra el registro correspondiente en el [formulario detallado](#detail-form) definido para el subformulario lista. O registo é aberto em modo de leitura-escrita para poder ser modificado.

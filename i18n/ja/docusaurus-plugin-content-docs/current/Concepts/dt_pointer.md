@@ -33,7 +33,7 @@ $MyVar:="Hello"
 $MyVar は、文字列 "Hello" を含む変数です。 $MyVar に対するポインターを作成します:
 
 ```4d
-C_POINTER($MyPointer)  
+var $MyPointer : Pointer
 $MyPointer:=->$MyVar
 ```
 
@@ -92,6 +92,26 @@ $MyVar:="Goodbye"
 | 異なる | Pointer # Pointer | Boolean | vPtrA # vPtrC | true  |
 |     |                   |         | vPtrA # vPtrB | false |
 
+:::warning Null Pointers
+
+Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. 例:
+
+```4d
+var $p : Pointer // non initialized pointer (Nil value)
+$v:=$p-> // error
+$p->:=$v // error
+```
+
+To prevent such errors, you can write:
+
+```4d
+If ($p#Null)
+  $p->:=$v
+End if
+```
+
+:::
+
 ## ポインターの使用例
 
 ### テーブルへのポインター
@@ -138,22 +158,29 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 プロセス変数またはローカル変数のポインターを使う場合、参照される変数はポインターが使用される時点ですでに定義されていなければなりません。 ローカル変数は、それらを作成したメソッドの実行が終わると破棄され、プロセス変数もそれを作成したプロセスの終了時に削除される点に留意してください。 存在しない変数をポインターで呼び出そうとすると、インタープリターモードでは (「変数が設定されていません」という内容の) シンタックスエラーが起きます。コンパイルモードでは、さらに重大なエラーが発生する可能性があります。
 
-ローカル変数のポインターを使用すると、プロセス変数の使用を控えることができます。 ローカル変数へのポインターは、同じプロセス内でのみ使用することができます。 デバッガーにおいて、別のメソッドで宣言されたローカル変数へのポインターを表示すると、ポインターの後ろの括弧内にそのメソッド名が表示されます。 例として、Method1 で以下のように書いたとします:
+ローカル変数のポインターを使用すると、プロセス変数の使用を控えることができます。 ローカル変数へのポインターは、同じプロセス内でのみ使用することができます。 デバッガーにおいて、別のメソッドで宣言されたローカル変数へのポインターを表示すると、ポインターの後ろの括弧内にそのメソッド名が表示されます。 For example, if you write in _Method1_:
 
 ```4d
  $MyVar:="Hello world"
  Method2(->$MyVar)
 ```
 
-Method2 実行中のデバッガーは $1 を次のように表示します:
+_Method2_:
 
-| $1 | ->$MyVar (Method1) |
-| -- | ------------------------------------- |
+```4d
+#DECLARE($param : Pointer)
+...
+```
 
-$1 の値は、次のようになります:
+The debugger will display $param as follows:
 
-| $MyVar (Method1) | "Hello world" |
-| ----------------------------------- | ------------- |
+| $param | ->$MyVar (Method1) |
+| ------ | ------------------------------------- |
+
+You can expand $param and its value will be:
+
+| $MyVar | "Hello world" |
+| ------ | ------------- |
 
 ### 配列要素へのポインター
 
@@ -196,11 +223,12 @@ SORT ARRAY($ArrPtr->;>) // 配列の並べ替え
 ポインターは引数としてメソッドに渡すことができます。 メソッド内で、ポインターの参照先の値を変更することができます。 たとえば、以下のメソッド `takeTwo` は、2つのポインターを引数として受け取ります。 そして、最初の引数の参照先を大文字に変換し、2つめの引数の参照先を小文字に変換します。 当該プロジェクトメソッドのコードです:
 
 ```4d
-  //takeTwo プロジェクトメソッド
-  //$1 – 文字列フィールドまたは変数へのポインター。 これを大文字に変換します。
-  //$2 – 文字列フィールドまたは変数へのポインター。 これを小文字に変換します。
- $1->:=Uppercase($1->)
- $2->:=Lowercase($2->)
+  //takeTwo project method
+  //$changeUp – Pointer to a string field or variable. Change this to uppercase.
+  //$changeLow – Pointer to a string field or variable. Change this to lowercase.
+ #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
+ $changeUp->:=Uppercase($changeUp->)
+ $changeLow->:=Lowercase($changeLow->)
 ```
 
 以下のステートメントではメソッド `takeTwo` を使用し、フィールドの値を大文字に、変数の値を小文字に変換します:

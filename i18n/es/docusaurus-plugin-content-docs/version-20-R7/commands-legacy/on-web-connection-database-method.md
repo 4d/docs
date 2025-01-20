@@ -5,105 +5,101 @@ slug: /commands/on-web-connection-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Web Connection database method.Syntax-->$1, $2, $3, $4, $5, $6 -> On Web Connection database method<!-- END REF-->
-<!--REF #_command_.On Web Connection database method.Params-->
-| Parameter | Type |  | Description |
+<!--REF #_command_.Metodo base On Web Connection.Syntax-->$1, $2, $3, $4, $5, $6 -> Método base On Web Connection<!-- END REF-->
+<!--REF #_command_.Metodo base On Web Connection.Params-->
+| Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Text | &#8592; | URL |
-| $2 | Text | &#8592; | HTTP header + HTTP body |
-| $3 | Text | &#8592; | IP address of browser |
-| $4 | Text | &#8592; | IP address of the server |
-| $5 | Text | &#8592; | User name |
-| $6 | Text | &#8592; | Password |
+| $1 | Texto | &#8592; | URL |
+| $2 | Texto | &#8592; | Encabezado HTTP + Cuerpo HTTP |
+| $3 | Texto | &#8592; | Dirección IP del navegador |
+| $4 | Texto | &#8592; | Dirección IP del servidor |
+| $5 | Texto | &#8592; | Nombre de usuario |
+| $6 | Texto | &#8592; | Contraseña |
 
 <!-- END REF-->
 
 #### 
 
-<!--REF #_command_.On Web Connection database method.Summary-->The **On Web Connection database method** can be called in the following cases:
+<!--REF #_command_.Metodo base On Web Connection.Summary-->El Método base On Web Connection puede llamarse en los siguientes casos: 
 
-* the web server receives a request beginning with the *4DCGI* URL.<!-- END REF-->
-* the web server receives an invalid request.
+* el servidor web recibe una petición que comienza por el URL *4DCGI*.<!-- END REF-->
+* el servidor web recibe una petición inválida.
 
-For more information, refer to the paragraph “” below.
+Para mayor información, consulte el párrafo “” abajo.
 
- The request should have previously been accepted by the [On Web Authentication database method](on-web-authentication-database-method.md) (if it exists) and the web server must be launched.
+La petición debe haber sido aceptada previamente por el [Método base On Web Authentication](metodo-base-on-web-authentication.md) (si existe) y el servidor web debe lanzarse.
 
-The **On Web Connection database method** receives six text parameters passed by 4D ($1, $2, $3, $4, $5, and $6). These parameters are described in the following table:   
+El Método base On Web Connection recibe seis parámetros de tipo texto, pasados por 4D ($1, $2, $3, $4, $5 y $6). Los contenidos de estos parámetros son los siguientes: 
 
-| **Parameters** | **Type** | **Description**                             |
-| -------------- | -------- | ------------------------------------------- |
-| $1             | Text     | URL                                         |
-| $2             | Text     | HTTP header + HTTP body (up to 32 kb limit) |
-| $3             | Text     | IP address of the Web client (browser)      |
-| $4             | Text     | IP address of the server                    |
-| $5             | Text     | User name                                   |
-| $6             | Text     | Password                                    |
+| **Parámetros** | **Tipo** | **Descripción**                                       |
+| -------------- | -------- | ----------------------------------------------------- |
+| $1             | Texto    | URL                                                   |
+| $2             | Texto    | Encabezado HTTP + cuerpo HTTP (hasta 32 kb de límite) |
+| $3             | Texto    | Dirección IP del navegador                            |
+| $4             | Texto    | Dirección IP llamada del servidor                     |
+| $5             | Texto    | Nombre de usuario                                     |
+| $6             | Texto    | Contraseña                                            |
 
-You must declare these parameters as shown below:
+Debe declarar estos seis parámetros de esta manera:
 
 ```4d
-  // On Web Connection Database Method
+  // Método de base On Web Connection
  
  var $1;$2;$3;$4;$5;$6 : Text
  
-  // Code for the method
+  // Código para el método
 ```
 
-* **URL extra data**  
-The first parameter (*$1*) is the URL entered by users in the address area of their web browser, without the host address.  
-Let’s use an intranet connection as an example. Suppose that the IP address of your 4D Web Server machine is *123.45.67.89*. The following table shows the values of *$1* depending on the URL entered in the web browser:  
+* **Datos extra del URL**  
     
-| **URL entered in Web browser Location area** | **Value of parameter $1** |  
-| -------------------------------------------- | ------------------------- |  
-| 123.45.67.89                                 | /                         |  
-| http://123.45.67.89                          | /                         |  
-| 123.45.67.89/Customers                       | /Customers                |  
-| http://123.45.67.89/Customers                | /Customers                |  
-| http://123.45.67.89/Customers/Add            | /Customers/Add            |  
-| 123.45.67.89/Do\_This/If\_OK/Do\_That        | /Do\_This/If\_OK/Do\_That |  
+El primer parámetro (*$1*) es el URL introducido por el usuario en el área de ubicación de su navegador web, menos la dirección local.  
+Tomemos el ejemplo de una conexión de Intranet. Supongamos que la dirección IP de su equipo servidor web 4D es *123.45.67.89*. La tabla siguiente muestra los valores de *$1* dependiendo del URL introducido en el navegador web:  
+    
+| **URL introducido en el navegador**        | **Valor del parámetro $1**     |  
+| ------------------------------------------ | ------------------------------ |  
+| 123.45.67.89                               | /                              |  
+| http://123.45.67.89                        | /                              |  
+| 123.45.67.89/Clientes                      | /Clientes                      |  
+| http://123.45.67.89/Clientes               | /Clientes                      |  
+| http://123.45.67.89/Clientes/Añadir        | /Clientes/Añadir               |  
+| 123.45.67.89/Hacer\_esto/Si\_OK/Hacer\_eso | /Hacer\_esto/Si\_OK/Hacer\_eso |  
     
     
-Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value *"/Customers/Add"* means “go directly to add a new record in the *\[Customers\]* table.” By supplying the web users of your database with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection to your database.  
-    
-**ATTENTION:** In order to prevent a user from directly accessing a database with a bookmark created during a previous session, 4D intercepts any URL that corresponds to one of the standard 4D URLs.
-* **Header and body of the HTTP request**  
-The second parameter (*$2*) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your On Web Connection database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.  
-    
-With Safari running on Mac OS, you may receive a header similar to this:  
-    
-```  
+Note que usted es libre de utilizar este parámetro a su conveniencia. 4D simplemente ignora los valores pasados más allá de la parte local del URL. Por ejemplo, puede establecer una convención donde el valor *"/Clientes/Añadir"* signifique “ir directamente a añadir un nuevo registro en la tabla *\[Clientes\]*.” Suministrando a los usuarios web de su base una lista de posibles valores y/o marcadores por defecto, puede ofrecer atajos a las diferentes partes de su aplicación. De esta forma, los usuarios web pueden acceder rápidamente a los recursos de su sitio web sin tener que navegar cada vez que se conecten a su base.
+
+**Advertencia:** para evitar que un usuario acceda directamente a una base con un marcador creado durante una sesión anterior, 4D intercepta todo URL que corresponda a uno de los URLs estándar de 4D.
+
+* **Encabezado y cuerpo de la petición HTTP**  
+El segundo parámetro ($2) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Note que esta información se pasa a su Método base On Web Connection tal como está. El contenido varía en función del tipo de navegador web que esté intentando la conexión  
+Con Safari corriendo en Mac OS, puede recibir un encabezado similar a este:  
+```RAW  
 GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent:  Mozilla/5.0 (Macintosh; U; Intel Mac OS X; fr-fr) AppleWebKit/523.10.3  (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
 ```  
     
-With Microsoft Internet Explorer 8 running on Windows, you may receive a header similar to this:  
-
-```  
+    
+Con Microsoft Internet Edge en Windows, puede recibir un encabezado similar a este:  
+```RAW  
 GET / HTTP/1.1Accept: image/jpeg, application/x-ms-application,  image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap,  application/vnd.ms-powerpoint, application/vnd.ms-excel,  application/msword, */*Accept-Language: fr-FRUser-Agent:  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2;  .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center  PC 6.0; .NET4.0C)Accept-Encoding: gzip, deflateHost: 123.45.67.89Connection: Keep-Alive  
-```  
-    
- If your application uses this information, it is up to you to parse the header and the body.  
-    
-**Note:** For performance reasons, the size of this data cannot be more than 32 KB. Beyond this, they are truncated by the 4D HTTP server.
-* **IP address of the web client**  
-The *$3* parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.  
-    
-**Note:** 4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34\. For more information, refer to the *Support of IPv6* section.
-* **IP address of the server**  
-The *$4* parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. For more information, please refer to the section *Web Server Settings*.
-* **User Name and Password**  
-The *$5* and *$6* parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable. This dialog box appears for each connection, if the **Use Passwords** option has been selected in the Database Settings dialog box (see section *Connection Security*).  
-    
-**Note:** If the user name sent by the browser exists in 4D, the *$6* parameter (the user’s password) is not returned for security reasons.
+```
+ Si su aplicación manipula esta información, es su decisión analizar el encabezado y el cuerpo. **Nota:** por razones de rendimiento, el tamaño de estos datos no puede ser mayor a 32 KB. Si el tamaño es mayor, los datos son truncados por el servidor 4D HTTP.
+* **Dirección IP del cliente web**  
+El tercer parámetro *$3* recibe la dirección IP del equipo navegador. Esta información puede permitirle distinguir entre las conexiones de Intranet e Internet.  
+Nota**:** 4D devuelve direcciones IPv4 en un formato híbrido IPv6 escrito con un prefijo de 96 bits, por ejemplo ::ffff:192.168.2.34 para la dirección IPv4 192.168.2.34\. Para mayor información, consulte la sección *Soporte de IP v6*.
+* **Dirección IP del servidor**  
+El cuarto parámetro *$4* recibe la dirección IP solicitada del servidor web 4D. 4D autoriza el multi-homing, el cual le permite explotar equipos que tengan más de una dirección IP. Para mayor información, consulte la sección *Parámetros del servidor web*.
+* **Nombre de usuario y contraseña**  
+Los parámetros *$5* y *$6* reciben el nombre de usuario y la contraseña introducidos por el usuario en la caja de diálogo estándar de identificación mostrada por el navegador. Esta caja de diálogo aparece para cada conexión, si la opción **Utilizar contraseñas** ha sido seleccionada en las Preferencias (ver sección *Seguridad de las conexiones*).
 
-#### On Web Connection Database Method Calls 
+**Nota:** si el nombre de usuario enviado por el navegador existe en 4D, el parámetro *$6* (la contraseña del usuario) no se devuelve por razones de seguridad.
 
-The **On Web Connection database method** can be used as the entry point for the 4D Web server, either using the special *4DCGI* URL, or using customized command URLs.
+#### Llamadas al Método base On Web Connection 
 
-**Warning:** Calling a 4D command that displays an interface element ([DIALOG](../commands/dialog.md), [ALERT](alert.md), etc.) ends the method processing.
+El Método base On Web Connection puede utilizarse como punto de entrada para el servidor web 4D, bien sea utilizando la URL especial *4DCGI*, o utilizando las URLs de comando personalizadas.
 
-The **On Web Connection database method** is therefore called in the following cases:
+**Advertencia:** la llamada de un comando 4D que muestra un elemento de interfaz ([DIALOG](../commands/dialog.md), [ALERT](alert.md)...) termina el procesamiento del método.
 
-* When 4D receives the */4DCGI* URL. The database method is called with the */4DCGI/<action>* URL in *$1*.
-* When a Web page is called with a URL of type *<path>/<file>* is not found. The database method is called with the URL.
-* When a Web page is called with a URL of type *<file>/* and no home page has been defined by default. The database method is called with the URL.
+El Método base On Web Connection se llama en los siguientes casos:
+
+* Cuando 4D recibe el URL */4DCGI*. El método base se llama con el URL */4DCGI/<action>* en *$1*.
+* Cuando una página web llamada con un URL de tipo *<ruta>/<archivo>* no se encuentra. El método base se llama con la URL.
+* Cuando una página web se llama con un URL del tipo *<file>/* y ninguna página ha sido definida por defecto. El método base se llama con la URL.
