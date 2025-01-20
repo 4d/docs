@@ -70,9 +70,9 @@ Para asegurar la correcta evaluación de las expresiones procesadas a través de
 
 La etiqueta `<!--#4DBASE -->` designa el directorio de trabajo a utilizar para la etiqueta `<!--#4DINCLUDE-->`.
 
-Cuando se llama en una página web, la etiqueta `<!--#4DBASE -->` modifica todas las llamadas `<!--#4DINCLUDE-->` posteriores a esta página, hasta la siguiente `<!--........-->`, si la hay. Si la carpeta`<!--#4DBASE -->` se modifica desde un archivo incluido, recupera su valor original en el archivo padre.
+When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next<!--#4DBASE -->`, if any. Si la <!--#4DBASE -->carpeta se modifica desde un archivo incluido, recupera su valor original en el archivo padre.</p>
 
-El parámetro *folderPath* debe contener un nombre de ruta relativo a la página actual y debe terminar con una barra (`/`). La carpeta designada debe estar ubicada dentro de la carpeta Web.
+<p spaces-before="0">El parámetro <em x-id="3">folderPath</em> debe contener un nombre de ruta relativo a la página actual y debe terminar con una barra (<code>/`). La carpeta designada debe estar ubicada dentro de la carpeta Web.
 
 Pase la palabra clave "WEBFOLDER" para restablecer la ruta por defecto (relativa a la página).
 
@@ -423,7 +423,7 @@ Este ejemplo inserta diferentes páginas dependiendo del usuario que esté conec
 
 Esta etiqueta está diseñada principalmente para incluir una página HTML (indicada por el parámetro *path*) en otra página HTML. Por defecto, sólo se incluye el cuerpo de la página HTML especificada, es decir, el contenido que se encuentra dentro de las etiquetas `<body>` y `</body>` (las etiquetas en sí no se incluyen). Esto le permite evitar conflictos relacionados con las metaetiquetas presentes en los encabezados.
 
-Sin embargo, si la página HTML especificada no contiene etiquetas `<body>``</body>`, se incluye toda la página. Depende de usted verificar la consistencia de las meta-etiquetas.
+However, if the HTML page specified does not contain `<body>` and `</body>` tags, the entire page is included. Depende de usted verificar la consistencia de las meta-etiquetas.
 
 El comentario `<!--#4DINCLUDE -->` es muy útil para las pruebas (`<!--#4DIF-->`) o los bucles (`<!--#4DLOOP-->`). Es muy conveniente incluir banners de acuerdo a un criterio o de forma aleatoria. Al incluir, independientemente de la extensión del nombre del archivo, 4D analiza la página llamada y luego inserta el contenido (modificado o no) en la página que origina la llamada `4DINCLUDE`.
 
@@ -569,7 +569,6 @@ Por ejemplo, el siguiente código:
 ```
 
 0
-
 1
 2
 3
