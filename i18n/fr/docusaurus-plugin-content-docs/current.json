@@ -220,7 +220,7 @@
     "description": "The generated-index page description for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Tags": {
-    "message": "Tags",
+    "message": "Balises",
     "description": "The label for category Tags in sidebar docs"
   },
   "sidebar.docs.category.Administration.link.generated-index.title": {
