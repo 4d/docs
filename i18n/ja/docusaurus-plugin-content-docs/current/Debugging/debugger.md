@@ -3,13 +3,13 @@ id: debugger
 title: デバッガー
 ---
 
-The 4D debugger is useful when you need to spot errors or monitor the execution of methods. デバッガーを使って、コードをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。
+4D デバッガーは、エラーを発見したり、メソッドの実行を監視する必要がある場合に便利です。 デバッガーを使って、コードをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
 
 :::info
 
-If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+**VS Code**でコーディングすることに慣れている場合、 [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) 拡張機能をインストールした後、VS Code を使用して4D Server 上の4D コードをデバッグすることもできます。
 
 :::
 
@@ -18,7 +18,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 デバッガーを開くには、次のような方法があります:
 
 - [シンタックスエラーウィンドウ](basics.md#シンタックスエラーウィンドウ) で **トレース** ボタンをクリックする。
-- Using the [`TRACE`](../commands-legacy/trace.md) command
+- [`TRACE`](../commands-legacy/trace.md) コマンドを使用する
 - メソッド実行ウィンドウで **デバッグ** ボタンをクリックする、またはコードエディターで **実行してデバッグ** ボタンを選択する。
 - メソッド実行中に **Alt+Shift+右クリック** (Windows) または **Ctrl+Option+Cmd+クリック** (Macintosh) をおこない、表示されるポップアップウィンドウ内でトレースするプロセスを選択する:
 
@@ -29,8 +29,8 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 
 デバッガーウィンドウは、現在トレースしているメソッドまたはクラス関数の名前や、デバッガーが表示される原因となったアクションの情報を表示します。 上のウィンドウの例では、次の情報が表示されています:
 
-- _drop_ is the method being traced
-- The debugger window appeared because of a break point.
+- _drop_ は現在トレースしているメソッドです。
+- デバッガウィンドウは、ブレークポイントがあったために表示されました。
 
 新しいデバッガーウィンドウの表示には、同じセッション内で表示された最後のデバッガーウィンドウと同じ構成 (ウィンドウのサイズと位置、分割線の配置および式評価エリアの内容) を使用します。 複数のユーザープロセスを実行した場合には、それぞれのプロセスを個別にトレースできます。つまり、各プロセスにつき 1つのデバッガーウィンドウを表示できます。
 
@@ -54,7 +54,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 
 :::note
 
-Default shortcuts can be customized in the [Shortcuts Page](../Preferences/shortcuts.md) of the Preferences dialog box.
+デフォルトのショートカットは、環境設定ダイアログボックスの[ショートカットページ](../Preferences/shortcuts.md) で変更できます。
 
 :::
 
@@ -62,29 +62,29 @@ Default shortcuts can be customized in the [Shortcuts Page](../Preferences/short
 
 トレースが停止され、通常のメソッド実行が再開されます。
 
-> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. この操作により、以降のカレントプロセスでの全ての TRACE 呼び出しが無効になります。
+> **Shift** + **F5** または **Shift** を押しながら **トレース終了** ボタンをクリックすると、実行が再開されます。 この操作により、以降のカレントプロセスでの全ての TRACE 呼び出しが無効になります。
 
 #### 次行に進む
 
 現在のメソッド行 (プログラムカウンターと呼ばれる黄色い矢印で示されている行) が実行されます。 その後、デバッガは次の行に移動します。
 
-"次の行に進む" ボタンは、サブルーチンや関数に移動することはなく、現在トレースの対象となっているメソッドのレベルにとどまります。 If you want to also trace subroutines and functions calls, use the **Step Into** button.
+"次の行に進む" ボタンは、サブルーチンや関数に移動することはなく、現在トレースの対象となっているメソッドのレベルにとどまります。 呼び出されるサブルーチンや関数もトレースしたい場合には、**呼び出しメソッドもトレース** ボタンを使用します。
 
-リモートデバッグにおいて、メソッドがサーバー上で実行されていた場合には、メソッドの最後の行の実行後にその親メソッドが呼ばれます。 If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
+リモートデバッグにおいて、メソッドがサーバー上で実行されていた場合には、メソッドの最後の行の実行後にその親メソッドが呼ばれます。 その時、親メソッドがリモート側で実行されていた場合には、**次行に進む** ボタンは **トレース終了** ボタンと同じように振る舞います。
 
 #### 呼び出しメソッドもトレース
 
 別のメソッド (サブルーチンまたは関数) を呼び出す行が実行される時にこのボタンを使用すると、呼び出されたメソッドがデバッガーウィンドウに表示され、ステップ実行できます。
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+デバッガーウィンドウの [呼び出し連鎖エリア](#呼び出し連鎖エリア) では、新しく呼び出されたメソッドがカレント (一番上) となります。
 
-When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
+別のメソッドを呼び出していない行が実行される場合には、このボタンは **次行に進む** ボタンと同じように振る舞います。
 
-#### Step Out
+#### 呼び出し元に進む
 
-If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+サブルーチンや関数をトレースしている場合にこのボタンをクリックすると、現在トレース中のメソッド全体を実行し、呼び出し元メソッドに戻ることができます。 デバッガーウィンドウは、コールチェーンの一つ前のメソッドに戻ります。 トレース中のメソッドがコールチェーンの最後のメソッドである場合には、デバッガーウィン ドウが閉じられます。
 
-In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+リモートデバッグにおいては、メソッドの最後の行の実行時に、サーバー上でメソッドが実行されている場合には、親メソッドが呼び出されます。 その時、親メソッドがリモート側で実行されていた場合には、このボタンはトレース終了ボタンと同じように振る舞います。
 
 #### Step Into Process
 

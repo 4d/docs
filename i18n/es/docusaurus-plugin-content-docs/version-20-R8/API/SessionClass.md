@@ -11,7 +11,7 @@ The following types of sessions are supported by this class:
 
 - [**Sesiones usuario web**](WebServer/sessions.md): las sesiones usuario web están disponibles cuando [las sesiones escalables están activas en su proyecto](WebServer/sessions.md#enabling-sessions). Se utilizan para conexiones Web y REST, y se les pueden asignar privilegios.
 - [Sesiones usuario cliente remoto\*\*](../Desktop/clientServer.md#remote-user-sessions): en las aplicaciones cliente/servidor, los usuarios remotos tienen sus propias sesiones gestionadas en el servidor.
-- [**Sesión de procedimientos almacenados**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html): todos los procedimientos almacenados ejecutados en el servidor comparten la misma sesión usuario virtual.
+- [**Stored procedures session**](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html): All stored procedures executed on the server share the same virtual user session.
 - [**Sesión independiente**](../Project/overview.md#development): objeto de sesión local devuelto en una aplicación de un solo usuario (útil en las fases de desarrollo y prueba de aplicaciones cliente/servidor).
 
 :::note

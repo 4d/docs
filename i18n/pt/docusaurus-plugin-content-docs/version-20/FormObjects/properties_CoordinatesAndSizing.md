@@ -32,7 +32,7 @@ Quando essa propriedade está ativada, a altura de cada linha é calculada autom
 
 :::caution
 
-Como requer cálculos adicionais em tempo de execução, a opção de altura automática da linha pode afetar a fluidez da rolagem da sua caixa de listagem, principalmente quando ela contém um grande número de linhas.
+> Como requer cálculos adicionais em tempo de execução, a opção de altura automática da linha pode afetar a fluidez da rolagem da sua caixa de listagem, principalmente quando ela contém um grande número de linhas.
 
 :::
 
@@ -247,7 +247,7 @@ Esta propriedade designa o tamanho horizontal de um objeto.
 
 #### Objectos suportados
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Botão](button_overview.md) - [Grade de botões](buttonGrid_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de](comboBox_overview.md) [combinação](dropdownList_Overview.md) - <6>Lista suspensa</a> - Caixa de grupo</7> - [Lista hierárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [Linha](shapes_overview.md#line) - [Caixa de listagem](listbox_overview.md#overview) - [Coluna de caixa de listagem](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Botão de imagem](pictureButton_overview.md) - [Menu pop-up de imagem](picturePopupMenu_overview.md) - [Área de plug-in](pluginArea_overview.md#overview) - [Indicadores de progresso](progressIndicator.md) - [Botão de rádio](radio_overview.md) - [Régua](ruler.md) - [Retângulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Divisor](splitters.md) - [Imagem estática](staticPicture.md) - [Stepper](stepper.md) - [Subformulário](subform_overview.md) - [Controle de tabulação](tabControl.md) - [Área de texto](text.md) - [Área da Web](webArea_overview.md#overview)</p> 
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Botão](button_overview.md) - [Grade de botões](buttonGrid_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de](comboBox_overview.md) [combinação](dropdownList_Overview.md) - [Lista suspensa](dropdownList_Overview.md) - Caixa de grupo</7> - [Lista hierárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [Caixa de listagem](listbox_overview.md#overview) - [Linha](shapes_overview.md#line) - [Coluna de caixa de listagem](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Botão de imagem](pictureButton_overview.md) - [Menu pop-up de imagem](picturePopupMenu_overview.md) - [Área de plug-in](pluginArea_overview.md#overview) - [Indicadores de progresso](progressIndicator.md) - [Botão de rádio](radio_overview.md) - [Régua](ruler.md) - [Retângulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Divisor](splitters.md) - [Imagem estática](staticPicture.md) - [Stepper](stepper.md) - [Subformulário](subform_overview.md) - [Controle de tabulação](tabControl.md) - [Área de texto](text.md) - [Área da Web](webArea_overview.md#overview)
 
 
 

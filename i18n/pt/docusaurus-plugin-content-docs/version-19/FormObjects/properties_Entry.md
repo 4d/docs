@@ -100,7 +100,7 @@ Aqui está uma tabela que explica cada uma das opções de filtro de entrada na 
 | &@                            | Permitir apenas caracteres alfanuméricos. Sem caracteres especiais.                                                                                                   |
 | ~a##                          | Abreviatura do nome do estado (por exemplo, CA). Permite duas letras quaisquer, mas converte-as em maiúsculas.                                                        |
 | !0&9##/##/##                  | Formato de entrada de data standard. Apresentar zeros nos espaços de entrada. Permitir quaisquer números.                                                             |
-| !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Apresentar zeros nos espaços de entrada. Permitir quaisquer números. Limited to hours and minutes.                                                 |
+| !0&9 Dia: ## Mês: ## Ano: ##  | Formato do registo de horas. Apresentar zeros nos espaços de entrada. Permitir quaisquer números. Limitado a horas e minutos.                                         |
 | !0&9##:##                     | Formato do registo de horas. Limitado a horas e minutos. Apresentar zeros nos espaços de entrada. São permitidos quatro números quaisquer, separados por dois pontos. |
 | !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Apresentar zeros nos espaços de entrada. Permitir dois números antes de cada palavra.                                                    |
 | !0&9Hrs: ## Mins: ## Secs: ## | Formato do registo de horas. Apresentar zeros nos espaços de entrada. Permitir dois números quaisquer depois de cada palavra.                                         |

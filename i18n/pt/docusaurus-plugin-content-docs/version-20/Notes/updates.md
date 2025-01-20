@@ -205,7 +205,7 @@ Leia [**O que há de novo em 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-
 
 ### 4D 19 R5
 
-- O arquivo [directory.json do projeto](Users/editing#directoryjson-file) agora pode ser [incorporado ao servidor](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) no momento da compilação, permitindo a implementação de um aplicativo cliente/servidor com uma configuração básica de segurança de usuário e grupo.
+- The project [directory.json file](../Users/handling_users_groups.md#directoryjson-file) can now be [embedded in the server](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
 - Agora você pode [desmarcar módulos inúteis](../Desktop/building.md#deselecting-modules) em seus aplicativos criados.
 - A biblioteca *MeCab* está incluída por padrão em todos os aplicativos 4D no macOS. Em versões anteriores, essa biblioteca, especificamente projetada para gerenciar texto em japonês, estava disponível apenas na versão japonesa do 4D no macOS. Se não precisar dessa biblioteca em seus aplicativos finais, agora você pode [desmarcá-la](../Desktop/building.md#deselecting-modules).
 - [Otimização cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization): novas funções de classe permitem que você manipule o cache ORDA e o conteúdo de um contexto de otimização. Consulte [pré-configurando contextos](../ORDA/remoteDatastores.md#preconfiguring-contexts) e [Cache ORDA](../ORDA/remoteDatastores.md#orda-cache) para obter mais informações.

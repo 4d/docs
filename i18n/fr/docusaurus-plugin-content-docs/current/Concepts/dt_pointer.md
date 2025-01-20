@@ -33,7 +33,7 @@ $MyVar:="Hello"
 $MyVar est désormais une variable contenant la chaîne "Hello". Nous pouvons alors créer un pointeur vers $MyVar :
 
 ```4d
-C_POINTER($MyPointer)  
+var $MyPointer : Pointer
 $MyPointer:=->$MyVar
 ```
 
@@ -92,6 +92,26 @@ Avec :
 | Inégalité | Pointeur # Pointeur | Boolean  | vPtrA # vPtrC | True   |
 |           |                     |          | vPtrA # vPtrB | False  |
 
+:::warning Null Pointers
+
+Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Par exemple :
+
+```4d
+var $p : Pointer // non initialized pointer (Nil value)
+$v:=$p-> // error
+$p->:=$v // error
+```
+
+To prevent such errors, you can write:
+
+```4d
+If ($p#Null)
+  $p->:=$v
+End if
+```
+
+:::
+
 ## Principales utilisations
 
 ### Utiliser des pointeurs vers des tables
@@ -138,22 +158,29 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 Lorsque vous utilisez des pointeurs vers des variables locales ou des variables process, vous devez veiller à ce que la variable pointée soit bien définie au moment de l’utilisation du pointeur. Rappelons que les variables locales sont supprimées à la fin de l’exécution de la méthode qui les a créées et les variables process à la fin du process dans lequel elles ont été créées. L’appel d’un pointeur vers une variable qui n’existe plus provoque une erreur de syntaxe en mode interprété (variable indéfinie) mais peut générer une erreur plus conséquente en mode compilé.
 
-Les pointeurs vers des variables locales permettent dans de nombreux cas d’économiser des variables process. Les pointeurs vers des variables locales peuvent être utilisés uniquement à l’intérieur d’un même process. Dans le débogueur, lorsque vous affichez un pointeur vers une variable locale déclarée dans une autre méthode, le nom de la méthode d’origine est indiquée entre parenthèses, derrière le pointeur. Par exemple, si vous écrivez dans Méthode1 :
+Les pointeurs vers des variables locales permettent dans de nombreux cas d’économiser des variables process. Les pointeurs vers des variables locales peuvent être utilisés uniquement à l’intérieur d’un même process. Dans le débogueur, lorsque vous affichez un pointeur vers une variable locale déclarée dans une autre méthode, le nom de la méthode d’origine est indiquée entre parenthèses, derrière le pointeur. For example, if you write in _Method1_:
 
 ```4d
  $MyVar:="Hello world"
  Method2(->$MyVar)
 ```
 
-Dans Method2, le débogueur affichera $1 de la façon suivante :
+_Method2_:
 
-| $1 | ->$MaVar (Méthode1) |
-| -- | -------------------------------------- |
+```4d
+#DECLARE($param : Pointer)
+...
+```
 
-La valeur de $1 sera :
+The debugger will display $param as follows:
 
-| $MyVar (Method1) | "Hello world" |
-| ----------------------------------- | ------------- |
+| $param | ->$MaVar (Méthode1) |
+| ------ | -------------------------------------- |
+
+You can expand $param and its value will be:
+
+| $MyVar | "Hello world" |
+| ------ | ------------- |
 
 ### Utiliser des pointeurs vers des éléments de tableau
 
@@ -196,11 +223,12 @@ Si vous devez vous référer au quatrième élément du tableau à l’aide du p
 Vous pouvez passer un pointeur en tant que paramètre d’une méthode. A l’intérieur de la méthode, vous pouvez modifier l’objet référencé par le pointeur. Par exemple, la méthode suivante, `takeTwo`, reçoit deux paramètres qui sont des pointeurs. Elle passe l’objet référencé par le premier paramètre en caractères majuscules, et l’objet référencé par le second paramètre en caractères minuscules.
 
 ```4d
-  //méthode projet takeTwo
-  //$1 - Pointeur vers un champ ou une variable de type chaîne. Changez en majuscules.
-  //$2 - Pointeur vers un champ ou une variable de type chaîne. Changez en minuscules.
- $1->:=Uppercase($1->)
- $2->:=Lowercase($2->)
+  //takeTwo project method
+  //$changeUp – Pointer to a string field or variable. Change this to uppercase.
+  //$changeLow – Pointer to a string field or variable. Change this to lowercase.
+ #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
+ $changeUp->:=Uppercase($changeUp->)
+ $changeLow->:=Lowercase($changeLow->)
 ```
 
 L'instruction suivante emploie la méthode `takeTwo` pour passer un champ en caractères majuscules et une variable en caractères minuscules :

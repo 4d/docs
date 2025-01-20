@@ -27,9 +27,9 @@
     "message": "Facebook",
     "description": "The label of footer link with label=Facebook linking to https://facebook.com/4Dsoftware"
   },
-  "link.item.label.Twitter": {
-    "message": "Twitter",
-    "description": "The label of footer link with label=Twitter linking to https://twitter.com/4Dsoftware"
+  "link.item.label.X": {
+    "message": "X",
+    "description": "The label of footer link with label=X linking to https://X.com/4Dsoftware"
   },
   "link.item.label.Youtube": {
     "message": "Youtube",

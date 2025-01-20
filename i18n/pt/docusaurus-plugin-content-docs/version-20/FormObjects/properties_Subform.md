@@ -46,7 +46,7 @@ Esta propriedade é utilizada para declarar o formulário detalhado a utilizar n
 
 Ação a ser executada no caso de um clique duplo em uma linha vazia de um subformulário lista. As opções abaixo estão disponíveis:
 - Não fazer nada: Ignora o duplo clique.
-- Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List] property is enabled. Otherwise, it will be created in page mode, in the [detail form](detail-form) associated with the subform.
+- Adicionar registro: cria um registro no subformulário e muda para o modo edição. The record will be created directly in the list if the [Enterable in List] property is enabled. Otherwise, it will be created in page mode, in the [detail form](detail-form) associated with the subform.
 
 
 #### Gramática JSON
@@ -67,15 +67,15 @@ Ação a ser executada no caso de um clique duplo em uma linha vazia de um subfo
 
 `Subformulário lista`
 
-Sets the action to be performed when a user double-clicks on a row in a list subform. As opções disponíveis são:
+Define a ação a ser executada quando um usuário clica duas vezes em uma linha no subformulário lista. As opções disponíveis são:
 
-*   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*   **Edit Record**: Double-clicking a row displays the corresponding record in the [detail form defined for the list subform](#detail-form). O registo é aberto em modo de leitura-escrita para poder ser modificado.
-*   **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
+*   **Não fazer nada** (padrão): clicar duas vezes em uma linha não aciona nenhuma ação automática.
+*   **Editar registro**: clicar duas vezes em uma linha exibe o registro correspondente no [formulário de detalhes definido para o subformulário lista](#detail-form). O registo é aberto em modo de leitura-escrita para poder ser modificado.
+*   **Exibir registro**: idêntico à ação anterior, exceto pelo fato de que o registro é aberto no modo somente leitura, de modo que não pode ser modificado.
 
-Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
+Independentemente da ação selecionada/escolhida, o evento de formulário `On Double clicked` é gerado.
 
-For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+Para as duas últimas ações, o evento do formulário `On Open Detail` também é gerado. `On Close Detail` é gerado quando um registro exibido no formulário detalhado associado à list box está prestes a ser fechado (independentemente de o registro ter sido modificado ou não).
 
 #### Gramática JSON
 
@@ -149,10 +149,10 @@ Especifica a tabela a que pertence o subformulário Lista (se existir).
 ## Modo seleção
 
 Designa a opção que permite aos utilizadores selecionar linhas:
-- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-- **Single**: One row at a time can be selected in this mode. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
-  The Up and Down arrow keys select the previous/next row in the list. As outras teclas de navegação percorrem a lista. The `On Selection Change` form event is generated every time the current row is changed.
-- **Multiple**: Several rows can be selected simultaneously in this mode.
+- **Nenhum**: as linhas não podem ser selecionadas se esse modo for escolhido. Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option is enabled. As teclas de navegação só fazem a lista rolar, o evento formulário `On Selection Change` não é gerado.
+- **Simples**: uma linha de cada vez pode ser selecionada neste modo. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
+  The Up and Down arrow keys select the previous/next row in the list. As outras teclas de navegação percorrem a lista. O evento formulário `On Selection Change` é gerado sempre que a linha atual é alterada.
+- **Múltiplo**: várias linhas podem ser selecionadas simultaneamente neste modo.
     - Os sub-registos selecionados são devolvidos pelo comando `GET HIGHLIGHTED RECORDS`.
     - Clicking on the record will select it, but it does not modify the current record.
     - A **Ctrl+click** (Windows) or **Command+click** (macOS) on a record toggles its state (between selected or not). As teclas de seta para cima e para baixo selecionam o registo anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. O evento do formulário `On Selection Change` é gerado sempre que o registo selecionado é alterado.
