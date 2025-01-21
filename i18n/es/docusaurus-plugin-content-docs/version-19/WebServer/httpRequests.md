@@ -106,7 +106,7 @@ Los parámetros $5 y $6 reciben el nombre de usuario y la contraseña introducid
 
 ## /4DACTION
 
-***/4DACTION/***MethodName***<br/> **/4DACTION/******MethodName/Param*
+*/4DACTION/MethodName*<br/> */4DACTION/MethodName/Param*
 
 | Parámetros | Tipo |    | Descripción                                 |
 | ---------- | ---- |:--:| ------------------------------------------- |
