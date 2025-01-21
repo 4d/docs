@@ -11,50 +11,50 @@ displayed_sidebar: docs
 | Parámetros | Tipo  |   | Descripción                                                                               |
 | ---------- | ----- | - | ----------------------------------------------------------------------------------------- |
 | aTable     | Tabla | → | Table owning the form or If omitted: default table or use of project form |
-| form       | Text  | → | Form name                                                                                 |
-| object     | Text  | → | Form object name or group name                                                            |
+| form       | Text  | → | Nombre del formulario                                                                     |
+| object     | Text  | → | Nombre del objeto del formulario o nombre del grupo                                       |
 
 <!-- END REF-->
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                |
-| ----------- | ----------------------------- |
-| 20 R8       | Support of *object* parameter |
+| Lanzamiento | Modificaciones                 |
+| ----------- | ------------------------------ |
+| 20 R8       | Soporte del parámetro *object* |
 
 </details>
 
 #### Descripción
 
-<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected. Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
+<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->El comando **FORM EDIT** abre el *form* asociado a *aTable* en el editor de formularios 4D, con opcionalmente *object* seleccionado. Tenga en cuenta que debe tener acceso al entorno Diseño, de lo contrario se generará el error -9804 ("No se puede abrir el formulario").
 
-The command is asynchronous: it returns immediately to the calling method and does not wait for the form to be open.
+El comando es asíncrono: vuelve inmediatamente al método que lo llama y no espera a que el formulario esté abierto.
 
-If you pass the optional *aTable* parameter, you indicate the table associated with *form*. If you omit this parameter, you indicate that *form* is a project form.
+Si se pasa el parámetro opcional *aTable*, se indica la tabla asociada a *form*. Si omite este parámetro, indica que *form* es un formulario proyecto.
 
-In the *form* parameter, pass the name of the form to open in the 4D Form editor. If you pass a name that does not exist, the error 81 is generated ("Form not found").
+En el parámetro *form*, pasa el nombre del formulario a abrir en el editor de formularios de 4D. Si pasa un nombre que no existe, se genera el error 81 ("Formulario no encontrado").
 
-Optionnally, you can pass in *object* the name of a form object or of a group to select automatically in the 4D Form editor. This feature allows you, for example, to save time when debugging a form based upon expression errors returned by [`Compile project`](compile-project.md).
+Opcionalmente, puede pasar en *object* el nombre de un objeto formulario o de un grupo para seleccionarlo automáticamente en el editor de formularios de 4D. Esta función le permite, por ejemplo, ahorrar tiempo al depurar un formulario basándose en los errores de expresión devueltos por [`Compilar proyecto`](compile-project.md).
 
-If *object* is not found in *form*, the form is opened and no error is returned.
+Si *object* no se encuentra en *form*, el formulario se abre y no se devuelve ningún error.
 
-Pass an empty string in *object* to deselect all objects in the open *form*.
+Pase una cadena vacía en *object* para deseleccionar todos los objetos del *form* abierto.
 
 #### Ejemplos
 
-To open the *Contacts* table *Address* form:
+Para abrir el formulario de la tabla *Contact* *Address*:
 
 ```4d
  FORM EDIT([Contacts];"Address")
 ```
 
-To open the *ContactList* project form:
+Para abrir el formulario de proyecto *ContactList*:
 
 ```4d
  FORM EDIT("ContactList")
 ```
 
-To open the *ContactPage* project form with "name-input" object selected:
+Para abrir el formulario de proyecto *ContactPage* con el objeto "name-input" seleccionado:
 
 ```4d
  FORM EDIT("ContactList"; "name-input")
@@ -62,7 +62,7 @@ To open the *ContactPage* project form with "name-input" object selected:
 
 #### Ver también
 
-*Design Object Access Commands*
+*Comandos de acceso a objetos de diseño*
 
 #### Propiedades
 
