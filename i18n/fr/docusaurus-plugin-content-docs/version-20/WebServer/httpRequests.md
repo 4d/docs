@@ -48,7 +48,7 @@ Vous devez déclarer ces paramètres de la manière suivante :
 //Code de la méthode base
 ```
 
-Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
+Alternativement, vous pouvez utiliser la syntaxe [paramètres nommés](Concepts/parameters.md#named-parameters) :
 
 ```4d
 // On Web Connection database method
@@ -83,14 +83,14 @@ Notez que vous êtes libre d'utiliser ce paramètre à votre convenance. 4D igno
 
 Le deuxième paramètre ($2) est l'en-tête (header) et le corps (body) de la requête HTTP envoyée par le navigateur web. Note that this information is passed to your `On Web Connection` database method "as is". Son contenu variera en fonction de la nature du navigateur web qui tente la connexion.
 
-Si votre application utilise ces informations, il vous appartient d'analyser l'en-tête et le corps. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
+Si votre application utilise ces informations, il vous appartient d'analyser l'en-tête et le corps. Vous pouvez utiliser les commandes `WEB GET HTTP HEADER` et `WEB GET HTTP BODY`.
 > Pour des raisons de performance, la taille des données passant par le paramètre $2 ne doit pas dépasser 32 Ko. Au-delà de cette taille, ils sont tronqués par le serveur HTTP 4D.
 
 
 ### $3 - Adresse IP du client Web
 
 Le paramètre $3 reçoit l'adresse IP de la machine du navigateur. Cette information peut vous permettre de distinguer entre les connexions intranet et internet.
-> 4D renvoie les adresses IPv4 dans un format hybride IPv6/IPv4 écrit avec un préfixe de 96 bits, par exemple ::ffff:192.168.2.34 pour l'adresse IPv4 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
+> 4D renvoie les adresses IPv4 dans un format hybride IPv6/IPv4 écrit avec un préfixe de 96 bits, par exemple ::ffff:192.168.2.34 pour l'adresse IPv4 192.168.2.34. Pour plus d'informations, reportez-vous à la section [Prise en charge d'IPv6](webServerConfig.md#about-ipv6-support).
 
 ### $4 - Adresse IP du serveur
 

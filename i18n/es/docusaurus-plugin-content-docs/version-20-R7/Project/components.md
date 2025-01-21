@@ -314,7 +314,7 @@ A continuación, se muestra el panel Dependencias. Las dependencias se ordenan p
 
 ![dependency](../assets/en/Project/dependency.png)
 
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). Puede añadir o eliminar las dependencias **local** y **GitHub**.
+La interfaz del panel Dependencias le permite gestionar las dependencias (en 4D monousuario y 4D Server). Puede añadir o eliminar las dependencias **local** y **GitHub**.
 
 ### Añadir una dependencia local
 
@@ -365,21 +365,21 @@ Luego puede definir la opción [etiqueta o versión](#tags-and-versions) para la
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version.
+- **Último**: seleccionado por defecto y permite descargar la versión etiquetada como la última versión (estable).
 - **Hasta la próxima versión mayor**: define un [rango de versiones semánticas](#tags-and-versions) para restringir las actualizaciones a la próxima versión principal.
-- **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
+- **Hasta la siguiente versión menor**: del mismo modo, restringir las actualizaciones a la siguiente versión menor.
 - **Versión exacta (Etiqueta)**: selecciona o introduce manualmente una [etiqueta específica](#tags-and-versions) de la lista disponible.
 
 Haga clic en el botón **Añadir** para añadir la dependencia al proyecto.
 
 La dependencia de GitHub declarada en el archivo [**dependencies.json**](#dependenciesjson) y añadida a la [lista de dependencias inactivas](#dependency-status) con el estado **Disponible al reiniciar**. Se cargará cuando se reinicie la aplicación.
 
-#### Providing your GitHub access token
+#### Suministrando su token de acceso de GitHub
 
 Si el componente está almacenado en un [repositorio privado GitHub](#private-repositories), deberá suministrar su token de acceso personal al gestor de dependencias. Para hacer esto, puede:
 
-- click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private GitHub repository path.
-- or, select **Add a GitHub personal access token...** in the Dependency manager menu at any moment.
+- haga clic en el botón \*\*Agregar un token de acceso personal... \* que se muestra en el cuadro de diálogo "Añadir una dependencia" después de introducir una ruta privada del repositorio de GitHub.
+- o, seleccione **Agregar un token de acceso personal de GitHub...** en el menú Administrador de Dependencias en cualquier momento.
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token.png)
 
@@ -391,7 +391,7 @@ Solo puede introducir un token de acceso personal. Una vez se ha sido introducid
 
 ### Eliminando una dependencia
 
-To remove a dependency from the Dependencies panel, select the dependency to remove and click on the **-** button of the panel or select **Remove the dependency...** from the contextual menu. Puede seleccionar varias relaciones, en cuyo caso la acción se aplica a todas las relaciones seleccionadas.
+Para eliminar una dependencia desde el panel de dependencias, seleccione la dependencia que desea eliminar y haga clic en el botón **-** del panel o seleccione **Eliminar la dependencia...** en el menú contextual. Puede seleccionar varias relaciones, en cuyo caso la acción se aplica a todas las relaciones seleccionadas.
 
 :::note
 

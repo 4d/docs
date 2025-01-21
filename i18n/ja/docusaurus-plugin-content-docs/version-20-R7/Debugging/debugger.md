@@ -76,9 +76,9 @@ title: デバッガー
 
 リモートデバッグにおいては、メソッドの最後の行の実行時に、サーバー上でメソッドが実行されている場合には、親メソッドが呼び出されます。 その時、親メソッドがリモート側で実行されていた場合には、このボタンはトレース終了ボタンと同じように振る舞います。
 
-#### Step Into Process
+#### 別プロセスもトレース
 
-On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
+新しいプロセスを作成する (New process コマンドを呼び出す) 行を実行する際にこのボタンを使用すると新しいデバッガーウィンドウが表示され、作成されたプロセスでトレースを続行することができます。 新しいプロセスを作成しない行を実行する際には、このボタンは 次行に進む ボタンと同等に動作します。
 
 #### 中断
 
@@ -89,7 +89,7 @@ On execution of a line that creates a new process (i.e., calling the New process
 
 #### 中断＆編集
 
-The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
+コードエディターウィンドウが開いて、**中断＆編集** ボタンがクリックされた時点で実行していたメソッドを表示します。
 
 > **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. 変更が完了したら、メソッドを再実行できます。
 

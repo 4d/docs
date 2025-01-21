@@ -9,7 +9,7 @@ title: Propriedades do formulário
 
 > A propriedade Esquema de cores só é aplicada no macOS.
 
-Esta propriedade define o esquema de cores para o formulário. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/set-application-color-scheme.md)). Isto pode ser alterado para o formulário para uma das duas opções seguintes:
+Esta propriedade define o esquema de cores para o formulário. Por padrão, quando a propriedade não está definida, o valor de um esquema de cores é **herdado** (o formulário usa o esquema definido no [nível da aplicação](../commands-legacy/set-application-color-scheme.md)). Isto pode ser alterado para o formulário para uma das duas opções seguintes:
 
 - dark - texto claro sobre um fundo escuro
 - light - texto escuro sobre um fundo claro

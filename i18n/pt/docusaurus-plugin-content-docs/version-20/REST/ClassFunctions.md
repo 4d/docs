@@ -26,15 +26,15 @@ As funções têm de ser sempre chamadas através de pedidos **POST** REST (um p
 
 As funções são chamadas no objeto correspondente no datastore do servidor.
 
-| Função de classe                                                   | Sintaxe                                                                         |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                         |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                  |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                            |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                    |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                   |
-| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                               |
+| Função de classe                                                   | Sintaxe                                                                     |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
+| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
+| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                           |
 
 
 

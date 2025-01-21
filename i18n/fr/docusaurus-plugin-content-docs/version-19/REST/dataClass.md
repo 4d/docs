@@ -46,7 +46,7 @@ Chaque entité contient les propriétés suivantes :
 | __TIMESTAMP | Date   | Horodatage de la dernière modification de l'entité                                                                           |
 | __STAMP     | Number | Tampon interne qui est nécessaire lors de la modification des valeurs de l'entité lors de l'utilisation de `$method=update`. |
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
+Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
 
  `GET  /rest/Company/name,address`
 
@@ -137,15 +137,15 @@ Retourne toutes les données d'une dataclass spécifique.
 
 ## \{dataClass\}\[{key}]
 
-Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22] or Company[IT0911AB2200]`
+Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass, par exemple, `Company (22) ou Company ("IT0911AB2200")`
 
 ### Description
 
-En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. Pour plus d'informations sur la définition d'une clé primaire, reportez-vous à la section **Modification de la clé primaire** dans **l'éditeur de modèle de données**.
+En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. La clé est la valeur de l'attribut défini comme clé primaire pour votre dataclass. Pour plus d'informations sur la définition d'une clé primaire, reportez-vous à la section **Modification de la clé primaire** dans **l'éditeur de modèle de données**.
 
-For more information about the data returned, refer to [\{dataClass\}](#dataclass).
+Pour plus d'informations sur les données retournées, reportez-vous à [\{dataClass\}](#dataClass).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
+Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
 
  `GET  /rest/Company[1]/name,address`
 
@@ -192,7 +192,7 @@ En passant la *dataClass* et un *attribut* avec une valeur, vous pouvez récupé
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
+Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 

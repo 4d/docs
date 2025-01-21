@@ -16,18 +16,18 @@ Los componentes pueden ser interpretados o [compilados](../Desktop/building.md).
 - Un proyecto 4D que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados.
 - Un proyecto 4D que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
 
-### Package folder
+### Carpeta Package
 
 La carpeta del paquete de un componente puede contener:
 
-- for **interpreted components**: a standard [Project folder](../Project/architecture.md). The package folder name must be suffixed with **.4dbase** if you want to install it in the [**Components** folder of your project](architecture.md#components).
-- for **compiled components**:
-  - either a "Contents" folder containing a .4DZ file, a _Resources_ folder, an _Info.plist_ file (recommended architecture)
-  - or directly a .4DZ file with other folders such as _Resources_.
+- para **componentes interpretados**: una [Carpeta Project](../Project/architecture.md) estándar. El nombre de la carpeta del paquete debe llevar el sufijo **.4dbase** si desea instalarlo en la carpeta [**Componentes** de su proyecto](architecture.md#components).
+- para **componentes compilados**:
+  - una carpeta "Contents" que contenga un archivo .4DZ, una carpeta _Resources_, un archivo _Info.plist_ (arquitectura recomendada)
+  - o directamente un archivo .4DZ con otras carpetas como _Resources_.
 
 :::note
 
-The "Contents" folder architecture is recommended for components if you want to [notarize](../Desktop/building.md#about-notarization) your applications on macOS.
+La arquitectura de carpetas "Contents" se recomienda para los componentes si desea [notarizar](../Desktop/building.md#about-notarization) sus aplicaciones en macOS.
 
 :::
 
@@ -46,8 +46,8 @@ Esta página describe cómo trabajar con componentes en los entornos **4D** y **
 
 Para cargar un componente en su proyecto 4D, usted puede:
 
-- copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
+- copie los archivos de componentes en la carpeta [**Components** de su proyecto](architecture.md#components) (las carpetas de paquetes de componentes interpretados deben llevar el sufijo ".4dbase", ver arriba),
+- o bien, declare el componente en el archivo **dependencies.json** de su proyecto; esto se hace automáticamente para los archivos locales cuando [**añade una dependencia utilizando la interfaz del gestor de dependencias**](#adding-a-github-dependency).
 
 Los componentes declarados en el archivo **dependencies.json** pueden almacenarse en diferentes ubicaciones:
 
@@ -175,7 +175,7 @@ Las rutas absolutas sólo deben utilizarse para componentes específicos de una 
 
 ### Configuración del repositorio GitHub
 
-4D components available as GitHub releases can be referenced and automatically loaded and updated in your 4D projects.
+Los componentes 4D disponibles como lanzamientos GitHub pueden ser referenciados y automáticamente cargados y actualizados en sus proyectos 4D.
 
 :::note
 
@@ -224,7 +224,7 @@ Declare un componente almacenado en GitHub en el archivo [**dependencies.json**]
 
 #### Etiquetas y versiones
 
-When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
+Cuando se crea una versión en GitHub, se le asocia una **etiqueta** y una **versión**. El gestor de dependencias utiliza esta información para gestionar la disponibilidad automática de los componentes.
 
 - **Etiquetas** son textos que hacen referencia única a una versión. En los archivos [**dependencies.json**](#dependencyjson) y [**environment4d.json**](#environment4djson), puede indicar la etiqueta de versión que desea utilizar en su proyecto. Por ejemplo:
 
@@ -270,7 +270,7 @@ Estos son algunos ejemplos:
 
 Si no especifica una etiqueta o una versión, 4D recupera automáticamente la "última" versión.
 
-The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](#defining-a-github-dependency-version-range).
+El gestor de dependencias comprueba periódicamente si hay actualizaciones de componentes disponibles en Github. Si hay una nueva versión disponible para un componente, se muestra un indicador de actualización para el componente en la lista de dependencias, [dependiendo de su configuración](#defining-a-github-dependency-version-range).
 
 #### Repositorios privados
 
@@ -284,7 +284,7 @@ Para más información, consulte la [Interfaz de tokens GitHub](https://github.c
 
 :::
 
-You then need to [provide your connection token](#providing-your-github-access-token) to the Dependency manager.
+A continuación, deberá [suministrar su token de conexión](#providing-your-github-access-token) al gestor de dependencias.
 
 #### Caché local para dependencias
 
@@ -303,7 +303,7 @@ Este archivo registra información como el estado de las dependencias, rutas, ur
 
 ## Monitoreo de dependencias del proyecto
 
-In an opened project, you can add, remove, update, and get information about dependencies and their current loading status in the **Dependencies** panel.
+En un proyecto abierto, puede añadir, eliminar, actualizar y obtener información sobre las dependencias y su estado de carga actual en el panel **Dependencias**.
 
 Para mostrar el panel Dependencias:
 
@@ -317,9 +317,9 @@ A continuación, se muestra el panel Dependencias. Las dependencias se ordenan p
 
 ![dependency](../assets/en/Project/dependency.png)
 
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server).
+La interfaz del panel Dependencias le permite gestionar las dependencias (en 4D monousuario y 4D Server).
 
-### Filtering dependencies
+### Filtrado de dependencias
 
 Por defecto, se listan todas las dependencias identificadas por el gestor de dependencias, sea cual sea su [estado](#dependency-status). Puede filtrar las dependencias mostradas según su estado seleccionando la pestaña correspondiente en la parte superior del panel Dependencias:
 
@@ -329,7 +329,7 @@ Por defecto, se listan todas las dependencias identificadas por el gestor de dep
 - **Inactivo**: dependencias que no están cargadas en el proyecto y no están disponibles. Hay muchas razones posibles para este estado: archivos que faltan, incompatibilidad de versiones...
 - **Conflicto**: dependencias que se cargan pero que sobrecargan al menos otra dependencia de menor [nivel de prioridad](#prioridad). También se muestran las dependencias sobrecargadas para que pueda comprobar el origen del conflicto y tomar las medidas oportunas.
 
-### Dependency status
+### Estado de dependencias
 
 Las dependencias que requieren la atención del desarrollador se indican mediante una **etiqueta de estado** a la derecha de la línea y un color de fondo específico:
 
@@ -342,17 +342,17 @@ Las siguientes etiquetas de estado están disponibles:
 - **Not found**: la dependencia se declara en el archivo dependencies.json pero no se encuentra.
 - **Inactive**: la dependencia no se carga porque no es compatible con el proyecto (por ejemplo, el componente no está compilado para la plataforma actual).
 - **Duplicated**: la dependencia no se carga porque existe otra dependencia con el mismo nombre en la misma ubicación (y está cargada).
-- **Available after restart**: The dependency reference has just been added or updated [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.
+- **Disponible después del reinicio**: la referencia a dependencias acaba de ser añadida o actualizada [usando la interfaz](#monitoring-project-dependencies), se cargará una vez que la aplicación se reinicie.
 - **Descargado después de reiniciar**: la referencia de dependencias acaba de ser removida [utilizando la interfaz](#removing-a-dependency), se descargará una vez que la aplicación se reinicie.
-- **Update available \<version\>**: A new version of the GitHub dependency matching your [component version configuration](#defining-a-github-dependency-version-range) has been detected.
-- **Refreshed after restart**: The [component version configuration](#defining-a-github-dependency-version-range) of the GitHub dependency has been modified, it will be adjusted the next startup.
-- **Recent update**: A new version of the GitHub dependency has been loaded at startup.
+- **Actualización disponible<version\>**: se ha detectado una nueva versión de la dependencia GitHub que coincide con su [configuración de la versión del componente](#defining-a-github-dependency-version-range).
+- **Reiniciado tras reinicio**: la [configuración de la versión del componente](#defining-a-github-dependency-version-range) de la dependencia de GitHub se ha modificado, se ajustará el próximo inicio.
+- **Actualización reciente**: se ha cargado una nueva versión de la dependencia de GitHub al inicio.
 
 Al pasar el ratón por encima de la línea de dependencia, se muestra un mensaje que ofrece información adicional sobre el estado:
 
 ![dependency-tips](../assets/en/Project/dependency-tip1.png)
 
-### Dependency origin
+### Origen de la dependencia
 
 El panel Dependencias enumera todas las dependencias del proyecto, sea cual sea su origen, es decir, de dónde procedan. El origen de la dependencia lo suministra la etiqueta bajo su nombre:
 
@@ -429,110 +429,110 @@ Si el componente se almacena en un [repositorio privado de GitHub](#private-repo
 
 :::
 
-Define the [dependency version range](#tags-and-versions) to use for this project. By defaut, "Latest" is selected, which means that the lastest version will be automatically used.
+Definir el [rango de versiones de dependencia](#tags-and-versions) a utilizar para este proyecto. Por defecto, se selecciona "Última", lo que significa que se utilizará automáticamente la última versión.
 
 Haga clic en el botón **Añadir** para añadir la dependencia al proyecto.
 
 La dependencia de GitHub declarada en el archivo [**dependencies.json**](#dependenciesjson) y añadida a la [lista de dependencias inactivas](#dependency-status) con el estado **Disponible al reiniciar**. Se cargará cuando se reinicie la aplicación.
 
-#### Defining a GitHub dependency version range
+#### Definición de un intervalo de versiones de dependencia de GitHub
 
-You can define the [tag or version](#tags-and-versions) option for a dependency:
+Puede definir la opción [etiqueta o versión](#tags-and-versions) para una dependencia:
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version.
+- **Último**: seleccionado por defecto y permite descargar la versión etiquetada como la última versión (estable).
 - **Hasta la próxima versión mayor**: define un [rango de versiones semánticas](#tags-and-versions) para restringir las actualizaciones a la próxima versión principal.
-- **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
+- **Hasta la siguiente versión menor**: del mismo modo, restringir las actualizaciones a la siguiente versión menor.
 - **Versión exacta (Etiqueta)**: selecciona o introduce manualmente una [etiqueta específica](#tags-and-versions) de la lista disponible.
 
-The current GitHub dependency version is displayed on the right side of the dependency item:
+La versión actual de la dependencia de GitHub se muestra a la derecha del elemento de la dependencia:
 
 ![dependency-origin](../assets/en/Project/dependency-version.png)
 
-#### Modifying the GitHub dependency version range
+#### Modificación del intervalo de versiones de las dependencias GitHub
 
-You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Modify the dependency...** from the contextual menu. In the "Modify the dependency" dialog box, edit the Dependency Rule menu and click **Apply**.
+Puede modificar la [configuración de versión](#defining-a-github-dependency-version-range) para una dependencia de GitHub listada: selecciona la dependencia a modificar y selecciona **Modificar la dependencia...** desde el menú contextual. En el cuadro de diálogo "Modificar la dependencia", edite el menú Regla de dependencia y haga clic en **Aplicar**.
 
-Modifying the version range is useful for example if you use the automatic update feature and want to lock a dependency to a specific version number.
+Modificar el rango de versiones es útil, por ejemplo, si utiliza la función de actualización automática y desea bloquear una dependencia a un número de versión específico.
 
-### Updating GitHub dependencies
+### Actualización de las dependencias GitHub
 
-The Dependency manager provides an integrated handling of updates on GitHub. The following features are supported:
+El gestor de dependencias ofrece una gestión integrada de las actualizaciones en GitHub. Se soportan las siguientes funcionalidades:
 
-- Automatic and manual checking of available versions
-- Automatic and manual updating of components
+- Verificación automática y manual de las versiones disponibles
+- Actualización automática y manual de los componentes
 
-Manual operations can be done **per dependency** or **for all dependencies**.
+Las operaciones manuales pueden realizarse **por dependencia** o **para todas las dependencias**.
 
-#### Checking for new versions
+#### Comprobación de nuevas versiones
 
-Dependencies are regularly checked for updates on GitHub. This checking is done transparently in background.
+Las actualizaciones de las dependencias se comprueban periódicamente en GitHub. Esta verificación se realiza de forma transparente en segundo plano.
 
 :::note
 
-If you provide an [access token](#providing-your-github-access-token), checks are performed more frequently, as GitHub then allows a higher frequency of requests to repositories.
+Si suministra un [token de acceso](#providing-your-github-access-token), las verificiones se realizan con mayor frecuencia, ya que GitHub permite entonces una mayor frecuencia de solicitudes a los repositorios.
 
 :::
 
-In addition, you can check for updates at any moment, for a single dependency or for all dependencies:
+Además, puede buscar actualizaciones en cualquier momento, para una sola dependencia o para todas las dependencias:
 
-- To check for updates of a single dependency, right-click on the dependency and select **Check for updates** in the contextual menu.
+- Para verificar las actualizaciones de una única dependencia, haga clic con el botón derecho del ratón en la dependencia y seleccione **Verificar actualizaciones** en el menú contextual.
 
-![check component](../assets/en/Project/check-component-one.png)
+![componente de verificación](../assets/en/Project/check-component-one.png)
 
-- To check for updates of all dependencies, click on the **options** menu at the bottom of the Dependency manager window and select **Check for updates**.
+- Para verificar si hay actualizaciones de todas las dependencias, haga clic en el menú **opciones** de la parte inferior de la ventana del gestor de dependencias y seleccione **Verificar actualizaciones**.
 
-![check components](../assets/en/Project/check-component-all.png)
+![componentes de verificación](../assets/en/Project/check-component-all.png)
 
-If a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is detected on GitHub, a specific dependency status is displayed:
+Si se detecta en GitHub una nueva versión del componente que coincide con su [configuración de versiones del componente](#defining-a-github-dependency-version-range), se muestra un estado de dependencia específico:
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 
-You can decide to [update the component](#updating-dependencies) or not.
+Puede decidir [actualizar el componente](#updating-dependencies) o no.
 
-If you do not want to use a component update (for example you want to stay with a specific version), just let the current status (make sure the [**Automatic update**](#automatic-update) feature is not checked).
+Si no desea utilizar una actualización de componentes (por ejemplo, desea permanecer con una versión específica), simplemente deje el estado actual (asegúrese de que la función [**Actualización automática**](#automatic-update) no está marcada).
 
-#### Updating dependencies
+#### Actualización de dependencias
 
-**Updating a dependency** means downloading a new version of the dependency from GitHub and keeping it ready to be loaded the next time the project is started.
+**Actualizar una dependencia** significa descargar una nueva versión de la dependencia desde GitHub y mantenerla lista para ser cargada la próxima vez que se inicie el proyecto.
 
-You can update dependencies at any moment, for a single dependency or for all dependencies:
+Puede actualizar las dependencias en cualquier momento, para una sola dependencia o para todas las dependencias:
 
-- To update a single dependency, right-click on the dependency and select **Update \<component name\> on next startup** in the contextual menu or in the **options** menu at the bottom of the Dependency manager window:
+- Para actualizar una sola dependencia, haga clic con el botón derecho del ratón en la dependencia y seleccione **Actualizar<component name\> en el próximo inicio** en el menú contextual o en el menú **opciones** de la parte inferior de la ventana del gestor de dependencias:
 
-![check component](../assets/en/Project/update-component-one.png)
+![componente de verificación](../assets/en/Project/update-component-one.png)
 
-- To update all dependencies at once, click on the **options** menu at the bottom of the Dependency manager window and select **Update all remote dependencies on next startup**:
+- Para actualizar todas las dependencias a la vez, haga clic en el menú **opciones** de la parte inferior de la ventana del gestor de dependencias y seleccione **Actualizar todas las dependencias remotas en el próximo inicio**:
 
-![check components](../assets/en/Project/update-component-all.png)
+![componentes de verificación](../assets/en/Project/update-component-all.png)
 
-In any cases, whatever the current dependency status, an automatic checking is done on GitHub before updating the dependency, to make sure the most recent version is retrieved, [according to your component versioning configuration](#defining-a-github-dependency-version-range).
+En cualquier caso, sea cual sea el estado actual de la dependencia, se realiza una verificación automática en GitHub antes de actualizar la dependencia, para asegurarse de que se recupera la versión más reciente, [según la configuración de versionado de su componente](#defining-a-github-dependency-version-range).
 
-When you select an update command:
+Al seleccionar un comando de actualización:
 
-- a dialog box is displayed and proposes to **restart the project**, so that the updated dependencies are immediately available. It is usually recommended to restart the project to evaluate updated dependencies.
-- if you click Later, the update command is no longer available in the menu, meaning the action has been planned for the next startup.
+- se muestra un cuadro de diálogo que propone **reiniciar el proyecto**, para que las dependencias actualizadas estén disponibles de inmediato. Normalmente se recomienda reiniciar el proyecto para evaluar las dependencias actualizadas.
+- si hace clic en Más tarde, el comando de actualización ya no estará disponible en el menú, lo que significa que la acción se ha planificado para el siguiente inicio.
 
-#### Automatic update
+#### Actualización automática
 
-The **Automatic update** option is available in the **options** menu at the bottom of the Dependency manager window.
+La opción **Actualización automática** está disponible en el menú **opciones** de la parte inferior de la ventana del gestor de dependencias.
 
-When this option is checked (default), new GitHub component versions matching your [component versioning configuration](#defining-a-github-dependency-version-range) are automatically updated for the next project startup. This option facilitates the day-to-day management of dependency updates, by eliminating the need to manually select updates.
+Cuando esta opción está marcada (por defecto), las nuevas versiones de componentes de GitHub que coincidan con su [configuración de versiones de componentes](#defining-a-github-dependency-version-range) se actualizan automáticamente para el siguiente inicio del proyecto. Esta opción facilita la gestión diaria de las actualizaciones de dependencias, al eliminar la necesidad de seleccionar manualmente las actualizaciones.
 
-When this option is unchecked, a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is only indicated as available and will require a [manual updating](#updating-dependencies). Unselect the **Automatic update** option if you want to monitor dependency updates precisely.
+Cuando esta opción no está marcada, una nueva versión del componente que coincida con su [configuración de versiones del componente](#defining-a-github-dependency-version-range) sólo se indicará como disponible y requerirá una [actualización manual](#updating-dependencies). Desmarque la opción **Actualización automática** si desea controlar con precisión las actualizaciones de las dependencias.
 
-### Providing your GitHub access token
+### Suministrando su token de acceso de GitHub
 
-Registering your personal access token in the Dependency manager is:
+Registrar su token de acceso personal en el gestor de dependencias es:
 
-- mandatory if the component is stored on a [private GitHub repository](#private-repositories),
-- recommended for a more frequent [checking of dependency updates](#updating-github-dependencies).
+- obligatorio si el componente se almacena en un [repositorio privado de GitHub](#private-repositories),
+- recomendado para una [verificación de actualizaciones de dependencias](#updating-github-dependencies) más frecuente.
 
-To provide your GitHub access token, you can either:
+Para proporcionar su token de acceso a GitHub, también puede:
 
-- click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private GitHub repository path.
-- or, select **Add a GitHub personal access token...** in the Dependency manager menu at any moment.
+- haga clic en el botón \*\*Agregar un token de acceso personal... \* que se muestra en el cuadro de diálogo "Añadir una dependencia" después de introducir una ruta privada del repositorio de GitHub.
+- o, seleccione **Agregar un token de acceso personal de GitHub...** en el menú Administrador de Dependencias en cualquier momento.
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token.png)
 
@@ -542,11 +542,11 @@ Luego puede introducir su token de acceso personal:
 
 Solo puede introducir un token de acceso personal. Una vez se ha sido introducido un token, puede editarlo.
 
-The provided token is stored in a **github.json** file in the [active 4D folder](../commands-legacy/get-4d-folder.md#active-4d-folder).
+El token proporcionado se almacena en un archivo **github.json** en la [carpeta activa de 4D](../commands-legacy/get-4d-folder.md#active-4d-folder).
 
 ### Eliminando una dependencia
 
-To remove a dependency from the Dependencies panel, select the dependency to remove and click on the **-** button of the panel or select **Remove the dependency...** from the contextual menu. Puede seleccionar varias relaciones, en cuyo caso la acción se aplica a todas las relaciones seleccionadas.
+Para eliminar una dependencia desde el panel de dependencias, seleccione la dependencia que desea eliminar y haga clic en el botón **-** del panel o seleccione **Eliminar la dependencia...** en el menú contextual. Puede seleccionar varias relaciones, en cuyo caso la acción se aplica a todas las relaciones seleccionadas.
 
 :::note
 
