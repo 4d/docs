@@ -188,7 +188,7 @@ Specific 4D keywords can be used in class definitions:
 - `property` to define static properties of the objects with a type.
 - `Function get <Name>` and `Function set <Name>` to define computed properties of the objects.
 - `Class extends <ClassName>` to define inheritance.
-- `This` and `Super` are commands that have special 
+- `This` and `Super` are commands that have special features within classes.
 
 ### `Function`
 
