@@ -94,9 +94,9 @@ Para as duas últimas ações, o evento do formulário `On Open Detail` também 
 ---
 ## Introduzível em lista
 
-When a list subform has this property enabled, the user can modify record data directly in the list, without having to use the [associated detail form](#detail-form).
+Quando um subformulário de lista tem essa propriedade ativada, o usuário pode modificar os dados do registro diretamente na lista, sem precisar usar o [formulário detalhado associado](#detail-form).
 
-> To do this, simply click twice on the field to be modified in order to switch it to editing mode (make sure to leave enough time between the two clicks so as not to generate a double-click).
+> Para fazer isso, basta clicar duas vezes no campo a ser modificado para alterná-lo para o modo de edição (certifique-se de deixar tempo suficiente entre os dois cliques para não gerar um clique duplo).
 
 
 #### Gramática JSON
@@ -116,7 +116,7 @@ When a list subform has this property enabled, the user can modify record data d
 
 Você usa essa propriedade para declarar o formulário de lista a ser usado no subformulário. Um subformulário lista permite que você insira, visualize e modifique dados em outras tabelas.
 
-List subforms can be used for data entry in two ways: the user can enter data directly in the subform, or enter it in an [input form](#detail-form). In this configuration, the form used as the subform is referred to as the List form. O formulário de entrada é designado Formulário detalhado.
+Os subformulários de lista podem ser usados para entrada de dados de duas maneiras: o usuário pode inserir dados diretamente no subformulário ou inseri-los em um [formulário de entrada](#detail-form). Nessa configuração, o formulário usado como subformulário é chamado formulário Lista. O formulário de entrada é designado Formulário detalhado.
 
 #### Gramática JSON
 
@@ -149,13 +149,13 @@ Especifica a tabela a que pertence o subformulário Lista (se existir).
 ## Modo seleção
 
 Designa a opção que permite aos utilizadores selecionar linhas:
-- **Nenhum**: as linhas não podem ser selecionadas se esse modo for escolhido. Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option is enabled. As teclas de navegação só fazem a lista rolar, o evento formulário `On Selection Change` não é gerado.
+- **Nenhum**: as linhas não podem ser selecionadas se esse modo for escolhido. Clicar na lista não terá efeito, a menos que a opção [Entrável na lista](subform_overview.md#enterable-in-list) esteja ativada. As teclas de navegação só fazem a lista rolar, o evento formulário `On Selection Change` não é gerado.
 - **Simples**: uma linha de cada vez pode ser selecionada neste modo. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
   The Up and Down arrow keys select the previous/next row in the list. As outras teclas de navegação percorrem a lista. O evento formulário `On Selection Change` é gerado sempre que a linha atual é alterada.
 - **Múltiplo**: várias linhas podem ser selecionadas simultaneamente neste modo.
     - Os sub-registos selecionados são devolvidos pelo comando `GET HIGHLIGHTED RECORDS`.
-    - Clicking on the record will select it, but it does not modify the current record.
-    - A **Ctrl+click** (Windows) or **Command+click** (macOS) on a record toggles its state (between selected or not). As teclas de seta para cima e para baixo selecionam o registo anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. O evento do formulário `On Selection Change` é gerado sempre que o registo selecionado é alterado.
+    - Clicar no registro o selecionará, mas não modificará o registro atual.
+    - **Ctrl+clique** (Windows) ou **Comando+clique** (macOS) em um registro alterna seu estado (entre selecionado ou não). As teclas de seta para cima e para baixo selecionam o registo anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. O evento do formulário `On Selection Change` é gerado sempre que o registo selecionado é alterado.
 
 
 #### Gramática JSON
