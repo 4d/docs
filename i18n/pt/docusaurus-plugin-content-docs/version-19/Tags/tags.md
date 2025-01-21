@@ -70,7 +70,7 @@ To ensure the correct evaluation of expressions processed via tags, regardless o
 
 The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!--#4DINCLUDE-->` tag.
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--........-->`, if any. If the`<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
+When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next <!--#4DBASE -->`, if any. If the`<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
 
 The *folderPath* parameter must contain a pathname relative to the current page and it must end with a slash (`/`). A pasta designada deve estar localizada dentro da pasta Web.
 
@@ -420,7 +420,7 @@ Este exemplo insere páginas diferentes dependendo de qual usuário está conect
 
 This tag is mainly designed to include an HTML page (indicated by the *path* parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the `<body>` and `</body>` tags, is included (the tags themselves are not included). Isso permite evitar conflitos relacionados a meta etiquetas presentes nos cabeçalhos.
 
-However, if the HTML page specified does not contain `<body>``</body>` tags, the entire page is included. Cabe-lhe a você verificar a coerência das meta etiquetas.
+However, if the HTML page specified does not contain `<body>` and `</body>` tags, the entire page is included. Cabe-lhe a você verificar a coerência das meta etiquetas.
 
 The `<!--#4DINCLUDE -->` comment is very useful for tests (`<!--#4DIF-->`) or loops (`<!--#4DLOOP-->`). É muito conveniente incluir banners de acordo com critérios ou de forma aleatória. When including, regardless of the file name extension, 4D analyzes the called page and then inserts the contents (modified or not) in the page originating the `4DINCLUDE` call.
 
@@ -566,7 +566,6 @@ Por exemplo, o seguinte código:
 ```
 
 0
-
 1
 2
 3
