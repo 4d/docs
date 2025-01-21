@@ -70,7 +70,7 @@ Pour garantir l'évaluation correcte des expressions traitées via les balises, 
 
 La balise `<!--#4DBASE -->` désigne le répertoire de travail à utiliser par la balise `<!--#4DINCLUDE-->`.
 
-Lorsqu'elle est appelée dans une page Web, la balise `<!--#4DBASE -->` modifie tous les appels `<!--#4DINCLUDE-->` ultérieurs sur cette page, jusqu'au prochain <!--#4DBASE -->`, if any. If the`<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
+Lorsqu'elle est appelée dans une page Web, la balise `<!--#4DBASE -->` modifie tous les appels `<!--#4DINCLUDE-->` ultérieurs sur cette page, jusqu'au prochain `, if any. If the <code><!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
 
 Le paramètre *folderPath* doit contenir un nom de chemin relatif à la page actuelle et il doit se terminer par une barre oblique (`/`). Le dossier désigné doit être situé à l'intérieur du dossier Web.
 
@@ -342,16 +342,16 @@ En cas d'erreur d'interprétation, le texte inséré sera `<!--#4DHTML myvar--> 
 
 ## 4DIF, 4DELSE, 4DELSEIF et 4DENDIF
 
-#### Syntaxe : `<!--#4DIF ` ` expression-->` {`<!--#4DELSEIF expression2-->...<!--#4DELSEIF expressionN-->`} {`<!--#4DELSE-->`} `<!--#4DENDIF-->`
+#### Syntaxe : `<!--#4DIF` `expression-->` {`<!--#4DELSEIF expression2-->...<!--#4DELSEIF expressionN-->`} {`<!--#4DELSE-->`} `<!--#4DENDIF-->`
 
 Utilisé avec les commentaires `<!--#4DELSEIF-->` (optionnel), `<!--#4DELSE-->` (optionnel) et `<!--#4DENDIF-->`, le commentaire `<!--#4DIF expression-->` offre la possibilité d'exécuter des portions de code de manière conditionnelle.
 
 Le paramètre *expression* peut contenir n'importe quelle expression 4D valide renvoyant une valeur booléenne. Il doit être indiqué entre parenthèses et respecter les règles syntaxiques de 4D.
 
 
-Les blocs `<!--#4DIF expression-->`... `<!--#4DENDIF-->` peuvent être imbriqués à plusieurs niveaux. Comme dans 4D, chaque `<!--#4DIF expression-->` doit correspondre à un `<!--#4DENDIF-->`.
-
 En cas d'erreur d'interprétation, le texte "`<!--#4DIF expression-->`: Une expression booléenne était attendue" est inséré à la place du contenu situé entre `<!--#4DIF -->` et `<!--#4DENDIF-->`. De même, s'il n'y a pas autant de `<!--#4DENDIF-->` que de `<!--#4DIF -->`, le texte "`<!--#4DIF expression-->`: 4DENDIF expected" est inséré à la place du contenu situé entre `<!--#4DIF -->` et `<!--#4DENDIF-->`.
+
+En cas d'erreur d'interprétation, le texte "`<!--#4DIF expression-->`: Une expression booléenne était attendue" est inséré à la place du contenu situé entre `<!--#4DIF -->` et `<!--#4DENDIF-->`. `<!--#4DENDIF-->` peuvent être imbriqués à plusieurs niveaux. Comme dans 4D, chaque `<!--#4DIF expression-->` doit correspondre à un `<!--#4DENDIF-->`.
 
 En utilisant la balise `<!--#4DELSEIF-->`, vous pouvez tester un nombre illimité de conditions. Seul le code qui suit la première condition évaluée à `True` est exécuté. Si aucune condition n'est vraie, aucune instruction n'est exécutée (s'il n'y a pas de `<!--#4DELSE-->` final). Vous pouvez utiliser une balise `<!--#4DELSE-->` après la dernière balise `<!--#4DELSEIF-->`. Si toutes les conditions sont fausses, les instructions qui suivent `<!--#4DELSE-->` sont exécutées.
 
@@ -472,11 +472,11 @@ Le code suivant :
 ... pourrait être exprimé en langage 4D de la manière suivante :
 
 ```4d
- FIRST RECORD([People])
+ NEXT RECORD([People])
+ End while
+    FIRST RECORD([People])
  While(Not(End selection([People])))
     ...
-    NEXT RECORD([People])
- End while
 ```
 
 ### `<!--#4DLOOP array-->`
