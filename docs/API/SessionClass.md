@@ -99,7 +99,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 |Release|Changes|
 |---|---|
-|20 R8|Added|
+|20 R9|Added|
 
 </details>
 
@@ -126,7 +126,7 @@ The `.createOTP()` function <!-- REF #SessionClass.createOTP().Summary -->create
 
 For more information about the OTP tokens, please refer to [this section](../WebServer/sessions.md#session-token-otp).
 
-By default, the lifespan of the token is the same as the [`.idleTimeOut`](#idletimeout) of the session. You can set this timeout by passing a value in seconds in the *lifespan* parameter. If an expired token is used to restore a web user session, it is ignored and a guest session is created. 
+By default, if the *lifespan* parameter is omitted, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session. You can set a custom timeout by passing a value in seconds in *lifespan* (the minimum value is 10 seconds, *lifespan* is reset to 10 if a smaller value is passed). If an expired token is used to restore a web user session, it is ignored. 
 
 The returned token can then be used in exchanges with third-party applications or websites to securely identify the session. For example, the session OTP token can be used with a payment application. 
 
@@ -509,7 +509,7 @@ End if
 
 |Release|Changes|
 |---|---|
-|20 R8|Added|
+|20 R9|Added|
 
 </details>
 
@@ -536,12 +536,15 @@ The `.restore()` function <!-- REF #SessionClass.restore().Summary -->replaces t
 
 If the original user session has been correctly restored, the function returns `true`. 
 
-The function returns `false`, no session is restored and a new guest session is used if:
+The function returns `false` if:
 
 - the session token has already been used,
 - the session token has expired,
 - the session token does not exist,
 - the original session itself has expired.
+
+In this case, the current web user session is left untouched (no session is restored). 
+
 
 
 
@@ -556,7 +559,12 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
    Session.restore($request.urlQuery.state) 
 ```
 
+#### See also
+
+[`.createOTP()`](#createotp) 
+
 <!-- END REF -->
+
 
 
 
