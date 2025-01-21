@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo   |   | Descrição                                                                                 |
 | --------- | ------ | - | ----------------------------------------------------------------------------------------- |
 | aTable    | Tabela | → | Table owning the form or If omitted: default table or use of project form |
-| form      | Text   | → | Form name                                                                                 |
-| object    | Text   | → | Form object name or group name                                                            |
+| form      | Text   | → | Nome do formulario                                                                        |
+| object    | Text   | → | Nome do objeto do formulário ou nome do grupo                                             |
 
 <!-- END REF-->
 
@@ -66,7 +66,7 @@ To open the *ContactPage* project form with "name-input" object selected:
 
 #### Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1749                            |
-| Thread safe    | &amp;cross; |
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1749                            |
+| Thread safe       | &amp;cross; |
