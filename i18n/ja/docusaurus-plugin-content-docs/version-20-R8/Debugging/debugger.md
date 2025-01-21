@@ -101,7 +101,7 @@ title: デバッガー
 
 コードエディターウィンドウが開いて、**中断＆編集** ボタンがクリックされた時点で実行していたメソッドを表示します。
 
-> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. 変更が完了したら、メソッドを再実行できます。
+> **Tip**: このボタンは、コードにどのような変更が必要かが明らかであり、メソッドのテストを続行するためにその変更が必要な場合に使用してください。 変更が完了したら、メソッドを再実行できます。
 
 #### 編集
 
@@ -109,18 +109,18 @@ title: デバッガー
 
 このボタンをクリックしてメソッドを編集した場合には、現在の実行は中断されないため、編集内容の反映は次回実行時になります。
 
-> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
+> **Tip**: このボタンは、コードに必要な変更内容がわかっている場合で、その変更がコードの残り部分の実行やトレースの妨げにならない場合に使用します。
 
-## Auto-saving
+## 設定保存
 
-The current state of the debugger window is automatically saved in the project. 構成には次の内容が含まれます:
+デバッガウィンドウの現在の状態がプロジェクトに自動的に保存されます。 構成には次の内容が含まれます:
 
-- the size and position of the window,
-- the position of the division lines,
-- the [display mode](#display-mode),
-- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pin-an-expression) to keep it displayed in all contexts.
+- ウィンドウのサイズと位置
+- 分割線の位置
+- [表示モード](#表示モード)
+- カスタムのウォッチエリアに現在表示されている式 デフォルトでは、カレントメソッドと関数に対しては式は保存されています。 [**式を固定**](#pin-an-expression) することで、全てのコンテキストにおいてその式を表示させることができます。
 
-The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
+**デフォルトウィンドウ設定** ボタンを使用するとカレントウィンドウのデフォルトの位置とサイズを復元します(これには分割線とウィンドウ自体を含みます)。
 
 ![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
 
@@ -140,9 +140,9 @@ The **Default window configuration** button restores the default position and si
 
 ### 式リスト
 
-#### Line Expressions
+#### ライン式
 
-This theme lets you keep track of the values of expressions:
+このテーマには、次のように式の値が表示されます:
 
 - 実行されるコードの行 (プログラムカウンターにより、[ソースコードエリア](#ソースコードエリア) 内で黄色の矢印でマークされている行) で使用されている。
 - コードの前の行で使用されている。
@@ -294,14 +294,14 @@ $c:=$a+$b
 
 メソッドの引数リストが展開されていれば、引数や戻り値を [カスタムウォッチエリア](#カスタムウォッチエリア) にドラッグ＆ドロップすることができます。
 
-You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
+呼び出しチェーンは [Call chain](https://doc.4d.com/4dv19/help/command/ja/page1662.html) コマンドを使って取得することもできます。
 
 ## カスタムウォッチエリア
 
 カスタムウォッチエリアは、式を評価するために使用します。 [ウォッチエリア](#ウォッチエリア) と似ていますが、ここでは任意の式を表示することができます。 どのようなタイプの式でも評価できます:
 
 - 変数
-- object and object property
+- オブジェクトとオブジェクトのプロパティ
 - フィールド
 - pointer
 - 演算
@@ -311,29 +311,29 @@ You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-テキスト形式で表示できる式であれば、どのような式でも評価することができます。 ピクチャーや BLOBフィールドおよび変数は表示できません。 To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands-legacy/blob-to-text.md).
+テキスト形式で表示できる式であれば、どのような式でも評価することができます。 ピクチャーや BLOBフィールドおよび変数は表示できません。 BLOB のコンテンツを表示するためには、例えば [BLOB to text](../commands-legacy/blob-to-text.md) などのBLOB コマンドを使用することができます。
 
-### Display mode
+### 表示モード
 
-You select the display mode to be used for all debugger windows using the **Display** option of the Custom Watch pane's [contextual menu](#contextual-menu).
+カスタムウォッチペインの[コンテキストメニュー](#contextual-menu) から**表示** オプションを使用することで、全てのデバッガウィンドウで使用される表示モードを選択することができます。
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane-display-menu.png)
 
 次のオプションから選択することができます:
 
-- **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code.
-- **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List.
-- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+- **ローカル変数**: ローカル変数が実行中のソースコード内で初期化されるとすぐにその変数を自動的に表示し評価します。
+- **ライン式**: 式リストの中の[ライン式](#line-expressions) の項目と同じコンテンツを自動的に表示して評価します。
+- **式**: 手動で入力したカスタムの式のみを表示します。 カスタムの式には特定の青いアイコン ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png) が表示されます。
 
 :::note
 
-Whatever the display mode, you can add custom expressions at any moment.
+表示モードに関わらず、カスタムの式はいつでも追加可能です。
 
 :::
 
 ### 新しい式の挿入
 
-You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pin-an-expression).
+評価したい任意の式を入力することができます。 カスタムの式は [式を固定化](#pin-an-expression) した場合を除き、カレントのデバッガのウィンドウにしか表示されません。
 
 リストに式を追加する方法は複数あります:
 
