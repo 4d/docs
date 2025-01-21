@@ -143,7 +143,7 @@ Vous souhaitez créer une nouvelle clé dans la classe `CryptoKey` :
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-## L'objet classe
+## L'objet class
 
 Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
