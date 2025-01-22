@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get attributes.Params-->
 
-| 引数          | 型                                              |   | 説明                                        |
-| ----------- | ---------------------------------------------- | - | ----------------------------------------- |
-| targetObj   | Object                                         | → | レンジまたは要素または4D Write Pro ドキュメント            |
-| attribName  | Text                                           | → | Name of attribute to get                  |
-| attribValue | Text, Number, Array, Collection, Picture, Date | ← | Current value of attribute for the target |
-| attribColl  | Collection                                     | → | Collection of attribute names to get      |
-| 戻り値         | Object                                         | ← | Attribute names and values                |
+| 引数          | 型                                              |                             | 説明                                        |
+| ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
+| targetObj   | Object                                         | &#8594; | レンジまたは要素または4D Write Pro ドキュメント            |
+| attribName  | Text                                           | &#8594; | Name of attribute to get                  |
+| attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
+| attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
+| 戻り値         | Object                                         | &#8592; | Attribute names and values                |
 
 <!-- END REF-->
 
