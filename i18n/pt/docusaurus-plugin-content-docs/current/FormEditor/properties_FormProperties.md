@@ -38,33 +38,33 @@ Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de 
 
 ---
 
-## Form Class
+## Classe de formulário
 
-Nome de uma [classe usuário](../Concepts/classes.md#class-definition) existente para associar ao formulário. The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
+Nome de uma [classe usuário](../Concepts/classes.md#class-definition) existente para associar ao formulário. A classe do usuário pode pertencer ao projeto host ou a um [componente](../Extensions/develop-components.md#sharing-of-classes), caso em que a sintaxe formal é "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
 
-Associating a class to the form provides the following benefits:
+A associação de uma classe ao formulário oferece os seguintes benefícios:
 
-- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression**...). Errors are displayed in red and warnings are displayed in yellow in the left column of the Property list and you can hover it to get explanations:
+- Quando você trabalha no [Editor de formulário](../FormEditor/formEditor.md), a classe associada é usada para verificações de sintaxe precisas de expressões como `Form. yProperty` em todas as áreas da [lista de propriedades](../FormEditor/formEditor.md#property-list) que suportam [expressions](../Concepts/quick-tour.md#expressions) (por exemplo, **Variável ou Expressão**, **expressão de cor da fonte**...). Erros são exibidos em vermelho e avisos são exibidos no amarelo na coluna esquerda da lista de propriedades e você pode passar o mouse para obter explicações:
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 
-- The detection of errors in the code of form object expressions by the [compiler](../Project/compiler.md) is improved.
+- A detecção de erros no código de expressões do objeto de forma por [compiler](../Project/compiler.md) é melhorada.
 
-- You can also to benefit from [autocompletion features](../code-editor/write-class-method.md#autocomplete-functions) in the code editor.
+- Você também pode se beneficiar de [recursos de preenchimento automático](../code-editor/write-class-method.md#autocomplete-functions) no editor de código.
 
-- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a _formData_ object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands.
+- Quando o formulário for executado, 4D instancia automaticamente um objeto de classe de usuário para o formulário, que é retornado pelo objeto [`Form`](../commands/form.md). Seu código pode acessar diretamente as funções de classe definidas na classe do usuário por meio do comando `Form` (por exemplo, `Form.message()`) sem precisar passar um objeto _formData_ como parâmetro para os comandos [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md) ou [`FORM LOAD`](../commands/form-load.md).
 
 :::note
 
-See [this blog post](http://blog.4d.com/empower-your-development-process-with-your-forms) for an illustration of this feature.
+Consulte [esta postagem no blog](http://blog.4d.com/empower-your-development-process-with-your-forms) para ver uma ilustração desse recurso.
 
 :::
 
 #### Gramática JSON
 
-| Nome      | Tipo de dados | Valores possíveis                                                                                                       |
-| --------- | ------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| formClass | string        | name of an existing user class ("_className_" or "_componentNameSpace_._className_") |
+| Nome      | Tipo de dados | Valores possíveis                                                                                                                |
+| --------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| formClass | string        | nome de uma classe de usuário existente ("_className_" ou "_componentNameSpace_._className_") |
 
 ---
 
