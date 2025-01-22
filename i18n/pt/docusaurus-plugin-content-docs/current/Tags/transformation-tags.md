@@ -69,7 +69,7 @@ To ensure the correct evaluation of expressions processed via tags, regardless o
 
 A tag `<!--#4DBASE -->` designa o diretório de trabalho a ser usado pela tag `<!--#4DINCLUDE-->`.
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next <!--#4DBASE -->`, if any. Se a pasta`<!--#4DBASE -->\` for modificada em um arquivo incluído, ela recuperará seu valor original do arquivo pai.
+When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--#4DBASE -->`, if any. If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
 
 O parâmetro _folderPath_ deve conter um nome de caminho relativo à página atual e deve terminar com uma barra (`/`). A pasta designada deve estar localizada dentro da pasta Web.
 
