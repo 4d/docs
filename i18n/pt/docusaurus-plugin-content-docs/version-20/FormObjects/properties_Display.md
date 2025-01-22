@@ -52,7 +52,7 @@ O campo contém efetivamente "proportion". 4D aceita e armazena a entrada inteir
 ## Formato de Data
 
 Os formatos de data controlam como as datas aparecem quando são apresentadas ou impressas. Para a entrada de dados, as datas são inseridas no formato MM/DD/AAAA, independentemente do formato de exibição escolhido.
-> Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for dates must only be selected among the 4D built-in formats.
+> Diferentemente dos formatos [Alfa](#alpha-format) e [numérico](#number-format), os formatos de exibição para datas devem ser selecionados somente entre os formatos incorporados em 4D.
 
 A tabela seguinte apresenta as opções disponíveis:
 
@@ -262,7 +262,7 @@ O formato **Scaled to fit** faz com que o 4D redimensione a imagem para se ajust
 
 `Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
-O formato **Truncated (centered)** faz com que o 4D centralize a imagem na área e corte qualquer parte que não caiba na área. 4D crops equally from each edge and from the top and bottom.
+O formato **Truncated (centered)** faz com que o 4D centralize a imagem na área e corte qualquer parte que não caiba na área. 4D corta igualmente de cada borda e da parte superior e inferior.
 
 O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior esquerdo da imagem no canto superior esquerdo da área e recorte qualquer parte que não caiba na área. 4D corta da direita e de baixo para cima.
 > Quando o formato da imagem for **Truncado (não centrado)**, é possível adicionar barras de deslocamento à área de entrada.
@@ -306,7 +306,7 @@ Se o campo for reduzido para um tamanho inferior ao da imagem original, a imagem
 ## Formato Hora
 
 Os formatos de hora controlam a forma como as horas aparecem quando são apresentadas ou impressas. Para a entrada de dados, você insere as horas no formato HH:MM:SS de 24 horas ou no formato AM/PM de 12 horas HH:MM:SS, independentemente do formato de exibição escolhido.
-> Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for times must only be selected among the 4D built-in formats.
+> Diferentemente dos formatos [Alfa](#alpha-format) e [numérico](#number-format), os formatos de exibição para horas devem ser selecionados somente entre os formatos incorporados em 4D.
 
 A tabela abaixo mostra os formatos de exibição do campo Hora e dá exemplos:
 
@@ -366,7 +366,7 @@ Utilizado para associar um formato de visualização aos dados da coluna. Os for
 
 As colunas booleanas e numéricas (numéricas ou inteiras) podem ser exibidas como caixas de seleção. Nesse caso, a propriedade [Title](#title) pode ser definida.
 
-As colunas booleanas também podem ser apresentadas como menus pop-up. In this case, the [Text when False and Text when True](#text-when-falsetext-when-true) properties must be defined.
+As colunas booleanas também podem ser apresentadas como menus pop-up. Neste caso, as propriedades [Text quando False e Text quando True](#text-when-falsetext-when-true) devem ser definidas.
 
 #### Gramática JSON
 
@@ -424,7 +424,7 @@ Nesse caso também, a propriedade [Title](#title) também está disponível para
 
 #### Objectos suportados
 
-[Caixa de seleção](checkbox_overview.md) - [Caixa de listagem Coluna](listbox_overview.md#list-box-columns)
+[Caixa de seleção](checkbox_overview.md) - [Coluna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -481,7 +481,7 @@ A propriedade Truncate with ellipsis (Truncar com reticências) pode ser aplicad
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Coluna List Box](listbox_overview.md#list-box-columns) - [Rodapé List Box](listbox_overview.md#list-box-footers)
 
 ---
 
@@ -493,7 +493,7 @@ Esta propriedade permite ocultar o objeto no ambiente Aplicação.
 
 #### Visibilidade automática em formulários lista
 
-No contexto dos formulários de "lista" do site [](FormEditor/properties_FormProperties.md#form-type), a propriedade Visibility suporta dois valores específicos:
+No contexto dos [formulários "lista"](FormEditor/properties_FormProperties.md#form-type), a propriedade Visibility suporta dois valores específicos:
 
 * **Se registrar o nome selecionado** (nome JSON: "selectedRows")
 * **Se o registro não estiver selecionado** (nome JSON: "unselectedRows")
@@ -512,7 +512,7 @@ Essa propriedade é usada somente ao desenhar objetos localizados no corpo de um
 
 #### Objectos suportados
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botão](button_overview.md) - [Grade de botões](buttonGrid_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé List Box](listbox_overview.md#list-box-footers) - [Cabeçalho List Box](listbox_overview.md#list-box-headers) - [Botão de imagem](pictureButton_overview.md) - [Menu pop-up imagem](picturePopupMenu_overview.md) - [Área de plug-in](pluginArea_overview.md) - [Indicador de progresso](progressIndicator.md) - [Botão rádio](radio_overview.md) - [Spinner](spinner.md) - [Divisor](splitters.md) - [Imagem estática](staticPicture.md) - [Stepper](stepper.md) - [Subformulário](subform_overview.md) - [Controle de tabulação](tabControl.md) - [Área texto](text.md) - [Área Web](webArea_overview.md)
 
 ---
 
