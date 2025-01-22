@@ -106,7 +106,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ## /4DACTION
 
-***/4DACTION/***MethodName***<br/> **/4DACTION/******MethodName/Param*
+*/4DACTION/MethodName*<br/> */4DACTION/MethodName/Param*
 
 | Parâmetros | Tipo |    | Descrição                                           |
 | ---------- | ---- |:--:| --------------------------------------------------- |
