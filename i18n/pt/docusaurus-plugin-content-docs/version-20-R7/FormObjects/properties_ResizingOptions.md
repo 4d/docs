@@ -25,7 +25,7 @@ Cuando esta propiedad está desactivada (valor `legacy` en JSON), sólo se redim
 
 A aparência da coluna falsa corresponde à das colunas existentes; ela terá um cabeçalho e/ou rodapé falso se esses elementos estiverem presentes nas colunas do list box existentes e terá a(s) mesma(s) cor(es) de fundo aplicada(s).
 
-Se puede hacer clic en el encabezado y/o en el pie de página falsos, pero esto no tiene ningún efecto sobre las otras columnas (por ejemplo: no se realiza ninguna ordenación); no obstante, los eventos se generan en consecuencia `On Clicked`, \`On Header Cl
+Se puede hacer clic en el encabezado y/o en el pie de página falsos, pero esto no tiene ningún efecto sobre las otras columnas (por ejemplo: no se realiza ninguna ordenación); no obstante, los eventos se generan en consecuencia `On Clicked`, \\`On Header Cl
 
 Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) devuelve "X+1" para su número de columna (donde X es el número de columnas existent
 
