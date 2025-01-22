@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 
-| Parámetros      | Tipo                               |   | Descripción          |
-| --------------- | ---------------------------------- | - | -------------------- |
-| entitySelection | 4D.EntitySelection | → | Una entity selection |
+| Parámetros      | Tipo                               |                             | Descripción          |
+| --------------- | ---------------------------------- | --------------------------- | -------------------- |
+| entitySelection | 4D.EntitySelection | &#8594; | Una entity selection |
 
 <!-- END REF-->
 
