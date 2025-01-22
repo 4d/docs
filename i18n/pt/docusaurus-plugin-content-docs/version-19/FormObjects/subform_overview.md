@@ -90,13 +90,13 @@ Você pode modificar os rótulos do subformulário atribuindo valores ao objeto 
  C_OBJECT($lang)
  $lang:=New object
  If(<>lang="fr")
-    $lang.CompanyName:="Société :"
-    $lang.LastName:="Nom :"
+    $lang. CompanyName:="Société :"
+    $lang. LastName:="Nom :"
  Else
-    $lang.CompanyName:="Company:"
-    $lang.LastName:="Name:"
+    $lang. CompanyName:="Company:"
+    $lang. LastName:="Name:"
  End if
- InvoiceAddress.Label:=$lang
+ InvoiceAddress. Label:=$lang
 ```
 
 ![](../assets/en/FormObjects/subforms5.png)
@@ -133,7 +133,7 @@ Para obter mais informações, consulte a descrição do comando `CALL SUBFORM C
 
 #### Comando EXECUTE METHOD IN SUBFORM
 
-O comando `EXECUTE METHOD IN SUBFORM` permite que um formulário ou um de seus objetos solicite a execução de um método no contexto da instância do subformulário, o que lhe dá acesso às variáveis do subformulário, objetos, etc. Este método também pode receber parâmetros.
+O comando `EXECUTE METHOD IN SUBFORM` permite que um formulário ou um de seus objetos solicite a execução de um método no contexto da instância do subformulário, o que lhe dá acesso às variáveis do subformulário, objetos, etc. Este método também pode receber parâmetros. Este método também pode receber parâmetros.
 
 Este mecanismo é ilustrado no diagrama seguinte:
 
