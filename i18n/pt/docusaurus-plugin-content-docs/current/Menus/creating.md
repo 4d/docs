@@ -6,20 +6,20 @@ title: Criação de menus e barras de menus
 É possível criar menus e barras de menu:
 
 - usando o editor de menus da janela da caixa de ferramentas 4D. Nesse caso, os menus e as barras de menu são armazenados na estrutura da aplicação.
-- dinamicamente, utilizando os comandos de linguagem do tema "Menus". In this case, menus and menu bars are not stored, they only exist in memory.
+- dinamicamente, utilizando os comandos de linguagem do tema "Menus". Nesse caso, os menus e as barras de menu não são armazenados, eles existem apenas na memória.
 
-You can combine both features and use menus created in structure as templates to define menus in memory.
+Você pode combinar os dois recursos e usar menus criados na estrutura como modelos para definir menus na memória.
 
 ## Barra de menu padrão
 
-Uma aplicação personalizada deve conter pelo menos uma barra de menu com um menu. A custom application must contain at least one menu bar with one menu. The default menu bar includes standard menus and a command for returning to the Design mode.
+Uma aplicação personalizada deve conter pelo menos uma barra de menu com um menu. Por padrão, quando você cria um projeto, 4D cria automaticamente uma barra de menu padrão (Menu Bar #1) para você poder acessar a modo Aplicação. A barra de menu padrão inclui menus padrão e um comando para retornar ao modo Desenho.
 
-This allows the user to access the Application environment as soon as the project is created. La barra de menús nº 1 se llama automáticamente cuando se elige el comando **Test Application** en el menú **Ejecución**.
+Isso permite que o usuário acesse o modo Aplicação assim que o projeto é criado. La barra de menús nº 1 se llama automáticamente cuando se elige el comando **Test Application** en el menú **Ejecución**.
 
 A barra de menus predefinida inclui três menus:
 
 - **Archivo**: sólo incluye el comando **Salir**. La acción estándar _Salir_ está asociada al comando, que hace que la aplicación salga.
-- **Editar**: menú estándar y totalmente editable. Editing functions such as copy, paste, etc. are defined using standard actions.
+- **Editar**: menú estándar y totalmente editable. As funções de edição, como copiar, colar, etc., são definidas por meio de ações padrão.
 - **Modo**: contiene, por defecto, el comando **Volver al modo Diseño**, que se utiliza para salir del modo Aplicación.
 
 > > Menu items appear _in italics_ because they consist of references and not hard-coded text. Consulte [Propiedad Título](properties.md#title).
