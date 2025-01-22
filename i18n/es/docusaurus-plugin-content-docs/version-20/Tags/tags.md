@@ -327,7 +327,7 @@ En caso de que se produzca un error durante la interpretación, el texto inserta
 
 #### Sintaxis alternativa: `$4DHTML(expression)`
 
-The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
+The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. Este valor se inserta como texto simple, los caracteres HTML especiales como ">" se escapan automáticamente.
 
 Por ejemplo, aquí están los resultados del procesamiento de la variable de texto 4D myvar con las etiquetas disponibles:
 
@@ -472,11 +472,11 @@ El código siguiente:
 ... podría expresarse en lenguaje 4D de la siguiente manera:
 
 ```4d
- FIRST RECORD([People])
+ NEXT RECORD([People])
+ End while
+    FIRST RECORD([People])
  While(Not(End selection([People])))
     ...
-    NEXT RECORD([People])
- End while
 ```
 
 ### `<!--#4DLOOP array-->`
