@@ -257,9 +257,21 @@ The OTP token can also be provided as a custom parameter that you need to proces
 In both cases, you need to extract the token from the custom parameter and to call the [`Session.restore()`](../API/SessionClass.md#restore) function with the token as parameter. 
 
 
-#### Invalid OTP
+#### Processing a invalid OTP
 
- If the OTP token is not valid (either received through `$4DSID` or passed to the [`Session.restore()`](../API/SessionClass.md#restore) function), no web user session is restored and the current session (if any) is left unchanged. You can then decide to use the `Storage` of the current session, or open a guest session, or display a login page. 
+The OTP token is considered invalid if:
+
+- the session token has already been used,
+- the session token has expired,
+- the session token does not exist,
+- the original session itself has expired.
+
+In this case, no web user session is restored and the current session (if any) is left unchanged. Usually, you can decide to display a login page or to open a guest session. 
+
+Verifying if the received OTP token is valid depends on how it was handled:
+
+- If you used a `$4DSID`, you can store a custom status property in the [session storage](../API/SessionClass.md#storage) at the moment of the token creation, and check this status once the OTP token was received to see if it is the same value (see example). 
+- If you used the [`Session.restore()`](../API/SessionClass.md#restore) function, it returns true if the session correctly restored. 
 
 
 ### Example of email validation with $4DSID
