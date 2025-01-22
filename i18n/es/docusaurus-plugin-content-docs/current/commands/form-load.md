@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM LOAD.Params-->
 
-| Parámetros | Tipo         |   | Descripción                                                                                                                                                                                                              |
-| ---------- | ------------ | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| aTable     | Tabla        | → | Table form to load (if omitted, load a project form)                                                                                                                                                  |
-| form       | Text, Object | → | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
-| formData   | Object       | → | Data to associate to the form                                                                                                                                                                                            |
-| \*         | Operador     | → | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context)                                                                         |
+| Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                                              |
+| ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| aTable     | Tabla        | &#8594; | Table form to load (if omitted, load a project form)                                                                                                                                                  |
+| form       | Text, Object | &#8594; | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
+| formData   | Object       | &#8594; | Data to associate to the form                                                                                                                                                                                            |
+| \*         | Operador     | &#8594; | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context)                                                                         |
 
 <!-- END REF-->
 
