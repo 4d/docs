@@ -190,7 +190,7 @@ A coleção deve conter apenas **elementos do mesmo tipo**, caso contrário, um 
 The number of loops is based on the number of elements of the collection. A cada iteração, a variável *item* é automaticamente preenchida com o elemento correspondente da coleção. Os pontos abaixo devem ser considerados:
 
 - Se a variável *item* for do tipo objeto ou do tipo coleção (ou seja, se *expressão* for uma coleção de objetos ou de coleções), a modificação dessa variável modificará automaticamente o elemento correspondente da coleção (porque objetos e coleções compartilham as mesmas referências). Se a variável for de tipo escalar, só se modificará a variável.
-- A variável *item* recebe o mesmo tipo que o primeiro elemento da coleção. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
+- A variável *item* recebe o mesmo tipo que o primeiro elemento da coleção. A variável *item* recebe o mesmo tipo que o primeiro elemento da coleção. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
 - Se a coleção contiver elementos com um valor Null, será gerado um erro se o tipo de variável *item* não for compatível com valores Null (como variáveis longint).
 
 #### Exemplo com uma coleção de valores escalares
@@ -330,10 +330,10 @@ Assim como a tag `4DTEXT`, esta tag permite avaliar uma variável 4D ou express�
 
 For example, here are the processing results of the 4D text variable myvar with the available tags:
 
-| Valor myvar    | Etiquetas              | Resultados                  |
-| -------------- | ---------------------- | --------------------------- |
-| `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&amp;lt;B&amp;gt;` |
-| `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`                       |
+| Valor myvar    | Etiquetas              | Resultados                          |
+| -------------- | ---------------------- | ----------------------------------- |
+| `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&amp;amp;lt;B&amp;amp;gt;` |
+| `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`                               |
 
 No caso de um erro de interpretação, o texto inserido será `<!--#4DHTML myvar-->: ## error # error code`.
 
