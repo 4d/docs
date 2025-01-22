@@ -4,9 +4,9 @@ title: Modo SDI em Windows
 ---
 
 
-On Windows, 4D developers can configure their 4D merged applications to work as SDI (Single-Document Interface) applications. Nas aplicações SDI, cada janela é independente das outras e pode ter a sua própria barra de menus. As aplicações SDI são opostas às aplicações MDI (Multiple Documents Interface), em que todas as janelas estão contidas na janela principal e dependem dela.
+No Windows, os desenvolvedores 4D podem configurar suas aplicações 4D fundidas para trabalhar como aplicações SDI (Single-Document Interface). Nas aplicações SDI, cada janela é independente das outras e pode ter a sua própria barra de menus. As aplicações SDI são opostas às aplicações MDI (Multiple Documents Interface), em que todas as janelas estão contidas na janela principal e dependem dela.
 
-> The concept of sdi.mdI does not exist on macOS. Esta funcionalidade diz respeito apenas a aplicações Windows e as opções relacionadas são ignoradas no macOS.
+> O conceito de sdi.mdI não existe no macOS. Esta funcionalidade diz respeito apenas a aplicações Windows e as opções relacionadas são ignoradas no macOS.
 
 ## Disponibilidade do modo SDI
 
@@ -17,12 +17,12 @@ O modo SDI está disponível somente no seguinte ambiente de execução:
 
 ## Activação do modo SDI
 
-Enabling and using the SDI mode in your application require the following steps:
+Para habilitar e usar o modo SDI em sua aplicação, são necessárias as seguintes etapas:
 
-1. Check the **Use SDI mode on Windows** option in the "Interface" page of the Settings dialog box.
+1. Marque a opção **Usar o modo SDI no Windows** na página "Interface" da caixa de diálogo das Propriedades.
 2. Construa uma aplicação mesclada (monoposto /ou aplicação cliente).
 
-Then, when executed it in a supported context (see above), the merged application will work automatically in SDI mode.
+Então, quando executado em um contexto compatível (veja acima), o aplicativo mesclado funcionará automaticamente no modo SDI.
 
 ## Gerir aplicações no modo SDI
 
@@ -40,7 +40,7 @@ Assim, as janelas podem ser utilizadas nos modos MDI ou SDI sem que seja necess�
 
 #### Acerca do ecrã inicial
 
-- If the **Splash screen** interface option was selected in the Settings, the splash window will contain any menus that would have been displayed in the MDI window. Note também que fechar a janela splash screen resultará na saída da aplicação, tal como no modo MDI.
+- Se selecionar a opção de interface **Tela de abertura** nas Propriedades, a janela inicial conterá todos os menus que teriam sido apresentados na janela MDI. Note também que fechar a janela tela de abertura resultará na saída da aplicação, tal como no modo MDI.
 - Se a opção Splash screen não tiver sido selecionada, os menus serão apresentados apenas nas janelas abertas, dependendo das escolhas do programador.
 
 ### Saída automática

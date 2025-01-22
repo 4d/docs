@@ -26,7 +26,7 @@ Você pode escolher entre [dois mecanismos de renderização] (properties_WebAre
 
 Selecting the embedded web rendering engine allows you to call 4D methods from the web area. A seleção do mecanismo de renderização do sistema é recomendada quando a área da web está conectada à internet, porque ela sempre se beneficia das últimas atualizações de segurança.
 
-### Acesso a métodos 4D
+### Acessar métodos 4D
 
 Quando a propriedade [Access 4D methods](properties_WebArea.md#access-4d-methods) estiver selecionada, você pode chamar métodos 4D de uma área web.
 
@@ -194,7 +194,7 @@ Para exibir o inspetor da Web, você pode executar o comando `WA OPEN WEB INSPEC
 - **Use the web area context menu**<br/>
   This feature can only be used with onscreen web areas and requires that the following conditions are met:
   - o [menu contextual](properties_Entry.md#context-menu) para a área web está ativado
-  - Deve habilitar expressamente ao uso do inspetor na área mediante a instrução abaixo:
+  - o uso do inspetor é expressamente permitido na área por meio da seguinte declaração:
   ```4d
   	WA SET PREFERENCE(*; "WA";WA enable Web inspector;True)  
   ```

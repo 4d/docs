@@ -12,7 +12,7 @@ Puede combinar ambas funcionalidades y utilizar los menús creados en la estruct
 
 ## Barra de menús por defecto
 
-Una aplicación personalizada debe contener al menos una barra de menús con un menú. Una aplicación personalizada debe contener al menos una barra de menús con un menú. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
+Una aplicación personalizada debe contener al menos una barra de menús con un menú. Por defecto, cuando crea un nuevo proyecto, 4D crea automáticamente una barra de menú por defecto (Barra de Menú #1) para que pueda acceder al entorno Aplicación. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
 
 Esto permite al usuario acceder al modo Aplicación tan pronto como se crea el proyecto. La barra de menús nº 1 se llama automáticamente cuando se elige el comando **Test Application** en el menú **Ejecución**.
 

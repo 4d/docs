@@ -201,7 +201,7 @@ Por padrão, quando um botão contém um título e uma imagem, os elementos são
 
 ## Margem vertical
 
-This property allows setting the size (in pixels) of the vertical margins of the button. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
+Esta propriedade permite definir o tamanho (em píxeis) das margens verticais do botão. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
 Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contornos.
 
@@ -221,26 +221,26 @@ Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contorno
 
 ## Com menu pop-up
 
-This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:
+Esta propriedade permite exibir um símbolo que aparece como um triângulo no botão para indicar a presença de um menu pop-up anexado:
 
 ![](../assets/en/FormObjects/property_popup.png)
 
-The appearance and location of this symbol depends on the button style and the current platform.
+A aparência e o local desse símbolo dependem do estilo do botão e da plataforma atual.
 
 ### Ligados e Separados
 
-To attach a pop-up menu symbol to a button, there are two display options available:
+Para anexar um símbolo de menu pop-up a um botão, há duas opções de exibição disponíveis:
 
 |                          Linked                         |                          Separado                          |
 | :-----------------------------------------------------: | :--------------------------------------------------------: |
 | ![](../assets/en/FormObjects/property_popup_linked.png) | ![](../assets/en/FormObjects/property_popup_separated.png) |
 
-> The actual availability of a "separated" mode depends on the style of the button and the platform.
+> A disponibilidade real de um modo "separado" depende do estilo do botão e da plataforma.
 
-Each option specifies the relation between the button and the attached pop-up menu:
+Cada opção especifica a relação entre o botão e o menu pop-up anexado:
 
 - Quando o menu pop-up é **separado**, clicar na parte esquerda do botão executa diretamente a ação atual do botão; essa ação pode ser modificada usando o menu pop-up acessível na parte direita do botão.
-- Quando o menu pop-up está **vinculado**, um simples clique no botão exibe apenas o menu pop-up. Only the selection of the action in the pop-up menu causes its execution.
+- Quando o menu pop-up está **vinculado**, um simples clique no botão exibe apenas o menu pop-up. Somente a seleção da ação no menu pop-up causa sua execução.
 
 :::info
 
@@ -250,7 +250,7 @@ Refer to the [`On Alternative Click` event description](../Events/onAlternativeC
 
 ### Gerir o menu pop-up
 
-It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) and [`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) commands.
+É importante notar que a propriedade "Com o Menu Popup" apenas gerencia o aspecto gráfico do botão. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) and [`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) commands.
 
 #### Gramática JSON
 

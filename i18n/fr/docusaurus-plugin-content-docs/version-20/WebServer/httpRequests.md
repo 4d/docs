@@ -5,24 +5,24 @@ title: Traitement des requêtes HTTP
 
 Le serveur web 4D offre plusieurs fonctionnalités pour gérer les requêtes HTTP :
 
-- the `On Web Connection` database method, a router for your web application,
-- the `/4DACTION` URL to call server-side code
-- `WEB GET VARIABLES` to get values from HTML objects sent to the server
-- other commands such as `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, or `WEB GET BODY PART` allow to customize the request processing, including cookies.
-- the *COMPILER_WEB* project method, to declare your variables.
+- la méthode base `On Web Connection`, un routeur pour votre application web,
+- l'URL `/4DACTION` pour appeler le code côté serveur
+- `WEB GET VARIABLES` pour récupérer les valeurs des objets HTML envoyés au serveur
+- d'autres commandes telles que `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, ou `WEB GET BODY PART` permettent de personnaliser le traitement des requêtes, y compris les cookies.
+- la méthode projet *COMPILER_WEB* pour déclarer vos variables.
 
 
 ## On Web Connection
 
-The `On Web Connection` database method can be used as the entry point for the 4D Web server.
+La méthode base `On Web Connection` peut être utilisée comme point d'entrée pour le serveur Web 4D.
 
 ### Appels des méthodes base
 
-The `On Web Connection` database method is automatically called when the server receives any URL that is not a path to an existing page on the server. La méthode base est appelée avec l'URL.
+La méthode base `On Web Connection` est automatiquement appelée lorsque le serveur reçoit une URL qui n'est pas un chemin vers une page existante sur le serveur. La méthode base est appelée avec l'URL.
 
-For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder).
+Par exemple, l'URL "*a/b/c*" appellera la méthode base, mais "*a/b/c.html*" n'appellera pas la méthode base si la page "c.html" existe dans le sous-dossier "a/b" du WebFolder.
 
-> The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
+> La requête doit avoir été acceptée préalablement par la méthode base \[`On Web Authentication`\] (si elle existe) et le serveur web doit être lancé.
 
 ### Syntaxe
 
@@ -59,7 +59,7 @@ Alternativement, vous pouvez utiliser la syntaxe [paramètres nommés](Concepts/
 ```
 
 
-> Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) is not allowed and ends the method processing.
+> L'appel à une commande 4D qui affiche un élément d'interface`(DIALOG`, `ALERT`, etc.) n'est pas autorisé et met fin au traitement de la méthode.
 
 
 ### $1 - URL extra data
@@ -76,12 +76,12 @@ Prenons une connexion intranet comme exemple. Supposons que l'adresse IP de votr
 | http://123.45.67.89/Customers/Add    | /Customers/Add           |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-Notez que vous êtes libre d'utiliser ce paramètre à votre convenance. 4D ignore simplement la valeur passée au-delà de la partie hôte de l'URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. En proposant aux utilisateurs web une liste de valeurs possibles et/ou des signets par défaut, vous pouvez leur fournir des raccourcis vers différentes parties de votre application. De cette façon, les utilisateurs web peuvent accéder rapidement aux ressources de votre site web sans passer par le chemin de navigation complet à chaque nouvelle connexion.
+Notez que vous êtes libre d'utiliser ce paramètre à votre convenance. 4D ignore simplement la valeur passée au-delà de la partie hôte de l'URL. Par exemple, vous pouvez établir une convention où la valeur "*/Customers/Add*" signifie "accès direct pour ajouter un nouvel enregistrement dans la table `[Customers]`" En proposant aux utilisateurs web une liste de valeurs possibles et/ou des signets par défaut, vous pouvez leur fournir des raccourcis vers différentes parties de votre application. De cette façon, les utilisateurs web peuvent accéder rapidement aux ressources de votre site web sans passer par le chemin de navigation complet à chaque nouvelle connexion.
 
 
 ### $2 - En-tête (header) et corps (body) de la requête HTTP
 
-Le deuxième paramètre ($2) est l'en-tête (header) et le corps (body) de la requête HTTP envoyée par le navigateur web. Note that this information is passed to your `On Web Connection` database method "as is". Son contenu variera en fonction de la nature du navigateur web qui tente la connexion.
+Le deuxième paramètre ($2) est l'en-tête (header) et le corps (body) de la requête HTTP envoyée par le navigateur web. Notez que ces informations sont passées telles quelles à votre méthode base `On Web Connection`. Son contenu variera en fonction de la nature du navigateur web qui tente la connexion.
 
 Si votre application utilise ces informations, il vous appartient d'analyser l'en-tête et le corps. Vous pouvez utiliser les commandes `WEB GET HTTP HEADER` et `WEB GET HTTP BODY`.
 > Pour des raisons de performance, la taille des données passant par le paramètre $2 ne doit pas dépasser 32 Ko. Au-delà de cette taille, ils sont tronqués par le serveur HTTP 4D.
@@ -98,7 +98,7 @@ Le paramètre `$4` reçoit l'adresse IP utilisée pour appeler le serveur web 4D
 
 ### $5 et $6 - Nom d'utilisateur et mot de passe
 
-The $5 and $6 parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
+Les paramètres $5 et $6 reçoivent le nom et le mot de passe saisis par l'utilisateur dans la boîte de dialogue d'identification standard affichée par le navigateur, le cas échéant (voir la page [Authentification](authentication.md)).
 > Si le nom d'utilisateur envoyé par le navigateur existe dans 4D, le paramètre $6 (le mot de passe de l'utilisateur) n'est pas renvoyé pour des raisons de sécurité.
 
 

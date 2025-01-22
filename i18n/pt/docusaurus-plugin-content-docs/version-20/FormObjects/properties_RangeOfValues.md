@@ -60,7 +60,7 @@ Permite definir uma lista cujos valores não podem ser introduzidos no objeto. S
 
 Restringe as entradas válidas aos itens da lista. Por exemplo, talvez você queira usar uma lista obrigatória para títulos de cargos, de modo que as entradas válidas sejam limitadas a títulos que tenham sido aprovados pela gerência.
 
-Tornar uma lista obrigatória não apresenta automaticamente a lista quando o campo é selecionado. Se você deseja exibir a lista obrigatória, atribua a mesma lista à propriedade [Lista de opções](properties_DataSource.md#choice-list). No entanto, ao contrário da propriedade [Lista de opções](properties_DataSource.md#choice-list) quando uma lista é definida, a entrada de teclado não é mais possível, apenas a seleção de um valor da lista usando o menu pop-up é permitida. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
+Tornar uma lista obrigatória não apresenta automaticamente a lista quando o campo é selecionado. Se você deseja exibir a lista obrigatória, atribua a mesma lista à propriedade [Lista de opções](properties_DataSource.md#choice-list). No entanto, ao contrário da propriedade [Lista de opções](properties_DataSource.md#choice-list) quando uma lista é definida, a entrada de teclado não é mais possível, apenas a seleção de um valor da lista usando o menu pop-up é permitida. Se listas diferentes forem definidas usando as propriedades [Lista de Opções](properties_DataSource.md#choice-list) e da Lista exigida, a propriedade da Lista obrigatória tem prioridade.
 > Se uma lista especificada for hierárquica, apenas os itens do primeiro nível são tidos em conta.
 
 #### Gramática JSON

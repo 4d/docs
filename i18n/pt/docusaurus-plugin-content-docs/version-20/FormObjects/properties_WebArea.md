@@ -4,7 +4,7 @@ title: Área Web
 ---
 
 ---
-## Acesso a métodos 4D
+## Acessar métodos 4D
 
 Você pode chamar métodos 4D a partir do código JavaScript executado em uma área Web e obter valores em retorno. Para consegue chamar métodos 4D de uma área Web, você deve ativar o parâmetro de acessibilidade 4D ("todos").
 
@@ -87,7 +87,7 @@ Essa opção permite escolher entre dois mecanismos de renderização para a ár
 
 > No Windows, se o Microsoft Edge WebView2 não estiver instalado, o 4D usa o mecanismo incorporado como mecanismo de renderização do sistema. To know if it is installed in your system, look for "Microsoft Edge WebView2 Runtime" in your applications panel.
 
-*   **checked** - `JSON value: embedded`: In this case, 4D uses Blink engine from Google (CEF). Using the embedded Web engine means that Web area rendering and their functioning in your application are identical regardless of the platform used to run 4D (slight variations of pixels or differences related to network implementation may nevertheless be observed). Using the embedded Web engine means that Web area rendering and their functioning in your application are identical regardless of the platform used to run 4D (slight variations of pixels or differences related to network implementation may nevertheless be observed).
+*   **checked** - `JSON value: embedded`: In this case, 4D uses Blink engine from Google (CEF). Usar o mecanismo da Web incorporado significa que a renderização da área da Web e seu funcionamento em seu aplicativo são idênticos, independentemente da plataforma usada para executar 4D (pequenas variações de pixels ou diferenças relacionadas à implementação da rede podem, no entanto, ser observadas). Using the embedded Web engine means that Web area rendering and their functioning in your application are identical regardless of the platform used to run 4D (slight variations of pixels or differences related to network implementation may nevertheless be observed).
 
 The Blink engine has the following limitations:
 
