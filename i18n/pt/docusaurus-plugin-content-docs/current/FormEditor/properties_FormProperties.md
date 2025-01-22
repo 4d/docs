@@ -9,12 +9,12 @@ title: Propriedades do formulário
 
 > A propriedade Esquema de cores só é aplicada no macOS.
 
-Esta propriedade define o esquema de cores para o formulário. Por padrão, quando a propriedade não está definida, o valor de um esquema de cores é **herdado** (o formulário usa o esquema definido no [nível da aplicação](../commands-legacy/set-application-color-scheme.md)). Isto pode ser alterado para o formulário para uma das duas opções seguintes:
+Esta propriedade define o esquema de cores para o formulário. Esta propriedade define o esquema de cores para o formulário. Isto pode ser alterado para o formulário para uma das duas opções seguintes:
 
 - dark - texto claro sobre um fundo escuro
 - light - texto escuro sobre um fundo claro
 
-> \> A defined color scheme can not be overridden by a CSS.
+> &#062; A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
 
@@ -32,9 +32,9 @@ Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de 
 
 #### Gramática JSON
 
-| Nome | Tipo de dados      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                            |
-| ---- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css  | cadeia ou colecção | Caminho(s) do arquivo CSS fornecido(s) como<li>:uma string (um arquivo para ambas as plataformas)</li><li>uma coleção de strings (uma lista de arquivos para ambas as plataformas)</li><li>uma coleção de objetos {"path":string; "media": "mac" \| "win"} </li> |
+| Nome | Tipo de dados      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                              |
+| ---- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css  | cadeia ou colecção | Caminho(s) do arquivo CSS fornecido(s) como<li>:uma string (um arquivo para ambas as plataformas)</li><li>uma coleção de strings (uma lista de arquivos para ambas as plataformas)</li><li>uma coleção de objetos {"path":string; "media": "mac" \\| "win"} </li> |
 
 ---
 
@@ -70,7 +70,7 @@ Consulte [esta postagem no blog](http://blog.4d.com/empower-your-development-pro
 
 ## Nome do formulário
 
-Essa propriedade é o nome do próprio formulário sendo usada para fazer referência ao formulário pelo nome usando a linguagem 4D. O nome do formulário deve estar em conformidade com as [regras especificadas para identificadores] (Concepts/identifiers.md) em 4D.
+Essa propriedade é o nome do próprio formulário sendo usada para fazer referência ao formulário pelo nome usando a linguagem 4D. Essa propriedade é o nome do próprio formulário sendo usada para fazer referência ao formulário pelo nome usando a linguagem 4D.
 
 #### Gramática JSON
 
