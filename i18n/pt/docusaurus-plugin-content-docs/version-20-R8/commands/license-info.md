@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Params-->
 
-| Parâmetro | Tipo   |   | Descrição                            |
-| --------- | ------ | - | ------------------------------------ |
-| Resultado | Object | ← | Information about the active licence |
+| Parâmetro | Tipo   |                             | Descrição                            |
+| --------- | ------ | --------------------------- | ------------------------------------ |
+| Resultado | Object | &#8592; | Information about the active licence |
 
 <!-- END REF-->
 
