@@ -3,7 +3,7 @@ id: radiobuttonOverview
 title: Botão rádio
 ---
 
-Radio buttons are objects that allow the user to select one of a group of buttons.
+Os botões rádio são objetos que permitem que o usuário selecione um de um grupo de botões.
 
 Um botão radio aparece na forma de um texto seguido de um círculo. Entretanto, os botões de rádio podem ter <a href=“#button-styles”>aparências diferentes</a>.
 
@@ -17,39 +17,39 @@ Um botão radio aparece na forma de um texto seguido de um círculo. Entretanto,
 
 ## Configuração de botões radio
 
-Radio buttons are used in coordinated sets: only one button at a time can be selected in the set. In order to operate in a coordinated manner, a set of radio buttons must share the same [Radio Group](properties_Object.md#radio-group) property.
+Os botões rádio são usados em conjuntos coordenados: somente um botão de cada vez pode ser selecionado no conjunto. Para operar de forma coordenada, um conjunto de botões de rádio deve compartilhar a mesma propriedade [Grupo Rádio](properties_Object.md#radio-group).
 
-Os botões rádio são controlados com métodos. Como todos os botões, um botão de rádio é definido como 0 quando o formulário é aberto pela primeira vez. Um método associado a um botão de rádio é executado quando o botão é selecionado. The following is an example of a group of radio buttons used in a video collection database to enter the speed of the recording (SP, LP, or EP):
+Os botões rádio são controlados com métodos. Como todos os botões, um botão de rádio é definido como 0 quando o formulário é aberto pela primeira vez. Um método associado a um botão de rádio é executado quando o botão é selecionado. A seguir, um exemplo de um grupo de botões de rádio usados em um banco de dados de coleção de vídeos para inserir a velocidade da gravação (SP, LP ou EP):
 
 ![](../assets/en/FormObjects/radio2.png)
 
-Selecting one radio button in a group sets that button to 1 and all of the others in the group to 0. Só pode ser selecionado um botão rádio de cada vez.
-> You can associate [Boolean type expressions](properties_Object.md#variable-or-expression) with radio buttons. In this case, when a radio button in a group is selected, its variable is True and the variables for the group's other radio buttons are False.
+A seleção de um botão de rádio em um grupo define esse botão como 1 e todos os outros no grupo como 0. Só pode ser selecionado um botão rádio de cada vez.
+> Você pode associar [expressões boolianas](properties_Object.md#variable-or-expression) a botões rádio. Nesse caso, quando um botão de opção em um grupo é selecionado, sua variável é True e as variáveis dos outros botões de opção do grupo são False.
 
-The value contained in a radio button object is not saved automatically (except if it is the representation of a Boolean field); radio button values must be stored in their variables and managed with methods.
+O valor contido em um objeto de botão de opção não é salvo automaticamente (exceto se for a representação de um campo booliano); os valores dos botões de opção devem ser armazenados em suas variáveis e gerenciados com métodos.
 
 
 
 
 ## Estilos de botões
 
-Radio [button styles](properties_TextAndPicture.md#button-style) control radio button's general appearance as well as its available properties. É possível aplicar diferentes estilos predefinidos aos botões rádio. However, the same button style must be applied to all radio buttons in a group so that they work as expected.
+[Os estilos de botão](properties_TextAndPicture.md#button-style) rádio controlam a aparência geral do botão rádio, bem como suas propriedades disponíveis. É possível aplicar diferentes estilos predefinidos aos botões rádio. No entanto, o mesmo estilo de botão deve ser aplicado a todos os botões rádio em um grupo para que eles funcionem como esperado.
 
 4D fornece botões rádio nos seguintes estilos predefinidos:
 
 
 ### Clássico
 
-The Regular radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
+O estilo de botão rádio Regular é um botão sistema padrão *(ou seja,* um pequeno alvo com texto) que executa o código quando o usuário clica nele.
 
 ![](../assets/en/FormObjects/radio_regular.png)
 
-In addition to initiating code execution, the Regular radio button style changes bullsey color when being hovered.
+Além de iniciar a execução do código, o estilo do botão de opção Regular muda a cor do bullsey ao passar o mouse.
 
 
 ### Plano
 
-The Flat radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
+O estilo de botão rádio plano é um botão sistema padrão *(ou seja,* um pequeno alvo com texto) que executa o código quando o usuário clica nele.
 
 ![](../assets/en/FormObjects/radio_flat.png)
 
@@ -72,7 +72,7 @@ Por padrão, o estilo da barra de ferramentas tem um fundo transparente com um r
 
 ### Bevel
 
-The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
+O estilo de botão rádio Bevel é semelhante ao comportamento do estilo [Barra de ferramentas](#toolbar), exceto pelo fato de ter um fundo cinza-claro e um contorno cinza. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
  - *Windows* - o botão é realçado.
 
@@ -156,7 +156,7 @@ O estilo Disclosure tem o nome "roundedDisclosure" na [gramática JSON do estilo
 
 ### Personalizado
 
-The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
+O estilo de botão rádio Personalizado aceita uma imagem de fundo personalizada e permite o gerenciamento de parâmetros adicionais, como [deslocamento do ícone](properties_TextAndPicture.md#icon-offset) e [margens](properties_TextAndPicture.md#horizontal-margin).
 
 
 ## Propriedades compatíveis
