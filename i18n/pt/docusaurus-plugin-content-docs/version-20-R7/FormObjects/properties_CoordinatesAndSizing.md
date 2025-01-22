@@ -32,7 +32,7 @@ Quando essa propriedade está ativada, a altura de cada linha é calculada autom
 
 :::caution
 
-\> Como requer cálculos adicionais em tempo de execução, a opção de altura automática da linha pode afetar a fluidez da rolagem da sua caixa de listagem, principalmente quando ela contém um grande número de linhas.
+&#062; Como requer cálculos adicionais em tempo de execução, a opção de altura automática da linha pode afetar a fluidez da rolagem da sua caixa de listagem, principalmente quando ela contém um grande número de linhas.
 
 :::
 
