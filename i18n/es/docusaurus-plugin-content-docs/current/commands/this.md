@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| Parámetros | Tipo   |   | Descripción              |
-| ---------- | ------ | - | ------------------------ |
-| Resultado  | Object | ← | Elemento u objeto actual |
+| Parámetros | Tipo   |                             | Descripción              |
+| ---------- | ------ | --------------------------- | ------------------------ |
+| Resultado  | Object | &#8592; | Elemento u objeto actual |
 
 <!-- END REF-->
 
