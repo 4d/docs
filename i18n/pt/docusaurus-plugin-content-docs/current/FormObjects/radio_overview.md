@@ -16,7 +16,7 @@ Um botão radio aparece na forma de um texto seguido de um círculo. Sin embargo
 
 ## Configuração de botões radio
 
-Os botões rádio são usados em conjuntos coordenados: somente um botão de cada vez pode ser selecionado no conjunto. Para funcionar de forma coordinada, un conjunto de botones radio debe compartir la misma propiedad [Grupo radio](properties_Object.md#radio-group).
+Os botões rádio são usados em conjuntos coordenados: somente um botão de cada vez pode ser selecionado no conjunto. A seleção de um botão de rádio em um grupo define esse botão como 1 e todos os outros no grupo como 0.
 
 Os botões rádio são controlados com métodos. Como todos os botões, um botão de rádio é definido como 0 quando o formulário é aberto pela primeira vez. Um método associado a um botão de rádio é executado quando o botão é selecionado. A seguir, um exemplo de um grupo de botões de rádio usados em um banco de dados de coleção de vídeos para inserir a velocidade da gravação (SP, LP ou EP):
 
