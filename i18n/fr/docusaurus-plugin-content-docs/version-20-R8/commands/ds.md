@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ds.Params-->
 
-| Paramètres | Type                         |   | Description                            |
-| ---------- | ---------------------------- | - | -------------------------------------- |
-| localID    | Text                         | → | Identifiant local du datastore distant |
-| Résultat   | cs.DataStore | ← | Nouvelle référence de datastore        |
+| Paramètres | Type                         |                             | Description                            |
+| ---------- | ---------------------------- | --------------------------- | -------------------------------------- |
+| localID    | Text                         | &#8594; | Identifiant local du datastore distant |
+| Résultat   | cs.DataStore | &#8592; | Nouvelle référence de datastore        |
 
 <!-- END REF-->
 
