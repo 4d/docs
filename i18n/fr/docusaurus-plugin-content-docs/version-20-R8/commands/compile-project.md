@@ -9,11 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compile project.Params-->
 
-| Paramètres  | Type                    |   | Description                                                   |
-| ----------- | ----------------------- | - | ------------------------------------------------------------- |
-| projectFile | 4D.File | → | Fichier .4DProject à compiler                 |
-| options     | Object                  | → | Objet qui spécifie les options de compilation                 |
-| Résultat    | Object                  | ← | Objet contenant des informations sur le statut de compilation |
+| Paramètres  | Type                    |                             | Description                                                   |
+| ----------- | ----------------------- | --------------------------- | ------------------------------------------------------------- |
+| projectFile | 4D.File | &#8594; | Fichier .4DProject à compiler                 |
+| options     | Object                  | &#8594; | Objet qui spécifie les options de compilation                 |
+| Résultat    | Object                  | &#8592; | Objet contenant des informations sur le statut de compilation |
 
 <!-- END REF-->
 
