@@ -21,9 +21,9 @@ Vous agrandissez ou réduisez la zone de rupture en faisant glisser le taquet ve
 
 #### Grammaire JSON
 
-| Nom         | Type de données               | Valeurs possibles                                                                                                                                  |
-| ----------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| markerBreak | integer \| integer collection | Position du taquet de rupture ou collection des positions de taquets de rupture en pixels.<br/>Valeur minimale : 0 |
+| Nom         | Type de données                                       | Valeurs possibles                                                                                                                                  |
+| ----------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| markerBreak | integer &#x7c; integer collection | Position du taquet de rupture ou collection des positions de taquets de rupture en pixels.<br/>Valeur minimale : 0 |
 
 ---
 
@@ -77,9 +77,9 @@ Le formulaire peut contenir des [zones d'en-tête supplémentaires](#zones-suppl
 
 #### Grammaire JSON
 
-| Nom          | Type de données               | Valeurs possibles                                                                                                                                |
-| ------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| markerHeader | integer \| integer collection | Position du taquet d'en-tête ou collection des positions de taquets d'en-tête en pixels.<br/>Valeur minimale : 0 |
+| Nom          | Type de données                                       | Valeurs possibles                                                                                                                                |
+| ------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| markerHeader | integer &#x7c; integer collection | Position du taquet d'en-tête ou collection des positions de taquets d'en-tête en pixels.<br/>Valeur minimale : 0 |
 
 ## Zones supplémentaires
 
