@@ -187,7 +187,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 - `property`: オブジェクトのスタティックプロパティを型定義します。
 - `Function get <Name>` と `Function set <Name>`: オブジェクトの計算プロパティを定義します。
 - `Class extends <ClassName>`: 継承を定義します。
-- `This` および `Super` は特殊な用途を持つコマンドです。
+- `This` and `Super` are commands that have special features within classes.
 
 ### `Function`
 
