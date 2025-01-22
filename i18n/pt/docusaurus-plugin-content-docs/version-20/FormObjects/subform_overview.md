@@ -13,8 +13,8 @@ Para definir claramente os conceitos implementados com subformulários, aqui est
 
 *   **Subformulário**: um formulário destinado a ser incluído em outro formulário, ele próprio chamado de formulário pai.
 *   **Formulário pai**: um formulário que contém um ou mais subformulários.
-*   **Contêiner de sub**formulário: um objeto incluído no formulário pai, que exibe uma instância do subformulário.
-*   **Instância de sub**formulário: a representação de um subformulário em um formulário pai. Esse conceito é importante porque é possível exibir várias instâncias do mesmo subformulário em um formulário pai.
+*   **Contêiner de subformulário**: um objeto incluído no formulário pai, que exibe uma instância do subformulário.
+*   **Instância de subformulário**: a representação de um subformulário em um formulário pai. Esse conceito é importante porque é possível exibir várias instâncias do mesmo subformulário em um formulário pai.
 *   **Formulário lista**: instância do subformulário exibido como uma lista.
 *   **Formulário de detalhes**: formulário de entrada do tipo página associado a um subformulário do tipo lista que pode ser acessado com um clique duplo na lista.
 
