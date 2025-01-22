@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| Paramètres    | Type    |     | Description                   |
-| ------------- | ------- | :-: | ----------------------------- |
-| processNumber | Integer |  →  | Process number                |
-| Résultat      | Object  |  ←  | Informations sur le processus |
+| Paramètres    | Type    |                             | Description                   |
+| ------------- | ------- | :-------------------------: | ----------------------------- |
+| processNumber | Integer | &#8594; | Process number                |
+| Résultat      | Object  | &#8592; | Informations sur le processus |
 
 <!-- END REF -->
 
