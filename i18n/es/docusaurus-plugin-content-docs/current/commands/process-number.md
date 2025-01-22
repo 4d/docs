@@ -9,12 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process number.Params-->
 
-| Parámetros | Tipo     |   | Descripción                                                      |
-| ---------- | -------- | - | ---------------------------------------------------------------- |
-| name       | Text     | → | Nombre del proceso del que se desea obtener el número de proceso |
-| id         | Text     | → | ID del proceso del que se desea obtener el número de proceso     |
-| \*         | Operador | → | Devuelve el número de proceso del servidor                       |
-| Resultado  | Integer  | ← | Process number                                                   |
+| Parámetros | Tipo     |                             | Descripción                                                      |
+| ---------- | -------- | --------------------------- | ---------------------------------------------------------------- |
+| name       | Text     | &#8594; | Nombre del proceso del que se desea obtener el número de proceso |
+| id         | Text     | &#8594; | ID del proceso del que se desea obtener el número de proceso     |
+| \*         | Operador | &#8594; | Devuelve el número de proceso del servidor                       |
+| Resultado  | Integer  | &#8592; | Process number                                                   |
 
 <!-- END REF-->
 
