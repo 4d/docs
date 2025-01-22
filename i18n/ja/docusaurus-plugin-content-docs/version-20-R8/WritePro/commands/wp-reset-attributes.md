@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP RESET ATTRIBUTES.Params-->
 
-| 引数                  | 型          |   | 説明                                  |
-| ------------------- | ---------- | - | ----------------------------------- |
-| targetObj           | Object     | → | レンジまたは要素または4D Write Pro ドキュメント      |
-| sectionOrSubsection | Object     | → | 4D Write Pro ドキュメントのセクションまたはサブセクション |
-| attribName          | Text       | → | 削除したい属性の名前                          |
-| attribColl          | Collection | → | Collection of attributes to remove  |
+| 引数                  | 型          |                             | 説明                                  |
+| ------------------- | ---------- | --------------------------- | ----------------------------------- |
+| targetObj           | Object     | &#8594; | レンジまたは要素または4D Write Pro ドキュメント      |
+| sectionOrSubsection | Object     | &#8594; | 4D Write Pro ドキュメントのセクションまたはサブセクション |
+| attribName          | Text       | &#8594; | 削除したい属性の名前                          |
+| attribColl          | Collection | &#8594; | Collection of attributes to remove  |
 
 <!-- END REF-->
 
