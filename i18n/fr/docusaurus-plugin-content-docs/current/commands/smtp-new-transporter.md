@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SMTP New transporter.Params-->
 
-| Paramètres | Type                               |   | Description                                                                       |
-| ---------- | ---------------------------------- | - | --------------------------------------------------------------------------------- |
-| server     | Object                             | → | Informations sur le serveur de messagerie                                         |
-| Résultat   | 4D.SMTPTransporter | ← | [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) |
+| Paramètres | Type                               |                             | Description                                                                       |
+| ---------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
+| server     | Object                             | &#8594; | Informations sur le serveur de messagerie                                         |
+| Résultat   | 4D.SMTPTransporter | &#8592; | [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
 <!-- END REF-->
 
