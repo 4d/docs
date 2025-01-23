@@ -37,7 +37,7 @@ L'objet retourné contient les propriétés suivantes :
 | ID               | Integer                                 | Process unique ID                                                                |
 | name             | Text                                    | Nom du process                                                                   |
 | number           | Integer                                 | Process number                                                                   |
-| preemptive       | Boolean                                 | True if run preemptive, false otherwise                                          |
+| préemptif        | Boolean                                 | True if run preemptive, false otherwise                                          |
 | sessionID        | Text                                    | UUID de la session                                                               |
 | state            | Integer                                 | Current status. Possible values: see below       |
 | systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
