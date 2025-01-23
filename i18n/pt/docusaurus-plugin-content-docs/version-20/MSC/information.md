@@ -4,18 +4,18 @@ title: Página de informação
 sidebar_label: Página de informação
 ---
 
-The Information page provides information about the 4D and system environments, as well as the database and application files. Cada página pode ser exibida usando controles de guia na parte superior da janela.
+A página de Informação fornece informações sobre os ambientes 4D e sistema, bem como o banco de dados e os arquivos da aplicação. Cada página pode ser exibida usando controles de guia na parte superior da janela.
 
 ## Programa
 
-This page indicates the name, version and location of the application as well as the active 4D folder (for more information about the active 4D folder, refer to the description of the `Get 4D folder` command in the *4D Language Reference* manual).
+Essa página indica o nome, a versão e o local da aplicação, bem como a pasta 4D ativa (para obter mais informações sobre a pasta 4D ativa, consulte a descrição do comando `Get 4D folder` no manual *Linguagem 4D*).
 
 A parte central da janela indica o nome e local do projeto de bancos de dados e arquivos de dados assim como o arquivo de histórico (se houver). A parte inferior da janela indica o nome do titular da licença 4D, o tipo de licença e o nome de usuário do banco de dados quando ativar as senhas (ou o Designer se não for o caso).
 
-- **Display and selection of pathnames**: On the **Program** tab, pathnames are displayed in pop-up menus containing the folder sequence as found on the disk:  
-  ![](../assets/en/MSC/MSC_popup.png) If you select a menu item (disk or folder), it is displayed in a new system window. The **Copy the path** command copies the complete pathname as text to the clipboard, using the separators of the current platform.
+- **Exibição e seleção de nomes de caminho**: na guia **Programa**, os nomes de caminho são exibidos em menus pop-up que contêm a sequência de pastas conforme encontrada no disco:  
+  ![](../assets/en/MSC/MSC_popup.png) Se você selecionar um item de menu (disco ou pasta), ele será exibido em uma nova janela do sistema. O comando **Copie o caminho** copia o nome completo do caminho como texto para a área de transferência, usando os separadores da plataforma atual.
 
-- **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. All the license files installed in your 4D environment are grouped together in this folder, on your hard disk. When they are opened with a Web browser, these files display information concerning the licenses they contain and their characteristics. The location of the "Licenses" folder can vary depending on the version of your operating system. Para obter mais informações sobre a localização desta pasta, consulte o comando `Get 4D folder`. ***Note:** You can also access this folder from the “Update License” dialog box (available in the Help menu).*
+- **Pasta "Licenses"** O botão **Pasta "Licenses"** exibe o conteúdo da pasta Licenses ativa em uma nova janela do sistema. Todos os arquivos de licença instalados em seu ambiente 4D estão agrupados nessa pasta, em seu disco duro. Quando são abertos com um navegador Web, esses arquivos exibem informações sobre as licenças que contêm e suas características. O local da pasta "Licenses" pode variar conforme a versão do seu sistema operacional. Para obter mais informações sobre a localização desta pasta, consulte o comando `Get 4D folder`. ***Nota:** você também pode acessar esta pasta a partir da caixa de diálogo "Atualizar Licença" (disponível no menu Ajuda).*
 
 ## Tabelas
 
@@ -24,15 +24,15 @@ Esta página fornece uma visão geral das tabelas da sua base de dados:
 ![](../assets/en/MSC/MSC_Tables.png)
 > As informações desta página estão disponíveis nos modos standard e de manutenção.
 
-The page lists all the tables of the database (including invisible tables) as well as their characteristics:
+A página lista todas as tabelas do banco de dados (incluindo tabelas invisíveis), bem como suas características:
 
 - **ID**: número interno da tabela.
-- **Tabelas**: nome da tabela. Names of deleted tables are displayed with parenthesis (if they are still in the trash).
-- **Records**: Total number of records in the table. If a record is damaged or cannot be read, *Error* is displayed instead of the number. Neste caso, pode considerar a utilização das ferramentas de verificação e reparação.
+- **Tabelas**: nome da tabela. Os nomes das tabelas excluídas são exibidos entre parênteses (se ainda estiverem na lixeira).
+- **Registros**: número total de registros na tabela. Se um registro estiver danificado ou não puder ser lido, será exibido *Error* em vez do número. Neste caso, pode considerar a utilização das ferramentas de verificação e reparação.
 - **Campos**: número de campos na tabela. Os campos invisíveis são contados, mas os campos apagados não são contados.
 - **Indexes**: Número de índices de qualquer tipo na tabela
 - **Criptografável**: se marcado, é selecionado o atributo **Encriptable** para a tabela ao nível da estrutura (ver o parágrafo Encriptable no Manual de Design).
-- **Encrypted**: If checked, the records of the table are encrypted in the data file. **Encrypted**: If checked, the records of the table are encrypted in the data file.
+- **Criptografado**: se marcada, os registros da tabela serão criptografados no arquivo de dados. ***Nota**: qualquer inconstância entre as opções Criptografável e Criptografado exige que você verifique o estado da criptografia do arquivo de dados na página Criptografar do CSM.*
 - **Address Table Size**: Size of the address table for each table. The address table is an internal table which stores one element per record created in the table. Na verdade, associa os registos ao seu endereço físico. For performance reasons, it is not resized when records are deleted, thus its size can be different from the current number of records in the table. If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page). ***Note:** Differences between address table size and record number can also result from an incident during the cache flush.*
 
 
