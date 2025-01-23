@@ -17,11 +17,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
 
-| Paramètres | Type   |     | Description                              |
-| ---------- | ------ | :-: | ---------------------------------------- |
-| mail       | Object |  →  | Objet email                              |
-| options    | Object |  →  | Options d'encodage et de charset du mail |
-| Résultat   | Text   |  ←  | Objet email converti en MIME             |
+| Paramètres | Type   |                             | Description                              |
+| ---------- | ------ | :-------------------------: | ---------------------------------------- |
+| mail       | Object | &#8594; | Objet email                              |
+| options    | Object | &#8594; | Options d'encodage et de charset du mail |
+| Résultat   | Text   | &#8592; | Objet email converti en MIME             |
 
 <!-- END REF -->
 

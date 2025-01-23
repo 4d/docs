@@ -25,7 +25,7 @@ El método base `On Web Connection` puede utilizarse como punto de entrada al se
 
 The `On Web Connection` database method is automatically called when the server receives any URL that is not a valid path to an existing page on the server (and is not a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md)).
 
-O método da base de dados é chamado com o URL.
+The <code>On Web Connection</code> database method is automatically called when the server receives any URL that is not a path to an existing page on the server.
 
 Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no llamará al método base si la página "c.html" existe en la subcarpeta "a/b" del [WebFolder](webServerConfig.md#root-folder).
 

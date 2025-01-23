@@ -267,7 +267,7 @@ Puede forzar un retorno de carro en la etiqueta utilizando el caracter \ (barra 
 
 ![](../assets/en/FormObjects/property_title.png)
 
-Para insertar un \ en la etiqueta, ingrese "\\".
+Para insertar un \ en la etiqueta, ingrese "&#92;&#92;".
 
 Por defecto, la etiqueta se coloca en el centro del objeto. Cuando el objeto también contiene un icono, puede modificar la ubicación relativa de estos dos elementos utilizando la propiedad [Posición Título/imagen](properties_TextAndPicture.md#titlepicture-position).
 

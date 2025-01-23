@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session.Params-->
 
-| Paramètres | Type                       |   | Description   |
-| ---------- | -------------------------- | - | ------------- |
-| Résultat   | 4D.Session | ← | Objet session |
+| Paramètres | Type                       |                             | Description   |
+| ---------- | -------------------------- | --------------------------- | ------------- |
+| Résultat   | 4D.Session | &#8592; | Objet session |
 
 <!-- END REF-->
 

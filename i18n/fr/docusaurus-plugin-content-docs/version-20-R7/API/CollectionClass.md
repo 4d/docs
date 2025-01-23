@@ -2460,10 +2460,10 @@ où :
 
 - **logicalOperator** : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
 
-| Conjonction | Symbole(s)                                          |
-| ----------- | ---------------------------------------------------------------------- |
-| AND         | &, &&, and |
-| OU          | \|,\|\|, or                                                            |
+| Conjonction | Symbole(s)                                                       |
+| ----------- | ----------------------------------------------------------------------------------- |
+| AND         | &, &&, and              |
+| OU          | &#124;,&#124;&#124;, or |
 
 #### Utilisation de guillemets
 

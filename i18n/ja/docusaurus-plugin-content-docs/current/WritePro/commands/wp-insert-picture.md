@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert picture.Params-->
 
-| 引数             | 型                       |   | 説明                                                         |
-| -------------- | ----------------------- | - | ---------------------------------------------------------- |
-| targetObj      | Object                  | → | レンジまたは要素または4D Write Pro ドキュメント                             |
-| picture        | Picture                 | → | Picture field or variable, or path to picture file on disk |
-| pictureFileObj | 4D.File | → | A File object representing a picture file. |
-| mode           | Integer                 | → | Insertion mode                                             |
-| rangeUpdate    | Integer                 | → | Range update mode                                          |
-| 戻り値            | Object                  | ← | Object referencing the picture                             |
+| 引数             | 型                       |                             | 説明                                                         |
+| -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------- |
+| targetObj      | Object                  | &#8594; | レンジまたは要素または4D Write Pro ドキュメント                             |
+| picture        | Picture                 | &#8594; | Picture field or variable, or path to picture file on disk |
+| pictureFileObj | 4D.File | &#8594; | A File object representing a picture file. |
+| mode           | Integer                 | &#8594; | Insertion mode                                             |
+| rangeUpdate    | Integer                 | &#8594; | Range update mode                                          |
+| 戻り値            | Object                  | &#8592; | Object referencing the picture                             |
 
 <!-- END REF-->
 

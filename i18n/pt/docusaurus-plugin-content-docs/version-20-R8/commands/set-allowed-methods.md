@@ -9,9 +9,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 
-| Parâmetro    | Tipo       |   | Descrição             |
-| ------------ | ---------- | - | --------------------- |
-| methodsArray | Text array | → | Array of method names |
+| Parâmetro    | Tipo       |                             | Descrição             |
+| ------------ | ---------- | --------------------------- | --------------------- |
+| methodsArray | Text array | &#8594; | Array of method names |
 
 <!-- END REF-->
 

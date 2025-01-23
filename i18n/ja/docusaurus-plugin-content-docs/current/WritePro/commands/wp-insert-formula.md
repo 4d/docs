@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert formula.Params-->
 
-| 引数          | 型      |   | 説明                                                         |
-| ----------- | ------ | - | ---------------------------------------------------------- |
-| targetObj   | Object | → | レンジまたは要素または4D Write Pro ドキュメント                             |
-| formula     | Object | → | Formula object OR Object with formula and name properties  |
-| mode        | Number | → | Insertion mode                                             |
-| rangeUpdate | Number | → | Includes or excludes the inserted content within the range |
-| 戻り値         | Object | ← | Text range object reprsenting the result of the formula    |
+| 引数          | 型      |                             | 説明                                                         |
+| ----------- | ------ | --------------------------- | ---------------------------------------------------------- |
+| targetObj   | Object | &#8594; | レンジまたは要素または4D Write Pro ドキュメント                             |
+| formula     | Object | &#8594; | Formula object OR Object with formula and name properties  |
+| mode        | Number | &#8594; | Insertion mode                                             |
+| rangeUpdate | Number | &#8594; | Includes or excludes the inserted content within the range |
+| 戻り値         | Object | &#8592; | Text range object reprsenting the result of the formula    |
 
 <!-- END REF-->
 

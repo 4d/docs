@@ -6,13 +6,13 @@ sidebar_label: Página análise de atividades
 
 A página Análise da atividade permite visualizar o conteúdo do ficheiro de registo atual. Esta função é útil para analisar o uso de um banco de dados ou detectar as operações que causaram erros ou mal funcionamento. No caso de um banco de dados em modo cliente-servidor, permite verificar as operações realizadas por cada máquina cliente.
 
-> It is also possible to rollback the operations carried out on the data of the database. Para más información, consulte [Página de retroceso](rollback.md).
+> Também é possível reverter as operações realizadas nos dados do banco de dados. Para más información, consulte [Página de retroceso](rollback.md).
 
 ![](../assets/en/MSC/MSC_analysis.png)
 
 Cada operação registada no ficheiro de registo aparece como uma linha. As colunas fornecem várias informações sobre a operação. Pode reorganizar as colunas conforme pretendido, clicando nos respectivos cabeçalhos.
 
-This information allows you to identify the source and context of each operation:
+Essas informações permitem que você identifique a origem e o contexto de cada operação:
 
 - **Operación**: número de secuencia de la operación en el archivo de historial.
 

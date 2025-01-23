@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process activity.Params-->
 
-| Parâmetro | Tipo    |   | Descrição                                                                              |
-| --------- | ------- | - | -------------------------------------------------------------------------------------- |
-| sessionID | Text    | → | Session ID                                                                             |
-| options   | Integer | → | Return options                                                                         |
-| Resultado | Object  | ← | Snapshot of running processes and/or (4D Server only) user sessions |
+| Parâmetro | Tipo    |                             | Descrição                                                                              |
+| --------- | ------- | --------------------------- | -------------------------------------------------------------------------------------- |
+| sessionID | Text    | &#8594; | Session ID                                                                             |
+| options   | Integer | &#8594; | Return options                                                                         |
+| Resultado | Object  | &#8592; | Snapshot of running processes and/or (4D Server only) user sessions |
 
 <!-- END REF-->
 

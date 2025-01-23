@@ -52,9 +52,9 @@ Tenga en cuenta que la conversión de ida y vuelta puede conducir a un resultado
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos | Valores posibles              |
-| ------------ | -------------- | ----------------------------- |
-| headerHeight | string         | decimales positivos +px \| em |
+| Nombre       | Tipos de datos | Valores posibles                                      |
+| ------------ | -------------- | ----------------------------------------------------- |
+| headerHeight | string         | decimales positivos +px &#124; em |
 
 #### Objetos soportados
 

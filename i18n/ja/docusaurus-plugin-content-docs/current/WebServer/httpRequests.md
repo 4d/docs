@@ -25,7 +25,7 @@ You can also implement your own HTTP request handlers for a customized control o
 
 The `On Web Connection` database method is automatically called when the server receives any URL that is not a valid path to an existing page on the server (and is not a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md)).
 
-データベースメソッドは、URL とともに呼び出されます。
+<code>On Web Connection</code> データベースメソッドは、サーバー上に存在しないページへのパスをサーバーが URL として受け取った場合に、自動的に呼び出されます。
 
 たとえば、"_a/b/c_" という URL はデータベースメソッドを呼び出しますが、[WebFolder](webServerConfig.md#ルートフォルダー) の "a/b" サブフォルダーに "c.html" というページが存在する場合、"_a/b/c.html_" はデータベースメソッドを呼び出しません。
 
@@ -150,7 +150,7 @@ WEB SEND BLOB($BLOB;"image/png")
 
 ### 4DACTION を使用してフォームをポスト
 
-4D Webサーバーでは、ポストされたフォームを使用することもできます。これはスタティックなページから Webサーバーにデータを送信し、すべての値を簡単に取得するというものです。 POSTタイプを使用し、フォームのアクションは /4DACTION/MethodName で始まっていなければなりません。
+4D Webサーバーでは、ポストされたフォームを使用することもできます。 これはスタティックなページから Webサーバーにデータを送信し、すべての値を簡単に取得するというものです。 POSTタイプを使用し、フォームのアクションは /4DACTION/MethodName で始まっていなければなりません。
 
 フォームは 2つのメソッドを使用してサブミットできます (4D では両方のタイプを使用できます):
 

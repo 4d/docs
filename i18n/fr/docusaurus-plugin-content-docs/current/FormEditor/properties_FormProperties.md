@@ -32,9 +32,9 @@ Un fichier CSS défini au niveau du formulaire remplacera la ou les feuilles de 
 
 #### Grammaire JSON
 
-| Nom | Type de données      | Valeurs possibles                                                                                                                                                                                                                                                                                                               |
-| --- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css | string ou collection | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \| "win"} objects </li> |
+| Nom | Type de données      | Valeurs possibles                                                                                                                                                                                                                                                                                                                                       |
+| --- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css | string ou collection | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
 
 ---
 

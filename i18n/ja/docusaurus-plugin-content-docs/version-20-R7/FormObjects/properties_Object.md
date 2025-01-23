@@ -282,7 +282,7 @@ When using 4D’s language, you can refer to an active form object by its object
 
 ![](../assets/en/FormObjects/property_title.png)
 
-ラベルに \ を表示したい場合は \\ と入力します。
+ラベルに \ を表示したい場合は &#92;&#92; と入力します。
 
 デフォルトでラベルはオブジェクトの中央に置かれます。 When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) property.
 

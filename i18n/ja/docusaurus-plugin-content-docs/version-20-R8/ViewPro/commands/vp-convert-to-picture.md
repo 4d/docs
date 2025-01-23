@@ -40,7 +40,7 @@ title: VP Convert to picture
 - 行高さ
 - カラム幅
 - 非表示のカラム / 行
-  \> 枠線の表示状態は <a href="#vp-set-print-info">VP SET PRINT INFO</a> で定義されたドキュメント属性に依存します。
+  &#062; 枠線の表示状態は <a href="#vp-set-print-info">VP SET PRINT INFO</a> で定義されたドキュメント属性に依存します。
 
 > 枠線の表示状態は [VP SET PRINT INFO](vp-set-print-info.md) で定義されたドキュメント属性に依存します。
 

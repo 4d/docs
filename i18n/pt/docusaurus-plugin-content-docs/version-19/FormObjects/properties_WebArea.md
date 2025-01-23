@@ -87,7 +87,7 @@ Essa opção permite escolher entre dois mecanismos de renderização para a ár
 O motor Blink tem as seguintes limitações:
 
 - [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html): o uso desse comando requer que pelo menos uma página já esteja carregada na área (por uma chamada para [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) ou uma atribuição à variável URL associada à área).
-- Quando os drops de URL são ativados pelo seletor `WA enable URL drop` do comando [WA SET PREFERENCE]](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html), o primeiro drop deve ser precedido por pelo menos uma chamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) ou uma atribuição à variável de URL associada à área.
+- Quando os drops de URL são ativados pelo seletor `WA enable URL drop` do comando \[WA SET PREFERENCE]\](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html), o primeiro drop deve ser precedido por pelo menos uma chamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) ou uma atribuição à variável de URL associada à área.
 
 #### Gramática JSON
 

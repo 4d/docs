@@ -52,9 +52,9 @@ _(font Arial 12)_: 3 píxeles -> 0,4 línea redondeada a 1 línea -> 19 píxeles
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos | Valores posibles              |
-| ------------ | -------------- | ----------------------------- |
-| footerHeight | string         | decimales positivos +px \| em |
+| Nombre       | Tipos de datos | Valores posibles                                      |
+| ------------ | -------------- | ----------------------------------------------------- |
+| footerHeight | string         | decimales positivos +px &#124; em |
 
 #### Objetos soportados
 

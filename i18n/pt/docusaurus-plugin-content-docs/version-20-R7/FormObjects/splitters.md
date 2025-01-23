@@ -59,4 +59,4 @@ A cada separador se le asocia una [variable](properties_Object.md#variable-or-ex
 - Se o valor for positivo: o divisor foi movido para a parte inferior ou para a direita,
 - Se o valor for 0: o divisor foi movido para a sua posição original.
 
-Você também pode mover o divisor de forma programática: basta definir o valor da variável associada. Por ejemplo, si un separador vertical está asociado a una variable llamada `split1`, y si se ejecuta la siguiente sentencia:`split1:=-10`, el separador se moverá 10 píxeles a la izquierda - como si el usuario lo hiciera manualmente. A movimentação é de fato realizada no final da execução do formulário ou método objeto que contém a declaração.
+Você também pode mover o divisor de forma programática: basta definir o valor da variável associada. Você também pode mover o divisor de forma programática: basta definir o valor da variável associada. A movimentação é de fato realizada no final da execução do formulário ou método objeto que contém a declaração.

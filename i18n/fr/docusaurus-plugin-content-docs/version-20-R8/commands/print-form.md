@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print form.Params-->
 
-| Paramètres | Type         |   | Description                                                                                                                                                                              |
-| ---------- | ------------ | - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable     | Table        | → | Table owning the form, or Default table, if omitted                                                                                                                                      |
-| form       | Text, Object | → | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
-| formData   | Object       | → | Données à associer au formulaire                                                                                                                                                         |
-| areaStart  | Integer      | → | Print marker, or Beginning area (if areaEnd is specified)                                                                                                             |
-| areaEnd    | Integer      | → | Ending area (if areaStart specified)                                                                                                                                  |
-| Résultat   | Integer      | ← | Height of printed section                                                                                                                                                                |
+| Paramètres | Type         |                             | Description                                                                                                                                                                              |
+| ---------- | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| aTable     | Table        | &#8594; | Table owning the form, or Default table, if omitted                                                                                                                                      |
+| form       | Text, Object | &#8594; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
+| formData   | Object       | &#8594; | Données à associer au formulaire                                                                                                                                                         |
+| areaStart  | Integer      | &#8594; | Print marker, or Beginning area (if areaEnd is specified)                                                                                                             |
+| areaEnd    | Integer      | &#8594; | Ending area (if areaStart specified)                                                                                                                                  |
+| Résultat   | Integer      | &#8592; | Height of printed section                                                                                                                                                                |
 
 <!-- END REF-->
 

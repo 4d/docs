@@ -9,9 +9,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Params-->
 
-| Parámetros | Tipo    |   | Descripción       |
-| ---------- | ------- | - | ----------------- |
-| Resultado  | Integer | ← | Form event number |
+| Parámetros | Tipo    |                             | Descripción       |
+| ---------- | ------- | --------------------------- | ----------------- |
+| Resultado  | Integer | &#8592; | Form event number |
 
 <!-- END REF-->
 

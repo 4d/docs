@@ -2403,10 +2403,10 @@ donde:
 
 - **logicalOperator**: utilizado para unir condiciones múltiples en la búsqueda (opcional). Puede utilizar uno de los siguientes operadores lógicos (se puede utilizar el nombre o el símbolo):
 
-| Conjunción | Símbolo(s)                                          |
-| ---------- | ---------------------------------------------------------------------- |
-| AND        | &, &&, and |
-| O          | \|,\|\|, or                                                            |
+| Conjunción | Símbolo(s)                                                       |
+| ---------- | ----------------------------------------------------------------------------------- |
+| AND        | &, &&, and              |
+| O          | &#124;,&#124;&#124;, or |
 
 #### Utilizar comillas
 

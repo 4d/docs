@@ -51,9 +51,9 @@ _(font Arial 18)_: 52 pixels -> 2 lines -> 40 pixels _(font Arial 12)_: 3 pixels
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados | Valores possíveis             |
-| ------------ | ------------- | ----------------------------- |
-| footerHeight | string        | décimales positives +px \| em |
+| Nome         | Tipo de dados | Valores possíveis                                     |
+| ------------ | ------------- | ----------------------------------------------------- |
+| footerHeight | string        | décimales positives +px &#124; em |
 
 #### Objectos suportados
 

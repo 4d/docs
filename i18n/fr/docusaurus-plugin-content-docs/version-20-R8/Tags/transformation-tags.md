@@ -330,10 +330,10 @@ Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression
 
 Par exemple, voici les résultats du traitement de la variable texte 4D myvar avec les balises disponibles :
 
-| valeur de myvar | Balises                | Résultat                    |
-| --------------- | ---------------------- | --------------------------- |
-| `myvar:="<B>"`  | `<!--#4DTEXT myvar-->` | `&amp;lt;B&amp;gt;` |
-| `myvar:="<B>"`  | `<!--#4DHTML myvar-->` | `<B>`                       |
+| valeur de myvar | Balises                | Résultat                            |
+| --------------- | ---------------------- | ----------------------------------- |
+| `myvar:="<B>"`  | `<!--#4DTEXT myvar-->` | `&amp;amp;lt;B&amp;amp;gt;` |
+| `myvar:="<B>"`  | `<!--#4DHTML myvar-->` | `<B>`                               |
 
 In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar--> : ## error # error code`.
 

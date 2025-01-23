@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Session info.Params -->
 
-| 引数        | 型       |     | 説明          |
-| --------- | ------- | :-: | ----------- |
-| sessionID | Integer |  →  | セッションID     |
-| 戻り値       | Object  |  ←  | セッションに関する情報 |
+| 引数        | 型       |                             | 説明          |
+| --------- | ------- | :-------------------------: | ----------- |
+| sessionID | Integer | &#8594; | セッションID     |
+| 戻り値       | Object  | &#8592; | セッションに関する情報 |
 
 <!-- END REF -->
 
