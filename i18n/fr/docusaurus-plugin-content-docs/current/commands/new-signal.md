@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New signal.Params-->
 
-| Paramètres  | Type                      |   | Description                  |
-| ----------- | ------------------------- | - | ---------------------------- |
-| Description | Text                      | → | Description du signal        |
-| Résultat    | 4D.Signal | ← | Object encapsulant le signal |
+| Paramètres  | Type                      |                             | Description                  |
+| ----------- | ------------------------- | --------------------------- | ---------------------------- |
+| Description | Text                      | &#8594; | Description du signal        |
+| Résultat    | 4D.Signal | &#8592; | Object encapsulant le signal |
 
 <!-- END REF-->
 
