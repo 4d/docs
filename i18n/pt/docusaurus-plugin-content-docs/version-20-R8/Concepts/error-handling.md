@@ -17,7 +17,7 @@ Basicamente, há duas maneiras de lidar com erros em 4D. Pode:
 
 :::tip Boas práticas
 
-\> > É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. Quando o servidor 4D não estiver executando [headless](../Admin/cli.md) (ou seja, inicializado com sua [janela de administração](.. ServerWindow/overview.md)), este método evitaria caixas de diálogo inesperadas a serem exibidas na máquina do servidor. No modo headless, erros são registrados no [arquivo 4DDebugLog](../Depuring/debugLogFiles.md#4ddebuglogtxt-standard) para análise posterior.
+&#062; &#062; É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. Quando o servidor 4D não estiver executando [headless](../Admin/cli.md) (ou seja, inicializado com sua [janela de administração](.. ServerWindow/overview.md)), este método evitaria caixas de diálogo inesperadas a serem exibidas na máquina do servidor. No modo headless, erros são registrados no [arquivo 4DDebugLog](../Depuring/debugLogFiles.md#4ddebuglogtxt-standard) para análise posterior.
 
 :::
 

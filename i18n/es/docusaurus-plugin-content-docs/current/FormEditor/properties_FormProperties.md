@@ -13,7 +13,7 @@ Esta propiedad define el esquema de colores para el formulario. Esta propiedad d
 
 - dark -- texto claro sobre fondo oscuro
 - light - dark text on a light background
-  \> A defined color scheme can not be overridden by a CSS.
+  &#062; A defined color scheme can not be overridden by a CSS.
 
 > El número de caracteres para el título de una ventana está limitado a 31.
 

@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.IMAP New transporter.Params -->
 
-| 引数     | 型                                  |     | 説明                                                                                |
-| ------ | ---------------------------------- | :-: | --------------------------------------------------------------------------------- |
-| server | Object                             |  →  | メールサーバー情報                                                                         |
-| 戻り値    | 4D.IMAPTransporter |  ←  | [IMAP transporter オブジェクト](../API/IMAPTransporterClass.md#imap-transporter-object) |
+| 引数     | 型                                  |                             | 説明                                                                                |
+| ------ | ---------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
+| server | Object                             | &#8594; | メールサーバー情報                                                                         |
+| 戻り値    | 4D.IMAPTransporter | &#8592; | [IMAP transporter オブジェクト](../API/IMAPTransporterClass.md#imap-transporter-object) |
 
 <!-- END REF -->
 

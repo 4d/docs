@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Params-->
 
-| Parâmetro | Tipo   |   | Descrição                     |
-| --------- | ------ | - | ----------------------------- |
-| Resultado | Object | ← | Form data of the current form |
+| Parâmetro | Tipo   |                             | Descrição                     |
+| --------- | ------ | --------------------------- | ----------------------------- |
+| Resultado | Object | &#8592; | Form data of the current form |
 
 <!-- END REF-->
 

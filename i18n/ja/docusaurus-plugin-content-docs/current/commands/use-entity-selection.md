@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 
-| 引数              | 型                                  |   | 説明           |
-| --------------- | ---------------------------------- | - | ------------ |
-| entitySelection | 4D.EntitySelection | → | エンティティセレクション |
+| 引数              | 型                                  |                             | 説明           |
+| --------------- | ---------------------------------- | --------------------------- | ------------ |
+| entitySelection | 4D.EntitySelection | &#8594; | エンティティセレクション |
 
 <!-- END REF-->
 

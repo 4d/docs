@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Add picture.Params-->
 
-| 引数             | 型                       |   | 説明                                                         |
-| -------------- | ----------------------- | - | ---------------------------------------------------------- |
-| wpDoc          | Object                  | → | 4D Write Pro ドキュメント                                        |
-| picture        | Picture                 | → | 4D picture                                                 |
-| picturePath    | Text                    | → | Picture path                                               |
-| pictureFileObj | 4D.File | → | 4D.File object representing a picture file |
-| 戻り値            | Object                  | ← | Object referencing the picture                             |
+| 引数             | 型                       |                             | 説明                                                         |
+| -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------- |
+| wpDoc          | Object                  | &#8594; | 4D Write Pro ドキュメント                                        |
+| picture        | Picture                 | &#8594; | 4D picture                                                 |
+| picturePath    | Text                    | &#8594; | Picture path                                               |
+| pictureFileObj | 4D.File | &#8594; | 4D.File object representing a picture file |
+| 戻り値            | Object                  | &#8592; | Object referencing the picture                             |
 
 <!-- END REF-->
 

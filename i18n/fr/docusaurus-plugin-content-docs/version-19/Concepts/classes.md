@@ -172,7 +172,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-Il n'y a pas de mot-clé de fin pour le code d'une fonction. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de la classe.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
 
 :::
 
@@ -279,11 +279,12 @@ $area:=$rect.getArea() //5000
 Class Constructor({$parameterName : type; ...})
 // code
 // code
+// code
 ```
 
 :::note
 
-Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de la classe.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
 
 :::
 
@@ -410,6 +411,11 @@ Class constructor($width : Integer; $height : Integer)
 
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+ $0:=(This.height)*(This.width)
 
 // Function definition
 Function getArea()

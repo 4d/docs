@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert document body.Params-->
 
-| 引数          | 型       |   | 説明                                                       |
-| ----------- | ------- | - | -------------------------------------------------------- |
-| targetObj   | Object  | → | レンジまたは要素または4D Write Pro ドキュメント                           |
-| wpDoc       | Object  | → | 4D Write Pro ドキュメント                                      |
-| mode        | Integer | → | Insertion mode                                           |
-| rangeUpdate | Integer | → | Range update mode                                        |
-| 戻り値         | Object  | ← | Text range object referencing the inserted document body |
+| 引数          | 型       |                             | 説明                                                       |
+| ----------- | ------- | --------------------------- | -------------------------------------------------------- |
+| targetObj   | Object  | &#8594; | レンジまたは要素または4D Write Pro ドキュメント                           |
+| wpDoc       | Object  | &#8594; | 4D Write Pro ドキュメント                                      |
+| mode        | Integer | &#8594; | Insertion mode                                           |
+| rangeUpdate | Integer | &#8594; | Range update mode                                        |
+| 戻り値         | Object  | &#8592; | Text range object referencing the inserted document body |
 
 <!-- END REF-->
 

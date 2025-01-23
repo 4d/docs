@@ -323,7 +323,7 @@ se convierte en
 
 `variable2:=variable1`
 
-Esta función es extremadamente útil para invertir un conjunto de asignaciones utilizadas para obtener o definir propiedades, o para corregir errores de entrada. Para utilizar esta función, seleccione la(s) línea(s) que desea modificar y, a continuación, elija **Método** > **Intercambiar expresión** o utilice el menú contextual del área. To use this function, select the line(s) to be modified, then choose <strong x-id="1">Method</strong> > <strong x-id="1">Swap Expression</strong> or use the context menu of the area.
+Esta función es extremadamente útil para invertir un conjunto de asignaciones utilizadas para obtener o definir propiedades, o para corregir errores de entrada. Para utilizar esta función, seleccione la(s) línea(s) que desea modificar y, a continuación, elija **Método** > **Intercambiar expresión** o utilice el menú contextual del área. To use this function, select the line(s) to be modified, then choose <strong x-id="1">Method</strong> &#062; <strong x-id="1">Swap Expression</strong> or use the context menu of the area.
 
 ### Portapapeles
 

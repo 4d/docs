@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| 引数              | 型                         |     | 説明                                                                                                                |
-| --------------- | ------------------------- | :-: | ----------------------------------------------------------------------------------------------------------------- |
-| fileToZip       | 4D.File   |  →  | 圧縮する File または Folder オブジェクト                                                                                       |
-| folderToZip     | 4D.Folder |  →  | 圧縮する File または Folder オブジェクト                                                                                       |
-| zipStructure    | Object                    |  →  | 圧縮する File または Folder オブジェクト                                                                                       |
-| destinationFile | 4D.File   |  →  | アーカイブの保存先ファイル                                                                                                     |
-| options         | Integer                   |  →  | *folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう) |
-| 戻り値             | Object                    |  ←  | ステータスオブジェクト                                                                                                       |
+| 引数              | 型                         |                             | 説明                                                                                                                |
+| --------------- | ------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------- |
+| fileToZip       | 4D.File   | &#8594; | 圧縮する File または Folder オブジェクト                                                                                       |
+| folderToZip     | 4D.Folder | &#8594; | 圧縮する File または Folder オブジェクト                                                                                       |
+| zipStructure    | Object                    | &#8594; | 圧縮する File または Folder オブジェクト                                                                                       |
+| destinationFile | 4D.File   | &#8594; | アーカイブの保存先ファイル                                                                                                     |
+| options         | Integer                   | &#8594; | *folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう) |
+| 戻り値             | Object                    | &#8592; | ステータスオブジェクト                                                                                                       |
 
 <!-- END REF -->
 

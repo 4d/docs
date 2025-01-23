@@ -950,10 +950,10 @@ Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto est
   - no caso de uma pesquisa com um comparador IN, *valor* deve ser uma coleção, ou valores que coincidam com o tipo da rota do atributo entre \[ ] separados por vírgulas (para as strings, os caracteres `"` devem ser escapados com `\`).
 - **logicalOperator**: usado para participar de múltiplas condições na consulta (opcional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
 
-| Conjunção | Símbolos                                                               |
-| --------- | ---------------------------------------------------------------------- |
-| AND       | &, &&, and |
-| OU        | \|,\|\|, or                                                            |
+| Conjunção | Símbolos                                                                            |
+| --------- | ----------------------------------------------------------------------------------- |
+| AND       | &, &&, and              |
+| OU        | &#124;,&#124;&#124;, or |
 
 - **ordem por attributePath**: você pode incluir uma ordem pela instrução *attributePath* na consulta, para que os dados resultantes sejam classificados de acordo com essa afirmação. Você pode usar várias ordens por declarações, separadas por vírgulas (por exemplo, ordem por *attributePath1* desc, *attributePath2* ascens). Como padrão, a ordem é ascendente. Passe 'desc'' para definir uma ordem descendente e 'asc' para definir uma ordem ascendente.
 

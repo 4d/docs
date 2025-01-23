@@ -136,8 +136,7 @@ No formulário pai, o subformulário é apresentado duas vezes. Cada contenedor 
 El botón sólo crea las propiedades `mother` y `father` en el objeto `Form` del padre:
 
 ```4d
-//Método de objeto do botão Adicionar valores
-Form.mother:=New object("lastname"; "Hotel"; "firstname"; "Anne")
+//Método de objeto do botão Adicionar valores Form.mother:=New object("lastname"; "Hotel"; "firstname"; "Anne")
 Form.father:=New object("lastname"; "Golf"; "firstname"; "Félix")
 ```
 
