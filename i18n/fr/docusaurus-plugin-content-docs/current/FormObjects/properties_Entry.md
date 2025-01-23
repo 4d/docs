@@ -114,8 +114,8 @@ Ce tableau explique chaque filtre présent dans la liste déroulante Filtre de s
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                                                          |
-| ----------- | --------------- | ------------------------------------------------------------------------------------------ |
+| Nom         | Type de données | Valeurs possibles                                                                              |
+| ----------- | --------------- | ---------------------------------------------------------------------------------------------- |
 | entryFilter | string          | <li>Entry filter code</li> or <li>Entry filter name (filter names start with &#124; )</li> |
 
 #### Objets pris en charge
