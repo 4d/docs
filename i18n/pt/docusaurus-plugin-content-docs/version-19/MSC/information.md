@@ -33,18 +33,18 @@ A página lista todas as tabelas do banco de dados (incluindo tabelas invisívei
 - **Indexes**: Número de índices de qualquer tipo na tabela
 - **Criptografável**: se marcado, é selecionado o atributo **Encriptable** para a tabela ao nível da estrutura (ver o parágrafo Encriptable no Manual de Design).
 - **Criptografado**: se marcada, os registros da tabela serão criptografados no arquivo de dados. ***Nota**: qualquer inconstância entre as opções Criptografável e Criptografado exige que você verifique o estado da criptografia do arquivo de dados na página Criptografar do CSM.*
-- **Address Table Size**: Size of the address table for each table. The address table is an internal table which stores one element per record created in the table. Na verdade, associa os registos ao seu endereço físico. For performance reasons, it is not resized when records are deleted, thus its size can be different from the current number of records in the table. If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page). ***Note:** Differences between address table size and record number can also result from an incident during the cache flush.*
+- **Tamanho da tabela endereços**: tamanho da tabela de endereços para cada tabela. A tabela de endereços é uma tabela interna que armazena um elemento por registro criado na tabela. Na verdade, associa os registos ao seu endereço físico. Por motivos de desempenho, ele não é redimensionado quando os registros são excluídos, portanto, seu tamanho pode diferir do número atual de registros na tabela. Se essa diferença for significativa, uma operação de compactação de dados com a opção "Compactar tabela de endereços" marcada poderá ser executada para otimizar o tamanho da tabela de endereços (consulte a página [Compactar](compact.md)). ***Nota:** as diferenças entre tamanho da tabela de endereço e número de registro também podem resultar de um incidente durante a gravação do cache no disco.*
 
 ## Dados
 
-The **Data** page provides information about the available and used storage space in the data file.
+A página **Dados** fornece informações sobre o espaço disponível e usado no arquivo de dados.
 > Esta página não pode ser acedida em modo manutenção
 
 As informações são fornecidas sob a forma de gráficos:
 
 ![](../assets/en/MSC/MSC_Data.png)
-> This page does not take into account any data that may be stored outside of the data file (see "External storage").
+> Esta página não considera nenhum dado que possa estar armazenado fora do arquivo de dados (consulte "Armazenamento externo").
 
-Arquivos que são muito fragmentados reduzem o desempenho do disco e, assim, do banco de dados. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](../assets/en/MSC/MSC_infowarn.png)
+Arquivos que são muito fragmentados reduzem o desempenho do disco e, assim, do banco de dados. Se a taxa de ocupação for muito baixa, 4D indicará isso por um ícone de aviso (exibido no botão Informações e na guia do tipo de arquivo correspondente) e especificará que a compactação é necessária:![](../assets/en/MSC/MSC_infowarn.png)
 
-A warning icon is also displayed on the button of the [Compact](compact.md) page: ![](../assets/en/MSC/MSC_compactwarn.png)
+Um ícone de aviso também é exibido no botão da página [Compactar](compact.md): ![](../assets/en/MSC/MSC_compactwarn.png)
