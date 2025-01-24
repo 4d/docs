@@ -19,7 +19,7 @@ In the following example, a break point (the red bullet) has been set, in the de
 
 ![break-point](../assets/en/Debugging/break.png)
 
-Dans l'exemple ci-dessus, en cliquant sur le bouton [**No Trace**](./debugger.md/#no-trace), l'exécution normale reprend jusqu'à la ligne marquée avec le point d'arrêt. Cette ligne n'est pas exécutée - vous retournez en mode trace. Le fait de définir un point d'arrêt au-delà du compteur du programme et de cliquer sur le bouton **No Trace** vous permet de sauter des parties de la méthode tracée.
+In the above example, clicking the [**No Trace**](./debugger.md#no-trace) button resumes normal execution up to the line marked with the break point. Cette ligne n'est pas exécutée - vous retournez en mode trace. Le fait de définir un point d'arrêt au-delà du compteur du programme et de cliquer sur le bouton **No Trace** vous permet de sauter des parties de la méthode tracée.
 
 Pour supprimer un point d'arrêt, cliquez sur la puce correspondante.
 
