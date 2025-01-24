@@ -17,15 +17,15 @@ Essas informações permitem que você identifique a origem e o contexto de cada
 - **Operación**: número de secuencia de la operación en el archivo de historial.
 
 - **Acción**: tipo de operación realizada sobre los datos. Esta coluna pode conter uma das seguintes operações:
-  - Abertura de ficheiro de dados: Abertura de um ficheiro de dados.
+  - Abertura de ficheiro de dados: abertura de um ficheiro de dados.
   - Encerramento do ficheiro de dados: encerramento de um ficheiro de dados aberto.
   - Criação de um contexto: criação de um processo que especifica um contexto de execução.
   - Encerramento de um contexto: encerramento de um processo.
   - Adição: Criação e armazenamento de um registo.
   - Adicionar um BLOB: armazenamento de um BLOB num campo BLOB.
-  - Eliminação: Eliminação de um registo.
+  - Eliminação: eliminação de um registo.
   - Modificação: modificação de um registo.
-  - Início da transação: A transação foi iniciada.
+  - Início da transação: a transação foi iniciada.
   - Validação da transação: transação validada.
   - Cancelamento da transação: transação cancelada.
   - Contexto de actualización: cambio de datos adicionales (por ejemplo, una llamada a `CHANGE CURRENT USER` o `SET USER ALIAS`).
@@ -42,9 +42,10 @@ Essas informações permitem que você identifique a origem e o contexto de cada
 
 - **Usuario sistema**: nombre del sistema del usuario que realizó la operación. Em modo cliente-servidor, o nome da máquina do lado do cliente é exibido; em modo monousuário, a ID do usuário é exibida.
 
-- **Usuario 4D**: nombre de usuario 4D del usuario que ha realizado la operación. If an alias is defined for the user, the alias is displayed instead of the 4D user name.
+- **Usuario 4D**: nombre de usuario 4D del usuario que ha realizado la operación. Se um alias for definido para o usuário, o alias será exibido em vez do nome de usuário 4D.
 
 - **Valores**: valores de los campos del registro en caso de adición o de modificación. Os valores são separados por ";". Only values represented in alphanumeric form are displayed.\
+  Only values represented in alphanumeric form are displayed.\
   ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
 
 - **Registros**: número del registro.
