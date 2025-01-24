@@ -39,7 +39,7 @@ O subformulário na página utiliza o formulário de entrada indicado pela propr
 
 ### Utilizar a variável ou expressão ligada
 
-Você pode vincular [uma variável ou uma expressão](properties_Object.md#variable-or-expression) a um objeto de contêiner de subformulação. Isso é muito útil para sincronizar valores do formulário principal e de seus subformulários.
+Você pode vincular [uma variável ou uma expressão](properties_Object.md#variable-or-expression) a um objeto de contêiner de subformulação. Isso é muito útil para sincronizar valores do formulário principal e de seus subformulários. Isso é muito útil para sincronizar valores do formulário principal e de seus subformulários.
 
 Por padrão, 4D cria uma variável ou expressão de [tipo de objeto](properties_Object.md#expression-type) para um contêiner de subformulário, que lhe permite compartilhar valores no contexto do subformulário usando o comando `Form` ([veja abaixo](#using-the-subform-bound-object)). No entanto, você pode usar uma variável ou expressão de qualquer tipo escalar (tempo, inteiro, etc.) especialmente se você só precisa compartilhar um único valor:
 
