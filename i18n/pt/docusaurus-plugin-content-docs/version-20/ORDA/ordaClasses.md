@@ -36,7 +36,7 @@ Além disso, 4D [pré-criou automaticamente](#creating-classes) as classes para 
 
 ## Arquitetura
 
-A ORDA fornece **classes genéricas** expostas através da loja de classes **`4D`** [](Concepts/classes.md#class-stores), bem como **classes de utilizador** (que estendem as classes genéricas) expostas na loja de classes **`cs`** [](Concepts/classes.md#class-stores):
+ORDA fornece **classes genéricas** expostas através da [class store](Concepts/classes.md#class-stores) **`4D`**, bem como **user classes** (que estendem as classes genéricas) expostas na [class store](Concepts/classes.md#class-stores) **`cs`**:
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
