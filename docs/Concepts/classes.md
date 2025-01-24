@@ -166,7 +166,7 @@ When a class is [defined](#class-definition) in the project, it is loaded in the
 - [`new()`](API/ClassClass.md#new) function, allowing to instantiate class objects
 - [`isShared`](API/ClassClass.md#isshared) property, true if the class is [shared](#shared-classes)
 - [`isSingleton`](API/ClassClass.md#issingleton) property, true if the class defines a [singleton](#singleton-classes).
-- [`isSectionSingleton`](API/ClassClass.md#issectionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
+- [`isSessionSingleton`](API/ClassClass.md#issessionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
 - [`me`](API/ClassClass.md#me) property, allowing to instantiate and access [singletons](#singleton-classes).
 
 In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
