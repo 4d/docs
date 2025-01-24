@@ -227,7 +227,7 @@ Además de los caracteres y códigos especiales descritos en las secciones anter
 | ^                      | Circunflejo                                                                                                                 | #\^#                                        |
 | '                      | Apostrofe                                                                                                                   | '######                                      |
 | { }                    | Paréntesis curvos                                                                                                           | {###,###,###}                                |
-| `< >`                  | Signos menor que y mayor que                                                                                                | ## >#\\#                                    |
+| `< >`                  | Signos menor que y mayor que                                                                                                | ## >#\\\#                                  |
 | =                      | Signo igual                                                                                                                 | #+#=##                                       |
 | /                      | Barra inclinada hacia adelante. Cuando se utiliza con números, los muestra como fracciones. | mm/dd/yyyy                                   |
 | !                      | Signo de exclamación                                                                                                        | $###.00!                     |
