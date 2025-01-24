@@ -18,7 +18,7 @@ Un atributo es la celda de almacenamiento más pequeña de una base de datos rel
 - Num objeto dataclass, cada propriedade é um atributo de dataclass que corresponde a um campo na tabela correspondente (mesmo nome e tipo).
 - Num objeto entity, os atributos de entidades são propriedades que contêm os valores para os atributos do datastore correspondentes.
 
-> Attributes and properties are similar concepts. "Atributo" é utilizado para designar as propriedades da dataclass que armazenam os dados, enquanto "propriedade" é mais genérico e define um dado armazenado num objeto.
+> &#062; Attributes and properties are similar concepts. "Atributo" é utilizado para designar as propriedades da dataclass que armazenam os dados, enquanto "propriedade" é mais genérico e define um dado armazenado num objeto.
 
 ## AttributePath
 
