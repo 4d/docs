@@ -106,7 +106,7 @@ $4 引数は 4D Webサーバーによってリクエストされた IPアドレ�
 
 ## /4DACTION
 
-***/4DACTION/****MethodName*<br/> ***/4DACTION/****MethodName/Param*
+*/4DACTION/****MethodName*<br/> ***/4DACTION/****MethodName/Param*
 
 | 引数         | 型    |    | 説明                    |
 | ---------- | ---- |:--:| --------------------- |
