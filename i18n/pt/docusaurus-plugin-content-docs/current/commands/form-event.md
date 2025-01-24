@@ -17,17 +17,17 @@ displayed_sidebar: docs
 
 #### Descrição
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred. Usually, you will use **FORM Event** from within a form or object method.
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred. Usually, you will use **FORM Event** from within a form or object method.
 
 **Objeto devolvido**
 
 Each returned object includes the following main properties:
 
-| **Property** | **Tipo** | **Description**                                                                                                                                                                                   |
-| ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName   | text     | Name of the object triggering the event - Not included if the event is triggered by the form                                                                                                      |
-| code         | integer  | Valor numérico do evento de formulário.                                                                                                                                           |
-| description  | text     | Name of the form event (*e.g.* "On After Edit"). Veja a seção [**Eventos Formulário**](../Events/overview.md). |
+| **Propriedade** | **Tipo** | **Description**                                                                                                                                                                                   |
+| --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectName      | text     | Name of the object triggering the event - Not included if the event is triggered by the form                                                                                                      |
+| code            | integer  | Valor numérico do evento de formulário.                                                                                                                                           |
+| description     | text     | Name of the form event (*e.g.* "On After Edit"). Veja a seção [**Eventos Formulário**](../Events/overview.md). |
 
 For example, in the case of a click on a button, the object contains the following properties:
 
