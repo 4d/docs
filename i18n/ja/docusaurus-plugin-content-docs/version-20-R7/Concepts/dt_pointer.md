@@ -47,7 +47,7 @@ $MyPointer->
 
 前述の式は、"Hello" という文字列を返します。 ポインター記号 (->) をポインターの後につけると、参照先の値を取得することができます。 これをデリファレンス (参照外し) と呼びます。
 
-ポインター記号 (->) を後につけたポインターは、その参照先を直接使うのと同義であることを理解することが重要です。 つまり、変数 $MyVar を使用することと、$MyPointer-> を使用することは、まったく同じ意味になります。 たとえば、以下のステートメントはアラートボックスに文字列 "Hello" を表示します:
+ポインター記号 (->) を後につけたポインターは、その参照先を直接使うのと同義であることを理解することが重要です。 ポインター記号 (->) を後につけたポインターは、その参照先を直接使うのと同義であることを理解することが重要です。 つまり、変数 $MyVar を使用することと、$MyPointer-> を使用することは、まったく同じ意味になります。 たとえば、以下のステートメントはアラートボックスに文字列 "Hello" を表示します: たとえば、以下のステートメントはアラートボックスに文字列 "Hello" を表示します:
 
 ```4d
 ALERT($MyPointer->)
@@ -59,7 +59,7 @@ $MyPointer を使用して $MyVar の値を変更することもできます。 
 $MyPointer->:="Goodbye"
 ```
 
-この2つの $MyPointer-> を使用した例のとおり、$MyVar を使用するのとまったく同じ動作が実行されます。 以下の2つのステートメントも、同一の動作を実行します。両方とも、変数 $MyVar の現在の値をアラートボックスに表示します:
+この2つの $MyPointer-> を使用した例のとおり、$MyVar を使用するのとまったく同じ動作が実行されます。 この2つの $MyPointer-> を使用した例のとおり、$MyVar を使用するのとまったく同じ動作が実行されます。 以下の2つのステートメントも、同一の動作を実行します。両方とも、変数 $MyVar の現在の値をアラートボックスに表示します: 以下の2つのステートメントも、同一の動作を実行します。両方とも、変数 $MyVar の現在の値をアラートボックスに表示します:
 
 ```4d
 ALERT($MyPointer->)
@@ -235,9 +235,9 @@ takeTwo(->[myTable]myField;->$MyVar)
 - $PointerTwo:=->$PointerOne
   \--> 新たな変数 $PointerTwo に、$MyVar を参照する $PointerOne へのポインターを代入します。
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示します。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。
+  \--> $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示します。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。
 - ALERT (($PointerTwo->)->)
-  \--> 先の説明と同様に $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。
+  \--> 先の説明と同様に $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。
 
 以下の例では、$MyVar に "Hello" が代入されます:
 
