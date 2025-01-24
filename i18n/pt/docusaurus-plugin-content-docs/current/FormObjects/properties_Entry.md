@@ -70,7 +70,7 @@ Quando essa propriedade está desativada, todos os menus pop-up associados a uma
 
 ## Filtro de entrada
 
-Um filtro de entrada controla exatamente o que o usuário pode digitar durante a entrada de dados. A diferencia de las [listas obligatorias ](properties_RangeOfValues.md#required-list), por ejemplo, los filtros de entrada funcionan caracter por caracter. Por exemplo, se um número de parte sempre consiste em duas letras seguidas por três dígitos, você pode usar um filtro de postagens para restringir o usuário a esse padrão. Pode até controlar as letras e os números específicos.
+Um filtro de entrada controla exatamente o que o usuário pode digitar durante a entrada de dados. Um filtro de entrada controla exatamente o que o usuário pode digitar durante a entrada de dados. Por exemplo, se um número de parte sempre consiste em duas letras seguidas por três dígitos, você pode usar um filtro de postagens para restringir o usuário a esse padrão. Pode até controlar as letras e os números específicos.
 
 Um filtro de entrada funciona apenas durante a introdução de dados. Não tem nenhum efeito na apresentação de dados após o usuário ter anulado a seleção do objeto. En general, se utilizan conjuntamente los filtros de entrada con los [formatos de visualización](properties_Display.md). O filtro restringe a entrada de dados e o formato garante a exibição adequada do valor após a entrada de dados.
 
@@ -289,7 +289,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 Permite a passagem direta para o modo de edição em list boxes.
 
-Quando essa opção está ativada, as células da caixa de listagem mudam para o modo de edição após um único clique do usuário, independentemente de essa área da caixa de listagem ter sido selecionada anteriormente. Tenga en cuenta que esta opción permite editar celdas incluso cuando el list box [modo selección](properties_ListBox.md#selection-mode) está en "Ninguno".
+Quando essa opção está ativada, as células da caixa de listagem mudam para o modo de edição após um único clique do usuário, independentemente de essa área da caixa de listagem ter sido selecionada anteriormente. Quando essa opção está ativada, as células da caixa de listagem mudam para o modo de edição após um único clique do usuário, independentemente de essa área da caixa de listagem ter sido selecionada anteriormente.
 
 Quando esta opção não está habilitada, os usuários devem primeiro selecionar a linha da célula e, em seguida, clicar em uma célula para editar seu conteúdo.
 
