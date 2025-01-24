@@ -258,7 +258,7 @@ L'<!-- REF #WebServerClass.HTTPTrace.Summary -->activation de `HTTP TRACE`<!-- E
 
 <!-- REF #WebServerClass.HTTPSEnabled.Syntax -->**.HTTPSEnabled** : Boolean<!-- END REF -->
 
-Le <!-- REF #WebServerClass.HTTPEnabled.Summary -->statut du protocole HTTP<!-- END REF -->.
+Le <!-- REF #WebServerClass.HTTPSEnabled.Summary -->statut du protocole HTTPS<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -268,7 +268,7 @@ Le <!-- REF #WebServerClass.HTTPEnabled.Summary -->statut du protocole HTTP<!-- 
 
 <!-- REF #WebServerClass.HTTPSPort.Syntax -->**.HTTPSPort** : Integer<!-- END REF -->
 
-Le <!-- REF #WebServerClass.HTTPPort.Summary -->numéro de port IP d'écoute pour HTTPS<!-- END REF -->.
+Le <!-- REF #WebServerClass.HTTPSPort.Summary -->numéro de port IP d'écoute pour HTTPS<!-- END REF -->.
 
 Par défaut = 443
 
@@ -296,7 +296,7 @@ Par défaut = 480 minutes
 
 > Cette propriété n'est pas retournée en [mode sessions évolutives](#scalablesession).
 
-La <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->durée de vie (en minutes) des process de session legacy inactifs<!-- END REF -->. À la fin de cette période, le cookie de session expire et n'est plus envoyé par le client HTTP.
+La <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->durée de vie (en minutes) des process de session legacy inactifs (durée définie dans le cookie)<!-- END REF -->. À la fin de cette période, le cookie de session expire et n'est plus envoyé par le client HTTP.
 
 Par défaut = 480 minutes
 
@@ -419,7 +419,7 @@ En cas de modification, le serveur doit être redémarré pour utiliser la nouve
 
 *Propriété en lecture seulement.*
 
-La <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->disponibilité du PFS sur le serveur<!-- END REF -->.
+Le <!-- REF #WebServerClass.name.Summary -->nom de l'application web server<!-- END REF -->.
 
 <!-- END REF -->
 
