@@ -20,15 +20,15 @@ displayed_sidebar: docs
 | ----------- | --------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------- |
 | 引数          | 型                                 |                                       | 説明                                                                                     |
 | ***         | ***                               | :---: | ***                                                                                    |
-| file        | 4D.File           | →                                     | 添付ファイル                                                                                 |
-| zipFile     | 4D.ZipFile        | →                                     | 添付 Zipファイル                                                                             |
-| blob        | 4D.Blob           | →                                     | 添付を格納した BLOB                                                                           |
-| path        | Text                              | →                                     | 添付ファイルのパス                                                                              |
-| name        | Text                              | →                                     | メールクライアントが添付を指定するのに使用する名前 + 拡張子                                                        |
-| cid         | Text                              | →                                     | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列) |
-| type        | Text                              | →                                     | content-type ヘッダーの値                                                                    |
-| disposition | Text                              | →                                     | content-disposition ヘッダーの値: "inline" あるいは "attachment"                 |
-| 戻り値         | 4D.MailAttachment | ←                                     | Attachment オブジェクト                                                                      |
+| file        | 4D.File           | &#8594;           | 添付ファイル                                                                                 |
+| zipFile     | 4D.ZipFile        | &#8594;           | 添付 Zipファイル                                                                             |
+| blob        | 4D.Blob           | &#8594;           | 添付を格納した BLOB                                                                           |
+| path        | Text                              | &#8594;           | 添付ファイルのパス                                                                              |
+| name        | Text                              | &#8594;           | メールクライアントが添付を指定するのに使用する名前 + 拡張子                                                        |
+| cid         | Text                              | &#8594;           | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列) |
+| type        | Text                              | &#8594;           | content-type ヘッダーの値                                                                    |
+| disposition | Text                              | &#8594;           | content-disposition ヘッダーの値: "inline" あるいは "attachment"                 |
+| 戻り値         | 4D.MailAttachment | &#8592;           | Attachment オブジェクト                                                                      |
 
 <!-- END REF-->
 

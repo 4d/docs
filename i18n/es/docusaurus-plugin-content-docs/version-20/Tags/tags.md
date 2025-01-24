@@ -70,9 +70,9 @@ Para asegurar la correcta evaluación de las expresiones procesadas a través de
 
 La etiqueta `<!--#4DBASE -->` designa el directorio de trabajo a utilizar para la etiqueta `<!--#4DINCLUDE-->`.
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next<!--#4DBASE -->`, if any. Si la <!--#4DBASE -->carpeta se modifica desde un archivo incluido, recupera su valor original en el archivo padre.</p>
+When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--#4DBASE -->`, if any. If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
 
-<p spaces-before="0">El parámetro <em x-id="3">folderPath</em> debe contener un nombre de ruta relativo a la página actual y debe terminar con una barra (<code>/`). La carpeta designada debe estar ubicada dentro de la carpeta Web.
+El parámetro *folderPath* debe contener un nombre de ruta relativo a la página actual y debe terminar con una barra (`/`). La carpeta designada debe estar ubicada dentro de la carpeta Web.
 
 Pase la palabra clave "WEBFOLDER" para restablecer la ruta por defecto (relativa a la página).
 
@@ -327,7 +327,7 @@ En caso de que se produzca un error durante la interpretación, el texto inserta
 
 #### Sintaxis alternativa: `$4DHTML(expression)`
 
-The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
+The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. Este valor se inserta como texto simple, los caracteres HTML especiales como ">" se escapan automáticamente.
 
 Por ejemplo, aquí están los resultados del procesamiento de la variable de texto 4D myvar con las etiquetas disponibles:
 
@@ -472,11 +472,11 @@ El código siguiente:
 ... podría expresarse en lenguaje 4D de la siguiente manera:
 
 ```4d
- FIRST RECORD([People])
+ NEXT RECORD([People])
+ End while
+    FIRST RECORD([People])
  While(Not(End selection([People])))
     ...
-    NEXT RECORD([People])
- End while
 ```
 
 ### `<!--#4DLOOP array-->`

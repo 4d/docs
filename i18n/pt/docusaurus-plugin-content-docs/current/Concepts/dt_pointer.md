@@ -266,7 +266,7 @@ Aqui está uma explicação de cada linha do exemplo:
 - ($PointerTwo->)->:="Goodbye"
   \--> $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Assim, neste caso, $MyVar é atribuído o "Adeus".
 - ALERT (($PointerTwo->)->)
-  \--> A mesma coisa: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar.
+  \--> A mesma coisa: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Por conseguinte ($PointerTwo-&#062;)-&#062; faz referência ao conteúdo de $MyVar.
 
 A seguinte linha coloca "Olá" em $MyVar:
 

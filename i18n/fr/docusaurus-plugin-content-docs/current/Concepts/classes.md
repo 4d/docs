@@ -98,8 +98,8 @@ Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, e
 
 Les classes disponibles sont accessibles depuis leurs class stores. Il existe deux class stores dans 4D :
 
-- [`cs`](../commands/cs.md) for user class store
-- [`4D`](../commands/4d.md) for built-in class store
+- [`cs`](../commands/cs.md) pour le class store utilisateur
+- [`4D`](../commands/4d.md) pour le class store intégré
 
 ### `cs`
 
@@ -107,9 +107,9 @@ Les classes disponibles sont accessibles depuis leurs class stores. Il existe de
 
 <!-- REF #_command_.cs.Params -->
 
-| Paramètres | Type   |   | Description                                                         |                  |
-| ---------- | ------ | - | ------------------------------------------------------------------- | ---------------- |
-| classStore | Object | ← | Class store utilisateur utilisateurs pour le projet ou le composant | <!-- END REF --> |
+| Paramètres | Type   |                             | Description                                                         |                  |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------- | ---------------- |
+| classStore | Object | &#8592; | Class store utilisateur utilisateurs pour le projet ou le composant | <!-- END REF --> |
 
 La commande `cs` <!-- REF #_command_.cs.Summary -->retourne le class store utilisateur pour le projet ou le composant courant<!-- END REF -->. Elle retourne toutes les classes utilisateur [définies](#class-definition) dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
 
@@ -127,9 +127,9 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Paramètres | Type   |   | Description    |                  |
-| ---------- | ------ | - | -------------- | ---------------- |
-| classStore | Object | ← | Class store 4D | <!-- END REF --> |
+| Paramètres | Type   |                             | Description    |                  |
+| ---------- | ------ | --------------------------- | -------------- | ---------------- |
+| classStore | Object | &#8592; | Class store 4D | <!-- END REF --> |
 
 La commande `4D` <!-- REF #_command_.4D.Summary -->retourne le class store des classes 4D intégrées disponibles<!-- END REF -->. Elle donne accès à des API spécifiques telles que [CryptoKey](API/CryptoKeyClass.md).
 
@@ -141,7 +141,7 @@ Vous souhaitez créer une nouvelle clé dans la classe `CryptoKey` :
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-You want to list 4D built-in classes:
+Vous voulez lister les classes 4D intégrées :
 
 ```4d
  var $keys : collection
@@ -149,7 +149,7 @@ You want to list 4D built-in classes:
  ALERT("There are "+String($keys.length)+" built-in classes.")
 ```
 
-## L'objet classe
+## L'objet class
 
 Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
@@ -158,7 +158,7 @@ Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est cha
 - fonction [`new()`](API/ClassClass.md#new), permettant d'instancier les objets de la classe
 - propriété [`isShared`](API/ClassClass.md#isshared), true si la classe est [partagée](#shared-classes)
 - propriété [`isSingleton`](API/ClassClass.md#issingleton), true si la classe définit une [classe singleton](#singleton-classes).
-- [`isSectionSingleton`](API/ClassClass.md#issectionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
+- propriété [`isSectionSingleton`](API/ClassClass.md#issectionsingleton), true si la classe définit une [session singleton](#singleton-classes).
 - propriété [`me`](API/ClassClass.md#me), permettant d'instancier et d'accéder aux [singletons](#singleton-classes).
 
 De plus, un objet classe peut référencer un objet [`constructor`](#class-constructor) (facultatif).
@@ -180,7 +180,7 @@ Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de 
 - `property` pour définir les propriétés statiques des objets d'un type donné.
 - `Function get <Name>` et `Function set <Name>` pour définir les propriétés calculées des objets.
 - `Class extends <ClassName>` pour définir l'héritage.
-- `This` and `Super` are commands that have special
+- `This` and `Super` are commands that have special features within classes.
 
 ### `Function`
 

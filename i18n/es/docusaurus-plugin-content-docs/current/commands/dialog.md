@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Params-->
 
-| Parámetros | Tipo         |   | Descripción                                                                                                                                                                                  |
-| ---------- | ------------ | - | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable     | Tabla        | → | Table owning the form or If omitted: default table or use of project form                                                                                                    |
-| form       | Text, Object | → | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, or an object describing the form |
-| formData   | Object       | → | Data to associate to the form                                                                                                                                                                |
-| \*         | Operador     | → | Use the same process                                                                                                                                                                         |
+| Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                  |
+| ---------- | ------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| aTable     | Tabla        | &#8594; | Table owning the form or If omitted: default table or use of project form                                                                                                    |
+| form       | Text, Object | &#8594; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| formData   | Object       | &#8594; | Data to associate to the form                                                                                                                                                                |
+| \*         | Operador     | &#8594; | Use the same process                                                                                                                                                                         |
 
 <!-- END REF-->
 

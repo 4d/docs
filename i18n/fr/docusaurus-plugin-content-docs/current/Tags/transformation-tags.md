@@ -69,7 +69,7 @@ Pour garantir l'évaluation correcte des expressions traitées via les balises, 
 
 The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!--#4DINCLUDE-->` tag.
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next <!--#4DBASE -->`, if any. If the`<!--#4DBASE -->\` folder is modified from within an included file, it retrieves its original value from the parent file.
+When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--#4DBASE -->`, if any. If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
 
 The _folderPath_ parameter must contain a pathname relative to the current page and it must end with a slash (`/`). Le dossier désigné doit être situé à l'intérieur du dossier Web.
 
@@ -330,10 +330,10 @@ Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression
 
 Par exemple, voici les résultats du traitement de la variable texte 4D myvar avec les balises disponibles :
 
-| valeur de myvar | Balises                | Résultat                    |
-| --------------- | ---------------------- | --------------------------- |
-| `myvar:="<B>"`  | `<!--#4DTEXT myvar-->` | `&amp;lt;B&amp;gt;` |
-| `myvar:="<B>"`  | `<!--#4DHTML myvar-->` | `<B>`                       |
+| valeur de myvar | Balises                | Résultat                            |
+| --------------- | ---------------------- | ----------------------------------- |
+| `myvar:="<B>"`  | `<!--#4DTEXT myvar-->` | `&amp;amp;lt;B&amp;amp;gt;` |
+| `myvar:="<B>"`  | `<!--#4DHTML myvar-->` | `<B>`                               |
 
 In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar--> : ## error # error code`.
 

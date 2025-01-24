@@ -7,22 +7,22 @@ Cette section d'initiation est destinée aux nouveaux utilisateurs qui souhaiten
 
 ## Hello World Example
 
-Commençons par faire en sorte que le serveur web envoie "Hello World" au navigateur. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
+Commençons par faire en sorte que le serveur web envoie "Hello World" au navigateur. La manière la plus simple de faire cela est de créer un projet, démarrer le serveur web et écrire un petit code qui retourne un texte dans la méthode base `On Web Connection`.
 
 ### Démarrer le serveur web
 
 Pour démarrer le Serveur Web 4D:
 
 1. Lancez votre application 4D et créez un nouveau projet 4D vide.
-2. In the **Run** menu, select **Start Web Server**.
+2. Dans le menu **Exécution**, sélectionnez **Démarrer le serveur Web**.
 
 C'est tout ! Le serveur web est démarré (vous pouvez voir que l'élément de menu est devenu **Arrêter le serveur web**). Il est maintenant prêt à traiter les requêtes. Pour le vérifier, nous allons afficher la page d'accueil par défaut.
 
 ### Affichage de la page home par défaut
 
-The 4D web server creates automatically a default `index.html` page in the default `WebFolder` root folder, created at the same level as the Project folder.
+Le serveur web 4D crée automatiquement une page `index.html` par défaut dans le dossier racine `WebFolder` par défaut, créé au même niveau que le dossier Project.
 
-1. Lancez un navigateur web et connectez-vous à l'adresse IP du serveur web (le port http par défaut pour le serveur web 4D est 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu.
+1. Lancez un navigateur web et connectez-vous à l'adresse IP du serveur web (le port http par défaut pour le serveur web 4D est 80). Si le serveur web et le navigateur sont sur la même machine, vous pouvez sélectionner **Tester le serveur Web** dans le menu **Exécution**.
 
 La page d'accueil par défaut est affichée :
 
@@ -30,7 +30,7 @@ La page d'accueil par défaut est affichée :
 
 ### Affichage de Hello World
 
-1. Open the Explorer, display the Database Methods list and double-click on `On Web Connection`.
+1. Ouvrez l'Explorateur, affichez la liste des méthodes base et double-cliquez sur `On Web Connection`.
 
 2. Saisissez le code suivant :
 
@@ -39,14 +39,14 @@ Case of
  : ($1="/hello")
   WEB SEND TEXT("Hello World!")
  Else 
-  // Error 404 for example
+  // Error 404 par exemple
 End case
  Else 
-  // Error 404 for example
+  // Error 404 par exemple
 End case 
 ```
 
-The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. Ce code très simple envoie simplement le texte au navigateur.
+La méthode base `On Web Connection` est appelée pour les requêtes entrantes et reçoit l'URL cible dans le paramètre `$1`. Ce code très simple envoie simplement le texte au navigateur.
 
 3. Dans votre navigateur, saisissez l'URL suivante :
 
@@ -68,7 +68,7 @@ Créez une base de données basique avec, par exemple, une seule table contenant
 
 ### Affichage des données dans une page
 
-The most simple solution to display data is to call a [template page](templates.md) containing tags.
+La solution la plus simple pour afficher des données consiste à appeler une [page de modèle](templates.md) contenant des balises.
 
 1. À l'aide de n'importe quel éditeur de texte, créez un fichier contenant les lignes suivantes :
 
@@ -83,22 +83,22 @@ The most simple solution to display data is to call a [template page](templates.
 </html>
 ```
 
-2. Name the file "friends.shtml" and save it in the **WebFolder** of your project.
+2. Nommez le fichier "friends.shtml" et enregistrez-le dans le dossier **WebFolder** de votre projet.
 3. Dans votre navigateur, saisissez l'URL suivante :
 
 ```
 http://localhost/friends.shtml
 ```
 
-`.shtml` pages are automatically processed by the web server. Votre page remplie avec les données est renvoyée :
+Les pages `.shtml` sont automatiquement traitées par le serveur web. Votre page remplie avec les données est renvoyée :
 
 ![](../assets/en/WebServer/hello3bis.png)
 
 ### Requête REST
 
-If we not only want to *display* data, but to *use* it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
+Si nous ne voulons pas seulement *afficher* des données, mais aussi les *utiliser*, nous pouvons faire appel à ORDA et au serveur REST. Grâce au [concept ORDA](ORDA/overview.md), la table `Friends` est automatiquement mappée sur une dataclass et est disponible via [REST](REST/gettingStarted.md).
 
-1. We will use the REST server to access data: go the "Settings" dialog box, select the "Web/Rest resource" page, and check the **Expose as REST server** option.
+1. Nous allons utiliser le serveur REST pour accéder aux données : dans la boîte de dialogue des ** Propriétés**, sélectionnez **Web** > **Fonctionnalités Web**, et cochez l'option **Exposer en tant que serveur REST**.
 
 ![](../assets/en/WebServer/hello5.png)
 
@@ -180,7 +180,7 @@ Le serveur renvoie les entités, c'est-à-dire les données, de la dataclass Fri
 }
 ```
 
-This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed. Dans vos interfaces web, vous pouvez facilement lier le code javascript ou html avec les données retournées. See the built-in [Web Data Explorer](Admin/dataExplorer.md) to have an example of sophisticated web interface bound to dataclasses.
+Cet exemple très simple montre comment le serveur web interagit de manière transparente avec le [serveur REST](REST/gettingStarted.md) pour renvoyer toutes les données demandées, à condition qu'elles soient exposées. Dans vos interfaces web, vous pouvez facilement lier le code javascript ou html avec les données retournées. Affichez l'[Explorateur de données](Admin/dataExplorer.md) intégré pour avoir un exemple d'interface Web sophistiquée liée à des dataclasses.
 
 ## Connexion et session
 
@@ -190,8 +190,8 @@ Dans les sections ci-dessus, nous obtenons un accès libre à l'application à p
 
 La façon la plus simple et sécurisée de connecter un utilisateur sur le serveur web 4D est basée sur le scénario suivant :
 
-- Users are stored in a dedicated, unexposed table (named *WebUsers* for example)
-- The *WebUsers* table could be [encrypted](MSC/encrypt.md) and stores the user login and a hash of their password.
+- Les utilisateurs sont stockés dans une table dédiée et non exposée (nommée *WebUsers* par exemple)
+- La table *WebUsers* pourrait être [cryptée](MSC/encrypt.md) et stocke l'identifiant de l'utilisateur et un hachage de son mot de passe.
 
 1. Créez une table avec certains champs, par exemple :
 
@@ -213,7 +213,7 @@ $webUser.save()
 
 ### Authentification des utilisateurs
 
-> To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https).
+> Pour être sécurisé de bout en bout, il est nécessaire que toute la connexion soit établie via [https](webServerConfig.md#enable-https).
 
 1. Ouvrez l'Explorateur et créez une méthode projet nommée "login".
 
@@ -256,10 +256,14 @@ End if
     End if 
 Else 
     WEB SEND TEXT("Wrong user name or password.")
+End if
+    End if 
+Else 
+    WEB SEND TEXT("Wrong user name or password.")
 End if 
 ```
 
-3. Display the method properties by clicking on the **[i]** button in the code editor, check the `4D tags and URLs (4DACTION...)` option and click **OK**.
+3. Affichez les propriétés de la méthode en cliquant sur le bouton **[i]** de l'éditeur de code, cochez l'option `Balises and URLs 4D (4DACTION...)` et cliquez sur **OK**.
 
 ![](../assets/en/WebServer/hello0.png)
 
@@ -269,14 +273,14 @@ End if
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 ```
 
-> L'utilisation de telles URLs n'est pas recommandée, elle est présentée ici uniquement pour simplifier l'exemple. Une requête de connexion plus réaliste doit être traitée via un formulaire web et une requête POST. See [this page](sessions.md#example) for an example of form POST.
+> L'utilisation de telles URLs n'est pas recommandée, elle est présentée ici uniquement pour simplifier l'exemple. Une requête de connexion plus réaliste doit être traitée via un formulaire web et une requête POST. Voir [cette page](sessions.md#example) pour un exemple de formulaire POST.
 
 Vous serez alors connecté pour la session :
 
 ![](../assets/en/WebServer/login1.png)
 
-Les informations d'identification erronées seraient rejetées :
+Les informations d'identification erronées seront rejetées :
 
 ![](../assets/en/WebServer/login2.png)
 
-Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. See the [User sessions](sessions.md) page.
+Une fois qu'un utilisateur est connecté, vous pouvez gérer la session associée en utilisant la commande `WEB Get Current Session ID`. Voir la page [Sessions](sessions.md).

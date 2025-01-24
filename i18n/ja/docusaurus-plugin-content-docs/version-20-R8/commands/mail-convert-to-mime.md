@@ -17,11 +17,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
 
-| 引数      | 型      |     | 説明                      |
-| ------- | ------ | :-: | ----------------------- |
-| mail    | Object |  →  | Email オブジェクト            |
-| options | Object |  →  | 文字セットとエンコーディングのメールオプション |
-| 戻り値     | Text   |  ←  | MIME に変換された Emailオブジェクト |
+| 引数      | 型      |                             | 説明                      |
+| ------- | ------ | :-------------------------: | ----------------------- |
+| mail    | Object | &#8594; | Email オブジェクト            |
+| options | Object | &#8594; | 文字セットとエンコーディングのメールオプション |
+| 戻り値     | Text   | &#8592; | MIME に変換された Emailオブジェクト |
 
 <!-- END REF -->
 

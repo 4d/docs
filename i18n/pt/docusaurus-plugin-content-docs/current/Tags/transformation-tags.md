@@ -69,7 +69,7 @@ To ensure the correct evaluation of expressions processed via tags, regardless o
 
 A tag `<!--#4DBASE -->` designa o diretório de trabalho a ser usado pela tag `<!--#4DINCLUDE-->`.
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next <!--#4DBASE -->`, if any. Se a pasta`<!--#4DBASE -->\` for modificada em um arquivo incluído, ela recuperará seu valor original do arquivo pai.
+When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--#4DBASE -->`, if any. If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
 
 O parâmetro _folderPath_ deve conter um nome de caminho relativo à página atual e deve terminar com uma barra (`/`). A pasta designada deve estar localizada dentro da pasta Web.
 
@@ -190,7 +190,7 @@ A coleção deve conter apenas **elementos do mesmo tipo**, caso contrário, um 
 The number of loops is based on the number of elements of the collection. A cada iteração, a variável _item_ é automaticamente preenchida com o elemento correspondente da coleção. Os pontos abaixo devem ser considerados:
 
 - Se a variável _item_ for do tipo objeto ou do tipo coleção (ou seja, se _expressão_ for uma coleção de objetos ou de coleções), a modificação dessa variável modificará automaticamente o elemento correspondente da coleção (porque objetos e coleções compartilham as mesmas referências). Se a variável for de tipo escalar, só se modificará a variável.
-- A variável _item_ recebe o mesmo tipo que o primeiro elemento da coleção. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
+- A variável _item_ recebe o mesmo tipo que o primeiro elemento da coleção. A variável _item_ recebe o mesmo tipo que o primeiro elemento da coleção. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
 - Se a coleção contiver elementos com um valor Null, será gerado um erro se o tipo de variável _item_ não for compatível com valores Null (como variáveis longint).
 
 #### Exemplo com uma coleção de valores escalares
@@ -330,10 +330,10 @@ Assim como a tag `4DTEXT`, esta tag permite avaliar uma variável 4D ou express�
 
 For example, here are the processing results of the 4D text variable myvar with the available tags:
 
-| Valor myvar    | Etiquetas              | Resultados                  |
-| -------------- | ---------------------- | --------------------------- |
-| `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&amp;lt;B&amp;gt;` |
-| `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`                       |
+| Valor myvar    | Etiquetas              | Resultados                          |
+| -------------- | ---------------------- | ----------------------------------- |
+| `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&amp;amp;lt;B&amp;amp;gt;` |
+| `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`                               |
 
 No caso de um erro de interpretação, o texto inserido será `<!--#4DHTML myvar-->: ## error # error code`.
 

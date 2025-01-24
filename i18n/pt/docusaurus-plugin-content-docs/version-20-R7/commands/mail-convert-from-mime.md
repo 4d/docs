@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
 
-| Parâmetro  | Tipo       |     | Descrição      |
-| ---------- | ---------- | :-: | -------------- |
-| mime       | Blob, Text |  →  | E-mail no MIME |
-| Resultados | Object     |  ←  | Objeto Email   |
+| Parâmetro  | Tipo       |                             | Descrição      |
+| ---------- | ---------- | :-------------------------: | -------------- |
+| mime       | Blob, Text | &#8594; | E-mail no MIME |
+| Resultados | Object     | &#8592; | Objeto Email   |
 
 <!-- END REF -->
 
@@ -87,8 +87,8 @@ $transporter:=SMTP New transporter($server)
 $status:=$transporter.send($email)
 ```
 
-\| mime | BLOB, Text | →  | Email in MIME |
-\| Function result | Object | ← | Email object |
+\| mime | BLOB, Text | &#8594;  | Email in MIME |
+\| Function result | Object | &#8592; | Email object |
 
 #### Propriedades
 

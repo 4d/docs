@@ -18,7 +18,7 @@ The `On Web Connection` database method can be used as the entry point for the 4
 
 ### Chamadas métodos de base
 
-The `On Web Connection` database method is automatically called when the server receives any URL that is not a path to an existing page on the server. O método da base de dados é chamado com o URL.
+O método da base de dados é chamado com o URL. The `On Web Connection` database method is automatically called when the server receives any URL that is not a path to an existing page on the server.
 
 Por exemplo, a URL "*a/b/c*" chamará o método do banco de dados, mas "*a/b/c. tml*" não chamará o método de banco de dados se a página "c.html" existir no subdiretório "a/b" do arquivo [WebFolder](webServerConfig.md#root-folder).
 
@@ -106,7 +106,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ## /4DACTION
 
-***/4DACTION/***MethodName***<br/> **/4DACTION/******MethodName/Param*
+*/4DACTION/MethodName*<br/> */4DACTION/MethodName/Param*
 
 | Parâmetros | Tipo |    | Descrição                                           |
 | ---------- | ---- |:--:| --------------------------------------------------- |
@@ -147,11 +147,7 @@ var $PictVar : Picture
 var $BlobVar : Blob
 
  //find the picture in the Images folder within the Resources folder
-$path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
-
-READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable
-PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format
-WEB SEND BLOB($BLOB;"image/png")
+$path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd" READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format WEB SEND BLOB($BLOB;"image/png")
 ```
 
 ### 4DACCIÓN para publicar formulários
@@ -294,6 +290,30 @@ return false
 
 <input name="vtNav_appName" value="" type="hidden"> 
 <input name="vtNav_appVersion" value="" type="hidden"> 
+<input name="vtNav_appCodeName" value="" type="hidden">
+<input name="vtNav_userAgent" value="" type="hidden"></p>
+</form>
+</body>
+</html>
+return false
+}
+}
+//--></script>
+</head>
+<body>
+<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
+ name="frmWelcome"
+ onsubmit="return GetBrowserInformation(frmWelcome)">
+  <h1>Welcome to Spiders United</h1>
+  <p><b>Please enter your name:</b>
+  <input name="vtUserName" value="" size="30" type="text"></p>
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
+<input name="vsbRegister" value="Register" type="submit">
+<input name="vsbInformation" value="Information" type="submit"></p>
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
 <input name="vtNav_appCodeName" value="" type="hidden">
 <input name="vtNav_userAgent" value="" type="hidden"></p>
 </form>

@@ -70,7 +70,7 @@ To ensure the correct evaluation of expressions processed via tags, regardless o
 
 The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!--#4DINCLUDE-->` tag.
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next <!--#4DBASE -->`, if any. If the`<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
+When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--#4DBASE -->`, if any. If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
 
 The *folderPath* parameter must contain a pathname relative to the current page and it must end with a slash (`/`). A pasta designada deve estar localizada dentro da pasta Web.
 
@@ -257,14 +257,13 @@ O número de loops é baseado no número de entidades da seleção de entidades.
 #### Exemplo com `PROCESS 4D TAGS`
 
 ```4d
-var customers : cs.CustomersSelection
+var customers : cs. CustomersSelection
 var $input; $output : Text
 
-customers:=ds.Customers.all()
+customers:=ds. Customers.all()
 $input:="<!--#4DEACH $cust in customers-->"
 $input:=$input+"<!--#4DTEXT $cust.name -->"+Char(Carriage return)
-$input:=$input+"<!--#4DENDEACH-->"
-PROCESS 4D TAGS($input; $output)
+$input:=$input+"<!--#4DENDEACH-->" PROCESS 4D TAGS($input; $output)
 TEXT TO DOCUMENT("customers.txt"; $output)
 ```
 
@@ -391,10 +390,8 @@ This example of code inserted in a static HTML page displays a different label a
 ```html
 <BODY>
 ...
-<!--#4DIF (vname#"")-->
-Names starting with <!--#4DTEXT vname-->.
-<!--#4DELSE-->
-No name has been found.
+<!--#4DIF (vname#"")--> Names starting with <!--#4DTEXT vname-->.
+<!--#4DELSE--> No name has been found.
 <!--#4DENDIF-->
 ...
 </BODY>
@@ -469,11 +466,11 @@ O seguinte código:
 ... poderia ser expresso em linguagem 4D da seguinte forma:
 
 ```4d
- FIRST RECORD([People])
+ NEXT RECORD([People])
+ End while
+    FIRST RECORD([People])
  While(Not(End selection([People])))
     ...
-    NEXT RECORD([People])
- End while
 ```
 
 ### `<!--#4DLOOP array-->`

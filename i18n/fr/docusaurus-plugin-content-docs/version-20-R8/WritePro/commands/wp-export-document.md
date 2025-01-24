@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP EXPORT DOCUMENT.Params-->
 
-| Paramètres | Type                    |   | Description                                                                                                                                         |
-| ---------- | ----------------------- | - | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| wpDoc      | Object                  | → | 4D Write Pro variable                                                                                                                               |
-| filePath   | Text                    | → | Path of exported file                                                                                                                               |
-| fileObj    | 4D.File | → | File object to export                                                                                                                               |
-| format     | Integer                 | → | Document output format (e.g., .docx, .pdf, etc.) |
-| option     | Object, Integer         | → | Export options, which can vary depending on the format chosen.                                                                      |
+| Paramètres | Type                    |                             | Description                                                                                                                                         |
+| ---------- | ----------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| wpDoc      | Object                  | &#8594; | 4D Write Pro variable                                                                                                                               |
+| filePath   | Text                    | &#8594; | Path of exported file                                                                                                                               |
+| fileObj    | 4D.File | &#8594; | File object to export                                                                                                                               |
+| format     | Integer                 | &#8594; | Document output format (e.g., .docx, .pdf, etc.) |
+| option     | Object, Integer         | &#8594; | Export options, which can vary depending on the format chosen.                                                                      |
 
 <!-- END REF-->
 

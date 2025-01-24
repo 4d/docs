@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SMTP New transporter.Params-->
 
-| 引数     | 型                                  |   | 説明                                                                                |
-| ------ | ---------------------------------- | - | --------------------------------------------------------------------------------- |
-| server | Object                             | → | メールサーバー情報                                                                         |
-| 戻り値    | 4D.SMTPTransporter | ← | [SMTP transporter オブジェクト](../API/SMTPTransporterClass.md#smtp-transporter-object) |
+| 引数     | 型                                  |                             | 説明                                                                                |
+| ------ | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
+| server | Object                             | &#8594; | メールサーバー情報                                                                         |
+| 戻り値    | 4D.SMTPTransporter | &#8592; | [SMTP transporter オブジェクト](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
 <!-- END REF-->
 

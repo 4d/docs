@@ -267,7 +267,7 @@ Vous pouvez forcer un retour chariot dans le libellé en utilisant le caractère
 
 ![](../assets/en/FormObjects/property_title.png)
 
-Pour insérer un \ dans le libellé, entrez "\\".
+Pour insérer un \ dans le libellé, entrez "&#92;&#92;".
 
 Par défaut, le libellé est placé au centre de l'objet. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) property.
 

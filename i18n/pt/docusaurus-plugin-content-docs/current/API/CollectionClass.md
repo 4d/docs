@@ -2436,10 +2436,10 @@ onde:
 
 - **logicalOperator**: usado para participar de múltiplas condições na consulta (opcional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
 
-| Conjunção | Símbolos                                                               |
-| --------- | ---------------------------------------------------------------------- |
-| AND       | &, &&, and |
-| OU        | \|,\|\|, or                                                            |
+| Conjunção | Símbolos                                                                            |
+| --------- | ----------------------------------------------------------------------------------- |
+| AND       | &, &&, and              |
+| OU        | &#124;,&#124;&#124;, or |
 
 #### Usar aspas
 

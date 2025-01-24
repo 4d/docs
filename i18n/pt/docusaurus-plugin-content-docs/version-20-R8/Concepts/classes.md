@@ -107,9 +107,9 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 
 <!-- REF #_command_.cs.Params -->
 
-| Parâmetro  | Tipo   |   | Descrição                                           |                  |
-| ---------- | ------ | - | --------------------------------------------------- | ---------------- |
-| classStore | Object | ← | Class store de usuário para o projeto ou componente | <!-- END REF --> |
+| Parâmetro  | Tipo   |                             | Descrição                                           |                  |
+| ---------- | ------ | --------------------------- | --------------------------------------------------- | ---------------- |
+| classStore | Object | &#8592; | Class store de usuário para o projeto ou componente | <!-- END REF --> |
 
 O comando `cs` <!-- REF #_command_.cs.Summary -->devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Ele retorna todas as classes de usuários [definidas](#class-definition) no projeto ou componente aberto. Por padrão, apenas as classes [ORDA do projeto](ORDA/ordaClasses.md) estão disponíveis.
 
@@ -127,9 +127,9 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Parâmetro  | Tipo   |   | Descrição      |                  |
-| ---------- | ------ | - | -------------- | ---------------- |
-| classStore | Object | ← | Class store 4D | <!-- END REF --> |
+| Parâmetro  | Tipo   |                             | Descrição      |                  |
+| ---------- | ------ | --------------------------- | -------------- | ---------------- |
+| classStore | Object | &#8592; | Class store 4D | <!-- END REF --> |
 
 O comando `4D` <!-- REF #_command_.4D.Summary -->retorna a classe store para as classes 4D incorporadas disponíveis<!-- END REF -->. Ele permite acesso a APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
 
@@ -180,7 +180,7 @@ As palavras-chave 4D específicas podem ser utilizadas nas definições de class
 - `propriedade` para definir as propriedades estáticas dos objetos com um tipo.
 - `Função get <Nome>` e `Função set <Nome>` para definir propriedades calculadas dos objetos.
 - `Class extends <ClassName>` para definir a herança.
-- `This` and `Super` are commands that have special
+- `This` and `Super` are commands that have special features within classes.
 
 ### `Function`
 
@@ -211,7 +211,7 @@ Como propriedades e funções compartilham o mesmo espaço de nomes, usar o mesm
 
 :::tip
 
-<strong x-id="1">Dica:</strong> Começar o nome da função com um caractere de sublinhado ("_") excluirá a função dos recursos de preenchimento automático no editor de código 4D. Por exemplo, se você declarar `Function _myPrivateFunction` em `MyClass`, ela não será proposta no editor de código quando você digitar "cs.MyClass. "\`.
+<strong x-id="1">Dica:</strong> Começar o nome da função com um caractere de sublinhado ("_") excluirá a função dos recursos de preenchimento automático no editor de código 4D. Por exemplo, se você declarar `Function _myPrivateFunction` em `MyClass`, ela não será proposta no editor de código quando você digitar "cs.MyClass. "\\`.
 
 :::
 
@@ -276,7 +276,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 Você também pode declarar o parâmetro de retorno adicionando apenas `: type` e usar a [`return expression`](parameters.md#return-expression) (ele também encerrará a execução da função). Por exemplo:
 
 ```4d
-Function add($x : Variant; $y : Integer)-&gt;$result : Integer
+Function add($x : Variant; $y : Integer)-&amp;gt;$result : Integer
 ```
 
 #### Exemplo 1

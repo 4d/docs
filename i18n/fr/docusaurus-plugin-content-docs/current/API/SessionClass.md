@@ -310,7 +310,7 @@ Si cette propriété n'est pas définie, sa valeur par défaut est 60 (1h).
 
 Lorsque cette propriété est définie, la propriété [`.expirationDate`](#expirationdate) est mise à jour en conséquence.
 
-> La valeur ne peut pas être < 60 ; si une valeur inférieure est définie, le timeout est élevé à 60.
+> La valeur ne peut pas être &#060; 60 ; si une valeur inférieure est définie, le timeout est élevé à 60.
 
 Cette propriété est en **lecture-écriture**.
 

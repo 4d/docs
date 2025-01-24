@@ -56,7 +56,7 @@ Define la acción a realizar cuando un usuario haga doble clic en una línea en 
 - **Editar registro**: al hacer doble clic en una línea se muestra el registro correspondiente en el formulario detallado definido [ para el list box](#detail-form-name). El registro se abre en modo de lectura-escritura para que pueda ser modificado.
 - **Mostrar registro**: idéntica a la acción anterior, salvo que el registro se abre en modo de sólo lectura para que no pueda ser modificado.
 
-> \> Double-clicking an empty row is ignored in list boxes.
+> &#062; Double-clicking an empty row is ignored in list boxes.
 
 Independientemente de la acción seleccionada/elegida, se genera el evento de formulario `On Double clicked`.
 

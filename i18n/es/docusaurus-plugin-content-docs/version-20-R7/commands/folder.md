@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Folder.Params -->
 
-| Parámetros     | Tipo                      |     | Descripción                                                           |
-| -------------- | ------------------------- | :-: | --------------------------------------------------------------------- |
-| path           | Text                      |  →  | Ruta de la carpeta                                                    |
-| folderConstant | Integer                   |  →  | Constante de la carpeta 4D                                            |
-| pathType       | Integer                   |  →  | `fk posix path` (por defecto) o `fk platform path` |
-| \*             | operator                  |  →  | \* para devolver la carpeta de la base local                          |
-| Result         | 4D.Folder |  ←  | Nuevo objeto de carpeta                                               |
+| Parámetros     | Tipo                      |                             | Descripción                                                           |
+| -------------- | ------------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path           | Text                      | &#8594; | Ruta de la carpeta                                                    |
+| folderConstant | Integer                   | &#8594; | Constante de la carpeta 4D                                            |
+| pathType       | Integer                   | &#8594; | `fk posix path` (por defecto) o `fk platform path` |
+| \*             | operator                  | &#8594; | \* para devolver la carpeta de la base local                          |
+| Result         | 4D.Folder | &#8592; | Nuevo objeto de carpeta                                               |
 
 <!-- END REF -->
 

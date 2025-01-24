@@ -14,7 +14,7 @@ Esta propriedade define o esquema de cores para o formulário. Por padrão, quan
 - dark - texto claro sobre um fundo escuro
 - light - texto escuro sobre um fundo claro
 
-> \> A defined color scheme can not be overridden by a CSS.
+> &#062; A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
 
@@ -32,9 +32,9 @@ Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de 
 
 #### Gramática JSON
 
-| Nome | Tipo de dados      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                            |
-| ---- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css  | cadeia ou colecção | Caminho(s) do arquivo CSS fornecido(s) como<li>:uma string (um arquivo para ambas as plataformas)</li><li>uma coleção de strings (uma lista de arquivos para ambas as plataformas)</li><li>uma coleção de objetos {"path":string; "media": "mac" \| "win"} </li> |
+| Nome | Tipo de dados      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                              |
+| ---- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css  | cadeia ou colecção | Caminho(s) do arquivo CSS fornecido(s) como<li>:uma string (um arquivo para ambas as plataformas)</li><li>uma coleção de strings (uma lista de arquivos para ambas as plataformas)</li><li>uma coleção de objetos {"path":string; "media": "mac" \\| "win"} </li> |
 
 ---
 
@@ -57,7 +57,7 @@ Para obter mais informações, consulte [Páginas de formulário] (forms.md#form
 
 ## Nome do formulário
 
-Essa propriedade é o nome do próprio formulário sendo usada para fazer referência ao formulário pelo nome usando a linguagem 4D. O nome do formulário deve estar em conformidade com as [regras especificadas para identificadores] (Concepts/identifiers.md) em 4D.
+Essa propriedade é o nome do próprio formulário sendo usada para fazer referência ao formulário pelo nome usando a linguagem 4D. Essa propriedade é o nome do próprio formulário sendo usada para fazer referência ao formulário pelo nome usando a linguagem 4D.
 
 #### Gramática JSON
 

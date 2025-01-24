@@ -4,13 +4,13 @@ title: Área Web
 ---
 
 ---
-## Acesso a métodos 4D
+## Acessar métodos 4D
 
-You can call 4D methods from the JavaScript code executed in a Web area and get values in return. To be able to call 4D methods from a Web area, you must activate the 4D methods accessibility property ("all").
+Você pode chamar métodos 4D a partir do código JavaScript executado em uma área Web e obter valores em retorno. Para consegue chamar métodos 4D de uma área Web, você deve ativar o parâmetro de acessibilidade 4D ("todos").
 
 > Esta propriedade só está disponível se a área Web [utilizar o mecanismo de renderização Web incorporado](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods](webArea_overview.md#4d-object).
+Quando essa propriedade está ativada, um objeto JavaScript especial chamado `$4d` é instanciado na área Web, que pode ser [usado para gerenciar chamadas para os métodos projeto de 4D](webArea_overview.md#4d-object).
 
 
 
@@ -28,7 +28,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 ---
 ## Progressão
 
-Nome de uma variável do tipo Longint. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Atualizado automaticamente por 4D, não pode ser modificado manualmente.
+Nome de uma variável do tipo Longint. Essa variável receberá um valor entre 0 e 100, representando a porcentagem de conclusão do carregamento da página na área Web. Atualizado automaticamente por 4D, não pode ser modificado manualmente.
 
 #### Gramática JSON
 
@@ -46,20 +46,20 @@ Nome de uma variável do tipo Longint. This variable will receive a value betwee
 ---
 ## URL
 
-A String type variable that designates the URL loaded or being loading by the associated Web area. The association between the variable and the Web area works in both directions:
+Uma variável do tipo String que designa o URL carregado ou que está sendo carregado pela área Web associada. A associação entre a variável e a área Web funciona em ambas as direções:
 
-*   If the user assigns a new URL to the variable, this URL is automatically loaded by the Web area.
-*   Any browsing done within the Web area will automatically update the contents of the variable.
+*   Se o usuário atribuir um novo URL à variável, esse URL será carregado automaticamente pela área Web.
+*   Qualquer navegação feita na área Web atualizará automaticamente o conteúdo da variável.
 
-Schematically, this variable functions like the address area of a Web browser. Pode representá-lo através de uma área de texto por cima da área Web.
+Esquematicamente, essa variável funciona como a área de endereço de um navegador Web. Pode representá-lo através de uma área de texto por cima da área Web.
 
 ### Variável URL e comando WA OPEN URL
 
 A variável URL produz os mesmos efeitos que o comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html). No entanto, há que assinalar as seguintes diferenças:
-- For access to documents, this variable only accepts URLs that are RFC-compliant ("file://c:/My%20Doc") and not system pathnames ("c:\MyDoc"). O comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) aceita ambas as notações.
-- If the URL variable contains an empty string, the Web area does not attempt to load the URL. The [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command generates an error in this case.
-- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command.
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+- Para acesso a documentos, essa variável aceita apenas URLs em conformidade com a RFC ("file://c:/My%20Doc") e não nomes de caminho do sistema ("c:\MyDoc"). O comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) aceita ambas as notações.
+- Se a variável URL contiver uma cadeia de caracteres vazia, a área Web não tentará carregar o URL. O comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) gera um erro nesse caso.
+- Se a variável URL não contiver um protocolo (http, mailto, arquivo, etc.), a área Web adicionará "http://", o que não é o caso do comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html).
+- Quando a área Web não é exibida no formulário (quando está localizada em outra página do formulário), a execução do comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) não tem efeito, ao passo que a atribuição de um valor à variável URL pode ser usada para atualizar o URL atual.
 
 #### Gramática JSON
 
@@ -79,15 +79,15 @@ A variável URL produz os mesmos efeitos que o comando [WA OPEN URL](https://doc
 ---
 ## Utilizar o motor de renderização Web integrado
 
-This option allows choosing between two rendering engines for the Web area, depending on the specifics of your application:
+Essa opção permite escolher entre dois mecanismos de renderização para a área Web, dependendo das especificidades de sua aplicação:
 
-*   **unchecked** - `JSON value: system` (default): In this case, 4D uses the "best" engine corresponding to the system. On Windows, 4D automatically uses the most recent version of the browser found on the machine (IE11, MS Edge, etc.). No macOS, 4D usa a versão atual do WebKit (Safari). This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. However, you may notice some rendering differences between Internet Explorer/Edge implementations and WebKit ones.
-*   **checked** - `JSON value: embedded`: In this case, 4D uses Blink engine from Google (CEF). Using the embedded Web engine means that Web area rendering and their functioning in your application are identical regardless of the platform used to run 4D (slight variations of pixels or differences related to network implementation may nevertheless be observed). When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, new versions of the engines are provided through 4D.
+*   **desmarcado** - `Valor JSON: system` (padrão): neste caso, a 4D usa o mecanismo "melhor" correspondente ao sistema. No Windows, 4D usa automaticamente a versão mais recente do navegador encontrado na máquina (IE11, MS Edge, etc.). No macOS, 4D usa a versão atual do WebKit (Safari). Isso significa que você se beneficia automaticamente dos mais recentes avanços na renderização da Web, por HTML5 ou JavaScript. No entanto, você pode notar algumas diferenças de renderização entre as implementações do Internet Explorer/Edge e as do WebKit.
+*   **checked** - `valor JSON: embedded`: nesse caso, 4D usa o mecanismo Blink do Google (CEF). Usar o mecanismo da Web incorporado significa que a renderização da área da Web e seu funcionamento em seu aplicativo são idênticos, independentemente da plataforma usada para executar 4D (pequenas variações de pixels ou diferenças relacionadas à implementação da rede podem, no entanto, ser observadas). Quando essa opção é escolhida, você não se beneficia mais das atualizações automáticas do mecanismo da Web realizadas pelo sistema operacional; no entanto, novas versões dos mecanismos são fornecidas por 4D.
 
 O motor Blink tem as seguintes limitações:
 
-- [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html): using this command requires that at least one page is already loaded in the area (through a call to [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) or one assignment to the URL variable associated to the area.
+- [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html): o uso desse comando requer que pelo menos uma página já esteja carregada na área (por uma chamada para [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) ou uma atribuição à variável URL associada à área).
+- Quando os drops de URL são ativados pelo seletor `WA enable URL drop` do comando \[WA SET PREFERENCE]\](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html), o primeiro drop deve ser precedido por pelo menos uma chamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) ou uma atribuição à variável de URL associada à área.
 
 #### Gramática JSON
 
