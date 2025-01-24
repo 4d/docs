@@ -70,7 +70,7 @@ Lorsque cette propriété est désactivée, tous les pop-up menus associés à u
 
 ## Filtres de saisie
 
-Un filtre de saisie contrôle exactement ce que l’utilisateur peut taper au clavier pendant la saisie. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. Par exemple, si un numéro de composant est toujours constitué de trois lettres suivies de trois chiffres, vous pouvez contraindre la saisie à respecter cette forme. Vous pouvez même contrôler les lettres et les chiffres particuliers.
+Un filtre de saisie contrôle exactement ce que l’utilisateur peut taper au clavier pendant la saisie. Un filtre de saisie contrôle exactement ce que l’utilisateur peut taper au clavier pendant la saisie. Par exemple, si un numéro de composant est toujours constitué de trois lettres suivies de trois chiffres, vous pouvez contraindre la saisie à respecter cette forme. Vous pouvez même contrôler les lettres et les chiffres particuliers.
 
 Un filtre de saisie n’est effectif que pendant la saisie. Il n’a aucun effet sur l’affichage des données une fois que l'objet est désélectionné. En général, les filtres de saisie sont utilisés conjointement avec les [formats d'affichage](properties_Display.md). Le filtre agit pendant la saisie et le format d’affichage assure un affichage approprié de la valeur après sa saisie.
 
@@ -289,7 +289,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 Active le passage direct en mode édition dans les list box.
 
-Lorsque cette option est activée, les cellules de list box basculent en mode édition après un simple clic utilisateur, indépendamment du fait que la zone de list box ait été sélectionnée préalablement. Note that this option allows cells to be edited even when the list box [selection mode](properties_ListBox.md#selection-mode) is set to "None".
+Lorsque cette option est activée, les cellules de list box basculent en mode édition après un simple clic utilisateur, indépendamment du fait que la zone de list box ait été sélectionnée préalablement. Lorsque cette option est activée, les cellules de list box basculent en mode édition après un simple clic utilisateur, indépendamment du fait que la zone de list box ait été sélectionnée préalablement.
 
 Lorsque cette option n'est pas activée, les utilisateurs doivent d'abord sélectionner la ligne de la cellule puis cliquer sur la cellule pour modifier son contenu.
 

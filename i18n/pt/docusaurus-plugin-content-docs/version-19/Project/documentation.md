@@ -5,27 +5,27 @@ title: Documentar um projecto
 
 
 
-In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
+Nos projetos de aplicação, você pode documentar seus métodos e seus formulários, tabelas ou campos. A criação de documentação é particularmente apropriada para projetos que estão sendo desenvolvidos por vários programadores e, em geral, é uma boa prática de programação. A documentação pode conter uma descrição de um elemento, bem como de qualquer informação necessária para entender como o elemento funciona na aplicação.
 
 Os seguintes elementos do projeto aceitam documentação:
 
-- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
+- Métodos (métodos banco de dados, métodos componentes, métodos projeto, métodos formulário, métodos 4D Mobile, triggers e classes)
 - Formulários
 - Tabela
 
-Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. São armazenados como ficheiros independentes na pasta do seu projeto.
+Seus arquivos de documentação são escritos na sintaxe Markdown (arquivos .md) usando qualquer editor compatível com Markdown. São armazenados como ficheiros independentes na pasta do seu projeto.
 
-Documentation is displayed in the preview area (right-side panel) of the Explorer:
+A documentação é exibida na área de visualização (painel do lado direito) do Explorer:
 
 ![](../assets/en/Project/explorer_Doc.png)
 
-It can also be partially exposed as [code editor tips](#viewing-documentation-in-the-code-editor).
+Ele também pode ser parcialmente exposto como [dicas do editor de código](#viewing-documentation-in-the-code-editor).
 
 ## Ficheiros documentação
 
 ### Nome do ficheiro de documentação
 
-Documentation files have the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
+Os arquivos de documentação têm o mesmo nome do elemento anexado, com a extensão ".md". Por exemplo, o arquivo de documentação anexado ao método projeto `myMethod.4dm` será denominado `myMethod.md`.
 
 In the Explorer, 4D automatically displays the documentation file with the same name as the selected element (see below).
 

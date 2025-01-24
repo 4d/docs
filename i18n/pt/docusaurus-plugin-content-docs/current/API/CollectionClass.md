@@ -275,10 +275,10 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <!-- REF #collection.concat().Params -->
 
-| Parâmetro  | Tipo                                                           |                             | Descrição                                                                                                                            |
-| ---------- | -------------------------------------------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------ |
-| value      | Number, Text, Object, Collection, Date, Time, Boolean, Picture |              ->             | Valores a concatenar. Se *valor* for uma coleção, todos os elementos da coleção serão adicionados à coleção original |
-| Resultados | Collection                                                     | <- | Nova coleção com valores adicionados à coleção original                                                                              |
+| Parâmetro  | Tipo                                                           |                             | Descrição                                                                                                                                                                      |
+| ---------- | -------------------------------------------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| value      | Number, Text, Object, Collection, Date, Time, Boolean, Picture |              ->             | Valores a concatenar. Se *valor* for uma coleção, todos os seus elementos serão adicionados como novos elementos no final da coleção original. |
+| Resultados | Collection                                                     | <- | Nova coleção com valores adicionados à coleção original                                                                                                                        |
 
 <!-- END REF -->
 
@@ -288,7 +288,7 @@ A função `.concat()` <!-- REF #collection.concat().Summary -->retorna uma nova
 
 > Essa função não modifica a coleção original.
 
-Se *valor* for uma coleção, todos os seus elementos serão adicionados como novos elementos no final da coleção original. Se *value* não for a coleção, será adicionado ao novo elemento.
+A coleção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se apenas for especificado o parâmetro *startFrom*, a coleção devolvida contém todos os elementos desde *startFrom* até ao último elemento da coleção original.
 
 #### Exemplo
 
@@ -643,7 +643,7 @@ A função `.equal()` <!-- REF #collection.equal().Summary -->compara recursivam
 
 :::
 
-Como padrão, uma avaliação não-diacrítica é realizada. Se você quiser que a avaliação diferencie maiúsculas de minúsculas ou caracteres acentuados, passe a constante `ck diacritical` no parâmetro de opção.
+Como padrão, uma avaliação não-diacrítica é realizada. A avaliação é sensível a maiúsculas e minúsculas e diferencia os caracteres acentuados.
 
 :::tip
 
@@ -1013,7 +1013,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - ou *methodName*, o nome de um método projeto (texto).
 
-A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para o primeiro elemento que cumpra a condição. Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1102,7 +1102,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - *methodName*, o nome de um método projeto (texto).
 
-A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para o primeiro elemento que cumpra a condição. Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -2408,7 +2408,7 @@ valor de comparação propertyPath {valor de comparação logicalOperator proper
 
 onde:
 
-- **propertyPath**: caminho da propriedade em que você deseja executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. No caso de um caminho de atributo cujo tipo é `Collection`, a notação `[]` é usada para lidar todas as ocorrências (por exemplo `children[].age`).
+- **propertyPath**: caminho da propriedade em que você deseja executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings.
 
 - **comparator**: símbolo que compara *propertyPath* e *value*. Os simbolos abaixo são compatíveis:
 
@@ -2465,7 +2465,7 @@ Você pode usar parênteses na consulta para dar prioridade ao cálculo. Por exe
 
 Dois tipos de placeholders podem ser usados: **placeholders indexados** e **placeholders nomeados**.
 
-- **Placeholders indexados**: parâmetros são inseridos como `:paramIndex` (por exemplo, ":1", ":2"...) no *queryString* e seus respectivos valores são fornecidos pela sequência de parâmetro(s) *value*. É possível utilizar até 128 parâmetros *value*.
+- **Placeholders indexados**: parâmetros são inseridos como `:paramIndex` (por exemplo, ":1", ":2"...) no *queryString* e seus respectivos valores são fornecidos pela sequência de parâmetro(s) *value*. no *queryString* e seus respectivos valores são fornecidos pela sequência de parâmetro(s) *value*.
 
 Exemplo:
 
@@ -2483,7 +2483,7 @@ $o.parameters:={name:"Chicago")
 $c:=$myCol.query(":att=:name";$o)
 ```
 
-É possível misturar todos os tipos de argumentos em *queryString*. Uma *queryString* pode conter, para os parâmetros *propertyPath* e *value*:
+É possível misturar todos os tipos de argumentos em *queryString*. É possível misturar todos os tipos de argumentos em *queryString*.
 
 - valores diretos (sem placeholders),
 - placeholders indexados ou com nome.
@@ -2866,7 +2866,8 @@ A função `.remove()` <!-- REF #collection.remove(). Resumo -->remove um ou mai
 
 Em *index*, passe a posição onde deseja que o elemento seja retirado da colecção.
 
-> **Aviso**: lembre que elementos de coleção são numerados a partir de 0. Se *index* for maior que o comprimento da coleção, o índice inicial real será definido como o comprimento da coleção.
+> **Aviso**: lembre que elementos de coleção são numerados a partir de 0. Se *startFrom* < 0, é considerada como offset do final da coleção
+> (*startFrom:=startFrom+length*).
 
 - Se *index* < 0, ele será recalculado como *index:=index+length* (ele é considerado como o deslocamento do final da coleção).
 - Se o valor calculado for < 0, *index* será definido como 0.
@@ -3055,7 +3056,7 @@ A função `.slice()` <!-- REF #collection.slice().Summary -->retorna uma parte 
 
 > Essa função não modifica a coleção original.
 
-A coleção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se apenas for especificado o parâmetro *startFrom*, a coleção devolvida contém todos os elementos desde *startFrom* até ao último elemento da coleção original.
+A coleção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se *valor* for uma coleção, todos os elementos da coleção serão adicionados à coleção original
 
 - Se *startFrom* < 0, ele é recalculado como *startFrom:=startFrom+length* (é considerado como o deslocamento a partir do final da coleção).
 - Se o valor calculado < 0, *startFrom* é definido como 0.

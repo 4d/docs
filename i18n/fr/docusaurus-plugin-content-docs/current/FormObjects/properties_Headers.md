@@ -5,7 +5,7 @@ title: En-têtes
 
 ## Afficher en-têtes
 
-Cette propriété est utilisée pour afficher ou masquer [les en-têtes de colonne listbox](listbox_overview.md#list-box-headers). Il existe un en-tête par colonne; chaque en-tête est configuré séparément.
+En-têtes Il existe un en-tête par colonne; chaque en-tête est configuré séparément.
 
 #### Grammaire JSON
 

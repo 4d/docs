@@ -25,24 +25,24 @@ displayed_sidebar: docs
 
 #### 説明
 
-`Process info` コマンドは、<!-- REF #_command_.Process info.Summary -->*processNumber* 引数にプロセス番号を渡したプロセスについての詳細な情報を提供するオブジェクトを返します<!-- END REF -->。 正しくないプロセス番号を渡した場合、コマンドはnull オブジェクトを返します。
+`Process info` コマンドは、<!-- REF #_command_.Process info.Summary -->*processNumber* 引数にプロセス番号を渡したプロセスについての詳細な情報を提供するオブジェクトを返します<!-- END REF -->。 正しくないプロセス番号を渡した場合、コマンドはnull オブジェクトを返します。 正しくないプロセス番号を渡した場合、コマンドはnull オブジェクトを返します。
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ            | 型                                       | 説明                                                   |
-| ---------------- | --------------------------------------- | ---------------------------------------------------- |
-| cpuTime          | Real                                    | 実行時間(秒)                           |
-| cpuUsage         | Real                                    | このプロセスに割り当てられてる時間のパーセント(0 から1 の間) |
-| creationDateTime | Text (Date ISO 8601) | プロセス作成の日時                                            |
-| ID               | Integer                                 | プロセス固有のID                                            |
-| name             | Text                                    | プロセス名                                                |
-| number           | Integer                                 | プロセス番号                                               |
-| preemptive       | Boolean                                 | プリエンプティブに実行可能ならTrue、それ以外の場合にはfalse                   |
-| sessionID        | Text                                    | セッションUUID                                            |
-| state            | Integer                                 | 現在の状態。 取り得る値: 以下を参照のこと               |
-| systemID         | Text                                    | ユーザープロセス、4D プロセス、またはスペアプロセスのID                       |
-| type             | Integer                                 | 実行中のプロセスタイプ。 取り得る値: 以下を参照のこと         |
-| visible          | Boolean                                 | 表示であればTrue、それ以外はFalse                                |
+| プロパティ            | 型                                       | 説明                                                                           |
+| ---------------- | --------------------------------------- | ---------------------------------------------------------------------------- |
+| cpuTime          | Real                                    | 実行時間(秒)                                                   |
+| cpuUsage         | Real                                    | このプロセスに割り当てられてる時間のパーセント(0 から1 の間)                         |
+| creationDateTime | Text (Date ISO 8601) | プロセス作成の日時                                                                    |
+| ID               | Integer                                 | プロセス固有のID                                                                    |
+| name             | Text                                    | プロセス名                                                                        |
+| number           | Integer                                 | プロセス番号                                                                       |
+| preemptive       | Boolean                                 | プリエンプティブに実行可能ならTrue、それ以外の場合にはfalse                                           |
+| sessionID        | Text                                    | セッションUUID                                                                    |
+| state            | Integer                                 | 現在の状態。 取り得る値: 以下を参照のこと                                       |
+| systemID         | Text                                    | ユーザープロセス、4D プロセス、またはスペアプロセスのID                                               |
+| type             | Integer                                 | 実行中のプロセスタイプ。 取り得る値: 以下を参照のこと 取り得る値: 以下を参照のこと |
+| visible          | Boolean                                 | 表示であればTrue、それ以外はFalse                                                        |
 
 - "state" の取り得る値:
 
@@ -118,7 +118,7 @@ displayed_sidebar: docs
 
 :::note
 
-4D の内部プロセスのtype は負の値を持ち、ユーザーによって生成されたプロセスのtype は正の値を持ちます。 ユーザーによってローンチされたワーカープロセスのtype は5 です。
+4D の内部プロセスのtype は負の値を持ち、ユーザーによって生成されたプロセスのtype は正の値を持ちます。 ユーザーによってローンチされたワーカープロセスのtype は5 です。 ユーザーによってローンチされたワーカープロセスのtype は5 です。
 
 :::
 

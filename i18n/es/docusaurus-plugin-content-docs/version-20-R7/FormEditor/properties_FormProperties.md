@@ -9,7 +9,7 @@ title: Propiedades de los formularios
 
 > La propiedad de esquema de color sólo se aplica en macOS.
 
-Esta propiedad define el esquema de colores para el formulario. This property defines the color scheme for the form. Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
+Esta propiedad define el esquema de colores para el formulario. Esta propiedad define el esquema de colores para el formulario. Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
 
 - dark -- texto claro sobre fondo oscuro
 - light - dark text on a light background

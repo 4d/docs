@@ -35,8 +35,7 @@ Pode modificar esta barra de menu como desejar ou criar outras.
    Elija **Crear una nueva barra de menús** o **Crear un nuevo menú** en el menú contextual de la lista o en el menú de opciones situado debajo de la lista.
    Se você criou uma barra de menus, uma nova barra aparecerá na lista contendo os menus padrão (Arquivo e Edição).
 2. (opcional) Clique duas vezes no nome da barra de menus/menu para alternar para o modo de edição e digitar um nome personalizado.
-   OU
-   Digite o nome personalizado na área "Título".
+   OU Digite o nome personalizado na área "Título".
    Os nomes das barras de menu devem ser únicos. Podem conter até 31 caracteres. Puede introducir el nombre como "hard coded" o introducir una referencia (ver [información sobre la propiedad Title](properties.md#title)).
 
 ### Utilizar a linguagem 4D
@@ -62,8 +61,7 @@ Para adicionar um item de menu:
    Clique no botão adicionar ![](../assets/en/Menus/PlussNew.png) localizado abaixo da lista central.
    4D adiciona um novo item com o nome padrão "Item X", onde X é o número de itens já criados.
 3. Clique duas vezes no nome do comando para alternar para o modo de edição e inserir um nome personalizado.
-   OU
-   Digite o nome personalizado na área "Título". Pode conter até 31 caracteres. Você pode digitar o nome como "código duro" ou insira uma referência (veja abaixo).
+   OU Digite o nome personalizado na área "Título". Pode conter até 31 caracteres. Você pode digitar o nome como "código duro" ou insira uma referência (veja abaixo).
 
 ### Utilizar a linguagem 4D
 

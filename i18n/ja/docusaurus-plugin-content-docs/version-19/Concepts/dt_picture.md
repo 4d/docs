@@ -40,7 +40,7 @@ WIC および ImageIO はピクチャー内のメタデータの書き込みを�
 | リサイズ     | Picture * Number       | Picture | 割合によってピクチャーをサイズ変更します。                                                                                              |
 | 水平スケール   | Picture *+ Number      | Picture | 割合によってピクチャー幅をサイズ変更します。                                                                                             |
 | 垂直スケール   | Picture *&#124; Number | Picture | 割合によってピクチャー高さをサイズ変更します。                                                                                            |
-| キーワードを含む | Picture % String       | Boolean | 文字列が、ピクチャー式に格納されたピクチャーに関連付けられている場合に true を返します。 `GET PICTURE KEYWORDS` を参照ください                                     |
+| キーワードを含む | Picture % String       | Boolean | 文字列が、ピクチャー式に格納されたピクチャーに関連付けられている場合に true を返します。 `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください    |
 
 
 **注:**
