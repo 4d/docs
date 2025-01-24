@@ -693,7 +693,7 @@ Una comparación recursiva de colecciones puede llevar mucho tiempo si la colecc
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Comparación
+- Tipo
 - Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede efecturar toda prueba, con o sin los parámetros, y debe devolver *true* para cada elemento que cumpla la prueba. Recibe un `Object` en el primer parámetro ($1).
@@ -829,12 +829,12 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <!-- REF #collection.fill().Params -->
 
-| Parámetros | Tipo                                            |                             | Descripción                                                                               |
-| ---------- | ----------------------------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------- |
-| value      | number, Text, Collection, Object, Date, Boolean |              ->             | Valor a asignar                                                                           |
-| startFrom  | Integer                                         |              ->             | Índice de inicio (incluido)                                            |
-| end        | Integer                                         |              ->             | Índice final (no incluido)                                             |
-| Result     | collection                                      | <- | *methodName*, el nombre de un método proyecto (texto). |
+| Parámetros | Tipo                                            |                             | Descripción                                    |
+| ---------- | ----------------------------------------------- | :-------------------------: | ---------------------------------------------- |
+| value      | number, Text, Collection, Object, Date, Boolean |              ->             | Valor a asignar                                |
+| startFrom  | Integer                                         |              ->             | Índice de inicio (incluido) |
+| end        | Integer                                         |              ->             | Índice final (no incluido)  |
+| Result     | collection                                      | <- | Colección original ordenada                    |
 
 <!-- END REF -->
 
@@ -901,7 +901,7 @@ La función `.filter()` <!-- REF #collection.filter().Summary -->devuelve una nu
 
 Se designa la retrollamada a ejecutar para filtrar los elementos de la colección utilizando:
 
-- Comparación
+- Tipo
 - Tipo
 
 Se llama a la retrollamada con los parámetros pasados en *param* (opcional) y un objeto en primer parámetro (*$1*). La retrollamada puede realizar cualquier prueba, con o sin el parámetro(s) y debe devolver **true** para cada elemento que cumpla la condición y por lo tanto, debe añadirse a la nueva colección.
@@ -988,7 +988,7 @@ Ejemplo
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Comparación
+- Tipo
 - Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un `Object` en el primer parámetro ($1).
@@ -1076,7 +1076,7 @@ Ejemplo:
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Comparación
+- Tipo
 - Desea ordenar la colección resultante:
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un `Object` en el primer parámetro ($1).
@@ -1142,7 +1142,7 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 #### Descripción
 
-Colección original sin elementos eliminados
+Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 > Esta función no modifica la colección original.
 
@@ -1251,7 +1251,7 @@ Colección de valores transformados
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Comparación
+- Tipo
 - Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
@@ -1733,7 +1733,7 @@ La función `.map()` <!-- REF #collection.map().Summary -->crea una nueva colecc
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Comparación
+- Tipo
 - Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
@@ -2172,7 +2172,7 @@ Esta función devuelve una *copia superficial*, lo que significa que los objetos
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Comparación
+- Tipo
 
 - Tipo
 
@@ -2640,7 +2640,7 @@ La función `.reduce()` <!-- REF #collection.reduce().Summary -->aplica la *form
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Comparación
+- Tipo
 - Tipo
 
 Tipo
@@ -2725,7 +2725,7 @@ La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplic
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Comparación
+- Tipo
 - Tipo
 
 Tipo
@@ -3046,7 +3046,7 @@ La función `.some()` <!-- REF #collection.some().Summary --> devuelve true si a
 
 Se designa el código 4D de retrollamada (callback) a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Comparación
+- Tipo
 - Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede efecturar toda prueba, con o sin los parámetros, y debe devolver *true* para cada elemento que cumpla la prueba. Recibe un `Object` en el primer parámetro ($1).
