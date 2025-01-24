@@ -9,7 +9,7 @@ title: Propriétés des formulaires
 
 > La propriété de schéma de couleurs n'est appliquée que sur macOS.
 
-Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](https://doc.4d.com/4dv19/help/command/en/page1762.html)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
+Cette propriété définit la palette de couleurs du formulaire. Cette propriété définit la palette de couleurs du formulaire. Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
 
 - dark - texte clair sur fond foncé
 - light - texte foncé sur fond clair
