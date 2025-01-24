@@ -90,7 +90,7 @@ You want to use a field expression to add an anchored image to a document displa
 
 ```4d
  QUERY([Flowers];[Flowers]Common_Name="tulip")
- WP SET TEXT(myDoc;[Flowers]Description;wk append) //insert text
+ WP SET TEXT(myDoc;[Flowers]Description;wk append) //inserir texto
  var $obImage : Object
  $obImage:=WP Add picture(myDoc)
  WP SET ATTRIBUTES($obImage;wk image formula;Formula([Flowers]Image))
