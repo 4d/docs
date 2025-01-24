@@ -38,7 +38,7 @@ A página lista todas as tabelas do banco de dados (incluindo tabelas invisívei
 - **Índices**: número de índices de todo tipo en la tabla
 - **Encriptable**: si el atributo **Encriptable** se marca para la tabla al nivel de la estructura (ver el párrafo "Encriptable" en el Manual de Diseño).
 - **Encriptado**: si se marca, los registros de la tabla se cifran en el archivo de datos. **Encriptado**: si se marca, los registros de la tabla se cifran en el archivo de datos.
-- **Tamaño tabla direcciones**: tamaño de la tabla de direcciones para cada tabla. The address table is an internal table which stores one element per record created in the table. Na verdade, associa os registos ao seu endereço físico. For performance reasons, it is not resized when records are deleted, thus its size can be different from the current number of records in the table. Si esta diferencia es significativa, se puede ejecutar una operación de compactación de datos con la opción "Compactar la tabla de direcciones" marcada para optimizar el tamaño de la tabla de direcciones (ver la página [Compactar](compact.md)).
+- **Tamaño tabla direcciones**: tamaño de la tabla de direcciones para cada tabla. A tabela de endereços é uma tabela interna que armazena um elemento por registro criado na tabela. Na verdade, associa os registos ao seu endereço físico. Por motivos de desempenho, ele não é redimensionado quando os registros são excluídos, portanto, seu tamanho pode diferir do número atual de registros na tabela. Si esta diferencia es significativa, se puede ejecutar una operación de compactación de datos con la opción "Compactar la tabla de direcciones" marcada para optimizar el tamaño de la tabla de direcciones (ver la página [Compactar](compact.md)).
   ***Nota:** las diferencias entre el tamaño de la tabla de direcciones y el número de registros también pueden ser el resultado de un incidente durante la escritura de la caché en el disco.*
 
 ## Dados
@@ -51,7 +51,7 @@ As informações são fornecidas sob a forma de gráficos:
 
 ![](../assets/en/MSC/MSC_Data.png)
 
-> This page does not take into account any data that may be stored outside of the data file (see "External storage").
+> Esta página não considera nenhum dado que possa estar armazenado fora do arquivo de dados (consulte "Armazenamento externo").
 
 Arquivos que são muito fragmentados reduzem o desempenho do disco e, assim, do banco de dados. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](../assets/en/MSC/MSC_infowarn.png)
 
