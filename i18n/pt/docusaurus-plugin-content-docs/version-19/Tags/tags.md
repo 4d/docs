@@ -473,6 +473,9 @@ O seguinte código:
     FIRST RECORD([People])
  While(Not(End selection([People])))
     ...
+    FIRST RECORD([People])
+ While(Not(End selection([People])))
+    ...
 ```
 
 ### `<!--#4DLOOP array-->`
