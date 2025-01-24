@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 La commande `ds` <!-- REF #_command_.ds.Summary -->retourne une référence vers le datastore correspondant à la base de données 4D courante ou à la base de données désignée par *localID*<!-- END REF -->.
 
-Si vous omettez le paramètre *localID* (ou si vous passez une chaîne vide ""), la commande renvoie une référence au datastore correspondant à la base de données 4D locale (ou à la base 4D Server en cas d'ouverture d'une base de données distante sur 4D Ser Le datastore est ouvert automatiquement et est disponible directement via `ds`.
+Si vous omettez le paramètre *localID* (ou si vous passez une chaîne vide ""), la commande renvoie une référence au datastore correspondant à la base de données 4D locale (ou à la base 4D Server en cas d'ouverture d'une base de données distante sur 4D Ser Le datastore est ouvert automatiquement et est disponible directement via `ds`. Le datastore est ouvert automatiquement et est disponible directement via `ds`.
 
 Vous pouvez également obtenir une référence sur un datastore distant ouvert en passant son identifiant local dans le paramètre *localID*. Vous pouvez également obtenir une référence sur un datastore distant ouvert en passant son identifiant local dans le paramètre *localID*. L'identifiant local est défini lors de l'utilisation de cette commande.
 

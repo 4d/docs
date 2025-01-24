@@ -1150,7 +1150,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 #### Recherches dans les relations N vers N
 
-ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur `AND` MAIS dans le même attribut. Par exemple, considérez la structure suivante :
+ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur `AND` MAIS dans le même attribut. Par exemple, considérez la structure suivante :
 
 ![alt-text](../assets/en/API/manytomany.png)
 

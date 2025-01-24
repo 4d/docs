@@ -91,7 +91,7 @@ Você pode lidar com entidades como qualquer outro objeto em 4D e passar suas re
 ## Utilização de atributos de entidades
 
 Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na tabela correspondente. Os atributos de entidade do tipo armazenamento podem ser definidos ou obtidos como propriedades simples do objeto de entidade, enquanto a entidade do tipo **relatedEntity** ou **relatedEntities** retornará uma entidade ou uma seleção de entidades.
-> Para obter mais informações sobre o tipo de atributo, consulte o parágrafo [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) .
+> Para obter mais informações sobre o tipo de atributo, consulte o parágrafo [Atributos de armazenamento e de relação](dsMapping.md#storage-and-relation-attributes).
 
 Por exemplo, para definir um atributo de armazenamento:
 
@@ -228,13 +228,13 @@ Uma nova seleção de entidade é **alterável** nos seguintes casos:
 
 Exemplo:
 ```4d
-$toModify:=ds. Company.all().copy() //$toModify is alterable
+$toModify:=ds.Company.all().copy() //$toModify é alterável
 ```
 
 
 Uma nova seleção de entidade **herda** da natureza da seleção de entidade original nos seguintes casos:
 
-- the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. .
+- a nova seleção de entidade resulta de uma das várias funções de classe ORDA aplicadas a uma seleção de entidade existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - a nova entity selection é baseada numa relação:
     - [entity.*attributeName*](API/EntityClass.md#attributename) (por exemplo, "company.employees") quando *attributeName* é um atributo relacionado um-para-muitos e a entidade pertence a uma seleção de entidade (mesma natureza da seleção de entidade [.getSelection()](API/EntityClass.md#getselection) ),
     - [entitySeletion.*attributeName*](API/EntitySelectionClass.md#attributename) (por exemplo, "employees.employer") quando *attributeName* é um atributo relacionado (mesma natureza que a seleção da entidade),

@@ -235,9 +235,9 @@ takeTwo(->[myTable]myField;->$MyVar)
 - $PointerTwo:=->$PointerOne
   \--> 新たな変数 $PointerTwo に、$MyVar を参照する $PointerOne へのポインターを代入します。
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示します。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。
+  \--> $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示します。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。
 - ALERT (($PointerTwo->)->)
-  \--> 先の説明と同様に $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。
+  \--> 先の説明と同様に $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。
 
 以下の例では、$MyVar に "Hello" が代入されます:
 

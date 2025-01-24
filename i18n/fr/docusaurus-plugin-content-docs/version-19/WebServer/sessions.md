@@ -84,9 +84,9 @@ Voici un exemple :
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
-	//Accès accordé, ne rien faire
+    //Accès accordé, ne rien faire
 Else
-	//Afficher une page d'authentification
+    //Afficher une page d'authentification
 End if
 ```
 

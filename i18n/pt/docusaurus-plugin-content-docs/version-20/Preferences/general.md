@@ -45,9 +45,9 @@ Na caixa de diálogo Preferências do 4D, a opção **Janela guia** permite cont
 
 Estão disponíveis três opções:
 
-*   **De acordo com as Preferências do sistema** (padrão): As janelas 4D se comportarão como definido nas Preferências do sistema do macOS (Em tela cheia, Sempre ou Manualmente).
+*   **Conforme as Preferências do sistema** (padrão): as janelas 4D se comportarão como definido nas Preferências do sistema do macOS (Em tela cheia, Sempre ou Manualmente).
 *   **Never**: Abrir um novo documento no 4D form editor ou no Code Editor sempre resultará na criação de uma nova janela (as guias nunca são criadas).
-*   **Sempre**: Abrir um novo documento no editor de formulários 4D ou nos editores de métodos sempre resultará na criação de uma nova guia.
+*   **Sempre**: abrir um novo documento no editor de formulários 4D ou nos editores de métodos sempre resultará na criação de uma nova guia.
 
 ### Aparência (somente macOS)
 

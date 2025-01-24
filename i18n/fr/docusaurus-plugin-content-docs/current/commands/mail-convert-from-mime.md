@@ -29,7 +29,7 @@ La commande `MAIL Convert from MIME` <!-- REF #_command_.MAIL Convert from MIME.
 
 > Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).
 
-Passez dans *mime* un document MIME valide à convertir. Il peut être fourni par tout type de serveur ou d'application de messagerie. Vous pouvez passer un BLOB ou un texte dans le paramètre *mime*. Si le MIME provient d'un fichier, il est recommandé d'utiliser un paramètre BLOB pour éviter les problèmes liés aux conversions de charset et de retours à la ligne.
+Passez dans *mime* un document MIME valide à convertir. Il peut être fourni par tout type de serveur ou d'application de messagerie. Il peut être fourni par tout type de serveur ou d'application de messagerie. Si le MIME provient d'un fichier, il est recommandé d'utiliser un paramètre BLOB pour éviter les problèmes liés aux conversions de charset et de retours à la ligne.
 
 #### Objet retourné
 

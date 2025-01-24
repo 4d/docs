@@ -3,7 +3,7 @@ id: documentation
 title: Documentar um projecto
 ---
 
-Nos projetos de aplicação, você pode documentar seus métodos e suas classes, formulários, tabelas ou campos. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
+Nos projetos de aplicação, você pode documentar seus métodos e suas classes, formulários, tabelas ou campos. A criação de documentação é particularmente apropriada para projetos que estão sendo desenvolvidos por vários programadores e, em geral, é uma boa prática de programação. A documentação pode conter uma descrição de um elemento, bem como de qualquer informação necessária para entender como o elemento funciona na aplicação.
 
 Os seguintes elementos do projeto aceitam documentação:
 
@@ -12,9 +12,9 @@ Os seguintes elementos do projeto aceitam documentação:
 - Formulários
 - Tabela
 
-Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. São armazenados como ficheiros independentes na pasta do seu projeto.
+Seus arquivos de documentação são escritos na sintaxe Markdown (arquivos .md) usando qualquer editor compatível com Markdown. São armazenados como ficheiros independentes na pasta do seu projeto.
 
-Documentation is displayed in the preview area (right-side panel) of the Explorer:
+A documentação é exibida na área de visualização (painel do lado direito) do Explorer:
 
 ![](../assets/en/Project/explorer_Doc.png)
 
@@ -24,7 +24,7 @@ También se puede exponer parcialmente como [consejos del editor de código](#vi
 
 ### Nome do ficheiro de documentação
 
-Documentation files have the same name as their attached element, with the ".md" extension. Por ejemplo, el archivo de documentación adjunto al método proyecto `myMethod.4dm` se llamará `myMethod.md`.
+Os arquivos de documentação têm o mesmo nome do elemento anexado, com a extensão ".md". Por ejemplo, el archivo de documentación adjunto al método proyecto `myMethod.4dm` se llamará `myMethod.md`.
 
 In the Explorer, 4D automatically displays the documentation file with the same name as the selected element (see below).
 

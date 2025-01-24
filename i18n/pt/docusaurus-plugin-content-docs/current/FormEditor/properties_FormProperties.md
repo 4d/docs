@@ -32,9 +32,9 @@ Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de 
 
 #### Gramática JSON
 
-| Nome | Tipo de dados      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                              |
-| ---- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css  | cadeia ou colecção | Caminho(s) do arquivo CSS fornecido(s) como<li>:uma string (um arquivo para ambas as plataformas)</li><li>uma coleção de strings (uma lista de arquivos para ambas as plataformas)</li><li>uma coleção de objetos {"path":string; "media": "mac" \\| "win"} </li> |
+| Nome | Tipo de dados      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                 |
+| ---- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css  | cadeia ou colecção | Caminho(s) do arquivo CSS fornecido(s) como<li>:uma string (um arquivo para ambas as plataformas)</li><li>uma coleção de strings (uma lista de arquivos para ambas as plataformas)</li><li>uma coleção de objetos {"path":string; "media": "mac" \\ |
 
 ---
 

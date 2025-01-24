@@ -61,7 +61,7 @@ Web ユーザーセッションに関する詳細な情報については、[Web
 
 #### ストアドプロシージャーセッション
 
-すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。 ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
+すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。 ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます: ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
 
 - [`Execute on server`](../commands-legacy/execute-on-server.md) コマンドで呼び出されたメソッド
 - `On Server Startup`、`On Server Shutdown`、`On Backup Startup`、`On Backup Shutdown`、および `On System event` データベースメソッド

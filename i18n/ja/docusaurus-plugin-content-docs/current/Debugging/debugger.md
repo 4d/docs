@@ -340,41 +340,41 @@ $c:=$a+$b
 - ウォッチエリアまたは呼び出し連鎖エリアから項目や式をドラッグ＆ドロップします。
 - [ソースコードエリア](#ソースコードエリア) で式を選択し、**ctrl+D**  (Windows) または **cmd+D** (macOS) を押します。
 - カスタムウォッチエリアの空スペースのどこかをダブルクリックします (プレースホルダー名を持つ編集可能な式が追加されます)。
-- Select a [display option](#display-mode) that automatically inserts expressions.
-- Select **New Expression...** in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**. 値を返すフォーミュラであれば、なんでも追加できます。
+- [表示オプション](#表示モード) を選択することで式が自動的に挿入されます。
+- カスタムウォッチペインの[コンテキストメニュー](#コンテキストメニュー) 内の**新しい式...** を選ぶことで**フォーミュラエディタ** を使用して式を追加することができます。 値を返すフォーミュラであれば、なんでも追加できます。
 
 式を編集するには、その式をクリックして選択し、再びクリックすると (または**Enter**キーを押す) 編集モードになります。
 
-To delete a custom expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard, or click on the **x** icon.
+カスタムの式を削除するには、その式をクリックして選択し、**Backspace** または **Delete**キーを押すか、あるいは **x** アイコンをクリックします。
 
 :::warning
 
-Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+システム変数 (たとえば OK変数) の値を変更するような 4D式を評価する場合、その後のメソッド実行に影響しうる点に注意してください。
 
 :::
 
-### Pinning an expression
+### 式をピン留めする
 
-You can click on the pushpin icon to pin an expression:
+押しピンのアイコンをクリックすることで、式をピン留めすることができます:
 
 ![pinning-expression](../assets/en/Debugging/pin-expression.png)
 
-The expression will then be displayed in all debugger windows.
+ピン留めされた式はその後全てのデバッガウィンドウに表示されるようになります。
 
 ### コンテキストメニュー
 
-The Custom Watch Pane’s menu is available on a contextual click or using the ![menu](../assets/en/Debugging/custom-watch-pane-menu.png) icon:
+カスタムウォッチペインのメニューはコンテキストクリック、または![メニュー](../assets/en/Debugging/custom-watch-pane-menu.png) アイコンをクリックすることで利用可能です。
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-- **Display**: Selects the [display mode](#display-mode) to be used for all debugger windows.
-- **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
+- **表示**: 全てのデバッガウィンドウで使用する[表示モード](#表示モード) を選択します。
+- **新しい式...**: 新しい式を挿入し、4D のフォーミュラエディターを表示します。
   ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
-  For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
+  フォーミュラエディターについての詳細な情報については、 [4D Design Reference マニュアル](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html) をご覧ください。
 
-* **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
+* **コマンドを挿入...**: 4D コマンドを新しい式として挿入するメニューを表示します。
 * **すべて削除**: 現在カスタムウォッチエリアに表示されている式をすべて削除します。
-* **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
+* **標準式**: ウォッチエリアの式リストをカスタムの式としてコピーします。
 
 > このオプションは [リモートデバッグモード](debugging-remote.md)では利用できません。
 
@@ -391,9 +391,9 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 
 このエリアでは、[**ブレークポイント**](breakpoints.md) の追加や削除も可能です。
 
-### Prototype
+### プロトタイプ
 
-The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
+呼び出しチェーンに表示される、現在実行中のメソッドまたは関数のプロトタイプがペインの上部に表示されます:
 
 ![prototype](../assets/en/Debugging/prototype.png)
 
@@ -456,9 +456,9 @@ The prototype of the currently executed method or function in the Call chain is 
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-- **Show documentation**: Opens the documentation for the target element. このコマンドは以下の要素に使用できます:
-  - _Project methods_, _user classes_: Selects the method in the Explorer and switches to the documentation tab
-  - _4D commands, functions, class names:_ Displays the online documentation.
+- **ドキュメンテーションを表示**: ターゲット要素のドキュメンテーションを開きます。 このコマンドは以下の要素に使用できます:
+  - _プロジェクトメソッド_, _ユーザークラス_: エクスプローラー内でのメソッドを選択し、ドキュメンテーションタブに切り替えします。
+  - _4D コマンド、関数、クラス名:_ オンラインのドキュメントを表示します。
 - **参照を検索...** (コードエディターでも利用可能): 現在の要素が参照されているすべてのメソッドとフォームを検索します。 現在の要素とは、選択されているものまたはカーソルが置かれているものをいいます。 これにはフィールド、変数、コマンド、文字列等が含まれます。 検索結果は、標準の検索結果ウィンドウに表示されます。 現在の要素とは、選択されているものまたはカーソルが置かれているものをいいます。 これにはフィールド、変数、コマンド、文字列等が含まれます。 検索結果は、標準の検索結果ウィンドウに表示されます。
 - **コピー**: 選択された式が標準のペーストボードへとコピーされます。
 - **式ペインにコピー**: 選択された式をカスタムウォッチエリアにコピーします。

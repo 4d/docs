@@ -9,7 +9,7 @@ title: Propriedades do formulário
 
 > A propriedade Esquema de cores só é aplicada no macOS.
 
-Esta propriedade define o esquema de cores para o formulário. Por padrão, quando a propriedade não está definida, o valor de um esquema de cores é **herdado** (o formulário usa o esquema definido no [nível do aplicativo] (https://doc.4d.com/4dv19/help/command/en/page1762.html)). Isto pode ser alterado para o formulário para uma das duas opções seguintes:
+Esta propriedade define o esquema de cores para o formulário. Esta propriedade define o esquema de cores para o formulário. Isto pode ser alterado para o formulário para uma das duas opções seguintes:
 
 - dark - texto claro sobre um fundo escuro
 - light - texto escuro sobre um fundo claro
@@ -32,9 +32,9 @@ Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de 
 
 #### Gramática JSON
 
-| Nome | Tipo de dados      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                              |
-| ---- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css  | cadeia ou colecção | Caminho(s) do arquivo CSS fornecido(s) como<li>:uma string (um arquivo para ambas as plataformas)</li><li>uma coleção de strings (uma lista de arquivos para ambas as plataformas)</li><li>uma coleção de objetos {"path":string; "media": "mac" \\| "win"} </li> |
+| Nome | Tipo de dados      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                 |
+| ---- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css  | cadeia ou colecção | Caminho(s) do arquivo CSS fornecido(s) como<li>:uma string (um arquivo para ambas as plataformas)</li><li>uma coleção de strings (uma lista de arquivos para ambas as plataformas)</li><li>uma coleção de objetos {"path":string; "media": "mac" \\ |
 
 ---
 

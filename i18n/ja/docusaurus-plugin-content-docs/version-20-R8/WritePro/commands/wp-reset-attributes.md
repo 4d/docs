@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 #### 説明
 
-**WP RESET ATTRIBUTES** コマンドは<!--REF #_command_.WP RESET ATTRIBUTES.Summary-->引数として渡されたレンジ、要素、またはドキュメントの1つ以上の値をリセットすることができます。<!-- END REF-->このコマンドは任意の4D Write Pro 内部属性(文字、段落、ドキュメント、表または画像)を削除することができます。 You can pass the attribute name to be reset in *attribName* or you can pass a collection of attributes in *attribColl* to reset multiple attributes at once.
+**WP RESET ATTRIBUTES** コマンドは<!--REF #_command_.WP RESET ATTRIBUTES.Summary-->引数として渡されたレンジ、要素、またはドキュメントの1つ以上の値をリセットすることができます。<!-- END REF-->このコマンドは任意の4D Write Pro 内部属性(文字、段落、ドキュメント、表または画像)を削除することができます。 You can pass the attribute name to be reset in *attribName* or you can pass a collection of attributes in *attribColl* to reset multiple attributes at once. You can pass the attribute name to be reset in *attribName* or you can pass a collection of attributes in *attribColl* to reset multiple attributes at once.
 
 > In the case of a section or a subsection, the *sectionOrSubsection* object can be passed alone and all the attributes are reset at once.
 
@@ -29,12 +29,12 @@ displayed_sidebar: docs
 - 要素(ヘッダー / フッター / 本文 / 表 / 段落 / アンカーされた画像またはインラインの画像 / セクション / サブセクション / スタイルシート)
 - 4D Write Pro ドキュメント
 
-**WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。
+**WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。
 
 :::note 注記
 
 - **WP RESET ATTRIBUTES** がセクション/サブセクションオブジェクトに対して適用された場合、属性はその親セクションまたはドキュメントから継承されます。
-- **WP RESET ATTRIBUTES** がスタイルシートオブジェクトに対して適用された場合、スタイルシートがデフォルト("Normal")スタイルシートである場合を除き、その属性はスタイルシートから削除されます。 この場合、デフォルトの値が属性に対して適用されます(スタイルシートは全てのスタイルシート属性を定義します)。
+- **WP RESET ATTRIBUTES** がスタイルシートオブジェクトに対して適用された場合、スタイルシートがデフォルト("Normal")スタイルシートである場合を除き、その属性はスタイルシートから削除されます。 この場合、デフォルトの値が属性に対して適用されます(スタイルシートは全てのスタイルシート属性を定義します)。 この場合、デフォルトの値が属性に対して適用されます(スタイルシートは全てのスタイルシート属性を定義します)。
 - *sectionOrSubsection* 引数がセクションでもサブセクションでもなく、また属性が何も指定されたなかった場合には、エラーが生成されます。
 
 :::
