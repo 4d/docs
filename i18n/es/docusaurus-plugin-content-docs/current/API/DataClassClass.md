@@ -40,7 +40,7 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece un objeto de interfaz a una 
 
 #### Descripción
 
-Los atributos de las clases de datos son<!-- REF ClaseDeDatos.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
+Los atributos de las clases de datos son<!-- REF DataClassClass.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
 
 Los objetos devueltos tienen propiedades que puede leer para obtener información sobre los atributos de su clase de datos.
 
@@ -579,7 +579,7 @@ $number:=$ds.Persons.getCount()
 
 #### Descripción
 
-La función `.getDataStore()` <!-- REF #DataClass.getDataStore().Summary -->devuelve el datastore para la clase de datos especificada<!-- END REF -->.
+La función `.getDataStore()` <!-- REF #DataClassClass.getDataStore().Summary -->devuelve el datastore para la clase de datos especificada<!-- END REF -->.
 
 El almacén de datos puede ser:
 
@@ -846,7 +846,7 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 
 #### Descripción
 
-La función `.newSelection()` <!-- REF #DataClassClass.newSelection(). Summary -->crea una nueva selección de entidades en blanco, no compartible, relacionada con la clase de datos, en memoria<!-- END REF -->.
+La función `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->crea una nueva selección de entidades en blanco, no compartible, relacionada con la clase de datos, en memoria<!-- END REF -->.
 
 > Para obtener información sobre las selecciones de entidades no compartibles, consulte [esta sección](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -900,7 +900,7 @@ Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` va
 
 #### parámetro queryString
 
-Ejemplo 1
+El parámetro *queryString* utiliza la siguiente sintaxis:
 
 ```4d
 attributePath|formula comparator value   
