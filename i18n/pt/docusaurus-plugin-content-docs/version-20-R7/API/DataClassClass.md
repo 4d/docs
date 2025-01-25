@@ -273,7 +273,7 @@ Para cada objeto de *objectCol*:
   - Se a chave primária for dada (como é) e não existir, a entidade é criada
   - Se a chave primária não for dada, a entidade é criada e o valor da chave primária é assignado com respeito às regras padrão de database.
 
-> A propriedade "\*\*KEY" que contém um valor só é tida em conta quando a propriedade "\*\*NEW" está definida como **false** (ou é omitida) e existe uma entidade correspondente. Em todos os outros casos, o valor da propriedade "\*\_KEY" é ignorado, o valor da chave primária deve ser passado "tal como está".
+> A propriedade "\*\*KEY" que contém um valor só é tida em conta quando a propriedade "\*\*NEW" está definida como **false** (ou é omitida) e existe uma entidade correspondente. Em todos os outros casos, o valor da propriedade "\_\_KEY" é ignorado, o valor da chave primária deve ser passado "tal como está".
 
 **Entidades relacionadas**
 
@@ -709,7 +709,7 @@ A função `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retorna um
 
 #### Descrição
 
-A função `.getRemoteCache()` <!-- REF #DataClassClassClass.getRemoteCache().Summary -->retorna um objeto que contém os conteúdos do cache ORDA para um dataclass.<!-- END REF -->.
+A função `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->retorna um objeto que contém os conteúdos do cache ORDA para um dataclass.<!-- END REF -->.
 
 Chamar esta função a partir de uma aplicação 4D monousuário retorna `Null`.
 
@@ -891,7 +891,7 @@ Quando criada, a seleção de entidades não contém nenhuma entidade (`mySelect
 
 #### Descrição
 
-A função `.query()` busca entidades que atendam aos critérios de pesquisa especificados em *queryString* ou *formula* e (opcionalmente) *value*(s), para todas as entidades na classe de dados, e retorna um novo objeto do tipo `EntitySelection` contendo todas as entidades encontradas. Se aplica carregamento diferido/lazy loading.
+A função `.query()` <!-- REF #DataClassClass.query().Summary -->busca entidades que atendam aos critérios de pesquisa especificados em *queryString* ou *formula* e (opcionalmente) *value*(s), para todas as entidades na classe de dados, e retorna um novo objeto do tipo `EntitySelection` contendo todas as entidades encontradas<!-- END REF -->. Se aplica carregamento diferido/lazy loading.
 
 Se nenhuma entidade correspondente for encontrada, uma `EntitySelection` vazia é retornada.
 
