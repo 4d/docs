@@ -151,7 +151,7 @@ Linguaje da documentação HTML a apresentar. É possível selecionar uma docume
 
 Define onde 4D irá procurar por páginas de documentação.
 
-- Quando marcado (padrão), 4D primeiro procura a página na pasta local (veja abaixo). Se for encontrado, 4D mostra a página no navegador atual. Caso contrário, o 4D o procura automaticamente no site de documentação on-line. Desta forma, é possível aceder à documentação mesmo quando se está offline.
+- Quando marcado (padrão), 4D primeiro procura a página na pasta local (veja abaixo). Se for encontrado, 4D mostra a página no navegador atual. Se for encontrado, 4D mostra a página no navegador atual. Desta forma, é possível aceder à documentação mesmo quando se está offline.
 - Quando não marcada, 4D procura a página desejada diretamente no site de documentação on-line e a exibe no navegador atual. Se não for encontrado, 4D mostra uma mensagem de erro no navegador.
 
 ### Pasta local
