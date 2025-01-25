@@ -288,7 +288,7 @@ A função `.concat()` <!-- REF #collection.concat().Summary -->retorna uma nova
 
 > Essa função não modifica a coleção original.
 
-A coleção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se apenas for especificado o parâmetro *startFrom*, a coleção devolvida contém todos os elementos desde *startFrom* até ao último elemento da coleção original.
+A coleção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se *valor* for uma coleção, todos os elementos da coleção serão adicionados à coleção original
 
 #### Exemplo
 
@@ -1013,7 +1013,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - ou *methodName*, o nome de um método projeto (texto).
 
-A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para cada elemento que cumpra o teste. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1273,7 +1273,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - ou *methodName*, o nome de um método projeto (texto).
 
-A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -2654,7 +2654,7 @@ $entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
 
 :::info
 
-More examples of queries can be found in the `dataClass.query()` page.
+More examples of queries can be found in the `dataClass.query()` page. Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
 :::
 
@@ -3055,7 +3055,7 @@ A função `.slice()` <!-- REF #collection.slice().Summary -->retorna uma parte 
 
 > Essa função não modifica a coleção original.
 
-A coleção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se *valor* for uma coleção, todos os elementos da coleção serão adicionados à coleção original
+A coleção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se apenas for especificado o parâmetro *startFrom*, a coleção devolvida contém todos os elementos desde *startFrom* até ao último elemento da coleção original.
 
 - Se *startFrom* < 0, ele é recalculado como *startFrom:=startFrom+length* (é considerado como o deslocamento a partir do final da coleção).
 - Se o valor calculado < 0, *startFrom* é definido como 0.
@@ -3112,7 +3112,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - ou *methodName*, o nome de um método projeto (texto).
 
-A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para cada elemento que cumpra o teste. Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
