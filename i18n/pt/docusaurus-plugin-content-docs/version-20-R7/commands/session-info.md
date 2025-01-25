@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 | Parâmetro  | Tipo    |                             | Descrição                     |
 | ---------- | ------- | :-------------------------: | ----------------------------- |
-| sessionID  | Integer | &#8594; | Session ID                    |
+| sessionID  | Integer | &#8594; | ID da sessão                  |
 | Resultados | Object  | &#8592; | Information about the session |
 
 <!-- END REF -->
