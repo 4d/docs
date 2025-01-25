@@ -19,7 +19,7 @@ Para criar um novo projeto de banco de dados:
 
 3. Introduzca el nombre de su carpeta de proyecto y haga clic en **Guardar**. Este nome será utilizado:
 
-   - as the name of the .4DProject file at the first level of the "Project" folder.
+   - como nome de toda a pasta do projeto,
    - como nombre del archivo .4DProject en el primer nivel de la [carpeta "Project"](../Project/architecture.md#project-folder).
 
 Pode escolher qualquer nome permitido pelo seu sistema operacional. <em x-id="3">Atenção:</em> se seu banco projeto estiver destinado a funcionar em outros sistemas ou a ser guardada através de uma ferramenta de controle de código fonte, deve levar em consideração suas recomendações específicas de denominação.
