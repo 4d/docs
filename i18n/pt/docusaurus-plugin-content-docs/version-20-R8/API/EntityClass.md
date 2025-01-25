@@ -242,7 +242,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResultado1 (todas as diferenças são devolvidas):
+vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 
 ```4d
 [
@@ -291,7 +291,7 @@ vCompareResult2 (apenas diferenças em $attributesToInspect foram retornadas)
 ]
 ```
 
-vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
+vCompareResultado1 (todas as diferenças são devolvidas):
 
 ```4d
 [
