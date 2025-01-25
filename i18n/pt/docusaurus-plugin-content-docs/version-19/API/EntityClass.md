@@ -92,7 +92,7 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 #### Descrição
 
-A função `.isNew()` <!-- REF #EntityClass.clone().Summary -->retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore.<!-- END REF -->.
+A função `.touched()` <!-- REF #EntityClass.clone().Summary -->comprova se um atributo da entidade tiver sido modificado ou não desde que se carregou a entidade na memória ou se salvou<!-- END REF -->.
 
 Esta função permite que você atualize as entidades separadamente. No entanto, por razões de desempenho, a nova entidade compartilha a mesma referência de atributos de objeto que a entidade clonada.
 > Tenha em mente que quaisquer modificações feitas a entidades serão salvas no registro referenciado somente quando a função [`.save()`](#save) for executada.
@@ -123,7 +123,7 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Ele
 
 </details>
 
-<!-- REF #EntityClass.diff().Syntax -->Parâmetros<!-- END REF -->
+<!-- REF #EntityClass.diff().Syntax -->|            |    |                                        |<!-- END REF -->
 
 
 <!-- REF #EntityClass.diff().Params -->
@@ -161,7 +161,7 @@ Se uma das entidades comparadas for **Null**, um erro é gerado.
 
 ```4d
  var $diff1; $diff2 : Collection
- employee:=ds.Employee.query("ID=1001").first()
+ employee:=ds. Employee.query("ID=1001").first()
  $clone:=employee.clone()
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
@@ -234,7 +234,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResultado1 (todas as diferenças são devolvidas):
+vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 
 ```4d
 [
@@ -283,7 +283,7 @@ vCompareResult2 (apenas diferenças em $attributesToInspect foram retornadas)
 ]
 ```
 
-vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
+vCompareResultado1 (todas as diferenças são devolvidas):
 
 ```4d
 [
@@ -375,7 +375,7 @@ O objecto devolvido por `.drop( )` contém as seguintes propriedades:
 | Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                     |
 | ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao utilizar entity.drop( ), este erro pode ser devolvido quando usar a opção dk force drop if stamp changed. Ao usar entity.lock( ), este erro pode ser retornado quando usar a opção dk if stamp changed</li>**statusText asociado**: "A entidade já não existe"                              |
-| `dk status locked`                        | 3     | A entidade está bloqueada por um bloqueio pessimista.<br/>**statusText associado **: "Already locked"                                                                                                                    |
+| `dk status locked`                        | 3     | A entidade está bloqueada por um bloqueio pessimista.<br/>**statusText associado **: "Already locked"                                                                                                                |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.<br/>**Associado statusText**: "Outro erro"                                                            |
 | `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<br/><li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><li>**Associated statusText***: "O carimbo mudou"</li> |
 
@@ -1168,7 +1168,7 @@ Os valores abaixo podem ser retornado nas propriedades `status` e `statusText` d
 
 | Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                                                            |
 | ----------------------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status automerge failed`              | 6     | Parâmetros                                                                                                                                                                                                                                                            |
+| `dk status automerge failed`              | 6     | |                                                                                                                                                                                                                                                                     |
 | `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>**statusText asociado**: "A entidade já não existe"                                                        |
 | `dk status locked`                        | 3     | Informações sobre a origem do bloqueio                                                                                                                                                                                                                                |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.****Texto status associado: "Outro erro"                                                                                                            |
@@ -1539,7 +1539,7 @@ Retorna:
 
 #### Descrição
 
-A função `.touched()` <!-- REF #EntityClass.touched().Summary -->comprova se um atributo da entidade tiver sido modificado ou não desde que se carregou a entidade na memória ou se salvou<!-- END REF -->.
+A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore.<!-- END REF -->.
 
 Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. Pode usar essa função para determinar se precisar salvar a entidade.
 
