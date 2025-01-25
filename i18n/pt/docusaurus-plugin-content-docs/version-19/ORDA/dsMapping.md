@@ -122,7 +122,7 @@ No entanto, as propriedades da dataclass são enumeráveis:
 
 ```code4d
 ARRAY TEXT($prop;0)
-OB PROPERTY NAMES(ds.Employee;$prop)
+OB PROPERTY NAMES(ds. Employee;$prop)
 //$prop contém os nomes de todos os atributos da dataclasse
 ```
 
@@ -159,7 +159,7 @@ Além disso, os seguintes atributos de relação também estarão automaticament
 
 * na dataclass Project: o atributo **theClient**, do tipo "relatedEntity"; há no máximo uma empresa para cada projeto (o cliente)
 * na dataclass Company: o atributo **companyProjects**, do tipo "relatedEntities"; para cada empresa, há qualquer número de projetos relacionados.
-> A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
+> > A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
 
 Todos os atributos da dataclass são expostos como propriedades da dataclass:
 
