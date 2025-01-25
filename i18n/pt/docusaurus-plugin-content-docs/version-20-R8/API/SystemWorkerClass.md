@@ -360,7 +360,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. Parâmetro
+The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. Parâmetro
 
 Essa propriedade é **somente leitura**.
 
@@ -447,7 +447,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-Parâmetro No parâmetro *message*, passe o texto a ser escrito em *stdin*.
+A função `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite que você escreva no fluxo de entrada (stdin) do processo externo<!-- END REF -->. No parâmetro *message*, passe o texto a ser escrito em *stdin*.
 
 The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
 
