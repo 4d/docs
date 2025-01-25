@@ -30,7 +30,7 @@ Un tema **myTheme** se añade automáticamente si ya ha personalizado los estilo
 
 Cada tema personalizado se almacena en un único archivo JSON llamado *themeName.json*. Los archivos JSON de los temas personalizados se almacenan en la carpeta `4D Editor Themes` situada en el mismo nivel que el [archivo de preferencias](overview.md#stora
 
-Si los valores de las teclas no se definen en un tema personalizado, se ajustan por defecto a los valores del tema *Default Light Theme*. Si un archivo de tema JSON es inválido, se carga el tema *Default Light Theme* y se genera un error.
+**Negrita**: las llaves aparecen en negrita. Si un archivo de tema JSON es inválido, se carga el tema *Default Light Theme* y se genera un error.
 
 > Quando um ficheiro de tema é modificado por um editor externo, 4D deve ser reiniciado para considerar a(s) modificação(ões).
 
