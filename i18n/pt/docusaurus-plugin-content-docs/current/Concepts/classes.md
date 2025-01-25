@@ -158,7 +158,7 @@ Quando uma classe é [definida](#class-definition) no projeto, ela é carregada 
 - [`new()`](API/ClassClass.md#new) função, permitindo instanciar objetos de classe
 - Propriedade [`isShared`](API/ClassClass.md#isshared), true se a classe é [compartilhada](#classes-compartilhadas)
 - Propriedade [`isSingleton`](API/ClassClass.md#issingleton), true se a classe define uma [singleton](#singleton-classes).
-- propriedade [`isSectionSingleton`](API/ClassClass.md#issectionsingleton), true se a classe definir um [session singleton](#singleton-classes).
+- [`isSessionSingleton`](API/ClassClass.md#issessionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
 - Propriedade [`me`](API/ClassClass.md#me), permitindo instanciar e acessar [singletons](#singleton-classes).
 
 Além disso, um objeto de classe pode fazer referência a um objeto [`construtor`](#class-constructor) (opcional).
