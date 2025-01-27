@@ -110,8 +110,8 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 #### `Triggers`
 
-| Conteúdos                                          | Descrição                                                                                                                               | Formato |
-| -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Conteúdos                                                                                    | Descrição                                                                                                                               | Formato |
+| -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | table__n_.4dm | Métodos trigger definidos na database. Um arquivo de acionamento por tabela (n é o número da tabela) | text    |
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. É compatível com as ferramentas de controlo da versão.
@@ -234,8 +234,8 @@ Para más información, consulte [Documentar un proyecto](Project/documentation.
 
 ## `WebFolder`
 
-Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. É criado automaticamente quando o servidor Web é iniciado pela primeira vez.
+Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. É criado automaticamente quando o servidor Web é iniciado pela primeira vez.
 
 ## Archivo `.gitignore` (opcional)
 
-Ficheiro que especifica quais os ficheiros que serão ignorados pelo git. Puede incluir un archivo gitignore en sus proyectos utilizando la opción **Crear un archivo .gitignore** en la página **General** de las preferencias. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).
+Ficheiro que especifica quais os ficheiros que serão ignorados pelo git. Ficheiro que especifica quais os ficheiros que serão ignorados pelo git. Puede incluir un archivo gitignore en sus proyectos utilizando la opción **Crear un archivo .gitignore** en la página **General** de las preferencias.
