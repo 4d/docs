@@ -21,6 +21,8 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: build
+    - name:
+      run: ls -R
     - name: Publish
       uses: peaceiris/actions-gh-pages@v4
       with:
