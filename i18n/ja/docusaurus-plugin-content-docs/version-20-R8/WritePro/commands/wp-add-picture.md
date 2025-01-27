@@ -20,40 +20,40 @@ displayed_sidebar: docs
 
 #### 説明
 
-**WP Add picture** コマンドは、<!--REF #_command_.WP Add picture.Summary--> 引数として渡されたピクチャーを*wpDoc* 引数で指定したドキュメント内での固定された場所にアンカーし、その参照を返します。<!-- END REF--> 返された参照は、[WP SET ATTRIBUTES](wp-set-attributes.md) コマンドへと渡すことで*wpDoc* 引数で指定したドキュメント内の(ページ、セクション、ヘッダー、フッター等の)任意の位置へと移動させることができます。 レイヤーやサイズなども指定可能です。
+**WP Add picture** コマンドは、<!--REF #_command_.WP Add picture.Summary--> 引数として渡されたピクチャーを*wpDoc* 引数で指定したドキュメント内での固定された場所にアンカーし、その参照を返します。<!-- END REF--> 返された参照は、[WP SET ATTRIBUTES](wp-set-attributes.md) コマンドへと渡すことで*wpDoc* 引数で指定したドキュメント内の(ページ、セクション、ヘッダー、フッター等の)任意の位置へと移動させることができます。 レイヤーやサイズなども指定可能です。 レイヤーやサイズなども指定可能です。
 
 *wpDoc* 引数には、4D Write Pro ドキュメントオブジェクトを渡します。
 
 オプションの第二引数には、次のいずれかを渡すことができます:
 
 - *picture*: 4D ピクチャー
-- *picturePath*:  ディスク上に保存されているピクチャーファイルへのパスを格納した文字列(システムのシンタックス) You can pass a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you need to indicate the file extension.
-- In *PictureFileObj*: a `4D.File` object representing a picture file.
+- *picturePath*:  ディスク上に保存されているピクチャーファイルへのパスを格納した文字列(システムのシンタックス) *picturePath*:  ディスク上に保存されているピクチャーファイルへのパスを格納した文字列(システムのシンタックス) You can pass a full pathname, or a pathname relative to the database structure file. またファイル名を渡すこともでき、その場合、ファイルはデータベースのストラクチャーファイルと同じ階層に置かれている必要があります。 ファイル名を渡す場合には、ファイルの拡張子も指定する必要があります。
+- *PictureFileObj*: ピクチャーファイルを表す`4D.File` オブジェクト
 
 :::note
 
-Any picture format [supported by 4D](../../FormEditor/pictures.md#native-formats-supported) can be used. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
+[4D でサポートされているフォーマット](../../FormEditor/pictures.md#native-formats-supported) であれば、どんなピクチャーフォーマットでも使用することができます。 [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) コマンドを使用することで、利用可能なピクチャーフォーマットの一覧を取得することができます。 ピクチャーに複数のフォーマット(コーデック)が格納されている場合、4D Write Pro はドキュメント内に表示用に1種類、印刷用に1種類(異なる場合)のフォーマットのみを保管します。その際、「最適」なフォーマットが自動的に選択されます。
 
 :::
 
-- If *picture* is omitted, a valid picture reference is returned, and an empty image is added. This allows you to then call [WP SET ATTRIBUTES](wp-set-attributes.md) with the wk image expression selector to fill the image with a 4D expression. If the expression can not be evaluated or does not return a valid picture, an empty image (default black frame image) is displayed.
+- *picture* 引数が省略された場合でも、有効なピクチャー参照は返され、空の画像が追加されます。 この場合、その後に[WP SET ATTRIBUTES](wp-set-attributes.md) コマンドをwk image expression セレクターで呼び出すことでその画像に4D 式を入れることができます。 式が評価できない、あるいは有効なピクチャーが返されない場合、空の画像(デフォルトの黒枠の画像)が表示されます。
 
-By default, the added picture is:
+デフォルトでは、追加されたピクチャーは以下のように表示されます:
 
-- Embedded behind the text
-- Displayed at the top left corner of the paper box
-- Shown on all pages
+- テキストの後ろに埋め込み
+- ペーパーボックスの左上隅に表示
+- 全てのページに表示
 
-The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).
+位置、レイヤー(インライン、テキストの前/後)、表示状態、その他ピクチャーのあらゆるプロパティは[WP SET ATTRIBUTES](wp-set-attributes.md) コマンド、または標準アクションを使用して変更することができます(*4D Write Pro 標準アクションを使用*を参照してください)。
 
-**Note:** The [WP Selection range](../commands-legacy/wp-selection-range.md) command returns a *picture reference* object if an anchored picture is selected and a *range object* if an inline picture is selected. You can determine if a selected object is a picture object by checking the `wk type` attribute:
+**注意:** [WP Selection range](../commands-legacy/wp-selection-range.md) コマンドは、アンカーされたピクチャーが選択されていた場合には*ピクチャー参照* を、インラインピクチャーが選択されていた場合には*レンジオブジェクト* を返します。 選択されたオブジェクトがピクチャーオブジェクトであるかどうかは、`wk type` 属性をチェックすることで確認できます。
 
-- **Value = 2**: The selected object is a picture object.
-- **Value = 0**: The selected object is a range object.
+- **Value = 2**: 選択されたオブジェクトはピクチャーオブジェクトです。
+- **Value = 0**: 選択されたオブジェクトはレンジオブジェクトです。
 
 #### 例題 1
 
-You want to add a picture with default settings using a filepath.
+ファイルパスを使用して、デフォルトの設定でピクチャーを追加したい場合を考えます。
 
 ```4d
  var $obPict : Object
@@ -66,7 +66,7 @@ The result is:
 
 #### 例題 2
 
-You want to add a resized picture, centered and anchored to the header:
+リサイズされたピクチャーを、ヘッダーの中央にアンカーして追加したい場合を考えます:
 
 ```4d
  var $obImage : Object
@@ -86,11 +86,11 @@ The result is:
 
 #### 例題 3
 
-You want to use a field expression to add an anchored image to a document displaying some text from the database:
+フィールド式を使用して、アンカーされた画像を、データベースからのテキストを表示するドキュメントに追加したい場合を考えます:
 
 ```4d
  QUERY([Flowers];[Flowers]Common_Name="tulip")
- WP SET TEXT(myDoc;[Flowers]Description;wk append) //insert text
+ WP SET TEXT(myDoc;[Flowers]Description;wk append) //テキストを挿入する
  var $obImage : Object
  $obImage:=WP Add picture(myDoc)
  WP SET ATTRIBUTES($obImage;wk image formula;Formula([Flowers]Image))
