@@ -24,7 +24,7 @@ Depois que as propriedades de evento [`On Before Keystroke`](onBeforeKeystroke.m
 
 O evento `No Depois da tecla` não é gerado:
 
-- no [lista colunas](FormObjects/listbox_overview.md#list-box-columns) método, exceto quando uma célula está sendo editada (entretanto, ela é gerada em quaisquer casos no método [lista caixa](FormObjects/listbox_overview.md)),
+- in [list box columns](FormObjects/listbox_overview.md#list-box-columns) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
 - quando as modificações do usuário não forem realizadas usando o teclado (colar, arrastar e soltar, caixa de seleção, lista suspensa, caixa de seleção). Para processar esses eventos, você deve usar [`On After Edit`](onAfterEdit.md).
 
 ### Sequência de teclas
