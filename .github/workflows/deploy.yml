@@ -21,13 +21,11 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: build
-    - name:
-      run: ls -R
     - name: Publish
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build/
+        publish_dir: ./
 
   publish-release:
     needs: [workflow-static]
