@@ -477,6 +477,8 @@ However, if the HTML page specified does not contain `<body>` and `</body>` tags
     FIRST RECORD([People])
  While(Not(End selection([People])))
     ...
+    NEXT RECORD([People])
+ End while
     FIRST RECORD([People])
  While(Not(End selection([People])))
     ...
@@ -712,6 +714,8 @@ $シンタックスを使用すると、パーサーによって以下のコー�
   // 例 1
  myName:="<!--#4DHTML QUIT 4D-->" // 悪意あるコードの侵入
  input:="My name is: <!--#4DHTML myName-->"
+ PROCESS 4D TAGS(input;output)
+ // 4D は終了していまいます <!--#4DHTML myName-->"
  PROCESS 4D TAGS(input;output)
  // 4D は終了していまいます <!--#4DHTML myName-->"
  PROCESS 4D TAGS(input;output)

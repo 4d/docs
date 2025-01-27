@@ -18,7 +18,7 @@ Esta opção permite configurar o ecrã 4D por padrão no arranque, quando o usu
 
 * **Diálogo Abrir Projeto Remoto**: 4D mostra o diálogo de logon padrão do 4D Server, permitindo selecionar um projeto publicado na rede.
 * **Abra a caixa de diálogo Welcome Wizard** (configuração de fábrica): O 4D exibe a caixa de diálogo Welcome Wizard (Assistente de boas-vindas).
-> **4D Server**: O aplicativo 4D Server ignora essa opção. Nesse ambiente, o modo **Do nothing** é sempre usado.
+> > **4D Server**: O aplicativo 4D Server ignora essa opção. Nesse ambiente, o modo **Do nothing** é sempre usado.
 
 ### Criação de formulários automática
 
@@ -100,7 +100,7 @@ Você pode escolher acessar o site de documentação online 4D diretamente ou ac
 
 Indica a localização da documentação HTML estática. Por padrão, esta é a subpasta \Help\Command\language. Pode ver a localização clicando no menu associado à zona. Se esta subpasta não estiver presente, a localização é apresentada a vermelho.
 
-Você pode modificar esse local conforme desejar, por exemplo, se quiser exibir a documentação em um idioma diferente do idioma do aplicativo. A documentação HTML estática pode estar localizada em outro volume, em um servidor da Web, etc. Para designar um local diferente, clique no botão [...] ao lado da área de entrada e escolha uma pasta raiz da documentação (pasta correspondente ao idioma: fr, en, de ou em ja).
+Você pode modificar esse local conforme desejar, por exemplo, se quiser exibir a documentação em um idioma diferente do idioma do aplicativo. A documentação HTML estática pode estar localizada em outro volume, em um servidor da Web, etc. A documentação HTML estática pode estar localizada em outro volume, em um servidor da Web, etc. Para designar um local diferente, clique no botão [...] ao lado da área de entrada e escolha uma pasta raiz da documentação (pasta correspondente ao idioma: fr, en, de ou em ja).
 
 ### Sítio Web
 

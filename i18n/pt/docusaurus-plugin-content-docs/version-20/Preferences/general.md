@@ -13,10 +13,10 @@ Esta opção permite configurar o ecrã 4D por padrão no arranque, quando o usu
 
 *   **Não fazer nada**: só aparece a janela da aplicação, vazia.
 *   **Diálogo Abrir Projeto Local**: 4D apresenta uma caixa de diálogo padrão para abrir um documento, permitindo-lhe selecionar um projeto local.
-*   **Abrir o último projeto utilizado**: 4D abre diretamente o último projeto utilizado; não aparece nenhuma caixa de diálogo de abertura. >Para forçar a apresentação da caixa de diálogo de abertura quando esta opção é selecionada, mantenha premida a tecla **Alt** (Windows) ou **Opção** (macOS) enquanto inicia o projeto.
+*   **Abrir o último projeto utilizado**: 4D abre diretamente o último projeto utilizado; não aparece nenhuma caixa de diálogo de abertura. **Abrir o último projeto utilizado**: 4D abre diretamente o último projeto utilizado; não aparece nenhuma caixa de diálogo de abertura.
 *   **Diálogo Abrir Projeto Remoto**: 4D mostra o diálogo de logon padrão do 4D Server, permitindo selecionar um projeto publicado na rede.
 *   **Abra a caixa de diálogo Welcome Wizard** (configuração de fábrica): O 4D exibe a caixa de diálogo Welcome Wizard (Assistente de boas-vindas).
-> **4D Server**: O aplicativo 4D Server ignora essa opção. Nesse ambiente, o modo **Do nothing** é sempre usado.
+> > **4D Server**: O aplicativo 4D Server ignora essa opção. Nesse ambiente, o modo **Do nothing** é sempre usado.
 
 ### Criação de formulários automática
 
@@ -152,7 +152,7 @@ Linguaje da documentação HTML a apresentar. É possível selecionar uma docume
 
 Define onde 4D irá procurar por páginas de documentação.
 
-*   Quando marcado (padrão), 4D primeiro procura a página na pasta local (veja abaixo). Se for encontrado, 4D mostra a página no navegador atual. Caso contrário, o 4D o procura automaticamente no site de documentação on-line. Desta forma, é possível aceder à documentação mesmo quando se está offline.
+*   Quando marcado (padrão), 4D primeiro procura a página na pasta local (veja abaixo). Se for encontrado, 4D mostra a página no navegador atual. Se for encontrado, 4D mostra a página no navegador atual. Desta forma, é possível aceder à documentação mesmo quando se está offline.
 *   Quando não marcada, 4D procura a página desejada diretamente no site de documentação on-line e a exibe no navegador atual. Se não for encontrado, 4D mostra uma mensagem de erro no navegador.
 
 ### Pasta local

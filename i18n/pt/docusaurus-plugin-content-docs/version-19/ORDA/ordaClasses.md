@@ -16,8 +16,7 @@ $nextHigh:=ds. Employee.get(1).getNextWithHigherSalary()
 Os desenvolvedores podem não só utilizar estas funções em datastores locais, mas também em arquiteturas cliente/servidor e remotas:
 
 ```4d
- //$cityManager é a referência de um datastore remoto
-Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
+ //$cityManager é a referência de um datastore remoto Form.comp.city:=$cityManager. City.getCityName(Form.comp.zipcode)
 ```
 
 Graças a esta caraterística, toda a lógica comercial da sua aplicação 4D pode ser armazenada como uma camada independente para que possa ser facilmente mantida e reutilizada com um alto nível de segurança:
@@ -99,15 +98,10 @@ Cada tabela exposta com ORDA oferece uma classe DataClass no armazenamento de cl
 #### Exemplo
 
 ```4D
-// cs. Classe company
-
-
-Class extends DataClass
+// cs. Classe company Class extends DataClass
 
 // Retorna empresas cuja receita é acima da média
-// Retorna uma seleção de entidade relacionada com a dataClass Company
-
-Function GetBestOnes()
+// Retorna uma seleção de entidade relacionada com a dataClass Company Function GetBestOnes()
  $sel:=This.query("revenues >= :1";This.all().average("revenues"));
  $0:=$sel
 ```
@@ -115,8 +109,8 @@ Function GetBestOnes()
 Em seguida, pode obter uma seleção de entidades das "melhores" empresas através da execução:
 
 ```4d
- var $best : cs.CompanySelection
- $best:=ds.Company.GetBestOnes()
+ var $best : cs. CompanySelection
+ $best:=ds. Company. GetBestOnes()
 ```
 
 #### Exemplo com um datastore remoto
@@ -128,17 +122,13 @@ O seguinte catálogo *City* está exposto num datastore remoto (vista parcial):
 A classe `City` fornece uma API:
 
 ```4d  
-// cs.City class
-
-Class extends DataClass
-
-Function getCityName()
+// cs. City class Class extends DataClass Function getCityName()
  var $1; $zipcode : Integer
- var $zip : 4D.Entity
+ var $zip : 4D. Entity
  var $0 : Text
 
  $zipcode:=$1
- $zip:=ds.ZipCode.get($zipcode)
+ $zip:=ds. ZipCode.get($zipcode)
  $0:="" 
 
  If ($zip#Null)
@@ -165,19 +155,14 @@ Cada tabela exposta com ORDA oferece uma classe EntitySelection no repositório 
 
 - **Extends**: 4D. EntitySelection
 - **Nome da classe**: *DataClassName*Seleção (em que *DataClassName* é o nome da tabela)
-- **Exemplo de nome**: cs.EmployeeSelection
+- **Exemplo de nome**: cs. EmployeeSelection
 
 #### Exemplo
 
 ```4d
-// Class cs.EmployeeSelection 
+// Class cs. EmployeeSelection Class extends EntitySelection
 
-
-Class extends EntitySelection
-
-//Extrair os empregados com um salário superior à média desta seleção de entidades 
-
-Function withSalaryGreaterThanAverage
+//Extrair os empregados com um salário superior à média desta seleção de entidades Function withSalaryGreaterThanAverage
  C_OBJECT($0)
  $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
 
@@ -200,16 +185,8 @@ Cada tabela exposta com ORDA oferece uma classe de Entidade no armazenamento de 
 #### Exemplo
 
 ```4d
-// cs.CityEntity class
-
-Class extends Entity
-
-Function getPopulation()
-    $0:=This.zips.sum("population")
-
-
-Function isBigCity
-C_BOOLEAN($0)
+// cs. CityEntity class Class extends Entity Function getPopulation()
+    $0:=This.zips.sum("population") Function isBigCity C_BOOLEAN($0)
 // A função getPopulation() pode ser usada dentro da classe
 $0:=This.getPopulation()>50000
 ```
@@ -220,9 +197,7 @@ Em seguida, pode chamar este código:
 var $cityManager; $city : Object
 
 $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
-$city:=$cityManager.City.getCity("Caguas")
-
-If ($city.isBigCity())
+$city:=$cityManager. City.getCity("Caguas") If ($city.isBigCity())
  ALERT($city.name + " is a big city")
 End if
 ```
@@ -257,8 +232,7 @@ Uma função que não esteja exposta não está disponível em aplicações remo
 Para permitir que uma função de classe de modelo de dados seja chamada por um pedido remoto, é necessário declará-la explicitamente utilizando a palavra-chave `exposed` . A sintaxe formal é:
 
 ```4d  
-// declarar uma função exposta
-Função exposta <functionName>   
+// declarar uma função exposta Função exposta <functionName>   
 ```
 
 > A palavra-chave `exposed` só pode ser utilizada com funções de classe de modelo de dados. Se for utilizada com uma função [da classe de usuário regular](Concepts/classes.md) , é ignorada e o compilador devolve um erro.
@@ -340,6 +314,11 @@ Na classe *StudentsEntity*:
 Class extends Entity
 
 local Function age() -> $age: Variant
+    If (This.birthDate#!00-00-00!)
+    If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null End if
     If (This.birthDate#!00-00-00!)
     If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)

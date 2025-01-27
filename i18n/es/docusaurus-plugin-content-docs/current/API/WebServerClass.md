@@ -236,7 +236,7 @@ El estado del protocolo <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP<!--
 
 <!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Integer<!-- END REF -->
 
-El estado del protocolo<!-- REF #WebServerClass.HTTPnabled.Summary -->HTTPS<!-- END REF -->.
+El <!-- REF #WebServerClass.HTTPPort.Summary -->escuchando número de puerto IP para HTTP<!-- END REF -->.
 
 Por defecto = 80
 
@@ -419,7 +419,7 @@ Valores posibles:
 
 *Propiedad de sólo lectura*
 
-El <!-- REF #WebServerClass.sessionCookieName.Summary -->nombre de la cookie utilizada para almacenar el ID de sesión<!-- END REF -->.
+The <!-- REF #WebServerClass.name.Summary -->name of the web server application<!-- END REF -->.
 
 <!-- END REF -->
 

@@ -17,7 +17,7 @@ A página contém botões de ação que fornecem acesso direto às funções de 
 - **Verificar sólo los registros**: inicia el procedimiento de verificación sólo para los registros (los índices no se verifican).
 - **Verificar sólo los índices**: inicia el procedimiento de verificación sólo para los índices(los registros no se verifican).
 
-> &#062; A verificação de registros e índices também pode ser realizada no modo detalhado, tabela por tabela (consulte a seção Detalhes abaixo).
+> &#062; &#062; A verificação de registros e índices também pode ser realizada no modo detalhado, tabela por tabela (consulte a seção Detalhes abaixo).
 
 ## Abrir arquivo de registo
 

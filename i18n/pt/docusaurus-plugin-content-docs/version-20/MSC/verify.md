@@ -16,7 +16,7 @@ A página contém botões de ação que fornecem acesso direto às funções de 
 - **Verifica os registros e os índices:** inicia o procedimento de verificação total dos dados.
 - **Verificar somente os registros**: inicia o procedimento de verificação somente para os registros (os índices não são verificados).
 - **Verificar somente os índices**: inicia o procedimento de verificação apenas para os índices (os registros não são verificados).
-> > A verificação de registros e índices também pode ser realizada no modo detalhado, tabela por tabela (consulte a seção Detalhes abaixo).
+> > > A verificação de registros e índices também pode ser realizada no modo detalhado, tabela por tabela (consulte a seção Detalhes abaixo).
 
 
 ## Abrir arquivo de registo

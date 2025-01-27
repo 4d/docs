@@ -94,7 +94,7 @@ Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na 
 Por exemplo, para definir um atributo de armazenamento:
 
 ```4d
- $entity:=ds.Employee.get(1) //obter atributo de funcionário com ID 1
+ $entity:=ds. Employee.get(1) //obter atributo de funcionário com ID 1
  $name:=$entity.lastname //obter o nome do funcionário, por exemplo, "Smith"
  $entity.lastname:="Jones" //definir o nome do funcionário
 ```
@@ -139,18 +139,18 @@ Neste exemplo, uma entidade na classe de dados "Employee" contém um objeto do t
 Para atribuir um valor diretamente ao atributo "employer", você deve passar uma entidade existente da classe de dados "Company". Por exemplo:
 
 ```4d
- $emp:=ds.Employee.new() // crie um funcionário
+ $emp:=ds. Employee.new() // crie um funcionário
  $emp.lastname:="Smith" // atribua um valor a um atributo
- $emp. mployer:=ds.Company.query("nome =:1";"4D")[0]  //atribuir uma entidade da empresa
+ $emp. mployer:=ds. Company.query("nome =:1";"4D")[0]  //atribuir uma entidade da empresa
  $emp.save()
 ```
 
 Você também pode obter diretamente a entidade relacionada através de sua chave primária (Número ou texto). Por exemplo:
 
 ```4d
- $emp:=ds.Employee.new()
+ $emp:=ds. Employee.new()
  $emp.lastname:="Wesson"
- $emp.employer:=ds.Company.get(2)
+ $emp.employer:=ds. Company.get(2)
   //obtém a entidade Company com o valor de chave primária 2
   //atribui ao funcionário
  $emp.save()
@@ -175,7 +175,7 @@ Você pode criar um objeto de tipo [seleção de entidade](dsMapping.md#entity-s
 * Usando a função [`.all()`](API/DataClassClass.md#all) de dataclass para selecionar todas as entidades em um dataclass;
 * Usando o comando `Create entity selection` ou o método [`.newSelection()`](API/DataClassClass.md#newselection) para criar uma seleção de entidade em branco;
 * Usando a função [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar uma seleção de entidade existente;
-* Usando uma das várias funções da classe [Entity selection](API/EntitySelectionClass.md) que retorna uma nova entidade selecionada, tais como [`. r()`](API/EntitySelectionClass.md#or);
+* a nova seleção de entidade resulta de uma das várias funções de classe ORDA aplicadas a uma seleção de entidade existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 * Utilizando um atributo de relação do tipo "entidades relacionadas" (ver abaixo).
 
 Você pode criar e usar simultaneamente tantas seleções de entidades diferentes quanto desejar para uma classe de dados. Lembre-se de que uma seleção de entidade contém apenas referências a entidades. Seleções diferentes de entidades podem conter referências para as mesmas entidades.
@@ -224,54 +224,64 @@ Uma nova seleção de entidade é **alterável** nos seguintes casos:
 Exemplo:
 
 ```4d
-$toModify:=ds.Company.all().copy() //$toModify é alterável
+$toModify:=ds. Company.all().copy() //$toModify é alterável
 ```
 
 Uma nova seleção de entidade **herda** da natureza da seleção de entidade original nos seguintes casos:
 
-* a nova seleção de entidade resulta de uma das várias funções de classe ORDA aplicadas a uma seleção de entidade existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
-* a nova entity selection é baseada numa relação:
-  * [entity.*attributeName*](API/EntityClass.md#attributename) (por exemplo, "company.employees") quando *attributeName* é um atributo relacionado um-para-muitos e a entidade pertence a uma seleção de entidade (mesma natureza da seleção de entidade [.getSelection()](API/EntityClass.md#getselection)),
-  * [entitySeletion.*attributeName*](API/EntitySelectionClass.md#attributename) (por exemplo, "employees.employer") quando *attributeName* é um atributo relacionado (mesma natureza que a seleção da entidade),
-  * [.extract()](API/EntitySelectionClass.md#extract) quando a coleção resultante contém seleções de entidade (mesma natureza que a seleção da entidade).
+* Usando uma das várias funções da classe [Entity selection](API/EntitySelectionClass.md) que retorna uma nova entidade selecionada, tais como`. .</li>
+<li>a nova entity selection é baseada numa relação:
 
-Exemplos:
+<ul>
+<li><a href="API/EntityClass.md#attributename">entity.<em x-id="3">attributeName</em></a> (por exemplo, "company.employees") quando <em x-id="3">attributeName</em> é um atributo relacionado um-para-muitos e a entidade pertence a uma seleção de entidade (mesma natureza da seleção de entidade <a href="API/EntityClass.md#getselection">.getSelection()</a>),</li>
+<li><a href="API/EntitySelectionClass.md#attributename">entitySeletion.<em x-id="3">attributeName</em></a> (por exemplo, "employees.employer") quando <em x-id="3">attributeName</em> é um atributo relacionado (mesma natureza que a seleção da entidade),</li>
+<li><a href="API/EntitySelectionClass.md#extract">.extract()</a> quando a coleção resultante contém seleções de entidade (mesma natureza que a seleção da entidade).</li>
+</ul></li>
+</ul>
 
-```4d
-$highSal:=ds.Employee.query("salary >= :1"; 1000000)   
+<p spaces-before="0">Exemplos:</p>
+
+<pre><code class="4d">$highSal:=ds. Employee.query("salary >= :1"; 1000000)   
  //$highSal é compartilhável por causa da consulta em dataClass
 $comp:=$highSal.employer //$compé compartilhável porque $highSal é compartilhável
 
-$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
+$lowSal:=ds. Employee.query("salary <= :1"; 10000).copy() 
  //$lowSal é alterável por causa da copy()
 $comp2:=$lowSal.employer //$comp2 é alterável porque $lowSal é alterável
-```
-
-:::note Seleções de entidades devolvidas pelo servidor
-
-Na arquitetura cliente/servidor, as seleções de entidades retornadas do servidor são sempre compartilháveis no cliente, mesmo que [`copy()`](API/EntitySelectionClass.md#copy) tenha sido chamado no servidor. Para tornar essa seleção de entidade alterável no cliente, você precisa executar [`copy()`](API/EntitySelectionClass.md#copy) no lado do cliente. Exemplo:
+`</pre> 
+  
+  :::note Seleções de entidades devolvidas pelo servidor
+  
+  Na arquitetura cliente/servidor, as seleções de entidades retornadas do servidor são sempre compartilháveis no cliente, mesmo que [`copy()`](API/EntitySelectionClass.md#copy) tenha sido chamado no servidor. Para tornar essa seleção de entidade alterável no cliente, você precisa executar [`copy()`](API/EntitySelectionClass.md#copy) no lado do cliente. Exemplo:
+  
+  
 
 ```4d
-    	//uma função é sempre executada no servidor
-exposed Function getSome() : cs.MembersSelection
+    //uma função é sempre executada no servidor
+exposed Function getSome() : cs. MembersSelection
     return This.query("ID >= :1"; 15).orderBy("ID ASC")
 
-	//em um método, é executado no lado remoto
-var $result : cs.MembersSelection
+    //em um método, é executado no lado remoto
+var $result : cs. MembersSelection
 var $alterable : Boolean
-$result:=ds.Members.getSome() //$result é compartilhável
+$result:=ds. Members.getSome() //$result é compartilhável
 $alterable:=$result.isAlterable() //False
 
-$result:=ds.Members.getSome().copy() // $result agora é alterável
+$result:=ds. Members.getSome().copy() // $result agora é alterável
 $alterable:=$result.isAlterable() // True
 ```
 
+
 :::
+
+
 
 
 #### Partilhar uma seleção de entidade entre processos (exemplo)
 
 Você trabalha com duas seleções de entidades que deseja passar para um processo de trabalho para ele poder enviar correios eletrônicos para as pessoas apropriadas:
+
+
 
 ```4d
 
@@ -284,12 +294,15 @@ $unpaid:=ds. Invoices.query("status=:1"; "Unpaid")
 
 ```
 
+
 O método `sendMails`:
+
+
 
 ```4d
 
- #DECLARE ($paid : cs.InvoicesSelection, $unpaid : cs.InvoicesSelection)
- var $invoice : cs.InvoicesEntity
+ #DECLARE ($paid : cs. InvoicesSelection, $unpaid : cs. InvoicesSelection)
+ var $invoice : cs. InvoicesEntity
 
  var $server; $transporter; $email; $status : Objeto
 
@@ -316,16 +329,24 @@ O método `sendMails`:
  End for each
 ```
 
+
+
+
 ### Selecções de entidades e atributos de armazenamento
 
 Todos os atributos de armazenamento (texto, número, booleano, data) estão disponíveis como propriedades de seleções de entidades, bem como de entidades. Quando usado em conjunto com uma seleção de entidade, um atributo escalar retorna uma coleção de valores escalares. Por exemplo:
+
+
 
 ```4d
  $locals:=ds. Person.query("city = :1";"San Jose") //entity selection of people
  $localEmails:=$locals.emailAddress //collection of email addresses (strings)
 ```
 
+
 Esse código retorna em *$localEmails* uma coleção de endereços de correio eletrônico como cadeias de caracteres.
+
+
 
 ### Selecções de entidades e atributos de relações
 
@@ -333,13 +354,18 @@ Além da variedade de maneiras que você pode consultar, você também pode usar
 
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
+
+
 ```4d
  $myParts:=ds. Part.query("ID < 100") //Return parts with ID less than 100
  $myInvoices:=$myParts.invoiceItems.invoice
   //All invoices with at least one line item related to a part in $myParts
 ```
 
+
 A última linha retornará em $myInvoices uma seleção de entidade de todas as faturas que tenham pelo menos um item de fatura relacionado a uma peça na seleção de entidade myParts. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade.
+
+
 
 ## Bloqueio de entidades
 
@@ -350,14 +376,16 @@ ORDA fornece-lhe dois modos de bloqueio de entidades:
 * um modo automático "otimista", adequado à maioria das aplicações,
 * um modo "pessimista" que permite bloquear as entidades antes do seu acesso.
 
+
+
 ### Bloqueio optimista automático
 
 Esse mecanismo automático baseia-se no conceito de "bloqueio otimista", sendo particularmente adequado aos problemas das aplicações Web. Este conceito é caracterizado pelos seguintes princípios de funcionamento:
 
 * Todas as entidades sempre podem ser carregadas para leitura e gravação; não há "bloqueio" *_a priori_* das entidades.
 * Cada entidade tem um carimbo de bloqueio interno incrementado sempre que é guardado.
-* Quando um usuário ou processo tenta salvar uma entidade usando o método `entity.save( )`, 4D compara o valor do carimbo da entidade a ser salva com o da entidade encontrada nos dados (no caso de uma modificação):
-  * Quando os valores correspondem, a entidade é salva e o valor do marcador interno é aumentado.
+* Quando um usuário ou processo tenta salvar uma entidade usando o método `entity.save( )`, 4D compara o valor do carimbo da entidade a ser salva com o da entidade encontrada nos dados (no caso de uma modificação): 
+    * Quando os valores correspondem, a entidade é salva e o valor do marcador interno é aumentado.
   * Quando os valores não correspondem, significa que outro usuário modificou esta entidade nesse meio tempo. A gravação não é efetuada e é devolvido um erro.
 
 O diagrama seguinte ilustra o bloqueio otimista:
@@ -370,6 +398,8 @@ O diagrama seguinte ilustra o bloqueio otimista:
 
 Isto também pode ser ilustrado pelo seguinte código:
 
+
+
 ```4d
  $person1:=ds. Person.get(1) //Reference to entity
  $person2:=ds. Person.get(1) //Other reference to same entity
@@ -379,11 +409,16 @@ Isto também pode ser ilustrado pelo seguinte código:
  $result:=$person2.save() //$result.success=false, change not saved
 ```
 
+
 Neste exemplo, atribuímos a $person1 uma referência à entidade pessoa com uma chave de 1. De seguida, atribuímos outra referência da mesma entidade à variável $person2. Utilizando $person1, alteramos o primeiro nome da pessoa e guardamos a entidade. Quando tentamos fazer a mesma coisa com $person2, 4D verifica se a entidade no disco é a mesma de quando a referência em $person1 foi atribuída pela primeira vez. Como não é a mesma coisa, ele retorna false na propriedade success e não salva a segunda modificação.
 
 Quando essa situação ocorre, você pode, por exemplo, recarregar a entidade do disco usando o método `entity.reload()` para poder tentar fazer a modificação novamente. O método `entity.save()` também propõe uma opção "automerge" para salvar a entidade caso os processos modifiquem atributos que não sejam os mesmos.
 
+
+
 > Os carimbos de registro não são usados em **transações** porque, nesse contexto, existe apenas uma única cópia de um registro. Seja qual for o número de entidades que referenciam um registro, a mesma cópia é modificada, portanto, as operações `entity.save()` nunca gerarão erros de carimbo.
+
+
 
 ### Bloqueio pessimista
 
@@ -396,7 +431,11 @@ Esse recurso é baseado em dois métodos da classe `Entity`:
 
 Para mais informações, consulte as descrições destas funções.
 
+
+
 > Os bloqueios pessimistas também podem ser tratados através da API [REST](../REST/$lock.md).
+
+
 
 ### Utilização simultânea de bloqueios clássicos 4D e bloqueios pessimistas ORDA
 
@@ -413,6 +452,8 @@ Os **bloqueios de transação** também se aplicam aos comandos clássicos e ORD
 
 * Exemplo com um bloqueio definido por um comando clássico:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
 * Exemplo com um bloqueio definido por um método ORDA:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+
+
 
 ## Otimização cliente/servidor
 
@@ -439,6 +480,8 @@ Os seguintes métodos associam automaticamente o contexto de otimização da sel
 
 Dado o seguinte código:
 
+
+
 ```4d
  $sel:=$ds. Employee.query("firstname = ab@")
  For each($e;$sel)
@@ -446,16 +489,23 @@ Dado o seguinte código:
  End for each
 ```
 
+
 Graças à otimização, esta solicitação obterá apenas dados de atributos usados (firstname, lastname, employer, employer.name) em *$sel* após uma fase de aprendizagem.
+
+
 
 ### Utilizar a propriedade context
 
 Você pode aumentar os benefícios da otimização usando a propriedade **context** . Essa propriedade faz referência a um contexto de otimização "aprendido" para uma seleção de entidade. Pode ser passado como parâmetro para os métodos ORDA que devolvem novas selecções de entidades, de modo a que as selecções de entidades solicitem diretamente ao servidor os atributos utilizados e contornem a fase de aprendizagem.
 
 Uma mesma propriedade no contexto de otimização pode ser passada para um número ilimitado de seleções de entidade nos mesmos dataclass. Todos os métodos ORDA que manipulam seleções de entidades suportam a propriedade **context** (por exemplo, os métodos, `dataClass.query( )` ou `dataClass.all( )`). No entanto, lembre-se de que um contexto é atualizado automaticamente quando novos atributos são usados em outras partes do código. A reutilização do mesmo contexto em códigos diferentes pode resultar em sobrecarga do contexto e, portanto, reduzir sua eficiência.
+
+
 > Um mecanismo semelhante é implementado para as entidades carregadas, de modo que apenas atributos usados são requisitados (veja o método `dataClass.get( )`).
 
 **Exemplo com o método `dataClass.query( )`:**
+
+
 
 ```4d
  var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Objeto
@@ -479,6 +529,9 @@ e associada ao contexto "shortList"
  associada ao contexto "longList" é aplicada
 ```
 
+
+
+
 ### List box baseado em uma seleção de entidades
 
 A otimização da seleção de entidades é aplicada automaticamente a caixas de listagem baseadas em seleção de entidades em configurações de cliente/servidor, ao exibir e rolar o conteúdo de uma caixa de listagem: somente os atributos exibidos na caixa de listagem são solicitados ao servidor.
@@ -493,6 +546,8 @@ As solicitações subsequentes ao servidor enviadas pelos métodos de navegaçã
 * `entity.previous( )`
 
 Por exemplo, o código a seguir carrega a entidade selecionada e permite a navegação na seleção da entidade. As entidades são carregadas em um contexto separado e o contexto inicial da caixa de listagem não é alterado:
+
+
 
 ```4d
  $myEntity:=Form.currentElement //expressão do item atual

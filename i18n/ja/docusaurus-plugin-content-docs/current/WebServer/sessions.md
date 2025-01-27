@@ -60,7 +60,7 @@ RESTリクエストのための Webセッションを作成するには、利用
 
 :::
 
-The `Session` object of the current session can then be accessed through the [`Session`](commands/session.md) command in the code of any web processes.
+カレントセッションの `Session` オブジェクトは、あらゆる Webプロセスのコードにおいて [`Session`](commands/session.md) コマンドを介してアクセスできます。
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -83,9 +83,9 @@ Webプロセスは通常終了せず、効率化のためにプールされリ�
 
 非アクティブな cookie の有効期限は、デフォルトでは 60分です。つまり、Webサーバーは、非アクティブなセッションを 60分後に自動的に閉じます。
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command.
+このタイムアウトは、`Session` オブジェクトの [`.idleTimeout`](API/SessionClass.md#idletimeout) プロパティで設定できます (タイムアウトは 60分未満にはできません)。また、[`Open datastore`](../commands/open-datastore.md)コマンドの _connectionInfo_ パラメーターを使っても設定できます。
 
-When a web session is closed, if the [`Session`](commands/session.md) command is called afterwards:
+Webセッションが閉じられた後に [`Session`](commands/session.md) コマンドが呼び出されると:
 
 - `Session` オブジェクトには権限が含まれていません (ゲストセッション)。
 - [`.storage`](API/SessionClass.md#storage) プロパティは空です。
@@ -149,7 +149,6 @@ http://localhost:8044/authenticate.shtml
 </FORM>
 </body>
 </html>
-
 ```
 
 ![alt-text](../assets/en/WebServer/authenticate.png)

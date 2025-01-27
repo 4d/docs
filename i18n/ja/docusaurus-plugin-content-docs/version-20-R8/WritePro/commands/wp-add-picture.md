@@ -8,26 +8,26 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Add picture.Params-->
 
-| 引数             | 型                       |                             | 説明                                                         |
-| -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------- |
-| wpDoc          | Object                  | &#8594; | 4D Write Pro ドキュメント                                        |
-| picture        | Picture                 | &#8594; | 4D picture                                                 |
-| picturePath    | Text                    | &#8594; | Picture path                                               |
-| pictureFileObj | 4D.File | &#8594; | 4D.File object representing a picture file |
-| 戻り値            | Object                  | &#8592; | Object referencing the picture                             |
+| 引数             | 型                       |                             | 説明                                         |
+| -------------- | ----------------------- | --------------------------- | ------------------------------------------ |
+| wpDoc          | Object                  | &#8594; | 4D Write Pro ドキュメント                        |
+| picture        | Picture                 | &#8594; | ピクチャー                                      |
+| picturePath    | Text                    | &#8594; | ピクチャーパス                                    |
+| pictureFileObj | 4D.File | &#8594; | ピクチャーファイルを表す4D.File オブジェクト |
+| 戻り値            | Object                  | &#8592; | ピクチャーを参照しているオブジェクト                         |
 
 <!-- END REF-->
 
 #### 説明
 
-The **WP Add picture** command<!--REF #_command_.WP Add picture.Summary--> anchors the picture passed as parameter at a fixed location within the specified *wpDoc* and returns its reference.<!-- END REF--> The returned reference can then be passed to the [WP SET ATTRIBUTES](wp-set-attributes.md) command to move the picture to any location in *wpDoc* (page, section, header, footer, etc.) with a defined layer, size, etc.
+**WP Add picture** コマンドは、<!--REF #_command_.WP Add picture.Summary--> 引数として渡されたピクチャーを*wpDoc* 引数で指定したドキュメント内での固定された場所にアンカーし、その参照を返します。<!-- END REF--> 返された参照は、[WP SET ATTRIBUTES](wp-set-attributes.md) コマンドへと渡すことで*wpDoc* 引数で指定したドキュメント内の(ページ、セクション、ヘッダー、フッター等の)任意の位置へと移動させることができます。 レイヤーやサイズなども指定可能です。
 
-In *wpDoc*, pass the name of a 4D Write Pro document object.
+*wpDoc* 引数には、4D Write Pro ドキュメントオブジェクトを渡します。
 
-For the optional second parameter, you can pass either:
+オプションの第二引数には、次のいずれかを渡すことができます:
 
-- In *picture*:  A 4D picture
-- In *picturePath*:  A string containing a path to a picture file stored on disk (system syntax). You can pass a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you need to indicate the file extension.
+- *picture*: 4D ピクチャー
+- *picturePath*:  ディスク上に保存されているピクチャーファイルへのパスを格納した文字列(システムのシンタックス) You can pass a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you need to indicate the file extension.
 - In *PictureFileObj*: a `4D.File` object representing a picture file.
 
 :::note

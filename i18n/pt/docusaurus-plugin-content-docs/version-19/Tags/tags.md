@@ -473,6 +473,8 @@ O seguinte código:
     FIRST RECORD([People])
  While(Not(End selection([People])))
     ...
+    NEXT RECORD([People])
+ End while
     FIRST RECORD([People])
  While(Not(End selection([People])))
     ...

@@ -18,9 +18,9 @@ Para criar um novo projeto de banco de dados:
     * Selecionar **Novo > Projeto...** do menu **Arquivo**: ![](../assets/en/getStart/projectCreate1.png)
     * (apenas 4D) Selecione **Projeto...** do botão da barra de ferramentas **Novo**:<p>![](../assets/en/getStart/projectCreate2.png)</p>Um diálogo padrão **Salvar** aparece para que você possa escolher o nome e local da pasta principal do projeto 4D.
 
-3. Coloque o nome de sua pasta de projeto e clique **Save**. Este nome será utilizado:
+3. Coloque o nome de sua pasta de projeto e clique **Guardar**. Este nome será utilizado:
 
-    * as the name of the .4DProject file at the first level of the "Project" folder.
+    * como nome de toda a pasta do projeto,
     * as the name of the .4DProject file at the first level of the "Project" folder.
 
  Pode escolher qualquer nome permitido pelo seu sistema operacional. *Atenção:* se seu banco projeto estiver destinado a funcionar em outros sistemas ou a ser guardada através de uma ferramenta de controle de código fonte, deve levar em consideração suas recomendações específicas de denominação.

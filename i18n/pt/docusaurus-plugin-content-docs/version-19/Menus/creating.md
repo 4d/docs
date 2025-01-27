@@ -21,7 +21,7 @@ A barra de menus predefinida inclui três menus:
 - **Arquivo**: inclui apenas o comando **Sair**. A ação padrão *Sair* está associada ao comando, o que faz com que aplicação seja encerrada.
 - **Editar**: padrão e completamente modificável. As funções de edição, como copiar, colar, etc., são definidas por meio de ações padrão.
 - **Modo**: contém, por padrão, o comando **Retornar ao modo Desenho**, usado para sair do modo Aplicação.
-> > Os itens de menu aparecem *em itálico* porque consistem em referências e não em texto codificado. Consultar [Propriedade Título](properties.md#title).
+> > > Os itens de menu aparecem *em itálico* porque consistem em referências e não em texto codificado. Consultar [Propriedade Título](properties.md#title).
 
 Pode modificar esta barra de menu como desejar ou criar outras.
 
