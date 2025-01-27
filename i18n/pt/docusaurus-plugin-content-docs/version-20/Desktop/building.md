@@ -7,7 +7,7 @@ title: Build application overview
 
 O construtor de aplicações permite-lhe:
 
-* Gerar um banco de dados compilado, sem código interpretado
+* Criar uma estrutura ou componente compilado, sem código interpretado,
 * Construir uma aplicação autônoma, de duplo clique, *i.e.*, fundida com 4D Volume Desktop, o motor de banco de dados 4D,
 * Gerar aplicações diferentes a partir do mesmo banco de dados compilado mediante um projeto XML,
 * Criar aplicações cliente-servidor homogêneas,
@@ -20,7 +20,7 @@ O construtor de aplicações permite-lhe:
 
 A cria de um pacote de projetos pode ser efetuada utilizando:
 
-* o comando [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html),
+* either the [`BUILD APPLICATION`](https://doc.4d.com/4dv20/help/command/en/page871.html) command,
 * or the [Build Application window](#application-builder).
 
 :::tip
@@ -48,7 +48,7 @@ Cada parâmetro de geração da aplicação é armazenado como uma chave XML no 
 
 Os parâmetros padrão são utilizados na primeira vez que a caixa de diálogo Criar aplicação é utilizada. O conteúdo do ficheiro é atualizado, se necessário, quando se clica em **Criar** ou **Salvar os parâmetros**. Pode definir vários outros ficheiros de parâmetros XML para o mesmo projeto e utilizá-los utilizando o comando [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
 
-As chaves XML oferecem opções adicionais além daquelas exibidas na caixa de diálogo Criar aplicativo. XML keys provide additional options besides those displayed in the Build Application dialog box.
+As chaves XML oferecem opções adicionais além daquelas exibidas na caixa de diálogo Criar aplicativo. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual.
 
 ### Arquivo histórico
 
@@ -86,9 +86,9 @@ This feature creates a `.4dz`file within a `Compiled Database/<project name>` fo
 
 `/Compiled Database/MyProject/MyProject.4dz`
 
-Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. A .4dz file is essentially a zipped (packed) version of the project folder. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar.
+Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. .4dz files can be used by 4D Server, 4D Volume Desktop (merged applications), and 4D. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar.
 
-> Ao gerar arquivos .4dz, 4D usa um formato zip padrão **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. Se você não quiser usar esse formato padrão, adicione a chave `UseStandardZipFormat` XML com o valor `False` no arquivo [`buildApp.4DSettings`](#build-application-settings) (para obter mais informações, consulte o manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
+> Ao gerar arquivos .4dz, 4D usa um formato zip padrão **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
 
 #### Incluir pastas relacionadas
 
@@ -118,20 +118,18 @@ Essa guia permite que você crie uma versão autônoma e de usuário único do s
 
 ### Criar uma aplicação autónoma
 
-Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project.
+Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project. No Windows, esta funcionalidade cria um ficheiro executável (.exe). Em macOS, trata da criação de pacotes de software.
 
-Os seguintes elementos são necessários para a construção:
+The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine). A funcionalidade fornecida pelo ficheiro 4D Volume Desktop está ligada à oferta do produto a que se subscreveu. Para mais informações sobre este ponto, consulte a documentação de vendas e a [4D Store](http://www.4d.com/).
 
-* 4D Volume Desktop (o motor de base de dados 4D),
-* uma [licença apropriada](#licenses)
+- You can define a default data file or allow users to [create and use their own data file](#management-of-data-files).
+- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**About licenses**](#about-licenses) paragraph).
 
-No Windows, esta funcionalidade cria um ficheiro executável (.exe). Em macOS, trata da criação de pacotes de software.
+:::note
 
-O princípio consiste em fundir um ficheiro de estrutura compilado com 4D Volume Desktop. A funcionalidade fornecida pelo ficheiro 4D Volume Desktop está ligada à oferta do produto a que se subscreveu. Para mais informações sobre este ponto, consulte a documentação de vendas e a [4D Store](http://www.4d.com/).
+It is possible to [automate the update of merged single-user applications](#automatic-updating-of-server-or-single-user-applications) by means of a sequence of language commands.
 
-Você pode definir um arquivo de dados padrão ou permitir que os usuários criem e usem seu próprio arquivo de dados (consulte o gerenciamento [de arquivos de dados na seção de aplicativos finais](https://doc.4d.com/4Dv17R6/4D/17-R6/Data-file-management-in-final-applications.300-4354729.en.html)).
-
-É possível automatizar a atualização de aplicativos de usuário único mesclados através de uma sequência de comandos de idioma (veja [Atualização automática de aplicativos de servidor ou de usuário único](https://doc.4d.com/4Dv17R6/4D/17-R6/Automatic-updating-of-server-or-single-user-applications.300-4354721.en.html).
+:::
 
 #### Localização do 4D Volume Desktop
 
@@ -167,7 +165,7 @@ Se você tiver especificado "MyProject" como o nome do aplicativo, encontrará o
   * Pasta 4D Extensions, pasta Resources, várias bibliotecas (DLL), pasta Native Components, pasta SASL Plugins - Arquivos necessários para a operação do aplicativo
   * Uma pasta Database - Inclui uma pasta Resources e um arquivo MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file. **Observação**: Essa pasta também contém a pasta *Default Data* , se ela tiver sido definida (consulte [Gerenciamento de arquivos de dados em aplicativos finais](#data-file-management-in-final-applicatons).
   * (Opcional) Pasta Components e/ou pasta Plugins - Contém todos os componentes e/ou arquivos de plug-in incluídos no banco de dados. Para obter mais informações sobre isso, consulte os plugins [e componentes](#plugins-and-components).
-  * Pasta de licenças - Um arquivo XML com números de licença integrados ao aplicativo. Para obter mais informações sobre isso, consulte a seção [Licenses & Certificate](#licenses-and-certificate) .
+  * (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. Para obter mais informações sobre isso, consulte a seção [Licenses & Certificate](#licenses-and-certificate) .
   * Itens adicionais adicionados à pasta da Área de Trabalho de Volume 4D, se houver (veja [Personalizando a pasta de Volume 4D para Desktop](#customizing-4d-volume-desktop-folder)).
 
  Todos estes itens devem ser mantidos na mesma pasta para que o executável possa operar.
@@ -196,6 +194,21 @@ Os elementos devem ser instalados:
 * **no Windows**: na *Aplicação Final\MyProject\Database*.
 * **no macOS**: ao lado do pacote de software *MyProject.app*.
 
+
+#### About licenses
+
+A stand-alone application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+
+| Deployment license     | Descrição                                                          | Where to enter it                                                                          |
+| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
+| *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                         | [Licenses page](#licenses) of the Build application dialog                                 |
+| *4D Desktop*           | Per-user license, allowing them to use stand-alone 4D applications | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
+
+
+
+
+
 ## Página cliente/servidor
 
 Nessa guia, você pode criar aplicativos cliente-servidor personalizados que sejam homogêneos, multiplataforma e com uma opção de atualização automática.
@@ -219,7 +232,7 @@ Além disso, o aplicativo cliente/servidor é personalizado e fácil de usar:
 * Para iniciar a parte do servidor, o usuário simplesmente clica duas vezes no aplicativo do servidor. The database does not need to be selected.
 * Para iniciar a parte do cliente, o usuário simplesmente clica duas vezes no aplicativo cliente, que se conecta diretamente ao aplicativo do servidor. Você não precisa escolher um servidor em uma caixa de diálogo de conexão. O cliente direciona o servidor usando seu nome, quando o cliente e o servidor estão na mesma sub-rede, ou usando seu endereço IP, que é definido usando a chave `IPAddress` XML no arquivo buildapp.4DSettings. Se a conexão falhar, mecanismos alternativos específicos do [podem ser implementados](#management-of-client-connections). Você pode "forçar" a exibição da caixa de diálogo de conexão padrão segurando a tecla **Opção** (macOS) ou **Alt** (Windows) enquanto inicia a aplicação cliente. Apenas a parte do cliente pode conectar à parte do servidor correspondente. Se um usuário tentar conectar à parte do servidor usando uma aplicação 4D padrão, uma mensagem de erro é retornada e a conexão é impossível.
 * Um aplicativo cliente/servidor pode ser definido para que a parte do cliente [possa ser atualizada automaticamente através da rede](#copy-of-client-applications-in-the-server-application). Você só precisa criar e distribuir uma versão inicial do aplicativo cliente, atualizações subsequentes são tratadas usando o mecanismo de atualização automática.
-* É possível automatizar a atualização do servidor através do uso de uma sequência de comandos de linguagem ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) e [RESTART 4D](https://doc.4d.com/4dv19/help/command/en/page1292.html)).
+* It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4dv20/help/command/en/page1291.html) and [RESTART 4D](https://doc.4d.com/4dv20/help/command/en/page1292.html).
 
 ### Criar aplicação servidor
 
@@ -490,18 +503,26 @@ Os seguintes módulos opcionais podem ser desmarcados:
 
 A página Licences & Certificate pode ser utilizada para:
 
-* designar o(s) número(s) da licença que você deseja integrar em seu aplicativo de stand-alone de usuário único
+* designate the license number(s) that you want to integrate into your single-user [stand-alone application](#application-page),
 * assinar a aplicação através de um certificado no macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licenças
 
-Esta aba exibe a lista de licenças de implantação disponíveis que você poderá integrar ao seu aplicativo. Por padrão, a lista está vazia. Você deve adicionar explicitamente sua licença *4D Developer Professional* bem como cada licença *4D Desktop Volume* para ser usada na aplicação criada. Você pode adicionar outro número de Profissional de Desenvolvedor 4D e suas licenças associadas, além da que está sendo usada atualmente.
+This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. Por padrão, a lista está vazia.
+
+:::info
+
+If you keep the list empty, you build a stand-alone application without embedded deployment license. In this case, the end-user will have to purchase and enter a per-user *4D Desktop* license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. For more information, see the [**About licenses**](#about-licenses) paragraph.
+
+:::
+
+Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
 
 Para remover ou adicionar uma licença, use os botões **[+]** e **[-]** na parte inferior da janela.
 
-Quando você clicar no botão \[+], uma caixa de diálogo 'Abrir arquivo' aparece exibindo por padrão o conteúdo da pasta *Licenças* do seu computador. Para obter mais informações sobre a localização desta pasta, consulte o comando [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html).
+Quando você clicar no botão \[+], uma caixa de diálogo 'Abrir arquivo' aparece exibindo por padrão o conteúdo da pasta *Licenças* do seu computador. For more information about the location of this folder, refer to the [Get 4D folder](https://doc.4d.com/4Dv20/4D/20/Get-4D-folder.301-4311294.en.html) command.
 
 Você deve designar os arquivos que contêm sua licença de desenvolvedor, bem como os que contém suas licenças de implantação. Esses arquivos foram gerados ou atualizados quando a licença *4D Developer Professional* e as licenças *4D Desktop Volume* foram compradas.
 
