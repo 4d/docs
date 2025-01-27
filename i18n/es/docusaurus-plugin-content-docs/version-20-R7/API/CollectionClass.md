@@ -435,7 +435,7 @@ Mayor que
 
 #### Descripción
 
-Colección original sin elementos eliminados
+Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 
 Si la colección contiene objetos, puede pasar el parámetro *propertyPath*. En este caso, sólo se tienen en cuenta los elementos que contienen el *propertyPath*.
 
@@ -559,7 +559,7 @@ El parámetro opcional *propertyPath* permite contar valores dentro de una colec
 
 #### Descripción
 
-Colección original sin elementos eliminados
+Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 > Esta función no modifica la colección original.
 
@@ -1085,7 +1085,7 @@ La función `.findIndex()` <!-- REF #collection.findIndex().Summary -->devuelve 
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Tipo
+- *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un `Object` en el primer parámetro ($1).
@@ -1260,7 +1260,7 @@ Esta función es idéntica a una llamada a [`map()`](#map) seguida de una llamad
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
+- expresión
 - Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un `Object` en el primer parámetro ($1).
@@ -1605,9 +1605,9 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 <!-- REF #collection.last().Params -->
 
-| Parámetros | Tipo |                             | Descripción                                   |
-| ---------- | ---- | :-------------------------: | --------------------------------------------- |
-| Result     | any  | <- | Colección que contiene los elementos añadidos |
+| Parámetros | Tipo |                             | Descripción                     |
+| ---------- | ---- | :-------------------------: | ------------------------------- |
+| Result     | any  | <- | Primer elemento de la colección |
 
 <!-- END REF -->
 
@@ -1696,7 +1696,7 @@ Tipo
 
 #### Descripción
 
-Ejemplo 2
+La propiedad `.length` <!-- REF #collection.length.Summary --> devuelve el número de elementos en la colección<!-- END REF -->.
 
 La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eliminar elementos actualiza la longitud, si es necesario. Esta propiedad es **sólo lectura** (no se puede utilizar para definir el tamaño de la colección).
 
@@ -1742,7 +1742,7 @@ La función `.map()` <!-- REF #collection.map().Summary -->crea una nueva colecc
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Para el cálculo sólo se tienen en cuenta los elementos numéricos (se ignoran otros tipos de elementos).
+- expresión
 - Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
@@ -1798,7 +1798,7 @@ La función `.lastIndexOf()` <!-- REF #collection.lastIndexOf().Summary -->busca
 
 > Esta función no modifica la colección original.
 
-Lanzamiento
+La función `.max()` <!-- REF #collection.max().Summary -->devuelve el elemento con el valor más alto de la colección<! - END REF --> (el último elemento de la colección, ya que sería ordenado en orden ascendente usando el [`.sort()`](#sort) función).
 
 Lanzamiento
 
@@ -1844,7 +1844,7 @@ Si la colección está vacía, `.max()` devuelve *Undefined*.
 
 #### Descripción
 
-Ordenar una colección de números de forma ascendente y descendente:
+La función `.multiSort()` <!-- REF #collection.multiSort().Summary -->permite realizar una ordenación sincronizada multinivel sobre un conjunto de colecciones<!-- END REF -->.
 
 > Esta función no modifica la colección original.
 
@@ -2173,7 +2173,7 @@ Ordenar con una ruta de propiedad:
 
 #### Descripción
 
-La nueva colección
+Ordenar una colección de números de forma ascendente y descendente:
 
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
@@ -2181,7 +2181,7 @@ Esta función devuelve una *copia superficial*, lo que significa que los objetos
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Para más información sobre las colecciones compartidas, por favor consulte la página [Objetos y colecciones compartidas](Concepts/shared.md).
+- Ruta de la propiedad del objeto que se utilizará para el cálculo
 
 - Tipo
 
@@ -2670,7 +2670,7 @@ La función `.reduce()` <!-- REF #collection.reduce().Summary -->aplica la *form
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- expresión
+- Para una descripción detallada de los parámetros *queryString* y *value*, consulte la función `dataClass.query()`.
 - Tipo
 
 Tipo
@@ -2755,7 +2755,7 @@ La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplic
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Ruta de la propiedad del objeto que se utilizará para el cálculo
+- Descripción Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 - Tipo
 
 Tipo
@@ -3008,11 +3008,11 @@ Si la colección está vacía, este método no hace nada.
 
 <!-- REF #collection.slice().Params -->
 
-| Parámetros | Tipo       |                             | Descripción                                    |
-| ---------- | ---------- | :-------------------------: | ---------------------------------------------- |
-| startFrom  | Integer    |              ->             | Índice de inicio (incluido) |
-| end        | Integer    |              ->             | Índice final (no incluido)  |
-| Result     | Collection | <- | La nueva colección compartida                  |
+| Parámetros | Tipo       |                             | Descripción                                                           |
+| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------------- |
+| startFrom  | Integer    |              ->             | Índice de inicio (incluido)                        |
+| end        | Integer    |              ->             | Índice final (no incluido)                         |
+| Result     | Collection | <- | Copia ordenada de la colección (copia superficial) |
 
 <!-- END REF -->
 
