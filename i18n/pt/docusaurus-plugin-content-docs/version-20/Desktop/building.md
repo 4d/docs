@@ -20,7 +20,7 @@ O construtor de aplicações permite-lhe:
 
 A cria de um pacote de projetos pode ser efetuada utilizando:
 
-* either the [`BUILD APPLICATION`](https://doc.4d.com/4dv20/help/command/en/page871.html) command,
+* ou o comando [`BUILD APPLICATION`](https://doc.4d.com/4dv20/help/command/en/page871.html),
 * or the [Build Application window](#application-builder).
 
 :::tip
@@ -48,7 +48,7 @@ Cada parâmetro de geração da aplicação é armazenado como uma chave XML no 
 
 Os parâmetros padrão são utilizados na primeira vez que a caixa de diálogo Criar aplicação é utilizada. O conteúdo do ficheiro é atualizado, se necessário, quando se clica em **Criar** ou **Salvar os parâmetros**. Pode definir vários outros ficheiros de parâmetros XML para o mesmo projeto e utilizá-los utilizando o comando [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
 
-As chaves XML oferecem opções adicionais além daquelas exibidas na caixa de diálogo Criar aplicativo. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual.
+As chaves XML oferecem opções adicionais além daquelas exibidas na caixa de diálogo Criar aplicativo. A descrição dessas chaves é detalhada no manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html).
 
 ### Arquivo histórico
 
@@ -82,13 +82,13 @@ Essa guia permite que você crie um arquivo de estrutura compilado padrão ou um
 
 Gera um banco de dados que contém apenas código compilado.
 
-This feature creates a `.4dz`file within a `Compiled Database/<project name>` folder. For example, if you have named your application “MyProject”, 4D will create:
+Esta funcionalidade cria um arquivo *.4dz* em uma pasta `Compiled Database<project name>`. For example, if you have named your application “MyProject”, 4D will create:
 
 `/Compiled Database/MyProject/MyProject.4dz`
 
-Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. .4dz files can be used by 4D Server, 4D Volume Desktop (merged applications), and 4D. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar.
+Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. Os arquivos .4dz podem ser usados pelo 4D Server, 4D Volume Desktop (aplicações mesclados) e 4D. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar.
 
-> Ao gerar arquivos .4dz, 4D usa um formato zip padrão **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
+> Ao gerar arquivos .4dz, 4D usa um formato zip padrão **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. Se você não quiser usar esse formato padrão, adicione a chave `UseStandardZipFormat` XML com o valor `False` no arquivo [`buildApp.4DSettings`](#build-application-settings) (para obter mais informações, consulte o manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
 
 #### Incluir pastas relacionadas
 
@@ -118,16 +118,16 @@ Essa guia permite que você crie uma versão autônoma e de usuário único do s
 
 ### Criar uma aplicação autónoma
 
-Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project. No Windows, esta funcionalidade cria um ficheiro executável (.exe). Em macOS, trata da criação de pacotes de software.
+Marcar a opção **Build stand-alone Application** e clicar em **Build** criará um aplicativo autônomo (clicável duas vezes) diretamente do seu projeto de aplicação. No Windows, esta funcionalidade cria um ficheiro executável (.exe). Em macOS, trata da criação de pacotes de software.
 
-The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine). A funcionalidade fornecida pelo ficheiro 4D Volume Desktop está ligada à oferta do produto a que se subscreveu. Para mais informações sobre este ponto, consulte a documentação de vendas e a [4D Store](http://www.4d.com/).
+O princípio consiste em mesclar um arquivo de estrutura compilado com **4D Volume Desktop** (o mecanismo de banco de dados 4D). A funcionalidade fornecida pelo ficheiro 4D Volume Desktop está ligada à oferta do produto a que se subscreveu. Para mais informações sobre este ponto, consulte a documentação de vendas e a [4D Store](http://www.4d.com/).
 
-- You can define a default data file or allow users to [create and use their own data file](#management-of-data-files).
-- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**About licenses**](#about-licenses) paragraph).
+- Você pode definir um arquivo de dados padrão ou permitir que os usuários [criem e usem seu próprio arquivo de dados](#management-of-data-files).
+- Você pode incorporar uma licença de implantação ou permitir que o usuário final insira sua licença na primeira inicialização da aplicação (consulte o parágrafo [**Sobre licenças**](#about-licenses)).
 
 :::note
 
-It is possible to [automate the update of merged single-user applications](#automatic-updating-of-server-or-single-user-applications) by means of a sequence of language commands.
+É possível [automatizar a atualização de aplicações de usuário único mesclados](#automatic-updating-of-server-or-single-user-applications) por uma sequência de comandos de linguagem.
 
 :::
 
@@ -165,7 +165,7 @@ Se você tiver especificado "MyProject" como o nome do aplicativo, encontrará o
   * Pasta 4D Extensions, pasta Resources, várias bibliotecas (DLL), pasta Native Components, pasta SASL Plugins - Arquivos necessários para a operação do aplicativo
   * Uma pasta Database - Inclui uma pasta Resources e um arquivo MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file. **Observação**: Essa pasta também contém a pasta *Default Data* , se ela tiver sido definida (consulte [Gerenciamento de arquivos de dados em aplicativos finais](#data-file-management-in-final-applicatons).
   * (Opcional) Pasta Components e/ou pasta Plugins - Contém todos os componentes e/ou arquivos de plug-in incluídos no banco de dados. Para obter mais informações sobre isso, consulte os plugins [e componentes](#plugins-and-components).
-  * (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. Para obter mais informações sobre isso, consulte a seção [Licenses & Certificate](#licenses-and-certificate) .
+  * (Opcional) Pasta Licenses - Um arquivo XML de números de licença integrados a aplicação, se houver. Para obter mais informações sobre isso, consulte a seção [Licenses & Certificate](#licenses-and-certificate) .
   * Itens adicionais adicionados à pasta da Área de Trabalho de Volume 4D, se houver (veja [Personalizando a pasta de Volume 4D para Desktop](#customizing-4d-volume-desktop-folder)).
 
  Todos estes itens devem ser mantidos na mesma pasta para que o executável possa operar.
@@ -195,7 +195,7 @@ Os elementos devem ser instalados:
 * **no macOS**: ao lado do pacote de software *MyProject.app*.
 
 
-#### About licenses
+#### Sobre as licenças
 
 A stand-alone application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
 
