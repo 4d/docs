@@ -10,6 +10,15 @@ Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), t
 
 :::
 
+## 4D 20.6 LTS
+
+#### Highlights
+
+- Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.6): list of all bugs that have been fixed in 4D 20.6 LTS.
+
+
+
 ## 4D 20.5 LTS
 
 #### Highlights
