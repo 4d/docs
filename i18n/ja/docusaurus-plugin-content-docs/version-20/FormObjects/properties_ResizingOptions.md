@@ -43,7 +43,7 @@ title: リサイズオプション
 
 ## 横方向サイズ変更
 
-このプロパティは、ユーザーがフォームの幅をサイズ変更したときの、当該オブジェクトの挙動を指定します。 このプロパティは `OBJECT SET RESIZING OPTIONS` ランゲージコマンドによっても設定することができます。
+This property specifies if an object should be horizontally moved or resized when a user resizes the form. このプロパティは `OBJECT SET RESIZING OPTIONS` ランゲージコマンドによっても設定することができます。
 
 次の値が提供されています:
 
@@ -68,7 +68,7 @@ title: リサイズオプション
 
 ## 縦方向サイズ変更
 
-このプロパティは、ユーザーがフォームの高さをサイズ変更したときの、当該オブジェクトの挙動を指定します。 このプロパティは `OBJECT SET RESIZING OPTIONS` ランゲージコマンドによっても設定することができます。
+This property specifies if an object should be vertically moved or resized when a user resizes the form.It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
 次の値が提供されています:
 
