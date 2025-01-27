@@ -191,7 +191,7 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 ## 4D 20.x LTS
 
-See [**Release Notes for 4D 20.x LTS**](../../versioned_docs/version-20/Notes/updates.md).
+[**4D 20.x LTS のリリースノート**](../../version-20/Notes/updates.md) 参照。
 
 ## ライブラリの一覧
 
