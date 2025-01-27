@@ -263,9 +263,9 @@ Para fazer isso, você deve cercar o código a ser excluído da verificação de
 
 ```4d
   // %R- para desativar o intervalo verificando
- 
+
  ... //Coloque o código a ser excluído do intervalo verificando aqui
- 
+
   // %R+ para habilitar a verificação de intervalo novamente para o resto
 ```
 
