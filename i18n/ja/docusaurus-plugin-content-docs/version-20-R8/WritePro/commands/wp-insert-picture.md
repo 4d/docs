@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | pictureFileObj | 4D.File | &#8594; | A File object representing a picture file. |
 | mode           | Integer                 | &#8594; | Insertion mode                                             |
 | rangeUpdate    | Integer                 | &#8594; | Range update mode                                          |
-| 戻り値            | Object                  | &#8592; | Object referencing the picture                             |
+| 戻り値            | Object                  | &#8592; | ピクチャーを参照しているオブジェクト                                         |
 
 <!-- END REF-->
 
