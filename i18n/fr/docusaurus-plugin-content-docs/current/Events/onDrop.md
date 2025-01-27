@@ -11,7 +11,7 @@ title: On Drop
 
 L'événement `On Drop` est envoyé une fois à l'objet de destination lorsque le pointeur de la souris est relâché sur l'objet. Cet événement est la deuxième phase de l'opération de glisser-déposer, où l'opération que vous réalisez est en réponse à l'action de l'utilisateur.
 
-Cet événement n'est pas envoyé à l'objet si le glisser n'a pas été accepté lors des événements [`On Drag Over`](onDragOver.md). Si vous traitez l'événement `On Drag Over` pour un objet et rejetez un glisser, l'événement `On Drop` ne se produit pas. Ainsi, si lors de l'événement `On Drag Over` vous avez testé la compatibilité des types de données entre les objets source et destination, et si vous avez accepté un éventuel dépôt, vous n'avez pas besoin de re-tester les données pendant l'événement \`On D Vous savez déjà que les données sont adaptées à l'objet de destination.
+Cet événement n'est pas envoyé à l'objet si le glisser n'a pas été accepté lors des événements [`On Drag Over`](onDragOver.md). Si vous traitez l'événement `On Drag Over` pour un objet et rejetez un glisser, l'événement `On Drop` ne se produit pas. Ainsi, si lors de l'événement `On Drag Over` vous avez testé la compatibilité des types de données entre les objets source et destination, et si vous avez accepté un éventuel dépôt, vous n'avez pas besoin de re-tester les données pendant l'événement \\`On D Vous savez déjà que les données sont adaptées à l'objet de destination. Vous savez déjà que les données sont adaptées à l'objet de destination.
 
 #### Voir également
 
