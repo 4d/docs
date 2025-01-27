@@ -33,12 +33,13 @@ $MyVar:="Hello"
 $MyVar é agora uma variável que contém a string "Olá". Agora podemos criar um ponteiro para $MyVar:
 
 ```4d
-C_POINTER($MyPointer)  
+var $MyPointer : Pointer
 $MyPointer:=->$MyVar
 ```
 O símbolo -> significa "fazer um ponteiro para". Este símbolo é formado por um traço seguido por um sinal "maior que". Neste caso, ele recebe o ponteiro que faz referência ou "aponta para" $MyVar. Este ponteiro é atribuído ao MyPointer com o operador de atribuição.
 
 $MyPointer é agora uma variável que contém um ponteiro para $MyVar. $MyPointer não contém "Olá", que é o valor em $MyVar, mas pode usar $MyPointer para obter este valor. A seguinte expressão devolve o valor em $MyVar:
+
 ```4d
 $MyPointer->
 ```
@@ -84,8 +85,35 @@ Con:
 | Desigualdade | Pointer # Pointer   | Parâmetros | vPtrA # vPtrC | True  |
 |              |                     |            | vPtrA # vPtrB | False |
 
+
+:::warning Null Pointers
+
+Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Por exemplo:
+
+```4d
+var $p : Pointer // non initialized pointer (Nil value)
+$v:=$p-> // error
+$p->:=$v // error
+```
+
+To prevent such errors, you can write:
+
+```4d
+If ($p#Null)
+  $p->:=$v
+End if
+```
+
+:::
+
+
+
+
 ## Principais usos
+
+
 ### Ponteiros para tabelas
+
 Em qualquer lugar que a língua espere ver uma tabela, pode usar um ponteiro desreferenciado para a tabela. Cria-se um ponteiro para uma mesa usando uma linha como esta:
 ```4d
 $TablePtr:=->[anyTable]
@@ -118,22 +146,29 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 Quando se utilizam apontadores para processar ou variáveis locais, é necessário ter a certeza de que a variável apontada já está definida quando o apontador é utilizado. Tenha em mente que as variáveis locais são eliminadas quando o método que as criou tiver concluído a sua execução e as variáveis de processo são eliminadas no final do processo que as criou. Quando um ponteiro chama uma variável que já não existe, isto causa um erro de sintaxe no modo interpretado (variável não definida) mas pode gerar um erro mais grave no modo compilado.
 
-Os ponteiros para variáveis locais permitem-lhe guardar variáveis de processo em muitos casos. Os ponteiros para variáveis locais só podem ser utilizados dentro do mesmo processo. No depurador, quando se mostra um ponteiro para uma variável local que tenha sido declarada noutro método, o nome do método original é indicado entre parênteses, após o ponteiro. Por exemplo, se escrever no Método1:
+Os ponteiros para variáveis locais permitem-lhe guardar variáveis de processo em muitos casos. Os ponteiros para variáveis locais só podem ser utilizados dentro do mesmo processo. No depurador, quando se mostra um ponteiro para uma variável local que tenha sido declarada noutro método, o nome do método original é indicado entre parênteses, após o ponteiro. For example, if you write in *Method1*:
+
 ```4d
  $MyVar:="Hello world"
  Method2(->$MyVar)
 ```
-No Método2, o depurador exibirá $1 como se segue:
+*Method2*:
 
-| $1 | ->$MyVar (Method1) |
-| -- | ------------------ |
-|    |                    |
+```4d
+#DECLARE($param : Pointer)
+...
+```
+The debugger will display $param as follows:
 
-O valor de $1 será:
+| $param | ->$MyVar (Method1) |
+| ------ | ------------------ |
+|        |                    |
 
-| $MyVar (Method1) | "Hello world" |
-| ---------------- | ------------- |
-|                  |               |
+You can expand $param and its value will be:
+
+| $MyVar | "Hello world" |
+| ------ | ------------- |
+|        |               |
 
 ### Ponteiros para os elementos do array
 Pode criar um ponteiro para um elemento de array. Por exemplo, as linhas seguintes criam um array e atribuem um ponteiro ao primeiro elemento do array a uma variável chamada $ElemPtr:
@@ -164,12 +199,14 @@ Se precisar de se referir ao quarto elemento do array usando o ponteiro, faça d
 
 ### Indicadores como parâmetros para os métodos
 Pode passar um ponteiro como parâmetro para um método. Dentro do método, você pode modificar o objeto referenciado pelo ponteiro. Por exemplo, o seguinte método, `takeTwo`, toma dois parâmetros que são indicadores. Altera o objecto referenciado pelo primeiro parâmetro para caracteres maiúsculos, e o objecto referenciado pelo segundo parâmetro para caracteres minúsculos. Aqui está o método do projecto:
+
 ```4d
   //takeTwo project method
-  //$1 - Ponteiro para um campo de string  ou variável. Alterar isto para maiúsculas.
-  //$2 - Apontador para um campo de string ou variável. Mudar isto para minúsculas.
- $1->:=Uppercase($1->)
- $2->:=Lowercase($2->)
+  //$changeUp – Pointer to a string field or variable. Alterar isto para maiúsculas.
+  //$changeLow – Pointer to a string field or variable. Mudar isto para minúsculas.
+ #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
+ $changeUp->:=Uppercase($changeUp->)
+ $changeLow->:=Lowercase($changeLow->)
 ```
 
 A linha seguinte utiliza o método `takeTwo` para alterar um campo para caracteres maiúsculos e para alterar uma variável para caracteres minúsculos:
@@ -182,6 +219,7 @@ Se o campo [myTable]myField contivesse a corda "jones", esta seria alterada para
 No método takeTwo, e de facto, sempre que se utilizam apontadores, é importante que o tipo de dados do objecto a ser referenciado esteja correcto. No exemplo anterior, os apontadores devem apontar para algo que contenha um fio ou texto.
 
 ### Ponteiros a ponteiros
+
 Se gosta realmente de complicar as coisas, pode usar apontadores para referenciar outros apontadores. Considerem este exemplo:
 ```4d
  $MyVar:="Hello"
@@ -211,3 +249,5 @@ $NewVar:=($PointerTwo->)->
 ```
 
 **Importante:** A desreferência múltipla requer parênteses.
+
+
