@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 #### 説明
 
-<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.**Process activity** コマンドは特定の時刻での、実行中のプロセスや接続ユーザーセッション(4D Server のみ) のスナップショットを返します。 このコマンドは、全てのプロセスを返します。これには、[Process info](process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。  このコマンドは、全てのプロセスを返します。これには、[Process info](process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。  このコマンドは、全てのプロセスを返します。これには、[Process info](process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。  このコマンドは、全てのプロセスを返します。これには、[Process info](process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。 
+<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.**Process activity** コマンドは特定の時刻での、実行中のプロセスや接続ユーザーセッション(4D Server のみ) のスナップショットを返します。 このコマンドは、全てのプロセスを返します。これには、[Process info](process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。  このコマンドは、全てのプロセスを返します。これには、[Process info](process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。  このコマンドは、全てのプロセスを返します。これには、[Process info](process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。  このコマンドは、全てのプロセスを返します。これには、[Process info](process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。  このコマンドは、全てのプロセスを返します。これには、[Process info](process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。 
 
 デフォルトで、引数を渡さずに使用した場合、**Process activity** は以下のプロパティを格納したオブジェクトを返します:
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 
 **Sessions**
 
-"sessions" プロパティには、サーバーで実行中の全てのユーザーセッションを記述するオブジェクトのコレクションが格納されます。 セッションオブジェクトのプロパティの詳細については、[`Session info`](session-info.md) コマンドを参照してください。 セッションオブジェクトのプロパティの詳細については、[`Session info`](session-info.md) コマンドを参照してください。 セッションオブジェクトのプロパティの詳細については、[`Session info`](session-info.md) コマンドを参照してください。 セッションオブジェクトのプロパティの詳細については、[`Session info`](session-info.md) コマンドを参照してください。
+"sessions" プロパティには、サーバーで実行中の全てのユーザーセッションを記述するオブジェクトのコレクションが格納されます。 セッションオブジェクトのプロパティの詳細については、[`Session info`](session-info.md) コマンドを参照してください。 セッションオブジェクトのプロパティの詳細については、[`Session info`](session-info.md) コマンドを参照してください。 セッションオブジェクトのプロパティの詳細については、[`Session info`](session-info.md) コマンドを参照してください。 セッションオブジェクトのプロパティの詳細については、[`Session info`](session-info.md) コマンドを参照してください。 セッションオブジェクトのプロパティの詳細については、[`Session info`](session-info.md) コマンドを参照してください。
 
 :::note 注記
 
@@ -63,13 +63,13 @@ displayed_sidebar: docs
 
 **Processes**
 
-"process"プロパティには、サーバーで実行中の全てのプロセスを記述するオブジェクトのコレクションが格納されます。 プロセスオブジェクトのプロパティの詳細な情報については、[`Process info`](process-info.md) コマンドを参照してください。 プロセスオブジェクトのプロパティの詳細な情報については、[`Process info`](process-info.md) コマンドを参照してください。 プロセスオブジェクトのプロパティの詳細な情報については、[`Process info`](process-info.md) コマンドを参照してください。 プロセスオブジェクトのプロパティの詳細な情報については、[`Process info`](process-info.md) コマンドを参照してください。
+"process"プロパティには、サーバーで実行中の全てのプロセスを記述するオブジェクトのコレクションが格納されます。 プロセスオブジェクトのプロパティの詳細な情報については、[`Process info`](process-info.md) コマンドを参照してください。 プロセスオブジェクトのプロパティの詳細な情報については、[`Process info`](process-info.md) コマンドを参照してください。 プロセスオブジェクトのプロパティの詳細な情報については、[`Process info`](process-info.md) コマンドを参照してください。 プロセスオブジェクトのプロパティの詳細な情報については、[`Process info`](process-info.md) コマンドを参照してください。 プロセスオブジェクトのプロパティの詳細な情報については、[`Process info`](process-info.md) コマンドを参照してください。
 
 サーバー上では、`Process activity` コマンドは追加の"session" プロパティを返します:
 
-| 追加のプロパティ | 型      | 説明                                                                                                                                                                                                                           |   |
-| -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
-| session  | Object | プロセスが実行中のセッションの[`.info`](../API/SessionClass.md#info) プロパティ。 `Processes only` 引数が渡されていた場合には未定義となります。 `Processes only` 引数が渡されていた場合には未定義となります。 `Processes only` 引数が渡されていた場合には未定義となります。 `Processes only` 引数が渡されていた場合には未定義となります。 |   |
+| 追加のプロパティ | 型      | 説明                                                                                                                                                                                                                                                                   |   |
+| -------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
+| session  | Object | プロセスが実行中のセッションの[`.info`](../API/SessionClass.md#info) プロパティ。 `Processes only` 引数が渡されていた場合には未定義となります。 `Processes only` 引数が渡されていた場合には未定義となります。 `Processes only` 引数が渡されていた場合には未定義となります。 `Processes only` 引数が渡されていた場合には未定義となります。 `Processes only` 引数が渡されていた場合には未定義となります。 |   |
 
 #### 例題 1
 
