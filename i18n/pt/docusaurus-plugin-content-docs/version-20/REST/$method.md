@@ -28,7 +28,7 @@ Elimina a entidade, coleção de entidades ou seleção de entidades atual (cria
 
 Com `$method=delete`, é possível eliminar uma entidade ou toda uma coleção de entidades. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
 
-You can also delete the entities in an entity set, by calling [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
+Também é possível eliminar as entidades de um conjunto de entidades, chamando [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
 ### Exemplo
 
