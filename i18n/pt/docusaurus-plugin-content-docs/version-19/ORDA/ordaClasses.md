@@ -324,6 +324,11 @@ Else
     $age:=Year of(Current date)-Year of(This.birthDate)
 Else 
     $age:=Null End if
+    If (This.birthDate#!00-00-00!)
+    If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null End if
 ```
 
 #### Verificação de atributos
