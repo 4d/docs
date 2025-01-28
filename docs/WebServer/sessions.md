@@ -215,7 +215,7 @@ The 4D web server allows you to generate, share, and use OTP (One-Time Passcode)
 
 In 4D, OTP session tokens are useful when calling external URLs and being called back in another browser or device (mobile/computer). Typically, a third-party application sends a confirmation email containing a callback link on which the user has to click. The callback link includes the OTP token, so that the session which triggered the callback is loaded along with its data and privileges. This principle allows you to share the same session on multiple devices. Thanks to this architecture, the [session cookie](#session-implementation) is not exposed on the network, which eliminates the risk of man-in-the-middle attack.
 
-### Basic scenario
+### Overview
 
 The basic sequence of an OTP session token use in a 4D web application is the following:
 
@@ -224,7 +224,6 @@ The basic sequence of an OTP session token use in a 4D web application is the fo
 3. You send a request to the third-party application with the session token included in the callback Uri. Note that the way to provide the callback Uri to a third-party application depends on its API (see below).  
 4. The third-party application sends back a request to 4D with the pattern you provided in the callback Uri.
 5. The request callback is processed in your application.
-
 
 By definition, an OTP token can only be used once. In this scenario, if a web request is received with a session token as parameter that has already been used, the initial session is not restored.
 
@@ -246,6 +245,7 @@ Using the `$4DSID` parameter is the most simple way to process a callback from t
 A [`4DACTION`](./httpRequests.md#4daction) url can also be used on the 4D side.
 
 :::
+
 
 #### Using a custom parameter
 
@@ -274,6 +274,124 @@ Verifying if the received OTP token is valid depends on how it was handled:
 - If you used the [`Session.restore()`](../API/SessionClass.md#restore) function, it returns true if the session correctly restored. 
 
 
+
+
+
+
+### Scenario with $4DSID
+
+The scenario using the `$4DSID` key is illustrated in the following diagram:
+
+```mermaid
+sequenceDiagram
+  Actor User as User
+  participant FrontEnd as Front end
+  participant 4DServer as 4D Server
+  participant ExternalPlatform as External platform
+
+  User ->>+ FrontEnd: Validate
+  
+  FrontEnd ->>+ 4DServer: ValidateOperation()
+
+    4DServer ->> 4DServer: Generate OTP with session.createOTP()
+Note over 4DServer: e.g. OTP is 2E5D0D5xxx
+
+  4DServer ->>+ ExternalPlatform: Call the external platform, give a callback URL containing a $4DSID parameter (depends on the platform API)
+
+  Note right of 4DServer: e.g. callback URL: "https://acme.com/my4DApp/completeOperation?$4DSID=2E5D0D5xxx"
+
+ ExternalPlatform ->>+ ExternalPlatform: Process request
+ExternalPlatform ->>+ 4DServer: External platform calls back 4D Server if validation OK
+Note right of 4DServer: e.g. https://acme.com/my4DApp/completeOperation?$4DSID=2E5D0D57751D471DB29FD110D2DCE253
+    4DServer ->> 4DServer: An HTTP request handler processes the URL pattern "/my4DApp/completeOperation"<br/>(e.g.  handleOperation() function of the OperationsHandler singleton, see code below)
+
+   Note over 4DServer: The original session is retrieved thanks to the OTP given in the $4DSID parameter.
+     Note over 4DServer: Session object refers to the session which generated the OTP
+  4DServer ->>+ FrontEnd: Restore session
+
+```
+
+The 4D HTTP request handler definition:
+
+```json
+[
+  {
+    "class": "OperationsHandler",
+    "method": "handleOperation",
+    "regexPattern": "/my4DApp/completeOperation",
+    "verbs": "get"
+  }
+]
+```
+
+The singleton class:
+
+```4d
+//Class OperationsHandler
+shared singleton Class constructor()
+    function handleOperation($request : 4D.IncomingMessage) 
+    $session:=Session
+```
+
+
+### Scenario with `restore` function 
+
+The scenario using a custom parameter is illustrated in the following diagram:
+
+```mermaid
+sequenceDiagram
+  Actor User as User
+  participant FrontEnd as Front end
+  participant 4DServer as 4D Server
+  participant ExternalPlatform as External platform
+
+  User ->>+ FrontEnd: Validate
+  FrontEnd ->>+ 4DServer: Validate()
+
+
+    4DServer ->> 4DServer: Generate OTP with session.createOTP()
+    Note over 4DServer: e.g. OTP is 2E5D0D5xxx
+
+  4DServer ->> ExternalPlatform: Call the external platform giving the OTP, for example as a state parameter (depends on the platform)
+    Note right of 4DServer: e.g. https://thirdPartSystem.com/validate?state=2E5D0D5xxx&redirect_uri=https://acme.com/my4DApp/completeOperation
+      Note right of 4DServer: The callback URL will be like: https://acme.com/my4DApp/completeOperation?state=2E5D0D5xxx
+ ExternalPlatform ->> ExternalPlatform: Process request
+  ExternalPlatform ->> 4DServer: The state parameter is sent back by the third party system in the callback
+        Note right of 4DServer: e.g. https://acme.com/my4DApp/completeOperation?state=2E5D0D5xxx
+ 4DServer ->> 4DServer: An HTTP request handler processes the URL pattern "/my4DApp/completeOperation"<br/> (e.g. handleOperation() function of the OperationHandler singleton, see code below)
+
+4DServer ->> 4DServer: Session.restore()
+
+
+ Note over 4DServer:The state parameter is got from the received request ($req.urlQuery.state)
+   Note over 4DServer:The original session is retrieved by calling the restore() function
+  Note over 4DServer:Session object refers to the session which generated the OTP
+   4DServer ->>+ FrontEnd: Restore session
+
+
+```
+The 4D HTTP request handler definition:
+
+```json
+[
+  {
+    "class": "OperationsHandler",
+    "method": "handleOperation",
+    "regexPattern": "/my4DApp/completeOperation",
+    "verbs": "get"
+  }
+]
+```
+
+The singleton class:
+
+
+```4d
+//Class OperationsHandler
+shared singleton Class constructor()
+    Function handleOperation($req : 4D.IncomingMessage) : 4D.OutgoingMessage
+    Session.restore($req.urlQuery.state)
+```
 ### Example of email validation with $4DSID
 
 1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. An OTP corresponding to the current session is generated. An URL is then returned with this OTP given in the $4DSID parameter.
@@ -355,22 +473,6 @@ Function validateEmail() : 4D.OutgoingMessage
 Since the `$4DSID` parameter contains a valid OTP corresponding to the original session, the `Session` object refers to the session that created the OTP. 
 
 A new user is created, and some information is stored in the session, especially the current step of the user account creation process (Waiting for validation email) and the user ID.
-
-
-
-
-
-### Example with $4DSID (To be edited)
-
-The scenario using the `$4DSID` key is illustrated in the following diagram:
-
-![alt-text](../assets/en/WebServer/otp-token-$4DSID.jpg)
-
-### Example with `restore` function  (To be edited)
-
-The scenario using a custom parameter is illustrated in the following diagram:
-
-![alt-text](../assets/en/WebServer/otp-token-restore.jpg)
 
 
 ### Supported contexts
