@@ -328,7 +328,7 @@ No caso de um erro durante a interpretação, o texto inserido terá o formato: 
 
 Assim como a tag `4DTEXT`, esta tag permite avaliar uma variável 4D ou expressão que retorne um valor, e insira como uma expressão HTML. Ao contrário da tag `4DTEXT`, essa tag não escapa dos caracteres especiais do HTML (por exemplo, ">").
 
-For example, here are the processing results of the 4D text variable myvar with the available tags:
+Por exemplo, aqui estão os resultados do processamento da variável de texto 4D myvar com as tags disponíveis:
 
 | Valor myvar    | Etiquetas              | Resultados                          |
 | -------------- | ---------------------- | ----------------------------------- |
@@ -345,7 +345,7 @@ No caso de um erro de interpretação, o texto inserido será `<!--#4DHTML myvar
 
 Usado com os comentários `<!--#4DELSEIF-->` (opcional), `<!--#4DELSE-->` (opcional) e `<!--#4DENDIF-->`, o comentário `<!--#4DIF expressão-->` oferece a possibilidade de executar partes do código condicionalmente.
 
-O parâmetro *expressão* pode conter qualquer expressão 4D válida que retorne um valor booleano. It must be indicated within parenthesis and comply with the 4D syntax rules.
+O parâmetro *expressão* pode conter qualquer expressão 4D válida que retorne um valor booleano. Deve ser indicado entre parênteses e estar em conformidade com as regras da sintaxe 4D.
 
 A expressão `<!--#4DIF -->` ... `<!--#4DENDIF-->` blocos podem ser aninhados em vários níveis. Como em 4D, cada expressão `<!--#4DIF -->` deve corresponder a um `<!--#4DENDIF-->`.
 
@@ -449,7 +449,7 @@ Exemplos:
 
 #### Sintaxe: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
 
-This comment allows repetition of a portion of code as long as the condition is fulfilled. A porção é delimitada por `<!--#4DLOOP-->` e `<!--#4DENDLOOP-->`.
+Este comentário permite a repetição de uma porção de código, desde que a condição seja satisfeita. A porção é delimitada por `<!--#4DLOOP-->` e `<!--#4DENDLOOP-->`.
 
 A condição `<!--#4DLOOP -->` ... `<!--#4DENDLOOP-->` blocos podem ser aninhados. Como em 4D, cada `<!--#4DLOOP condition-->` deve corresponder a um `<!--#4DENDLOOP-->`.
 
@@ -457,7 +457,7 @@ Existem cinco tipos de condições:
 
 ### `<!--#4DLOOP [table]-->`
 
-This syntax makes a loop for each record from the table current selection in the current process. The code portion located between the two comments is repeated for each current selection record.
+Esta sintaxe faz um loop para cada registro da tabela selecionada atualmente no processo atual. A porção de código localizada entre os dois comentários é repetida para cada registro de seleção atual.
 
 > Quando a tag `4DLOOP` é usada com uma tabela, os registros são carregados no modo "Somente leitura".
 
