@@ -154,7 +154,7 @@ Esta opção permite escolher o modo de ligação entre o aplicativo mesclado e 
 
 Para obter mais informações sobre o modo de ligação de dados, consulte [Último arquivo de dados aberto](#last-data-file-opened).
 
-#### Ficheiros gerados
+#### Arquivos gerados
 
 Quando você clicar no botão **Construa** , A 4D cria automaticamente uma pasta **Aplicação Final** na pasta de Destino **** especificada. Dentro da pasta de Aplicação Final está uma subpasta com o nome do aplicativo especificado nele.
 
@@ -197,13 +197,13 @@ Os elementos devem ser instalados:
 
 #### Sobre as licenças
 
-A stand-alone application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+Uma aplicação autônoma requer uma licença de implantação. Ele pode ser incorporado na etapa de criação pelo desenvolvedor ou inserido no primeiro lançamento pelo usuário final, conforme descrito na seguinte tabela:
 
-| Deployment license     | Descrição                                                          | Where to enter it                                                                          |
-| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
-| *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                         | [Licenses page](#licenses) of the Build application dialog                                 |
-| *4D Desktop*           | Per-user license, allowing them to use stand-alone 4D applications | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
+| Licença de implantação | Descrição                                                                  | Local                                                                                             |
+| ---------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| *4D OEM Desktop*       | Licença personalizada incorporada, contate 4D Sales para obter informações | [Página de licenças](#licenses) da caixa de diálogo Build application                             |
+| *4D Unlimited Desktop* | **Descontinuado** - licença personalizada incorporada                      | [Página de licenças](#licenses) da caixa de diálogo Build application                             |
+| *4D Desktop*           | Licença por usuário, permitindo-lhes utilizar aplicativos 4D autônomos     | Caixa de diálogo [Primeira ativação](../Admin/licenses.md#first-activation) na máquina do usuário |
 
 
 
@@ -232,7 +232,7 @@ Além disso, o aplicativo cliente/servidor é personalizado e fácil de usar:
 * Para iniciar a parte do servidor, o usuário simplesmente clica duas vezes no aplicativo do servidor. The database does not need to be selected.
 * Para iniciar a parte do cliente, o usuário simplesmente clica duas vezes no aplicativo cliente, que se conecta diretamente ao aplicativo do servidor. Você não precisa escolher um servidor em uma caixa de diálogo de conexão. O cliente direciona o servidor usando seu nome, quando o cliente e o servidor estão na mesma sub-rede, ou usando seu endereço IP, que é definido usando a chave `IPAddress` XML no arquivo buildapp.4DSettings. Se a conexão falhar, mecanismos alternativos específicos do [podem ser implementados](#management-of-client-connections). Você pode "forçar" a exibição da caixa de diálogo de conexão padrão segurando a tecla **Opção** (macOS) ou **Alt** (Windows) enquanto inicia a aplicação cliente. Apenas a parte do cliente pode conectar à parte do servidor correspondente. Se um usuário tentar conectar à parte do servidor usando uma aplicação 4D padrão, uma mensagem de erro é retornada e a conexão é impossível.
 * Um aplicativo cliente/servidor pode ser definido para que a parte do cliente [possa ser atualizada automaticamente através da rede](#copy-of-client-applications-in-the-server-application). Você só precisa criar e distribuir uma versão inicial do aplicativo cliente, atualizações subsequentes são tratadas usando o mecanismo de atualização automática.
-* It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4dv20/help/command/en/page1291.html) and [RESTART 4D](https://doc.4d.com/4dv20/help/command/en/page1292.html).
+* Também é possível automatizar a atualização da parte do servidor por meio do uso de uma sequência de comandos da linguagem ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) e [RESTART 4D](https://doc.4d.com/4dv19/help/command/en/page1292.html)).
 
 ### Criar aplicação servidor
 
@@ -263,7 +263,7 @@ Quando se executa uma aplicação 4D Server construída:
 * Se o servidor tiver um ficheiro de directório de dados, este é carregado.
 * Se o servidor não tiver um ficheiro de directório de dados, o ficheiro de directório da aplicação é carregado.
 
-O ficheiro do directório de aplicação é apenas de leitura. Modificações feitas aos usuários, grupos e permissões durante a execução do servidor são armazenadas no arquivo de diretório de dados. Se nenhum arquivo de diretório de dados já existir, ele será criado automaticamente. Se o arquivo de diretório do aplicativo foi incorporado, ele é duplicado como arquivo de diretório de dados.
+O arquivo do diretório de aplicação é somente leitura. Modificações feitas aos usuários, grupos e permissões durante a execução do servidor são armazenadas no arquivo de diretório de dados. Se nenhum arquivo de diretório de dados já existir, ele será criado automaticamente. Se o arquivo de diretório do aplicativo foi incorporado, ele é duplicado como arquivo de diretório de dados.
 
 Embutir o arquivo de diretório do projeto permite que você faça deploy de um aplicativo cliente/servidor com um usuário de segurança básico e configuração de grupo. As alterações subsequentes são adicionadas ao ficheiro do diretório de dados.
 
@@ -285,7 +285,7 @@ Caminho para a estrutura compilada do aplicativo cliente Apple Silicon/Intel usa
 
 Esta opção permite escolher o modo de ligação entre o aplicativo mesclado e o arquivo de dados local. Estão disponíveis dois modos de ligação de dados:
 
-* **Por nome da aplicação** (por defeito) - A aplicação 4D abre automaticamente o ficheiro de dados mais recentemente aberto correspondente ao ficheiro de estrutura. Isto permite-lhe mover o pacote de aplicações livremente no disco. Esta opção deve ser geralmente utilizada para aplicações fundidas, a menos que seja especificamente necessário duplicar a aplicação.
+* **Por nome do aplicativo** (padrão) - O aplicativo 4D abre automaticamente o arquivo de dados aberto mais recentemente correspondente ao arquivo de estrutura. Isto permite-lhe mover o pacote de aplicações livremente no disco. Esta opção deve ser geralmente utilizada para aplicações fundidas, a menos que seja especificamente necessário duplicar a aplicação.
 
 * **Por caminho do aplicativo** - O aplicativo 4D mesclado analisará o arquivo *lastDataPath.xml* do aplicativo e tentará abrir o arquivo de dados com um atributo "executablePath" que corresponda ao caminho completo do aplicativo. Se tal entrada for encontrada, o arquivo de dados correspondente (definido através do seu atributo "dataFilePath") será aberto. Caso contrário, o último arquivo de dados aberto será aberto (modo padrão).
 
@@ -317,7 +317,7 @@ As opções desta área configuram o mecanismo para atualizar as partes do clien
 * **Permitir atualização automática da aplicação cliente Windows** - Marque esta opção para construir um `.4darchive` que pode ser enviado para as aplicações cliente na plataforma Windows em caso de atualização.
 * **Permitir atualização automática do aplicativo cliente Macintosh** - Marque esta opção para construir um `. arquivo darchive` que pode ser enviado para os seus aplicativos cliente na plataforma Macintosh em caso de atualização.
 
-O ficheiro `.4darchive` é copiado para a seguinte localização:
+O `.4darchive` é copiado no seguinte local:
 
 ```
 <ApplicationName>_Build/Client Server executable/Upgrade4DClient/
@@ -330,7 +330,7 @@ Você pode marcar a opção **Permitir atualização automática...** para aplic
 * a opção **Build server application** é verificada
 * a opção **Permitir atualização automática...** para aplicativos clientes que executam na plataforma atual está marcada.
 
-Esta funcionalidade requer que clique no botão **[...]** e designe a localização no disco do ficheiro a utilizar para a atualização. O ficheiro a selecionar depende da plataforma do servidor atual:
+Esta funcionalidade requer que clique no botão **[...]** e determine a localização no disco do ficheiro a utilizar para a atualização. O ficheiro a selecionar depende da plataforma do servidor atual:
 
 | Plataforma de servidor actual | Ficheiro obrigatório                                         | Detalhes                                                                                                                                                                                       |
 | ----------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -369,7 +369,7 @@ Existem muitas causas possíveis para este erro. Quando você receber esta mensa
 * **Pathnames** - Verifique a validade dos pathnames definidos no projeto de aplicação através da caixa de diálogo do Construtor de Aplicação ou via chaves XML (por exemplo *ClientMacFolderToWin*). Em particular, verifique os caminhos para as versões do 4D Volume Desktop.
 * **privilégios de leitura/gravação** - Na máquina do cliente, verifique se o usuário atual tem direitos de acesso de gravação para a atualização da aplicação do cliente.
 
-### Ficheiros gerados
+### Arquivos gerados
 
 Uma vez que uma aplicação cliente/servidor é criada, você encontrará uma nova pasta na pasta de destino chamada **Client Server executable**. Esta pasta contém duas subpastas, `<ApplicationName>Client` e `<ApplicationName>Server`.
 > Estas pastas não são geradas se ocorrer um erro. Neste caso, abra o arquivo [log](#log-file) para descobrir a causa do erro.
@@ -495,7 +495,7 @@ Os seguintes módulos opcionais podem ser desmarcados:
 
 > Se você desmarcar o MeCab para um aplicativo na linguagem japonesa usado em plataformas heterogêneas, certifique-se de desmarcá-lo na compilação cliente/servidor e na compilação [do aplicativo cliente](#build-client-application) (para a plataforma simultânea) caso contrário, serão detectadas defeituosas no aplicativo.
 
-* **PHP**: Necessary to use PHP features and commands in 4D (see this [settings paragraph](../settings/php.md)).
+* **PHP**: necessário para utilizar recursos e comandos PHP no 4D (veja este [configurações do parágrafo](../settings/php.md)).
 * **SpellChecker**: Utilizado para [spellchecking features](../FormObjects/properties_Entry.md#auto-spellcheck) integrado e comandos disponíveis para áreas de entrada e para áreas 4D Write Pro.
 * Uma aplicação cliente/servidor pode ser estabelecida para que a porção cliente [seja atualizada automaticamente na rede](#copy-of-client-applications-in-the-server-application).
 
@@ -503,26 +503,26 @@ Os seguintes módulos opcionais podem ser desmarcados:
 
 A página Licences & Certificate pode ser utilizada para:
 
-* designate the license number(s) that you want to integrate into your single-user [stand-alone application](#application-page),
+* designar o(s) número(s) da licença que você deseja integrar ao seu único usuário [aplicativo autônomo](#application-page), ,
 * assinar a aplicação através de um certificado no macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licenças
 
-This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. Por padrão, a lista está vazia.
+Esta aba exibe a lista de licenças [de implantação disponíveis que você pode incorporar](#about-licenses) em seu aplicativo. Por padrão, a lista está vazia.
 
 :::info
 
-If you keep the list empty, you build a stand-alone application without embedded deployment license. In this case, the end-user will have to purchase and enter a per-user *4D Desktop* license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. For more information, see the [**About licenses**](#about-licenses) paragraph.
+Se você mantiver a lista vazia, construirá uma aplicação independente sem licença de implantação incorporada. Neste caso, o usuário final terá de comprar e inserir uma licença por usuário *4D Desktop*. Se você integrar uma licença de implementação, o usuário não terá que inserir ou usar seu próprio número de licença na inicialização do aplicativo. Para obter mais informações, consulte o parágrafo [**Sobre as licenças**](#about-licenses).
 
 :::
 
-Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
+Sua licença atual do Desenvolvedor *4D Professional* é associada automaticamente a cada licença de implantação para ser usada na aplicação construída. Você pode adicionar outro número 4D Developer Professional e suas licenças associadas.
 
 Para remover ou adicionar uma licença, use os botões **[+]** e **[-]** na parte inferior da janela.
 
-Quando você clicar no botão \[+], uma caixa de diálogo 'Abrir arquivo' aparece exibindo por padrão o conteúdo da pasta *Licenças* do seu computador. For more information about the location of this folder, refer to the [Get 4D folder](https://doc.4d.com/4Dv20/4D/20/Get-4D-folder.301-4311294.en.html) command.
+Quando você clicar no botão \[+], uma caixa de diálogo 'Abrir arquivo' aparece exibindo por padrão o conteúdo da pasta *Licenças* do seu computador. Para obter mais informações sobre a localização desta pasta, consulte o comando [Get 4D folder](https://doc.4d.com/4Dv20/4D/20/Get-4D-folder.301-4311294.en.html).
 
 Você deve designar os arquivos que contêm sua licença de desenvolvedor, bem como os que contém suas licenças de implantação. Esses arquivos foram gerados ou atualizados quando a licença *4D Developer Professional* e as licenças *4D Desktop Volume* foram compradas.
 
