@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.El comando **FORM EDIT** abre el *form* asociado a *aTable* en el editor de formularios 4D, con opcionalmente *object* seleccionado. Tenga en cuenta que debe tener acceso al entorno Diseño, de lo contrario se generará el error -9804 ("No se puede abrir el formulario").
+<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.El comando **FORM EDIT** abre el *form* asociado a *aTable* en el editor de formularios 4D, con opcionalmente *object* seleccionado. Tenga en cuenta que debe tener acceso al entorno Diseño, de lo contrario se generará el error -9804 ("No se puede abrir el formulario").
 
 El comando es asíncrono: vuelve inmediatamente al método que lo llama y no espera a que el formulario esté abierto.
 

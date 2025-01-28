@@ -20,7 +20,7 @@ Se o método base `On REST Authentication` não tiver sido definido, é aberta u
 
 ## Modo preventivo
 
-On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+No servidor 4D, as solicitações REST são tratadas automaticamente através de processos preventivos, **mesmo no modo interpretado**. Você precisa ter certeza de que seu código é [compatível com uma execução preventiva](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
 With 4D single-user, interpreted code is always run in cooperative mode.
 
@@ -87,7 +87,7 @@ var $sales : cs.SalesPersonsEntity
 
 $Accepted:=False
 
- //A '/rest' URL has been called with headers username-4D and password-4D
+ //A '/rest' URL foi chamado com nome de usuário-4D e senha-4D
 If ($userId#"")
     $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
     If ($sales#Null)

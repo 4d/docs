@@ -33,7 +33,7 @@ title: 入力
 - **最近使用したフォント**: セッション中に最近使用されたフォント名を表示します。 リストには最大で 10フォントまで表示されます (それ以上は古いものから置き換えられていきます)。 デフォルトではリストは空になっているので、このオプションは表示されません。 このリストは `SET RECENT FONTS` と `FONT LIST` コマンドを使用して管理することができます。
 - スタイルの変更をおこなうためのコマンド: スタイル、サイズ、カラー、背景色。 このポップアップメニューを使用してユーザーがスタイル属性を編集する と、4D は `On After Edit` フォームイベントを生成します。
 
-[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
 
 #### JSON 文法
 
@@ -219,7 +219,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
  :xliff:PH_Lastname
 
 この場合、"プレースホルダー" のフィールドには参照のみを渡します。参照と静的なテキストを組み合わせることはできません。
-> You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) and [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) commands.
+> You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
 
 #### JSON 文法
 
@@ -270,7 +270,6 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 | --------------- | ------- | -------------------------------------------------- |
 | shortcutAccel   | boolean | true, false (Windows: Ctrl/macOS: Command)         |
 | shortcutAlt     | boolean | true, false                                        |
-| shortcutCommand | boolean | true, false                                        |
 | shortcutControl | boolean | true, false (macOS: Control)                       |
 | shortcutShift   | boolean | true, false                                        |
 |                 |         |                                                    |

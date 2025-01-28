@@ -43,7 +43,7 @@ Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL P
 
 ## Dimensionamiento horizontal
 
-Esta propiedad indica si el tamaño horizontal de un objeto debe ser movido o redimensionado cuando un usuario cambia el tamaño del formulario. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
+This property specifies if an object should be horizontally moved or resized when a user resizes the form. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
 
 Hay tres opciones disponibles:
 
@@ -68,7 +68,7 @@ Hay tres opciones disponibles:
 
 ## Dimensionamiento vertical
 
-Esta propiedad indica si el tamaño vertical de un objeto debe ser movido o redimensionado cuando un usuario cambia el tamaño del formulario. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
+This property specifies if an object should be vertically moved or resized when a user resizes the form.It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
 Hay tres opciones disponibles:
 

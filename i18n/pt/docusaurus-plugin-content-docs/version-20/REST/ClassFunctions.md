@@ -163,7 +163,7 @@ Corpo do pedido: ["Aguada"]
 
 #### Resultados
 
-Le résultat est une entité:
+O resultado é uma entidade:
 ```
 {
     "__entityModel": "City",

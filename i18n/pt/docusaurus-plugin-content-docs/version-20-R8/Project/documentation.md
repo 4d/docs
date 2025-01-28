@@ -104,6 +104,7 @@ Si existe un archivo llamado `\<MethodName>.md` en la carpeta `\<package>/docume
 
 - Or, if no html comment tag is used, the first sentence after a `# Description` tag of the markdown file.\
   Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
+  Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
   Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.
 
 :::note

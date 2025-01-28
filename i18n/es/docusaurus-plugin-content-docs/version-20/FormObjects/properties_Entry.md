@@ -33,7 +33,7 @@ Para un tipo de texto [multiestilo](properties_Text.md#multi-style) [input](inpu
 - **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. La lista puede almacenar hasta 10 fuentes (más allá, la última fuente utilizada sustituye a la más antigua). Por defecto, esta lista está vacía y la opción no se muestra. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
 - comandos para las modificaciones de estilo soportados: fuente, tamaño, estilo, color y color de fondo. Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
 
-Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
 
 #### Gramática JSON
 
@@ -219,7 +219,7 @@ Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador d
  :xliff:PH_Lastname
 
 Sólo se pasa la referencia en el campo "Marcador de posición"; no es posible combinar una referencia con texto estático.
-> You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) and [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) commands.
+> You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
 
 #### Gramática JSON
 
@@ -270,7 +270,6 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 | --------------- | -------------- | -------------------------------------------------- |
 | shortcutAccel   | boolean        | true, false (Windows: Ctrl/macOS: Command)         |
 | shortcutAlt     | boolean        | true, false                                        |
-| shortcutCommand | boolean        | true, false                                        |
 | shortcutControl | boolean        | true, false (macOS: Control)                       |
 | shortcutShift   | boolean        | true, false                                        |
 |                 |                |                                                    |

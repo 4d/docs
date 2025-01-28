@@ -84,6 +84,27 @@ Avec :
 | Inégalité | Pointeur # Pointeur | Boolean  | vPtrA # vPtrC | True   |
 |           |                     |          | vPtrA # vPtrB | False  |
 
+
+:::warning Null Pointers
+
+Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Par exemple :
+
+```4d
+var $p : Pointer // non initialized pointer (Nil value)
+$v:=$p-> // error
+$p->:=$v // error
+```
+
+To prevent such errors, you can write:
+
+```4d
+If ($p#Null)
+  $p->:=$v
+End if
+```
+
+:::
+
 ## Principales utilisations
 ### Utiliser des pointeurs vers des tables
 Partout où le langage requiert un nom de table, vous pouvez utiliser un pointeur dépointé vers une table. Pour créer un pointeur vers une table, écrivez une instruction du type :

@@ -107,7 +107,7 @@ Os arquivos `.4DLink` podem também ser criados com um editor XML.
 
 ## Guardar arquivos
 
-Ao trabalhar em um projeto em 4D, você pode usar editores 4D integrados para criar, modificar ou salvar itens de estrutura, métodos, formulários, etc. Modificações são salvas no disco quando selecionar um item de menu **Salvar** ou quando a janela do editor perder ou ficar com o foco.
+Ao trabalhar em um projeto em 4D, você pode usar editores 4D integrados para criar, modificar ou salvar itens de estrutura, métodos, formulários, etc. Modificações são salvas no disco quando selecionar um item de menu **Salvar** ou quando a janela do editor perder ou ficar com o foco. Modificações são salvas no disco quando selecionar um item de menu **Salvar** ou quando a janela do editor perder ou ficar com o foco.
 
 Jà que os editores usam arquivos no disco, podem ocorrer conflitos potenciais se o mesmo arquivo for modificado ou até mesmo excluído de locais diferentes. Por exemplo, se o mesmo método for editado em uma janela do Editor de Código *e* em um editor de texto, salvar ambas as modificações resultará num conflito.
 

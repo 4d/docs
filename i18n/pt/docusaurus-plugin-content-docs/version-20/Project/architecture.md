@@ -222,7 +222,7 @@ Esta pasta contém arquivos que memorizam as configurações do usuário, por ex
 
 Esta pasta contém os plug-ins que devem estar disponíveis no projeto de aplicação. Deve ser armazenado ao mesmo nível que a pasta Project.
 
-> Uma aplicação projeto pode ser utilizada como um componente: - para desenvolvimento: colocar um alias do ficheiro .4dproject na pasta Components do projeto host. - para implantação: [construir o componente](Desktop/building.md#build-component) e colocar o arquivo .4dz resultante numa pasta .4dbase na pasta Components da aplicação anfitriã.
+> Uma aplicação projeto pode ser utilizada como um componente: - para desenvolvimento: colocar um alias do ficheiro .4dproject na pasta Components do projeto host. - para implantação: [construir o componente](Desktop/building.md#build-component) e colocar o arquivo .4dz resultante numa pasta .4dbase na pasta Components da aplicação anfitriã. - para implantação: [construir o componente](Desktop/building.md#build-component) e colocar o arquivo .4dz resultante numa pasta .4dbase na pasta Components da aplicação anfitriã.
 
 
 ## `Plugins`
@@ -238,7 +238,7 @@ Para mais informações, consulte [Documentar um projeto](Project/documentation.
 
 ## `WebFolder`
 
-Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. É criado automaticamente quando o servidor Web é iniciado pela primeira vez.
+Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. É criado automaticamente quando o servidor Web é iniciado pela primeira vez.
 
 ## arquivo `.gitignore` (opcional)
 

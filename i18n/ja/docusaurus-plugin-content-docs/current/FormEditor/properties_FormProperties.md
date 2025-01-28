@@ -40,11 +40,11 @@ title: フォームプロパティ
 
 ## フォームクラス
 
-フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 ユーザークラスはホストプロジェクトのものでも[コンポーネント](../Extensions/develop-components.md#sharing-of-classes) のものでも使用可能です。後者の場合は正式なシンタックスは"[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className" となります。
+フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 ユーザークラスはホストプロジェクトのものでも[コンポーネント](../Extensions/develop-components.md#sharing-of-classes) のものでも使用可能です。後者の場合は正式なシンタックスは"[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className" となります。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 ユーザークラスはホストプロジェクトのものでも[コンポーネント](../Extensions/develop-components.md#sharing-of-classes) のものでも使用可能です。後者の場合は正式なシンタックスは"[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className" となります。
 
 フォームにクラスを割り当てることで、以下のような利点があります:
 
-- [フォームエディター](../FormEditor/formEditor.md) を使用する際、割り当てられたクラスは[式](../Concepts/quick-tour.md#expressions) をサポートする[プロパティリスト](../FormEditor/formEditor.md#property-list) の全てのエリア(例: **変数または式**、**フォントカラー式**...)において、`Form.myProperty` のような式に対する正確なシンタックスチェックを行うのに使用されます。 エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます: エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます: エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます:
+- [フォームエディター](../FormEditor/formEditor.md) を使用する際、割り当てられたクラスは[式](../Concepts/quick-tour.md#expressions) をサポートする[プロパティリスト](../FormEditor/formEditor.md#property-list) の全てのエリア(例: **変数または式**、**フォントカラー式**...)において、`Form.myProperty` のような式に対する正確なシンタックスチェックを行うのに使用されます。 エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます: エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます: エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます: エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます:
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 
@@ -52,7 +52,7 @@ title: フォームプロパティ
 
 - またコードエディター内での[自動補完機能](../code-editor/write-class-method.md#autocomplete-functions) を利用することもできます。
 
-- フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、あるいは [`FORM LOAD`](../commands/form-load.md) といったコマンドに_formData_ オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。 フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、あるいは [`FORM LOAD`](../commands/form-load.md) といったコマンドに_formData_ オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。
+- フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、あるいは [`FORM LOAD`](../commands/form-load.md) といったコマンドに_formData_ オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。 フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、あるいは [`FORM LOAD`](../commands/form-load.md) といったコマンドに_formData_ オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。 フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、あるいは [`FORM LOAD`](../commands/form-load.md) といったコマンドに_formData_ オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。
 
 :::note
 
@@ -157,7 +157,7 @@ title: フォームプロパティ
 
 ## サブフォームとして公開
 
-コンポーネントフォームをホストアプリケーションの [サブフォーム](FormObjects/subform_overview.md) として選択するには、明示的に共有されている必要があります。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。
+コンポーネントフォームをホストアプリケーションの [サブフォーム](FormObjects/subform_overview.md) として選択するには、明示的に共有されている必要があります。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。
 
 公開されたサブフォームとして指定できるのは、プロジェクトフォームのみです。
 
@@ -194,13 +194,13 @@ title: フォームプロパティ
 
 ## ウィンドウタイトル
 
-ウィンドウタイトルは、アプリケーションモードで `Open window` や `Open form window` コマンドを用いてフォームを開く際に使用されます。 ウィンドウタイトルはウィンドウのタイトルバーに表示されます。 ウィンドウタイトルはウィンドウのタイトルバーに表示されます。 ウィンドウタイトルはウィンドウのタイトルバーに表示されます。
+ウィンドウタイトルは、アプリケーションモードで `Open window` や `Open form window` コマンドを用いてフォームを開く際に使用されます。 ウィンドウタイトルはウィンドウのタイトルバーに表示されます。 ウィンドウタイトルはウィンドウのタイトルバーに表示されます。 ウィンドウタイトルはウィンドウのタイトルバーに表示されます。 ウィンドウタイトルはウィンドウのタイトルバーに表示されます。
 
 動的参照を使用して、フォームのウィンドウタイトルを定義することもできます:
 
 - Resourcesフォルダーに保存された、標準の XLIFF参照
 - テーブル/フィールドラベル: 適用できるシンタックスは `<?[TableNum]FieldNum>` または `<?[TableName]FieldName>` です。
-- 変数またはフィールド: 適用できるシンタックスは `\<VariableName>` または `\<[TableName]FieldName>`。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。
+- 変数またはフィールド: 適用できるシンタックスは `\<VariableName>` または `\<[TableName]FieldName>`。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。
 
 > ウィンドウタイトルの最大文字数は 31 です。
 

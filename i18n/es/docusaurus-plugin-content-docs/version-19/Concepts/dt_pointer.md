@@ -84,6 +84,27 @@ Con:
 | Desigualdad | Puntero # Puntero | Boolean  | vPtrA # vPtrC | True  |
 |             |                   |          | vPtrA # vPtrB | False |
 
+
+:::warning Null Pointers
+
+Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Por ejemplo:
+
+```4d
+var $p : Pointer // non initialized pointer (Nil value)
+$v:=$p-> // error
+$p->:=$v // error
+```
+
+To prevent such errors, you can write:
+
+```4d
+If ($p#Null)
+  $p->:=$v
+End if
+```
+
+:::
+
 ## Principales usos
 ### Punteros a tablas
 En cualquier lugar en el que el lenguaje espere ver una tabla, se puede utilizar un puntero desreferenciado a la tabla. Se crea un puntero a una tabla utilizando una línea de instrucción como esta:

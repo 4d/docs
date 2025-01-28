@@ -33,7 +33,7 @@ Para um tipo de texto [multi-estilo](properties_Text.md#multi-style) [input](inp
 - **Recent fonts (Fontes recentes**): exibe os nomes das fontes recentes selecionadas durante a sessão. A lista pode armazenar até 10 fontes (além disso, a última fonte usada substitui a mais antiga). Por padrão, essa lista está vazia e a opção não é exibida. Você pode gerenciar essa lista usando os comandos `SET RECENT FONTS` e `FONT LIST`.
 - comandos para as modificações de estilo suportadas: tipo de letra, tamanho, estilo, cor e cor de fundo. Quando o usuário modifica um atributo de estilo por meio desse menu pop-up, o 4D gera o evento de formulário `On After Edit`.
 
-Em uma [área da Web](webArea_overview.md), o conteúdo do menu depende do mecanismo de renderização da plataforma. É possível controlar o acesso ao menu de contexto através do comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
+Em uma [área da Web](webArea_overview.md), o conteúdo do menu depende do mecanismo de renderização da plataforma. It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
 
 #### Gramática JSON
 
@@ -219,7 +219,7 @@ Você pode usar uma referência XLIFF no formulário ":xliff:resname" como um es
  :xliff:PH_Lastname
 
 Você só passa a referência no campo "Placeholder"; não é possível combinar uma referência com um texto estático.
-> Você também pode definir e obter o texto do espaço reservado programando usando os comandos [`OBJETO SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) e [`OBJECT Obter o espaço reservado`](../commands-legacy/object-get-placeholder.md)
+> You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
 
 #### Gramática JSON
 
@@ -270,7 +270,6 @@ Para ver uma lista de todos os atalhos usados no ambiente 4D Design , consulte a
 | --------------- | ------------- | -------------------------------------------------- |
 | shortcutAccel   | boolean       | true, false (Windows: Ctrl/macOS: Command)         |
 | shortcutAlt     | boolean       | true, false                                        |
-| shortcutCommand | boolean       | true, false                                        |
 | shortcutControl | boolean       | true, false (macOS: Control)                       |
 | shortcutShift   | boolean       | true, false                                        |
 |                 |               |                                                    |

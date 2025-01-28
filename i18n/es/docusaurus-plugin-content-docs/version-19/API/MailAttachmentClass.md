@@ -179,7 +179,7 @@ La función `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary 
 
 ## .cid
 
-<!-- REF #MailAttachmentClass.cid.Syntax -->.<!-- END REF -->
+<!-- REF #MailAttachmentClass.cid.Syntax -->|<!-- END REF -->
 
 #### Descripción
 
@@ -241,7 +241,7 @@ La propiedad `.path` contiene <!-- REF #MailAttachmentClass.path.Summary -->la r
 
 #### Descripción
 
-La propiedad `.platformPath` devuelve <!-- REF #MailAttachmentClass.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
+La propiedad `.platformPath` devuelve <!-- REF #MailAttachmentClass.platformPath.Summary -->La propiedad `.platformPath` devuelve<!-- END REF -->.
 
 ## .type
 

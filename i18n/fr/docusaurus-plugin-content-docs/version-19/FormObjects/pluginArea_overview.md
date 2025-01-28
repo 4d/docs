@@ -4,7 +4,7 @@ title: Zones de plug-in
 ---
 
 
-Une zone de plug-in est une zone du formulaire entièrement contrôlée par un [plug-in](../Extensions/develop-plug-ins.md). La capacité d’intégrer des plug-ins dans les formulaires permet d’accéder à des possibilités illimitées lorsque vous créez des applications personnalisées.
+A plug-in area is an area on the form that is completely controlled by a plug-in. La capacité d’intégrer des plug-ins dans les formulaires permet d’accéder à des possibilités illimitées lorsque vous créez des applications personnalisées.
 
 Lorsque vous ouvrez une application, 4D crée une liste interne des plug-ins [installés dans votre application](../Concepts/plug-ins.md#installing-plug-ins). Une fois que vous avez inséré une Zone de plug-in dans un formulaire, vous pouvez sélectionner le plug-in à lui affecter via la liste **Type** dans la fenêtre de propriétés de l’objet :
 

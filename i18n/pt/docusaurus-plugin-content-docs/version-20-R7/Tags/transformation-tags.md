@@ -3,7 +3,7 @@ id: transformation-tags
 title: Etiquetas de transformação
 ---
 
-4D provides a set of transformation tags which allow you to insert references to 4D variables or expressions, or to perform different types of processing within a source text, referred to as a "template". These tags are interpreted when the source text is executed and generate an output text.
+4D oferece um conjunto de etiquetas de transformação que lhe permite inserir referências a variáveis ou expressões 4D, ou realizar diferentes processamentos dentro de um texto source, referido como um "modelo". Essas etiquetas são interpretadas quando o texto de origem é executado e geram um texto de saída.
 
 Esse princípio é usado em particular pelo servidor da Web 4D para criar [páginas de modelo da Web] (WebServer/templates.md).
 
@@ -45,7 +45,7 @@ A análise do conteúdo de uma fonte *template* é feita em dois contextos:
 
 ### Processamento recursivo
 
-4D tags are interpreted recursively: 4D always attempts to reinterpret the result of a transformation and, if a new transformation has taken place, an additional interpretation is performed, and so on until the product obtained no longer requires any further transformation. Por exemplo, dada a seguinte instrução:
+As etiquetas 4D são interpretadas de forma recursiva: 4D sempre tenta reinterpretar o resultado de uma transformação e, se uma nova transformação tiver ocorrido, uma interpretação adicional é realizada, e assim por diante, até que o produto obtido não precise mais de nenhuma transformação adicional. Por exemplo, dada a seguinte instrução:
 
 ```html
 <!--#4DHTML [Mail]Letter_type-->
@@ -53,15 +53,15 @@ A análise do conteúdo de uma fonte *template* é feita em dois contextos:
 
 Se o próprio campo de texto `[Mail]Letter_type` contiver uma tag, por exemplo, `<!--#4DSCRIPT/m_Gender-->`, essa tag será avaliada recursivamente após a interpretação da tag 4DHTML.
 
-This powerful principle meets most needs related to text transformation. Observe, entretanto, que em alguns casos isso também pode permitir a inserção de código malicioso no contexto da Web, [o que pode ser evitado] (WebServer/templates.md#prevention-of-malicious-code-insertion).
+Esse princípio poderoso atende à maioria das necessidades relacionadas à transformação de texto. Observe, entretanto, que em alguns casos isso também pode permitir a inserção de código malicioso no contexto da Web, [o que pode ser evitado] (WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ### Identificadores com tokens
 
-To ensure the correct evaluation of expressions processed via tags, regardless of the language or 4D version, it's recommended to use the tokenized syntax for elements whose name may vary over versions (commands, tables, fields, constants). Por exemplo, para inserir o comando `Current time` (tempo atual), digite `Current time:C178`.
+Para garantir a avaliação correta das expressões processadas por etiquetas, independentemente da linguagem ou da versão 4D, é recomendável usar a sintaxe tokenizada para elementos cujo nome possa variar conforme as versões (comandos, tabelas, campos, constantes). Por exemplo, para inserir o comando `Current time` (tempo atual), digite `Current time:C178`.
 
 ### Utilizar o "." como separador decimal
 
-4D sempre usa o caractere de ponto final (.) como um separador decimal ao avaliar uma expressão numérica usando uma tag 4D `4DTEXT`, `4DHTML` e `4DEVAL`. Os parâmetros regionais são ignorados. This feature facilitates code maintenance and compatibility between 4D languages and versions.
+4D sempre usa o caractere de ponto final (.) como um separador decimal ao avaliar uma expressão numérica usando uma tag 4D `4DTEXT`, `4DHTML` e `4DEVAL`. Os parâmetros regionais são ignorados. Esse recurso facilita a manutenção do código e a compatibilidade entre idiomas e versões 4D.
 
 ## 4DBASE
 
@@ -73,7 +73,7 @@ When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subseque
 
 O parâmetro *folderPath* deve conter um nome de caminho relativo à página atual e deve terminar com uma barra (`/`). A pasta designada deve estar localizada dentro da pasta Web.
 
-Pass the "WEBFOLDER" keyword to restore the default path (relative to the page).
+Passe a palavra-chave "WEBFOLDER" para restaurar o caminho padrão (relativo à página).
 
 O código seguinte, que deve especificar um caminho relativo para cada chamada:
 
@@ -131,7 +131,7 @@ No arquivo "head.html", a pasta atual é modificada por meio de `<!--#4DBASE -->
 
 A tag `4DCODE` permite que você insira um bloco de código 4D de várias linhas em um modelo.
 
-Quando um `<! -#4DCODE` sequencia detectada que é seguida de um espaço, um CR ou um caractere LF, 4D interpreta todas as linhas de código até a próxima sequência `-->`. The code block itself can contain carriage returns, line feeds, or both; it will be interpreted sequentially by 4D.
+Quando um `<! -#4DCODE` sequencia detectada que é seguida de um espaço, um CR ou um caractere LF, 4D interpreta todas as linhas de código até a próxima sequência `-->`. O próprio bloco de código pode conter retornos, feeds de linha ou ambos; ele será interpretado sequencialmente por 4D.
 
 Por exemplo, pode escrever num modelo:
 
@@ -158,12 +158,12 @@ End if
 Eis as características da etiqueta 4DCODE:
 
 - O comando `TRACE` é suportado e ativa o depurador 4D, permitindo que você depure seu código de modelo.
-- Any error will display the standard error dialog that lets the user stop code execution or enter debugging mode.
+- Qualquer erro exibirá a caixa de diálogo de erro padrão que permite que o usuário interrompa a execução do código ou entre no modo de depuração.
 - O texto entre `<!--#4DCODE` and `-->` é dividido em linhas que aceitam qualquer convenção de fim de linha (cr, lf ou crlf).
 - O texto é tokenizado no contexto do banco de dados chamado `PROCESS 4D TAGS`. Isto é importante para o reconhecimento dos métodos de projeto, por exemplo. A propriedade de método [Disponível através de tags e URLs 4D (4DACTION ...)](WebServer/allowProject.md) não é tida em conta.
-- Even if the text always uses English-US, it is recommended to use the token syntax (:Cxxx) for command and constant names to protect against potential problems due to commands or constants being renamed from one version of 4D to another.
+- Mesmo que o texto sempre use o inglês americano, é recomendável usar a sintaxe de token (:Cxxx) para nomes de comandos e constantes para se proteger contra possíveis problemas por comandos ou constantes serem renomeados de uma versão do 4D para outra.
 
-> The fact that 4DCODE tags can call any of the 4D language commands or project methods could be seen as a security issue, especially when the database is available through HTTP. However, since it executes server-side code called from your own template files, the tag itself does not represent a security issue. In this context, as for any Web server, security is mainly handled at the level of remote accesses to server files.
+> Que as etiquetas 4DCODE podem chamar qualquer um dos comandos da linguagem 4D ou métodos do projeto pode ser visto como um problema de segurança, especialmente quando o banco de dados está disponível por HTTP. No entanto, como ele executa o código do servidor chamado a partir dos seus próprios arquivos de modelo, a etiqueta não representa um problema de segurança. Neste contexto, como em qualquer servidor Web, a segurança é manipulada principalmente ao nível de acessos remotos para arquivos de servidor.
 
 ## 4DEACH e 4DENDEACH
 
@@ -177,7 +177,7 @@ O comentário `<!--#4DEACH-->` pode iterar por três tipos de expressão:
 - [seleções de entidades](#--4deach-entity-in-entityselection--): loop através de cada entidade,
 - [objects](#--4deach-property-in-object--): loop através de cada propriedade de objeto.
 
-The number of iterations is evaluated at startup and will not change during the processing. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
+O número de iterações é avaliado na inicialização e não será alterado durante o processamento. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
 
 ### `<!--#4DEACH item in collection-->`
 
@@ -187,7 +187,7 @@ O parâmetro *item* é uma variável do mesmo tipo que os elementos da coleção
 
 A coleção deve conter apenas **elementos do mesmo tipo**, caso contrário, um erro será retornado assim que a variável *item* receber o primeiro tipo de valor incompatível.
 
-The number of loops is based on the number of elements of the collection. A cada iteração, a variável *item* é automaticamente preenchida com o elemento correspondente da coleção. Os pontos abaixo devem ser considerados:
+O número de loops é baseado no número de elementos da coleção. A cada iteração, a variável *item* é automaticamente preenchida com o elemento correspondente da coleção. Os pontos abaixo devem ser considerados:
 
 - Se a variável *item* for do tipo objeto ou do tipo coleção (ou seja, se *expressão* for uma coleção de objetos ou de coleções), a modificação dessa variável modificará automaticamente o elemento correspondente da coleção (porque objetos e coleções compartilham as mesmas referências). Se a variável for de tipo escalar, só se modificará a variável.
 - A variável *item* recebe o mesmo tipo que o primeiro elemento da coleção. A variável *item* recebe o mesmo tipo que o primeiro elemento da coleção. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
@@ -328,7 +328,7 @@ No caso de um erro durante a interpretação, o texto inserido terá o formato: 
 
 Assim como a tag `4DTEXT`, esta tag permite avaliar uma variável 4D ou expressão que retorne um valor, e insira como uma expressão HTML. Ao contrário da tag `4DTEXT`, essa tag não escapa dos caracteres especiais do HTML (por exemplo, ">").
 
-For example, here are the processing results of the 4D text variable myvar with the available tags:
+Por exemplo, aqui estão os resultados do processamento da variável de texto 4D myvar com as tags disponíveis:
 
 | Valor myvar    | Etiquetas              | Resultados                          |
 | -------------- | ---------------------- | ----------------------------------- |
@@ -345,7 +345,7 @@ No caso de um erro de interpretação, o texto inserido será `<!--#4DHTML myvar
 
 Usado com os comentários `<!--#4DELSEIF-->` (opcional), `<!--#4DELSE-->` (opcional) e `<!--#4DENDIF-->`, o comentário `<!--#4DIF expressão-->` oferece a possibilidade de executar partes do código condicionalmente.
 
-O parâmetro *expressão* pode conter qualquer expressão 4D válida que retorne um valor booleano. It must be indicated within parenthesis and comply with the 4D syntax rules.
+O parâmetro *expressão* pode conter qualquer expressão 4D válida que retorne um valor booleano. Deve ser indicado entre parênteses e estar em conformidade com as regras da sintaxe 4D.
 
 A expressão `<!--#4DIF -->` ... `<!--#4DENDIF-->` blocos podem ser aninhados em vários níveis. Como em 4D, cada expressão `<!--#4DIF -->` deve corresponder a um `<!--#4DENDIF-->`.
 
@@ -449,7 +449,7 @@ Exemplos:
 
 #### Sintaxe: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
 
-This comment allows repetition of a portion of code as long as the condition is fulfilled. A porção é delimitada por `<!--#4DLOOP-->` e `<!--#4DENDLOOP-->`.
+Este comentário permite a repetição de uma porção de código, desde que a condição seja satisfeita. A porção é delimitada por `<!--#4DLOOP-->` e `<!--#4DENDLOOP-->`.
 
 A condição `<!--#4DLOOP -->` ... `<!--#4DENDLOOP-->` blocos podem ser aninhados. Como em 4D, cada `<!--#4DLOOP condition-->` deve corresponder a um `<!--#4DENDLOOP-->`.
 
@@ -457,7 +457,7 @@ Existem cinco tipos de condições:
 
 ### `<!--#4DLOOP [table]-->`
 
-This syntax makes a loop for each record from the table current selection in the current process. The code portion located between the two comments is repeated for each current selection record.
+Esta sintaxe faz um loop para cada registro da tabela selecionada atualmente no processo atual. A porção de código localizada entre os dois comentários é repetida para cada registro de seleção atual.
 
 > Quando a tag `4DLOOP` é usada com uma tabela, os registros são carregados no modo "Somente leitura".
 

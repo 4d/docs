@@ -84,6 +84,27 @@ $MyVar:="Goodbye"
 | 異なる | Pointer # Pointer | Boolean | vPtrA # vPtrC | true  |
 |     |                   |         | vPtrA # vPtrB | false |
 
+
+:::warning Null Pointers
+
+null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。 例: 例:
+
+```4d
+var $p : Pointer // non initialized pointer (Nil value)
+$v:=$p-> // error
+$p->:=$v // error
+```
+
+このようなエラーを防ぐためには、以下のような書き方をすることができます:
+
+```4d
+If ($p#Null)
+  $p->:=$v
+End if
+```
+
+:::
+
 ## ポインターの使用例
 ### テーブルへのポインター
 テーブルの代わりにデリファレンスしたポインターを使用することができます。 以下のようなステートメントで、テーブルのポインターを作成します:

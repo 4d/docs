@@ -8,44 +8,44 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get attributes.Params-->
 
-| 引数          | 型                                              |                             | 説明                                        |
-| ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
-| targetObj   | Object                                         | &#8594; | レンジまたは要素または4D Write Pro ドキュメント            |
-| attribName  | Text                                           | &#8594; | Name of attribute to get                  |
-| attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
-| attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
-| 戻り値         | Object                                         | &#8592; | Attribute names and values                |
+| 引数          | 型                                              |                             | 説明                             |
+| ----------- | ---------------------------------------------- | --------------------------- | ------------------------------ |
+| targetObj   | Object                                         | &#8594; | レンジまたは要素または4D Write Pro ドキュメント |
+| attribName  | Text                                           | &#8594; | 取得する属性の名前                      |
+| attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | ターゲットの属性のカレントの値                |
+| attribColl  | Collection                                     | &#8594; | 取得する属性名のコレクション                 |
+| 戻り値         | Object                                         | &#8592; | 属性名と値                          |
 
 <!-- END REF-->
 
 #### 説明
 
-The **WP Get attributes** command<!--REF #_command_.WP Get attributes.Summary--> returns the value of any attribute in a 4D Write Pro range, header, body, footer, table, or document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attributes: character, paragraph, document, table, or image.
+**WP Get attributes** コマンドは、<!--REF #_command_.WP Get attributes.Summary-->4D Write Proレンジ、ヘッダー/フッター/本文/表、あるいはドキュメント内のあらゆる属性の値を返します。<!-- END REF--> このコマンドを使用すると4D Write Proのどのような内部属性(文字、段落、ドキュメント、表組み、画像など)にもアクセスすることができます。
 
-In *targetObj*, you can pass:
+*targetObj* 引数には、以下のいずれかを渡すことができます:
 
 - レンジ
 - 要素(ヘッダー / フッター / 本文 / 表 / 段落 / アンカーされた画像またはインラインの画像 / セクション / サブセクション / スタイルシート)
 - 4D Write Pro ドキュメント
 
-In *attribName*, pass the name of the attribute you want to retrieve.
+*attribName* 引数には、取得したい属性の名前を渡します。
 
-You can also pass a collection of attribute names in *attribColl*, in which case the command will return an object containing the attribute names passed in *attribColl* along with their corresponding values.
+また、*attribColl* 引数には属性名のコレクションを渡すこともできます。この場合、コマンドは*attribColl* 引数に渡した属性とそれに対応する値を格納したオブジェクトを返します。
 
-For a comprehensive list of attributes to pass, as well as their scope and values, please refer to the *4D Write Pro Attributes* section.
+渡すことのできる属性の包括的な一覧と、そのスコープおよび値については、*4D Write Pro属性* の章を参照してください。
 
-If there are different values for the same attribute in the element passed as a parameter, the command returns:
+引数として渡した要素内の同じ属性に対して異なる値があった場合、コマンドは以下のように対応します:
 
-- for numerical values, wk mixed
-- for an array, an empty array (tab stops, color if *attribValue* is defined as array), with an exception for wk text shadow offset for which the array value will always contain 2 entries which may be set separately to wk mixed if either horizontal offset or vertical offset (or both) are mixed.
-- for string values, an empty string
-- for picture values, an empty picture.
+- 数値に対しては、wk mixed を返します。
+- 配列の場合、空の配列を返します(attribValue が配列として定義されていた場合にはタブストップ、カラー)。ただしwk text shadow offset に関しては、配列の値は常に2つのエントリーを含みます。これらのエントリーは水平方向あるいは垂直方向のオフセット(あるいはその両方)がミックスされていた場合にはwk mixed が返されます。
+- 文字列の値に対しては、空の文字列を返します。
+- ピクチャーの値に対しては、空のピクチャーを返します。
 
-**Note**: If *targetObj* contains a paragraph and a character style sheets, the paragraph style sheet name is returned.
+**注意**: *targetObj* オブジェクトに段落スタイルシートと文字スタイルシートが格納されていた場合、段落スタイルシート名が返されます。
 
 #### 例題 1
 
-You want to get the background color of the selected area:
+選択されたエリアの背景色を取得したい場合を考えます:
 
 ```4d
  $range:=WP Selection range(*;"WParea")
@@ -54,7 +54,7 @@ You want to get the background color of the selected area:
 
 #### 例題 2
 
-You want to get the font size, background color and border style of the selected area using a collection:
+選択したエリアのフォントサイズ、背景色と背景スタイルを、コレクションを使用して取得したい場合を考えます:
 
 ```4d
  $range:=WP Selection range(*;"WParea")
