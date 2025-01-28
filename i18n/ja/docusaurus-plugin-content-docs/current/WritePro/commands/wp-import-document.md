@@ -8,24 +8,24 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Import document.Params-->
 
-| 引数       | 型                       |                             | 説明                                                                                                                                                                                                                                                                 |
-| -------- | ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| filePath | Text                    | &#8594; | Path to: a 4D Write document (.4w7 or .4wt) or a 4D Write Pro document (.4wp) or a .docx document (.docx) |
-| fileObj  | 4D.File | &#8594; | File object to import                                                                                                                                                                                                                                              |
-| option   | Integer, Object         | &#8594; | (Integer) Import option for HTML expressions, (object) Import options for .docx document                                                                                                                     |
-| 戻り値      | Object                  | &#8592; | 4D Write Pro object                                                                                                                                                                                                                                                |
+| 引数       | 型                       |                             | 説明                                                                                                                                                                                                                                    |
+| -------- | ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| filePath | Text                    | &#8594; | 4D Write ドキュメント(.4w7または.4wt)へのパス、または4D Write Pro ドキュメント(.4wp)へのパス、または.docx ドキュメント(.docx)へのパス |
+| fileObj  | 4D.File | &#8594; | 読み込むファイルオブジェクト                                                                                                                                                                                                                        |
+| option   | Integer, Object         | &#8594; | (倍長整数) HTML 式の読み込みオプション (オブジェクト型) .docx ドキュメント用の読み込みオプション                                                                                                                       |
+| 戻り値      | Object                  | &#8592; | 4D Write Pro オブジェクト                                                                                                                                                                                                                   |
 
 <!-- END REF-->
 
 #### 説明
 
-The **WP Import document** command<!--REF #_command_.WP Import document.Summary--> converts an existing 4D Write Pro / 4D Write document (.4wp, .4w7 or .4wt) or MS Word document (.docx) to a new 4D Write Pro object.<!-- END REF-->
+**WP Import document** コマンドは、<!--REF #_command_.WP Import document.Summary-->既存の4D Write Proドキュメント/4D Write ドキュメント(.4wp、.4w7 または .4wt)またはMS Word ドキュメント(.docx) を新規の4D Write Proオブジェクトへと変換します。<!-- END REF-->
 
 *filePath* あるいは *fileObj* のいずれかを渡すことができます:
 
-- In the *filePath* parameter, pass the path of a document stored on disk. You must pass a complete path, unless the document is located at the same level as the structure file, in which case you can just pass its name.
+- *filePath* 引数の場合、ディスク上に保存されているドキュメントのパスを渡します。 ドキュメントが ストラクチャーファイルと同階層に置かれている場合を除き、完全なパスを渡す必要があります (同階層に置かれている場合にはファイル名のみを渡すことができます)。
 
-- In the *fileObj* parameter, pass a 4D.File object representing the file to import.
+- *fileObj* 引数には、読み込むファイルを表す4D.File オブジェクトを渡します。
 
 The following types of documents are supported:
 
