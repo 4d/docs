@@ -251,8 +251,6 @@ $comp2:=$lowSal.employer //$comp2 é alterável porque $lowSal é alterável
 
 <p spaces-before="2">Na arquitetura cliente/servidor, as seleções de entidades retornadas do servidor são sempre compartilháveis no cliente, mesmo que <a href="API/EntitySelectionClass.md#copy"><code>copy()</code></a> tenha sido chamado no servidor.
 ```
-</a> tenha sido chamado no servidor.
-</code>
 
 :::note Seleções de entidades devolvidas pelo servidor
 
