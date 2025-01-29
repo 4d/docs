@@ -391,7 +391,7 @@ Por padrão, uma hora nula é exibida com zeros, por exemplo, "00:00:00". Com a 
 Cuando una [expresión booleana](properties_Object.md#expression-type) se muestra como:
 
 - un texto en un [objeto de entrada](input_overview.md)
-- un "popup"  en una [columna del list box](listbox_overview.md#list-box-columns),
+- un "popup" [](properties_Display.md#display-type) en una [columna del list box](listbox_overview.md#list-box-columns),
 
 ... pode selecionar o texto a apresentar para cada valor:
 
