@@ -3,7 +3,7 @@ id: authentication
 title: Autenticação
 ---
 
-Authenticating users is necessary when you want to provide specific access rights to web users. Authentication designates the way the information concerning the user credentials (usually name and password) are collected and processed.
+A autenticação de usuários é necessária quando se deseja fornecer direitos de acesso específicos aos usuários Web. A autenticação determina como as informações referentes às credenciais do usuário (geralmente nome e senha) são coletadas e processadas.
 
 ## Modos de autenticação
 
@@ -23,7 +23,7 @@ O funcionamento do sistema de acesso do servidor web 4D está resumido no diagra
 
 ### Personalizado (padrão)
 
-Basically in this mode, it's up to the developer to define how to authenticate users. 4D sólo evalúa las peticiones HTTP [que requieren una autenticación](#method-calls).
+Basicamente, nesse modo, cabe ao desenvolvedor definir como autenticar os usuários. 4D sólo evalúa las peticiones HTTP [que requieren una autenticación](#method-calls).
 
 Este modo de autenticação é o mais flexível porque permite que você:
 
@@ -44,7 +44,7 @@ If no custom authentication is provided, 4D calls the [`On Web Authentication`](
 
 ### Protocolo Basic
 
-When a user connects to the server, a standard dialog box appears on their browser in order for them to enter their user name and password.
+Quando um usuário se conecta ao servidor, uma caixa de diálogo padrão é exibida no navegador para que ele digite o nome de usuário e a senha.
 
 > O nome e a palavra-passe introduzidos pelo utilizador são enviados sem encriptação no cabeçalho do pedido HTTP. Este modo requer normalmente HTTPS para garantir a confidencialidade.
 
@@ -59,9 +59,9 @@ Os valores introduzidos são então avaliados:
 
 ### Protocolo DIGEST
 
-This mode provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher.
+Esse modo oferece um nível maior de segurança, pois as informações de autenticação são processadas por um processo unidirecional chamado hashing, que impossibilita decifrar seu conteúdo.
 
-Como no modo BASIC, os usuários devem digitar seu nome e senha ao se conectarem. O método banco de dados [`On Web Authentication`](#on-web-authentication) é então chamado. Quando o modo DIGEST é ativado, o parâmetro $password (senha) é sempre retornado vazio. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). Por lo tanto, en este caso es imprescindible evaluar las solicitudes de conexión mediante el comando `WEB Validate digest`.
+Como no modo BASIC, os usuários devem digitar seu nome e senha ao se conectarem. O método banco de dados [`On Web Authentication`](#on-web-authentication) é então chamado. Quando o modo DIGEST é ativado, o parâmetro $password (senha) é sempre retornado vazio. De fato, ao usar esse modo, essas informações não passam pela rede como texto claro (não criptografado). Por lo tanto, en este caso es imprescindible evaluar las solicitudes de conexión mediante el comando `WEB Validate digest`.
 
 > Você deve reiniciar o servidor Web para que as alterações feitas nesses parâmetros sejam levadas em conta.
 
@@ -69,9 +69,9 @@ Como no modo BASIC, os usuários devem digitar seu nome e senha ao se conectarem
 
 El método de base de datos `On Web Authentication` se encarga de gestionar el acceso al motor del servidor web. É chamado por 4D ou 4D Server quando uma solicitação HTTP dinâmica é recebida.
 
-### Chamadas métodos de base
+### Chamadas dos métodos banco
 
-El método base `On Web Authentication` se llama automáticamente cuando una solicitud o procesamiento requiere la ejecución de algún código 4D (excepto para las llamadas REST). It is also called when the web server receives an invalid static URL (for example, if the static page requested does not exist).
+El método base `On Web Authentication` se llama automáticamente cuando una solicitud o procesamiento requiere la ejecución de algún código 4D (excepto para las llamadas REST). Ele também é chamado quando o servidor Web recebe um URL estático inválido (por exemplo, se a página estática solicitada não existir).
 
 Por tanto, se llama al método base `On Web Authentication`:
 
@@ -134,9 +134,9 @@ Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu W
 
 #### $content - Header and Body of the HTTP request
 
-The second parameter (`$content`) is the header and the body of the HTTP request sent by the web browser. Tenga en cuenta que esta información se pasa a su método base `On Web Authentication` tal cual. Its contents will vary depending on the nature of the web browser which is attempting the connection.
+The second parameter (`$content`) is the header and the body of the HTTP request sent by the web browser. Tenga en cuenta que esta información se pasa a su método base `On Web Authentication` tal cual. Seu conteúdo varia conforme a natureza do navegador Web que está tentando se conectar.
 
-If your application uses this information, it is up to you to parse the header and the body. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
+Se o seu aplicativo usar essas informações, caberá a você analisar o cabeçalho e o corpo. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
 
 > For performance reasons, the size of data passing through the $content parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
