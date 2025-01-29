@@ -23,7 +23,7 @@ title: Pointer
 | オブジェクト | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
-## ポインターの基本
+## ポインターの使用例
 
 ポインターの使用方法について例題を用いて説明します。 以下の例は、ポインターを通して変数にアクセスする方法を示します。 まず、変数を作成します:
 
@@ -55,13 +55,13 @@ $MyPointer を使用して $MyVar の値を変更することもできます。 
 ```4d
 $MyPointer->:="Goodbye"
 ```
-この2つの $MyPointer-> を使用した例のとおり、$MyVar を使用するのとまったく同じ動作が実行されます。 以下の2つのステートメントも、同一の動作を実行します。両方とも、変数 $MyVar の現在の値をアラートボックスに表示します:
+この2つの $MyPointer-> を使用した例のとおり、$MyVar を使用するのとまったく同じ動作が実行されます。 以下の2つのステートメントも、同一の動作を実行します。 両方とも、変数 $MyVar の現在の値をアラートボックスに表示します:
 
 ```4d
 ALERT($MyPointer->)
 ALERT($MyVar)
 ```
-以下の2つのステートメントも、同一の動作を実行します。両方とも $MyVar に、文字列 "Goodbye" を代入します:
+以下の2つのステートメントも、同一の動作を実行します。 両方とも $MyVar に、文字列 "Goodbye" を代入します:
 ```4d
 $MyPointer->:="Goodbye"
 $MyVar:="Goodbye"
@@ -203,7 +203,9 @@ SORT ARRAY($ArrPtr->;>) // 配列の並べ替え
 ```4d
   //takeTwo project method
   //$changeUp – Pointer to a string field or variable. これを大文字に変換します。
+  これを大文字に変換します。
   //$changeLow – Pointer to a string field or variable. これを小文字に変換します。
+ これを小文字に変換します。
  #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)
