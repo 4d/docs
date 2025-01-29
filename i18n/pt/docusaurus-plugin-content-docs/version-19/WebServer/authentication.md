@@ -140,32 +140,32 @@ Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu W
 O segundo parâmetro (`$2`) é o cabeçalho e o corpo da solicitação HTTP enviada pelo navegador Web. Observe que essas informações são passadas para o método de banco de dados `On Web Authentication` como estão. Seu conteúdo varia conforme a natureza do navegador Web que está tentando se conectar.
 
 Se o seu aplicativo usar essas informações, caberá a você analisar o cabeçalho e o corpo. Você pode usar os comandos `WEB GET HTTP HEADER` e `WEB GET HTTP BODY`.
-> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
+> Por motivos de desempenho, o tamanho dos dados que passam pelo parâmetro $2 não deve exceder 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
 #### $3 - Endereço IP do cliente Web
 
-The `$3` parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
-> 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
+O parâmetro `$3` recebe o endereço IP da máquina do navegador. Essas informações permitem distinguir entre conexões de intranet e de Internet.
+> 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. Para obter mais informações, consulte a seção [Suporte IPv6](webServerConfig.md#about-ipv6-support).
 
 #### $4 - Endereço IP do servidor
 
-O parâmetro `$4` recebe o endereço IP usado para chamar o servidor web. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.md#ip-address-to-listen).
+O parâmetro `$4` recebe o endereço IP usado para chamar o servidor web. 4D permite multi-home que você explore máquinas com mais de um endereço IP. Para obter mais informações, consulte a [página Configuração](webServerConfig.md#ip-address-to-listen).
 
 #### $5 e $6 - Nome de usuário e palavra-passe
 
-The `$5` and `$6` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if [basic](#basic-protocol) or [digest](#digest-protocol) authentication is selected.
-> If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+Os parâmetros `$5` e `$6` recebem o nome de usuário e a senha inseridos pelo usuário na caixa de diálogo de identificação padrão exibida pelo navegador. Esta caixa de diálogo aparece para cada conexão, se a autenticação [basic](#basic-protocol) ou [digest](#digest-protocol) for selecionada.
+> Se o nome de usuário enviado pelo navegador existir em 4D, o parâmetro $6 (a senha do usuário) não é retornado por razões de segurança.
 
 #### Parâmetro $0
 
-The `On Web Authentication` database method returns a boolean in $0:
+O método banco de dados `On Web Autenticação` retorna um booliano em $0:
 
 - Se $0 é True, a ligação é aceite.
 
 - Se $0 é False, a ligação é recusada.
 
-The `On Web Connection` database method is only executed if the connection has been accepted by `On Web Authentication`.
-> **WARNING**<br/>If no value is set to $0 or if $0 is not defined in the `On Web Authentication` database method, the connection is considered as accepted and the `On Web Connection` database method is executed.
+O método banco de dados `On Web Connection` só é executado se a conexão tiver sido aceite pelo `On Web Authentication`.
+> **AVISO**<br/>Se nenhum valor estiver definido como $0 ou se $0 não estiver definido no método banco de dados `On Web Authentication`, a conexão é considerada aceita e o método banco de dados `On Web Connection` é executado.
 > - - * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. O mesmo acontecerá se ocorrer um erro durante seu processamento.
 
 ### Exemplo
