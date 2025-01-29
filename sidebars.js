@@ -2875,6 +2875,7 @@ module.exports =
 								items: [
 									"WritePro/writeprointerface",
 									"WritePro/managing-formulas",
+									"WritePro/commands-legacy/4d-write-pro-attributes",
 									{
 										type: "category",
 										label: "Commands",
