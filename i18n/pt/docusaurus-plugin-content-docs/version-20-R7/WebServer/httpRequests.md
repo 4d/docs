@@ -15,7 +15,7 @@ O servidor web 4D oferece várias funcionalidades para lidar com solicitações 
 
 El método base `On Web Connection` puede utilizarse como punto de entrada al servidor web de 4D.
 
-### Chamadas métodos de base
+### Chamadas dos métodos banco
 
 The `On Web Connection` database method is automatically called when the server receives any URL that is not a path to an existing page on the server. The <code>On Web Connection</code> database method is automatically called when the server receives any URL that is not a path to an existing page on the server.
 
@@ -78,7 +78,7 @@ Note que você está livre para usar este parâmetro a sua conveniência. 4D sim
 
 O segundo parâmetro ($2) é o cabeçalho e o corpo da solicitação HTTP enviada pelo navegador Web. Tenga en cuenta que esta información se pasa a su método base `On Web Connection` "tal cual". Its contents will vary depending on the nature of the web browser attempting the connection.
 
-If your application uses this information, it is up to you to parse the header and the body. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
+Se o seu aplicativo usar essas informações, caberá a você analisar o cabeçalho e o corpo. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
 
 > For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
