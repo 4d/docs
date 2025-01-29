@@ -8,65 +8,65 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert break.Params-->
 
-| 引数          | 型       |                             | 説明                                |
-| ----------- | ------- | --------------------------- | --------------------------------- |
-| targetObj   | Object  | &#8594; | レンジまたは要素または4D Write Pro ドキュメント    |
-| breakType   | Integer | &#8594; | Type of break to insert           |
-| mode        | Integer | &#8594; | Insertion mode                    |
-| rangeUpdate | Integer | &#8594; | Range update mode                 |
-| 戻り値         | Object  | &#8592; | Text range of the break character |
+| 引数          | 型       |                             | 説明                             |
+| ----------- | ------- | --------------------------- | ------------------------------ |
+| targetObj   | Object  | &#8594; | レンジまたは要素または4D Write Pro ドキュメント |
+| breakType   | Integer | &#8594; | 挿入するブレークのタイプ                   |
+| mode        | Integer | &#8594; | 挿入モード                          |
+| rangeUpdate | Integer | &#8594; | レンジ更新モード                       |
+| 戻り値         | Object  | &#8592; | ブレーク文字のテキストレンジ                 |
 
 <!-- END REF-->
 
 #### 説明
 
-The **WP Insert break** command <!--REF #_command_.WP Insert break.Summary-->inserts a new break of the *breakType* type in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameters, and  returns the text range of the break character<!-- END REF-->
+**WP Insert break** コマンドは<!--REF #_command_.WP Insert break.Summary-->コマンドは*mode* 引数や*rangeUpdate* 引数で指定された形で、*targetObj* 引数で指定されたレンジ内に*breakType* 引数で指定された型の新しいブレークを挿入し、ブレーク文字のテキストレンジを返します。<!-- END REF-->
 
-In *targetObj*, pass:
+*targetObj* 引数には、以下のいずれかを渡すことができます:
 
 - レンジ
-- an element (table / row / paragraph / body / header / footer / inline picture / section / subsection), or
+- 要素(表組 / 行 / 段落 / 本文 / ヘッダー / フッター / インラインピクチャー / セクション / サブセクション)
 - 4D Write Pro ドキュメント
 
-In *breakType*, pass one of the following constants from the *4D Write Pro Constants* theme to define the type of break to insert:
+*breakType* 引数には、*4D Write Pro 定数* テーマから以下の定数のどれか一つを渡し、挿入するブレークのタイプを定義します:
 
-| 定数                          | 型       | 値 | 説明                                                                                                                                              |
-| --------------------------- | ------- | - | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| wk column break             | Integer | 3 | Column break: inserts a column break                                                                                            |
-| wk continuous section break | Integer | 5 | Defines a continuous section break (often used to change the number of columns without starting a new page). |
-| wk line break               | Integer | 0 | Line break (in the same paragraph)                                                                                           |
-| wk page break               | Integer | 2 | Page break: defines a new page                                                                                                  |
-| wk paragraph break          | Integer | 4 | Paragraph break: defines a new paragraph                                                                                        |
-| wk section break            | Integer | 1 | Section break: defines a new section                                                                                            |
+| 定数                          | 型       | 値 | 説明                                                                               |
+| --------------------------- | ------- | - | -------------------------------------------------------------------------------- |
+| wk column break             | Integer | 3 | カラムブレーク:カラムブレークを挿入します                                            |
+| wk continuous section break | Integer | 5 | 継続したセクションブレークを定義します(一般的には新しいページに移らずにページ内でカラムの数を変更するために使用されます) |
+| wk line break               | Integer | 0 | (同じ段落内での)改行                                                   |
+| wk page break               | Integer | 2 | 改ページ：新しいページを定義します。                                                               |
+| wk paragraph break          | Integer | 4 | 段落ブレーク: 新しい段落を定義します。                                             |
+| wk section break            | Integer | 1 | セクションブレーク:新しいセクションを定義します。                                        |
 
-In the *mode* parameter, pass a constant to indicate the insertion mode to be used for the break in the destination *targetObj*:
+*mode* 引数には、対象となる*targetObj* レンジ内で使用されるブレークの挿入モードを指定する定数を渡します:
 
-| 定数         | 型       | 値 | 説明                                     |
-| ---------- | ------- | - | -------------------------------------- |
-| wk append  | Integer | 2 | Insert contents at end of target       |
-| wk prepend | Integer | 1 | Insert contents at beginning of target |
-| wk replace | Integer | 0 | Replace target contents                |
+| 定数         | 型       | 値 | 説明                   |
+| ---------- | ------- | - | -------------------- |
+| wk append  | Integer | 2 | コンテンツをターゲットの終わりに挿入する |
+| wk prepend | Integer | 1 | コンテンツをターゲットの始めに挿入する  |
+| wk replace | Integer | 0 | ターゲットのコンテンツを置き換える    |
 
-- If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
+- *targetObj* がレンジである場合、オプションの*rangeUpdate* 引数に以下の定数のいづれか一つを渡すことで挿入されたコンテンツが結果のレンジに含まれるかどうかを指定することができます:
 
-| 定数                    | 型       | 値 | 説明                                                                       |
-| --------------------- | ------- | - | ------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1 | Inserted contents not included in updated range                          |
-| wk include in range   | Integer | 0 | Inserted contents included in updated range (default) |
+| 定数                    | 型       | 値 | 説明                                                |
+| --------------------- | ------- | - | ------------------------------------------------- |
+| wk exclude from range | Integer | 1 | 挿入されたコンテンツを更新されたレンジに含めない                          |
+| wk include in range   | Integer | 0 | 挿入されたコンテンツを更新されたレンジに含める(デフォルト) |
 
-If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
+*rangeUpdate* 引数を渡さなかった場合、デフォルトでは挿入されたコンテンツは結果のレンジに含まれます。
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- *targetObj* がレンジではない場合、*rangeUpdate* は無視されます。
 
 #### 例題 1
 
-While building invoices, you want to insert page breaks except on the last page:
+請求書を作成する際、最後のページを除いてページブレーク(改ページ)を挿入したい場合を考えます:
 
 ```4d
  $nbInvoices:=Records in selection([INVOICE])
  For($j;1;$nbInvoices)
-    ... //processing invoices
-    If($j#$nbInvoices) //insert page break except for last page
+    ... //請求書を処理
+    If($j#$nbInvoices) //最後のページを除いて改ページを挿入
        WP Insert break($buildRange;wk page break;wk append;wk exclude from range)
     End if
  End for
@@ -74,17 +74,17 @@ While building invoices, you want to insert page breaks except on the last page:
 
 #### 例題 2
 
-You want to insert a continuous section break to have a single column section and a two-column section on the same page.
+同じページ内に連続したセクションブレークを単一カラムセクションと2カラムセクションとの間に挿入したい場合を考えます。
 
-1. Insert a continuous section break at the selection to create a new section:
+1. セレクション位置に継続したセクションブレークを挿入して新しいセクションを作成します:
 
 ```4d
  $range:=WP Selection range(*;"WParea")  
- WP Insert break($range;wk continuous section break;wk append)  
+ WP Insert break($range;wk continuous section break;wk append) 
 ```
 
 ![](../../assets/en/WritePro/commands/pict5562056.en.png)
-2. Set the column count to 2 for the first section:
+2. 最初のセクションに対してカラム数を2に設定します:
 
 ```4d
  $section:=WP Get section(WParea;1)  
