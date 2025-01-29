@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.WP New.Summary-->**WP New** コマンドは4D Write Pro オブジェクトを作成して返します。<!-- END REF-->返されたオブジェクトは完全なドキュメントであり、例えば[WP INSERT DOCUMENT](../commands/wp-insert-document.md) コマンドなどに渡すことができます。
+<!--REF #_command_.WP New.Summary-->**WP New** コマンドは4D Write Pro オブジェクトを作成して返します。<!-- END REF-->返されたオブジェクトは完全なドキュメントであり、例えば[WP INSERT DOCUMENT](../commands/wp-insert-document-body.md) コマンドなどに渡すことができます。
 
 *source* 引数を省略した場合、コマンドはデフォルトで空の4D Write Proオブジェクトを返します。
 
@@ -119,4 +119,4 @@ displayed_sidebar: docs
 #### 参照 
 
 [WP Import document](../commands/wp-import-document.md)  
-[WP INSERT DOCUMENT](../commands/wp-insert-document.md)  
+[WP INSERT DOCUMENT](../commands/wp-insert-document-body.md)  

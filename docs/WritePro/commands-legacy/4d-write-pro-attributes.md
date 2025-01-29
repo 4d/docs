@@ -165,7 +165,7 @@ Image attributes are used to handle pictures inserted or or added in the area. T
 
 **Reminder:** As detailed in the *Handling pictures* section, 4D Write Pro supports two kinds of pictures:
 
-* Picture inserted inline using the [WP INSERT PICTURE](../commands/wp-insert-picture.md) or the [ST INSERT EXPRESSION](commands/st-insert-expression.md) command
+* Picture inserted inline using the [WP INSERT PICTURE](../commands/wp-insert-picture.md) or the [ST INSERT EXPRESSION](../../commands-legacy/st-insert-expression.md) command
 * Picture anchored in the page using the [WP Add picture](../commands/wp-add-picture.md) command
 
 The following attributes are avalaible for both inline and anchored pictures:
