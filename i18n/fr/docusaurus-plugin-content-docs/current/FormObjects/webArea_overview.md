@@ -226,7 +226,7 @@ Avant de générer une application finale, ajoutez le fichier personnalisé 4DCE
 
 :::warning
 
-L'ajout d'un fichier 4DCEFParameters.json personnalisé peut avoir un impact sur toutes les zones Web intégrées à 4D, y compris les [zones 4D View Pro](.../ViewPro/configuring.md#form-area-properties). Il incombe au développeur de veiller à ce que les commutateurs personnalisés ne déstabilisent pas l'application 4D.
+L'ajout d'un fichier 4DCEFParameters.json personnalisé peut avoir un impact sur toutes les zones Web intégrées à 4D, y compris les [zones 4D View Pro](../ViewPro/configuring.md#form-area-properties). Il incombe au développeur de veiller à ce que les commutateurs personnalisés ne déstabilisent pas l'application 4D.
 
 :::
 
