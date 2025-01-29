@@ -24,7 +24,7 @@ The **WP Insert document body** command<!--REF #_command_.WP Insert document bod
 
 In *targetObj*, pass:
 
-- A range, or
+- Un rango, o
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
 - a 4D Write Pro document.
 
