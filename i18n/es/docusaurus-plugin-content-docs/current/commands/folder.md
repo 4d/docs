@@ -77,7 +77,7 @@ Si el comando se llama desde un componente, pase el parámetro opcional `*` para
 
 #### Propiedades
 
-|                |                                                                     |
-| -------------- | ------------------------------------------------------------------- |
-| Command number | 1567                                                                |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1567                                                                |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
