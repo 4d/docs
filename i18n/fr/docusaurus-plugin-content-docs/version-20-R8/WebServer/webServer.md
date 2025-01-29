@@ -22,7 +22,7 @@ La sécurité des données est présente à tous les stades d'implémentation du
 
 - Extension du support du [**Protocole TLS (HTTPS)**](../Admin/tls.md),
 
-- **Authentification** : [fonctionnalités d'authentification](authentification.md) flexibles et personnalisables basées sur des paramètres inclus et des méthodes base ([`On Web Authentication`](authentication.md#on-web-authentication) pour le serveur web et [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
+- **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables basées sur des paramètres inclus et des méthodes base ([`On Web Authentication`](authentication.md#on-web-authentication) pour le serveur web et [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
 
 - **Contrôle du contenu exposé** : Seul le contenu que vous exposez explicitement est disponible via des requêtes web directes ou des requêtes REST. Vous devez déclarer :
   - [Les méthodes projet](templates.md#allowing-project-methods) exposées via des requêtes HTTP
