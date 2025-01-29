@@ -233,7 +233,7 @@ Para más información, consulte [Documentar un proyecto](Project/documentation.
 
 ## `WebFolder`
 
-Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. É criado automaticamente quando o servidor Web é iniciado pela primeira vez.
+Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. É criado automaticamente quando o servidor Web é iniciado pela primeira vez. Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. É criado automaticamente quando o servidor Web é iniciado pela primeira vez.
 
 ## Archivo `.gitignore` (opcional)
 
