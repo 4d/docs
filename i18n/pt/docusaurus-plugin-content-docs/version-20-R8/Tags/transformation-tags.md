@@ -552,7 +552,7 @@ O método `my_method` pode ser o seguinte:
 
 ### `<!--#4DLOOP expression-->`
 
-Com esta sintaxe, a tag `4DLOOP` faz um laço contanto que a *expressão* retorne `True`. The expression can be any valid Boolean expression and must contain a variable part to be evaluated in each loop to avoid infinite loops.
+Com esta sintaxe, a tag `4DLOOP` faz um laço contanto que a *expressão* retorne `True`. A expressão pode ser qualquer expressão booleana válida e deve conter uma parte da variável para ser avaliada em cada laço para evitar laços infinitos.
 
 Por exemplo, o seguinte código:
 
@@ -576,7 +576,7 @@ Por exemplo, o seguinte código:
 
 ### `<!--#4DLOOP pointerArray-->`
 
-Nesse caso, a tag `4DLOOP` funciona como em uma matriz: ela faz um loop para cada elemento da matriz referenciada pelo ponteiro. The current array element is increased each time the portion of code is repeated.
+Nesse caso, a tag `4DLOOP` funciona como em uma matriz: ela faz um loop para cada elemento da matriz referenciada pelo ponteiro. O elemento do array atual é aumentado cada vez que a porção de código é repetida.
 
 Essa sintaxe é útil quando você passa um ponteiro de matriz como parâmetro para o comando `PROCESS 4D TAGS`.
 
@@ -600,10 +600,10 @@ Podem ser mostradas as seguintes mensagens:
 
 - Tipo de expressão inesperado (erro padrão);
 - Nome incorreto da tabela (erro no nome da tabela);
-- An array was expected (the variable is not an array or is a two dimension array);
+- Um array era esperado (a variável não é um array ou é um array de duas dimensões);
 - O método não existe;
 - Erro de sintaxe (quando o método está em execução);
-- Access error (you do not have the appropriate access privileges to access the table or the method).
+- Erro de acesso (você não tem os privilégios de acesso apropriados para acessar a tabela ou o método).
 - 4DENDLOOP esperado (o número `<!--#4DENDLOOP-->` não corresponde ao número `<!--#4DLOOP -->`).
 
 ## 4DSCRIPT/
@@ -628,7 +628,7 @@ O método `MYMETH` é o seguinte:
 
 > Um método chamado por `4DSCRIPT` não deve chamar elementos de interface (`DIALOG`, `ALERT`, etc.).
 
-As 4D executes methods in their order of appearance, it is absolutely possible to call a method that sets the value of many variables that are referenced further in the document, whichever mode you are using. Você pode inserir quantos comentários `<!--#4DSCRIPT...-->` você quiser em um modelo.
+Como 4D executa métodos em sua ordem de aparição, é absolutamente possível chamar um método que define o valor de muitas variáveis referenciadas mais adiante no documento, seja qual for o modo que estiver usando. Você pode inserir quantos comentários `<!--#4DSCRIPT...-->` você quiser em um modelo.
 
 ## 4DTEXT
 
@@ -652,12 +652,12 @@ No caso de um erro de avaliação, o texto inserido aparecerá como `<!--#4DTEXT
 
 - É necessário utilizar variáveis processo.
 - É possível mostrar o conteúdo de um campo imagem. No entanto, não é possível exibir o conteúdo de um item matriz de imagens.
-- It is possible to display the contents of an object field by means of a 4D formula. Por exemplo, você pode escrever `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
+- É possível exibir o conteúdo de um campo objeto por uma fórmula 4D. Por exemplo, você pode escrever `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
 - Normalmente, trabalha-se com variáveis de tipo texto. No entanto, também é possível utilizar variáveis BLOB. Você só precisa gerar BLOBs no modo `Texto sem comprimento`.
 
 ## Sintaxe alternativa para 4DTEXT, 4DHTML, 4DEVAL
 
-Several existing 4D transformation tags can be expressed using a $-based syntax:
+Várias tags de transformação 4D existentes podem ser expressas usando uma sintaxe baseada em $:
 
 #### $4dtag (expression)
 
@@ -665,13 +665,13 @@ pode ser utilizado em vez de
 
 #### `<!--#4dtag expression-->`
 
-This alternative syntax is available only for tags used to return processed values:
+Esta sintaxe alternativa está disponível apenas para as etiquetas usadas para retornar valores processados:
 
 - [4DTEXT](#4dtext)
 - [4DHTML](#4dhtml)
 - [4DEVAL](#4deval)
 
-(Other tags, such as 4DIF or 4DSCRIPT, must be written with the regular syntax).
+(Outras etiquetas, como 4DIF ou 4DSCRIPT, devem ser escritas com a sintaxe normal).
 
 Por exemplo, pode escrever:
 
@@ -685,7 +685,7 @@ em vez de:
 <!--#4DEVAL(UserName)-->
 ```
 
-The main advantage of this syntax is that it allows you to write XML-compliant templates. Some 4D developers need to create and validate XML-based templates using standard XML parser tools. Como o caractere "<" é inválido em um valor de atributo XML, não era possível usar a sintaxe "`<!-- -->`" das tags 4D sem quebrar a sintaxe do documento. Por outro lado, o escape do caractere "<" impedirá que 4D interprete as tags corretamente.
+A principal vantagem dessa sintaxe é que ela permite que você escreva modelos em conformidade com XML. Alguns desenvolvedores de 4D precisam criar e validar modelos baseados em XML usando ferramentas padrão de análise de XML. Como o caractere "<" é inválido em um valor de atributo XML, não era possível usar a sintaxe "`<!-- -->`" das tags 4D sem quebrar a sintaxe do documento. Por outro lado, o escape do caractere "<" impedirá que 4D interprete as tags corretamente.
 
 Por exemplo, o código a seguir causaria um erro de análise de XML devido ao primeiro caractere "<" no valor do atributo:
 
@@ -703,7 +703,7 @@ Observe que `$4dtag` e `<--#4dtag -->` não são estritamente equivalentes: ao c
 
 A razão para esta diferença é evitar a injeção de código malicioso. Conforme [explicado abaixo] (#prevention-of-malicious-code-insertion), é altamente recomendável usar as tags `4DTEXT` em vez das tags `4DHTML` ao manipular o texto do usuário para se proteger contra reinterpretações indesejadas das tags: com `4DTEXT`, caracteres especiais como "<" são escapados, portanto, quaisquer tags 4D que usem a sintaxe `<!--#4dtag expression -->` perderão seu significado específico. No entanto, como o `4DTEXT` não escapa do símbolo `$`, decidimos interromper o suporte à recursão para evitar a injeção maliciosa usando a sintaxe `$4dtag (expression)`.
 
-The following examples show the result of processing depending on the syntax and tag used:
+Os seguintes exemplos mostram o resultado do processamento dependendo da sintaxe e da tag usada:
 
 ```4d
   // exemplo 1
@@ -729,7 +729,7 @@ The following examples show the result of processing depending on the syntax and
   //4D will quit)"
 ```
 
-Observe que a sintaxe `$4dtag` suporta a correspondência de pares de aspas ou parênteses. For example, suppose that you need to evaluate the following complex (unrealistic) string:
+Observe que a sintaxe `$4dtag` suporta a correspondência de pares de aspas ou parênteses. Por exemplo, suponha que você precisa avaliar a seguinte string complexa (irrealista):
 
 ```
 String(1) + "\"(hello)\""
