@@ -70,7 +70,7 @@ Para asegurar la correcta evaluación de las expresiones procesadas a través de
 
 La etiqueta `<!--#4DBASE -->` designa el directorio de trabajo a utilizar para la etiqueta `<!--#4DINCLUDE-->`.
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--#4DBASE -->`, if any. If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
+Cuando se llama en una página web, la etiqueta `<!--#4DBASE -->` modifica todas las llamadas `<!--#4DINCLUDE-->` posteriores a esta página, hasta la siguiente `<!--#4DBASE -->`, si la hay. Si la carpeta `<!--#4DBASE -->` se modifica desde un archivo incluido, recupera su valor original en el archivo padre.
 
 El parámetro *folderPath* debe contener un nombre de ruta relativo a la página actual y debe terminar con una barra (`/`). La carpeta designada debe estar ubicada dentro de la carpeta Web.
 
@@ -327,7 +327,7 @@ En caso de que se produzca un error durante la interpretación, el texto inserta
 
 #### Sintaxis alternativa: `$4DHTML(expression)`
 
-The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. Este valor se inserta como texto simple, los caracteres HTML especiales como ">" se escapan automáticamente.
+Al igual que la etiqueta `4DTEXT`, esta etiqueta le permite evaluar una variable o una expresión 4D que devuelve un valor e insertarlo como una expresión HTML. Este valor se inserta como texto simple, los caracteres HTML especiales como ">" se escapan automáticamente.
 
 Por ejemplo, aquí están los resultados del procesamiento de la variable de texto 4D myvar con las etiquetas disponibles:
 
@@ -423,7 +423,7 @@ Este ejemplo inserta diferentes páginas dependiendo del usuario que esté conec
 
 Esta etiqueta está diseñada principalmente para incluir una página HTML (indicada por el parámetro *path*) en otra página HTML. Por defecto, sólo se incluye el cuerpo de la página HTML especificada, es decir, el contenido que se encuentra dentro de las etiquetas `<body>` y `</body>` (las etiquetas en sí no se incluyen). Esto le permite evitar conflictos relacionados con las metaetiquetas presentes en los encabezados.
 
-However, if the HTML page specified does not contain `<body>` and `</body>` tags, the entire page is included. Depende de usted verificar la consistencia de las meta-etiquetas.
+Sin embargo, si la página HTML especificada no contiene etiquetas `<body>` y `</body>`, se incluye toda la página. Depende de usted verificar la consistencia de las meta-etiquetas.
 
 El comentario `<!--#4DINCLUDE -->` es muy útil para las pruebas (`<!--#4DIF-->`) o los bucles (`<!--#4DLOOP-->`). Es muy conveniente incluir banners de acuerdo a un criterio o de forma aleatoria. Al incluir, independientemente de la extensión del nombre del archivo, 4D analiza la página llamada y luego inserta el contenido (modificado o no) en la página que origina la llamada `4DINCLUDE`.
 
@@ -647,7 +647,7 @@ La etiqueta `<!--#4DTEXT expression-->` permite insertar una referencia a una va
 <P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
 ```
 
-Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. Este valor se inserta como texto simple, los caracteres HTML especiales como ">" se escapan automáticamente.
+El valor de la variable 4D `vtSiteName` se insertará en la página HTML cuando se envíe. Este valor se inserta como texto simple, los caracteres HTML especiales como ">" se escapan automáticamente.
 
 También puede insertar expresiones 4D. Por ejemplo, puede insertar directamente el contenido de un campo (`<! -#4DTEXT [tableName]fieldName-->`), un elemento array (`<! -#4DTEXT tabarr{1}-->`) o un método que devuelve un valor (`<!--#4DTEXT mymethod-->`). La conversión de las expresiones sigue las mismas reglas que las de las variables. Además, la expresión debe cumplir con las reglas de sintaxis 4D.
 
