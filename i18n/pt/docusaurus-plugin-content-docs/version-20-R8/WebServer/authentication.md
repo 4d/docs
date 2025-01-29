@@ -143,13 +143,13 @@ Se o seu aplicativo usar essas informações, caberá a você analisar o cabeça
 
 #### $IPClient - Endereço IP do cliente Web
 
-O parâmetro `$IPClient` recebe o endereço IP da máquina do navegador. This information can allow you to distinguish between intranet and internet connections.
+O parâmetro `$IPClient` recebe o endereço IP da máquina do navegador. Essas informações permitem distinguir entre conexões de intranet e de Internet.
 
 > 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. Para más información, consulte la sección [Soporte IPv6](webServerConfig.md#about-ipv6-support).
 
 #### $IPServer - Endereço IP do servidor
 
-The `$IPServer` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
+The `$IPServer` parameter receives the IP address used to call the web server. 4D permite multi-home que você explore máquinas com mais de um endereço IP. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
 
 #### $user e $password - Nome de usuário e senha
 
