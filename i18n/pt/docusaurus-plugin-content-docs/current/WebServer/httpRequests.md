@@ -82,7 +82,7 @@ Se o seu aplicativo usar essas informações, caberá a você analisar o cabeça
 
 ### $BrowserIP - Web client IP address
 
-The $BrowserIP parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
+The $BrowserIP parameter receives the IP address of the browser’s machine. Essas informações permitem distinguir entre conexões de intranet e de Internet.
 
 > 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. Para más información, consulte la sección [Soporte IPv6](webServerConfig.md#about-ipv6-support).
 
