@@ -13,8 +13,8 @@ displayed_sidebar: docs
 | targetObj      | Object                  | &#8594; | レンジまたは要素または4D Write Pro ドキュメント                             |
 | picture        | Picture                 | &#8594; | Picture field or variable, or path to picture file on disk |
 | pictureFileObj | 4D.File | &#8594; | A File object representing a picture file. |
-| mode           | Integer                 | &#8594; | Insertion mode                                             |
-| rangeUpdate    | Integer                 | &#8594; | Range update mode                                          |
+| mode           | Integer                 | &#8594; | 挿入モード                                                      |
+| rangeUpdate    | Integer                 | &#8594; | レンジ更新モード                                                   |
 | 戻り値            | Object                  | &#8592; | ピクチャーを参照しているオブジェクト                                         |
 
 <!-- END REF-->
@@ -34,18 +34,18 @@ For the second parameter, you can pass either:
 - In *picture*:
   - A picture field or variable
   - A string containing a path to a picture file stored on disk, in the system syntax.
-    If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. またファイル名を渡すこともでき、その場合、ファイルはデータベースのストラクチャーファイルと同じ階層に置かれている必要があります。 You can also pass a file name, in which case the file must be located next to the database structure file.
+    If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. またファイル名を渡すこともでき、その場合、ファイルはデータベースのストラクチャーファイルと同じ階層に置かれている必要があります。 ファイル名を渡す場合には、ファイルの拡張子も指定する必要があります。 You can also pass a file name, in which case the file must be located next to the database structure file.
 - In *pictureFileObj* : a `File` object representing a picture file.
 
-[4D でサポートされているフォーマット](../../FormEditor/pictures.md#native-formats-supported) であれば、どんなピクチャーフォーマットでも使用することができます。 [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) コマンドを使用することで、利用可能なピクチャーフォーマットの一覧を取得することができます。 ピクチャーに複数のフォーマット(コーデック)が格納されている場合、4D Write Pro はドキュメント内に表示用に1種類、印刷用に1種類(異なる場合)のフォーマットのみを保管します。その際、「最適」なフォーマットが自動的に選択されます。
+[4D でサポートされているフォーマット](../../FormEditor/pictures.md#native-formats-supported) であれば、どんなピクチャーフォーマットでも使用することができます。 [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) コマンドを使用することで、利用可能なピクチャーフォーマットの一覧を取得することができます。 ピクチャーに複数のフォーマット(コーデック)が格納されている場合、4D Write Pro はドキュメント内に表示用に1種類、印刷用に1種類(異なる場合)のフォーマットのみを保管します。その際、「最適」なフォーマットが自動的に選択されます。 [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) コマンドを使用することで、利用可能なピクチャーフォーマットの一覧を取得することができます。 ピクチャーに複数のフォーマット(コーデック)が格納されている場合、4D Write Pro はドキュメント内に表示用に1種類、印刷用に1種類(異なる場合)のフォーマットのみを保管します。その際、「最適」なフォーマットが自動的に選択されます。
 
 In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used on the picture in the document:
 
-| 定数         | 型       | 値 | 説明                                     |
-| ---------- | ------- | - | -------------------------------------- |
-| wk append  | Integer | 2 | Insert contents at end of target       |
-| wk prepend | Integer | 1 | Insert contents at beginning of target |
-| wk replace | Integer | 0 | Replace target contents                |
+| 定数         | 型       | 値 | 説明                   |
+| ---------- | ------- | - | -------------------- |
+| wk append  | Integer | 2 | コンテンツをターゲットの終わりに挿入する |
+| wk prepend | Integer | 1 | コンテンツをターゲットの始めに挿入する  |
+| wk replace | Integer | 0 | ターゲットのコンテンツを置き換える    |
 
 If *targetObj* is a range, you can optionally use the *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted picture is included in the resulting range:
 
@@ -56,7 +56,7 @@ If *targetObj* is a range, you can optionally use the *rangeUpdate* parameter to
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted picture is included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- *targetObj* がレンジではない場合、*rangeUpdate* は無視されます。
 
 #### 例題 1
 
