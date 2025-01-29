@@ -139,7 +139,7 @@ Returns the data for the specific entity defined by the dataclass's primary key,
 
 ### Descrição
 
-Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade.
+Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. A chave é o valor do atributo definido como a chave primária para seu dataclas. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade.
 
 Para más información sobre los datos devueltos, consulte [\{dataClass\}](#dataclass).
 
