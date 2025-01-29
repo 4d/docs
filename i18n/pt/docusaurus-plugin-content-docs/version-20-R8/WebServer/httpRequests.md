@@ -21,7 +21,7 @@ You can also implement your own HTTP request handlers for a customized control o
 
 El método base `On Web Connection` puede utilizarse como punto de entrada al servidor web de 4D.
 
-### Chamadas métodos de base
+### Chamadas dos métodos banco
 
 The `On Web Connection` database method is automatically called when the server receives any URL that is not a valid path to an existing page on the server (and is not a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md)).
 
@@ -76,7 +76,7 @@ Note que você está livre para usar este parâmetro a sua conveniência. 4D sim
 
 The second parameter ($header) is the header and the body of the HTTP request sent by the web browser. Tenga en cuenta que esta información se pasa a su método base `On Web Connection` "tal cual". Its contents will vary depending on the nature of the web browser attempting the connection.
 
-If your application uses this information, it is up to you to parse the header and the body. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
+Se o seu aplicativo usar essas informações, caberá a você analisar o cabeçalho e o corpo. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
 
 > For performance reasons, the size of data passing through the $header parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
