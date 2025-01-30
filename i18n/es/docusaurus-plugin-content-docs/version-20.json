@@ -44,11 +44,11 @@
     "description": "The label for category ORDA in sidebar docs"
   },
   "sidebar.docs.category.Class Functions": {
-    "message": "Class Functions",
+    "message": "Clases",
     "description": "The label for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Class Functions.link.generated-index.title": {
-    "message": "Class Functions",
+    "message": "Clases",
     "description": "The generated-index page title for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Class Functions.link.generated-index.description": {
@@ -68,7 +68,7 @@
     "description": "The label for category Debugging in sidebar docs"
   },
   "sidebar.docs.category.Settings": {
-    "message": "Settings",
+    "message": "Propiedades",
     "description": "The label for category Settings in sidebar docs"
   },
   "sidebar.docs.category.Preferences": {
