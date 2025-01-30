@@ -260,7 +260,7 @@ Else
 End if 
 ```
 
-3. Display the method properties by clicking on the **[i]** button in the code editor, check the `4D tags and URLs (4DACTION...)` option and click **OK**.
+3. Exibir as propriedades do método clicando no botão **[i]** no editor de código, verifique as etiquetas e URLs `4D (4DACTION...)` opção e clique **OK**.
 
 ![](../assets/en/WebServer/hello0.png)
 
@@ -271,7 +271,7 @@ End if
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 ```
 
-> Using such URLs is not recommended, it is only presented here to keep the example simple. A more realistic login request must be handled through a web form and a POST request. Consulte [esta página](sessions.md#example) para ver um exemplo de formulário POST.
+> Usar tais URLs não é recomendado, só é apresentado aqui para manter o exemplo simples. Uma solicitação de login mais realista deve ser tratada através de um formulário web e uma solicitação POST. Consulte [esta página](sessions.md#example) para ver um exemplo de formulário POST.
 
 Em seguida, será registado para a sessão:
 
@@ -281,5 +281,5 @@ As credenciais incorretas serão rejeitadas:
 
 ![](../assets/en/WebServer/login2.png)
 
-Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. Ver a página [Sessões de usuário](sessions.md). 
+Assim que um usuário estiver logado, você poderá lidar com a sessão associada usando o método `WEB Get Current Session ID`. Ver a página [Sessões de usuário](sessions.md). 
 
