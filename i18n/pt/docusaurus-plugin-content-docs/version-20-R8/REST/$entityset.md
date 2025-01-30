@@ -84,7 +84,7 @@ Se quisermos saber se os dois conjuntos de entidades se intersectam, podemos esc
 
 `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=intersect&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
-Se houver uma intersecção, esta consulta devolve true. .
+Se houver uma intersecção, esta consulta devolve true. . .
 
 No exemplo seguinte, criamos um conjunto de entidades que combina todas as entidades de ambos os conjuntos de entidades:
 

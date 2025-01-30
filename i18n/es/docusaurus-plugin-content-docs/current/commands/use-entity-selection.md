@@ -50,7 +50,7 @@ USE ENTITY SELECTION($entitySel) //Se actualiza la selección actual de la tabla
 
 |                           |                                                                     |
 | ------------------------- | ------------------------------------------------------------------- |
-| Command number            | 1513                                                                |
+| Número de comando         | 1513                                                                |
 | Thread safe               | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
 | Changes current record    |                                                                     |
 | Changes current selection |                                                                     |

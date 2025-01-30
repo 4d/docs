@@ -16,7 +16,7 @@ O evento `On Clicked` é gerado quando o usuário clicar em um objeto.
 
 O evento `On Clicked` geralmente ocorre quando o botão do mouse for liberado. No entanto, há várias excepções:
 
-- [Botões invisíveis](FormObjects/properties_Display.md#not-rendered): o evento `On Clicked` ocorre assim que o clique é feito e não espera que o botão do mouse seja liberado.
+- [Botões invisíveis](FormObjects/properties_Display.md#not-rendered): O evento `On Clicked` ocorre assim que o clique é feito e não espera que o botão do mouse seja liberado.
 - [Réguas](FormObjects/ruler.md): Se a opção [Execute object method](FormObjects/properties_Action.md#execute-object-method) for definida como **true**, o evento `On Clicked` ocorrerá assim que o clique for feito.
 - [Caixas de combinação](FormObjects/comboBox_overview.md): O evento `On Clicked` ocorre somente se o usuário selecionar outro valor no menu associado. Uma  [caixa de combinação](FormObjects/comboBox_overview.md) deve ser tratada como uma área de texto digitável cuja lista suspensa associada fornece valores padrão. Consequentemente, você lida com a entrada de dados em uma caixa de combinação por meio dos eventos `On Before Keystroke`, `On After Keystroke` e `On Data Change` .
 - [Listas suspensas](FormObjects/dropdownList_Overview.md): O evento `On Clicked` ocorre somente se o usuário selecionar outro valor no menu. O evento `On Data Change` permite que você detecte a ativação do objeto quando um valor diferente do valor atual é selecionado.

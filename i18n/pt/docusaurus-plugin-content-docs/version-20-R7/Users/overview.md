@@ -3,7 +3,7 @@ id: overview
 title: Descrição geral do controlo de acesso
 ---
 
-If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. It is also essential to provide security for sensitive data, even in single-user applications.
+Se mais de uma pessoa usar uma aplicação, que geralmente é o caso em arquitetura cliente-servidor ou interfaces Web, você precisa controlar o acesso ou fornecer diferentes recursos, conforme os usuários conectados. It is also essential to provide security for sensitive data, even in single-user applications.
 
 A estratégia de controle de acesso 4D depende da configuração de sua implementação:
 

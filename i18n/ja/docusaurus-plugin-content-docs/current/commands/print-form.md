@@ -51,7 +51,7 @@ displayed_sidebar: docs
  height:=Print form(myTable;myForm;marker)
 ```
 
-この場合コマンドは*marker* で示されるセクションを印刷します。 この場合コマンドは*marker* で示されるセクションを印刷します。 この場合コマンドは*marker* で示されるセクションを印刷します。 以下の*Form Area* テーマの定数のうちの1つをmarker引数に渡します: この場合コマンドは*marker* で示されるセクションを印刷します。 この場合コマンドは*marker* で示されるセクションを印刷します。 以下の*Form Area* テーマの定数のうちの1つをmarker引数に渡します: この場合コマンドは*marker* で示されるセクションを印刷します。 この場合コマンドは*marker* で示されるセクションを印刷します。 以下の*Form Area* テーマの定数のうちの1つをmarker引数に渡します:
+この場合コマンドは*marker* で示されるセクションを印刷します。 この場合コマンドは*marker* で示されるセクションを印刷します。 この場合コマンドは*marker* で示されるセクションを印刷します。 以下の*Form Area* テーマの定数のうちの1つをmarker引数に渡します: この場合コマンドは*marker* で示されるセクションを印刷します。 この場合コマンドは*marker* で示されるセクションを印刷します。 以下の*Form Area* テーマの定数のうちの1つをmarker引数に渡します: この場合コマンドは*marker* で示されるセクションを印刷します。 この場合コマンドは*marker* で示されるセクションを印刷します。 以下の*Form Area* テーマの定数のうちの1つをmarker引数に渡します: この場合コマンドは*marker* で示されるセクションを印刷します。 この場合コマンドは*marker* で示されるセクションを印刷します。 以下の*Form Area* テーマの定数のうちの1つをmarker引数に渡します:
 
 | 定数            | 型       | 値   |
 | ------------- | ------- | --- |
@@ -106,7 +106,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 **Print form** は、印刷するページをそれぞれメモリ中に作成します。 各ページはメモリ中のページがいっぱいになるか、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを実行すると印刷されます。 **Print form** は、印刷するページをそれぞれメモリ中に作成します。 各ページはメモリ中のページがいっぱいになるか、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを実行すると印刷されます。 **Print form** の使用後、最後のページの印刷を確実に行うためには、[PAGE BREAK](../commands-legacy/page-break.md) コマンドで終了しなければなりません(ただし[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) のコンテキスト内の場合を除く、注意参照)。 そうでないと、最後のページが一杯にならないと、それはメモリ中に残り印刷されません。 そうでないと、最後のページが一杯にならないと、それはメモリ中に残り印刷されません。 各ページはメモリ中のページがいっぱいになるか、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを実行すると印刷されます。 **Print form** は、印刷するページをそれぞれメモリ中に作成します。 各ページはメモリ中のページがいっぱいになるか、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを実行すると印刷されます。 **Print form** の使用後、最後のページの印刷を確実に行うためには、[PAGE BREAK](../commands-legacy/page-break.md) コマンドで終了しなければなりません(ただし[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) のコンテキスト内の場合を除く、注意参照)。 そうでないと、最後のページが一杯にならないと、それはメモリ中に残り印刷されません。 そうでないと、最後のページが一杯にならないと、それはメモリ中に残り印刷されません。
 
-**警告:** このコマンドが[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) で開かれた印刷ジョブのコンテキストで呼び出された場合、[PAGE BREAK](../commands-legacy/page-break.md) を使用して最後のページを印刷しようとしてはいけません。なぜなら、最後のページは[CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) コマンドによって自動的に印刷されるからです。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。
+**警告:** このコマンドが[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) で開かれた印刷ジョブのコンテキストで呼び出された場合、[PAGE BREAK](../commands-legacy/page-break.md) を使用して最後のページを印刷しようとしてはいけません。なぜなら、最後のページは[CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) コマンドによって自動的に印刷されるからです。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。
 
 このコマンドは外部エリアとオブジェクト(例えば 4D Write や 4D Viewエリアなど) を印刷します。 エリアはコマンドの実行の際に毎回リセットされます。 エリアはコマンドの実行の際に毎回リセットされます。
 
@@ -114,7 +114,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 **Print form** は、1回だけフォームメソッドの[`On Printing Detail` event](../Events/onPrintingDetail.md) イベントを生成します。
 
-**4D Server:** このコマンドは、ストアドプロシージャのフレームワークにおいて4D Server上で実行することができます。 この状況では、次の制約があります: この状況では、次の制約があります: この状況では、次の制約があります: この状況では、次の制約があります: この状況では、次の制約があります:
+**4D Server:** このコマンドは、ストアドプロシージャのフレームワークにおいて4D Server上で実行することができます。 この状況では、次の制約があります: この状況では、次の制約があります: この状況では、次の制約があります: この状況では、次の制約があります: この状況では、次の制約があります: この状況では、次の制約があります:
 
 - サーバマシン上ではダイアログボックスを一切表示しないでください (特定の必要性がある場合を除く)。
 - プリンタ関連の問題が発生しても (用紙切れ、プリンタ接続切断等) 、エラーメッセージは生成されません。

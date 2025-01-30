@@ -277,7 +277,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 #### Descripción
 
-Colección compartida que se agrupa con la colección resultante
+Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 > Esta función no modifica la colección original.
 
@@ -693,7 +693,7 @@ La función `.every()` <!-- REF #collection.every().Summary -->devuelve **true**
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Tipo
+- Para una descripción detallada de los parámetros *queryString* y *value*, consulte la función `dataClass.query()`.
 - o *methodName*, el nombre de un método proyecto (texto).
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede efecturar toda prueba, con o sin los parámetros, y debe devolver *true* para cada elemento que cumpla la prueba. Recibe un `Object` en el primer parámetro ($1).
@@ -1151,7 +1151,7 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 #### Descripción
 
-Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
+Primer elemento de la colección
 
 > Esta función no modifica la colección original.
 
@@ -1260,7 +1260,7 @@ Esta función es idéntica a una llamada a [`map()`](#map) seguida de una llamad
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- expresión
+- *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un `Object` en el primer parámetro ($1).
@@ -1742,7 +1742,7 @@ La función `.map()` <!-- REF #collection.map().Summary -->crea una nueva colecc
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- expresión
+- Para una descripción detallada de los parámetros *queryString* y *value*, consulte la función `dataClass.query()`.
 - Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
@@ -2181,7 +2181,7 @@ Esta función devuelve una *copia superficial*, lo que significa que los objetos
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Ruta de la propiedad del objeto que se utilizará para el cálculo
+- *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 
 - Tipo
 
@@ -2311,7 +2311,7 @@ Lanzamiento
 
 #### Descripción
 
-Este ejemplo permite reducir varios elementos de la colección a uno solo:
+Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 > Esta función modifica la colección original.
 
@@ -2670,7 +2670,7 @@ La función `.reduce()` <!-- REF #collection.reduce().Summary -->aplica la *form
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Para una descripción detallada de los parámetros *queryString* y *value*, consulte la función `dataClass.query()`.
+- Descripción Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 - Tipo
 
 Tipo
@@ -3151,7 +3151,7 @@ Incluído en
 
 #### Descripción
 
-Colección original ordenada
+La función `.multiSort()` <!-- REF #collection.multiSort().Summary -->permite realizar una ordenación sincronizada multinivel sobre un conjunto de colecciones<!-- END REF -->.
 
 > Esta función modifica la colección original.
 

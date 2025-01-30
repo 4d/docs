@@ -8,84 +8,84 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert formula.Params-->
 
-| 引数          | 型      |                             | 説明                                                         |
-| ----------- | ------ | --------------------------- | ---------------------------------------------------------- |
-| targetObj   | Object | &#8594; | レンジまたは要素または4D Write Pro ドキュメント                             |
-| formula     | Object | &#8594; | Formula object OR Object with formula and name properties  |
-| mode        | Number | &#8594; | Insertion mode                                             |
-| rangeUpdate | Number | &#8594; | Includes or excludes the inserted content within the range |
-| 戻り値         | Object | &#8592; | Text range object reprsenting the result of the formula    |
+| 引数          | 型      |                             | 説明                                           |
+| ----------- | ------ | --------------------------- | -------------------------------------------- |
+| targetObj   | Object | &#8594; | レンジまたは要素または4D Write Pro ドキュメント               |
+| formula     | Object | &#8594; | フォーミュラオブジェクト、またはformula とname プロパティを持つオブジェクト |
+| mode        | Number | &#8594; | 挿入モード                                        |
+| rangeUpdate | Number | &#8594; | 挿入されたコンテンツをレンジ内に含めるか含めないかを指定                 |
+| 戻り値         | Object | &#8592; | フォーミュラの結果を表すテキストレンジオブジェクト                    |
 
 <!-- END REF-->
 
 #### 説明
 
-The **WP Insert formula** command<!--REF #_command_.WP Insert formula.Summary--> inserts a *formula* in *targetObj* according to the specified insertion *mode* and returns the resulting text range.<!-- END REF-->
+**WP Insert formula** コマンドは、<!--REF #_command_.WP Insert formula.Summary-->*targetObj* 引数で指定したターゲット内に*formula* 引数のフォーミュラを、*mode* 引数で指定したモードで挿入しその結果のテキストレンジを返します。<!-- END REF-->
 
-In the *targetObj* parameter, you can pass:
+*targetObj* 引数には、以下のものを渡すことができます:
 
 - レンジ
-- an element (table / row / cell(s) / paragraph / body / header / footer / section / subsection / inline picture), or
-- a 4D Write Pro document.
+- 要素(表組 / 行 / セル / 段落 / 本文 / ヘッダー / フッター / セクション / サブセクション / インライン画像)
+- 4D Write Pro ドキュメント
 
-In the *formula* parameter, pass the 4D formula to evaluate. 以下のものを渡すことができます:
+*formula* 引数には、評価される4D フォーミュラを渡します。 以下のものを渡すことができます:
 
-- either a [formula object](../../API/FunctionClass.md#formula-objects) created by the [**Formula**](../../API/FunctionClass.md#formula) or [**Formula from string**](../../API/FunctionClass.md#formula-from-string) command,
-- or an object containing two properties:
+- [**Formula**](../../API/FunctionClass.md#formula) または [**Formula from string**](../../API/FunctionClass.md#formula-from-string) コマンドで作成された[フォーミュラオブジェクト](../../API/FunctionClass.md#formula-objects)
+- または以下の2つのプロパティを格納しているオブジェクト:
 
-| **プロパティ** | **型**  | **Description**                                                                                                                                                                                                        |
-| --------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name      | Text   | Name to display for the formula in the document                                                                                                                                                                        |
-| formula   | Object | The [formula object](../../API/FunctionClass.md#formula-objects) created by the [**Formula**](../../API/FunctionClass.md#formula) or [**Formula from string**](../../API/FunctionClass.md#formula-from-string) command |
+| **プロパティ** | **型**  | **Description**                                                                                                                                                                                      |
+| --------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name      | Text   | ドキュメント内で表示するフォーミュラの名前                                                                                                                                                                                |
+| formula   | Object | [**Formula**](../../API/FunctionClass.md#formula) または [**Formula from string**](../../API/FunctionClass.md#formula-from-string) コマンドで作成された[フォーミュラオブジェクト](../../API/FunctionClass.md#formula-objects) |
 
-When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. For more information, see the [Managing formulas](../managing-formulas.md) page.
+フォーミュラの*name* プロパティがあるオブジェクトを使用する場合、ドキュメント内で、フォーミュラが参照として表示される場合にはフォーミュラ参照ではなくそのname の名前が表示され、値または記号として表示される場合にはフォーミュラtip に名前が表示されます。 *name* プロパティが空の文字列を格納しているか省略されている場合、それはオブジェクトから削除され、デフォルトでフォーミュラが表示されます。 詳細な情報については、[フォーミュラの管理](../managing-formulas.md) のページを参照してください。
 
-In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used:
+*mode* 引数には、使用する挿入モードを指定する、以下の定数のいずれか一つを渡します:
 
-| 定数         | 型       | 値 | 説明                                     |
-| ---------- | ------- | - | -------------------------------------- |
-| wk append  | Integer | 2 | Insert contents at end of target       |
-| wk prepend | Integer | 1 | Insert contents at beginning of target |
-| wk replace | Integer | 0 | Replace target contents                |
+| 定数         | 型       | 値 | 説明                   |
+| ---------- | ------- | - | -------------------- |
+| wk append  | Integer | 2 | コンテンツをターゲットの終わりに挿入する |
+| wk prepend | Integer | 1 | コンテンツをターゲットの始めに挿入する  |
+| wk replace | Integer | 0 | ターゲットのコンテンツを置き換える    |
 
-- If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted *formula* is included in the resulting range:
+- *targetObj* がレンジである場合、オプションの*rangeUpdate* 引数に以下の定数のいづれか一つを渡すことで挿入された*formula* 引数のフォーミュラが結果のレンジに含まれるかどうかを指定することができます:
 
-| 定数                    | 型       | 値 | 説明                                                                       |
-| --------------------- | ------- | - | ------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1 | Inserted contents not included in updated range                          |
-| wk include in range   | Integer | 0 | Inserted contents included in updated range (default) |
+| 定数                    | 型       | 値 | 説明                                                |
+| --------------------- | ------- | - | ------------------------------------------------- |
+| wk exclude from range | Integer | 1 | 挿入されたコンテンツを更新されたレンジに含めない                          |
+| wk include in range   | Integer | 0 | 挿入されたコンテンツを更新されたレンジに含める(デフォルト) |
 
-If you do not pass a *rangeUpdate* parameter, by default the inserted *formula* is included in the resulting range.
+*rangeUpdate* 引数を渡さなかった場合、デフォルトでは挿入された*formula* 引数のフォーミュラは結果のレンジに含まれます。
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- *targetObj* がレンジではない場合、*rangeUpdate* は無視されます。
 
 :::note
 
-Keep in mind that, when called, the formula object is evaluated within the context of the database or component that created it.
+フォーミュラオブジェクトは、呼び出されたときに、そのフォーミュラオブジェクトを作成したデータベースまたはコンポーネントのコンテキスト内で評価されるという点に注意してください。
 
 :::
 
 #### 例題 1
 
-To replace all current date formulas with formatted strings:
+全てのCurrent date フォーミュラを、フォーマットされた文字列で置き換えたい場合を考えます:
 
 ```4d
  var $_formulas : Collection
  var $find;$newFormula : Object
  
-  // define the formula to find
+  // 検索するフォーミュラを定義
  $find:=Formula(Current date)
  
-  // define the replacement formula
+  // 置換するフォーミュラを定義
  $newFormula:=Formula(String(Current date;System date long))
  
-  // find all formulas in the document
+  // ドキュメント内にあるフォーミュラを全て検索
  $_formulas:=WP Get formulas(WriteProArea)
  
-  // query the collection from WP Get formulas
+  // WP Get formulas から取得したコレクション内をクエリする
  $_formulas:=$_formulas.query("formula.source =:1";$find.source)
  
-  // then replace each formula
+  // WP Get formulas から取得したコレクション内をクエリする
  For each($formula;$_formulas)
     WP Insert formula($formula.range;$newFormula;wk replace)
  End for each
@@ -93,19 +93,19 @@ To replace all current date formulas with formatted strings:
 
 #### 例題 2
 
-You want to use a formula name for the customer name:
+顧客の名前にフォーミュラによる名前を使用したい場合を考えます:
 
 ```4d
-  //add some data
+  // データを追加する
  $data:=New object("customer";New object("lastname";"Smith";"firstname";"John"))
  WP SET DATA CONTEXT(WPArea;$data)
  
-  //create a formula object with a name
+  // name プロパティを持つフォーミュラオブジェクトを作成する
  $o:=New object
  $o.formula:=Formula(This.data.customer.firstname+" "+This.data.customer.lastname)
  $o.name:="Customer name"
  
-  //inserts as text
+  // テキストとして挿入
  $range:=WP Text range(WPArea;wk start text;wk end text)
  WP SET TEXT($range;"Dear ";wk append)
  WP Insert formula($range;$o;wk append)
@@ -117,7 +117,7 @@ You want to use a formula name for the customer name:
 
 #### 例題 3
 
-You want to highlight a formula in yellow:
+フォーミュラを黄色でハイライトしたい場合を考えます:
 
 ```4d
 WParea:=WP New

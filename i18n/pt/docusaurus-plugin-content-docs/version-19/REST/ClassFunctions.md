@@ -133,12 +133,10 @@ Pode então executar este pedido:
 A classe Dataclass `City` fornece uma API que devolve uma entidade cidade a partir de um nome passado como parâmetro:
 
 ```
-// City class
-
-Class extends DataClass
+// City class Class extends DataClass
 
 exposed Function getCity()
- var $0 : cs.CityEntity
+ var $0 : cs. CityEntity
  var $1,$nameParam : text
  $nameParam:=$1
  $0:=This.query("name = :1";$nameParam).first()
@@ -229,9 +227,7 @@ Pode então executar este pedido:
 A classe `StudentsSelection` tem uma função `getAgeAverage`:
 
 ```  
-// StudentsSelection Class
-
-Class extends EntitySelection
+// StudentsSelection Class Class extends EntitySelection
 
 exposed Function getAgeAverage
  C_LONGINT($sum;$0)
@@ -261,10 +257,7 @@ Uma vez criado um conjunto de entidades, é possível executar este pedido:
 A classe `StudentsSelection` tem uma função `getLastSummary`:
 
 ```  
-// StudentsSelection Class
-
-
-Class extends EntitySelection
+// StudentsSelection Class Class extends EntitySelection
 
 exposed Function getLastSummary
  C_TEXT($0)
@@ -291,9 +284,7 @@ Pode então executar este pedido:
 A classe de Dataclass `Students` tem a função `pushData()` que recebe uma entidade que contém dados do cliente. O método `checkData()` executa alguns controlos. Se estiverem corretas, a entidade é guardada e devolvida.
 
 ```
-// Students Class
-
-Class extends DataClass
+// Students Class Class extends DataClass
 
 exposed Function pushData
  var $1, $entity, $status, $0 : Object
@@ -432,9 +423,7 @@ Corpo do pedido:
 Neste exemplo, associamos uma escola existente a uma entidade Students. A classe `StudentEntity` tem um API:
 
 ```
-// StudentsEntity class
-
-Class extends Entity
+// StudentsEntity class Class extends Entity
 
 exposed Function putToSchool()
  var $1, $school , $0, $status : Object

@@ -429,7 +429,7 @@ Mayor que
 | Parámetros   | Tipo |                             | Descripción                                                      |
 | ------------ | ---- | :-------------------------: | ---------------------------------------------------------------- |
 | propertyPath | Text |              ->             | Ruta de la propiedad del objeto que se utilizará para el cálculo |
-| Result       | Real | <- | Colección que contiene los elementos añadidos                    |
+| Result       | Real | <- | Primer elemento de la colección                                  |
 
 <!-- END REF -->
 
@@ -559,7 +559,7 @@ El parámetro opcional *propertyPath* permite contar valores dentro de una colec
 
 #### Descripción
 
-Colección original sin elementos eliminados
+Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 > Esta función no modifica la colección original.
 
@@ -1085,7 +1085,7 @@ La función `.findIndex()` <!-- REF #collection.findIndex().Summary -->devuelve 
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
+- Descripción Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 - Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un `Object` en el primer parámetro ($1).
@@ -1151,7 +1151,7 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 #### Descripción
 
-Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
+Primer elemento de la colección
 
 > Esta función no modifica la colección original.
 
@@ -1261,7 +1261,7 @@ Esta función es idéntica a una llamada a [`map()`](#map) seguida de una llamad
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
-- Tipo
+- Para una descripción detallada de los parámetros *queryString* y *value*, consulte la función `dataClass.query()`.
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un `Object` en el primer parámetro ($1).
 
@@ -1743,7 +1743,7 @@ La función `.map()` <!-- REF #collection.map().Summary -->crea una nueva colecc
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
-- Tipo
+- Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
 
@@ -1844,7 +1844,7 @@ Si la colección está vacía, `.max()` devuelve *Undefined*.
 
 #### Descripción
 
-Ordenar una colección de números de forma ascendente y descendente:
+Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 > Esta función no modifica la colección original.
 
@@ -2173,7 +2173,7 @@ Ordenar con una ruta de propiedad:
 
 #### Descripción
 
-La nueva colección
+Ordenar una colección de números de forma ascendente y descendente:
 
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
@@ -2181,9 +2181,9 @@ Esta función devuelve una *copia superficial*, lo que significa que los objetos
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Ruta de la propiedad del objeto que se utilizará para el cálculo
+- *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 
-- Tipo
+- Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer
 
 En la retrolamada, pase un código que compare dos valores y devuelva **true** si el primer valor es menor que el segundo. Puede ofrecer los parámetros *extraParam* a la retrollamada si es necesario.
 
@@ -2196,7 +2196,7 @@ La retrollamada recibe los siguientes parámetros:
 
 Si utilizó un método, debe definir el siguiente parámetro:
 
-- Considera la @ como un caracter estándar
+- `.pop()`, utilizado junto con [`.push()`](#push), puede utilizarse para implementar una funcionalidad primera entrada última salida de tratamiento de datos apilados:
 
 #### Ejemplo 1
 
@@ -2311,7 +2311,7 @@ Lanzamiento
 
 #### Descripción
 
-Este ejemplo permite reducir varios elementos de la colección a uno solo:
+`.pop()`, utilizado junto con [`.push()`](#push), puede utilizarse para implementar una funcionalidad primera entrada última salida de tratamiento de datos apilados:
 
 > Esta función modifica la colección original.
 
@@ -2670,8 +2670,8 @@ La función `.reduce()` <!-- REF #collection.reduce().Summary -->aplica la *form
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- `.pop()`, utilizado junto con [`.push()`](#push), puede utilizarse para implementar una funcionalidad primera entrada última salida de tratamiento de datos apilados:
-- Tipo
+- *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
+- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 
 Tipo
 
@@ -2755,8 +2755,8 @@ La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplic
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Para una descripción detallada de los parámetros *queryString* y *value*, consulte la función `dataClass.query()`.
-- Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer
+- *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
+- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 
 Tipo
 
@@ -3077,7 +3077,7 @@ La función `.some()` <!-- REF #collection.some().Summary --> devuelve true si a
 Se designa el código 4D de retrollamada (callback) a ejecutar para evaluar los elementos de la colección utilizando:
 
 - Descripción Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
-- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
+- o *methodName*, el nombre de un método proyecto (texto).
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
 
@@ -3151,7 +3151,7 @@ Incluído en
 
 #### Descripción
 
-Colección original ordenada
+Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 > Esta función modifica la colección original.
 
@@ -3176,7 +3176,7 @@ La retrollamada recibe los siguientes parámetros:
 
 Ejemplo
 
-- Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.
+- Para una descripción detallada de los parámetros *queryString* y *value*, consulte la función `dataClass.query()`.
 
 #### Ejemplo 1
 

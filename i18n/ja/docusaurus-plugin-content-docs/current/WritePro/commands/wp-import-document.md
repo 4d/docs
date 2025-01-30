@@ -23,49 +23,49 @@ displayed_sidebar: docs
 
 *filePath* あるいは *fileObj* のいずれかを渡すことができます:
 
-- *filePath* 引数の場合、ディスク上に保存されているドキュメントのパスを渡します。 ドキュメントが ストラクチャーファイルと同階層に置かれている場合を除き、完全なパスを渡す必要があります (同階層に置かれている場合にはファイル名のみを渡すことができます)。
+- *filePath* 引数の場合、ディスク上に保存されているドキュメントのパスを渡します。 *filePath* 引数の場合、ディスク上に保存されているドキュメントのパスを渡します。 ドキュメントが ストラクチャーファイルと同階層に置かれている場合を除き、完全なパスを渡す必要があります (同階層に置かれている場合にはファイル名のみを渡すことができます)。
 
 - *fileObj* 引数には、読み込むファイルを表す4D.File オブジェクトを渡します。
 
-The following types of documents are supported:
+以下のドキュメントの種類がサポートされています:
 
-- former 4D Write documents (.4w7 or .4wt). For a detailed list of 4D Write features that are currently supported in 4D Write Pro objects, please refer to the *Importing 4D Write documents* section.
-- 4D Write Pro (.4wp) format documents. For more information about the 4D Write Pro document format, refer to *.4wp document format*.
-- documents in .docx format. For more information about, refer to *Importing and Exporting in .docx format*.
+- 旧式の4D Write ドキュメント(.4w7 あるいは .4wt)。 4D Write Pro オブジェクトでもサポートされる4D Write 機能の詳細な一覧については、*4D Write ドキュメントの読み込み* の章を参照して下さい。
+- 4D Write Pro(.4wp)フォーマットドキュメント。 4D Write Proドキュメントフォーマットについてのより詳細な情報に関しては、*.4wp ドキュメントフォーマット* を参照して下さい。
+- .docx フォーマットのドキュメント。 詳細な情報については、*.docxフォーマットの読み込み/書き出し* を参照してください。
 
-**Note:** If you want to import a document stored in a 4D BLOB field, you can also consider using the [WP New](../commands-legacy/wp-new.md) command.
+**注意:** 4D BLOBフィールドに保存されたドキュメントを読み込みたい場合には、[WP New](../commands-legacy/wp-new.md) コマンドの使用も検討してみて下さい。
 
-An error is returned if the *filePath* or *fileObj* parameter is invalid, if the file is missing, or if the file format is not supported.
+*filePath* または *fileObj* 引数に渡したパスが無効な場合、またはファイルが見つからない場合、または指定したファイルがサポートされていないフォーマットだった場合、エラーが返されます。
 
-The optional *option* parameter allows defining import options for:
+オプションの*option* 引数を使用すると以下のように読み込みオプションを定義することができます:
 
-- **longint**
+- **倍長整数**
 
-By default, HTML expressions inserted in legacy 4D Write documents are not imported (no 4D Write Pro support). If you pass the wk import html expressions as text constant, HTML expressions will be imported as raw text within `##htmlBegin##` and `##htmlEnd##` tags -- which will require formatting actions afterward. 例:
+デフォルトで、旧式の4D Write ドキュメント内で使用されているHTML 式は読み込まれません(4D Write Pro ではサポートされません)。 wk import html expressions as text 定数を渡した場合、HTML 式は`##htmlBegin##` および `##htmlEnd##` タグで囲まれた標準テキストとして読み込まれるため、そのあとに整形アクションが必要になります。 例:
 
 ```html
 ##htmlBegin##Imported titlebold##htmlEnd##  
 ```
 
-- **object**
+- **オブジェクト**
 
-You can pass an object to define how the following attributes are handled during the import operation:
+以下のプロパティを持ったオブジェクトを渡すことで、読み込みオペレーション中に以下の属性がどのように扱われるかを定義することができます:
 
-| **Attribute**           | **型** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ----------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| anchoredTextAreas       | Text  | For MS Word (.docx) documents only. Specifies how Word anchored text areas are handled. Available values:<br/><br/> **anchored** (default) - Anchored text areas are treated as text boxes. **inline** \- Anchored text areas are treated as inline text at the position of the anchor. **ignore** \- Anchored text areas are ignored. **Note**: The layout and the number of pages in the document may change. See also *How to import .docx format*                                                                                                                                                                                                                                                                                   |
-| anchoredImages          | Text  | For MS Word (.docx) documents only. Specifies how anchored images are handled. Available values:<br/><br/> **all** (default) - All anchored images are imported as anchored images with their text wrapping properties (exception: the .docx wrapping option "tight" is imported as wrap square). **ignoreWrap** \- Anchored images are imported, but any text wrapping around the image is ignored. **ignore** \- Anchored images are not imported.                                                                                                                                                                                                                                                                                 |
-| sections                | Text  | For MS Word (.docx) documents only. Specifies how section are handled. Available values:<br/><br/> **all** (default) - All sections are imported. Continuous, even, or odd sections are converted to standard sections. **ignore** \- Sections are converted to default 4D Write Pro sections (A4 portrait layout without header or footer). **Note**: Section breaks of any type but continuous are converted to section breaks with page break. Continuous section breaks are imported as continuous section breaks.                                                                                                                                                                                                |
-| fields                  | Text  | For MS Word (.docx) documents only. Specifies how .docx fields that can't be converted to 4D Write Pro formulas are handled. Available values:<br/><br/> **ignore** \- .docx fields are ignored. **label** \- .docx field references are imported as labels within double curly braces ("{{ }}"). Ex: The "ClientName" field would be imported as {{ClientName}}. **value** (default) - The last computed value for the .docx field (if available) is imported. **Note**: If a .docx field corresponds to a 4D Write Pro variable, the field is imported as a formula and this option is ignored. |
-| borderRules             | Text  | For MS Word (.docx) documents only. Specifies how paragraph borders are handled. Available values:<br/><br/> **collapse** \- Paragraph formatting is modified to mimic automatically collapsed borders. Note that the collapse property only applies during the import operation. If a stylesheet with a automatic border collapse setting is reapplied after the import operation, the setting will be ignored. **noCollapse** (default) - Paragraph formatting is not modified.                                                                                                                                                                                                                                                                                        |
-| preferredFontScriptType | Text  | For MS Word (.docx) documents only. Specifies the preferred typeface to use when different typefaces are defined for a single font property in OOXML. Available values:<br/><br/> **latin** (default) - Latin script **bidi** \- Bidrectional script. Suitable if document is mainly bidirectional left-to-right (LTR) or right-to-left (RTL) text (e.g., Arabic or Hebrew). **eastAsia** \- East Asian script. Suitable if document is mainly Asian text.                                                                                                                                                                                                                     |
-| htmlExpressions         | Text  | For 4D Write (.4w7) documents only. Specifies how HTML expressions are handled. Available values: <br/><br/> **rawText** \- HTML expressions are imported as raw text within ##htmlBegin## and ##htmlEnd## tags **ignore** (default) - HTML expressions are ignored.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| importDisplayMode       | Text  | For 4D Write (.4w7) documents only. Specifies how image display is handled. Available values: <br/><br/> **legacy -** 4W7 image display mode is converted using a background image if different than scaled to fit. **noLegacy** (default) - 4W7 image display mode is converted to the *imageDisplayMode* attribute if different than scaled to fit.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **属性**                  | **型** | **詳細**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ----------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| anchoredTextAreas       | Text  | MS Word (.docx) ドキュメントのみ有効。 Word のアンカーされたテキストがどのように管理されるかを指定します。 取り得る値:<br/><br/> **anchored** (デフォルト) - アンカーされたテキストエリアはテキストボックスとして扱われます。 **inline** \- アンカーされたテキストはアンカーされた位置でインラインテキストとして扱われます。 **ignore** \- アンカーされたテキストは無視されます。 **注意**: ドキュメント内のレイアウトとページ数が変化する可能性があります。 *.docx フォーマットのファイルの読み込み方* も参照してください。                                                                                                                                                                                                        |
+| anchoredImages          | Text  | MS Word (.docx) ドキュメントのみ有効。 アンカーされた画像がどのように管理されるかを指定します。 取り得る値:<br/><br/> **all** (デフォルト) - アンカーされた画像は全てアンカーされた画像としてテキスト折り返しプロパティとともに読み込まれます(例外: .docx の折り返しオプション"tight"はwrap square として読み込まれます)。 **ignoreWrap** \- アンカーされた画像は全て読み込まれますが、画像の周りにテキスト折り返しがある場合は無視されます。 **ignore** \- アンカーされた画像は読み込まれません。                                                                                                                                                                                               |
+| sections                | Text  | MS Word (.docx) ドキュメントのみ有効。 セクションがどのように管理されるかを指定します。 取り得る値:<br/><br/> **all** (デフォルト) - 全てのセクションが読み込まれます。 継続されたセクション、奇数/偶数セクションは全て標準のセクションへと変換されます。 **ignore** \- セクションは全てデフォルトの4D Write Pro セクション(A4/縦向きレイアウト/ヘッダーやフッターはなし)へと変換されます。 **注意**: 継続されたセクションブレークを除く全てのセクションブレークはセクションブレークを伴う改ページへと変換されます。 継続されたセクションブレークは継続したセクションブレークとして読み込まれます。                                                                                                                                                                         |
+| fields                  | Text  | MS Word (.docx) ドキュメントのみ有効。 4D Write Pro フォーミュラに変換できない.docx フィールドがどのように管理されるかを指定します。 取り得る値:<br/><br/> **ignore** \- .docx フィールドは無視されます。 **label** \- .docx フィールド参照は二重中括弧 ("{{ }}")がついたラベルとして読み込まれます。 例: "ClientName" フィールドは{{ClientName}} として読み込まれます。 **value** (default) - .docx フィールドの最後の計算された値が(あれば)読み込まれます。 **注意**: .docx フィールドが4D Write Pro 変数に対応している場合、フィールドはフォーミュラとして読み込まれ、このオプションは無視されます。 |
+| borderRules             | Text  | MS Word (.docx) ドキュメントのみ有効。 段落の境界線がどのように管理されるかを指定します。 取り得る値:<br/><br/> **collapse** \- 段落フォーマットは自動折りたたみ境界線を真似するように変更されます。 折りたたみプロパティは読み込みオペレーションのときにしか適用されないと言う点に注意してください。 自動境界線折りたたみ設定のあるスタイルシートが読み込みオペレーションの後に再適用された場合、この設定は無視されます。 **noCollapse** (デフォルト) - 段落フォーマットは変更されません。                                                                                                                                                                                                                                                                         |
+| preferredFontScriptType | Text  | MS Word (.docx) ドキュメントのみ有効。 OOXML 内の単一フォントプロパティとして異なるタイプフェイスが定義されていた場合にどのタイプフェイスを使用するかを指定します。 取り得る値:<br/><br/> **latin** (デフォルト) - ラテン文字 **bidi** \- 双方向テキスト。 ドキュメントが双方向でleft-to-right(LTR)またはright-to-left(RTL)テキストの場合に適しています(例:アラビア文字やヘブライ文字)。 **eastAsia** \- 東アジア文字。 ドキュメントが主にアジア系のテキストの場合に適しています。                                                                                                                                                                         |
+| htmlExpressions         | Text  | 4D Write (.4w7) ドキュメントのみ有効。 HTML 式がどのように管理されるかを指定します。 取り得る値: <br/><br/> **rawText** \- HTML テキストは##htmlBegin## および ##htmlEnd## タグに挟まれた標準テキストとして読み込まれます。 **ignore** (デフォルト) - HTML 式は無視されます。                                                                                                                                                                                                                                                                                                                                                              |
+| importDisplayMode       | Text  | 4D Write (.4w7) ドキュメントのみ有効。 画像の表示がどのように管理されるかを指定します。 取り得る値: <br/><br/> **legacy -** 画像の表示モードは、縮小して表示以外の場合には背景画像として変換されます。 **noLegacy** (デフォルト) - 4W7 画像の表示モードは縮小して表示以外の場合には*imageDisplayMode* 属性に変換されます。                                                                                                                                                                                                                                                                                                                                                  |
 
-**Compatibility Notes**
+**互換性に関する注意**
 
-- *Character style sheets in legacy 4D Write documents use a proprietary mechanism, which is not supported by 4D Write Pro. To get the best result for imported text, style sheet attributes are converted to "hard coded" style attributes. Legacy character style sheets are not imported and are no longer referenced in the document.*
-- *Support for importing in .docx format is only certified for Microsoft Word 2010 and newer. Older versions, particularly Microsoft Word 2007, may not import correctly.*
+- *旧式の4D Write ドキュメント内で使用される文字スタイルシートは独自の機構が使用されており、これは4D Write Pro ではサポートされていないものです。 インポートされたテキストを可能な限り再現するため、スタイルシート属性は"ハードコード"スタイル属性へと変換されています。 旧式の文字スタイルシートは読み込まれず、今後ドキュメント内では参照されることはありません。*
+- *.docx フォーマットからの読み込みのサポートはMicrosoft Word 2010 以降でのみ正式対応しています。 それ以前のバージョン、具体的にはMicrosoft Word 2007 などでは、正しく読み込まれない可能性があります。*
 
 #### 例題 1
 
@@ -76,36 +76,36 @@ You can pass an object to define how the following attributes are handled during
 
 #### 例題 2
 
-You want to import a .docx document and would like that paragraph borders are collapsed as they are in MS Word:
+.docx ドキュメントを読み込み、段落境界線がMS Word のように折りたたまれていてほしい場合を考えます:
 
 ```4d
  $options:=New object
- $options.borderRules:="collapse" //collapse paragraph borders while converting
+ $options.borderRules:="collapse" //変換時に段落境界線を折りたたむ
 
  wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
 
-You want to import original .docx fields as text (for fields not converted to 4D formulas):
+オリジナルの.docx フィールドをテキストとして読み込みたい場合を考えます(4D フォーミュラに変換できないフィールドの場合):
 
 ```4d
  $options:=New object
- $options.fields:="label" //for unconverted fields, import field references as text between {{ and }}
+ $options.fields:="label" // 変換されていないフィールドは、{{ と }} に挟まれたテキストとして読み込まれます。
 
  wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
 
-You want to import a .docx document whose text is mostly in Japanese:
+テキストが主に日本語である.docx ドキュメントを読み込みたい場合を考えます:
 
 ```4d
  $options:=New object
- $options.preferredFontScriptType:="eastAsia" //force conversion to prefer eastAsia font scripts
+ $options.preferredFontScriptType:="eastAsia" //強制的に東アジアフォント文字に適した変換をします
 
  wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
 
 #### 例題 3
 
-You want to import a document on disk using a File object:
+ディスク上のファイルを、ファイルオブジェクトを使用して読み込みたい場合を考えます:
 
 ```4d
 var $file : 4D.File

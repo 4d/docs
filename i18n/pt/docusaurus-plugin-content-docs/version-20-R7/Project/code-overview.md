@@ -37,7 +37,7 @@ Para eliminar um método ou classe existente, pode:
 
 ## Importação e exportação de código
 
-É possível importar e exportar um método ou o código de uma classe sob a forma de um ficheiro. Estos comandos se encuentran en el menú **Método** del editor de código .
+É possível importar e exportar um método ou o código de uma classe sob a forma de um ficheiro. Estos comandos se encuentran en el menú **Método** del editor de código [](../code-editor/write-class-method.md).
 
 - Cuando se selecciona el comando **Exportar el método...**, aparece una caja de diálogo estándar para guardar archivos, que permite elegir el nombre, la ubicación y el formato del archivo de exportación (ver abajo). Tal como acontece com a impressão, a exportação não tem em conta o estado colapsado das estruturas de código e todo o código é exportado.
 - Cuando se selecciona el comando **Importar el método...**, aparece una caja de diálogo estándar de apertura de archivos que permite designar el archivo a importar. A importação substitui o texto selecionado no método. Para substituir um método existente por um método importado, selecionar todo o conteúdo do método antes de efetuar a importação.

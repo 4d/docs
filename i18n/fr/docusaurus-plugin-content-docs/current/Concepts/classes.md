@@ -180,7 +180,7 @@ Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de 
 - `property` pour définir les propriétés statiques des objets d'un type donné.
 - `Function get <Name>` et `Function set <Name>` pour définir les propriétés calculées des objets.
 - `Class extends <ClassName>` pour définir l'héritage.
-- `This` and `Super` are commands that have special features within classes.
+- `This` et `Super` sont des commandes qui ont des fonctionnalités spéciales dans les classes.
 
 ### `Function`
 
@@ -193,7 +193,7 @@ Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de 
 
 :::note
 
-Il n'y a pas de mot-clé de fin pour le code d'une fonction. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de classe.
 
 :::
 
@@ -333,7 +333,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 :::note
 
-Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de classe.
 
 :::
 
@@ -347,7 +347,7 @@ Vous pouvez créer et saisir des propriétés d'instance dans le constructeur (v
 
 L'utilisation du mot-clé `shared` crée une **classe partagée**, utilisée pour n'instancier que des objets partagés. Pour plus d'informations, reportez-vous au paragraphe [Classes partagées](#shared-classes).
 
-Using the `singleton` keyword creates a **singleton**, used to create a single instance of the class. A `session singleton` creates a single instance per session. Pour plus d'informations, référez-vous au paragraphe [Classes singleton](#singleton-classes).
+L'utilisation du mot-clé `singleton` crée un **singleton**, utilisé pour créer une seule instance de la classe. Un `singleton session` crée une seule instance par session. Pour plus d'informations, référez-vous au paragraphe [Classes singleton](#singleton-classes).
 
 #### Exemple
 

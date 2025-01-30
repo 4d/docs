@@ -99,7 +99,7 @@ The object returned by **Compile project** has up to three properties:
 | symbols.methods\[\].params       | Collection          | Collection of parameter types (Value type numerical codes)                                                            |
 | symbols.methods\[\]. threadSafe  | Boolean             | Indicates if this method is thread safe                                                                                                  |
 
-Pour plus d'informations, voir [Outils de compilation](../Projet/compiler.md#compilation-tools).
+Pour plus d'informations, voir [Outils de compilation](../Project/compiler.md#compilation-tools).
 
 ###### variable objects
 

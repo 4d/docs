@@ -3,6 +3,14 @@ id: updates
 title: Notas de lançamento
 ---
 
+## 4D 20 R9
+
+Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-v20-R9/), the blog post that lists all new features and enhancements in 4D 20 R9.
+
+#### Destaques
+
+- Support of [session tokens](../WebServer/sessions.md#session-token-otp) handled with [`Session.createOTP()`](../API/SessionClass.md#createotp) and [`Session.restore()`](../API/SessionClass.md#restore) new functions.
+
 ## 4D 20 R8
 
 Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R8/), the blog post that lists all new features and enhancements in 4D 20 R8.

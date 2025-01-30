@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 #### Descrição
 
-<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
+<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
 
 In the *form* parameter, you can pass:
 
@@ -114,7 +114,7 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 
 **Print form** gera apenas um evento [`On Printing Detail`](../Events/onPrintingDetail.md) para o método formulário.
 
-**4D Server:** This command can be executed on 4D Server within the framework of a stored procedure. In this context:
+**4D Server:** This command can be executed on 4D Server within the framework of a stored procedure. Neste contexto:
 
 - Make sure that no dialog box appears on the server machine (except for a specific requirement).
 - In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
