@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Nota:** Esse comando usa o motor de renderização web embebido.<!-- END REF--> .
 
-No objeto *parâmetros*, pasesqualquer dos atributos opcionais abaixo para a área web. Estas propiedades estarão disponíveis através do comando [This ](this.md) dentro do método onEvent e fazem referência à instância: 
+No objeto *parâmetros*, pasesqualquer dos atributos opcionais abaixo para a área web. Estas propiedades estarão disponíveis através do comando [This ](../commands/this.md) dentro do método onEvent e fazem referência à instância: 
 
 | **Propriedade <br/>** | **Tipo <br/>** | **Descrição <br/>**                                                                                                                                                                                                                                                                                                                           |
 | ----------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -27,7 +27,7 @@ Se especificar o parâmetro *processo*, a tecla foi enviada ao processo cujo nú
 
 #### Exemplo 
 
-Ver exemplo do comando [Process number](process-number.md).
+Ver exemplo do comando [Process number](../commands/process-number.md).
 
 #### Ver também 
 

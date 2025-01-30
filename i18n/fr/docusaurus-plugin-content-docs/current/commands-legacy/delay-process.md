@@ -32,7 +32,7 @@ Reportez-vous aux exemples de la section *Verrouillage d'enregistrements*.
 
 #### Exemple 2 
 
-Reportez-vous à l'exemple de la fonction [Process number](process-number.md).
+Reportez-vous à l'exemple de la fonction [Process number](../commands/process-number.md).
 
 #### Voir aussi 
 

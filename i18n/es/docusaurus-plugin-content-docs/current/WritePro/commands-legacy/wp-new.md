@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.WP New.Summary-->El comando **WP New** crea y devuelve un objeto 4D Write Pro.<!-- END REF--> El objeto devuelto es un documento completo que se puede pasar al comando [WP INSERT DOCUMENT](../commands/wp-insert-document.md), por ejemplo.
+<!--REF #_command_.WP New.Summary-->El comando **WP New** crea y devuelve un objeto 4D Write Pro.<!-- END REF--> El objeto devuelto es un documento completo que se puede pasar al comando [WP INSERT DOCUMENT](../commands/wp-insert-document-body.md), por ejemplo.
 
 Por defecto, si se omite el parámetro *fuente*, el comando devuelve un objeto 4D Write Pro vacío.
 
@@ -118,4 +118,4 @@ Se ha definido un documento de plantilla con diferentes partes con formato previ
 #### Ver también 
 
 [WP Import document](../commands/wp-import-document.md)  
-[WP INSERT DOCUMENT](../commands/wp-insert-document.md)  
+[WP INSERT DOCUMENT](../commands/wp-insert-document-body.md)  

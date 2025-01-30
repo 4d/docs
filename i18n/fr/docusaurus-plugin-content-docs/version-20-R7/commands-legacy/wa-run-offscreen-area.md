@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Note** : Cette commande utilise le moteur de rendu web intégré.
 
-Dans l'objet *paramètres*, passez l'un des propriétés optionnelles suivantes pour la zone web. Ces propriétés seront disponibles via la commande [This](this.md) dans la méthode onEvent et référencent cette instance :
+Dans l'objet *paramètres*, passez l'un des propriétés optionnelles suivantes pour la zone web. Ces propriétés seront disponibles via la commande [This](../commands/this.md) dans la méthode onEvent et référencent cette instance :
 
 | **Propriété**    | **Type**               | **Description**                                                                                                                                                                                                                                                                                                                                                                               |
 | ---------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -92,7 +92,7 @@ La variable système OK est définie sur 0 si le timeout a été atteint ou si l
 
 #### Voir aussi 
 
-[FORM Event](form-event.md)  
+[FORM Event](../commands/form-event.md)  
 *Gestion programmée des zones Web*  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
 
