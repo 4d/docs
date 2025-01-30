@@ -86,7 +86,7 @@ This feature creates a `.4dz`file within a `Compiled Database/<project name>` fo
 
 `/Compiled Database/MyProject/MyProject.4dz`
 
-Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar. Os arquivos .4dz podem ser usados pelo 4D Server, 4D Volume Desktop (aplicações mesclados) e 4D.
+Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar.
 
 > Ao gerar arquivos .4dz, 4D usa um formato zip padrão **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. Se você não quiser usar esse formato padrão, adicione a chave `UseStandardZipFormat` XML com o valor `False` no arquivo [`buildApp.4DSettings`](#build-application-settings) (para obter mais informações, consulte o manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
 
@@ -138,7 +138,7 @@ Para construir uma aplicação independente, você deve primeiro designar a past
 * *Windows* - a pasta contém o 4D Volume Desktop.4DE, 4D Volume Desktop.RSR, bem como vários arquivos e pastas necessários para sua operação. Esses itens devem ser colocados no mesmo nível da pasta selecionada.
 * *macOS* - 4D Volume Desktop é fornecido na forma de um pacote de software estruturado que contém vários arquivos genéricos e pastas.
 
-Clique no botão **[...]** e use *Procurar pasta* para localizar o aplicativo 4D Server No macOS, deve selecionar o pacote 4D Server diretamente. Uma caixa de diálogo aparece permitindo que você designe a pasta 4D Volume Desktop (Windows) ou pacote (macOS).
+Para selecionar a pasta Desktop de volume 4D, clique no botão **[...]**. Uma caixa de diálogo aparece permitindo que você designe a pasta 4D Volume Desktop (Windows) ou pacote (macOS).
 
 Depois que a pasta for selecionada, o nome completo do caminho será exibido e, se realmente conter 4D Volume Desktop, a opção para a construção de uma aplicação executável é ativada.
 
@@ -180,7 +180,7 @@ Ao criar um aplicativo autônomo, o 4D copia o conteúdo da pasta 4D Volume Desk
 * Instalar uma versão 4D Volume Desktop correspondente a um idioma específico;
 * Adicionar uma pasta personalizada *PlugIns*;
 * Construir um pacote de projeto
-> Construir um pacote de projeto > No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. Para modificá-lo, primeiro é preciso exibir seu conteúdo (**Control+clique** no ícone).
+> Construir um pacote de projeto > Construir um pacote de projeto > No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. Para modificá-lo, primeiro é preciso exibir seu conteúdo (**Control+clique** no ícone).
 
 #### Localização dos arquivos da Web
 
@@ -240,7 +240,7 @@ Marque esta opção para gerar a parte do servidor da sua aplicação durante a 
 
 #### Localização do 4D Server
 
-Para selecionar a pasta Desktop de volume 4D, clique no botão **[...]**. Uma caixa de diálogo aparece permitindo que você designe a pasta 4D Volume Desktop (Windows) ou pacote (macOS).
+Clique no botão **[...]** e use *Procurar pasta* para localizar o aplicativo 4D Server No macOS, deve selecionar o pacote 4D Server diretamente. Uma caixa de diálogo aparece permitindo que você designe a pasta 4D Volume Desktop (Windows) ou pacote (macOS).
 
 #### Versão atual
 
@@ -378,7 +378,7 @@ A pasta `<ApplicationName>Cliente` contém a porção do cliente do aplicativo c
 
 O conteúdo dessas pastas varia dependendo da plataforma atual:
 
-* *Windows* - Cada pasta contém o arquivo executável do aplicativo, chamado `<ApplicationName>Cliente. xxeque` para a parte do cliente e o servidor `<ApplicationName>. xe` para a parte do servidor bem como os correspondentes arquivos .rsr. As pastas também contêm vários arquivos e pastas necessários para que os aplicativos funcionem e itens personalizados que podem estar na pasta de Volume 4D e no Servidor 4D.
+* Se você quer integrar outros plugins ou componentes na aplicação executável, você só precisa colocá-los em uma pasta **PlugIns** ou **Components** ao lado da aplicação 4D Volume Desktop ou ao lado da aplicação 4D Server O mecanismo para copiar o conteúdo da pasta do aplicativo de origem (ver [Personalizando a pasta desktop de volume 4D](#customizing-4d-volume-desktop-folder)) pode ser usado para integrar qualquer tipo de arquivo na aplicação executável. O mecanismo para copiar o conteúdo da pasta do aplicativo de origem (ver [Personalizando a pasta desktop de volume 4D](#customizing-4d-volume-desktop-folder)) pode ser usado para integrar qualquer tipo de arquivo na aplicação executável.
 * *macOS* - Cada pasta contém apenas o pacote de aplicação, chamado `<ApplicationName> Client` para a parte do cliente e `<ApplicationName> Server` para a parte do servidor. Cada pacote contém todos os itens necessários para que a aplicação funcione. No macOS, inicie um pacote fazendo duplo clique no mesmo.
 
  > Os pacotes macOS construídos contêm os mesmos itens que as subpastas do Windows. Você pode exibir seu conteúdo (**Control+click** no ícone para poder modificá-los.
@@ -427,7 +427,7 @@ O cenário básico é o seguinte:
 * a chave `PublishName` não foi copiada no *info.plist* do cliente mesclado
 * Se o aplicativo de usuário único não tiver uma pasta "Dados padrão", o cliente mesclado será executado sem dados.
 
-Atualização automática de 4D Server ([Current version](#current-version), comando `SET UPDATE FOLDER` ...) com aplicação monousuário com aplicação remoto padrão Em conexão, o aplicativo de usuário único compara sua chave `Atuais` com o intervalo de versão do 4D Server Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local. Em conexão, o aplicativo de usuário único compara sua chave `Atuais` com o intervalo de versão do 4D Server Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local.
+Atualização automática de 4D Server ([Current version](#current-version), comando `SET UPDATE FOLDER` ...) com aplicação monousuário com aplicação remoto padrão Em conexão, o aplicativo de usuário único compara sua chave `Atuais` com o intervalo de versão do 4D Server Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local. Em conexão, o aplicativo de usuário único compara sua chave `Atuais` com o intervalo de versão do 4D Server Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local. Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local.
 
 ### Personalização dos nomes da pasta de cache cliente e/ou servidor
 
@@ -584,11 +584,11 @@ Para obter mais informações sobre o conceito de notarização, consulte [nesta
 * **macOs** - Ao construir uma aplicação com duplo clique, 4D lida com a personalização do ícone. Para fazer isso, você deve criar um arquivo de ícone (tipo de icns), antes de criar o arquivo do aplicativo, e colocá-lo ao lado da pasta do projeto.
 > A Apple, Inc. fornece uma ferramenta específica para construir arquivos de ícones *icns* (para mais informações, consulte a documentação da [Apple](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
 
- Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão *.ico*. 4D leva este arquivo automaticamente em conta ao construir um aplicativo clicável duplo.
+ Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão *.icns*. 4D leva automaticamente este arquivo em conta ao construir o aplicativo clicável duplo (o arquivo *.icns* é renomeado *ApplicationName.
 
 * **Windows** - Ao construir uma aplicação clicável e dupla, o 4D lida com a personalização do seu ícone. Para fazer isso, você deve criar um arquivo de ícone (*. extensão co* , antes de construir o arquivo do aplicativo e colocá-lo ao lado da pasta do projeto.
 
- Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão *.icns*. 4D leva automaticamente este arquivo em conta ao construir o aplicativo clicável duplo (o arquivo *.icns* é renomeado *ApplicationName.</p></li> </ul>
+ Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão *.ico*. 4D leva este arquivo automaticamente em conta ao construir um aplicativo clicável duplo.
 
 Você também pode definir as [chaves XML ](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) específicas no arquivo buildApp.4DSettings para designar cada ícone a ser usado. Estão disponíveis as seguintes chaves:
 
