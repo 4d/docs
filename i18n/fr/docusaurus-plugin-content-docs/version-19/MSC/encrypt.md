@@ -50,7 +50,7 @@ Pour des raisons de sécurité, toutes les opérations de maintenance liées au 
 - Si la clé de chiffrement des données n'est pas identifiée, vous devez la fournir. La boîte de dialogue suivante s'affiche : ![](../assets/en/MSC/MSC_encrypt7.png)
 
 À ce stade, deux options s'offrent à vous :
-- entrer la phrase secrète actuelle(2) et cliquer sur **OK**. OU
+- entrer la phrase secrète actuelle(2) et cliquer sur **OK**. OR
 - connecter un appareil tel qu'une clé USB et cliquer sur le bouton **Scanner les disques**.
 
 (1) Le trousseau de 4D stocke toutes les clés de chiffrement de données valides saisies durant la session d'application session.   
