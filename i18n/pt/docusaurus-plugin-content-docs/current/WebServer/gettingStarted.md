@@ -263,7 +263,7 @@ End if
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 ```
 
-> Using such URLs is not recommended, it is only presented here to keep the example simple. A more realistic login request must be handled through a web form and a POST request. Consulte [esta página](sessions.md#example) para ver un ejemplo de formulario POST.
+> Usar tais URLs não é recomendado, só é apresentado aqui para manter o exemplo simples. Uma solicitação de login mais realista deve ser tratada através de um formulário web e uma solicitação POST. Consulte [esta página](sessions.md#example) para ver un ejemplo de formulario POST.
 
 Em seguida, será registado para a sessão:
 
