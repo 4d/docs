@@ -206,6 +206,7 @@ SORT ARRAY($ArrPtr->;>) // 配列の並べ替え
   これを大文字に変換します。
   //$changeLow – Pointer to a string field or variable. これを小文字に変換します。
  これを小文字に変換します。
+ これを小文字に変換します。
  #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)
