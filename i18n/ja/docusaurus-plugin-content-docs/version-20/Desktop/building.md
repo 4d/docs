@@ -86,7 +86,7 @@ title: アプリケーションビルド
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
-.4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz files can be used by 4D Server, 4D Volume Desktop (merged applications), and 4D. 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
+.4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz files can be used by 4D Server, 4D Volume Desktop (merged applications), and 4D. 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
 > .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
 
@@ -180,7 +180,7 @@ It is possible to [automate the update of merged single-user applications](#auto
 * 特定の言語バージョンに対応する 4D Volume Desktop をインストールする
 * カスタムプラグインを *Plugins* フォルダーに置く
 * *Resources* フォルダーの内容をカスタマイズする
-> *Resources* フォルダーの内容をカスタマイズする > macOS では、4D Volume Desktop はソフトウェアパッケージ形式で提供されています。 内容を変更するにはパッケージを開きます (アイコンを **Control+クリック**)。
+> *Resources* フォルダーの内容をカスタマイズする > *Resources* フォルダーの内容をカスタマイズする > macOS では、4D Volume Desktop はソフトウェアパッケージ形式で提供されています。 内容を変更するにはパッケージを開きます (アイコンを **Control+クリック**)。
 
 #### Webファイルの場所
 
@@ -230,7 +230,7 @@ A stand-alone application requires a deployment license. It can be embedded at b
 ビルドされたクライアント/サーバーアプリケーションは起動や接続処理が簡易です:
 
 * サーバーを起動するには、サーバーアプリケーションをダブルクリックします。 プロジェクトファイルを選択する必要はありません。
-* クライアントを起動するにも、同様にクライアントアプリケーションをダブルクリックします。すると、サーバーアプリケーションへの接続が直接おこなわれるため、 すると、サーバーアプリケーションへの接続が直接おこなわれるため、 接続ダイアログでサーバーを選択する必要はありません。 クライアントは接続対象のサーバーを名称 (サーバーが同じサブネットワーク上にある場合)、あるいはIPアドレスによって認識します。 IPアドレスの指定は buildapp.4DSettings ファイル内の `IPAddress` XMLキーを使用して設定されます。 接続が失敗した場合のために、代替機構を実装することができます。 これについては [クライアント接続の管理](#クライアント接続の管理) の章で説明されています。 また、**Option** (macOS) や **Alt** (Windows) キーを押しながらクライアントアプリケーション起動すると、標準の接続ダイアログを強制的に表示させることもできます。 サーバーアプリケーションには、対応するクライアントアプリケーションのみが接続できます。 標準の 4Dアプリケーションを使用してサーバーアプリケーションに接続を試みると、接続は拒否されエラーが返されます。
+* クライアントを起動するにも、同様にクライアントアプリケーションをダブルクリックします。 すると、サーバーアプリケーションへの接続が直接おこなわれるため、 すると、サーバーアプリケーションへの接続が直接おこなわれるため、 接続ダイアログでサーバーを選択する必要はありません。 すると、サーバーアプリケーションへの接続が直接おこなわれるため、 接続ダイアログでサーバーを選択する必要はありません。 クライアントは接続対象のサーバーを名称 (サーバーが同じサブネットワーク上にある場合)、あるいはIPアドレスによって認識します。 IPアドレスの指定は buildapp.4DSettings ファイル内の `IPAddress` XMLキーを使用して設定されます。 接続が失敗した場合のために、代替機構を実装することができます。 これについては [クライアント接続の管理](#クライアント接続の管理) の章で説明されています。 また、**Option** (macOS) や **Alt** (Windows) キーを押しながらクライアントアプリケーション起動すると、標準の接続ダイアログを強制的に表示させることもできます。 サーバーアプリケーションには、対応するクライアントアプリケーションのみが接続できます。 標準の 4Dアプリケーションを使用してサーバーアプリケーションに接続を試みると、接続は拒否されエラーが返されます。
 * クライアント側を [ネットワーク越しに自動更新](#サーバーアプリケーション内部のクライアントアプリケーションのコピー) するようにクライアント/サーバーアプリケーションを設定することも可能です。 クライアントアプリケーションは最初のバージョンのみビルドして配布する必要があります。 以降のアップデートは、自動アップデート機構を利用することで管理します。
 * It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4dv20/help/command/en/page1291.html) and [RESTART 4D](https://doc.4d.com/4dv20/help/command/en/page1292.html).
 
@@ -584,11 +584,11 @@ Apple の公証サービスを利用するのに必要な条件を満たすた�
 * **macOS** - アプリケーションビルドの際にアイコンをカスタマイズするには、 icns タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。 icns タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。
 > Apple, Inc. より、*icns* アイコンファイルを作成するツールが提供されています。 (詳細については、[Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2) を参照してください。
 
- アイコンファイルの名前は、プロジェクトファイル名 + "*.ico*" 拡張子でなければなりません。 4Dは自動でこのファイルを認識し、アイコンとして使用します。
+ アイコンファイルの名前は、プロジェクトファイル名 + "*.icns*" 拡張子でなければなりません。 4Dは自動でこのファイルを認識し、アイコンとして使用します。
 
 * **Windows** - アプリケーションビルドの際にアイコンをカスタマイズするには、 *.ico* タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。 *.ico* タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。
 
- アイコンファイルの名前は、プロジェクトファイル名 + "*.icns*" 拡張子でなければなりません。 4Dは自動でこのファイルを認識し、アイコンとして使用します。
+ アイコンファイルの名前は、プロジェクトファイル名 + "*.ico*" 拡張子でなければなりません。 4Dは自動でこのファイルを認識し、アイコンとして使用します。
 
 また、buildApp.4DSettings ファイルにて、使用すべきアイコンを [XML keys](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-BuildApplication.100-4670981.ja.html) (SourcesFiles の項参照)によって指定することも可能です。 次のキーが利用できます:
 
@@ -679,7 +679,7 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 組み込みクライアントアプリの接続プロシージャーは、専用サーバーが使用不可能な場合にも柔軟に対応します。 4Dクライアントアプリのスタートアップシナリオは、次のとおりです:
 
-1. クライアントアプリ内の "EnginedServer.4DLink" ファイルに有効な接続情報が保存されていた場合、クライアントアプリは指定されたサーバーアドレスへ接続を試みます。    
+1. クライアントアプリ内の "EnginedServer.4DLink" ファイルに有効な接続情報が保存されていた場合、クライアントアプリは指定されたサーバーアドレスへ接続を試みます。     
    または  
    クライアントアプリは検索サービスを使用してサーバーへの接続を試みます (同じサブネット内に公開されたサーバー名に基づいて検索します)。
 
@@ -712,10 +712,10 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 組み込みクライアントアプリがサーバーに接続できない場合、標準のサーバー選択ダイアログボックスを表示するかどうかは設定しておくことができます。 この設定は、アプリケーションをビルドするマシン上の [ServerSelectionAllowedXML](https://doc.4d.com/4Dv18/4D/18/ServerSelectionAllowed.300-4671093.ja.html) キーの値によって制御されます:
 
-* **エラーメッセージを表示し、サーバー選択ダイアログボックスへのアクセスを可能にする**。 ユーザーは **選択...** ボタンをクリックすることによって、サーバー選択ウィンドウにアクセスできます。 `ServerSelectionAllowed`: **True** 値 ![](../assets/en/Project/connect1.png)
+* **エラーメッセージを表示し、サーバー選択ダイアログボックスを表示させない**。 ユーザーは **選択...** ボタンをクリックすることによって、サーバー選択ウィンドウにアクセスできます。    
+  `ServerSelectionAllowed`: **False** 値、またはキーを省略 ![](../assets/en/Project/connect1.png)
 
-* **エラーメッセージを表示し、サーバー選択ダイアログボックスを表示させない**。 ユーザーは **選択...** ボタンをクリックすることによって、サーバー選択ウィンドウにアクセスできます。   
-  `ServerSelectionAllowed`: **False** 値、またはキーを省略 ![](../assets/en/Project/connect2.png) ![](../assets/en/Project/connect3.png)
+* **エラーメッセージを表示し、サーバー選択ダイアログボックスへのアクセスを可能にする**。 ユーザーは **選択...** ボタンをクリックすることによって、サーバー選択ウィンドウにアクセスできます。 `ServerSelectionAllowed`: **True** 値 ![](../assets/en/Project/connect2.png) ![](../assets/en/Project/connect3.png)
 
 ## サーバーまたはシングルユーザーアプリケーションの自動更新
 
