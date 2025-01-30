@@ -86,7 +86,7 @@ This feature creates a *.4dz* file within a `Compiled Database/<project name>` f
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
-Un fichier .4dz est essentiellement une version compressée du dossier du projet. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet. .4dz files can be used by 4D Server, 4D Volume Desktop (merged applications), and 4D.
+Un fichier .4dz est essentiellement une version compressée du dossier du projet. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
 
 > Lors de la génération de fichiers .4dz, 4D utilise par défaut un format zip **standard**. L'avantage de ce format est qu'il est facilement lisible par tout outil de dézippage. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
 
@@ -180,7 +180,7 @@ Lors de la construction de l’application exécutable, 4D duplique le contenu d
 * Installer une version de 4D Volume Desktop correspondant à une langue spécifique ;
 * Ajouter un dossier *PlugIns* personnalisé ;
 * Personnaliser le contenu du dossier *Resources*.
-> Les progiciels macOS générés contiennent les mêmes éléments que les sous-dossiers Windows. Pour les visualiser, vous devrez tout d’abord afficher leur contenu (effectuez Control+clic sur leur icône) afin de pouvoir les modifier.
+> Les progiciels macOS générés contiennent les mêmes éléments que les sous-dossiers Windows. Pour le modifier, vous devez d'abord afficher son contenu (**Contrôle+clic** sur l'icône).
 
 #### Emplacements des fichiers Web
 
@@ -381,7 +381,7 @@ Le contenu de ces dossiers diffère en fonction de la plate-forme courante :
 * *Windows* - Chaque dossier contient le fichier exécutable de l'application, nommé `<ApplicationName>Client.exe` pour la partie client et `<ApplicationName>Server.exe` pour la partie serveur ainsi que les fichiers .rsr correspondants. Les dossiers contiennent également divers fichiers et dossiers nécessaires au fonctionnement des applications et les éléments personnalisés éventuellement placés dans les dossiers 4D Volume Desktop et 4D Server d’origine.
 * *macOS* - Chaque dossier contient uniquement le paquet de l'application, nommé `<ApplicationName> Client` pour la partie client et `<ApplicationName> Server` pour la partie serveur. Chaque progiciel contient tous les éléments nécessaires à son fonctionnement. Sous macOS, un progiciel est lancé via un double-clic.
 
- > Les progiciels macOS générés contiennent les mêmes éléments que les sous-dossiers Windows. Pour le modifier, vous devez d'abord afficher son contenu (**Contrôle+clic** sur l'icône).
+ > > Les progiciels macOS générés contiennent les mêmes éléments que les sous-dossiers Windows. Pour les visualiser, vous devrez tout d’abord afficher leur contenu (effectuez Control+clic sur leur icône) afin de pouvoir les modifier.
 
 Si vous avez coché l'option "Autoriser la mise à jour automatique de l'application cliente", un sous-dossier supplémentaire appelé *Upgrade4DClient* est ajouté dans le dossier/package `<ApplicationName>Server`. Ce sous-dossier contient l’application cliente au format macOS et/ou Windows sous forme de fichier compressé. Ce fichier est utilisé lors de la mise à jour automatique des applications clientes.
 
