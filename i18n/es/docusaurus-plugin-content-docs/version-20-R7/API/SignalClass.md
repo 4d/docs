@@ -126,7 +126,7 @@ Esta propiedad está en **lectura-escritura**.
 
 #### Descripción
 
-Lanzamiento Cuando se crea la señal, `.signaled` es **False**. Se convierte en **True** cuando la función `.trigger( )` se llama en el objeto.
+Lanzamiento Lanzamiento Cuando se crea la señal, `.signaled` es **False**. Se convierte en **True** cuando la función `.trigger( )` se llama en el objeto.
 
 Esta propiedad es de **solo lectura**.
 
