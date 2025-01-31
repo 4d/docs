@@ -4,30 +4,30 @@ slug: overview
 title: Servidor Web
 ---
 
-4D in local mode, 4D in remote mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
+4D no modo local, 4D em modo remoto e 4D Server incluem um mecanismo de servidor web (também conhecido como servidor http) que permite a você projetar e publicar poderosas aplicações web que podem aproveitar ao máximo seus bancos de dados 4D.
 
 ## Monitorização fácil
 
-Você pode iniciar ou parar a publicação da aplicação web a qualquer momento. To do so, you just need to select a menu command or execute a single line of code.
+Você pode iniciar ou parar a publicação da aplicação web a qualquer momento. Para fazer isso, você só precisa selecionar um comando de menu ou executar uma única linha de código.
 
 Monitorar o servidor 4D é fácil e pode ser feito usando a janela de administração do Servidor 4D ou através de [URLs especiais](webServerAdmin.md#administration-urls).
 
 ## Pronto a usar
 
-The 4D web server automatically creates a default root folder and a default home page for an instantaneous availability.
+O servidor 4D cria automaticamente uma pasta raiz padrão e uma página inicial padrão para uma disponibilidade instantânea.
 
 ## Segurança
 
-A segurança dos dados está presente em todos os estágios das implementações do servidor web 4D. Security levels are scalable and default settings usually select the most secure options. A segurança do servidor web 4D é baseada nos seguintes elementos:
+A segurança dos dados está presente em todos os estágios das implementações do servidor web 4D. Os níveis de segurança são escalonáveis e as configurações padrão geralmente selecionam as opções mais seguras. A segurança do servidor web 4D é baseada nos seguintes elementos:
 
-* Extended support of the [**TLS Protocol (HTTPS)**](../Admin/tls.md),
+* Suporte estendido do [**protocolo TLS (HTTPS)**](../Admin/tls.md),
 
 * **Autenticação**: recursos de autenticação [flexíveis e personalizáveis](authentication.md) com base em configurações built-it bem como métodos de banco de dados ([`On Web Authentication`](authentication.md#on-web-authentication) para o servidor web e [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) para o servidor REST),
 
-* **Control of exposed contents**: only elements that you expose explicitely can be available from direct web or REST requests. É necessário declarar:
+* **Controle do conteúdo exposto**: apenas elementos que você expõe explicitamente podem estar disponíveis a partir de solicitações web diretas ou REST. É necessário declarar:
   * [Métodos projeto](templates.md#allowing-project-methods) expostos por meio de solicitações HTTP
-  * [ORDA functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
-  * [Tables and fields](REST/configuration.md#exposing-tables-and-fields) that you don't want to be available to REST requests.
+  * Funções [ORDA](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) são expostas através de solicitações REST
+  * [Tabelas e campos](REST/configuration.md#exposing-tables-and-fields) que você não quer estar disponível para solicitações REST.
 
 * **Sandboxing** através da definição de uma pasta [HTML raiz](webServerConfig.md#root-folder) por padrão
 
@@ -36,26 +36,26 @@ A segurança dos dados está presente em todos os estágios das implementações
 
 ## Sessões Usuário
 
-The 4D web server includes complete automatic features for easily managing [web sessions](sessions.md) (user sessions) based on cookies.
+O servidor Web 4D inclui recursos automáticos para gerenciar facilmente [sessões Web](sessions.md) (sessões usuário) com base em cookies.
 
 ## Ponto de acesso para solicitações REST
 
-The 4D web server allows accessing data stored in your 4D applications through REST requests. REST requests provide direct access to any database operation such as adding, reading, editing, ordering, or searching data.
+O servidor web 4D permite acessar os dados armazenados em suas aplicações 4D através de solicitações REST. Solicitações REST fornecem acesso direto a qualquer operação de banco de dados, como adicionar, ler, editar, ordenar ou pesquisar dados.
 
-REST requests are detailed in the [REST server](REST/gettingStarted.md) section.
+As solicitações REST são detalhadas na seção [Servidor REST](REST/gettingStarted.md).
 
 ## Extensão dos parâmetros
 
-The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the `WEB SET OPTION` command.
+A configuração do servidor Web 4D é definida através de um conjunto abrangente de configurações ao nível da aplicação que também pode ser personalizado para a sessão usando as propriedades do objeto `webServer` ou o comando `WEB SET OPTION`.
 
 ## Modelos e URLs
 
-The 4D web server supports access to data stored in your 4D applications through template pages and specific URLs.
+O servidor web 4D suporta acesso a dados armazenados em suas aplicações 4D através de páginas de modelos e URLs específicas.
 
-* Template pages contain [special tags](templates.md) that initiate web server processing at the time when they are sent to browsers.
+* As páginas de modelo contêm [etiquetas especiais](templates.md) que iniciam o processamento de servidor web no momento em que são enviadas para os navegadores.
 
 * [URLs específicos](httpRequests.md) permitem que 4D seja chamado para executar qualquer ação; esses URLs também podem ser usados como ações de formulário para acionar o processamento quando o usuário publica formulários HTML.
 
 ## Métodos banco de dados dedicados
 
-`On Web Authentication`, `On Web Connection`, as well as `On REST Authentication` database methods are the entry points of requests in the web server; they can be used to evaluate and route any type of request.
+Os métodos banco de dados `On Web Authentication`, `On Web Connection`, e `On REST Authentication` são os pontos de entrada de solicitações no servidor web; eles podem ser usados para avaliar e rotear qualquer tipo de pedido.
