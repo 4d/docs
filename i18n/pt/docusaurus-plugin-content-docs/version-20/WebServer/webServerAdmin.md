@@ -3,15 +3,15 @@ id: webServerAdmin
 title: Administração
 ---
 
-4D provides several integrated tools to start, stop, or monitor the integrated web server.
+4D fornece várias ferramentas integradas para iniciar, parar ou monitorar o servidor web integrado.
 
 
 ## Iniciando o servidor Web 4D
 
-> To be able to launch the web server of 4D or 4D Server, you must have a "4D Web Application" license. Para obter mais informações, consulte o site [4D](https://www.4d.com).
+> Para poder iniciar o servidor web de 4D ou 4D Server, você deve ter uma licença "4D Web Application". Para obter mais informações, consulte o site [4D](https://www.4d.com).
 
 
-A 4D project can start and monitor a web server for the main (host) application as well as for each hosted component.
+Um projeto 4D pode iniciar e monitorar um servidor web para a aplicação (host) principal, bem como para cada componente hospedado.
 
 O servidor web principal de 4D pode ser iniciado de diferentes maneiras:
 
@@ -19,43 +19,43 @@ O servidor web principal de 4D pode ser iniciado de diferentes maneiras:
     *   4D: **Execução\>iniciar servidor Web**<br/>![](../assets/en/WebServer/start1.png)
     *   4D Server: botão **Iniciar servidor HTTP** da página Servidor HTTP<br/>![](../assets/en/WebServer/start2.png)
 
-*   Inicia automaticamente cada vez que a aplicação 4D é aberta. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
+*   Inicia automaticamente cada vez que a aplicação 4D é aberta. Para fazer isso, exiba a página **Web\/Configuração** nas Propriedades e selecione a caixa de seleção **Iniciar Web Server na inicialização**:<br/>![](../assets/en/WebServer/config.png)
 
-*   Programmatically, by calling the [`webServer.start()`](API/WebServerClass.md#start) function or `WEB START SERVER` command.
+*   Por programação, chamando o comando [`webServer.start()`](API/WebServerClass.md#start) ou `WEB START SERVER`.
 
-The web server of any component can be launched by calling the [`webServer.start()`](API/WebServerClass.md#start) function on the component's web server object.
-> You do not need to relaunch the 4D application to start or stop the web server.
+O servidor web de qualquer componente pode ser lançado chamando a função [`webServer.start()`](API/WebServerClass.md#start) no objeto servidor web do componente.
+> Você não precisa reiniciar a aplicação 4D para iniciar ou parar o servidor web.
 
 ## Parando o servidor Web 4D
 
 O servidor web principal de 4D pode ser parado de diferentes maneiras:
 
-*   Using the **Run\>Stop Web Server** menu of 4D or the **Stop HTTP server** button of the HTTP Server page of 4D Server (both items show **Start...** when the server is not already started).
+*   Usando o menu 4D **Executar\>Parar Servidor Web** ou o botão **Parar servidor HTTP** na página Servidor HTTP de 4D Server (ambos os itens mostram **Iniciar...** quando o servidor não estiver iniciado).
 
-*   Programmatically, by calling the [`webServer.stop()`](API/WebServerClass.md#stop) function or `WEB STOP SERVER` command.
+*   Por programação, chamando a função [`webServer.stop()`](API/WebServerClass.md#stop) ou `WEB STOP SERVER`.
 
-The web server of any component can be stopped by calling the `webServer.stop()` function on the component's web server object.
+O servidor web de qualquer componente pode ser interrompido chamando a função `webServer.stop()` no objeto servidor web do componente.
 
 
-## Teste do Servidor Web 4D
+## Testar o Web server
 
-The **Test Web Server** command can be used to make sure the built-in web server is functioning correctly (4D only). This command is accessible in the **Run** menu when the web server is launched:
+O comando de menú **Testar o Web server** pode ser usado para garantir que o servidor interno esteja funcionando corretamente (apenas 4D). Este comando é acessível no menu **Executar** quando for lançado o servidor web:
 
 ![](../assets/en/WebServer/test1.png)
 
 
-When you select this command, the home page of the website published by the 4D application is displayed in a window of your default web browser:
+Quando seleciona este comando, a página de início do site web publicado pela aplicação 4D se mostra em uma janela de seu navegador web por padrão:
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
 
-This command lets you verify that the web server, home page display, etc. work correctly. The page is called using the *localhost* URL, which is the standard shortcut designating the IP address of the machine on which the web browser is executed. O comando considera o número da [porta de publicação TCP](#http-port) especificado nos parâmetros.
+Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. A página se chama utilizando o URL *Localhost*, o atalho padrão que designa o endereço IP da máquina onde se executa o navegador. O comando considera o número da [porta de publicação TCP](#http-port) especificado nos parâmetros.
 
 
 
 ## Limpar a cache
 
-At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache).
+A qualquer momento, você pode limpar o cache das páginas e imagens que ele contém (se, por exemplo, você tiver modificado uma página estática e quiser recarregá-la no cache).
 
 Para o fazer, pode:
 
@@ -69,27 +69,27 @@ A cache é então imediatamente limpa.
 
 ## Explorador de execução
 
-The **Watch** page (**Web** heading) in the Runtime Explorer displays web server information, particularly:
+A página **Watch** (ir para **Web**) no Runtime Explorer exibe informações do servidor, particularmente:
 
-*   **Web Cache Usage**: indicates the number of pages present in the web cache as well as its use percentage. This information is only available if the web server is active and if the cache size is greater than 0.
+*   **Uso do cache web**: indica o número de páginas presentes no cache web, bem como sua porcentagem de uso. Esta informação só estará disponível se o servidor web estiver ativo e se o tamanho do cache for maior que 0.
 
-*   **Web Server Elapsed Time**: indicates the duration of use (in hours:minutes:seconds format) of the Web server. Esta informação só está disponível se o servidor Web estiver ativo.
+*   **Tempo decorrido do servidor Web**: indica a duração do uso (em horas:minutos:segundos) do servidor web. Esta informação só está disponível se o servidor Web estiver ativo.
 
-*   **Web Hits Count**: indicates the total number of HTTP requests received since the web server boot, as well as an instantaneous number of requests per second (measure taken between two Runtime Explorer updates). Esta informação só está disponível se o servidor Web estiver ativo.
+*   **Contagem de acessos à web**: indica o número total de solicitações HTTP recebidas desde a inicialização do servidor web, bem como um número instantâneo de solicitações por segundo (medida tomada entre duas atualizações do explorador de execução). Esta informação só está disponível se o servidor Web estiver ativo.
 
 
 
 
 ## URLs de administração
 
-Website administration URLS allow you to control the website published on your server. 4D Web Server accepts four particular URLs: */4DSTATS*, */4DHTMLSTATS*, /*4DCACHECLEAR* and */4DWEBTEST*.
+URLs de administração web permitem que você controle o site publicado no seu servidor. O servidor Web 4D aceita quatro URLs em particular: */4DSTATS*, */4DHTMLSTATS*, /*4DCACHECLEAR* e */4DWEBTEST*.
 
-> */4DSTATS*, */4DHTMLSTATS* and */4DCACHECLEAR* are only available to the Designer and Administrator of the database. If the 4D password system has not been activated, these URLs are available to all the users. /4DWEBTEST está sempre disponível.
+> */4DSTATS*, */4DHTMLSTATS* e */4DCACHECLEAR* só estão disponíveis para o Designer e Administrador do banco de dados. Se o sistema de senha 4D não foi ativado, estas URLs estarão disponíveis para todos os usuários. /4DWEBTEST está sempre disponível.
 
 
 ### /4DSTATS
 
-The **/4DSTATS** URL returns several items of information in an HTML table (displayable in a browser):
+O URL **/4DSTATS** retorna vários itens de informação em uma tabela HTML (exibido em um navegador):
 
 | Elemento                | Descrição                                                    |
 | ----------------------- | ------------------------------------------------------------ |
