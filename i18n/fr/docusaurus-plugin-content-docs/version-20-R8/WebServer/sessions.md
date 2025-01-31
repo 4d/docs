@@ -46,13 +46,13 @@ Le nom du cookie peut être obtenu en utilisant la propriété [`.sessionCookieN
 
 :::
 
-1. Dans chaque requête de client web, le serveur Web vérifie la présence et la valeur du cookie privé "4DSID_*AppName*".
+1. Dans chaque requête de client web, le serveur Web vérifie la présence et la valeur du cookie privé "4DSID__AppName_".
 
 2. Si le cookie a une valeur, 4D recherche la session qui a créé ce cookie parmi les sessions existantes ; si cette session est trouvée, elle est réutilisée pour l'appel.
 
 3. Si la requête du client ne correspond pas à une session déjà ouverte :
 
-- une nouvelle session avec un cookie privé "4DSID_*AppName*" est créée sur le serveur web
+- une nouvelle session avec un cookie privé "4DSID__AppName_" est créée sur le serveur web
 - un nouvel objet `Session` Guest est créé et est dédié à la session web évolutive.
 
 :::note
