@@ -9,7 +9,7 @@ For in-depth information on preemptive process in 4D, please refer to the [Preem
 
 ## Disponibilidade do modo preemptivo para os processos web
 
-The following table indicates whether the preemptive mode is used or is available, depending on the execution context:
+A tabela a seguir indica se o modo preventivo está utilizado ou está disponível, dependendo do contexto de execução:
 
 | 4D Server             | Interpretado ([asociado al depurador](../Debugging/debugging-remote.md)) | Interpretado (não associado ao depurador) | Compilado          |
 | --------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ------------------ |
