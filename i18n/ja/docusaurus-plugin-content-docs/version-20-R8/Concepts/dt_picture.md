@@ -20,7 +20,7 @@ WIC および ImageIO はピクチャー内のメタデータの書き込みを�
 4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドによって返されます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
 多くの [4D ピクチャー管理コマンド](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.ja.html) は Codec ID を引数として受けとることができます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
 4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドによって返されます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
-4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドからピクチャー Codec IDとして返されます。  これは以下の形式で返されます:  これは以下の形式で返されます:  これは以下の形式で返されます:
+4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドからピクチャー Codec IDとして返されます。  これは以下の形式で返されます:  これは以下の形式で返されます:  これは以下の形式で返されます:  これは以下の形式で返されます:
 
 - 拡張子 (例: “.gif”)
 - MIME タイプ (例: “image/jpeg”)
@@ -46,7 +46,7 @@ WIC および ImageIO はピクチャー内のメタデータの書き込みを�
 | リサイズ     | Picture \* Number                           | Picture | 割合によってピクチャーをサイズ変更します。                                                                                                                                                                                                                                                                                                               |
 | 水平スケール   | Picture \*+ Number                          | Picture | 割合によってピクチャー幅をサイズ変更します。                                                                                                                                                                                                                                                                                                              |
 | 垂直スケール   | Picture \*&#124; Number | Picture | 割合によってピクチャー高さをサイズ変更します。                                                                                                                                                                                                                                                                                                             |
-| キーワードを含む | Picture % String                            | Boolean | 文字列が、ピクチャー式に格納されたピクチャーに関連付けられている場合に true を返します。 `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください                                                                                                                          |
+| キーワードを含む | Picture % String                            | Boolean | 文字列が、ピクチャー式に格納されたピクチャーに関連付けられている場合に true を返します。 `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください                                                                                           |
 
 **注 :**
 
