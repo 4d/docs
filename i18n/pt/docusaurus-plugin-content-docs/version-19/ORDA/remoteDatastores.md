@@ -6,14 +6,14 @@ title: Utilizar um datastore remoto
 Um [datastore](dsMapping.md#datastore) exposto em uma aplicação 4D pode ser acessado simultaneamente através de diferentes clientes:
 
 - As aplicações 4D remotas usando ORDA para acessar o datastore principal com o comando `ds`. Note que a aplicação 4D remota ainda pode acessar o banco de dados no modo clássico. Esses acessos são tratados pelo **servidor de aplicações 4D**.
-- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. Esses acessos são transmitidos pelo servidor **HTTP REST**.
+- Outras aplicações 4D (4D remote, 4D Server) abrindo uma sessão no banco de dados remoto através do comando `Open datastore`. Esses acessos são transmitidos pelo servidor **HTTP REST**.
 - As petições 4D for iOS para atualizar aplicações iOS. Esses acessos são transmitidos pelo **servidor HTTP**.
 
 Quando você trabalha com um datastore remoto referenciado por chamadas para o comando `Open datastore`, a conexão entre os processos solicitantes e o datastore remoto é tratada por sessões.
 
 ## Abertura de sessões
 
-When a 4D application (*i.e.* a process) opens an external datastore using the `Open datastore` command, a session in created on the remote datastore to handle the connection. This session is identified using a internal session ID which is associated to the `localID` on the 4D application. Essa sessão gerencia automaticamente o acesso a dados, seleções de entidades ou entidades.
+Quando uma aplicação 4D*(ou seja,* um processo) abre um repositório de dados externo usando o comando `Open datastore`, uma sessão é criada no repositório de dados remoto para lidar com a conexão. Esta sessão é identificada usando um ID de sessão interno associado ao `localID` na aplicação 4D. Essa sessão gerencia automaticamente o acesso a dados, seleções de entidades ou entidades.
 
 O `localID` é local para a máquina que conecta ao datastore remoto, o que significa:
 

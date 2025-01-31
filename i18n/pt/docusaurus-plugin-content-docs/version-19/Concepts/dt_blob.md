@@ -3,7 +3,7 @@ id: blob
 title: BLOB
 ---
 
-O campo, a variável ou a expressão BLOB (Binary Large OBjects) é uma série contígua de bytes que pode ser tratada como um único objeto ou cujos bytes podem ser endereçados individualmente. A BLOB can be empty (null length) or can contain up to 2147483647 bytes (2 GB).
+O campo, a variável ou a expressão BLOB (Binary Large OBjects) é uma série contígua de bytes que pode ser tratada como um único objeto ou cujos bytes podem ser endereçados individualmente. Um BLOB pode estar vazio (comprimento null) ou pode conter até 2147483647 bytes (2 GB).
 
 > Por padrão, 4D define o tamanho máximo de blob para 2 GB, mas este limite de tamanho pode ser menor, dependendo do seu Sistema Operacional e da quantidade de espaço disponível.
 

@@ -58,15 +58,15 @@ Comando `POP3 New transporter` <!-- REF #_command_.POP3 New transporter.Summary 
 
 No parâmetro *server*, passe um objeto contendo as propriedades abaixo:
 
-| *server*                                                                                                                                                                                                                                                                                                                                              | Valor padrão (se omitido)                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                                          | Valor padrão (se omitido)                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                             |
-| .**accessTokenOAuth2**: TextText string representing OAuth 2 authorization credentials. Usado apenas com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for utilizado mas `authenticationMode` for omitido, é utilizado o protocolo OAuth 2 (se permitido pelo servidor). Não devolvido no objecto *[SMTP transporter](#smtptransporterobject)*. | nenhum                                                            |
+| .**accessTokenOAuth2**: Text String representing OAuth 2 authorization credentials. Usado apenas com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for utilizado mas `authenticationMode` for omitido, é utilizado o protocolo OAuth 2 (se permitido pelo servidor). Não devolvido no objecto *[SMTP transporter](#smtptransporterobject)*. | nenhum                                                            |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| o modo de autenticação mais seguro disponível no servidor é usado |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *obrigatório*                                                     |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| nenhum                                                            |
-| **.password** : TextUser password for authentication on the server. Não devolvido no objecto *[SMTP transporter](#smtptransporterobject)*.                                                                                                                                                                                                            | nenhum                                                            |
+| **.password** : Text  User password for authentication on the server. Não devolvido no objecto *[SMTP transporter](#smtptransporterobject)*.                                                                                                                                                                                                      | nenhum                                                            |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                               |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| nenhum                                                            |
 
@@ -275,7 +275,7 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 A função `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->devolve o `Email` objeto correspondente ao *msgNumber* na caixa de correio designada pelo transportador [`POP3`](#pop3-transporter-object)<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
-Passe em *msgNumber* o número da mensagem a recuperar. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) function.
+Passe em *msgNumber* o número da mensagem a recuperar. Este número é retornado na propriedade number pela função [`.getMailInfoList()`](#getmailinfolist).
 
 O método retorna Null se:
 

@@ -12,9 +12,15 @@ title: コンポーネント
 
 ## コンポーネントのインストール
 
-コンポーネントをインストールするには、[プロジェクトの `Components` フォルダー](Project/architecture.md) にコンポーネントファイルをコピーします。 エイリアスまたはショートカットも使用できます。
+To install a component, you simply need to copy the component package folder into the [`Components` folder of the project](Project/architecture.md). エイリアスまたはショートカットも使用できます。
 
 インタープリターモードで動作するホストプロジェクトは、インタープリターまたはコンパイル済みどちらのコンポーネントも使用できます。 コンパイルモードで実行されるホストデータベースでは、インタープリターのコンポーネントを使用できません。 この場合、コンパイル済みコンポーネントのみが利用可能です。
+
+:::note
+
+Interpreted component package folder name must be suffixed ".4dbase".
+
+:::
 
 ## コンポーネントの使い方
 

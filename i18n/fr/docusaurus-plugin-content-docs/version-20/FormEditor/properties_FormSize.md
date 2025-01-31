@@ -63,7 +63,7 @@ Cette valeur détermine également les marges droites des formulaires utilisés 
 
 ## Marge hor.
 
-Value to add (in pixels) to the bottom margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`.
+Valeur à ajouter (en pixels) à la marge droite du formulaire lorsque la [taille du formulaire](#size-based-on) est fixée sur **Taille automatique** ou `\&#060;object name&#062;`.
 
 Cette valeur détermine également les marges supérieures des formulaires utilisés dans l'éditeur d'étiquettes.
 

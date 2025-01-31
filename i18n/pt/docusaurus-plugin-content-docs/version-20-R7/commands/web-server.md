@@ -8,14 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server.Params-->
 
-| Parâmetro | Tipo                          |   | Descrição                                                                                |
-| --------- | ----------------------------- | - | ---------------------------------------------------------------------------------------- |
-| option    | Integer                       | → | Servidor Web a ser obtido (padrão se omitido = `Web server database`) |
-| Resultado | 4D. WebServer | ← | Objeto Web Server                                                                        |
+| Parâmetro | Tipo                          |                             | Descrição                                                                                |
+| --------- | ----------------------------- | --------------------------- | ---------------------------------------------------------------------------------------- |
+| option    | Integer                       | &#8594; | Servidor Web a ser obtido (padrão se omitido = `Web server database`) |
+| Resultado | 4D. WebServer | &#8592; | Objeto Web Server                                                                        |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
 
 <details><summary>História</summary>
 
@@ -57,3 +55,10 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 [WEB Server list](web-server-list.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1674                            |
+| Thread safe    | &amp;cross; |

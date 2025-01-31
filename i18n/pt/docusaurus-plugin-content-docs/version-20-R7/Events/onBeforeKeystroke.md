@@ -3,9 +3,9 @@ id: onBeforeKeystroke
 title: On Before Keystroke
 ---
 
-| Code | Pode ser chamado por                                                                                                                                                                                                                                                                            | Definição                                                                                                                                                                     |
-| ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 17   | [Área 4D Write Pro](FormObjects/writeProArea_overview) - [Caixa de Combinação](FormObjects/comboBox_overview.md) - Formulário - [Entrada](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Coluna de List Box](FormObjects/listbox_overview.md#list-box-columns) | Um carácter está prestes a ser introduzido no objecto que tem o foco. `Obter texto editado` devolve o texto do objeto **sem** este caractere. |
+| Code | Pode ser chamado por                                                                                                                                                                                                                                                          | Definição                                                                                                                                                                     |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 17   | [4D Write Pro area](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | Um carácter está prestes a ser introduzido no objecto que tem o foco. `Obter texto editado` devolve o texto do objeto **sem** este caractere. |
 
 <details><summary>História</summary>
 
@@ -28,7 +28,7 @@ O evento `On Before Keystroke` não é gerado:
 
 ### Objectos não enterráveis
 
-O evento `On Before Keystroke` pode ser gerado em objetos não inseríveis, por exemplo, em uma caixa de seleção mesmo se as células da caixa de seleção não forem inseríveis, ou as linhas não forem selecionáveis. This allows you to build interfaces where the user can scroll dynamically to a specific row in a list box by entering the first letters of a value. No caso em que as células da caixa de listagem são editáveis, você pode usar o comando `Is editing text` para saber se o usuário está realmente digitando texto em uma célula ou está usando o recurso de preenchimento automático e, em seguida, executar o código apropriado.
+O evento `On Before Keystroke` pode ser gerado em objetos não inseríveis, por exemplo, em uma caixa de seleção mesmo se as células da caixa de seleção não forem inseríveis, ou as linhas não forem selecionáveis. Isso permite que você construa interfaces onde o usuário pode rolar dinamicamente para uma linha específica em um list box, digitando as primeiras letras de um valor. No caso em que as células da caixa de listagem são editáveis, você pode usar o comando `Is editing text` para saber se o usuário está realmente digitando texto em uma célula ou está usando o recurso de preenchimento automático e, em seguida, executar o código apropriado.
 
 ### Sequência de teclas
 

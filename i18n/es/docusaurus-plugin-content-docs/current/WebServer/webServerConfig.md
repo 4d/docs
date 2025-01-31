@@ -468,10 +468,9 @@ A cambio, debe asegurarse en este caso de inicializar sistemáticamente las vari
 
 ## Robots.txt
 
-Ciertos robots (motores de búsqueda, arañas...) desplazarse a través de servidores web y páginas estáticas. Si no quiere que los robots puedan acceder a todo su sitio, puede definir las URLs
-a las que no pueden acceder.
+Ciertos robots (motores de búsqueda, arañas...) desplazarse a través de servidores web y páginas estáticas. Si no quiere que los robots puedan acceder a todo su sitio, puede definir las URLs a las que no pueden acceder.
 
-Para ello, ponga el archivo ROBOTS.TXT en la raíz del servidor. Este archivo debe estar estructurado de la siguiente manera:
+Para ello, ponga el archivo ROBOTS. TXT en la raíz del servidor. Este archivo debe estar estructurado de la siguiente manera:
 
 ```4d
    User-Agent: <name>

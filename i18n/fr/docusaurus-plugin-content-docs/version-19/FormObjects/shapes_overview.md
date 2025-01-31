@@ -23,12 +23,12 @@ Les rectangles sont créés à l'aide de plusieurs propriétés (couleur, épais
 
 ```4d
  "myRectangle": {
-  "type": "rectangle", //define the type of object
-  "left": 60,    //left position on the form  
-  "top": 160,    //top position on the form 
-  "width": 100,   //width of the object
-  "height": 20,   //height of the object
-  "borderRadius": 20  //define the roundness of the corners
+  "type": "rectangle", //définit le type d'objet
+  "left": 60,    //position sur la gauche du formulaire  
+  "top": 160,    //position en haut du formulaire 
+  "width": 100,   //largeur de l'objet
+  "height": 20,   //hauteur de l'objet
+  "borderRadius": 20  //définit l'arrondi des angles
                 }
 ```
 
@@ -48,7 +48,7 @@ La propriété JSON `startPoint` définit à partir de quelle coordonnée la lig
 
 > la propriété `startPoint` n'est pas exposée dans la liste des propriétés, où la direction du dessin de ligne est visible.
 
-#### JSON Examples
+#### Exemples JSON
 
 ```
  "myLine": {
@@ -57,8 +57,8 @@ La propriété JSON `startPoint` définit à partir de quelle coordonnée la lig
   "top": 40,
   "width": 100,
   "height": 80,
-  "startPoint": "topLeft", //first direction
-  "strokeDashArray": "6 2" //dashed
+  "startPoint": "topLeft", //première direction
+  "strokeDashArray": "6 2" //pointillé
   }
 ```
 
@@ -71,8 +71,8 @@ Result: ![](../assets/en/FormObjects/shape_line1.png)
   "top": 40,
   "width": 100,
   "height": 80,
-  "startPoint": "bottomLeft", //2nd direction
-  "strokeDashArray": "6 2" //dashed
+  "startPoint": "bottomLeft", //2ème direction
+  "strokeDashArray": "6 2" //pointillé
   }
 ```
 
@@ -92,12 +92,12 @@ Un ovale statique est un objet décoratif contenu dans les formulaires. Les obje
 
 ```4d
  "myOval": {
-  "type": "oval",  //define the type of object
-  "left": 60,   //left position on the form  
-  "top": 160,   //top position on the form 
-  "width": 100,  //width of the object
-  "height": 20,  //height of the object
-  "fill": "blue"  //define the background color
+  "type": "oval",  //définit le type d'objet
+  "left": 60,   //position sur la gauche du formulaire  
+  "top": 160,   //position en haut du formulaire 
+  "width": 100,  //largeur de l'objet
+  "height": 20,  //hauteur de l'objet
+  "fill": "blue"  //définit la couleur de fond
                 }
 ```
 

@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 **注:** このコマンドへの引数の受け渡しはテスト目的で用意されているものです。パフォーマンス上の理由から、運用環境でキャッシュを空にすることは推奨されていません。
 
-データの変更内容は 4Dによって定期的に保存されるため、このコマンドは通常必要ありません。一般的には、環境設定の [データベースページ](https://developer.4d.com/docs/ja/settings/database/) にある、**キャッシュをディスクに保存: X秒(分)毎**オプション (保存の頻度を指定) を使用して、バッファのフラッシュ間隔を指定します (デフォルト値の20秒が設定として推奨されています)。またCache flush periodicity パラメーターを [SET DATABASE PARAMETER](set-database-parameter.md) あるいは [Get database parameter](get-database-parameter.md) コマンドで設定・取得することもできます。
+データの変更内容は 4Dによって定期的に保存されるため、このコマンドは通常必要ありません。一般的には、環境設定の [データベースページ](../settings/database.md) にある、**キャッシュをディスクに保存: X秒(分)毎**オプション (保存の頻度を指定) を使用して、バッファのフラッシュ間隔を指定します (デフォルト値の20秒が設定として推奨されています)。またCache flush periodicity パラメーターを [SET DATABASE PARAMETER](set-database-parameter.md) あるいは [Get database parameter](get-database-parameter.md) コマンドで設定・取得することもできます。
 
 #### 参照 
 

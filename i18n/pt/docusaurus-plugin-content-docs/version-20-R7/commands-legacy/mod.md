@@ -21,7 +21,7 @@ displayed_sidebar: docs
 • Mod aceita expressões de tipo Inteiro, Inteiro longo e Reais. Entretanto, se *numero1* ou *numero2* são números reais, os números são arredondados primeiro e depois Mod é calculado.   
 • Seja cuidadoso quando utilize Mod com números reais de grande tamanho (acima de 2^31), já que neste caso, sua operação poderia alcançar os limites das capacidades de cálculo dos processadores padrão.
 
-Igualmente pode utilizar o operador *%* para calcular o resto (ver [C\_TIME](c-time.md)).
+Igualmente pode utilizar o operador *%* para calcular o resto (ver *C\_TIME*).
 
 **Advertência:** o operador *%* retorna resultados válidos com expressões de tipo Inteiro e Inteiro longo. Para calcular o módulo de valores reais, deve utilizar o comando Mod.
 

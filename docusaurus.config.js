@@ -5,11 +5,33 @@ const darkTheme = themes.palenight;
 
 
 const isProduction = process.env.GITHUB_REPOSITORY_OWNER === '4d';
+const router = process.env.DOCUSAURUS_ROUTER
+const isStatic = process.env.DOCUSAURUS_ROUTER === "hash"
+const language = process.env.DOCUSAURUS_LANGUAGE ?? "en"
+
+const locales = isStatic ? [language] : ["en", "fr", "es", "ja", "pt"]
+const localeConfigs = isStatic ? {} : {
+  en: {
+    label: "English",
+  },
+  fr: {
+    label: "Français",
+  },
+  es: {
+    label: "Español",
+  },
+  ja: {
+    label: "日本語",
+  },
+  pt: {
+    label: "Português",
+  },
+}
 
 module.exports = {
   title: "4D Docs",
   tagline: "Documentation for 4D developers",
-  baseUrl: "/docs/",
+  baseUrl: isStatic ? "/" : "/docs/",
   //url: "https://4d.github.io/",
   url: "https://developer.4d.com/",
   organizationName: "4D",
@@ -41,12 +63,12 @@ module.exports = {
           // Sidebars file relative to website dir.
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
-            '20-R7': {
-              label: '20 R7 BETA',
+            '20-R8': {
+              label: '20 R8 BETA',
               banner: 'none',
             },
-            '20-R6': {
-              label: '20 R6',
+            '20-R7': {
+              label: '20 R7',
               banner: 'none',
             },
             '20': {
@@ -79,27 +101,12 @@ module.exports = {
       rspackBundler: true,
       mdxCrossCompilerCache: true,
     },
+    experimental_router: router,
   },
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "fr", "es", "ja", "pt"],
-    localeConfigs: {
-      en: {
-        label: "English",
-      },
-      fr: {
-        label: "Français",
-      },
-      es: {
-        label: "Español",
-      },
-      ja: {
-        label: "日本語",
-      },
-      pt: {
-        label: "Português",
-      },
-    },
+    defaultLocale: language,
+    locales: locales,
+    localeConfigs: localeConfigs,
   },
   plugins: [
     [
@@ -159,10 +166,6 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: '4D Developer Center',
-              to: 'https://developer.4d.com',
-            },
-            {
               label: '4D Blog',
               to: 'https://blog.4d.com',
             },
@@ -175,8 +178,8 @@ module.exports = {
               to: 'https://facebook.com/4Dsoftware',
             },
             {
-              label: 'Twitter',
-              to: 'https://twitter.com/4Dsoftware',
+              label: 'X',
+              to: 'https://x.com/4Dsoftware',
             },
             {
               label: 'Youtube',
@@ -192,6 +195,10 @@ module.exports = {
           title: 'Support',
           items: [
             {
+              label: 'Documentation download',
+              href: 'https://github.com/4d/docs/releases/tag/latest',
+            },
+            {
               label: '4D Doc Center (Where It All Began)',
               to: 'https://doc.4d.com',
             },
@@ -201,15 +208,15 @@ module.exports = {
             },
             {
               label: 'Downloads',
-              href: 'https://us.4d.com/product-download/Feature-Release',
+              to: 'https://us.4d.com/product-download/Feature-Release',
             },
             {
               label: 'Resources',
-              href: 'https://us.4d.com/resources',
+              to: 'https://us.4d.com/resources',
             },
             {
               label: 'Get Support',
-              href: 'https://us.4d.com/4d-technical-support',
+              to: 'https://us.4d.com/4d-technical-support',
             }
           ],
         },
@@ -218,24 +225,24 @@ module.exports = {
           items: [
             {
               label: 'About 4D',
-              href: 'https://us.4d.com/about-us',
+              to: 'https://us.4d.com/about-us',
             },
             {
               label: 'Contact us',
-              href: 'https://us.4d.com/contact-us',
+              to: 'https://us.4d.com/contact-us',
             },
             {
               label: '4D around the world',
-              href: 'https://us.4d.com/4d-around-the-world',
+              to: 'https://us.4d.com/4d-around-the-world',
             },
             {
               label: 'Careers',
-              href: 'https://us.4d.com/Careers',
+              to: 'https://us.4d.com/Careers',
             },
           ],
         },
       ],
-      "copyright": "© 2024 4D SAS - All rights reserved",
+      "copyright": "© 2025 4D SAS - All rights reserved",
     },
   },
   markdown: {
@@ -250,5 +257,5 @@ module.exports = {
       maintainCase: false,
     },
   },
- themes: ['@docusaurus/theme-mermaid'],
+  themes: ['@docusaurus/theme-mermaid'],
 }

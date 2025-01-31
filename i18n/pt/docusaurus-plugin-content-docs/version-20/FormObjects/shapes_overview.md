@@ -64,7 +64,7 @@ A propriedade JSON `startPoint` define a coordenada a partir da qual a linha dev
   "strokeDashArray": "6 2" //dashed
   }
 ```
-Result: ![](../assets/en/FormObjects/shape_line1.png)
+Resultado: ![](../assets/en/FormObjects/shape_line1.png)
 
 
 ```
@@ -78,7 +78,7 @@ Result: ![](../assets/en/FormObjects/shape_line1.png)
   "strokeDashArray": "6 2" //dashed
   }
 ```
-Result: ![](../assets/en/FormObjects/shape_line2.png)
+Resultado: ![](../assets/en/FormObjects/shape_line2.png)
 
 
 

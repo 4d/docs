@@ -39,12 +39,12 @@ O registo atual ou a seleção atual de linhas é modificado num formulário lis
 
 ### Lista hierárquica
 
-This event is generated every time the selection in the hierarchical list is modified after a mouse click or keystroke.
+Esse evento é gerado sempre que a seleção na lista hierárquica é modificada após um clique do mouse ou pressionamento de tecla.
 
 ### Área de entrada e 4D Write Pro
 
-The text selection or the position of the cursor in the area is modified following a click or a keystroke.
+A seleção de texto ou a posição do cursor na área é modificada após um clique, ou um pressionamento de tecla.
 
 ### List box
 
-This event is generated each time the current selection of rows or columns of the list box is modified.
+Esse evento é gerado sempre que a seleção atual de linhas ou de colunas do list box é modificada.

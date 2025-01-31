@@ -3,9 +3,9 @@ id: propertiesPicture
 title: Imagem
 ---
 
-## Pathname
+## Rota de acesso
 
-Nome do caminho de uma imagem de origem estática para um botão de imagem [](pictureButton_overview.md), um menu pop-up de imagem [](picturePopupMenu_overview.md)ou uma imagem estática [](staticPicture.md). É necessário utilizar a sintaxe POSIX.
+Nome do caminho de uma imagem de origem estática para um [botão imagem](pictureButton_overview.md), [menu pop-up imagem](picturePopupMenu_overview.md) ou [imagem estática](staticPicture.md). É necessário utilizar a sintaxe POSIX.
 
 As seguintes localizações podem ser utilizadas para imagens estáticas:
 
@@ -49,7 +49,7 @@ Se o campo for reduzido para um tamanho inferior ao da imagem original, a imagem
 
 `Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
-O formato **Center** faz com que o 4D centralize a imagem na área e corte qualquer parte que não caiba na área. 4D crops equally from each edge and from the top and bottom.
+O formato **Center** faz com que o 4D centralize a imagem na área e corte qualquer parte que não caiba na área. 4D corta igualmente de cada borda e da parte superior e inferior.
 
 O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior esquerdo da imagem no canto superior esquerdo da área e recorte qualquer parte que não caiba na área. 4D corta da direita e de baixo para cima.
 > Quando o formato da imagem for **Truncado (não centrado)**, é possível adicionar barras de deslocamento à área de entrada.

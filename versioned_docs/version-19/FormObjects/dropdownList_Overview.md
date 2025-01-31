@@ -28,7 +28,7 @@ You can create different types of drop-down lists with different features. To de
 
 > This feature is only available in 4D projects.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. The object must contain the following properties:
+An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) can be used as the data source of a drop-down list. The object must contain the following properties:
 
 |Property|Type|Description|
 |---|---|---|

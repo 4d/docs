@@ -148,7 +148,7 @@ A propriedade `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownL
 <!-- REF #TableStyle.backColor.Syntax -->
 **.backColor**: Text<!-- END REF -->
 
-A propriedade `.backColor` é o <!-- REF #TableStyle.backColor.Summary -->[cor de fundo](configuring.md/#background--foreground) da tabela<!-- END REF -->.
+A propriedade `.backColor` é o <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md#background--foreground) of the table<!-- END REF -->.
 
 
 ### .forecolor
@@ -156,7 +156,7 @@ A propriedade `.backColor` é o <!-- REF #TableStyle.backColor.Summary -->[cor d
 <!-- REF #TableStyle.forecolor.Syntax -->
 **.forecolor**: Text<!-- END REF -->
 
-A propriedade `.forecolor` é o <!-- REF #TableStyle.forecolor.Summary -->[cor de primeiro plano](configuring.md/#background--foreground) da tabela<!-- END REF -->.
+A propriedade `.forecolor` é o <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->.
 
 
 
@@ -165,7 +165,7 @@ A propriedade `.forecolor` é o <!-- REF #TableStyle.forecolor.Summary -->[cor d
 <!-- REF #TableStyle.font.Syntax -->
 **.font**: Text<!-- END REF -->
 
-A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->nome do letra (ver [**Categorias de letra e texto**](configuring.md/#fonts-and-text)) da tabela<!-- END REF -->.
+A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md#fonts-and-text)) of the table<!-- END REF -->.
 
 
 
@@ -174,7 +174,7 @@ A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->nome do letra (v
 <!-- REF #TableStyle.textDecoration.Syntax -->
 **.textDecoration** : Integer<!-- END REF -->
 
-A propriedade `.textDecoration` é a <!-- REF #TableStyle.textDecoration.Summary -->decoração do texto da tabela (ver [**Letras e textos**](configuring.md/#fonts-and-text))<!-- END REF -->.
+A propriedade `.textDecoration` é a <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md#fonts-and-text))<!-- END REF -->.
 
 
 ### .borderLeft

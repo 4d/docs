@@ -126,7 +126,7 @@ Esta propiedad está en **lectura-escritura**.
 
 #### Descripción
 
-Lanzamiento Lanzamiento Lanzamiento Lanzamiento Lanzamiento Lanzamiento Lanzamiento Lanzamiento Lanzamiento Lanzamiento Lanzamiento Lanzamiento Cuando se crea la señal, `.signaled` es **False**. La propiedad `.signaled` se convierte en true cuando cualquier worker/proceso llama al método `.trigger()`.
+Lanzamiento Cuando se crea la señal, `.signaled` es **False**. Se convierte en **True** cuando la función `.trigger( )` se llama en el objeto.
 
 Esta propiedad es de **solo lectura**.
 
@@ -158,7 +158,7 @@ Esta propiedad es de **solo lectura**.
 
 La función `.trigger( )` <!-- REF #SignalClass.trigger().Summary -->define la propiedad `signaled` del objeto signal como **true**<!-- END REF --> y despierta a todos los workers o procesos que esperan esta signal.
 
-Si la señal ya está en el estado de señalización (es decir, la propiedad signaled\\\\\\\\\\\\\` ya es **true**), la función no hace nada.
+Si la señal ya está en el estado de señalización (es decir, la propiedad `signaled` ya es **true**), la función no hace nada.
 
 <!-- END REF -->
 

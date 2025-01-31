@@ -169,7 +169,7 @@ If one of the compared entities is **Null**, an error is raised.
  employee.lastName:="SOPHIE"
  employee.salary:=500
  $diff1:=$clone.diff(employee) // All differences are returned
- $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
+ $diff2:=$clone.diff(employee;New collection("firstName";"lastName"))
   // Only differences on firstName and lastName are returned
 ```
 

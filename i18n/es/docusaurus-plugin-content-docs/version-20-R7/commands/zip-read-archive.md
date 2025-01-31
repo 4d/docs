@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-| Parámetros | Tipo                          |     | Descripción                           |
-| ---------- | ----------------------------- | :-: | ------------------------------------- |
-| zIPFile    | 4D.File       |  →  | Archivos Zip                          |
-| contraseña | Text                          |  →  | Contraseña del archivo ZIP, si la hay |
-| Result     | 4D.ZipArchive |  ←  | Objeto archivo                        |
+| Parámetros | Tipo                          |                             | Descripción                           |
+| ---------- | ----------------------------- | :-------------------------: | ------------------------------------- |
+| zIPFile    | 4D.File       | &#8594; | Archivos Zip                          |
+| contraseña | Text                          | &#8594; | Contraseña del archivo ZIP, si la hay |
+| Result     | 4D.ZipArchive | &#8592; | Objeto archivo                        |
 
 <!-- END REF -->
 
@@ -84,3 +84,10 @@ Para extraer desde la carpeta root:
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
+
+#### Propiedades
+
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1637                                                                |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

@@ -27,7 +27,7 @@ Function sayHello()->$welcome : Text
  $welcome:="Hello "+This.fullName
 ```
 
-Dans une méthode, créons une "Personne" :
+Dans une méthode, créons une "Person" :
 
 ```4d
 var $person : cs.Person //objet de classe Person
@@ -143,7 +143,7 @@ Vous souhaitez créer une nouvelle clé dans la classe `CryptoKey` :
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-## L'objet classe
+## L'objet class
 
 Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
@@ -182,7 +182,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-There is no ending keyword for function code. There is no ending keyword for function code.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
 
 :::
 
@@ -304,11 +304,12 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 Class Constructor({$parameterName : type; ...})
 // code
 // code
+// code
 ```
 
 :::note
 
-There is no ending keyword for class constructor function code. There is no ending keyword for function code.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
 
 :::
 
@@ -372,8 +373,8 @@ Le type de propriété peut être l'un des suivants :
 | `Collection`                             | Valeur collection                                              |
 | `Variant`                                | Valeur variant                                                 |
 | `Object`                                 | Objet de classe par défaut (4D.Object)                         |
-| `4D.<className>`                   | Object de la classe 4D className                               |
-| `cs.<className>`                   | Object de la classe utilisateur className                      |
+| `4D.<className>`                   | Objet de la classe 4D className                                |
+| `cs.<className>`                   | Objet de la classe utilisateur className                       |
 | `cs.<namespace>.<className>` | Object de la classe className du composant `<namespace>` |
 
 :::info
@@ -576,6 +577,11 @@ Class constructor($width : Integer; $height : Integer)
 
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+ $0:=(This.height)*(This.width)
 
 // Function definition
 Function getArea()

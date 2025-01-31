@@ -15,7 +15,7 @@ Utilisez l'événement [`Sur données modifiées`](Events/onDataChange.md) pour 
 
 L'initialisation d'une combo box se fait exactement de la même manière que celle d'une [liste déroulante](dropdownList_Overview.md#overview) : en utilisant un objet, un tableau ou une liste de choix.
 
-### Utilisation d'un objet
+### Utiliser un objet
 
 > Cette fonctionnalité n'est disponible que dans les projets 4D.
 
@@ -30,7 +30,7 @@ Si l'objet contient d'autres propriétés, elles sont ignorées.
 
 Lorsque l'utilisateur saisit du texte dans la combo box, la propriété `currentValue` de l'objet reçoit le texte saisi.
 
-### Utiliser un tableau
+### Utiliser une énumération
 
 Veuillez vous référer à **Utiliser un tableau** dans la [page liste déroulante](dropdownList_Overview.md#using-an-array) pour obtenir des informations sur l'initialisation du tableau.
 

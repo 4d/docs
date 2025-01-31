@@ -31,14 +31,14 @@ myBoolean:=(myButton=1)
 
 4D suporta dois operadores lógicos que trabalham com expressões booleanas: conjunção (AND) e disjunção inclusiva (OR). Uma lógica E retorna VERDADEIRA se ambas as expressões forem VERDADEIRAS. Uma lógica OU retorna VERDADEIRA se pelo menos uma das expressões for VERDADEIRA. O quadro seguinte mostra os operadores lógicos:
 
-| Operação | Sintaxe                                 | Retorna    | Expression                                                                       | Valor |
-| -------- | --------------------------------------- | ---------- | -------------------------------------------------------------------------------- | ----- |
-| AND      | Booleano & Booleano | Parâmetros | ("A" = "A") & (15 # 3) | True  |
-|          |                                         |            | ("A" = "B") & (15 # 3) | False |
-|          |                                         |            | ("A" = "B") & (15 = 3) | False |
-| OU       | Boolean  \| Boolean                     | Parâmetros | ("A" = "A") \| (15 # 3)                    | True  |
-|          |                                         |            | ("A" = "B") \|  (15 # 3)                   | True  |
-|          |                                         |            | ("A" = "B") \|  (15 = 3)                   | False |
+| Operação | Sintaxe                                     | Retorna    | Expression                                                                             | Valor |
+| -------- | ------------------------------------------- | ---------- | -------------------------------------------------------------------------------------- | ----- |
+| AND      | Booleano & Booleano     | Parâmetros | ("A" = "A") & (15 # 3)       | True  |
+|          |                                             |            | ("A" = "B") & (15 # 3)       | False |
+|          |                                             |            | ("A" = "B") & (15 = 3)       | False |
+| OU       | Boolean  &#124; Boolean | Parâmetros | ("A" = "A") &#124; (15 # 3)  | True  |
+|          |                                             |            | ("A" = "B") &#124;  (15 # 3) | True  |
+|          |                                             |            | ("A" = "B") &#124;  (15 = 3) | False |
 
 A tabela seguinte é a tabela da verdade para o operador lógico AND:
 
@@ -51,12 +51,12 @@ A tabela seguinte é a tabela da verdade para o operador lógico AND:
 
 A tabela seguinte é a tabela da verdade para o operador lógico OR:
 
-| Expr1 | Expr2 | Expr1 \| Expr2 |
-| ----- | ----- | -------------- |
-| True  | True  | True           |
-| True  | False | True           |
-| False | True  | True           |
-| False | False | False          |
+| Expr1 | Expr2 | Expr1 &#124; Expr2 |
+| ----- | ----- | -------------------------------------- |
+| True  | True  | True                                   |
+| True  | False | True                                   |
+| False | True  | True                                   |
+| False | False | False                                  |
 
 **Consejo:** si necesita calcular la conjunción exclusiva entre Expr1 y Expr2, escriba:
 

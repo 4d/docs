@@ -442,7 +442,7 @@ Se precisar, pode usar uma Increment_Expression (positiva ou negativa) cujo valo
  End for
 ```
 
-#### Optimizing the execution of the For... End for loops
+#### Otimizando a execução do comando For...End para loops
 
 Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, de processo e de variáveis locais. Para loops repetitivos longos, especialmente em modo compilado, use variáveis locais de tipo Inteiro longo.
 
@@ -491,7 +491,7 @@ O ciclo `For...End for` geralmente é mais rápido que o `While...End while` e `
 
 :::
 
-### Nested For... End for looping structures
+### Estruturas For... End for aninhadas
 
 Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui aninhar loops `for...End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
 

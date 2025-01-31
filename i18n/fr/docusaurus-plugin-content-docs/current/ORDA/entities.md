@@ -267,7 +267,7 @@ Une entity selection peut être **partageable** (lisible par plusieurs process, 
 Une entity selection **partageable** a les caractéristiques suivantes :
 
 - elle peut être stockée dans un objet partagé ou une collection partagée, et peut être passée comme paramètre entre plusieurs process ou workers ;
-- it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group;
+- elle peut être stockée dans plusieurs objets partagés ou collections partagées, ou dans un objet partagé ou une collection partagée qui appartient déjà à un groupe ;
 - elle ne permet pas d'ajouter de nouvelles entités. Essayer d'ajouter une entité à une entity selection partageable génèrera une erreur (1637 - Cette entity selection ne peut pas être modifiée). Pour ajouter une entité à une entity selection partageable, vous devez d'abord la transformer en une entity selection non partageable en utilisant la fonction [`.copy()`](API/EntitySelectionClass.md#copy) avant d'appeler [`.add()`](API/EntitySelectionClass.md#add).
 
 > La plupart des fonctions d'entity selection (telles que [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) prennent en charge les entity selection partageables puisqu'elles ne modifient pas la sélection d'origine (elles en renvoient une nouvelle).

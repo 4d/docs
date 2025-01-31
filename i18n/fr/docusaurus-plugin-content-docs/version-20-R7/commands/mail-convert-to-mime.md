@@ -17,11 +17,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
 
-| Paramètres | Type   |     | Description                              |
-| ---------- | ------ | :-: | ---------------------------------------- |
-| mail       | Object |  →  | Objet email                              |
-| options    | Object |  →  | Options d'encodage et de charset du mail |
-| Résultat   | Text   |  ←  | Objet email converti en MIME             |
+| Paramètres | Type   |                             | Description                              |
+| ---------- | ------ | :-------------------------: | ---------------------------------------- |
+| mail       | Object | &#8594; | Objet email                              |
+| options    | Object | &#8594; | Options d'encodage et de charset du mail |
+| Résultat   | Text   | &#8592; | Objet email converti en MIME             |
 
 <!-- END REF -->
 
@@ -84,3 +84,10 @@ $mime:=MAIL Convert to MIME($mail)
 // <html><body>HTML format email</body></html>
 // --E0AE5773D5E95245BBBD80DD0687E218--
 ```
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1604                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

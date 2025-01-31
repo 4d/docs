@@ -2164,7 +2164,7 @@ El parámetro *howMany* permite especificar el número de entidades a extraer, e
 
 Si *howMany* longitud de la entity selection, el método devuelve (length - begin) objetos.
 
-Si <em x-id="3">howMany</em> > longitud de la entity selection, el método devuelve (length - <em x-id="3">begin</em>) objetos.
+Si <em x-id="3">howMany</em> &#062; longitud de la entity selection, el método devuelve (length - <em x-id="3">begin</em>) objetos.
 
 - la entity selection está vacía, o
 - *begin* es mayor que la longitud de la entity selection.

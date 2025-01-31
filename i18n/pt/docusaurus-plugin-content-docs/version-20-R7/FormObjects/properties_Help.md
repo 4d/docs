@@ -5,7 +5,7 @@ title: Ajuda
 
 ## Dica de Ajuda
 
-This property allows associating help messages with active objects in your forms. Podem ser apresentados em tempo de execução:
+Essa propriedade permite associar mensagens de ajuda a objetos ativos em seus formulários. Podem ser apresentados em tempo de execução:
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
@@ -17,7 +17,7 @@ Você também pode:
 - designe uma dica de ajuda existente, previamente especificada no editor de [dicas de ajuda](https://doc.4d.com/4Dv17R5/4D/17-R5/Help-tips.200-4163423.en.html) de 4D.
 - ou introduzir a mensagem de ajuda diretamente como uma cadeia de caracteres. Isto permite-lhe tirar partido da arquitetura XLIFF. Você pode inserir uma referência XLIFF aqui para exibir uma mensagem no idioma da aplicação (para obter mais informações sobre XLIFF, consulte [Apêndice B: Arquitetura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). También puede utilizar referencias 4D ([ver Uso de referencias en texto estático](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
 
-> \> > In macOS, displaying help tips is not supported in pop-up type windows.
+> &#062; &#062; In macOS, displaying help tips is not supported in pop-up type windows.
 
 #### Gramática JSON
 
@@ -36,7 +36,7 @@ Você também pode associar mensagens de ajuda a objetos de formulário de duas 
 - ao nível da estrutura da base de dados (apenas campos). Neste caso, a dica de ajuda do campo é apresentada em todos os formulários em que aparece. Para obter mais informações, consulte "Dicas de ajuda" em [Propriedades dos campos](https://doc.4d.com/4Dv17R5/4D/17-R5/Field-properties.300-4163580.en.html).
 - usando o comando **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)**, para o processo atual.
 
-When different tips are associated with the same object in several locations, the following priority order is applied:
+Quando diferentes dicas são associadas ao mesmo objeto em vários locais, a seguinte ordem de prioridade é aplicada:
 
 1. nível de estrutura (prioridade mais baixa)
 2. nível do editor de formulários

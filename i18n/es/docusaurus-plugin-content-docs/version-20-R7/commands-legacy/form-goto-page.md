@@ -29,7 +29,7 @@ Los botones de acción automática realizan las mismas tareas que los comandos [
 Los comandos de gestión de página pueden utilizarse con formularios de entrada o con formularios de salida en cajas de diálogo. Los formularios de salida utilizan sólo la primera página. Un formulario siempre tiene por lo menos una página, la primera página. Recuerde que sin importar el número de páginas que tenga un formulario, sólo existe un método de formulario para cada formulario. 
 
 * Utilice el comando [FORM Get current page](form-get-current-page.md) para saber que página se está mostrando.
-* Utilice [Form event code](form-event-code.md) On Page Change que se genera cada vez que la página actual del formulario cambia.
+* Utilice [Form event code](../commands/form-event-code.md) On Page Change que se genera cada vez que la página actual del formulario cambia.
 
 **Nota:** cuando diseñaun formulario, puede trabajar con las páginas de la 1 a la X, como también con la página 0, en la cual pone los objetos que aparecen en todas las páginas. Cuando **utiliza** un formulario, y llama los comandos de página, usted trabaja con las páginas de la 1 a la X; la página 0 se combina automáticamente con la página que está siendo mostrada.
 

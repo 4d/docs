@@ -3,15 +3,15 @@ id: components
 title: Componentes
 ---
 
-A 4D component is a set of 4D methods and forms representing one or more functionalities that can be installed in different applications. Por exemplo, você pode desenvolver um componente de e-mail 4D que gerencia todos os aspectos de envio, recebimento e armazenamento de e-mails em aplicativos 4D.
+Um componente 4D é um conjunto de métodos e formulários 4D que representam uma ou mais funcionalidades que podem ser instaladas em diferentes aplicações. Por exemplo, você pode desenvolver um componente de e-mail 4D que gerencia todos os aspectos de envio, recebimento e armazenamento de e-mails em aplicativos 4D.
 
 ## Apresentação
 
 ### Definições
 
-- **Projeto Matrix**: Projeto 4D usado para desenvolver o componente. O projeto matriz é um projeto standard sem atributos específicos. Um projeto matricial forma um componente único.
-- **Projeto host**: Projeto de aplicativo no qual um componente é instalado e usado.
-- **Component**: Matrix project, compiled or not, copied into the [`Components`](Project/architecture.md) folder of the host application and whose contents are used in the host application.
+- **Projeto Matrix**: projeto 4D usado para desenvolver o componente. O projeto matriz é um projeto standard sem atributos específicos. Um projeto matricial forma um componente único.
+- **Projeto host**: projeto no qual um componente é instalado e usado.
+- **Componente**: projeto utilizado como matriz que pode ser compilado na pasta [`Componentes`](Project/architecture.md) da aplicação host e cujo conteúdo é usado na aplicação host.
 
 ### Princípios
 
@@ -19,8 +19,8 @@ Criar e instalar componentes 4D é realizado diretamente a partir de 4D. Basicam
 
 - Um componente é constituído por um ficheiro de projeto 4D clássico.
 - Para instalar um componente, basta copiá-lo para a pasta [`Components` do projeto](Project/architecture.md). Pode usar pseudónimos ou atalhos.
-- A project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. No entanto, um componente não pode utilizar ele próprio "subcomponentes".
-- A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, and so on. Não pode chamar métodos de bancos de dados e triggers.
+- Um projeto pode ser tanto uma “matriz” quanto um “host,”, em outras palavras, um projeto utilizado como matriz pode usar um ou mais componentes. No entanto, um componente não pode utilizar ele próprio "subcomponentes".
+- Um componente pode chamar a maioria dos elementos 4D: métodos projeto, formulários projeto, barras de menu, listas de opções e assim por diante. Não pode chamar métodos de bancos de dados e triggers.
 - Não é possível utilizar tabelas standard ou ficheiros de dados em componentes 4D. Entretanto um componente não pode criar ou usar tabelas, campos e arquivos de dados usando mecanismos de bancos de dados externos. São bancos 4D independentes com as que se trabalha utilizando comandos SQL.
 - Um projecto anfitrião executado em modo interpretado pode utilizar componentes interpretados ou compilados. Um projecto anfitrião executado em modo compilado não pode utilizar componentes interpretados. Por isso não pode ser usado em um componente.
 
@@ -28,7 +28,7 @@ Criar e instalar componentes 4D é realizado diretamente a partir de 4D. Basicam
 
 Exceto pelos [Comandos não utilizáveis](#unusable-commands), um componente não pode usar qualquer comando da linguagem 4D.
 
-When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` or `EXECUTE FORMULA` command that use the context of the method specified by the command. Observe também que os comandos de leitura do tema "Usuários e grupos" podem ser usados a partir de um componente, mas lerão os usuários e grupos do projeto host (um componente não tem seus próprios usuários e grupos).
+Quando comandos são chamados de um componente, eles são executados no contexto do componente, exceto o comando `EXECUTE METHOD` ou `EXECUTE FORMULA` que usa o contexto do método especificado pelo comando. Observe também que os comandos de leitura do tema "Usuários e grupos" podem ser usados a partir de um componente, mas lerão os usuários e grupos do projeto host (um componente não tem seus próprios usuários e grupos).
 
 Os comandos `SET DATABASE PARAMETER` e `Get database parameter` são uma exceção: seu alcance é global a aplicação. Quando esses comandos forem chamados de um componente, são aplicados ao projecto de aplicação local.
 
@@ -63,17 +63,17 @@ Os comandos abaixo não são compatíveis para seu uso dentro de um componente p
 - O comando `Current form table` devolve `Nil` quando chamado no contexto de um formulário projeto. Por isso não pode ser usado em um componente.
 - Os comandos da linguagem de definição de dados SQL(`CREATE TABLE`, `DROP TABLE`, etc.) não podem ser usados no projeto do componente. Entretanto são compatíveis com bancos de dados externos (ver o comando SQL`CREATE DATABASE`).
 
-## Partilhar os métodos de projeto
+## Partilhar os métodos projeto
 
-All the project methods of a matrix project are by definition included in the component (the project is the component), which means that they can be called and executed by the component.
+Todos os métodos de projeto de um projeto utilizado como matriz são, por definição, incluídos no componente (o projeto é o componente), o que significa que eles podem ser chamados e executados pelo componente.
 
-Por outro lado, por padrão, esses métodos de projeto não estarão visíveis e não poderão ser chamados no projeto host. In the matrix project, you must explicitly designate the methods that you want to share with the host project. These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host project). Esses métodos formam **pontos de entrada** no componente.
+Por outro lado, por padrão, esses métodos projeto não estarão visíveis e não poderão ser chamados no projeto host. No projeto matrix, você deve designar explicitamente os métodos que você deseja compartilhar com o projeto host. Esses métodos projeto podem ser chamados no código do projeto host (mas eles não podem ser modificados no editor de métodos do projeto host). Esses métodos formam **pontos de entrada** no componente.
 
 Por outro lado, por motivos de segurança, por padrão, um componente não pode executar métodos de projeto pertencentes ao projeto host. Em alguns casos, talvez seja necessário permitir que um componente acesse os métodos de projeto do seu projeto host. Para isso, você deve designar explicitamente quais métodos de projeto do projeto host você deseja tornar acessíveis aos componentes (nas propriedades do método, marque a caixa **Compartilhado por componentes e projeto host** ).
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. Por exemplo:
+Dado que os métodos do projeto dos projetos host estão disponíveis para os componentes, você pode executar um método host dentro de um componente usando o comando `EXECUTE FORMULA` ou `EXECUTE METHOD`. Por exemplo:
 
 ```4d
 // Método host
@@ -86,7 +86,7 @@ component_method("host_method_name")
  EXECUTE METHOD($1)
 ```
 
-> Um banco de dados de host interpretado que contém componentes interpretados pode ser compilado ou verificado quanto à sintaxe se não chamar métodos do componente interpretado. Otherwise, a warning dialog box appears when you attempt to launch the compilation or a syntax check and it will not be possible to carry out the operation. Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the `EXECUTE METHOD` and `EXECUTE FORMULA` commands.
+> Um banco de dados de host interpretado que contém componentes interpretados pode ser compilado ou verificado quanto à sintaxe se não chamar métodos do componente interpretado. Caso contrário, uma caixa de diálogo de aviso será exibida quando você tentar iniciar a compilação ou uma verificação de sintaxe, e não será possível executar a operação. Lembre-se de que um método interpretado pode chamar um método compilado, mas não o contrário, exceto pelo uso dos comandos `EXECUTE METHOD` e `EXECUTE FORMULA`.
 
 ## Passar variáveis
 
@@ -278,16 +278,16 @@ Um componente pode executar o código 4D automaticamente ao abrir ou fechar o ba
 
 A execução do código de inicialização ou de fechamento é feita por meio do método de banco de dados `On Host Database Event`.
 
-> Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo. To do this, you must check the **Execute "On Host Database Event" method of the components** option on the Security page the Settings.
+> Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo. Para fazer isso, você deve verificar a opção **Executar o método "On Host Database Event" dos componentes** na página de Segurança dos Parâmetros.
 
 ## Proteção dos componentes: compilação
 
-By default, all the project methods of a matrix project installed as a component are potentially visible from the host project. Em particular:
+Por padrão, todos os métodos projeto de um projeto utilizado como matriz e instalados como um componente são potencialmente visíveis do projeto host. Em particular:
 
 - Os métodos do projeto compartilhado são encontrados na página de métodos do Explorer e podem ser chamados nos métodos do projeto host. Seu conteúdo pode ser selecionado e copiado na área de vista prévia do Explorador. Também podem ser vistos no depurador. No entanto, eles não podem ser abertos ou modificados no editor de métodos.
 - Os outros métodos de projeto do projeto matriz não aparecem no Explorer, mas também podem ser visualizados no depurador do projeto host.
 
-To protect the project methods of a component effectively, simply compile the matrix project and provide it in the form of a .4dz file. Quando um projeto compilado usado como uma matriz é instalado como um componente:
+Para proteger os métodos projeto de um componente de forma eficaz, basta compilar o projeto matrix e fornecê-lo na forma de um arquivo .4dz. Quando um projeto compilado usado como uma matriz é instalado como um componente:
 
-- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host project. No entanto, seu conteúdo não aparecerá na área de visualização e no depurador.
+- Os métodos do projeto compartilhado são mostrados na página Métodos do Explorer e podem ser chamados nos métodos do projeto host. No entanto, seu conteúdo não aparecerá na área de visualização e no depurador.
 - Os outros métodos projeto do projeto matriz nunca aparecerão.

@@ -189,13 +189,13 @@ Debe introducir una lista de valores. En el editor de formularios, un diálogo e
 
 ## Expression
 
-This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. Ver también la sección **[Variable o Expresión](properties_Object.md#variable-or-expression)**.
+Esta descripción es específica para las columnas de tipo list box [selección](listbox_overview.md#selection-list-boxes) y [colección](listbox_overview.md#collection-or-entity-selection-list-boxes). Ver también la sección **[Variable o Expresión](properties_Object.md#variable-or-expression)**.
 
 Una expresión 4D que se asociará a una columna. Puede introducir:
 
 - Una **variable simple** (en este caso, debe ser declarada explícitamente para la compilación). Se puede utilizar cualquier tipo de variable excepto BLOBs y arrays. El valor de la variable se calculará generalmente en el evento `On Display Detail`.
 
-- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. Se pueden utilizar los siguientes tipos de campos:
+- Un **campo** que utiliza la sintaxis estándar [Table]Field([list box de tipo selección](listbox_overview.md#selection-list-boxes) únicamente), por ejemplo: `[Employees]LastName`. Se pueden utilizar los siguientes tipos de campos:
   - String
   - Numeric
   - Fecha
@@ -232,7 +232,7 @@ Si se utiliza un campo, una variable o una expresión asignable (*por ejemplo Pe
 
 ## Tabla principal
 
-`Current selection list boxes`
+`Listbox de tipo selección actual`
 
 Especifica la tabla cuya selección actual se utilizará. Esta tabla y su selección actual constituirán la referencia de los campos asociados a las columnas del list box (referencias de campo o expresiones que contienen campos). Aunque algunas columnas contengan campos de otras tablas, el número de líneas mostradas será definido por la tabla maestra.
 
@@ -293,9 +293,9 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles                          |
-| ------------------- | -------------- | ----------------------------------------- |
-| selectedItemsSource | string         | Colección asignable o expresión de objeto |
+| Nombre              | Tipos de datos | Valores posibles                           |
+| ------------------- | -------------- | ------------------------------------------ |
+| selectedItemsSource | string         | Assignable collection or object expression |
 
 #### Objetos soportados
 
@@ -303,13 +303,13 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 ---
 
-## Nombre de selección
+## Selección temporal
 
-`List boxes de tipo selección nombrada`
+`List boxes de tipo selección temporal`
 
-Especifica la selección con nombre que se utilizará. Debe introducir el nombre de una selección nombrada válida. Puede ser una selección nombrada proceso o interproceso. El contenido del list box se basará en esta selección. La selección elegida debe existir y ser válida en el momento en que se muestre el list box; de lo contrario, el list box se mostrará en blanco.
+Especifica la selección temporal a utilizar. Debe introducir el nombre de una selección temporal válida. Puede ser una selección temporal proceso o interproceso. El contenido del list box se basará en esta selección. La selección elegida debe existir y ser válida en el momento en que se muestre el list box; de lo contrario, el list box se mostrará en blanco.
 
-> Las selecciones con nombre son listas ordenadas de registros. Se utilizan para mantener en memoria el orden y el registro actual de una selección. Para más información, consulte la sección **Selecciones temporales** del manual *Lenguaje 4D*.
+> Las selecciones temporales son listas ordenadas de registros. Se utilizan para mantener en memoria el orden y el registro actual de una selección. Para más información, consulte la sección **Selecciones temporales** del manual *Lenguaje 4D*.
 
 #### Gramática JSON
 

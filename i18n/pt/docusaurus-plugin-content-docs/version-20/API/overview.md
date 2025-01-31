@@ -3,7 +3,7 @@ id: overview
 title: Funções e comandos de classe
 ---
 
-As funções e propriedades da classe 4D estão disponíveis através de objectos de instância de classe. Esta seção descreve a API da classe 4D incorporada, bem como os comandos de construção associados.
+As funções e propriedades da classe 4D estão disponíveis através de objectos de instância de classe. As funções e propriedades das classes 4D estão disponíveis através de objetos de instância de classe.
 
 - devem ser chamadas em instâncias com o operador `()`. Por exemplo, `collection.sort()`.
 - as propriedades são acessadas sem parênteses, por exemplo `file.creationTime`. Pode também utilizar a sintaxe \[], por exemplo `file["creationTime"]`.
@@ -19,4 +19,4 @@ As seguintes convenções são utilizadas na sintaxe da função:
 
 ## Veja também
 
-[Classes in the 4D Language](../Concepts/classes.md).
+[Classes na linguagem 4D](../Concepts/classes.md).

@@ -5,9 +5,9 @@ title: Gama de valores
 
 ## Valor padrão
 
-É possível atribuir um valor proposto a ser introduzido num objeto de entrada. This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
+É possível atribuir um valor proposto a ser introduzido num objeto de entrada. Esta propriedade é útil, por exemplo, quando a entrada [data source](properties_Object.md#variable-or-expression) é um campo: o valor padrão é inserido quando um novo registro é exibido pela primeira vez. Você pode alterar o valor, a menos que a área de entrada tenha sido definida como [não entrável](properties_Entry.md#enterable).
 
-The default value can only be used if the [data source type](properties_Object.md#expression-type) is:
+O valor padrão só poderá ser usado se o [tipo de fonte de dados](properties_Object.md#expression-type) for:
 
 - text/string
 - number/integer
@@ -15,7 +15,7 @@ The default value can only be used if the [data source type](properties_Object.m
 - time
 - boolean
 
-4D provides stamps for generating default values for the date, time, and sequence number. A data e a hora são retiradas da data e da hora do sistema. 4D gera automaticamente os números de sequência necessários. The table below shows the stamp to use to generate default values automatically:
+4D fornece carimbos para gerar valores padrão para a data, hora e número de sequência. A data e a hora são retiradas da data e da hora do sistema. 4D gera automaticamente os números de sequência necessários. A tabela abaixo mostra o carimbo a ser usado para gerar valores padrão automaticamente:
 
 | Stamp | Significado         |
 | ----- | ------------------- |
@@ -23,9 +23,9 @@ The default value can only be used if the [data source type](properties_Object.m
 | #H    | Hora actual         |
 | #N    | Número de sequência |
 
-You can use a sequence number to create a unique number for each record in the table for the current data file. Um número de sequência é um longint gerado para cada novo registo. Os números começam em um (1) e aumentam gradualmente em um (1). A sequence number is never repeated even if the record it is assigned to is deleted from the table. Cada tabela tem o seu próprio contador interno de números de sequência. Para obter mais informações, consulte o parágrafo [Autoincremento](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029).
+É possível usar um número de sequência para criar um número exclusivo para cada registro na tabela do arquivo de dados atual. Um número de sequência é um longint gerado para cada novo registo. Os números começam em um (1) e aumentam gradualmente em um (1). Um número de sequência nunca é repetido, mesmo que o registro ao qual foi atribuído seja excluído da tabela. Cada tabela tem o seu próprio contador interno de números de sequência. Para obter mais informações, consulte o parágrafo [Autoincremento](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029).
 
-> Do not make confusion between this property and the "[default values](properties_DataSource.md#default-list-of-values)" property that allows to fill a list box column with static values.
+> Não faça confusão entre esta propriedade e a propriedade "[valores padrão](properties_DataSource.md#default-list-of-values)" que permite preencher uma coluna list box com valores estáticos.
 
 #### Gramática JSON
 
@@ -58,9 +58,9 @@ Permite definir uma lista cujos valores não podem ser introduzidos no objeto. S
 
 ## Lista obrigatória
 
-Restringe as entradas válidas aos itens da lista. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
+Restringe as entradas válidas aos itens da lista. Por exemplo, talvez você queira usar uma lista obrigatória para títulos de cargos, de modo que as entradas válidas sejam limitadas a títulos que tenham sido aprovados pela gerência.
 
-Tornar uma lista obrigatória não apresenta automaticamente a lista quando o campo é selecionado. If you want to display the required list, assign the same list to the [Choice List](properties_DataSource.md#choice-list) property. However, unlike the [Choice List](properties_DataSource.md#choice-list) property, when a required list is defined, keyboard entry is no longer possible, only the selection of a list value using the pop-up menu is allowed. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
+Tornar uma lista obrigatória não apresenta automaticamente a lista quando o campo é selecionado. Se você deseja exibir a lista obrigatória, atribua a mesma lista à propriedade [Lista de opções](properties_DataSource.md#choice-list). No entanto, ao contrário da propriedade [Lista de opções](properties_DataSource.md#choice-list) quando uma lista é definida, a entrada de teclado não é mais possível, apenas a seleção de um valor da lista usando o menu pop-up é permitida. Se listas diferentes forem definidas usando as propriedades [Lista de Opções](properties_DataSource.md#choice-list) e da Lista exigida, a propriedade da Lista obrigatória tem prioridade.
 > Se uma lista especificada for hierárquica, apenas os itens do primeiro nível são tidos em conta.
 
 #### Gramática JSON

@@ -23,7 +23,7 @@ displayed_sidebar: docs
   
 **Nota**: por pedido dos usuários, foi introduzida uma exceção para o francês e o italiano: o apóstrofe (') seguido por uma vogal ou a letra "h" se considera como um separador de palavra. Por exemplo, as cadeias "L'homme" ou "l'arbre" se dividem em "L’"+"homme" y "l'"+"arbre".  
   
-O algoritmo utilizado difere se a opção **Considerar só caracteres não alfanuméricos para as palavras-chaves** está selecionada nas [propriedades da base](https://developer.4d.com/docs/pt/settings/database/#text-comparison).  
+O algoritmo utilizado difere se a opção **Considerar só caracteres não alfanuméricos para as palavras-chaves** está selecionada nas [propriedades da base](../settings/database.md#text-comparison).  
   
 No parâmetro *texto*, passe o texto original a dividir em palavras. Este texto pode ter estilo, cujo caso as etiquetas de estilo são ignoradas.   
   

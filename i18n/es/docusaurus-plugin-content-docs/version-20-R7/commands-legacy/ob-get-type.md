@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.OB Get type.Summary-->El comando **OB Get type** devuelve el tipo del valor asociado a la *propiedad* del *objeto*.<!-- END REF-->debe haber sido definido utilizando el comando [C\_OBJECT](c-object.md) o designar un campo objeto 4D.
+<!--REF #_command_.OB Get type.Summary-->El comando **OB Get type** devuelve el tipo del valor asociado a la *propiedad* del *objeto*.<!-- END REF-->debe haber sido definido utilizando el comando *C\_OBJECT* o designar un campo objeto 4D.
 
 En el parámetro *propiedad*, pase la etiqueta de la propiedad cuyo tipo quiere conocer.  
 Tenga en cuenta que el parámetro *propiedad* tiene en cuenta las mayúsculas y minúsculas.  

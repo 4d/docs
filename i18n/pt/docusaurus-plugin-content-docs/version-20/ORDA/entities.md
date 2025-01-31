@@ -91,18 +91,18 @@ Você pode lidar com entidades como qualquer outro objeto em 4D e passar suas re
 ## Utilização de atributos de entidades
 
 Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na tabela correspondente. Os atributos de entidade do tipo armazenamento podem ser definidos ou obtidos como propriedades simples do objeto de entidade, enquanto a entidade do tipo **relatedEntity** ou **relatedEntities** retornará uma entidade ou uma seleção de entidades.
-> Para obter mais informações sobre o tipo de atributo, consulte o parágrafo [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) .
+> Para obter mais informações sobre o tipo de atributo, consulte o parágrafo [Atributos de armazenamento e de relação](dsMapping.md#storage-and-relation-attributes).
 
 Por exemplo, para definir um atributo de armazenamento:
 
 ```4d
- $entity:=ds.Employee.get(1) //obter atributo de funcionário com ID 1
+ $entity:=ds. Employee.get(1) //obter atributo de funcionário com ID 1
  $name:=$entity.lastname //obter o nome do funcionário, por exemplo, "Smith"
  $entity.lastname:="Jones" //definir o nome do funcionário
  $entity.save() //salvar as modificações
 ```
 
-> Os campos de Blob do banco de dados ([blobs escalares](Concepts/dt_blob.md) são automaticamente convertidos de e para atributos de objetos de blob ([`4D.Blob`](Concepts/dt_blob.md)) quando manipulados pelo ORDA. Ao salvar um atributo blob objeto, tenha em mente isso, Ao contrário do tamanho do objeto blob limitado apenas pela memória disponível, o tamanho do campo Blob é limitado a 2GB.
+> Os campos de Blob do banco de dados ([blobs escalares](Concepts/dt_blob.md) são automaticamente convertidos de e para atributos de objetos de blob ([`4D. Blob`](Concepts/dt_blob.md)) quando manipulados pelo ORDA. Ao salvar um atributo blob objeto, tenha em mente isso, Ao contrário do tamanho do objeto blob limitado apenas pela memória disponível, o tamanho do campo Blob é limitado a 2GB.
 
 O acesso a um atributo relacionado depende do tipo de atributo. Por exemplo, com a seguinte estrutura:
 
@@ -143,18 +143,18 @@ Neste exemplo, uma entidade na classe de dados "Employee" contém um objeto do t
 Para atribuir um valor diretamente ao atributo "employer", você deve passar uma entidade existente da classe de dados "Company". Por exemplo:
 
 ```4d
- $emp:=ds.Employee.new() // crie um funcionário
+ $emp:=ds. Employee.new() // crie um funcionário
  $emp.lastname:="Smith" // atribua um valor a um atributo
- $emp. mployer:=ds.Company.query("nome =:1";"4D")[0]  //atribuir uma entidade da empresa
+ $emp. mployer:=ds. Company.query("nome =:1";"4D")[0]  //atribuir uma entidade da empresa
  $emp.save()
 ```
 
 Você também pode obter diretamente a entidade relacionada através de sua chave primária (Número ou texto). Por exemplo:
 
 ```4d
- $emp:=ds.Employee.new()
+ $emp:=ds. Employee.new()
  $emp.lastname:="Wesson"
- $emp.employer:=ds.Company.get(2)
+ $emp.employer:=ds. Company.get(2)
   //obtém a entidade Company com o valor de chave primária 2
   //atribui ao funcionário
  $emp.save()
@@ -179,7 +179,7 @@ Você pode criar um objeto de tipo [seleção de entidade](dsMapping.md#entity-s
 *   Usando a função [`.all()`](API/DataClassClass.md#all) de dataclass para selecionar todas as entidades em um dataclass;
 *   Usando o comando `Create entity selection` ou o método [`.newSelection()`](API/DataClassClass.md#newselection) para criar uma seleção de entidade em branco;
 *   Usando a função [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar uma seleção de entidade existente;
-*   Usando uma das várias funções da classe [Entity selection](API/EntitySelectionClass.md) que retorna uma nova entidade selecionada, tais como [`. r()`](API/EntitySelectionClass.md#or);
+*   a nova seleção de entidade resulta de uma das várias funções de classe ORDA aplicadas a uma seleção de entidade existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 *   Utilizando um atributo de relação do tipo "entidades relacionadas" (ver abaixo).
 
 Você pode criar e usar simultaneamente tantas seleções de entidades diferentes quanto desejar para uma classe de dados. Lembre-se de que uma seleção de entidade contém apenas referências a entidades. Seleções diferentes de entidades podem conter referências para as mesmas entidades.
@@ -228,13 +228,13 @@ Uma nova seleção de entidade é **alterável** nos seguintes casos:
 
 Exemplo:
 ```4d
-$toModify:=ds. Company.all().copy() //$toModify is alterable
+$toModify:=ds. Company.all().copy() //$toModify é alterável
 ```
 
 
 Uma nova seleção de entidade **herda** da natureza da seleção de entidade original nos seguintes casos:
 
-- the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. .
+- Usando uma das várias funções da classe [Entity selection](API/EntitySelectionClass.md) que retorna uma nova entidade selecionada, tais como`. .
 - a nova entity selection é baseada numa relação:
     - [entity.*attributeName*](API/EntityClass.md#attributename) (por exemplo, "company.employees") quando *attributeName* é um atributo relacionado um-para-muitos e a entidade pertence a uma seleção de entidade (mesma natureza da seleção de entidade [.getSelection()](API/EntityClass.md#getselection) ),
     - [entitySeletion.*attributeName*](API/EntitySelectionClass.md#attributename) (por exemplo, "employees.employer") quando *attributeName* é um atributo relacionado (mesma natureza que a seleção da entidade),
@@ -243,17 +243,12 @@ Uma nova seleção de entidade **herda** da natureza da seleção de entidade or
 Exemplos:
 
 ```4d
-var $highSal; $lowSal : cs.EmployeeSelection
-var $comp; $comp2 : cs.Company
+<code class="4d">Employee.query("salary >= :1"; 1000000)   
 
-$highSal:=ds.Employee.query("salary >= :1"; 1000000)   
-
-	//$highSal é compartilhável por causa da consulta em dataClass
+    //$highSal é compartilhável por causa da consulta em dataClass
 $comp:=$highSal.employer //$comp é compartilhável porque $highSal é compartilhável
 
-$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
-	//$lowSal é alterável por causa da copy()
-$comp2:=$lowSal.employer //$comp2 é alterável porque $lowSal é alterável
+$lowSal:=ds.
 ```
 
 :::note Seleções de entidades devolvidas pelo servidor
@@ -284,14 +279,13 @@ Você trabalha com duas seleções de entidades que deseja passar para um proces
 
 ```4d
 
-var $paid; $unpaid : cs.InvoicesSelection
+var $paid; $unpaid : cs. InvoicesSelection
 //We get entity selections for paid and unpaid invoices
 
-$paid:=ds.Invoices.query("status=:1"; "Paid")
-$unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
+$paid:=ds. Invoices.query("status=:1"; "Paid")
+$unpaid:=ds. Invoices.query("status=:1"; "Unpaid")
 
-//Passamos referências de seleção de entidades como parâmetros para o worker
-CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
+//Passamos referências de seleção de entidades como parâmetros para o worker CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
 ```
 
@@ -299,7 +293,7 @@ O método `sendMails`:
 
 ```4d 
 
- #DECLARAR ($paid : cs.InvoicesSelection, $unpaid : cs.InvoicesSelection)
+ #DECLARAR ($paid : cs. InvoicesSelection, $unpaid : cs. InvoicesSelection)
  var $invoice : cs. nvoicesEntity
 
  var $server; $transporter; $email; $status : Objeto

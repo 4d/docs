@@ -8,7 +8,7 @@ As aplicações 4D desktop podem ser utilizadas numa configuração Cliente/Serv
 
 - **Os aplicativos cliente/servidor fusionados** são gerados pelo [gerenciador Build Application](building.md#clientserver-page). São utilizados para implementações de aplicações.
 
-- Os **projectos remotos** são arquivos [.4DProject](Project/architecture.md) abertos pelo 4D Server e acessados com 4D em modo remoto. O servidor envia uma versão .4dz do projecto ([formato comprimido](building.md#build-compiled-structure)) para o 4D remoto, assim os ficheiros de estrutura são apenas de leitura. Esta configuração é normalmente utilizada para testar aplicações.
+- Os **projectos remotos** são arquivos [.4DProject](Project/architecture.md) abertos pelo 4D Server e acessados com 4D em modo remoto. O servidor envia uma versão .4dz do projeto ([comprimido formato](building.md#build-compiled-structure)) para a 4D remota, portanto arquivos de estrutura são somente leitura. Esta configuração é normalmente utilizada para testar aplicações.
 
 ![](../assets/en/getStart/localremote.png)
 
@@ -58,13 +58,13 @@ Quando essa página atribuir um servidor, clicar no botão **OK** permitirá que
 
 Depois que a conexão com o servidor for estabelecida, o projeto remoto será listado na guia **Recent (Recente** ).
 
-### Atualizar ficheiros de projeto no servidor
+### Atualizando arquivos do projeto no servidor
 
 O 4D Server cria e envia automaticamente para as máquinas remotas uma [ versão .4dz](building.md#build-compiled-structure) do arquivo de projeto *.4DProject* (não compactado) no modo interpretado.
 
-- Uma versão .4dz atualizada do projeto é automaticamente produzida quando necessário, *i. .* quando o projeto for modificado e recarregado pelo Servidor 4D. O projecto é recarregado:
+- Uma versão .4dz atualizada do projeto é automaticamente produzida quando necessário, *i. .* quando o projeto for modificado e recarregado pelo Servidor 4D. O projeto foi recarregado:
   - automaticamente quando a janela de aplicação do Servidor 4D chegar à frente do sistema operacional ou quando o aplicativo 4D na mesma máquina salvar uma modificação (veja abaixo).
-  - quando o comando `RELOAD PROJECT` é executado. Chamar este comando é necessário, por exemplo, quando você puxou uma nova versão do projeto a partir da plataforma de controle de origem.
+  - quando o comando `RELOAD PROJET` for executado. Chamar este comando é necessário, por exemplo, quando você puxou uma nova versão do projeto a partir da plataforma de controle de origem.
 
 ### Atualizando arquivos do projeto em máquinas remotas
 

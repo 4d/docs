@@ -48,7 +48,7 @@ L’activité du process est le pourcentage du temps que 4D Server a consacré �
 
 Chaque process est identifié par une icône et un type. La couleur et la forme de l’icône indiquent la famille du process :
 
-| icône                                      | type                                                                                                                                                                                                                   |
+| icon                                       | type                                                                                                                                                                                                                   |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/Admin/server-icon-1.png)  | Serveur d’application                                                                                                                                                                                                  |
 | ![](../assets/en/Admin/server-icon-2.png)  | Serveur SQL                                                                                                                                                                                                            |

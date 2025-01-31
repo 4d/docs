@@ -7,7 +7,7 @@ No Windows, os desenvolvedores 4D podem testar e configurar suas aplicações 4D
 
 :::info
 
-O conceito SDI/MDI não existe no macOS. Esta funcionalidade diz respeito apenas a aplicações Windows e as opções relacionadas são ignoradas no macOS.
+The concept of sdi.mdI does not exist on macOS. Esta funcionalidade diz respeito apenas a aplicações Windows e as opções relacionadas são ignoradas no macOS.
 
 :::
 
@@ -50,7 +50,7 @@ Assim, as janelas podem ser utilizadas nos modos MDI ou SDI sem que seja necess�
 
 #### Tela inicial
 
-- Se a opção de interface **Splash screen** tiver sido [selecionada nas Configurações](../settings/interface.md#display-windows), a janela inicial conterá todos os menus que teriam sido exibidos na janela MDI. Note também que fechar a janela splash screen resultará na saída da aplicação, tal como no modo MDI.
+- Se a opção de interface **Splash screen** tiver sido [selecionada nas Configurações](../settings/interface.md#display-windows), a janela inicial conterá todos os menus que teriam sido exibidos na janela MDI. Note também que fechar a janela tela de abertura resultará na saída da aplicação, tal como no modo MDI.
 - Se a opção Splash screen não tiver sido selecionada, os menus serão apresentados apenas nas janelas abertas, dependendo das escolhas do programador.
 
 ### Depurador

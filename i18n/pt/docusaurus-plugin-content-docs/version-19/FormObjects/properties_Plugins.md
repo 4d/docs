@@ -5,15 +5,15 @@ title: Plug-ins
 
 ## Propriedades avançadas
 
-If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
+Se opções avançadas são fornecidas pelo autor do plug-in, um botão das **Propriedades Avançadas** pode ser ativado na lista de propriedades. Nesse caso, você pode clicar nesse botão para definir essas opções, geralmente por uma caixa de diálogo personalizada.
 
-Because the Advanced properties feature is under the control of the author of the plug-in, information about these Advanced options is the responsibility of the distributor of the plug-in.
+Como o recurso de propriedades avançadas está sob o controle do autor do plug-in, as informações sobre essas opções avançadas são de responsabilidade do distribuidor do plug-in.
 
 #### Gramática JSON
 
-| Nome             | Tipo de dados | Valores possíveis                                                                                                            |
-| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| customProperties | text          | Plugin specific properties, passed to plugin as a JSON string if an object, or as a binary buffer if a base64 encoded string |
+| Nome             | Tipo de dados | Valores possíveis                                                                                                                                                                                  |
+| ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| customProperties | text          | Propriedades específicas do plug-in, passadas para o plug-in como uma cadeia de caracteres JSON, se for um objeto, ou como um buffer binário, se for uma cadeia de caracteres codificada em base64 |
 
 #### Objectos suportados
 

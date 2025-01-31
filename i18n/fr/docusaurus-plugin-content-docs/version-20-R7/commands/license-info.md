@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Params-->
 
-| Paramètres | Type   |   | Description                          |
-| ---------- | ------ | - | ------------------------------------ |
-| Résultat   | Object | ← | Information about the active licence |
+| Paramètres | Type   |                             | Description                          |
+| ---------- | ------ | --------------------------- | ------------------------------------ |
+| Résultat   | Object | &#8592; | Information about the active licence |
 
 <!-- END REF-->
 
@@ -134,3 +134,10 @@ You want to get information on your current 4D Server license:
 [CHANGE LICENSES](../commands-legacy/change-licenses.md)\
 [Is license available](../commands-legacy/is-license-available.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1489                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

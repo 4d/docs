@@ -35,8 +35,8 @@ Conversion d'unités : lorsque vous passez d'une unité à l'autre, 4D les conve
 
 A noter que la conversion en va-et-vient peut conduire à un résultat final différent de la valeur de départ en raison des calculs automatiques effectués par 4D. Ceci est illustré dans les séquences suivantes :
 
-- (font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels
-- (font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
+- (font Arial 18)*: 52 pixels -> 2 lignes -> 40 pixels
+- (font Arial 12)*: 3 pixels -> 0.4 ligne arrondi en 1 ligne -> 19 pixels
 
 #### Exemple JSON
 

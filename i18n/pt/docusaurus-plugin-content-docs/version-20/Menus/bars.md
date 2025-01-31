@@ -3,46 +3,46 @@ id: bars
 title: Barras de menus
 ---
 
-As barras de menu constituem a principal interface das aplicações personalizadas. For each custom application, you must create at least one menu bar with at least one menu. By default, Menu Bar #1 is the menu bar displayed in the Application environment. You can change which menu bar is displayed using the `SET MENU BAR` command.
+As barras de menu constituem a principal interface das aplicações personalizadas. Para cada aplicação personalizada, você deve criar pelo menos uma barra de menu com pelo menos um menu. Por padrão, a Barra de menus nº 1 é a barra de menus exibida no ambiente da aplicação. Você pode alterar qual barra de menu é exibida usando o comando `SET MENU BAR`.
 
-4D lets you associate a custom splash screen picture with each menu bar and to preview this menu bar at any time.
+4D permite que você associe uma imagem de tela inicial personalizada a cada barra de menu e visualize essa barra de menu a qualquer momento.
 
 
 ## Tela inicial
 
 
-You can enhance the appearance of each menu bar by associating a custom splash screen with it. The window containing the splash screen is displayed below the menu bar when it appears. Pode conter um logótipo ou qualquer tipo de imagem. Por padrão, 4D mostra o logo 4D na tela inicial:
+É possível aprimorar a aparência de cada barra de menu associando-lhe uma tela inicial personalizada. A janela que contém a tela inicial é exibida abaixo da barra de menus quando ela aparece. Pode conter um logótipo ou qualquer tipo de imagem. Por padrão, 4D mostra o logo 4D na tela inicial:
 
 ![](../assets/en/Menus/splash1.png)
 
-Uma imagem personalizada de tela de inicialização pode vir de qualquer aplicativo gráfico. 4D lets you paste a clipboard picture or use any picture present on your hard disk. Qualquer formato de imagem padrão suportado por 4D pode ser usado.
+Uma imagem personalizada de tela de inicialização pode vir de qualquer aplicação gráfica. 4D permite que você cole uma imagem da área de transferência ou use qualquer imagem presente em seu disco duro. Qualquer formato de imagem padrão suportado por 4D pode ser usado.
 
-The splash screen picture can be set only in the Menu editor: select the menu bar with which you want to associate the custom splash screen. Note a área "Imagem de fundo" na parte direita da janela. To open a picture stored on your disk directly, click on the **Open** button or click in the "Background Image" area. É apresentado um menu de contexto:
-- To paste a picture from the clipboard, choose **Paste**.
-- To open a picture stored in a disk file, choose **Open**. If you choose Open, a standard Open file dialog box will appear so that you can select the picture file to be used. Uma vez definida, a imagem é apresentada em miniatura na área. É então associado à barra de menus.
+A imagem da tela inicial só pode ser definida no Editor de menus: selecione a barra de menus à qual deseja associar a tela inicial personalizada. Note a área "Imagem de fundo" na parte direita da janela. Para abrir diretamente uma imagem armazenada em seu disco, clique no botão **Abrir** ou clique na área "Imagem de fundo". É apresentado um menu de contexto:
+- Para colar uma imagem da área de transferência, selecione **Colar**.
+- Para abrir uma imagem armazenada em um arquivo de disco, selecione **Abrir**. Se você escolher Abrir, uma caixa de diálogo Abrir padrão irá aparecer para você poder selecionar o arquivo de imagem a ser usado. Uma vez definida, a imagem é apresentada em miniatura na área. É então associado à barra de menus.
 
 ![](../assets/en/Menus/splash2.png)
 
-You can view the final result by testing the menu bar (see the following section). In Application mode, the picture is displayed in the splash screen with the "Truncated (Centered)" type format.
+É possível visualizar o resultado testando a barra de menus (consulte a seção a seguir). No modo Aplicação, a imagem é exibida na tela inicial com o formato do tipo "Truncado (centralizado)".
 
 > Pode escolher se quer exibir ou esconder a janela usando a opção **Mostrar a barra de ferramentas** nas Propriedades do Banco de Dados.
 
-To remove the custom picture and display the default one instead, click on the **Clear** button or select **Clear** in the area pop-up menu.
+Para remover a imagem personalizada e exibir a imagem padrão, clique no botão **Limpar** ou selecione **Limpar** no menu pop-up da área.
 
 
 ## Pré-visualização de barras de menu
 
-The Menu Bar editor lets you view the custom menus and splash screen at any time, without closing the toolbox window.
+O editor da barra de menus permite que você visualize os menus personalizados e a tela inicial a qualquer momento, sem fechar a janela da caixa de ferramentas.
 
-To do so, simply select the menu bar and choose **Test the menu bar "Menu Bar #X"** in the context menu or the options menu of the editor.
+Para fazer isso, basta selecionar a barra de menus e escolher **Testar a barra de menus "Barra de menus #X"** no menu de contexto ou no menu de opções do editor.
 
 ![](../assets/en/Menus/splash3.png)
 
-4D mostra uma pré-visualização da barra de menu assim como o ecrã inicial. Você pode rolar os menus e submenus para visualizar seu conteúdo. No entanto, estes menus não estão activos. To test the functioning of menus and the toolbar, you must use the **Test Application** command from the **Run** menu.
+4D mostra uma pré-visualização da barra de menu assim como o ecrã inicial. Você pode rolar os menus e submenus para visualizar seu conteúdo. No entanto, estes menus não estão activos. Para testar o funcionamento dos menus e da barra de ferramentas, você deve usar o comando **Testar aplicativo** no menu **Executar**.
 
 :::info
 
-Se a opção **Usar o modo SDI no Windows** estiver selecionada na [ página "Interface" da caixa de diálogo Configurações](../settings/interface.md#display-windows), o menu **Testar aplicaçao** permitirá que você teste a aplicaçao no [modo SDI ou MDI](sdi/md) no Windows:
+Se a opção **Usar o modo SDI no Windows** estiver selecionada na [ página "Interface" da caixa de diálogo Configurações](../settings/interface.md#display-windows), o menu **Testar aplicação** permitirá que você teste a aplicação no [modo SDI ou MDI](sdi.md) no Windows:
 
 ![](../assets/en/settings/sdi-mdi.png)
 

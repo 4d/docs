@@ -38,7 +38,7 @@ Se a pasta especificada não existe na localização definida, ou se a rota de a
 
 #### Sobre certificados SSL 
 
-[Como descrito nesta página](https://developer.4d.com/docs/pt/Admin/tls/), certificados SSL gerenciado por 4D deve ser no **PEM format**. Se seu provedor de certificado (por exemplo, [startssl](https://www.startssl.com/)) enviar para você um certificado que esteja no formato binário, como .crt, .pfx ou .p12 (o formato também depende de seu navegador), você terá que converter o formato para o PEM format antes de poder utilizã-lo. Há web sites como *sslshopper* onde se pode fazer essa conversão on-line.
+[Como descrito nesta página](../Admin/tls.md), certificados SSL gerenciado por 4D deve ser no **PEM format**. Se seu provedor de certificado (por exemplo, [startssl](https://www.startssl.com/)) enviar para você um certificado que esteja no formato binário, como .crt, .pfx ou .p12 (o formato também depende de seu navegador), você terá que converter o formato para o PEM format antes de poder utilizã-lo. Há web sites como *sslshopper* onde se pode fazer essa conversão on-line.
 
 #### Exemplo 
 

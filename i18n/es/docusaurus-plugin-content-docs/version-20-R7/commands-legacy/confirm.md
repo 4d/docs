@@ -23,7 +23,7 @@ Pase el mensaje a mostrar en el parámetro *mensaje*.
 
 Por defecto, título del botón OK es “Aceptar” y el del botón Cancelar es “Cancelar.” Para cambiar los títulos de estos botones, pase los nuevos títulos en los parámetros opcionales *ok titulobotonOK* y *titulobotoncancel*. Si es necesario, el ancho de los botones se redimensiona hacia la izquierda, de acuerdo al ancho de los títulos personalizados que usted pase.
 
-El botón OK tiene la propiedad [botón por defecto](https://developer.4d.com/docs/FormObjects/propertiesAppearance#default-button). Si el usuario hace clic en el botón OK o presiona Intro para aceptar la caja de diálogo, la variable sistema OK toma el valor 1\. Si el usuario hace clic en el botón Cancel para cancelar la caja de diálogo, la variable sistema OK toma el valor 0.
+El botón OK tiene la propiedad [botón por defecto](../FormObjects/propertiesAppearance.md#default-button). Si el usuario hace clic en el botón OK o presiona Intro para aceptar la caja de diálogo, la variable sistema OK toma el valor 1\. Si el usuario hace clic en el botón Cancel para cancelar la caja de diálogo, la variable sistema OK toma el valor 0.
 
 **Consejo:** no llame al comando CONFIRM desde un método de formulario o de objeto que maneje los eventos de formulario On Activate o On Deactivate; esto provocará un bucle infinito.
 

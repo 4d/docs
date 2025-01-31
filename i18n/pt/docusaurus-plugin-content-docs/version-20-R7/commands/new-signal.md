@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New signal.Params-->
 
-| Parâmetro   | Tipo                       |   | Descrição                          |
-| ----------- | -------------------------- | - | ---------------------------------- |
-| description | Text                       | → | Descrição para o sinal             |
-| Resultado   | 4D. Signal | ← | Objeto nativo encapsulando o sinal |
+| Parâmetro   | Tipo                       |                             | Descrição                          |
+| ----------- | -------------------------- | --------------------------- | ---------------------------------- |
+| description | Text                       | &#8594; | Descrição para o sinal             |
+| Resultado   | 4D. Signal | &#8592; | Objeto nativo encapsulando o sinal |
 
 <!-- END REF-->
 
@@ -69,3 +69,10 @@ O método ***doSomething*** poderia ser como:
  End use
  $signal.trigger() // The work is finished
 ```
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1641                            |
+| Thread safe    | &amp;check; |

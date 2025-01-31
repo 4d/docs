@@ -24,7 +24,7 @@ Por defecto, este comando no afecta el contenido actual de la caché, esto signi
 
 **Nota:** pasar un parámetro a este comando es para propósitos de prueba. Por motivos de rendimiento, no se recomienda liberar la caché en el entorno de producción.
 
-Normalmente, no es necesario llamar a este comando, ya que 4D guarda las modificaciones de datos regularmente. La opción **Vaciar la caché cada X segundos (minutos)** en [Página Base de datos](https://developer.4d.com/docs/es/settings/database/) de las Propiedades de la base, que especifica con qué frecuencia guardar, se suele utilizar para controlar el vaciado de la caché. Recomendamos utilizar el valor por defecto de 20 segundos. Tenga en cuenta también que el parámetro Cache flush periodicity se puede ajustar y leer utilizando los comandos [SET DATABASE PARAMETER](set-database-parameter.md) y [Get database parameter](get-database-parameter.md).
+Normalmente, no es necesario llamar a este comando, ya que 4D guarda las modificaciones de datos regularmente. La opción **Vaciar la caché cada X segundos (minutos)** en [Página Base de datos](../settings/database.md) de las Propiedades de la base, que especifica con qué frecuencia guardar, se suele utilizar para controlar el vaciado de la caché. Recomendamos utilizar el valor por defecto de 20 segundos. Tenga en cuenta también que el parámetro Cache flush periodicity se puede ajustar y leer utilizando los comandos [SET DATABASE PARAMETER](set-database-parameter.md) y [Get database parameter](get-database-parameter.md).
 
 #### Ver también 
 

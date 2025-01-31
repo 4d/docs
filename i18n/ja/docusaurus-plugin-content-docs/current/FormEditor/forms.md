@@ -1,6 +1,6 @@
 ---
 id: forms
-title: フォーム
+title: Forms
 ---
 
 フォームはデスクトップアプリケーションにおいて、データの入力・修正・印刷をおこなうためのインターフェースとなります。 フォームを使用することで、ユーザーはデータベースのデータをやり取りし、レポートを印刷します。 フォームを使用して、カスタムダイアログボックスやパレット、そのほかのカスタムウィンドウを作成します。
@@ -87,7 +87,7 @@ title: フォーム
 
 - もっとも重要な情報を最初のページに配置し、他の情報を後ろのページに配置する。
 - トピックごとに、専用ページにまとめる。
-- [入力順](../FormEditor/formEditor.html#データの入力順)を設定して、データ入力中のスクロール動作を少なくしたり、または不要にする。
+- Reduce or eliminate scrolling during data entry by setting the [entry order](formEditor.md#data-entry-order).
 - フォーム要素の周りの空間を広げ、洗練された画面をデザインする。
 
 複数ページは入力フォームとして使用する場合にのみ役立ちます。 印刷出力には向きません。 マルチページフォームを印刷すると、最初のページしか印刷されません。
@@ -111,7 +111,7 @@ title: フォーム
 3. 開かれたフォームの 0ページ
 4. 開かれたフォームのカレントページ
 
-この順序により、フォームにおけるオブジェクトの [入力順](../FormEditor/formEditor.html#データの入力順) が決まります。
+This order determines the default [entry order](formEditor.md#data-entry-order) of objects in the form.
 
 > 継承フォームの 0ページと 1ページだけが他のフォームに表示可能です。
 

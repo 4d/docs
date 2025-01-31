@@ -37,7 +37,7 @@ If you want to display a pop-up menu associated with a 3D button, then do not pa
 
 If a menu item has been selected, the command returns its associated custom character string (such as it has been defined using the [SET MENU ITEM PARAMETER](set-menu-item-parameter.md) command). Otherwise, the command returns an empty string. 
 
-**Starting with 4D v16 R3:** If a standard action is associated to a menu item, it is taken into account by the **Dynamic pop up menu** command at several levels:
+If a standard action is associated to a menu item, it is taken into account by the **Dynamic pop up menu** command at several levels:
 
 * If an associated standard action is not enabled (i.e. it cannot be invoked) in the context of the pop up menu, the item is automatically hidden. You can know if an action is enabled using the [Action info](action-info.md) command.
 * Items with a toggle associated action are automatically checked, unchecked or "mixed" depending on the selection.

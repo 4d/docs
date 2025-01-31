@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| Parâmetro | Tipo   |   | Descrição                 |
-| --------- | ------ | - | ------------------------- |
-| Resultado | Object | ← | Current element or object |
+| Parâmetro | Tipo   |                             | Descrição                 |
+| --------- | ------ | --------------------------- | ------------------------- |
+| Resultado | Object | &#8592; | Current element or object |
 
 <!-- END REF-->
 
@@ -178,3 +178,10 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 [Self](../commands-legacy/self.md)\
 [Super](super.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1470                            |
+| Thread safe    | &amp;check; |

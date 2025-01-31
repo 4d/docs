@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-| Parâmetro  | Tipo                     |     | Descrição                       |
-| ---------- | ------------------------ | :-: | ------------------------------- |
-| zipFile    | 4D. File |  →  | Arquivos Zip                    |
-| senha      | Text                     |  →  | Senha do arquivo ZIP, se houver |
-| Resultados | Parâmetros               |  ←  | Objeto arquivo                  |
+| Parâmetro  | Tipo                     |                             | Descrição                       |
+| ---------- | ------------------------ | :-------------------------: | ------------------------------- |
+| zipFile    | 4D. File | &#8594; | Arquivos Zip                    |
+| senha      | Text                     | &#8594; | Senha do arquivo ZIP, se houver |
+| Resultados | Parâmetros               | &#8592; | Objeto arquivo                  |
 
 <!-- END REF -->
 
@@ -84,3 +84,10 @@ Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1637                            |
+| Thread safe    | &amp;check; |

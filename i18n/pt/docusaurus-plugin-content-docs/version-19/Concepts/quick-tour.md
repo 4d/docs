@@ -227,7 +227,7 @@ $f.message() //displays "Hello world!"
 Opcionalmente, utilize a palavra-chave `Class constructor` para declarar as propriedades do objeto.
 
 ```4d  
-//in the Rectangle.4dm file
+//no arquivo Rectangle.4dm
 Class constructor ($height: Integer; $width : Integer)
 This.height:=$height
 This.width:=$width
@@ -237,13 +237,13 @@ This.name:="Rectangle"
 Uma classe pode estender outra classe utilizando `Class extends <ClassName>`. As superclasses podem ser chamadas utilizando o comando `Super`. Por exemplo:
 
 ```4d  
-//in the Square.4dm file
+//no arquivo Square.4dm
 Class extends rectangle
 
 Class constructor($length : Integer)
 
-  // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height
+  // Ele chama o construtor da classe pai com comprimentos   
+  // fornecido para a largura e altura
 Super($length;$length)
 
 This.name:="Square"

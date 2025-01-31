@@ -63,7 +63,7 @@ A 4D.OutgoingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 The `.body` property contains <!-- REF #OutgoingMessageClass.body.Summary -->the outgoing message body<!-- END REF -->. `.body` プロパティでは以下のデータ型がサポートされます:
 
-- text
+- テキスト
 - blob
 - object
 - image

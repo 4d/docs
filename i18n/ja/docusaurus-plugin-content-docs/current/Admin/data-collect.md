@@ -18,7 +18,7 @@ title: データ収集
 - データベースが開かれる
 - データベースが閉じられる
 - Webサーバーが起動される
-- php実行
+- use of specific features such as php, open datastore, remote debugger,
 - クライアントが接続される
 - 収集データが送信される
 
@@ -57,6 +57,22 @@ title: データ収集
 | --------- | ------ | ------------------------------------------------------ |
 | webServer | Object | Webサーバーが起動中、または起動済みの場合は "started":true |
 
+### Collected at new web session creation
+
+| データ                                                 | 型      | 注記                                                                                   |
+| --------------------------------------------------- | ------ | ------------------------------------------------------------------------------------ |
+| databases.webMaxLicensedSessions    | Number | Maximum number of non-REST web sessions on the server that use the webserver license |
+| databases.restMaxLicensedSessions   | Number | Maximum number of REST web sessions on the server that use the REST license          |
+| databases.webMaxUnlicensedSessions  | Number | Maximum number of other non-REST web sessions on the server                          |
+| databases.restMaxUnlicensedSessions | Number | Maximum number of other REST web sessions on the server                              |
+
+### Collected at datastore opening
+
+| データ                                               | 型      | 注記                                                            |
+| ------------------------------------------------- | ------ | ------------------------------------------------------------- |
+| databases.externalDatastoreOpened | Number | Number of calls to `Open datastore`                           |
+| databases.internalDatastoreOpened | Number | Number of times the datastore is opened by an external server |
+
 ### 一定時間ごとに収集される情報
 
 | データ                         | 型      | 注記           |
@@ -67,21 +83,23 @@ title: データ収集
 
 ### 収集データの送信時に収集される情報
 
-| データ                                         | 型      | 注記                                                |
-| ------------------------------------------- | ------ | ------------------------------------------------- |
-| uptime                                      | Number | ローカル4Dデータベースが開かれてからの経過時間 (秒単位) |
-| cacheReadBytes                              | Object | キャッシュから読み出したバイト数                                  |
-| cacheMissBytes                              | Object | キャッシュミスバイト数                                       |
-| cacheReadCount                              | Object | キャッシュの読み出し回数                                      |
-| cacheMissCount                              | Object | キャッシュミス回数                                         |
-| dataSegment1.diskReadBytes  | Object | データファイルから読み取ったバイト数                                |
-| dataSegment1.diskWriteBytes | Object | データファイルに書き込んだバイト数                                 |
-| dataSegment1.diskReadCount  | Object | データファイルからの読み取り回数                                  |
-| dataSegment1.diskWriteCount | Object | データファイルへの書き込み回数                                   |
-| indexSegment.diskReadBytes  | Number | インデックスファイルから読み取ったバイト数                             |
-| indexSegment.diskWriteBytes | Number | インデックスファイルに書き込んだバイト数                              |
-| indexSegment.diskReadCount  | Number | インデックスファイルからの読み取り回数                               |
-| indexSegment.diskWriteCount | Number | インデックスファイルへの書き込み回数                                |
+| データ                                            | 型       | 注記                                                                |
+| ---------------------------------------------- | ------- | ----------------------------------------------------------------- |
+| uptime                                         | Number  | ローカル4Dデータベースが開かれてからの経過時間 (秒単位)                 |
+| cacheReadBytes                                 | Object  | キャッシュから読み出したバイト数                                                  |
+| cacheMissBytes                                 | Object  | キャッシュミスバイト数                                                       |
+| cacheReadCount                                 | Object  | キャッシュの読み出し回数                                                      |
+| cacheMissCount                                 | Object  | キャッシュミス回数                                                         |
+| dataSegment1.diskReadBytes     | Object  | データファイルから読み取ったバイト数                                                |
+| dataSegment1.diskWriteBytes    | Object  | データファイルに書き込んだバイト数                                                 |
+| dataSegment1.diskReadCount     | Object  | データファイルからの読み取り回数                                                  |
+| dataSegment1.diskWriteCount    | Object  | データファイルへの書き込み回数                                                   |
+| indexSegment.diskReadBytes     | Number  | インデックスファイルから読み取ったバイト数                                             |
+| indexSegment.diskWriteBytes    | Number  | インデックスファイルに書き込んだバイト数                                              |
+| indexSegment.diskReadCount     | Number  | インデックスファイルからの読み取り回数                                               |
+| indexSegment.diskWriteCount    | Number  | インデックスファイルへの書き込み回数                                                |
+| databases.webScalableSessions  | Boolean | True if scalable sessions are activated                           |
+| databases.webIPAddressesNumber | Number  | Number of different IP addresses that made a request to 4D Server |
 
 ### データベースの終了時、収集データの送信時に収集される情報
 
@@ -92,6 +110,14 @@ title: データ収集
 | webserverBytesIn               | Number | データ収集中に Webサーバーが受信したバイト数 |
 | webserverBytesOut              | Number | データ収集中に Webサーバーが送信したバイト数 |
 | qodly.webforms | Number | Qodly Webフォームの数          |
+
+### Collected at every new call to the remote debugger
+
+| データ                                                         | 型      | 注記                                                            |
+| ----------------------------------------------------------- | ------ | ------------------------------------------------------------- |
+| databases.remoteDebugger4DRemoteAttachments | Number | Number of attachments to the remote debugger from a remote 4D |
+| databases.remoteDebuggerQodlyAttachments    | Number | Number of attachments to the remote debugger from Qodly       |
+| databases.remoteDebuggerVSCodeAttachments   | Number | Number of attachments to the remote debugger from VS Code     |
 
 ### PHP execute の呼び出し毎に収集される情報
 
@@ -109,7 +135,7 @@ title: データ収集
 
 ## 保存先と送信先
 
-収集されたデータは、4D Server の終了時にデータベース毎にテキストファイル (JSON形式) に書き込まれます。 このファイルは、[Active 4D Folder](https://doc.4d.com/4dv20/help/command/ja/page485.html) に格納されます。 つまり:
+収集されたデータは、4D Server の終了時にデータベース毎にテキストファイル (JSON形式) に書き込まれます。 The file is stored inside the [active 4D folder](../commands-legacy/get-4d-folder.md), i.e.:
 
 - Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`

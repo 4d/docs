@@ -91,7 +91,7 @@ c. 以下のプロジェクトメソッドをメニューに関連付けます:
 
 #### 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
 *セット*  
 

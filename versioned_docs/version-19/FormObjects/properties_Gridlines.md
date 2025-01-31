@@ -11,7 +11,7 @@ Defines the color of the horizontal lines in a list box (gray by default).
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|horizontalLineStroke| color|any css value, "'transparent", "automatic"|
+|horizontalLineStroke| color|Any CSS value, "transparent", "automatic"|
 
 #### Objects Supported
 
@@ -27,7 +27,7 @@ Defines the color of the vertical lines in a list box (gray by default).
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|verticalLineStroke| color|any css value, "'transparent", "automatic"|
+|verticalLineStroke| color|Any CSS value, "transparent", "automatic"|
 
 #### Objects Supported
 

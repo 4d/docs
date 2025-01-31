@@ -188,7 +188,7 @@ The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style 
 
 Por padrão, o estilo OS X Gradient tem um fundo cinza-claro com um rótulo no centro. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
- - *Windows* - o botão é idêntico ao estilo Bevel. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
+ - *Windows* - o botão é idêntico ao estilo Bevel. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido no lado direito do botão.
 
 ![](../assets/en/FormObjects/button_osxgradient.png)
 
@@ -293,7 +293,7 @@ O estilo do botão Ajuda pode ser usado para exibir um botão padrão de ajuda d
                 }
 ```
 
-> O estilo de ajuda não suporta as propriedades básicas[Número de estados](properties_TextAndPicture.md#number-of-states), [Caminho do nome de imagem](properties_TextAndPicture.md#picture-pathname) e [Título/Posição da imagem](properties_TextAndPicture.md#titlepicture-position).
+> O estilo de ajuda não suporta as propriedades básicas [Número de estados](properties_TextAndPicture.md#number-of-states), [Caminho do nome de imagem](properties_TextAndPicture.md#picture-pathname) e [Título/Posição da imagem](properties_TextAndPicture.md#titlepicture-position).
 
 
 ### Círculo

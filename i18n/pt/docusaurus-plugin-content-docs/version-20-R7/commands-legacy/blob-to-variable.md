@@ -24,7 +24,7 @@ Os dados BLOB devem ser consistentes com a variável destino. Normalmente, você
 
 Se você não especificar o parâmetro opcional *offset*, os dados da variável são lidos a partir do início do BLOB. Se você lidar com um BLOB em que diversas variáveis tenham sido armazenados, você deve passar o parâmetro de *offset* e, além disso, você deve passar uma variável numérica. Antes da chamada, defina essa variável numérica para o deslocamento apropriado. Após a chamada, a mesma variável numérica retorna o deslocamento da próxima variável armazenada dentro do BLOB.
 
-**Nota:** **BLOB TO VARIABLE** Suporta as variáveis objeto de tipo [C\_OBJECT](c-object.md). Para maior informação, consulte o comando [VARIABLE TO BLOB](variable-to-blob.md).
+**Nota:** **BLOB TO VARIABLE** Suporta as variáveis objeto de tipo *C\_OBJECT*. Para maior informação, consulte o comando [VARIABLE TO BLOB](variable-to-blob.md).
 
 Após a chamada, se a variável foi reescrita com sucesso, a variável OK é definida como 1\. Se a operação não pôde ser executada, a variável OK é definido como 0, por exemplo, se não havia memória suficiente.
 

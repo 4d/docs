@@ -38,13 +38,13 @@ Um combo box é iniciado em exatamente da mesma forma que uma lista drop down Se
 
 ### Utilizar uma lista de seleção
 
-If you want to use a combo box to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the form object's data source. Isso facilita gerenciar variáveis/campos listados.
+Se quiser usar uma caixa de combinação para gerenciar os valores de uma área de entrada (campo listado ou variável), 4D permite referenciar o campo ou a variável diretamente como a fonte de dados do objeto formulário. Isso facilita gerenciar variáveis/campos listados.
 
 > Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
 
 Para associar uma caixa de combinação a um campo ou variável, basta digitar o nome do campo ou da variável diretamente em [Variable or Expression] (properties_Object.md#variable-or-expression) do objeto do formulário na Lista de propriedades.
 
-When the form is executed, 4D automatically manages the combo box during input or display: when a user chooses a value, it is saved in the field; this field value is shown in the combo box when the form is displayed:
+Quando o formulário é executado, 4D gerencia automaticamente a caixa de combinação durante a entrada ou exibição: quando um usuário escolhe um valor, ele é salvo no campo; esse valor de campo é mostrado na caixa de combinação quando o formulário é exibido:
 
 Consulte **Usando uma escolha** na página [lista suspensa] (dropdownList_Overview.md#using-a-choice-list) para obter mais informações.
 

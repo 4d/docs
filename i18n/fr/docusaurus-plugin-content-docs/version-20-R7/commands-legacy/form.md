@@ -29,7 +29,7 @@ Si le formulaire courant est affiché suite à un appel à la commande [DIALOG](
 
 Si le formulaire courant est un sous-formulaire, l'objet retourné par **Form** dépend de la variable du conteneur parent :
 
-* Si la variable associée au conteneur parent a été typée en objet ([C\_OBJECT](c-object.md)), **Form** retourne la valeur de cette variable.  
+* Si la variable associée au conteneur parent a été typée en objet (*C\_OBJECT*), **Form** retourne la valeur de cette variable.  
 Dans ce cas, l'objet retourné par **Form** est identique à celui retourné par l'expression suivante :  
 ```4d  
  (OBJECT Get pointer(Object subform container))->  

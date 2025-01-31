@@ -39,5 +39,5 @@ You can manage the data with object or form [methods](Concepts/methods.md).
 You can also represent field and variable expressions in your forms using alternative objects, more particularly:
 
 * You can display and enter data from database fields directly in columns of [selection type List boxes](listbox_overview.md).
-* You can represent a list field or variable directly in a form using [Pop-up Menus/Drop-down Lists](popupMenuDropdownList_overview) and [Combo Boxes](comboBox_overview.md) objects.
+* You can represent a list field or variable directly in a form using [Pop-up Menus/Drop-down Lists](dropdownList_Overview.md) and [Combo Boxes](comboBox_overview.md) objects.
 * You can represent a boolean expression as a [check box](checkbox_overview.md) or as a [radio button](radio_overview.md) object.

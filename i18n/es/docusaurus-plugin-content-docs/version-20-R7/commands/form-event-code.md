@@ -8,13 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Params-->
 
-| Parámetros | Tipo    |   | Descripción       |
-| ---------- | ------- | - | ----------------- |
-| Resultado  | Integer | ← | Form event number |
+| Parámetros | Tipo    |                             | Descripción       |
+| ---------- | ------- | --------------------------- | ----------------- |
+| Resultado  | Integer | &#8592; | Form event number |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
 
 #### Descripción
 
@@ -349,3 +347,10 @@ As a result, the red rectangle follows the scrolling of the list box:
 [Keystroke](../commands-legacy/keystroke.md)\
 [POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)\
 [SET TIMER](../commands-legacy/set-timer.md)
+
+#### Propiedades
+
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 388                                                                 |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

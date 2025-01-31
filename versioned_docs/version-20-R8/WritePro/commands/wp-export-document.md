@@ -1,0 +1,270 @@
+---
+id: wp-export-document
+title: WP EXPORT DOCUMENT
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.WP EXPORT DOCUMENT.Syntax-->**WP EXPORT DOCUMENT** ( *wpDoc* ; *filePath* {; *format* {; *option*}} )<br/>**WP EXPORT DOCUMENT** ( *wpDoc* ; *fileObj* {; *format* {; *option*}} )<!-- END REF-->
+<!--REF #_command_.WP EXPORT DOCUMENT.Params-->
+| Parameter | Type |  | Description |
+| --- | --- | --- | --- |
+| wpDoc | Object | &#8594;  | 4D Write Pro variable |
+| filePath | Text | &#8594;  | Path of exported file |
+| fileObj | 4D.File | &#8594; | File object to export |
+| format | Integer | &#8594;  | Document output format (e.g., .docx, .pdf, etc.)|
+| option | Object, Integer | &#8594;  |Export options, which can vary depending on the format chosen. |
+
+<!-- END REF-->
+
+#### Description
+
+The **WP EXPORT DOCUMENT** command<!--REF #_command_.WP EXPORT DOCUMENT.Summary--> exports the *wpDoc* 4D Write Pro object to a document on disk according to the *filePath* or *fileObj* parameter as well as any optional parameters.<!-- END REF-->
+
+In *wpDoc*, pass the 4D Write Pro object that you want to export.
+
+You can pass either a *filePath* or *fileObj*:
+
+* In *filePath*, pass the destination path and the name of the document to be exported. If you pass only the document name, it will be saved at the same level as the 4D structure file.
+
+* In *fileObj* parameter, pass a 4D.File object representing the file to be exported.
+
+You can omit the *format* parameter, in which case you need to specify the extension in *filePath*. You can also pass a constant from the *4D Write Pro Constants* theme in the *format* parameter. In this case, 4D adds the appropriate extension to the file name if needed. The following formats are supported:
+
+| Constant             | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| -------------------- | ----- | ------------------ |
+| wk 4wp               | 4     | 4D Write Pro document is saved in a native archive format (zipped HTML and images saved in a separate folder). 4D specific tags are included and 4D expressions are not computed. This format is particularly suitable for saving and archiving 4D Write Pro documents on disk without any loss.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| wk docx              | 7     | .docx extension. 4D Write Pro document is saved in Microsoft Word format. Certified support for Microsoft Word 2010 and newer. <br/> <br/>The document parts exported are: <br/>Body / headers / footers / sectionsPage / print settings (margins, background color / image, borders, padding, paper size / orientation)Images - inline, anchored, and background image pattern (defined with wk background image)Compatible variables and expressions (page number, number of pages, date, time, metadata). Non-compatible variables and expressions will be evaluated and frozen before export.Links -<br/>BookmarksURLsNote that some 4D Write Pro settings may not be available or may behave differently in Microsoft Word. |
+| wk mime html         | 1     | 4D Write Pro document is saved as standard MIME HTML with HTML documents and images embedded as MIME parts (encoded in base64). Expressions are computed and 4D specific tags and method links are removed. Only text boxes anchored to embedded view are exported (as divs). This format is particularly suitable for sending HTML emails with the  command.                                                                                                                                                                                                                                                                                                                                                                                                    |
+| wk pdf               | 5     | .pdf extension. 4D Write Pro document is saved in PDF format, based on Page view mode. The following metadata is exported in a PDF document: Title Author Subject Content creator **Notes**: Expressions are automatically frozen when document is exported Links to methods are NOT exported                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| wk svg               | 8     | 4D Write Pro document page is saved in SVG format, based on Page view mode. **Note:** When exporting to SVG, you can only export one page at a time. Use the wk page index to specify which page to export.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| wk web page complete | 2     | .htm or .html extension. Document is saved as standard HTML and its resources are saved separately. 4D tags and links to 4D methods are removed and expressions are computed. Only text boxes anchored to embedded view are exported (as divs). This format is particularly suitable when you want to display a 4D Write Pro document in a web browser.                                                                                                                                                                                                                                                                                                                                                                                                          |
+
+**Notes:**
+
+* "4D specific tags" means 4D XHTML with a 4D namespace and 4D CSS styles.
+* For more information about the 4D Write Pro format, refer to *.4wp document format*.
+* To view a list of known differences or incompatibility when using the .docx format, see *Importing and Exporting in .docx format*.
+* For more information on exporting to SVG format, see *Exporting to SVG format*.
+
+##### option parameter
+
+Pass an [object](# "Data structured as a native 4D object") in *option* containing the values to define the properties of the exported document. The following properties are available:
+
+| Constant   | Value              | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ----------- | ------------------ | ---------------------------------------- |
+| wk CID host domain name                     | cidHostDomain      | CID host domain name: host domain that will be added to generated CID URLs including an '@' as separator. Available only when the wk mime html format is used.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| wk embedded pictures                        | embeddedPictures   | For SVG Export only. Sets whether pictures are embedded in the exported .svg file when you call [WP EXPORT DOCUMENT](wp-export-document.md). Available values: true (default): Pictures are embedded in the exported .svg file false: Pictures are exported in a folder called "filename\_images" at the level of the exported .svg file, "filename" being the name passed to the command for the file, without the extension. The pictures are not embedded, but referenced in the .svg file. Note that: If the folder already exists, it is emptied before the file is exported If there is no image on the exported page, the folder is deleted                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| wk factur x                                 | facturX            | For PDF export only. Value: object configuring a "Factur-X (ZUGFeRD)" PDF export (see *wk factur x object*).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| wk files                                    | files              | For PDF export only. Value: collection of objects, each of them describing a file to be embedded in the final document (see *wk files collection*). This feature is only supported in PDF/A-3 documents: when the wk files attribute is used, the "PDF/A-3" version is automatically set (the wk pdfa version attribute is ignored). In case of a Factur-X PDF export (see below), the first object of the collection must contain the Factur-X xml file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| wk google fonts tag                         | googleFontsTag     | For SVG export only. Sets the import rule for google fonts in the exported SVG. Possible values: false (default): No google fonts import rule is added. true: Adds the @import rule to the exported file. Useful if you want to use fonts that are not available by default on Windows or macOS. **Note:** This property is set to false by default because when enabled, Google fonts override native fonts, and native fonts are generally better rendered in the browser.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| wk HTML pretty print                        | htmlPrettyPrint    | HTML code is formatted to be easier to read.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| wk max picture DPI                          | maxPictureDPI      | Used for resampling (reducing) images to preferred resolution. For SVG images in Windows, used for rasterization. Default values: 300 (for wk optimized for \= wk print) 192 (for wk optimized for \= wk screen) Maximum possible value: 1440                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| wk optimized for                            | optimizedFor       | Defines how an exported document is optimized based on its intended medium. Possible values: wk print (default value for wk pdf and wk svg) Bitmap pictures may be downscaled using the DPI defined by wk max picture DPI or 300 (default value) and may be converted to PNG if codec is not supported for the export type. Vectorial pictures are converted to PNG using the DPI defined by wk max picture DPI or 300 (Windows only) If a picture contains more than one format, the best format for printing is used (*e.g.*, .tiff instead or .jpg) wk screen (default value for wk web page complete and wk mime html) Bitmap pictures may be downscaled using the DPI defined by wk max picture DPI or 192 (default value) and may be converted to JPEG (opaque images) or PNG (transparent images) if codec is not supported for the export type. Vectorial pictures are converted to PNG using the DPI defined by wk max picture DPI or 192 (Windows only) If a picture contains more than one format, the format for screen rendering is used. **Note:** Documents exported in wk docx format are always optimized for wk print (wk optimized for option is ignored). |
+| wk page index                               | pageIndex          | For SVG export only. Index of the page to export to svg format (default is 1). Page index starts at 1 for the first page of the document. **Note:** Page index is independent from page numbering.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| wk pdfa version                             | pdfaVersion        | Exports PDF with conformance to a PDF/A version. For more information on PDF/A properties and versions, please refer to the [PDF/A page on Wikipedia](https://en.wikipedia.org/wiki/PDF/A). Possible values: wk pdfa2: Exports to version "PDF/A-2" wk pdfa3: Exports to version "PDF/A-3" **Note:** On macOS, wk pdfa2 may export to PDF/A-2 or PDF/A-3 or higher, depending on platform implementation. Also, wk pdfa3 means "exports to *at least* PDF/A-3". On Windows, the output PDF file will always be equal to the desired conformance.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| wk recompute formulas                       | recomputeFormulas  | Defines if formulas must be recomputed when exported. Possible values: true - Default value. All formulas are recomputed false - Do not recompute formulas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| wk visible background and anchored elements | visibleBackground  | Displays or exports background images/color, anchored images and text boxes (for display, visible effect in Page or Embedded view mode only). Possible values: True/False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| wk visible empty images                     | visibleEmptyImages | Displays or exports a default black rectangle for images that cannot be loaded or computed (empty images or images in an unsupported format). Possible values: True/False. Default value: True If value is False, missing image elements will not be displayed at all even if they have borders, width, height, or background; this may impact the page layout for inline images.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| wk visible footers                          | visibleFooters     | Displays or exports the footers (for display, visible effect in Page view mode only). Possible values: True/False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| wk visible headers                          | visibleHeaders     | Displays or exports the headers (for display, visible effect in Page view mode only). Possible values: True/False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| wk visible references                       | visibleReferences  | Displays or exports all 4D expressions inserted in the document as references. Possible values: True/False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
+The following table indicates the *option* available per export *format*:
+
+| |  **wk 4wp**  | **wk docx**                                                                | **wk mime html**                                                          | **wk pdf**                                                                     | **wk web page html 4D**                                                    | **wk svg**                                                                 |                                                                               |
+| -------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |---|
+| wk CID host domain name                     | \-                                                                         | \-                                                                        | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                      | \-                                                                         | \-                                                                         | \-                                                                            |
+| wk HTML pretty print                        | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: false) | \-                                                                        | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: False)     | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: False) | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: False) | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: false)    |
+| wk max picture DPI                          | \-                                                                         | always 300                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                      | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: 300)   | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: 300)      |
+| wk optimized for                            | \-                                                                         | always wk print                                                           | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: wk screen) | always wk print                                                            | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: wk print) |
+| wk recompute formulas                       | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true) | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)      | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)  | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)     |
+| wk visible background and anchored elements | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true) | always true                                                                    | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)  | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)     |
+| wk visible footers                          | \-                                                                         | always true                                                               | always false                                                                   | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)  | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)     |
+| wk visible headers                          | \-                                                                         | always true                                                               | always false                                                                   | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)  | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)     |
+| wk visible empty images                     | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true) | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)      | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)  | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)     |
+| wk visible references                       | \-                                                                         | \-                                                                        | \-                                                                             | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: false) | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: false)    |
+| wk pdfa version                             | \-                                                                         | \-                                                                        | \-                                                                             | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                  | \-                                                                         | \-                                                                            |
+| wk factur x                                 | \-                                                                         | \-                                                                        | \-                                                                             | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                  | \-                                                                         | \-                                                                            |
+| wk files                                    | \-                                                                         | \-                                                                        | \-                                                                             | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                  | \-                                                                         | \-                                                                            |
+| wk page index                               | \-                                                                         | \-                                                                        | \-                                                                             | \-                                                                         | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: 1)        |
+| wk embedded pictures                        | \-                                                                         | \-                                                                        | \-                                                                             | \-                                                                         | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)     |
+| wk google fonts tag                         | \-                                                                         | \-                                                                        | \-                                                                             | \-                                                                         | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: false)    |
+
+**Compatibility Note:** Passing a *longint* value in *option* is supported for compatibility reasons, but it is recommended to use an [object](# "Data structured as a native 4D object") parameter.
+
+##### wk files collection
+
+The wk files property allows you to [export a PDF with attachments](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures). This property must contain a collection of objects describing the files to be embedded in the final document. Each object of the collection can contain the following properties:
+
+| **Property** | **Type**       | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ------------ | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name         | Text           | File name. Optional if the *file* property is used, in which case the name is inferred by default from the file name. Mandatory if the *data* property is used (except for the first file of a Factur-X export, in which case the name for the file is automatically "factur-x.xml", see below)                                                                                                                                                                                                                                                                                                                                                    |
+| description  | Text           | Optional. If omitted, default value for the first export file to Factur-X is "Factur-X/ZUGFeRD Invoice", otherwise empty.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| mimeType     | Text           | Optional. If omitted, default value can usually be guessed from file extension; otherwise, "application/octet-stream" is used. If passed, make sure to use an ISO mime type, otherwise the exported file could be invalid.                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| data         | Text or BLOB   | Mandatory if *file* property is missing                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| file         | 4D.File object | Mandatory if *data* property is missing, ignored otherwise.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| relationship | Text           | Optional. If omitted, default value is "Data". Possible values for Factur-X first file:for BASIC, EN 16931 or EXTENDED profiles: "Alternative", "Source" or "Data" ("Alternative" only for German invoice)for MINIMUM and BASIC WL profiles: "Data" only.for other profiles: "Alternative", "Source" or "Data" (with restrictions perhaps depending on country: see profile specification for more info about other profiles - for instance for RECHNUNG profile only "Alternative" is allowed)for other files (but Factur-X invoice xml file) : "Alternative", "Source", "Data", "Supplement" or "Unspecified"any other value generates an error. |
+
+If the *option* parameter also contains a wk factur x property, then the first element of the wk files collection must be the Factur-X (ZUGFeRD) invoice xml file (see below).
+
+:::note
+
+PDF attachments are only supported by the PDF/A-3 version. When you pass the wk files property, the "PDF/A-3" version is automatically used.
+
+:::
+
+##### wk factur x object
+
+The wk factur x property is an object that can contains up to two properties:
+
+| **Property** | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                |
+| ------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| profile      | Text     | Optional. If omitted, *profile* is determined from the provided xml file or text (which must use a standard profile). If passed, it can be a non-standard profile name (for using other profiles - for instance RECHNUNG). **Note:* Standard profile names are: MINIMUM, BASIC WL, BASIC, EN 16931 (aka COMFORT which is an alias), EXTENDED.* |
+| version      | Text     | Optional. Default value is "1.0"                                                                                                                                                                                                                                                                                                               |
+
+**About Factur-X / ZUGFeRD PDF documents**
+
+*Factur-X / ZUGFeRD* is a European standard for hybrid e-invoices (PDF for users and XML data for process automation). For more information, please read [this blog post](https://blog.4d.com/4d-write-pro-electronic-invoice-generation).
+
+To trigger a "Factur-X" PDF export, pass both the wk factur x and wk files properties in the *option* parameter (see Example 5). In this case:
+
+* a Factur-X (ZUGFeRD) PDF is generated,
+* the first element of the wk files collection is used as Factur-X xml file,
+* if the wk files property is missing or contains an empty collection, or if its first element is not a xml file, an error is generated.
+
+:::note
+
+For a detailed example of Factur-X / ZUGFeRD export implementation, you can download [this HDI 4D project](https://github.com/4d-depot/HDI%5F4DWP%5FGenerateFacturX).
+
+:::
+
+#### Example 1
+
+You want to export the contents of the *myArea* 4D Write Pro object in both HTML and PDF format:
+
+```4d
+  // export HTML
+ var $option : Object
+ $option:=New object
+
+ $option[wk recompute formulas]:=False
+ $option[wk HTML pretty print]:=False
+ $option[wk optimized for]:=wk print
+ $option[wk max picture DPI]:=600 //override default value for print (300 DPI)
+
+ WP EXPORT DOCUMENT(myArea;$path;wk web page complete;$option)
+
+  //export PDF
+ var $option : Object
+ $option:=New object
+
+ $option[wk visible headers]:=True
+ $option[wk visible footers]:=True
+ $option[wk visible background]:=True
+ $option[wk max picture DPI]:=96 //override default value for screen (192 DPI) to limit doc size
+ $option[wk optimized for]:=wk screen
+ $option[wk recompute formulas]:=True
+
+ WP EXPORT DOCUMENT(myArea;$path;wk pdf;$option)
+```
+
+#### Example 2
+
+You want to export the contents of the *myArea* 4D Write Pro object in .4wp format:
+
+```4d
+ var $path : Text
+ var $docRef : Integer
+
+ Case of
+    :(Form event code=On Clicked)
+
+       $path:=Get 4D folder(Database folder)+"Export"+Folder separator
+       $path:=Select document($path;".4wp";" title";File name entry)
+
+       If($path#"")
+          WP EXPORT DOCUMENT(myArea;document;wk 4wp)
+       End if
+ End case
+```
+
+#### Example 3
+
+To export the second page of the document as SVG and export the pictures from the document:   
+
+```4d
+ var $options : Object
+
+ $options:=New object
+ $options[wk embedded pictures]:=False
+ $options[wk page index]:=2
+
+ WP EXPORT DOCUMENT(WPArea;"my exported document";wk svg;$options)
+```
+
+#### Example 4
+
+Exporting a PDF document with PDF/A-2 conformance:
+
+```4d
+ var $options: Object:={}
+ $options[wk visible empty images] :=False
+ $options[wk pdfa version]:=wk pdfa2 // conformance "PDF/A-2"
+ WP EXPORT DOCUMENT(wpDoc;"invoice.pdf";wk pdf;$options)
+```
+
+#### Example 5
+
+Examples of Factur-X PDF exports:
+
+```4d
+  //BASIC (standard profile)
+ var $options;$fileInfo : Object
+ $options:={}
+ $options[wk factur x]:={}
+ $options[wk factur x].profile:="BASIC"
+ $options[wk factur x].version:="1.0"
+
+ $fileInfo:={}
+ $fileInfo.file:=$file  //$file is a 4D.File with an .xml file as target
+ $options[wk files]:=[$fileInfo]
+
+ WP EXPORT DOCUMENT(wpDoc;"facturX_basic.pdf";wk pdf;$options)
+
+  //RECHNUNG profile (custom profile)
+ $options:={}
+ $options[wk factur x]:={}
+ $options[wk factur x].profile:="RECHNUNG"
+ $options[wk factur x].version:="2.1" //last version for RECHNUNG
+
+ $fileInfo:={}
+ $fileInfo.file:=$file  //$file is a 4D.File with an .xml file as target
+ $fileInfo.name:="rechnung.xml" //mandatory file name in PDF for RECHNUNG
+ $fileInfo.relationship:="Alternative" //mandatory for Germany
+ $fileInfo.description:="ZUGFeRD Rechnung"
+ $options[wk files]:=[$fileInfo]
+
+ WP EXPORT DOCUMENT(wpDoc;"facturX_rechnung.pdf";wk pdf;$options)
+```
+
+#### Example 6
+
+Exporting a docx document using a File object:
+
+```4d
+var $file : 4D.File
+
+$file:=File("/DATA/test-export")
+
+$options:=New object(wk visible background and anchored elements; False)
+
+WP EXPORT DOCUMENT(WParea; $file; wk docx; $options)
+
+```
+
+#### See also
+
+[4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)</br>
+[Blog post - 4D Write Pro: Electronic invoice generation](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)</br>
+[Blog post - 4D Write Pro: Export to PDF with enclosures](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)</br>
+[WP EXPORT VARIABLE](../commands-legacy/wp-export-variable.md)</br>

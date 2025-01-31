@@ -70,7 +70,7 @@ Um objeto com duas propriedades:
 
 Uma coleção de objetos de endereço.
 
-### Gesttão do corpo do correio eletrônico
+### Gestão do corpo do correio eletrônico
 
 The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used with the [SMTP.send()](SMTPTransporterClass.md#send) function to allow sending simple mails. Quando ambas as propriedades são preenchidas, o tipo de conteúdo MIME multiparte/alternativo é utilizada. O cliente de email deve reconhecer a parte multiparte/alternativa e exibir a parte do texto ou html conforme necessário.
 

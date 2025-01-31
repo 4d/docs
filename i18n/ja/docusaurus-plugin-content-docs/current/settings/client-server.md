@@ -24,7 +24,7 @@ title: クライアント-サーバーページ
 
 #### 公開名
 
-このオプションでは、4D Server データベースの公開名を変更できます。この名前は接続ダイアログボックスの **利用可能** ページに表示されます ([リモートプロジェクトを開く](../Desktop/clientServer/md#リモートプロジェクトを開く) 参照)。 デフォルトで 4D Server はプロジェクトファイル名を使用します。 これを好きな名前に変更できます。
+This option lets you change the publication name of a 4D Server database, _i.e._, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer.md#opening-a-remote-project) paragraph). デフォルトで 4D Server はプロジェクトファイル名を使用します。 これを好きな名前に変更できます。
 
 :::note
 

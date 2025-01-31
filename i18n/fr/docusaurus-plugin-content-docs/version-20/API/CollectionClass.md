@@ -171,10 +171,10 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| Paramètres | Type                                                                |    | Description                                                |
-| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valeur(s) de la collection partagée                        |
-| Résultat   | Collection                                                          | <- | La nouvelle collection partagée|<!-- END REF -->
+| Paramètres | Type                                                  |    | Description                                                |
+| ---------- | ----------------------------------------------------- |:--:| ---------------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection | -> | Valeur(s) de la collection partagée                        |
+| Résultat   | Collection                                            | <- | La nouvelle collection partagée|<!-- END REF -->
 
 
 |

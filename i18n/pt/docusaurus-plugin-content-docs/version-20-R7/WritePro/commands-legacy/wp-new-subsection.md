@@ -47,5 +47,5 @@ Se quiser criar as subseções esquerda e direita:
 
 #### Ver também 
 
-[WP DELETE SUBSECTION](wp-delete-subsection.md)  
+[WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
 [WP Get subsection](wp-get-subsection.md)  

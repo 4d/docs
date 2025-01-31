@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create deployment license.Summary-->La commande **Create deployment license** crée un fichier de licence intégré dans le dossier Licences de l'application construite par la *mergedApp*.<!-- END REF--> Si le dossier Licences n'existe pas dans la *mergedApp*, il est créé par la commande.
 
-Dans mergedApp, passez un objet [4D.Folder](https://developer.4d.com/docs/fr/API/FolderClass/) contenant une référence au dossier contenant l'application construite dans laquelle vous souhaitez intégrer une licence.
+Dans mergedApp, passez un objet [4D.Folder](../API/FolderClass.md) contenant une référence au dossier contenant l'application construite dans laquelle vous souhaitez intégrer une licence.
 
-Dans licence, passez un objet [4D.File](https://developer.4d.com/docs/fr/API/FileClass/) contenant une référence au fichier de licence utilisé pour générer la licence intégrée.
+Dans licence, passez un objet [4D.File](../API/FileClass.md) contenant une référence au fichier de licence utilisé pour générer la licence intégrée.
 
 If the build requires a specific OEM license (*4D OEM XML Keys*) and if no such license is already installed in the Licenses folder of the building machine, you need to pass it using the *oemLicense* parameter. This parameter is useful if you dedicate a machine to build your applications. 
 
@@ -33,7 +33,7 @@ La commande renvoie un objet *status* contenant les propriétés suivantes :
 | **Propriété** | **Type**                                                   | **Description**                            |
 | ------------- | ---------------------------------------------------------- | ------------------------------------------ |
 | success       | Booléen                                                    | Vrai si le fichier de licence a été généré |
-| file          | [4D.File](https://developer.4d.com/docs/fr/API/FileClass/) | Le fichier de licence généré               |
+| file          | [4D.File](../API/FileClass.md) | Le fichier de licence généré               |
 | statusText    | Texte                                                      | Description de l'erreur, s'il y a lieu     |
 | errors        | Collection                                                 | Collection d'objets d'erreur               |
 | \[\].message  | Texte                                                      | Message d'erreur                           |

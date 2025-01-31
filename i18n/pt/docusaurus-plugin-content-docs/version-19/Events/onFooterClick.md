@@ -10,6 +10,6 @@ title: On Footer Click
 
 ## Descrição
 
-Este evento está disponível para um objeto list box ou de coluna de list box. Ele é gerado quando ocorre um clique no rodapé de uma coluna de list box. In this context, the `OBJECT Get pointer` command returns a pointer to the variable of the footer that is clicked. O evento é gerado para os cliques esquerdo e direito.
+Este evento está disponível para um objeto list box ou de coluna de list box. Ele é gerado quando ocorre um clique no rodapé de uma coluna de list box. Neste contexto, o comando `OBJECT Get pointer` retorna um ponteiro para a variável do rodapé clicada. O evento é gerado para os cliques esquerdo e direito.
 
-You can test the number of clicks made by the user by means of the `Clickcount` command.
+Você pode testar o número de cliques feitos pelo usuário através do comando `Clickcount`.

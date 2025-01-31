@@ -4,9 +4,9 @@ title: Zones de plug-in
 ---
 
 
-Une zone de plug-in est une zone du formulaire contrôlée par un plug-in. La capacité d’intégrer des plug-ins dans les formulaires permet d’accéder à des possibilités illimitées lorsque vous créez des applications personnalisées. Une zone de plug-in peut réaliser une tâche simple comme l’affichage d’une horloge numérique dans un formulaire, ou plus complexe comme proposer un environnement de traitement de textes, un tableur ou un éditeur graphique.
+Une zone de plug-in est une zone du formulaire entièrement contrôlée par un [plug-in](../Extensions/develop-plug-ins.md). La capacité d’intégrer des plug-ins dans les formulaires permet d’accéder à des possibilités illimitées lorsque vous créez des applications personnalisées.
 
-Lorsque vous ouvrez une application, 4D crée une liste interne des plug-ins [installés dans votre application](#installing-plug-ins). Une fois que vous avez inséré une Zone de plug-in dans un formulaire, vous pouvez sélectionner le plug-in à lui affecter via la liste **Type** dans la fenêtre de propriétés de l’objet :
+Lorsque vous ouvrez une application, 4D crée une liste interne des plug-ins [installés dans votre application](../Concepts/plug-ins.md#installing-plug-ins). Une fois que vous avez inséré une Zone de plug-in dans un formulaire, vous pouvez sélectionner le plug-in à lui affecter via la liste **Type** dans la fenêtre de propriétés de l’objet :
 
 ![](../assets/en/FormObjects/pluginArea.png)
 
@@ -18,16 +18,6 @@ Si vous dessinez une zone de plug-in trop petite, 4D l’affiche sous forme de b
 ## Propriétés avancées
 
 Si les options avancées sont fournies par l'auteur du plug-in, un thème **Plug-in** contenant un bouton [**Propriétés avancées**](properties_Plugins.md) peut être activé dans la liste des propriétés. Dans ce cas, vous pouvez cliquer sur ce bouton pour définir ces options, généralement via une boîte de dialogue personnalisée.
-
-
-## Installer un plug-in
-
-Pour ajouter un plug-in dans votre environnement 4D, vous devez dans un premier temps quitter votre application 4D. Le chargement des plug-ins s’effectue au lancement de l’application 4D. Pour plus d’informations sur l’installation d’un plug-in, reportez-vous à la section [Installer des plugins ou des composants](https://doc.4d.com/4Dv17R6/4D/17-R6/Installing-plugins-or-components.300-4354866.en.html).
-
-
-## Créer des plug-ins
-
-Si vous souhaitez concevoir vos propres plug-ins, vous pouvez obtenir des informations détaillées sur l'écriture et la création de plug-ins. 4D fournit un [kit complet (sur github)](https://github.com/4d/4D-Plugin-SDK) pour vous aider à écrire des plug-ins personnalisés.
 
 
 ## Propriétés prises en charge

@@ -101,7 +101,7 @@ Utilizando las tablas del **Ejemplo 1**:
 
 #### Ver también 
 
-[Formula from string](formula-from-string.md)  
+[Formula from string](../commands/formula-from-string.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *Utilizar tokens en fórmulas*  

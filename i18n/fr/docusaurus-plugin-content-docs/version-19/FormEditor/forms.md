@@ -88,7 +88,7 @@ Vous pouvez créer plusieurs pages pour un formulaire d'entrée. Si le nombre de
 
 - Placez les informations les plus importantes sur la première page et les informations les moins importantes sur les autres pages.
 - Organisez chaque sujet sur sa propre page.
-- Réduir ou éliminer le défilement pendant la saisie des données en définissant [l'ordre de saisie](../FormEditor/formEditor.html#data-entry-order).
+- Réduire ou éliminer le défilement pendant la saisie des données en définissant [l'ordre de saisie](formEditor.md#data-entry-order).
 - Prévoyez de l'espace autour des éléments du formulaire pour un design d'écran attrayant.
 
 Les pages multiples sont utiles uniquement pour les formulaires d'entrée. Elles ne sont pas destinées à être imprimées. Lorsqu'un formulaire de plusieurs pages est imprimé, seule la première page est imprimée.
@@ -112,7 +112,7 @@ A l’exécution du formulaire, les objets sont chargés et combinés dans l’o
 3. Page zéro du formulaire ouvert
 4. Page courante du formulaire ouvert.
 
-Cet ordre détermine [l'ordre de saisie](../FormEditor/formEditor.html#data-entry-order) par défaut des objets dans le formulaire.
+Cet ordre détermine [l'ordre de saisie](formEditor.md#data-entry-order) par défaut des objets dans le formulaire.
 
 > Seules les pages 0 et 1 du formulaire hérité peuvent apparaître dans les autres formulaires.
 
@@ -120,9 +120,9 @@ Les propriétés ainsi que la méthode d’un formulaire ne sont pas prises en c
 
 Pour définir un formulaire hérité, les propriétés de [Inherited Form Name](properties_FormProperties.md#inherited-form-name) et [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (pour les formulaires table) doivent être définies dans le formulaire qui héritera de quelque chose issue d'un autre formulaire.
 
-A form can inherit from a project form, by setting the [Inherited Form Table](properties_FormProperties.md#inherited-form-table) property to `\&#060;None&#062;` in the Property List (or " " in JSON).
+Un formulaire peut hériter d'un formulaire projet, en définissant la propriété [Inherited Form Table](properties_FormProperties.md#inherited-form-table) sur `\&#060;None&#062;` dans la liste des propriétés (ou " " dans JSON).
 
-To stop inheriting a form, select `\&#060;None&#062;` in the Property List (or " " in JSON) for the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) property.
+Pour stopper l’héritage d’un formulaire, choisissez l’option **\<None>** dans la Liste des propriétés (ou " " dans JSON) pour la propriété [Inherited Form Name](properties_FormProperties.md#inherited-form-name).
 > Il est possible de définir un formulaire hérité dans un formulaire qui servira à son tour de formulaire hérité pour un troisième formulaire. La combinaison des objets s’effectue alors de manière récursive. 4D détecte les boucles récursives (par exemple si le formulaire [table1]form1 est défini comme formulaire hérité de [table1]form1, c’est-à-dire de lui-même) et interrompt le chaînage des formulaires.
 
 ## Propriétés prises en charge

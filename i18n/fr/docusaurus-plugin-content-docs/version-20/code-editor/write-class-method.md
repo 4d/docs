@@ -220,7 +220,7 @@ Sous macOS, utilisez la touche **Command** au lieu de la touche **Ctrl** mention
 
 :::
 
-| **Raccourci**                                           | **Action**                                                                                                                                        |
+| **Equivalent clavier**                                  | **Action**                                                                                                                                        |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Sélection et navigation**                             |                                                                                                                                                   |
 | Double-clic                                             | Sélectionne un nom d'élément du langage                                                                                                           |

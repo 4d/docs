@@ -92,16 +92,19 @@ Dans une méthode de gestion d'erreur personnalisée, vous avez accès à plusie
 
 :::info
 
-4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs.
-:::
+4D gère automatiquement un certain nombre de variables appelées**variables système**, répondant à différents besoins. :::  </p> 
 
 - la commande [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1799.html) qui renvoie une collection de la pile actuelle des erreurs survenues dans l'application 4D. Vous pouvez également utiliser la commande [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/en/page1015.html) qui renvoie les mêmes informations sous forme de tableaux.
 - la commande `Get call chain` qui retourne une collection d'objets décrivant chaque étape de la chaîne d'appel de la méthode dans le process courant.
 
 
+
+
 #### Exemple
 
 Voici un système de gestion des erreurs simple :
+
+
 
 ```4d
 //installer la méthode de gestion d'erreur
@@ -110,6 +113,9 @@ ON ERR CALL("errorMethod")
  ON ERR CALL("") //redonner le contrôle à 4D
 ```
 
+
+
+
 ```4d
 // méthode projet errorMethod
  If(Error#1006) //ceci n'est pas une interruption générée par l'utilisateur
@@ -117,9 +123,14 @@ ON ERR CALL("errorMethod")
  End if
 ```
 
+
+
+
 ### Utiliser une méthode de gestion des erreurs vide
 
 Si vous souhaitez essentiellement masquer la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. La variable système `Error` peut être testée dans n'importe quelle méthode, c'est-à-dire en dehors de la méthode de gestion d'erreurs :
+
+
 
 ```4d
 ON ERR CALL("emptyMethod") //emptyMethod existe mais est vide

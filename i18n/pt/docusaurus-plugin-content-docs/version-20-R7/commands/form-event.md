@@ -9,9 +9,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Event.Params-->
 
-| Parâmetro | Tipo   |   | Descrição      |
-| --------- | ------ | - | -------------- |
-| Resultado | Object | ← | Objecto evento |
+| Parâmetro | Tipo   |                             | Descrição      |
+| --------- | ------ | --------------------------- | -------------- |
+| Resultado | Object | &#8592; | Objecto evento |
 
 <!-- END REF-->
 
@@ -100,3 +100,10 @@ A caixa de lista resultante quando as linhas são selecionadas:
 
 [Eventos de formulário](../Events/overview.md)
 [Código de evento do formulário](../commands/form-event-code.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1606                            |
+| Thread safe    | &amp;check; |

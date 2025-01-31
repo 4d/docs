@@ -56,7 +56,7 @@ Quando se habilitam as sessões escaláveis, o objeto `Sessão` está disponíve
 
 - `On Web Authentication`, `On Web Connection`, e métodos database`On REST Authentication`,
 - [`Em Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) e [`Em Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) métodos de base de dados para pedidos móveis,
-- As [funções Data Model Class](ORDA/ordaClasses.md) ORDA chamadas pelas petições REST,
+- as [funções Data Model Class](ORDA/ordaClasses.md) ORDA chamadas pelas petições REST,
 - código processado a través das etiquetas 4D nas páginas semidinâmicas (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
 - os métodos projeto com o atributo "Available through 4D tags and URLs (4DACTION...)" e chamados através de 4DACTION/ urls.
 
@@ -260,7 +260,7 @@ If (Session.isGuest())
 
 #### Descrição
 
-A função `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->retorna Verdadeiro se a sessão for uma sessão de Convidado (ou seja, não tem privilégios)<!-- END REF -->.
+A função `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->retorna True se a sessão for uma sessão de Convidado (ou seja, não tem privilégios)<!-- END REF -->.
 
 
 #### Exemplo
@@ -407,7 +407,7 @@ A propriedade `.userName` contém <!-- REF #SessionClass.userName.Summary -->o n
 
 Essa propriedade é uma string vazia como padrão. Pode ser estabelecida usando a propriedade `privileges` da função [`setPrivileges()`](#setprivileges).
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 
 

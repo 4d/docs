@@ -28,7 +28,7 @@ Le paramètre *\** est utile lorsque la commande est appelée dans le contexte d
 Les commandes de gestion des pages peuvent être utilisées avec des formulaires entrée ou des formulaires affichés dans des boîtes de dialogue. Les formulaires sortie n'utilisent que la première page. Un formulaire comprend toujours au minimum une page, la première. Notez bien que quel que soit le nombre de pages qu'il contient, un formulaire ne peut être associé qu'à une seule méthode formulaire. 
 
 * Vous pouvez utiliser la commande [FORM Get current page](form-get-current-page.md) pour savoir quelle page est affichée à l'écran.
-* Vous pouvez utiliser l'[Form event code](form-event-code.md) On Page Change qui est généré à chaque fois que le formulaire change de page courante.
+* Vous pouvez utiliser l'[Form event code](../commands/form-event-code.md) On Page Change qui est généré à chaque fois que le formulaire change de page courante.
 
 **Note :** Pendant que vous construisez un formulaire, vous pouvez utiliser les pages 1 à N du formulaire ainsi que la page 0 (zéro), dans laquelle vous placez les objets que vous voulez faire apparaître sur toutes les pages. Lors de l'utilisation du formulaire, et donc lorsque les commandes de gestion des pages sont appelées, seules les pages 1 à N sont accessibles : la page 0 est automatiquement combinée à la page affichée à l'écran.
 

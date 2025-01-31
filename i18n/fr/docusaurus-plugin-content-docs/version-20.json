@@ -60,7 +60,7 @@
     "description": "The label for category Handling Code in sidebar docs"
   },
   "sidebar.docs.category.Tags": {
-    "message": "Tags",
+    "message": "Balises",
     "description": "The label for category Tags in sidebar docs"
   },
   "sidebar.docs.category.Debugging": {

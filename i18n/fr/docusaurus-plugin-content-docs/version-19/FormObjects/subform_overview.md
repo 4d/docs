@@ -121,7 +121,7 @@ Par exemple, l’instruction suivante :
  $ptr:=OBJECT Get pointer(Object named;"MyButton";"MySubForm")
 ```
 
-... retrieves a pointer to the "MyButton" variable that is located in the "MySubForm" subform object. Cette syntaxe permet d’accéder depuis le formulaire parent à tout objet se trouvant dans un sous-formulaire. A noter également la commande `OBJECT Get name` qui permet de récupérer le nom de l’objet ayant le focus.
+... récupère un pointeur vers la variable "MyButton" qui se trouve dans l'objet sous-forme "MySubForm". Cette syntaxe permet d’accéder depuis le formulaire parent à tout objet se trouvant dans un sous-formulaire. A noter également la commande `OBJECT Get name` qui permet de récupérer le nom de l’objet ayant le focus.
 
 #### Commande CALL SUBFORM CONTAINER
 

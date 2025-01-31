@@ -200,7 +200,7 @@ HTTP Strict Transport Security (HSTS) の状態です。
 
 HSTS によって、4D Webサーバーはブラウザーに対し、セキュアな HTTPS接続のみを許可すると宣言できます。 HSTS を有効にすると、4D Webサーバーはすべてのレスポンスヘッダーに HSTS 関連の情報を自動的に追加します。 4D Webサーバーからの初回レスポンスを受け取った際にブラウザーは HSTS情報を記録し、以降の HTTPリクエストは自動的に HTTPSリクエストに変換されます。 ブラウザー側でこの情報が保存される時間は **HSTS max age** 設定によって指定されます。
 
-> HSTS のためには、サーバー上で [HTTPS が有効](httpsを有効にする)になっていなくてはなりません。 また、クライアントの初回接続を許可するために、[HTTP も有効](httpを有効化) でなくてはなりません。
+> HSTS requires that HTTPS is [enabled](#enable-https) on the server. また、クライアントの初回接続を許可するために、[HTTP も有効](#httpを有効化) でなくてはなりません。
 
 > 現在の接続モードは、`WEB Is secured connection` コマンドで取得できます。
 

@@ -50,7 +50,7 @@ displayed_sidebar: docs
 | generateSymbols        | ブール              | 返された.symbol オブジェクト内にsymbol 情報を生成するためにはTrue                                                                                                                     |
 | generateSyntaxFile     | ブール              | プロジェクトの\\Resources\\en.lproj フォルダに *コード補完のためのシンタックスファイル* を生成するためにはTrue                                                                                         |
 | generateTypingMethods  | 文字列              | 型指定メソッドを生成する際にリセット(Reset)するか追加(append)するかを選択します。値が"append"だった場合、既存の変数宣言は変更されません(コンパイラウィンドウの振る舞い)。値が"reset" だった場合、既存の変数宣言は事前に削除されます。                            |
-| plugins                | 4D.Folder オブジェクト | [カレントのプロジェクトのPlugins フォルダ](https://developer.4d.com/docs/ja/Project/architecture/#plugins) ではなく、使用したいプラグインのフォルダ。このプロパティは、*projectFile* シンタックスを使用した場合にのみ利用可能です。 |
+| plugins                | 4D.Folder オブジェクト | [カレントのプロジェクトのPlugins フォルダ](../Project/architecture.md#plugins) ではなく、使用したいプラグインのフォルダ。このプロパティは、*projectFile* シンタックスを使用した場合にのみ利用可能です。 |
 | targets                | 文字列のコレクション       | 取り得る値: "x86\_64\_generic"、"arm64\_macOS\_lib"。また空のコレクションを渡すことでシンタックスチェックのみを実行させることもできます。                                                                       |
 | typeInference          | 文字列              | "all": 全ての変数を定義させる "locals": ローカル変数のみ自動定義させる "none": 自動変数定義は行わない                                                                                               |
 | warnings               | オブジェクトのコレクション    | 警告の有効化状態を定義します                                                                                                                                                 |

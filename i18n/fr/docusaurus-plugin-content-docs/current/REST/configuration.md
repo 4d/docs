@@ -17,7 +17,7 @@ Pour des raisons de sécurité, par défaut, 4D ne répond pas aux requêtes RES
 
 Le message d'avertissement "Attention, vérifiez les privilèges d'accès" s'affiche lorsque vous cochez cette option, pour attirer votre attention sur le fait que lorsque les services REST sont activés, l'accès par défaut aux objets de base de données est gratuit tant que les accès REST n'ont pas été configurés.
 
-> You must restart the 4D application for your changes to take effect.
+> Vous devez redémarrer l'application 4D pour que vos modifications soient prises en compte.
 
 ## Controlling REST access
 
@@ -62,9 +62,9 @@ Pour supprimer l'exposition REST d'une table :
 
 ### Exposer des champs
 
-Par défaut, touts les champs d'une base 4D sont exposés dans REST.
+Par défaut, tous les champs d'une base 4D sont exposés dans REST.
 
-Vous pouvez choisir d'exposer certains champs de vos tables à REST. Par exemple, si vous ne souhaitez pas exposer le champ [Employees]Salary.
+Vous pouvez choisir d'exposer certains champs de vos tables en REST. Par exemple, vous pouvez ne pas souhaiter exposer le champ [Employees]Salary.
 
 Pour supprimer l'exposition REST d'un champ :
 

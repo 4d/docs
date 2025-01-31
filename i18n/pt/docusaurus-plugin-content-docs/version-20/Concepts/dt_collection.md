@@ -128,7 +128,7 @@ Alguns métodos retornam a coleção original depois de moficiação, para que p
 ```
 
 
-### parâmetro caminoPropriedade
+### parâmetro propertyPath
 
 
 Vários métodos aceitam uma _propertyPath_ como parâmetro. Este parâmetro significa:

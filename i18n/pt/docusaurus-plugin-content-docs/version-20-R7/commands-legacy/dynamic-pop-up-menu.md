@@ -37,7 +37,7 @@ Se quer mostrar um menu suspenso associado a um botão 3D, não passe os parâme
 
 Se um elemento de menu for selecionado, o comando devolve sua cadeia de caracteres personalizada associada (tal como foi definido utilizando o comando [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)). Do contrario, o comando devolve uma cadeia vazia.
 
-**A partir de 4D v16 R3:** Se uma ação padrão for associada a um item menu, é levado em consideração pelo comando **Dynamic pop up menu** em vários níveis:
+Se uma ação padrão for associada a um item menu, é levado em consideração pelo comando **Dynamic pop up menu** em vários níveis:
 
 * se uma ação padrão associada não for ativada (ou seja, não puder ser chamada) no contexto do menu pop up, o item é automaticamente escondido. Pode saber se a ação foi ativada usando o comando [Action info](action-info.md).
 * Itens com uma ação toggle associada são automaticamente marcados, desmarcados ou "mixed" dependendo da seleção.

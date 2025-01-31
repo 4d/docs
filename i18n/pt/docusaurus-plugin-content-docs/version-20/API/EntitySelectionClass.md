@@ -508,7 +508,7 @@ Passe no parâmetro *attributePath* a rota de atributo a avaliar.
 Só são levados em consideração os valores numéricos para o cálculo. Lembre entretanto que se o *attributePath* da seleção de entidades conter tipos de valores mistos, `.average()` considera todos os elementos escalares para calcular o valor médio.
 > Os valores de tipo Date são convertidos em valores numéricos (segundos) e são usados para calcular a média.
 
-`.average()` returns **undefined**se a entity selection estiver vazia ou *attributePath* não conter valores numéricos.
+`.average()` retorna **undefined** se a seleção da entidade está vazia ou *attributePath* não contém valores numéricos.
 
 Um erro é retornado se:
 

@@ -1,6 +1,6 @@
 ---
 id: dsmapping
-title: Objets Data Model
+title: Objets du modèle de données
 ---
 
 La technologie ORDA est fondée sur une cartographie automatique d'une structure de base sous-jacente. Elle permet également d'accéder aux données via des objets sélection d'entités (entity selection) et entité (entity). Par conséquent, ORDA expose la base de données entière comme un ensemble d'objets de modèle de données.
@@ -203,7 +203,7 @@ Les propriétés de l'entité sont toutefois énumérables :
 
 ### Entity selection
 
-Une sélection d'entité est un objet contenant une ou plusieurs référence(s) à des entités appartenant à la même dataclasse. Elle est généralement créée à la suite d'une requête ou retournée à partir d'un attribut relationnel. Une entity selection peut contenir 0, 1 ou X entités de la dataclass - où X peut représenter le nombre total d'entités contenues dans la dataclass.
+Une entity selection est un objet contenant une ou plusieurs référence(s) à des entités appartenant à la même dataclasse. Elle est généralement créée à la suite d'une requête ou retournée à partir d'un attribut relationnel. Une entity selection peut contenir 0, 1 ou X entités de la dataclass - où X peut représenter le nombre total d'entités contenues dans la dataclass.
 
 Voici un exemple :
 
@@ -222,7 +222,7 @@ L'objet sélection d'entités lui-même ne peut pas être copié en tant qu'obje
  $myentitysel:=OB Copy(ds.Employee.all()) //retourne null
 ```
 
-Les propriétés des sélections d'entités sont toutefois énumérables :
+Les propriétés des entity selections sont toutefois énumérables :
 
 ```4d
  ARRAY TEXT($prop;0)
@@ -234,12 +234,12 @@ Les propriétés des sélections d'entités sont toutefois énumérables :
 
 #### Entity selections triées vs Entity selections non-triées
 
-Pour des raisons d'optimisation, par défaut, 4D ORDA crée généralement des sélections d'entités non-ordonnées, sauf lorsque vous utilisez la méthode `orderBy( )` ou si vous utilisez les options appropriées. Dans cette documentation, sauf indication contraire, "sélection d'entités" fait généralement référence à une "sélection d'entités non-ordonnée".
+Pour des raisons d'optimisation, par défaut, 4D ORDA crée généralement des entity selections non-triées, sauf lorsque vous utilisez la méthode `orderBy()` ou si vous utilisez les options appropriées. Dans cette documentation, sauf indication contraire, "entity selection" fait généralement référence à une "entity selection non-triée".
 
-Les sélections d'entités ordonnées sont créées uniquement lorsque cela est nécessaire ou lorsqu'elles sont spécifiquement demandées à l'aide d'options, c'est-à-dire dans les cas suivants :
+Les entity selections triées sont créées uniquement lorsque cela est nécessaire ou lorsqu'elles sont spécifiquement demandées à l'aide d'options, c'est-à-dire dans les cas suivants :
 
-*   résultat d'un `orderBy( )` sur une sélection (de n'importe quel type) ou un `orderBy( )` sur une dataclass,
-*   résultat de la méthode `newSelection( )` avec l'option `dk keep ordered`
+*   résultat d'un `orderBy()` sur une sélection (de n'importe quel type) ou un `orderBy()` sur une dataclass,
+*   résultat de la méthode `newSelection()` avec l'option `dk keep ordered`
 
 Les sélections d'entités non-triées sont créées dans les cas suivants :
 

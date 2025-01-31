@@ -6,12 +6,15 @@ files:
       - /docs/WritePro/commands-legacy/*.*
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
   - source: /i18n/en/docusaurus-plugin-content-docs/*.json
+    ignore:
+      - /i18n/en/docusaurus-plugin-content-docs/version-18.json
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/%original_file_name%
   - source: /versioned_docs/**/*
     ignore:
       - /versioned_docs/**/preprocessing.conf
       - /versioned_docs/**/commands-legacy/*.*
       - /versioned_docs/**/WritePro/commands-legacy/*.*
+      - /versioned_docs/version-18/
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/**/%original_file_name%
   - source: /i18n/en/docusaurus-theme-classic/*.json
     translation: /i18n/%two_letters_code%/docusaurus-theme-classic/%original_file_name%

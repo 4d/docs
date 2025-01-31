@@ -4,7 +4,7 @@ slug: overview
 title: Serveur Web
 ---
 
-4D en mode local et remote ainsi que 4D Server disposent d'un moteur de serveur web intégré (aussi appelé serveur HTTP) qui vous permet de créer et publier des applications web afin de tirer le maximum de vos bases de données 4D.
+4D en mode local et distant ainsi que 4D Server disposent d'un moteur de serveur web intégré (aussi appelé serveur Http) qui vous permet de créer et publier des applications web afin de tirer le maximum de vos bases de données 4D.
 
 ## Administration simplifiée
 
@@ -22,7 +22,7 @@ La sécurité des données est présente à tous les stades d'implémentation du
 
 - Extension du support du [**Protocole TLS (HTTPS)**](../Admin/tls.md),
 
-- **Authentification** : [fonctionnalités d'authentification](authentification.md) flexibles et personnalisables basées sur des paramètres inclus et des méthodes base ([`On Web Authentication`](authentication.md#on-web-authentication) pour le serveur web et [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
+- **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables basées sur des paramètres inclus et des méthodes base ([`On Web Authentication`](authentication.md#on-web-authentication) pour le serveur web et [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
 
 - **Contrôle du contenu exposé** : Seul le contenu que vous exposez explicitement est disponible via des requêtes web directes ou des requêtes REST. Vous devez déclarer :
   - [Les méthodes projet](templates.md#allowing-project-methods) exposées via des requêtes HTTP
@@ -53,7 +53,7 @@ Les requêtes REST sont détaillées dans la section [serveur REST](REST/getting
 
 Le serveur web 4D offre un accès aux données stockées dans vos applications 4D à travers des pages de template et des URLs spécifiques.
 
-- **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables, basées sur des paramètres intégrés, ainsi que des Méthodes base de secours ( pour le serveur web et []
+- **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables, basées sur des paramètres intégrés, ainsi que des Méthodes base de secours ([](authentication.md#on-web-authentication) pour le serveur web et []
 
 - [Les URLs spécifiques](httpRequests.md) permettent à 4D d'être appelé pour exécuter tout type d'action. Ces URLs peuvent également être utilisées comme des actions de formulaire pour déclencher des traitements de données quand l'utilisateur poste des form
 

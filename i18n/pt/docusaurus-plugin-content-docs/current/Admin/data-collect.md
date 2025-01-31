@@ -18,7 +18,7 @@ Dados são coletados durante os eventos abaixo:
 - arranque da base de dados,
 - fechamento de banco de dados,
 - início do servidor Web,
-- execução php,
+- use of specific features such as php, open datastore, remote debugger,
 - ligação cliente,
 - envio da recolha de dados.
 
@@ -57,6 +57,22 @@ Alguns dados são também recolhidos a intervalos regulares.
 | --------- | ------ | ------------------------------------------------------------------------------- |
 | webServer | Object | "started":true se o servidor Web estiver a arrancar ou iniciado |
 
+### Collected at new web session creation
+
+| Dados                                               | Tipo   | Notas                                                                                |
+| --------------------------------------------------- | ------ | ------------------------------------------------------------------------------------ |
+| databases.webMaxLicensedSessions    | Number | Maximum number of non-REST web sessions on the server that use the webserver license |
+| databases.restMaxLicensedSessions   | Number | Maximum number of REST web sessions on the server that use the REST license          |
+| databases.webMaxUnlicensedSessions  | Number | Maximum number of other non-REST web sessions on the server                          |
+| databases.restMaxUnlicensedSessions | Number | Maximum number of other REST web sessions on the server                              |
+
+### Collected at datastore opening
+
+| Dados                                             | Tipo   | Notas                                                         |
+| ------------------------------------------------- | ------ | ------------------------------------------------------------- |
+| databases.externalDatastoreOpened | Number | Number of calls to `Open datastore`                           |
+| databases.internalDatastoreOpened | Number | Number of times the datastore is opened by an external server |
+
 ### Recolha a intervalos regulares
 
 | Dados                       | Tipo   | Notas                                      |
@@ -67,21 +83,23 @@ Alguns dados são também recolhidos a intervalos regulares.
 
 ### Recolhido no envio da recolha de dados
 
-| Dados                                       | Tipo   | Notas                                                                                          |
-| ------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------- |
-| uptime                                      | Number | Tempo decorrido (em segundos) desde que a base de dados 4D local foi aberta |
-| cacheReadBytes                              | Object | Número de bytes lidos da cache                                                                 |
-| cacheMissBytes                              | Object | Número de bytes perdidos na cache                                                              |
-| cacheReadCount                              | Object | Número de leituras na cache                                                                    |
-| cacheMissCount                              | Object | Número de leituras falhadas na cache                                                           |
-| dataSegment1.diskReadBytes  | Object | Número de bytes lidos no ficheiro de dados                                                     |
-| dataSegment1.diskWriteBytes | Object | Número de bytes escritos no ficheiro de dados                                                  |
-| dataSegment1.diskReadCount  | Object | Número de leituras no ficheiro de dados                                                        |
-| dataSegment1.diskWriteCount | Object | Número de escritas no ficheiro de dados                                                        |
-| indexSegment.diskReadBytes  | Number | Número de bytes lidos no ficheiro de índice                                                    |
-| indexSegment.diskWriteBytes | Number | Número de bytes escritos no ficheiro de índice                                                 |
-| indexSegment.diskReadCount  | Number | Número de leituras no ficheiro índice                                                          |
-| indexSegment.diskWriteCount | Number | Número de escritas no ficheiro de índice                                                       |
+| Dados                                          | Tipo       | Notas                                                                                          |
+| ---------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
+| uptime                                         | Number     | Tempo decorrido (em segundos) desde que a base de dados 4D local foi aberta |
+| cacheReadBytes                                 | Object     | Número de bytes lidos da cache                                                                 |
+| cacheMissBytes                                 | Object     | Número de bytes perdidos na cache                                                              |
+| cacheReadCount                                 | Object     | Número de leituras na cache                                                                    |
+| cacheMissCount                                 | Object     | Número de leituras falhadas na cache                                                           |
+| dataSegment1.diskReadBytes     | Object     | Número de bytes lidos no ficheiro de dados                                                     |
+| dataSegment1.diskWriteBytes    | Object     | Número de bytes escritos no ficheiro de dados                                                  |
+| dataSegment1.diskReadCount     | Object     | Número de leituras no ficheiro de dados                                                        |
+| dataSegment1.diskWriteCount    | Object     | Número de escritas no ficheiro de dados                                                        |
+| indexSegment.diskReadBytes     | Number     | Número de bytes lidos no ficheiro de índice                                                    |
+| indexSegment.diskWriteBytes    | Number     | Número de bytes escritos no ficheiro de índice                                                 |
+| indexSegment.diskReadCount     | Number     | Número de leituras no ficheiro índice                                                          |
+| indexSegment.diskWriteCount    | Number     | Número de escritas no ficheiro de índice                                                       |
+| databases.webScalableSessions  | Parâmetros | True if scalable sessions are activated                                                        |
+| databases.webIPAddressesNumber | Number     | Number of different IP addresses that made a request to 4D Server                              |
 
 ### Recolhidos aquando do encerramento da base de dados e do envio da recolha de dados
 
@@ -92,6 +110,14 @@ Alguns dados são também recolhidos a intervalos regulares.
 | webserverBytesIn               | Number | Bytes recebidos pelo servidor Web durante a recolha de dados  |
 | webserverBytesOut              | Number | Bytes enviados pelo servidor Web durante a recolha de dados   |
 | qodly.webforms | Number | Número de formulários web Qodly                               |
+
+### Collected at every new call to the remote debugger
+
+| Dados                                                       | Tipo   | Notas                                                         |
+| ----------------------------------------------------------- | ------ | ------------------------------------------------------------- |
+| databases.remoteDebugger4DRemoteAttachments | Number | Number of attachments to the remote debugger from a remote 4D |
+| databases.remoteDebuggerQodlyAttachments    | Number | Number of attachments to the remote debugger from Qodly       |
+| databases.remoteDebuggerVSCodeAttachments   | Number | Number of attachments to the remote debugger from VS Code     |
 
 ### Recolhido sempre que PHP execute é chamado
 
@@ -109,7 +135,7 @@ Alguns dados são também recolhidos a intervalos regulares.
 
 ## Onde é armazenado e enviado?
 
-Os dados coletados são escritos em um arquivo de texto (formato JSON) por banco de dados quando 4D Servidor abandona. O ficheiro é armazenado dentro da [pasta 4D ativa](https://doc.4d.com/4dv20/help/command/en/page485.html), ou seja:
+Os dados coletados são escritos em um arquivo de texto (formato JSON) por banco de dados quando 4D Servidor abandona. The file is stored inside the [active 4D folder](../commands-legacy/get-4d-folder.md), i.e.:
 
 - en Windows:
   `Users\[userName]\AppData\Roaming\4D Server`

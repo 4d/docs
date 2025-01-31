@@ -43,4 +43,4 @@ Lorsque différentes astuces sont associées au même objet à plusieurs emplace
 
 #### Voir également
 
-[Placeholder](properties_Entry.md#placeholder)
+[Texte exemple](properties_Entry.md#placeholder)

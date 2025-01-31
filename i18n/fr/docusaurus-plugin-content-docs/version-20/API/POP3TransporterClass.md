@@ -46,7 +46,7 @@ Les objets Transporter POP3 sont instanciés avec la commande [POP3 New transpor
 <!-- REF #_command_.POP3 New transporter.Params -->
 | Paramètres | Type               |    | Description                                                                   |
 | ---------- | ------------------ |:--:| ----------------------------------------------------------------------------- |
-| server     | object             | -> | Informations sur le serveur IMAP                                              |
+| server     | object             | -> | Informations sur le serveur de messagerie                                     |
 | Résultat   | 4D.POP3Transporter | <- | [objet POP3 transporter](#pop3-transporter-object)|<!-- END REF -->
 
 
@@ -106,7 +106,7 @@ La fonction retourne un [**objet POP3 transporter**](#pop3-transporter-object). 
 <!-- REF #4D.POP3Transporter.new().Params -->
 | Paramètres | Type               |    | Description                                                                   |
 | ---------- | ------------------ |:--:| ----------------------------------------------------------------------------- |
-| server     | Object             | -> | Informations sur le serveur IMAP                                              |
+| server     | Object             | -> | Informations sur le serveur de messagerie                                     |
 | Résultat   | 4D.POP3Transporter | <- | [objet POP3 transporter](#pop3-transporter-object)|<!-- END REF -->
 
 |
@@ -208,9 +208,9 @@ L'exécution de cette méthode ne supprime pas réellement l'email. L'email marq
 
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
-| Paramètres | Type   |    | Description                              |
-| ---------- | ------ |:--:| ---------------------------------------- |
-| Résultat   | Object | <- | Objet boxInfo|<!-- END REF -->
+| Paramètres | Type   |    | Description                                            |
+| ---------- | ------ |:--:| ------------------------------------------------------ |
+| Résultat   | Object | <- | Collection d'objets mailbox|<!-- END REF -->
 
 |
 
@@ -270,7 +270,7 @@ L'objet `boxInfo` contient les propriété suivantes :
 
 La fonction `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->renvoie l'objet `Email ` correspondant au *msgNumber * dans la boîte aux lettres désignée par le [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Cette fonction vous permet de gérer localement le contenu de l'email.
 
-Passez dans *msgNumber* le numéro du message à récupérer. Ce numéro est renvoyé dans la propriété `number` par la fonction [`.getMailInfoList()`](#getmailinfolist).
+Passez dans *msgNumber* le numéro du message à récupérer. Dans le paramètre *msgNumber*, passez le numéro de l'email à récupérer.
 
 Optionnellement, vous pouvez passer `true` dans le paramètre *headerOnly* pour exclure les parties body de l'objet `Email` renvoyé. Seules les propriétés d'en-têtes ([`header`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) sont alors retournées. Cette option vous permet d'optimiser l'étape de téléchargement lorsque beaucoup d'emails sont sur le serveur.
 
@@ -369,6 +369,7 @@ La fonction retourne **Null** si :
  $mailInfo:=$transporter.getMailInfo(1) //get the first mail
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
+ End if
  End if
 ```
 

@@ -9,12 +9,12 @@ title: Propriedades do formulário
 
 > A propriedade Esquema de cores só é aplicada no macOS.
 
-Esta propriedade define o esquema de cores para o formulário. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/set-application-color-scheme.md)). Isto pode ser alterado para o formulário para uma das duas opções seguintes:
+Esta propriedade define o esquema de cores para o formulário. Esta propriedade define o esquema de cores para o formulário. Isto pode ser alterado para o formulário para uma das duas opções seguintes:
 
 - dark - texto claro sobre um fundo escuro
 - light - texto escuro sobre um fundo claro
 
-> \> A defined color scheme can not be overridden by a CSS.
+> &#062; A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
 
@@ -32,49 +32,49 @@ Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de 
 
 #### Gramática JSON
 
-| Nome | Tipo de dados      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                            |
-| ---- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css  | cadeia ou colecção | Caminho(s) do arquivo CSS fornecido(s) como<li>:uma string (um arquivo para ambas as plataformas)</li><li>uma coleção de strings (uma lista de arquivos para ambas as plataformas)</li><li>uma coleção de objetos {"path":string; "media": "mac" \| "win"} </li> |
+| Nome | Tipo de dados      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                 |
+| ---- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css  | cadeia ou colecção | Caminho(s) do arquivo CSS fornecido(s) como<li>:uma string (um arquivo para ambas as plataformas)</li><li>uma coleção de strings (uma lista de arquivos para ambas as plataformas)</li><li>uma coleção de objetos {"path":string; "media": "mac" \\ |
 
 ---
 
-## Form Class
+## Classe de formulário
 
-Nome de uma [classe usuário](../Concepts/classes.md#class-definition) existente para associar ao formulário. The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
+Nome de uma [classe usuário](../Concepts/classes.md#class-definition) existente para associar ao formulário. A classe do usuário pode pertencer ao projeto host ou a um [componente](../Extensions/develop-components.md#sharing-of-classes), caso em que a sintaxe formal é "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
 
-Associating a class to the form provides the following benefits:
+A associação de uma classe ao formulário oferece os seguintes benefícios:
 
-- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression**...). Errors are displayed in red and warnings are displayed in yellow in the left column of the Property list and you can hover it to get explanations:
+- Quando você trabalha no [Editor de formulário](../FormEditor/formEditor.md), a classe associada é usada para verificações de sintaxe precisas de expressões como `Form. yProperty` em todas as áreas da [lista de propriedades](../FormEditor/formEditor.md#property-list) que suportam [expressions](../Concepts/quick-tour.md#expressions) (por exemplo, **Variável ou Expressão**, **expressão de cor da fonte**...). Erros são exibidos em vermelho e avisos são exibidos no amarelo na coluna esquerda da lista de propriedades e você pode passar o mouse para obter explicações:
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 
-- The detection of errors in the code of form object expressions by the [compiler](../Project/compiler.md) is improved.
+- A detecção de erros no código de expressões do objeto de forma por [compiler](../Project/compiler.md) é melhorada.
 
-- You can also to benefit from [autocompletion features](../code-editor/write-class-method.md#autocomplete-functions) in the code editor.
+- Você também pode se beneficiar de [recursos de preenchimento automático](../code-editor/write-class-method.md#autocomplete-functions) no editor de código.
 
-- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a _formData_ object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands.
+- Quando o formulário for executado, 4D instancia automaticamente um objeto de classe de usuário para o formulário, que é retornado pelo objeto [`Form`](../commands/form.md). Seu código pode acessar diretamente as funções de classe definidas na classe do usuário por meio do comando `Form` (por exemplo, `Form.message()`) sem precisar passar um objeto _formData_ como parâmetro para os comandos [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md) ou [`FORM LOAD`](../commands/form-load.md).
 
 :::note
 
-See [this blog post](http://blog.4d.com/empower-your-development-process-with-your-forms) for an illustration of this feature.
+Consulte [esta postagem no blog](http://blog.4d.com/empower-your-development-process-with-your-forms) para ver uma ilustração desse recurso.
 
 :::
 
 #### Gramática JSON
 
-| Nome      | Tipo de dados | Valores possíveis                                                                                                       |
-| --------- | ------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| formClass | string        | name of an existing user class ("_className_" or "_componentNameSpace_._className_") |
+| Nome      | Tipo de dados | Valores possíveis                                                                                                                |
+| --------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| formClass | string        | nome de uma classe de usuário existente ("_className_" ou "_componentNameSpace_._className_") |
 
 ---
 
 ## Nome do formulário
 
-This property is the name of the form itself and is used to refer to the form by name using the 4D language. O nome do formulário deve estar em conformidade com as [regras especificadas para identificadores] (Concepts/identifiers.md) em 4D.
+Essa propriedade é o nome do próprio formulário sendo usada para fazer referência ao formulário pelo nome usando a linguagem 4D. Essa propriedade é o nome do próprio formulário sendo usada para fazer referência ao formulário pelo nome usando a linguagem 4D.
 
 #### Gramática JSON
 
-The form name is defined by the name of the folder that contains the form.4Dform file. Consulte [arquitetura do projeto](Project/architecture.md#sources-folder) para obter mais informações.
+O nome do formulário é definido pelo nome da pasta que contém o arquivo form.4Dform. Consulte [arquitetura do projeto](Project/architecture.md#sources-folder) para obter mais informações.
 
 ---
 
@@ -118,9 +118,9 @@ Para remover a herança, selecione `\<None>` na Property List (ou " " em JSON).
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                                                                                                                  |
-| ------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| inheritedForm | string        | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
+| Nome          | Tipo de dados | Valores possíveis                                                                                                                                                     |
+| ------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| inheritedForm | string        | Nome do formulário da tabela ou do projeto OU um caminho POSIX para um arquivo .json que descreve o formulário OU um objeto que descreve o formulário |
 
 ---
 
@@ -157,7 +157,7 @@ Para obter mais informações, consulte [Páginas de formulário] (forms.md#form
 
 ## Publicado como subformulário
 
-Para que um formulário de componente seja selecionado como um [subformulário] (FormObjects/subform_overview.md) em um aplicativo host, ele deve ter sido explicitamente compartilhado. When this property is selected, the form will be published in the host application.
+Para que um formulário de componente seja selecionado como um [subformulário] (FormObjects/subform_overview.md) em um aplicativo host, ele deve ter sido explicitamente compartilhado. Quando esta propriedade for selecionada, o formulário será publicado na aplicação host.
 
 Apenas os projetos formulário podem ser especificados como subformulários publicados.
 
@@ -176,7 +176,7 @@ Quando a opção é usada, se a janela for aberta usando o comando "Abrir janela
 - a página atual,
 - a posição, tamanho e visibilidade de cada objecto de formulário (incluindo o tamanho e visibilidade das colunas da lista box).
 
-> Esta opção não leva em conta objetos gerados usando o comando `OBJECT DUPLICATE`. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+> Esta opção não leva em conta objetos gerados usando o comando `OBJECT DUPLICATE`. Para que um usuário recupere seu ambiente ao usar este comando, o desenvolvedor deve repetir a sequência de criação, definição e posicionamento dos objetos.
 
 Quando essa opção é selecionada, a opção [Save Value] (FormObjects/properties_Object.md#save-value) fica disponível para determinados objetos.
 
@@ -200,7 +200,7 @@ Você pode usar referências dinâmicas para definir os títulos das janelas dos
 
 - Uma referência XLIFF padrão armazenada na pasta Resources.
 - Um rótulo de tabela ou campo: A sintaxe a ser aplicada é `<?[TableNum]FieldNum>` ou `<?[TableName]FieldName>`.
-- Uma variável ou um campo: A sintaxe a ser aplicada é `\<VariableName>` ou `<[TableName]FieldName>`. The current value of the field or variable will be displayed in the window title.
+- Uma variável ou um campo: A sintaxe a ser aplicada é `\<VariableName>` ou `<[TableName]FieldName>`. O valor atual do campo ou variável será exibido no título da janela.
 
 > O número de caracteres para um título de janela é limitado a 31.
 

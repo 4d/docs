@@ -21,7 +21,7 @@ displayed_sidebar: docs
 * **Mod** accepte des expressions de type Entier, Entier long et Réel (numérique). Cependant, si *nombre1* et/ou *nombre2* sont des nombres réels, ils sont arrondis avant le calcul du **Mod**.
 * La fonction **Mod** est à utiliser avec précaution avec des nombres réels de grande taille (au-delà de 2^31). Dans ce cas en effet, son fonctionnement peut se heurter aux limites des capacités de calcul des processeurs standard.
 
-Vous pouvez également utiliser l'opérateur "%" pour calculer le reste d'une division (reportez-vous à la section [C\_TIME](c-time.md)). Toutefois, cet opérateur retourne des résultats valides uniquement avec des expressions de type Entier et Entier long. Si vous voulez calculer le modulo de nombres réels, vous devez utiliser la commande **Mod**. 
+Vous pouvez également utiliser l'opérateur "%" pour calculer le reste d'une division (reportez-vous à la section *C\_TIME*). Toutefois, cet opérateur retourne des résultats valides uniquement avec des expressions de type Entier et Entier long. Si vous voulez calculer le modulo de nombres réels, vous devez utiliser la commande **Mod**. 
 
 #### Exemple 
 

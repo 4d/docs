@@ -8,7 +8,7 @@ String é um termo genérico que significa:
 - Campos ou variáveis texto: um campo, uma variável ou uma expressão texto pode conter de 0 a 2 GB de texto.
 - Campos alfanuméricos: um campo alfanumérico pode conter de 0 a 255 caracteres (limite estabelecido aquando da definição do campo).
 
-## Constantes literais String
+## String literals
 
 Uma constante string é colocada entre aspas duplas e rectas ("..."). Eis alguns exemplos:
 

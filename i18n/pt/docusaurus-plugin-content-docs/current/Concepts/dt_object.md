@@ -20,7 +20,7 @@ Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de 
 
 (1) **Objetos não-transmissíveis** como objetos ORDA ([entidades](ORDA/dsMapping.md#entity), [seleções de entidades](ORDA/dsMapping.md#entity-selection), etc.), [manipuladores de arquivo](../API/FileHandleClass.md), [servidor web](../API/WebServerClass.md)... não podem ser armazenado em **campos objeto**. Um erro é retornado se você tentar fazer isso; no entanto, eles são totalmente compatíveis com **variáveis do objeto** na memória.
 
-(\*)Quando se expõe como texto no depurador ou se exporta a JSON, as propriedades dos objetos imagem imprimem "[objeto Imagem]".
+(2) Quando se expõe como texto no depurador ou se exporta a JSON, as propriedades dos objetos imagem imprimem "[object Picture]".
 
 :::caution
 

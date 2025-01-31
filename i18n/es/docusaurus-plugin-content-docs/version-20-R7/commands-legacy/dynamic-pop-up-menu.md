@@ -37,7 +37,7 @@ Si quiere mostrar un menú desplegable asociado a un botón 3D, no pase los par�
 
 Si un elemento de menú ha sido seleccionado, el comando devuelve su cadena de caracteres personalizada asociada (tal como se ha definido utilizando el comando [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)). De lo contrario, el comando devuelve una cadena vacía.
 
-**A partir de 4D v16 R3:** si una acción estándar está asociada a un elemento de menú, es tenida en cuenta por el comando **Dynamic pop up menu** en varios niveles:
+Si una acción estándar está asociada a un elemento de menú, es tenida en cuenta por el comando **Dynamic pop up menu** en varios niveles:
 
 * Si una acción estándar asociada no está activada (es decir, no se puede invocar) en el contexto del menú emergente, el elemento se oculta automáticamente. Puede saber si una acción se activa utilizando el comando [Action info](action-info.md).
 * Los elementos con una acción asociada se seleccionan automáticamente, sin marcar o "mezclados" según la selección.

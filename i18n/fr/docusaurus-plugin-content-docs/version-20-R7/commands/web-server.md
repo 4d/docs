@@ -8,14 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server.Params-->
 
-| Paramètres | Type                         |   | Description                                                                          |
-| ---------- | ---------------------------- | - | ------------------------------------------------------------------------------------ |
-| option     | Integer                      | → | Serveur Web à référencer (défaut si omis = `Web server database`) |
-| Résultat   | 4D.WebServer | ← | Objet Serveur Web                                                                    |
+| Paramètres | Type                         |                             | Description                                                                          |
+| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------ |
+| option     | Integer                      | &#8594; | Serveur Web à référencer (défaut si omis = `Web server database`) |
+| Résultat   | 4D.WebServer | &#8592; | Objet Serveur Web                                                                    |
 
 <!-- END REF-->
-
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 <details><summary>Historique</summary>
 
@@ -57,3 +55,10 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 
 [WEB Server list](web-server-list.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
+
+#### Propriétés
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Numéro de commande | 1674                            |
+| Thread safe        | &amp;cross; |

@@ -275,7 +275,7 @@ Cette propriété est en **lecture/écriture**.
 
 :::caution
 
-Lorsqu'un file handle est créé, la valeur `.offset` est un nombre d'octets. Cependant, l'unité de mesure du décalage diffère selon la fonction de lecture : avec [`readBlob()`](#readblob), `.offset` est un nombre d'octets, alors qu'avec [`readText()`](#readtext)/[`readLine()`](#readline), c'est un nombre de caractères. Selon le jeu de caractères du fichier, un caractère correspond à un ou plusieurs octets. Selon le jeu de caractères du fichier, un caractère correspond à un ou plusieurs octets. Ainsi, si vous commencez la lecture avec `readBlob()` et que vous appelez ensuite `readText()`, la lecture du texte commencera à une position incohérente. Par exemple :
+Lorsqu'un file handle est créé, la valeur `.offset` est un nombre d'octets. Cependant, l'unité de mesure du décalage diffère selon la fonction de lecture : avec [`readBlob()`](#readblob), `.offset` est un nombre d'octets, alors qu'avec [`readText()`](#readtext)/[`readLine()`](#readline), c'est un nombre de caractères. Selon le jeu de caractères du fichier, un caractère correspond à un ou plusieurs octets. Selon le jeu de caractères du fichier, un caractère correspond à un ou plusieurs octets. Selon le jeu de caractères du fichier, un caractère correspond à un ou plusieurs octets. Par exemple :
 
 ```4d
   // Ouvrir un fichier texte européen en utilisant l'encodage utf-16 (2 octets par caractère)

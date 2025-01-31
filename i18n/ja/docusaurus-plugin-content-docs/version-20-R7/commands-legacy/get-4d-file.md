@@ -66,7 +66,7 @@ User settings file for data および User settings file の両ファイルに�
 
 #### 参照 
 
-[File](file.md)  
+[File](../commands/file.md)    
 
 #### プロパティ
 

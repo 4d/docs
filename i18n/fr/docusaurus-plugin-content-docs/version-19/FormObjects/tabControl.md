@@ -34,7 +34,7 @@ Sous macOS, les onglets peuvent être orientés, en plus de la position standard
   "top": 160,  
   "width": 100, 
   "height": 20, 
-  "labelsPlacement": "bottom" //define the direction
+  "labelsPlacement": "bottom" //définir la direction
  }
 ```
 
@@ -46,9 +46,9 @@ Pour fournir les étiquettes d'un onglet, vous pouvez utiliser :
 - une liste déroulante
 - un tableau
 
-### Utilisation d'un objet
+### Utiliser un objet
 
-Vous pouvez affecter un [objet](Concepts/dt_object.md) encapsulant une [collection](Concepts/dt_collection) comme [source de données](properties_Object.md#variable-or-expression) de l'onglet. Cet objet doit avoir les propriétés suivantes :
+Vous pouvez assigner un [objet](Concepts/dt_object.md) encapsulant une [collection](Concepts/dt_collection.md) comme [source de données](properties_Object.md#variable-or-expression) d'un onglet. Cet objet doit avoir les propriétés suivantes :
 
 | Propriété      | Type       | Description                                                                                                                                                          |
 | -------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

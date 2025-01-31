@@ -70,9 +70,9 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Saisie de chemins Windows et séquences d'échappement
 
-The 4D code editor allows the use of escape sequences. Une séquence d’échappement est une suite de caractères permettant de remplacer un caractère “spécial”. La séquence débute par le caractère barre oblique inversée (antislash) `\`, suivi d’un caractère. Par exemple, `\t` est la séquence d'échappement pour le caractère `Tab`.
+L'éditeur de code 4D permet l'utilisation de séquences d'échappement. Une séquence d’échappement est une suite de caractères permettant de remplacer un caractère “spécial”. La séquence débute par le caractère barre oblique inversée (antislash) `\`, suivi d’un caractère. Par exemple, `\t` est la séquence d'échappement pour le caractère `Tab`.
 
-Le caractère `\` est également utilisé comme séparateur dans les noms de chemin sous Windows. En général, 4D interprète correctement les chemins Windows saisis dans l'éditeur de code en remplaçant les barres obliques simples `\` par des barres obliques doubles ``\\`. Par exemple,``C:\Folder`deviendra`C:\\Folder`.
+Le caractère `\` est également utilisé comme séparateur dans les noms de chemin sous Windows. En général, 4D interprète correctement les chemins Windows saisis dans l'éditeur de code en remplaçant les barres obliques simples `\` par des barres obliques doubles ``\\`. Par exemple, ``C:\Folder`deviendra` C:\\Folder`.
 
 Toutefois, si vous écrivez `C:\MyDocuments\New`, 4D affichera `C:\\MyDocuments\New`. Dans ce cas, le deuxième `\` est interprété à tort comme `\N` (une séquence d'échappement existante). Vous devez donc saisir un double `\\` lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans l'une des séquences d'échappement reconnues par 4D.
 

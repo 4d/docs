@@ -9,15 +9,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compile project.Params-->
 
-| Parámetros  | Tipo                    |   | Descripción                                             |
-| ----------- | ----------------------- | - | ------------------------------------------------------- |
-| projectFile | 4D.File | → | .4DProject file to compile              |
-| options     | Object                  | → | Object that specifies compilation options               |
-| Resultado   | Object                  | ← | Object containing information on the compilation status |
+| Parámetros  | Tipo                    |                             | Descripción                                             |
+| ----------- | ----------------------- | --------------------------- | ------------------------------------------------------- |
+| projectFile | 4D.File | &#8594; | .4DProject file to compile              |
+| options     | Object                  | &#8594; | Object that specifies compilation options               |
+| Resultado   | Object                  | &#8592; | Object containing information on the compilation status |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
 
 <details><summary>Historia</summary>
 
@@ -192,3 +190,10 @@ var $result:=Compile project($options)
 #### Ver también
 
 [BUILD APPLICATION](../commands-legacy/build-application.md)
+
+#### Propiedades
+
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1760                                                                |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

@@ -30,7 +30,7 @@ L'*instruction* peut notamment contenir les éléments suivants :
 **Notes :** 
 
 * Si *instruction* est une méthode projet, il est recommandé d'utiliser [EXECUTE METHOD](execute-method.md) qui permet de passer des paramètres.
-* Il est déconseillé d'appeler des commandes de déclaration de variables telles que [C\_DATE](c-date.md) dans *instruction* afin d'éviter tout risque de conflit de type.
+* Il est déconseillé d'appeler des commandes de déclaration de variables telles que *C\_DATE* dans *instruction* afin d'éviter tout risque de conflit de type.
 
 La formule peut utiliser des variables process et interprocess. En revanche, *instruction* ne doit pas contenir d'instructions de contrôle de flux (Si, Tant que...) car le code doit "tenir" sur une seule ligne.
 

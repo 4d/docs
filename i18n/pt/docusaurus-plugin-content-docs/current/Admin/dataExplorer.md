@@ -57,7 +57,7 @@ Para além de uma visão abrangente e personalizável dos seus dados, o Explorad
 
 ### Básicos
 
-O Data Explorer proporciona um acesso global ao modelo de dados ORDA em relação às regras de mapeamento ORDA .
+O Data Explorer proporciona um acesso global ao modelo de dados ORDA em relação às regras de mapeamento ORDA [](ORDA/dsMapping.md#general-rules).
 
 :::info
 
@@ -240,7 +240,7 @@ O botão **recarregar**![reload](../assets/en/Admin/data-explorer-reload.png) re
 
 ### Salvar modificações
 
-Exceto pela exclusão  (veja abaixo), as modificações da entidade são feitas localmente e precisam ser salvas para que sejam armazenadas no arquivo de dados.
+Exceto pela exclusão [](#deleting-entities) (veja abaixo), as modificações da entidade são feitas localmente e precisam ser salvas para que sejam armazenadas no arquivo de dados.
 
 Para salvar modificações ou para salvar uma entidade que você criou no Explorador de Dados, clique no botão **Salvar**![save](../assets/en/Admin/data-explorer-save.png).
 

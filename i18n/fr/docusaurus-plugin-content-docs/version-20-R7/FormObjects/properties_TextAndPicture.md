@@ -37,7 +37,7 @@ Aspect général du bouton. Le style du bouton joue également un rôle dans la 
 
 ---
 
-## Horizontal Margin
+## Marge horizontale
 
 Cette propriété permet de définir la taille (en pixels) des marges horizontales du bouton. Cette marge délimite la zone que l'icône et le titre du bouton ne doivent pas dépasser.
 
@@ -68,9 +68,9 @@ Désigne l'emplacement d'une icône par rapport à l'objet formulaire.
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles           |
-| ------------- | --------------- | --------------------------- |
-| iconPlacement | string          | "aucun", "gauche", "droite" |
+| Nom           | Type de données | Valeurs possibles       |
+| ------------- | --------------- | ----------------------- |
+| iconPlacement | string          | "none", "left", "right" |
 
 #### Objets pris en charge
 
@@ -141,9 +141,9 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 #### Grammaire JSON
 
-| Nom   | Type de données | Valeurs possibles                                              |
-| ----- | --------------- | -------------------------------------------------------------- |
-| icône | picture         | Chemin relatif ou filesystem en syntaxe POSIX. |
+| Nom  | Type de données | Valeurs possibles                                              |
+| ---- | --------------- | -------------------------------------------------------------- |
+| icon | picture         | Chemin relatif ou filesystem en syntaxe POSIX. |
 
 #### Objets pris en charge
 
@@ -151,7 +151,7 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 ---
 
-## Title/Picture Position
+## Position Titre/Image
 
 Cette propriété permet de modifier l’emplacement relatif du titre par rapport à l’icône associée. Cette propriété n’a pas d’effet lorsque le bouton contient uniquement un titre (pas d’image associée) ou une image (pas de titre). Par défaut, lorsqu’un bouton 3D contient un titre et une image, le texte est placé en-dessous de l’image.
 
@@ -199,7 +199,7 @@ By default, when a button contains a title and a picture, the elements are joine
 
 ---
 
-## Vertical Margin
+## Marge verticale
 
 Cette propriété permet de définir la taille (en pixels) des marges verticales du bouton. Cette marge délimite la zone que l'icône et le titre du bouton ne doivent pas dépasser.
 
@@ -239,8 +239,8 @@ Pour associer un symbole de pop up menu à un bouton, vous disposez de deux opti
 
 Chaque option précise la relation entre le bouton et le pop up menu associé :
 
-- When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.
-- When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. Seule la sélection de l’action dans le pop up menu provoque son déclenchement.
+- Lorsque le pop up menu est **séparé**, un clic sur la partie gauche du bouton exécute directement l’action courante du bouton ; cette action peut être modifiée via le pop up menu accessible dans la partie droite du bouton.
+- Lorsque le pop up menu est **lié**, un simple clic sur le bouton ne déclenche aucune autre action que l’affichage du pop up menu. Seule la sélection de l’action dans le pop up menu provoque son déclenchement.
 
 :::info
 
@@ -250,7 +250,7 @@ Refer to the [`On Alternative Click` event description](../Events/onAlternativeC
 
 ### Gestion du pop up menu
 
-Il est important de noter que la propriété “Avec pop up menu” gère uniquement l’aspect graphique du bouton. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) and [`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) commands.
+Il est important de noter que la propriété “Avec pop up menu” gère uniquement l’aspect graphique du bouton. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu.md) and [`Pop up menu`](../commands-legacy/pop-up-menu.md) commands.
 
 #### Grammaire JSON
 

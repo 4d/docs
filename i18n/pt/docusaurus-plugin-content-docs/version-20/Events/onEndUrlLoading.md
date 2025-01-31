@@ -10,4 +10,4 @@ title: On End URL Loading
 
 ## Descrição
 
-This event is generated once the loading of all resources of the URL is complete. You can call the `WA Get current URL` command in order to find out the URL that was loaded.
+Este evento é gerado quando o carregamento de todos os recursos do URL é concluído. Você pode chamar o comando `WA Get URL` para descobrir a URL que foi carregada.

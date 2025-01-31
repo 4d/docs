@@ -55,7 +55,7 @@ Exemplo:
 
 Pode criar dois tipos de coleções:
 
-- regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command. Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
+- coleções regulares (não compartilhadas) usando o comando [`New collection`](API/CollectionClass.md#new-collection). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
 - coleções compartidas, utilizando o comando `New shared collection`. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. Access to these collections is controlled by [`Use... End use`](Concepts/shared.md#useend-use) structures.
 
 Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
@@ -79,7 +79,7 @@ Alguns métodos retornam a coleção original depois de moficiação, para que p
 ```
 
 
-### parâmetro caminoPropriedade
+### parâmetro propertyPath
 
 
 Vários métodos aceitam uma _propertyPath_ como parâmetro. Este parâmetro significa:
@@ -87,7 +87,7 @@ Vários métodos aceitam uma _propertyPath_ como parâmetro. Este parâmetro sig
 - um nome de objeto propriedade por exemplo "Sobrenome"
 - ou uma rota de propriedades de objeto, ou seja, uma sequência hierárquica de subpropriedades vinculadas com caracteres de ponto, por exemplo "empregado.filhos.nome".
 
-**Warning:** When using functions and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Advertência:** ao usar funções e parâmetros propertyPath, não se pode usar ".", "[ ]", ou espaços nos nomes das propriedades, dado que isso impedirá que 4D analise corretamente o caminho:
 
 ```4d
  $vmin:=$col.min("My.special.property") //indefinido

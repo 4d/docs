@@ -22,7 +22,7 @@ En *rangeObj*, pase un objeto que contenga un rango de líneas a eliminar. Si el
 - tanto las columnas como las líneas, sólo se eliminan las líneas.
 - sólo columnas, el comando no hace nada.
 
-> \> Rows are deleted from bottom to top.
+> &#062; Rows are deleted from bottom to top.
 
 #### Ejemplo
 

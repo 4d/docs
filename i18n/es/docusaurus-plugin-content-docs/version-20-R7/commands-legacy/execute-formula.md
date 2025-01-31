@@ -34,7 +34,7 @@ Para asegurarse de que la *instruccion* sea evaluada correctamente independiente
 **Notas:** 
 
 * Si la *instruccion* es un método proyecto, se recomienda utilizar [EXECUTE METHOD](execute-method.md) que le permite pasar parámetros.
-* No se recomienda llamar a ningún comando de declaración de variable como [C\_DATE](c-date.md) en *instruccion* ya que puede generar conflictos en el código.
+* No se recomienda llamar a ningún comando de declaración de variable como *C\_DATE* en *instruccion* ya que puede generar conflictos en el código.
 
 La fórmula puede incluir variables de proceso y variables entre procesos. Sin embargo, la declaración no puede contener el control de las instrucciones de flujo (If, While, etc.), ya que debe estar en una línea de código.
 

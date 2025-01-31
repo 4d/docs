@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Folder.Params -->
 
-| Paramètres     | Type                      |     | Description                                                           |
-| -------------- | ------------------------- | :-: | --------------------------------------------------------------------- |
-| path           | Text                      |  →  | Chemin du dossier                                                     |
-| folderConstant | Integer                   |  →  | Constante de dossier 4D                                               |
-| pathType       | Integer                   |  →  | `fk posix path` (par défaut) ou `fk platform path` |
-| \*             | operator                  |  →  | \* pour retourner le dossier de la base hôte                          |
-| Résultat       | 4D.Folder |  ←  | Nouvel objet dossier                                                  |
+| Paramètres     | Type                      |                             | Description                                                           |
+| -------------- | ------------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path           | Text                      | &#8594; | Chemin du dossier                                                     |
+| folderConstant | Integer                   | &#8594; | Constante de dossier 4D                                               |
+| pathType       | Integer                   | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
+| \*             | operator                  | &#8594; | \* pour retourner le dossier de la base hôte                          |
+| Résultat       | 4D.Folder | &#8592; | Nouvel objet dossier                                                  |
 
 <!-- END REF -->
 
@@ -74,3 +74,10 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 [File](file.md)\
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1567                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

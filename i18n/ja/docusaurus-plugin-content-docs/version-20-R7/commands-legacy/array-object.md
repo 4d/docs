@@ -64,7 +64,7 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[C\_OBJECT](c-object.md)  
+*C\_OBJECT*  
 *オブジェクト(ランゲージ)*  
 *配列を作成する*  
 

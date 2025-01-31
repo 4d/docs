@@ -58,7 +58,7 @@ Lorsqu'une application est chiffrée (voir ci-dessus), la page Chiffrement propo
 
 ### Fournir la clé de chiffrement des données actuelle
 
-Pour des raisons de sécurité, toutes les opérations de maintenance liées au chiffrement nécessitent la clé de chiffrement des données actuelle.
+Pour des raisons de sécurité, toutes les opérations de maintenance liées au chiffrement nécessitent la clé courante de chiffrement des données.
 
 - Si la clé de chiffrement des données est déjà chargée dans le trousseau 4D(1), elle est automatiquement réutilisée par 4D.
 - Si la clé de chiffrement des données n'est pas identifiée, vous devez la fournir. Le dialogue suivant est affiché:

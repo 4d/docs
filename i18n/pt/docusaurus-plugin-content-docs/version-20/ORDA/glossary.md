@@ -19,7 +19,7 @@ Um atributo é a célula de armazenamento mais pequena num banco de dados relaci
 
 *   Num objeto dataclass, cada propriedade é um atributo de dataclass que corresponde a um campo na tabela correspondente (mesmo nome e tipo).
 *   Num objeto entity, os atributos de entidades são propriedades que contêm os valores para os atributos do datastore correspondentes.
-> *Atributos* e *propriedades* são conceitos semelhantes. "Atributo" é utilizado para designar as propriedades da dataclass que armazenam os dados, enquanto "propriedade" é mais genérico e define um dado armazenado num objeto.
+> Attributes and properties are similar concepts. "Atributo" é utilizado para designar as propriedades da dataclass que armazenam os dados, enquanto "propriedade" é mais genérico e define um dado armazenado num objeto.
 
 ## AttributePath
 
@@ -94,7 +94,7 @@ Uma entidade é um objeto que corresponde a um modelo de dataclass. Uma entidade
 
 Uma entidade pode ser vista como uma instância da dataclass, como um registo da tabela que corresponde à dataclass no seu datastore associado. No entanto, uma entidade também contém dados relacionados. O objetivo da entidade é gerir dados (criar, atualizar, apagar).
 
-Para mais informações, consulte Entidades.
+Para obter mais informações, consulte [entities](entities.md).
 
 ## Seleção de entidades
 

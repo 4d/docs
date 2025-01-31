@@ -24,7 +24,7 @@ Los datos en el BLOB deben ser compatibles con la variable de destino. Generalme
 
 Si no especifica el parámetro opcional *offset*, los datos de la variable se leen desde el inicio del BLOB. Si usted está trabajando con un BLOB que contiene muchas variables, debe pasar el parámetro *offset* y, adicionalmente, debe pasar una variable numérica. Antes de llamar el comando, defina esta variable numérica en el offset correspondiente. Después de llamar el comando, la misma variable númerica devuelve el offset de la siguiente variable almacenada en el BLOB.
 
-**Nota:** **BLOB TO VARIABLE** soporta las variables objeto y colección de tipo [C\_OBJECT](c-object.md) y [C\_COLLECTION](c-collection.md). Para mayor información, consulte el comando [VARIABLE TO BLOB](variable-to-blob.md).
+**Nota:** **BLOB TO VARIABLE** soporta las variables objeto y colección de tipo *C\_OBJECT* y *C\_COLLECTION*. Para mayor información, consulte el comando [VARIABLE TO BLOB](variable-to-blob.md).
 
 Después de llamar el comando, si la variable ha sido reescrita con éxito, la variable OK toma el valor 1\. Si la operación no se pudo realizar, la variable OK toma el valor 0; por ejemplo, si no hay suficiente memoria.
 

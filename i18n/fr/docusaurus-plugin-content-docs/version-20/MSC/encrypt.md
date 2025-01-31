@@ -4,7 +4,7 @@ title: Page chiffrement
 sidebar_label: Page chiffrement
 ---
 
-Vous pouvez vous aider de cette page pour chiffrer ou *déchiffrer* (i.e. enlever le chiffrement) le fichier de données, en fonction du statut de l'attribut **Chiffrable** défini pour chaque table de la base.
+Vous pouvez utiliser cette page pour chiffrer ou *déchiffrer* (i.e. enlever le chiffrement) le fichier de données, en fonction du statut de l'attribut **Chiffrable** défini pour chaque table de la base.
 
 :::info
 
@@ -40,11 +40,11 @@ Si le processus de chiffrement est réussi, la page Chiffrement affiche les bout
 **Attention :** Durant l'opération de chiffrement, 4D créé un nouveau fichier de données vide et y insère des données à partir du fichier de données original. Les enregistrements correspondant aux tables "chiffrées" sont chiffrés puis copiés ; les autres enregistrements sont uniquement copiés (une opération de compactage est également exécutée). Si l'opération est réussie, le fichier de données original est déplacé vers un dossier "Replaced Files (Encrypting)". Si vous souhaitez transmettre un fichier de données chiffré, assurez-vous d'avoir préalablement déplacé/retiré tout fichier de données non chiffrées du dossier de l'application.
 
 ## Opérations de maintenance liées au chiffrement
-When an application is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios. ![](../assets/en/MSC/MSC_encrypt6.png)
+Lorsqu'une application est chiffrée (voir ci-dessus), la page Chiffrement propose plusieurs opérations de maintenance du chiffrement, correspondant à des scénarios standard. ![](../assets/en/MSC/MSC_encrypt6.png)
 
 
 ### Fournir la clé de chiffrement des données actuelle
-Pour des raisons de sécurité, toutes les opérations de maintenance liées au chiffrement nécessitent la clé de chiffrement des données actuelle.
+Pour des raisons de sécurité, toutes les opérations de maintenance liées au chiffrement nécessitent la clé courante de chiffrement des données.
 
 - Si la clé de chiffrement des données est déjà chargée dans le trousseau 4D(1), elle est automatiquement réutilisée par 4D.
 - Si la clé de chiffrement des données n'est pas identifiée, vous devez la fournir. La boîte de dialogue suivante s'affiche : ![](../assets/en/MSC/MSC_encrypt7.png)

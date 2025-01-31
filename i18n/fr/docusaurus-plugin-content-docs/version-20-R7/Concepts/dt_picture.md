@@ -3,7 +3,7 @@ id: picture
 title: Picture
 ---
 
-Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. En règle générale, n'importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l'aide des commandes 4D telles que `READ PICTURE FILE`.
+Un champ, une variable ou expression de type Picture peut être toute image Windows ou Macintosh. En règle générale, n'importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l'aide des commandes 4D telles que `READ PICTURE FILE`.
 
 4D utilise des API natives pour encoder (écrire) et décoder (lire) les champs et les variables des images sous Windows et macOS. Ces implémentations donnent accès à de nombreux formats natifs, dont le format RAW, couramment utilisé par les appareils photo numériques.
 
@@ -28,18 +28,18 @@ Les formats d'images reconnus par 4D sont retournés par la commande `PICTURE CO
 
 ## Opérateurs sur les images
 
-| Opération                 | Syntaxe                             | Retourne | Action                                                                                                                                                                                               |
-| ------------------------- | ----------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Concaténation horizontale | Image1 + Image2                     | Picture  | Place Image2 à la droite d'Image1                                                                                                                                                                    |
-| Concaténation verticale   | Image1 / Image2                     | Picture  | Place Image2 au-dessous d'Image1                                                                                                                                                                     |
-| Superposition exclusive   | Image1 & Image2 | Picture  | Superpose Image2 à Image1 (Image2 est au premier plan). Donne le même résultat que `COMBINE PICTURES(pict3;pict1;Superposition;pict2)`                            |
-| Superposition inclusive   | Image1                              | Picture  | Image    \| Superpose Image2 à Image1 et retourne le masque résultant si les deux images sont de même taille. Donne le même résultat que `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Déplacement horizontal    | Image + Nombre                      | Picture  | Déplace l'image horizontalement d'un nombre de pixels égal à Nombre                                                                                                                                  |
-| Déplacement vertical      | Image / Nombre                      | Picture  | Déplace l'image verticalement d'un nombre de pixels égal à Nombre                                                                                                                                    |
-| Redimensionnement         | Image \* Nombre                     | Picture  | Redimensionne l'image au pourcentage Nombre                                                                                                                                                          |
-| Extension horizontale     | Image \*+ Nombre                    | Picture  | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                                                          |
-| Extension verticale       | Image \*\| Nombre                   | Picture  | Image    \| Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                                |
-| Contient mot-clé          | Image % Chaîne                      | Boolean  | Renvoie vrai si la chaîne est associée à l'image stockée dans l'expression image. Voir `GET PICTURE KEYWORDS`                                                                        |
+| Opération                 | Syntaxe                                   | Retourne | Action                                                                                                                                                                                               |
+| ------------------------- | ----------------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Concaténation horizontale | Image1 + Image2                           | Picture  | Place Image2 à la droite d'Image1                                                                                                                                                                    |
+| Concaténation verticale   | Image1 / Image2                           | Picture  | Place Image2 au-dessous d'Image1                                                                                                                                                                     |
+| Superposition exclusive   | Image1 & Image2       | Picture  | Superpose Image2 à Image1 (Image2 est au premier plan). Donne le même résultat que `COMBINE PICTURES(pict3;pict1;Superposition;pict2)`                            |
+| Superposition inclusive   | Image1                                    | Picture  | Image    \| Superpose Image2 à Image1 et retourne le masque résultant si les deux images sont de même taille. Donne le même résultat que `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
+| Déplacement horizontal    | Image + Nombre                            | Picture  | Déplace l'image horizontalement d'un nombre de pixels égal à Nombre                                                                                                                                  |
+| Déplacement vertical      | Image / Nombre                            | Picture  | Déplace l'image verticalement d'un nombre de pixels égal à Nombre                                                                                                                                    |
+| Redimensionnement         | Image \* Nombre                           | Picture  | Redimensionne l'image au pourcentage Nombre                                                                                                                                                          |
+| Extension horizontale     | Image \*+ Nombre                          | Picture  | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                                                          |
+| Extension verticale       | Image \*&#124; Nombre | Picture  | Image    \| Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                                |
+| Contient mot-clé          | Image % Chaîne                            | Boolean  | Renvoie vrai si la chaîne est associée à l'image stockée dans l'expression image. Voir `GET PICTURE KEYWORDS`                                                                        |
 
 **Notes :**
 

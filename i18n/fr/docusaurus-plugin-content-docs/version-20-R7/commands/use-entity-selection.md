@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 
-| Paramètres      | Type                               |   | Description          |
-| --------------- | ---------------------------------- | - | -------------------- |
-| entitySelection | 4D.EntitySelection | → | Une entity selection |
+| Paramètres      | Type                               |                             | Description          |
+| --------------- | ---------------------------------- | --------------------------- | -------------------- |
+| entitySelection | 4D.EntitySelection | &#8594; | Une entity selection |
 
 <!-- END REF-->
 
@@ -45,3 +45,12 @@ USE ENTITY SELECTION($entitySel) //La sélection courante de la table Employee e
 #### Voir également
 
 [Create entity selection](create-entity-selection.md)
+
+#### Propriétés
+
+|                           |                                                                 |
+| ------------------------- | --------------------------------------------------------------- |
+| Numéro de commande        | 1513                                                            |
+| Thread safe               | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Changes current record    |                                                                 |
+| Changes current selection |                                                                 |

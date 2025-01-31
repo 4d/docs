@@ -56,7 +56,7 @@ Repeat
 ```
 The other difference with a `Repeat... Until` loop is that the loop continues until the Boolean expression is TRUE.
 
-Um loop `Repeat... Until` é similar a um loop [While... End while](flow-control#whileend-while), exceto que comprova a expressão booleana depois do loop  e não antes.
+Um loop `Repeat... Until` é similar a um loop [While... End while](flow-control.md#whileend-while), exceto que comprova a expressão booleana depois do loop  e não antes.
 
 The `break` and `continue` statements are [described below](#break-and-continue).
 

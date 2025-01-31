@@ -34,7 +34,8 @@ Vous pouvez modifier cette barre de menus comme vous le souhaitez ou créer des 
    OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list.
    Si vous avez créé une barre de menu, une nouvelle barre de menus apparaît dans la liste, contenant les menus par défaut (Fichier et Edition).
 2. (Facultatif) Effectuez un double-clic sur le nom du menu/de la barre de menus afin de le rendre éditable et saisissez un nom personnalisé.
-   OR Enter the custom name in the "Title" area.
+   OU
+   Saisissez le nom personnalisé dans la zone “Titre”.
    Les noms des barres de menu doivent être uniques. Ils peuvent comporter jusqu’à 31 caractères. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
 
 ### A l'aide du langage 4D
@@ -60,7 +61,8 @@ Pour ajouter une ligne de menu :
    Click on the add ![](../assets/en/Menus/PlussNew.png) button located below the central list.
    4D ajoute une nouvelle ligne avec le nom par défaut “Ligne X”, où X représente le nombre de lignes déjà créées.
 3. Double-cliquez sur le nom de la commande pour passer en mode édition et saisissez un nom personnalisé.
-   OR Enter the custom name in the "Title" area. Il peut comporter jusqu’à 31 caractères. Vous pouvez saisir le nom comme "en dur" ou saisir une référence (voir ci-dessous).
+   OU
+   Saisissez le nom personnalisé dans la zone “Titre”. Il peut comporter jusqu’à 31 caractères. Vous pouvez saisir le nom comme "en dur" ou saisir une référence (voir ci-dessous).
 
 ### A l'aide du langage 4D
 
@@ -77,7 +79,7 @@ Pour supprimer une barre de menus, un menu ou une ligne de menu, vous disposez d
 - Select the item to be deleted and click on the delete ![](../assets/en/Menus/MinussNew.png) button located beneath the list.
 - ou, utiliser la commande **Supprimer ...** dans le menu contextuel ou le menu d’options de l’éditeur.
 
-> Il est impossible de supprimer Menu Bar #1.
+> Il est impossible de supprimer la Barre #1.
 
 ### A l'aide du langage 4D
 

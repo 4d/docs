@@ -24,7 +24,7 @@ Como padrão, a memória cache atual é deixada sem mexer, ou seja, os dados con
 
 **Nota:** Passar um parâmetro a este comando é reservado para propósitos de teste. Por razões de performance, não é recomendado liberar a cache no ambiente de produção.
 
-Geralmente não precisa chamar este comando, já que 4D salva modificações de dados regularmente. A opção **Flush Cache every X Seconds (Minutes) em** [Database page](https://developer.4d.com/docs/pt/settings/database/) das configurações de banco de dados, que especifica quão frequente vai salvar, é tipicamente usado para controlar o esvaziamento da cache.Nós recomendamos usar o valor padrão de 20 segundos. Note que o parâmetro Cache flush periodicity pode ser estabelecido e lido usando os comandos [SET DATABASE PARAMETER](set-database-parameter.md) e [Get database parameter](get-database-parameter.md). 
+Geralmente não precisa chamar este comando, já que 4D salva modificações de dados regularmente. A opção **Flush Cache every X Seconds (Minutes) em** [Database page](../settings/database.md) das configurações de banco de dados, que especifica quão frequente vai salvar, é tipicamente usado para controlar o esvaziamento da cache.Nós recomendamos usar o valor padrão de 20 segundos. Note que o parâmetro Cache flush periodicity pode ser estabelecido e lido usando os comandos [SET DATABASE PARAMETER](set-database-parameter.md) e [Get database parameter](get-database-parameter.md). 
 
 #### Ver também 
 

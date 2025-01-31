@@ -9,9 +9,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Event.Params-->
 
-| Parámetros | Tipo   |   | Descripción   |
-| ---------- | ------ | - | ------------- |
-| Resultado  | Object | ← | Objeto evento |
+| Parámetros | Tipo   |                             | Descripción   |
+| ---------- | ------ | --------------------------- | ------------- |
+| Resultado  | Object | &#8592; | Objeto evento |
 
 <!-- END REF-->
 
@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 Each returned object includes the following main properties:
 
-| **Property** | **Type** | **Description**                                                                                                                                                                               |
-| ------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName   | text     | Nombre del objeto que desencadena el evento - No se incluye si el evento lo desencadena el formulario                                                                                         |
-| code         | integer  | Valor numérico del evento de formulario.                                                                                                                                      |
-| description  | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section. |
+| **Propiedad** | **Type** | **Description**                                                                                                                                                                               |
+| ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectName    | text     | Nombre del objeto que desencadena el evento - No se incluye si el evento lo desencadena el formulario                                                                                         |
+| code          | integer  | Valor numérico del evento de formulario.                                                                                                                                      |
+| description   | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section. |
 
 For example, in the case of a click on a button, the object contains the following properties:
 
@@ -100,3 +100,10 @@ The resulting list box when rows are selected:
 
 [Form Events](../Events/overview.md)
 [Form event code](../commands/form-event-code.md)
+
+#### Propiedades
+
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1606                                                                |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

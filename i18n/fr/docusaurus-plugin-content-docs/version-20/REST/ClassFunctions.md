@@ -26,15 +26,15 @@ Les fonctions doivent toujours être appelées à l'aide des requêtes **POST** 
 
 Les fonctions sont appelées sur l'objet correspondant au datastore du serveur.
 
-| Fonction de classe                                                 | Syntaxe                                                                         |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                         |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                  |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                            |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                    |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                   |
-| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                               |
+| Fonction de classe                                                 | Syntaxe                                                                     |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
+| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
+| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                           |
 
 
 
@@ -49,11 +49,11 @@ Les fonctions sont appelées sur l'objet correspondant au datastore du serveur.
 
 
 
-Vous pouvez envoyer des paramètres aux fonctions définies dans les classes utilisateurs ORDA. Côté serveur, ils seront reçus dans les fonctions de classe dans les paramètres normaux $1, $2, etc.
+Vous pouvez envoyer des paramètres aux fonctions définies dans les classes utilisateurs ORDA. Côté serveur, ils seront reçus dans les fonctions de classe dans les paramètres classiques $1, $2, etc.
 
 Les règles suivantes s'appliquent :
 
-- Les paramètres doivent être passés dans le **corps de la requête POST**
+- Les paramètres doivent être passés dans le **body de la requête POST**
 - Les paramètres doivent être inclus dans une collection (format JSON)
 - Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
 - L'entity selection et l'entité peuvent être passées en tant que paramètres. L'objet JSON doit contenir des attributs spécifiques utilisés par le serveur REST pour affecter des données aux objets ORDA correspondants : __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
@@ -63,7 +63,7 @@ Voir [cet exemple](#request-receiving-an-entity-as-parameter) et [cet exemple](#
 
 ### Paramètre de valeur scalaire
 
-Le(s) paramètre(s) doivent simplement être incluse dans une collection définie dans le corps. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
+Le(s) paramètre(s) doivent simplement être incluse dans une collection définie dans le corps. Par exemple, avec une fonction de dataclass `getCities()` qui reçoit des paramètres de type texte : `/rest/City/getCities`
 
 **Paramètres dans le body :** ["Aguada","Paris"]
 
@@ -106,7 +106,7 @@ L'entity selection doit avoir été définie au préalable à l'aide de [$method
 | Propriétés            | Type    | Description                                                                             |
 | --------------------- | ------- | --------------------------------------------------------------------------------------- |
 | Attributs de l'entité | mixte   | Optionnelle - Valeurs à modifier                                                        |
-| __DATASET             | Text    | Obligatoire - entitySetID (UUID) de la sélection d'entité                               |
+| __DATASET             | Text    | Obligatoire - entitySetID (UUID) de l'entity selection                                  |
 | __ENTITIES            | Boolean | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une sélection d'entité |
 
 Reportez-vous aux exemples de [réception d'une sélection d'entité](#receiving-an-entity-selection-as-parameter).

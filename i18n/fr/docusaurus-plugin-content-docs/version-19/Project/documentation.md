@@ -5,7 +5,7 @@ title: Documenter un projet
 
 
 
-In application projects, you can document your methods as well as your forms, tables, or fields. La création d'une documentation est particulièrement appropriée pour les projets développés par plusieurs programmeurs et s'inscrit généralement dans les bonnes pratiques en matière de programmation. La documentation peut contenir la description d'un élément ainsi que toute information nécessaire pour comprendre comment l'élément fonctionne dans l'application.
+Dans les projets d'application, vous pouvez documenter vos méthodes ainsi que vos formulaires, tables ou champs. La création d'une documentation est particulièrement appropriée pour les projets développés par plusieurs programmeurs et s'inscrit généralement dans les bonnes pratiques en matière de programmation. La documentation peut contenir la description d'un élément ainsi que toute information nécessaire pour comprendre comment l'élément fonctionne dans l'application.
 
 Les éléments de projet suivants peuvent être documentés :
 
@@ -98,7 +98,7 @@ L'éditeur de code 4D affiche une partie de la documentation d'une méthode dans
 
 ![](../assets/en/Project/codeEditor_Comments.png)
 
-If a file named `\&#060;MethodName&#062;.md` exists in `\&#060;package&#062;/documentation` folder, the code editor displays (by priority):
+Si un fichier nommé \ `&#060;MethodName&#062 ;.md` existe dans le dossier \ `&#060;package&#062;/documentation`, l'éditeur de code affiche (par priorité) :
 
 - Tout texte saisi dans une balise HTML `comment` (*\<!-- command documentation -->*) en haut du fichier markdown.
 

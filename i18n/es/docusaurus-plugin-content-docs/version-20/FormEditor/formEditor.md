@@ -155,7 +155,7 @@ Para seleccionar un objeto utilizando la barra de herramientas:
 Para seleccionar un objeto utilizando la Lista de propiedades:
 
 1. Seleccione el nombre del objeto en la lista desplegable de objetos situada en la parte superior de la lista de propiedades. Con estos dos métodos, puede seleccionar un objeto que esté oculto por otros objetos o que se encuentre fuera del área visible de la ventana actual. Para deseleccionar un objeto, haga clic fuera del límite del objeto o **Mayúsculas+clic** en el objeto.
-> > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+> También es posible seleccionar objetos haciendo doble clic en la ventana de resultados de la operación "Buscar en diseño".
 
 ### Selección de múltiples objetos
 
@@ -193,7 +193,7 @@ La caja de diálogo "Duplicar muchos" aparece cuando se selecciona uno o más ob
 
 ![](../assets/en/FormEditor/duplcateMany.png)
 
-- En el área superior, introduzca el número de columnas y líneas de objetos que desea obtener. Por ejemplo, si desea tres columnas y dos líneas de objetos, introduzca 3 en el área Columna(s) y 2 en el área Línea(s). Si desea tres nuevas copias horizontales de un objeto, introduzca 4 en el área Columna(s) y deje el valor por defecto, 1, en el área Línea(s).
+- En el área superior, introduzca el número de columnas y líneas de objetos que desea obtener. Por ejemplo, si desea tres columnas y dos líneas de objetos, introduzca 3 en el área Columna(s) y 2 en el área Línea(s). En el área superior, introduzca el número de columnas y líneas de objetos que desea obtener.
 
 - Para las líneas y columnas, defina el desplazamiento que desea aplicar a cada copia. El valor debe expresarse en puntos. It will be applied to each copy, or copies, in relation to the original object. For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
 
@@ -230,7 +230,7 @@ Puede desagrupar un grupo de objetos para tratarlos de nuevo como objetos indivi
 Un objeto activo que ha sido agrupado debe ser desagrupado antes de poder acceder a sus propiedades o métodos. Sin embargo, es posible seleccionar un objeto perteneciente a un grupo sin reagrupar el conjunto: para ello, **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en el objeto (el grupo debe estar seleccionado previamente).
 
 La agrupación sólo afecta a los objetos en el editor de formularios. Cuando se ejecuta el formulario, todos los objetos agrupados actúan como si estuvieran desagrupados.
-> La rejilla magnética también influye en el redimensionamiento manual de los objetos.
+> No es posible agrupar objetos que pertenezcan a diferentes vistas y solo se pueden agrupar aquellos objetos que pertenezcan a la vista actual (ver [Vistas](#views) ).
 
 Para agrupar los objetos:
 
@@ -519,7 +519,7 @@ El diseño del formulario resultante depende del tipo de formulario:
 
 
 
-## Marcas
+## Atajos
 
 El editor de formularios 4D utiliza marcas para facilitar la visualización de las propiedades de los objetos. Puede encontrarlos en la barra de herramientas del formulario:
 

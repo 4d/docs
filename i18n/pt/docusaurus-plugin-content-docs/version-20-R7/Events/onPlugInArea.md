@@ -9,4 +9,4 @@ title: On Plug in Area
 
 ## Descrição
 
-The event is generated when a plug-in requested its form area to execute the associated object method.
+O evento é gerado quando um plug-in solicitou sua área de formulário para executar o método de objeto associado.

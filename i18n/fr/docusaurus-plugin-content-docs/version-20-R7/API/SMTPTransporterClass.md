@@ -33,7 +33,7 @@ Les objets SMTP Transporter sont instanciés avec la commande [`SMTP New transpo
 
 | Paramètres | Type                               |                             | Description                                       |
 | ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------- |
-| server     | Object                             |              ->             | Informations sur le serveur IMAP                  |
+| server     | Object                             |              ->             | Informations sur le serveur de messagerie         |
 | Résultat   | 4D.SMTPTransporter | <- | [Objet SMTP Transporter](#objet-smtp-transporter) |
 
 <!-- END REF -->

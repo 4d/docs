@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW DOCUMENT ICON.Params-->
 
-| Parâmetro | Tipo                                               |   | Descrição                              |
-| --------- | -------------------------------------------------- | - | -------------------------------------- |
-| winRef    | Integer                                            | → | Window reference number                |
-| image     | Imagem                                             | → | Ícone personalizado                    |
-| file      | 4D.File, 4D.Folder | → | Caminho do arquivo ou caminho da pasta |
+| Parâmetro | Tipo                                               |                             | Descrição                              |
+| --------- | -------------------------------------------------- | --------------------------- | -------------------------------------- |
+| winRef    | Integer                                            | &#8594; | Window reference number                |
+| image     | Imagem                                             | &#8594; | Ícone personalizado                    |
+| file      | 4D.File, 4D.Folder | &#8594; | Caminho do arquivo ou caminho da pasta |
 
 <!-- END REF-->
 

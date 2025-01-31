@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.OB SET NULL.Summary-->O comando **OB SET NULL** armazena o valor **null** no objeto de linguagem designado pelo parâmetro *objeto* .<!-- END REF-->deve ter sido definido utilizando o comando [C\_OBJECT](c-object.md) ou designar um campo objeto 4D..  
+<!--REF #_command_.OB SET NULL.Summary-->O comando **OB SET NULL** armazena o valor **null** no objeto de linguagem designado pelo parâmetro *objeto* .<!-- END REF-->deve ter sido definido utilizando o comando *C\_OBJECT* ou designar um campo objeto 4D..  
   
 No parâmetro *propriedade*, passe a etiqueta da propriedade na que deseja armazenar o valor **null**. Se a propriedade já existe em *objeto*, seu valor se atualiza. Se não existe, é criada.  
 Tenha em conta que o parâmetro *propriedade* tem em conta as maiúsculas e minúsculas.

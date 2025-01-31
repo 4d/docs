@@ -73,7 +73,7 @@ Um ponteiro JSON é, estritamente falando, uma string composta de partes separad
 Os ponteiros JSOn são resolvidos recursivamente, o que significa que se um ponteiro resolvido também contiver ponteiros, serão resolvidos recursivamente e assim por diante, até que sejam resolvidos todos os ponteiros. Nesse contexto, todas as rotas de arquivo encontradas nas URLs de ponteiro JSOn podem ser relativas ou absolutas. Devem usar '/' como delimitador de rota e são resolvidas da maneira abaixo:
 
 * Uma rota relativa não deve começar com '/'. Se resolve relativamente ao documento JSON onde foi encontrada a string de rota de acesso,
-* Uma rota absoluta começa com '/'. Só as [rotas filesystem](https://developer.4d.com/docs/Concepts/paths/#filesystem-pathnames) são aceitas como rotas absolutas.Por exemplo "/RESOURCES/templates/myfile.json" aponta ao arquivo "myfile.json" que se encontra na pasta de recursos do banco de dados atual.
+* Uma rota absoluta começa com '/'. Só as [rotas filesystem](../Concepts/paths.md#filesystem-pathnames) são aceitas como rotas absolutas.Por exemplo "/RESOURCES/templates/myfile.json" aponta ao arquivo "myfile.json" que se encontra na pasta de recursos do banco de dados atual.
 
 **Notas:**
 

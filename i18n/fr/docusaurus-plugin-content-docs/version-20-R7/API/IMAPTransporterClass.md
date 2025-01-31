@@ -50,7 +50,7 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 
 | Paramètres | Type                               |                             | Description                                        |
 | ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------- |
-| server     | Object                             |              ->             | Informations sur le serveur IMAP                   |
+| server     | Object                             |              ->             | Informations sur le serveur de messagerie          |
 | Résultat   | 4D.IMAPTransporter | <- | [Objet transporteur IMAP](#objet-imap-transporter) |
 
 <!-- END REF -->
@@ -1025,7 +1025,7 @@ Le paramètre optionnel *options* vous permet de définir les parties de message
 
 | Propriété | Type       | Description                                                                                                                                                                                                                                                                                                                                   |
 | --------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| liste     | Collection | Collection d'[objets Email](EmailObjectClass.md#objet-email). Si aucun objet Email n'est trouvé, une collection vide est retournée.                                                                                                                                                                           |
+| list      | Collection | Collection d'[objets Email](EmailObjectClass.md#objet-email). Si aucun objet Email n'est trouvé, une collection vide est retournée.                                                                                                                                                                           |
 | notFound  | Collection | Collection de :<br/><ul><li>première syntaxe - ID de messages passés précédemment qui n'existent pas</li><li>deuxième syntaxe - numéros de séquence des messages entre startMsg et endMsg qui n'existent pas.</li></ul>Une collection vide est renvoyée si tous les messages ont été trouvés. |
 
 #### Exemple

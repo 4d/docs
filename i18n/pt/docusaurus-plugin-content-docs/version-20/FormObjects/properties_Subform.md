@@ -33,9 +33,9 @@ Esta propriedade é utilizada para declarar o formulário detalhado a utilizar n
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                                                                                                   |
-| ---------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string        | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Nome       | Tipo de dados | Valores possíveis                                                                                                                                              |
+| ---------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| detailForm | string        | Nome (string) da tabela ou formulário projeto, um caminho POSIX (string) para um arquivo .json descrevendo o formulário, ou um objeto descrevendo o formulário |
 
 #### Objectos suportados
 
@@ -44,9 +44,9 @@ Esta propriedade é utilizada para declarar o formulário detalhado a utilizar n
 ---
 ## Duplo clique numa linha vazia
 
-Action to perform in case of a double-click on an empty line of a list subform. As opções abaixo estão disponíveis:
+Ação a ser executada no caso de um clique duplo em uma linha vazia de um subformulário lista. As opções abaixo estão disponíveis:
 - Não fazer nada: Ignora o duplo clique.
-- Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List] property is enabled. Otherwise, it will be created in page mode, in the [detail form](detail-form) associated with the subform.
+- Adicionar registro: cria um registro no subformulário e muda para o modo edição. The record will be created directly in the list if the [Enterable in List] property is enabled. Otherwise, it will be created in page mode, in the [detail form](detail-form) associated with the subform.
 
 
 #### Gramática JSON
@@ -67,15 +67,15 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 `Subformulário lista`
 
-Sets the action to be performed when a user double-clicks on a row in a list subform. As opções disponíveis são:
+Define a ação a ser executada quando um usuário clica duas vezes em uma linha no subformulário lista. As opções disponíveis são:
 
-*   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*   **Edit Record**: Double-clicking a row displays the corresponding record in the [detail form defined for the list subform](#detail-form). O registo é aberto em modo de leitura-escrita para poder ser modificado.
-*   **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
+*   **Não fazer nada** (padrão): clicar duas vezes em uma linha não aciona nenhuma ação automática.
+*   **Editar registro**: clicar duas vezes em uma linha exibe o registro correspondente no [formulário de detalhes definido para o subformulário lista](#detail-form). O registo é aberto em modo de leitura-escrita para poder ser modificado.
+*   **Exibir registro**: idêntico à ação anterior, exceto pelo fato de que o registro é aberto no modo somente leitura, de modo que não pode ser modificado.
 
-Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
+Independentemente da ação selecionada/escolhida, o evento de formulário `On Double clicked` é gerado.
 
-For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+Para as duas últimas ações, o evento do formulário `On Open Detail` também é gerado. `On Close Detail` é gerado quando um registro exibido no formulário detalhado associado à list box está prestes a ser fechado (independentemente de o registro ter sido modificado ou não).
 
 #### Gramática JSON
 
@@ -94,9 +94,9 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 ---
 ## Introduzível em lista
 
-When a list subform has this property enabled, the user can modify record data directly in the list, without having to use the [associated detail form](#detail-form).
+Quando um subformulário de lista tem essa propriedade ativada, o usuário pode modificar os dados do registro diretamente na lista, sem precisar usar o [formulário detalhado associado](#detail-form).
 
-> To do this, simply click twice on the field to be modified in order to switch it to editing mode (make sure to leave enough time between the two clicks so as not to generate a double-click).
+> Para fazer isso, basta clicar duas vezes no campo a ser modificado para alterná-lo para o modo de edição (certifique-se de deixar tempo suficiente entre os dois cliques para não gerar um clique duplo).
 
 
 #### Gramática JSON
@@ -116,13 +116,13 @@ When a list subform has this property enabled, the user can modify record data d
 
 Você usa essa propriedade para declarar o formulário de lista a ser usado no subformulário. Um subformulário lista permite que você insira, visualize e modifique dados em outras tabelas.
 
-List subforms can be used for data entry in two ways: the user can enter data directly in the subform, or enter it in an [input form](#detail-form). In this configuration, the form used as the subform is referred to as the List form. O formulário de entrada é designado Formulário detalhado.
+Os subformulários de lista podem ser usados para entrada de dados de duas maneiras: o usuário pode inserir dados diretamente no subformulário ou inseri-los em um [formulário de entrada](#detail-form). Nessa configuração, o formulário usado como subformulário é chamado formulário Lista. O formulário de entrada é designado Formulário detalhado.
 
 #### Gramática JSON
 
-| Nome     | Tipo de dados | Valores possíveis                                                                                                                   |
-| -------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| listForm | string        | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Nome     | Tipo de dados | Valores possíveis                                                                                                                                              |
+| -------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| listForm | string        | Nome (string) da tabela ou formulário projeto, um caminho POSIX (string) para um arquivo .json descrevendo o formulário, ou um objeto descrevendo o formulário |
 
 #### Objectos suportados
 
@@ -149,13 +149,13 @@ Especifica a tabela a que pertence o subformulário Lista (se existir).
 ## Modo seleção
 
 Designa a opção que permite aos utilizadores selecionar linhas:
-- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-- **Single**: One row at a time can be selected in this mode. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
-  The Up and Down arrow keys select the previous/next row in the list. As outras teclas de navegação percorrem a lista. The `On Selection Change` form event is generated every time the current row is changed.
-- **Multiple**: Several rows can be selected simultaneously in this mode.
+- **Nenhum**: as linhas não podem ser selecionadas se esse modo for escolhido. Clicar na lista não terá efeito, a menos que a opção [Entrável na lista](subform_overview.md#enterable-in-list) esteja ativada. As teclas de navegação só fazem a lista rolar, o evento formulário `On Selection Change` não é gerado.
+- **Simples**: uma linha de cada vez pode ser selecionada neste modo. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
+  The Up and Down arrow keys select the previous/next row in the list. As outras teclas de navegação percorrem a lista. O evento formulário `On Selection Change` é gerado sempre que a linha atual é alterada.
+- **Múltiplo**: várias linhas podem ser selecionadas simultaneamente neste modo.
     - Os sub-registos selecionados são devolvidos pelo comando `GET HIGHLIGHTED RECORDS`.
-    - Clicking on the record will select it, but it does not modify the current record.
-    - A **Ctrl+click** (Windows) or **Command+click** (macOS) on a record toggles its state (between selected or not). As teclas de seta para cima e para baixo selecionam o registo anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. O evento do formulário `On Selection Change` é gerado sempre que o registo selecionado é alterado.
+    - Clicar no registro o selecionará, mas não modificará o registro atual.
+    - **Ctrl+clique** (Windows) ou **Comando+clique** (macOS) em um registro alterna seu estado (entre selecionado ou não). As teclas de seta para cima e para baixo selecionam o registo anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. O evento do formulário `On Selection Change` é gerado sempre que o registo selecionado é alterado.
 
 
 #### Gramática JSON

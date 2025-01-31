@@ -126,7 +126,7 @@ Pode declarar o parâmetro retornado de uma função adicionado uma flecha (->) 
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#returned-value-1)). Por exemplo:
+Você também pode declarar apenas o parâmetro de retorno adicionando `: type`, nesse caso estará automaticamente disponível através de `$0` ([ver sintaxe sequencial abaixo](#returned-value-1)). Por exemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -283,7 +283,7 @@ Para declarar parâmetros genéricos, se utiliza uma diretriz do compilador à q
 
 Esse comando significa que a partir do quarto parâmetro (incluído), o método pode receber um número variável de parâmetros de tipo longint. $1, $2 e $3 podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. $1, $2 and $3 can be of any data type.
 
-> **Nota:** O número na declaração tem que ser uma constante e não uma variável.
+> O número na declaração tem que ser uma constante e não uma variável.
 
 
 
@@ -385,7 +385,7 @@ Este caso es tratado por 4D dependendo do contexto:
 
 
 
-## Variáveis input output
+## Variáveis de entrada/saída
 
 Dentro da subrotina, pode utilizar os parâmetros $1, $2... da mesma maneira que utilizaria qualquer outra variável local. Entretanto, no caso de usar comandos que modifiquem o valor da variável passada como parâmetro (por exemplo `Find in field`), os parâmetros $1, $2, etc. não podem ser utilizardos diretamente. Primeiro deve copiá-los nas variáveis locais padrão (por exemplo: `$myvar:=$1`).
 
@@ -444,7 +444,7 @@ No manual *Linguagem de 4D*, os caracteres { } (chaves) indicam parâmetros opci
 ALERT("Are you sure?";"Yes I am") //2 parameters ALERT("Time is over") //1 parameter
 ```
 
-4D project methods also accept such optional parameters, starting from the right. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. Uma boa prática é atribuir valores padrão a parâmetros não utilizados.
+Os métodos projeto 4D também aceitam tais parâmetros opcionais, começando pela direita. A questão com parâmetros opcionais é como lidar com o caso em que alguns deles estão faltando no método chamado - isso nunca deve produzir um erro. Uma boa prática é atribuir valores padrão a parâmetros não utilizados.
 
 > Quando os parâmetros opcionais forem necessários em seus métodos, também pode considerar o uso de [parâmetros com nome](#named-parameters) que oferecem uma forma flexível de manejar um número variável de parâmetros.
 
@@ -453,7 +453,7 @@ Utilizando o comando `Count parameters` desde dentro do método chamado, pode de
 O exemplo abaixo mostra uma mensagem de texto e pode inserir o texto em um documento no disco ou em uma área de 4D Write Pro:
 
 ```4d
-// APPEND TEXT Project Method
+// Método projeto APPEND TEXT
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
 
@@ -468,7 +468,7 @@ O exemplo abaixo mostra uma mensagem de texto e pode inserir o texto em um docum
     End if
  End if
 ```
-Depois de adicionar este método projeto a sua aplicação, pode escrever:
+Após adicionar este método projeto a sua aplicação, pode escrever:
 
 ```4d  
 APPEND TEXT(vtSomeText) //Will only display the  message APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document at $path APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea

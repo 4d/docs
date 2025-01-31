@@ -28,12 +28,13 @@ displayed_sidebar: docs
 *property* 引数には、値を変更するプロパティを、そして新しい値を*value*に渡します。*property*引数には、**標準プロパティ**(“*Menu Item Properties*”テーマ内の定数のどれか一つ)あるいは**カスタムプロパティ**を使用することができます:
 
 * **標準プロパティ**: ほとんどの標準プロパティは、“*Menu Item Properties*” テーマ内の定数を通して利用可能です。  
+
 | 定数                         | 型   | 値                                | コメント                                                                                                                                                                              |  
 | -------------------------- | --- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Access privileges          | 文字列 | 4D\_access\_group                | コマンドにアクセスグループを設定するために使用します。<br/>0 = All Groups<br/>>0 = Group ID                                                                                                  |  
 | Associated standard action | 文字列 | 4D\_standard\_action             | メニュー項目に標準アクションを割り当てるために使用します。<br/>"*標準アクション*" テーマの定数参照。                                                                                                                   |  
-| n/a                        | 文字列 | 4D\_execute\_without\_validating | **[イベントを発生させない](https://developer.4d.com/docs/Menus/properties#execute-without-validating)** オプションを有効化します(標準アクションが割り当てられたメニュー項目に対して設定します)<br/>True=有効化、 False (デフォルト)=無効化 |  
-| Start a new process        | 文字列 | 4D\_start\_new\_process          | "新規プロセス開始オプションを有効にします。<br/>0 = No, 1 = Yes                                                                                                                                |  
+| n/a                        | 文字列 | 4D\_execute\_without\_validating | [**イベントを発生させない**](../Menus/properties.md#新規プロセスで開始) オプションを有効化します(標準アクションが割り当てられたメニュー項目に対して設定します)<br/>True=有効化、 False (デフォルト)=無効化 |  
+| Start a new process        | 文字列 | 4D\_start\_new\_process          | "新規プロセス開始オプションを有効にします。<br/>0 = No, 1 = Yes   |  
     
 Associated Standard Action プロパティの場合、*value* 引数には標準アクション名を渡すことができます。利用可能なアクションの包括的な一覧については、*デザインリファレンスマニュアル*の*標準アクション*の章を参照してください。主要なアクションは*標準アクション*テーマの定数としても使用可能です。  
     

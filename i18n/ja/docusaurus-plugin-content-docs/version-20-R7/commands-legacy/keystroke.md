@@ -166,7 +166,7 @@ $2->:=$vtNewValue
 #### 参照 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 
 #### プロパティ

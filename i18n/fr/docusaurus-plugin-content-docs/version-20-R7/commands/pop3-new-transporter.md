@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POP3 New transporter.Params-->
 
-| Paramètres | Type                               |   | Description                                                                       |
-| ---------- | ---------------------------------- | - | --------------------------------------------------------------------------------- |
-| server     | Object                             | → | Informations sur le serveur IMAP                                                  |
-| Résultat   | 4D.POP3Transporter | ← | [Object POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object) |
+| Paramètres | Type                               |                             | Description                                                                       |
+| ---------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
+| server     | Object                             | &#8594; | Informations sur le serveur de messagerie                                         |
+| Résultat   | 4D.POP3Transporter | &#8592; | [Object POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object) |
 
 <!-- END REF-->
 
@@ -66,3 +66,10 @@ La fonction retourne un [**objet POP3 transporter**](../API/POP3TransporterClass
     ALERT("An error occurred receiving the mail: "+$status.statusText)
  End if
 ```
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1697                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

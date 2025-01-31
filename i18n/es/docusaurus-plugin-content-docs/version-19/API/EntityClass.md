@@ -94,7 +94,7 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 
 La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->.
 
-This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+Esta función permite actualizar las entidades por separado. Sin embargo, tenga en cuenta que, por razones de rendimiento, la nueva entidad comparte la misma referencia de atributos de objeto que la entidad clonada.
 > Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado solo cuando se ejecute la función [`.save()`](#save).
 
 Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que [`.isNew()`](#isnew) devuelve **True**).
@@ -163,12 +163,13 @@ Si una de las entidades comparadas es **Null**, se produce un error.
  var $diff1; $diff2 : Collection
  employee:=ds.Employee.query("ID=1001").first()
  $clone:=employee.clone()
+
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
- $diff1:=$clone.diff(employee) // Se devuelven todas las diferencias
- $diff2:=$clone.diff(employee;New collection"firstName"; "lastName"))
-  // Sólo se devuelven las diferencias en firstName y lastName
+ $diff1:=$clone.diff(employee) // All differences are returned
+ $diff2:=$clone.diff(employee;New collection("firstName";"lastName"))
+  // Only differences on firstName and lastName are returned
 ```
 
 $diff1:

@@ -10,13 +10,13 @@ Les boutons image peuvent être utilisés de deux manières :
 * Comme boutons de commande dans un formulaire. Dans ce cas, le bouton image comprend généralement quatre états différents : activé, désactivé, cliqué et survolé.      
   Par exemple, un tableau de miniatures qui comporte une ligne de quatre colonnes, chaque miniature correspond aux états Par défaut, Cliqué, Survol et Désactivé.
 
-  | Propriété                  | Nom JSON               | Valeur |
-  | -------------------------- | ---------------------- | ------ |
-  | Lignes                     | rowCount               | 1      |
-  | Colonnes                   | columnCount            | 4      |
-  | Switch back when Released  | switchBackWhenReleased | true   |
-  | Switch when Roll Over      | switchWhenRollover     | true   |
-  | Use Last Frame as Disabled | useLastFrameAsDisabled | true   |
+  | Propriété                      | Nom JSON               | Valeur |
+  | ------------------------------ | ---------------------- | ------ |
+  | Lignes                         | rowCount               | 1      |
+  | Colonnes                       | columnCount            | 4      |
+  | Retour sur relâchement du clic | switchBackWhenReleased | true   |
+  | Bascule sur passage du curseur | switchWhenRollover     | true   |
+  | Dernière imagette si désactivé | useLastFrameAsDisabled | true   |
 
 * Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. Avec les [Pop-up menus image](picturePopupMenu_overview.md), tous les choix sont présentés simultanément (en tant que commandes du pop-up menu) ; avec un bouton image, les choix sont présentés consécutivement (à mesure que l’utilisateur clique sur le bouton).   
   Voici un exemple de bouton image. Vous souhaitez permettre aux utilisateurs de votre application de choisir la langue qui sera utilisée dans les menus, les boîtes de dialogue, etc. Vous pouvez implémenter cette option à l’aide d’un bouton image, placé dans une boîte de dialogue personnalisée de Propriétés :
@@ -51,11 +51,11 @@ Outre les paramètres de positionnement et d'apparence standard, vous pouvez dé
 
 Les autres modes disponibles sont les suivants :
 - [Recommencer la séquence](properties_Animation.md#loop-back-to-first-frame)
-- [Switch back when Released](properties_Animation.md#switch-back-when-released)
-- [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
+- [Retour sur relâchement du clic](properties_Animation.md#switch-back-when-released)
+- [Bascule sur passage du curseur](properties_Animation.md#switch-when-roll-over)
 - [Défilement continu sur clic](properties_Animation.md#switch-continuously-on-clicks)
-- [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
 - [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled)
+- [Défilement tous les n ticks](./properties_Animation.md#switch-every-x-ticks)
 > La [variable associée](properties_Object.md#variable-or-expression) au bouton image renvoie le numéro d'index, dans la table des vignettes, de l'image courante affichée. La numérotation des images dans le tableau débute à 0.
 
 ## Propriétés prises en charge

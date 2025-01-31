@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.File.Params -->
 
-| Parámetros   | Tipo                    |     | Descripción                                                           |
-| ------------ | ----------------------- | :-: | --------------------------------------------------------------------- |
-| path         | Text                    |  →  | Ruta del archivo                                                      |
-| fileConstant | Integer                 |  →  | Constante del archivo 4D                                              |
-| pathType     | Integer                 |  →  | `fk posix path` (por defecto) o `fk platform path` |
-| \*           | operator                |  →  | \* para devolver el archivo de la base local                          |
-| Result       | 4D.File |  ←  | Nuevo objeto de archivo                                               |
+| Parámetros   | Tipo                    |                             | Descripción                                                           |
+| ------------ | ----------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path         | Text                    | &#8594; | Ruta del archivo                                                      |
+| fileConstant | Integer                 | &#8594; | Constante del archivo 4D                                              |
+| pathType     | Integer                 | &#8594; | `fk posix path` (por defecto) o `fk platform path` |
+| \*           | operator                | &#8594; | \* para devolver el archivo de la base local                          |
+| Result       | 4D.File | &#8592; | Nuevo objeto de archivo                                               |
 
 <!-- END REF -->
 
@@ -84,3 +84,10 @@ Si el comando se llama desde un componente, pase el parámetro opcional `*` para
 [Get 4D file](../commands-legacy/get-4d-file.md)\
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
+
+#### Propiedades
+
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1566                                                                |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

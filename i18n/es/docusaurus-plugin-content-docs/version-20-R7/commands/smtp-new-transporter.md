@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SMTP New transporter.Params-->
 
-| Parámetros | Tipo                               |   | Descripción                                                                       |
-| ---------- | ---------------------------------- | - | --------------------------------------------------------------------------------- |
-| server     | Object                             | → | Información del servidor de correo                                                |
-| Resultado  | 4D.SMTPTransporter | ← | [Objeto SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object) |
+| Parámetros | Tipo                               |                             | Descripción                                                                       |
+| ---------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
+| server     | Object                             | &#8594; | Información del servidor de correo                                                |
+| Resultado  | 4D.SMTPTransporter | &#8592; | [Objeto SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
 <!-- END REF-->
 
@@ -84,3 +84,10 @@ The function returns a [**SMTP transporter object**](../API/SMTPTransporterClass
     ALERT("An error occurred sending the mail: "+$status.message)
  End if
 ```
+
+#### Propiedades
+
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1608                                                                |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create deployment license.Summary-->**Create deployment license** コマンドは、*mergedApp* 引数で指定したビルドされたアプリのライセンスフォルダ内に、埋め込みライセンスファイルを作成します。<!-- END REF--> *mergedApp* 引数で指定した組み込みアプリ内にライセンスフォルダが存在しない場合、フォルダはコマンドによって作成されます。
 
-*mergedApp* 引数には、ライセンスを埋め込みたいビルドされたアプリケーションを格納しているフォルダへの参照を格納した [4D.Folder](https://developer.4d.com/docs/API/FolderClass) オブジェクトを渡します。
+*mergedApp* 引数には、ライセンスを埋め込みたいビルドされたアプリケーションを格納しているフォルダへの参照を格納した [4D.Folder](../API/FolderClass.md) オブジェクトを渡します。
 
-*license* 引数には、埋め込みライセンスを生成するのに使用されるライセンスファイルへの参照を格納した [4D.File](https://developer.4d.com/docs/API/FileClass) オブジェクトを渡します。
+*license* 引数には、埋め込みライセンスを生成するのに使用されるライセンスファイルへの参照を格納した [4D.File](../API/FileClass.md) オブジェクトを渡します。
 
 ビルドに特定のOEM ライセンス(*4D OEM XML Keys*) が必要で、ビルドするマシンのライセンスフォルダにそのようなライセンスがまだインストールされていない場合、 *oemLicense* 引数を指定してそれを渡す必要があります。この引数は、あるマシンをアプリケーションをビルドする専用機として使う場合に便利です。
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 | **プロパティ**    | **型**                                                  | **詳細**                  |
 | ------------ | ------------------------------------------------------ | ----------------------- |
 | success      | ブール                                                    | ライセンスファイルが生成された場合にはTrue |
-| file         | [4D.File](https://developer.4d.com/docs/API/FileClass) | 生成されたライセンスファイル          |
+| file         | [4D.File](../API/FileClass.md) | 生成されたライセンスファイル          |
 | statusText   | テキスト                                                   | エラーがあればその詳細             |
 | errors       | コレクション                                                 | エラーオブジェクトのコレクション        |
 | \[\].message | テキスト                                                   | エラーメッセージ                |

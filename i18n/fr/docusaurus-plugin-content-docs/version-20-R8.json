@@ -1,0 +1,1042 @@
+{
+  "version.label": {
+    "message": "20 R8 BETA",
+    "description": "The label for version 20-R8"
+  },
+  "sidebar.docs.category.Getting Started": {
+    "message": "Prise en main",
+    "description": "The label for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.Getting Started.link.generated-index.title": {
+    "message": "Prise en main",
+    "description": "The generated-index page title for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.Core Development": {
+    "message": "Développement",
+    "description": "The label for category Core Development in sidebar docs"
+  },
+  "sidebar.docs.category.Core Development.link.generated-index.title": {
+    "message": "Développement",
+    "description": "The generated-index page title for category Core Development in sidebar docs"
+  },
+  "sidebar.docs.category.Project Management": {
+    "message": "Gestion des projets",
+    "description": "The label for category Project Management in sidebar docs"
+  },
+  "sidebar.docs.category.Settings": {
+    "message": "Propriétés",
+    "description": "The label for category Settings in sidebar docs"
+  },
+  "sidebar.docs.category.Development Environment": {
+    "message": "Environnement de développement",
+    "description": "The label for category Development Environment in sidebar docs"
+  },
+  "sidebar.docs.category.Debugging": {
+    "message": "Débogage",
+    "description": "The label for category Debugging in sidebar docs"
+  },
+  "sidebar.docs.category.ORDA": {
+    "message": "ORDA",
+    "description": "The label for category ORDA in sidebar docs"
+  },
+  "sidebar.docs.category.Processes": {
+    "message": "Process",
+    "description": "The label for category Processes in sidebar docs"
+  },
+  "sidebar.docs.category.Preferences": {
+    "message": "Préférences",
+    "description": "The label for category Preferences in sidebar docs"
+  },
+  "sidebar.docs.category.4D Language": {
+    "message": "Langage 4D",
+    "description": "The label for category 4D Language in sidebar docs"
+  },
+  "sidebar.docs.category.4D Language.link.generated-index.title": {
+    "message": "Langage 4D",
+    "description": "The generated-index page title for category 4D Language in sidebar docs"
+  },
+  "sidebar.docs.category.Concepts": {
+    "message": "Concepts",
+    "description": "The label for category Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.Data Types": {
+    "message": "Types de données",
+    "description": "The label for category Data Types in sidebar docs"
+  },
+  "sidebar.docs.category.Commands": {
+    "message": "Commandes",
+    "description": "The label for category Commands in sidebar docs"
+  },
+  "sidebar.docs.category.Commands.link.generated-index.title": {
+    "message": "Commandes",
+    "description": "The generated-index page title for category Commands in sidebar docs"
+  },
+  "sidebar.docs.category.4D Environment": {
+    "message": "4D Environment",
+    "description": "The label for category 4D Environment in sidebar docs"
+  },
+  "sidebar.docs.category.4D Environment.link.generated-index.title": {
+    "message": "4D Environment",
+    "description": "The generated-index page title for category 4D Environment in sidebar docs"
+  },
+  "sidebar.docs.category.Arrays": {
+    "message": "Tableaux",
+    "description": "The label for category Arrays in sidebar docs"
+  },
+  "sidebar.docs.category.Arrays.link.generated-index.title": {
+    "message": "Tableaux",
+    "description": "The generated-index page title for category Arrays in sidebar docs"
+  },
+  "sidebar.docs.category.Backup": {
+    "message": "Sauvegarde",
+    "description": "The label for category Backup in sidebar docs"
+  },
+  "sidebar.docs.category.Backup.link.generated-index.title": {
+    "message": "Sauvegarde",
+    "description": "The generated-index page title for category Backup in sidebar docs"
+  },
+  "sidebar.docs.category.BLOB": {
+    "message": "BLOB",
+    "description": "The label for category BLOB in sidebar docs"
+  },
+  "sidebar.docs.category.BLOB.link.generated-index.title": {
+    "message": "BLOB",
+    "description": "The generated-index page title for category BLOB in sidebar docs"
+  },
+  "sidebar.docs.category.Boolean": {
+    "message": "Boolean",
+    "description": "The label for category Boolean in sidebar docs"
+  },
+  "sidebar.docs.category.Boolean.link.generated-index.title": {
+    "message": "Boolean",
+    "description": "The generated-index page title for category Boolean in sidebar docs"
+  },
+  "sidebar.docs.category.Cache Management": {
+    "message": "Cache Management",
+    "description": "The label for category Cache Management in sidebar docs"
+  },
+  "sidebar.docs.category.Cache Management.link.generated-index.title": {
+    "message": "Cache Management",
+    "description": "The generated-index page title for category Cache Management in sidebar docs"
+  },
+  "sidebar.docs.category.Collections": {
+    "message": "Collections",
+    "description": "The label for category Collections in sidebar docs"
+  },
+  "sidebar.docs.category.Collections.link.generated-index.title": {
+    "message": "Collections",
+    "description": "The generated-index page title for category Collections in sidebar docs"
+  },
+  "sidebar.docs.category.Communications": {
+    "message": "Communications",
+    "description": "The label for category Communications in sidebar docs"
+  },
+  "sidebar.docs.category.Communications.link.generated-index.title": {
+    "message": "Communications",
+    "description": "The generated-index page title for category Communications in sidebar docs"
+  },
+  "sidebar.docs.category.Compiler": {
+    "message": "Compiler",
+    "description": "The label for category Compiler in sidebar docs"
+  },
+  "sidebar.docs.category.Compiler.link.generated-index.title": {
+    "message": "Compiler",
+    "description": "The generated-index page title for category Compiler in sidebar docs"
+  },
+  "sidebar.docs.category.Data Entry": {
+    "message": "Data Entry",
+    "description": "The label for category Data Entry in sidebar docs"
+  },
+  "sidebar.docs.category.Data Entry.link.generated-index.title": {
+    "message": "Data Entry",
+    "description": "The generated-index page title for category Data Entry in sidebar docs"
+  },
+  "sidebar.docs.category.Data Security": {
+    "message": "Data Security",
+    "description": "The label for category Data Security in sidebar docs"
+  },
+  "sidebar.docs.category.Data Security.link.generated-index.title": {
+    "message": "Data Security",
+    "description": "The generated-index page title for category Data Security in sidebar docs"
+  },
+  "sidebar.docs.category.Database Methods": {
+    "message": "Database Methods",
+    "description": "The label for category Database Methods in sidebar docs"
+  },
+  "sidebar.docs.category.Database Methods.link.generated-index.title": {
+    "message": "Database Methods",
+    "description": "The generated-index page title for category Database Methods in sidebar docs"
+  },
+  "sidebar.docs.category.Date and Time": {
+    "message": "Date and Time",
+    "description": "The label for category Date and Time in sidebar docs"
+  },
+  "sidebar.docs.category.Date and Time.link.generated-index.title": {
+    "message": "Date and Time",
+    "description": "The generated-index page title for category Date and Time in sidebar docs"
+  },
+  "sidebar.docs.category.Design Object Access": {
+    "message": "Design Object Access",
+    "description": "The label for category Design Object Access in sidebar docs"
+  },
+  "sidebar.docs.category.Design Object Access.link.generated-index.title": {
+    "message": "Design Object Access",
+    "description": "The generated-index page title for category Design Object Access in sidebar docs"
+  },
+  "sidebar.docs.category.Drag and Drop": {
+    "message": "Drag and Drop",
+    "description": "The label for category Drag and Drop in sidebar docs"
+  },
+  "sidebar.docs.category.Drag and Drop.link.generated-index.title": {
+    "message": "Drag and Drop",
+    "description": "The generated-index page title for category Drag and Drop in sidebar docs"
+  },
+  "sidebar.docs.category.Entry Control": {
+    "message": "Entry Control",
+    "description": "The label for category Entry Control in sidebar docs"
+  },
+  "sidebar.docs.category.Entry Control.link.generated-index.title": {
+    "message": "Entry Control",
+    "description": "The generated-index page title for category Entry Control in sidebar docs"
+  },
+  "sidebar.docs.category.File and Folder": {
+    "message": "File and Folder",
+    "description": "The label for category File and Folder in sidebar docs"
+  },
+  "sidebar.docs.category.File and Folder.link.generated-index.title": {
+    "message": "File and Folder",
+    "description": "The generated-index page title for category File and Folder in sidebar docs"
+  },
+  "sidebar.docs.category.Form Events": {
+    "message": "Evénements formulaire",
+    "description": "The label for category Form Events in sidebar docs"
+  },
+  "sidebar.docs.category.Form Events.link.generated-index.title": {
+    "message": "Evénements formulaire",
+    "description": "The generated-index page title for category Form Events in sidebar docs"
+  },
+  "sidebar.docs.category.Forms": {
+    "message": "Formulaires",
+    "description": "The label for category Forms in sidebar docs"
+  },
+  "sidebar.docs.category.Forms.link.generated-index.title": {
+    "message": "Formulaires",
+    "description": "The generated-index page title for category Forms in sidebar docs"
+  },
+  "sidebar.docs.category.Formulas": {
+    "message": "Formules",
+    "description": "The label for category Formulas in sidebar docs"
+  },
+  "sidebar.docs.category.Formulas.link.generated-index.title": {
+    "message": "Formules",
+    "description": "The generated-index page title for category Formulas in sidebar docs"
+  },
+  "sidebar.docs.category.Graphs": {
+    "message": "Graphs",
+    "description": "The label for category Graphs in sidebar docs"
+  },
+  "sidebar.docs.category.Graphs.link.generated-index.title": {
+    "message": "Graphs",
+    "description": "The generated-index page title for category Graphs in sidebar docs"
+  },
+  "sidebar.docs.category.HTTP": {
+    "message": "HTTP",
+    "description": "The label for category HTTP in sidebar docs"
+  },
+  "sidebar.docs.category.HTTP.link.generated-index.title": {
+    "message": "HTTP",
+    "description": "The generated-index page title for category HTTP in sidebar docs"
+  },
+  "sidebar.docs.category.Hierarchical Lists": {
+    "message": "Hierarchical Lists",
+    "description": "The label for category Hierarchical Lists in sidebar docs"
+  },
+  "sidebar.docs.category.Hierarchical Lists.link.generated-index.title": {
+    "message": "Hierarchical Lists",
+    "description": "The generated-index page title for category Hierarchical Lists in sidebar docs"
+  },
+  "sidebar.docs.category.Import and Export": {
+    "message": "Import and Export",
+    "description": "The label for category Import and Export in sidebar docs"
+  },
+  "sidebar.docs.category.Import and Export.link.generated-index.title": {
+    "message": "Import and Export",
+    "description": "The generated-index page title for category Import and Export in sidebar docs"
+  },
+  "sidebar.docs.category.Interruptions": {
+    "message": "Interruptions",
+    "description": "The label for category Interruptions in sidebar docs"
+  },
+  "sidebar.docs.category.Interruptions.link.generated-index.title": {
+    "message": "Interruptions",
+    "description": "The generated-index page title for category Interruptions in sidebar docs"
+  },
+  "sidebar.docs.category.JSON": {
+    "message": "JSON",
+    "description": "The label for category JSON in sidebar docs"
+  },
+  "sidebar.docs.category.JSON.link.generated-index.title": {
+    "message": "JSON",
+    "description": "The generated-index page title for category JSON in sidebar docs"
+  },
+  "sidebar.docs.category.LDAP": {
+    "message": "LDAP",
+    "description": "The label for category LDAP in sidebar docs"
+  },
+  "sidebar.docs.category.LDAP.link.generated-index.title": {
+    "message": "LDAP",
+    "description": "The generated-index page title for category LDAP in sidebar docs"
+  },
+  "sidebar.docs.category.Language": {
+    "message": "Langage",
+    "description": "The label for category Language in sidebar docs"
+  },
+  "sidebar.docs.category.Language.link.generated-index.title": {
+    "message": "Langage",
+    "description": "The generated-index page title for category Language in sidebar docs"
+  },
+  "sidebar.docs.category.Licenses": {
+    "message": "Licences",
+    "description": "The label for category Licenses in sidebar docs"
+  },
+  "sidebar.docs.category.Licenses.link.generated-index.title": {
+    "message": "Licences",
+    "description": "The generated-index page title for category Licenses in sidebar docs"
+  },
+  "sidebar.docs.category.List Box": {
+    "message": "List Box",
+    "description": "The label for category List Box in sidebar docs"
+  },
+  "sidebar.docs.category.List Box.link.generated-index.title": {
+    "message": "List Box",
+    "description": "The generated-index page title for category List Box in sidebar docs"
+  },
+  "sidebar.docs.category.Mail": {
+    "message": "Mail",
+    "description": "The label for category Mail in sidebar docs"
+  },
+  "sidebar.docs.category.Mail.link.generated-index.title": {
+    "message": "Mail",
+    "description": "The generated-index page title for category Mail in sidebar docs"
+  },
+  "sidebar.docs.category.Math": {
+    "message": "Math",
+    "description": "The label for category Math in sidebar docs"
+  },
+  "sidebar.docs.category.Math.link.generated-index.title": {
+    "message": "Math",
+    "description": "The generated-index page title for category Math in sidebar docs"
+  },
+  "sidebar.docs.category.Menus": {
+    "message": "Menus",
+    "description": "The label for category Menus in sidebar docs"
+  },
+  "sidebar.docs.category.Menus.link.generated-index.title": {
+    "message": "Menus",
+    "description": "The generated-index page title for category Menus in sidebar docs"
+  },
+  "sidebar.docs.category.Messages": {
+    "message": "Messages",
+    "description": "The label for category Messages in sidebar docs"
+  },
+  "sidebar.docs.category.Messages.link.generated-index.title": {
+    "message": "Messages",
+    "description": "The generated-index page title for category Messages in sidebar docs"
+  },
+  "sidebar.docs.category.Named Selections": {
+    "message": "Sélections temporaires",
+    "description": "The label for category Named Selections in sidebar docs"
+  },
+  "sidebar.docs.category.Named Selections.link.generated-index.title": {
+    "message": "Sélections temporaires",
+    "description": "The generated-index page title for category Named Selections in sidebar docs"
+  },
+  "sidebar.docs.category.Objects (Forms)": {
+    "message": "Objects (Forms)",
+    "description": "The label for category Objects (Forms) in sidebar docs"
+  },
+  "sidebar.docs.category.Objects (Forms).link.generated-index.title": {
+    "message": "Objects (Forms)",
+    "description": "The generated-index page title for category Objects (Forms) in sidebar docs"
+  },
+  "sidebar.docs.category.Objects (Language)": {
+    "message": "Objects (Language)",
+    "description": "The label for category Objects (Language) in sidebar docs"
+  },
+  "sidebar.docs.category.Objects (Language).link.generated-index.title": {
+    "message": "Objects (Language)",
+    "description": "The generated-index page title for category Objects (Language) in sidebar docs"
+  },
+  "sidebar.docs.category.On a Series": {
+    "message": "On a Series",
+    "description": "The label for category On a Series in sidebar docs"
+  },
+  "sidebar.docs.category.On a Series.link.generated-index.title": {
+    "message": "On a Series",
+    "description": "The generated-index page title for category On a Series in sidebar docs"
+  },
+  "sidebar.docs.category.PHP": {
+    "message": "PHP",
+    "description": "The label for category PHP in sidebar docs"
+  },
+  "sidebar.docs.category.PHP.link.generated-index.title": {
+    "message": "PHP",
+    "description": "The generated-index page title for category PHP in sidebar docs"
+  },
+  "sidebar.docs.category.Pasteboard": {
+    "message": "Pasteboard",
+    "description": "The label for category Pasteboard in sidebar docs"
+  },
+  "sidebar.docs.category.Pasteboard.link.generated-index.title": {
+    "message": "Pasteboard",
+    "description": "The generated-index page title for category Pasteboard in sidebar docs"
+  },
+  "sidebar.docs.category.Pictures": {
+    "message": "Images",
+    "description": "The label for category Pictures in sidebar docs"
+  },
+  "sidebar.docs.category.Pictures.link.generated-index.title": {
+    "message": "Images",
+    "description": "The generated-index page title for category Pictures in sidebar docs"
+  },
+  "sidebar.docs.category.Printing": {
+    "message": "Printing",
+    "description": "The label for category Printing in sidebar docs"
+  },
+  "sidebar.docs.category.Printing.link.generated-index.title": {
+    "message": "Printing",
+    "description": "The generated-index page title for category Printing in sidebar docs"
+  },
+  "sidebar.docs.category.Process (Communications)": {
+    "message": "Process (Communications)",
+    "description": "The label for category Process (Communications) in sidebar docs"
+  },
+  "sidebar.docs.category.Process (Communications).link.generated-index.title": {
+    "message": "Process (Communications)",
+    "description": "The generated-index page title for category Process (Communications) in sidebar docs"
+  },
+  "sidebar.docs.category.Process (User Interface)": {
+    "message": "Process (User Interface)",
+    "description": "The label for category Process (User Interface) in sidebar docs"
+  },
+  "sidebar.docs.category.Process (User Interface).link.generated-index.title": {
+    "message": "Process (User Interface)",
+    "description": "The generated-index page title for category Process (User Interface) in sidebar docs"
+  },
+  "sidebar.docs.category.Processes.link.generated-index.title": {
+    "message": "Process",
+    "description": "The generated-index page title for category Processes in sidebar docs"
+  },
+  "sidebar.docs.category.Queries": {
+    "message": "Queries",
+    "description": "The label for category Queries in sidebar docs"
+  },
+  "sidebar.docs.category.Queries.link.generated-index.title": {
+    "message": "Queries",
+    "description": "The generated-index page title for category Queries in sidebar docs"
+  },
+  "sidebar.docs.category.Quick Report": {
+    "message": "Quick Report",
+    "description": "The label for category Quick Report in sidebar docs"
+  },
+  "sidebar.docs.category.Quick Report.link.generated-index.title": {
+    "message": "Quick Report",
+    "description": "The generated-index page title for category Quick Report in sidebar docs"
+  },
+  "sidebar.docs.category.Record Locking": {
+    "message": "Record Locking",
+    "description": "The label for category Record Locking in sidebar docs"
+  },
+  "sidebar.docs.category.Record Locking.link.generated-index.title": {
+    "message": "Record Locking",
+    "description": "The generated-index page title for category Record Locking in sidebar docs"
+  },
+  "sidebar.docs.category.Records": {
+    "message": "Records",
+    "description": "The label for category Records in sidebar docs"
+  },
+  "sidebar.docs.category.Records.link.generated-index.title": {
+    "message": "Records",
+    "description": "The generated-index page title for category Records in sidebar docs"
+  },
+  "sidebar.docs.category.Relations": {
+    "message": "Relations",
+    "description": "The label for category Relations in sidebar docs"
+  },
+  "sidebar.docs.category.Relations.link.generated-index.title": {
+    "message": "Relations",
+    "description": "The generated-index page title for category Relations in sidebar docs"
+  },
+  "sidebar.docs.category.Resources": {
+    "message": "Resources",
+    "description": "The label for category Resources in sidebar docs"
+  },
+  "sidebar.docs.category.Resources.link.generated-index.title": {
+    "message": "Resources",
+    "description": "The generated-index page title for category Resources in sidebar docs"
+  },
+  "sidebar.docs.category.SQL": {
+    "message": "SQL",
+    "description": "The label for category SQL in sidebar docs"
+  },
+  "sidebar.docs.category.SQL.link.generated-index.title": {
+    "message": "SQL",
+    "description": "The generated-index page title for category SQL in sidebar docs"
+  },
+  "sidebar.docs.category.SVG": {
+    "message": "SVG",
+    "description": "The label for category SVG in sidebar docs"
+  },
+  "sidebar.docs.category.SVG.link.generated-index.title": {
+    "message": "SVG",
+    "description": "The generated-index page title for category SVG in sidebar docs"
+  },
+  "sidebar.docs.category.Secured Protocol": {
+    "message": "Secured Protocol",
+    "description": "The label for category Secured Protocol in sidebar docs"
+  },
+  "sidebar.docs.category.Secured Protocol.link.generated-index.title": {
+    "message": "Secured Protocol",
+    "description": "The generated-index page title for category Secured Protocol in sidebar docs"
+  },
+  "sidebar.docs.category.Selection": {
+    "message": "Selection",
+    "description": "The label for category Selection in sidebar docs"
+  },
+  "sidebar.docs.category.Selection.link.generated-index.title": {
+    "message": "Selection",
+    "description": "The generated-index page title for category Selection in sidebar docs"
+  },
+  "sidebar.docs.category.Sets": {
+    "message": "Ensembles",
+    "description": "The label for category Sets in sidebar docs"
+  },
+  "sidebar.docs.category.Sets.link.generated-index.title": {
+    "message": "Ensembles",
+    "description": "The generated-index page title for category Sets in sidebar docs"
+  },
+  "sidebar.docs.category.Spell Checker": {
+    "message": "Spell Checker",
+    "description": "The label for category Spell Checker in sidebar docs"
+  },
+  "sidebar.docs.category.Spell Checker.link.generated-index.title": {
+    "message": "Spell Checker",
+    "description": "The generated-index page title for category Spell Checker in sidebar docs"
+  },
+  "sidebar.docs.category.String": {
+    "message": "String",
+    "description": "The label for category String in sidebar docs"
+  },
+  "sidebar.docs.category.String.link.generated-index.title": {
+    "message": "String",
+    "description": "The generated-index page title for category String in sidebar docs"
+  },
+  "sidebar.docs.category.Structure Access": {
+    "message": "Structure Access",
+    "description": "The label for category Structure Access in sidebar docs"
+  },
+  "sidebar.docs.category.Structure Access.link.generated-index.title": {
+    "message": "Structure Access",
+    "description": "The generated-index page title for category Structure Access in sidebar docs"
+  },
+  "sidebar.docs.category.Styled Text": {
+    "message": "Styled Text",
+    "description": "The label for category Styled Text in sidebar docs"
+  },
+  "sidebar.docs.category.Styled Text.link.generated-index.title": {
+    "message": "Styled Text",
+    "description": "The generated-index page title for category Styled Text in sidebar docs"
+  },
+  "sidebar.docs.category.Subrecords": {
+    "message": "Subrecords",
+    "description": "The label for category Subrecords in sidebar docs"
+  },
+  "sidebar.docs.category.Subrecords.link.generated-index.title": {
+    "message": "Subrecords",
+    "description": "The generated-index page title for category Subrecords in sidebar docs"
+  },
+  "sidebar.docs.category.System Documents": {
+    "message": "System Documents",
+    "description": "The label for category System Documents in sidebar docs"
+  },
+  "sidebar.docs.category.System Documents.link.generated-index.title": {
+    "message": "System Documents",
+    "description": "The generated-index page title for category System Documents in sidebar docs"
+  },
+  "sidebar.docs.category.System Environment": {
+    "message": "System Environment",
+    "description": "The label for category System Environment in sidebar docs"
+  },
+  "sidebar.docs.category.System Environment.link.generated-index.title": {
+    "message": "System Environment",
+    "description": "The generated-index page title for category System Environment in sidebar docs"
+  },
+  "sidebar.docs.category.Table": {
+    "message": "Table",
+    "description": "The label for category Table in sidebar docs"
+  },
+  "sidebar.docs.category.Table.link.generated-index.title": {
+    "message": "Table",
+    "description": "The generated-index page title for category Table in sidebar docs"
+  },
+  "sidebar.docs.category.Tools": {
+    "message": "Tools",
+    "description": "The label for category Tools in sidebar docs"
+  },
+  "sidebar.docs.category.Tools.link.generated-index.title": {
+    "message": "Tools",
+    "description": "The generated-index page title for category Tools in sidebar docs"
+  },
+  "sidebar.docs.category.Transactions": {
+    "message": "Transactions",
+    "description": "The label for category Transactions in sidebar docs"
+  },
+  "sidebar.docs.category.Transactions.link.generated-index.title": {
+    "message": "Transactions",
+    "description": "The generated-index page title for category Transactions in sidebar docs"
+  },
+  "sidebar.docs.category.Triggers": {
+    "message": "Triggers",
+    "description": "The label for category Triggers in sidebar docs"
+  },
+  "sidebar.docs.category.Triggers.link.generated-index.title": {
+    "message": "Triggers",
+    "description": "The generated-index page title for category Triggers in sidebar docs"
+  },
+  "sidebar.docs.category.User Interface": {
+    "message": "Interface utilisateur",
+    "description": "The label for category User Interface in sidebar docs"
+  },
+  "sidebar.docs.category.User Interface.link.generated-index.title": {
+    "message": "Interface utilisateur",
+    "description": "The generated-index page title for category User Interface in sidebar docs"
+  },
+  "sidebar.docs.category.Users and Groups": {
+    "message": "Utilisateurs et groupes",
+    "description": "The label for category Users and Groups in sidebar docs"
+  },
+  "sidebar.docs.category.Users and Groups.link.generated-index.title": {
+    "message": "Utilisateurs et groupes",
+    "description": "The generated-index page title for category Users and Groups in sidebar docs"
+  },
+  "sidebar.docs.category.Variables": {
+    "message": "Variables",
+    "description": "The label for category Variables in sidebar docs"
+  },
+  "sidebar.docs.category.Variables.link.generated-index.title": {
+    "message": "Variables",
+    "description": "The generated-index page title for category Variables in sidebar docs"
+  },
+  "sidebar.docs.category.Web Area": {
+    "message": "Zones Web",
+    "description": "The label for category Web Area in sidebar docs"
+  },
+  "sidebar.docs.category.Web Area.link.generated-index.title": {
+    "message": "Zones Web",
+    "description": "The generated-index page title for category Web Area in sidebar docs"
+  },
+  "sidebar.docs.category.Web Server": {
+    "message": "Serveur Web",
+    "description": "The label for category Web Server in sidebar docs"
+  },
+  "sidebar.docs.category.Web Server.link.generated-index.title": {
+    "message": "Serveur Web",
+    "description": "The generated-index page title for category Web Server in sidebar docs"
+  },
+  "sidebar.docs.category.Web Services (Client)": {
+    "message": "Web Services (Client)",
+    "description": "The label for category Web Services (Client) in sidebar docs"
+  },
+  "sidebar.docs.category.Web Services (Client).link.generated-index.title": {
+    "message": "Web Services (Client)",
+    "description": "The generated-index page title for category Web Services (Client) in sidebar docs"
+  },
+  "sidebar.docs.category.Web Services (Server)": {
+    "message": "Web Services (Server)",
+    "description": "The label for category Web Services (Server) in sidebar docs"
+  },
+  "sidebar.docs.category.Web Services (Server).link.generated-index.title": {
+    "message": "Web Services (Server)",
+    "description": "The generated-index page title for category Web Services (Server) in sidebar docs"
+  },
+  "sidebar.docs.category.Windows": {
+    "message": "Windows",
+    "description": "The label for category Windows in sidebar docs"
+  },
+  "sidebar.docs.category.Windows.link.generated-index.title": {
+    "message": "Windows",
+    "description": "The generated-index page title for category Windows in sidebar docs"
+  },
+  "sidebar.docs.category.XML DOM": {
+    "message": "XML DOM",
+    "description": "The label for category XML DOM in sidebar docs"
+  },
+  "sidebar.docs.category.XML DOM.link.generated-index.title": {
+    "message": "XML DOM",
+    "description": "The generated-index page title for category XML DOM in sidebar docs"
+  },
+  "sidebar.docs.category.XML SAX": {
+    "message": "XML SAX",
+    "description": "The label for category XML SAX in sidebar docs"
+  },
+  "sidebar.docs.category.XML SAX.link.generated-index.title": {
+    "message": "XML SAX",
+    "description": "The generated-index page title for category XML SAX in sidebar docs"
+  },
+  "sidebar.docs.category.XML": {
+    "message": "XML",
+    "description": "The label for category XML in sidebar docs"
+  },
+  "sidebar.docs.category.XML.link.generated-index.title": {
+    "message": "XML",
+    "description": "The generated-index page title for category XML in sidebar docs"
+  },
+  "sidebar.docs.category.Classes": {
+    "message": "Classes",
+    "description": "The label for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Classes.link.generated-index.title": {
+    "message": "Classes",
+    "description": "The generated-index page title for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Classes.link.generated-index.description": {
+    "message": "Liste des classes 4D",
+    "description": "The generated-index page description for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Administration": {
+    "message": "Administration",
+    "description": "The label for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Administration.link.generated-index.title": {
+    "message": "Administration",
+    "description": "The generated-index page title for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Administration.link.generated-index.description": {
+    "message": "Comment contrôler vos applications 4D",
+    "description": "The generated-index page description for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.4D Server Administration Window": {
+    "message": "Fenêtre d'administration de 4D Server",
+    "description": "The label for category 4D Server Administration Window in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration": {
+    "message": "Administration Web",
+    "description": "The label for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration.link.generated-index.title": {
+    "message": "Administration Web",
+    "description": "The generated-index page title for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration.link.generated-index.description": {
+    "message": "Outils web 4D pour l'administration et la surveillance de vos applications.",
+    "description": "The generated-index page description for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.MSC": {
+    "message": "CSM",
+    "description": "The label for category MSC in sidebar docs"
+  },
+  "sidebar.docs.category.Backup and Restore": {
+    "message": "Sauvegarde et restitution",
+    "description": "The label for category Backup and Restore in sidebar docs"
+  },
+  "sidebar.docs.category.Extensions": {
+    "message": "Extensions",
+    "description": "The label for category Extensions in sidebar docs"
+  },
+  "sidebar.docs.category.4D View Pro": {
+    "message": "4D View Pro",
+    "description": "The label for category 4D View Pro in sidebar docs"
+  },
+  "sidebar.docs.category.4D View Pro.link.generated-index.title": {
+    "message": "4D View Pro",
+    "description": "The generated-index page title for category 4D View Pro in sidebar docs"
+  },
+  "sidebar.docs.category.A": {
+    "message": "A",
+    "description": "The label for category A in sidebar docs"
+  },
+  "sidebar.docs.category.A.link.generated-index.title": {
+    "message": "A",
+    "description": "The generated-index page title for category A in sidebar docs"
+  },
+  "sidebar.docs.category.C": {
+    "message": "C",
+    "description": "The label for category C in sidebar docs"
+  },
+  "sidebar.docs.category.C.link.generated-index.title": {
+    "message": "C",
+    "description": "The generated-index page title for category C in sidebar docs"
+  },
+  "sidebar.docs.category.D": {
+    "message": "D",
+    "description": "The label for category D in sidebar docs"
+  },
+  "sidebar.docs.category.D.link.generated-index.title": {
+    "message": "D",
+    "description": "The generated-index page title for category D in sidebar docs"
+  },
+  "sidebar.docs.category.E": {
+    "message": "E",
+    "description": "The label for category E in sidebar docs"
+  },
+  "sidebar.docs.category.E.link.generated-index.title": {
+    "message": "E",
+    "description": "The generated-index page title for category E in sidebar docs"
+  },
+  "sidebar.docs.category.F": {
+    "message": "F",
+    "description": "The label for category F in sidebar docs"
+  },
+  "sidebar.docs.category.F.link.generated-index.title": {
+    "message": "F",
+    "description": "The generated-index page title for category F in sidebar docs"
+  },
+  "sidebar.docs.category.G": {
+    "message": "G",
+    "description": "The label for category G in sidebar docs"
+  },
+  "sidebar.docs.category.G.link.generated-index.title": {
+    "message": "G",
+    "description": "The generated-index page title for category G in sidebar docs"
+  },
+  "sidebar.docs.category.I": {
+    "message": "I",
+    "description": "The label for category I in sidebar docs"
+  },
+  "sidebar.docs.category.I.link.generated-index.title": {
+    "message": "I",
+    "description": "The generated-index page title for category I in sidebar docs"
+  },
+  "sidebar.docs.category.M": {
+    "message": "M",
+    "description": "The label for category M in sidebar docs"
+  },
+  "sidebar.docs.category.M.link.generated-index.title": {
+    "message": "M",
+    "description": "The generated-index page title for category M in sidebar docs"
+  },
+  "sidebar.docs.category.N": {
+    "message": "N",
+    "description": "The label for category N in sidebar docs"
+  },
+  "sidebar.docs.category.N.link.generated-index.title": {
+    "message": "N",
+    "description": "The generated-index page title for category N in sidebar docs"
+  },
+  "sidebar.docs.category.O": {
+    "message": "O",
+    "description": "The label for category O in sidebar docs"
+  },
+  "sidebar.docs.category.O.link.generated-index.title": {
+    "message": "O",
+    "description": "The generated-index page title for category O in sidebar docs"
+  },
+  "sidebar.docs.category.P": {
+    "message": "P",
+    "description": "The label for category P in sidebar docs"
+  },
+  "sidebar.docs.category.P.link.generated-index.title": {
+    "message": "P",
+    "description": "The generated-index page title for category P in sidebar docs"
+  },
+  "sidebar.docs.category.R": {
+    "message": "R",
+    "description": "The label for category R in sidebar docs"
+  },
+  "sidebar.docs.category.R.link.generated-index.title": {
+    "message": "R",
+    "description": "The generated-index page title for category R in sidebar docs"
+  },
+  "sidebar.docs.category.S": {
+    "message": "S",
+    "description": "The label for category S in sidebar docs"
+  },
+  "sidebar.docs.category.S.link.generated-index.title": {
+    "message": "S",
+    "description": "The generated-index page title for category S in sidebar docs"
+  },
+  "sidebar.docs.category.4D Write Pro": {
+    "message": "4D Write Pro",
+    "description": "The label for category 4D Write Pro in sidebar docs"
+  },
+  "sidebar.docs.category.4D Write Pro.link.generated-index.title": {
+    "message": "4D Write Pro",
+    "description": "The generated-index page title for category 4D Write Pro in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications": {
+    "message": "Applications Web",
+    "description": "The label for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications.link.generated-index.title": {
+    "message": "Applications Web",
+    "description": "The generated-index page title for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications.link.generated-index.description": {
+    "message": "Guides pour le développement d'applications Web avec 4D",
+    "description": "The generated-index page description for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Web Development": {
+    "message": "Développement Web",
+    "description": "The label for category Web Development in sidebar docs"
+  },
+  "sidebar.docs.category.Qodly Studio": {
+    "message": "Qodly Studio",
+    "description": "The label for category Qodly Studio in sidebar docs"
+  },
+  "sidebar.docs.category.Qodly Studio.link.generated-index.title": {
+    "message": "Qodly Studio",
+    "description": "The generated-index page title for category Qodly Studio in sidebar docs"
+  },
+  "sidebar.docs.category.Qodly Studio.link.generated-index.description": {
+    "message": "Utiliser Qodly Studio pour créer des interfaces web puissantes.",
+    "description": "The generated-index page description for category Qodly Studio in sidebar docs"
+  },
+  "sidebar.docs.category.REST API": {
+    "message": "API REST",
+    "description": "The label for category REST API in sidebar docs"
+  },
+  "sidebar.docs.category.REST API.link.generated-index.title": {
+    "message": "API REST",
+    "description": "The generated-index page title for category REST API in sidebar docs"
+  },
+  "sidebar.docs.category.REST API.link.generated-index.description": {
+    "message": "Exposer votre datastore en REST et utiliser l'API REST.",
+    "description": "The generated-index page description for category REST API in sidebar docs"
+  },
+  "sidebar.docs.category.Exposing your datastore in REST": {
+    "message": "Exposer votre datastore en REST",
+    "description": "The label for category Exposing your datastore in REST in sidebar docs"
+  },
+  "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.title": {
+    "message": "Exposer votre datastore en REST",
+    "description": "The generated-index page title for category Exposing your datastore in REST in sidebar docs"
+  },
+  "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.description": {
+    "message": "Configurez votre datastore pour l'accès REST",
+    "description": "The generated-index page description for category Exposing your datastore in REST in sidebar docs"
+  },
+  "sidebar.docs.category.API (general)": {
+    "message": "API (général)",
+    "description": "The label for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (general).link.generated-index.title": {
+    "message": "API (général)",
+    "description": "The generated-index page title for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (general).link.generated-index.description": {
+    "message": "API REST pour les informations globales",
+    "description": "The generated-index page description for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass)": {
+    "message": "API (dataClass)",
+    "description": "The label for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass).link.generated-index.title": {
+    "message": "API (dataClass)",
+    "description": "The generated-index page title for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass).link.generated-index.description": {
+    "message": "API REST pour dataClass.",
+    "description": "The generated-index page description for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications": {
+    "message": "Applications Desktop",
+    "description": "The label for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications.link.generated-index.title": {
+    "message": "Applications Desktop",
+    "description": "The generated-index page title for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications.link.generated-index.description": {
+    "message": "Guides pour le développement d'applications Desktop avec 4D",
+    "description": "The generated-index page description for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights": {
+    "message": "Droits d'accès",
+    "description": "The label for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights.link.generated-index.title": {
+    "message": "Droits d'accès",
+    "description": "The generated-index page title for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights.link.generated-index.description": {
+    "message": "Contrôle d'accès et privilèges des utilisateurs pour les applications Desktop.",
+    "description": "The generated-index page description for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.category.Form Editor": {
+    "message": "Éditeur de formulaires",
+    "description": "The label for category Form Editor in sidebar docs"
+  },
+  "sidebar.docs.category.Form Properties": {
+    "message": "Propriétés des formulaires",
+    "description": "The label for category Form Properties in sidebar docs"
+  },
+  "sidebar.docs.category.Form Objects": {
+    "message": "Objets de formulaire",
+    "description": "The label for category Form Objects in sidebar docs"
+  },
+  "sidebar.docs.category.Form Object Properties": {
+    "message": "Propriétés des objets de formulaire",
+    "description": "The label for category Form Object Properties in sidebar docs"
+  },
+  "sidebar.docs.category.Mobile Applications": {
+    "message": "Applications mobiles",
+    "description": "The label for category Mobile Applications in sidebar docs"
+  },
+  "sidebar.docs.link.4D Mobile App Server": {
+    "message": "4D Mobile App Server",
+    "description": "The label for link 4D Mobile App Server in sidebar docs, linking to https://github.com/4d-go-mobile/4D-Mobile-App-Server"
+  },
+  "sidebar.docs.link.4D NetKit": {
+    "message": "4D NetKit",
+    "description": "The label for link 4D NetKit in sidebar docs, linking to https://developer.4d.com/4D-NetKit"
+  },
+  "sidebar.docs.link.4D Progress": {
+    "message": "4D Progress",
+    "description": "The label for link 4D Progress in sidebar docs, linking to https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Progress.100-7476284.en.html"
+  },
+  "sidebar.docs.link.4D SVG": {
+    "message": "4D SVG",
+    "description": "The label for link 4D SVG in sidebar docs, linking to https://doc.4d.com/4Dv20R8/4D/20-R8/4D-SVG-Component.100-7477155.en.html"
+  },
+  "sidebar.docs.link.4D Widgets": {
+    "message": "4D Widgets",
+    "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Widgets.100-7477804.en.html"
+  },
+  "sidebar.docs.link.Go Mobile": {
+    "message": "Go Mobile",
+    "description": "The label for link Go Mobile in sidebar docs, linking to https://developer.4d.com/go-mobile/"
+  },
+  "sidebar.docs.link.4D for iOS (archive)": {
+    "message": "4D for iOS (archive)",
+    "description": "The label for link 4D for iOS (archive) in sidebar docs, linking to https://developer.4d.com/4d-for-ios"
+  },
+  "sidebar.docs.doc.Command Line Interface": {
+    "message": "Interface de ligne de commande",
+    "description": "The label for the doc item Command Line Interface in sidebar docs, linking to the doc Admin/cli"
+  },
+  "sidebar.docs.doc.TLS Protocol": {
+    "message": "Protocole TLS",
+    "description": "The label for the doc item TLS Protocol in sidebar docs, linking to the doc Admin/tls"
+  },
+  "sidebar.docs.doc.Managing 4D Licenses": {
+    "message": "Gestion des licences 4D",
+    "description": "The label for the doc item Managing 4D Licenses in sidebar docs, linking to the doc Admin/licenses"
+  },
+  "sidebar.docs.doc.Data Collection": {
+    "message": "Collecte des données",
+    "description": "The label for the doc item Data Collection in sidebar docs, linking to the doc Admin/data-collect"
+  },
+  "sidebar.docs.doc.Client/Server": {
+    "message": "Client/Serveur",
+    "description": "The label for the doc item Client/Server in sidebar docs, linking to the doc Desktop/clientServer"
+  },
+  "sidebar.docs.doc.User Settings": {
+    "message": "Propriétés utilisateur",
+    "description": "The label for the doc item User Settings in sidebar docs, linking to the doc Desktop/user-settings"
+  },
+  "sidebar.docs.doc.Build Application": {
+    "message": "Générateur d'application",
+    "description": "The label for the doc item Build Application in sidebar docs, linking to the doc Desktop/building"
+  }
+}

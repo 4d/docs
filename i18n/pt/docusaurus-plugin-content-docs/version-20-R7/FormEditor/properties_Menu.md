@@ -5,11 +5,11 @@ title: Menú
 
 ## Barra do menu associada
 
-When a menu bar is associated to a form, it is added to the right of the current menu bar when the form is displayed in Application environment.
+Quando uma barra de menu estiver associada a um formulário, é adicionado à direita da barra de menu atual quando o formulário é exibido no ambiente Aplicação.
 
 La selección de un comando de menú hace que se envíe un evento `On Menu Selected` al método formulario; entonces puede utilizar el comando `Menu selected` para probar el menú seleccionado.
 
-> If the menu bar of the form is identical to the current menu bar, it is not added.
+> Se a barra de menu do formulário é idêntica à barra de menu atual, ele não será adicionado.
 
 A barra de menu do formulário funciona tanto para os formulários de entrada como para os de saída.
 

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 Quando tiver executado este comando, a impressora novamente está disponível para outros trabalhos de impressão.
 
-**Nota de compatibilidade:** A partir de 4D v20 R4, trabalhos de impressão não bloqueiam novos projetos. Para saber mais veja [Non-blocking printing option](https://developer.4d.com/docs/settings/compatibility/) nas configurações.
+**Nota de compatibilidade:** A partir de 4D v20 R4, trabalhos de impressão não bloqueiam novos projetos. Para saber mais veja [Non-blocking printing option](../settings/compatibility.md) nas configurações.
 
 #### Ver também 
 

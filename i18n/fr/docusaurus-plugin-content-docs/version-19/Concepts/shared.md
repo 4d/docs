@@ -22,7 +22,7 @@ Un catalogue unique et global, retourné par la commande `Storage`, est disponib
 
 ## Utilisation des objets et collections partagés
 
-Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application, under certain conditions.
+Une fois instanciés à l'aide des commandes `New shared object` ou `New shared collection`, les objets partagés et les collections partagées peuvent être modifiés et lus depuis n'importe quel process de l'application, sous certaines conditions.
 
 ### Modification
 
@@ -31,7 +31,7 @@ Les modifications suivantes peuvent être effectuées sur les objets partagés e
 - ajout ou suppression de propriétés d'objets,
 - ajout ou modification de valeurs (prises en charge par les objets/collections partagé(e) s), y compris d'autres objets et collections partagé(s) (ce qui crée un groupe partagé, cf. ci-dessous).
 
-All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#use-end-use) block, otherwise an error is generated.
+Toute instruction de modification dans un objet partagé ou une collection partagée doit être protégée à l'intérieur d'un bloc \[`Use...End use`\](#use-end-use), sinon une erreur est générée.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -40,21 +40,21 @@ All modification instructions in a shared object or collection require to be pro
 End Use
 ```
 
-For conveniency, all [collection functions](../API/CollectionClass.md) that modify the shared object or collection insert an internal `Use...End use` block so you do not have to code it yourself. Par exemple :
+Pour plus de commodité, toutes les \[fonctions de collection\](../API/CollectionClass.md) qui modifient l'objet partagé ou la collection partagée insèrent un bloc interne `Use...End use` afin que vous n'ayez pas à le coder vous-même. Par exemple :
 
 ```4d
 $col:=New shared collection()
 $col.push("alpha") //.push() déclenche automatiquement Use/End use, donc pas besoin de le faire vous-même
 ```
 
-If you need to execute several modifications on the same collection, you can protect all modifications with a single `Use...End use` so that modifications are performed atomically.
+Si vous avez besoin d'exécuter plusieurs modifications sur la même collection, vous pouvez protéger toutes les modifications avec un unique `Use...End use` afin que les modifications soient effectuées de manière atomique.
 
 ```4d
 $col:=Storage.mySharedCollection
 Use($col)
-    $col[0]:="omega" //modifying an element requires to be performed inside Use/End use
-    $col.push("alpha") //.push() internally triggers Use/End use, but we want to do both modifications atomically
-End Use
+	$col[0]:="omega" //La modification d'un élément nécessite d'être effectuée dans Use/End use
+	$col.push("alpha") //.push() déclenche en interne Use/End use, mais nous voulons faire les deux modifications de façon atomique
+End use
 ```
 
 Un objet/une collection partagé(e) ne peut être modifié(e) que par un seul process à la fois. `Use` verrouille l'objet/la collection partagé(e) pour les autres threads, tandis que `End use` déverrouille l'objet/la collection partagé(e) (si le compteur de verrouillage est à 0, voir ci-dessous). . Toute tentative de modification d'un objet/d'une collection partagé(e) sans au moins un appel à `Use...End use` génère une erreur. Lorsqu'un process appelle `Use...End use` avec un objet/une collection partagé(e) qui est déjà "utilisé(e)" par un autre process, il est simplement mis en attente jusqu'à ce qu'il soit déverrouillé par l'appel à `End use` (aucune erreur n'est générée). En conséquence, les instructions situées à l'intérieur des structures `Use...End use` doivent toujours s'exécuter rapidement et déverrouiller les éléments dès que possible. Il est donc fortement déconseillé de modifier un objet ou une collection partagé(e) directement depuis l'interface, par exemple depuis une boîte de dialogue.
@@ -118,30 +118,30 @@ Vous souhaitez lancer plusieurs process qui vont effectuer des tâches d'inventa
 
 ```4d
  ARRAY TEXT($_items;0)
- ... //fill the array with items to count
+ ... //remplir le tableau avec les éléments à compter
  $nbItems:=Size of array($_items)
- var $inventory : Object
+  var $inventory : Object
  $inventory:=New shared object
  Use($inventory)
     $inventory.nbItems:=$nbItems
  End use
 
-  //Create processes
+  //Créer des process
  For($i;1;$nbItems)
     $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
-  //$inventory object sent by reference
+  // objet $inventory envoyé par référence
  End for
 ```
 
 Dans la méthode "HowMany", l'inventaire est effectué et l'objet partagé $inventory est mis à jour dès que possible :
 
 ```4d
-    //HowMany
+    	//HowMany
  #DECLARE ($what : Text ; $inventory : Object)
 
- $count:=CountMethod($what) //method to count products
- Use($inventory) //use shared object
-    $inventory[$what]:=$count  //save the results for this item
+ $count:=CountMethod($what) //méthode pour compter les produits
+ Use($inventory) //utiliser l'objet partagé
+    $inventory[$what]:=$count  //sauvegarder les résultats pour cet élément
  End use
 ```
 

@@ -3,23 +3,23 @@ id: picturePopupMenuOverview
 title: Menu pop-up imagem
 ---
 
-A picture pop-up menu is a pop-up menu that displays a two-dimensional array of pictures. A picture pop-up menu can be used instead of a [picture button](pictureButton_overview.md). The creation of the picture to use with a picture pop-up menu is similar to the creation of a picture for a picture button. The concept is the same as for [button grids](buttonGrid_overview.md), except that the graphic is used as a pop-up menu instead of a form object.
+Um menu pop-up imagem é um menu pop-up que exibe um array de imagens bidimensional. Um menu pop-up imagem pode ser usado em vez de um [botão imagem](pictureButton_overview.md). A criação da imagem a ser usada com um menu pop-up imagem é semelhante à criação de uma imagem para um botão imagem. O conceito é o mesmo das [grades de botões](buttonGrid_overview.md), exceto pelo fato de que o gráfico é usado como um menu pop-up em vez de um objeto do formulário.
 
 ## Utilizar os menus emergentes de imagens
 
-To create a picture pop-up menu, you need to [refer to a picture](properties_Picture.md#pathname). The following example allows you to select the interface language by selecting it from a picture pop-up menu. Cada língua é representada pela bandeira correspondente:
+Para criar um menu pop-up imagem, você precisa [fazer referência a uma imagem](properties_Picture.md#pathname). O exemplo a seguir permite que você selecione o idioma da interface selecionando-o em um menu pop-up imagem. Cada língua é representada pela bandeira correspondente:
 
 ![](../assets/en/FormObjects/picturePopupMenu_example.png)
 
 ### Programação
 
-Pode gerir os menus pop-up de imagens utilizando métodos. As with [button grids](buttonGrid_overview.md), variables associated with picture pop-up menus are set to the value of the selected element in the picture pop-up menu. Se nenhum elemento for seleccionado, o valor é 0. Os elementos são numerados, linha a linha, da esquerda para a direita, começando pela linha superior.
+Pode gerir os menus pop-up de imagens utilizando métodos. Como as [grades dos botões](buttonGrid_overview.md), variáveis associadas aos menus imagem são definidas com o valor do elemento selecionado no menu pop-up imagem. Se nenhum elemento for seleccionado, o valor é 0. Os elementos são numerados, linha a linha, da esquerda para a direita, começando pela linha superior.
 
 ### Ir para página
 
-You can assign the `gotoPage` [standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) to a picture pop-up menu. When that action is selected, 4D will automatically display the page of the form that corresponds to the position of the picture selected in the picture array. Elements are numbered from left to right and top to bottom, beginning with the top left corner.
+Você pode atribuir a [ação padrão](https://doc.4d.com/4Dv19R4/4D/19-R4/Standard-actions.300-5736871.en.html) `gotoPage` para um menu pop-up imagem. Quando essa ação for selecionada, 4D exibirá automaticamente a página do formulário que corresponde à posição da imagem selecionada na array de imagens. Os elementos são numerados da esquerda para a direita e de cima para baixo, começando pelo canto superior esquerdo.
 
-For example, if the user selects the 3rd element, 4D will display the third page of the current form (if it exists). If you want to manage the effect of a click yourself, select `No action`.
+Por exemplo, se o usuário selecionar o terceiro elemento, 4D exibirá a terceira página do formulário atual (se existir). Se quiser gerenciar você mesmo o efeito de um clique, selecione `Nenhuma ação`.
 
 ## Propriedades compatíveis
 

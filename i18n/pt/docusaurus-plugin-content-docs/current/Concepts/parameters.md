@@ -431,7 +431,7 @@ O exemplo abaixo mostra uma mensagem de texto e pode inserir o texto em um docum
  End if
 ```
 
-Depois de adicionar este método projeto a sua aplicação, pode escrever:
+Após adicionar este método projeto a sua aplicação, pode escrever:
 
 ```4d
 APPEND TEXT(vtSomeText) //Will only display the  message APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document at $path APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea

@@ -54,7 +54,7 @@ title: ピクチャーボタン
 - [ロールオーバー効果](properties_Animation.md#ロールオーバー効果)
 - [マウス押下中は自動更新](properties_Animation.md#マウス押下中は自動更新)
 - [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用)
-- [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用)
+- [Switch every x ticks](./properties_Animation.md#switch-every-x-ticks)
 
 > ピクチャーボタンに [関連付けた変数](properties_Object.md#変数あるいは式) は、ピクチャーのサムネールテーブルで現在表示されているピクチャーのインデックス番号を返します。  このテーブル内のピクチャー番号は 0 から始まります。
 

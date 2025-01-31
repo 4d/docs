@@ -4,7 +4,7 @@ title: Tour d'horizon
 sidebar_label: Tour d'horizon
 ---
 
-En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode de projet :
+En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode projet :
 
 ```4d  
 ALERT("Hello, World!")
@@ -209,16 +209,16 @@ Pour instancier un objet de la classe dans une méthode, appelez la classe utili
 $o:=cs.myClass.new()
 ```
 
-In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
+Dans la méthode de classe `myClass`, utilisez l'instruction `Function <methodName>` pour définir la fonction membre de la classe *methodName*. Une fonction membre de classe peut recevoir et renvoyer des paramètres comme n'importe quelle méthode et utiliser `This` comme instance de l'objet.
 
 ```4d  
 
-//in the myClass.4dm file
+//dans le fichier myClass.4dm
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
 ```
 
-To execute a class member function, just use the `()` operator on the member function of the object instance.
+Pour exécuter une fonction membre de classe, il suffit d'utiliser l'opérateur `()` sur la fonction membre de l'instance de l'objet.
 
 ```4d
 $o:=cs.myClass.new()
@@ -280,13 +280,13 @@ Pour parler simplement, les expressions retournent une valeur. En fait, lorsque 
 
 Les expressions peuvent être constituées de presque tous les éléments du langage : commandes, opérateurs, variables, champs, propriétés d'objets et éléments de collection. Vous utilisez des expressions pour écrire des lignes de code, qui sont à leur tour utilisées pour construire des méthodes. Des expressions sont employées à chaque fois que le langage 4D a besoin de connaître la valeur d’une donnée.
 
-Les expressions sont rarement «autonomes». Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. Cela inclut :
+Les expressions sont rarement «autonomes». Il existe plusieurs endroits dans 4D où une expression peut être utilisée seule. Cela inclut :
 
-- Editeur de formule (apply formula, query with formula, order by formula)
+- L'éditeur de formule (apply formula, query with formula, order by formula)
 - La commande `EXECUTE FORMULA`
 - La liste de propriétés, où une expression peut être utilisée en tant que source de données pour la plupart des widgets
-- Dans la fenêtre du Débogueur où la valeur des expressions peut être évaluée
-- Dans l’éditeur d’états semi-automatiques en tant que formule dans une colonne
+- La fenêtre du Débogueur où la valeur des expressions peut être évaluée
+- L'éditeur d’états semi-automatiques en tant que formule dans une colonne
 
 
 ### Types d’expressions
@@ -412,7 +412,7 @@ End for
 
 Le langage 4D vous permet d'utiliser des séquences d'échappement (aussi appelées caractères d'échappement). Une séquence d’échappement est une suite de caractères permettant de remplacer un caractère “spécial”.
 
-The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+La séquence se compose d'une barre oblique inversée `\`, suivie d'un caractère. Par exemple, `\t` est la séquence d'échappement pour le caractère **Tab**. Les séquences d'échappement facilitent l'entrée de caractères spéciaux : l'exemple précédent (`\t`) remplace l'entrée "Character(Tab)".
 
 Dans 4D, les séquences d'échappement suivantes peuvent être utilisées:
 
@@ -426,6 +426,6 @@ Dans 4D, les séquences d'échappement suivantes peuvent être utilisées:
 
 > Il est possible d'utiliser des majuscules ou des minuscules dans les séquences d'échappement.
 
-In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+Dans l'exemple suivant, le caractère **retour chariot** (séquence d'échappement `\r`) est inséré dans une instruction afin d'obtenir une boîte de dialogue :
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`

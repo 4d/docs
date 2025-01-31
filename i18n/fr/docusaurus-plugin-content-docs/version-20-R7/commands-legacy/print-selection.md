@@ -32,7 +32,7 @@ Pendant l'impression, la méthode du formulaire sortie et les méthodes objet du
 * Un événement On Printing Footer est généré juste avant que la zone de pied de page soit imprimée.
 
 Vous pouvez savoir si **PRINT SELECTION** est sur le point d'imprimer le premier en-tête en testant [Before selection](before-selection.md) pendant un événement On Header. Vous pouvez également savoir si **PRINT SELECTION** est sur le point d'imprimer le dernier pied de page, en testant [End selection](end-selection.md) pendant un événement On Printing Footer.  
-Pour plus d'informations, reportez-vous à la description de ces commandes ainsi qu'aux commandes [Form event code](form-event-code.md) et [Level](level.md).
+Pour plus d'informations, reportez-vous à la description de ces commandes ainsi qu'aux commandes [Form event code](../commands/form-event-code.md) et [Level](level.md).
 
 Si **PRINT SELECTION** est appelée au même moment par deux process différents, l'impression déclenchée par le second process attendra que le premier ait terminé.
 

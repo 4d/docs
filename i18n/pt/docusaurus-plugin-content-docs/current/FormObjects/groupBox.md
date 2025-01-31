@@ -3,7 +3,7 @@ id: groupBox
 title: Área de grupo
 ---
 
-A group box is a static object that allows you to visually assemble multiple form objects:
+Uma área de grupo é um objeto estático que permite montar visualmente vários objetos de formulário:
 
 ![](../assets/en/FormObjects/groupBox.png)
 

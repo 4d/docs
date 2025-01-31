@@ -71,8 +71,8 @@ Définition du raccourci Ctrl+R (Windows) et Cmd+R (Mac OS) pour la ligne "Recom
 Définition du raccourci F4 pour l'élément de menu "Fermer" : 
 
 ```4d
- INSERER ELEMENT MENU(FileMenu;-1;"Fermer")
- FIXER RACCOURCI ELEMENT MENU(FileMenu;-1;"[F4]";0)
+ INSERT MENU ITEM(FileMenu;-1;"Fermer")
+ SET MENU ITEM SHORTCUT(FileMenu;-1;"[F4]";0)
 ```
 
 #### Voir aussi 

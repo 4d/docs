@@ -10,7 +10,7 @@ Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Cada
 
 O tamanho máximo de um método de projecto é limitado a 2 GB de texto ou 32.000 linhas de comando.
 
-## Métodos especializados
+## Tipos de métodos
 
 Na Linguagem 4D, existem várias categorias de métodos. A categoria depende da forma como podem ser chamados:
 
@@ -150,7 +150,7 @@ Note-se que, mesmo que não tenha parâmetros, um método de objeto a ser execut
 $o:=$f.message //devolve o objeto fórmula em $o
 ```
 
-### Métodos do menu
+### Métodos de menu
 
 Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. Atribui-se o método ao comando menu usando o editor de menu ou um comando do tema "Menus". O método executa-se quando o comando do menu é escolhido. Ao criar menus personalizados com métodos de menu que realizam ações específicas, pode personalizar seu banco de dados.
 

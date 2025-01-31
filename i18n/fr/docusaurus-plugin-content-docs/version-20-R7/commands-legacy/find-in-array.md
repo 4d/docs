@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find in array.Summary-->**Find in array** retourne le numéro du premier élément de *tableau* qui correspond à *valeur*.<!-- END REF-->peut être utilisé avec des tableaux de type Texte, Numérique, Date, Pointeur, Objet et Booléen. Les paramètres *tableau* et *valeur* doivent être du même type.
 
-*valeur* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont mises en oeuvre, voir [Opérateurs basiques](https://developer.4d.com/docs/fr/Concepts/operators/#op%C3%A9rateurs-basiques)). Si aucun élément n'est trouvé, **Find in array** renvoie -1.
+*valeur* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont mises en oeuvre, voir [Opérateurs basiques](../Concepts/operators.md#opérateurs-basiques)). Si aucun élément n'est trouvé, **Find in array** renvoie -1.
 
 **Note :** Avec les tableaux d'objets, vous ne pouvez utiliser que des références d'objets dans le paramètre valeur. 
 
