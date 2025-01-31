@@ -21,7 +21,7 @@ As sessões Web são usadas para:
 
 ## Activando sessões web
 
-The session management feature can be enabled and disabled on your 4D web server. Existem diferentes formas de ativar a gestão de sessões:
+A funcionalidade de gerenciamento de sessão pode ser ativado e desativado no seu servidor web 4D. Existem diferentes formas de ativar a gestão de sessões:
 
 - Using the **Scalable sessions** OTPion on the "Web/OTPions (I)" page of the Settings (permanent setting):
   ![alt-text](../assets/en/WebServer/settingsSession.png)
@@ -32,7 +32,7 @@ This OTPion is selected by default in new projects. It can however be disabled b
 
 > The [`WEB SET OTPION`](../commands-legacy/web-set-OTPion.md) command can also set the session mode for the main Web server.
 
-In any cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
+Em qualquer caso, o parâmetro é local para a máquina; para poder diferir no servidor Web 4D Server e os servidores Web de máquinas 4D remotas.
 
 > **Compatibility**: A **Legacy sessions** OTPion is available in projects created with a 4D version prior to 4D v18 R6 (for more information, please refer to the [doc.4d.com](https://doc.4d.com) web site).
 
@@ -48,7 +48,7 @@ O nome do cookie pode ser obtido usando a propriedade [`.sessionCookieName`](API
 
 1. En cada petición del cliente web, el servidor web comprueba la presencia y el valor de la cookie privada "4DSID__AppName_".
 
-2. If the cookie has a value, 4D looks for the session that created this cookie among the existing sessions; if this session is found, it is reused for the call.
+2. Se o cookie tiver um valor, 4D procura pela sessão que criou este cookie entre as sessões existentes; Se esta sessão for encontrada, ela será reutilizada para a chamada.
 
 3. Se a solicitação do cliente não corresponder a uma sessão já aberta:
 
@@ -67,13 +67,13 @@ The `Session` object of the current session can then be accessed through the [`S
 
 :::info
 
-Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
+Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. Quando um processo termina de executar uma solicitação, ele é colocado de novo no pool e disponibilizado para a próxima solicitação. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) for example). Esta limpeza é necessária para todas as informações relacionadas ao processo, como uma referência a um arquivo aberto. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
 
 :::
 
 ## Armazenar e compartilhar informações de sessão
 
-Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). This property allows you to share information between all processes handled by the session.
+Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). Essa propriedade permite que você compartilhe informações entre todos os processos manipulados pela sessão.
 
 ## Duração da sessão
 
@@ -82,7 +82,7 @@ Uma sessão Web escalável é encerrada quando:
 - o servidor web está parado,
 - o tempo limite do cookie de sessão foi atingido.
 
-The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.
+O tempo de vida de um cookie inativo é 60 minutos por padrão, o que significa que o servidor irá automaticamente fechar as sessões inativas após 60 minutos.
 
 This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command.
 
@@ -100,7 +100,7 @@ Você pode fechar uma sessão em um formulário Qodly usando o recurso [**logout
 
 ## Privilégios
 
-Os privilégios podem ser associados a sessões usuário Web. On the web server, you can provide specific access or features depending on the privileges of the session.
+Os privilégios podem ser associados a sessões usuário Web. No servidor web, você pode fornecer acesso ou recursos específicos, dependendo dos privilégios da sessão.
 
 Você atribui privilégios usando a função [`.setPrivileges()`](API/SessionClass.md#setprivileges). In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
@@ -122,11 +122,11 @@ Privileges are implemented at the heart of the ORDA architecture to provide deve
 
 ## Exemplo
 
-Em uma aplicação CRM, cada vendedor gerencia seu próprio portefólio de clientes. The datastore contains at least two linked dataclasses: Customers and SalesPersons (a salesperson has several customers).
+Em uma aplicação CRM, cada vendedor gerencia seu próprio portefólio de clientes. A datastore contém pelo menos dois dataclasses ligados: Customers e SalesPersons (um vendedor tem vários clientes).
 
 ![alt-text](../assets/en/WebServer/exampleSession.png)
 
-We want a salesperson to authenticate, open a session on the web server, and have the top 3 customers be loaded in the session.
+Queremos que um vendedor autentique, abra uma sessão no servidor web e que os 3 primeiros clientes sejam carregados na sessão.
 
 1. Executamos este URL para abrir uma sessão:
 
