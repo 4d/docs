@@ -37,15 +37,15 @@ Con barra de fórmula visible:
 
 Tanto la interfaz de la cinta de opciones como la de la barra de herramientas agrupan funciones relacionadas en pestañas:
 
-| Pestaña  | Acciones                        | Interfaz Cinta | Interfaz Barra de herramientas |
-| -------- | ------------------------------- | :------------: | :----------------------------: |
-| File     | Gestión de archivos             |        X       |                                |
-| Inicio   | Apariencia del texto            |        X       |                X               |
-| Insertar | Añadir elementos                |        X       |                X               |
-| Fórmulas | Cálculos de fórmulas y librería |        X       |                X               |
-| Datos    | Gestión de los datos            |        X       |                X               |
-| Mostrar  | Presentación visual             |        X       |                X               |
-| Settings | Presentación de la hoja         |        X       |                                |
+| Pestaña     | Acciones                        | Interfaz Cinta | Interfaz Barra de herramientas |
+| ----------- | ------------------------------- | :------------: | :----------------------------: |
+| File        | Gestión de archivos             |        X       |                                |
+| Inicio      | Apariencia del texto            |        X       |                X               |
+| Insertar    | Añadir elementos                |        X       |                X               |
+| Fórmulas    | Cálculos de fórmulas y librería |        X       |                X               |
+| Datos       | Gestión de los datos            |        X       |                X               |
+| Mostrar     | Presentación visual             |        X       |                X               |
+| Propiedades | Presentación de la hoja         |        X       |                                |
 
 ## Eventos formulario
 
@@ -227,7 +227,7 @@ Además de los caracteres y códigos especiales descritos en las secciones anter
 | ^                      | Circunflejo                                                                                                                 | #\^#                                        |
 | '                      | Apostrofe                                                                                                                   | '######                                      |
 | { }                    | Paréntesis curvos                                                                                                           | {###,###,###}                                |
-| `< >`                  | Signos menor que y mayor que                                                                                                | ## >#\\\\\#                              |
+| `< >`                  | Signos menor que y mayor que                                                                                                | ## >#\\\\\\#                            |
 | =                      | Signo igual                                                                                                                 | #+#=##                                       |
 | /                      | Barra inclinada hacia adelante. Cuando se utiliza con números, los muestra como fracciones. | mm/dd/yyyy                                   |
 | !                      | Signo de exclamación                                                                                                        | $###.00!                     |
