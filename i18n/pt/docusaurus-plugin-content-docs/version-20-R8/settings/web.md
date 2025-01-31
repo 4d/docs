@@ -61,7 +61,7 @@ Define o tamanho da cache. Consulte [Cache](../WebServer/webServerConfig.md#cach
 
 #### Limpar cache
 
-At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache).
+A qualquer momento, você pode limpar o cache das páginas e imagens que ele contém (se, por exemplo, você tiver modificado uma página estática e quiser recarregá-la no cache).
 Para fazer isso, você só precisa clicar no botão **Limpar Cache**. A cache é então imediatamente limpa.
 
 > Você também pode usar a URL especial [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
