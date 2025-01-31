@@ -73,7 +73,7 @@ Pode mudar para o modo escuro \*\*\*\* mostrar o tema usando o selector no fundo
 
 A página contém várias áreas:
 
-- Do lado esquerdo encontra-se a área **Dataclasses** e **Attributes area**, permitindo-lhe seleccionar os dataclasses e atributos a exibir. Os atributos são ordenados de acordo com a ordem de criação da estrutura subjacente. A chave primária e os atributos indexados têm um ícone específico. É possível filtrar a lista de nomes de dataclass propostos e nomes de atributos utilizando as respectivas áreas de pesquisa.
+- Resultados Os atributos são ordenados de acordo com a ordem de criação da estrutura subjacente. A chave primária e os atributos indexados têm um ícone específico. É possível filtrar a lista de nomes de dataclass propostos e nomes de atributos utilizando as respectivas áreas de pesquisa.
   ![alt-text](../assets/en/Admin/dataExplorer3.png)
 
 - A parte central contém a área de pesquisa \*\*\*\* e a grade de dados \*\*\*\* (lista de entidades da classe de dados seleccionada). Cada coluna da grade representa um atributo de datastore.
@@ -84,7 +84,7 @@ A página contém várias áreas:
   - Se uma operação exigir muito tempo, é mostrada uma barra de progresso. Você pode parar a operação a qualquer momento clicando no botão vermelho:<br/>
     ![alt-text](../assets/en/Admin/dataExplorer5.png)
 
-- No lado direito está a área **Detalhes**: exibe os valores de atributo da entidade selecionada, bem como **dados relacionados**, se houver. Pode navegar entre as entidades da dataclass cliando nos links **First** / **Previous** / **Next** / **Last** na parte inferior da área.
+- Do lado esquerdo encontra-se a área **Dataclasses** e **Attributes area**, permitindo-lhe seleccionar os dataclasses e atributos a exibir. Pode navegar entre as entidades da dataclass cliando nos links **First** / **Previous** / **Next** / **Last** na parte inferior da área.
   - Todos os tipos de atributos são exibidos, incluindo imagens, objetos (expressos em json) assim como atributos [calculados](../ORDA/ordaClasses.md#computed-attributes-1) e atributos [alias](../ORDA/ordaClasses.md#alias-attributes-1).
   - Dados relacionados (many-to-one e one-to-many relações) podem ser exibidos através de áreas expansíveis/collapsable:<br/>
     ![alt-text](../assets/en/Admin/dataExplorerRelated.png)
