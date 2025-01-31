@@ -4,9 +4,9 @@ title: Objeto Web Server
 ---
 
 
-A 4D project can start and monitor a web server for the main (host) application as well as each hosted component.
+Um projeto 4D pode iniciar e monitorar um servidor web para a aplicação (host) principal, bem como para cada componente hospedado.
 
-For example, if you installed two components in your main application, you can start and monitor up to three independant web servers from your application:
+Por exemplo, se você instalou dois componentes em sua aplicação principal, você pode iniciar e monitorar até três servidores web independentes em sua aplicação:
 
 - um servidor web para a aplicação local,
 - um servidor Web para o componente #1,
