@@ -50,6 +50,13 @@ The `.type` property contains <!-- REF #4D.TCPEvent.type.Summary -->the type of 
 
 The `.data` property contains <!-- REF #4D.TCPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type `"data"`.
 
+:::note
+
+When working with low-level TCP/IP connections, keep in mind there is no guarantee that all data will arrive in a single packet. Data arrives in order but may be fragmented across multiple packets. 
+
+:::
+
 <!-- END REF -->
+
 
 
