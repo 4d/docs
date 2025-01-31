@@ -6,11 +6,11 @@ title: Utilizar processos web preemptivos
 
 The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your compiled applications. You can configure your web-related code, including 4D tags and web database methods, to run simultaneously on as many cores as possible.
 
-For in-depth information on preemptive process in 4D, please refer to the *Preemptive 4D processes* section in the [*4D Language Reference*](https://doc.4d.com).
+Para informações aprofundadas sobre o processo preventivo em 4D, por favor consulte *Processos 4D preventivos* seção na referência de linguagem[*4D*](https://doc.4d.com).
 
 ## Disponibilidade do modo preemptivo para os processos web
 
-The following table indicates whether the preemptive mode is used or is available, depending on the execution context:
+A tabela a seguir indica se o modo preventivo está utilizado ou está disponível, dependendo do contexto de execução:
 
 | 4D Server             | Interpretado ([associado ao depurador](../Debugging/debugging-remote.md)) | Interpretado (não associado ao depurador) | Compilado       |
 | --------------------- | ------------------------------------------------------------------------- | ----------------------------------------- | --------------- |
@@ -24,12 +24,12 @@ The following table indicates whether the preemptive mode is used or is availabl
 | Servidor Web            | cooperativo  | *parâmetro web* |
 | Servidor Web Services   | cooperativo  | *parâmetro web* |
 
-- REST Server: handles [ORDA data model class functions](../REST/ClassFunctions.md)
+- Servidor REST: lida com as[funções de classe do modelo de dados ORDA](../REST/ClassFunctions.md)
 - Servidor Web: lida com os modelos Web [](templates.md), [4DACTION e métodos de banco de dados](httpRequests.md)
 - Servidor de serviços Web: trata dos pedidos SOAP
-- ***web setting*** means that the preemptive mode depends on a setting value:
+- ***parâmetro web*** significa que o modo preventivo depende de um valor de configuração:
     - quando [**Sessões escalonáveis**](sessions.md#enabling-sessions) estiver selecionada, o [modo preemptivo será usado automaticamente](sessions.md#preemptive-mode) para os processos Web.
-    - otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
+    - caso contrário, o opção [**usa processos preventivos**](webServerConfig.md#use-preemptive-processes) é levado em conta.
     - regarding Web service processes (server or client), preemptive mode is supported at method level. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler.
 
 
