@@ -175,7 +175,7 @@ O método banco de dados `On Web Autenticação` retorna um booliano em $0:
 
 O método banco de dados `On Web Connection` só é executado se a conexão tiver sido aceite pelo `On Web Authentication`.
 > **AVISO**<br/>Se nenhum valor estiver definido como $0 ou se $0 não estiver definido no método banco de dados `On Web Authentication`, a conexão é considerada aceita e o método banco de dados `On Web Connection` é executado.
-> * Não chamar nenhum elemento de interface no método banco de dados `On Web Authentication` (`ALERT`, `DIALOG`, etc.) porque, caso contrário, a sua execução será interrompida e a ligação recusada. O mesmo acontecerá se ocorrer um erro durante seu processamento.
+> * - Não chamar nenhum elemento de interface no método banco de dados `On Web Authentication` (`ALERT`, `DIALOG`, etc.) porque, caso contrário, a sua execução será interrompida e a ligação recusada. O mesmo acontecerá se ocorrer um erro durante seu processamento.
 
 
 ### Exemplo
