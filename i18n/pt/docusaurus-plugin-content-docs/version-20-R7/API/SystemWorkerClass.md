@@ -396,7 +396,7 @@ Se não ocorrer nenhum erro, `.errors` será undefined.
 
 #### Descrição
 
-Parâmetro Parâmetro Parâmetro Se o processo não tiver terminado normalmente, `exitCode` é *undefined*.
+Parâmetro Parâmetro Parâmetro Parâmetro Se o processo não tiver terminado normalmente, `exitCode` é *undefined*.
 
 Essa propriedade é **somente leitura**.
 
