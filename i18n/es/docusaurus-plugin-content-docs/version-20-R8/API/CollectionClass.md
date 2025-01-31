@@ -277,7 +277,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 #### Descripción
 
-Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
+Descripción Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
 > Esta función no modifica la colección original.
 
@@ -429,7 +429,7 @@ Mayor que
 | Parámetros   | Tipo |                             | Descripción                                                      |
 | ------------ | ---- | :-------------------------: | ---------------------------------------------------------------- |
 | propertyPath | Text |              ->             | Ruta de la propiedad del objeto que se utilizará para el cálculo |
-| Result       | Real | <- | Colección que contiene los elementos añadidos                    |
+| Result       | Real | <- | Primer elemento de la colección                                  |
 
 <!-- END REF -->
 
@@ -1930,7 +1930,7 @@ La fórmula recibe los siguientes parámetros:
 
 **Ordenación sincronizada multinivel**
 
-Desea ordenar la colección resultante:
+Ordenar una colección de números de forma ascendente y descendente:
 
 Los niveles de ordenación vienen determinados por el orden en que se pasan las colecciones en el parámetro *colsToSort*: la posición de un objeto `collection`/`order` en la sintaxis determina su nivel de ordenación.
 
@@ -2032,7 +2032,7 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 #### Descripción
 
-La nueva colección
+La función `.multiSort()` <!-- REF #collection.multiSort().Summary -->permite realizar una ordenación sincronizada multinivel sobre un conjunto de colecciones<!-- END REF -->.
 
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
@@ -2173,7 +2173,7 @@ Ordenar con una ruta de propiedad:
 
 #### Descripción
 
-Ordenar una colección de números de forma ascendente y descendente:
+Descripción Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
@@ -2755,7 +2755,7 @@ La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplic
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Para una descripción detallada de los parámetros *queryString* y *value*, consulte la función `dataClass.query()`.
+- *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - Tipo
 
 Tipo
