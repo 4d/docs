@@ -3,13 +3,13 @@ id: webServerAdmin
 title: Administração
 ---
 
-4D provides several integrated tools to start, stop, or monitor the integrated web server.
+4D fornece várias ferramentas integradas para iniciar, parar ou monitorar o servidor web integrado.
 
 ## Iniciando o servidor Web 4D
 
-> To be able to launch the web server of 4D or 4D Server, you must have a "4D Web Application" license. Para más información, consulte el [sitio web de 4D](https://www.4d.com).
+> Para poder iniciar o servidor web de 4D ou 4D Server, você deve ter uma licença "4D Web Application". Para más información, consulte el [sitio web de 4D](https://www.4d.com).
 
-A 4D project can start and monitor a web server for the main (host) application as well as for each hosted component.
+Um projeto 4D pode iniciar e monitorar um servidor web para a aplicação (host) principal, bem como para cada componente hospedado.
 
 O servidor web principal de 4D pode ser iniciado de diferentes maneiras:
 
@@ -23,7 +23,7 @@ O servidor web principal de 4D pode ser iniciado de diferentes maneiras:
 
 The web server of any component can be launched by calling the [`webServer.start()`](API/WebServerClass.md#start) function on the component's web server object.
 
-> You do not need to relaunch the 4D application to start or stop the web server.
+> Você não precisa reiniciar a aplicação 4D para iniciar ou parar o servidor web.
 
 ## Parando o servidor Web 4D
 
@@ -35,21 +35,21 @@ O servidor web principal de 4D pode ser parado de diferentes maneiras:
 
 El servidor web de cualquier componente puede detenerse llamando a la función `webServer.stop()` en el objeto servidor web del componente.
 
-## Teste do Servidor Web 4D
+## Testar o Web server
 
 El comando **Test Web Server** puede utilizarse para asegurarse de que el servidor web integrado funciona correctamente (sólo en 4D). Este comando es accesible en el menú **Ejecutar** cuando se lanza el servidor web:
 
 ![](../assets/en/WebServer/test1.png)
 
-When you select this command, the home page of the website published by the 4D application is displayed in a window of your default web browser:
+Quando seleciona este comando, a página de início do site web publicado pela aplicação 4D se mostra em uma janela de seu navegador web por padrão:
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-This command lets you verify that the web server, home page display, etc. work correctly. La página se llama utilizando la URL _localhost_, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
+Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. La página se llama utilizando la URL _localhost_, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
 
 ## Limpar a cache
 
-At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache).
+A qualquer momento, você pode limpar o cache das páginas e imagens que ele contém (se, por exemplo, você tiver modificado uma página estática e quiser recarregá-la no cache).
 
 Para o fazer, pode:
 
@@ -64,7 +64,7 @@ A cache é então imediatamente limpa.
 
 La página **Watch** (sección **Web**) del Explorador de ejecución muestra la información del servidor web, en particular:
 
-- **Uso de la caché web**: indica el número de páginas presentes en la caché web así como su porcentaje de uso. This information is only available if the web server is active and if the cache size is greater than 0.
+- **Uso de la caché web**: indica el número de páginas presentes en la caché web así como su porcentaje de uso. Esta informação só estará disponível se o servidor web estiver ativo e se o tamanho do cache for maior que 0.
 
 - **Tiempo de actividad del servidor web**: indica la duración del uso (en formato horas:minutos:segundos) del servidor web. Esta informação só está disponível se o servidor Web estiver ativo.
 
@@ -72,9 +72,9 @@ La página **Watch** (sección **Web**) del Explorador de ejecución muestra la 
 
 ## URLs de administração
 
-Website administration URLS allow you to control the website published on your server. 4D Web Server acepta cuatro URLs específicas: _/4DSTATS_, _/4DHTMLSTATS_, /_4DCACHECLEAR_ y _/4DWEBTEST_.
+URLs de administração web permitem que você controle o site publicado no seu servidor. 4D Web Server acepta cuatro URLs específicas: _/4DSTATS_, _/4DHTMLSTATS_, /_4DCACHECLEAR_ y _/4DWEBTEST_.
 
-> _/4DSTATS_, _/4DHTMLSTATS_ y _/4DCACHECLEAR_ sólo están disponibles para el diseñador y el administrador de la base de datos. If the 4D password system has not been activated, these URLs are available to all the users. /4DWEBTEST está sempre disponível.
+> _/4DSTATS_, _/4DHTMLSTATS_ y _/4DCACHECLEAR_ sólo están disponibles para el diseñador y el administrador de la base de datos. Se o sistema de senha 4D não foi ativado, estas URLs estarão disponíveis para todos os usuários. /4DWEBTEST está sempre disponível.
 
 ### /4DSTATS
 
