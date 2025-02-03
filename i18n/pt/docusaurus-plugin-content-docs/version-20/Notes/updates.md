@@ -22,7 +22,7 @@ On Windows Server 2025, some custom options in the new Windows Print dialog box 
 
 :::
 
-- Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
+- Capacidade de [construir aplicações autônomas sem licenças incorporadas](../Desktop/building.md#licenses).
 - [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.6): list of all bugs that have been fixed in 4D 20.6 LTS.
 
 
@@ -172,7 +172,7 @@ Leia [**O que há de novo no 4D v19 R2**](https://blog.4d.com/en-whats-new-in-4d
 #### Mudanças de comportamento
 
 - Para conformidade com HTTP RFC, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) propriedade devolve agora todos os nomes de cabeçalho **em minúsculas**. Se quiser que o seu código continue a funcionar como antes, utilize a nova propriedade [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
-- When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
+- Quando um botão bevel[com menu pop-up vinculado](../FormObjects/properties_TextAndPicture.md#with-pop-up-menu) é atribuído a uma ação padrão, a ação padrão não é mais gerada se uma opção de menu pop-up for selecionada.
 - Nas áreas da Web que usam blink (CEF), as caixas de diálogo exibidas a partir de scripts externos agora estão bloqueando se não forem chamadas a partir de uma função `setTimeout()` JS. Isso se deve às atualizações atuais da CEF, nas quais as caixas de diálogo exibidas por funções como `alert()` ou `print()` não são mais tratadas pelo sistema operacional, mas pela área da Web. Veja [`WA Avaliar JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) e [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
 
 
@@ -222,7 +222,7 @@ Leia [**O que há de novo em 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-
 
 ### 4D 19 R5
 
-- The project [directory.json file](../Users/handling_users_groups.md#directoryjson-file) can now be [embedded in the server](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
+- O [arquivo directory.json](../Users/handling_users_groups.md#directoryjson-file) do projeto agora pode ser [incorporado ao servidor](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) no momento da compilação, permitindo a implementação de uma aplicação cliente/servidor com uma configuração básica de segurança de usuário e grupos.
 - Agora você pode [desmarcar módulos inúteis](../Desktop/building.md#deselecting-modules) em seus aplicativos criados.
 - A biblioteca *MeCab* está incluída por padrão em todos os aplicativos 4D no macOS. Em versões anteriores, essa biblioteca, especificamente projetada para gerenciar texto em japonês, estava disponível apenas na versão japonesa do 4D no macOS. Se não precisar dessa biblioteca em seus aplicativos finais, agora você pode [desmarcá-la](../Desktop/building.md#deselecting-modules).
 - [Otimização cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization): novas funções de classe permitem que você manipule o cache ORDA e o conteúdo de um contexto de otimização. Consulte [pré-configurando contextos](../ORDA/remoteDatastores.md#preconfiguring-contexts) e [Cache ORDA](../ORDA/remoteDatastores.md#orda-cache) para obter mais informações.
