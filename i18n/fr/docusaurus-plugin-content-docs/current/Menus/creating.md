@@ -102,9 +102,7 @@ Un menu peut être attaché à une barre de menus ou à un autre menu.
 - To attach a menu to a menu bar: right-click on the menu bar and select **Attach a menu to the menu bar "bar name" >**, then choose the menu to be attached to the menu bar:
   ![](../assets/en/Menus/attach.png)
   You can also select a menu bar then click on the options button found below the list.
-- To attach a menu to another menu: select the menu in the left-hand area, then right-click on the menu item and select **Attach a sub-menu to the item "item name">**, then choose the menu you want to use as sub-menu:\
-  ![](../assets/en/Menus/attach2.png)
-  You can also select a menu item then click on the options button found below the list.
+- Ajouter des lignes
   Le menu que vous êtes en train de rattacher deviendra un sous-menu. Le titre de la ligne est maintenu (le nom initial du sous-menu est ignoré), mais il peut être modifié.
 
 #### Détacher des menus
