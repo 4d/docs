@@ -20,7 +20,7 @@ title: アプリケーションビルド
 
 プロジェクトパッケージをビルドするには次の方法があります:
 
-- either the [`BUILD APPLICATION`](../commands-legacy/build-application.md) command,
+- [`BUILD APPLICATION`](../commands-legacy/build-application.md) コマンドを使う
 - [アプリケーションビルド](#application-builder) ダイアログを使う
 
 :::tip
@@ -45,9 +45,9 @@ title: アプリケーションビルド
 
 アプリケーションビルドに関わる各パラメーター設定は XML キーの形で、`buildApp.4DSettings` という名称のアプリケーションプロジェクトファイルに保存されます。 この XML ファイルはプロジェクトの [`Settings` フォルダー](../Project/architecture.md#settings-1) に配置されます。
 
-アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 You can define several other XML settings file for the same project and employ them using the [`BUILD APPLICATION`](../commands-legacy/build-application.md) command.
+アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じプロジェクト内に他に複数のXML 設定を定義することができ、[`BUILD APPLICATION`](../commands-legacy/build-application.md) コマンドを使用してどれを使用するかを選択することができます。
 
-また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual.
+また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 これらのキーの詳細は[4D XML キーBuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) マニュアルに詳細な説明があります。
 
 ### ログファイル
 
@@ -59,9 +59,9 @@ title: アプリケーションビルド
 - 発生したエラー
 - 署名の問題 (例: 署名されていないプラグイン)
 
-Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to [notarize](#about-notarization) your application on macOS.
+macOS 上でアプリケーションを[公証](#ノータリゼーション_\(公証\)_について) する場合などは、このファイルを確認することで、後の運用手順で時間を節約できることがあります。
 
-> Use the `Get 4D file(Build application log file)` statement to get the log file location.
+> ログファイルの場所を取得するためには、`Get 4D file(Build application log file)` 宣言を使用します。
 
 ## アプリケーション名と保存先フォルダー
 
@@ -85,34 +85,34 @@ Checking this file may help you saving time during the subsequent deployment ste
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
-.4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (<strong>注:</strong> バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (<strong>注:</strong> バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz files can be used by 4D Server, 4D Volume Desktop (merged applications), and 4D. 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
+.4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (<strong>注:</strong> バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルは4D Server、4D Volume Desktop(組み込みアプリ)、および4D において使用できます。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
-> .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual).
+> .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 この標準フォーマットを使用したくない場合、[`buildApp.4DSettings`](#build-application-settings) 内において`UseStandardZipFormat` XML キーを値`False` で追加して下さい(より詳細な情報については、[4D XML キーBuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) マニュアルを参照して下さい)。
 
 #### 関連するフォルダーを含む
 
-このオプションを選択すると、プロジェクトに関連するフォルダーが、Build フォルダーの *Components* および *Resources* フォルダーにコピーされます。 これらのフォルダーの詳細については [プロジェクトアーキテクチャーの説明](Project/architecture.md) を参照ください。 これらのフォルダーの詳細については [プロジェクトアーキテクチャーの説明](Project/architecture.md) を参照ください。
+このオプションを選択すると、プロジェクトに関連するフォルダーが、Build フォルダーの *Components* および *Resources* フォルダーにコピーされます。  これらのフォルダーの詳細については [プロジェクトアーキテクチャーの説明](Project/architecture.md) を参照ください。
 
 ### コンポーネントをビルド
 
 ストラクチャーからコンパイル済みコンポーネントをビルドします。
 
-[コンポーネント](../Extensions/develop-components.md) は特定の機能を実装した標準の 4D プロジェクトです。 [コンポーネント](../Extensions/develop-components.md) は特定の機能を実装した標準の 4D プロジェクトです。 ビルドされたコンポーネントを [他の 4Dプロジェクト (ホストアプリケーションプロジェクト) にインストール](../Project/components.md#basics) すると、ホストプロジェクトはその機能を利用できるようになります。
+[コンポーネント](../Extensions/develop-components.md) は特定の機能を実装した標準の 4D プロジェクトです。 ビルドされたコンポーネントを [他の 4Dプロジェクト (ホストアプリケーションプロジェクト) にインストール](../Project/components.md#basics) すると、ホストプロジェクトはその機能を利用できるようになります。
 
-If you have named your application *MyComponent*, 4D will automatically create a *Components* folder with the following structure:
+アプリケーションに *MyComponent* という名前をつけていた場合、4D は以下の構造を持 *Components* フォルダを自動的に作成します:
 
-`<destination_folder>/Components/MyComponent.4dbase/Contents/`.
+`<destination_folder>/Components/MyComponent.4dbase/Contents/`
 
-The *MyComponent.4dbase* folder is the [package folder of the compiled component](../Project/components.md#package-folder).
+*MyComponent.4dbase* フォルダは[コンパイルされたコンポーネントのpackageフォルダです](../Project/components.md#package-folder)
 
-The *Contents* folder contains:
+*Contents* フォルダには以下のものが格納されています:
 
-- *MyComponent.4DZ* file - the [compiled structure](#build-compiled-structure).
+- *MyComponent.4DZ* ファイル - [コンパイルされたストラクチャー](#コンパイル済みストラクチャーをビルド)
 - *Resources* フォルダー: 関連リソースは自動的にこのフォルダーにコピーされます。 コンポーネントは、他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
-- An *Info.plist* file - this file is required to build [notarizeable and stapleable](#about-notarization) components for macOS (it is ignored on Windows). The following [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) are prefilled:
-  - `CFBundleDisplayName` and `CFBundleName` for the application name,
-  - `NSHumanReadableCopyright`, can be [set using an XML key](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html).
-  - `CFBundleShortVersionString` and `CFBundleVersion` for the application version (x.x.x format, e.g. 1.0.5), can be [set using an XML key](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html).
+- *Info.plist* ファイル - このファイルはmacOS 用に[公証可能でステープル可能な](#ノータリゼーション (公証) について) コンポーネントをビルドするためには必須です(Windows においては無視されます)。 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています:
+  - アプリケーション名用に`CFBundleDisplayName` および `CFBundleName`
+  - `NSHumanReadableCopyright` は[XML キーを使用して設定](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html) 可能です。
+  - アプリケーションバージョン用に `CFBundleShortVersionString` および `CFBundleVersion` (x.x.x フォーマット、例: 1.0.5)は、[XML キーを使用して設定](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html) 可能です。
 
 ## アプリケーションページ
 
