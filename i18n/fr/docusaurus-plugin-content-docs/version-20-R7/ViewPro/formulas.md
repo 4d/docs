@@ -123,7 +123,7 @@ Voir [**la liste étendue des fonctions de SpreadJS**](https://developer.mescius
 
 ## Fonctions 4D
 
-4D View Pro vous permet de définir et d'appeler **des fonctions 4D personnalisées**, qui exécutent [des formules 4D](API/FunctionClass.md). L'utilisation de fonctions personnalisées 4D étend les possibilités de vos documents 4D View Pro et permet des interactions avancées avec la base de données 4D.
+Absolue L'utilisation de fonctions personnalisées 4D étend les possibilités de vos documents 4D View Pro et permet des interactions avancées avec la base de données 4D.
 
 Les fonctions personnalisées 4D permettent d'accéder, à partir de vos formules 4D View Pro :
 
