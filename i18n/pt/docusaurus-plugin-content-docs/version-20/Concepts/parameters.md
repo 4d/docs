@@ -265,7 +265,7 @@ Esse comando significa que a partir do quarto parâmetro (incluído), o método 
 
 Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
 
-When using the `#DECLARE` keyword, parameters are automatically declared. Por exemplo:
+Ao usar a palavra-chave `#DECLARE`, os parâmetros são declarados automaticamente. Por exemplo:
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
