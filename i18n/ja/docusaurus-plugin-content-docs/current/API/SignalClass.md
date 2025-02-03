@@ -178,24 +178,31 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 <!-- REF #SignalClass.wait().Params -->
 
-| 引数      | 型       |                             | 説明                                   |
-| ------- | ------- | --------------------------- | ------------------------------------ |
-| timeout | Real    | ->                          | シグナルの最大待機時間 (秒単位) |
-| 戻り値     | Boolean | <- | `.signaled` プロパティの状態                 |
+| 引数      | 型       |                             | 説明                           |
+| ------- | ------- | --------------------------- | ---------------------------- |
+| timeout | Real    | ->                          | Maximum wait time in seconds |
+| 戻り値     | Boolean | <- | `.signaled` プロパティの状態         |
 
 <!-- END REF -->
 
 #### 説明
 
-`.wait()` 関数は、<!-- REF #SignalClass.wait().Summary -->シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます<!-- END REF -->。
+The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->waits until the `.signaled` property of the Signal object becomes **true** or the specified `timeout` is reached<!-- END REF -->.
 
-コード実行のブロックを防ぐため、*timeout* 引数を使用して最長待機時間を秒単位で指定することもできます(小数を使用できます)。
+To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter. Decimals are accepted.
 
-> **警告**: *timeout* 引数を渡さずに `.wait()` を 4D のメインプロセスで呼び出すことは推奨されていません。最悪の場合 4Dアプリケーション全体がフリーズしてしまう恐れがあります。
+If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
-Signal がすでにシグナルされている (つまり `signaled` プロパティが **true** になっている) 状態であった場合、この関数は即座に戻り値を返します。
+The function returns the value of the .signaled property:
 
-この関数は `.signaled` プロパティの値を返します。 この値を評価することで、待機が終了したのは `.trigger()` が呼び出されたためか (`.signaled` プロパティは **true**)、それともタイムアウト時間が経過したためか (`.signaled` プロパティは **false**) を知ることができます。
+- **true** if the signal was triggered (`.trigger()` was called).
+- **false** if the timeout expired before the signal was triggered.
+
+:::note 警告
+
+Calling `.wait()` without a *timeout* in the main process is not recommended, as it could freeze the entire 4D application.
+
+:::
 
 > Signal オブジェクトを待機しているプロセスの状態は `Waiting for internal flag` です。
 
