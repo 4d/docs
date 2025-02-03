@@ -16,7 +16,7 @@ Pode aceder à caixa de diálogo Parâmetros:
 
 -   usando a opção de menu **Desenho > Parâmetros...**
 -   clicando em **Parâmetros** na barra de ferramentas 4D
--   on 4D Server, using the **Edit > Settings...** menu option
+-   no 4D Server, usando a opção de menu **Editar > Parâmetros...**
 
 When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
 
