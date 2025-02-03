@@ -24,7 +24,7 @@ Pour chaque utilisateur connecté à la base, la liste fournit les informations 
 - **Adresse IP** : Adresse IP de la machine distante.
 - **Connexion** : Date et heure de la connexion de la machine distante.
 - **Temps CPU** : Temps processeur consommé par cet utilisateur depuis la connexion.
-- **Activité** : Ratio du temps que 4D Server consacre à cet utilisateur (affichage dynamique). "Endormi" si la machine du poste client est passée en veille (cf. ci-dessous).
+- Déconnecter "Endormi" si la machine du poste client est passée en veille (cf. ci-dessous).
 
 ### Gestion des utilisateurs endormis
 
