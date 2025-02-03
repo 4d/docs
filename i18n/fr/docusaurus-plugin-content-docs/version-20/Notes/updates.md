@@ -14,6 +14,14 @@ Lisez [**Les nouveautés de 4D 20**](https://blog.4d.com/fr-whats-new-in-4d-v20/
 
 #### Points forts
 
+- 4D 20.6 LTS is certified on Wondiws Server 2025
+
+:::warning KNOWN ISSUE ON WINDOWS SERVER 2025
+
+On Windows Server 2025, some custom options in the new Windows Print dialog box are not available and are still under investigation. A fix will be available in the next hotfix.
+
+:::
+
 - Possibilité de \[construire des applications autonomes sans licences intégrées\](../Desktop/building.md#licenses).
 - [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.6): liste de tous les bugs qui ont été corrigés dans 4D 20.6 LTS.
 
