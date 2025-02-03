@@ -197,7 +197,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always false for a file<!-- END REF -->.
+A propriedade `.isFolder` retorna <!-- REF #document.isFolder.Summary -->sempre false para um arquivo<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -542,7 +542,7 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 
 #### Descrição
 
-The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
+A função `.getIcon()` retorna <!-- REF #document.getIcon().Summary -->o ícone do arquivo<!-- END REF -->.
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 
