@@ -148,7 +148,7 @@ A propriedade `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownL
 <!-- REF #TableStyle.backColor.Syntax -->
 **.backColor**: Text<!-- END REF -->
 
-A propriedade `.backColor` é o <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md#background--foreground) of the table<!-- END REF -->.
+A propriedade `.backColor` é o <!-- REF #TableStyle.backColor.Summary -->[cor de fundo](configuring.md#background--foreground) da tabela<!-- END REF -->.
 
 
 ### .forecolor
@@ -156,7 +156,7 @@ A propriedade `.backColor` é o <!-- REF #TableStyle.backColor.Summary -->[backg
 <!-- REF #TableStyle.forecolor.Syntax -->
 **.forecolor**: Text<!-- END REF -->
 
-A propriedade `.forecolor` é o <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->.
+A propriedade `.forecolor` é o <!-- REF #TableStyle.forecolor.Summary -->[cor do primeiro plano](configuring.md#background--foreground) da tabela<!-- END REF -->.
 
 
 
@@ -165,7 +165,7 @@ A propriedade `.forecolor` é o <!-- REF #TableStyle.forecolor.Summary -->[foreg
 <!-- REF #TableStyle.font.Syntax -->
 **.font**: Text<!-- END REF -->
 
-A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md#fonts-and-text)) of the table<!-- END REF -->.
+A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->nome da fonte (consulte [**Fontes e texto**](configuring.md#fonts-and-text)) da tabela<!-- END REF -->.
 
 
 
@@ -305,7 +305,7 @@ A propriedade `.firstRowStripSize` é o <!-- REF #TableThemeOptions.firstRowStri
 ### .firstRowStripStyle
 
 <!-- REF #TableThemeOptions.firstRowStripStyle.Syntax -->
-**.firstRowStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
+**.firstRowStripStyle**: [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
 A propriedade `.firstRowStripStyle` é o <!-- REF #TableThemeOptions.firstRowStripStyle.Summary -->primeiro estilo de linha alternada<!-- END REF -->.
 
