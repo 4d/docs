@@ -281,11 +281,11 @@ Número da porta IP de escuta para conexões HTTPS via TLS. Por padrão, o valor
 
 ## Tempo limite do processo inativo
 
-| Pode ser definido com              | Nome                                                                                                        | Comentários |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout)                                    |             |
-| `WEB SET OPTION`                   | `Web inactive process timeout`                                                                              |             |
-| Caixa de diálogos de configurações | [Options (I) page/Inactive Process Timeout](../settings/web.md#inactive-process-timeout) | Slider      |
+| Pode ser definido com              | Nome                                                                                                          | Comentários |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout)                                      |             |
+| `WEB SET OPTION`                   | `Web inactive process timeout`                                                                                |             |
+| Caixa de diálogos de configurações | [Página Opções (I)/Tempo de processo inativo](../settings/web.md#inactive-process-timeout) | Slider      |
 
 Life duration (in minutes) of inactive processes associated with legacy sessions. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the session context is destroyed.
 
@@ -452,9 +452,9 @@ Verdadero si PFS está disponible en el servidor web (ver la sección [TLS](Admi
 
 ## Reutilizar contextos temporários (em modo remoto)
 
-| Pode ser definido com              | Nome                                                                                                        | Comentários |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Options (I) page/Reuse Temporary Contexts](../settings/web.md#reuse-temporary-contexts) |             |
+| Pode ser definido com              | Nome                                                                                                                 | Comentários |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | [Página Opções (I)/Reutilizar contextos temporários](../settings/web.md#reuse-temporary-contexts) |             |
 
 > Esta opción sólo está disponible cuando la opción **Sin sesiones** está marcada.
 
@@ -587,9 +587,9 @@ El valor del atributo `Secure` de la cookie de sesión se define automáticament
 
 ## Utilizar processos preemptivos
 
-| Pode ser definido com              | Nome                                                                                                        | Comentários |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Options (I) page/Use Preemptive Processes](../settings/web.md#use-preemptive-processes) |             |
+| Pode ser definido com              | Nome                                                                                                           | Comentários |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | [Página Opções (I)/Usar processos preventivos](../settings/web.md#use-preemptive-processes) |             |
 
 Esta opción activa el modo apropiativo para el código del servidor web de su aplicación cuando se selecciona la opción **Sin sesiones** (el modo apropiativo siempre está activado con **sesiones escalables**). Cuando esta opción está marcada en este contexto, el compilador 4D evaluará automáticamente la propiedad hilo seguro de cada pieza de [código relacionado con la web](preemptiveWeb.md#thread-safety-of-4d-web-code) y devolverá errores en caso de incompatibi
 
