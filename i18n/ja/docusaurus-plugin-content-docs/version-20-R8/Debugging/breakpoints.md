@@ -15,11 +15,11 @@ title: ブレークポイントとキャッチコマンド
 
 ブレークポイントを設定するには、デバッガーまたはコードエディターのソースコードエリアの左マージン内をクリックします。
 
-In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If (Value type(request.reponse.headers...`:
+次の図では、ブレークポイント (赤い点) がデバッガー内で、`If (Value type(request.reponse.headers...` の行に設定されています:
 
 ![break-point](../assets/en/Debugging/break.png)
 
-In the above example, clicking the [**No Trace**](./debugger.md#no-trace) button resumes normal execution up to the line marked with the break point. その後、ブレークポイントで示された行は実行されずに、トレースモードへ 戻ります。 プログラムカウンターより下方の (後に実行される) 行にブレークポイントを設定し、**トレース終了** ボタンをクリックすると、ブレークポイントまでのメソッドをスキップすることができます。
+上の状態で [**トレース終了**](./debugger.md#トレース終了) ボタンをクリックすると、ブレークポイントが設定された行まで実行が再開されます。 その後、ブレークポイントで示された行は実行されずに、トレースモードへ 戻ります。 プログラムカウンターより下方の (後に実行される) 行にブレークポイントを設定し、**トレース終了** ボタンをクリックすると、ブレークポイントまでのメソッドをスキップすることができます。
 
 赤色の点をクリックすると、ブレークポイントは削除されます。
 
