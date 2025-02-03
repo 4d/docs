@@ -15,7 +15,7 @@ Para iniciar usando as funcionalidades REST, precisa iniciar e configurar o serv
 
 ## Iniciar o servidor REST
 
-Por razões de segurança, o padrão de 4D é não responder a petições REST. If you want to start the REST Server, you must check the **Expose as REST server** option in the "Web/REST resource" page of the structure settings in order for REST requests to be processed.
+Por razões de segurança, o padrão de 4D é não responder a petições REST. Se você deseja iniciar o Servidor REST, você deve verificar a opção **Expor o servidor REST** no **Web** > **Web Features** da página das configurações da estrutura para que as solicitações REST sejam processadas.
 
 ![alt-text](../assets/en/REST/Settings.png)
 
@@ -39,7 +39,7 @@ Pode configurar os acessos REST de uma das maneiras abaixo:
 
 ### Utilização dos parâmetros da estrutura
 
-The **Read/Write** menu in the "**Web** > **Web Features**" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
+O menu **Leitura/Escrita** na página "**Web** > **Web Features**" das configurações de estrutura especifica um grupo de usuários 4D que está autorizado a estabelecer o link para a aplicação 4D usando consultas REST.
 
 Como padrão, o menu mostra `<Anyone>`, o que significa que os acessos REST estão abertos a todos os usuários. Quando tiver especificado um grupo, só contas de usuários 4D que pertençam ao grupo podem ser usadas [acesso a 4D através de petições REST](authUsers.md). Se uma conta for usada que não pertença a esse grupo, 4D retorna um erro de autenticação para o emissor da petição.
 
@@ -74,7 +74,7 @@ Para remover a exposição REST para uma tabela:
 
 1. Visualizar o inspetor de Tabelas no editor de Estrutura e selecionar a tabela que quiser modfiicar.
 
-2. Uncheck the **Expose as REST resource** option: ![alt-text](../assets/en/REST/table.png) Do this for each table whose exposure needs to be modified.
+2. Desmarque a opção **Expor o recurso REST**: ![alt-text](../assets/en/REST/table.png) Faça isso para cada tabela cuja exposição precisa ser modificada.
 
 
 ### Expor campos
