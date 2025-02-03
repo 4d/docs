@@ -6,7 +6,7 @@ title: Conditions et boucles
 Quelle que soit la simplicité ou la complexité d’une méthode ou d'une fonction, vous utiliserez toujours un ou plusieurs types de structure de programmation. Les structures de programmation déterminent si et dans quel ordre les lignes d’instructions sont exécutées à l’intérieur d’une méthode. Il existe trois types de structures :
 
 - **Séquentielle**: une structure séquentielle est une structure simple et linéaire. Une séquence est une série d'instructions que 4D exécute l'une après l'autre, de la première à la dernière. Une routine d'une ligne, fréquemment utilisée pour les méthodes objets, est le cas le plus simple d'une structure séquentielle. Par exemple : `[People]lastName:=Uppercase([People]lastName)`
-- **Conditionnelle** : une structure conditionnelle permet aux méthodes de tester une condition et d’exécuter des séquences d’instructions différentes en fonction du résultat. La condition est une expression booléenne, c'est-à-dire une expression qui est évaluée à vrai ou faux. Une structure conditionnelle est la structure [`If...Else...End if`](#ifelseend-if), qui dirige le flux du programme le long de l'une des deux voies. L'autre structure conditionnelle est la structure [`Case of...Else...End case`](#case-ofelseend-case), qui aiguille le programme parmi une ou plusieurs alternatives.
+- **Conditionnelle** : une structure conditionnelle permet aux méthodes de tester une condition et d’exécuter des séquences d’instructions différentes en fonction du résultat. La condition est une expression booléenne, c'est-à-dire une expression qui est évaluée à vrai ou faux. La condition est une expression booléenne, c'est-à-dire une expression qui est évaluée à vrai ou faux. Une structure conditionnelle est la structure [`If...Else...End if`](#ifelseend-if), qui dirige le flux du programme le long de l'une des deux voies.
 - **Répétitive** : Il est très courant, lorsque vous écrivez des méthodes, de rencontrer des cas où vous devez répéter une séquence d’instructions un certain nombre de fois. Pour traiter ces besoins, le langage 4D vous propose plusieurs structures répétitives :
 
   - [`While...End while`](#whileend-while)
@@ -14,7 +14,7 @@ Quelle que soit la simplicité ou la complexité d’une méthode ou d'une fonct
   - [`For...End for`](#forend-for)
   - [`For each...End for each`](#for-eachend-for-each)
 
-Les boucles sont contrôlées de deux manières : soit elles bouclent jusqu'à ce qu'une condition soit remplie, soit elles bouclent un certain nombre de fois. Chaque structure répétitive peut être utilisée de l’une ou l’autre manière, mais les boucles `While` et `Repeat` sont mieux adaptées à la répétition jusqu’à ce qu’une condition soit remplie, alors que les boucles `For` sont mieux adaptées à la répétition  `For each...End for each`, destinée à effectuer des boucles dans les objets et les collections, permet de combiner les deux manières.
+Les boucles sont contrôlées de deux manières : soit elles bouclent jusqu'à ce qu'une condition soit remplie, soit elles bouclent un certain nombre de fois. Chaque structure répétitive peut être utilisée de l’une ou l’autre manière, mais les boucles `While` et `Repeat` sont mieux adaptées à la répétition jusqu’à ce qu’une condition soit remplie, alors que les boucles `For` sont mieux adaptées à la répétition  `For each...End for each`, destinée à effectuer des boucles dans les objets et les collections, permet de combiner les deux manières. `For each...End for each`, destinée à effectuer des boucles dans les objets et les collections, permet de combiner les deux manières.
 
 **Note :** 4D vous permet d’imbriquer des structures de programmation jusqu’à une “profondeur” de 512 niveaux.
 
@@ -38,7 +38,7 @@ A noter que l'élément `Else` est optionnel, vous pouvez écrire :
  End if
 ```
 
-La structure `If...Else...End if` permet à votre méthode de choisir dans une alternative, en fonction du résultat, TRUE ou FALSE, d’un test (une expression booléenne). Si l’expression booléenne est TRUE, les instructions qui suivent immédiatement le test sont exécutées. Si l’expression booléenne est FALSE, les instructions suivant la ligne Else sont exécutées. Le `Else` est optionnel ; lorsqu’il est omis, c’est la première ligne d’instructions suivant le `End if` (s’il y en a une) qui est exécutée.
+La structure `If...Else...End if` permet à votre méthode de choisir dans une alternative, en fonction du résultat, TRUE ou FALSE, d’un test (une expression booléenne). Si l’expression booléenne est TRUE, les instructions qui suivent immédiatement le test sont exécutées. Si l’expression booléenne est FALSE, les instructions suivant la ligne Else sont exécutées. Si l’expression booléenne est TRUE, les instructions qui suivent immédiatement le test sont exécutées.
 
 A noter que l'expression booléenne est toujours évaluée en totalité. Examinons en particulier le test suivant :
 
@@ -138,7 +138,7 @@ Chaque expression booléenne débute par le caractère deux points (`:`). La com
 :(bValidate=1)
 ```
 
-Seules les instructions suivant le premier cas TRUE (et ce, jusqu’au cas suivant) seront exécutées. Si aucun des cas n’est TRUE, aucune instruction n’est exécutée (s'il n'y a pas d'élément `Else`).
+Seules les instructions suivant le premier cas TRUE (et ce, jusqu’au cas suivant) seront exécutées. Rappelez-vous qu’avec une structure de type `Case of...Else...End case`, seul le premier cas TRUE rencontré est exécuté.
 
 Vous pouvez placer une instruction Else après le dernier cas. Si tous les cas sont FALSE, les instructions suivant le `Else` seront exécutées.
 
