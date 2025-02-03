@@ -73,20 +73,20 @@ URLs de administração web permitem que você controle o site publicado no seu 
 
 O URL **/4DSTATS** retorna vários itens de informação em uma tabela HTML (exibido em um navegador):
 
-| Elemento                | Descrição                                                    |
-| ----------------------- | ------------------------------------------------------------ |
-| Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)            |
-| Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                           |
-| Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes)            |
-| Cache Use               | Porcentagem do cache usado                                   |
-| Cached Objects          | Number of objects found in the cache, **including pictures** |
+| Elemento                | Descrição                                                     |
+| ----------------------- | ------------------------------------------------------------- |
+| Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)             |
+| Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                            |
+| Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes)             |
+| Cache Use               | Porcentagem do cache usado                                    |
+| Cached Objects          | Número de objetos encontrados no cache, **incluindo imagens** |
 
-This information can allow you to check the functioning of your server and eventually adapt the corresponding parameters.
-> The `WEB GET STATISTICS` command allows you to also obtain information about how the cache is being used for static pages.
+Estas informações permitem que você verifique o funcionamento do seu servidor e eventualmente adapte os parâmetros correspondentes.
+> O comando `WEB GET STATISTICS` permite que você também obtenha informações sobre como o cache está sendo usado para páginas estáticas.
 
 ### /4DHTMLSTATS
 
-The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as the */4DSTATS* URL. The difference is that the **Cached Objects** field only counts HTML pages (without counting picture files). Moreover, this URL returns the **Filtered Objects** field.
+O URL */4DHTMLSTATS* retorna, também como uma tabela HTML, a mesma informação do URL */4DSTATS*. A diferença é que o campo **Objetos Cached** conta apenas páginas HTML (sem contar os arquivos de imagem). Além disso, esta URL retorna o campo **Objetos Filtrados**.
 
 | Elemento                | Descrição                                                               |
 | ----------------------- | ----------------------------------------------------------------------- |
@@ -94,16 +94,16 @@ The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as t
 | Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                                      |
 | Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes)                       |
 | Cache Use               | Porcentagem do cache usado                                              |
-| Cached Objects          | Number of objects found in the cache, **without pictures**              |
+| Cached Objects          | Número de objetos encontrados no cache, **sem imagens**                 |
 | Objectos filtrados      | Número de objetos no cache não contados por URL, em particular, imagens |
 
 ### /4DCACHECLEAR
 
-The */4DCACHECLEAR* URL immediately clears the cache of the static pages and images. It allows you to therefore “force” the update of the pages that have been modified.
+O URL */4DCACHECLEAR* limpa imediatamente o cache das páginas e imagens estáticas. Isso permite que você "forçe" a atualização das páginas que foram modificadas.
 
 ### /4DWEBTEST
 
-The */4DWEBTEST* URL is designed to check the web server status. Quando esse URL é chamado, 4D retorna um arquivo texto com os campos HTTP seguintes preenchidos:
+A URL */4DWEBTEST* foi projetada para verificar o status do servidor da web. Quando esse URL é chamado, 4D retorna um arquivo texto com os campos HTTP seguintes preenchidos:
 
 | Campo HTTP | Descrição                              | Exemplo                                                                                                                         |
 | ---------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -116,13 +116,13 @@ The */4DWEBTEST* URL is designed to check the web server status. Quando esse URL
 4D permite gerar dois logs de pedidos web:
 
 * um histórico de depuração, útil na fase de desenvolvimento do servidor Web (*HTTPDebugLog.txt*),
-* a standardized web request log, rather used for statistic purposes (*logweb.txt*).
+* um log de requisição da web padronizado, mais usado para fins de estatística (*logweb.txt*).
 
-Both log files are automatically created in the **Logs** folder of the application project.
+Ambos os arquivos de log são criados automaticamente na pasta **Logs** do projeto de aplicativo.
 
 ### HTTPDebugLog.txt
 
-The [http debug file](webServerConfig.md#debug-log) can be enabled using the [`web server` object](webServerObject.md) or the `WEB SET OPTION` command.
+O arquivo de depuração [http](webServerConfig.md#debug-log) pode ser ativado usando o comando [`servidor` objeto](webServerObject.md) ou o comando `WEB SET OPTION`.
 
 Este arquivo registra cada petição HTTP e cada resposta em modo raw (não processado). Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
@@ -139,38 +139,38 @@ Os campos abaixo são registrados tanto para Request quanto para Response:
 
 ### logweb.txt
 
-The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObject.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. É necessário selecionar o formato do registo.
+A gravação do arquivo de registro Web [](webServerConfig.md#log-recording) pode ser ativada usando o servidor [`web` objeto](webServerObject.md), o comando `WEB SET OPÇÃO` ou a página **Web/Log (tipo)** das configurações. É necessário selecionar o formato do registo.
 
 #### CLF/DLF
 
-Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length* Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+Cada linha do arquivo representa uma requisição, tais como: *host rfc931 usuário \[DD/MMM/YYYY:HH:MM:SS] "request" tamanho do estado* Cada campo é separado por um espaço e cada linha termina pela sequência CR/LF (caractere 13, caractere 10).
 
-DLF (Combined Log Format) format is similar to CLF (Common Log Format) format and uses exactly the same structure. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent. Eis a descrição dos formatos CLF/DLF (não personalizáveis):
+O formato DLF (Formato Combinado de Log) é semelhante ao formato CLF (Formato Comum de Log) e usa exatamente a mesma estrutura. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent. Eis a descrição dos formatos CLF/DLF (não personalizáveis):
 
-| Campo nome           | Descrição                                                                                                                                                            |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| host                 | Endereço IP do cliente (por exemplo: 192.100.100.10)                                                                                                                 |
-| rfc931               | informação não gerada por 4D, é sempre - (um sinal de menos                                                                                                          |
-| user                 | nome de usuário conforme é autenticado, ou então é - (um sinal de menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).      |
-| DD/MMM/YYYY:HH:MM:SS | DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds. A data e a hora são locais para o servidor. |
-| request              | petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0                                                                                                   |
-| state                | resposta dada pelo servidor                                                                                                                                          |
-| length               | tamanho dos dados retornados (HTTP header exceto) ou 0                                                                                                               |
-| Referer              | DLF apenas- Contém a URL da página apontando para o documento solicitado.                                                                                            |
-| User-agent           | DLF only- Contains the name and version of the browser or software of the client at the origin of the request                                                        |
+| Campo nome           | Descrição                                                                                                                                                               |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| host                 | Endereço IP do cliente (por exemplo: 192.100.100.10)                                                                                                                    |
+| rfc931               | informação não gerada por 4D, é sempre - (um sinal de menos                                                                                                             |
+| user                 | nome de usuário conforme é autenticado, ou então é - (um sinal de menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).         |
+| DD/MMM/YYYY:HH:MM:SS | DD: dia, MMM: uma abreviação de 3 letras para o nome do mês (Jan, Feb,...), YYYY: ano, HH: hora, MM: minutos, SS: segundos. A data e a hora são locais para o servidor. |
+| request              | petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0                                                                                                      |
+| state                | resposta dada pelo servidor                                                                                                                                             |
+| length               | tamanho dos dados retornados (HTTP header exceto) ou 0                                                                                                                  |
+| Referer              | DLF apenas- Contém a URL da página apontando para o documento solicitado.                                                                                               |
+| User-agent           | Somente DLF - Contém o nome e a versão do navegador ou o software do cliente na origem do pedido                                                                        |
 
 #### ELF/WLF
 
-O formato ELF (Extended Log Format) é muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
+O formato ELF (Extended Log Format) é muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. Por esse motivo, o formato ELF pode ser personalizado: é possível escolher os campos a serem registrados, bem como sua ordem de inserção no arquivo.
 
-The WLF (WebStar Log Format) was developed specifically for the 4D WebSTAR server.
+O WLF (formato de log WebStar) foi desenvolvido especificamente para o servidor 4D WebSTAR.
 
 ##### Configuração dos campos
 
-When you choose the ELF or WLF format, the “Web Log Token Selection” area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. Para o efeito, assinalar os campos pretendidos.
+Quando você escolher o formato ELF ou WLF, a área "Seleção de Token de Log Web" exibe os campos disponíveis para o formato escolhido. Você precisará selecionar cada campo a ser incluído no registro. Para o efeito, assinalar os campos pretendidos.
 > Não é possível selecionar o mesmo campo duas vezes.
 
-The following table lists the fields available for each format (in alphabetical order) and describes its contents:
+A tabela a seguir lista os campos disponíveis para cada formato (em ordem alfabética) e descreve seu conteúdo:
 
 | Campo          | ELF | WLF | Valor                                                                                                                                                         |
 | -------------- | --- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -200,9 +200,9 @@ The following table lists the fields available for each format (in alphabetical 
 
 #### Frequência do backup
 
-Since a *logweb.txt* file can become considerably large, it is possible to set up an automatic archiving mechanism. The triggering of a backup can be based on a certain period of time (expressed in hours, days, week or months), or based on the file size; when the set deadline (or file size) is reached, 4D automatically closes and archives the current log file and creates a new one.
+Como um arquivo *logweb.txt* pode se tornar consideravelmente grande, é possível configurar um mecanismo de arquivamento automático. O acionamento de um backup pode ser baseado em um determinado período de tempo (expresso em horas, dias, semana ou meses) ou baseado no tamanho do arquivo; quando o prazo definido (ou tamanho do arquivo) for atingido, 4D automaticamente fecha e arquiva o arquivo de registro atual e cria um novo.
 
-When the web log file backup is triggered, the log file is archived in a folder named "Logweb Archives," which is created at the same level as the *logweb.txt* file.
+Quando o backup do arquivo de log da web é acionado, o arquivo de log é arquivado em uma pasta chamada "Arquivos Logweb", que é criado no mesmo nível que o logweb *. Arquivo xt*.
 
 The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_mm_ss.txt.” For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: and 7 seconds: e 7 segundos: “D2020_09_04_T15_50_07.txt.”
 
