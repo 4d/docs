@@ -9,7 +9,7 @@ title: Propriétés des formulaires
 
 > La propriété de schéma de couleurs n'est appliquée que sur macOS.
 
-Cette propriété définit la palette de couleurs du formulaire. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/set-application-color-scheme.md)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
+Cette propriété définit la palette de couleurs du formulaire. Cette propriété définit la palette de couleurs du formulaire. Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
 
 - dark - texte clair sur fond foncé
 - light - texte foncé sur fond clair
@@ -32,9 +32,9 @@ Un fichier CSS défini au niveau du formulaire remplacera la ou les feuilles de 
 
 #### Grammaire JSON
 
-| Nom | Type de données      | Valeurs possibles                                                                                                                                                                                                                                                                                                               |
-| --- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css | string ou collection | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \| "win"} objects </li> |
+| Nom | Type de données      | Valeurs possibles                                                                                                                                                                                                                                                                                                                                       |
+| --- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css | string ou collection | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
 
 ---
 

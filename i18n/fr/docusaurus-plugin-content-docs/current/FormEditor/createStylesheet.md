@@ -143,12 +143,12 @@ Spécifiez l'attribut entre parenthèses, puis entre accolades, déclarez le(s) 
 
 #### Syntaxes prises en charge
 
-| Syntaxe                                                                                   | Description                                                                                                               |
-| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| [attribute]                           | les objets ayant un `attribute`                                                                                           |
-| [attribute="valeur"]                  | les objets dont la valeur de l'`attribute` correspond à la "valeur" indiquée                                              |
-| [attribute~="valeur"] | les objets dont la valeur de `attribute` correspond à la "valeur" présente dans une liste de mots séparés par des espaces |
-| [attribute\|="valeur"]                | les objets dont `attribute` contient une valeur qui commence par celle de "valeur"                                        |
+| Syntaxe                                                                                            | Description                                                                                                               |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [attribute]                                    | les objets ayant un `attribute`                                                                                           |
+| [attribute="valeur"]                           | les objets dont la valeur de l'`attribute` correspond à la "valeur" indiquée                                              |
+| [attribute~="valeur"]          | les objets dont la valeur de `attribute` correspond à la "valeur" présente dans une liste de mots séparés par des espaces |
+| [attribute&#124;="valeur"] | les objets dont `attribute` contient une valeur qui commence par celle de "valeur"                                        |
 
 #### Exemples
 

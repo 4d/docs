@@ -25,7 +25,7 @@ Um objeto de texto permite a exibição de conteúdo escrito estático*(por exem
 
 ## Rotação
 
-O 4D permite que você gire as áreas de texto em seus formulários usando a propriedade [Orientation](properties_Text.md#orientation).
+4D permite que você gire as áreas de texto em seus formulários usando a propriedade [Orientation](properties_Text.md#orientation).
 
 ![](../assets/en/FormObjects/staticText.png)
 

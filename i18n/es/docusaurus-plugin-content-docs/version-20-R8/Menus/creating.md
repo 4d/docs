@@ -12,7 +12,7 @@ Puede combinar ambas funcionalidades y utilizar los menús creados en la estruct
 
 ## Barra de menús por defecto
 
-Una aplicación personalizada debe contener al menos una barra de menús con un menú. Una aplicación personalizada debe contener al menos una barra de menús con un menú. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
+Una aplicación personalizada debe contener al menos una barra de menús con un menú. Por defecto, cuando crea un nuevo proyecto, 4D crea automáticamente una barra de menú por defecto (Barra de Menú #1) para que pueda acceder al entorno Aplicación. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
 
 Esto permite al usuario acceder al modo Aplicación tan pronto como se crea el proyecto. La barra de menús nº 1 se llama automáticamente cuando se elige el comando **Test Application** en el menú **Ejecución**.
 
@@ -57,8 +57,7 @@ Para añadir un elemento de menú:
 1. En la lista de menús fuente, seleccione el menú al que desea añadir un comando.
    Si el menú ya tiene comandos, se mostrarán en la lista central. Si desea insertar el nuevo comando, seleccione el comando que desea que aparezca sobre él. Todavía es posible reorganizar el menú posteriormente utilizando la función de arrastrar y soltar.
 2. Elija **Añadir un elemento al menú "NombreDelMenú"** en el menú de opciones del editor o desde el menú contextual (clic derecho en la lista central).
-   O
-   Haga clic en el botón añadir ![](../assets/en/Menus/PlussNew.png) ubicado debajo de la lista central.
+   Añadir líneas
    4D añade un nuevo elemento con el nombre por defecto "Elemento X" donde X es el número de elementos ya creados.
 3. Haga doble clic en el nombre del comando para pasar al modo edición e introducir un nombre personalizado.
    OR Enter the custom name in the "Title" area. Puede contener hasta 31 caracteres. Puede introducir el nombre como "codificado" o introducir una referencia (ver más abajo).

@@ -42,7 +42,7 @@ Voir également [cet exemple](gettingStarted.md#authenticating-users) du chapitr
 
 Si aucune authentification personnalisée n'est fournie, 4D appelle la méthode de base de données [`On Web Authentication`](#on-web-authentication) (si elle existe). En plus de $1 et $2, seules les adresses IP du navigateur et du serveur ($3 et $4) sont fournies, le nom d'utilisateur et le mot de passe ($5 et $6) sont vides. La méthode doit retourner **True** dans $0 si l'utilisateur est authentifié avec succès. Ensuite, la ressource qui fait l'objet de la requête est fournie. Si l'authentification échoue, **False** est retourné dans $0.
 
-> **Attention:** Si la méthode de base de données `On Web Authentication` n'existe pas, les connexions sont automatiquement acceptées (mode test).
+> **Attention :** Si la méthode base `On Web Authentication` n'existe pas, les connexions sont automatiquement acceptées (mode test).
 
 
 ### Protocole BASIC
@@ -75,19 +75,19 @@ La méthode de base de données `On Web Authentication` est chargée de gérer l
 
 ### Appels des méthodes base
 
-The `On Web Authentication` database method is automatically called when a request or processing requires the execution of some 4D code (except for REST calls). Elle est également appelée lorsque le serveur web reçoit une URL statique invalide (par exemple, si la page statique demandée n'existe pas).
+La méthode base `On Web Authentication` est automatiquement appelée lorsqu'une requête ou un traitement nécessite l'exécution de code 4D (à l'exception des appels REST). Elle est également appelée lorsque le serveur web reçoit une URL statique invalide (par exemple, si la page statique demandée n'existe pas).
 
-The `On Web Authentication` database method is therefore called:
+La méthode base `On Web Authentication` est donc appelée :
 
 - lorsque le serveur web reçoit une URL demandant une ressource qui n'existe pas
-- when the web server receives a URL beginning with `4DACTION/`, `4DCGI/`...
-- when the web server receives a root access URL and no home page has been set in the Settings or by means of the `WEB SET HOME PAGE` command
-- when the web server processes a tag executing code (e.g `4DSCRIPT`) in a semi-dynamic page.
+- lorsque le serveur web reçoit une URL commençant par `4DACTION/`, `4DCGI/`...
+- lorsque le serveur web reçoit une URL d'accès root et aucune page d'accueil n'a été définie dans les Propriétés ou à l'aide de la commande `WEB SET HOME PAGE`
+- lorsque le serveur web traite une balise exécutant du code (par exemple `4DSCRIPT`) dans une page semi-dynamique.
 
-The `On Web Authentication` database method is NOT called:
+La méthode base `On Web Authentication` n'est PAS appelée :
 
 - lorsque le serveur web reçoit une URL demandant une page statique valide.
-- when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- lorsque le serveur web reçoit une URL commençant par `rest/` et que le serveur REST est lancé (dans ce cas, l'authentification est gérée via la méthode base [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) ou les [Propriétés de structure](REST/configuration.md#using-the-structure-settings)).
 
 
 ### Syntaxe
@@ -107,15 +107,15 @@ The `On Web Authentication` database method is NOT called:
 Vous devez déclarer ces paramètres de la manière suivante :
 
 ```4d
-//On Web Authentication database method
-
+//On Web Authentication 
+ 
  C_TEXT($1;$2;$3;$4;$5;$6)
  C_BOOLEAN($0)
-
-//Code for the method
+ 
+//Code de la méthode base
 ```
 
-Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
+Alternativement, vous pouvez utiliser la syntaxe [paramètres nommés](Concepts/parameters.md#named-parameters) :
 
 ```4d
 // On Web Authentication database method
@@ -125,12 +125,12 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
   -> $RequestAccepted : Boolean
 
 ```
-> All the `On Web Authentication` database method's parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-mode)).
+> Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. Les informations reçues par la méthode base dépendent du \[mode d'authentification\](#mode-d-authentification) sélectionné.
 
 
 #### $1 - URL
 
-The first parameter (`$1`) is the URL received by the server, from which the host address has been removed.
+Le premier paramètre (`$1`) est l'URL reçue par le serveur, de laquelle l'adresse de l'hôte a été enlevée.
 
 Prenons l'exemple d'une connexion Intranet. Supposons que l'adresse IP de votre machine serveur Web 4D est 123.45.67.89. Le tableau suivant montre les valeurs de $1 en fonction de l'URL saisie dans le navigateur Web :
 
@@ -144,43 +144,43 @@ Prenons l'exemple d'une connexion Intranet. Supposons que l'adresse IP de votre 
 
 #### $2 - En-tête (header) et corps (body) de la requête HTTP
 
-The second parameter (`$2`) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Authentication` database method as it is. Son contenu variera en fonction de la nature du navigateur web qui tente la connexion.
+Le deuxième paramètre (`$2`) est l'en-tête et le corps de la requête HTTP envoyée par le navigateur web. Notez que ces informations sont transmises telles quelles à votre méthode base `On Web Authentication`. Son contenu variera en fonction de la nature du navigateur web qui tente la connexion.
 
-Si votre application utilise ces informations, il vous appartient d'analyser l'en-tête et le corps. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
+Si votre application utilise ces informations, il vous appartient d'analyser l'en-tête et le corps. Vous pouvez utiliser les commandes `WEB GET HTTP HEADER` et `WEB GET HTTP BODY`.
 > Pour des raisons de performance, la taille des données passant par le paramètre $2 ne doit pas dépasser 32 Ko. Au-delà de cette taille, ils sont tronqués par le serveur HTTP 4D.
 
 #### $3 - Adresse IP du client Web
 
-The `$3` parameter receives the IP address of the browser’s machine. Cette information peut vous permettre de distinguer entre les connexions intranet et internet.
-> 4D renvoie les adresses IPv4 dans un format hybride IPv6/IPv4 écrit avec un préfixe de 96 bits, par exemple ::ffff:192.168.2.34 pour l'adresse IPv4 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
+Le paramètre `$3` reçoit l'adresse IP de la machine du navigateur. Cette information peut vous permettre de distinguer entre les connexions intranet et internet.
+> 4D renvoie les adresses IPv4 dans un format hybride IPv6/IPv4 écrit avec un préfixe de 96 bits, par exemple ::ffff:192.168.2.34 pour l'adresse IPv4 192.168.2.34. Pour plus d'informations, reportez-vous à la section [Prise en charge d'IPv6](webServerConfig.md#about-ipv6-support).
 
 
 #### $4 - Adresse IP du serveur
 
-The `$4` parameter receives the IP address used to call the web server. 4D permet le multi-homing, ce qui vous permet d'exploiter des machines avec plus d'une adresse IP. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.md#ip-address-to-listen).
+Le paramètre `$4` reçoit l'adresse IP utilisée pour appeler le serveur web. 4D permet le multi-homing, ce qui vous permet d'exploiter des machines avec plus d'une adresse IP. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.md#ip-address-to-listen).
 
 
 #### $5 et $6 - Nom d'utilisateur et mot de passe
 
-The `$5` and `$6` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if [basic](#basic-protocol) or [digest](#digest-protocol) authentication is selected.
+Les paramètres `$5` et `$6` reçoivent le nom d'utilisateur et le mot de passe saisis par l'utilisateur dans la boîte de dialogue d'identification standard affichée par le navigateur. Cette boîte de dialogue apparaît pour chaque connexion, si l'authentification [basic](#basic-protocol) ou [digest](#digest-protocol) est sélectionnée.
 > Si le nom d'utilisateur envoyé par le navigateur existe dans 4D, le paramètre $6 (le mot de passe de l'utilisateur) n'est pas renvoyé pour des raisons de sécurité.
 
 #### Paramètre $0
 
-The `On Web Authentication` database method returns a boolean in $0:
+La méthode base `On Web Authentication` retourne un booléen dans $0 :
 
 *   Si $0 est True, la connexion est acceptée.
 
 *   Si $0 est False, la connexion est refusée.
 
-The `On Web Connection` database method is only executed if the connection has been accepted by `On Web Authentication`.
-> **WARNING**<br/>If no value is set to $0 or if $0 is not defined in the `On Web Authentication` database method, the connection is considered as accepted and the `On Web Connection` database method is executed.
-> * * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. La même chose se produira s'il y a une erreur lors de son traitement.
+La méthode base `On Web Connection` est exécutée seulement si la connexion a été acceptée par `On Web Authentication`.
+> **ATTENTION**<br/>Si aucune valeur n'est définie pour $0 ou si $0 n'est pas défini dans la méthode base `On Web Authentication`, la connexion est considérée comme acceptée et la méthode base `On Web Connection` est exécutée.
+> * N'appelez aucun élément d'interface dans la méthode base `On Web Authentication``(ALERT`, `DIALOG`, etc.) car sinon son exécution sera interrompue et la connexion refusée. La même chose se produira s'il y a une erreur lors de son traitement.
 
 
 ### Exemple
 
-Example of the `On Web Authentication` database method in [DIGEST mode](#digest-protocol):
+Exemple de méthode base `On Web Authentication` en mode [DIGEST](#digest-protocol) :
 
 ```4d
  // On Web Authentication Database Method

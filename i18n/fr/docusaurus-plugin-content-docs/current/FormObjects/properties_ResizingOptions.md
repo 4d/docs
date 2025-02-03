@@ -27,7 +27,7 @@ L'apparence de la fausse colonne correspond à celle des colonnes existantes ; e
 
 The fake header and/or footer can be clicked but this does not have any effect on the other columns (e.g.: no sort is performed); nevertheless, the `On Clicked`, `On Header Click` and `On Footer Click` events are generated accordingly.
 
-If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) command returns "X+1" for its column number (where X is the number of existing columns).
+If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](../commands-legacy/listbox-get-cell-position.md) command returns "X+1" for its column number (where X is the number of existing columns).
 
 #### Grammaire JSON
 
@@ -43,7 +43,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 ## Dimensionnement horizontal
 
-Cette propriété indique si un objet doit être déplacé ou redimensionné horizontalement lorsque l'utilisateur redimensionne le formulaire. Elle peut également être définie dynamiquement par la commande de langage `OBJECT SET RESIZING OPTIONS`.
+This property specifies if an object should be horizontally moved or resized when a user resizes the form. Elle peut également être définie dynamiquement par la commande de langage `OBJECT SET RESIZING OPTIONS`.
 
 Trois options sont disponibles :
 
@@ -69,7 +69,7 @@ Trois options sont disponibles :
 
 ## Dimensionnement vertical
 
-Cette propriété indique si un objet doit être déplacé ou redimensionné verticalement lorsque l'utilisateur redimensionne le formulaire. Elle peut également être définie dynamiquement par la commande de langage `OBJECT SET RESIZING OPTIONS`.
+This property specifies if an object should be vertically moved or resized when a user resizes the form.It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
 Trois options sont disponibles :
 

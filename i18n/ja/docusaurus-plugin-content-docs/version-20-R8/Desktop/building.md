@@ -572,7 +572,7 @@ Apple からデベロッパー認証を取得するためには、キーチェ�
 
 Gatekeeper is a security feature of macOS that controls the execution of applications downloaded from the Internet. もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
 
-> Apple Silicon マシンでは、4D [コンポーネント](components.md) は実際に署名されている必要があります。 署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...") が発生します。
+> Apple Silicon マシンでは、4D [コンポーネント](components.md) は実際に署名されている必要があります。 署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...")
 
 アプリケーションビルダーの **アプリケーションに署名** 機能によって、このセキュリティオプションと互換性のあるアプリケーションやコンポーネントをデフォルトで生成することができます。
 
@@ -735,7 +735,7 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 ## サーバーまたはシングルユーザーアプリケーションの自動更新
 
-原則的に、サーバーアプリケーションや組み込みのシングルユーザーアプリケーションを更新するには、ユーザーの介入 (またはカスタムのシステムルーチンのプログラミング) が必要です。組み込みアプリケーションの新しいバージョンが利用可能になるたびに、運用中のアプリケーションを終了して、古いファイルを新しいファイルに手動で置き換え、その後アプリケーションを再起動してカレントのデータファイルを選択しなければなりません。
+原則的に、サーバーアプリケーションや組み込みのシングルユーザーアプリケーションを更新するには、ユーザーの介入 (またはカスタムのシステムルーチンのプログラミング) が必要です。 組み込みアプリケーションの新しいバージョンが利用可能になるたびに、運用中のアプリケーションを終了して、古いファイルを新しいファイルに手動で置き換え、その後アプリケーションを再起動してカレントのデータファイルを選択しなければなりません。
 
 You can automate this procedure to a large extent using the following language commands: [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md), [`RESTART 4D`](../commands-legacy/restart-4d.md), and also [`Get last update log path`](../commands-legacy/get-last-update-log-path.md) for monitoring operations. これらのコマンドを使い、4Dアプリケーションに、以下に説明する自動更新手順をトリガーする機能を実装します。 具体的には、メニューコマンドや、バックグラウンドで動作するプロセスなどを実装し、サーバーにアーカイブがあるかどうかを定期的にチェックします。
 

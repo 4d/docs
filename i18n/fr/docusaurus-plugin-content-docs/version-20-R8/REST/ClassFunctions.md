@@ -19,8 +19,8 @@ The following ORDA and singleton functions can be called in REST:
 | Fonction de classe                                                 | Syntaxe                                                                                                             |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
 | [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                                                             |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                                                      |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                                                                |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                                                          |
+| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                                                                    |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                         |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                                                            |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                                                           |
@@ -29,7 +29,7 @@ The following ORDA and singleton functions can be called in REST:
 
 :::note
 
-`/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). The function is searched in the entity selection class first. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
+`/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). La fonction est d'abord recherchée dans la classe Entity selection. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
 
 :::
 
@@ -155,7 +155,7 @@ L'entity selection doit avoir été définie au préalable à l'aide de [$method
 | Propriétés                                           | Type    | Description                                                                             |
 | ---------------------------------------------------- | ------- | --------------------------------------------------------------------------------------- |
 | Attributs de l'entité                                | mixte   | Optionnelle - Valeurs à modifier                                                        |
-| __DATASET  | Text    | Obligatoire - entitySetID (UUID) de la sélection d'entité            |
+| __DATASET  | Text    | Obligatoire - entitySetID (UUID) de l'entity selection               |
 | __ENTITIES | Boolean | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une sélection d'entité |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.

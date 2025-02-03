@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New collection.Params-->
 
-| 引数    | 型                                                                       |   | 説明             |
-| ----- | ----------------------------------------------------------------------- | - | -------------- |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | → | コレクションの値       |
-| 戻り値   | Collection                                                              | ← | New collection |
+| 引数    | 型                                                                       |                             | 説明             |
+| ----- | ----------------------------------------------------------------------- | --------------------------- | -------------- |
+| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594; | コレクションの値       |
+| 戻り値   | Collection                                                              | &#8592; | New collection |
 
 <!-- END REF-->
 

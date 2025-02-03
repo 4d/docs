@@ -51,9 +51,9 @@ Observe que a conversão para frente e para trás pode levar a um resultado dife
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados | Valores possíveis             |
-| ------------ | ------------- | ----------------------------- |
-| footerHeight | string        | décimales positives +px \| em |
+| Nome         | Tipo de dados | Valores possíveis                                     |
+| ------------ | ------------- | ----------------------------------------------------- |
+| footerHeight | string        | décimales positives +px &#124; em |
 
 #### Objectos suportados
 

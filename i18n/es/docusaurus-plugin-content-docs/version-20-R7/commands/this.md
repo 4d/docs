@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| Parámetros | Tipo   |   | Descripción              |
-| ---------- | ------ | - | ------------------------ |
-| Resultado  | Object | ← | Elemento u objeto actual |
+| Parámetros | Tipo   |                             | Descripción              |
+| ---------- | ------ | --------------------------- | ------------------------ |
+| Resultado  | Object | &#8592; | Elemento u objeto actual |
 
 <!-- END REF-->
 
@@ -181,7 +181,7 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 #### Propiedades
 
-|                |                                                                     |
-| -------------- | ------------------------------------------------------------------- |
-| Command number | 1470                                                                |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1470                                                                |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

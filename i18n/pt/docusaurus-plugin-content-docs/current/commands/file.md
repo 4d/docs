@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.File.Params -->
 
-| Parâmetro    | Tipo                     |     | Descrição                                                         |
-| ------------ | ------------------------ | :-: | ----------------------------------------------------------------- |
-| path         | Text                     |  →  | Rota do arquivo                                                   |
-| fileConstant | Integer                  |  →  | Constante de arquivo 4D                                           |
-| pathType     | Integer                  |  →  | `fk posix path` (padrão) ou `fk platform path` |
-| \*           | operator                 |  →  | \* para devolver o arquivo da base de dados anfitriã              |
-| Resultados   | 4D. File |  ←  | Novo objeto arquivo                                               |
+| Parâmetro    | Tipo                     |                             | Descrição                                                         |
+| ------------ | ------------------------ | :-------------------------: | ----------------------------------------------------------------- |
+| path         | Text                     | &#8594; | Rota do arquivo                                                   |
+| fileConstant | Integer                  | &#8594; | Constante de arquivo 4D                                           |
+| pathType     | Integer                  | &#8594; | `fk posix path` (padrão) ou `fk platform path` |
+| \*           | operator                 | &#8594; | \* para devolver o arquivo da base de dados anfitriã              |
+| Resultados   | 4D. File | &#8592; | Novo objeto arquivo                                               |
 
 <!-- END REF -->
 

@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open datastore.Params-->
 
-| Paramètres     | Type                         |   | Description                                                                                          |
-| -------------- | ---------------------------- | - | ---------------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                       | → | Propriétés de connexion utilisées pour joindre le datastore distant                                  |
-| localID        | Text                         | → | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
-| Résultat       | cs.DataStore | ← | Objet datastore                                                                                      |
+| Paramètres     | Type                         |                             | Description                                                                                          |
+| -------------- | ---------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                       | &#8594; | Propriétés de connexion utilisées pour joindre le datastore distant                                  |
+| localID        | Text                         | &#8594; | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
+| Résultat       | cs.DataStore | &#8592; | Objet datastore                                                                                      |
 
 <!-- END REF-->
 

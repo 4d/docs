@@ -177,7 +177,7 @@ Podem ser gerados até 5 métodos de compilação; um método de compilação s�
 
 - **Variáveis**: Agrupa as declarações de variáveis do processo;
 - **Variáveis de interprocessos**: Agrupa as declarações de variáveis interprocessuais;
-- **Arrays**: Agrupa as declarações de arrays de processos;
+- **Arrays**: agrupa as declarações de arrays de processos;
 - **Arrays de interprocessos**: Agrupa declarações de matrizes interprocessos;
 - **Métodos**: Agrupa as declarações de parâmetro do método (por exemplo, `C_LONGINT(meumétodo;$1;$2)`). Para obter mais informações, consulte [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
 

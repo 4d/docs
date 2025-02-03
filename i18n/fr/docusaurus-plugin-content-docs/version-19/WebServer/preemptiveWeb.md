@@ -1,43 +1,43 @@
 ---
 id: preemptiveWeb
-title: Using preemptive web processes
+title: Utiliser des process web préemptifs
 ---
 
 
-The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your compiled applications. You can configure your web-related code, including 4D tags and web database methods, to run simultaneously on as many cores as possible.
+Le serveur Web de 4D vous permet de tirer pleinement parti des ordinateurs multi-coeurs en utilisant des process Web préemptifs dans vos applications compilées. Vous pouvez configurer votre code lié au Web, y compris les balises 4D, les méthodes base Web ou les fonctions de classe Rest de Orda, afin qu'il s'exécute simultanément sur le plus grand nombre de coeurs possibles.
 
 Pour plus d'informations sur la fonctionnalité des process préemptifs dans 4D, veuillez vous référer à la section *Process 4D préemptifs* du [*manuel de language 4D*](https://doc.4d.com).
 
-## Disponibilité du mode préemptif pour les pocess Web
+## Disponibilité du mode préemptif pour les process Web
 
-Le tableau suivant permet d'indiquer si l'utilisation du mode préemptif pour les process Web est disponible dans le contexte d'exécution suivant :
+Le tableau suivant indique si l'utilisation du mode préemptif pour les process Web est disponible selon le contexte d'exécution :
 
-| 4D Server           | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpreted, project (no client connected locally) or binary | Compilé         |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | --------------- |
-| Serveur REST        | coopératif                                                                                                               | preemptive                                                   | preemptive      |
-| Serveur Web         | coopératif                                                                                                               | coopératif                                                   | *paramètre web* |
-| Server Web Services | coopératif                                                                                                               | coopératif                                                   | *paramètre web* |
-| Legacy REST         | coopératif                                                                                                               | *paramètre web*                                              | *paramètre web* |
+| 4D Server           | Interprété, projet ([client connecté en local](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interprété, projet (sans client connecté en local) ou binaire | Compilé         |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | --------------- |
+| Serveur REST        | coopératif                                                                                                             | préemptif                                                     | préemptif       |
+| Serveur Web         | coopératif                                                                                                             | coopératif                                                    | *paramètre web* |
+| Server Web Services | coopératif                                                                                                             | coopératif                                                    | *paramètre web* |
+| Ancien REST         | coopératif                                                                                                             | *paramètre web*                                               | *paramètre web* |
 
 | 4D distant/monoposte | Interprété | Compilé         |
 | -------------------- | ---------- | --------------- |
-| Serveur REST         | coopératif | preemptive      |
+| Serveur REST         | coopératif | préemptif       |
 | Serveur Web          | coopératif | *paramètre web* |
 | Server Web Services  | coopératif | *paramètre web* |
-| Legacy REST          | coopératif | *paramètre web* |
+| Ancien REST          | coopératif | *paramètre web* |
 
 - Serveur REST : gère les [fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md)
 - Serveur Web : gère les [modèles Web](templates.md), [4DACTION et les méthodes base](httpRequests.md)
 - Serveur de services Web : gère les requêtes SOAP
-- Legacy REST: direct requests to 4D methods (`/rest/{table}/{methodName}`)
-- ***web setting*** signifie que le mode préemptif dépend d'une valeur de réglage :
-  - lorsque l'option [**Scalable sessions est sélectionnée**](sessions.md#enabling-sessions), le [mode préemptif est automatiquement utilisé](sessions.md#preemptive-mode) pour les process web.
-  - otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
-  - regarding Web service processes (server or client), preemptive mode is supported at method level. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler.
+- Ancien REST: requêtes directes aux méthodes 4D (`/rest/{table}/{methodName}`)
+- ***paramètre web*** signifie que le mode préemptif dépend d'un paramétrage :
+  - lorsque l'option [**Sessions évolutives**](sessions.md#enabling-sessions) est sélectionnée, le [mode préemptif est automatiquement utilisé](sessions.md#preemptive-mode) pour les process web.
+  - sinon, l'option [**Utiliser des process préemptifs**](webServerConfig.md#use-preemptive-processes) est prise en compte.
+  - en ce qui concerne les process de service Web (serveur ou client), le mode préemptif est pris en charge au niveau de la méthode. Vous devez simplement sélectionner la propriété "Peut être exécutée dans un process préemptif" pour les méthodes de serveur SOAP publiées (voir Publication d'un service Web avec 4D) ou les méthodes de client proxy (voir Abonnement à un service Web dans 4D) et vous assurer qu'elles sont confirmées comme étant thread-safe par le compilateur.
 
 ## Ecrire du code serveur Web thread-safe
 
-Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souhaitez que les process Web soient lancés en mode préemptif. When the **Use preemptive processes** option is checked in the Settings dialog box, the following parts of the application will be automatically evaluated by the 4D compiler:
+Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souhaitez que les process Web soient lancés en mode préemptif. Lorsque l'option **Utiliser des process préemptifs** est cochée dans la boîte de dialogue Propriétés, les parties suivantes de l'application seront automatiquement évaluées par le compilateur 4D :
 
 - Toutes les méthodes base liées au web :
   - [`On Web Authentication`](authentication.md#on-web-authentication)
@@ -47,7 +47,7 @@ Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souh
 
 - La méthode projet `compiler_web` (indépendamment de sa propriété "Mode d'exécution") ;
 
-- Basically any code processed by the `PROCESS 4D TAGS` command in the web context, for example through .shtml pages.
+- En principe, tout code traité par la commande `PROCESS 4D TAGS` dans le contexte du web, par exemple par le biais de pages .shtml.
 
 - Toute méthode projet comportant l'attribut "Available through 4D tags and URLS (`4DACTION`, etc.)"
 
@@ -55,13 +55,13 @@ Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souh
 
 - [Fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md) appelées via REST
 
-- Project methods with "REST Server" property checked (legacy REST calls)
+- Méthodes projet avec la propriété "REST Server" cochées (appels REST hérités)
 
 Pour chacune de ces méthodes ou parties de code, le compilateur vérifiera si les règles thread-safe sont respectées, et retournera une erreur en cas de problème. Pour plus d'informations à propos des règles thread-safe, veuillez vous référer au paragraphe *Ecrire une méthode thread-safe* dans le chapitre *Process* du manuel de [Langage 4D](https://doc.4d.com).
 
 ## Code web 4D thread-safe
 
-La plupart des commandes et fonctions 4D, des méthodes base et des URL 4D sont thread-safe et peuvent être utilisées en mode préemptif.
+La plupart des commandes, fonctions, méthodes base et URLs 4D sont thread-safe et peuvent être utilisées en mode préemptif.
 
 ### 4D commands and database methods
 
@@ -70,7 +70,7 @@ Toutes les commandes 4D relatives au Web sont thread-safe, à savoir :
 - toutes les commandes du thème *Web Server*
 - toutes les commandes du thème *Client HTTP*.
 
-The web-related database methods are thread-safe and can be used in preemptive mode (see below): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
+Les méthodes base liées au web sont thread-safe et peuvent être utilisées en mode préemptif (voir ci-dessous) : `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 
 Bien sûr, le code exécuté par ces méthodes doit aussi être thread-safe.
 
@@ -89,7 +89,7 @@ Les URLs Web Server ci-dessous sont thread-safe et peuvent être utilisées en m
 - *4dimgfield/* (généré par `PROCESS 4D TAGS` pour les requêtes web relatives aux champs images)
 - *4dimg/* (généré par `PROCESS 4D TAGS` pour les requêtes web sur les variables image)
 
-### Preemptive web process icon
+### Icône de process web préemptif
 
 Dans l'Explorateur d'exécution et dans la fenêtre d'administration de 4D Server, une icone spécifique s'affiche pour les process Web préemptifs :
 

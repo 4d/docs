@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Import document.Params-->
 
-| Paramètres | Type                    |   | Description                                                                                                                                                                                                                                                        |
-| ---------- | ----------------------- | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| filePath   | Text                    | → | Path to: a 4D Write document (.4w7 or .4wt) or a 4D Write Pro document (.4wp) or a .docx document (.docx) |
-| fileObj    | 4D.File | → | File object to import                                                                                                                                                                                                                                              |
-| option     | Integer, Object         | → | (Integer) Import option for HTML expressions, (object) Import options for .docx document                                                                                                                     |
-| Résultat   | Object                  | ← | 4D Write Pro object                                                                                                                                                                                                                                                |
+| Paramètres | Type                    |                             | Description                                                                                                                                                                                                                                                        |
+| ---------- | ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| filePath   | Text                    | &#8594; | Path to: a 4D Write document (.4w7 or .4wt) or a 4D Write Pro document (.4wp) or a .docx document (.docx) |
+| fileObj    | 4D.File | &#8594; | File object to import                                                                                                                                                                                                                                              |
+| option     | Integer, Object         | &#8594; | (Integer) Import option for HTML expressions, (object) Import options for .docx document                                                                                                                     |
+| Résultat   | Object                  | &#8592; | 4D Write Pro object                                                                                                                                                                                                                                                |
 
 <!-- END REF-->
 

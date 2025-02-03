@@ -105,7 +105,7 @@ O código 4D é automaticamente indentado para revelar a sua estrutura:
 
 A modificação deste valor predefinido pode ser útil se os seus métodos contiverem algoritmos complexos com muitos níveis de incorporação. Pode ser utilizada uma indentação mais estreita para limitar a deslocação horizontal.
 
-#### Mostrar los números de línea
+#### Mostrar os números de linha
 
 Permite-lhe apresentar os números de linha por padrão em cada janela do Editor de código. Também pode mostrar/ocultar números de linha para a janela atual diretamente a partir do Editor de código.
 

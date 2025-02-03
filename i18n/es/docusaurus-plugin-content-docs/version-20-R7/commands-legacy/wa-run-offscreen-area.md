@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Nota:** este comando utiliza el motor de renderización web integrado.
 
-En el objeto *parametros*, pase cualquiera de los siguientes atributos opcionales. Estas propiedades estarán disponibles a través del comando [This ](this.md) dentro del método *onEvent* y hacen referencia a la instancia: 
+En el objeto *parametros*, pase cualquiera de los siguientes atributos opcionales. Estas propiedades estarán disponibles a través del comando [This ](../commands/this.md) dentro del método *onEvent* y hacen referencia a la instancia: 
 
 | **Propiedad**    | **Tipo <br/>**     | **Descripción**                                                                                                                                                                                                                                                                                                                                                            |
 | ---------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -93,7 +93,7 @@ La variable del sistema OK se define en 0 si se ha alcanzado el tiempo de espera
 
 #### Ver también 
 
-[FORM Event](form-event.md)  
+[FORM Event](../commands/form-event.md)  
 *Gestión programada de áreas web*  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
 

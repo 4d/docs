@@ -9,11 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compile project.Params-->
 
-| Parámetros  | Tipo                    |   | Descripción                                             |
-| ----------- | ----------------------- | - | ------------------------------------------------------- |
-| projectFile | 4D.File | → | .4DProject file to compile              |
-| options     | Object                  | → | Object that specifies compilation options               |
-| Resultado   | Object                  | ← | Object containing information on the compilation status |
+| Parámetros  | Tipo                    |                             | Descripción                                             |
+| ----------- | ----------------------- | --------------------------- | ------------------------------------------------------- |
+| projectFile | 4D.File | &#8594; | .4DProject file to compile              |
+| options     | Object                  | &#8594; | Object that specifies compilation options               |
+| Resultado   | Object                  | &#8592; | Object containing information on the compilation status |
 
 <!-- END REF-->
 
@@ -52,7 +52,7 @@ Compilation errors, if any, are returned as objects in the *errors* collection.
 
 The *options* parameter is an object. Here are the available compilation options:
 
-| **Property**                                                                       | **Type**                         | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Propiedad**                                                                      | **Type**                         | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ---------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | components                                                                         | Collection                       | Collection of 4D.File objects to dependent components (must be already compiled)                                                                                                                                                                                                                                                                                                                                                                                       |
 | defaultTypeForButtons                                                              | Integer                          | Possible value: Is real or Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -74,7 +74,7 @@ The *options* parameter is an object. Here are the available compilation options
 
 The object returned by **Compile project** has up to three properties:
 
-| **Property**                                                                                                           | **Type**             | **Description**                                                                                                                          |
+| **Propiedad**                                                                                                          | **Type**             | **Description**                                                                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | success                                                                                                                | Boolean              | True si la acción guardar tiene éxito, false en caso contrario.                                                          |
 | errors                                                                                                                 | Colección de objetos | **Available only in case of error or warning**. Collection of objects describing compilation errors or warnings          |
@@ -105,7 +105,7 @@ For more information, see [Compilation tools](../Project/compiler.md#compilation
 
 `interprocessVariables.variables` and `processVariables.variables` contain objects with the following structure:
 
-| **Property**   | **Type** | **Description**                                                                                           |
+| **Propiedad**  | **Type** | **Description**                                                                                           |
 | -------------- | -------- | --------------------------------------------------------------------------------------------------------- |
 | name           | Text     | Name of the variable                                                                                      |
 | type           | number   | Type of the variable (like Value type command)                                         |
@@ -116,7 +116,7 @@ For more information, see [Compilation tools](../Project/compiler.md#compilation
 
 The `code` property in `methods.code` and `errors.code` is an object with the following properties:
 
-| **Property**   | **Type**                | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Propiedad**  | **Type**                | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | -------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type           | Text                    | "projectMethod", "formObjectMethod", "formMethod", "databaseMethod", "triggerMethod", "executeOnServer" (when calling a project method with the *Execute on Server attribute*), "executeFormula" (when executing a formula via [PROCESS 4D TAGS](../commands-legacy/process-4d-tags.md) or evaluation of a formula in a 4D Write Pro document), "class", "classFunction", "formObjectExpression" (for errors occuring in expressions associated to form objects) |
 | path           | Text                    | Method path (same format as [METHOD OPEN PATH](../commands-legacy/method-open-path.md))                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -193,7 +193,7 @@ var $result:=Compile project($options)
 
 #### Propiedades
 
-|                |                                                                     |
-| -------------- | ------------------------------------------------------------------- |
-| Command number | 1760                                                                |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1760                                                                |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

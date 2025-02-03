@@ -40,7 +40,7 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece un objeto de interfaz a una 
 
 #### Descripción
 
-Los atributos de las clases de datos son<!-- REF ClaseDeDatos.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
+Los atributos de las clases de datos son<!-- REF DataClassClass.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
 
 Los objetos devueltos tienen propiedades que puede leer para obtener información sobre los atributos de su clase de datos.
 
@@ -579,7 +579,7 @@ $number:=$ds.Persons.getCount()
 
 #### Descripción
 
-La función `.getDataStore()` <!-- REF #DataClass.getDataStore().Summary -->devuelve el datastore para la clase de datos especificada<!-- END REF -->.
+La función `.getDataStore()` <!-- REF #DataClassClass.getDataStore().Summary -->devuelve el datastore para la clase de datos especificada<!-- END REF -->.
 
 El almacén de datos puede ser:
 
@@ -846,7 +846,7 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 
 #### Descripción
 
-La función `.newSelection()` <!-- REF #DataClassClass.newSelection(). Summary -->crea una nueva selección de entidades en blanco, no compartible, relacionada con la clase de datos, en memoria<!-- END REF -->.
+La función `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->crea una nueva selección de entidades en blanco, no compartible, relacionada con la clase de datos, en memoria<!-- END REF -->.
 
 > Para obtener información sobre las selecciones de entidades no compartibles, consulte [esta sección](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -900,7 +900,7 @@ Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` va
 
 #### parámetro queryString
 
-Ejemplo 1
+El parámetro *queryString* utiliza la siguiente sintaxis:
 
 ```4d
 attributePath|formula comparator value   
@@ -953,10 +953,10 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
   - en el caso de una búsqueda con un comparador IN, *value* debe ser una colección, o los valores que coincidan con el tipo de la ruta del atributo entre \[ ] separados por comas (para las cadenas, los caracteres `"` deben escaparse con `\`).
 - **logicalOperator**: utilizado para unir condiciones múltiples en la búsqueda (opcional). Puede utilizar uno de los siguientes operadores lógicos (se puede utilizar el nombre o el símbolo):
 
-| Conjunción | Símbolo(s)                                          |
-| ---------- | ---------------------------------------------------------------------- |
-| AND        | &, &&, and |
-| O          | \|,\|\|, or                                                            |
+| Conjunción | Símbolo(s)                                                       |
+| ---------- | ----------------------------------------------------------------------------------- |
+| AND        | &, &&, and              |
+| O          | &#124;,&#124;&#124;, or |
 
 - **order by attributePath**: puede incluir una declaración order by *attributePath* en la consulta para que los datos resultantes se ordenen según esa declaración. Puede utilizar varias sentencias order by, separadas por comas (por ejemplo, order by *attributePath1* desc, *attributePath2* asc). Por defecto, el orden es ascendente. Pase 'desc' para definir un orden descendente y 'asc' para definir un orden ascendente.
 

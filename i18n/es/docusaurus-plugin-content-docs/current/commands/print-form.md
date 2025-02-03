@@ -8,20 +8,20 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print form.Params-->
 
-| Parámetros | Tipo         |   | Descripción                                                                                                                                                                              |
-| ---------- | ------------ | - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable     | Tabla        | → | Table owning the form, or Default table, if omitted                                                                                                                                      |
-| form       | Text, Object | → | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
-| formData   | Object       | → | Data to associate to the form                                                                                                                                                            |
-| areaStart  | Integer      | → | Print marker, or Beginning area (if areaEnd is specified)                                                                                                             |
-| areaEnd    | Integer      | → | Ending area (if areaStart specified)                                                                                                                                  |
-| Resultado  | Integer      | ← | Height of printed section                                                                                                                                                                |
+| Parámetros | Tipo         |                             | Descripción                                                                                                                                                                              |
+| ---------- | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| aTable     | Tabla        | &#8594; | Table owning the form, or Default table, if omitted                                                                                                                                      |
+| form       | Text, Object | &#8594; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
+| formData   | Object       | &#8594; | Data to associate to the form                                                                                                                                                            |
+| areaStart  | Integer      | &#8594; | Print marker, or Beginning area (if areaEnd is specified)                                                                                                             |
+| areaEnd    | Integer      | &#8594; | Ending area (if areaStart specified)                                                                                                                                  |
+| Resultado  | Integer      | &#8592; | Height of printed section                                                                                                                                                                |
 
 <!-- END REF-->
 
 #### Descripción
 
-<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
+<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
 
 In the *form* parameter, you can pass:
 
@@ -185,7 +185,7 @@ The code that calls the dialog then prints its body:
 
 #### Propiedades
 
-|                |                                                                     |
-| -------------- | ------------------------------------------------------------------- |
-| Command number | 5                                                                   |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 5                                                                   |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

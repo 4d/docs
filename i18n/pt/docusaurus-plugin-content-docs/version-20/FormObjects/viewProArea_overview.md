@@ -3,11 +3,11 @@ id: viewProAreaOverview
 title: Área 4D View Pro
 ---
 
-4D View Pro allows you to insert and display a spreadsheet area in your 4D forms. A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures.
+4D View Pro permite inserir e mostrar uma área de planilha nos seus formulários 4D. Uma planilha é uma aplicação que contém uma grade de células onde você pode inserir informações, executar cálculos ou exibir imagens.
 
 ![](../assets/en/FormObjects/viewPro2.png)
 
-Once you use 4D View Pro areas in your forms, you can import and export spreadsheets documents.
+Após utilizar as áreas 4D View Pro nos seus formulários, você pode importar e exportar documentos de planilhas.
 
 
 ## Usando as áreas 4D View Pro
@@ -17,4 +17,4 @@ Once you use 4D View Pro areas in your forms, you can import and export spreadsh
 
 ## Propriedades compatíveis
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Show Formula Bar](properties_Appearance.md#show-formula-bar) - [Type](properties_Object.md#type) - [User Interface](properties_Appearance.md#user-interface) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[Estilo da linha de borda](properties_BackgroundAndBorder.md#border-line-style) - [Parte inferior](properties_CoordinatesAndSizing.md#bottom) - [Classe](properties_Object.md#css-class) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Método](properties_Action.md#method) - [Nome do objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - [Mostrar barra de fórmulas](properties_Appearance.md#show-formula-bar) - [Tipo](properties_Object.md#type) - [Interface do usuário](properties_Appearance.md#user-interface) - [Dimensionamento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width) 

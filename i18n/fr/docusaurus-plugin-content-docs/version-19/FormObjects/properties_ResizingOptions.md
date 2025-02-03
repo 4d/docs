@@ -69,7 +69,7 @@ Trois options sont disponibles :
 
 ## Dimensionnement vertical
 
-Cette propriété indique si un objet doit être déplacé ou redimensionné verticalement lorsque l'utilisateur redimensionne le formulaire. Elle peut également être définie dynamiquement par la commande de langage `OBJECT SET RESIZING OPTIONS`.
+Cette propriété indique si un objet doit être déplacé ou redimensionné verticalement lorsqu'un utilisateur redimensionne le formulaire. Il peut également être défini dynamiquement par la commande de langage `OBJECT SET RESIZING OPTIONS`.
 
 Trois options sont disponibles :
 

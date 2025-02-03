@@ -9,9 +9,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 
-| Parámetros   | Tipo       |   | Descripción           |
-| ------------ | ---------- | - | --------------------- |
-| methodsArray | Text array | → | Array of method names |
+| Parámetros   | Tipo       |                             | Descripción           |
+| ------------ | ---------- | --------------------------- | --------------------- |
+| methodsArray | Text array | &#8594; | Array of method names |
 
 <!-- END REF-->
 
@@ -60,7 +60,7 @@ This example authorizes all methods starting with “formula” and the “Total
 
 #### Propiedades
 
-|                |                                                                     |
-| -------------- | ------------------------------------------------------------------- |
-| Command number | 805                                                                 |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 805                                                                 |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

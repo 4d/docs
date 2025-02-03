@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.WP New.Summary-->La commande **WP New** crée et retourne un nouvel objet 4D Write Pro.<!-- END REF--> L'objet retourné est un document complet pouvant être passé, par exemple, à la commande [WP INSERT DOCUMENT](../commands/wp-insert-document.md).
+<!--REF #_command_.WP New.Summary-->La commande **WP New** crée et retourne un nouvel objet 4D Write Pro.<!-- END REF--> L'objet retourné est un document complet pouvant être passé, par exemple, à la commande [WP INSERT DOCUMENT](../commands/wp-insert-document-body.md).
 
 Par défaut, si vous omettez le paramètre *source*, la commande retourne un objet 4D Write Pro vide.
 
@@ -120,4 +120,4 @@ Vous avez défini un document modèle (*template*) comportant différentes parti
 #### Voir aussi 
 
 [WP Import document](../commands/wp-import-document.md)  
-[WP INSERT DOCUMENT](../commands/wp-insert-document.md)  
+[WP INSERT DOCUMENT](../commands/wp-insert-document-body.md)  

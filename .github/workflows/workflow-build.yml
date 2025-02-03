@@ -37,6 +37,10 @@ jobs:
           npm i
           fi
           npm run build
+      - name: Google verification
+        run: |
+          cd build
+          echo "google-site-verification: google2ba8aa85c185e97b.html" >> google2ba8aa85c185e97b.html
       - uses: actions/upload-artifact@v4
         with:
           path: ./build

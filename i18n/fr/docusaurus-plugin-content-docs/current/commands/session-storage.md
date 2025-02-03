@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Params-->
 
-| Paramètres | Type   |   | Description                                                |
-| ---------- | ------ | - | ---------------------------------------------------------- |
-| id         | Text   | → | Identifiant unique (UUID) de la session |
-| Résultat   | Object | ← | Objet de stockage de la session                            |
+| Paramètres | Type   |                             | Description                                                |
+| ---------- | ------ | --------------------------- | ---------------------------------------------------------- |
+| id         | Text   | &#8594; | Identifiant unique (UUID) de la session |
+| Résultat   | Object | &#8592; | Objet de stockage de la session                            |
 
 <!-- END REF-->
 

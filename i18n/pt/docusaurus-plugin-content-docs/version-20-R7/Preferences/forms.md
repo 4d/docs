@@ -15,16 +15,16 @@ Esta opción permite establecer el valor (en puntos) del paso utilizado para mov
 
 ### Ao ultrapassar os limites da janela
 
-This option allows setting the behavior of the Form editor when moving an object using the mouse beyond window limits.
+Esta opção permite definir o comportamento do editor de formulários ao mover um objeto usando o mouse além dos limites da janela.
 
 - **Provocar un desplazamiento automático**: cuando esta opción está marcada, esta acción provoca el desplazamiento del formulario en la ventana, como si se hiciera clic en las barras de desplazamiento. Esse comportamento é útil para mover objetos em formulários grandes.
-- **Comenzar un arrastrar y soltar**: cuando se marca esta opción, esta acción se interpreta como un arrastrar y soltar. The form window is not modified and the moved object can be dropped in another window (if its contents are compatible), for example, in another form. Este funcionamiento es útil para reciclar los objetos entre varios formularios o para utilizar las librerías de objetos (ver [Crear y utilizar librerías de objetos personalizadas](FormEditor/objectLibrary.md#creating-and-using-custom-object-libraries)).
+- **Comenzar un arrastrar y soltar**: cuando se marca esta opción, esta acción se interpreta como un arrastrar y soltar. A janela de formulário não foi modificada e o objeto movido pode ser colocado em outra janela (se seu conteúdo for compatível), por exemplo, de outra forma. Este funcionamiento es útil para reciclar los objetos entre varios formularios o para utilizar las librerías de objetos (ver [Crear y utilizar librerías de objetos personalizadas](FormEditor/objectLibrary.md#creating-and-using-custom-object-libraries)).
 
-You can configure this option depending on your work habits and development needs.
+Você pode configurar esta opção, dependendo dos seus hábitos de trabalho e das necessidades de desenvolvimento.
 
 ### Ativar o alinhamento automático por padrão
 
-This option activates auto alignment by default in each new window of the Form editor. Es posible modificar esta opción individualmente en cada ventana (consulte [Utilizar la rejilla magnética](FormEditor/formEditor.md#using-the-magnetic-grid)).
+Esta opção ativa o alinhamento automático por padrão em cada nova janela do editor de formulário. Es posible modificar esta opción individualmente en cada ventana (consulte [Utilizar la rejilla magnética](FormEditor/formEditor.md#using-the-magnetic-grid)).
 
 ## Exibição padrão do novo formulário
 

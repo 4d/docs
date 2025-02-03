@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Add picture.Params-->
 
-| Parámetros     | Tipo                    |   | Descripción                                                |
-| -------------- | ----------------------- | - | ---------------------------------------------------------- |
-| wpDoc          | Object                  | → | Documento 4D Write Pro                                     |
-| picture        | Picture                 | → | 4D picture                                                 |
-| picturePath    | Text                    | → | Picture path                                               |
-| pictureFileObj | 4D.File | → | 4D.File object representing a picture file |
-| Resultado      | Object                  | ← | Object referencing the picture                             |
+| Parámetros     | Tipo                    |                             | Descripción                                                |
+| -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------- |
+| wpDoc          | Object                  | &#8594; | Documento 4D Write Pro                                     |
+| picture        | Picture                 | &#8594; | 4D picture                                                 |
+| picturePath    | Text                    | &#8594; | Picture path                                               |
+| pictureFileObj | 4D.File | &#8594; | 4D.File object representing a picture file |
+| Resultado      | Object                  | &#8592; | Object referencing the picture                             |
 
 <!-- END REF-->
 

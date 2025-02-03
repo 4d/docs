@@ -3,19 +3,19 @@ id: overview
 title: Menus
 ---
 
-Pode criar barras de menu e menus para as suas aplicações 4D. Because pull-down menus are a standard feature of any desktop application, their addition will make your applications easier to use and will make them feel familiar to users.
+Pode criar barras de menu e menus para as suas aplicações 4D. Como os menus suspensos são um recurso padrão de qualquer aplicação de desktop, a adição deles facilitará o uso das aplicações e os tornará familiares aos usuários.
 
 ![](../assets/en/Menus/menubar.png)
 
-A **menu bar** is a group of menus that can be displayed on a screen together. Each **menu** on a menu bar can have numerous menu commands in it, including some that call cascading submenus (or hierarchical submenus). When the user chooses a menu or submenu command, it calls a project method or a standard action that performs an operation.
+Uma **barra de menus** é um grupo de menus que podem ser exibidos juntos em uma tela. Cada **menu** em uma barra de menu pode ter vários comandos de menu, incluindo alguns que chamam submenus em cascata (ou submenus hierárquicos). Quando o usuário seleciona um comando de menu ou submenu, ele chama um método projeto ou uma ação padrão que executa uma operação.
 
-É possível ter várias barras de menu separadas para cada aplicação. For example, you can use one menu bar that contains menus for standard operations on the database and another that becomes active only for reporting. One menu bar may contain a menu with menu commands for entering records. The menu bar appearing with the input form may contain the same menu, but the menu commands are disabled because the user doesn’t need them during data entry.
+É possível ter várias barras de menu separadas para cada aplicação. Por exemplo, você pode usar uma barra de menu que contenha menus para operações padrão no banco de dados e outra que fique ativa somente para relatórios. Uma barra de menu pode conter um menu com comandos de menu para inserir registros. A barra de menu que aparece com o formulário de entrada pode conter o mesmo menu, mas os comandos do menu estão desativados porque o usuário não precisa deles durante a entrada de dados.
 
-You can use the same menu in several menu bars or other menus, or you can leave it unattached and manage it only by programming (in this case, it is known as an independent menu).
+Você pode usar o mesmo menu em várias barras de menu ou outros menus, ou pode deixá-lo solto e gerenciá-lo apenas por programação (nesse caso, ele é conhecido como menu independente).
 
 Quando conceber menus, tenha em mente as duas regras seguintes:
-- Use menus for functions that are suited to menus: Menu commands should perform tasks such as adding a record, searching for records, or printing a report.
-- Group menu commands by function: For example, all menu commands that print reports should be in the same menu. For another example, you might have all the operations for a certain table in one menu.
+- Use menus para funções adequadas a menus: os comandos do menu devem executar tarefas como adicionar um registro, pesquisar registros ou imprimir um relatório.
+- Agrupe os comandos do menu por função: por exemplo, todos os comandos de menu que imprimem relatórios devem estar no mesmo menu. Em outro exemplo, você pode ter todas as operações de uma determinada tabela em um menu.
 
 Para criar menus e barras de menu, pode utilizar qualquer um deles:
 
@@ -25,10 +25,10 @@ Para criar menus e barras de menu, pode utilizar qualquer um deles:
 
 
 ## Editor de menus
-The Menu editor is accessed using the **Menus** button of the Toolbox.
+O editor de menus é acessado com o botão **Menus** da Caixa de ferramentas.
 
 ![](../assets/en/Menus/editor1.png)
 
-Menus and menu bars are displayed as two items of the same hierarchical list, on the left side of the dialog box. Cada menu pode ser anexado a uma barra de menus ou a outro menu. No segundo caso, o menu torna-se um sub-menu.
+Os menus e as barras de menu são exibidos como dois itens da mesma lista hierárquica, no lado esquerdo da caixa de diálogo. Cada menu pode ser anexado a uma barra de menus ou a outro menu. No segundo caso, o menu torna-se um sub-menu.
 
 4D atribui números de barra de menu sequencialmente - a barra de menu #1 aparece primeiro. É possível mudar o nome das barras de menu, mas não é possível alterar os seus números. Estes números são utilizados pelos comandos da linguaje.

@@ -114,8 +114,8 @@ A continuación se presenta una tabla que explica cada una de las opciones de fi
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                                                                         |
-| ----------- | -------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                             |
+| ----------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | entryFilter | string         | <li>Código de filtro de entrada</li> o <li>Nombre de filtro de entrada (los nombres de filtro empiezan por &#124; )</li> |
 
 #### Objetos soportados
@@ -273,7 +273,6 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 | --------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | shortcutAccel   | boolean        | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                                  |
 | shortcutAlt     | boolean        | true, false                                                                                                                                                                                                                                                    |
-| shortcutCommand | boolean        | true, false                                                                                                                                                                                                                                                    |
 | shortcutControl | boolean        | true, false (macOS: Control)                                                                                                                                                                                                |
 | shortcutShift   | boolean        | true, false                                                                                                                                                                                                                                                    |
 |                 |                |                                                                                                                                                                                                                                                                |

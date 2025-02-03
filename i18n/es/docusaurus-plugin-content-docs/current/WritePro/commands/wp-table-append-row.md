@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table append row.Params-->
 
-| Parámetros | Tipo                                      |   | Descripción                                   |
-| ---------- | ----------------------------------------- | - | --------------------------------------------- |
-| tableRef   | Object                                    | → | Table reference                               |
-| value      | Text, Number, Time, Date, Picture, Object | → | Value(s) to set in the row |
-| valueColl  | Collection                                | → | Collection of values to set in the row        |
-| Resultado  | Object                                    | ← | Row range object                              |
+| Parámetros | Tipo                                      |                             | Descripción                                   |
+| ---------- | ----------------------------------------- | --------------------------- | --------------------------------------------- |
+| tableRef   | Object                                    | &#8594; | Table reference                               |
+| value      | Text, Number, Time, Date, Picture, Object | &#8594; | Value(s) to set in the row |
+| valueColl  | Collection                                | &#8594; | Collection of values to set in the row        |
+| Resultado  | Object                                    | &#8592; | Row range object                              |
 
 <!-- END REF-->
 

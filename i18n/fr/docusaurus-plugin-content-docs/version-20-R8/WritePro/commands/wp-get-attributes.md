@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get attributes.Params-->
 
-| Paramètres  | Type                                           |   | Description                               |
-| ----------- | ---------------------------------------------- | - | ----------------------------------------- |
-| targetObj   | Object                                         | → | Range or element or 4D Write Pro document |
-| attribName  | Text                                           | → | Name of attribute to get                  |
-| attribValue | Text, Number, Array, Collection, Picture, Date | ← | Current value of attribute for the target |
-| attribColl  | Collection                                     | → | Collection of attribute names to get      |
-| Résultat    | Object                                         | ← | Attribute names and values                |
+| Paramètres  | Type                                           |                             | Description                               |
+| ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
+| targetObj   | Object                                         | &#8594; | Range or element or 4D Write Pro document |
+| attribName  | Text                                           | &#8594; | Name of attribute to get                  |
+| attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
+| attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
+| Résultat    | Object                                         | &#8592; | Attribute names and values                |
 
 <!-- END REF-->
 

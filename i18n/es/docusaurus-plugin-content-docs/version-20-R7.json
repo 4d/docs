@@ -256,7 +256,7 @@
     "description": "The label for category Records in sidebar docs"
   },
   "sidebar.docs.category.Relations": {
-    "message": "Relations",
+    "message": "Relaciones",
     "description": "The label for category Relations in sidebar docs"
   },
   "sidebar.docs.category.Resources": {
@@ -276,7 +276,7 @@
     "description": "The label for category Secured Protocol in sidebar docs"
   },
   "sidebar.docs.category.Selection": {
-    "message": "Selection",
+    "message": "Selección",
     "description": "The label for category Selection in sidebar docs"
   },
   "sidebar.docs.category.Sets": {
@@ -924,7 +924,7 @@
     "description": "The generated-index page title for category Records in sidebar docs"
   },
   "sidebar.docs.category.Relations.link.generated-index.title": {
-    "message": "Relations",
+    "message": "Relaciones",
     "description": "The generated-index page title for category Relations in sidebar docs"
   },
   "sidebar.docs.category.Resources.link.generated-index.title": {
@@ -944,7 +944,7 @@
     "description": "The generated-index page title for category Secured Protocol in sidebar docs"
   },
   "sidebar.docs.category.Selection.link.generated-index.title": {
-    "message": "Selection",
+    "message": "Selección",
     "description": "The generated-index page title for category Selection in sidebar docs"
   },
   "sidebar.docs.category.Sets.link.generated-index.title": {

@@ -3,13 +3,13 @@ id: sessions
 title: Sessions utilisateur
 ---
 
-Le serveur Web de 4D offre des fonctions intégrées pour la gestion des **sessions utilisateur**. Creating and maintaining user sessions allows you to control and improve the user experience on your web application. When user sessions are enabled, web clients can reuse the same server context from one request to another.
+Le serveur Web de 4D offre des fonctions intégrées pour la gestion des **sessions utilisateur**. La création et le maintien de sessions web vous permettent de contrôler et d'améliorer l'expérience de l'utilisateur sur votre application web. Lorsque les sessions web sont activées, les clients web peuvent réutiliser le même contexte de serveur d'une requête à une autre.
 
-Web server user sessions allow to:
+Les sessions utilisateur du serveur web permettent de :
 
-- handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are **scalable**),
-- share data between the processes of a web client,
-- associate privileges to user sessions,
+- gérer simultanément plusieurs requêtes depuis le même client web via un nombre illimité de process préemptifs (les sessions web sont **évolutives**),
+- partager des données entre les process d'un client web,
+- associer des privilèges aux sessions d'utilisateurs,
 - gérer l'accès via un objet `Session` et l'[API Session](API/SessionClass.md).
 
 > **Note :** l'implémentation actuelle n'est que la première étape d'une fonctionnalité complète à venir qui permet aux développeurs de gérer les autorisations utilisateur hiérarchiques via des sessions dans l'ensemble de l'application Web.
@@ -19,39 +19,39 @@ Web server user sessions allow to:
 
 La gestion de session peut être activée et désactivée sur votre serveur Web 4D. Il y a différentes façons d'activer la gestion de session :
 
-- Using the **Scalable sessions** option on the "Web/Options (I)" page of the Settings (permanent setting): ![alt-text](../assets/en/WebServer/settingsSession.png)
+- Utiliser l'option **Sessions évolutives** de la page "Web/Options (I)" des Propriétés (paramètre permanent) : ![alt-text](../assets/en/WebServer/settingsSession.png)
 
-Cette option est sélectionnée par défaut dans les nouveaux projets. It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
+Cette option est sélectionnée par défaut dans les nouveaux projets. Elle peut cependant être désactivée en sélectionnant l'option **Pas de sessions**, auquel cas les fonctionnalités de session web sont désactivées (aucun objet `Session` n'est disponible).
 
-- Utilisation de la propriété [`.scalableSession`](API/WebServerClass.md#scalablesession) de l'objet Web Server (pour passer le paramètre *settings* de la fonction [`.start()`](API/WebServerClass.md#start)). Dans ce cas, ce paramètre remplace l'option définie dans la boîte de dialogue Propriétés pour l'objet Web Server (il n'est pas stocké sur disque).
+- Utiliser la propriété [`.scalableSession`](API/WebServerClass.md#scalablesession) de l'objet Web Server (pour passer le paramètre *settings* de la fonction [`.start()`](API/WebServerClass.md#start)). Dans ce cas, ce paramètre remplace l'option définie dans la boîte de dialogue Propriétés pour l'objet Web Server (il n'est pas stocké sur disque).
 
-> The `WEB SET OPTION` command can also set the session mode for the main Web server.
+> La commande `WEB SET OPTION` peut également définir le mode de session pour le serveur Web principal.
 
 Dans tous les cas, ce paramètre est local à la machine ; il peut donc être différent sur le serveur Web 4D Server et les serveurs Web des machines 4D distantes.
 
-> **Compatibility**: A **Legacy sessions** option is available in projects created with a 4D version prior to 4D v18 R6 (for more information, please refer to the [doc.4d.com](https://doc.4d.com) web site).
+> **Compatibilité** : Une option **Anciennes sessions** est disponible dans les projets créés avec une version 4D antérieure à 4D v18 R6 (pour plus d'informations, veuillez consulter le site \[https://doc.4d.com\](https://doc.4d.com).
 
 
 ## Implémentation des sessions
 
-When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID_*AppName*", where *AppName* is the name of the application project. Ce cookie référence la session web courante pour l'application.
+Lorsque \[les sessions sont activées\](#activation-des-sessions), des mécanismes automatiques sont mis en place, basés sur un cookie privé défini par 4D lui-même : "4DSID_*NomApp*", où *NomApp* est le nom du projet d'application. Ce cookie référence la session web courante pour l'application.
 
 > Le nom du cookie peut être obtenu à l'aide de la propriété [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename).
 
-1. In each web client request, the Web server checks for the presence and the value of the private "4DSID_*AppName*" cookie.
+1. Dans chaque requête de client web, le serveur Web vérifie la présence et la valeur du cookie privé "4DSID_*AppName*".
 
 2. Si le cookie a une valeur, 4D recherche la session qui a créé ce cookie parmi les sessions existantes ; si cette session est trouvée, elle est réutilisée pour l'appel.
 
 2. Si la requête du client ne correspond pas à une session déjà ouverte :
 
-- a new session with a private "4DSID_*AppName*" cookie is created on the web server
-- a new Guest `Session` object is created and is dedicated to the scalable web session.
+- une nouvelle session avec un cookie privé "4DSID_*AppName*" est créée sur le serveur web
+- un nouvel objet `Session` Guest est créé et est dédié à la session web évolutive.
 
 L'objet `Session` courant est alors accessible via la commande [`Session`](API/SessionClass.md#session) dans le code de n'importe quel processus Web.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
-Les process Web ne se terminent généralement pas, ils sont recyclés dans un pool pour des raisons d'optimisation. Lorsqu'un process termine l'exécution d'une requête, il est replacé dans le pool et rendu disponible pour la requête suivante. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). Ce nettoyage est nécessaire pour toute information liée au process, comme une référence à un fichier ouvert. C'est la raison pour laquelle **il est recommandé** d'utiliser l'objet [Session](API/SessionClass.md) lorsque vous souhaitez conserver les informations relatives à la session.
+Les process Web ne se terminent généralement pas, ils sont recyclés dans un pool pour des raisons d'optimisation. Lorsqu'un process termine l'exécution d'une requête, il est replacé dans le pool et rendu disponible pour la requête suivante. Puisqu'un process web peut être réutilisé par n'importe quelle session, les [variables process](Concepts/variables.md#process-variables) doivent être effacées par votre code à la fin de son exécution (en utilisant [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) par exemple). Ce nettoyage est nécessaire pour toute information liée au process, comme une référence à un fichier ouvert. C'est la raison pour laquelle **il est recommandé** d'utiliser l'objet [Session](API/SessionClass.md) lorsque vous souhaitez conserver les informations relatives à la session.
 
 
 ## Partage d'informations
@@ -71,14 +71,14 @@ Ce timeout peut être défini à l'aide de la propriété [`.idleTimeout`](API/S
 
 Lorsqu'une session Web évolutive est fermée, si la commande [`Session`](API/SessionClass.md#session) est appelée par la suite :
 
-- the `Session` object does not contain privileges (it is a Guest session)
+- l'objet `Session` ne contient pas de privilèges (c'est une session Guest)
 - la propriété [`.storage`](API/SessionClass.md#storage) est vide
 - un nouveau cookie de session est associé à la session
 
 
 ## Privilèges
 
-Privileges can be associated to sessions. Sur le serveur web, vous pouvez fournir un accès spécifique ou des fonctionnalités en fonction des privilèges de la session.
+Des privilèges peuvent être associés aux sessions. Sur le serveur web, vous pouvez fournir un accès spécifique ou des fonctionnalités en fonction des privilèges de la session.
 
 Vous pouvez attribuer des privilèges à l'aide de la fonction [`.setPrivileges()`](API/SessionClass.md#setprivileges). Dans votre code, vous pouvez vérifier les privilèges de la session pour autoriser ou refuser l'accès à l'aide de la fonction [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). Par défaut, les nouvelles sessions n'ont aucun privilège : ce sont des sessions **invité** (la fonction [`.isGuest()`](API/SessionClass.md#isguest) retourne true).
 
@@ -113,7 +113,7 @@ http://localhost:8044/authenticate.shtml
 > Dans un environnement de production, il est nécessaire d'utiliser une [connexion HTTPS](API/WebServerClass.md#httpsenabled) pour éviter la circulation d'informations non chiffrées sur le réseau.
 
 
-2. The `authenticate.shtml` page is a form containing *userId* et *password* input fields and sending a 4DACTION POST action:
+2. La page `authenticate.shtml` est un formulaire contenant des champs de saisie *userId* et *password* et envoie une action POST 4DACTION :
 
 ```html
 <!DOCTYPE html>
@@ -130,7 +130,7 @@ http://localhost:8044/authenticate.shtml
 
 ![alt-text](../assets/en/WebServer/authenticate.png)
 
-3. The authenticate project method looks for the *userID* person and validates the password against the hashed value already stored in the *SalesPersons* table:
+3. La méthode projet d'authentification recherche la personne *userID* et valide le mot de passe par rapport à la valeur de hachage déjà stockée dans la table *SalesPersons* :
 
 ```4d
 var $indexUserId; $indexPassword; $userId : Integer

@@ -75,7 +75,7 @@ Especifica a localização do texto de um objeto.
 
 Valor máximo de um indicador.
 
-- For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+- Para steppers numéricos, essa propriedade representa segundos quando o objeto está associado a um valor do tipo hora sendo ignorada quando está associada a um valor do tipo data.
 - Para activar los [termómetros del Barber Shop](progressIndicator.md#barber-shop), esta propiedad debe omitirse.
 
 #### Gramática JSON
@@ -92,7 +92,7 @@ Valor máximo de um indicador.
 
 ## Mínimo
 
-Valor mínimo de um indicador. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+Valor mínimo de um indicador. Para steppers numéricos, essa propriedade representa segundos quando o objeto está associado a um valor do tipo hora sendo ignorada quando está associada a um valor do tipo data.
 
 #### Gramática JSON
 

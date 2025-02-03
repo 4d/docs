@@ -35,7 +35,7 @@ Para simplificar o exemplo, vamos usar uma aplicação 4D e um navegador que sã
 
 5. En el menú **Ejecutar**, seleccione **Iniciar el servidor Web** (si es necesario), luego seleccione **Probar el servidor Web**.
 
-The default home page is displayed:
+4D exibe a página home padrão do servidor Web 4D.
 
 ## Acessar dados 4D através do navegador
 

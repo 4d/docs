@@ -21,9 +21,9 @@ Puede hacer que las áreas Ruptura sean más pequeñas o más grandes. Puede uti
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos                | Valores posibles                                                                                                                                   |
-| ----------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| markerBreak | integer \| integer collection | Posición del marcador de ruptura o colección de posiciones del marcador de ruptura en píxeles.<br/>Valor mínimo: 0 |
+| Nombre      | Tipos de datos                                        | Valores posibles                                                                                                                                   |
+| ----------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| markerBreak | integer &#x7c; integer collection | Posición del marcador de ruptura o colección de posiciones del marcador de ruptura en píxeles.<br/>Valor mínimo: 0 |
 
 ---
 
@@ -77,9 +77,9 @@ El formulario puede contener [áreas de encabezado adicionales](#additional-area
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos                | Valores posibles                                                                                                                                         |
-| ------------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| markerHeader | integer \| integer collection | Posición del marcador de encabezado o colección de posiciones del marcador de encabezado en píxeles.<br/>Valor mínimo: 0 |
+| Nombre       | Tipos de datos                                        | Valores posibles                                                                                                                                         |
+| ------------ | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| markerHeader | integer &#x7c; integer collection | Posición del marcador de encabezado o colección de posiciones del marcador de encabezado en píxeles.<br/>Valor mínimo: 0 |
 
 ## Áreas adicionales
 

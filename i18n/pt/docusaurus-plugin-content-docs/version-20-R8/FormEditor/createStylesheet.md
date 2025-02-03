@@ -143,12 +143,12 @@ Especifique o tipo de atributo entre colchetes, depois entre chaves, declare os 
 
 #### Sintaxes compatíveis
 
-| Sintaxe                                                                                  | Descrição                                                                                                                        |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [attribute]                          | coincide con objetos con el `attribute`                                                                                          |
-| [attribute="value"]                  | coincide con objetos cuyo valor del `attribute` contenga exactamente el "valor" especificado                                     |
-| [attribute~="value"] | coincide con los objetos con el valor del `attribute` que contiene el "valor" entre una lista de palabras separadas por espacios |
-| [attribute\|="value"]                | coincide con objetos con un `attribute` cuyo valor empieza por "valor"                                                           |
+| Sintaxe                                                                                           | Descrição                                                                                                                        |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [attribute]                                   | coincide con objetos con el `attribute`                                                                                          |
+| [attribute="value"]                           | coincide con objetos cuyo valor del `attribute` contenga exactamente el "valor" especificado                                     |
+| [attribute~="value"]          | coincide con los objetos con el valor del `attribute` que contiene el "valor" entre una lista de palabras separadas por espacios |
+| [attribute&#124;="value"] | coincide con objetos con un `attribute` cuyo valor empieza por "valor"                                                           |
 
 #### Exemplos
 

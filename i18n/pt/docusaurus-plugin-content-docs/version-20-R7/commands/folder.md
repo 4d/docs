@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Folder.Params -->
 
-| Parâmetro      | Tipo                       |     | Descrição                                                         |
-| -------------- | -------------------------- | :-: | ----------------------------------------------------------------- |
-| path           | Text                       |  →  | Folder path                                                       |
-| folderConstant | Integer                    |  →  | Constante Pasta 4D                                                |
-| pathType       | Integer                    |  →  | `fk posix path` (padrão) ou `fk platform path` |
-| \*             | operator                   |  →  | \* para devolver a pasta da base de dados do anfitrião            |
-| Resultados     | 4D. Folder |  ←  | Novo Objeto Folder                                                |
+| Parâmetro      | Tipo                       |                             | Descrição                                                         |
+| -------------- | -------------------------- | :-------------------------: | ----------------------------------------------------------------- |
+| path           | Text                       | &#8594; | Folder path                                                       |
+| folderConstant | Integer                    | &#8594; | Constante Pasta 4D                                                |
+| pathType       | Integer                    | &#8594; | `fk posix path` (padrão) ou `fk platform path` |
+| \*             | operator                   | &#8594; | \* para devolver a pasta da base de dados do anfitrião            |
+| Resultados     | 4D. Folder | &#8592; | Novo Objeto Folder                                                |
 
 <!-- END REF -->
 
@@ -48,22 +48,22 @@ Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. If you work wit
 
 No parâmetro *folderConstant*, passe uma pasta 4D incorporada ou de sistema, utilizando uma das seguintes constantes:
 
-| Parâmetros                 | Valor | Comentário                                                                                                                                                  |
-| -------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| fk applications folder     | 116   |                                                                                                                                                             |
-| fk data folder             | 9     | Sistema de ficheiros associado: "/DATA"                                                                                                     |
-| fk database folder         | 4     | Sistema de arquivos associado: "/PACKAGE"                                                                                                   |
-| fk desktop folder          | 115   |                                                                                                                                                             |
-| fk documents folder        | 117   | Pasta de documentos do utilizador                                                                                                                           |
-| fk home folder             | 118   | Pasta atual do usuário (normalmente `/Users/<username>/`)                                                                                |
-| fk licenses folder         | 1     | Pasta contendo os arquivos de licença 4D da máquina                                                                                                         |
-| fk logs folder             | 7     | Sistema de arquivos associado: "/LOGS"                                                                                                      |
-| fk mobileApps folder       | 10    |                                                                                                                                                             |
-| fk remote database folder  | 3     | Pasta de base de dados 4D criada em cada máquina 4D remota                                                                                                  |
-| fk resources folder        | 6     | Sistema de arquivos associado: "/DATA"                                                                                                      |
-| fk system folder           | 100   |                                                                                                                                                             |
-| fk user preferences folder | 0     | 4D folder that stores user preference files within the <code>\<userName&gt;</code> directory. |
-| fk web root folder         | 8     | Pasta raiz atual da Web da base de dados: se estiver dentro do pacote "/PACKAGE/percurso", caso contrário, caminho completo                 |
+| Parâmetros                 | Valor | Comentário                                                                                                                                                      |
+| -------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| fk applications folder     | 116   |                                                                                                                                                                 |
+| fk data folder             | 9     | Sistema de ficheiros associado: "/DATA"                                                                                                         |
+| fk database folder         | 4     | Sistema de arquivos associado: "/PACKAGE"                                                                                                       |
+| fk desktop folder          | 115   |                                                                                                                                                                 |
+| fk documents folder        | 117   | Pasta de documentos do utilizador                                                                                                                               |
+| fk home folder             | 118   | Pasta atual do usuário (normalmente `/Users/<username>/`)                                                                                    |
+| fk licenses folder         | 1     | Pasta contendo os arquivos de licença 4D da máquina                                                                                                             |
+| fk logs folder             | 7     | Sistema de arquivos associado: "/LOGS"                                                                                                          |
+| fk mobileApps folder       | 10    |                                                                                                                                                                 |
+| fk remote database folder  | 3     | Pasta de base de dados 4D criada em cada máquina 4D remota                                                                                                      |
+| fk resources folder        | 6     | Sistema de arquivos associado: "/DATA"                                                                                                          |
+| fk system folder           | 100   |                                                                                                                                                                 |
+| fk user preferences folder | 0     | 4D folder that stores user preference files within the <code>\&lt;userName&gt;</code> directory. |
+| fk web root folder         | 8     | Pasta raiz atual da Web da base de dados: se estiver dentro do pacote "/PACKAGE/percurso", caso contrário, caminho completo                     |
 
 If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Caso contrário, se omitir o parâmetro `*`, um objecto nulo é sempre devolvido.
 

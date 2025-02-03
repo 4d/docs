@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Params-->
 
-| Parámetros | Tipo   |   | Descripción                   |
-| ---------- | ------ | - | ----------------------------- |
-| Resultado  | Object | ← | Form data of the current form |
+| Parámetros | Tipo   |                             | Descripción                   |
+| ---------- | ------ | --------------------------- | ----------------------------- |
+| Resultado  | Object | &#8592; | Form data of the current form |
 
 <!-- END REF-->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor). 4D automatically associates an object to the current form in the following cases:
+<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor). 4D automatically associates an object to the current form in the following cases:
 
 - the current form has been loaded by one of the [`DIALOG`](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands,
 - the current form is a subform,
@@ -56,12 +56,14 @@ For more information, please refer to the *Page subforms* section.
 
 ##### Table form
 
-**Form** returns the object associated with the table form displayed on screen. **Form** returns the object associated with the table form displayed on screen.\
+**Form** returns the object associated with the table form displayed on screen.\
+**Form** returns the object associated with the table form displayed on screen.\
+In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property: **Form** returns the object associated with the table form displayed on screen.\
 In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
-| **Property** | **Type** | **Description**                           |
-| ------------ | -------- | ----------------------------------------- |
-| parentForm   | object   | **Form** object of the parent output form |
+| **Propiedad** | **Type** | **Description**                           |
+| ------------- | -------- | ----------------------------------------- |
+| parentForm    | object   | **Form** object of the parent output form |
 
 #### Ejemplo
 
@@ -115,7 +117,7 @@ If values are edited and the OK button is clicked, the field is updated (the par
 
 #### Propiedades
 
-|                |                                                                     |
-| -------------- | ------------------------------------------------------------------- |
-| Command number | 1466                                                                |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1466                                                                |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

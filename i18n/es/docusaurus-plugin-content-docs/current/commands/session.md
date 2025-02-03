@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session.Params-->
 
-| Parámetros | Tipo                       |   | Descripción    |
-| ---------- | -------------------------- | - | -------------- |
-| Resultado  | 4D.Session | ← | Objeto Session |
+| Parámetros | Tipo                       |                             | Descripción    |
+| ---------- | -------------------------- | --------------------------- | -------------- |
+| Resultado  | 4D.Session | &#8592; | Objeto Session |
 
 <!-- END REF-->
 
@@ -104,7 +104,7 @@ IP:port/4DACTION/action_Session
 
 #### Propiedades
 
-|                |                                                                     |
-| -------------- | ------------------------------------------------------------------- |
-| Command number | 1714                                                                |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1714                                                                |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

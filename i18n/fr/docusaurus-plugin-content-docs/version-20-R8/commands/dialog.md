@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Params-->
 
-| Paramètres | Type         |   | Description                                                                                                                                                                            |
-| ---------- | ------------ | - | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable     | Table        | → | Table à laquelle appartient le formulaire; Si omis : Table par défaut ou utilisation d'un formulaire projet                                                            |
-| form       | Text, Object | → | Nom du formulaire table ou projet à afficher, ou Chemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ou Objet décrivant le formulaire |
-| formData   | Object       | → | Données à associer au formulaire                                                                                                                                                       |
-| \*         | Opérateur    | → | Utiliser le même process                                                                                                                                                               |
+| Paramètres | Type         |                             | Description                                                                                                                                                                            |
+| ---------- | ------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| aTable     | Table        | &#8594; | Table à laquelle appartient le formulaire; Si omis : Table par défaut ou utilisation d'un formulaire projet                                                            |
+| form       | Text, Object | &#8594; | Nom du formulaire table ou projet à afficher, ou Chemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ou Objet décrivant le formulaire |
+| formData   | Object       | &#8594; | Données à associer au formulaire                                                                                                                                                       |
+| \*         | Opérateur    | &#8594; | Utiliser le même process                                                                                                                                                               |
 
 <!-- END REF-->
 

@@ -18,10 +18,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Formula.Params -->
 
-| Parámetros | Tipo                        |     | Descripción                             |
-| ---------- | --------------------------- | :-: | --------------------------------------- |
-| formulaExp | Expression                  |  →  | Fórmula a devolver como objeto          |
-| Result     | 4D.Function |  ←  | Función nativa que encapsula la fórmula |
+| Parámetros | Tipo                        |                             | Descripción                             |
+| ---------- | --------------------------- | :-------------------------: | --------------------------------------- |
+| formulaExp | Expression                  | &#8594; | Fórmula a devolver como objeto          |
+| Result     | 4D.Function | &#8592; | Función nativa que encapsula la fórmula |
 
 <!-- END REF -->
 
@@ -142,7 +142,7 @@ Llamar a una fórmula utilizando la notación de objetos:
 
 #### Propiedades
 
-|                |                                                                     |
-| -------------- | ------------------------------------------------------------------- |
-| Command number | 1597                                                                |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1597                                                                |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

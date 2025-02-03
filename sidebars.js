@@ -2432,11 +2432,13 @@ module.exports =
 				"API/IncomingMessageClass",
 				"API/MailAttachmentClass",
 				"API/OutgoingMessageClass",
-       			"API/POP3TransporterClass",
+				"API/POP3TransporterClass",
 				"API/SessionClass",
 				"API/SignalClass",
 				"API/SMTPTransporterClass",
 				"API/SystemWorkerClass",
+				"API/TCPConnectionClass",
+				"API/TCPEventClass",
 				"API/WebFormClass",
 				"API/WebFormItemClass",
 				"API/WebServerClass",
@@ -2875,6 +2877,7 @@ module.exports =
 								items: [
 									"WritePro/writeprointerface",
 									"WritePro/managing-formulas",
+									"WritePro/commands-legacy/4d-write-pro-attributes",
 									{
 										type: "category",
 										label: "Commands",

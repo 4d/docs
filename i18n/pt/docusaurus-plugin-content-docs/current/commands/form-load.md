@@ -8,18 +8,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM LOAD.Params-->
 
-| Parâmetro | Tipo         |   | Descrição                                                                                                                                                                                                                |
-| --------- | ------------ | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| aTable    | Tabela       | → | Table form to load (if omitted, load a project form)                                                                                                                                                  |
-| form      | Text, Object | → | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
-| formData  | Object       | → | Data to associate to the form                                                                                                                                                                                            |
-| \*        | Operador     | → | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context)                                                                         |
+| Parâmetro | Tipo         |                             | Descrição                                                                                                                                                                                                                |
+| --------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| aTable    | Tabela       | &#8594; | Table form to load (if omitted, load a project form)                                                                                                                                                  |
+| form      | Text, Object | &#8594; | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
+| formData  | Object       | &#8594; | Data to associate to the form                                                                                                                                                                                            |
+| \*        | Operador     | &#8594; | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context)                                                                         |
 
 <!-- END REF-->
 
 #### Descrição
 
-<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents. There can only be one current form per process.
+<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents. There can only be one current form per process.
 
 In the *form* parameter, you can pass:
 

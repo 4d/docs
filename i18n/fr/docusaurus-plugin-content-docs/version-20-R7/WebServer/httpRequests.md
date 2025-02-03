@@ -40,9 +40,9 @@ Vous devez déclarer ces paramètres de la manière suivante :
 
 ```4d
 //On Web Connection
- 
+
  C_TEXT($1;$2;$3;$4;$5;$6)
- 
+
 //Code de la méthode base
 ```
 
@@ -90,7 +90,7 @@ Le paramètre $3 reçoit l'adresse IP de la machine du navigateur. Cette informa
 
 ### $4 - Adresse IP du serveur
 
-Le paramètre `$4` reçoit l'adresse IP utilisée pour appeler le serveur web 4D. 4D prend en charge le multi-homing, ce qui vous permet d'exploiter des machines avec plus d'une adresse IP. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.html#ip-address-to-listen).
+Le paramètre <code>$4</code> reçoit l'adresse IP utilisée pour appeler le serveur web 4D. 4D prend en charge le multi-homing, ce qui vous permet d'exploiter des machines avec plus d'une adresse IP. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.html#ip-address-to-listen).
 
 ### $5 et $6 - Nom d'utilisateur et mot de passe
 

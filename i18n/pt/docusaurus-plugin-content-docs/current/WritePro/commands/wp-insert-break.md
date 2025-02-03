@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert break.Params-->
 
-| Parâmetro   | Tipo    |   | Descrição                                 |
-| ----------- | ------- | - | ----------------------------------------- |
-| targetObj   | Object  | → | Range or element or 4D Write Pro document |
-| breakType   | Integer | → | Type of break to insert                   |
-| mode        | Integer | → | Insertion mode                            |
-| rangeUpdate | Integer | → | Range update mode                         |
-| Resultado   | Object  | ← | Text range of the break character         |
+| Parâmetro   | Tipo    |                             | Descrição                                 |
+| ----------- | ------- | --------------------------- | ----------------------------------------- |
+| targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document |
+| breakType   | Integer | &#8594; | Type of break to insert                   |
+| mode        | Integer | &#8594; | Insertion mode                            |
+| rangeUpdate | Integer | &#8594; | Range update mode                         |
+| Resultado   | Object  | &#8592; | Text range of the break character         |
 
 <!-- END REF-->
 

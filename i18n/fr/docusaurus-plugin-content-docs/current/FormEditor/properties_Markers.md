@@ -21,9 +21,9 @@ Vous agrandissez ou réduisez la zone de rupture en faisant glisser le taquet ve
 
 #### Grammaire JSON
 
-| Nom         | Type de données               | Valeurs possibles                                                                                                                                  |
-| ----------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| markerBreak | integer \| integer collection | Position du taquet de rupture ou collection des positions de taquets de rupture en pixels.<br/>Valeur minimale : 0 |
+| Nom         | Type de données                                       | Valeurs possibles                                                                                                                                  |
+| ----------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| markerBreak | integer &#x7c; integer collection | Position du taquet de rupture ou collection des positions de taquets de rupture en pixels.<br/>Valeur minimale : 0 |
 
 ---
 
@@ -73,13 +73,13 @@ Vous pouvez également placer et utiliser des objets actifs dans la zone d'en-t�
 
 Les actions standard telles que `Add Subrecord`, `Cancel` (listes affichées en utilisant `DISPLAY SELECTION` et `MODIFY SELECTION`) ou `Automatic splitter` peuvent être assignées aux boutons insérés. Les événements suivants s'appliquent aux objets actifs que vous insérez dans la zone d'en-tête : `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. A noter que la méthode formulaire est appelée avec l’événement `On Header` après l’appel des méthodes de tous les objets de la zone.
 
-Le formulaire peut contenir des [zones d'en-tête supplémentaires](#zones-supplementaires) pour être associé à des ruptures supplémentaires. Un en-tête de niveau 1 est imprimé juste avant que les enregistrements regroupés par le premier champ trié soient imprimés.
+Zone de rupture Un en-tête de niveau 1 est imprimé juste avant que les enregistrements regroupés par le premier champ trié soient imprimés.
 
 #### Grammaire JSON
 
-| Nom          | Type de données               | Valeurs possibles                                                                                                                                |
-| ------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| markerHeader | integer \| integer collection | Position du taquet d'en-tête ou collection des positions de taquets d'en-tête en pixels.<br/>Valeur minimale : 0 |
+| Nom          | Type de données                                       | Valeurs possibles                                                                                                                                |
+| ------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| markerHeader | integer &#x7c; integer collection | Position du taquet d'en-tête ou collection des positions de taquets d'en-tête en pixels.<br/>Valeur minimale : 0 |
 
 ## Zones supplémentaires
 

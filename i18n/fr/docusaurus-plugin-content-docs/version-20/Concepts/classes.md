@@ -143,7 +143,7 @@ Vous souhaitez créer une nouvelle clé dans la classe `CryptoKey` :
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-## L'objet classe
+## L'objet class
 
 Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
@@ -182,7 +182,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-Il n'y a pas de mot-clé de fin pour le code d'une fonction. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de la classe.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
 
 :::
 
@@ -304,11 +304,12 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 Class Constructor({$parameterName : type; ...})
 // code
 // code
+// code
 ```
 
 :::note
 
-Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de la classe.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
 
 :::
 
@@ -576,6 +577,11 @@ Class constructor($width : Integer; $height : Integer)
 
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+ $0:=(This.height)*(This.width)
 
 // Function definition
 Function getArea()

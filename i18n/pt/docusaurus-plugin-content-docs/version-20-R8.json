@@ -144,11 +144,11 @@
     "description": "The generated-index page title for category Compiler in sidebar docs"
   },
   "sidebar.docs.category.Data Entry": {
-    "message": "Data Entry",
+    "message": "Entrada de dados",
     "description": "The label for category Data Entry in sidebar docs"
   },
   "sidebar.docs.category.Data Entry.link.generated-index.title": {
-    "message": "Data Entry",
+    "message": "Entrada de dados",
     "description": "The generated-index page title for category Data Entry in sidebar docs"
   },
   "sidebar.docs.category.Data Security": {

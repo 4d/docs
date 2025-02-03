@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Note** : Cette commande utilise le moteur de rendu web intégré.
 
-Dans l'objet *paramètres*, passez l'un des propriétés optionnelles suivantes pour la zone web. Ces propriétés seront disponibles via la commande [This](this.md) dans la méthode onEvent et référencent cette instance :
+Dans l'objet *paramètres*, passez l'un des propriétés optionnelles suivantes pour la zone web. Ces propriétés seront disponibles via la commande [This](../commands/this.md) dans la méthode onEvent et référencent cette instance :
 
 | **Propriété**    | **Type**               | **Description**                                                                                                                                                                                                                                                                                                                                                                               |
 | ---------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

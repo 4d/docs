@@ -33,7 +33,7 @@ Pour une [zone de saisie](input_overview.md) de type texte et [multi-style](prop
 - **Polices récentes**: affiche les noms des polices récentes sélectionnées pendant la session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. Vous pouvez gérer cette liste en utilisant les commandes `SET RECENT FONTS` et `FONT LIST`.
 - commandes pour les modifications de style prises en charge : police, taille, style, couleur et couleur d'arrière-plan. Lorsque l'utilisateur modifie un attribut de style via ce menu contextuel, 4D génère l'événement formulaire `On After Edit`.
 
-Pour une [Zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+Pour une [Zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
 
 #### Grammaire JSON
 
@@ -219,7 +219,7 @@ Vous pouvez utiliser une référence XLIFF sous la forme ":xliff:resname" en tan
  :xliff:PH_Lastname
 
 Vous passez seulement la référence dans le champ "Texte exemple" ; il n'est pas possible de combiner une référence avec du texte statique.
-> You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) and [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) commands.
+> You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
 
 #### Grammaire JSON
 
@@ -270,7 +270,6 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 | --------------- | --------------- | -------------------------------------------------- |
 | shortcutAccel   | boolean         | true, false (Ctrl Windows/Command macOS)           |
 | shortcutAlt     | boolean         | true, false                                        |
-| shortcutCommand | boolean         | true, false                                        |
 | shortcutControl | boolean         | true, false (macOS Control)                        |
 | shortcutShift   | boolean         | true, false                                        |
 |                 |                 |                                                    |

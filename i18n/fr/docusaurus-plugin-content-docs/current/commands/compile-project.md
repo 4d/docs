@@ -9,11 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compile project.Params-->
 
-| Paramètres  | Type                    |   | Description                                                   |
-| ----------- | ----------------------- | - | ------------------------------------------------------------- |
-| projectFile | 4D.File | → | Fichier .4DProject à compiler                 |
-| options     | Object                  | → | Objet qui spécifie les options de compilation                 |
-| Résultat    | Object                  | ← | Objet contenant des informations sur le statut de compilation |
+| Paramètres  | Type                    |                             | Description                                                   |
+| ----------- | ----------------------- | --------------------------- | ------------------------------------------------------------- |
+| projectFile | 4D.File | &#8594; | Fichier .4DProject à compiler                 |
+| options     | Object                  | &#8594; | Objet qui spécifie les options de compilation                 |
+| Résultat    | Object                  | &#8592; | Objet contenant des informations sur le statut de compilation |
 
 <!-- END REF-->
 
@@ -99,7 +99,7 @@ The object returned by **Compile project** has up to three properties:
 | symbols.methods\[\].params       | Collection          | Collection of parameter types (Value type numerical codes)                                                            |
 | symbols.methods\[\]. threadSafe  | Boolean             | Indicates if this method is thread safe                                                                                                  |
 
-Pour plus d'informations, voir [Outils de compilation](../Projet/compiler.md#compilation-tools).
+Pour plus d'informations, voir [Outils de compilation](../Project/compiler.md#compilation-tools).
 
 ###### variable objects
 

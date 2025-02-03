@@ -20,15 +20,15 @@ displayed_sidebar: docs
 | ----------- | --------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | Paramètres  | Type                              |                                       | Description                                                                                          |
 | ***         | ***                               | :---: | ***                                                                                                  |
-| file        | 4D.File           | →                                     | Fichier joint                                                                                        |
-| zipFile     | 4D.ZipFile        | →                                     | Fichier Zip joint                                                                                    |
-| blob        | 4D.Blob           | →                                     | Blob contenant la pièce jointe                                                                       |
-| path        | Text                              | →                                     | Chemin de la pièce jointe                                                                            |
-| name        | Text                              | →                                     | Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe                   |
-| cid         | Text                              | →                                     | ID de la pièce jointe (messages HTML uniquement) ou " " si aucun cid n'est requis |
-| type        | Text                              | →                                     | Valeur de l'en-tête content-type                                                                     |
-| disposition | Text                              | →                                     | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                   |
-| Résultat    | 4D.MailAttachment | ←                                     | Objet pièce jointe                                                                                   |
+| file        | 4D.File           | &#8594;           | Fichier joint                                                                                        |
+| zipFile     | 4D.ZipFile        | &#8594;           | Fichier Zip joint                                                                                    |
+| blob        | 4D.Blob           | &#8594;           | Blob contenant la pièce jointe                                                                       |
+| path        | Text                              | &#8594;           | Chemin de la pièce jointe                                                                            |
+| name        | Text                              | &#8594;           | Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe                   |
+| cid         | Text                              | &#8594;           | ID de la pièce jointe (messages HTML uniquement) ou " " si aucun cid n'est requis |
+| type        | Text                              | &#8594;           | Valeur de l'en-tête content-type                                                                     |
+| disposition | Text                              | &#8594;           | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                   |
+| Résultat    | 4D.MailAttachment | &#8592;           | Objet pièce jointe                                                                                   |
 
 <!-- END REF-->
 

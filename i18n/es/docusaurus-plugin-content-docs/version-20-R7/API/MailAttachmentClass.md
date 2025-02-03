@@ -52,7 +52,7 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 
 La función `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.MailAttachment`<!-- END REF -->. Es idéntico al comando [`MAIL New attachment`](../commands/mail-new-attachment.md) (acceso directo).
 
-## .cid<!-- REF #MailAttachmentClass.cid.Syntax --><strong x-id="1">.cid</strong> : Text<!-- END REF -->#### Descripción
+## .cid
 
 <!-- REF #MailAttachmentClass.cid.Syntax -->**.cid** : Text<!-- END REF -->
 

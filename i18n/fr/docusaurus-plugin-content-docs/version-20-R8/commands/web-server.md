@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server.Params-->
 
-| Paramètres | Type                         |   | Description                                                                          |
-| ---------- | ---------------------------- | - | ------------------------------------------------------------------------------------ |
-| option     | Integer                      | → | Serveur Web à référencer (défaut si omis = `Web server database`) |
-| Résultat   | 4D.WebServer | ← | Objet Serveur Web                                                                    |
+| Paramètres | Type                         |                             | Description                                                                          |
+| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------ |
+| option     | Integer                      | &#8594; | Serveur Web à référencer (défaut si omis = `Web server database`) |
+| Résultat   | 4D.WebServer | &#8592; | Objet Serveur Web                                                                    |
 
 <!-- END REF-->
 

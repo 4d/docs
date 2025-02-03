@@ -102,7 +102,7 @@ Para as duas últimas ações, o evento do formulário `On Open Detail` também 
 
 Cuando un subformulario lista tiene esta propiedad activada, el usuario puede modificar los datos del registro directamente en la lista, sin tener que utilizar el [formulario detallado asociado](#detail-form).
 
-> To do this, simply click twice on the field to be modified in order to switch it to editing mode (make sure to leave enough time between the two clicks so as not to generate a double-click).
+> Para fazer isso, basta clicar duas vezes no campo a ser modificado para alterná-lo para o modo de edição (certifique-se de deixar tempo suficiente entre os dois cliques para não gerar um clique duplo).
 
 #### Gramática JSON
 
@@ -120,7 +120,7 @@ Cuando un subformulario lista tiene esta propiedad activada, el usuario puede mo
 
 Você usa essa propriedade para declarar o formulário de lista a ser usado no subformulário. Um subformulário lista permite que você insira, visualize e modifique dados em outras tabelas.
 
-Los subformularios de lista pueden utilizarse para la entrada de datos de dos maneras: el usuario puede introducir los datos directamente en el subformulario, o introducirlos en un [formulario de entrada](#detail-form). In this configuration, the form used as the subform is referred to as the List form. O formulário de entrada é designado Formulário detalhado.
+Los subformularios de lista pueden utilizarse para la entrada de datos de dos maneras: el usuario puede introducir los datos directamente en el subformulario, o introducirlos en un [formulario de entrada](#detail-form). Nessa configuração, o formulário usado como subformulário é chamado formulário Lista. O formulário de entrada é designado Formulário detalhado.
 
 #### Gramática JSON
 
@@ -159,7 +159,7 @@ Designa a opção que permite aos utilizadores selecionar linhas:
   As teclas de seta para cima e para baixo selecionam a linha anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. O evento de formulário `On Selection Change` é gerado sempre que a linha atual é alterada.
 - **Multiplique**: Várias linhas podem ser selecionadas simultaneamente neste modo.
   - Los subregistros seleccionados son devueltos por el comando `GET HIGHLIGHTED RECORDS`.
-  - Clicking on the record will select it, but it does not modify the current record.
+  - Clicar no registro o selecionará, mas não modificará o registro atual.
   - Un **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en un registro cambia su estado (entre seleccionado o no). As teclas de seta para cima e para baixo selecionam o registo anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. El evento de formulario `On Selection Change` se genera cada vez que el registro seleccionado se modifica.
 
 #### Gramática JSON

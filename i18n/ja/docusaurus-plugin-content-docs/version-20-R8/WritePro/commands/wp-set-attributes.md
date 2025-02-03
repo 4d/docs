@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 
-| 引数          | 型                                               |   | 説明                                                                      |
-| ----------- | ----------------------------------------------- | - | ----------------------------------------------------------------------- |
-| targetObj   | Object                                          | → | レンジまたは要素または4D Write Pro ドキュメント                                          |
-| attribName  | Text                                            | → | Name of attribute to set                                                |
-| attribValue | Text, Number, Object, Collection, Picture, Date | → | New attribute value                                                     |
-| attribObj   | Object                                          | → | Object containing attribute names and their corresponding values to set |
+| 引数          | 型                                               |                             | 説明                                                                      |
+| ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------------------------------- |
+| targetObj   | Object                                          | &#8594; | レンジまたは要素または4D Write Pro ドキュメント                                          |
+| attribName  | Text                                            | &#8594; | Name of attribute to set                                                |
+| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | New attribute value                                                     |
+| attribObj   | Object                                          | &#8594; | Object containing attribute names and their corresponding values to set |
 
 <!-- END REF-->
 

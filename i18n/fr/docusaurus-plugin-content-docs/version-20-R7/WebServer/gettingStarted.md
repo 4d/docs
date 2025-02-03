@@ -269,7 +269,7 @@ Vous serez alors connecté pour la session :
 
 ![](../assets/en/WebServer/login1.png)
 
-Les informations d'identification erronées seraient rejetées :
+Les informations d'identification erronées seront rejetées :
 
 ![](../assets/en/WebServer/login2.png)
 

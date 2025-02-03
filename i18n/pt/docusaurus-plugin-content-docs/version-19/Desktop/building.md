@@ -91,7 +91,7 @@ Um componente é um projeto padrão 4D onde foram desenvolvidas funcionalidades 
 
 Se tiver nomeado sua aplicação, *MeuComponente*, 4D criará uma pasta Components que contém a pasta *MeuComponente.4dbase*:
 
-\&#060;destination&#062;/Components/name.4dbase/\&#060;name&#062;.4DZ
+\<destination>/Components/name.4dbase/\<name>.4DZ
 
 A pasta *MyComponent.4dbase* contém:
 
@@ -106,7 +106,7 @@ Essa guia permite que você crie uma versão autônoma e de usuário único do s
 
 ### Criar uma aplicação autónoma
 
-Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project.
+Marcar a opção **Construir aplicação autônoma** e clicar em **Construir** criará uma aplicação autônoma (clicável duas vezes) diretamente do seu projeto de aplicação.
 
 Os seguintes elementos são necessários para a construção:
 
@@ -170,7 +170,7 @@ Ao criar um aplicativo autônomo, o 4D copia o conteúdo da pasta 4D Volume Desk
 * Instalar uma versão 4D Volume Desktop correspondente a um idioma específico;
 * Adicionar uma pasta personalizada *PlugIns*;
 * Construir um pacote de projeto
-> No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. Para modificá-lo, primeiro é preciso exibir seu conteúdo (**Control+clique** no ícone).
+> Construir um pacote de projeto > No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. Para modificá-lo, primeiro é preciso exibir seu conteúdo (**Control+clique** no ícone).
 
 #### Localização dos arquivos da Web
 
@@ -215,7 +215,7 @@ Marque esta opção para gerar a parte do servidor da sua aplicação durante a 
 
 #### Localização do 4D Server
 
-Clique no botão **[...]** e use *Procurar pasta* para localizar o aplicativo 4D Server No macOS, deve selecionar o pacote 4D Server diretamente.
+Clique no botão **[...]** e use *Procurar pasta* para localizar o aplicativo 4D Server No macOS, deve selecionar o pacote 4D Server diretamente. No macOS, deve selecionar o pacote 4D Server diretamente.
 
 #### Versão atual
 
@@ -248,7 +248,7 @@ Designa a localização no seu disco da aplicação 4D Volume Desktop a ser usad
 
 A Área de Trabalho de Volume 4D deve corresponder à plataforma atual (que também será a plataforma do aplicativo cliente). Se você deseja criar um aplicativo cliente para a plataforma "simultânea", você deve realizar uma operação de construção adicional usando uma aplicação 4D em execução nessa plataforma.
 
-Se você deseja que o aplicativo cliente se conecte ao servidor usando um endereço específico (diferente do nome do servidor publicado na sub-rede), você deve usar a chave `IPAddress` XML no aplicativo buildapp. Arquivo DConfigurações. Para mais informações sobre este arquivo, consulte a descrição do comando [`CONSTRUIR APLICAÇÃO`](https://doc.4d.com/4dv19/help/command/en/page871.html). Você também pode implementar mecanismos específicos em caso de falha na conexão. Os diferentes cenários propostos são descritos no parágrafo [Gerenciamento de conexões por aplicativos cliente](#management-of-client-connections).
+Se você deseja que o aplicativo cliente se conecte ao servidor usando um endereço específico (diferente do nome do servidor publicado na sub-rede), você deve usar a chave `IPAddress` XML no aplicativo buildapp. Para mais informações sobre este arquivo, consulte a descrição do comando [`CONSTRUIR APLICAÇÃO`](https://doc.4d.com/4dv19/help/command/en/page871.html). Você também pode implementar mecanismos específicos em caso de falha na conexão. Os diferentes cenários propostos são descritos no parágrafo [Gerenciamento de conexões por aplicativos cliente](#management-of-client-connections).
 
 #### Cópia de aplicativos cliente dentro do aplicativo servidor
 
@@ -277,7 +277,7 @@ Esta funcionalidade requer que clique no botão **[...]** e designe a localizaç
 | macOS                         | Windows 4D Volume Desktop *ou* Windows client update archive | Por padrão, é selecionada a aplicação `4D Volume Desktop` para Windows. Para selecionar um arquivo `.4darchive` previamente construído no Windows, pressione **Shift** enquanto clica no [...] |
 | Windows                       | macOS client update archive                                  | Selecione um arquivo `.4darchive` assinado, criado anteriormente no macOS                                                                                                                      |
 
-Pode construir um arquivo `.4darchive` na plataforma selecionado apenas [**Build client application**](#build-client-application) e a opção [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application).
+Pode construir um arquivo `.4darchive` na plataforma selecionado apenas [**Criar aplicação cliente**](#build-client-application) e a opção [**Permitir atualização automática...**](#copy-of-client-applications-inside-the-server-application).
 
 #### Mostrar notificação de atualização
 
@@ -368,7 +368,7 @@ O cenário básico é o seguinte:
 * a chave `PublishName` não foi copiada no *info.plist* do cliente mesclado
 * Se o aplicativo de usuário único não tiver uma pasta "Dados padrão", o cliente mesclado será executado sem dados.
 
-Atualização automática de 4D Server ([Current version](#current-version), comando `SET UPDATE FOLDER` ...) com aplicação monousuário com aplicação remoto padrão Em conexão, o aplicativo de usuário único compara sua chave `Atuais` com o intervalo de versão do 4D Server Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local.
+Atualização automática de 4D Server ([Current version](#current-version), comando `SET UPDATE FOLDER` ...) com aplicação monousuário com aplicação remoto padrão Em conexão, o aplicativo de usuário único compara sua chave `Atuais` com o intervalo de versão do 4D Server Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local. Em conexão, o aplicativo de usuário único compara sua chave `Atuais` com o intervalo de versão do 4D Server Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local.
 
 ### Personalização dos nomes da pasta de cache cliente e/ou servidor
 
@@ -416,7 +416,7 @@ A página lista os elementos carregados pela aplicação 4D atual:
 
 * A coluna **Type** - Indica o tipo de item: plug-in ou componente.
 
-Se você quer integrar outros plugins ou componentes na aplicação executável, você só precisa colocá-los em uma pasta **PlugIns** ou **Components** ao lado da aplicação 4D Volume Desktop ou ao lado da aplicação 4D Server O mecanismo para copiar o conteúdo da pasta do aplicativo de origem (ver [Personalizando a pasta desktop de volume 4D](#customizing-4d-volume-desktop-folder)) pode ser usado para integrar qualquer tipo de arquivo na aplicação executável.
+Se você quer integrar outros plugins ou componentes na aplicação executável, você só precisa colocá-los em uma pasta **PlugIns** ou **Components** ao lado da aplicação 4D Volume Desktop ou ao lado da aplicação 4D Server O mecanismo para copiar o conteúdo da pasta do aplicativo de origem (ver [Personalizando a pasta desktop de volume 4D](#customizing-4d-volume-desktop-folder)) pode ser usado para integrar qualquer tipo de arquivo na aplicação executável. O mecanismo para copiar o conteúdo da pasta do aplicativo de origem (ver [Personalizando a pasta desktop de volume 4D](#customizing-4d-volume-desktop-folder)) pode ser usado para integrar qualquer tipo de arquivo na aplicação executável.
 
 Se houver um conflito entre duas versões diferentes do mesmo plug-in (uma carregada por 4D e a outra localizada na pasta do aplicativo de origem), prioridade vai para o plug-in instalado na pasta Volume Desktop/4D do Servidor. No entanto, se houver duas instâncias do mesmo componente, o aplicativo não abrirá.
 > O uso de plug-ins e/ou componentes em uma versão de desenvolvimento requer os números de licença necessários.
@@ -479,13 +479,13 @@ Para obter um certificado de desenvolvedor da Apple, Inc., você pode usar os co
 
 Gatekeeper é um recurso de segurança do OS X que controla a execução de aplicativos baixados da internet. Se um aplicativo baixado não vem da Apple Store ou não estiver assinado, será rejeitado e não poderá ser iniciado.
 
-The **Sign application** option of the 4D application builder lets you generate applications that are compatible with this option by default.
+A opção **Assinar a aplicação** no Gerador de aplicações 4D permite que você gere aplicações compatíveis com essa opção por padrão.
 
 #### Sobre a notarização
 
 A notarização de aplicação é altamente recomendada pela Apple a partir do macOS 10.14.5 (Mojave) e 10. 5 (Catalina), pois aplicativos não notariados implantados através da internet são bloqueados por padrão.
 
-In 4D v18, the [built-in signing features](#os-x-signing-certificate) have been updated to meet all of Apple's requirements to allow using the Apple notary service. A notarização em si deve ser conduzida pelo desenvolvedor e é independente da 4D (note também que ela requer a instalação do Xcode). Veja [o blog](https://blog.4d.com/how-to-notarize-your-merged-4d-application/)com uma descrição do processo de notarização.
+A partir de 4D v18, as [funções de assinatura integrada](#os-x-signing-certificate) foram atualizadas para atender a todos os requisitos da Apple para permitir o uso do serviço de reconhecimento de firma da Apple. A notarização em si deve ser conduzida pelo desenvolvedor e é independente da 4D (note também que ela requer a instalação do Xcode). Veja [o blog](https://blog.4d.com/how-to-notarize-your-merged-4d-application/)com uma descrição do processo de notarização.
 
 Para obter mais informações sobre o conceito de notarização, consulte [nesta página no site de desenvolvedores Apple](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
@@ -496,11 +496,11 @@ Para obter mais informações sobre o conceito de notarização, consulte [nesta
 * **macOs** - Ao construir uma aplicação com duplo clique, 4D lida com a personalização do ícone. Para fazer isso, você deve criar um arquivo de ícone (tipo de icns), antes de criar o arquivo do aplicativo, e colocá-lo ao lado da pasta do projeto.
 > A Apple, Inc. fornece uma ferramenta específica para construir arquivos de ícones *icns* (para mais informações, consulte a documentação da [Apple](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
 
- Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão *.icns*. 4D leva automaticamente este arquivo em conta ao construir o aplicativo clicável duplo (o arquivo *.icns* é renomeado *ApplicationName. cns* e copiou para a pasta Recursos; *CFBundleFileIcon* entrada da informação *. lista* arquivo foi atualizado).
+ Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão *.ico*. 4D leva este arquivo automaticamente em conta ao construir um aplicativo clicável duplo.
 
 * **Windows** - Ao construir uma aplicação clicável e dupla, o 4D lida com a personalização do seu ícone. Para fazer isso, você deve criar um arquivo de ícone (*. extensão co* , antes de construir o arquivo do aplicativo e colocá-lo ao lado da pasta do projeto.
 
- Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão *.ico*. 4D leva este arquivo automaticamente em conta ao construir um aplicativo clicável duplo.
+ Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão *.icns*. 4D leva automaticamente este arquivo em conta ao construir o aplicativo clicável duplo (o arquivo *.icns* é renomeado *ApplicationName.</p></li> </ul>
 
 Você também pode definir as [chaves XML ](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) específicas no arquivo buildApp.4DSettings para designar cada ícone a ser usado. Estão disponíveis as seguintes chaves:
 
@@ -574,7 +574,7 @@ Mais especificamente, são abrangidos os seguintes casos:
 
 Para definir e utilizar um ficheiro de dados padrão:
 
-* Você fornece um arquivo de dados padrão (chamado "Default.4DD") e o armazena em uma pasta padrão (chamado "Dados Padrão") dentro da pasta do projeto do aplicativo. Este arquivo deve ser fornecido juntamente com todos os outros arquivos necessários, dependendo da configuração do projeto: índice (.4DIndx), Blobs externos, periódico, etc. É sua responsabilidade fornecer um ficheiro de dados padrão válido. No entanto, note que, uma vez que um arquivo de dados padrão é aberto em modo somente leitura, é recomendável desmarcar a opção "Usar Arquivo de Log" no arquivo de estrutura original antes de criar o arquivo de dados.
+* Você fornece um arquivo de dados padrão (chamado "Default.4DD") e o armazena em uma pasta padrão (chamado "Dados Padrão") dentro da pasta do projeto do aplicativo. Este arquivo deve ser fornecido juntamente com todos os outros arquivos necessários, dependendo da configuração do projeto: índice (.4DIndx), Blobs externos, periódico, etc. É sua responsabilidade fornecer um ficheiro de dados padrão válido. É sua responsabilidade fornecer um ficheiro de dados padrão válido. No entanto, note que, uma vez que um arquivo de dados padrão é aberto em modo somente leitura, é recomendável desmarcar a opção "Usar Arquivo de Log" no arquivo de estrutura original antes de criar o arquivo de dados.
 * Quando a aplicação é criada, a pasta de dados predefinida é integrada na aplicação fundida. Todos os ficheiros dentro desta pasta de dados predefinida também são incorporados.
 
 O gráfico seguinte ilustra esta funcionalidade:
@@ -620,4 +620,4 @@ Você pode escolher se deseja ou não exibir a caixa de diálogo de seleção pa
 * **exibir uma mensagem de erro sem acesso possível à caixa de diálogo de seleção do servidor**. Operação padrão. O aplicativo só pode sair.  
   `ServerSelectionAllowed`: **False** ou key omitida ![](../assets/en/Project/connect1.png)
 
-* **exibir uma mensagem de erro com acesso à caixa de diálogo de seleção do servidor possível**. O usuário pode acessar a janela de seleção do servidor clicando no botão **Select...**. `ServerSelectionAllowed`: **True** ![](../assets/en/Project/connect2.png) ![](../assets/en/Project/connect3.png)
+* **exibir uma mensagem de erro com acesso à caixa de diálogo de seleção do servidor possível**. O usuário pode acessar a janela de seleção do servidor clicando no botão **Selecionar...**. `ServerSelectionAllowed`: **True** ![](../assets/en/Project/connect2.png) ![](../assets/en/Project/connect3.png)

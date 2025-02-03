@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert formula.Params-->
 
-| Parámetros  | Tipo   |   | Descripción                                                |
-| ----------- | ------ | - | ---------------------------------------------------------- |
-| targetObj   | Object | → | Range or element or 4D Write Pro document                  |
-| formula     | Object | → | Formula object OR Object with formula and name properties  |
-| mode        | Number | → | Insertion mode                                             |
-| rangeUpdate | Number | → | Includes or excludes the inserted content within the range |
-| Resultado   | Object | ← | Text range object reprsenting the result of the formula    |
+| Parámetros  | Tipo   |                             | Descripción                                                |
+| ----------- | ------ | --------------------------- | ---------------------------------------------------------- |
+| targetObj   | Object | &#8594; | Range or element or 4D Write Pro document                  |
+| formula     | Object | &#8594; | Formula object OR Object with formula and name properties  |
+| mode        | Number | &#8594; | Insertion mode                                             |
+| rangeUpdate | Number | &#8594; | Includes or excludes the inserted content within the range |
+| Resultado   | Object | &#8592; | Text range object reprsenting the result of the formula    |
 
 <!-- END REF-->
 
@@ -33,10 +33,10 @@ In the *formula* parameter, pass the 4D formula to evaluate. Puede pasar:
 - either a [formula object](../../API/FunctionClass.md#formula-objects) created by the [**Formula**](../../API/FunctionClass.md#formula) or [**Formula from string**](../../API/FunctionClass.md#formula-from-string) command,
 - or an object containing two properties:
 
-| **Property** | **Type** | **Description**                                                                                                                                                                                                        |
-| ------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name         | Text     | Name to display for the formula in the document                                                                                                                                                                        |
-| formula      | Object   | The [formula object](../../API/FunctionClass.md#formula-objects) created by the [**Formula**](../../API/FunctionClass.md#formula) or [**Formula from string**](../../API/FunctionClass.md#formula-from-string) command |
+| **Propiedad** | **Type** | **Description**                                                                                                                                                                                                        |
+| ------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name          | Text     | Name to display for the formula in the document                                                                                                                                                                        |
+| formula       | Object   | The [formula object](../../API/FunctionClass.md#formula-objects) created by the [**Formula**](../../API/FunctionClass.md#formula) or [**Formula from string**](../../API/FunctionClass.md#formula-from-string) command |
 
 When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. For more information, see the [Managing formulas](../managing-formulas.md) page.
 

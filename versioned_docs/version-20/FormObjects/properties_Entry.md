@@ -34,7 +34,7 @@ For a [multi-style](properties_Text.md#multi-style) text type [input](input_over
 - commands for supported style modifications: font, size, style, color and background color.
 When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
 
-For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
 
 #### JSON Grammar
 
@@ -221,7 +221,7 @@ You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, fo
 
 You only pass the reference in the "Placeholder" field; it is not possible to combine a reference with static text.
 
->You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) and [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) commands.
+>You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
 
 #### JSON Grammar
 

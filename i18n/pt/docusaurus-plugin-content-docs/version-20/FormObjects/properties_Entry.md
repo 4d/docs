@@ -25,7 +25,7 @@ A propriedade Auto Spellcheck ativa a verificação ortográfica para cada objet
 
 Permite ao usuário aceder a um menu de contexto padrão no objeto quando o formulário é executado.
 
-Para uma [entrada](input_overview.md) do tipo imagem, além dos comandos de edição padrão (Recortar, Copiar, Colar e Limpar), o menu contém o comando **Importar...**, que pode ser usado para importar uma imagem armazenada em um arquivo, bem como o comando **Salvar como...**, que pode ser usado para salvar a imagem no disco. O menu também pode ser usado para modificar o formato de exibição da imagem: são fornecidas as opções **Truncated non-centered (Truncado não centralizado**), **Scaled to fit (Dimensionado para** **caber** ) e **Scaled to fit centered prop.</0> A modificação do [formato de exibição](properties_Display.md#picture-format) usando esse menu é temporária; ela não é salva com o registro.</p>
+Para uma [entrada](input_overview.md) do tipo imagem, além dos comandos de edição padrão (Recortar, Copiar, Colar e Limpar), o menu contém o comando **Importar...**, que pode ser usado para importar uma imagem armazenada em um arquivo, bem como o comando **Salvar como...**, que pode ser usado para salvar a imagem no disco. O menu também pode ser usado para modificar o formato de exibição da imagem: são fornecidas as opções **Truncated non-centered (Truncado não centralizado**), **Scaled to fit (Dimensionado para** **caber** ) e **Scaled to fit centered prop.</0> A modificação do [formato de exibição](properties_Display.md#picture-format) usando esse menu é temporária; ela não é salva com o registro. A modificação do [formato de exibição](properties_Display.md#picture-format) usando esse menu é temporária; ela não é salva com o registro.
 
 Para um tipo de texto [multi-estilo](properties_Text.md#multi-style) [input](input_overview.md), além dos comandos de edição padrão, o menu de contexto fornece os seguintes comandos:
 
@@ -33,7 +33,7 @@ Para um tipo de texto [multi-estilo](properties_Text.md#multi-style) [input](inp
 - **Recent fonts (Fontes recentes**): exibe os nomes das fontes recentes selecionadas durante a sessão. A lista pode armazenar até 10 fontes (além disso, a última fonte usada substitui a mais antiga). Por padrão, essa lista está vazia e a opção não é exibida. Você pode gerenciar essa lista usando os comandos `SET RECENT FONTS` e `FONT LIST`.
 - comandos para as modificações de estilo suportadas: tipo de letra, tamanho, estilo, cor e cor de fundo. Quando o usuário modifica um atributo de estilo por meio desse menu pop-up, o 4D gera o evento de formulário `On After Edit`.
 
-Em uma [área da Web](webArea_overview.md), o conteúdo do menu depende do mecanismo de renderização da plataforma. É possível controlar o acesso ao menu de contexto através do comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
+Em uma [área da Web](webArea_overview.md), o conteúdo do menu depende do mecanismo de renderização da plataforma. It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
 
 #### Gramática JSON
 
@@ -219,7 +219,7 @@ Você pode usar uma referência XLIFF no formulário ":xliff:resname" como um es
  :xliff:PH_Lastname
 
 Você só passa a referência no campo "Placeholder"; não é possível combinar uma referência com um texto estático.
-> Você também pode definir e obter o texto do espaço reservado programando usando os comandos [`OBJETO SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) e [`OBJECT Obter o espaço reservado`](../commands-legacy/object-get-placeholder.md)
+> You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
 
 #### Gramática JSON
 
@@ -270,7 +270,6 @@ Para ver uma lista de todos os atalhos usados no ambiente 4D Design , consulte a
 | --------------- | ------------- | -------------------------------------------------- |
 | shortcutAccel   | boolean       | true, false (Windows: Ctrl/macOS: Command)         |
 | shortcutAlt     | boolean       | true, false                                        |
-| shortcutCommand | boolean       | true, false                                        |
 | shortcutControl | boolean       | true, false (macOS: Control)                       |
 | shortcutShift   | boolean       | true, false                                        |
 |                 |               |                                                    |

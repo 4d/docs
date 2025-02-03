@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create entity selection.Params-->
 
-| Paramètres | Type                               |   | Description                                                                                          |
-| ---------- | ---------------------------------- | - | ---------------------------------------------------------------------------------------------------- |
-| dsTable    | Table                              | → | Table de la base 4D dont la sélection courante doit être utilisée pour construire l'entity selection |
-| settings   | Object                             | → | Option de création : contexte                                                        |
-| Résultat   | 4D.EntitySelection | ← | Nouvelle entity selection liée à la dataclass de la table                                            |
+| Paramètres | Type                               |                             | Description                                                                                          |
+| ---------- | ---------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| dsTable    | Table                              | &#8594; | Table de la base 4D dont la sélection courante doit être utilisée pour construire l'entity selection |
+| settings   | Object                             | &#8594; | Option de création : contexte                                                        |
+| Résultat   | 4D.EntitySelection | &#8592; | Nouvelle entity selection liée à la dataclass de la table                                            |
 
 <!-- END REF-->
 

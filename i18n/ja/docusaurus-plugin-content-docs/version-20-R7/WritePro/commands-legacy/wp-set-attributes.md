@@ -152,4 +152,4 @@ displayed_sidebar: docs
 
 *4D Write Pro属性*  
 [WP GET ATTRIBUTES](wp-get-attributes.md)  
-[WP RESET ATTRIBUTES](wp-reset-attributes.md)  
+[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)  

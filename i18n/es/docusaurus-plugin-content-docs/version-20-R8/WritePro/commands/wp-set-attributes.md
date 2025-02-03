@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 
-| Parámetros  | Tipo                                            |   | Descripción                                                             |
-| ----------- | ----------------------------------------------- | - | ----------------------------------------------------------------------- |
-| targetObj   | Object                                          | → | Range or element or 4D Write Pro document                               |
-| attribName  | Text                                            | → | Name of attribute to set                                                |
-| attribValue | Text, Number, Object, Collection, Picture, Date | → | New attribute value                                                     |
-| attribObj   | Object                                          | → | Object containing attribute names and their corresponding values to set |
+| Parámetros  | Tipo                                            |                             | Descripción                                                             |
+| ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------------------------------- |
+| targetObj   | Object                                          | &#8594; | Range or element or 4D Write Pro document                               |
+| attribName  | Text                                            | &#8594; | Name of attribute to set                                                |
+| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | New attribute value                                                     |
+| attribObj   | Object                                          | &#8594; | Object containing attribute names and their corresponding values to set |
 
 <!-- END REF-->
 

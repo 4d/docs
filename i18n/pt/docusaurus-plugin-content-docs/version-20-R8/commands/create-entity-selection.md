@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create entity selection.Params-->
 
-| Parâmetro | Tipo                                |   | Descrição                                                                                         |
-| --------- | ----------------------------------- | - | ------------------------------------------------------------------------------------------------- |
-| dsTable   | Tabela                              | → | Tabela do banco de dados 4D cuja seleção atual se utilizará para construir a seleção de entidades |
-| settings  | Object                              | → | Opção de construção: context                                                      |
-| Resultado | 4D. EntitySelection | ← | Seleção de entidades que coincidem com a classe de dados relacionada com a tabela dada            |
+| Parâmetro | Tipo                                |                             | Descrição                                                                                         |
+| --------- | ----------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------- |
+| dsTable   | Tabela                              | &#8594; | Tabela do banco de dados 4D cuja seleção atual se utilizará para construir a seleção de entidades |
+| settings  | Object                              | &#8594; | Opção de construção: context                                                      |
+| Resultado | 4D. EntitySelection | &#8592; | Seleção de entidades que coincidem com a classe de dados relacionada com a tabela dada            |
 
 <!-- END REF-->
 

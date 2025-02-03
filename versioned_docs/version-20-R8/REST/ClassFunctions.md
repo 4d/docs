@@ -24,8 +24,8 @@ The following ORDA and singleton functions can be called in REST:
 |Class function|Syntax|
 |---|----|
 |[datastore class](ORDA/ordaClasses.md#datastore-class)|`/rest/$catalog/DataStoreClassFunction`|
-|[dataclass class](ORDA/ordaClasses.md#dataclass-class)|`/rest/\{dataClass\}/DataClassClassFunction`|
-|[entitySelection class](ORDA/ordaClasses.md#entityselection-class)|`/rest/\{dataClass\}/EntitySelectionClassFunction`|
+|[dataclass class](ORDA/ordaClasses.md#dataclass-class)|`/rest/{dataClass}/DataClassClassFunction`|
+|[entitySelection class](ORDA/ordaClasses.md#entityselection-class)|`/rest/{dataClass}/EntitySelectionClassFunction`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$filter`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$orderby`|

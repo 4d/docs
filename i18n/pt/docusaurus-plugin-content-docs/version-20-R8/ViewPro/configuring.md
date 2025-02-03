@@ -264,20 +264,20 @@ Column and row attributes are used to specify the beginning, end, and repetition
 
 Header and footer attributes are used to specify text or images in the left, right, and center header/footer sections.
 
-| Propriedade       | Tipo              | Descrição                                                                        |
-| ----------------- | ----------------- | -------------------------------------------------------------------------------- |
-| footerCenter      | text              | O texto e o formato do rodapé central nas páginas impressas.     |
-| footerCenterImage | picture \| text\* | A imagem para a secção central do rodapé.                        |
-| footerLeft        | text              | O texto e o formato do rodapé esquerdo nas páginas impressas.    |
-| footerLeftImage   | picture \| text\* | A imagem para a secção esquerda do rodapé.                       |
-| footerRight       | text              | O texto e o formato do rodapé direito nas páginas impressas.     |
-| footerRightImage  | picture \| text\* | A imagem para a secção direita do rodapé.                        |
-| headerCenter      | text              | O texto e o formato do cabeçalho central nas páginas impressas.  |
-| headerCenterImage | picture \| text\* | A imagem para a secção central do cabeçalho.                     |
-| headerLeft        | text              | O texto e o formato do cabeçalho esquerdo nas páginas impressas. |
-| headerLeftImage   | picture \| text\* | A imagem para a secção esquerda do cabeçalho.                    |
-| headerRight       | text              | O texto e o formato do cabeçalho direito nas páginas impressas.  |
-| headerRightImage  | picture \| text\* | A imagem para a secção direita do cabeçalho.                     |
+| Propriedade       | Tipo                                      | Descrição                                                                        |
+| ----------------- | ----------------------------------------- | -------------------------------------------------------------------------------- |
+| footerCenter      | text                                      | O texto e o formato do rodapé central nas páginas impressas.     |
+| footerCenterImage | picture &#124; text\* | A imagem para a secção central do rodapé.                        |
+| footerLeft        | text                                      | O texto e o formato do rodapé esquerdo nas páginas impressas.    |
+| footerLeftImage   | picture &#124; text\* | A imagem para a secção esquerda do rodapé.                       |
+| footerRight       | text                                      | O texto e o formato do rodapé direito nas páginas impressas.     |
+| footerRightImage  | picture &#124; text\* | A imagem para a secção direita do rodapé.                        |
+| headerCenter      | text                                      | O texto e o formato do cabeçalho central nas páginas impressas.  |
+| headerCenterImage | picture &#124; text\* | A imagem para a secção central do cabeçalho.                     |
+| headerLeft        | text                                      | O texto e o formato do cabeçalho esquerdo nas páginas impressas. |
+| headerLeftImage   | picture &#124; text\* | A imagem para a secção esquerda do cabeçalho.                    |
+| headerRight       | text                                      | O texto e o formato do cabeçalho direito nas páginas impressas.  |
+| headerRightImage  | picture &#124; text\* | A imagem para a secção direita do cabeçalho.                     |
 
 \* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. If you pass a relative path, the file should be located next to the database structure file. No Windows, a extensão do ficheiro deve ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](commands/vp-get-print-info.md).
 
@@ -388,15 +388,15 @@ Show / Hide attributes are used to specify the visibility (printing) of 4D View 
 
 Watermark attributes are used to superimpose text or an image onto the 4D View Pro area.
 
-| Propriedade   |                                                                                    | Tipo              | Descrição                                                                                                                                                                                                                                                                                                                                        |
-| ------------- | ---------------------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| marca de água |                                                                                    | collection        | Coleção de parâmetros de marcas de água.  Valor padrão: undefined                                                                                                                                                                                                                                                |
-|               | \[ ].height   | inteiro longo     | A altura do texto/imagem da marca de água.                                                                                                                                                                                                                                                                                       |
-|               | \[ ].imageSrc | picture \| text\* | O texto/imagem da marca de água.                                                                                                                                                                                                                                                                                                 |
-|               | \[ ].page     | text              | A(s) página(s) onde a marca de água é impressa. Para todas as páginas: "all". Para páginas específicas: números de página ou intervalos de páginas separados por vírgulas. Ex.: "1,3,5-12" |
-|               | \[ ].width    | inteiro longo     | A largura do texto/imagem da marca de água.                                                                                                                                                                                                                                                                                      |
-|               | \[ ].x        | inteiro longo     | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                                                                                                                                                                   |
-|               | \[ ].y        | inteiro longo     | The vertical coordinate of the top left point of the watermark text / image.                                                                                                                                                                                                                                                     |
+| Propriedade   |                                                                                    | Tipo                                      | Descrição                                                                                                                                                                                                                                                                                                                                        |
+| ------------- | ---------------------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| marca de água |                                                                                    | collection                                | Coleção de parâmetros de marcas de água.  Valor padrão: undefined                                                                                                                                                                                                                                                |
+|               | \[ ].height   | inteiro longo                             | A altura do texto/imagem da marca de água.                                                                                                                                                                                                                                                                                       |
+|               | \[ ].imageSrc | picture &#124; text\* | O texto/imagem da marca de água.                                                                                                                                                                                                                                                                                                 |
+|               | \[ ].page     | text                                      | A(s) página(s) onde a marca de água é impressa. Para todas as páginas: "all". Para páginas específicas: números de página ou intervalos de páginas separados por vírgulas. Ex.: "1,3,5-12" |
+|               | \[ ].width    | inteiro longo                             | A largura do texto/imagem da marca de água.                                                                                                                                                                                                                                                                                      |
+|               | \[ ].x        | inteiro longo                             | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                                                                                                                                                                   |
+|               | \[ ].y        | inteiro longo                             | The vertical coordinate of the top left point of the watermark text / image.                                                                                                                                                                                                                                                     |
 
 \* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. If you pass a relative path, the file should be located next to the database structure file. No Windows, a extensão do ficheiro deve ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](commands/vp-get-print-info.md).
 

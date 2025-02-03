@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Params-->
 
-| Parámetros | Tipo   |   | Descripción                                                |
-| ---------- | ------ | - | ---------------------------------------------------------- |
-| id         | Text   | → | Unique identifier (UUID) of the session |
-| Resultado  | Object | ← | Storage object of the session                              |
+| Parámetros | Tipo   |                             | Descripción                                                |
+| ---------- | ------ | --------------------------- | ---------------------------------------------------------- |
+| id         | Text   | &#8594; | Unique identifier (UUID) of the session |
+| Resultado  | Object | &#8592; | Storage object of the session                              |
 
 <!-- END REF-->
 
@@ -65,7 +65,7 @@ This method modifies the value of a "settings" property stored in the storage ob
 
 #### Propiedades
 
-|                |                                                                     |
-| -------------- | ------------------------------------------------------------------- |
-| Command number | 1839                                                                |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1839                                                                |
+| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

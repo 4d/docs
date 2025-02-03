@@ -25,6 +25,7 @@ The availability of properties and functions in the `Session` object depends on 
 |                                                                                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)<br/><!-- INCLUDE #SessionClass.clearPrivileges().Summary --> |
+| [<!-- INCLUDE #SessionClass.createOTP().Syntax -->](#createotp)<br/><!-- INCLUDE #SessionClass.createOTP().Summary -->                   |
 | [<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)<br/><!-- INCLUDE #SessionClass.expirationDate.Summary -->        |
 | [<!-- INCLUDE #SessionClass.getPrivileges().Syntax -->](#getprivileges)<br/><!-- INCLUDE #SessionClass.getPrivileges().Summary -->       |
 | [<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)<br/><!-- INCLUDE #SessionClass.hasPrivilege().Summary -->          |
@@ -32,6 +33,7 @@ The availability of properties and functions in the `Session` object depends on 
 | [<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<br/><!-- INCLUDE #SessionClass.idleTimeout.Summary -->                 |
 | [<!-- INCLUDE #SessionClass.info.Syntax -->](#info)<br/><!-- INCLUDE #SessionClass.info.Summary -->                                      |
 | [<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<br/><!-- INCLUDE #SessionClass.isGuest().Summary -->                         |
+| [<!-- INCLUDE #SessionClass.restore().Syntax -->](#restore)<br/><!-- INCLUDE #SessionClass.restore().Summary -->                         |
 | [<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->       |
 | [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->                             |
 | [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->                          |
@@ -77,6 +79,54 @@ var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
 $isGuest:=Session.isGuest() //$isGuest is True
+```
+
+<!-- END REF -->
+
+<!-- REF SessionClass.createOTP().Desc -->
+
+## .createOTP()
+
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R9   | Adicionado |
+
+</details>
+
+<!-- REF #SessionClass.createOTP().Syntax -->**.createOTP** ( { *lifespan* : Integer } ) : Text <!-- END REF -->
+
+<!-- REF #SessionClass.createOTP().Params -->
+
+| Parâmetro  | Tipo    |                             | Descrição                         |
+| ---------- | ------- | :-------------------------: | --------------------------------- |
+| lifespan   | Integer |              ->             | Session token lifespan in seconds |
+| Resultados | Text    | <- | UUID of the session               |
+
+<!-- END REF -->
+
+#### Descrição
+
+:::note
+
+This function is only available with web user sessions. It returns an empty string in other contexts.
+
+:::
+
+The `.createOTP()` function <!-- REF #SessionClass.createOTP().Summary -->creates a new OTP (One Time Passcode) for the session and returns its token UUID<!-- END REF -->. This token is unique to the session in which it was generated.
+
+For more information about the OTP tokens, please refer to [this section](../WebServer/sessions.md#session-token-otp).
+
+By default, if the *lifespan* parameter is omitted, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session. You can set a custom timeout by passing a value in seconds in *lifespan* (the minimum value is 10 seconds, *lifespan* is reset to 10 if a smaller value is passed). If an expired token is used to restore a web user session, it is ignored.
+
+The returned token can then be used in exchanges with third-party applications or websites to securely identify the session. For example, the session OTP token can be used with a payment application.
+
+#### Exemplo
+
+```4d
+var $token : Text
+$token := Session.createOTP( 60 ) //the token is valid for 1 mn
 ```
 
 <!-- END REF -->
@@ -424,6 +474,67 @@ If (Session.isGuest())
 	//Do something for Guest user
 End if
 ```
+
+<!-- END REF -->
+
+<!-- REF SessionClass.restore().Desc -->
+
+## .restore()
+
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R9   | Adicionado |
+
+</details>
+
+<!-- REF #SessionClass.restore().Syntax -->**.restore** ( *token* : Text ) : Boolean <!-- END REF -->
+
+<!-- REF #SessionClass.restore().Params -->
+
+| Parâmetro  | Tipo       |                             | Descrição                                                                          |
+| ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------- |
+| token      | Text       |              ->             | Session token UUID                                                                 |
+| Resultados | Parâmetros | <- | True if the current session has been successfully replaced by the session in token |
+
+<!-- END REF -->
+
+#### Descrição
+
+:::note
+
+This function is only available with web user sessions. It returns False in other contexts.
+
+:::
+
+The `.restore()` function <!-- REF #SessionClass.restore().Summary -->replaces the current web user session with their original session corresponding to the *token* UUID<!-- END REF -->. Session's storage and privileges are restored.
+
+If the original user session has been correctly restored, the function returns `true`.
+
+The function returns `false` if:
+
+- the session token has already been used,
+- the session token has expired,
+- the session token does not exist,
+- the original session itself has expired.
+
+In this case, the current web user session is left untouched (no session is restored).
+
+#### Exemplo
+
+In a singleton called by a custom HTTP Request handler:
+
+```4d
+shared singleton Class constructor()
+
+Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
+   Session.restore($request.urlQuery.state) 
+```
+
+#### Veja também
+
+[`.createOTP()`](#createotp)
 
 <!-- END REF -->
 

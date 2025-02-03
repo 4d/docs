@@ -3,7 +3,7 @@ id: ordaClasses
 title: Classes de modelo de dados
 ---
 
-O ORDA permite-lhe criar funções de classe de alto nível acima do modelo de dados. Isto permite-lhe escrever código orientado para o negócio e "publicá-lo" tal como uma API. Datastore, classes de dados, seleções de entidades e entidades estão todos disponíveis como objetos de classe que podem conter funções.
+ORDA permite-lhe criar funções de classe de alto nível acima do modelo de dados. Isto permite-lhe escrever código orientado para o negócio e "publicá-lo" tal como uma API. Datastore, classes de dados, seleções de entidades e entidades estão todos disponíveis como objetos de classe que podem conter funções.
 
 Por exemplo, você poderia criar uma função `getNextWithHigherSalary()` na classe `EmployeeEntity` para retornar os funcionários com um salário maior do que o selecionado. Seria tão simples como chamar:
 
@@ -420,7 +420,7 @@ Function query <attributeName>($event : Object) -> $result : Object
 
 Esta função suporta três sintaxes:
 
-- Com a primeira sintaxe, você manipula toda a consulta através da propriedade de objeto$event.result\\\\`.
+- Com a primeira sintaxe, você manipula toda a consulta através da propriedade de objeto$event.result\\\\\\\`.
 - Com a segunda e terceira sintaxes, a função retorna um valor em _$result_:
 
   - Se _$result_ é um Texto, deve ser uma string de consulta válida

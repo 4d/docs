@@ -21,9 +21,9 @@ A área de quebra é definida como a área entre a linha de controle de detalhes
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados                 | Valores possíveis                                                                                                                         |
-| ----------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| markerBreak | integer \| integer collection | Posição do marcador de quebra ou coleção de posições do marcador de quebra em pixels.<br/>Valor mínimo: 0 |
+| Nome        | Tipo de dados                                         | Valores possíveis                                                                                                                         |
+| ----------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| markerBreak | integer &#x7c; integer collection | Posição do marcador de quebra ou coleção de posições do marcador de quebra em pixels.<br/>Valor mínimo: 0 |
 
 ---
 
@@ -77,9 +77,9 @@ El formulario puede contener [áreas de encabezado adicionales](#additional-area
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados                 | Valores possíveis                                                                                                                               |
-| ------------ | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| markerHeader | integer \| integer collection | Posição do marcador de cabeçalho ou coleção de posições do marcador de cabeçalho em pixels.<br/>Valor mínimo: 0 |
+| Nome         | Tipo de dados                                         | Valores possíveis                                                                                                                               |
+| ------------ | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| markerHeader | integer &#x7c; integer collection | Posição do marcador de cabeçalho ou coleção de posições do marcador de cabeçalho em pixels.<br/>Valor mínimo: 0 |
 
 ## Áreas adicionais
 

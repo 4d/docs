@@ -42,28 +42,40 @@ title: VP IMPORT DOCUMENT
 
 任意の *paramObj* 引数を渡すことで、読み込まれるドキュメントのプロパティを定義することができます:
 
-| 引数         |                     | 型                           | 説明                                                                                                                                                                                                                                                                                                                     |
-| ---------- | ------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula    |                     | 4D.Function | 読み込み終了時に実行させるコールバックメソッド。 [`Formula`](../../API/FunctionClass.md#formula) コマンドの戻り値フォーミュラを使用する必要があります。 [コールバックメソッド (フォーミュラ) の渡し方](vp-export-document.md#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。                                                                                                              |
-| password   |                     | テキスト                        | Microsoft Excel のみ (任意) - MS Excel ドキュメントの保護に使用されているパスワード。                                                                                                                                                                                                                                          |
-| csvOptions |                     | object                      | CSV読み込みのオプション                                                                                                                                                                                                                                                                                                          |
-|            | range               | object                      | 書き出されるデータの、最初のセルを格納しているセルレンジ。 指定されたレンジがセルレンジではない場合、レンジの最初のセルが使用されます。                                                                                                                                                                                                                                                   |
-|            | rowDelimiter        | テキスト                        | 行の区切り文字。 渡されなかった場合、区切り文字は 4D によって自動的に定義されます。                                                                                                                                                                                                                                                                           |
-|            | columnDelimiter     | テキスト                        | カラムの区切り文字。 デフォルト: ","                                                                                                                                                                                                                                                                                  |
-| sjsOptions |                     | object                      | sjs 読み込みのオプション                                                                                                                                                                                                                                                                                                         |
-|            | calcOnDemand        | boolean                     | 要求されたときにだけフォーミュラを計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                                                |
-|            | dynamicReferences   | boolean                     | 動的参照を含む関数を計算するかどうか。デフォルトは true。                                                                                                                                                                                                                                                                                        |
-|            | fullRecalc          | boolean                     | jsonデータを読み込んだ後に計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                                                  |
-|            | includeFormulas     | boolean                     | 読み込み時にフォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                                                      |
-|            | includeStyles       | boolean                     | 読み込み時にスタイルを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                                                        |
-|            | includeUnusedStyles | boolean                     | excel xml を json に変換する際、使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                             |
-|            | openMode            | integer                     | <li>0 (normal): 通常のオープンモード、レイジーなし、インクリメンタルなし。 ファイルを開くと、特定の時点で UI と UIイベントが更新され、応答します。</li><li>1 (lazy): レイジー (遅延) オープンモード。 ファイルを開くと、アクティブなシートだけが直接読み込まれます。 ファイルを開くと、アクティブなシートだけが直接読み込まれます。 他のシートは使用された場合にのみ読み込まれます。</li><li>2 (incremental): インクリメンタル (増分) オープンモード。 ファイルを開くと、データ読み込み中に UI と UIイベントが更新され、即座に応答します。</li> |
+| 引数           |                           | 型                           | 説明                                                                                                                                                                                                                                                                                                                     |
+| ------------ | ------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula      |                           | 4D.Function | 読み込み終了時に実行させるコールバックメソッド。 [`Formula`](../../API/FunctionClass.md#formula) コマンドの戻り値フォーミュラを使用する必要があります。 [コールバックメソッド (フォーミュラ) の渡し方](vp-export-document.md#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。                                                                                                              |
+| password     |                           | テキスト                        | Microsoft Excel のみ (任意) - MS Excel ドキュメントの保護に使用されているパスワード。                                                                                                                                                                                                                                          |
+| csvOptions   |                           | object                      | CSV読み込みのオプション                                                                                                                                                                                                                                                                                                          |
+|              | range                     | object                      | 書き出されるデータの、最初のセルを格納しているセルレンジ。 指定されたレンジがセルレンジではない場合、レンジの最初のセルが使用されます。                                                                                                                                                                                                                                                   |
+|              | rowDelimiter              | テキスト                        | 行の区切り文字。 渡されなかった場合、区切り文字は 4D によって自動的に定義されます。                                                                                                                                                                                                                                                                           |
+|              | columnDelimiter           | テキスト                        | カラムの区切り文字。 デフォルト: ","                                                                                                                                                                                                                                                                                  |
+| sjsOptions   |                           | object                      | sjs 読み込みのオプション                                                                                                                                                                                                                                                                                                         |
+|              | calcOnDemand              | boolean                     | 要求されたときにだけフォーミュラを計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                                                |
+|              | dynamicReferences         | boolean                     | 動的参照を含む関数を計算するかどうか。デフォルトは true。                                                                                                                                                                                                                                                                                        |
+|              | fullRecalc                | boolean                     | jsonデータを読み込んだ後に計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                                                  |
+|              | includeFormulas           | boolean                     | 読み込み時にフォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                                                      |
+|              | includeStyles             | boolean                     | 読み込み時にスタイルを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                                                        |
+|              | includeUnusedStyles       | boolean                     | excel xml を json に変換する際、使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                             |
+|              | openMode                  | integer                     | <li>0 (normal): 通常のオープンモード、レイジーなし、インクリメンタルなし。 ファイルを開くと、特定の時点で UI と UIイベントが更新され、応答します。</li><li>1 (lazy): レイジー (遅延) オープンモード。 ファイルを開くと、アクティブなシートだけが直接読み込まれます。 ファイルを開くと、アクティブなシートだけが直接読み込まれます。 他のシートは使用された場合にのみ読み込まれます。</li><li>2 (incremental): インクリメンタル (増分) オープンモード。 ファイルを開くと、データ読み込み中に UI と UIイベントが更新され、即座に応答します。</li> |
+| excelOptions |                           | object                      | Excel only (optional) - Options for Excel export                                                                                                                                                                                                                                                    |
+|              | includeStyles             | boolean                     | Whether to include the style when importing, default true.                                                                                                                                                                                                                                             |
+|              | includeFormulas           | boolean                     | Whether to include the formula when importing, default true.                                                                                                                                                                                                                                           |
+|              | frozenColumnsAsRowHeaders | boolean                     | Whether to treat the frozen columns as row headers when importing, default false.                                                                                                                                                                                                                      |
+|              | frozenRowsAsColumnHeaders | boolean                     | Whether to treat the frozen rows as column headers when importing, default false.                                                                                                                                                                                                                      |
+|              | fullRecalc                | boolean                     | jsonデータを読み込んだ後に計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                                                  |
+|              | dynamicReferences         | boolean                     | Whether to calculate functions with dynamic reference, default true.                                                                                                                                                                                                                                   |
+|              | calcOnDemand              | boolean                     | Whether to calculate formulas only when they are demanded, default false.                                                                                                                                                                                                                              |
+|              | includeUnusedStyles       | boolean                     | Whether to include the unused name style when converting excel xml to the json, default true.                                                                                                                                                                                                          |
+|              | password                  | テキスト                        | The password to open the workbook.                                                                                                                                                                                                                                                                     |
+|              | openMode                  | テキスト                        | The open mode of normal, lazy and incremental. By default is normal.                                                                                                                                                                                                                   |
 
 :::note 注記
 
 - .xslx、.csv、.sjs 形式のファイルの読み込みは、**非同期** でおこなわれます。 これらの形式で、ドキュメント処理の最後にアクションを実行したい場合には、`formula` プロパティを使用する必要があります。
 - Microsoft Excel 形式のファイルを 4D View Pro ドキュメントに読み込む場合、一部の設定が失われる可能性があります。 [SpreadJS にある一覧](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport) にて、設定を確認することができます。
 - CSV形式およびユーザー定義区切りの値 (DSV) に関する詳細については、こちらの [Wikipedia の記事](https://en.wikipedia.org/wiki/Delimiter-separated_values) (英文) を参照ください。
+- Using *excelOptions* object is recommended when importing ".xlsx" format. Make sure to not mix this object with legacy first level property *password* to avoid potiental issues.
 
 :::
 
@@ -72,8 +84,8 @@ title: VP IMPORT DOCUMENT
 フォームが開かれたときに、ディスク上に保存されているデフォルトの 4D View Pro ドキュメントを読み込みます:
 
 ```4d
-C_TEXT($docPath)
-If(Form event code=On VP Ready) // 4D View Pro エリアの読み込みが完了しています
+var $docPath : text
+If(Form event code=On VP Ready) //4D View Pro area loaded and ready
     $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
     VP IMPORT DOCUMENT("VPArea";$docPath)
 End if
@@ -84,13 +96,13 @@ End if
 パスワードで保護されている Microsoft Excel ドキュメントを 4D View Pro エリアに読み込みます:
 
 ```4d
-	// 読み込みコード
-var $o : Object
-$o:=New object
-$o.password:="excel123"
+	//Import code
+var $o:={}
 $o.formula:=Formula(myImport)
+$excelOptions:={includeStyles:false;includeFormulas:true;password:"excel123"}
+$o.excelOptions:=$excelOptions
  
-VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
+VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfile.xlsx";$o)
 ```
 
 ```4d
@@ -111,7 +123,7 @@ End if
 ![example-import-csv](../../assets/en/ViewPro/vp-import-document-csv.png)
 
 ```4d
-$params:=New object
+var $params:={}
 $params.range:=VP Cells("ViewProArea";0;0;2;5)
 VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOptions";$params))
 ```
@@ -122,4 +134,5 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 #### 参照
 
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
-[VP NEW DOCUMENT](vp-new-document.md)
+[VP NEW DOCUMENT](vp-new-document.md)<br/>
+[4D View Pro: Excel import/export update (blog post)](https://blog.4d.com/4d-view-pro-excel-import-export-update)

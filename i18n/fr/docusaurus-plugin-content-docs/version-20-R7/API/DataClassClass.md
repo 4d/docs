@@ -947,10 +947,10 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
   - Dans le cas d'une recherche avec un comparateur IN, *value*doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
 - **logicalOperator** : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
 
-| Conjonction | Symbole(s)                                          |
-| ----------- | ---------------------------------------------------------------------- |
-| AND         | &, &&, and |
-| OU          | \|,\|\|, or                                                            |
+| Conjonction | Symbole(s)                                                       |
+| ----------- | ----------------------------------------------------------------------------------- |
+| AND         | &, &&, and              |
+| OU          | &#124;,&#124;&#124;, or |
 
 - **order by attributePath** : vous pouvez inclure une déclaration order by *attributePath* dans la requête afin que les données résultantes soient triées selon cette déclaration. Vous pouvez utiliser plusieurs tris par déclaration, en les séparant par des virgules (e.g., order by *attributePath1* desc, *attributePath2* asc). Par défaut, le tri est par ordre croissant. Passez 'desc' pour définir un tri par ordre décroissant et 'asc' pour définir un tri par ordre croissant.
 

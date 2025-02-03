@@ -69,7 +69,7 @@ Pour garantir l'évaluation correcte des expressions traitées via les balises, 
 
 The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!--#4DINCLUDE-->` tag.
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--........-->`, if any. If the`<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
+When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--#4DBASE -->`, if any. If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
 
 The *folderPath* parameter must contain a pathname relative to the current page and it must end with a slash (`/`). Le dossier désigné doit être situé à l'intérieur du dossier Web.
 
@@ -190,7 +190,7 @@ The collection must contain only **elements of the same type**, otherwise an err
 Le nombre de boucles est basé sur le nombre d'éléments de la collection. At each iteration, the *item* variable is automatically filled with the matching element of the collection. Vous devez tenir compte des points suivants :
 
 - If the *item* variable is of the object type or collection type (i.e. if *expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). Si la variable est de type scalaire, seule la variable sera modifiée.
-- The *item* variable gets the same type as the first collection element. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
+- The *item* variable gets the same type as the first collection element. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
 - If the collection contains elements with a Null value, an error is generated if the *item* variable type does not support Null values (such as longint variables).
 
 #### Exemple avec une collection de valeurs scalaires
@@ -276,9 +276,9 @@ This syntax iterates on each *property* of the *object*. The code portion locate
 
 The *property* parameter is a text variable automatically filled with the name of the currently processed property.
 
-The properties of the object are processed according to their creation order. Pendant la boucle, il est possible d'ajouter ou de supprimer des propriétés dans l'objet, sans pour autant modifier le nombre de boucles qui reste basé sur le nombre de propriétés initial de l'objet.
+Les propriétés de l'objet sont itérées en fonction de leur ordre de création. Pendant la boucle, il est possible d'ajouter ou de supprimer des propriétés dans l'objet, sans pour autant modifier le nombre de boucles qui reste basé sur le nombre de propriétés initial de l'objet.
 
-#### Example with the properties of an object
+#### Exemple avec les propriétés d'un objet
 
 *getGamers* is a project method that returns an object like ("Mary"; 10; "Ann"; 20; "John"; 40) to figure gamer scores.
 
@@ -307,7 +307,7 @@ The properties of the object are processed according to their creation order. Pe
 
 The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
 
-For example, you can execute:
+Par exemple, vous pouvez exécuter :
 
 ```
  $input:="<!--#4DEVAL a:=42-->" //assignment
@@ -328,12 +328,12 @@ In case of an error during interpretation, the text inserted will be in the form
 
 Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. Unlike the `4DTEXT` tag, this tag does not escape HTML special characters (e.g. ">").
 
-For example, here are the processing results of the 4D text variable myvar with the available tags:
+Par exemple, voici les résultats du traitement de la variable texte 4D myvar avec les balises disponibles :
 
-| myvar Value    | Tags                   | Résultat                    |
-| -------------- | ---------------------- | --------------------------- |
-| `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&amp;lt;B&amp;gt;` |
-| `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`                       |
+| valeur de myvar | Balises                | Résultat                            |
+| --------------- | ---------------------- | ----------------------------------- |
+| `myvar:="<B>"`  | `<!--#4DTEXT myvar-->` | `&amp;amp;lt;B&amp;amp;gt;` |
+| `myvar:="<B>"`  | `<!--#4DHTML myvar-->` | `<B>`                               |
 
 In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar--> : ## error # error code`.
 
@@ -345,7 +345,7 @@ In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar
 
 Used with the `<!--#4DELSEIF-->` (optional), `<!--#4DELSE-->` (optional) and `<!--#4DENDIF-->` comments, the `<!--#4DIF expression-->` comment offers the possibility to execute portions of code conditionally.
 
-The *expression* parameter can contain any valid 4D expression returning a Boolean value. It must be indicated within parenthesis and comply with the 4D syntax rules.
+The *expression* parameter can contain any valid 4D expression returning a Boolean value. Il doit être indiqué entre parenthèses et respecter les règles syntaxiques de 4D.
 
 The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
 
@@ -354,7 +354,7 @@ In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boole
 Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`).
 You can use a `<!--#4DELSE-->` tag after the last `<!--#4DELSEIF-->`. If all the conditions are false, the statements following the `<!--#4DELSE-->` are executed.
 
-The two following codes are equivalent.
+Les deux codes suivants sont équivalents.
 
 Code using `4DELSE` only:
 
@@ -402,7 +402,7 @@ No name has been found.
 </BODY>
 ```
 
-This example inserts different pages depending on which user is connected:
+Cet exemple insère des pages différentes en fonction de l'utilisateur connecté :
 
 ```html
 <!--#4DIF LoggedIn=False-->
@@ -420,11 +420,11 @@ This example inserts different pages depending on which user is connected:
 
 #### Syntax: `<!--#4DINCLUDE path-->`
 
-This tag is mainly designed to include an HTML page (indicated by the *path* parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the `<body>` and `</body>` tags, is included (the tags themselves are not included). This lets you avoid conflicts related to meta tags present in the headers.
+This tag is mainly designed to include an HTML page (indicated by the *path* parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the `<body>` and `</body>` tags, is included (the tags themselves are not included). Cela permet d'éviter les conflits liés aux métabalises présentes dans les en-têtes.
 
-However, if the HTML page specified does not contain `<body>``</body>` tags, the entire page is included. It is up to you to verify the consistency of the meta tags.
+However, if the HTML page specified does not contain `<body>` and `</body>` tags, the entire page is included. Il vous appartient de vérifier la cohérence des balises méta.
 
-The `<!--#4DINCLUDE -->` comment is very useful for tests (`<!--#4DIF-->`) or loops (`<!--#4DLOOP-->`). It is very convenient to include banners according to a criteria or randomly.
+The `<!--#4DINCLUDE -->` comment is very useful for tests (`<!--#4DIF-->`) or loops (`<!--#4DLOOP-->`). Il est très pratique d'inclure des bannières en fonction d'un critère ou de manière aléatoire.
 When including, regardless of the file name extension, 4D analyzes the called page and then inserts the contents (modified or not) in the page originating the `4DINCLUDE` call.
 
 An included page with the `<!--#4DINCLUDE -->` comment is loaded in the Web server cache the same way as pages called via a URL or sent with the `WEB SEND FILE` command.
@@ -433,7 +433,7 @@ In *path*, put the path leading to the document to include. Warning: In the case
 
 > You can modify the default folder used by the `4DINCLUDE` tag in the current page, using the `<!--#4DBASE -->` tag (see below).
 
-The number of `<!--#4DINCLUDE path-->` within a page is unlimited. However, the `<!--#4DINCLUDE path-->` calls can be made only at one level. This means that, for example, you cannot insert `<!--#4DINCLUDE mydoc3.html-->` in the *mydoc2.html* body page, which is called by `<!--#4DINCLUDE mydoc2-->` inserted in *mydoc1.html*. Furthermore, 4D verifies that inclusions are not recursive.
+The number of `<!--#4DINCLUDE path-->` within a page is unlimited. However, the `<!--#4DINCLUDE path-->` calls can be made only at one level. This means that, for example, you cannot insert `<!--#4DINCLUDE mydoc3.html-->` in the *mydoc2.html* body page, which is called by `<!--#4DINCLUDE mydoc2-->` inserted in *mydoc1.html*. En outre, 4D vérifie que les inclusions ne sont pas récursives.
 
 In case of error, the inserted text is "`<!--#4DINCLUDE path-->` :The document cannot be opened".
 
@@ -449,15 +449,15 @@ Exemples :
 
 #### Syntax: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
 
-This comment allows repetition of a portion of code as long as the condition is fulfilled. The portion is delimited by `<!--#4DLOOP-->` and `<!--#4DENDLOOP-->`.
+Ce commentaire permet de répéter une partie du code tant que la condition est remplie. The portion is delimited by `<!--#4DLOOP-->` and `<!--#4DENDLOOP-->`.
 
 The `<!--#4DLOOP condition-->` ... `<!--#4DENDLOOP-->` blocks can be nested. Like in 4D, each `<!--#4DLOOP condition-->` must match a `<!--#4DENDLOOP-->`.
 
-There are five kinds of conditions:
+Il existe cinq types de conditions :
 
 ### `<!--#4DLOOP [table]-->`
 
-This syntax makes a loop for each record from the table current selection in the current process. The code portion located between the two comments is repeated for each current selection record.
+Cette syntaxe crée une boucle pour chaque enregistrement de la sélection courante de la table dans le process courant. La partie du code située entre les deux commentaires est répétée pour chaque enregistrement de la sélection courante.
 
 > When the `4DLOOP` tag is used with a table, records are loaded in "Read only" mode.
 
@@ -481,11 +481,11 @@ Le code suivant :
 
 ### `<!--#4DLOOP array-->`
 
-This syntax makes a loop for each array item. The array current item is increased when each code portion is repeated.
+Cette syntaxe crée une boucle pour chaque élément du tableau. L'indice d'élément courant du tableau est augmenté lorsque chaque portion de code est répétée.
 
-> This syntax cannot be used with two dimension arrays. In this case, it is better to combine a method with nested loops.
+> Cette syntaxe ne peut pas être utilisée avec des tableaux à deux dimensions. Dans ce cas, il est préférable de combiner une méthode avec des boucles imbriquées.
 
-The following code example:
+L'exemple de code suivant :
 
 ```html
 <!--#4DLOOP arr_names-->
@@ -504,13 +504,13 @@ The following code example:
 
 ### `<!--#4DLOOP method-->`
 
-This syntax makes a loop as long as the method returns `True`. The method takes a Long Integer parameter type. First it is called with the value 0 to allow an initialization stage (if necessary); it is then called with the values 1 ,then 2, then 3 and so on, as long as it returns `True`.
+This syntax makes a loop as long as the method returns `True`. La méthode prend un paramètre de type entier long. First it is called with the value 0 to allow an initialization stage (if necessary); it is then called with the values 1 ,then 2, then 3 and so on, as long as it returns `True`.
 
-For security reasons, within a Web process, the `On Web Authentication` database method can be called once just before the initialization stage (method execution with 0 as parameter). If the authentication is OK, the initialization stage will proceed.
+For security reasons, within a Web process, the `On Web Authentication` database method can be called once just before the initialization stage (method execution with 0 as parameter). Si l'authentification est correcte, l'étape d'initialisation se poursuit.
 
 `C_BOOLEAN($0)` and `C_LONGINT($1)` MUST be declared within the method for compilation purposes.
 
-The following code example:
+L'exemple de code suivant :
 
 ```html
 <!--#4DLOOP my_method-->
@@ -552,9 +552,9 @@ The `my_method` method can be as follows:
 
 ### `<!--#4DLOOP expression-->`
 
-With this syntax, the `4DLOOP` tag makes a loop as long as the *expression* returns `True`. The expression can be any valid Boolean expression and must contain a variable part to be evaluated in each loop to avoid infinite loops.
+With this syntax, the `4DLOOP` tag makes a loop as long as the *expression* returns `True`. L'expression peut être n'importe quelle expression booléenne valide et doit contenir une partie variable à évaluer dans chaque boucle afin d'éviter les boucles infinies.
 
-For example, the following code:
+Par exemple, le code suivant :
 
 ```html
 <!--#4DEVAL $i:=0-->
@@ -564,12 +564,11 @@ For example, the following code:
 <!--#4DENDLOOP-->
 ```
 
-...produces the following result:
+...donne le résultat suivant :
 
 ```
 
 0
-
 1
 2
 3
@@ -577,7 +576,7 @@ For example, the following code:
 
 ### `<!--#4DLOOP pointerArray-->`
 
-In this case, the `4DLOOP` tag works like it does with an array: it makes a loop for each element of the array referenced by the pointer. The current array element is increased each time the portion of code is repeated.
+In this case, the `4DLOOP` tag works like it does with an array: it makes a loop for each element of the array referenced by the pointer. L'indice de l'élément courant du tableau est augmenté à chaque fois que la portion de code est répétée.
 
 This syntax is useful when you pass an array pointer as a parameter to the `PROCESS 4D TAGS` command.
 
@@ -597,14 +596,14 @@ Voici un exemple :
 
 In case of an interpretation error, the text "`<!--#4DLOOP expression-->`: description" is inserted instead of the contents located between `<!--#4DLOOP -->` and `<!--#4DENDLOOP-->`.
 
-The following messages can be displayed:
+Les messages suivants peuvent être affichés :
 
-- Unexpected expression type (standard error);
-- Incorrect table name (error on the table name);
-- An array was expected (the variable is not an array or is a two dimension array);
-- The method does not exist;
-- Syntax error (when the method is executing);
-- Access error (you do not have the appropriate access privileges to access the table or the method).
+- Type d'expression inattendu (erreur standard) ;
+- Nom de table incorrect (erreur sur le nom de la table) ;
+- Un tableau était attendu (la variable n'est pas un tableau ou est un tableau à deux dimensions) ;
+- La méthode n'existe pas ;
+- Erreur de syntaxe (lors de l'exécution de la méthode) ;
+- Erreur d'accès (vous ne disposez pas des privilèges d'accès appropriés pour accéder à la table ou à la méthode).
 - 4DENDLOOP expected (the `<!--#4DENDLOOP-->` number does not match the `<!--#4DLOOP -->`).
 
 ## 4DSCRIPT/
@@ -613,7 +612,7 @@ The following messages can be displayed:
 
 The `4DSCRIPT` tag allows you to execute 4D methods when processing the template. The presence of the `<!--#4DSCRIPT/MyMethod/MyParam-->` tag as an HTML comment launches the execution of the `MyMethod` method with the `Param` parameter as a string in `$1`.
 
-> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the `On Web Authentication` database method (if it exists). If it returns True, 4D executes the method.
+> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the `On Web Authentication` database method (if it exists). Si elle retourne True, 4D exécute la méthode.
 
 The method must return text in `$0`. If the string starts with the code character 1, it is considered as HTML (the same principle is true for the `4DHTML` tag).
 
@@ -629,7 +628,7 @@ The `MYMETH` method is as follows:
 
 > A method called by `4DSCRIPT` must not call interface elements (`DIALOG`, `ALERT`, etc.).
 
-As 4D executes methods in their order of appearance, it is absolutely possible to call a method that sets the value of many variables that are referenced further in the document, whichever mode you are using. You can insert as many `<!--#4DSCRIPT...-->` comments as you want in a template.
+Comme 4D exécute les méthodes dans leur ordre d'apparition, il est tout à fait possible d'appeler une méthode qui fixe la valeur de plusieurs variables référencées plus loin dans le document, quel que soit le mode utilisé. You can insert as many `<!--#4DSCRIPT...-->` comments as you want in a template.
 
 ## 4DTEXT
 
@@ -704,7 +703,7 @@ Note that `$4dtag` and `<--#4dtag -->` are not strictly equivalent: unlike `<--#
 
 Cette différence consiste à empêcher l'injection de code malveillant. As [explained below](#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. However, since `4DTEXT` does not escape the `$` symbol, we decided to break support for recursion in order to prevent malicious injection using the `$4dtag (expression)` syntax.
 
-Les exemples suivants illustrent le résultat du traitement en fonction de la syntaxe et du tag utilisés :
+Les exemples suivants illustrent le résultat du traitement en fonction de la syntaxe et de la balise  utilisées :
 
 ```4d
   // example 1

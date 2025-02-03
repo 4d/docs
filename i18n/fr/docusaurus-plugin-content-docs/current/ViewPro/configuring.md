@@ -51,7 +51,7 @@ Les interfaces de Ruban et de Barre d'outils regroupent les fonctionnalités qui
 
 Les événements formulaire suivants sont disponibles dans la Liste de propriétés des zones 4D View Pro.
 
-Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Certains événements formulaire standard fournissent des informations étendues dans l'objet retourné par la commande [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) lorsqu'ils sont générés pour les zones 4D View Pro. Le tableau suivant indique les événements standard et les événements spécifiques ou ceux qui fournissent des informations supplémentaires aux zones 4D View Pro :
+Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Le tableau suivant indique les événements standard et les événements spécifiques ou ceux qui fournissent des informations supplémentaires aux zones 4D View Pro :
 
 | Événements 4D standard                          | Événements 4D View Pro spécifiques et étendus         |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -227,7 +227,7 @@ In addition to the special characters and codes described in the previous sectio
 | ^                      | Caret                                                                                              | #\^#                                        |
 | '                      | Apostrophe                                                                                         | '######                                      |
 | { }                    | Curly brackets                                                                                     | {###,###,###}                                |
-| `< >`                  | Less-than and greater than signs                                                                   | ## >#\#                                      |
+| `< >`                  | Less-than and greater than signs                                                                   | ## >#\\\\\#                              |
 | =                      | Equal sign                                                                                         | #+#=##                                       |
 | /                      | Forward slash. When used with numbers, displays them as fractions. | mm/dd/yyyy                                   |
 | !                      | Exclamation point                                                                                  | $###.00!                     |
@@ -266,20 +266,20 @@ Les attributs de ligne et de colonne sont utilisés pour identifier le début, l
 
 Header and footer attributes are used to specify text or images in the left, right, and center header/footer sections.
 
-| Propriété         | Type              | Description                                                                |
-| ----------------- | ----------------- | -------------------------------------------------------------------------- |
-| footerCenter      | text              | The text and format of the center footer on printed pages. |
-| footerCenterImage | picture \| text\* | The image for the center section of the footer.            |
-| footerLeft        | text              | The text and format of the left footer on printed pages.   |
-| footerLeftImage   | picture \| text\* | The image for the left section of the footer.              |
-| footerRight       | text              | The text and format of the right footer on printed pages.  |
-| footerRightImage  | picture \| text\* | The image for the right section of the footer.             |
-| headerCenter      | text              | The text and format of the center header on printed pages. |
-| headerCenterImage | picture \| text\* | The image for the center section of the header.            |
-| headerLeft        | text              | The text and format of the left header on printed pages.   |
-| headerLeftImage   | picture \| text\* | The image for the left section of the header.              |
-| headerRight       | text              | The text and format of the right header on printed pages.  |
-| headerRightImage  | picture \| text\* | The image for the right section of the header.             |
+| Propriété         | Type                                      | Description                                                                |
+| ----------------- | ----------------------------------------- | -------------------------------------------------------------------------- |
+| footerCenter      | text                                      | The text and format of the center footer on printed pages. |
+| footerCenterImage | picture &#124; text\* | The image for the center section of the footer.            |
+| footerLeft        | text                                      | The text and format of the left footer on printed pages.   |
+| footerLeftImage   | picture &#124; text\* | The image for the left section of the footer.              |
+| footerRight       | text                                      | The text and format of the right footer on printed pages.  |
+| footerRightImage  | picture &#124; text\* | The image for the right section of the footer.             |
+| headerCenter      | text                                      | The text and format of the center header on printed pages. |
+| headerCenterImage | picture &#124; text\* | The image for the center section of the header.            |
+| headerLeft        | text                                      | The text and format of the left header on printed pages.   |
+| headerLeftImage   | picture &#124; text\* | The image for the left section of the header.              |
+| headerRight       | text                                      | The text and format of the right header on printed pages.  |
+| headerRightImage  | picture &#124; text\* | The image for the right section of the header.             |
 
 \* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. Peu importe le type utilisé pour définir une image, l'image elle-même (pas une référence) est stockée dans la zone 4D View Pro et est retournée par [VP Get print info](commands/vp-get-print-info.md).
 
@@ -390,15 +390,15 @@ Show / Hide attributes are used to specify the visibility (printing) of 4D View 
 
 Watermark attributes are used to superimpose text or an image onto the 4D View Pro area.
 
-| Propriété |                                                                                    | Type              | Description                                                                                                                                                                                                                                                                               |
-| --------- | ---------------------------------------------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| watermark |                                                                                    | collection        | Collection of watermark settings.  Default value: undefined                                                                                                                                                                                               |
-|           | \[ ].height   | entier long       | The height of the watermark text / image.                                                                                                                                                                                                                                 |
-|           | \[ ].imageSrc | picture \| text\* | The watermark text / image.                                                                                                                                                                                                                                               |
-|           | \[ ].page     | text              | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
-|           | \[ ].width    | entier long       | The width of the watermark text / image.                                                                                                                                                                                                                                  |
-|           | \[ ].x        | entier long       | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                                                                                                            |
-|           | \[ ].y        | entier long       | The vertical coordinate of the top left point of the watermark text / image.                                                                                                                                                                                              |
+| Propriété |                                                                                    | Type                                      | Description                                                                                                                                                                                                                                                                               |
+| --------- | ---------------------------------------------------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| watermark |                                                                                    | collection                                | Collection of watermark settings.  Default value: undefined                                                                                                                                                                                               |
+|           | \[ ].height   | entier long                               | The height of the watermark text / image.                                                                                                                                                                                                                                 |
+|           | \[ ].imageSrc | picture &#124; text\* | The watermark text / image.                                                                                                                                                                                                                                               |
+|           | \[ ].page     | text                                      | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
+|           | \[ ].width    | entier long                               | The width of the watermark text / image.                                                                                                                                                                                                                                  |
+|           | \[ ].x        | entier long                               | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                                                                                                            |
+|           | \[ ].y        | entier long                               | The vertical coordinate of the top left point of the watermark text / image.                                                                                                                                                                                              |
 
 \* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. Peu importe le type utilisé pour définir une image, l'image elle-même (pas une référence) est stockée dans la zone 4D View Pro et est retournée par [VP Get print info](commands/vp-get-print-info.md).
 

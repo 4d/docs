@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| Paramètres    | Type    |     | Description                   |
-| ------------- | ------- | :-: | ----------------------------- |
-| processNumber | Integer |  →  | Process number                |
-| Résultat      | Object  |  ←  | Informations sur le processus |
+| Paramètres    | Type    |                             | Description                   |
+| ------------- | ------- | :-------------------------: | ----------------------------- |
+| processNumber | Integer | &#8594; | Process number                |
+| Résultat      | Object  | &#8592; | Informations sur le processus |
 
 <!-- END REF -->
 
@@ -37,7 +37,7 @@ L'objet retourné contient les propriétés suivantes :
 | ID               | Integer                                 | Process unique ID                                                                |
 | name             | Text                                    | Nom du process                                                                   |
 | number           | Integer                                 | Process number                                                                   |
-| preemptive       | Boolean                                 | True if run preemptive, false otherwise                                          |
+| préemptif        | Boolean                                 | True if run preemptive, false otherwise                                          |
 | sessionID        | Text                                    | UUID de la session                                                               |
 | state            | Integer                                 | Current status. Possible values: see below       |
 | systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
