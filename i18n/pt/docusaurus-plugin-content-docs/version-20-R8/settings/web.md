@@ -200,16 +200,16 @@ O menu de formato do histórico oferece as seguintes opções:
 
 > O formato DLF não pode ser personalizado.
 
-- **ELF (Extended Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato ELF. O formato ELF está muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
+- **ELF (Extended Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato ELF. O formato ELF está muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. Por esse motivo, o formato ELF pode ser personalizado: é possível escolher os campos a serem registrados, bem como sua ordem de inserção no arquivo.
 
 - **WLF (WebStar Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato WLF. O formato WLF foi desenvolvido especificamente para o servidor 4D WebSTAR. Ele é semelhante ao formato ELF, com apenas alguns campos adicionais. Tal como o formato ELF, pode ser personalizado.
 
 **Configuração dos campos**
-Quando você escolhe o formato ELF (Extended Log Format) ou WLF (WebStar Log Format), a área "Weg Log Token Selection" exibe os campos disponíveis para o formato escolhido. You will need to select each field to be included in the log. To do so, check the desired fields. You will need to select each field to be included in the log. To do so, check the desired fields.
+Quando você escolhe o formato ELF (Extended Log Format) ou WLF (WebStar Log Format), a área "Weg Log Token Selection" exibe os campos disponíveis para o formato escolhido. Você precisará selecionar cada campo a ser incluído no registro. You will need to select each field to be included in the log. To do so, check the desired fields.
 
 **Nota**: Não é possível selecionar o mesmo campo duas vezes.
 
-The following table lists the fields available for each format (in alphabetical order) and describes its contents:
+A tabela a seguir lista os campos disponíveis para cada formato (em ordem alfabética) e descreve seu conteúdo:
 
 | Campo                                                  | ELF | WLF | Valor                                                                                                                                                        |
 | ------------------------------------------------------ | --- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
