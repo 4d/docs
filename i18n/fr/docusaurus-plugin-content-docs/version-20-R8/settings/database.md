@@ -70,7 +70,7 @@ Trois options d’emplacement sont proposées :
 
 En système japonais, 4D prend en charge la librairie *MeCab*, comportant un algorithme d’indexation des mots-clés particulièrement adapté à la langue japonaise.
 
-Cet algorithme est utilisé par défaut dans les versions japonaises de 4D. Si vous le souhaitez, vous pouvez désactiver l’utilisation de l’algorithme *MeCab*et utiliser la librairie classique *ICU*.
+Cet algorithme est utilisé par défaut dans les versions japonaises de 4D. Si vous le souhaitez, vous pouvez désactiver l’utilisation de l’algorithme _MeCab_et utiliser la librairie classique *ICU*.
 
 Pour désactiver *MeCab*, il vous suffit de cocher l’option **N’utiliser que les caractères non alphanumériques pour les mots-clés** :
 
