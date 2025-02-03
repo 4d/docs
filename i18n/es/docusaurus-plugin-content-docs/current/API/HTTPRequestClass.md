@@ -478,14 +478,14 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *timeout* : Real } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| Parámetros | Tipo                           |                             | Descripción                                         |
-| ---------- | ------------------------------ | :-------------------------: | --------------------------------------------------- |
-| time       | Real                           |              ->             | Tiempo máximo en segundos para esperar la respuesta |
-| Result     | 4D.HTTPRequest | <- | Objeto HTTPRequest                                  |
+| Parámetros | Tipo                           |                             | Descripción                  |
+| ---------- | ------------------------------ | :-------------------------: | ---------------------------- |
+| timeout    | Real                           |              ->             | Maximum wait time in seconds |
+| Result     | 4D.HTTPRequest | <- | Objeto HTTPRequest           |
 
 <!-- END REF -->
 
@@ -493,12 +493,16 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 > Esta función es hilo seguro.
 
-La función `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->espera la respuesta del servidor<!-- END REF -->.
+The `wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->waits waits for a response from the server or until the specified `timeout` is reached<!-- END REF -->.
 
-Si se pasa un parámetro *time*, la función esperará como máximo el número de segundos definido.
+If a *timeout* is provided, the function waits for the specified duration in this parameter. Decimals are accepted.
 
 Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
 
-Durante una ejecución `.wait()`, las funciones de retrollamada se ejecutan, ya sea desde otras instancias `HTTPRequest` o [`SystemWorker`](SystemWorkerClass.md) u otras llamadas [`CALL WORKER`](../commands-legacy/call-worker.md). Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
+:::note
+
+During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls.  You can exit from a .wait() by calling [`terminate()`](#terminate) from a callback.
+
+:::
 
 <!-- END REF -->
