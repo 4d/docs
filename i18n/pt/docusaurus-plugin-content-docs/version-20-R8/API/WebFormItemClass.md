@@ -56,7 +56,7 @@ For more information, please refer to the [`.hide()` description in the Qodly do
 
 #### Descrição
 
-The `.show()` function <!-- REF #WebFormItemClass.show().Summary -->makes the component visible<!-- END REF -->.
+A função `.show()` <!-- REF #WebFormItemClass.show().Summary -->torna o componente visível<!-- END REF -->.
 
 For more information, please refer to the [`.show()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#show).
 
