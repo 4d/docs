@@ -65,7 +65,7 @@ Ejemplos:
  $obFilled:=New object("name";"Smith";"age";42) //instanciación y asignación de un objeto pre-rellenado
 ```
 
-### operador \\`{}
+### operador \\\`{}
 
 El operador `{}` permite crear un **literal de objeto**. Un literal de objeto es una lista separada por semicolumnas de cero o más pares de nombres de propiedades y valores asociados de un objeto, encerrados entre llaves (`{}`). La sintaxis literal de objeto crea objetos vacíos o llenos.
 
