@@ -464,7 +464,7 @@ Como iniciar esse log:
   SET DATABASE PARAMETER(TCP log; 1)
   ```
 
-- Configure the log through a [JSON configuration file](#using-a-log-configuration-file):
+- Configure o log através de um [arquivo de configuração JSON](#using-a-log-configuration-file):
 
   ```json
   {
