@@ -88,7 +88,7 @@ Vous pouvez utiliser le bouton **Actualiser** dans les contextes suivants :
 
 ## 4D Online Store
 
-Sur le site web 4D Store, vous pouvez commander, mettre à jour, étendre et gérer vos produits 4D. Vous pouvez vous connecter au store à l'adresse suivante : [https://store.4d.com/fr/](https://store.4d.com/us/) (veuillez sélectionner votre pays).
+Sur le site web 4D Store, vous pouvez commander, mettre à jour, étendre et gérer vos produits 4D. Sur le site web 4D Store, vous pouvez commander, mettre à jour, étendre et gérer vos produits 4D.
 
 Cliquez sur **Se connecter** pour vous identifier à l'aide de votre compte existant ou sur **Nouveau compte** pour en créer un nouveau, puis suivez les instructions à l'écran.
 
