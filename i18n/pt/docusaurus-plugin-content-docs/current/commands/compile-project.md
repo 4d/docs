@@ -107,7 +107,7 @@ Para obter mais informações, consulte [Ferramentas de compilação](../Project
 
 | **Propriedade** | **Tipo** | **Description**                                                                                           |
 | --------------- | -------- | --------------------------------------------------------------------------------------------------------- |
-| name            | Text     | Name of the variable                                                                                      |
+| name            | Text     | Nome da variável                                                                                          |
 | type            | number   | Type of the variable (like Value type command)                                         |
 | arrayDimension  | number   | For arrays only: 1 for mono dimension arrays, 2 for two-dimension arrays                  |
 | code            | Object   | For process and interprocess variables: descriptor of where the variable has been defined |
