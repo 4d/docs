@@ -158,7 +158,7 @@ A seleção da entidade deve ter sido definida previamente usando [$method=entit
 | __DATASET  | Text       | Obrigatório - entitySetID (UUID) da seleção de entidades                 |
 | __ENTITIES | Parâmetros | Obrigatório - Verdadeiro para indicar ao servidor que o parâmetro é uma seleção de entidade |
 
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
+Ver exemplo para [receber uma seleção de entidade](#receiving-an-entity-selection-as-parameter) com uma solicitação POST.
 See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
 
 ## POST request examples
