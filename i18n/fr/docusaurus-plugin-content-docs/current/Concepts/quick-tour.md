@@ -378,7 +378,7 @@ End for
 
 #### Commentaires en ligne ou multilignes (`/*comment*/`)
 
-Encadrez le contenu avec les caractères `/*` ...  `*/` pour créer des blocs de commentaires en ligne ou multi-lignes. Les blocs de commentaire en ligne et multi-lignes commencent par `/*` et se terminent par `*/`.
+Encadrez le contenu avec les caractères `/*` ... `*/` pour créer des blocs de commentaires en ligne ou multi-lignes. Les blocs de commentaire en ligne et multi-lignes commencent par `/*` et se terminent par `*/`.
 
 - Les **lignes de commentaires en ligne** - peuvent être insérées n'importe où dans le code. Voici un exemple :
 
