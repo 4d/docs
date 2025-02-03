@@ -358,7 +358,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. This property is only available if the [`dataType`](#datatype) is "text".
+The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. Esta propriedade só estará disponível se o [`dataType`](#datatype) for "text".
 
 Essa propriedade é **somente leitura**.
 
@@ -463,7 +463,7 @@ You can use the `.dataType` property of the [options object](#options-object) to
 
 The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
 
-The type of the message is defined according to the [`dataType`](#datatype) attribute.
+O tipo da mensagem é definido conforme o atributo [`dataType`](#datatype).
 
 Essa propriedade é **somente leitura**.
 
