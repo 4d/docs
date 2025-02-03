@@ -88,7 +88,7 @@ La URL **/4DSTATS** devuelve varios elementos de información en una tabla HTML 
 | Cache Use               | Porcentagem do cache usado                                           |
 | Cached Objects          | Número de objetos encontrados en la caché, **incluyendo imágenes**   |
 
-This information can allow you to check the functioning of your server and eventually adapt the corresponding parameters.
+Estas informações permitem que você verifique o funcionamento do seu servidor e eventualmente adapte os parâmetros correspondentes.
 
 > El comando `WEB GET STATISTICS` permite obtener también información sobre cómo se está utilizando la caché de las páginas estáticas.
 
@@ -107,7 +107,7 @@ La URL _/4DHTMLSTATS_ devuelve, también como una HTML, la misma información qu
 
 ### /4DCACHECLEAR
 
-La URL _/4DCACHECLEAR_ elimina inmediatamente las páginas estáticas y las imágenes de la caché. It allows you to therefore “force” the update of the pages that have been modified.
+La URL _/4DCACHECLEAR_ elimina inmediatamente las páginas estáticas y las imágenes de la caché. Isso permite que você "forçe" a atualização das páginas que foram modificadas.
 
 ### /4DWEBTEST
 
@@ -153,33 +153,33 @@ The [web log recording file](webServerConfig.md#log-recording) can be enabled us
 
 Each line of the file represents a request, such as: _host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length_ Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
 
-DLF (Combined Log Format) format is similar to CLF (Common Log Format) format and uses exactly the same structure. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent. Eis a descrição dos formatos CLF/DLF (não personalizáveis):
+O formato DLF (Formato Combinado de Log) é semelhante ao formato CLF (Formato Comum de Log) e usa exatamente a mesma estrutura. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent. Eis a descrição dos formatos CLF/DLF (não personalizáveis):
 
-| Campo nome                                                           | Descrição                                                                                                                                                                                                                                                                                                                                                               |
-| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| host                                                                 | Endereço IP do cliente (por exemplo: 192.100.100.10)                                                                                                                                                                                                                                 |
-| rfc931                                                               | informação não gerada por 4D, é sempre - (um sinal de menos                                                                                                                                                                                                                                                                                          |
-| user                                                                 | nome de usuário conforme é autenticado, ou então é - (um sinal de menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).                                                                                                              |
-| DD/MMM/YYYY:HH:MM:SS | DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds. A data e a hora são locais para o servidor. |
-| request                                                              | petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0                                                                                                                                                                                                                                                   |
-| state                                                                | resposta dada pelo servidor                                                                                                                                                                                                                                                                                                                                             |
-| length                                                               | tamanho dos dados retornados (HTTP header exceto) ou 0                                                                                                                                                                                                                                                                                               |
-| Referer                                                              | DLF apenas- Contém a URL da página apontando para o documento solicitado.                                                                                                                                                                                                                                                                               |
-| User-agent                                                           | DLF only- Contains the name and version of the browser or software of the client at the origin of the request                                                                                                                                                                                                                                                           |
+| Campo nome                                                           | Descrição                                                                                                                                                                                                                                                                                                                                                                  |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| host                                                                 | Endereço IP do cliente (por exemplo: 192.100.100.10)                                                                                                                                                                                                                                    |
+| rfc931                                                               | informação não gerada por 4D, é sempre - (um sinal de menos                                                                                                                                                                                                                                                                                             |
+| user                                                                 | nome de usuário conforme é autenticado, ou então é - (um sinal de menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).                                                                                                                 |
+| DD/MMM/YYYY:HH:MM:SS | DD: dia, MMM: uma abreviação de 3 letras para o nome do mês (Jan, Feb,...), YYYY: ano, HH: hora, MM: minutos, SS: segundos. A data e a hora são locais para o servidor. |
+| request                                                              | petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0                                                                                                                                                                                                                                                      |
+| state                                                                | resposta dada pelo servidor                                                                                                                                                                                                                                                                                                                                                |
+| length                                                               | tamanho dos dados retornados (HTTP header exceto) ou 0                                                                                                                                                                                                                                                                                                  |
+| Referer                                                              | DLF apenas- Contém a URL da página apontando para o documento solicitado.                                                                                                                                                                                                                                                                                  |
+| User-agent                                                           | Somente DLF - Contém o nome e a versão do navegador ou o software do cliente na origem do pedido                                                                                                                                                                                                                                                                           |
 
 #### ELF/WLF
 
-O formato ELF (Extended Log Format) é muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
+O formato ELF (Extended Log Format) é muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. Por esse motivo, o formato ELF pode ser personalizado: é possível escolher os campos a serem registrados, bem como sua ordem de inserção no arquivo.
 
-The WLF (WebStar Log Format) was developed specifically for the 4D WebSTAR server.
+O WLF (formato de log WebStar) foi desenvolvido especificamente para o servidor 4D WebSTAR.
 
 ##### Configuração dos campos
 
-When you choose the ELF or WLF format, the “Web Log Token Selection” area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. Para o efeito, assinalar os campos pretendidos.
+Quando você escolher o formato ELF ou WLF, a área "Seleção de Token de Log Web" exibe os campos disponíveis para o formato escolhido. Você precisará selecionar cada campo a ser incluído no registro. Para o efeito, assinalar os campos pretendidos.
 
 > Não é possível selecionar o mesmo campo duas vezes.
 
-The following table lists the fields available for each format (in alphabetical order) and describes its contents:
+A tabela a seguir lista os campos disponíveis para cada formato (em ordem alfabética) e descreve seu conteúdo:
 
 | Campo                                                  | ELF | WLF | Valor                                                                                                                                                                                                                                    |
 | ------------------------------------------------------ | --- | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -209,7 +209,7 @@ The following table lists the fields available for each format (in alphabetical 
 
 #### Frequência do backup
 
-Dado que un archivo _logweb.txt_ puede llegar a ser considerablemente grande, es posible establecer un mecanismo de archivo automático. The triggering of a backup can be based on a certain period of time (expressed in hours, days, week or months), or based on the file size; when the set deadline (or file size) is reached, 4D automatically closes and archives the current log file and creates a new one.
+Dado que un archivo _logweb.txt_ puede llegar a ser considerablemente grande, es posible establecer un mecanismo de archivo automático. O acionamento de um backup pode ser baseado em um determinado período de tempo (expresso em horas, dias, semana ou meses) ou baseado no tamanho do arquivo; quando o prazo definido (ou tamanho do arquivo) for atingido, 4D automaticamente fecha e arquiva o arquivo de registro atual e cria um novo.
 
 Cuando se activa la copia de seguridad del archivo de registro web, el archivo de registro se archiva en una carpeta llamada "Archivos Logweb", que se crea en el mismo nivel que el archivo _logweb.txt_.
 
