@@ -14,7 +14,7 @@ Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), t
 
 #### Highlights
 
-- Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
+- 4D 20.6 LTS is certified on Wondiws Server 2025
 
 :::warning KNOWN ISSUE ON WINDOWS SERVER 2025
 
@@ -22,6 +22,7 @@ On Windows Server 2025, some custom options in the new Windows Print dialog box 
 
 :::
 
+- Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
 - [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.6): list of all bugs that have been fixed in 4D 20.6 LTS.
 
 
