@@ -429,7 +429,7 @@ If the component is stored on a [private GitHub repository](#private-repositorie
 
 :::
 
-Define the [dependency version range](#tags-and-versions) to use for this project. By defaut, "Latest" is selected, which means that the lastest version will be automatically used.
+Defina o [intervalo de versão de dependência](#tags-and-versions) para usar neste projeto. By defaut, "Latest" is selected, which means that the lastest version will be automatically used.
 
 Clique no botão **Adicionar** para adicionar a dependência ao projeto.
 
@@ -444,7 +444,7 @@ Você pode definir a opção [tag ou versão](#tags-and-versions) para uma depen
 - **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version.
 - **Up to Next Major Version**: Define a [semantic version range](#tags-and-versions) to restrict updates to the next major version.
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
-- **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
+- **Versão exata (etiqueta)**: selecione ou insira manualmente uma [etiqueta específica](#tags-and-versions) na lista disponível.
 
 The current GitHub dependency version is displayed on the right side of the dependency item:
 
