@@ -33,7 +33,7 @@ The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new
 
 **File ( path { ; pathType } { ; \* })**
 
-No parâmetro *path*, passe um caminho do arquivo. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA/myfile.txt").
+No parâmetro *path*, passe um caminho do arquivo. Você pode usar uma cadeia de caracteres personalizada ou um [sistema de arquivos](../Concepts/paths.md#filesystem-pathnames) (por exemplo, "/DATA/myfile.txt").
 
 > Apenas são compatíveis os nomes de caminho absolutos com o comando `File`.
 
