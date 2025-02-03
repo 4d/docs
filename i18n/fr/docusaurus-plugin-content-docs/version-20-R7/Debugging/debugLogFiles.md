@@ -484,7 +484,7 @@ Si un fichier `logConfig.json` est installé à la fois dans les dossiers Settin
 
 ### Description du fichier JSON
 
-Le fichier de configuration du journal est un fichier `.json` qui doit respecter le schéma json suivant :
+Voici un exemple de fichier de configuration de log :
 
 ```json
 {
