@@ -328,9 +328,7 @@ Essa propriedade é **somente leitura**.
 
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->
-
-**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
 
 #### Descrição
 
@@ -360,7 +358,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. Parâmetro
+The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. This property is only available if the [`dataType`](#datatype) is "text".
 
 Essa propriedade é **somente leitura**.
 
@@ -384,7 +382,7 @@ Cada elemento da coleção é um objeto com as seguintes propriedades:
 | [].message             | text   | Descrição do erro 4D                                 |
 | [ ].componentSignature | text   | Assinatura da componente interna que devolveu o erro |
 
-Se não ocorrer nenhum erro, `.errors` será undefined.
+If no error occured, `.errors` is undefined.
 
 <!-- END REF -->
 
@@ -396,7 +394,7 @@ Se não ocorrer nenhum erro, `.errors` será undefined.
 
 #### Descrição
 
-Parâmetro Parâmetro Parâmetro Parâmetro Se o processo não tiver terminado normalmente, `exitCode` é *undefined*.
+The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
 
 Essa propriedade é **somente leitura**.
 
@@ -441,13 +439,13 @@ Essa propriedade é **somente leitura**.
 | Parâmetro   | Tipo |     | Descrição                                                                              |
 | ----------- | ---- | :-: | -------------------------------------------------------------------------------------- |
 | message     | Text |  -> | Texto para escrever no fluxo de entrada (stdin) do processo externo |
-| messageBLOB | Blob |  -> | Bytes escritos no fluxo de entrada                                                     |
+| messageBLOB | Blob |  -> | Bytes write on the input stream                                                        |
 
 <!-- END REF -->
 
 #### Descrição
 
-A função `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite que você escreva no fluxo de entrada (stdin) do processo externo<!-- END REF -->. No parâmetro *message*, passe o texto a ser escrito em *stdin*.
+The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary -->allows you to write on the input stream (stdin) of the external process<!-- END REF -->. In the *message* parameter, pass the text to write in *stdin*.
 
 The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
 
@@ -465,7 +463,7 @@ You can use the `.dataType` property of the [options object](#options-object) to
 
 The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
 
-O tipo da mensagem é definido conforme o atributo [`dataType`](#datatype).
+The type of the message is defined according to the [`dataType`](#datatype) attribute.
 
 Essa propriedade é **somente leitura**.
 
@@ -513,7 +511,7 @@ Esta função envia a instrução para terminar e devolver o controlo ao guião 
 
 #### Descrição
 
-A propriedade `.terminated` <!-- REF #SystemWorkerClass.terminated.Summary -->contém **true** se o processo externo for encerrado<!-- END REF -->.
+The `.terminated` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -553,7 +551,7 @@ Essa propriedade é **somente leitura**.
 | Parâmetro  | Tipo                            |                             | Descrição                                        |
 | ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------ |
 | timeout    | Real                            |              ->             | Tempo de espera (em segundos) |
-| Resultados | 4D.SystemWorker | <- | Objecto SystemWorker                             |
+| Resultados | 4D.SystemWorker | <- | SystemWorker object                              |
 
 <!-- END REF -->
 
@@ -561,7 +559,7 @@ Essa propriedade é **somente leitura**.
 
 The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
 
-Em *timeout*, passe um valor em segundos. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
+In *timeout*, pass a value in seconds. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
 
 Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached. Se *timeout* for alcançado, o `SystemWorker` não é morto.
 
