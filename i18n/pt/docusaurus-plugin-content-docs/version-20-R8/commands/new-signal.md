@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 #### Descrição
 
-The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->.
+O comando `New signal` <!-- REF #_command_.New signal.Summary -->cria um objeto `4D.Signal` <!-- END REF -->.
 
 Um sinal é um objeto partilhado que pode ser passado como parâmetro de um worker ou processo para outro worker ou processo, de forma que:
 
