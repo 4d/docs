@@ -248,7 +248,7 @@ O padrão = 80
 
 <!-- REF #WebServerClass.HTTPTrace.Syntax -->**.HTTPTrace** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPTrace.Summary -->activation of `HTTP TRACE`<!-- END REF -->. For security reasons, by default the Web server rejects `HTTP TRACE` requests with an error 405. When enabled, the web server replies to `HTTP TRACE` requests with the request line, header, and body.
+A <!-- REF #WebServerClass.HTTPTrace.Summary --> ativação de `HTTP TRACE`<!-- END REF -->. For security reasons, by default the Web server rejects `HTTP TRACE` requests with an error 405. When enabled, the web server replies to `HTTP TRACE` requests with the request line, header, and body.
 
 <!-- END REF -->
 
@@ -258,7 +258,7 @@ The <!-- REF #WebServerClass.HTTPTrace.Summary -->activation of `HTTP TRACE`<!--
 
 <!-- REF #WebServerClass.HTTPSEnabled.Syntax -->**.HTTPSEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPSEnabled.Summary -->HTTPS protocol state<!-- END REF -->.
+O <!-- REF #WebServerClass.HTTPSEnabled.Summary -->estado do protocolo HTTPS<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -320,7 +320,7 @@ The <!-- REF #WebServerClass.IPAddressToListen.Summary -->IP address on which th
 
 *Propriedade apenas leitura*
 
-The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- END REF -->.
+O <!-- REF #WebServerClass.isRunning.Summary --> estado de execução do servidor web<!-- END REF -->.
 
 <!-- END REF -->
 
