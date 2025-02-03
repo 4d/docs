@@ -175,7 +175,7 @@ The <!-- REF #WebServerClass.defaultHomepage.Summary -->name of the default home
 
 <!-- REF #WebServerClass.HSTSEnabled.Syntax -->**.HSTSEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Security (HSTS) status<!-- END REF -->. O HSTS permite que o servidor declare que os navegadores só devem interagir com ele através de conexões HTTPS seguras. Navegadores gravarão as informações de HSTS na primeira vez que receberem uma resposta do servidor web, então quaisquer futuras solicitações HTTP serão automaticamente transformadas em solicitações HTTPS. O HSTS permite que o servidor declare que os navegadores só devem interagir com ele através de conexões HTTPS seguras. A HSTS requer que HTTPS esteja ativado no servidor. HTTP deve também ser habilitado para permitir conexões iniciais de clientes.
+O <!-- REF #WebServerClass.HSTSEnabled.Summary -->estado do HTTP Strict Transport Security (HSTS)<!-- END REF -->. O HSTS permite que o servidor declare que os navegadores só devem interagir com ele através de conexões HTTPS seguras. Navegadores gravarão as informações de HSTS na primeira vez que receberem uma resposta do servidor web, então quaisquer futuras solicitações HTTP serão automaticamente transformadas em solicitações HTTPS. O HSTS permite que o servidor declare que os navegadores só devem interagir com ele através de conexões HTTPS seguras. A HSTS requer que HTTPS esteja ativado no servidor. HTTP deve também ser habilitado para permitir conexões iniciais de clientes.
 
 <!-- END REF -->
 
@@ -248,7 +248,7 @@ O padrão = 80
 
 <!-- REF #WebServerClass.HTTPTrace.Syntax -->**.HTTPTrace** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPTrace.Summary -->activation of `HTTP TRACE`<!-- END REF -->. For security reasons, by default the Web server rejects `HTTP TRACE` requests with an error 405. When enabled, the web server replies to `HTTP TRACE` requests with the request line, header, and body.
+A <!-- REF #WebServerClass.HTTPTrace.Summary --> ativação de `HTTP TRACE`<!-- END REF -->. For security reasons, by default the Web server rejects `HTTP TRACE` requests with an error 405. When enabled, the web server replies to `HTTP TRACE` requests with the request line, header, and body.
 
 <!-- END REF -->
 
@@ -258,7 +258,7 @@ The <!-- REF #WebServerClass.HTTPTrace.Summary -->activation of `HTTP TRACE`<!--
 
 <!-- REF #WebServerClass.HTTPSEnabled.Syntax -->**.HTTPSEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPSEnabled.Summary -->HTTPS protocol state<!-- END REF -->.
+O <!-- REF #WebServerClass.HTTPSEnabled.Summary -->estado do protocolo HTTPS<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -320,7 +320,7 @@ The <!-- REF #WebServerClass.IPAddressToListen.Summary -->IP address on which th
 
 *Propriedade apenas leitura*
 
-The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- END REF -->.
+O <!-- REF #WebServerClass.isRunning.Summary --> estado de execução do servidor web<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -344,7 +344,7 @@ Contains <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessio
 
 <!-- REF #WebServerClass.logRecording.Syntax -->**.logRecording** : Integer<!-- END REF -->
 
-The <!-- REF #WebServerClass.logRecording.Summary -->log requests (logweb.txt) recording value<!-- END REF -->.
+O <!-- REF #WebServerClass.logRecording.Summary --> modo de registro do log das solicitações (logweb.txt)<!-- FIM REF -->.
 
 - 0 = Não registrar (padrão)
 - 1 = Guardar no formato CLF
@@ -398,7 +398,7 @@ Contains the <!-- REF #WebServerClass.maxSessions.Summary -->maximum number of s
 
 <!-- REF #WebServerClass.minTLSVersion.Syntax -->**.minTLSVersion** : Integer<!-- END REF -->
 
-The <!-- REF #WebServerClass.minTLSVersion.Summary -->minimum TLS version accepted for connections<!-- END REF -->. As tentativas de ligação de clientes que suportam apenas versões abaixo do mínimo serão rejeitadas.
+A <!-- REF #WebServerClass.minTLSVersion.Summary -->versão mínima de TLS aceita para as conexões<!-- END REF -->. As tentativas de ligação de clientes que suportam apenas versões abaixo do mínimo serão rejeitadas.
 
 Valores possíveis:
 
@@ -477,7 +477,7 @@ Contains <!-- REF #WebServerClass.scalableSession.Summary -->`True` if scalable 
 
 <!-- REF #WebServerClass.sessionCookieDomain.Syntax -->**.sessionCookieDomain** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" field of the session cookie<!-- END REF -->. Utilizado para controlar o alcance dos cookies da sessão. Se definir, por exemplo, o valor "/\*.4d.fr" para este selector, o cliente só enviará um cookie quando o pedido for dirigido ao domínio ".4d.fr", o que exclui os servidores que hospedam dados estáticos externos.
+O <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" do cookie de sessão<!-- END REF -->. Utilizado para controlar o alcance dos cookies da sessão. Se definir, por exemplo, o valor "/\*.4d.fr" para este selector, o cliente só enviará um cookie quando o pedido for dirigido ao domínio ".4d.fr", o que exclui os servidores que hospedam dados estáticos externos.
 
 <!-- END REF -->
 
@@ -517,7 +517,7 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->**.sessionCookieSameSite** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Possíveis valores (usando constantes):
+O <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valor "SameSite" do cookie de sessão<!-- FIM REF -->. Possíveis valores (usando constantes):
 
 | Parâmetros          | Valor    | Descrição                                                                                                                                                                                   |
 | ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
