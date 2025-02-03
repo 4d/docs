@@ -18,7 +18,7 @@ Les applications multi-utilisateurs sont déployées avec 4D Server. Il peut s'a
 
 Dans les applications multi-utilisateurs, le contrôle des accès se fait par le biais des [utilisateurs et des groupes 4D](handling_users_groups.md). Vous pouvez créer des utilisateurs, attribuer des mots de passe et créer des groupes d'accès qui ont différents niveaux de privilèges dans l'application.
 
-Initiez le système de contrôle des accès par mot de passe 4D avec 4D Server, [en attribuant un mot de passe au Super utilisateur](handling_users_groups.md#designer-and-administrator). Tant que vous n'attribuez pas de mot de passe au Super utilisateur, tous les accès à l'application se font avec les droits d'accès du Super utilisateur, même si vous avez [configuré des utilisateurs et des groupes](handling_users_groups.md) (à l'ouverture N'importe quelle partie de l'application peut être ouverte.
+Initiez le système de contrôle des accès par mot de passe 4D avec 4D Server, [en attribuant un mot de passe au Super utilisateur](handling_users_groups.md#designer-and-administrator). Tant que vous n'attribuez pas de mot de passe au Super utilisateur, tous les accès à l'application se font avec les droits d'accès du Super utilisateur, même si vous avez [configuré des utilisateurs et des groupes](handling_users_groups.md) (à l'ouverture N'importe quelle partie de l'application peut être ouverte. N'importe quelle partie de l'application peut être ouverte.
 
 Lorsqu’un mot de passe est affecté au Super_Utilisateur, tous les privilèges d’accès que vous avez affectés prennent effet. Pour se connecter à l'application ou à un [serveur à accès protégé](handling_users_groups.md#assigning-group-access), les utilisateurs distants doivent saisir un login/mot de passe.
 
