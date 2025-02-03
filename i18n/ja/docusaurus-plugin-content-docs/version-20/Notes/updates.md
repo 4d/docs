@@ -14,6 +14,14 @@ title: リリースノート
 
 #### ハイライト
 
+- 4D 20.6 LTS is certified on Wondiws Server 2025
+
+:::warning KNOWN ISSUE ON WINDOWS SERVER 2025
+
+On Windows Server 2025, some custom options in the new Windows Print dialog box are not available and are still under investigation. A fix will be available in the next hotfix.
+
+:::
+
 - Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
 - [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.6): list of all bugs that have been fixed in 4D 20.6 LTS.
 
