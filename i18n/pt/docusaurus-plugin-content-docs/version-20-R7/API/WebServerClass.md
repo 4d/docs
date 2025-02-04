@@ -111,7 +111,7 @@ The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the sec
 
 <!-- REF #WebServerClass.CORSEnabled.Syntax -->**.CORSEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Quando desativado (False, padrão), todas as solicitações de cruzamento de sites enviadas com CORS são ignoradas. Quando habilitado (verdadeiro) e um domínio ou método não permitido envia uma solicitação de site cruzado, ele é rejeitado com uma resposta de erro "403 - proibido".
+O <!-- REF #WebServerClass.CORSEnabled.Summary -->estado do serviço CORS (*Cross-origin resource sharing*) para o servidor<!-- END REF -->. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Quando desativado (False, padrão), todas as solicitações de cruzamento de sites enviadas com CORS são ignoradas. Quando habilitado (verdadeiro) e um domínio ou método não permitido envia uma solicitação de site cruzado, ele é rejeitado com uma resposta de erro "403 - proibido".
 
 Padrão: Falso (desabilitado)
 
@@ -165,7 +165,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->status of the HTTP request log 
 
 <!-- REF #WebServerClass.defaultHomepage.Syntax -->**.defaultHomepage** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.defaultHomepage.Summary -->name of the default home page<!-- END REF --> or "" to not send the custom home page.
+O <!-- REF #WebServerClass.defaultHomepage.Summary --> nome da página inicial padrão <!-- END REF --> ou "" para não enviar a página inicial personalizada.
 
 <!-- END REF -->
 
@@ -236,7 +236,7 @@ Estado do protocolo <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP<!-- END
 
 <!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Number<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPPort.Summary -->listening IP port number for HTTP<!-- END REF -->.
+O <!-- REF #WebServerClass.HTTPPort.Summary --> número da porta IP de escuta para HTTP<!-- END REF -->.
 
 O padrão = 80
 
@@ -268,7 +268,7 @@ O <!-- REF #WebServerClass.HTTPSEnabled.Summary -->estado do protocolo HTTPS<!--
 
 <!-- REF #WebServerClass.HTTPSPort.Syntax -->**.HTTPSPort** : Number<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPSPort.Summary -->listening IP port number for HTTPS<!-- END REF -->.
+O <!-- REF #WebServerClass.HTTPSPort.Summary --> número da porta IP de escuta para HTTPS<!-- END REF -->.
 
 O padrão = 443
 
@@ -282,7 +282,7 @@ O padrão = 443
 
 > Essa propriedade não é retornada no [modo de sessões dimensionáveis](#scalablesession).
 
-The <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->life duration (in minutes) of the inactive legacy session processes<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
+A <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->duração da vida (em minutos) dos processos de sessão legados inativos<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
 
 Default = 480 minutos
 
@@ -308,7 +308,7 @@ Default = 480 minutos
 
 <!-- REF #WebServerClass.IPAddressToListen.Syntax -->**.IPAddressToListen** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.IPAddressToListen.Summary -->IP address on which the 4D Web Server will receive HTTP requests<!-- END REF -->. Normalmente, nenhum endereço específico é definido. Os formatos string IPv6 e IPv4 são compatíveis
+O <!-- REF #WebServerClass.IPAddressToListen.Summary -->Endereço IP no qual o Servidor Web 4D receberá solicitações HTTP<!-- END REF -->. Normalmente, nenhum endereço específico é definido. Os formatos string IPv6 e IPv4 são compatíveis
 
 <!-- END REF -->
 
@@ -419,7 +419,7 @@ Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 
 *Propriedade apenas leitura*
 
-The <!-- REF #WebServerClass.name.Summary -->name of the web server application<!-- END REF -->.
+O <!-- REF #WebServerClass.name.Resumo --> nome da aplicação web server<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -453,7 +453,7 @@ The <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability o
 
 <!-- REF #WebServerClass.rootFolder.Syntax -->**.rootFolder** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folder<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter, it can be a `Folder` object.
+O <!-- REF #WebServerClass.rootFolder.Summary --> caminho da pasta raiz do servidor web <!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter, it can be a `Folder` object.
 
 <!-- END REF -->
 
