@@ -61,7 +61,7 @@ A expressão é TRUE apenas se ambos os métodos forem TRUE. Entretanto, mesmo s
 
 O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
 
-> **Note:** The [ternary operator](operators.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of If..Else statements.
+> **Nota:** o [operador ternário](operators.md#ternary-operator) permite escrever expressões condicionais de uma linha e pode substituir uma sequência completa de instruções If..Else.
 
 #### Exemplo
 
@@ -273,7 +273,7 @@ A sintaxe formal da estrutura de fluxo de controle `While... End while` é:
 
 Um loop `While...End while` executa as declarações no loop enquanto a expressão booleana for TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Os comandos `break` e `continue` são [descritos abaixo](#break-and-continue).
 
 É comum inicializar o valor testado na expressão booleana imediatamente antes de entrar no loop `While... End while`. Inicializar o valor significa definí-lo como algo apropriado, geralmente para que a expressão booleana seja TRUE e `While...End while` executa o loop.
 
@@ -312,7 +312,7 @@ Um ciclo `Repeat...Until` é como um ciclo [While...End while](flow-control.md#w
 
 A outra diferença com um loop `Repeat...Until` é que o loop continua até que a expressão booleana seja TRUE.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Os comandos `break` e `continue` são [descritos abaixo](#break-and-continue).
 
 #### Exemplo
 
@@ -350,7 +350,7 @@ A estrutura `For...End for` é um loop controlado por um contador:
 - Se *Start_Expression* e *End_Expression* forem iguais, o loop se executará só uma vez.
 - Se *Start_Expression* for maior que *End_Expression*, o loop não vai executar a não ser que especifique uma *Increment_Expression* negativa. Ver os exemplos.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Os comandos `break` e `continue` são [descritos abaixo](#break-and-continue).
 
 #### Exemplos básicos
 
@@ -579,7 +579,7 @@ A tabela a seguir compara os três tipos de `For each...End for each`:
     - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
     - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Os comandos `break` e `continue` são [descritos abaixo](#break-and-continue).
 
 ### Loop através da coleção
 
@@ -620,7 +620,7 @@ Se quiser computar algumas estatísticas para uma coleção de números:
 
 ### Loop nas seleções de entidades
 
-When `For each... End for each` is used with an *Expression* of the *Entity selection* type, the *Current_Item* parameter is the entity that is currently processed.
+Quando `For each...End for each` é usado com uma *Expression* do tipo *Entity selection*, o parâmetro *Current_Item* é a entidade que é atualmente processada.
 
 O número de loops é baseado no número de entidades da seleção de entidades. Em cada iteração do loop, o parâmetro *Current_Item* é preenchido automaticamente com a entidade da seleção de entidade que estiver sendo processada atualmente.
 
@@ -642,7 +642,7 @@ Se quiser aumentar o salário de todos os empregados britânicos em uma seleçã
 
 ### Loops nas propriedades de objetos
 
-When `For each... End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property.
+Quando `For each...End for each` é usado com uma *Expression* do tipo Objeto, o parâmetro *Current_Item* é uma variável de texto preenchida automaticamente com o nome da propriedade processada atualmente.
 
 As propriedades do objeto são processadas de acordo com sua ordem de criação. Durante o loop, propriedades podem ser adicionadas ou eliminadas no objeto, sem modificar o número de loops que permanecerão no número original de propriedades do objeto.
 
@@ -709,7 +709,7 @@ Por exemplo:
 
 ### Condições Until e While
 
-You can control the `For each... End for each` execution by adding an `Until` or a `While` condition to the loop. Quando uma instrução `Until(condição)` estiver associada ao loop, a iteração vai parar logo que a condição seja avaliada como `True`, mas no caso de uma instrução `While(condición)`, a iteração para quando a condição for avaliada, pela primeira vez, como `False`.
+Você pode controlar a execução de `For each...End for each` adicionando uma condição `Until` ou `While` ao loop. Quando uma instrução `Until(condição)` estiver associada ao loop, a iteração vai parar logo que a condição seja avaliada como `True`, mas no caso de uma instrução `While(condición)`, a iteração para quando a condição for avaliada, pela primeira vez, como `False`.
 
 Pode passar qualquer uma das duas palavras chave em função das suas necessidades:
 
@@ -740,9 +740,9 @@ Todas as estruturas de looping acima suportam as instruções `break` e `continu
 
 ### break
 
-A instrução `break` termina o ciclo que a contém. Control of the program flows to the statement immediately after the body of the loop.
+A instrução `break` termina o ciclo que a contém. O controle do programa flui para a instrução imediatamente após o corpo do loop.
 
-If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
+Se a instrução `break` estiver em um [loop aninhado](#nested-forend-for-looping-structures) (loop dentro de outro loop), a declaração `break` terminará o loop mais interno.
 
 
 #### Exemplo
@@ -757,7 +757,7 @@ End for
 
 ### continue
 
-The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
+A instrução `continue` termina a execução das instruções na iteração atual do loop atual e continua a execução do loop com a próxima iteração.
 
 ```4d
 var $text : Text
