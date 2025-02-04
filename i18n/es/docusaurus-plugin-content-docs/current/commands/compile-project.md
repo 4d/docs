@@ -48,7 +48,7 @@ Compilation errors, if any, are returned as objects in the *errors* collection.
 
 **Note:** You cannot call this command when another compilation is running (for example, a compilation launched from the Compilation window).
 
-##### options Parameter
+##### Parámetro options
 
 The *options* parameter is an object. Here are the available compilation options:
 
