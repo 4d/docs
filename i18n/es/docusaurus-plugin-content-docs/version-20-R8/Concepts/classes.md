@@ -180,7 +180,7 @@ En las definiciones de clase se pueden utilizar palabras claves específicas de 
 - `property` para definir propiedades estáticas de los objetos con un tipo.
 - `Function get <Name>` y `Function set <Name>` para definir las propiedades calculadas de los objetos.
 - `Class extends <ClassName>` para definir la herencia.
-- `This` and `Super` are commands that have special features within classes.
+- `This` y `Super` son comandos que tienen funcionalidades especiales dentro de clases.
 
 ### `Function`
 
@@ -193,7 +193,7 @@ En las definiciones de clase se pueden utilizar palabras claves específicas de 
 
 :::note
 
-There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+No hay palabra clave final para el código de una función. El lenguaje 4D detecta automáticamente el final del código de una función por la siguiente palabra clave `Function` o el final del archivo de clase.
 
 :::
 
@@ -333,7 +333,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 :::note
 
-There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+No hay palabra clave final para el código de función class constructor. El lenguaje 4D detecta automáticamente el final del código de una función por la siguiente palabra clave `Function` o el final del archivo de clase.
 
 :::
 
@@ -347,7 +347,7 @@ Puede crear y escribir propiedades de instancia dentro del constructor (ver ejem
 
 Utilizando la palabra clave `shared` se crea una **clase compartida**, utilizada para instanciar únicamente objetos compartidos. Para obtener más información, consulte el párrafo [Clases compartidas](#shared-classes).
 
-Using the `singleton` keyword creates a **singleton**, used to create a single instance of the class. Un `session singleton` crea una sola instancia por sesión. Para obtener más información, consulte el párrafo [Clases singleton](#singleton-classes).
+Utilizando la palabra clave `singleton` se crea un **singleton**, utilizado para crear una sola instancia de la sesión. Un `session singleton` crea una sola instancia por sesión. Para obtener más información, consulte el párrafo [Clases singleton](#singleton-classes).
 
 #### Ejemplo
 
@@ -606,9 +606,9 @@ Llama al constructor de la clase padre con las longitudes
   $area:=This.height*This.width
 ```
 
-## Class function commands
+## Comandos de función clase
 
-The following commands have specific features when they are used within class functions:
+Los siguientes comandos tienen características específicas cuando se utilizan dentro de las funciones clase:
 
 ### `Super`
 
@@ -618,7 +618,7 @@ Para más detalles, vea la descripción del comando [`Super`](../commands/super.
 
 ### `This`
 
-El comando [`This`](../commands/this.md) devuelve una referencia al objeto procesado actualmente. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
+El comando [`This`](../commands/this.md) devuelve una referencia al objeto procesado actualmente. En la mayoría de los casos, el valor de `This` está determinado por cómo se llama una función clase. Usually, `This` refers to the object the function was called on, as if the function were on the object.
 
 Ejemplo:
 
