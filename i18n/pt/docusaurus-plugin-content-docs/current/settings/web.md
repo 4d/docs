@@ -250,8 +250,8 @@ Configure os parâmetros de backup automático para o registro de solicitações
   - **iniciando em**: Usado para definir a hora em que o primeiro backup começará.
 - **A cada X dia(s) às X**: Esta opção é usada para programar backups diários. Introduza 1 se pretender efetuar uma cópia de segurança diária. Quando essa opção estiver marcada, você deve indicar a hora em que o backup deve ser iniciado.
 - **A cada X semana(s), dia em X**: Essa opção é usada para programar backups semanais. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar. Por exemplo, você pode usar essa opção para definir dois backups semanais: um às quartas-feiras e outro às sextas-feiras.
-- **A cada X mês(es), dia X às X**: Essa opção é usada para programar backups mensais. Digite 1 se quiser realizar uma cópia de segurança mensal. Digite 1 se quiser realizar uma cópia de segurança mensal.
-- **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Um backup é acionado automaticamente quando o arquivo atinge o tamanho definido. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
+- **A cada X mês(es), dia X às X**: Essa opção é usada para programar backups mensais. Digite 1 se quiser realizar uma cópia de segurança mensal. Quando essa opção estiver marcada, você deve indicar o dia do mês e a hora em que o backup deve ser iniciado.
+- **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Um backup é automaticamente acionado quando o arquivo atinge o tamanho definido. Você pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
 
 > No caso de backups programados, se o servidor Web não foi iniciado quando o backup estava programado para ocorrer, na próxima inicialização o 4D considera o backup como falho e aplica as configurações apropriadas, definidas nas Propriedades.
 
