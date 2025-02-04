@@ -16,7 +16,7 @@ Several dedicated [standard actions](#standard-actions), numerous [language comm
 Duas variáveis específicas podem ser associadas a cada área web:
 
 - [`URL`](properties_WebArea.md#url) -- para controlar a URL exibida pela área Web
-- [`Progression`](properties_WebArea.md#progression) -- to control the loading percentage of the page displayed in the web area.
+- [`Progression`](properties_WebArea.md#progression) -- para controlar a porcentagem de carregamento da página exibida na área Web.
 
 > As of 4D v19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
 
@@ -215,7 +215,7 @@ When you have done the settings as described above, you then have new options su
 
 The 4DCEFParameters.json is a configuration file that allows customization of CEF parameters to manage the behavior of web areas within 4D applications.
 
-[Default switches](#default-file) are provided, but you can override them by using a custom 4DCEFParameters.json file.
+Os [Interruptores padrão](#default-file) são fornecidos, mas você pode substituí-los usando um arquivo 4DCEFParameters.json personalizado.
 
 In the development phase (using 4D application), create a 4DCEFParameters.json file at the following location:
 
