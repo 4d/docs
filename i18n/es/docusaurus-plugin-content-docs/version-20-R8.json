@@ -492,11 +492,11 @@
     "description": "The generated-index page title for category SVG in sidebar docs"
   },
   "sidebar.docs.category.Secured Protocol": {
-    "message": "Secured Protocol",
+    "message": "Protocolo seguro",
     "description": "The label for category Secured Protocol in sidebar docs"
   },
   "sidebar.docs.category.Secured Protocol.link.generated-index.title": {
-    "message": "Secured Protocol",
+    "message": "Protocolo seguro",
     "description": "The generated-index page title for category Secured Protocol in sidebar docs"
   },
   "sidebar.docs.category.Selection": {
