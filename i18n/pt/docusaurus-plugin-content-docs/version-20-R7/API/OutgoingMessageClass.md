@@ -104,7 +104,7 @@ The `.headers` property is read-only. Para definir um cabeçalho, use a função
 
 #### Descrição
 
-The `.setBody()` function <!-- REF #OutgoingMessageClass.setBody().Summary -->sets the outgoing message *body*<!-- END REF -->.
+A função `.setBody()` <!-- REF #OutgoingMessageClass.setBody().Summary -->define a mensagem de saída *body*<!-- END REF -->.
 
 The following data types are supported in the *body*:
 
