@@ -65,7 +65,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
+A propriedade `.exists` retorna <!-- REF #document.exists.Summary -->true se o arquivo existe no disco<!-- END REF --> e false caso contrário.
 
 Essa propriedade é **somente leitura**.
 
@@ -219,7 +219,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
+A propriedade `.isWritable` retorna <!-- REF #document.isWritable.Summary -->true se o arquivo existe no disco e é gravável<!-- END REF -->.
 
 > The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file.
 
