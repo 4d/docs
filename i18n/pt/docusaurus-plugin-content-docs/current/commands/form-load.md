@@ -109,7 +109,7 @@ The following example returns the number of objects on a JSON form:
  ALERT("The form contains "+String(size of array(objectsArray))+" objects") //return the object count
 ```
 
-the result shown is:
+o resultado mostrado é:
 
 ![](../assets/en/commands/pict3688480.en.png)
 
