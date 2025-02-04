@@ -628,7 +628,7 @@ O seguinte código genérico duplica qualquer entidade:
 
 #### Descrição
 
-The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
+A função `.getKey()` <!-- REF #EntityClass.getKey().Summary -->retorna o valor da chave primária da entidade<!-- END REF -->.
 
 As chaves primárias podem ser números (Inteiro) ou strings. You can "force" the returned primary key value to be a string, no matter the actual primary key type, by passing the `dk key as string` option in the *mode* parameter.
 
