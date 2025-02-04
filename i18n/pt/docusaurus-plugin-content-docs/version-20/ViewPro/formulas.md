@@ -145,7 +145,7 @@ Consulte a [**lista ampliada de funções de SpreadJS**](https://www.grapecity.c
 
 As funções personalizadas 4D podem receber [parâmetros](#parameters) da área 4D View Pro e retornar valores.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Exemplos:
+Você declara todas as suas funções usando o método [`VP SET CUSTOM`](method-list.md#vp-set-custom-functions). Exemplos:
 
 ```4d
 o:=New object
