@@ -264,7 +264,7 @@ Este comando significa que a partir del cuarto parámetro (incluido), el método
 
 
 
-## Método `Compilador`
+## Método `Compiler`
 
 Aunque no sea obligatorio en [modo interpretado](interpreted.md), debe declarar cada parámetro en los métodos llamados tan pronto como pretenda compilar su proyecto.
 
