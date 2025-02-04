@@ -122,9 +122,9 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\(�
 
 ### スタンドアロンアプリケーションをビルド
 
-Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project. Windows においては、.exe 拡張子のついた実行ファイルが作成されます。 macOS においては、ソフトウェアパッケージが作成されます。
+**スタンドアロンアプリケーションをビルド** オプションを選択して **ビルド** ボタンをクリックすると、スタンドアロンの (つまり、ダブルクリックで起動可能な) アプリケーションがアプリケーションプロジェクトをもとに作成されます。 Windows においては、.exe 拡張子のついた実行ファイルが作成されます。 macOS においては、ソフトウェアパッケージが作成されます。
 
-The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine). 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 この点についての詳細な情報は、4D の [オンラインストア](https://store.4d.com/jp/) と、セールスドキュメンテーションを参照してください。
+この処理はコンパイル済みストラクチャーファイルと**4D Volume Desktop** (4D データベースエンジン)を統合します。 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 この点についての詳細な情報は、4D の [オンラインストア](https://store.4d.com/jp/) と、セールスドキュメンテーションを参照してください。
 
 - デフォルトのデータファイルを定義することも、ユーザーに [独自のデータファイルを作成して使用](#データファイルの管理") してもらうこともできます。
 - You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**About licenses**](#about-licenses) paragraph).
