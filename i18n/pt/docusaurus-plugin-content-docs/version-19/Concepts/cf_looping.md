@@ -361,7 +361,7 @@ Se quiser aumentar o salário de todos os empregados britânicos em uma seleçã
 
 ### Loops nas propriedades de objetos
 
-When `For each... End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property.
+When `For each...End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property.
 
 As propriedades do objeto são processadas de acordo com sua ordem de criação. Durante o loop, propriedades podem ser adicionadas ou eliminadas no objeto, sem modificar o número de loops que permanecerão no número original de propriedades do objeto.
 
@@ -425,7 +425,7 @@ Por exemplo:
 
 ### Condições Until e While
 
-You can control the `For each... End for each` execution by adding an `Until` or a `While` condition to the loop. Quando uma instrução `Until(condição)` estiver associada ao loop, a iteração vai parar logo que a condição seja avaliada como `True`, mas no caso de uma instrução `While(condición)`, a iteração para quando a condição for avaliada, pela primeira vez, como `False`.
+You can control the `For each...End for each` execution by adding an `Until` or a `While` condition to the loop. Quando uma instrução `Until(condição)` estiver associada ao loop, a iteração vai parar logo que a condição seja avaliada como `True`, mas no caso de uma instrução `While(condición)`, a iteração para quando a condição for avaliada, pela primeira vez, como `False`.
 
 Pode passar qualquer uma das duas palavras chave em função das suas necessidades:
 
