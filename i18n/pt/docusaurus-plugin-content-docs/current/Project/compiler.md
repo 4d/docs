@@ -61,7 +61,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 :::info Compatibidade
 
-This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](../Project/compiler.md#generate-typing).
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. Para informações sobre este botão, consulte a [documentação de versões 4D anteriores](../Project/compiler.md#generate-typing).
 
 :::
 
