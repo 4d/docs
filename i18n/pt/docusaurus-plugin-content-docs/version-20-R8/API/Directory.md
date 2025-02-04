@@ -333,7 +333,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
+A propriedade `.original` retorna <!-- REF #directory.original.Summary -->o mesmo objeto Pasta da pasta<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
