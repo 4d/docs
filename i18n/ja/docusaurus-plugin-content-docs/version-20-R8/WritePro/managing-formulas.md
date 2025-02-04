@@ -59,55 +59,55 @@ title: フォーミュラの管理
 | [This](../commands/this.md).pageNumber (\*) | Number | 以下の場所から定義されているページ番号:<li>- ドキュメントの開始からのページ番号(デフォルト)</li><li>- セクションの開始から定義されている場合には、セクションの開始からのページ番号</li> このフォーミュラは常に動的です。つまり[**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) コマンドの影響を受けません。 |
 | [This](../commands/this.md).pageCount (\*)  | Number | ページ数: 総合のページ数。<br/>このフォーミュラは常に動的です。つまり[**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) コマンドの影響を受けません。                                                                                                          |
 | [This](../commands/this.md).document                           | Object | 4D Write Pro ドキュメント                                                                                                                                                                                                                           |
-| [This](../commands/this.md).data                               | Object | Data context of the 4D Write Pro document set by [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md)                                                                                                                            |
-| [This](../commands/this.md).sectionIndex                       | Number | The Index of the section in the 4D Write Pro document starting from 1                                                                                                                                                                         |
-| [This](../commands/this.md).pageIndex                          | Number | The actual page number in the 4D Write Pro document starting from 1 (regardless of the section page numbers)                                                                                                               |
-| [This](../commands/this.md).sectionName                        | 文字列    | The name that the user gives to the section                                                                                                                                                                                                   |
+| [This](../commands/this.md).data                               | Object | [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md) コマンドで設定された4D Write Pro ドキュメントのデータコンテキスト                                                                                                                                     |
+| [This](../commands/this.md).sectionIndex                       | Number | 4D Write Pro ドキュメント内のセクションのインデックス(1から開始)                                                                                                                                                                                   |
+| [This](../commands/this.md).pageIndex                          | Number | 4D Write Pro ドキュメント内の実際のページ番号(1から開始、セクションのページ番号とは無関係)                                                                                                                                                                      |
+| [This](../commands/this.md).sectionName                        | 文字列    | ユーザーが与えたセクションの名前                                                                                                                                                                                                                              |
 
 :::note
 
-Additional context properties are available when you work with tables. See *Handling tables* for more information.
+表組を使用する場合には追加のコンテキストプロパティが利用できます。 より詳細な情報については*表組を管理する* を参照して下さい。
 
 :::
 
-(\*) **Important**: **This.pageNumber**, **This.pageIndex** and **This.pageCount** must be used only directly in a 4D Write Pro formula (they must be present in the *formula.source* string). They will return incorrect values if they are used by the 4D language within a method called by the formula. However, they can be passed as parameters to a method called directly by the formula:
+(\*) **重要**: **This.pageNumber**、**This.pageIndex** および **This.pageCount** は4D Write Pro フォーミュラの中で直接的にのみ使用することができます(*formula.source* 文字列の中に記入されている必要があります)。 これらはフォーミュラから呼び出されたメソッド内の4D ランゲージで使用された場合には不正確な値を返します。 ただし、フォーミュラから直接呼び出されるメソッドにこれらを引数として渡すことはできます:
 
-- This will work: « *formatNumber(This.pageNumber)* »
-- This will NOT work: « *formatNumber* » with *formatNumber* method processing *This.pageNumber*.
+- この使い方は動作します: « *formatNumber(This.pageNumber)* »
+- この使い方は動作**しません**: « *formatNumber* » (*formatNumber* メソッド内部で*This.pageNumber* を処理する)
 
-For example, to insert the page number in the footer area:
+例えば、フッターエリアにページ番号を挿入するには:
 
 ```4d
  $footer:=WP Get footer(4DWP;1)
  WP INSERT FORMULA($footer;Formula(This.pageNumber);wk append)
-  //Using Formula(myMethod) with myMethod processing This.pageNumber
-  //would not work correctly
+  // ただしFormula(myMethod) と書いてmyMethod にThis.pageNumber を処理させようとした場合
+  // これは正常には動作しません
 ```
 
 ## 日付と時間フォーミュラを挿入
 
-**Date**
+**日付**
 
-When the [**Current date**](../commands-legacy/current-date.md) command, a date variable, or a method returning a date is inserted in a formula, it will automatically be transformed into text using the system date short format.
+[**Current date**](../commands-legacy/current-date.md) コマンド、日付型変数、あるいは日付を返すメソッドがフォーミュラに挿入された場合、この日付はsystem date short フォーマットを使用してテキストをへと自動的に変換されます。
 
-**Time**
+**時間**
 
-When the [**Current time**](../commands-legacy/current-time.md) command, a time variable, or a method returning a time is inserted in a formula, it must be enclosed within a [**String**](../commands-legacy/string.md) command because time type is not supported in JSON. Consider the following examples of formulas:
+[**Current time**](../commands-legacy/current-time.md) コマンド、時間型変数、あるいは時間を返すメソッドがフォーミュラに挿入される場合、この時間は[**String**](../commands-legacy/string.md) コマンドでくくってあげる必要があります。JSON では時間型はサポートされていないからです。 以下のフォーミュラの例を参考にして下さい:
 
 ```4d
-  // This code is the best practice
+  // このコードがベストプラクティといえます
  $formula1:=Formula(String(Current time)) //OK 
  
-  // This code will work but is usually not recommended, except after "Edit formula"
+  // このコードは動作しますが一般的には推奨されません("Edit formula"の直後を除く)
  $formula2:=Formula from string("String(Current time)") //OK
  
-  // Wrong code because time values would be displayed as a longint for seconds (or milliseconds), not as a time
- $formula3:=Formula from string("Current time") //NOT valid
- $formula4:=Formula(Current time) //NOT valid
+  // 以下のコードは時間値が秒数(またはミリ秒数)の倍長整数として表示されるため間違ったコードです
+ $formula3:=Formula from string("Current time") //NG
+ $formula4:=Formula(Current time) //NG
  
 ```
 
-## Support of virtual structure
+## バーチャルストラクチャーのサポート
 
 Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. The virtual structure exposed to formulas is defined through [**SET FIELD TITLES**](../commands-legacy/set-field-titles.md)(...;\*) and [**SET TABLE TITLES**](../commands-legacy/set-table-titles.md)(...;\*) commands.
 
