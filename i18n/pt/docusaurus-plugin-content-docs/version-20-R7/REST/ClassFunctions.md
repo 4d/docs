@@ -49,7 +49,7 @@ with data in the body of the POST request: `["Aguada"]`
 
 :::note
 
-The `getCity()` function must have been declared with the `onHttpGet` keyword (see [Function configuration](#function-configuration) below).
+A função `getCity()` deve ter sido declarada com a palavra-chave `onHttpGet` (veja [Configuração da função](#function-configuration) abaixo).
 
 :::
 
