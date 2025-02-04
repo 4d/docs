@@ -734,7 +734,7 @@ Todas as estruturas de looping acima suportam as instruções `break` e `continu
 
 ### break
 
-A instrução `break` termina o ciclo que a contém. Control of the program flows to the statement immediately after the body of the loop.
+A instrução `break` termina o ciclo que a contém. O controle do programa flui para a instrução imediatamente após o corpo do loop.
 
 Se a declaração `break` estiver dentro de um [loop aninhado](#nested-forend-for-looping-structures) (loop dentro de outro loop), a declaração `break` terminará o loop mais interno.
 
