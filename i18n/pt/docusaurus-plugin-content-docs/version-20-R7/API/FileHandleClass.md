@@ -13,7 +13,7 @@ Thanks to the standard 4D object *refcounting*, a file handle is automatically d
 
 :::note
 
-Os recursos de um objeto, como documentos, são liberados quando não existem mais referências na memória, que acontece, por exemplo, no final do método de execução das variáveis locais. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources).
+Os recursos de um objeto, como documentos, são liberados quando não existem mais referências na memória, que acontece, por exemplo, no final do método de execução das variáveis locais. Se você quiser "forçar" a liberação dos recursos do objeto a qualquer momento, você pode [anular suas referências](../Concepts/dt_object.md#resources).
 
 :::
 
@@ -408,7 +408,7 @@ Essa função assume que a propriedade [`.offset`](#offset) é um número de car
 
 :::
 
-If the *stopChar* parameter is passed and not found, `.readText()` returns an empty string and the [.offset](#offset) is left untouched.
+Se o parâmetro *stopChar* for passado e não for encontrado, `.readText()` retorna uma string vazia e o [.offset](#offset) permanecerá intocado.
 
 > Quando esta função é executada pela primeira vez num handle de arquivo, todo o conteúdo do documento é carregado num buffer.
 
