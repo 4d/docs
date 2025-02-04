@@ -1046,7 +1046,7 @@ $notMarried:=ds.Person.query("info.married#true") //finds persons with attribute
 If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //encontra atributos false, null e undefined
 ```
 
 #### Não igual a em colecções
