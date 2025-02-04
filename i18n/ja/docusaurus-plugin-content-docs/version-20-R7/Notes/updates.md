@@ -10,23 +10,23 @@ title: リリースノート
 #### ハイライト
 
 - 時間型のリストボックスの列とヘッダーは、["blankIfNull" オプション](../FormObjects/properties_Display.md#時間フォーマット) をサポートするようになりました。
-- New properties in [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) and [`.getBoxList()`](../API/IMAPTransporterClass.md#getboxlist).
+- [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) and [`.getBoxList()`](../API/IMAPTransporterClass.md#getboxlist) に新しいプロパティが追加されました。
 - [コンポーネントマネージャーのインターフェースを使用してコンポーネントを追加および削除](../Project/components.md#依存関係の追加と削除) できるようになりました。
 - コンパイラー設定の新しい [**直接型指定モード**](../Project/compiler.md#直接型指定の有効化): コード内のすべての変数および引数を `var` と `#DECLARE`/`Function` キーワードで宣言します (新規プロジェクトではこのモードのみサポートされます)。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。
 - [セッションシングルトン](../Concepts/classes.md#シングルトンクラス) と、新しい [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) クラスプロパティをサポート。
-- New [`onHttpGet` function keyword](../ORDA/ordaClasses.md#onhttpget-keyword) to define singleton or ORDA functions that can be called through [HTTP REST GET requests](../REST/ClassFunctions.md#function-calls).
-- New [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class for the REST server to return any web contents.
+- 新しい[`onHttpGet` 関数キーワード](../ORDA/ordaClasses.md#onhttpget-keyword) を使用して[HTTP REST GET requests](../REST/ClassFunctions.md#function-calls) 経由で呼び出し可能なシングルトンまたはORDA 関数を定義できるようになりました。
+- 新しい [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用してREST サーバーがあらゆるWeb コンテンツを返すようになりました。
 - Qodly Studio: [Qodly Studio デバッガーを 4D Server で有効化](../WebServer/qodly-studio.md#4d-server-で-qodlyデバッガーを使用する) できるようになりました。
 - 4Dクライアントアプリケーション用の新しいアプリケーションビルド XMLキー: 接続時にサーバーから送信される証明書について、認証局の&#x20;
   署名 や [ドメイン](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.ja.html) を検証するためのキーが追加されました。
-- Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
+- [埋め込みライセンスなしでスタンドアロンアプリケーションをビルドすること](../Desktop/building.md#licenses) が可能になりました。
 - 4D Language:
-  - New commands: [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
-  - Modified commands: [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
+  - 新コマンド: [Process info](../commands/process-info.md)、 [Session info](../commands/session-info.md)、 [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
+  - 変更されたコマンド: [Process activity](../commands/process-activity.md)、 [Process number](../commands/process-number.md)
 - 4D Write Pro:
-  - New command: [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
-  - Modified commands: [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md) and [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
-  - [What's new page](https://doc.4d.com/4Dv20R7/4D/20-R7/What-s-new.901-7239607.en.html) in 4D Write Pro Reference.
+  - 新コマンド: [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
+  - 変更されたコマンド: [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md) および [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
+  - 4D Write Pro リファレンスの[What's new ページ](https://doc.4d.com/4Dv20R7/4D/20-R7/What-s-new.901-7239607.en.html)
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R7): 4D 20 R7 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/274/release-note-version-20r7/))。
 
 #### 動作の変更
