@@ -224,7 +224,7 @@ Observe que `.call()` é semelhante a [`.apply()`](#apply), exceto pelo fato de 
 
 #### Descrição
 
-The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
+A propriedade `.source` <!-- REF #FunctionClass.source.Summary -->contém a expressão de origem da `fórmula` como texto<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
