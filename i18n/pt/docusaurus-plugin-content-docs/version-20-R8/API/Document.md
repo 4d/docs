@@ -21,7 +21,7 @@ title: Document Class
 
 #### Descrição
 
-The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->the creation date of the file<!-- END REF -->.
+A propriedade `.creationDate` retorna <!-- REF #document.creationDate.Summary -->a data de criação do arquivo<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -296,7 +296,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
+A propriedade `.name` retorna <!-- REF #document.name.Summary --> o nome do arquivo sem extensão (se houver)<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
