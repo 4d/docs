@@ -185,7 +185,7 @@ Estes acessos são definidos no diálogo Parâmetros. O exemplo abaixo mostra di
 
 ![](../assets/en/Users/Access1.png)
 
-You also use groups to [distribute available licenses](#assigning-a-group-to-a-plug-in-or-to-a-server). Esta distribuição é definida no editor Grupos.
+Você também usa grupos para [distribuir licenças disponíveis](#assigning-a-group-to-a-plug-in-or-to-a-server). Esta distribuição é definida no editor Grupos.
 
 ## Ficheiro Directory.json
 
