@@ -59,7 +59,7 @@ A sintaxe específica da plataforma depende do sistema operativo em que o comand
 São suportados os seguintes padrões:
 
 - os separadores de pasta são "\"
-- the text contains ':' and '\' as the second and third character,
+- o texto contém ":" e "\" como o segundo e terceiro caractere,
 - o texto começa por "\\".
 
 Exemplos com [`Folder`](../commands/folder.md):
@@ -69,7 +69,7 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Entering Windows pathnames and escape sequences
+#### Caminhos de acesso Windows e sequências de escape
 
 A linguagem 4D permite o uso de [sequências de escape] (quick-tour.md#escape-sequences). As sequências de fuga começam com uma barra invertida `\`, seguida de um carácter. Por exemplo, `\t` é a sequência de escape para o carácter `Tab`.
 
