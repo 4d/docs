@@ -172,7 +172,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-There is no ending keyword for function code. There is no ending keyword for function code.
+No hay palabra clave final para el código de una función. There is no ending keyword for function code.
 
 :::
 
@@ -287,7 +287,7 @@ Class Constructor({$parameterName : type; ...})
 
 :::note
 
-There is no ending keyword for class constructor function code. There is no ending keyword for function code.
+No hay palabra clave final para el código de función class constructor. There is no ending keyword for function code.
 
 :::
 
