@@ -428,7 +428,7 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 
 > Esta função é thread segura.
 
-The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. Desencadeia o evento `onTerminate`.
+A função `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->aborta a solicitação HTTP <!-- END REF -->. Desencadeia o evento `onTerminate`.
 
 <!-- END REF -->
 
@@ -464,7 +464,7 @@ The `.timeout` property contains <!-- REF #HTTPRequestClass.timeout.Summary -->t
 
 #### Descrição
 
-The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL of the HTTP request<!-- END REF -->.
+A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary --> a URL da solicitação HTTP <!-- END REF -->.
 
 <!-- END REF -->
 
