@@ -132,7 +132,7 @@ Leia [**O que há de novo no 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d
 - Client/server and SQL server TLS connections are now [configured dynamically](../Admin/tls.md#enabling-tls-with-the-other-servers) (no certificate files are required).
 - Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-and-importing-structure-definitions.300-6654851.en.html).
 - New [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) that enhances code control during code typing, syntax checking, and compilation steps to prevent execution errors.
-- Method parameters declared in `#DECLARE` prototypes are [no longer necessary in "Compiler_" methods](../Concepts/parameters.md#compilation).
+- Os parâmetros de método declarados nos protótipos `#DECLARE` [não são mais necessários nos métodos "Compiler_"](../Concepts/parameters.md#compilation).
 - Suporte de [formatos personalizados de data e hora](../Project/date-time-formats.md)
 - Nova palavra-chave [`Try(expression)`](../Concepts/error-handling.md#tryexpression) para tratar casos de erro simples.
 - Novo comando [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
