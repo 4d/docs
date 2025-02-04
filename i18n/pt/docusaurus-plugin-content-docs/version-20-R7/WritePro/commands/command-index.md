@@ -1,6 +1,6 @@
 ---
 id: command-index
-title: 4D Write Pro Commands
+title: Comandos 4D Write Pro
 ---
 
 [A](#A) - [B](#B) - [C](#C) - [D](#D) - [E](#E) - [F](#F) - [G](#G) - [I](#I) - [N](#N) - [P](#P) - [R](#R) - [S](#S) - [T](#T) - [U](#U)
