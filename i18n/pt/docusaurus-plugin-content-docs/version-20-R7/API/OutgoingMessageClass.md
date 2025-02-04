@@ -185,6 +185,6 @@ For a list of HTTP status codes, please refer the [HTTP status code list on Wiki
 
 #### Descrição
 
-The `.status` property contains <!-- REF #OutgoingMessageClass.status.Summary -->the current status of the outgoing message<!-- END REF -->. Essa propriedade pode ser definida com a função [`setStatus()`](setstatus).
+A propriedade `.status` contém <!-- REF #OutgoingMessageClass.status.Summary --> o status atual da mensagem de saída <!-- END REF -->. Essa propriedade pode ser definida com a função [`setStatus()`](setstatus).
 
 <!-- END REF -->
