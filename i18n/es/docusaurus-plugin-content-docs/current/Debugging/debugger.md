@@ -140,7 +140,7 @@ En cualquier momento, puede arrastrar y soltar temas, sublistas de temas (si las
 
 ### Lista de expresiones
 
-#### Line Expressions
+#### Expresiones de línea
 
 This theme lets you keep track of the values of expressions:
 
