@@ -32,9 +32,9 @@ displayed_sidebar: docs
 Por padrão, o comando usa as opções do compilador definidas nas Configurações da estrutura. Você pode substituí-los passando um parâmetro *options*. As seguintes sintaxes são suportadas:
 
 - **Compile project**(): compila o projeto aberto usando as opções definidas nas Configurações da Estrutura
-- **Compile project**(*options*): compiles the opened project. The *options* defined override the Structure Settings
-- **Compile project**(*projectFile*): compiles the *projectFile* 4DProject using the options defined in the Structure Settings
-- **Compile project**(*projectFile*; *options*): compiles the *projectFile* 4DProject and the *options* defined override the Structure Settings
+- **Compile project**(*options*): compila o projeto aberto. As *options* definidas substituem os parâmetros de estrutura
+- **Compile project**(*projectFile*): compila o projeto 4D *projectFile* usando as opções definidas nas parâmetros de estrutura
+- **Compile project**(*projectFile*; *options*): compila o projeto 4D *projectFile* e as *options* definidas substituem os parâmetros de estrutura
 
 **Note:** Binary databases cannot be compiled using this command.
 
@@ -48,7 +48,7 @@ Compilation errors, if any, are returned as objects in the *errors* collection.
 
 **Note:** You cannot call this command when another compilation is running (for example, a compilation launched from the Compilation window).
 
-##### Parâmetro opções
+##### Parâmetro options
 
 The *options* parameter is an object. Here are the available compilation options:
 
