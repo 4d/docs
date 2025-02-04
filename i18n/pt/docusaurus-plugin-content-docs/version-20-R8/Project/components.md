@@ -38,7 +38,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D Server**. In other environments, components are managed differently:
 
 - in [4D in remote mode](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application.
-- in merged applications, components are [included at the build step](../Desktop/building.md#plugins--components-page).
+- em aplicações mescladas, componentes são [incluídos na etapa de compilação](../Desktop/building.md#plugins--components-page).
 
 :::
 
@@ -527,7 +527,7 @@ When this option is unchecked, a new component version matching your [component 
 Registering your personal access token in the Dependency manager is:
 
 - obrigatório se o componente estiver armazenado em um [repositório GitHub privado](#private-repositories),
-- recommended for a more frequent [checking of dependency updates](#updating-github-dependencies).
+- recomendado para uma [verificação de atualizações de dependências](#updating-github-dependencies).
 
 To provide your GitHub access token, you can either:
 
@@ -542,7 +542,7 @@ You can then enter your personal access token:
 
 You can only enter one personal access token. Once a token has been entered, you can edit it.
 
-The provided token is stored in a **github.json** file in the [active 4D folder](../commands-legacy/get-4d-folder.md#active-4d-folder).
+O token fornecido é armazenado em um arquivo **github.json** na [pasta 4D ativa](../commands-legacy/get-4d-folder.md#active-4d-folder).
 
 ### Removing a dependency
 
