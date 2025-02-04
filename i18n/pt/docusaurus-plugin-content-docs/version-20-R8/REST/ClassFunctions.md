@@ -138,7 +138,7 @@ Também é possível transmitir valores para quaisquer atributos da entidade. Es
 - If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
 
 See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
-See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
+Veja um exemplo de [conteúdo baixando usando uma entidade](#using-an-entity-to-download-contents) com uma solicitação GET.
 
 #### Parâmetro de entidade relacionada
 
@@ -159,7 +159,7 @@ A seleção da entidade deve ter sido definida previamente usando [$method=entit
 | __ENTITIES | Parâmetros | Obrigatório - Verdadeiro para indicar ao servidor que o parâmetro é uma seleção de entidade |
 
 Ver exemplo para [receber uma seleção de entidade](#receiving-an-entity-selection-as-parameter) com uma solicitação POST.
-See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
+Ver exemplo para [obter uma lista construída após uma seleção de entidades](#using-an-entity-selection-to-get-a-list) com uma solicitação GET.
 
 ## POST request examples
 
