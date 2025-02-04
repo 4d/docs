@@ -67,7 +67,7 @@ A propriedade **.accessKeyDefined** contém <!-- REF #WebServerClass.accessKeyDe
 
 <!-- REF #WebServerClass.certificateFolder.Syntax -->**.certificateFolder** : Text<!-- END REF -->
 
-Path of the <!-- REF #WebServerClass.certificateFolder.Summary -->folder where the certificate files are located<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. Ao usar essa propriedade no parâmetro `settings` da função [`.start()`](#start), ela pode ser um objeto [`Folder`](FolderClass.md).
+Caminho do <!-- REF #WebServerClass.certificateFolder.Summary -->pasta onde os arquivos de certificados estão localizados<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. Ao usar essa propriedade no parâmetro `settings` da função [`.start()`](#start), ela pode ser um objeto [`Folder`](FolderClass.md).
 
 <!-- END REF -->
 
@@ -487,7 +487,7 @@ O <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" do cookie de 
 
 <!-- REF #WebServerClass.sessionCookieName.Syntax -->**.sessionCookieName** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->.
+O <!-- REF #WebServerClass.sessionCookieName.Summary --> nome do cookie usado para armazenar o ID da sessão<!-- END REF -->.
 
 *Propriedade apenas leitura*
 
@@ -525,7 +525,7 @@ O <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valor "SameSite" do 
 | Web SameSite Lax    | "Lax"    | Os cookies também são enviados em pedidos cruzados mas apenas quando um utilizador está a navegar para o sítio de origem (isto é, quando segue um link). |
 | Web SameSite None   | "None"   | Os cookies são enviados em todos os contextos, ou seja, em resposta a pedidos tanto de primeira parte como de origem cruzada.                                               |
 
-See the [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) description for detailed information.
+Veja a descrição do [cookie da sessão SameSite](WebServer/webServerConfig.md#session-cookie-samesite) para informações detalhadas.
 
 <!-- END REF -->
 
@@ -537,7 +537,7 @@ See the [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-sa
 
 > This property is not used in [scalable sessions mode](#scalablesession) (there is no IP address validation).
 
-The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address validation for session cookies<!-- END REF -->. Por razões de segurança, por defeito o servidor web verifica o endereço IP de cada pedido contendo um cookie de sessão e rejeita-o se este endereço não corresponder ao endereço IP utilizado para criar o cookie. Em algumas aplicações específicas, poderá querer desactivar esta validação e aceitar cookies de sessão, mesmo quando os seus endereços IP não correspondem. Por exemplo, quando os dispositivos móveis mudam entre redes WiFi e 3G/4G, o seu endereço IP muda. Neste caso, pode permitir que os clientes possam continuar a utilizar as suas sessões web mesmo quando os endereços IP mudam (esta configuração reduz o nível de segurança da sua aplicação).
+O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validação de endereço IP para cookies de sessão<!-- END REF -->. Por razões de segurança, por defeito o servidor web verifica o endereço IP de cada pedido contendo um cookie de sessão e rejeita-o se este endereço não corresponder ao endereço IP utilizado para criar o cookie. Em algumas aplicações específicas, poderá querer desactivar esta validação e aceitar cookies de sessão, mesmo quando os seus endereços IP não correspondem. Por exemplo, quando os dispositivos móveis mudam entre redes WiFi e 3G/4G, o seu endereço IP muda. Neste caso, pode permitir que os clientes possam continuar a utilizar as suas sessões web mesmo quando os endereços IP mudam (esta configuração reduz o nível de segurança da sua aplicação).
 
 <!-- END REF -->
 
@@ -625,7 +625,7 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 <!-- END REF -->
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
+A função `.stop()` <!-- REF #WebServerClass.stop().Summary -->interrompe o servidor web no qual ele é aplicado<!-- END REF -->.
 
 Se o servidor web foi iniciado, todas as ligações e processos web são fechados, uma vez terminados os pedidos actualmente tratados. Se o servidor web não foi iniciado, o método não faz nada.
 
