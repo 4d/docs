@@ -13,7 +13,7 @@ As seguintes classes podem ser usadas no 4D View Pro.
 
 **.color** : Text<!-- END REF -->
 
-The `.color` property is the <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) of the border<!-- END REF -->. Predefinição = black.
+A propriedade `.color` é a <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) da borda<!-- END REF -->. Predefinição = black.
 
 ### .style
 
@@ -21,7 +21,7 @@ The `.color` property is the <!-- REF #LineBorder.color.Summary -->[color](confi
 
 **.style** : Integer<!-- END REF -->
 
-The `.style` property is the <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) of the border<!-- END REF -->. Predefinição = vazio.
+A propriedade `.style` é a <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) da borda<!-- END REF -->. Predefinição = vazio.
 
 ## TableColumn
 
@@ -97,7 +97,7 @@ The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn
 
 **.showFooter** : Boolean<!-- END REF -->
 
-The `.showFooter` property <!-- REF #TableOptions.showFooter.Summary -->indicates whether to display a footer<!-- END REF -->. Padrão = False
+A propriedade `.showFooter` <!-- REF #TableOptions.showFooter.Summary --> indica se deve exibir um pied de page<!-- END REF -->. Padrão = False
 
 ### .showHeader
 
@@ -105,7 +105,7 @@ The `.showFooter` property <!-- REF #TableOptions.showFooter.Summary -->indicate
 
 **.showHeader** : Boolean<!-- END REF -->
 
-The `.showHeader` property <!-- REF #TableOptions.showHeader.Summary -->indicates whether to display a header<!-- END REF -->. Padrão = True
+A propriedade `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica se deve exibir um cabeçalho<!-- END REF -->. Padrão = True
 
 ### .showResizeHandle
 
@@ -181,7 +181,7 @@ The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summar
 
 **.borderLeft** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderLeft` property is the <!-- REF #TableStyle.borderLeft.Summary -->left border line of the table <!-- END REF -->.
+A propriedade `.borderLeft` é a <!-- REF #TableStyle.borderLeft.Summary -->linha de borda esquerda da tabela <!-- END REF -->.
 
 ### .borderRight
 
@@ -189,7 +189,7 @@ The `.borderLeft` property is the <!-- REF #TableStyle.borderLeft.Summary -->lef
 
 **.borderRight** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderRight` property is the <!-- REF #TableStyle.borderRight.Summary -->right border line of the table <!-- END REF -->.
+A propriedade `.borderRight` é a <!-- REF #TableStyle.borderRight.Summary -->linha de borda direita da tabela <!-- END REF -->.
 
 ### .borderBottom
 
