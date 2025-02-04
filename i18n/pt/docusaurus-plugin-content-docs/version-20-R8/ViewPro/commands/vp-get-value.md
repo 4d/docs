@@ -16,7 +16,7 @@ title: VP Get value
 
 #### Descrição
 
-The `VP Get value` command <!-- REF #_method_.VP Get value.Summary -->retrieves a cell value from a designated cell range<!-- END REF -->.
+O comando `VP Get value` <!-- REF #_method_.VP Get value.Summary --> recupera um valor de célula em uma faixa de células designadas<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo cujo valor você deseja recuperar.
 
