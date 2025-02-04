@@ -25,7 +25,7 @@ Ao escrever uma fórmula, pode utilizar diferentes atalhos:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. To do so, enter these formulas using the [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) command.
+Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. Para fazer isso, insira essas fórmulas usando o comando [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name).
 
 ### Operadores e Operandos
 
