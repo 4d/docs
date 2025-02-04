@@ -25,7 +25,7 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D Server**. In other environments, components are managed differently:
 
 - in [4D in remote mode](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application.
-- in merged applications, components are [included at the build step](../Desktop/building.md#plugins--components-page).
+- em aplicações mescladas, componentes são [incluídos na etapa de compilação](../Desktop/building.md#plugins--components-page).
 
 :::
 
@@ -368,7 +368,7 @@ Em seguida, você pode definir a opção [tag ou versão](#tags-and-versions) pa
 - **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version.
 - **Up to Next Major Version**: Define a [semantic version range](#tags-and-versions) to restrict updates to the next major version.
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
-- **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
+- **Versão exata (etiqueta)**: selecione ou insira manualmente uma [etiqueta específica](#tags-and-versions) na lista disponível.
 
 Clique no botão **Adicionar** para adicionar a dependência ao projeto.
 
