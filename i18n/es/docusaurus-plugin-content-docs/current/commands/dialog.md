@@ -142,7 +142,7 @@ The following example uses the path to a .json form to display the records in an
  DIALOG("/RESOURCES/OutputPersonnel.json";*)
 ```
 
-which displays:
+que muestra:
 
 ![](../assets/en/commands/pict3687439.en.png)
 
