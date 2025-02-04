@@ -94,14 +94,14 @@ Estas propriedades são definidas:
 2. si no se utiliza, utilizando el comando `WEB SET OPTION` (sólo aplicaciones locales),
 3. se não for usado, nos parâmetros da aplicação host ou do componente.
 
-- If the web server is not started, the properties contain the values that will be used at the next web server startup.
+- Se o servidor web não for iniciado, as propriedades contêm os valores que serão usados na próxima inicialização do servidor web.
 - If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
 
 > *isRunning*, *name*, *openSSLVersion*, and *perfectForwardSecrecy* are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
 
 ## Âmbito dos comandos 4D Web
 
-El lenguaje 4D contiene [varios comandos](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) permitiendo controlar el servido Web. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
+El lenguaje 4D contiene [varios comandos](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) permitiendo controlar el servido Web. No entanto, esses comandos são projetados para funcionar com um único servidor web (padrão). Ao usar esses comandos no contexto de objetos do servidor web, certifique-se de que seu escopo é apropriado.
 
 | Comando                         | Âmbito                            |
 | ------------------------------- | --------------------------------- |
