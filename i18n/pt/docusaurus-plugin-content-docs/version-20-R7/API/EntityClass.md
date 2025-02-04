@@ -145,7 +145,7 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Nã
 
 #### Descrição
 
-The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
+A função `.diff()` <!-- REF #EntityClass.diff().Summary -->compara o conteúdo de duas entidades e retorna suas diferenças<!-- END REF -->.
 
 No *entityToCompare*, passe a entidade a ser comparada à entidade original.
 
@@ -769,7 +769,7 @@ Se a entidade não pertence à seleção de uma entidade, a função retorna Nul
 
 #### Descrição
 
-The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
+A função `.getStamp()` <!-- REF #EntityClass.getStamp().Summary --> retorna o valor atual do carimbo da entidade<!-- END REF -->.
 
 O selo interno é automaticamente incrementado por 4D cada vez que a entidade é gravada. It manages concurrent user access and modifications to the same entities (see [**Entity locking**](ORDA/entities.md#entity-locking)).
 
