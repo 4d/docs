@@ -344,7 +344,7 @@ The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Su
 
 #### Descrição
 
-The `.dataType` property <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. Valores possíveis: "text" ou "blob".
+A propriedade `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contém o tipo de conteúdo do corpo de resposta <!-- END REF -->. Valores possíveis: "text" ou "blob".
 
 Essa propriedade é **somente leitura**.
 
@@ -358,7 +358,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. Esta propriedade só estará disponível se o [`dataType`](#datatype) for "text".
+A propriedade <!-- REF #SystemWorkerClass.encoding.Summary -->contém a codificação do conteúdo do corpo da resposta<!-- END REF -->. Esta propriedade só estará disponível se o [`dataType`](#datatype) for "text".
 
 Essa propriedade é **somente leitura**.
 
