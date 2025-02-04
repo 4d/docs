@@ -507,7 +507,7 @@ Os seguintes módulos opcionais podem ser desmarcados:
 
 A página de Licenças e Certificados pode ser usada:
 
-- designate the license number(s) that you want to integrate into your single-user [stand-alone application](#application-page),
+- indique o(s) número(s) de licença(s) que você deseja integrar ao seu único usuário [aplicação autônoma](#application-page),
 - assinar a aplicação através de um certificado no macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
