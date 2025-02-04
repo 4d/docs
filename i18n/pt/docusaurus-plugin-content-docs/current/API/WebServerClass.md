@@ -111,7 +111,7 @@ The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the sec
 
 <!-- REF #WebServerClass.CORSEnabled.Syntax -->**.CORSEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Quando desativado (False, padrão), todas as solicitações de cruzamento de sites enviadas com CORS são ignoradas. Quando habilitado (verdadeiro) e um domínio ou método não permitido envia uma solicitação de site cruzado, ele é rejeitado com uma resposta de erro "403 - proibido".
+O <!-- REF #WebServerClass.CORSEnabled.Summary -->estado do serviço CORS (*Cross-origin resource sharing*) para o servidor<!-- END REF -->. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Quando desativado (False, padrão), todas as solicitações de cruzamento de sites enviadas com CORS são ignoradas. Quando habilitado (verdadeiro) e um domínio ou método não permitido envia uma solicitação de site cruzado, ele é rejeitado com uma resposta de erro "403 - proibido".
 
 Padrão: Falso (desabilitado)
 
@@ -165,7 +165,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->status of the HTTP request log 
 
 <!-- REF #WebServerClass.defaultHomepage.Syntax -->**.defaultHomepage** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.defaultHomepage.Summary -->name of the default home page<!-- END REF --> or "" to not send the custom home page.
+O <!-- REF #WebServerClass.defaultHomepage.Summary --> nome da página inicial padrão <!-- END REF --> ou "" para não enviar a página inicial personalizada.
 
 <!-- END REF -->
 
@@ -308,7 +308,7 @@ Default = 480 minutos
 
 <!-- REF #WebServerClass.IPAddressToListen.Syntax -->**.IPAddressToListen** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.IPAddressToListen.Summary -->IP address on which the 4D Web Server will receive HTTP requests<!-- END REF -->. Normalmente, nenhum endereço específico é definido. Os formatos string IPv6 e IPv4 são compatíveis
+O <!-- REF #WebServerClass.IPAddressToListen.Summary -->Endereço IP no qual o Servidor Web 4D receberá solicitações HTTP<!-- END REF -->. Normalmente, nenhum endereço específico é definido. Os formatos string IPv6 e IPv4 são compatíveis
 
 <!-- END REF -->
 
