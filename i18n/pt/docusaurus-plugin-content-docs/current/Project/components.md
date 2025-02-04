@@ -542,7 +542,7 @@ You can then enter your personal access token:
 
 You can only enter one personal access token. Once a token has been entered, you can edit it.
 
-The provided token is stored in a **github.json** file in the [active 4D folder](../commands-legacy/get-4d-folder.md#active-4d-folder).
+O token fornecido é armazenado em um arquivo **github.json** na [pasta 4D ativa](../commands-legacy/get-4d-folder.md#active-4d-folder).
 
 ### Removing a dependency
 
