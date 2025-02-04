@@ -310,7 +310,7 @@ The `.replyTo` property contains the <!-- REF #EmailObjectClass.replyTo.Summary 
 
 #### Descrição
 
-The `.sendAt` property contains the <!-- REF #EmailObjectClass.sendAt.Summary -->Email timestamp in ISO 8601 UTC format<!-- END REF -->.
+A propriedade `.sendAt` contém o <!-- REF #EmailObjectClass.sendAt.Summary --> Carimbo de e-mail no formato UTC ISO 8601<!-- END REF -->.
 
 ## .sender
 
