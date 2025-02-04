@@ -204,25 +204,25 @@ Como um arquivo *logweb.txt* pode se tornar consideravelmente grande, é possív
 
 Quando o backup do arquivo de log da web é acionado, o arquivo de log é arquivado em uma pasta chamada "Arquivos Logweb", que é criado no mesmo nível que o logweb *. Arquivo xt*.
 
-The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_mm_ss.txt.” For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: and 7 seconds: e 7 segundos: “D2020_09_04_T15_50_07.txt.”
+O arquivo arquivado é renomeado com base no seguinte exemplo: “DYYYY_MM_DDD_Thh_mm_ss.txt.” Por exemplo, para um dossiê arquivado em 4 de Setembro de 2020 às 3h50. e 7 segundos: “D2020_09_04_T15_50_07.txt.”
 
 #### Parâmetros de backup
 
-The automatic backup parameters for the logweb.txt are set on the **Web/Log (backup)** page of the Settings:
+Os parâmetros de backup automático para o logweb.txt são definidos na página **Web/Log (backup)** das Configurações:
 
 ![](../assets/en/WebServer/backup.png)
 
-Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. Você deve então especificar o momento exato do backup, se necessário.
+Primeiro você deve escolher a frequência (dias, semanas, etc.) ou o critério de limite de tamanho de arquivo clicando no botão de rádio correspondente. Você deve então especificar o momento exato do backup, se necessário.
 
-* **No Backup**: The scheduled backup function is deactivated.
+* **Nenhum Backup**: A função de backup programado está desativada.
 
-* **Every X hour(s)**: This option is used to program backups on an hourly basis. Pode digitar um valor entre 1 e 24.
-  * **starting at**: Used to set the time at which the first back up will begin.
+* **A cada X hora(s)**: Esta opção é utilizada para programar backups por hora. Pode digitar um valor entre 1 e 24.
+  * **começando em**: Usado para definir o tempo em que o primeiro volta começará.
 
-* **Every X day(s) at X**: This option is used to program backups on a daily basis. Introduza 1 se pretender efetuar uma cópia de segurança diária. When this option is checked, you must indicate the time when the backup must be started.
+* **Cada X dia(s) em X**: Esta opção é utilizada para programar backups diariamente. Introduza 1 se pretender efetuar uma cópia de segurança diária. Quando essa opção estiver marcada, você deve indicar a hora em que o backup deve ser iniciado.
 
-* **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started.
+* **A cada X semana(s) (s), dia em X**: Esta opção é usada para programar backups semanalmente. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar. Por exemplo, você pode usar essa opção para definir dois backups semanais: um nas quartas-feiras e outro na sexta-feira.
 
-* **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Digite 1 se quiser realizar uma cópia de segurança mensal. Digite 1 se quiser realizar uma cópia de segurança mensal.
+* **A cada X mês), décimo dia no X**: Esta opção é utilizada para programar backups mensalmente. Digite 1 se quiser realizar uma cópia de segurança mensal. Quando essa opção estiver marcada, você deve indicar o dia do mês e a hora em que o backup deve ser iniciado.
 
-* **Every X MB**: This option is used to program backups based on the size of the current request log file. Um backup é acionado automaticamente quando o arquivo atinge o tamanho definido. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
+* **Cada X MB**: Esta opção é usada para programar backups com base no tamanho do arquivo de log de solicitação atual. Um backup é automaticamente acionado quando o arquivo atinge o tamanho definido. Você pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
