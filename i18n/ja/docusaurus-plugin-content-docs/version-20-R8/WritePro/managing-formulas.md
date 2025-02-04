@@ -109,87 +109,87 @@ title: フォーミュラの管理
 
 ## バーチャルストラクチャーのサポート
 
-Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. The virtual structure exposed to formulas is defined through [**SET FIELD TITLES**](../commands-legacy/set-field-titles.md)(...;\*) and [**SET TABLE TITLES**](../commands-legacy/set-table-titles.md)(...;\*) commands.
+4D Write Pro ドキュメントに挿入されたテーブルおよびフィールドの式はデータベースのバーチャルストラクチャー定義をサポートします。 フォーミュラに公開されるバーチャルストラクチャーは[**SET FIELD TITLES**](../commands-legacy/set-field-titles.md)(...;\*) および [**SET TABLE TITLES**](../commands-legacy/set-table-titles.md)(...;\*) コマンドを通して定義されます。
 
-When a virtual structure is defined:
+バーチャルストラクチャーが定義されている場合:
 
-- references to expressions containing fields display virtual names when the 4D Write Pro document shows references and not values.
-- [**WP Get text**](commands-legacy/wp-get-text.md) returns virtual structure names if `wk expressions as source` option is set in expressions parameter.
-- [WP Insert formula](commands/wp-insert-formula.md) ignores the virtual structure and always expects real table/field names
+- 4D Write Pro ドキュメントが値ではなく参照を表示する場合、フィールドを格納する式への参照はバーチャルな名前を表示します。
+- [**WP Get text**](commands-legacy/wp-get-text.md) は、expressions 引数に`wk expressions as source` オプションが設定されている場合、バーチャルストラクチャー名を返します。
+- [WP Insert formula](commands/wp-insert-formula.md) コマンドはバーチャルストラクチャーを無視し、常に実際のテーブル/フィールド名を受け付けます。
 
 :::note
 
-When a document is displayed in "display expressions" mode, references to tables or fields that do not belong to the virtual structure are displayed with "`?`" characters, for example `[VirtualTableName]?` when the field is not defined in the virtual structure.
+ドキュメントが"式を表示"モードで表示されているとき、バーチャルストラクチャーに属していないテーブルまたはフィールドへの参照は"`?`"文字付きで表示されます。例えばあるフィールドがバーチャルストラクチャー内で定義されていなければ、`[VirtualTableName]?` と表示されます。
 
 :::
 
-## Displaying formulas
+## フォーミュラの表示
 
-You can control how formulas are displayed in your documents:
+ドキュメント内でフォーミュラがどのように表示されるかは以下のようにコントロールすることができます:
 
-- as *values* or as *references*
-- when shown as references, display source text, symbol, or name.
+- *値* または*参照* として表示
+- 参照として表示されている場合、ソーステキスト、記号、または名前を表示
 
-### References or Values
+### 参照か値か
 
-By default, 4D formulas are displayed as values. When you insert a 4D formula, 4D Write Pro computes and displays its current value.  If you wish to know which formula is used or what is its name, you need to display it as a reference.
+デフォルトでは、4D フォーミュラは値として表示されます。 4D フォーミュラを挿入すると、4D Write Pro はカレントの値を計算して表示します。  どのフォーミュラが表示されているのか知りたい場合には、これを参照として表示する必要があります。
 
-To display formulas as references, you can:
+フォーミュラを参照として表示するためには、以下の方法があります:
 
-- check the **Show references** option in the Property list (see *Configuring View properties*), or
-- use the visibleReferences standard action (see *Dynamic expressions*), or
-- use the [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) command with the `wk visible references` selector to **True**.
+- プロパティリスト内の**参照として表示** オプションをチェックする(*ビュープロパティの設定* 参照)
+- visibleReferences 標準アクションを使用する(*動的な式* 参照)
+- [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) コマンドを、`wk visible references` セレクターを**True** にして使用する
 
-Formula references can be displayed as:
+フォーミュラ参照は、以下の表示方法があります:
 
-- source texts (default)
+- ソーステキスト(デフォルト)
 - symbols
 - names
 
-### References as source texts (default)
+### 参照をソーステキストとして表示(デフォルト)
 
-When formulas are displayed as references, by default the source text of the formula appear in your document, with a default gray background (can be customized using the `wk formula highlight` selector).
+フォーミュラが参照 として表示されている場合、ドキュメント内にはフォーミュラのソーステキストが表示され、デフォルトでは灰色の背景色がつけられます(これは`wk formula highlight` セレクターを使用することでカスタマイズ可能です)
 
 たとえば、フォーマットを指定したカレント日付を挿入していると、デフォルトでは次の表示になります:
 
 ![](../assets/en/WritePro/wp-formulas1.png)
 
-When you display formulas as references, the **source** of the formula is displayed:
+フォーミュラを参照として表示した場合、そのフォーミュラの**ソース** が表示されます:
 
 ![](../assets/en/WritePro/wp-formulas2.png)
 
-### References as symbols
+### 参照を記号として表示
 
-When formula source texts are displayed in a document, the design could be confusing if you work on sophisticated templates using tables for example, and when formulas are complex:
+フォーミュラのソーステキストがドキュメント内に表示されている場合、例えば表組を使用したような込み入ったテンプレートで作業していてかつフォーミュラが複雑だった場合、デザインが分かりづらくなってしまううことがあります:
 
 ![](../assets/en/WritePro/wp-formulas3.png)
 
-In this case, you can display formula references as ![](../assets/en/WritePro/wp-formulas.png) symbols, so that the document is more compact:
+この場合、フォーミュラ参照を![](../assets/en/WritePro/wp-formulas.png) 記号として表示することで、ドキュメントを読みやすくすることができます:
 
 ![](../assets/en/WritePro/wp-formulas4.png)
 
-To display formula references as symbols, you can:
+フォーミュラ参照を記号として表示するためには、以下の方法があります:
 
-- check the **Display formula source as symbol option** in the Property list (see *Configuring View properties*), or
-- use the displayFormulaAsSymbol standard action (see *Using 4D Write Pro standard actions*), or
-- use the [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) command with the `wk display formula as symbol` selector to **True**.
+- プロパティリスト内の**フォーミュラのソースを記号として表示** オブションをチェックする(*ビュープロパティの設定* 参照)
+- displayFormulaAsSymbol 標準アクションを使用する(*4D Write Pro標準アクションの使用* 参照)
+- [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) コマンドを、`wk display formula as symbol` セレクターを**True** にして使用する
 
-### References as names
+### 参照を名前で表示
 
-You can assign names to formulas, making 4D Write Pro template documents easier to read and understand for end-users. When formulas are displayed as references (and not displayed as symbols) and you have defined a name for a formula, the formula name is displayed.
+フォーミュラには名前を割り当てることができ、これによって4D Write Pro テンプレートドキュメントをエンドユーザーがより読みやすく理解しやすいようにすることができます。 フォーミュラが参照として表示されている場合(そして記号として表示されていない場合)で、フォーミュラに対して名前を定義している場合、フォーミュラ名が表示されます。
 
-For example, the following formula references are displayed as source text by default:
+例えば、以下のフォーミュラ参照はデフォルトではソーステキストとして表示されます:
 
 ![](../assets/en/WritePro/wp-formulas5.png)
 
-If you assign formula names, they are displayed instead of texts:
+フォーミュラ名を割り当てた場合、テキストではなく名前が表示されます:
 
 ![](../assets/en/WritePro/wp-formulas6.png)
 
-To assign a name to a formula, you need to use the [WP Insert formula](commands/wp-insert-formula.md) command with an object parameter. 例:
+フォーミュラに名前を割り当てるためには、[WP Insert formula](commands/wp-insert-formula.md) コマンドにオブジェクト型の引数を渡す必要があります。 例:
 
 ```4d
-  //inserts the previous day in the document
+  // ドキュメント内に昨日の日付を挿入する
  $o:=New object("formula";Formula(Current date-1);"name";"Yesterday")
  $range:=WP Text range(WPArea;wk start text;wk end text)
  WP INSERT FORMULA($range;$o;wk append)
@@ -200,30 +200,29 @@ To assign a name to a formula, you need to use the [WP Insert formula](commands/
 
 :::note
 
-Only inline formulas can have a name (formulas for anchored images, break rows, and table datasource formulas cannot have names).
+名前をつけられるのはインラインフォーミュラのみです(アンカーされた画像、ブレーク行などに対するフォーミュラ、表データソースフォーミュラには名前をつけることはできません)。
 
 :::
 
-### Formula tips
+### フォーミュラのtips
 
-Whatever the formula display mode, you can get additional information on formulas through **tips** that are displayed when you hover on formulas.
+フォーミュラの表示モードに関わらず、フォーミュラ上をマウスでホバーした時に表示される**tips** でフォーミュラに関する追加の情報を得ることができます。
 
-- When formulas do not have names, tips provide the source text of formulas:
+- フォーミュラに名前がない場合、tips はフォーミュラのソーステキストを表示します:
 
   ![](../assets/en/WritePro/wp-formulas7.png)
 
-- When formulas have names but are displayed as values or as symbols, the tip provides the name of formulas:
+- フォーミュラに名前はついているものの値または記号として表示されている場合、tips はフォーミュラ名を表示します:
 
   ![](../assets/en/WritePro/wp-formulas8.png)
 
-In this context, you can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula.
+このコンテキストでは、フォーミュラ上をホバーしているときに**Ctrl** (Windows) または **Cmd** (macOS) キーを押すことでフォーミュラのソーステキストを表示できます。
 
-- When formulas have names and are displayed as names, no tip is displayed by default.
-  You can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula:
-  [
+- フォーミュラに名前がついていて、名前として表示されている場合、デフォルトではtips は表示されません。
+  フォーミュラ上をホバーしているときに**Ctrl** (Windows) または **Cmd** (macOS) キーを押すことでフォーミュラのソーステキストを表示できます:
   ![](../assets/en/WritePro/wp-formulas9.png)
 
 #### 参照
 
-[Download HDI database](http://download.4d.com/Demos/4D_v16/HDI_4DWP_Filter4DExpressions.zip)</br>
-*Using commands from the Styled Text theme*
+[HDI データベースをダウンロード](http://download.4d.com/Demos/4D_v16/HDI_4DWP_Filter4DExpressions.zip)</br>
+*スタイル付きテキストテーマのコマンドを使用*
