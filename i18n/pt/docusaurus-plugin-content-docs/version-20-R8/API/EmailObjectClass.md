@@ -171,7 +171,7 @@ The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon 
 
 #### Descrição
 
-The `.comments` property contains an <!-- REF #EmailObjectClass.comments.Summary -->additional comments header<!-- END REF -->.
+A propriedade `.comments` contém um <!-- REF #EmailObjectClass.comments.Summary --> cabeçalho de comentários adicional<!-- END REF -->.
 
 Os comentários só aparecem na seção de cabeçalho da mensagem (mantendo o corpo da mensagem intocado).
 
