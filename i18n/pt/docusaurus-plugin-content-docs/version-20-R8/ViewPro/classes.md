@@ -31,7 +31,7 @@ A propriedade `.style` é a <!-- REF #LineBorder.style.Summary -->[style](config
 
 **.dataField** : Text<!-- END REF -->
 
-The `.dataField` property <!-- REF #TableColumn.dataField.Summary -->contains the table column's property name in the data context<!-- END REF -->.
+A propriedade `.dataField` <!-- REF #TableColumn.dataField.Summary -->contém o nome da propriedade da coluna da tabela no contexto de dados<!-- END REF -->.
 
 ### .formatter
 
@@ -65,7 +65,7 @@ The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -
 
 **.bandColumns** : Boolean<!-- END REF -->
 
-The `.bandColumns` property <!-- REF #TableOptions.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->. Padrão = False
+A propriedade `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary --> indica se deve exibir um estilo de coluna alternativo<!-- END REF -->. Padrão = False
 
 ### .bandRows
 
@@ -73,7 +73,7 @@ The `.bandColumns` property <!-- REF #TableOptions.bandColumns.Summary -->indica
 
 **.bandRows** : Boolean<!-- END REF -->
 
-The `.bandRows` property <!-- REF #TableOptions.bandRows.Summary -->indicates whether to display an alternating row style<!-- END REF -->. Padrão = True
+A propriedade `.bandRows` <!-- REF #TableOptions.bandRows.Summary --> indica se deve exibir um estilo de linha alternativo<!-- END REF -->. Padrão = True
 
 ### .highlightLastColumn
 
@@ -213,7 +213,7 @@ The `.borderHorizontal` property is the <!-- REF #TableStyle.borderHorizontal.Su
 
 **.borderVertical** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderVertical` property is the <!-- REF #TableStyle.borderVertical.Summary -->vertical border line of the table <!-- END REF -->.
+A propriedade `.borderVertical` é a <!-- REF #TableStyle.borderVertical.Summary -->linha de borda vertical da tabela<!-- END REF -->.
 
 ## TableTheme
 
@@ -223,7 +223,7 @@ The `.borderVertical` property is the <!-- REF #TableStyle.borderVertical.Summar
 
 **.bandRows** : Boolean<!-- END REF -->
 
-The `.bandRows` property <!-- REF #TableTheme.bandRows.Summary -->indicates whether to display an alternating row style<!-- END REF -->.
+A propriedade `.bandRows` <!-- REF #TableTheme.bandRows.Summary --> indica se deve exibir um estilo de linha alternativo<!-- END REF -->.
 
 ### .bandColumns
 
@@ -255,7 +255,7 @@ The `.highlightFirstColumn` property <!-- REF #TableTheme.highlightFirstColumn.S
 
 **.theme** : [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<br/>**.theme** : Text<!-- END REF -->
 
-The `.theme` property <!-- REF #TableTheme.theme.Summary -->defines a table theme<!-- END REF -->.
+A propriedade `.theme` <!-- REF #TableTheme.theme.Summary -->define um tema de tabela<!-- END REF -->.
 Si Text: nombre de un [tema nativo SpreadJS](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 ## TableThemeOptions
@@ -314,7 +314,7 @@ The `.firstRowStripStyle` property is the <!-- REF #TableThemeOptions.firstRowSt
 
 **.footerRowStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.footerRowStyle` property is the <!-- REF #TableThemeOptions.footerRowStyle.Summary -->default style of the footer area<!-- END REF -->.
+A propriedade `.footerRowStyle` é o <!-- REF #TableThemeOptions.footerRowStyle.Summary --> estilo padrão da área de rodapé<!-- END REF -->.
 
 ### .headerRowStyle
 
@@ -322,7 +322,7 @@ The `.footerRowStyle` property is the <!-- REF #TableThemeOptions.footerRowStyle
 
 **.headerRowStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.headerRowStyle` property is the <!-- REF #TableThemeOptions.headerRowStyle.Summary -->default style of the header area<!-- END REF -->.
+A propriedade `.headerRowStyle` é a <!-- REF #TableThemeOptions.headerRowStyle.Summary --> estilo padrão da área de cabeçalho<!-- END REF -->.
 
 ### .highlightFirstColumnStyle
 
@@ -394,7 +394,7 @@ The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowS
 
 **.secondRowStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.secondRowStripStyle` property is the <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->second alternating row style<!-- END REF -->.
+A propriedade `.secondRowStripStyle` é a <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->segundo estilo de linha alternativo<!-- END REF -->.
 
 ### .wholeTableStyle
 
@@ -402,4 +402,4 @@ The `.secondRowStripStyle` property is the <!-- REF #TableThemeOptions.secondRow
 
 **.wholeTableStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.wholeTableStyle` property is the <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->default style of the data area<!-- END REF -->.
+A propriedade`.wholeTableStyle` é a <!-- REF #TableThemeOptions.inteTableStyle.Summary --> estilo padrão da área de dados<!-- END REF -->.
