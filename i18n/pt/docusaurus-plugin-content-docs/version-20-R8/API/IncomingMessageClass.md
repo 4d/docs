@@ -113,7 +113,7 @@ Um objeto 4D.IncomingMessage é um objeto [não compartilhável](../Concepts/sha
 
 #### Descrição
 
-The `.getBlob()` function <!-- REF #IncomingMessageClass.getBlob().Summary -->returns the body of the request as a Blob<!-- END REF -->.
+A função `.getBlob()` <!-- REF #IncomingMessageClass.getBlob().Summary -->retorna o corpo da solicitação como um Blob<!-- END REF -->.
 
 If the body has not been given as a binary content, the function tries to convert the value but it can give unexpected results.
 
