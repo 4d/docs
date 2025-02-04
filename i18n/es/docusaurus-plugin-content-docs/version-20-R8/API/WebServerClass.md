@@ -236,7 +236,7 @@ El estado del protocolo <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP<!--
 
 <!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Integer<!-- END REF -->
 
-El <!-- REF #WebServerClass.HTTPPort.Summary -->escuchando número de puerto IP para HTTP<!-- END REF -->.
+El <!-- REF #WebServerClass.HTTPPort.Summary -->número de puerto IP de escucha para HTTP<!-- END REF -->.
 
 Por defecto = 80
 
