@@ -14,7 +14,7 @@ title: リリースノート
 
 #### ハイライト
 
-- 4D 20.6 LTS is certified on Wondiws Server 2025
+- 4D 20.6 LTS is certified on Windows Server 2025
 
 :::warning KNOWN ISSUE ON WINDOWS SERVER 2025
 
