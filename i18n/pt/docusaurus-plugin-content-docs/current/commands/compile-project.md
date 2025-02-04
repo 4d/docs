@@ -32,9 +32,9 @@ displayed_sidebar: docs
 Por padrão, o comando usa as opções do compilador definidas nas Configurações da estrutura. Você pode substituí-los passando um parâmetro *options*. As seguintes sintaxes são suportadas:
 
 - **Compile project**(): compila o projeto aberto usando as opções definidas nas Configurações da Estrutura
-- **Compile project**(*options*): compiles the opened project. The *options* defined override the Structure Settings
-- **Compile project**(*projectFile*): compiles the *projectFile* 4DProject using the options defined in the Structure Settings
-- **Compile project**(*projectFile*; *options*): compiles the *projectFile* 4DProject and the *options* defined override the Structure Settings
+- **Compile project**(*options*): compila o projeto aberto. As *options* definidas substituem os parâmetros de estrutura
+- **Compile project**(*projectFile*): compila o projeto 4D *projectFile* usando as opções definidas nas parâmetros de estrutura
+- **Compile project**(*projectFile*; *options*): compila o projeto 4D *projectFile* e as *options* definidas substituem os parâmetros de estrutura
 
 **Note:** Binary databases cannot be compiled using this command.
 
@@ -48,7 +48,7 @@ Compilation errors, if any, are returned as objects in the *errors* collection.
 
 **Note:** You cannot call this command when another compilation is running (for example, a compilation launched from the Compilation window).
 
-##### Parâmetro opções
+##### Parâmetro options
 
 The *options* parameter is an object. Here are the available compilation options:
 
@@ -60,7 +60,7 @@ The *options* parameter is an object. Here are the available compilation options
 | generateSymbols                                                                    | Parâmetros                       | True to generate symbol information in the .symbols returned object                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | generateSyntaxFile                                                                 | Parâmetros                       | True to generate a [syntax file for code completion](../settings/general.md).md#generate-syntax-file-for-code-completion-when-compiled) in the \\Resources\\en.lproj folder of the project                                                                                                                                                                                                                                                                              |
 | generateTypingMethods                                                              | Text                             | "reset" or "append" to generate typing methods. If value is "append", existing variable declarations won't be modified (compiler window behavior). If value is "reset" existing variable declarations are removed beforehand.                                                                                                                                                                                                          |
-| plugins                                                                            | Objeto 4D.Folder | Plug-ins folder to be used instead of the [Plugins folder of the current project](../Project/architecture.md#plugins). This property is only available with the *projectFile* syntax.                                                                                                                                                                                                                                                                                     |
+| plugins                                                                            | Objeto 4D.Folder | Pasta plug-ins a ser usada em vez da [pasta Plugins do projeto atual](../Project/architecture.md#plugins). This property is only available with the *projectFile* syntax.                                                                                                                                                                                                                                                                                                 |
 | targets                                                                            | Coleção de strings               | Possible values: "x86_64_generic", "arm64_macOS_lib". Pass an empty collection to execute syntax check only                                                                                                                                                                                                                                                                           |
 | typeInference                                                                      | Text                             | "all": The compiler deduces the types of all variables not explicitly declared, "locals": The compiler deduces the types of local variables not explicitly declared, "none": All variables must be explicitly declared in the code (legacy mode), "direct": All variables must be explicitly declared in the code ([direct typing](../Project/compiler.md#enabling-direct-typing)). |
 | warnings                                                                           | Uma coleção de objetos           | Define o estado dos avisos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -193,7 +193,7 @@ var $result:=Compile project($options)
 
 #### Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1760                            |
-| Thread safe    | &amp;cross; |
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1760                            |
+| Thread safe       | &amp;cross; |
