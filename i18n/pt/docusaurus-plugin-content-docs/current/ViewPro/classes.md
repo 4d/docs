@@ -31,7 +31,7 @@ A propriedade `.style` é a <!-- REF #LineBorder.style.Summary -->[style](config
 
 **.dataField** : Text<!-- END REF -->
 
-The `.dataField` property <!-- REF #TableColumn.dataField.Summary -->contains the table column's property name in the data context<!-- END REF -->.
+A propriedade `.dataField` <!-- REF #TableColumn.dataField.Summary -->contém o nome da propriedade da coluna da tabela no contexto de dados<!-- END REF -->.
 
 ### .formatter
 
@@ -65,7 +65,7 @@ The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -
 
 **.bandColumns** : Boolean<!-- END REF -->
 
-The `.bandColumns` property <!-- REF #TableOptions.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->. Padrão = False
+A propriedade `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary --> indica se deve exibir um estilo de coluna alternativo<!-- END REF -->. Padrão = False
 
 ### .bandRows
 
@@ -255,7 +255,7 @@ The `.highlightFirstColumn` property <!-- REF #TableTheme.highlightFirstColumn.S
 
 **.theme** : [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<br/>**.theme** : Text<!-- END REF -->
 
-The `.theme` property <!-- REF #TableTheme.theme.Summary -->defines a table theme<!-- END REF -->.
+A propriedade `.theme` <!-- REF #TableTheme.theme.Summary -->define um tema de tabela<!-- END REF -->.
 Si Text: nombre de un [tema nativo SpreadJS](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 ## TableThemeOptions
@@ -394,7 +394,7 @@ The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowS
 
 **.secondRowStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.secondRowStripStyle` property is the <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->second alternating row style<!-- END REF -->.
+A propriedade `.secondRowStripStyle` é a <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->segundo estilo de linha alternativo<!-- END REF -->.
 
 ### .wholeTableStyle
 
