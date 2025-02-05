@@ -449,7 +449,7 @@ The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary 
 
 The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
 
-You can use the `.dataType` property of the [options object](#options-object) to make response body return Blob values.
+Você pode usar a propriedade `.dataType` do [objeto options](#options-object) para fazer o corpo da resposta retornar valores Blob.
 
 <!-- END REF -->
 
