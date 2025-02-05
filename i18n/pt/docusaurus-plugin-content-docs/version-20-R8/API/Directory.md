@@ -385,7 +385,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. .
+A propriedade `.path` retorna <!-- REF #directory.path.Summary --> o caminho POSIX da pasta<!-- END REF -->. .
 
 Essa propriedade é **somente leitura**.
 
