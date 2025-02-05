@@ -101,7 +101,7 @@ The <!-- REF #WebServerClass.characterSet.Summary -->character set that the 4D W
 
 <!-- REF #WebServerClass.cipherSuite.Syntax -->**.cipherSuite** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the secure protocol<!-- END REF -->. Define a prioridade dos algoritmos de criptografia implementados pelo servidor web 4D. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a [página ciphers](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
+A <!-- REF #WebServerClass.cipherSuite.Resumo -->lista de cifras usada para o protocolo seguro<!-- END REF -->. Define a prioridade dos algoritmos de criptografia implementados pelo servidor web 4D. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a [página ciphers](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
 
 <!-- END REF -->
 
@@ -431,7 +431,7 @@ O <!-- REF #WebServerClass.name.Resumo --> nome da aplicação web server<!-- EN
 
 *Propriedade apenas leitura*
 
-The <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL library used<!-- END REF -->.
+A <!-- REF #WebServerClass.openSSLVersion.Summary --> versão da biblioteca OpenSSL usada<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -443,7 +443,7 @@ The <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL li
 
 *Propriedade apenas leitura*
 
-The <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability on the server<!-- END REF -->.
+A <!-- REF #WebServerClass.perfectForwardSecrecy.Resumo --> disponibilidade de PFS no servidor<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -499,7 +499,7 @@ O <!-- REF #WebServerClass.sessionCookieName.Summary --> nome do cookie usado pa
 
 <!-- REF #WebServerClass.sessionCookiePath.Syntax -->**.sessionCookiePath** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the session cookie<!-- END REF -->. Utilizado para controlar o alcance dos cookies da sessão. Se definir, por exemplo, o valor "/4DACTION" para este selector, o cliente só enviará um cookie para pedidos dinâmicos que comecem por 4DACTION, e não para imagens, páginas estáticas, etc.
+O <!-- REF #WebServerClass.sessionCookiePath.Summary -->campo "path" do cookie de sessão<!-- END REF -->. Utilizado para controlar o alcance dos cookies da sessão. Se definir, por exemplo, o valor "/4DACTION" para este selector, o cliente só enviará um cookie para pedidos dinâmicos que comecem por 4DACTION, e não para imagens, páginas estáticas, etc.
 
 <!-- END REF -->
 
@@ -535,7 +535,7 @@ Veja a descrição do [cookie da sessão SameSite](WebServer/webServerConfig.md#
 
 <!-- REF #WebServerClass.sessionIPAddressValidation.Syntax -->**.sessionIPAddressValidation** : Boolean<!-- END REF -->
 
-> This property is not used in [scalable sessions mode](#scalablesession) (there is no IP address validation).
+> Esta propriedade não é usada no [modo sessões escaláveis](#scalablesession) (não há validação de endereço IP).
 
 O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validação de endereço IP para cookies de sessão<!-- END REF -->. Por razões de segurança, por defeito o servidor web verifica o endereço IP de cada pedido contendo um cookie de sessão e rejeita-o se este endereço não corresponder ao endereço IP utilizado para criar o cookie. Em algumas aplicações específicas, poderá querer desactivar esta validação e aceitar cookies de sessão, mesmo quando os seus endereços IP não correspondem. Por exemplo, quando os dispositivos móveis mudam entre redes WiFi e 3G/4G, o seu endereço IP muda. Neste caso, pode permitir que os clientes possam continuar a utilizar as suas sessões web mesmo quando os endereços IP mudam (esta configuração reduz o nível de segurança da sua aplicação).
 
