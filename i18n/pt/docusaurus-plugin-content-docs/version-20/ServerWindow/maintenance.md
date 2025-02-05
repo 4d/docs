@@ -4,89 +4,89 @@ title: Página Manutenção
 ---
 
 
-The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. Ele também fornece acesso às funções básicas de manutenção:
+A página **Manutenção** da janela de Administração de Servidor 4D fornece informações sobre a operação atual da aplicação. Ele também fornece acesso às funções básicas de manutenção:
 
 ![](../assets/en/Admin/server-maintenance.png)
 
 
 ## Última verificação/compactação
 
-These areas indicate the date, time and status of the last [data verification](MSC/verify.md) and [compacting operation](MSC/compact.md) carried out on the database.
+Estas áreas indicam a data, hora e estado da última [verificação de dados](MSC/verify.md) e [operação de compactação](MSC/compact.md) realizadas no banco de dados.
 
 ### Verificar registos e índices
 
-This button can be used to launch the verification operation directly, without interrupting the server. Observe que o servidor pode ficar visivelmente mais lento durante a operação.
+Este botão pode ser usado para iniciar a operação de verificação diretamente, sem interromper o servidor. Observe que o servidor pode ficar visivelmente mais lento durante a operação.
 
-Todos os registros e todos os índices do banco de dados são verificados. If you want to be able to target the verification or have additional options available, you will need to use the [Maintenance and Security Center](MSC/overview.md) (MSC).
+Todos os registros e todos os índices do banco de dados são verificados. Se você quer ser capaz de direcionar a verificação ou ter opções adicionais disponíveis, você precisará usar o [Manutenção e Centro de Segurança](MSC/overview.md) (MSC).
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
+Após a verificação, um relatório é gerado no formato XML no servidor na pasta [Logs de manutenção](Project/architecture.md#logs). Botão **Visualizar Relatório** (chamado **Download Relatório** se a operação foi realizada de uma máquina remota) permite que você exiba o arquivo em seu navegador.
 
 ### Compactar dados...
 
-Thus button can be used to launch a data compacting operation directly. This operation requires stopping the server: when you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation:
+Assim, o botão pode ser usado para executar uma operação de compactação de dados diretamente. Esta operação requer parar o servidor: quando você clicar neste botão, a caixa de diálogo de desligamento do Servidor 4D aparece para que você possa escolher como interromper a operação:
 
 ![](../assets/en/Admin/server-shut.png)
 
-After the actual interruption of the application service, 4D Server carries out a standard compacting operation on the database data. If you want to have additional options available, you will need to use the [MSC](MSC/overview.md).
+Após a interrupção real do serviço de aplicação, 4D Server realiza uma operação padrão de compactação nos dados da base de dados. Se você deseja ter opções adicionais disponíveis, você precisará usar o [MSC](MSC/overview.md).
 
-Once the compacting is finished, 4D Server automatically restarts the application. Os usuários 4D podem então ser reconectados.
+Quando a compactação terminar, o servidor 4D reinicia automaticamente o aplicativo. Os usuários 4D podem então ser reconectados.
 
-> If the request for compacting was carried out from a remote 4D remote machine, this machine is automatically reconnected by 4D Server.
+> Se o pedido de compactação foi realizado a partir de uma máquina remota 4D remota, esta máquina é automaticamente reconectada pelo Servidor 4D.
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
+Após a verificação, um relatório é gerado no formato XML no servidor na pasta [Logs de manutenção](Project/architecture.md#logs). Botão **Visualizar Relatório** (chamado **Download Relatório** se a operação foi realizada de uma máquina remota) permite que você exiba o arquivo em seu navegador.
 
 
 ## Tempo de funcionamento
 
-This area indicates the duration of the 4D Server application execution since the last time it was started (days, hours and minutes).
+Esta área indica a duração da execução do aplicativo 4D Server desde a última vez que foi iniciado (dias, horas e minutos).
 
 
 ### Reiniciar o servidor...
 
-Este botão pode ser usado para fechar e reiniciar imediatamente o projeto. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. Após a validação, 4D Server fecha e reabre automaticamente o projeto. Os usuários 4D podem então ser reconectados.
+Este botão pode ser usado para fechar e reiniciar imediatamente o projeto. Quando você clica neste botão, a caixa de diálogo de desligamento do Servidor 4D aparece para que você possa escolher como interromper a operação. Após a validação, 4D Server fecha e reabre automaticamente o projeto. Os usuários 4D podem então ser reconectados.
 
-> If the request for restarting was carried out from a remote 4D machine, this machine is automatically reconnected by 4D Server.
+> Se o pedido de reinicialização foi feito a partir de uma máquina 4D remota, esta máquina é automaticamente reconectada pelo Servidor 4D.
 
 ## Última cópia de segurança
 
-This area indicates the date and time of the [last backup](MSC/backup.md) of the database and provides information about the next scheduled automatic backup (if any). Automatic backups are configured using the **Scheduler** page of the structure settings.
+Esta área indica a data e hora do [último backup](MSC/backup.md) do banco de dados e fornece informação sobre o próximo backup programa (se houver). Os backups automáticos são configurados utilizando a página **Agendador** das configurações de estrutura.
 
 - **Último backup**: data e hora do último backup.
-- **Next backup**: date and time of next scheduled backup.
-- **Needed space**: estimated space needed for the backup. The actual size of the backup file may vary according to the settings (compression, etc.) and according to variations of the data file.
-- **Available space**: space available on the backup volume.
+- **Next backup**: data e hora do próximo backup programado.
+- **Espaço necessário**: espaço estimado necessário para o backup. O tamanho real do arquivo de backup pode variar de acordo com as configurações (compressão, etc.) e de acordo com as variações do arquivo de dados.
+- **Available space**: espaço disponível do volume de backup.
 
 
-The **Start backup** button can be used to backup the database immediately using the current backup parameters (files backed up, location of archives, options, etc.). You can view these parameters by clicking on the **Settings...** button. During a backup on the server, the client machines are "blocked" (but not disconnected) and it is not possible for any new clients to connect.
+O botão **Iniciar backup** pode ser usado para fazer backup do banco de dados imediatamente usando os parâmetros de backup atuais (backup de arquivos, backup localização de arquivos, opções, etc.). Você pode ver esses parâmetros clicando no botão **Configurações...**. Durante um backup no servidor, as máquinas do cliente são "bloqueadas" (mas não desconectadas) e não é possível que qualquer novo cliente se conecte.
 
 
 ## Histórico de solicitações e depuração
 
-This area indicates the server log files recording duration (when log files are activated) and allows you to control their activation.
+Esta área indica a duração da gravação dos arquivos de log do servidor (quando os arquivos de log são ativados) e permite a você controlar a ativação deles.
 
-Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section for details on log files.
+Consulte a seção [**Descrição dos arquivos de log**](Debugging/debugLogFiles.md) para detalhes dos arquivos de log.
 
-### Start/Stop Request and Debug Logs
+### Iniciar/Parar Logs de Solicitação e Depuração
 
-The **Start Request and Debug Logs** button starts log files. Since this may noticeably deteriorate server performance, it is to be reserved for the development phase of the application.
+O botão **Iniciar solicitação e depurar logs** inicia arquivos de log. Uma vez que isto pode deteriorar significativamente o desempenho do servidor, deve ser reservado para a fase de desenvolvimento da aplicação.
 
 > Este botão registra apenas operações executadas no servidor.
 
-When the logs have been activated, the button title changes to **Stop Request and Debug Logs**, so that you can stop recording requests at any time. Pay attention to the fact that restarting the log after stopping it "erases" the previous file.
+Quando os logs forem ativados, o título do botão muda para **Parar Requisição e Depurar Logs**, , para que você possa parar a gravação dos pedidos a qualquer momento. Preste atenção ao fato de que reiniciar o log após parar "erva" o arquivo anterior.
 
 ### Ver relatório
 
-The **View Report** button (named **Download report** if the operation was carried out from a remote desktop client) lets you open a system window displaying the request log file.
+O botão **Visualizar Relatório** (chamado **Relatório de Download** se a operação foi realizada a partir de um cliente desktop remoto) permite que você abra uma janela do sistema exibindo o arquivo de registro de solicitações.
 
-### Carregar ficheiro de configuração dos registos
+### Carregar arquivo e configuração dos registos
 
-This button allows you to load a special server [log configuration file](Debugging/debugLogFiles.md#using-a-log-configuration-file) (`.json` file). Such a file can be provided by 4D technical services to monitor and study specific cases.
+Este botão permite carregar um arquivo de configuração [servidor especial de log](Debugging/debugLogFiles.md#using-a-log-configuration-file) (`.json` file). Este arquivo pode ser fornecido por serviços técnicos 4D para acompanhar e estudar casos específicos.
 
 
 ### Pausar no registo
 
-This button suspends all currently logging operations started on the server. Esta funcionalidade pode ser útil para aligeirar temporariamente as tarefas do servidor.
+Este botão suspende todas as operações de registro atualmente iniciadas no servidor. Esta funcionalidade pode ser útil para aligeirar temporariamente as tarefas do servidor.
 
-When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
+Quando os logs forem pausados, o título do botão muda para **Retomar o registro**, para que possa retomar as operações de registro.
 
 > É possível pausar e retomar o registro em log usando o comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html).
