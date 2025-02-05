@@ -236,7 +236,7 @@ Estado do protocolo <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP<!-- END
 
 <!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Integer<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPPort.Summary -->listening IP port number for HTTP<!-- END REF -->.
+O <!-- REF #WebServerClass.HTTPPort.Summary --> número da porta IP de escuta para HTTP<!-- END REF -->.
 
 O padrão = 80
 
@@ -268,7 +268,7 @@ O <!-- REF #WebServerClass.HTTPSEnabled.Summary -->estado do protocolo HTTPS<!--
 
 <!-- REF #WebServerClass.HTTPSPort.Syntax -->**.HTTPSPort** : Integer<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPSPort.Summary -->listening IP port number for HTTPS<!-- END REF -->.
+O <!-- REF #WebServerClass.HTTPSPort.Summary --> número da porta IP de escuta para HTTPS<!-- END REF -->.
 
 O padrão = 443
 
@@ -282,7 +282,7 @@ O padrão = 443
 
 > Essa propriedade não é retornada no [modo de sessões dimensionáveis](#scalablesession).
 
-The <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->life duration (in minutes) of the inactive legacy session processes<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
+A <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->duração da vida (em minutos) dos processos de sessão legados inativos<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
 
 Default = 480 minutos
 
@@ -419,7 +419,7 @@ Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 
 *Propriedade apenas leitura*
 
-The <!-- REF #WebServerClass.name.Summary -->name of the web server application<!-- END REF -->.
+O <!-- REF #WebServerClass.name.Resumo --> nome da aplicação web server<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -453,7 +453,7 @@ The <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability o
 
 <!-- REF #WebServerClass.rootFolder.Syntax -->**.rootFolder** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folder<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter, it can be a `Folder` object.
+O <!-- REF #WebServerClass.rootFolder.Summary --> caminho da pasta raiz do servidor web <!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter, it can be a `Folder` object.
 
 <!-- END REF -->
 
