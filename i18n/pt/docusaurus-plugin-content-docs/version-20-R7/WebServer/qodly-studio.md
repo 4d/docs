@@ -108,7 +108,7 @@ Há duas maneiras de acessar Qodly Studio:
 
   `localhost:7080/studio`
 
-  You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to access Qodly Studio.
+  Em seguida, você será solicitado a entrar na [chave de acesso](../Admin/webAdmin.md#access-key) para acessar Qodly Studio.
 
 ## Developing with Qodly Studio
 
@@ -259,7 +259,7 @@ Make sure the ["force login" mode](../REST/authUsers.md#force-login-mode) is ena
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 
-You can also set this option directly in the [**roles.json** file](../ORDA/privileges.md#rolesjson-file).
+Você também pode definir essa opção diretamente no arquivo [**roles.json**](../ORDA/privileges.md#rolesjson-file).
 
 You just need then to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly page. A licence will be consumed only when the user is actually logged.
 
