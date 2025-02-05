@@ -233,7 +233,7 @@ Using the `$4DSID` parameter is the most simple way to process a callback from t
 
 :::note
 
-A [`4DACTION`](./httpRequests.md#4daction) url can also be used on the 4D side.
+Una url [`4DACCIÓN`](./httpRequests.md#4daction) también puede ser usada en el lado 4D.
 
 :::
 
@@ -461,7 +461,7 @@ A new user is created, and some information is stored in the session, especially
 ### Supported contexts
 
 - Both HTTP and HTTPS schemas are supported.
-- Only [scalable sessions](#enabling-web-sessions) can be reused with tokens.
+- Sólo [sesiones escalables](#enabling-web-sessions) pueden ser reutilizados con tokens.
 - Only sessions of the host database can be reused (sessions created in component web servers cannot be restored).
 - Tokens are not supported with client/server sessions or single-user sessions.
 
