@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 The **WP Insert break** command <!--REF #_command_.WP Insert break.Summary-->inserts a new break of the *breakType* type in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameters, and  returns the text range of the break character<!-- END REF-->
 
-In *targetObj*, pass:
+En *targetObj*, pase:
 
 - un rango, o
 - an element (table / row / paragraph / body / header / footer / inline picture / section / subsection), or
