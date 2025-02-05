@@ -50,7 +50,7 @@ $tcpClient.wait(0)
 
 ```
 
-#### Asynchronous Example
+#### Ejemplo asincrónico
 
 This example defines a class that handles the connection lifecycle and events, showcasing how to work asynchronously:
 
@@ -122,7 +122,7 @@ CALL WORKER("new process"; "Async_TCP")
 
 ```
 
-### TCPConnection Object
+### Objeto TCPConnection
 
 A TCPConnection object is a non-sharable object.
 
@@ -177,8 +177,8 @@ All callback functions receive two parameters:
 
 | Parámetros  | Tipo                                            | Descripción                                           |
 | ----------- | ----------------------------------------------- | ----------------------------------------------------- |
-| $connection | [`TCPConnection` object](#tcpconnection-object) | The current TCP connection instance.  |
-| $event      | [`TCPEvent` object](#tcpevent-object)           | Contains information about the event. |
+| $connection | [objeto `TCPConnection`](#tcpconnection-object) | The current TCP connection instance.  |
+| $event      | [objeto `TCPEvent`](#tcpevent-object)           | Contains information about the event. |
 
 **Sequence of Callback Calls:**
 
