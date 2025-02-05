@@ -3,7 +3,7 @@ id: monitor
 title: Página Monitor
 ---
 
-The **Monitor** page displays dynamic information concerning database use as well as information about the system and the 4D Server application.
+A página **Monitor** exibe informações dinâmicas sobre o uso de banco de dados, bem como informações sobre o sistema e a aplicação do servidor 4D.
 
 ![](../assets/en/Admin/server-admin.png)
 
