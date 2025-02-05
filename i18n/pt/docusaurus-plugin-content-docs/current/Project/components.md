@@ -527,7 +527,7 @@ When this option is unchecked, a new component version matching your [component 
 Registering your personal access token in the Dependency manager is:
 
 - obrigatório se o componente estiver armazenado em um [repositório GitHub privado](#private-repositories),
-- recommended for a more frequent [checking of dependency updates](#updating-github-dependencies).
+- recomendado para uma [verificação de atualizações de dependências](#updating-github-dependencies).
 
 To provide your GitHub access token, you can either:
 
