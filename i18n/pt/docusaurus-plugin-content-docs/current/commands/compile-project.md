@@ -112,7 +112,7 @@ Para obter mais informações, consulte [Ferramentas de compilação](../Project
 | arrayDimension  | number   | Para arrays apenas: 1 para arrays monodimensionais, 2 para arrays de duas dimensões      |
 | code            | Object   | Para as variáveis de processo e interprocesso: descritor de onde a variável foi definida |
 
-###### code object
+###### objeto de código
 
 A propriedade `code` em `methods.code` e `errors.code` é um objeto com as seguintes propriedades:
 
@@ -121,35 +121,35 @@ A propriedade `code` em `methods.code` e `errors.code` é um objeto com as segui
 | type                                                                                                                        | Text                     | "projectMethod", "formObjectMethod", "formMethod", "databaseMethod", "triggerMethod", "executeOnServer" (ao chamar um método do projeto com o atributo *Executar no servidor*), "executeFormula" (ao executar uma fórmula através de [PROCESS 4D TAGS](../commands-legacy/process-4d-tags.md) ou avaliação de uma fórmula em um documento 4D Write Pro), "class", "classFunction", "formObjectExpression" (para erros que ocorrem em expressões associadas ao formulário de objetos) |
 | path                                                                                                                        | Text                     | Caminho do método (mesmo formato que [METHOD OPEN PATH](../commands-legacy/method-open-path.md))                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | file                                                                                                                        | 4D. File | Arquivo do método                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|                                                                                                                             |                          | **Returned depending on the value of the `type` property:**                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|                                                                                                                             |                          | **Retornado dependendo do valor da propriedade `type`:**                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | methodName                                                                                                                  | Text                     | Métodos proyecto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| table                                                                                                                       | Number                   | Number of the table (returned for a trigger, a table form method or a table form object method)                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| formName                                                                                                                    | Text                     | Form name (returned for a form method)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| objectName                                                                                                                  | Text                     | Form object name (returned for an object method)                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Esta propriedade só está disponível quando não estiver selecionado <a href="#font-theme">tema de fonte</a>. | Text                     | Form object property name (returned for a form object expression)                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| className                                                                                                                   | Text                     | Class name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| table                                                                                                                       | Number                   | Número da tabela (retornado para um gatilho, um método de formulário da tabela ou um método de objeto de formulário da tabela)                                                                                                                                                                                                                                                                                                                                                                                             |
+| formName                                                                                                                    | Text                     | Nome do formulário (retornado para um método do formulário)                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| objectName                                                                                                                  | Text                     | Nome do objeto do formulário (retornado para um método do objeto)                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Esta propriedade só está disponível quando não estiver selecionado <a href="#font-theme">tema de fonte</a>. | Text                     | Nome da propriedade objeto de formulário (retornado para uma expressão de objeto de forma)                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| className                                                                                                                   | Text                     | Nome da turma                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | functionName                                                                                                                | Text                     | Nome da função de classe                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| databaseMethod                                                                                                              | Number                   | Database method index                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| databaseMethod                                                                                                              | Number                   | Índice de método                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 #### Exemplos
 
-To perform a syntax check only, pass an empty collection to the targets parameter:
+Para fazer uma verificação de sintaxe apenas, passe uma coleção vazia para o parâmetro de alvos:
 
 ```4d
- var $status : Object
+ var $status : Objeto
  var $options:={}
- $options.targets:=New collection //Empty collection for syntax checking
- $status:=Compile project($options)
+ $options.targets:=Nova coleção //Vazio pela verificação de sintaxe
+ $status:=Compilação de projeto($options)
 ```
 
-Compile the current project using the compiler options of the Structure Settings only:
+Compilar o projeto atual usando apenas as opções do compilador das configurações de estrutura:
 
 ```4d
  var $status : Object
  $status:=Compile project
 ```
 
-On a Silicon Mac, compile the current project to ARM only:
+Em um Silicon Mac, compile o projeto atual apenas para ARM:
 
 ```4d
  var $status : Object
@@ -158,7 +158,7 @@ On a Silicon Mac, compile the current project to ARM only:
  $status:=Compile project($options)
 ```
 
-Compile a project other than the current project:
+Compilar um projeto diferente do projeto atual:
 
 ```4d
  var $status : Object
@@ -167,7 +167,7 @@ Compile a project other than the current project:
  $status:=Compile project($projectFile)
 ```
 
-Compile a project and declare its component:
+Compilar um projeto e declarar seu componente:
 
 ```4d
  var $status : Object
@@ -178,7 +178,7 @@ Compile a project and declare its component:
  $status:=Compile project($options)
 ```
 
-Disable warnings 518.1 and 518.2 when compiling your project:
+Desativar avisos 518.1 e 518.2 ao compilar seu projeto:
 
 ```4d
 var $options:={}
