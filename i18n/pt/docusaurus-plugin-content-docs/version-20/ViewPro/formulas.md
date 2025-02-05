@@ -31,7 +31,7 @@ Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome.
 
 Todas as fórmulas têm operandos e operadores:
 
-*   **Operators**: see [Values and operators](#values-and-operators) below.
+*   **Operadores**: veja [Valores e operadores](#values-and-operators) abaixo.
 *   **Operandos** inclui várias categorias:
     *   Os [valores](#values-and-operators) (5 tipos de dados são suportados)
     *   As [referências a outras células](#cell-references) (relativo, absoluto, misto ou por nome)
