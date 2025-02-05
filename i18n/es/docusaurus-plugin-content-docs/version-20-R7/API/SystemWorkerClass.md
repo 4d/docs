@@ -358,7 +358,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. This property is only available if the [`dataType`](#datatype) is "text".
+The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. Esta propiedad sólo está disponible si el [`dataType`](#datatype) es "text".
 
 Esta propiedad es de **solo lectura**.
 
@@ -551,7 +551,7 @@ Esta propiedad es de **solo lectura**.
 | Parámetros | Tipo                            |                             | Descripción                                       |
 | ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------- |
 | timeout    | Real                            |              ->             | Tiempo de espera (en segundos) |
-| Result     | 4D.SystemWorker | <- | SystemWorker object                               |
+| Result     | 4D.SystemWorker | <- | Objeto SystemWorker                               |
 
 <!-- END REF -->
 
