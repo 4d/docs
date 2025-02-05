@@ -87,7 +87,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. Uma extensão sempre começa com ".". Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome do arquivo não tiver extensão.
+A propriedade `.extension` retorna <!-- REF #document.extension.Summary --> a extensão do nome do arquivo (se houver)<!-- END REF -->. Uma extensão sempre começa com ".". Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome do arquivo não tiver extensão.
 
 Essa propriedade é **somente leitura**.
 
@@ -175,7 +175,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.isFile` property returns <!-- REF #document.isFile.Summary -->always true for a file<!-- END REF -->.
+A propriedade `.isFile` retorna <!-- REF #document.isFile.Summary -->sempre true para um arquivo<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -367,7 +367,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.path` property returns <!-- REF #document.path.Summary -->the POSIX path of the file<!-- END REF -->. .
+A propriedade `.path` retorna <!-- REF #document.path.Summary --> o caminho POSIX do arquivo<!-- END REF -->. .
 
 Essa propriedade é **somente leitura**.
 
