@@ -34,7 +34,7 @@ Todas as fórmulas têm operandos e operadores:
 *   **Operators**: see [Values and operators](#values-and-operators) below.
 *   **Operandos** inclui várias categorias:
     *   Os [valores](#values-and-operators) (5 tipos de dados são suportados)
-    *   [references to other cells](#cell-references) (relative, absolute, mixed or by name)
+    *   As [referências a outras células](#cell-references) (relativo, absoluto, misto ou por nome)
     *   [funções standard de folha de cálculo](#using-functions)
     *   [funções 4D](#4d-functions) baseadas em fórmulas 4D e que fornecem acesso a variáveis, campos, métodos, comandos ou expressões 4D.
 
