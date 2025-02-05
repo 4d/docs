@@ -112,7 +112,7 @@ Para obter mais informações, consulte [Ferramentas de compilação](../Project
 | arrayDimension  | number   | Para arrays apenas: 1 para arrays monodimensionais, 2 para arrays de duas dimensões      |
 | code            | Object   | Para as variáveis de processo e interprocesso: descritor de onde a variável foi definida |
 
-###### code object
+###### objeto de código
 
 A propriedade `code` em `methods.code` e `errors.code` é um objeto com as seguintes propriedades:
 
