@@ -32,7 +32,7 @@ As seguintes propriedades estão disponíveis:
 
 #### Descrição
 
-The `.type` property contains <!-- REF #4D.TCPEvent.type.Summary -->the type of the event<!-- END REF -->. Valores possíveis:
+A propriedade `.type` contém <!-- REF #4D.TCPEvent.type.Summary -->o tipo do evento<!-- END REF -->. Valores possíveis:
 
 - `"connection"`: Indicates that a TCPConnection was successfully established.
 - `"data"`: Indicates that data has been received.
