@@ -11,10 +11,10 @@ Para abrir uma janela de administração do servidor a partir de uma máquina cl
 
 Esta janela pode ser acedida de duas maneiras:
 
-- Choose the **Administration Window** command from the **Help** menu or click on the corresponding button in the 4D tool bar.
+- Escolha o comando **Janela de administração** a partir do menu **Ajudar** ou clique no botão correspondente na barra de ferramentas 4D.
 - Executar o comando `OPEN ADMINISTRATION WINDOW`.
 
-A [server administration window](monitor.md) then appears on the client machine.
+Uma [janela de administração do servidor](monitor.md) então aparece na máquina cliente.
 
 
 ## Especificidades da administração via uma máquina 4D remota
