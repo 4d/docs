@@ -3,34 +3,34 @@ id: http-request-handler
 title: HTTP Request handler
 ---
 
-By default, HTTP requests received by the 4D web server are handled through [built-in processing features](httpRequests.md) or the [REST server](../REST/REST_requests.md).
+デフォルトで、4D Web サーバーで受信されたHTTP リクエストは[ビルトイン処理機能](httpRequests.md) または[REST サーバー](../REST/REST_requests.md) で管理されます。
 
-In addition, 4D supports the implementation of **custom HTTP Request handlers**, allowing you to intercept specific incoming HTTP requests and process them using your own code.
+これに加えて、4D では**カスタムのHTTP リクエストハンドラー** の実装をサポートしており、これによって受信した特定のHTTP リクエストに割り込み、自分のコードを使用して処理することができるようになります。
 
-When a custom HTTP request handler intercepts a request, it is processed directly and no other processing features (e.g. [On Web authentication](./authentication.md#on-web-authentication) or [On Web connection](./httpRequests.md#on-web-connection) database methods) are called.
+カスタムのHTTP リクエストハンドラーがリクエストに割り込んだ場合、そのリクエストは直接処理され、他の処理機能(例: [On Web authentication](./authentication.md#on-web-authentication) データベースメソッドや [On Web connection](./httpRequests.md#on-web-connection) データベースメソッド)が呼び出されることはありません。
 
-Custom HTTP request handlers meet various needs, including:
+カスタムのHTTP リクエストハンドラーを使用することで、以下のような用途に応えることができます:
 
-- using a given URL as a resource provider or a file-uploading box (to download or upload various files),
-- redirecting on specific pages according to a context (user authenticated, privileges granted...),
-- handle an authentication via oAuth 2.0.
+- 与えられたURL をリソースプロバイダやファイルアップロードボックスとして使用する(これにより様々なファイルのダウンロード/アップロードが可能になります)。
+- コンテキスト(認証されたユーザー、与えられた権限など)に応じて、特定のページへとリダイレクトする
+- oAuth 2.0 経由での認証を管理する
 
 ## 要件
 
-Custom HTTP Request handlers are supported:
+カスタムのHTTP リクエストハンドラーは以下の条件の元にサポートされます:
 
-- when [scalable sessions](./sessions.md#enabling-web-sessions) are enabled,
-- with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
+- [スケーラブルセッション](./sessions.md#enabling-web-sessions) が有効化されていること
+- メインのWeb サーバーでのみ利用可能です([コンポーネントのWeb サーバー](../WebServer/webServerObject.md) で定義されていたHTTP リクエストハンドラーがあったとしてもそれは無視されます)。
 
-## HTTPHandlers.json File
+## HTTPHandlers.json ファイル
 
-You define your custom HTTP Request handlers in a configuration file named **HTTPHandlers.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
+カスタムHTTP リクエストハンドラーは、[`Project/Sources`](../Project/architecture.md#sources) にある**HTTPHandlers.json** という設定ファイル内で定義します。
 
-This file contains all listened URL patterns, the handled verbs, and the code to be called. Handlers are provided as a collection in JSON format.
+このファイルはサーバーが聞いている全てのURL パターン、管理される動詞(メソッド)、そして呼び出されるべきコードが格納されています。 ハンドラーはJSON フォーマットのコレクションとして提供されます。
 
-At runtime, the first pattern matching the URL is executed, the others are ignored.
+ランタイムでは、URLに合致する最初のパターンのみが実行され、他のパターンは無視されます。
 
-Here is an example of a *HTTPHandlers.json* file contents:
+以下は*HTTPHandlers.json* ファイルのコンテンツの一例です:
 
 ```json
 
@@ -44,25 +44,25 @@ Here is an example of a *HTTPHandlers.json* file contents:
 ]
 ```
 
-This handler declaration can be read as: when any request starting by `/start/` with a `GET` or `POST` verb is received by the server, the `gettingStarted` function of the `GeneralHandling` singleton is executed.
+このハンドラー宣言は以下のように解釈することができます: `/start/` から始まり`GET` または`POST`動詞がついたリクエストがサーバーで受信された場合、`GeneralHandling` シングルトンクラスの`gettingStarted` 関数が実行されます。
 
 :::note
 
-You must restart the Web server so that modifications made in this file are taken into account.
+このファイルに対して行った変更が反映されるためには、Web サーバーを再起動する必要があります。
 
 :::
 
-## Handler definition
+## ハンドラー定義
 
-A handler is defined by:
+ハンドラーは以下の3つの要素から定義されます:
 
-- a listened URL pattern
-- a function and its class where the code is implemented to handle the listened URL pattern
-- the verbs with which the URL can be called to trigger the handler
+- 聞くべきURL パターン
+- 受信したURL パターンを処理するためのコードが実装されているクラスとその関数
+- そのURL とともに使用することでハンドラーをトリガーする動詞(メソッド)
 
-The handler identifier is the couple [pattern + a verb among the verbs list].
+ハンドラーの識別子は、[パターン + 動詞のリストの中にある動詞]の組み合わせとなります。
 
-### URL patterns
+### URL パターン
 
 URL patterns can be given as **prefixes** or using **regular expressions**.
 
