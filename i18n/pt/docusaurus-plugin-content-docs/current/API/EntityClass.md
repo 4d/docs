@@ -145,7 +145,7 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Nã
 
 #### Descrição
 
-The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
+A função `.diff()` <!-- REF #EntityClass.diff().Summary -->compara o conteúdo de duas entidades e retorna suas diferenças<!-- END REF -->.
 
 No *entityToCompare*, passe a entidade a ser comparada à entidade original.
 
