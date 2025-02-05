@@ -1040,7 +1040,7 @@ Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como
 The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
+$notMarried:=ds.Person.query("info.married#true") //encontra pessoas cujo valor do atributo é false
 ```
 
 If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
