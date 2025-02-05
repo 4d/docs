@@ -326,7 +326,7 @@ A propriedade `.headerRowStyle` é o <!-- REF #TableThemeOptions.headerRowStyle.
 ### .highlightFirstColumnStyle
 
 <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Syntax -->
-**.highlightFirstColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
+**.highlightFirstColumnStyle**: [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
 A propriedade `.highlightFirstColumnStyle` é o <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->estilo da primeira coluna<!-- END REF -->. "highlightFirstColumn" tem de ser true.
 
