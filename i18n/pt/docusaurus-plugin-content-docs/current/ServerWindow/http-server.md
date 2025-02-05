@@ -3,7 +3,7 @@ id: http-server
 title: Página Servidor HTTP
 ---
 
-La página **Servidor HTTP** agrupa la información sobre el servidor Web y el servidor SOAP de 4D Server. The Web server lets you publish Web content such as HTML pages or pictures for Web browsers, and to handle REST requests. O servidor SOAP gere a publicação de serviços Web. Esses servidores dependem do servidor HTTP interno de 4D Server.
+La página **Servidor HTTP** agrupa la información sobre el servidor Web y el servidor SOAP de 4D Server. O servidor web permite que você publique conteúdo Web como páginas HTML ou imagens para navegadores Web e para lidar com solicitações REST. O servidor SOAP gere a publicação de serviços Web. Esses servidores dependem do servidor HTTP interno de 4D Server.
 
 ![](../assets/en/Admin/server-admin-web-page.png)
 
@@ -18,12 +18,12 @@ A parte superior da página fornece informações sobre o estado atual do servid
 
 Esse botão alterna e pode ser usado para controlar a ativação do servidor HTTP do 4D Server.
 
-- Cuando el estado del servidor HTTP es "Iniciado", el botón se etiqueta**Detener el servidor HTTP**. If you click on this button, the 4D Server HTTP server is immediately stopped; the Web server, REST server, and SOAP server no longer accept any requests.
+- Cuando el estado del servidor HTTP es "Iniciado", el botón se etiqueta**Detener el servidor HTTP**. Se você clicar neste botão, o servidor HTTP 4D é parado imediatamente; o servidor Web, o servidor REST e o servidor SOAP não aceitam mais quaisquer solicitações.
 - Cuando el estado del servidor HTTP es "Detenido", el botón se titula **Iniciar servidor HTTP**. Se você clicar nesse botão, o servidor HTTP de 4D Server será iniciado imediatamente; solicitações Web, REST e SOAP serão aceitas.
 
 > Você deve ter uma licença adequada para poder iniciar o servidor HTTP.
 >
-> The HTTP server can also be launched automatically on application startup (Settings) or by programming.
+> O servidor HTTP também pode ser iniciado automaticamente na inicialização do aplicativo (configurações) ou pela programação.
 
 ## Informação Web
 
@@ -34,7 +34,7 @@ Esta área fornece informações específicas sobre o servidor Web de 4D Server.
 
 ## Informação SOAP
 
-This area provides specific information about the SOAP server of 4D Server and includes a control button.
+Esta área fornece informações específicas sobre o servidor SOAP do 4D Server e inclui um botão de controle.
 
 - **Peticiones SOAP**: aceptadas o rechazadas. Esta informação indica se o servidor SOAP está ativado. Para que as solicitações SOAP sejam aceitas, o servidor HTTP deve ser iniciado e o servidor SOAP deve aceitar explicitamente as solicitações (consulte o botão Aceitar/Rejeitar).
 - **Conexiones máximas**: número máximo de conexiones SOAP permitidas. Este valor depende da licença instalada na máquina do servidor.
@@ -44,7 +44,7 @@ Si presiona el botón **Aceptar las peticiones SOAP** y el servidor HTTP está d
 
 ## Configuração servidor HTTP
 
-This area provides information about the configuration parameters and operation of the HTTP server:
+Esta área fornece informações sobre os parâmetros de configuração e a operação do servidor HTTP:
 
 - **Lanzamiento automático al inicio**: parámetro definido a través de las Propiedades.
 - **Proceso servidor HTTP (utilizado/total)**: número de procesos HTTP creados en el servidor (número actual de procesos / total de todos los procesos creados).
