@@ -465,7 +465,7 @@ The Dependency manager provides an integrated handling of updates on GitHub. The
 
 Manual operations can be done **per dependency** or **for all dependencies**.
 
-#### Checking for new versions
+#### 新バージョンをチェック
 
 Dependencies are regularly checked for updates on GitHub. This checking is done transparently in background.
 
@@ -493,7 +493,7 @@ You can decide to [update the component](#updating-dependencies) or not.
 
 If you do not want to use a component update (for example you want to stay with a specific version), just let the current status (make sure the [**Automatic update**](#automatic-update) feature is not checked).
 
-#### Updating dependencies
+#### 依存関係の更新
 
 **Updating a dependency** means downloading a new version of the dependency from GitHub and keeping it ready to be loaded the next time the project is started.
 
