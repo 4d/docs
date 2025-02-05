@@ -333,7 +333,7 @@ A propriedade `.highlightFirstColumnStyle` é o <!-- REF #TableThemeOptions.high
 ### .highlightLastColumnStyle
 
 <!-- REF #TableThemeOptions.highlightLastColumnStyle.Syntax -->
-**.highlightLastColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
+**.highlightLastColumnStyle**: [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
 A propriedade `.highlightLastColumnStyle` é a <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->estilo de la última columna<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
 
