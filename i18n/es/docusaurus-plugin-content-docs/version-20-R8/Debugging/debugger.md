@@ -340,7 +340,7 @@ Hay varias formas de añadir expresiones a la lista:
 - Arrastrar y soltar un objeto o expresión desde el Panel de Vigilancia o el Panel de Cadena de Llamadas
 - Seleccione una expresión en el [panel código fuente](#source-code-pane) y presione **ctrl+D**  (Windows) o **cmd+D** (macOS)
 - Haga doble clic en algún lugar del espacio vacío del panel de control personalizado (añade una expresión con un nombre de marcador de posición que puede editar)
-- Select a [display option](#display-mode) that automatically inserts expressions.
+- Selecciona una [opción de visualización](#display-mode) que inserta automáticamente las expresiones.
 - Select **New Expression...** in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**. Puede introducir cualquier fórmula que devuelva un resultado.
 
 Para editar una expresión, haga clic en ella para seleccionarla y, a continuación, vuelva a hacer clic o presione **Intro** en su teclado.
