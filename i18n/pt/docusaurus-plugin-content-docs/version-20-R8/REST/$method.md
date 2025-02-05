@@ -83,7 +83,7 @@ Libera um conjunto de entidades existente armazenado no cache do 4D Server.
 
 ### Descrição
 
-You can release an entity set, which you created using [`$method=entityset`](#methodentityset), from 4D Server's cache.
+Você pode lançar um entity set, que você criou usando [`$method=entityset`](#methodentityset), no cache do servidor 4D.
 
 ### Exemplo
 
