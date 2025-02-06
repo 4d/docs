@@ -232,11 +232,11 @@
     "description": "The label for category Printing in sidebar docs"
   },
   "sidebar.docs.category.Process (Communications)": {
-    "message": "Process (Communications)",
+    "message": "Processo (Comunicações)",
     "description": "The label for category Process (Communications) in sidebar docs"
   },
   "sidebar.docs.category.Process (User Interface)": {
-    "message": "Process (User Interface)",
+    "message": "Processo (Interface do Usuário)",
     "description": "The label for category Process (User Interface) in sidebar docs"
   },
   "sidebar.docs.category.Queries": {
@@ -896,11 +896,11 @@
     "description": "The generated-index page title for category Printing in sidebar docs"
   },
   "sidebar.docs.category.Process (Communications).link.generated-index.title": {
-    "message": "Process (Communications)",
+    "message": "Processo (Comunicações)",
     "description": "The generated-index page title for category Process (Communications) in sidebar docs"
   },
   "sidebar.docs.category.Process (User Interface).link.generated-index.title": {
-    "message": "Process (User Interface)",
+    "message": "Processo (Interface do Usuário)",
     "description": "The generated-index page title for category Process (User Interface) in sidebar docs"
   },
   "sidebar.docs.category.Processes.link.generated-index.title": {
