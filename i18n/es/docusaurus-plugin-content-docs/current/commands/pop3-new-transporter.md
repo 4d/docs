@@ -72,4 +72,4 @@ La función devuelve un [**objeto POP3 transporter**](../API/POP3TransporterClas
 |                   |                                                                     |
 | ----------------- | ------------------------------------------------------------------- |
 | Número de comando | 1697                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
