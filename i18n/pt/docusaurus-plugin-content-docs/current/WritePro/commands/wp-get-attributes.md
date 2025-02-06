@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parâmetro   | Tipo                                           |                             | Descrição                                 |
 | ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
 | targetObj   | Object                                         | &#8594; | Range or element or 4D Write Pro document |
-| attribName  | Text                                           | &#8594; | Name of attribute to get                  |
+| attribName  | Text                                           | &#8594; | Nome do atributo para obter               |
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
 | attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
 | Resultado   | Object                                         | &#8592; | Attribute names and values                |
@@ -26,7 +26,7 @@ In *targetObj*, you can pass:
 
 - a range, or
 - an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
-- a 4D Write Pro document
+- um documento 4D Write Pro
 
 In *attribName*, pass the name of the attribute you want to retrieve.
 
