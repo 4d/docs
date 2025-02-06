@@ -237,7 +237,7 @@ Um url [`4DACTION`](./httpRequests.md#4daction) também pode ser usada no lado 4
 
 :::
 
-#### Using a custom parameter
+#### Usando um parâmetro personalizado
 
 The OTP token can also be provided as a custom parameter that you need to process specifically to restore the session. You must use this solution if:
 
@@ -260,7 +260,7 @@ In this case, no web user session is restored and the current session (if any) i
 Verifying if the received OTP token is valid depends on how it was handled:
 
 - If you used a `$4DSID`, you can store a custom status property in the [session storage](../API/SessionClass.md#storage) at the moment of the token creation, and check this status once the OTP token was received to see if it is the same value (see example).
-- If you used the [`Session.restore()`](../API/SessionClass.md#restore) function, it returns true if the session correctly restored.
+- Se você usou a função [`Session.restore()`](../API/SessionClass.md#restore), ele retorna verdadeiro se a sessão foi restaurada corretamente.
 
 ### Scenario with $4DSID
 
