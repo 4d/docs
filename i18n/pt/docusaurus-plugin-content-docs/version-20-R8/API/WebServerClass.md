@@ -388,7 +388,7 @@ Valores possíveis: 500000 - 2147483647
 
 > Essa propriedade não é retornada no [modo de sessões dimensionáveis](#scalablesession).
 
-Contains the <!-- REF #WebServerClass.maxSessions.Summary -->maximum number of simultaneous legacy sessions<!-- END REF -->. When you reach the limit, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the total number of web processes (`maxConcurrentProcesses` property, 100 by default)
+Contém o <!-- REF #WebServerClass.maxSessions.Summary --> número máximo de sessões legacy simultâneas<!-- END REF -->. When you reach the limit, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the total number of web processes (`maxConcurrentProcesses` property, 100 by default)
 
 <!-- END REF -->
 
