@@ -313,7 +313,7 @@ O Painel de controle personalizado é útil para avaliar expressões. É semelha
 
 É possível avaliar qualquer expressão que possa ser apresentada sob a forma de texto. Isto não abrange os campos ou variáveis imagem e BLOB. Para exibir o conteúdo do BLOB, você pode usar comandos BLOB, como [BLOB to text](../commands-legacy/blob-to-text.md).
 
-### Display mode
+### Modo de exibição
 
 You select the display mode to be used for all debugger windows using the **Display** option of the Custom Watch pane's [contextual menu](#contextual-menu).
 
