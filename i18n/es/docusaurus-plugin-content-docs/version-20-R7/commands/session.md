@@ -101,4 +101,4 @@ IP:port/4DACTION/action_Session
 |                   |                                                                     |
 | ----------------- | ------------------------------------------------------------------- |
 | Número de comando | 1714                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
