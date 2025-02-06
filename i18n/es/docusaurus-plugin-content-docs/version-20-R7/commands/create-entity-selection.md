@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-The `Create entity selection` command <!--REF #_command_.Create entity selection.Summary-->builds and returns a new, [alterable](../ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table<!-- END REF-->.
+El comando `Create entity selection` <!--REF #_command_.Create entity selection.Summary-->crea y devuelve una nueva entity selection [modificable](../ORDA/entities.md#shareable-or-alterable-entity-selections) relativa a la dataclass correspondiente con la *dsTable* dada, de acuerdo con la selección actual de esta tabla<!-- END REF-->.
 
 Si la selección actual está ordenada, se crea una entity selection [ordenada](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) (se mantiene el orden de la selección actual). Si la selección actual no está ordenada, se crea una selección de entidades no ordenada.
 
@@ -46,7 +46,7 @@ $employees:=Create entity selection([Employee])
 
 #### Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1512                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1512                            |
+| Hilo seguro       | &amp;check; |
