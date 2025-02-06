@@ -345,7 +345,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.parent` property returns <!-- REF #document.parent.Summary -->the parent folder object of the file<!-- END REF -->. .
+A propriedade `.parent` retorna <!-- REF #document.parent.Summary --> o objeto pasta pai do arquivo<!-- END REF -->. .
 
 Essa propriedade é **somente leitura**.
 
@@ -581,7 +581,7 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 #### Descrição
 
-The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
+A função `.getText()` <!-- REF #document.getText().Summary -->retorna o conteúdo do arquivo como texto<!-- END REF -->.
 
 Opcionalmente, você pode designar o conjunto de caracteres a ser usado na leitura do conteúdo. Você pode passar também:
 
