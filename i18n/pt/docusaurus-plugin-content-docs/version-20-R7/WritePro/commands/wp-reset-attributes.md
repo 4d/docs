@@ -25,7 +25,7 @@ In the *targetObj* parameter, you can pass either:
 
 - a range, or
 - an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
-- a 4D Write Pro document
+- um documento 4D Write Pro
 
 When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Default values are listed in the *4D Write Pro Attributes* section.
 
