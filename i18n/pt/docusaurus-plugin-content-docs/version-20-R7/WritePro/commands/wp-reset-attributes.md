@@ -23,7 +23,7 @@ The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summa
 
 In the *targetObj* parameter, you can pass either:
 
-- a range, or
+- um intervalo, ou
 - an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
 - um documento 4D Write Pro
 
