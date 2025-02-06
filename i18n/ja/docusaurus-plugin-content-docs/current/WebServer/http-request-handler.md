@@ -64,25 +64,24 @@ title: HTTP Request handler
 
 ### URL パターン
 
-URL patterns can be given as **prefixes** or using **regular expressions**.
+URL パターンは**接頭辞** として、あるいは**正規表現** を使用して定義することできます。
 
-- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.\
-  Ex: `"regexPattern" : "/docs/**/index.html"`
+- 正規表現パターンを宣言するためには、HTTPHandlers.json ファイル内において"regexPattern" プロパティ名を使用します。 正規表現パターンは直接管理されます。\
+  例: `"regexPattern" : "/docs/**/index.html"`
 
-- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
-  Regular expressions patterns are handled directly.\
-  Ex: `"regexPattern" : "/docs/**/index.html"`
+- 接頭辞パターンを宣言するためには、HTTPHandlers.json ファイルの"pattern" プロパティ名を使用します。 接頭辞は開始と終了の`/` を既に格納している正規表現とみなされます。
+  例: `"regexPattern" : "/docs/**/index.html"`
 
-"Pattern" and "regexPattern" properties cannot be used in the same handler definition (in this case, only the "regexPattern" property is taken into account).
+"Pattern" と "regexPattern" プロパティは同じハンドラー定義内で同時に使用することはできません(使用した場合、"regexPattern" プロパティのみが有効となります)。
 
-#### Pattern matching
+#### パターンの合致
 
-URL patterns are triggered in the given order:
+URL パターンは以下の指定された順番に基づいてトリガーされます:
 
-- the first matching pattern is executed
-- the following patterns are not executed even if they match the URL
+- 最初に合致したパターンが実行されます。
+- それ以降のパターンは、URL に合致していたとしても実行されません。
 
-As a consequence, you need to apply a accurate strategy when writing your handlers: the most detailed patterns must be written before the more general patterns.
+結果として、ハンドラーを作成する際には正確な戦略を適用する必要があります。つまり、もっとも詳細なパターンを先に、そして最も一般的なパターンを後に書く必要があります。
 
 ```json
 [
@@ -108,49 +107,49 @@ As a consequence, you need to apply a accurate strategy when writing your handle
 
 ```
 
-#### Forbidden patterns
+#### 禁止されているパターン
 
-URL patterns matching 4D built-in HTTP processing features are not allowed in custom HTTP handlers. For example, the following patterns cannot be handled:
+カスタムのHTTP ハンドラーでは、4D ビルトインのHTTP 処理機能に合致するURL パターンは許可されていません。 例えば、以下のようなパターンは管理することができません:
 
 - `/4DACTION`
 - `/rest`
 - `/$lib/renderer`
 - `/$shared`
 
-### Class and method
+### クラスとメソッド
 
-You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
+定義されたURL パターンを検知して割り込んだときに実行されるべきコードを宣言するためには、"class" および "method" プロパティを使用します。
 
-- "class": class name without `cs.`, e.g. "UsersHandling" for the `cs.UsersHandling` user class. It must be a [**shared**](../Concepts/classes.md#shared-singleton) and [**singleton**](../Concepts/classes.md#singleton-classes) class.
-- "method": class function belonging to the class.
+- "class": `cs.` を除いたクラス名。例: `cs.UsersHandling` ユーザークラスの場合は、"UsersHandling" このクラスは[**共有**](../Concepts/classes.md#共有シングルトン) クラスかつ[**シングルトン**](../Concepts/classes.md#シングルトンクラス) クラスである必要があります。
+- "method": クラスに属性ているクラス関数
 
-[See below](#request-handler-code) for information about the request handler code.
+リクエストハンドラーコードについての情報に関しては、[後述の説明](#リクエストハンドラーコード) を参照してください。
 
 ### Verbs
 
-You can use the "verbs" property in the handler definition to declare HTTP verbs that are supported in incoming requests for this handler. A request that uses a verb that is not explicitely allowed is automatically rejected by the server.
+ハンドラー定義内で"verbs" プロパティを使用することで、そのハンドラーが受信するリクエスト内でサポートされるHTTP 動詞(メソッド) を宣言することができます。 明示的に許可されていない動詞を使用するリクエストは、サーバーによって自動的に拒否されます。
 
-You can declare several verbs, separated by a comma. Verb names are not case sensitive.
+カンマで区切ることで、複数の動詞を宣言することができます。 動詞の名前の大文字・小文字は区別されます。
 
-Ex: `"verbs" : "PUT, POST"`
+例: `"verbs" : "PUT, POST"`
 
 :::note
 
-No control is done on verb names. All names can be used.
+動詞名に対する制約はありません。 全ての動詞名を使用することが可能です。
 
 :::
 
-By default, if the "verbs" property is not used for a handler, **all** HTTP verbs are supported in incoming requests for this handler (except those possibly used beforehand in a more detailed pattern, as shown in the example above).
+デフォルトで、"verbs" プロパティがハンドラーにおいて使用されていない場合、そのハンドラーが受信するリクエストに対しては、**全ての** HTTP 動詞がサポートされることになります(ただし前述の例のように、より詳細なパターンによって先に使用されているものを除く)。
 
 :::note
 
-The HTTP verb can also be evaluated [using the `.verb` property within the request handler code](../API/IncomingMessageClass.md#verb) to be accepted or rejected.
+HTTP 動詞はまた、[リクエストハンドラーコード内で`.verb` プロパティを使用](../API/IncomingMessageClass.md#verb) して評価することで受け入れるか拒否するかを決めることができます。
 
 :::
 
 ## 例題
 
-Here is a detailed example of a HTTPHandlers.json file:
+以下はHTTPHandlers.json ファイルの詳細な例です:
 
 ```json
 
@@ -158,42 +157,42 @@ Here is a detailed example of a HTTPHandlers.json file:
    {
         "class": "GeneralHandling",
         "method": "handle",
-        "pattern": "info", //URL prefix
+        "pattern": "info", //URL 接頭辞
         "verbs": "GET"
     }, 
     {
         "class": "UsersHandling",
         "method": "manageAccount",
-        "pattern": "userAccount/update",   //URL prefix
+        "pattern": "userAccount/update",   //URL 接頭辞
         "verbs": "PUT,POST"
     }, 
     {
         "class": "FinancialHandling",
         "method": "handleInvoices",
-        "regexPattern": "/docs/invoices/(past|today)", //URL prefix given as a regex
+        "regexPattern": "/docs/invoices/(past|today)", // 正規表現として指定されたURL 接頭辞
         "verbs": "GET"
     },
     {
         "class": "DocsHandling",
         "method": "handleDocs",
-        "regexPattern": "/docs/myPage.html",  //URL prefix given as a regex
+        "regexPattern": "/docs/myPage.html",  // 正規表現として指定されたURL 接頭辞
         "verbs": "GET"
     },
     {
         "class": "InvoicesHandling",
         "method": "handleTheInvoice",
-        "pattern": "docs/invoices/details/theInvoice", // The most specific URL first
+        "pattern": "docs/invoices/details/theInvoice", // 最も厳密なURL を最初に
         "verbs": "GET,POST"
     },
     {
         "class": "InvoicesHandling",
         "method": "handleDetails",
-        "pattern": "docs/invoices/details",    // The general URLs after
+        "pattern": "docs/invoices/details",    // 一般的なURL を後に
         "verbs": "GET"
     },
     {
         "class": "InvoicesHandling",
-        "method": "handleInvoices",   // The general URLs after
+        "method": "handleInvoices",   // 一般的なURL を後に
         "pattern": "docs/invoices",
         "verbs": "GET"
     }
@@ -201,32 +200,32 @@ Here is a detailed example of a HTTPHandlers.json file:
 
 ```
 
-In this example, you must implement the following functions:
+この例においては、以下の関数を実装する必要があります:
 
-- *handle function* in the *GeneralHandling* class
-- *manageAccount* in the *UsersHandling* class
-- *handleInvoices* in the *FinancialHandling* class
-- *handleDocs* in the *DocsHandling* class
-- *handleTheInvoice* / *handleDetails* / *handleInvoices* in the *InvoicesHandling* class
+- *GeneralHandling* クラス内の*handle 関数*
+- *UsersHandling* クラス内の *manageAccount*
+- *FinancialHandling* クラス内の *handleInvoices*
+- *DocsHandling* クラス内の *handleDocs*
+- *InvoicesHandling* クラス内の *handleTheInvoice* / *handleDetails* / *handleInvoices*
 
-Examples of URLs triggering the handlers:
+以下はハンドラーをトリガーするURL の一例です:
 
-`IP:port/info/` with a GET verb
-`IP:port/info/general` with a GET verb
+`IP:port/info/` とGET 動詞
+`IP:port/info/general` とGET 動詞
 
-`IP:port/userAccount/update/` with a POST verb
-`IP:port/userAccount/update/profile` with a POST verb
+`IP:port/userAccount/update/` とPOST 動詞
+`IP:port/userAccount/update/profile` とPOST 動詞
 
-`IP:port/docs/invoices/past` with a GET verb
-`IP:port/docs/invoices/today/latest` with a GET verb
+`IP:port/docs/invoices/past` とGET 動詞
+`IP:port/docs/invoices/today/latest` とGET 動詞
 
-`IP:port//docs/myPage.html` with a GET verb
+`IP:port//docs/myPage.html` とGET 動詞
 
 `IP:port//docs/invoices/` with a GET verb, calls *handleInvoices* function (*InvoicesHandling* class)
 `IP:port//docs/invoices/details/` with a GET verb, calls *handleDetails* function (*InvoicesHandling* class)
 `IP:port//docs/invoices/details/theInvoice/xxxxxx` with a GET verb, calls *handleTheInvoice* function (*InvoiceslHandling* class)
 
-## Request handler code
+## リクエストハンドラーコード
 
 ### Function configuration
 
