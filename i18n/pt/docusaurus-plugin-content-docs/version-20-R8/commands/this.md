@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descrição
 
-The `This` command <!--REF #_command_.This.Summary-->returns a reference to the currently processed object.<!-- END REF-->
+O comando `This` <!--REF #_command_.This.Summary-->retorna uma referência ao objeto processado atualmente.<!-- END REF-->
 
 Na maioria dos casos, o valor de `Isso` é determinado pela forma como uma função é chamada. Não pode ser definido por atribuição durante a execução e pode ser diferente de cada vez que a função é chamada.
 
