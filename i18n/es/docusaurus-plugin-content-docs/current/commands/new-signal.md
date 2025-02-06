@@ -75,4 +75,4 @@ El método ***doSomething*** puede ser como:
 |                   |                                                                     |
 | ----------------- | ------------------------------------------------------------------- |
 | Número de comando | 1641                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
