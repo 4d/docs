@@ -23,7 +23,7 @@ The **WP SET ATTRIBUTES** command <!--REF #_command_.WP SET ATTRIBUTES.Summary--
 
 In *targetObj*, you can pass :
 
-- a range, or
+- um intervalo, ou
 - an element (header / footer / body / table / row / paragraph / anchored or inline picture / section / subsection / style sheet), or
 - um documento 4D Write Pro
 
