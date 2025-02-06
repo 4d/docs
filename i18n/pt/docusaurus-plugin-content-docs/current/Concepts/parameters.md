@@ -295,7 +295,7 @@ The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is deprecat
 
 :::
 
-## Triggers and On Drag Over
+## Triggers e On Drag Over
 
 Alguns contextos não suportam a declaração em um método "Compiler_", portanto, são tratados especificamente:
 
