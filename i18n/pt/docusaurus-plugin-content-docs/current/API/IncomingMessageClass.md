@@ -340,7 +340,7 @@ Parameters given in the body of the request using POST or PUT verbs are handled 
 
 #### Descrição
 
-The `.verb` property contains <!-- REF #IncomingMessageClass.verb.Summary -->the verb used by the request<!-- END REF -->.
+A propriedade `.verb` contém <!-- REF #IncomingMessageClass.verb.Summary -->o verbo usado pelo pedido<!-- END REF -->.
 
 HTTP and HTTPS request verbs include for example "get", "post", "put", etc.
 
