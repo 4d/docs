@@ -321,7 +321,7 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 
 ### Filtering dependencies
 
-By default, all dependencies identified by the Dependency manager are listed, whatever their [status](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
+Por padrão, todas as dependências identificadas pelo gerenciador de dependências são listadas, independentemente de seu [estado](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
@@ -360,7 +360,7 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 As seguintes origens são possíveis:
 
-| Origin tag                        | Descrição                                                                    |
+| Etiqueta de origem                | Descrição                                                                    |
 | --------------------------------- | ---------------------------------------------------------------------------- |
 | Componente 4D                     | Componente 4D incorporado, armazenado na pasta `Components` da aplicação 4D  |
 | dependencies.json | Component declared in the [`dependencies.json`](#dependenciesjson) file      |
@@ -409,7 +409,7 @@ If no [**environment4d.json**](#environmen4djson) file is already defined for th
 
 :::
 
-The dependency is added to the [inactive dependency list](#dependency-status) with the **Available after restart** status. It will be loaded once the application restarts.
+A dependência é adicionada à [lista de dependências inativas](#dependency-status) com o estado **Disponível após reiniciar**. It will be loaded once the application restarts.
 
 ### Adding a GitHub dependency
 
