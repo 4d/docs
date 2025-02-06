@@ -546,7 +546,7 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 
 The `.writeText()` function <!-- REF #FileHandleClass.writeText().Summary -->writes *textToWrite* content at the current position and does not insert a final end-of-line delimiter<!-- END REF --> (unlike the [.writeLine()](#writeline) function). By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.
 
-When this function is executed, the current position ([.offset](#offset)) is updated after the next end-of-line delimiter.
+Quando esta função é executada, a posição atual ([.offset](#offset)) é atualizada após o próximo delimitador de fim de linha.
 
 #### Veja também
 
