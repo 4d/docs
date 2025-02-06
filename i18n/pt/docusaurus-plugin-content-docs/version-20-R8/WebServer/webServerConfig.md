@@ -339,11 +339,11 @@ Para evitar essa confusão, recomendamos usar a notação [ ] sempre que você c
 
 ## Manter sessão
 
-| Pode ser definido com              | Nome                                                                                                                                                           | Comentários                      |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| objeto webServer                   | [`keepSession`](API/WebServerClass.md#keepsession)                                                                                                             |                                  |
-| `WEB SET OPTION`                   | `Web keep session`                                                                                                                                             |                                  |
-| Caixa de diálogos de configurações | [Options (I) page/Legacy sessions (single process sessions)](../settings/web.md#legacy-sessions-single-process-sessions) | somente nos projetos convertidos |
+| Pode ser definido com              | Nome                                                                                                                                                                | Comentários                      |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| objeto webServer                   | [`keepSession`](API/WebServerClass.md#keepsession)                                                                                                                  |                                  |
+| `WEB SET OPTION`                   | `Web keep session`                                                                                                                                                  |                                  |
+| Caixa de diálogos de configurações | [Página Opções (I) /Sessões herdadas (sessões de processo único)](../settings/web.md#legacy-sessions-single-process-sessions) | somente nos projetos convertidos |
 
 Estado do gerenciamento de sessão antigo para o servidor Web 4D (obsoleto).
 
@@ -530,11 +530,11 @@ Por exemplo, se você quiser que a pasta raiz HTML seja a subpasta "Web" na past
 
 ## Sessões escaláveis
 
-| Pode ser definido com              | Nome                                                                                                                                                             | Comentários |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`scalableSession`](API/WebServerClass.md#scalablesession)                                                                                                       |             |
-| `WEB SET OPTION`                   | `Sessão escalável Web`                                                                                                                                           |             |
-| Caixa de diálogos de configurações | [Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions) |             |
+| Pode ser definido com              | Nome                                                                                                                                                                 | Comentários |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`scalableSession`](API/WebServerClass.md#scalablesession)                                                                                                           |             |
+| `WEB SET OPTION`                   | `Sessão escalável Web`                                                                                                                                               |             |
+| Caixa de diálogos de configurações | [Página Opções (I)/sessões escalonáveis (sessões multi-processo)](../settings/web.md#scalable-sessions-multi-process-sessions) |             |
 
 Session management enabling status for the 4D web server. As sessões do servidor da Web são detalhadas na página [Sessões Web](sessions.md).
 
