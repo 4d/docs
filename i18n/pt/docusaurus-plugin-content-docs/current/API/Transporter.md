@@ -248,7 +248,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 #### Descrição
 
-The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Utilizado para transacções postais (SMTP, POP3, IMAP).
+A propriedade `.host` contém <!-- REF #transporter.host.Summary --> o nome ou o endereço IP do servidor host<!-- END REF -->. Utilizado para transacções postais (SMTP, POP3, IMAP).
 
 <!-- END REF -->
 
