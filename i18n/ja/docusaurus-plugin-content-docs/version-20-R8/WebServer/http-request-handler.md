@@ -221,45 +221,45 @@ HTTP 動詞はまた、[リクエストハンドラーコード内で`.verb` プ
 
 `IP:port//docs/myPage.html` とGET 動詞
 
-`IP:port//docs/invoices/` with a GET verb, calls *handleInvoices* function (*InvoicesHandling* class)
-`IP:port//docs/invoices/details/` with a GET verb, calls *handleDetails* function (*InvoicesHandling* class)
-`IP:port//docs/invoices/details/theInvoice/xxxxxx` with a GET verb, calls *handleTheInvoice* function (*InvoiceslHandling* class)
+`IP:port//docs/invoices/` を GET 動詞と使用すると、*handleInvoices* 関数を呼び出します(*InvoicesHandling* クラス)
+`IP:port//docs/invoices/details/` を GET 動詞と使用すると、*handleDetails* 関数を呼び出します(*InvoicesHandling* クラス)
+`IP:port//docs/invoices/details/theInvoice/xxxxxx` を GET 動詞と使用すると、*handleTheInvoice* 関数を呼び出します(*InvoiceslHandling* クラス)
 
 ## リクエストハンドラーコード
 
 ### Function configuration
 
-The HTTP Request handler code must be implemented in a function of a [**Shared**](../Concepts/classes.md#shared-singleton) [**singleton class**](../Concepts/classes.md#singleton-classes).
+HTTP リクエストハンドラーコードは、[**共有された**](../Concepts/classes.md#共有シングルトン) 、 [**シングルトンクラス**](../Concepts/classes.md#シングルトンクラス) の関数内に実装されている必要があります。
 
-If the singleton is missing or not shared, an error "Cannot find singleton" is returned by the server. If the class or the function [defined as handler](#handler-definition) in the HTTPHandlers.json file is not found, an error "Cannot find singleton function" is returned by the server.
+シングルトンがないかあるいは共有されていない場合、"シングルトンが見つかりません" エラーがサーバーから返されます。 HTTPHandlers.json 内で[ハンドラーとして定義されている](#ハンドラー定義) クラスまたは関数が見つからない場合、"シングルトン関数が見つかりません" エラーがサーバーによって返されます。
 
-Request handler functions are not necessarily shared, unless some request handler properties are updated by the functions. In this case, you need to declare its functions with the [`shared` keyword](../Concepts/classes.md#shared-functions).
+リクエストハンドラーのプロパティが関数によってアップデートされていない限り、リクエストハンドラー関数は必ずしも共有されているわけではありません。 この場合、[`shared` キーワード](../Concepts/classes.md#共有関数) を使用して関数を宣言する必要があります。
 
 :::note
 
-It is **not recommended** to expose request handler functions to external REST calls using [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) or [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keywords.
+[`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) または [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードを使用してリクエストハンドラー関数を外部REST 呼び出しへと公開することは**推奨されていません**。
 
 :::
 
-### Input: an instance of the 4D.IncomingMessage class
+### 入力: 4D.IncomingMessage クラスのインスタンス
 
-When a request has been intercepted by the handler, it is received on the server as an instance of the [4D.IncomingMessage class](../API/IncomingMessageClass.md).
+ハンドラーがリクエストを検知して割り込んだ場合、[4D.IncomingMessage クラス](../API/IncomingMessageClass.md) のインスタンスとしてサーバーで受信されます。
 
-All necessary information about the request are available in this object, including the request url, verb, headers, and, if any, parameters (put in the URL) and body.
+リクエストURL、動詞、ヘッダー、そしてあれば(URL 内に渡された)引数や本文など、リクエストに関して必要な情報は全てこのオブジェクト内に揃っています。
 
-Then, the request handler can use this information to trigger appropriate business logic.
+そのため、リクエストハンドラーはこれらの情報を使用して適切なビジネスロジックをトリガーすることができます。
 
-### Output: an instance of the 4D.OutgoingMessage class
+### 出力: 4D.OutgoingMessage クラスのインスタンス
 
-The request handler can return an object instance of the [4D.OutGoingMessage class](../API/OutgoingMessageClass.md), i.e. some full web content ready for a browser to handle, such as a file content.
+リクエストハンドラーは[4D.OutGoingMessage クラス](../API/OutgoingMessageClass.md)のオブジェクトインスタンスを返すことができます。つまりファイルのコンテンツなど、ブラウザが管理可能な完全なWeb コンテンツを返すことができるということです。
 
 ### 例題
 
-The [4D.IncomingMessage class](../API/IncomingMessageClass.md) provides functions to get the [headers](../API/IncomingMessageClass.md#headers) and the [body](../API/IncomingMessageClass.md#gettext) of the request.
+[4D.IncomingMessage クラス](../API/IncomingMessageClass.md) は、リクエストの[ヘッダー](../API/IncomingMessageClass.md#headers) および[本文](../API/IncomingMessageClass.md#gettext) を取得するための関数を提供しています。
 
-Here is a simple example to upload a file on the server.
+以下はサーバーにファイルをアップロードするためのシンプルな例です。
 
-The **HTTPHandlers.json** file:
+**HTTPHandlers.json** ファイル:
 
 ```json
 [
@@ -272,12 +272,12 @@ The **HTTPHandlers.json** file:
 ]
 ```
 
-The called URL is: http://127.0.0.1:8044/putFile?fileName=testFile
+呼び出されたURL: http://127.0.0.1:8044/putFile?fileName=testFile
 
-The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. It is received in the [`urlQuery`](../API/IncomingMessageClass.md#urlquery) object in the request.
+ファイルのバイナリーのコンテンツはリクエストの本文に置かれ、またPOST 動詞が使用されています。 ファイル名はURL 内に引数(*fileName*) として渡されています。 これはリクエストの[`urlQuery`](../API/IncomingMessageClass.md#urlquery) オブジェクト内に受け取られます。
 
 ```4d
-    //UploadFile class
+    //UploadFile クラス
 
 shared singleton Class constructor()
 	
