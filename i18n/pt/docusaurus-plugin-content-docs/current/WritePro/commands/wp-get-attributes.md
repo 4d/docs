@@ -24,7 +24,7 @@ The **WP Get attributes** command<!--REF #_command_.WP Get attributes.Summary-->
 
 In *targetObj*, you can pass:
 
-- a range, or
+- um intervalo, ou
 - an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
 - um documento 4D Write Pro
 
