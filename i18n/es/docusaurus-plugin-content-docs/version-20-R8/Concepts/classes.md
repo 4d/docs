@@ -618,7 +618,7 @@ Para más detalles, vea la descripción del comando [`Super`](../commands/super.
 
 ### `This`
 
-El comando [`This`](../commands/this.md) devuelve una referencia al objeto procesado actualmente. En la mayoría de los casos, el valor de `This` está determinado por cómo se llama una función clase. Usually, `This` refers to the object the function was called on, as if the function were on the object.
+El comando [`This`](../commands/this.md) devuelve una referencia al objeto procesado actualmente. En la mayoría de los casos, el valor de `This` está determinado por cómo se llama una función clase. Normalmente, `This` se refiere al objeto al que la función fue llamada, como si la función estuviera sobre el objeto.
 
 Ejemplo:
 
@@ -719,11 +719,11 @@ Una **clase singleton** es una clase usuario que sólo produce una única instan
 
 4D soporta tres tipos de singletons:
 
-- a **process singleton** has a unique instance for the process in which it is instantiated,
-- a **shared singleton** has a unique instance for all processes on the machine.
-- un **singleton de sesión** es un singleton compartido pero con una instancia única para todos los procesos en la [sesión](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
+- un **singleton proceso** tiene una instancia única para el proceso en el que se instancia,
+- un **singleton compartido** tiene una instancia única para todos los procesos en la máquina.
+- un **singleton de sesión** es un singleton compartido pero con una instancia única para todos los procesos en la [sesión](../API/SessionClass.md). Los singletons de sesión son compartidos dentro de una sesión completa, pero varían entre sesiones. En el contexto de un cliente-servidor o una aplicación web, los singletons de sesión hacen posible crear y utilizar una instancia diferente para cada sesión, y por lo tanto para cada usuario.
 
-Singletons are useful to define values that need to be available from anywhere in an application, a session, or a process.
+Los singletons son útiles para definir los valores que necesitan estar disponibles desde cualquier parte de una aplicación, una sesión o un proceso.
 
 :::info
 
@@ -731,13 +731,13 @@ Las clases Singleton no están soportadas por las [clases ORDA](../ORDA/ordaClas
 
 :::
 
-The following table indicates the scope of a singleton instance depending on where it was created:
+La siguiente tabla indica el alcance de una instancia singleton dependiendo de donde se creó:
 
 | Singleton creado en | Alcance del proceso singleton                                                                                   | Alcance del singleton compartido | Alcance del singleton de sesión                                                |
 | ------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------ |
-| **4D monopuesto**   | Proceso                                                                                                         | Aplicación                       | Application or Web/REST session                                                |
+| **4D monopuesto**   | Proceso                                                                                                         | Aplicación                       | Aplicación o sesión Web/REST                                                   |
 | **4D Server**       | Proceso                                                                                                         | Máquina 4D Server                | Sesión cliente/servidor o sesión Web/REST o sesión de procedimiento almacenado |
-| **Modo remoto 4D**  | Proceso (*nota*: los singletons no están sincronizados en el proceso gemelo) | Máquina remota 4D                | 4D remote machine or Web/REST session                                          |
+| **Modo remoto 4D**  | Proceso (*nota*: los singletons no están sincronizados en el proceso gemelo) | Máquina remota 4D                | Máquina remota 4D o sesión Web/REST                                            |
 
 Una vez instanciado, existe una clase singleton (y su singleton) siempre que exista una referencia a ella en algún lugar de la aplicación que se ejecuta en la máquina.
 
@@ -766,7 +766,7 @@ La propiedad [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) de
 
 ### Ejemplos
 
-#### Process singleton
+#### Singleton Proceso
 
 ```4d
 	//class: ProcessTag
@@ -830,9 +830,9 @@ $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")
 
 Dado que la función *buildVehicle()* modifica el singleton **cs.VehicleFactory** (incrementando `This.vehicleBuilt`), debe agregar la palabra clave `shared`.
 
-#### Session singleton
+#### Singleton de sesión
 
-In an inventory application, you want to implement an item inventory using session singletons.
+En una aplicación de inventario, desea implementar un inventario de artículos utilizando singletons de sesión.
 
 ```4d
 //class ItemInventory
@@ -845,12 +845,12 @@ shared function addItem($item:object)
     This.itemList.push($item)
 ```
 
-By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Acceder al inventario del usuario es tan simple como:
+Al definir la clase ItemInventory como un singleton de sesión, asegúrese de que cada sesión y por lo tanto cada usuario tiene su propio inventario. Acceder al inventario del usuario es tan simple como:
 
 ```4d
-//in a user session
+//en una sesión usuario
 $myList := cs.ItemInventory.me.itemList
-//current user's item list
+//lista de elemento del usuario actual
 
 ```
 
