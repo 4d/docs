@@ -359,7 +359,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->. .
+A propriedade `.parent` retorna <!-- REF #directory.parent.Summary --> o objeto pasta pai da pasta<!-- END REF -->. .
 
 Se a pasta não tiver um pai (raiz), é devolvido o valor nulo.
 
