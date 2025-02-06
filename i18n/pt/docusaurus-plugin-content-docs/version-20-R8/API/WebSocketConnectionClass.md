@@ -76,7 +76,7 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.send()` function <!-- REF #WebSocketConnectionClass.send().Summary -->sends a *message* to the client<!-- END REF -->.
+A função `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->envia uma *message* para o cliente<!-- END REF -->.
 
 Os conteúdos seguintes são enviados em função do tipo de *message*:
 
