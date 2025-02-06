@@ -167,7 +167,7 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.id` property contains <!-- REF #WebSocketClass.id.Summary -->the unique identifier of the connection<!-- END REF -->.
+A propriedade `.id` contém <!-- REF #WebSocketClass.id.Summary --> o identificador único da conexão<!-- END REF -->.
 
 Esta propriedade é só de leitura.
 
