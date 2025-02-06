@@ -169,4 +169,4 @@ $err:=ZIP Create archive($zip; $destination)
 |                   |                                                                     |
 | ----------------- | ------------------------------------------------------------------- |
 | Número de comando | 1640                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
