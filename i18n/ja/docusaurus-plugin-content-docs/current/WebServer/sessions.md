@@ -3,7 +3,7 @@ id: sessions
 title: Webセッション
 ---
 
-4D Webサーバーは、**Webセッション** を管理するビルトインの機能を提供します。 Webセッションを作成・維持することで、Webアプリケーション上のユーザーエクスペリエンスを管理・向上することができます。 Webセッションが有効かされていると、Webクライアントはリクエスト間で同じコンテキスト (セレクションや変数の値) を再利用できます。 Webセッションを作成・維持することで、Webアプリケーション上のユーザーエクスペリエンスを管理・向上することができます。 Webセッションが有効かされていると、Webクライアントはリクエスト間で同じコンテキスト (セレクションや変数の値) を再利用できます。 Webセッションを作成・維持することで、Webアプリケーション上のユーザーエクスペリエンスを管理・向上することができます。 Webセッションが有効かされていると、Webクライアントはリクエスト間で同じコンテキスト (セレクションや変数の値) を再利用できます。 Webセッションを作成・維持することで、Webアプリケーション上のユーザーエクスペリエンスを管理・向上することができます。 Webセッションが有効かされていると、Webクライアントはリクエスト間で同じコンテキスト (セレクションや変数の値) を再利用できます。
+4D Webサーバーは、**Webセッション** を管理するビルトインの機能を提供します。  Webセッションを作成・維持することで、Webアプリケーション上のユーザーエクスペリエンスを管理・向上することができます。 Webセッションが有効かされていると、Webクライアントはリクエスト間で同じコンテキスト (セレクションや変数の値) を再利用できます。
 
 Webセッションでは、以下のことが可能です:
 
@@ -25,9 +25,9 @@ Webセッションは次のものに使用されます:
 
 - ストラクチャー設定の Web / オプション (I) ページの **スケーラブルセッション** を使用する (永続的な設定): ![alt-text](../assets/en/WebServer/settingsSession.png)
 
-This OTPion is selected by default in new projects. このオプションは、新規プロジェクトではデフォルトで選択されています。 このオプションは、新規プロジェクトではデフォルトで選択されています。 このオプションは、新規プロジェクトではデフォルトで選択されています。 これは、**セッションなし** オプションを選択して無効にすることもできます。この場合、Webセッション機能は無効になります (`Session` オブジェクトは使用できません)。
+このオプションは、新規プロジェクトではデフォルトで選択されています。 これは、**セッションなし** オプションを選択して無効にすることもできます。この場合、Webセッション機能は無効になります (`Session` オブジェクトは使用できません)。
 
-- Webサーバーオブジェクトの [`.scalableSession`](API/WebServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/WebServerClass.md#start) 関数に _settings_ 引数として渡します）。 この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。 この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。 In this case, this setting overrides the OTPion defined in the Settings dialog box for the Web Server object (it is not stored on disk). In this case, this setting overrides the OTPion defined in the Settings dialog box for the Web Server object (it is not stored on disk).
+- Webサーバーオブジェクトの [`.scalableSession`](API/WebServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/WebServerClass.md#start) 関数に _settings_ 引数として渡します）。  この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
 
 > メインの Webサーバーのセッションモードは、`WEB SET OPTION` コマンドを使って設定することもできます。
 
@@ -37,7 +37,7 @@ This OTPion is selected by default in new projects. このオプションは、�
 
 ## セッションの実装
 
-When [sessions are enabled](#enabling-web-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where _AppName_ is the name of the application project. この cookie は、アプリケーションのカレントWebセッションを参照します。
+[セッションを有効にする](#セッションの有効化) と、4D自身が設定したプライベート cookie ("4DSID__AppName_"、_AppName_ はアプリケーションプロジェクトの名称) に基づいて、自動メカニズムが実装されます。  この cookie は、アプリケーションのカレントWebセッションを参照します。
 
 :::info
 
@@ -66,13 +66,13 @@ RESTリクエストのための Webセッションを作成するには、利用
 
 :::info
 
-Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。 プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。 プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。 プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Webプロセスはどのセッションでも再利用できるため、実行終了時には ([`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/ja/page89.html) などを使用し) コードによって [プロセス変数](Concepts/variables.md#プロセス変数) をクリアする必要があります 。 このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。 これが、セッション関連の情報を保持したい場合には、[Session](API/SessionClass.md) オブジェクトを使用することが **推奨** される理由です。 このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。 これが、セッション関連の情報を保持したい場合には、[Session](API/SessionClass.md) オブジェクトを使用することが **推奨** される理由です。 このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。 これが、セッション関連の情報を保持したい場合には、[Session](API/SessionClass.md) オブジェクトを使用することが **推奨** される理由です。
+Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。 プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Webプロセスはどのセッションでも再利用できるため、実行終了時には ([`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/ja/page89.html) などを使用し) コードによって [プロセス変数](Concepts/variables.md#プロセス変数) をクリアする必要があります 。  このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。 これが、セッション関連の情報を保持したい場合には、[Session](API/SessionClass.md) オブジェクトを使用することが **推奨** される理由です。
 
 :::
 
 ## セッション情報の保存と共有
 
-各 `Session` オブジェクトには、共有オブジェクトである [`.storage`](API/SessionClass.md#storage) プロパティが用意されています。 このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。 このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。 各 `Session` オブジェクトには、共有オブジェクトである [`.storage`](API/SessionClass.md#storage) プロパティが用意されています。 このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。 このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。 このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。
+各 `Session` オブジェクトには、共有オブジェクトである [`.storage`](API/SessionClass.md#storage) プロパティが用意されています。  このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。
 
 ## セッションの有効期限
 
@@ -99,9 +99,9 @@ Webセッションが閉じられた後に [`Session`](commands/session.md) コ�
 
 ## 権限
 
-Webユーザーセッションには、権限を関連付けることができます。 セッションの権限に応じて、特定のアクセスや機能を Webサーバー上で提供することができます。 セッションの権限に応じて、特定のアクセスや機能を Webサーバー上で提供することができます。 セッションの権限に応じて、特定のアクセスや機能を Webサーバー上で提供することができます。 セッションの権限に応じて、特定のアクセスや機能を Webサーバー上で提供することができます。
+Webユーザーセッションには、権限を関連付けることができます。  セッションの権限に応じて、特定のアクセスや機能を Webサーバー上で提供することができます。
 
-権限を割り当てるには、[`.setPrivileges()`](API/SessionClass.md#setprivileges) 関数を使用します。 権限を割り当てるには、[`.setPrivileges()`](API/SessionClass.md#setprivileges) 関数を使用します。 権限を割り当てるには、[`.setPrivileges()`](API/SessionClass.md#setprivileges) 関数を使用します。 コード内では、[`.hasPrivilege()`](API/SessionClass.md#hasprivilege) 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。 デフォルトでは、新しいセッションは権限を持たず、**ゲスト** セッションとなります ([`.isGuest()`](API/SessionClass.md#isguest) 関数は true を返します)。 デフォルトでは、新しいセッションは権限を持たず、**ゲスト** セッションとなります ([`.isGuest()`](API/SessionClass.md#isguest) 関数は true を返します)。 デフォルトでは、新しいセッションは権限を持たず、**ゲスト** セッションとなります ([`.isGuest()`](API/SessionClass.md#isguest) 関数は true を返します)。 権限を割り当てるには、[`.setPrivileges()`](API/SessionClass.md#setprivileges) 関数を使用します。 権限を割り当てるには、[`.setPrivileges()`](API/SessionClass.md#setprivileges) 関数を使用します。 コード内では、[`.hasPrivilege()`](API/SessionClass.md#hasprivilege) 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。 デフォルトでは、新しいセッションは権限を持たず、**ゲスト** セッションとなります ([`.isGuest()`](API/SessionClass.md#isguest) 関数は true を返します)。 デフォルトでは、新しいセッションは権限を持たず、**ゲスト** セッションとなります ([`.isGuest()`](API/SessionClass.md#isguest) 関数は true を返します)。 デフォルトでは、新しいセッションは権限を持たず、**ゲスト** セッションとなります ([`.isGuest()`](API/SessionClass.md#isguest) 関数は true を返します)。
+権限を割り当てるには、[`.setPrivileges()`](API/SessionClass.md#setprivileges) 関数を使用します。  コード内では、[`.hasPrivilege()`](API/SessionClass.md#hasprivilege) 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。  デフォルトでは、新しいセッションは権限を持たず、**ゲスト** セッションとなります ([`.isGuest()`](API/SessionClass.md#isguest) 関数は true を返します)。
 
 例:
 
@@ -116,13 +116,13 @@ End if
 
 :::info
 
-権限は ORDAアーキテクチャーの中心に実装されており、データストアやデータクラス関数へのアクセスを制御するための強力な技術を開発者に提供します。 詳細については、ORDA の章の [**権限**](../ORDA/privileges.md) を参照ください。 詳細については、ORDA の章の [**権限**](../ORDA/privileges.md) を参照ください。 詳細については、ORDA の章の [**権限**](../ORDA/privileges.md) を参照ください。 詳細については、ORDA の章の [**権限**](../ORDA/privileges.md) を参照ください。
+権限は ORDAアーキテクチャーの中心に実装されており、データストアやデータクラス関数へのアクセスを制御するための強力な技術を開発者に提供します。  詳細については、ORDA の章の [**権限**](../ORDA/privileges.md) を参照ください。
 
 :::
 
 ## 例題
 
-CRMアプリケーションを使って、各営業担当者が自分の顧客ポートフォリオを管理します。 データストアには、少なくとも 2つのリンクされたデータクラス Customers と SalesPersons が含まれています (営業担当者は複数の顧客を持ちます)。 データストアには、少なくとも 2つのリンクされたデータクラス Customers と SalesPersons が含まれています (営業担当者は複数の顧客を持ちます)。
+CRMアプリケーションを使って、各営業担当者が自分の顧客ポートフォリオを管理します。  データストアには、少なくとも 2つのリンクされたデータクラス Customers と SalesPersons が含まれています (営業担当者は複数の顧客を持ちます)。
 
 ![alt-text](../assets/en/WebServer/exampleSession.png)
 
@@ -201,27 +201,27 @@ End if
 
 :::
 
-## Session Token (OTP)
+## セッショントークン(OTP)
 
-The 4D web server allows you to generate, share, and use OTP (One-Time Passcode) session tokens. OTP session tokens are used to secure communications with third-party applications or websites. For information on OTP, please refer to the [One-time password page](https://en.wikipedia.org/wiki/One-time_password) on Wikipedia.
+4D web サーバーでは、OTP (One-Time Passcode/ワンタイムパスコード) セッショントークンを生成、共有、そして使用することができます。 OTP セッショントークンは、サードパーティのアプリケーションやWebサイトとの通信を保護するために使用されます。 OTP の詳細な情報については、Wikipedia の[ワンタイムパスワードのページ](https://ja.wikipedia.org/wiki/%E3%83%AF%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%91%E3%82%B9%E3%83%AF%E3%83%BC%E3%83%89) を参照して下さい。
 
-In 4D, OTP session tokens are useful when calling external URLs and being called back in another browser or device (mobile/computer). Typically, a third-party application sends a confirmation email containing a callback link on which the user has to click. The callback link includes the OTP token, so that the session which triggered the callback is loaded along with its data and privileges. This principle allows you to share the same session on multiple devices. Thanks to this architecture, the [session cookie](#session-implementation) is not exposed on the network, which eliminates the risk of man-in-the-middle attack.
+4D では、OTP セッショントークンは外部URL を呼び出して、それが他のブラウザや他のデバイス(モバイル/PC) でコールバックされる場合に特に有用です。 通常、こういったサードパーティアプリケーションはコールバックリンクが入った確認メールを送信してきて、ユーザーはこれをクリックする必要があります。 コールバックリンクにはOTP トークンが含まれており、そのコールバックをトリガーしたセッションは、そのデータと権限とともにロードされます。 この原理により、同じセッションを複数のデバイス間で共有することができます。 このアーキテクチャーのおかげで、[セッションクッキー](#session-implementation) はネットワークに公開されることはないため、中間者攻撃のリスクを排除することができます。
 
 ### 概要
 
-The basic sequence of an OTP session token use in a 4D web application is the following:
+4D Web アプリケーションにおけるOTP セッショントークンの利用の基本的なシーケンスは、以下の通りです:
 
-1. The web user initiates an action that requires a secured third-party connection, for example a validation, from within a specific session.
-2. In your 4D code, you create a new OTP for the session using the [`Session.createOTP()`](../API/SessionClass.md#createotp) function.
-3. You send a request to the third-party application with the session token included in the callback Uri. Note that the way to provide the callback Uri to a third-party application depends on its API (see below).
-4. The third-party application sends back a request to 4D with the pattern you provided in the callback Uri.
-5. The request callback is processed in your application.
+1. Web ユーザーが、保護されたサードパーティ接続を必要とするアクションを開始します。例えば、特定のセッション内での認証などです。
+2. 4D コード内において、[`Session.createOTP()`](../API/SessionClass.md#createotp) 関数を使用してそのセッションのための新しいOTP を作成します。
+3. サードパーティアプリケーションに対して、コールバックURL 内にセッショントークンを含んだリクエストを送信します。 ここで、サードパーティアプリケーションにコールバックURL を提供する方法は、API によって異なるという点に注意して下さい(下記参照)。
+4. サードパーティアプリケーションは、コールバックURL に提供したパターンを使用して4D へリクエストを送り返します。
+5. その後、そのリクエストのコールバックをアプリケーション内で処理します。
 
-By definition, an OTP token can only be used once. In this scenario, if a web request is received with a session token as parameter that has already been used, the initial session is not restored.
+その名前が示す通り、OTP (ワンタイムパスワード)トークンは一度しか使用することができません。 このシナリオにおいては、既に使用されたセッショントークンを引数として持つWeb リクエストが受信された場合、最初のセッションは復元されません。
 
-### Processing the OTP in the callback
+### OTPをコールバックで処理する
 
-Callbacks from third-party applications that include the OTP token can be processed in different ways in your 4D application, depending on your development and the third-party API. Basically, you have two possibilities to handle the token: through the **`$4DSID`** parameter for an automatic processing, or through a custom parameter that you need to process.
+サードパーティアプリケーションからのOTP トークンを含んだコールバックは、開発とサードパーティAPI に応じて、4D アプリケーション内で違う方法で処理することもできます。 基本的には、トークンを扱う方法には2つの方法があります: 自動処理をする **`$4DSID`** 引数を通して渡すか、自分で処理する必要があるカスタム引数を通して渡すかです。
 
 #### Using `$4DSID` in the URL
 
