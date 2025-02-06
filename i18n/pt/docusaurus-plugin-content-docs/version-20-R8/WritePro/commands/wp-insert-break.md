@@ -24,7 +24,7 @@ The **WP Insert break** command <!--REF #_command_.WP Insert break.Summary-->ins
 
 Em *targetObj*, passe:
 
-- a range, or
+- um intervalo, ou
 - an element (table / row / paragraph / body / header / footer / inline picture / section / subsection), or
 - um documento 4D Write Pro
 
