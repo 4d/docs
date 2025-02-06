@@ -191,7 +191,7 @@ All callback functions receive two parameters:
 
 #### TCPEvent object
 
-A [`TCPEvent`](TCPEventClass.md) object is returned when a [callback function](#callback-functions) is called.
+Un objeto [`TCPEvent`](TCPEventClass.md) es devuelto cuando se llama una [función de retrollamada](#callback-functions).
 
 <!-- END REF -->
 
