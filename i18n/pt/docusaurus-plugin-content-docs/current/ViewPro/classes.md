@@ -39,7 +39,7 @@ A propriedade `.dataField` <!-- REF #TableColumn.dataField.Summary -->contém o 
 
 **.formatter** : Text<!-- END REF -->
 
-The `.formatter` property <!-- REF #TableColumn.formatter.Summary -->contains the table column's formatter<!-- END REF -->.
+A propriedade `.formatter` <!-- REF #TableColumn.formatter.Summary -->contém o formato da coluna da tabela<!-- END REF -->.
 
 ### .name
 
@@ -47,7 +47,7 @@ The `.formatter` property <!-- REF #TableColumn.formatter.Summary -->contains th
 
 **.name** : Text<!-- END REF -->
 
-The `.name` property <!-- REF #TableColumn.name.Summary -->contains the table column's name<!-- END REF --> (mandatory).
+A propriedade `.name` <!-- REF #TableColumn.name.Summary -->contém o nome da coluna da tabela <!-- END REF --> (obrigatório).
 
 ## TableOptions
 
