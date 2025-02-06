@@ -69,4 +69,4 @@ Para abrir el formulario de proyecto *ContactPage* con el objeto "name-input" se
 |                   |                                                                     |
 | ----------------- | ------------------------------------------------------------------- |
 | Número de comando | 1749                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
