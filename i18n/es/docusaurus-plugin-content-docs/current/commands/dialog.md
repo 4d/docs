@@ -182,5 +182,5 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 |                    |                                                                     |
 | ------------------ | ------------------------------------------------------------------- |
 | Número de comando  | 40                                                                  |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+| Hilo seguro        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
 | Modifies variables | OK, error                                                           |
