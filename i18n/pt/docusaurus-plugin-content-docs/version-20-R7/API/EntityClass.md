@@ -501,7 +501,7 @@ O mapeamento entre o objecto e a entidade é feito sobre os nomes dos atributos:
 
 - Se uma propriedade do objeto não existe nos dados (dataclass), ela é ignorada.
 - Os tipos de dados devem ser equivalentes. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see [`Converting data types`](Concepts/data-types.md#converting-data-types)), otherwise the attribute is left untouched.
-- A chave primária pode ser dada como é ou com uma propriedade "__KEY" (preenchida com o valor da chave primária). If it does not already exist in the dataclass, the entity is created with the given value when [.save()](#save) is called. Se a chave primária não for dada, a entidade é criada e o valor da chave primária é atribuído de acordo com as regras da base de dados. O auto-incremento só é calculado se a chave primária for nula.
+- A chave primária pode ser dada como é ou com uma propriedade "__KEY" (preenchida com o valor da chave primária). Se ela ainda não existir na classe de dados, a entidade será criada com o valor fornecido quando [.save()](#save) for chamado. Se a chave primária não for dada, a entidade é criada e o valor da chave primária é atribuído de acordo com as regras da base de dados. O auto-incremento só é calculado se a chave primária for nula.
 
 *filler* pode tratar de uma entidade relacionada sob as seguintes condições:
 
@@ -947,7 +947,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 #### Descrição
 
-The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. The [lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
+The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. O [bloqueio é definido](ORDA/entities.md#entity-locking) para um registro e todas as referências da entidade no processo atual.
 
 Other processes will see this record as locked (the `result.success` property will contain False if they try to lock the same entity using this function). Só as funções executadas na sessão de "bloqueio" são permitidas para editar e guardar os atributos da entidade. A entidade pode ser carregada como apenas leitura por outras sessões, mas não serão capazes de introduzir e guardar valores.
 
