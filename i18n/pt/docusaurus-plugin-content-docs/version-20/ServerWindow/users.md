@@ -4,12 +4,12 @@ title: Página Usuários
 ---
 
 
-The **Users** page lists the 4D users connected to the server.
+A página **Usuários** lista os usuários 4D conectados ao servidor.
 
 
 ![](../assets/en/Admin/server-users.png)
 
-The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). A página também contém uma área de pesquisa dinâmica e botões de controlo. You can modify the order of the columns by dragging and dropping their header areas.
+O botão "Usuários" indica, entre parênteses, o número total de usuários conectados ao servidor (este número não considera los filtros de exibição aplicados à janela). A página também contém uma área de pesquisa dinâmica e botões de controlo. Você pode modificar a ordem das colunas arrastando e soltando as áreas de cabeçalho deles.
 
 Também pode ordenar a lista de valores da coluna clicando no respetivo cabeçalho. Clique várias vezes para especificar sucessivamente uma ordem ascendente/descendente.
 
@@ -17,10 +17,10 @@ Também pode ordenar a lista de valores da coluna clicando no respetivo cabeçal
 
 ## Lista de usuários
 
-For each user connected to the server, the list provides the following information:
+Para cada usuário conectado ao servidor, a lista fornece as seguintes informações:
 
 - Sistema da máquina cliente (macOS ou Windows) como um ícone.
-- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
+- **Usuário 4D**: nome do usuário 4D, ou alias, se definido com [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) na máquina de usuário. Se as senhas não são ativadas e nenhum alias foi definido, todos os usuários são chamados "Designer".
 - **Nome de máquina**: nome da máquina remota.
 - **Session name**: Name of the session opened on the remote machine.
 - **Endereço IP**: endereço IP da máquina remota.
