@@ -197,7 +197,7 @@ A propriedade `.borderRight` é a <!-- REF #TableStyle.borderRight.Summary -->li
 
 **.borderBottom** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderBottom` property is the <!-- REF #TableStyle.borderBottom.Summary -->bottom border line of the table <!-- END REF -->.
+A propriedade `.borderBottom` é a <!-- REF #TableStyle.borderBottom.Summary -->linha inferior da borda da tabela<!-- END REF -->.
 
 ### .borderHorizontal
 
