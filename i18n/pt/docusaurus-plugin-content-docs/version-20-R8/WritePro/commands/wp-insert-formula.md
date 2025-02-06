@@ -24,7 +24,7 @@ The **WP Insert formula** command<!--REF #_command_.WP Insert formula.Summary-->
 
 In the *targetObj* parameter, you can pass:
 
-- a range, or
+- um intervalo, ou
 - an element (table / row / cell(s) / paragraph / body / header / footer / section / subsection / inline picture), or
 - a 4D Write Pro document.
 
