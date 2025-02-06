@@ -7,7 +7,7 @@ La página **Usuarios** lista los usuarios 4D conectados al servidor.
 
 ![](../assets/en/Admin/server-users.png)
 
-The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). A página também contém uma área de pesquisa dinâmica e botões de controlo. You can modify the order of the columns by dragging and dropping their header areas.
+O botão "Usuários" indica, entre parênteses, o número total de usuários conectados ao servidor (este número não considera los filtros de exibição aplicados à janela). A página também contém uma área de pesquisa dinâmica e botões de controlo. Você pode modificar a ordem das colunas arrastando e soltando as áreas de cabeçalho deles.
 
 Também pode ordenar a lista de valores da coluna clicando no respetivo cabeçalho. Clique várias vezes para especificar sucessivamente uma ordem ascendente/descendente.
 
@@ -15,10 +15,10 @@ Também pode ordenar a lista de valores da coluna clicando no respetivo cabeçal
 
 ## Lista de usuários
 
-For each user connected to the server, the list provides the following information:
+Para cada usuário conectado ao servidor, a lista fornece as seguintes informações:
 
 - Sistema da máquina cliente (macOS ou Windows) como um ícone.
-- **Usuário 4D**: nome do usuário 4D, ou alias se definido com o comando [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) na máquina usuário. If passwords are not activated and no alias has been set, all users are named "Designer".
+- **Usuário 4D**: nome do usuário 4D, ou alias se definido com o comando [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) na máquina usuário. Se as senhas não são ativadas e nenhum alias foi definido, todos os usuários são chamados "Designer".
 - **Nombre de máquina**: Nombre de la máquina remota.
 - **Nombre de sesión**: nombre de la sesión abierta en la máquina remota.
 - **Dirección IP**: dirección IP de la máquina remota.
