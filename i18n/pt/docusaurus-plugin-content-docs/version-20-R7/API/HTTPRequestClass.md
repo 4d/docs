@@ -487,7 +487,7 @@ A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary --> a URL da
 
 > Esta função é thread segura.
 
-The `wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->waits for the response from the server<!-- END REF -->.
+A função `wait()` <!-- REF #HTTPRequestClass.wait().Summary --> espera pela resposta do servidor<!-- END REF -->.
 
 If a *time* parameter is passed, the function will wait at most the defined number of seconds.
 
