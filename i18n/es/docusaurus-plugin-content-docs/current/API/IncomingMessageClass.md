@@ -260,7 +260,7 @@ The `.url` property is read-only.
 
 :::note
 
-The "host" part of the request (*IP:port*) is provided by the [`host` header](#headers).
+La parte "host" de la petición (*IP:port*) es suministrada por el [encabezado `host`](#headers).
 
 :::
 
