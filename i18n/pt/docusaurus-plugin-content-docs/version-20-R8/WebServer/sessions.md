@@ -9,7 +9,7 @@ As sessões Web permitem:
 
 - manipular várias solicitações simultaneamente do mesmo cliente web através de um número ilimitado de processos preventivos (sessões web são **escaláveis**),
 - gerenciar a sessão por um objeto `Session` e da [API de session](API/SessionClass.md),
-- store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
+- armazena e compartilha dados entre processos de um cliente web usando o [.storage](../API/SessionClass.md#storage) da sessão,
 - associate privileges to the user running the session.
 
 ## Usos
