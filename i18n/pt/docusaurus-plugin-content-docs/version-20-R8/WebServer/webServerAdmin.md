@@ -19,7 +19,7 @@ O servidor web principal de 4D pode ser iniciado de diferentes maneiras:
 
 - Inicia automaticamente cada vez que a aplicação 4D é aberta. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
 
-- Programmatically, by calling the [`webServer.start()`](API/WebServerClass.md#start) function or `WEB START SERVER` command.
+- Programaticamente, chamando o comando [`webServer.start()`](API/WebServerClass.md#start) ou `WEB START SERVER`.
 
 The web server of any component can be launched by calling the [`webServer.start()`](API/WebServerClass.md#start) function on the component's web server object.
 
@@ -31,7 +31,7 @@ O servidor web principal de 4D pode ser parado de diferentes maneiras:
 
 - Utilizando el menú 4D **Ejecución\>Detener el servidor Web**, o vía el botón **Detener el servidor HTTP** de la página Servidor HTTP de 4D Server (ambos elementos muestran **Iniciar...** cuando el servidor no está ya iniciado).
 
-- Programmatically, by calling the [`webServer.stop()`](API/WebServerClass.md#stop) function or `WEB STOP SERVER` command.
+- Programmaticamente, chamando o comando [`webServer.stop()`](API/WebServerClass.md#stop) ou `WEB STOP SERVER`.
 
 El servidor web de cualquier componente puede detenerse llamando a la función `webServer.stop()` en el objeto servidor web del componente.
 
