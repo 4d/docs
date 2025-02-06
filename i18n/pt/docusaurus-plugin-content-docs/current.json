@@ -536,7 +536,7 @@
     "description": "The label for category Cache Management in sidebar docs"
   },
   "sidebar.docs.category.Collections": {
-    "message": "Collections",
+    "message": "Coleções",
     "description": "The label for category Collections in sidebar docs"
   },
   "sidebar.docs.category.Communications": {
@@ -552,7 +552,7 @@
     "description": "The label for category Data Entry in sidebar docs"
   },
   "sidebar.docs.category.Data Security": {
-    "message": "Data Security",
+    "message": "Segurança dos dados",
     "description": "The label for category Data Security in sidebar docs"
   },
   "sidebar.docs.category.Database Methods": {
@@ -732,7 +732,7 @@
     "description": "The label for category Styled Text in sidebar docs"
   },
   "sidebar.docs.category.Subrecords": {
-    "message": "Subrecords",
+    "message": "Sub-registros",
     "description": "The label for category Subrecords in sidebar docs"
   },
   "sidebar.docs.category.System Documents": {
@@ -840,7 +840,7 @@
     "description": "The generated-index page title for category Cache Management in sidebar docs"
   },
   "sidebar.docs.category.Collections.link.generated-index.title": {
-    "message": "Collections",
+    "message": "Coleções",
     "description": "The generated-index page title for category Collections in sidebar docs"
   },
   "sidebar.docs.category.Communications.link.generated-index.title": {
@@ -856,7 +856,7 @@
     "description": "The generated-index page title for category Data Entry in sidebar docs"
   },
   "sidebar.docs.category.Data Security.link.generated-index.title": {
-    "message": "Data Security",
+    "message": "Segurança dos dados",
     "description": "The generated-index page title for category Data Security in sidebar docs"
   },
   "sidebar.docs.category.Database Methods.link.generated-index.title": {
@@ -1056,7 +1056,7 @@
     "description": "The generated-index page title for category Styled Text in sidebar docs"
   },
   "sidebar.docs.category.Subrecords.link.generated-index.title": {
-    "message": "Subrecords",
+    "message": "Sub-registros",
     "description": "The generated-index page title for category Subrecords in sidebar docs"
   },
   "sidebar.docs.category.System Documents.link.generated-index.title": {
