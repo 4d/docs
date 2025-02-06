@@ -26,7 +26,7 @@ Em *targetObj*, passe:
 
 - a range, or
 - an element (table / row / paragraph / body / header / footer / inline picture / section / subsection), or
-- a 4D Write Pro document
+- um documento 4D Write Pro
 
 In *breakType*, pass one of the following constants from the *4D Write Pro Constants* theme to define the type of break to insert:
 
