@@ -90,7 +90,7 @@ Un objeto servidor web contiene [varias propiedades](API/WebServerClass.md#web-s
 
 Estas propriedades são definidas:
 
-1. using the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function (except for read-only properties, see below),
+1. usando o parâmetro `settings` da função [`.start()`](API/WebServerClass.md#start) (exceto para propriedades somente leitura, veja abaixo),
 2. si no se utiliza, utilizando el comando `WEB SET OPTION` (sólo aplicaciones locales),
 3. se não for usado, nos parâmetros da aplicação host ou do componente.
 
