@@ -25,7 +25,7 @@ title: VP Get tables
 
 #### Descrição
 
-The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns a collection of all table names defined in the *sheet*<!-- END REF -->.
+O comando `VP Get tables` <!-- REF #_method_.VP Get tables.Summary --> retorna uma coleção de todos os nomes das tabelas definidos na *sheet*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
