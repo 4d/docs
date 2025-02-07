@@ -7,7 +7,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 
 `Email` objects are created when receiving mails through a *transporter* class function:
 
-- IMAP - [`.getMail()`](IMAPTransporterClass.md#getmail) and [`.getMails()`](IMAPTransporterClass.md#getmails) functions to get emails from an IMAP server
+- IMAP - funções [`.getMail()`](IMAPTransporterClass.md#getmail) e [`.getMails()`](IMAPTransporterClass.md#getmails) para obter e-mails de um servidor IMAP
 - POP3 - Função [`.getMail()`](POP3TransporterClass.md#getmail) para obter um e-mail de um servidor POP3.
 
 > Você também pode criar um novo objeto `Email` em branco e preenchê-lo com [propriedades do objeto Email](#email-object).
@@ -302,7 +302,7 @@ Para requisitos específicos de formatação, consulte a [RFC#5322](https://tool
 
 #### Descrição
 
-The `.replyTo` property contains the <!-- REF #EmailObjectClass.replyTo.Summary -->[addresse(s)](#email-addresses) for responses<!-- END REF -->.
+A propriedade `.replyTo` contém os <!-- REF #EmailObjectClass.replyTo.Summary -->[endereços](#email-addresses) para respostas<!-- END REF -->.
 
 ## .sendAt
 
@@ -359,4 +359,4 @@ The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summar
 
 #### Descrição
 
-The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+A propriedade `.to` contém <!-- REF #EmailObjectClass.to.Summary --> os [endereços](#email-addresses) dos destinatários primários de e-mail<!-- END REF -->.
