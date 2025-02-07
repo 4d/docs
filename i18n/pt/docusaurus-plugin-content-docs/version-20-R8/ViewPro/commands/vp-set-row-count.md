@@ -17,7 +17,7 @@ title: VP SET ROW COUNT
 
 #### Descrição
 
-The `VP SET ROW COUNT` command <!-- REF #_method_.VP SET ROW COUNT.Summary -->defines the total number of rows in *vpAreaName*<!-- END REF -->.
+O comando `VP SET ROW COUNT` <!-- REF #_method_.VP SET ROW COUNT.Summary --> define o número total de linhas em *vpAreaName*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
