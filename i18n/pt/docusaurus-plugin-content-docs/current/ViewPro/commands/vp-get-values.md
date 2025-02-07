@@ -16,7 +16,7 @@ title: VP Get values
 
 #### Descrição
 
-The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retrieves the values from the designated *rangeObj*<!-- END REF -->.
+O comando `VP Get values` <!-- REF #_method_.VP Get values.Summary --> recupera os valores do *rangeObj*<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo cujos valores você deseja recuperar. Se *rangeObj* incluir vários intervalos, somente o primeiro será usado.
 
