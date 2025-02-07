@@ -222,7 +222,7 @@ If the body is not received as a valid picture, the function returns null.
 
 #### Descrição
 
-The `.getText()` function <!-- REF #IncomingMessageClass.getText().Summary -->returns the body of the request as a text value<!-- END REF -->.
+A função `.getText()` <!-- REF #IncomingMessageClass.getText().Summary -->retorna o corpo da solicitação como valor de texto<!-- END REF -->.
 
 If the body has not been given as a string value, the function tries to convert the value but it can give unexpected results.
 
