@@ -672,7 +672,7 @@ As chaves primárias podem ser números (Inteiro) ou strings. You can "force" th
 
 The `.getRemoteContextAttributes()` function <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity <!-- END REF -->.
 
-If there is no [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) for the entity, the function returns an empty Text.
+Se não houver [contexto de otimização](../ORDA/remoteDatastores.md#clientserver-optimization) para a entidade, a função retornará um texto vazio.
 
 #### Exemplo
 
@@ -818,7 +818,7 @@ O selo interno é automaticamente incrementado por 4D cada vez que a entidade é
 
 #### Descrição
 
-The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
+A função `.indexOf()` <!-- REF #EntityClass.indexOf().Summary -->retorna a posição da entidade em uma entity selection<!-- END REF -->.
 
 By default if the *entitySelection* parameter is omitted, the function returns the entity's position within its own entity selection. Caso contrário, ele retorna a posição da entidade dentro da *entitySelection*.
 
@@ -947,7 +947,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 #### Descrição
 
-The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. O [bloqueio é definido](ORDA/entities.md#entity-locking) para um registro e todas as referências da entidade no processo atual.
+A função `.lock()` <!-- REF #EntityClass.lock().Summary -->coloca um bloqueio pessimista no registro referenciado pela entidade<!-- END REF -->. O [bloqueio é definido](ORDA/entities.md#entity-locking) para um registro e todas as referências da entidade no processo atual.
 
 Other processes will see this record as locked (the `result.success` property will contain False if they try to lock the same entity using this function). Só as funções executadas na sessão de "bloqueio" são permitidas para editar e guardar os atributos da entidade. A entidade pode ser carregada como apenas leitura por outras sessões, mas não serão capazes de introduzir e guardar valores.
 
@@ -1353,7 +1353,7 @@ Atualização de uma entidade com a opção `dk auto merge`:
 
 #### Descrição
 
-The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Os nomes das propriedades no objecto correspondem aos nomes dos atributos da entidade.
+A função `.toObject()` <!-- REF #EntityClass.toObject().Summary -->retorna um objeto que foi criado a partir da entidade<!-- END REF -->. Os nomes das propriedades no objecto correspondem aos nomes dos atributos da entidade.
 
 If no filter is specified, or if the *filterString* parameter contains an empty string or "\*", the returned object will contain:
 
