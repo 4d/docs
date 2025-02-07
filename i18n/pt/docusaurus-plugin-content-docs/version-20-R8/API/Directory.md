@@ -543,7 +543,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 #### Descrição
 
-The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
+A função `.files()` retorna <!-- REF #directory.files().Summary -->uma coleção de objetos `File` contidos na pasta<!-- END REF -->.
 
 > Os apelidos ou links simbolicos não são resolvidos.
 
