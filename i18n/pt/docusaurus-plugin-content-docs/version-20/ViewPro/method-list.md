@@ -5349,7 +5349,7 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 
 The *numberValue* parameter specifies a numeric value to be assigned to the *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *numberValue* parameter.
+O parâmetro opcional *formatPattern* define um [pattern](configuring.md#cell-format) para o parâmetro *numberValue*.
 
 #### Exemplo
 
