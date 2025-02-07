@@ -394,7 +394,7 @@ If no error occured, `.errors` is undefined.
 
 #### Descrição
 
-The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
+A propriedade `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contém o código de saída retornado pelo processo externo<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
 
 Essa propriedade é **somente leitura**.
 
