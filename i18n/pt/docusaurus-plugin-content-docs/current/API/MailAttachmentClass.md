@@ -101,7 +101,7 @@ The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the 
 
 #### Descrição
 
-The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the POSIX path of the attachment file, if it exists<!-- END REF -->.
+A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary --> o caminho POSIX do arquivo de anexo, se ele existir<!-- END REF -->.
 
 ## .platformPath
 
