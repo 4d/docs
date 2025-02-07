@@ -116,7 +116,7 @@ Há duas maneiras de acessar Qodly Studio:
 
 The Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
 
-You can rely on this documentation and its associated resources for developing web applications powered by Qodly pages. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE (see [Feature comparison](#feature-comparison)).
+You can rely on this documentation and its associated resources for developing web applications powered by Qodly pages. No entanto, dependendo da etapa de implementação, desenvolvedores 4D usarão Qodly Studio ou 4D IDE (veja [Comparação das funcionalidades](#feature-comparison)).
 
 Code examples are provided in [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), but since QodlyScript inherits from the 4D Language, you won't be lost. Code examples are provided in [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), but since QodlyScript inherits from the 4D Language, you won't be lost.
 
@@ -310,7 +310,7 @@ Para fazer o logout do usuário, basta executar a ação padrão **Logout** na p
 
 Triggering the logout action from a web user session has the following effects:
 
-- the current web user session loses its privileges, only [descriptive REST requests](../REST/authUsers.md#descriptive-rest-requests) are allowed,
+- a sessão usuário web atual perde seus privilégios, apenas as [requisições REST descritivas](../REST/authUsers.md#descriptive-rest-requests) são permitidas,
 - a licença associada ao 4D é liberada,
 - the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). During this period after a logout, if the user logs in again, the same session is used and the `Session.storage` shared object is available with its current contents.
 
