@@ -205,7 +205,7 @@ A propriedade `.borderBottom` é a <!-- REF #TableStyle.borderBottom.Summary -->
 
 **.borderHorizontal** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderHorizontal` property is the <!-- REF #TableStyle.borderHorizontal.Summary -->horizontal border line of the table <!-- END REF -->.
+A propriedade `.borderHorizontal` é a <!-- REF #TableStyle.borderHorizontal.Summary -->linha horizontal de borda da tabela<!-- END REF -->.
 
 ### .borderVertical
 
