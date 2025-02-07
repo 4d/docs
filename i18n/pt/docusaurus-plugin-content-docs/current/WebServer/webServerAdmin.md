@@ -130,7 +130,7 @@ Ambos archivos de historial se crean automáticamente en la carpeta **Logs** del
 
 ### HTTPDebugLog.txt
 
-The [http debug file](webServerConfig.md#debug-log) can be enabled using the [`web server` object](webServerObject.md) or the `WEB SET OPTION` command.
+O [arquivo de depuração http](webServerConfig.md#debug-log) pode ser ativado usando o objeto [`web server`](webServerObject.md) ou o comando `WEB SET OPTION`.
 
 Este arquivo registra cada petição HTTP e cada resposta em modo raw (não processado). Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
