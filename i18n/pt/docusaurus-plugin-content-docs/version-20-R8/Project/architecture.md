@@ -161,7 +161,7 @@ A pasta Data contém o ficheiro de dados e todos os arquivo e pastas relacionado
 
 ### `Settings` (datos del usuario)
 
-This folder contains [**user settings for data**](../Desktop/user-settings.md#user-settings-for-data-file) used for application administration.
+Essa pasta contém [**configurações de usuário para os dados**](../Desktop/user-settings.md#user-settings-for-data-file) usadas para a administração de aplicações.
 
 > Estos parámetros tienen prioridad sobre los [parámetros de usuario](#settings-user) y los [parámetros de estructura](#sources). Ver también [Prioridad de los parámetros](../Desktop/user-settings.md#priority-of-settings).
 
