@@ -223,44 +223,44 @@ End if
 
 サードパーティアプリケーションからのOTP トークンを含んだコールバックは、開発とサードパーティAPI に応じて、4D アプリケーション内で違う方法で処理することもできます。 基本的には、トークンを扱う方法には2つの方法があります: 自動処理をする **`$4DSID`** 引数を通して渡すか、自分で処理する必要があるカスタム引数を通して渡すかです。
 
-#### Using `$4DSID` in the URL
+#### `$4DSID`をURLの中で使用する
 
-Using the `$4DSID` parameter is the most simple way to process a callback from the third-party application:
+`$4DSID` 引数を使用するのが、サードパーティアプリケーションからのコールバックを処理するための最もシンプルな方法です:
 
-- The OTP token is provided as a parameter directly in the callback url using the standard `?$4DSID=XXXX123` syntax.
-- In 4D, you implement a dedicated [HTTP Request handler](http-request-handler.md) in your 4D application using [`IncomingMessage`](../API/IncomingMessageClass.md) and [`OutgoingMessage`](../API/OutgoingMessageClass.md) classes.
-- If the `$4DSID` token is valid, the related web user session is **automatically restored** in any web process with its storage and privileges.
+- OTP トークンは直接コールバックURL 内で引数として、標準の`?$4DSID=XXXX123` シンタックスを使用して提供されます。
+- 4D では[`IncomingMessage`](../API/IncomingMessageClass.md) および [`OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用して、4D アプリケーション内に専用の[HTTP リクエストハンドラー](http-request-handler.md) を実装します。
+- `$4DSID` トークンが有効であれば、関連したWeb ユーザーセッションはあらゆるWeb プロセスにおいて、そのストレージと権限を持って **自動的に復元されます**。
 
 :::note
 
-A [`4DACTION`](./httpRequests.md#4daction) url can also be used on the 4D side.
+4D 側では[`4DACTION`](./httpRequests.md#4daction) URL を使用することもできます。
 
 :::
 
-#### Using a custom parameter
+#### カスタムの引数を使用する
 
-The OTP token can also be provided as a custom parameter that you need to process specifically to restore the session. You must use this solution if:
+OTP トークンは、セッションを復元するために特別に処理する必要があるカスタムの引数として渡すこともできます。 このソリューションは、以下のような場合に使用する必要があります:
 
-- the third-party application does not allow to insert parameters such as a `$4DSID` directly in the redirect Uri, and provides a dedicated API (the implementation depends on the third-party application),
-- or, you want to call an ORDA function through REST to process the callback, in which case you need to pass the OTP with the [REST parameter syntax](../REST/ClassFunctions.md#parameters) (e.g. `?$params='["XXX123"]'`).
+- サードパーティアプリケーションが`$4DSID` のような引数をリダイレクトURI に挿入することを許可しておらず、専用のAPI を提供している(実装はサードパーティアプリケーションに依存します)。
+- あるいは、コールバックを処理するのにREST 経由でORDA 関数を呼び出したい場合。この場合、OTP は[REST 引数シンタックス](../REST/ClassFunctions.md#parameters) (例: `?$params='["XXX123"]'`) に則って渡す必要があります。
 
-In both cases, you need to extract the token from the custom parameter and to call the [`Session.restore()`](../API/SessionClass.md#restore) function with the token as parameter.
+どちらの場合においても、カスタムの引数からトークンを抽出し、そして[`Session.restore()`](../API/SessionClass.md#restore) 関数にトークンを引数として渡して呼び出す必要があります。
 
-#### Processing a invalid OTP
+#### 無効なOTPを処理する
 
-The OTP token is considered invalid if:
+OTP トークンは以下の場合には無効と判断されます:
 
-- the session token has already been used,
-- the session token has expired,
-- the session token does not exist,
-- the original session itself has expired.
+- セッショントークンが既に使用されている場合
+- セッショントークンが失効してしまっている場合
+- セッショントークンが存在しない場合
+- オリジナルのセッション自体が失効してしまっている場合
 
-In this case, no web user session is restored and the current session (if any) is left unchanged. Usually, you can decide to display a login page or to open a guest session.
+この場合、Web ユーザーセッションは復元されず、またカレントセッション(あれば)は変更されずにそのままにされます。 通常、ログインページを表示するか、あるいはゲストセッションを開くかを決めることができます。
 
-Verifying if the received OTP token is valid depends on how it was handled:
+受信したOTP トークンが有効化かどうかの検証するための方法は、その使用方法によって異なります:
 
-- If you used a `$4DSID`, you can store a custom status property in the [session storage](../API/SessionClass.md#storage) at the moment of the token creation, and check this status once the OTP token was received to see if it is the same value (see example).
-- If you used the [`Session.restore()`](../API/SessionClass.md#restore) function, it returns true if the session correctly restored.
+- `$4DSID` を使用した場合、[session storage](../API/SessionClass.md#storage) にカスタムのステータスプロパティをトークン作成時に保存しておき、OTP トークンを受信したときにそれが同じ値であるかを見ることでステータスをチェックすることができます(例題参照)。
+- [`Session.restore()`](../API/SessionClass.md#restore) 関数を使用した場合、セッションが正常に復元されていれば、この関数はTrue を返します。
 
 ### Scenario with $4DSID
 
