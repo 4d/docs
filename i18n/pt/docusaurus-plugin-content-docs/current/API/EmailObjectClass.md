@@ -272,7 +272,7 @@ Palavra-chave reservada.
 
 #### Descrição
 
-The `.messageId` property contains a <!-- REF #EmailObjectClass.messageId.Summary -->message identifier header ("message-id")<!-- END REF -->.
+A propriedade `.messageId` contém um <!-- REF #EmailObjectClass.messageId.Summary -->cabeçalho de identificador de mensagem ("message-id")<!-- END REF -->.
 
 Este cabeçalho geralmente é "lettersOrNumbers@domainname", por exemplo, "abcdef.123456@4d.com". Este ID exclusivo é usado em particular em fóruns ou listas públicas de e-mail. Em geral, os servidores de email adicionam automaticamente este cabeçalho às mensagens que enviam.
 
