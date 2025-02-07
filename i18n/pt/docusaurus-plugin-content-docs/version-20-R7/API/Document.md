@@ -252,7 +252,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->the date of the file's last modification<!-- END REF -->.
+A propriedade `.modificationDate` retorna <!-- REF #document.modificationDate.Summary --> a data da última modificação do arquivo<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -444,7 +444,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.copyTo()` function <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified *destinationFolder* <!-- END REF -->.
+A função `.copyTo()` <!-- REF #document.copyTo().Summary -->copia o objeto `File` para a *destinationFolder*<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
