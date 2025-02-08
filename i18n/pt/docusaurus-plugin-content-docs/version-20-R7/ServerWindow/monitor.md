@@ -7,16 +7,16 @@ La página **Monitor** muestra información dinámica relativa al uso de la base
 
 ![](../assets/en/Admin/server-admin.png)
 
-> On Windows, some of the system information displayed on this page are retrieved via the Windows "Performance Analyzer" tools. These tools can only be accessed when the user that opened the session where 4D Server was launched has the necessary administration authorization.
+> No Windows, algumas das informações do sistema exibidas nesta página são recuperadas através das ferramentas de "Analisador de desempenho do Windows". Estas ferramentas só podem ser acessadas quando o usuário que abriu a sessão onde o servidor 4D foi iniciado tiver a autorização administrativa necessária.
 
 ## Área gráfica
 
-The graphic area lets you see the evolution in real time of several parameters: the CPU usage, network traffic and memory. You select the parameter to be displayed via a menu found in the center of the window:
+A área gráfica permite que você veja a evolução em tempo real de vários parâmetros: o uso da CPU, o tráfego de rede e a memória. Você seleciona o parâmetro a ser exibido através de um menu encontrado no centro da janela:
 
 ![](../assets/en/Admin/server-graphic.png)
 
-- **Uso de la CPU**: uso global de la CPU de la máquina, para todas las aplicaciones en conjunto. The specific part of 4D Server in this usage rate is provided in the "Processors" information area.
-- **Red**: número de bytes recibidos por segundo por la máquina (servidor o cliente). The number of bytes sent is provided in the "Network" information area.
+- **Uso de la CPU**: uso global de la CPU de la máquina, para todas las aplicaciones en conjunto. A parte específica do servidor 4D nessa taxa de uso é fornecida na área de informação "Processadores".
+- **Red**: número de bytes recibidos por segundo por la máquina (servidor o cliente). O número de bytes enviados é fornecido na área de informação "Rede".
 - **Memoria física**: cantidad de memoria RAM de la máquina utilizada por 4D Server. A more detailed view of memory use is provided in the "Memory" information area.
 - **Memoria virtual**: cantidad de memoria virtual utilizada por la aplicación 4D Server. Esta memória é alocada pelo sistema conforme as necessidades de aplicação. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the top left indicates the maximum quantity of usable virtual memory. The maximum value is calculated dynamically according to the general memory settings of the application.
 - **Caché**: cantidad de memoria caché utilizada por la aplicación 4D Server. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the bottom right of the area indicates the quantity of memory currently being used.
