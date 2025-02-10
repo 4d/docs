@@ -90,7 +90,7 @@ Dans ce mode, vous pouvez configurer des paramètres de serveur Web supplémenta
 
 _Note de compatibilité :_ Cette option est disponible uniquement dans les bases/projets créé(e) s avec une version 4D antérieure à 4D v18 R6.
 
-Cette option permet de gérer les anciennes sessions utilisateur par le serveur 4D HTTP. Ce mécanisme est décrit dans la section [Gestion des sessions Web](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Journal (sauvegarde)
+Cette option permet de gérer les anciennes sessions utilisateur par le serveur 4D HTTP. Ce mécanisme est décrit dans la section [Gestion des sessions Web](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Voir [Garder session](../WebServer/webServerConfig.md#keep-session).
 
 L'option [Réutilisation des contextes temporaires (4D en mode distant)](#reuse-temporary-contexts) est automatiquement cochée (et verrouillée).
 
@@ -158,7 +158,7 @@ Liste des hôtes et méthodes autorisé(e)s pour le service CORS. Voir [Paramèt
 
 ### Format du journal (logweb.txt)
 
-Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier _logweb.txt_ et définit son format. Format du journal (logweb.txt)
+Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier _logweb.txt_ et définit son format. Voir [Enregistrement des logs](../WebServer/webServerConfig.md#enregistrement-des-logs).
 
 > L’activation et la désactivation du fichier d’historique des requêtes peut également être effectuée par programmation, à l’aide de la commande [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
 
