@@ -3,11 +3,11 @@ id: IncomingMessageClass
 title: IncomingMessage
 ---
 
-The `4D.IncomingMessage` class allows you to handle the object received by a custom [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Parameters given directly in the request with GET verb are handled by the [`.urlQuery`](#urlquery) property, while parameters passed in the body of the request are available through functions such as [`.getBlob()`](#getblob) or [`getText()`](#gettext).
+`4D.IncomingMessage` クラスを使用すると、カスタムの[**HTTP リクエストハンドラー**](../WebServer/http-request-handler.md) が受信したオブジェクトを管理できるようになります。 HTTP リクエストおよびそのプロパティは`4D.IncomingMessage` クラスのインスタンスとして自動的に受信されます。 GET 動詞とともにリクエストに直接渡された引数は[`.urlQuery`](#urlquery) プロパティで管理される一方、リクエストの本文に渡された引数は[`.getBlob()`](#getblob) あるいは [`getText()`](#gettext) といった関数を通して利用可能です。
 
-The HTTP request handler can return any value (or nothing). It usually returns an instance of the [`4D.OutgoingMessage`](OutgoingMessageClass.md) class.
+HTTP リクエストハンドラーはあらゆる値を返すことが可能です(あるいは返さないことも可能です)。 通常は、[`4D.OutgoingMessage`](OutgoingMessageClass.md) クラスのインスタンスを返します。
 
-All properties of this class are read-only. They are automatically filled by the request handler.
+このクラスの全てのプロパティは読み出し専用です。 これらはリクエストハンドラーによって自動的に値が入れられます。
 
 <details><summary>履歴</summary>
 
@@ -19,7 +19,7 @@ All properties of this class are read-only. They are automatically filled by the
 
 ### 例題
 
-The following [**HTTPHandlers.json** file](../WebServer/http-request-handler.md) has been defined:
+[**HTTPHandlers.json** ファイル](../WebServer/http-request-handler.md) が、以下のように定義されているとします:
 
 ```json
 [
@@ -32,7 +32,7 @@ The following [**HTTPHandlers.json** file](../WebServer/http-request-handler.md)
 ]
 ```
 
-The `http://127.0.0.1/start/example?param=demo&name=4D` request is run with a `GET` verb in a browser. It is handled by the *gettingStarted* function of the following *GeneralHandling* singleton class:
+`http://127.0.0.1/start/example?param=demo&name=4D` リクエストが、`GET` 動詞とともにブラウザ内で実行されます。 このリクエストは、以下の*GeneralHandling* シングルトンクラスの*gettingStarted* 関数によって管理されます:
 
 ```4d
 shared singleton Class constructor()
@@ -59,9 +59,9 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ```
 
-The request is received on the server as *$request*, an object instance of the [4D.IncomingMessage class](../API/IncomingMessageClass.md).
+このリクエストはサーバー上では\*$request\* として受信されます。これは[4D.IncomingMessage class](../API/IncomingMessageClass.md) のインスタンスのオブジェクトです。
 
-Here is the response:
+レスポンスのヘッダーは以下のようになります:
 
 ```json
 Called URL: /start/example? param=demo&name=4D 
@@ -74,9 +74,9 @@ The verb is: GET
 There are 2 url parts - Url parts are: start - example
 ```
 
-### IncomingMessage Object
+### IncomingMessageオブジェクト
 
-4D.IncomingMessage objects provide the following properties and functions:
+4D.IncomingMessage オブジェクトは、以下のプロパティと関数を提供します:
 
 |                                                                                                                                           |
 | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -93,7 +93,7 @@ There are 2 url parts - Url parts are: start - example
 
 :::note
 
-A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
+4D.IncomingMessage オブジェクトは[共有不可](../Concepts/shared.md) のオブジェクトです。
 
 :::
 
@@ -105,17 +105,17 @@ A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 <!-- REF #IncomingMessageClass.getBlob().Params -->
 
-| 引数  | 型    |                             | 説明                            |
-| --- | ---- | --------------------------- | ----------------------------- |
-| 戻り値 | BLOB | <- | Body of the request as a Blob |
+| 引数  | 型    |                             | 説明               |
+| --- | ---- | --------------------------- | ---------------- |
+| 戻り値 | BLOB | <- | Blob 形式のリクエストの本文 |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.getBlob()` function <!-- REF #IncomingMessageClass.getBlob().Summary -->returns the body of the request as a Blob<!-- END REF -->.
+`.getBlob()` 関数は、<!-- REF #IncomingMessageClass.getBlob().Summary -->リクエストの本文部分をBlob として返します<!-- END REF -->。
 
-If the body has not been given as a binary content, the function tries to convert the value but it can give unexpected results.
+本文がバイナリーコンテンツとして渡されていない場合、この関数は値をBlob に変換することを試みますが、想定外の結果を返す可能性もあります。
 
 <!-- END REF -->
 
