@@ -262,9 +262,9 @@ OTP トークンは以下の場合には無効と判断されます:
 - `$4DSID` を使用した場合、[session storage](../API/SessionClass.md#storage) にカスタムのステータスプロパティをトークン作成時に保存しておき、OTP トークンを受信したときにそれが同じ値であるかを見ることでステータスをチェックすることができます(例題参照)。
 - [`Session.restore()`](../API/SessionClass.md#restore) 関数を使用した場合、セッションが正常に復元されていれば、この関数はTrue を返します。
 
-### Scenario with $4DSID
+### $4DSIDを使用したシナリオ
 
-The scenario using the `$4DSID` key is illustrated in the following diagram:
+`$4DSID` キーを使用する場合のシナリオは、以下の図に表されています:
 
 ```mermaid
 sequenceDiagram
@@ -295,7 +295,7 @@ Note right of 4DServer: e.g. https://acme.com/my4DApp/completeOperation?$4DSID=2
 
 ```
 
-The 4D HTTP request handler definition:
+4D HTTP リクエストハンドラー定義は以下のようになります:
 
 ```json
 [
@@ -308,18 +308,18 @@ The 4D HTTP request handler definition:
 ]
 ```
 
-The singleton class:
+シングルトンクラス定義は以下のようになります:
 
 ```4d
-//Class OperationsHandler
+// OperationsHandler クラス
 shared singleton Class constructor()
     function handleOperation($request : 4D.IncomingMessage) 
     $session:=Session
 ```
 
-### Scenario with `restore` function
+### `restore`関数を使用するシナリオ
 
-The scenario using a custom parameter is illustrated in the following diagram:
+カスタムの引数を使用する場合のシナリオは、以下の図に表されています:
 
 ```mermaid
 sequenceDiagram
@@ -354,7 +354,7 @@ sequenceDiagram
 
 ```
 
-The 4D HTTP request handler definition:
+4D HTTP リクエストハンドラー定義は以下のようになります:
 
 ```json
 [
@@ -367,18 +367,18 @@ The 4D HTTP request handler definition:
 ]
 ```
 
-The singleton class:
+シングルトンクラス定義は以下のようになります:
 
 ```4d
-//Class OperationsHandler
+// OperationsHandler クラス
 shared singleton Class constructor()
     Function handleOperation($req : 4D.IncomingMessage) : 4D.OutgoingMessage
     Session.restore($req.urlQuery.state)
 ```
 
-### Example of email validation with $4DSID
+### $4DSIDを使用したメール検証の例
 
-1. A user account is created in a _Users_ dataclass. A _$info_ object is received with the email and password. An OTP corresponding to the current session is generated. An URL is then returned with this OTP given in the $4DSID parameter.
+1. ユーザーアカウントが _Users_ データクラス内で作成されるような場合を考えます。 まず、Eメールとパスワードを格納した _$info_ オブジェクトが受信されます。 次に、カレントのセッションに対応したOTP が生成されます。 最後に、$4DSID 引数内に渡されたOTP を含んだURL が返されます。
 
 ```4d
 //cs.Users class
@@ -389,26 +389,26 @@ var $user : cs.UsersEntity
 var $status : Object
 var $token : Text
 	
-$user:=This.new() //create a new user
+$user:=This.new() // 新規ユーザーを作成
 $user.fromObject($info)
 $status:=$user.save()
 	
-//Store information in the session
-//including user creation status
+// ユーザー作成ステータスを含めた情報を、
+// セッションに保存する
 Use (Session.storage)
 	Session.storage.status:=New shared object("step"; "Waiting for validation email"; /
     "email"; $user.email; "ID"; $user.ID)
 End use 
 	
-//Generate an OTP corresponding to the session
+// セッションに対応したOTP を生成
 $token:=Session.createOTP()
 
-// Return an URL with a $4DSID parameter
+// $4DSID 引数を持ったURL を返す
 return "https://my.server.com/tools/validateEmail?$4DSID="+$token`
 
 ```
 
-2. The user is sent this URL as a link in an email. The URL prefix `/validateEmail` is handled by a [custom HTTP request handler](./http-request-handler.md):
+2. ユーザーにはこのURL をリンクとして格納したEメールが送信されます。 `/validateEmail` のURL 接頭辞は[カスタムのHTTP リクエストハンドラー](./http-request-handler.md) によって管理されます:
 
 ```json
 [
@@ -421,22 +421,22 @@ return "https://my.server.com/tools/validateEmail?$4DSID="+$token`
 ]
 ```
 
-The _validateEmail()_ function of the RequestHandler singleton:
+RequestHandler シングルトンの、_validateEmail()_ 関数は以下のようになります:
 
 ```4d
-//validateEmail class
+//validateEmail クラス
 
 shared singleton Class constructor()
 
 Function validateEmail() : 4D.OutgoingMessage
 	
  var $result:=4D.OutgoingMessage.new()
-    //The session which generated the OTP is retrieved 
-    //thanks to the $4DSID parameter given in the URL
+    // OTP を生成したセッションは、
+    // $4DID 内に渡されたURL のおかげで取得することができます。
  If (Session.storage.status.step="Waiting for validation email")
 	
   $user:=ds.Users.get(Session.storage.status.ID)
-  $user.emailValidated() //set to true
+  $user.emailValidated() //true に設定する
 		
   $result.setBody("Congratulations <br>"\
   +"Your email "+Session.storage.status.email+" has been validated")
