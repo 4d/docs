@@ -454,25 +454,25 @@ Function validateEmail() : 4D.OutgoingMessage
 
 ```
 
-Since the `$4DSID` parameter contains a valid OTP corresponding to the original session, the `Session` object refers to the session that created the OTP.
+`$4DSID` 引数にはオリジナルのセッションに対応した有効なOTP が格納されているため、`Session` オブジェクトはそのOTP を作成したセッションを参照することができます。
 
-A new user is created, and some information is stored in the session, especially the current step of the user account creation process (Waiting for validation email) and the user ID.
+新規ユーザーが作成され、特にユーザーアカウント作成プロセスの現在のステップ(認証メールを待っている段階である)とユーザーIDなどのいくつかの情報がセッションに保存されます。
 
-### Supported contexts
+### サポートされるコンテキスト
 
-- Both HTTP and HTTPS schemas are supported.
-- Only [scalable sessions](#enabling-web-sessions) can be reused with tokens.
-- Only sessions of the host database can be reused (sessions created in component web servers cannot be restored).
-- Tokens are not supported with client/server sessions or single-user sessions.
+- HTTP とHTTPS スキーマの両方がサポートされます。
+- トークンで再使用ができるのは[スケーラブルセッション](#Webセッションの有効化) のみです。
+- 再使用ができるのはホストデータベースのセッションのみです(コンポーネントのWeb サーバーで作成されたセッションは復元することができません)。
+- トークンはクライアント/サーバーセッション、あるいはシングルユーザーセッションにおいてはサポートされていません。
 
-### Lifespan
+### ライフスパン
 
-A session token has a lifespan, and the session itself has a lifespan. The session token lifespan can be set [at the token creation](../API/SessionClass.md#createotp). By default, the token lifespan is the same value as the [`.idleTimeout`](../API/SessionClass.md#idletimeout) value.
+セッショントークンにはライフスパン(有効期限)があり、またセッション自身にもライフスパンがあります。 セッショントークンのライフスパンは、[トークン作成時](../API/SessionClass.md#createotp) に設定することが可能です。 デフォルトで、トークンのライフスパンは[`.idleTimeout`](../API/SessionClass.md#idletimeout) の値と同じ値となっています。
 
-A session is only restored by a token if both the session token lifespan and the session lifespan have not expired. In other cases (the session token has expired and/or the session itself has expired), a guest session is created when a web request with a session token is received.
+セッショントークンのライフパンと、セッションのライフスパンの両方がどちらも失効していない場合に限り、トークンを使用してセッションを復元することができます。 それ以外の場合(セッショントークンが失効している、またはセッション自身が失効している)には、セッショントークンをもったWeb リクエストが受信されたときにゲストセッションが作成されます。
 
 :::note
 
-For more information, please refer to the [Connect Your Web Apps to Third-Party Systems](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/) blog post.
+より詳細な情報に関しては、[Connect Your Web Apps to Third-Party Systems](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/) のblog 記事を参照して下さい。
 
 :::
