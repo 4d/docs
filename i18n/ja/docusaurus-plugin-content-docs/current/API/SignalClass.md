@@ -180,27 +180,27 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 | 引数      | 型       |                             | 説明                           |
 | ------- | ------- | --------------------------- | ---------------------------- |
-| timeout | Real    | ->                          | Maximum wait time in seconds |
+| timeout | Real    | ->                          | 最大待機時間(秒) |
 | 戻り値     | Boolean | <- | `.signaled` プロパティの状態         |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->waits until the `.signaled` property of the Signal object becomes **true** or the specified `timeout` is reached<!-- END REF -->.
+`.wait( )` 関数は、<!-- REF #SignalClass.wait().Summary -->シグナルオブジェクトの`.signaled` が**true** になるか、`timeout` で指定したタイムアウト時間が経過するまで、待機します<!-- END REF -->。
 
-To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter. Decimals are accepted.
+コード実行のブロッキングを防ぐため、*timeout* 引数に最大の待機時間を秒単位で渡すことができます。 小数の値も指定可能です。
 
-If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
+Signal がすでにシグナルされている (つまり `signaled` プロパティが **true** になっている) 状態であった場合、この関数は待機をせずに即座に実行を戻します。
 
-The function returns the value of the .signaled property:
+この関数は .signaled プロパティの値を返します:
 
-- **true** if the signal was triggered (`.trigger()` was called).
-- **false** if the timeout expired before the signal was triggered.
+- シグナルがトリガーされた場合(`.trigger()` が呼び出された場合)には**true** が返されます。
+- シグナルがトリガーされる前にタイムアウトが失効した場合には**false** が返されます。
 
 :::note 警告
 
-Calling `.wait()` without a *timeout* in the main process is not recommended, as it could freeze the entire 4D application.
+*timeout* 引数を渡さずに `.wait()` をメインプロセスで呼び出すことは推奨されていません。最悪の場合 4Dアプリケーション全体がフリーズしてしまう恐れがあります。
 
 :::
 
