@@ -7,12 +7,12 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 ### セッションの種類
 
-The following types of sessions are supported by this class:
+このクラスは以下の種類のセッションをサポートしています:
 
 - [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合、Webユーザーセッションが利用可能です。 これらは Web および REST 接続に使用され、権限を割り当てることができます。 これらは Web および REST 接続に使用され、権限を割り当てることができます。
 - [**リモートクライアントユーザー セッション**](../Desktop/clientServer.md#リモートユーザーセッション): クライアント/サーバーアプリケーションでは、リモートユーザーは、サーバー上で管理される独自のセッションを持ちます。
 - [**Stored procedures session**](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html): All stored procedures executed on the server share the same virtual user session.
-- [**Standalone session**](../Project/overview.md#development): Local session object returned in single-user application (useful in development and test phases of client/server applications).
+- [**スタンドアロンセッション**](../Project/overview.md#development): シングルユーザーアプリケーションで返されるローカルのセッションオブジェクト(クライアント/サーバーアプリケーションの開発およびテストフェーズにおいて有用です)。
 
 :::note
 
@@ -62,7 +62,7 @@ The following types of sessions are supported by this class:
 
 :::note
 
-This function does nothing and always returns **True** with remote client, stored procedure, and standalone sessions.
+この関数は、リモートクライアント、ストアドプロシージャー、およびスタンドアロンのセッションでは何もせず、常に **true** を返します。
 
 :::
 
@@ -142,7 +142,7 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 `.getPrivileges()` 関数は、<!-- REF #SessionClass.getPrivileges().Summary -->対象セッションに紐づいている全アクセス権の名称のコレクションを返します<!-- END REF -->。
 
-With remote client, stored procedure and standalone sessions, this function returns a collection only containing "WebAdmin".
+リモートクライアント、ストアドプロシージャーおよびスタンドアロンセッションでは、この関数は "WebAdmin" のみを含むコレクションを返します。
 
 :::info
 
@@ -238,7 +238,7 @@ $privileges := Session.getPrivileges()
 
 `.hasPrivilege()` 関数は、<!-- REF #SessionClass.hasPrivilege().Summary -->対象セッションに *privilege* のアクセス権が紐づいていれば true、でなければ false を返します<!-- END REF -->。
 
-With remote client, stored procedure and standalone sessions, this function always returns True, whatever the *privilege*.
+リモートクライアント、ストアドプロシージャーおよびスタンドアロンセッションでは、この関数は *privilege* に関係なく、常に True を返します。
 
 #### 例題
 
@@ -270,11 +270,11 @@ End if
 
 #### 説明
 
-`.userName` プロパティは、<!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 このプロパティは、コード内でユーザーを確認するのに使用できます。 With 4D Server, this unique string is automatically assigned by the server for each session and allows you to identify its processes.
+`.id` プロパティは、<!-- REF #SessionClass.id.Summary -->ユーザーセッションの固有のID を格納しています<!-- END REF -->。 4D Server ではこの一意の文字列は、サーバーによって各セッションに対して自動的に割り当てられ、そのプロセスを識別することを可能にします。
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands/session-storage.md) command.
+[`Session storage`](../commands/session-storage.md) コマンドにこのプロパティを渡すことで、セッションの[`.storage`](#storage) オブジェクトを取得できます。
 
 :::
 
@@ -346,33 +346,33 @@ End if
 
 :::note
 
-This property is only available with remote client, stored procedure, and standalone sessions.
+このプロパティは、リモートクライアント、ストアドプロシージャーおよびスタンドアロンセッションの場合にのみ使用できます。
 
 :::
 
-The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote client or stored procedure session on the server, or the standalone session<!-- END REF -->.
+`.info` プロパティは、<!-- REF #SessionClass.info.Summary -->サーバー上のリモートクライアントまたはストアドプロシージャーセッション、あるいはスタンドアロンセッションの情報を格納します<!-- END REF -->。
 
 :::note
 
-- The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
-- The `.info` object is the same object as the one returned by the [`Session info`](../commands/session-info.md) command for a standalone session.
+- `.info` オブジェクトは、リモートクライアントおよびストアドプロシージャーセッションに対して [`Process activity`](../commands/process-activity.md) コマンドの"session" プロパティによって返されるオブジェクトと同じです。
+- `.info` オブジェクトは、スタンドアロンセッションに対しては[`Session info`](../commands/session-info.md) コマンドによって返されるオブジェクトと同じです。
 
 :::
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ            | 型                                | 説明                                                                                                                                                                                                                           |
-| ---------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text                             | Session type: "remote", "storedProcedure", "standalone"                                                                                                                                                      |
-| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                                                                                                                   |
-| machineName      | Text                             | リモートセッション: リモートマシンの名前。 リモートセッション: リモートマシンの名前。 Stored procedures session: name of the server machine. Standalone session: name of the machine |
-| systemUserName   | Text                             | リモートセッション: リモートマシン上で開かれたシステムセッションの名前。                                                                                                                                                                        |
-| IPAddress        | Text                             | リモートマシンの IPアドレス。                                                                                                                                                                                                             |
-| hostType         | Text                             | ホストタイプ: "windows" または "mac"                                                                                                                                                                                  |
-| creationDateTime | 日付 (ISO 8601) | Date and time of session creation. Standalone session: date and time of application startup                                                                                                  |
-| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                                                                                                  |
-| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                                                                                                            |
-| persistentID     | Text                             | リモートセッション: セッションの永続的な ID                                                                                                                                                                                     |
+| プロパティ            | 型                                | 説明                                                                                                                        |
+| ---------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"                                                        |
+| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                |
+| machineName      | Text                             | リモートセッション: リモートマシンの名前。 ストアドプロシージャセッション: サーバーマシンの名前。 スタンドアロンセッションの場合: マシン名 |
+| systemUserName   | Text                             | リモートセッション: リモートマシン上で開かれたシステムセッションの名前。                                                                     |
+| IPAddress        | Text                             | リモートマシンの IPアドレス。                                                                                                          |
+| hostType         | Text                             | ホストタイプ: "windows" または "mac"                                                                               |
+| creationDateTime | 日付 (ISO 8601) | セッション作成の日付と時間。 スタンドアロンセッションの場合: アプリケーション起動の日付と時間                                                          |
+| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                               |
+| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                         |
+| persistentID     | Text                             | リモートセッション: セッションの永続的な ID                                                                                  |
 
 :::note
 
@@ -408,7 +408,7 @@ The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote
 
 :::note
 
-This function always returns **False** with remote client, stored procedure, and standalone sessions.
+この関数は、リモートクライアント、ストアドプロシージャ、およびスタンドアロンセッションでは常に**False** を返します。
 
 :::
 
@@ -456,7 +456,7 @@ End if
 
 :::note
 
-This function does nothing and always returns **False** with remote client, stored procedure, and standalone sessions.
+この関数は、リモートクライアント、ストアドプロシージャー、およびスタンドアロンのセッションでは何もせず、常に **false** を返します。
 
 :::
 
@@ -537,7 +537,7 @@ End if
 
 :::tip
 
-You can get the `.storage` property of a session using the [`Session storage`](../commands/session-storage.md) command.
+セッションの`.storage` プロパティは[`Session storage`](../commands/session-storage.md) コマンドを使用することで取得できます。
 
 :::
 
@@ -584,9 +584,9 @@ End use
 
 `.userName` プロパティは、<!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 このプロパティは、コード内でユーザーを確認するのに使用できます。
 
-- Webセッションでは、このプロパティはデフォルトで空の文字列です。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
+- Webセッションでは、このプロパティはデフォルトで空の文字列です。  これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
 - リモートおよびストアドプロシージャーセッションでは、このプロパティは [`Current user`](../commands-legacy/current-user.md) コマンドと同じユーザー名を返します。
-- With standalone sessions, this property contains "designer" or the name set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command.
+- スタンドアロンセッションでは、このプロパティは"designer" または[`SET USER ALIAS`](../commands-legacy/set-user-alias.md) コマンドで設定された名前が格納されています。
 
 このプロパティは **読み取り専用** です。
 
