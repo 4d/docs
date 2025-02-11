@@ -28,7 +28,7 @@ A seleção do motor de renderização web aninhado permite chamar aos métodos 
 
 ### Acessar métodos 4D
 
-When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a web area.
+Quando a propriedade [Acessar aos métodos 4D](properties_WebArea.md#access-4d-methods) estiver selecionada, você pode chamar métodos 4D de uma área web.
 
 :::note Notas
 
