@@ -45,7 +45,7 @@ Quando seleciona este comando, a página de início do site web publicado pela a
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. La página se llama utilizando la URL _localhost_, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
+Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. La página se llama utilizando la URL *localhost*, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
 
 ## Limpar a cache
 
@@ -72,9 +72,9 @@ La página **Watch** (sección **Web**) del Explorador de ejecución muestra la 
 
 ## URLs de administração
 
-URLs de administração web permitem que você controle o site publicado no seu servidor. 4D Web Server acepta cuatro URLs específicas: _/4DSTATS_, _/4DHTMLSTATS_, /_4DCACHECLEAR_ y _/4DWEBTEST_.
+URLs de administração web permitem que você controle o site publicado no seu servidor. 4D Web Server acepta cuatro URLs específicas: */4DSTATS*, */4DHTMLSTATS*, /*4DCACHECLEAR* y */4DWEBTEST*.
 
-> _/4DSTATS_, _/4DHTMLSTATS_ y _/4DCACHECLEAR_ sólo están disponibles para el diseñador y el administrador de la base de datos. Se o sistema de senha 4D não foi ativado, estas URLs estarão disponíveis para todos os usuários. /4DWEBTEST está sempre disponível.
+> */4DSTATS*, */4DHTMLSTATS* y */4DCACHECLEAR* sólo están disponibles para el diseñador y el administrador de la base de datos. Se o sistema de senha 4D não foi ativado, estas URLs estarão disponíveis para todos os usuários. /4DWEBTEST está sempre disponível.
 
 ### /4DSTATS
 
@@ -94,7 +94,7 @@ Estas informações permitem que você verifique o funcionamento do seu servidor
 
 ### /4DHTMLSTATS
 
-La URL _/4DHTMLSTATS_ devuelve, también como una HTML, la misma información que la URL _/4DSTATS_. La diferencia es que el campo **Cached Objects** sólo cuenta las páginas HTML (sin contar los archivos de imágenes). Además, esta URL devuelve el campo **Objetos filtrados**.
+La URL */4DHTMLSTATS* devuelve, también como una HTML, la misma información que la URL */4DSTATS*. La diferencia es que el campo **Cached Objects** sólo cuenta las páginas HTML (sin contar los archivos de imágenes). Además, esta URL devuelve el campo **Objetos filtrados**.
 
 | Elemento                | Descrição                                                               |
 | ----------------------- | ----------------------------------------------------------------------- |
@@ -107,11 +107,11 @@ La URL _/4DHTMLSTATS_ devuelve, también como una HTML, la misma información qu
 
 ### /4DCACHECLEAR
 
-La URL _/4DCACHECLEAR_ elimina inmediatamente las páginas estáticas y las imágenes de la caché. Isso permite que você "forçe" a atualização das páginas que foram modificadas.
+La URL */4DCACHECLEAR* elimina inmediatamente las páginas estáticas y las imágenes de la caché. Isso permite que você "forçe" a atualização das páginas que foram modificadas.
 
 ### /4DWEBTEST
 
-La URL _/4DWEBTEST_ permite verificar el estado del servidor web. Quando esse URL é chamado, 4D retorna um arquivo texto com os campos HTTP seguintes preenchidos:
+La URL */4DWEBTEST* permite verificar el estado del servidor web. Quando esse URL é chamado, 4D retorna um arquivo texto com os campos HTTP seguintes preenchidos:
 
 | Campo HTTP | Descrição                                           | Exemplo                                                                                                                                                                                                                                                                                                                                            |
 | ---------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -123,8 +123,8 @@ La URL _/4DWEBTEST_ permite verificar el estado del servidor web. Quando esse UR
 
 4D permite gerar dois logs de pedidos web:
 
-- un historial de depuración, útil en la fase de desarrollo del servidor web (_HTTPDebugLog.txt_),
-- un historial estandarizado de peticiones web, más bien utilizado con fines estadísticos (_logweb.txt_).
+- un historial de depuración, útil en la fase de desarrollo del servidor web (*HTTPDebugLog.txt*),
+- un historial estandarizado de peticiones web, más bien utilizado con fines estadísticos (*logweb.txt*).
 
 Ambos archivos de historial se crean automáticamente en la carpeta **Logs** del proyecto de aplicación.
 
@@ -151,7 +151,7 @@ The [web log recording file](webServerConfig.md#log-recording) can be enabled us
 
 #### CLF/DLF
 
-Each line of the file represents a request, such as: _host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length_ Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length* Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
 
 O formato DLF (Formato Combinado de Log) é semelhante ao formato CLF (Formato Comum de Log) e usa exatamente a mesma estrutura. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent. Eis a descrição dos formatos CLF/DLF (não personalizáveis):
 
@@ -209,11 +209,11 @@ A tabela a seguir lista os campos disponíveis para cada formato (em ordem alfab
 
 #### Frequência do backup
 
-Dado que un archivo _logweb.txt_ puede llegar a ser considerablemente grande, es posible establecer un mecanismo de archivo automático. O acionamento de um backup pode ser baseado em um determinado período de tempo (expresso em horas, dias, semana ou meses) ou baseado no tamanho do arquivo; quando o prazo definido (ou tamanho do arquivo) for atingido, 4D automaticamente fecha e arquiva o arquivo de registro atual e cria um novo.
+Dado que un archivo *logweb.txt* puede llegar a ser considerablemente grande, es posible establecer un mecanismo de archivo automático. O acionamento de um backup pode ser baseado em um determinado período de tempo (expresso em horas, dias, semana ou meses) ou baseado no tamanho do arquivo; quando o prazo definido (ou tamanho do arquivo) for atingido, 4D automaticamente fecha e arquiva o arquivo de registro atual e cria um novo.
 
-Cuando se activa la copia de seguridad del archivo de registro web, el archivo de registro se archiva en una carpeta llamada "Archivos Logweb", que se crea en el mismo nivel que el archivo _logweb.txt_.
+Cuando se activa la copia de seguridad del archivo de registro web, el archivo de registro se archiva en una carpeta llamada "Archivos Logweb", que se crea en el mismo nivel que el archivo *logweb.txt*.
 
-O arquivo arquivado é renomeado com base no seguinte exemplo: “DYYYY_MM_DDD_Thh_mm_ss.txt.” Por exemplo, para um dossiê arquivado em 4 de Setembro de 2020 às 3h50. e 7 segundos: “D2020_09_04_T15_50_07.txt.”
+O arquivo arquivado é renomeado com base no seguinte exemplo: “DYYYY_MM_DDD_Thh_mm_ss.txt.” Por exemplo, para um dossiê arquivado em 4 de Setembro de 2020 às 3h50. e 7 segundos: “D2020_09_04_T15_50_07.txt.” e 7 segundos: “D2020_09_04_T15_50_07.txt.”
 
 #### Parâmetros de backup
 
@@ -230,7 +230,7 @@ First you must choose the frequency (days, weeks, etc.) or the file size limit c
 
 - **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduza 1 se pretender efetuar uma cópia de segurança diária. Quando essa opção estiver marcada, você deve indicar a hora em que o backup deve ser iniciado.
 
-- **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar. Por exemplo, você pode usar essa opção para definir dois backups semanais: um nas quartas-feiras e outro na sexta-feira.
+- **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar.
 
 - **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Digite 1 se quiser realizar uma cópia de segurança mensal. Quando essa opção estiver marcada, você deve indicar o dia do mês e a hora em que o backup deve ser iniciado.
 
