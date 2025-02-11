@@ -11,11 +11,11 @@ La propiedad **Title** contiene la etiqueta de un menú o elemento de menú tal 
 
 En el editor de menús, puede introducir directamente la etiqueta como "fijo". También puede introducir una referencia para una variable o un elemento XLIFF, lo que facilitará el mantenimiento y la traducción de las aplicaciones. Puede utilizar los siguientes tipos de referencias:
 
-- Una referencia a un recurso XLIFF del tipo :xliff:MyLabel. Para más información sobre las referencias XLIFF, consulte la sección _Arquitectura XLIFF_ en _Referencia Diseño 4D_.
+- Una referencia a un recurso XLIFF del tipo :xliff:MyLabel. Para más información sobre las referencias XLIFF, consulte la sección *Arquitectura XLIFF* en *Referencia Diseño 4D*.
 - Un nombre de variable interproceso seguido de un número, por ejemplo:
-  `:<>vlang,3`. Si se cambia el contenido de esta variable, se modificará la etiqueta del menú cuando se muestre. En este caso, la etiqueta llamará a un recurso XLIFF. El valor contenido en la variable `<>vlang` corresponde al atributo _id_ del elemento _group_. El segundo valor (3 en este ejemplo) designa el atributo _id_ del elemento _trans-unit_.
+  `:<>vlang,3`. Si se cambia el contenido de esta variable, se modificará la etiqueta del menú cuando se muestre. En este caso, la etiqueta llamará a un recurso XLIFF. El valor contenido en la variable `<>vlang` corresponde al atributo *id* del elemento *group*. El segundo valor (3 en este ejemplo) designa el atributo *id* del elemento *trans-unit*.
 
-Utilizando el lenguaje 4D, se define la propiedad del título a través del parámetro _itemText_ de los comandos `APPEND MENU ITEM`, `INSERT MENU ITEM`, y `SET MENU ITEM`.
+Utilizando el lenguaje 4D, se define la propiedad del título a través del parámetro *itemText* de los comandos `APPEND MENU ITEM`, `INSERT MENU ITEM`, y `SET MENU ITEM`.
 
 ### Caracteres de control
 
@@ -55,14 +55,14 @@ La elección entre asociar una acción estándar o un método proyecto a un coma
 Puede asignar un método proyecto y/o una acción estándar a un comando de menú seleccionado en el editor de menú:
 
 - **Nombre del método**: seleccione un nombre de método proyecto existente en el combo box. Si el método proyecto no existe, introduzca su nombre en el combo "Nombre del método" y haga clic en el botón [...] button. 4D muestra un diálogo de creación de método proyecto que se utiliza para acceder al editor de código.
-- **Acción estándar asociada**: elija o escriba la acción que desea asignar en el combo box "Acción estándar asociada". Puede introducir toda acción soportada y (opcionalmente) el parámetro que desee en el área. Para obtener una lista completa de acciones estándar, consulte la sección **Acciones estándar** en el _Modo Diseño_.
-  **Nota para macOS:** en macOS, los comandos de menús personalizados asociados a la acción _Salir_ se colocan automáticamente en el menú de la aplicación, conforme a los estándares de interfaz de la plataforma.
+- **Acción estándar asociada**: elija o escriba la acción que desea asignar en el combo box "Acción estándar asociada". Puede introducir toda acción soportada y (opcionalmente) el parámetro que desee en el área. Para obtener una lista completa de acciones estándar, consulte la sección **Acciones estándar** en el *Modo Diseño*.
+  **Nota para macOS:** en macOS, los comandos de menús personalizados asociados a la acción *Salir* se colocan automáticamente en el menú de la aplicación, conforme a los estándares de interfaz de la plataforma.
 
 Utilizando el lenguaje 4D, puedes asociar un método proyecto utilizando el comando `SET MENU ITEM METHOD`, y una acción estándar utilizando el comando `SET MENU ITEM PROPERTY`.
 
 ### Iniciar un proceso
 
-La opción **Iniciar un nuevo proceso** está disponible para los comandos de menú asociados a los métodos. Puede definirse a través de una casilla de selección en el editor de menús, o a través del parámetro _propiedad_ del comando `SET MENU ITEM PROPERTY`.
+La opción **Iniciar un nuevo proceso** está disponible para los comandos de menú asociados a los métodos. Puede definirse a través de una casilla de selección en el editor de menús, o a través del parámetro *propiedad* del comando `SET MENU ITEM PROPERTY`.
 
 Cuando la opción **Iniciar un nuevo proceso** está activada, se crea un nuevo proceso cuando se elige el comando de menú.
 Normalmente, un método asociado a un comando de menú se ejecuta en el proceso actual a menos que llame explícitamente a un nuevo proceso en su código. La opción **Iniciar un nuevo proceso** facilita el lanzamiento de un nuevo proceso. Si se activa, 4D creará un nuevo proceso cuando se elija el comando del menú.
