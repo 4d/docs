@@ -35,7 +35,7 @@ Permite modificar o número da porta TCP/IP usada pelo servidor Web para as cone
 
 #### Permitir o acesso ao banco de dados por meio de URLs 4DSYNC
 
-_Nota de compatibilidade_: Essa opção está [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para acesso ao banco de dados por meio de HTTP, agora é recomendado usar as funcionalidades de armazenamento remoto do ORDA e solicitações REST.
+*Nota de compatibilidade*: Essa opção está [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para acesso ao banco de dados por meio de HTTP, agora é recomendado usar as funcionalidades de armazenamento remoto do ORDA e solicitações REST.
 
 ### Caminhos
 
@@ -88,7 +88,7 @@ Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
 #### Sessões herdadas (sessões de processo único)
 
-_Nota de compatibilidad:_ esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
+*Nota de compatibilidad:* esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
 
 Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. Esse mecanismo é descrito na seção [Web Sessions Management (Legacy)] (https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Veja [Manter Sessão](../WebServer/webServerConfig.md#keep-session).
 
@@ -128,7 +128,7 @@ Personalizado (padrão)
 Senhas com protocolo BASIC
 Senhas com protocolo DIGEST
 
-É recomendado usar a autenticação personalizada. Veja o capítulo [**Autenticação**](../WebServer/authentication.md) na documentação _Desenvolvimento Web_.
+É recomendado usar a autenticação personalizada. Veja o capítulo [**Autenticação**](../WebServer/authentication.md) na documentação *Desenvolvimento Web*.
 
 ## Opções (II)
 
@@ -160,7 +160,7 @@ Lista de hosts e métodos permitidos para o serviço CORS. Ver [Parámetros CORS
 
 ### Formato do histórico
 
-Inicia ou interrompe o registro das solicitações recebidas pelo servidor da Web 4D no arquivo _logweb.txt_ e define seu formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
+Inicia ou interrompe o registro das solicitações recebidas pelo servidor da Web 4D no arquivo *logweb.txt* e define seu formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
 
 > A ativação e desativação do arquivo de log de solicitações também pode ser realizada pela programação usando o comando [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
 
@@ -265,7 +265,7 @@ Para obter mais informações sobre o suporte de serviços da Web em 4D, consult
 
 Essa área contém várias opções relacionadas ao uso de 4D como um "servidor" de serviços da Web, ou seja, a publicação de métodos projeto na forma de serviços Web.
 
-- **Autorizar peticiones de servicios web**: Esta opção permite que você inicialize a publicação de Serviços Web. Se essa opção não tiver sido marcada, o 4D recusará solicitações SOAP e não gerará um WSDL, mesmo que os métodos tenham o atributo _Published in WSDL_. Quando essa opção está marcada, 4D cria o arquivo WSDL.
+- **Autorizar peticiones de servicios web**: Esta opção permite que você inicialize a publicação de Serviços Web. Se essa opção não tiver sido marcada, o 4D recusará solicitações SOAP e não gerará um WSDL, mesmo que os métodos tenham o atributo *Published in WSDL*. Quando essa opção está marcada, 4D cria o arquivo WSDL.
 - **Nome do Serviço Web**: Esta área permite que você altere o "nome genérico" do Serviço Web. Esse nome é usado para diferenciar os serviços no nível do servidor SOAP (quando o servidor publica vários serviços Web diferentes), bem como nos diretórios de serviços Web. Por padrão, 4D usa o nome A_WebService.
 - **Namespace de Serviços Web**: Essa área é usada para alterar o namespace dos serviços da Web publicados por 4D. Cada serviço Web publicado na Internet deve ser único. A singularidade dos nomes dos Serviços Web é assegurada pelo uso de namespaces XML. Um namespace é uma cadeia de caracteres arbitrária usada para identificar um conjunto de tags XML de forma exclusiva. Normalmente, o namespace começa com a URL da empresa (http://mycompany.com/mynamespace). Nesse caso, não é indispensável ter algo em particular no URL indicado; o que importa é que a cadeia de caracteres usada seja exclusiva. Por padrão, o 4D usa o seguinte namespace: http://www.4d.com/namespace/default.
 
