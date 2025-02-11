@@ -73,7 +73,7 @@ Os processos Web geralmente não terminam, eles são reciclados em um pool para 
 
 ## Armazenar e compartilhar informações de sessão
 
-Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). Essa propriedade permite que você compartilhe informações entre todos os processos manipulados pela sessão.
+Cada objeto `Session` fornece uma propriedade [`.storage`](API/SessionClass.md#storage) que é um [objeto compartilhado](Concepts/shared.md). Essa propriedade permite que você compartilhe informações entre todos os processos manipulados pela sessão.
 
 ## Duração da sessão
 
