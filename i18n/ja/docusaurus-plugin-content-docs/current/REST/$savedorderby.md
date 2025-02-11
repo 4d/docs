@@ -3,7 +3,7 @@ id: savedorderby
 title: $savedorderby
 ---
 
-エンティティセット作成時に、`$orderby` に定義した並べ替え情報を保存します (_例_: `$savedorderby="{orderby}"`)
+エンティティセット作成時に、`$orderby` に定義した並べ替え情報を保存します (*例*: `$savedorderby="{orderby}"`)
 
 ## 説明
 
