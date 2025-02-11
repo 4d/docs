@@ -88,7 +88,7 @@ Por tanto, NO se llama al método base `On Web Authentication`:
 
 ### Sintaxis
 
-**On Web Authentication**( _$url_ : Text ; _$content_ : Text ; _$IPClient_ : Text ; _$IPServer_ : Text ; _$user_ : Text ; _$password_ : Text ) -> $accept : Boolean
+**On Web Authentication**( *$url* : Text ; *$content* : Text ; *$IPClient* : Text ; *$IPServer* : Text ; *$user* : Text ; *$password* : Text ) -> $accept : Boolean
 
 | Parámetros | Tipo    |                             | Descripción                                                                  |
 | ---------- | ------- | :-------------------------: | ---------------------------------------------------------------------------- |
