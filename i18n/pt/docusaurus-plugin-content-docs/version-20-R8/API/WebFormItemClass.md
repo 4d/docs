@@ -3,7 +3,7 @@ id: WebFormItemClass
 title: WebFormItem
 ---
 
-`4D.WebFormItem` objects are properties of the [`4D.WebForm`](WebFormItemClass.md) object returned by the [`Web Form`](WebFormClass.md#web-form) command.
+Os objetos `4D.WebFormItem` são propriedades do objeto [`4D.WebForm`](WebFormItemClass.md) retornado pelo comando [`Web Form`](WebFormClass.md#web-form).
 
 A classe `WebFormItem` é detalhada na [documentação Qodly](https://developer.qodly.com/docs/language/WebFormItemClass).
 
@@ -74,7 +74,7 @@ For more information, please refer to the [`.show()` description in the Qodly do
 
 #### Descrição
 
-The `.addCSSClass` function <!-- REF #WebFormItemClass.addCSSClass().Summary -->adds the class specified in *className* to the component<!-- END REF -->.
+A função `.addCSSClass` <!-- REF #WebFormItemClass.addCSSClass().Summary -->adiciona a classe especificada no *className* ao component<!-- END REF -->.
 
 For more information, please refer to the [`.addCSSClass` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#addcssclass).
 
