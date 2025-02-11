@@ -81,7 +81,7 @@ A propriedade `.bandRows` <!-- REF #TableOptions.bandRows.Summary --> indica se 
 
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-The `.highlightLastColumn` property <!-- REF #TableOptions.highlightLastColumn.Summary -->indicates whether to highlight the last column<!-- END REF -->. Padrão = False
+A propriedade `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary --> indica se deve destacar a última coluna<!-- END REF -->. Padrão = False
 
 ### .highlightFirstColumn
 
@@ -113,7 +113,7 @@ A propriedade `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica 
 
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a _source_<!-- END REF -->. Padrão = False
+The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a *source*<!-- END REF -->. Padrão = False
 
 ### .tableColumns
 
@@ -247,7 +247,7 @@ A propriedade `.highlightLastColumn` <!-- REF #TableTheme.highlightLastColumn.Su
 
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-The `.highlightFirstColumn` property <!-- REF #TableTheme.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->.
+A propriedade `.highlightFirstColumn` <!-- REF #TableTheme.highlightFirstColumn.Summary -->indica se a primeira coluna deve destacar<!-- END REF -->.
 
 ### .theme
 
@@ -338,7 +338,7 @@ The `.highlightFirstColumnStyle` property is the <!-- REF #TableThemeOptions.hig
 
 **.highlightLastColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.highlightLastColumnStyle` property is the <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->style of the last column<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
+A propriedade `.highlightLastColumnStyle` é o <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary --> estilo da última coluna<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
 
 ### .lastFooterCellStyle
 
