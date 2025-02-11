@@ -36,10 +36,10 @@ Quando a operação estiver concluída, os arquivos compactados substituem autom
 
 ## Abrir arquivo de registo
 
-Depois que a compactação terminar, 4D gera um arquivo de histórico na pasta Logs do banco de dados. Este arquivo permite visualizar todas as operações efectuadas. É criada no formato XML e se chama  _DatabaseName\*\*_Compact_Log_yyyy-mm-dd hh-mm-ss.xml_" onde:
+Depois que a compactação terminar, 4D gera um arquivo de histórico na pasta Logs do banco de dados. Este arquivo permite visualizar todas as operações efectuadas. É criada no formato XML e se chama  *DatabaseName\*\*_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" onde:
 
-- _ApplicationName_ es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
-- _yyyy-mm-dd hh-mm-ss_ es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
+- *ApplicationName* es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
+- *yyyy-mm-dd hh-mm-ss* es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
 
 Al presionar el botón **Abrir archivo de historial**, 4D muestra el archivo de historial más reciente en el navegador por defecto de la máquina.
 
