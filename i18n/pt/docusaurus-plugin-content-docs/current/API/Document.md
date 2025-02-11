@@ -411,7 +411,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. Se o arquivo não existir em disco, o tamanho é 0.
+A propriedade `.size` retorna <!-- REF #document.size.Summary --> o tamanho do arquivo expresso em bytes<!-- END REF -->. Se o arquivo não existir em disco, o tamanho é 0.
 
 Essa propriedade é **somente leitura**.
 
