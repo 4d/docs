@@ -155,7 +155,7 @@ The following commands and classes are dedicated to the server-side management o
 Recomendamos o uso de funções classe em vez de métodos projeto. Apenas as funções de classe podem ser chamadas a partir de componentes. No entanto, você ainda pode usar seus métodos projeto no Qodly Studio de duas maneiras:
 
 - Você pode chamar seus métodos a partir de funções classe.
-- You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
+- Você pode diretamente [executar seus métodos](https://developer.qodly.com/docs/studio/coding#methods-and-classes) do Explorador Qodly.
 
 ### Uso fora de linha
 
@@ -321,7 +321,7 @@ In default mode when any page is rendered, or in "force login" mode when a page 
 
 A configuração do esquema URL de Qodly Studio (HTTP e HTTPS) determina quantas licenças são retidas ao renderizar os formulários Qodly. With the appropriate configuration, you can avoid unnecessary license retaining.
 
-As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. Por outro lado, o [motor de renderização](#rendering-webforms) se comunica com o servidor web 4D do banco de dados usando solicitações REST. Dessa forma, se comporta como um Cliente 4D convencional.
+Como explicado na seção [configuração](#configuration), o servidor web WebAdmin fornece um acesso web seguro a Qodly Studio. Por outro lado, o [motor de renderização](#rendering-webforms) se comunica com o servidor web 4D do banco de dados usando solicitações REST. Dessa forma, se comporta como um Cliente 4D convencional.
 
 Se você executar o renderizador a partir do Qodly Studio e esses dois servidores web não forem acessados através do mesmo esquema de URL (HTTP ou HTTPS), isso pode levar a uma contagem incorreta de licenças.
 
