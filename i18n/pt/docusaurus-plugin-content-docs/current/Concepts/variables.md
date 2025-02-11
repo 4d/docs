@@ -136,7 +136,7 @@ var $mycol:=[]  // Inferred as a Collection
 
 :::note
 
-O tipo inferido pode ser diferente entre [modo interpretado e compilado] (interpreted.md) se a avaliação do valor for muito ambígua. Nesse caso, um aviso é gerado pelo compilador e um tipo variante é usado. For example, in the following _$a_ type will be correctly inferred in interpreted mode (Text), but the syntax checking will generate a warning and _$a_ will be typed as a variant for the compiled mode.
+O tipo inferido pode ser diferente entre [modo interpretado e compilado] (interpreted.md) se a avaliação do valor for muito ambígua. Nesse caso, um aviso é gerado pelo compilador e um tipo variante é usado. For example, in the following *$a* type will be correctly inferred in interpreted mode (Text), but the syntax checking will generate a warning and *$a* will be typed as a variant for the compiled mode.
 
 ```4d
 var $class:={test: "a"}
@@ -171,17 +171,17 @@ O operador de atribuição é a maneira mais importante de criar uma variável e
 MyNumber:=3
 ```
 
-cria a variável _MyNumber_ e coloca o número 3 nela. Se o MyNumber já existe, então o número 3 é apenas colocado nele.
+cria a variável *MyNumber* e coloca o número 3 nela. Se o MyNumber já existe, então o número 3 é apenas colocado nele.
 
 > Geralmente não é recomendado criar variáveis sem [declarar seu tipo](#declaring-variables).
 
-Naturalmente, as variáveis não seriam muito úteis se não se conseguisse obter dados delas. Mais uma vez, utiliza-se o operador de atribuição. Se precisar colocar o valor de MyNumber em um campo chamado [Products]Size, você escreveria _MyNumber_ no lado direito do operador de atribuição:
+Naturalmente, as variáveis não seriam muito úteis se não se conseguisse obter dados delas. Mais uma vez, utiliza-se o operador de atribuição. Se precisar colocar o valor de MyNumber em um campo chamado [Products]Size, você escreveria *MyNumber* no lado direito do operador de atribuição:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-Nesse caso, _[Products]Size_ seria igual a 3. Este exemplo é bastante simples, mas ilustra a forma fundamental como os dados são transferidos de um local para outro utilizando a língua.
+Nesse caso, *[Products]Size* seria igual a 3. Este exemplo é bastante simples, mas ilustra a forma fundamental como os dados são transferidos de um local para outro utilizando a língua.
 
 ## Variáveis locais, processo e inter-processo
 
