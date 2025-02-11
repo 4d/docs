@@ -200,7 +200,7 @@ Quando a função for chamada, ela recebe na propriedade `$editor.editor` uma c�
 
 Depois que as operações forem concluídas, se a macro resultar na modificação, adição ou remoção de objetos, você poderá passar as propriedades editadas resultantes em `$result`. O processador macro analisará as propriedades retornadas e aplicará as operações necessárias no formulário. Obviamente, quanto menos propriedades você retornar, menos tempo o processamento exigirá.
 
-Aqui estão as propriedades retornadas no parâmetro _$editor_:
+Aqui estão as propriedades retornadas no parâmetro *$editor*:
 
 | Propriedade                                                      | Tipo       | Descrição                                                                              |
 | ---------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------- |
