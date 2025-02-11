@@ -20,7 +20,7 @@ Os nomes de dataclass podem ser utilizados diretamente nos pedidos REST para tra
 
 ## \{dataClass\}
 
-Devuelve todos los datos (por defecto las 100 primeras entidades) para una clase de datos específica (_por ejemplo_, `Company`)
+Devuelve todos los datos (por defecto las 100 primeras entidades) para una clase de datos específica (*por ejemplo*, `Company`)
 
 ### Descrição
 
@@ -135,7 +135,7 @@ Retorna todas as datas para uma classe de dados específica.
 
 ## \{dataClass\}\[{key}]
 
-Returns the data for the specific entity defined by the dataclass's primary key, _e.g._, `Company[22]` or `Company[IT0911AB2200]`
+Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22]` or `Company[IT0911AB2200]`
 
 ### Descrição
 
@@ -186,7 +186,7 @@ Retorna os dados para uma entidade na qual os valores de atributo são definidas
 
 ### Descrição
 
-By passing the _dataClass_ and an _attribute_ along with a value, you can retrieve all the public information for that entity. O valor é um valor único para o atributo, mas não é a chave primária.
+By passing the *dataClass* and an *attribute* along with a value, you can retrieve all the public information for that entity. O valor é um valor único para o atributo, mas não é a chave primária.
 
 `GET  /rest/Company:companyCode(Acme001)`
 
