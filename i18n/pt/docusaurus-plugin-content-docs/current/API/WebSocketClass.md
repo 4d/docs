@@ -139,7 +139,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 #### Descrição
 
-The `.dataType` property contains <!-- REF #WebSocketClass.dataType.Summary -->the type of the response body content<!-- END REF -->. Pode ser "text", "blob" ou "object".
+A propriedade `.dataType` contém <!-- REF #WebSocketClass.dataType.Summary --> o tipo do conteúdo do corpo de resposta<!-- END REF -->. Pode ser "text", "blob" ou "object".
 
 Esta propriedade é só de leitura.
 
