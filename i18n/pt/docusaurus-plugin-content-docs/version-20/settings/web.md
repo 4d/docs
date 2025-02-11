@@ -254,7 +254,7 @@ Configure the automatic backup parameters for the request log. Configure the aut
 
     -   **iniciando em**: usado para definir a hora em que o primeiro backup começará.
 -   **A cada X dia(s) às X**: esta opção é usada para programar backups diários. Introduza 1 se pretender efetuar uma cópia de segurança diária. Quando essa opção estiver marcada, você deve indicar a hora em que o backup deve ser iniciado.
--   **A cada X semana(s), dia em X**: essa opção é usada para programar backups semanais. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar. Por exemplo, você pode usar essa opção para definir dois backups semanais: um às quartas-feiras e outro às sextas-feiras.
+-   **A cada X semana(s), dia em X**: essa opção é usada para programar backups semanais. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Por exemplo, você pode usar essa opção para definir dois backups semanais: um às quartas-feiras e outro às sextas-feiras.
 -   **A cada X mês(es), dia X às X**: essa opção é usada para programar backups mensais. Digite 1 se quiser realizar uma cópia de segurança mensal. Quando essa opção estiver marcada, você deve indicar o dia do mês e a hora em que o backup deve ser iniciado.
 -   **A cada X MB**: essa opção é usada para programar backups com base no tamanho do arquivo de registro de solicitações atual. Um backup é automaticamente acionado quando o arquivo atinge o tamanho definido. Você pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
 
