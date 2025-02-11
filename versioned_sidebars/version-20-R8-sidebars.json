@@ -2597,6 +2597,8 @@
             "API/SignalClass",
             "API/SMTPTransporterClass",
             "API/SystemWorkerClass",
+            "API/TCPConnectionClass",
+            "API/TCPEventClass",
             "API/WebFormClass",
             "API/WebFormItemClass",
             "API/WebServerClass",

@@ -22,8 +22,9 @@ Sur Windows Server 2025, certaines options personnalisées de la nouvelle boîte
 
 :::
 
-- Possibilité de [construire des applications autonomes sans licences intégrées](../Desktop/building.md#licenses).
+- Possibilité de [construire des applications autonomes sans licences intégrées](../Desktop/building.md#licences).
 - [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.6): liste de tous les bugs qui ont été corrigés dans 4D 20.6 LTS.
+
 
 
 
