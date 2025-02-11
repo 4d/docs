@@ -71,7 +71,7 @@ Para manejar este caso, las aplicaciones 4D ejecutadas en modo SDI incluyen un m
 
 :::note
 
-Cuando se llama a un menú con una acción estándar asociada _salir_, la aplicación sale y se cierran todas las ventanas, sea cual sea el lugar desde el que se llamó al menú.
+Cuando se llama a un menú con una acción estándar asociada *salir*, la aplicación sale y se cierran todas las ventanas, sea cual sea el lugar desde el que se llamó al menú.
 
 :::
 
