@@ -11,4 +11,4 @@ Para modificar um atalho, pode selecionar/desmarcar o item a modificar (Shift, A
 
 Tenga en cuenta que cada acceso directo incluye implícitamente la tecla **Ctrl** (Windows) o **Comando** (macOS).
 
-Si edita esta lista, la configuración de sus accesos directos personalizados se almacena en un archivo _4DShortcutsvXX.xml_, creado en el mismo nivel que [el archivo de preferencias usuario](overview.md#storage). Assim, cada vez que 4D é atualizado, as suas preferências de atalhos de teclado permanecem.
+Si edita esta lista, la configuración de sus accesos directos personalizados se almacena en un archivo *4DShortcutsvXX.xml*, creado en el mismo nivel que [el archivo de preferencias usuario](overview.md#storage). Assim, cada vez que 4D é atualizado, as suas preferências de atalhos de teclado permanecem.
