@@ -201,7 +201,7 @@ La boîte de dialogue “Dupliquer plusieurs” apparaît lorsque vous sélectio
 - Pour les lignes et les colonnes, définissez le décalage que vous souhaitez appliquer à chaque nouveau duplicata. La valeur saisie doit être exprimée en points Elle sera appliquée à chaque copie par rapport à l'objet d'origine. Elle sera appliquée à chaque copie par rapport à l'objet d'origine. Par exemple, si vous souhaitez laisser un décalage vertical de 20 points entre chaque objet et que la hauteur de l'objet source est de 50 points, entrez 70 dans la zone "Décalage" de la colonne.
 
 - Si vous souhaitez créer une matrice de variables, cochez l’option **Numéroter les variables** et sélectionnez le sens dans lequel la numérotation des variables doit s’effectuer.
-  Cette option n’est active que si l’objet sélectionné est une variable. Pour plus d’informations sur cette option, reportez-vous à la section **Dupliquer sur matrice** du _Manuel de développement_.
+  Cette option n’est active que si l’objet sélectionné est une variable. Pour plus d’informations sur cette option, reportez-vous à la section **Dupliquer sur matrice** du *Manuel de développement*.
 
 ### Déplacer des objets
 
@@ -324,7 +324,7 @@ Pour répartir des objets à l’aide de la boîte de dialogue d'alignement et r
 
 3. Dans les zones Alignement gauche/droite et/ou haut/bas, cliquez sur l'icône de distribution standard : ![](../assets/en/FormEditor/horizontalDistribution.png) <p>(icône standard de distribution horizontale)</p>La zone d'exemple affiche les résultats de votre sélection.
 
-4. Pour effectuer une distribution qui utilise le schéma standard, cliquez sur **Aperçu** ou _Appliquer_.<p>Dans ce cas, 4D effectuera une distribution standard, de sorte que les objets soient répartis avec une quantité d'espace égale entre eux.</p>OU :<p>Pour exécuter une distribution spécifique, sélectionnez l'option **Distribuer** (par exemple, si vous souhaitez distribuer les objets en fonction de la distance par rapport à leur côté droit). Cette option agit comme un interrupteur. Si la case à cocher Répartir est sélectionnée, les icônes situées en dessous effectuent une fonction différente:</p>
+4. Pour effectuer une distribution qui utilise le schéma standard, cliquez sur **Aperçu** ou *Appliquer*.<p>Dans ce cas, 4D effectuera une distribution standard, de sorte que les objets soient répartis avec une quantité d'espace égale entre eux.</p>OU :<p>Pour exécuter une distribution spécifique, sélectionnez l'option **Distribuer** (par exemple, si vous souhaitez distribuer les objets en fonction de la distance par rapport à leur côté droit). Cette option agit comme un interrupteur. Si la case à cocher Répartir est sélectionnée, les icônes situées en dessous effectuent une fonction différente:</p>
 
 - Horizontalement, les icônes correspondent aux répartitions suivantes : équidistance des côtés gauches, des centres (hor.) et des côtés droits des objets sélectionnés.
 - Verticalement, les icônes correspondent aux répartitions suivantes : équidistance des bords supérieurs, des centres (vert.) et des bords inférieurs des objets sélectionnés.
@@ -397,7 +397,7 @@ Lorsque vous changez l’ordre de saisie, vous pouvez sélectionner un groupe d�
 
 Pour créer un groupe de saisie :
 
-1. Sélectionnez **Ordre de saisie** dans le menu _Formulaire_ ou cliquez sur le bouton  dans la barre d’outils de la fenêtre.
+1. Sélectionnez **Ordre de saisie** dans le menu *Formulaire* ou cliquez sur le bouton  dans la barre d’outils de la fenêtre.
 2. Dessinez un rectangle de sélection autour des objets que vous souhaitez grouper pour la saisie.
 
 Lorsque vous relâchez le bouton de la souris, les objets contenus ou touchés par le rectangle suivent l’ordre de saisie par défaut. L’ordre de saisie des autres objets est réorganisé en conséquence.
@@ -542,7 +542,7 @@ Le principe de cette fonction est le suivant : chaque badge est associé à une 
 
 ### Utilisation des badges
 
-Pour activer un badge, cliquez sur l'icône _badge_ jusqu’à ce que le badge souhaité soit sélectionné. Vous pouvez également cliquer sur la partie droite du bouton et sélectionner directement le type de badge à afficher dans le menu associé :
+Pour activer un badge, cliquez sur l'icône *badge* jusqu’à ce que le badge souhaité soit sélectionné. Vous pouvez également cliquer sur la partie droite du bouton et sélectionner directement le type de badge à afficher dans le menu associé :
 
 Pour ne pas afficher de badges, choisissez la ligne **Pas de badges** dans le menu de sélection.
 
