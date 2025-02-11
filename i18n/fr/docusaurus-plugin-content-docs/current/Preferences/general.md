@@ -100,7 +100,7 @@ Si vous avez l'intention d'utiliser des VCS ou des éditeurs de code externes av
 
 > Vous pouvez toujours obtenir le code avec les tokens en appelant la <a href="https://doc.4d.com/4dv19R/help/command/en/page1190.html"><code>METHOD GET CODE</code></a> avec 1 dans le paramètre <em x-id="3">option</em>.
 
-> You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the _option_ parameter.
+> You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the *option* parameter.
 
 #### Exclusion des tokens dans les projets existants
 
