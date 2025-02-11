@@ -153,7 +153,7 @@ Eis um breve exemplo do aspeto do seu ficheiro JSON:
 
 #### Arquivos de tradução
 
-Translation files translate the names of templates, themes, tables, fields, and formulas. These files are added to the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" folder in your project.
+Translation files translate the names of templates, themes, tables, fields, and formulas. Estes arquivos são adicionados à pasta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" em seu projeto.
 
 Each translation file must be named with the corresponding language code (for example "en" for English or "fr" for French).
 
