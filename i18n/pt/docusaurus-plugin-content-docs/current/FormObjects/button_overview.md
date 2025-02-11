@@ -3,7 +3,7 @@ id: buttonOverview
 title: Botão
 ---
 
-Um botão é um objeto ativo ao qual pode ser atribuída uma ação (_por exemplo_, uma tarefa de banco de dados ou uma função de interface) a executar quando um usuário clica nele.
+Um botão é um objeto ativo ao qual pode ser atribuída uma ação (*por exemplo*, uma tarefa de banco de dados ou uma função de interface) a executar quando um usuário clica nele.
 
 ![](../assets/en/FormObjects/button_regular.png)
 
@@ -26,7 +26,7 @@ La [variable](properties_Object.md#variable-or-expression) asociada a un botón 
 
 Os estilos dos botões controlam a aparência geral de um botão, bem como as suas propriedades disponíveis. É possível aplicar diferentes estilos pré-definidos a botões ou associar-lhes menus pop-up. Um grande número de variações podem ser obtidas combinando essas propriedades/comportamentos.
 
-Com exceção das [propriedades disponíveis](#supported-properties), muitos objetos de botão são _estruturalmente_ idênticos. A diferença é no processamento das variáveis associadas.
+Com exceção das [propriedades disponíveis](#supported-properties), muitos objetos de botão são *estruturalmente* idênticos. A diferença é no processamento das variáveis associadas.
 
 4D fornece botões nos seguintes estilos pré-definidos:
 
@@ -90,11 +90,11 @@ O estilo de botão Barra de Ferramentas está pensado principalmente para sua in
 
 Por padrão, o estilo da barra de ferramentas tem um fundo transparente com um rótulo no centro. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - o botão é destacado quando usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e no centro do botão.
+- *Windows* - o botão é destacado quando usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e no centro do botão.
 
 ![](../assets/en/FormObjects/button_toolbar.png)
 
-- _macOS_ - o destaque do botão nunca aparece. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e na parte inferior do botão.
+- *macOS* - o destaque do botão nunca aparece. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e na parte inferior do botão.
 
 #### Exemplo JSON:
 
@@ -118,11 +118,11 @@ O estilo de botão Chanfrado combina a aparência do estilo [Clássico](#regular
 
 Por padrão, o estilo Bevel tem um fundo cinza-claro com um rótulo no centro. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - o botão é destacado. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e no centro do botão.
+- *Windows* - o botão é destacado. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e no centro do botão.
 
 ![](../assets/en/FormObjects/button_bevel.png)
 
-- _macOS_ - o destaque do botão nunca aparece. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e na parte inferior do botão.
+- *macOS* - o destaque do botão nunca aparece. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e na parte inferior do botão.
 
 #### Exemplo JSON:
 
@@ -146,11 +146,11 @@ O estilo de botão Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel
 
 Por padrão, o estilo Bevel arredondado tem um fundo cinza-claro com um rótulo no centro. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - o botão é idêntico ao estilo Bevel. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e no centro do botão.
+- *Windows* - o botão é idêntico ao estilo Bevel. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e no centro do botão.
 
 ![](../assets/en/FormObjects/button_roundedbevel.png)
 
-- _macOS_ - las esquinas del botón están redondeadas. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e na parte inferior do botão.
+- *macOS* - las esquinas del botón están redondeadas. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e na parte inferior do botão.
 
 #### Exemplo JSON:
 
@@ -174,11 +174,11 @@ O estilo de botão OS X Gradient é quase idêntico ao estilo [Bevel](#bevel). A
 
 Por padrão, o estilo OS X Gradient tem um fundo cinza-claro com um rótulo no centro. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - o botão é idêntico ao estilo Bevel. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido no lado direito do botão.
+- *Windows* - o botão é idêntico ao estilo Bevel. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido no lado direito do botão.
 
 ![](../assets/en/FormObjects/button_osxgradient.png)
 
-- _macOS_ - el botón se muestra como un botón de dos tonos. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e na parte inferior do botão.
+- *macOS* - el botón se muestra como un botón de dos tonos. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e na parte inferior do botão.
 
 #### Exemplo JSON:
 
@@ -202,11 +202,11 @@ O estilo do botão OS X Textured é quase igual ao estilo [Bevel](#bevel), mas p
 
 Como padrão, o estilo OS X Textured aparece como:
 
-- _Windows_ - um botão padrão do sistema com um fundo cinza-claro e um rótulo no centro. Tem a particularidade de ser transparente no Vista.
+- *Windows* - um botão padrão do sistema com um fundo cinza-claro e um rótulo no centro. Tem a particularidade de ser transparente no Vista.
 
 ![](../assets/en/FormObjects/button_osxtextured.png)
 
-- _macOS_ - um botão sistema padrão que mostra uma mudança de cor cinza-claro a cinza-escuro. Sua altura está predefinida: não é possível ampliar ou reduzir.
+- *macOS* - um botão sistema padrão que mostra uma mudança de cor cinza-claro a cinza-escuro. Sua altura está predefinida: não é possível ampliar ou reduzir.
 
 #### Exemplo JSON:
 
@@ -230,11 +230,11 @@ O estilo de botão Office XP combina a aparência do estilo [Clássico](#regular
 
 As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas nos sistemas de cores. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - seu fundo só aparece quando o mouse passa por cima.
+- *Windows* - seu fundo só aparece quando o mouse passa por cima.
 
 ![](../assets/en/FormObjects/button_officexp.png)
 
-- _macOS_ - its background is always displayed.
+- *macOS* - its background is always displayed.
 
 #### Exemplo JSON:
 
