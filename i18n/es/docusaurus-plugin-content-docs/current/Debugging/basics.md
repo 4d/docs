@@ -33,8 +33,8 @@ Ocasionalmente, puede que no haya suficiente memoria para crear un BLOB. O, cuan
 
 Estos son generalmente los tipos de errores más difíciles de encontrar. A excepción de los errores de digitación, todos los tipos de errores listados arriba están cubiertos hasta cierto punto por la expresión "error de diseño o de lógica". Utilice el [depurador ](debugger.md) para detectarlos. Por ejemplo:
 
-- Puede ocurrir un _error de sintaxis_ cuando intenta utilizar una variable que aún no está inicializada.
-- Puede ocurrir un _error de entorno_ cuando intenta abrir un documento, porque el nombre de ese documento es recibido por una subrutina que no obtuvo el valor correcto como parámetro.
+- Puede ocurrir un *error de sintaxis* cuando intenta utilizar una variable que aún no está inicializada.
+- Puede ocurrir un *error de entorno* cuando intenta abrir un documento, porque el nombre de ese documento es recibido por una subrutina que no obtuvo el valor correcto como parámetro.
 
 Los errores de diseño o de lógica también incluyen situaciones como:
 
