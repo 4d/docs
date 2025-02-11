@@ -40,7 +40,7 @@ Un fichier CSS défini au niveau du formulaire remplacera la ou les feuilles de 
 
 ## Form Class
 
-Name of an existing [user class](../Concepts/classes.md#class-definition) to associate to the form . The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
+Name of an existing [user class](../Concepts/classes.md#class-definition) to associate to the form . The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
 
 Associating a class to the form provides the following benefits:
 
@@ -52,7 +52,7 @@ Associating a class to the form provides the following benefits:
 
 - You can also to benefit from [autocompletion features](../code-editor/write-class-method.md#autocomplete-functions) in the code editor.
 
-- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a _formData_ object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands.
+- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a *formData* object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands.
 
 :::note
 
@@ -64,7 +64,7 @@ See [this blog post](http://blog.4d.com/empower-your-development-process-with-yo
 
 | Nom       | Type de données | Valeurs possibles                                                                                                       |
 | --------- | --------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| formClass | string          | name of an existing user class ("_className_" or "_componentNameSpace_._className_") |
+| formClass | string          | name of an existing user class ("*className*" or "*componentNameSpace*.*className*") |
 
 ---
 
@@ -80,14 +80,14 @@ Le nom du formulaire est défini par le nom du dossier qui contient le fichier f
 
 ## Type de formulaire
 
-The form type, _i.e._ its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
+The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
 
 Chaque table dans une base de données a généralement au moins deux formulaires table. Un pour lister les enregistrements à l'écran et l'autre pour afficher un enregistrement à la fois (utilisé pour la saisie et les modifications) :
 
-- Output form - the _output form_ or _list form_ displays a list of records, with a single line per record. Les résultats des recherches sont affichés dans un formulaire de sortie et les utilisateurs peuvent double-cliquer sur une ligne pour afficher le formulaire d'entrée pour cet enregistrement.
+- Output form - the *output form* or *list form* displays a list of records, with a single line per record. Les résultats des recherches sont affichés dans un formulaire de sortie et les utilisateurs peuvent double-cliquer sur une ligne pour afficher le formulaire d'entrée pour cet enregistrement.
   ![](../assets/en/FormObjects/formOutput.png)
 
-- Formulaire d'entrée ou formulaire détail - utilisé pour la saisie des données. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (_i.e._, First Record, Last Record, Previous Record, Next Record).
+- Formulaire d'entrée ou formulaire détail - utilisé pour la saisie des données. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record).
   ![](../assets/en/FormObjects/formInput.png)
 
 Les types pris en charge dépendent de la catégorie de formulaire :
@@ -98,7 +98,7 @@ Les types pris en charge dépendent de la catégorie de formulaire :
 | Formulaire de détail pour l'impression | detailPrinter    | Un rapport imprimé avec une page par enregistrement, comme une facture  | Formulaires projet - Formulaires table |
 | Formulaire de liste                    | listScreen       | Un formulaire pour lister les enregistrements à l'écran                 | Formulaires table                      |
 | Formulaire de liste pour l'impression  | listPrinter      | Un rapport imprimé qui liste les enregistrements                        | Formulaires table                      |
-| Aucun                                  | _no destination_ | Un formulaire sans fonction spécifique                                  | Formulaires projet - Formulaires table |
+| Aucun                                  | *no destination* | Un formulaire sans fonction spécifique                                  | Formulaires projet - Formulaires table |
 
 #### Grammaire JSON
 
