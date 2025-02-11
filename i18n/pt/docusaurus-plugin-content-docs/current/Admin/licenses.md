@@ -41,19 +41,19 @@ Depois entre o número de licença do produto que quiser ativar. Esse número é
 Se não puder usar [instant activation](#instant-activation) porque seu computador não tem acesso à internet, veja a ativação postergada usando os passos abaixo.
 
 1. Na janela de License Manager, selecione a aba **Deferred Activation**.
-2. Digite o número de licença e seu email e clique  **Generate file** para criar o arquivo ID  (_reg.txt_).
+2. Digite o número de licença e seu email e clique  **Generate file** para criar o arquivo ID  (*reg.txt*).
 
 ![](../assets/en/getStart/activ3.png)
 
-3. Salve o arquivo _reg.txt_ para um drive USB e leve ao computador que tenha acesso à internet.
+3. Salve o arquivo *reg.txt* para um drive USB e leve ao computador que tenha acesso à internet.
 4. No aparelho com acesso à internet, faça login a  [https://activation.4d.com](https://activation.4d.com).
-5. Na página web, clique no botão **Choose File...** e selecione o arquivo _reg.txt_ dos passos 3 e 4; depois clique no botão **Ativar**.
+5. Na página web, clique no botão **Choose File...** e selecione o arquivo *reg.txt* dos passos 3 e 4; depois clique no botão **Ativar**.
 6. Baixe os arquivos seriais.
 
 ![](../assets/en/getStart/activ4.png)
 
-7. Salve os arquivos _license4d_ em uma mídia partilhda e os transfira para a máquina 4D do passo 1.
-8. Agora de volta para a máquina com 4D, ainda na página **Deferred Activation**, clique **Next**; e depois clique no botão **Load...** e selecione o arquivo _license4d_ da mídia social do passo 7.
+7. Salve os arquivos *license4d* em uma mídia partilhda e os transfira para a máquina 4D do passo 1.
+8. Agora de volta para a máquina com 4D, ainda na página **Deferred Activation**, clique **Next**; e depois clique no botão **Load...** e selecione o arquivo *license4d* da mídia social do passo 7.
 
 ![](../assets/en/getStart/activ5.png)
 
