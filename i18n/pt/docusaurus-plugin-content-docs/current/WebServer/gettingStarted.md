@@ -94,7 +94,7 @@ Las páginas `.shtml` son procesadas automáticamente por el servidor web. A sua
 
 ### Pedido REST
 
-Si no sólo queremos _visualizar_ datos, sino _utilizarlos_, podemos utilizar ORDA y el servidor REST. Gracias al [concepto ORDA](ORDA/overview.md), la tabla `Friends` se asigna automáticamente a una clase de datos y está disponible a través de [REST](REST/gettingStarted.md).
+Si no sólo queremos *visualizar* datos, sino *utilizarlos*, podemos utilizar ORDA y el servidor REST. Gracias al [concepto ORDA](ORDA/overview.md), la tabla `Friends` se asigna automáticamente a una clase de datos y está disponible a través de [REST](REST/gettingStarted.md).
 
 1. Utilizaremos el servidor REST para acceder a los datos: vaya a la caja de diálogo **Parámetros**, seleccione **Web** > **Funcionalidades Web** y marque la opción **Exponer como servidor REST**.
 
@@ -188,8 +188,8 @@ Nas seções acima, nós temos acesso gratuito à aplicação através de solici
 
 A maneira mais simples e segura para registrar um usuário no servidor da Web 4D é baseada no seguinte cenário:
 
-- Los usuarios se almacenan en una tabla dedicada y no expuesta (llamada _WebUsers_ por ejemplo)
-- La tabla _WebUsers_ podría estar [encriptada](MSC/encrypt.md) y almacena el login del usuario y un hash de su contraseña.
+- Los usuarios se almacenan en una tabla dedicada y no expuesta (llamada *WebUsers* por ejemplo)
+- La tabla *WebUsers* podría estar [encriptada](MSC/encrypt.md) y almacena el login del usuario y un hash de su contraseña.
 
 1. Criar uma tabela com alguns campos, por exemplo:
 
