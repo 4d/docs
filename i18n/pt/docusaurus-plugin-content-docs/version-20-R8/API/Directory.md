@@ -309,7 +309,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
+A propriedade `.name` retorna <!-- REF #directory.name.Summary --> o nome da pasta, sem extensão (se houver)<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
