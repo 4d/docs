@@ -442,7 +442,7 @@ Se o parâmetro *stopChar* for passado e não for encontrado, `.readText()` reto
 
 #### Descrição
 
-The `.setSize()` function <!-- REF #FileHandleClass.setSize().Summary -->sets a new *size* in bytes for the document<!-- END REF -->.
+A função `.setSize()` <!-- REF #FileHandleClass.setSize().Summary -->define um novo tamanho de *size* em bytes para o documento<!-- END REF -->.
 
 If the *size* value is less than the current document size, the document content is truncated from the beginning to get the new *size* .
 
