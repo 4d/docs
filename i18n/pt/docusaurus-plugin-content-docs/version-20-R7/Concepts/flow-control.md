@@ -309,7 +309,7 @@ Compare o exemplo a seguir com o exemplo para o laço `While...End while`. Lembr
  Until(OK=0)
 ```
 
-## For...End for
+## For... End for
 
 A sintaxe formal da estrutura de fluxo de controle `For...End for` é:
 
@@ -317,8 +317,7 @@ A sintaxe formal da estrutura de fluxo de controle `For...End for` é:
 For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
    statement(s)
     {break}  
-    {continue}
-End for
+    {continue} End for
 ```
 
 O loop `For...End for` é um ciclo controlado por uma variável de contador:
@@ -442,7 +441,7 @@ Se precisar, pode usar uma Increment_Expression (positiva ou negativa) cujo valo
  End for
 ```
 
-#### Otimizando a execução do comando For...End para loops
+#### Otimizando a execução do comando For... End para loops
 
 Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, de processo e de variáveis locais. Para loops repetitivos longos, especialmente em modo compilado, use variáveis locais de tipo Inteiro longo.
 
