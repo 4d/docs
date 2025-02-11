@@ -367,7 +367,7 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-- **Display**: Selects the [display mode](#display-mode) to be used for all debugger windows.
+- **Mostrar**: selecciona el [modo de visualización](#display-mode) para todas las ventanas de depuración.
 - **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
   ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
   For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
