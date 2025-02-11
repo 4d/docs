@@ -10,7 +10,7 @@ Independentemente da simplicidade ou da complexidade de um método, sempre utili
 - **[Bucle](Concepts/cf_looping.md)**: quando se escrevem métodos, é muito comum descobrir que se necessita que uma sequência de sentenças se repita um número de vezes. Para lidar com esta necessidade, a linguagem 4D oferece as estruturas de loop abaixo:
   - `While... End while`
   - `Repeat... Until`
-  - `For...End for`
+  - `For... End for`
   - `For each... End for each`<br/> Os loops são controlados de duas maneiras: ou eles fazem o loop até que uma condição seja atendida ou fazem o loop um número especificado de vezes. Cada estrutura de looping pode ser usada de qualquer forma, mas loops`While`  e `Repeat` são mais apropriados para repetir até que uma condição seja satisfeita, e loops `For` são mais apropriados para looping um número especificado de vezes. `For each... End for each` permite misturar ambas as formas e foi concebido para fazer loop dentro de objectos e colecções.
 
 **Nota:** 4D permite incorporar estruturas de programação até uma "profundidade" de 512 níveis.
