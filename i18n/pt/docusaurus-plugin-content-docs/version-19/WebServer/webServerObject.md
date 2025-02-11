@@ -14,7 +14,7 @@ Por exemplo, se você instalou dois componentes em sua aplicação principal, vo
 
 Além da memória, não há limite para o número de componentes e, assim, de servidores web, que podem ser anexados a um único projeto de aplicação 4D.
 
-Cada servidor web 4D, incluindo o servidor web da aplicação principal, é exposto como um **objeto** específico da classe `4D.WebServer`. Uma vez instanciado, um objeto de servidor da Web pode ser gerenciado a partir da aplicação atual ou de qualquer componente usando um [grande número de propriedades e funções](API/WebServerClass.md).
+Cada servidor web 4D, incluindo o servidor web da aplicação principal, é exposto como um **objeto** específico da classe `4D. WebServer`. Uma vez instanciado, um objeto de servidor da Web pode ser gerenciado a partir da aplicação atual ou de qualquer componente usando um [grande número de propriedades e funções](API/WebServerClass.md).
 
 > Os [comandos WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) herdados da linguagem 4D são compatíveis, mas não é possível selecionar o servidor Web ao qual eles se aplicam (veja abaixo).
 
