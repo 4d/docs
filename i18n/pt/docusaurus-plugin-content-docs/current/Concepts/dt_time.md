@@ -9,7 +9,7 @@ As horas são em formato de 24 horas.
 
 Um valor de Hora pode ser tratado como um número. O número retornado de uma Hora será o número de segundos desde a maia noite (00:00:00) contidos nesse valor de hora.
 
-**Nota:** No manual _4D Language Reference_, os parâmetros de tempo nas descrições de comandos são indicados como Time, exceto quando indicado de outra forma.
+**Nota:** No manual *4D Language Reference*, os parâmetros de tempo nas descrições de comandos são indicados como Time, exceto quando indicado de outra forma.
 
 ## Constantes literais de tipo hora
 
