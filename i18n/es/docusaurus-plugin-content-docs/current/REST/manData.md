@@ -27,7 +27,7 @@ Añada las peticiones REST [`$skip`]($skip.md) (para definir con qué entidad em
 
 ## Creación y gestión del conjunto de entidades
 
-Un conjunto de entidades (también conocido como _selección de entidades_) es una colección de entidades obtenidas a través de una petición REST que se almacena en la caché de 4D Server. El uso de un conjunto de entidades evita que se consulte continuamente la aplicación para obtener los mismos resultados. El acceso a un conjunto de entidades es mucho más rápido y puede mejorar la velocidad de su aplicación.
+Un conjunto de entidades (también conocido como *selección de entidades*) es una colección de entidades obtenidas a través de una petición REST que se almacena en la caché de 4D Server. El uso de un conjunto de entidades evita que se consulte continuamente la aplicación para obtener los mismos resultados. El acceso a un conjunto de entidades es mucho más rápido y puede mejorar la velocidad de su aplicación.
 
 Para crear un conjunto de entidades, llame a [`$method=entityset`]($method.md#methodentityset) en su solicitud REST. Como medida de seguridad, también se puede utilizar [`$savedfilter`]($savedfilter.md) y/o [`$savedorderby`]($savedorderby.md) cuando se llame a [`$filter`]($filter.md) y/o [`$orderby`]($orderby.md) para que si alguna vez el conjunto de entidades se agota o se elimina del servidor, se pueda recuperar rápidamente con el mismo ID que antes.
 
@@ -41,7 +41,7 @@ Si desea eliminar un conjunto de entidades de la caché de 4D Server, puede util
 
 Si se modifica alguno de los atributos de la entidad en el conjunto de entidades, los valores se actualizarán. Sin embargo, si se modifica un valor que formaba parte de la consulta ejecutada para crear el conjunto de entidades, no se eliminará del conjunto de entidades aunque ya no se ajuste a los criterios de búsqueda.
 
-Las entidades que elimine, por supuesto, dejarán de formar parte del conjunto de entidades. Sin embargo, por defecto su referencia permanecerá en el conjunto de entidades con un valor _undefined_, y seguirán incluidos en el recuento del conjunto de entidades. Llame a [`$clean`]($clean.md) en el conjunto de entidades para crear un nuevo conjunto de entidades actualizado sin referencias de entidades _undefined_.
+Las entidades que elimine, por supuesto, dejarán de formar parte del conjunto de entidades. Sin embargo, por defecto su referencia permanecerá en el conjunto de entidades con un valor *undefined*, y seguirán incluidos en el recuento del conjunto de entidades. Llame a [`$clean`]($clean.md) en el conjunto de entidades para crear un nuevo conjunto de entidades actualizado sin referencias de entidades *undefined*.
 
 Si el conjunto de entidades ya no existe en la caché de 4D Server, se recreará con un nuevo tiempo de espera por defecto de 10 minutos. El conjunto de entidades se refrescará (pueden incluirse ciertas entidades y eliminarse otras) desde la última vez que se creó, si ya no existía antes de recrearlo.
 
@@ -73,7 +73,7 @@ con los datos en el cuerpo de la petición: `["Paris"]`
 
 ## Selección de atributos a obtener
 
-Siempre se puede definir qué atributos devolver en la respuesta REST después de una solicitud inicial pasando su ruta en la solicitud (_por ejemplo_, `Company(1)/name,revenues/`)
+Siempre se puede definir qué atributos devolver en la respuesta REST después de una solicitud inicial pasando su ruta en la solicitud (*por ejemplo*, `Company(1)/name,revenues/`)
 
 Puede aplicar este filtro de las siguientes maneras:
 
@@ -85,7 +85,7 @@ Puede aplicar este filtro de las siguientes maneras:
 |                         | \{dataClass\}:\{attribute\}(value)/{att1,att2...}/ | /People:firstName(Larry)/firstName,lastName/ |
 | Entity selection        | \{dataClass\}/{att1,att2...}/$entityset/\{entitySetID\}                               | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61                   |
 
-Los atributos deben estar delimitados por una coma, _i.e._, `/Employee/firstName,lastName,salary`. Se pueden pasar atributos de almacenamiento o relacionales.
+Los atributos deben estar delimitados por una coma, *i.e.*, `/Employee/firstName,lastName,salary`. Se pueden pasar atributos de almacenamiento o relacionales.
 
 ### Ejemplos
 
