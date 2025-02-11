@@ -26,7 +26,7 @@ Seleccione la opción **Iniciar servidor WebAdmin al inicio** en la caja de diá
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
-- Tanto si utiliza la aplicación 4D con o sin interfaz, puede habilitar el modo de inicio automático utilizando el siguiente argumento _Interfaz de línea de comandos_:
+- Tanto si utiliza la aplicación 4D con o sin interfaz, puede habilitar el modo de inicio automático utilizando el siguiente argumento *Interfaz de línea de comandos*:
 
 ```
 open ~/Desktop/4D.app --webadmin-auto-start true
@@ -50,7 +50,7 @@ La configuración del componente `WebAdmin` es obligatoria, en particular para d
 
 Puede configurar el componente `WebAdmin` utilizando la [caja de diálogo Parámetros de la administración web](#settings-dialog-box) (ver abajo).
 
-> Si utiliza una aplicación 4D sin interfaz, puede utilizar los [argumentos de la _Interfaz de Línea de Comandos_](#webadmin-headless-configuration) para definir la configuración básica. Tendrá que personalizar el archivo de configuración para definir los parámetros avanzados.
+> Si utiliza una aplicación 4D sin interfaz, puede utilizar los [argumentos de la *Interfaz de Línea de Comandos*](#webadmin-headless-configuration) para definir la configuración básica. Tendrá que personalizar el archivo de configuración para definir los parámetros avanzados.
 
 ### Caja de diálogo de parámetros
 
@@ -93,7 +93,7 @@ Ruta de la carpeta donde se encuentran los archivos del certificado TLS. Por def
 
 #### Modo de registro de depuración
 
-Estado o formato del archivo de registro de peticiones HTTP (HTTPDebugLog__nn_.txt, almacenado en la carpeta "Logs" de la aplicación -- _nn_ es el número de archivo). Las siguientes opciones están disponibles:
+Estado o formato del archivo de registro de peticiones HTTP (HTTPDebugLog_*nn*.txt, almacenado en la carpeta "Logs" de la aplicación -- *nn* es el número de archivo). Las siguientes opciones están disponibles:
 
 - **Desactivado** (por defecto)
 - **Con todas las partes del body** - activado con las partes del cuerpo en respuesta y petición
