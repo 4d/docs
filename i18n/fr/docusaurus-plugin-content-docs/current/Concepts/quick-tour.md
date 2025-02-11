@@ -153,7 +153,7 @@ Certains cas nécessitent que vous stockiez des données dans un type et que vou
 [Produits]Matricule:=String(Numéro)+"abc"
 ```
 
-Si _Numéro_ vaut 17, _[Produits]Matricule_ prendra la valeur “17abc”.
+Si *Numéro* vaut 17, *[Produits]Matricule* prendra la valeur “17abc”.
 
 Les types de données sont détaillés dans la section [Types de données](Concepts/data-types.md).
 
@@ -197,14 +197,14 @@ myColl[3]  //accès au 4ème élément de la collection
 
 Le langage 4D prend en charge les classes d'objets. Ajoutez un fichier `myClass.4dm` dans le dossier Project/Sources/Classes d'un projet pour créer une classe nommée "myClass".
 
-Pour instancier un objet de la classe dans une méthode, appelez la classe utilisateur à partir du _class store_ (`cs`) et utilisez la fonction membre `new()`. Vous pouvez passer des paramètres.
+Pour instancier un objet de la classe dans une méthode, appelez la classe utilisateur à partir du *class store* (`cs`) et utilisez la fonction membre `new()`. Vous pouvez passer des paramètres.
 
 ```4d
 // dans une méthode 4D
 $o:=cs.myClass.new()
 ```
 
-Dans la classe `myClass`, utilisez l'instruction `Function <methodName>` pour définir la fonction membre de la classe _methodName_. Une fonction membre de la classe peut recevoir et renvoyer des paramètres comme n'importe quelle méthode et utiliser `This` comme instance de l'objet.
+Dans la classe `myClass`, utilisez l'instruction `Function <methodName>` pour définir la fonction membre de la classe *methodName*. Une fonction membre de la classe peut recevoir et renvoyer des paramètres comme n'importe quelle méthode et utiliser `This` comme instance de l'objet.
 
 ```4d
 
