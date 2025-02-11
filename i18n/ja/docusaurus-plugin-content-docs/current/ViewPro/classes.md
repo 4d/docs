@@ -113,7 +113,7 @@ title: クラス
 
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-`.showResizeHandle` プロパティは、 <!-- REF #TableOptions.showResizeHandle.Summary -->_source_ を持たない表において、リサイズハンドルを表示するかどうかを示します<!-- END REF -->。 デフォルト = false
+`.showResizeHandle` プロパティは、 <!-- REF #TableOptions.showResizeHandle.Summary -->*source* を持たない表において、リサイズハンドルを表示するかどうかを示します<!-- END REF -->。 デフォルト = false
 
 ### .tableColumns
 
