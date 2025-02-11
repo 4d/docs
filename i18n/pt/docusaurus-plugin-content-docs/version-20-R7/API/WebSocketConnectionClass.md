@@ -54,7 +54,7 @@ The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summ
 
 #### Descrição
 
-The `.id` property contains <!-- REF #WebSocketConnectionClass.id.Summary -->the unique identifier of the connection<!-- END REF -->.
+A propriedade `.id` contém <!-- REF #WebSocketConnectionClass.id.Summary --> o identificador único da conexão<!-- END REF -->.
 
 Esta propriedade é só de leitura.
 
@@ -119,7 +119,7 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.terminate()` function <!-- REF #WebSocketConnectionClass.terminate().Summary -->forces the connection to close<!-- END REF -->.
+A função `.terminate()` <!-- REF #WebSocketConnectionClass.terminate().Summary -->força a conexão a fechar<!-- END REF -->.
 
 A *code* and *message* can be sent to the client during the closure to indicate the reason of the termination.
 
