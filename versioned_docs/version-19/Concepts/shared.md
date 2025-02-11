@@ -108,7 +108,7 @@ Shared objects and shared collections are designed to allow communication betwee
 
 :::note
 
-Keep in mind that [collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed. 
+[Collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed, making an explicit call to the structure unnecessary. It's also the case for `ARRAY TO COLLECTION` and `OB REMOVE` commands.
 
 :::
 
