@@ -235,7 +235,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. .
+A propriedade `.isPackage` retorna <!-- REF #directory.isPackage.Summary -->true se a pasta é um pacote no macOS (e existe no disco)<!-- END REF -->. .
 
 Em Windows, `.isPackage` sempre devolve **false**.
 
@@ -499,7 +499,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 #### Descrição
 
-The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
+A função `.file()` cria <!-- REF #directory.file().Summary -->um objeto `File` dentro do objeto `Folder` e retorna sua referência<!-- END REF -->.
 
 In *path*, pass a relative POSIX path to designate the file to return. A rota se avaliará a partir da pasta pai como raíz.
 
