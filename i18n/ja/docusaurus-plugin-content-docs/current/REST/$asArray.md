@@ -7,7 +7,7 @@ title: $asArray
 
 ## 説明
 
-レスポンスを配列として取得するには、RESTリクエストに `$asArray` を追加します (_例:_ `$asArray=true`)。
+レスポンスを配列として取得するには、RESTリクエストに `$asArray` を追加します (*例:* `$asArray=true`)。
 
 ## 例題
 
