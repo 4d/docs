@@ -126,7 +126,7 @@ Essa propriedade é **leitura-escrita**.
 
 #### Descrição
 
-The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. Quando o sinal é criado, `.signaled` é **False**. Torna-se **True** quando o `.trigger( )` é chamado no objeto.
+A propriedade `.signaled` <!-- REF #SignalClass.signaled.summary -->contém o estado atual do objeto `Signal`<!-- END REF -->. Quando o sinal é criado, `.signaled` é **False**. Torna-se **True** quando o `.trigger( )` é chamado no objeto.
 
 Essa propriedade é **somente leitura**.
 
