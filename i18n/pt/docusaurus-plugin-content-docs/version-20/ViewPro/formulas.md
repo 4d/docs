@@ -274,7 +274,7 @@ $o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information
 
 ## Compatibidade
 
-Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. However, using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method is recommended.
+Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. No entanto, é recomendável usar o método [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions).
 
 ### Referência a campos utilizando a estrutura virtual
 
