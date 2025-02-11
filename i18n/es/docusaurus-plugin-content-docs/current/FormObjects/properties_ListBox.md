@@ -80,7 +80,7 @@ Para las dos últimas acciones, también se genera el evento de formulario `On O
 
 Esta propiedad se utiliza para especificar el conjunto a utilizar para gestionar los registros resaltados en el list box (cuando se selecciona la fuente de datos **Arrays**, se utiliza un conjunto booleano con el mismo nombre que el list box).
 
-4D crea un conjunto por defecto llamado _ListBoxSetN_ donde _N_ empieza en 0 y se incrementa según el número de list boxes en el formulario. Si es necesario, puede modificar el conjunto por defecto. Puede ser un conjunto local, proceso o interproceso (recomendamos utilizar un conjunto local, por ejemplo _$LBSet_, para limitar el tráfico de red). A continuación, 4D lo mantiene automáticamente. Si el usuario selecciona una o varias líneas en el list box, el conjunto se actualiza inmediatamente. Si desea seleccionar una o varias líneas por programación, puede aplicar a este conjunto los comandos del tema "Conjuntos".
+4D crea un conjunto por defecto llamado *ListBoxSetN* donde *N* empieza en 0 y se incrementa según el número de list boxes en el formulario. Si es necesario, puede modificar el conjunto por defecto. Puede ser un conjunto local, proceso o interproceso (recomendamos utilizar un conjunto local, por ejemplo *$LBSet*, para limitar el tráfico de red). A continuación, 4D lo mantiene automáticamente. Si el usuario selecciona una o varias líneas en el list box, el conjunto se actualiza inmediatamente. Si desea seleccionar una o varias líneas por programación, puede aplicar a este conjunto los comandos del tema "Conjuntos".
 
 > - El estado de resaltado de las líneas del list box y el estado de resaltado de los registros de la tabla son completamente independientes.
 > - Si la propiedad "Conjunto resaltado" no contiene un nombre, no será posible realizar selecciones en el list box.
@@ -104,7 +104,7 @@ Las columnas bloqueadas y las columnas estáticas son dos funcionalidades distin
 - Las columnas bloqueadas siempre se muestran a la izquierda del list box; no se desplazan horizontalmente.
 - Las columnas estáticas no pueden moverse arrastrándolas y soltándolas dentro del list box.
 
-> Puede definir columnas estáticas y bloqueadas por programación, consulte la sección "List Box" en el manual _de Lenguaje 4D_.
+> Puede definir columnas estáticas y bloqueadas por programación, consulte la sección "List Box" en el manual *de Lenguaje 4D*.
 
 Estas propiedades interactúan de la siguiente manera:
 
@@ -176,7 +176,7 @@ Un array 4D que controla la visualización de las líneas del list box.
 
 Puede definir las propiedades de interfaz "oculta", "desactivada" y "seleccionable" para cada línea de un list box basado en arrays utilizando este array. También puede ser designado utilizando el comando `LISTBOX SET ARRAY`.
 
-El array de control de líneas debe ser de tipo Longint e incluir el mismo número de líneas que el list box. Cada elemento del _Array de control de líneas_ define el estado de la interfaz de su línea correspondiente en el list box. Hay tres propiedades de interfaz disponibles utilizando constantes en el tema de constantes "List Box":
+El array de control de líneas debe ser de tipo Longint e incluir el mismo número de líneas que el list box. Cada elemento del *Array de control de líneas* define el estado de la interfaz de su línea correspondiente en el list box. Hay tres propiedades de interfaz disponibles utilizando constantes en el tema de constantes "List Box":
 
 | Constante                | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------------------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
