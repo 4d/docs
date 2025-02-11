@@ -183,7 +183,7 @@ Para requisitos específicos de formatação, consulte a [RFC#5322](https://tool
 
 #### Descrição
 
-The `.from` property contains the <!-- REF #EmailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
+A propriedade `.from` contém o <!-- REF #EmailObjectClass.from.Summary -->[a(s) endereço(es)](#email-addresses) de origem do e-mail<!-- END REF -->.
 
 Cada e-mail que você envia tem os endereços [sender](#sender) e **from**:
 
@@ -225,7 +225,7 @@ The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summar
 
 [IMAP transporter](IMAPTransporterClass.md) unicamente.
 
-The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique ID from the IMAP server<!-- END REF -->.
+A propriedade `.id` contém o <!-- REF #EmailObjectClass.id.Summary --> ID exclusivo do servidor IMAP<!-- END REF -->.
 
 ## .inReplyTo
 
@@ -343,7 +343,7 @@ The `.size` property contains the <!-- REF #EmailObjectClass.size.Summary -->siz
 
 #### Descrição
 
-The `.subject` property contains the <!-- REF #EmailObjectClass.subject.Summary -->description of topic<!-- END REF -->.
+A propriedade `.subject` contém a <!-- REF #EmailObjectClass.subject.Summary -->descrição do tópico<!-- END REF -->.
 
 ## .textBody
 
