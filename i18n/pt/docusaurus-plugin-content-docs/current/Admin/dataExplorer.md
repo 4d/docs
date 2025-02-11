@@ -95,7 +95,7 @@ A página contém várias áreas:
 
 É possível reordenar a lista de entidades apresentada de acordo com os valores dos atributos. Todos os tipos de atributos podem ser utilizados para uma espécie, exceto imagem e objeto.
 
-- Clique no cabeçalho de uma coluna para encomendar entidades de acordo com os valores dos atributos correspondentes. Como padrão, a ordem é ascendente. Clicar duas vezes para uma ordem decrescente. Uma coluna utilizada para classificar entidades é exibida com um pequeno ícone e o seu nome está em _itálico_.
+- Clique no cabeçalho de uma coluna para encomendar entidades de acordo com os valores dos atributos correspondentes. Como padrão, a ordem é ascendente. Clicar duas vezes para uma ordem decrescente. Uma coluna utilizada para classificar entidades é exibida com um pequeno ícone e o seu nome está em *itálico*.
 
 ![alt-text](../assets/en/Admin/dataExplorer7.png)
 
@@ -107,7 +107,7 @@ Neste modo, é possível filtrar entidades introduzindo valores a encontrar (ou 
 
 ![alt-text](../assets/en/Admin/dataExplorer6.png)
 
-Se introduzir vários atributos, é automaticamente aplicado um AND. Por exemplo, o filtro a seguir exibe entidades com _primeiro nome_ atributo começando com "flo" e _salário_ valor do atributo > 50000:
+Se introduzir vários atributos, é automaticamente aplicado um AND. Por exemplo, o filtro a seguir exibe entidades com *primeiro nome* atributo começando com "flo" e *salário* valor do atributo > 50000:
 
 ![alt-text](../assets/en/Admin/dataExplorer9.png)
 
@@ -160,7 +160,7 @@ Ao seleccionar esta opção, é exibida uma área de consulta acima da lista de 
 
 ![alt-text](../assets/en/Admin/dataExplorer8.png)
 
-Pode introduzir consultas avançadas que não estão disponíveis como consultas de atributos. Por exemplo, se quiser encontrar entidades com _primeiro nome_ atributo contendo "Jim" mas não "Jimmy", pode escrever:
+Pode introduzir consultas avançadas que não estão disponíveis como consultas de atributos. Por exemplo, se quiser encontrar entidades com *primeiro nome* atributo contendo "Jim" mas não "Jimmy", pode escrever:
 
 ```
 firstname=="Jim"
@@ -169,7 +169,7 @@ firstname=="Jim"
 Você pode usar qualquer expressão de consulta ORDA como [documentado com a função `query()`](API/DataClassClass.md#query), com as seguintes limitações ou diferenças:
 
 - Por segurança, você não pode executar fórmulas usando `eval()`.
-- Os marcadores de lugar não podem ser utilizados; é necessário escrever uma consulta _queryString_ com valores.
+- Os marcadores de lugar não podem ser utilizados; é necessário escrever uma consulta *queryString* com valores.
 - Os valores das strings contendo caracteres espaciais devem ser incorporados entre aspas duplas ("").
 
 Por exemplo, com o Dataclass Employee, pode escrever:
