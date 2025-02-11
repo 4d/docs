@@ -69,7 +69,7 @@ O arquivo **dependencies.json** faz referência a todos os componentes necessár
 
 Pode conter:
 
-- names of components [stored locally](#declaring-local-components) (default path or path defined in an **environment4d.json** file),
+- nomes de componentes [armazenado localmente](#declaring-local-components) (caminho ou caminho padrão definido em um arquivo **environment4d.json**),
 - names of components [stored on GitHub repositories](#declaring-components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
 
 #### environment4d.json
@@ -297,7 +297,7 @@ Referenced GitHub components are downloaded in a local cache folder then loaded 
 
 ### dependency-lock.json
 
-A `dependency-lock.json` file is created in the [`userPreferences` folder](architecture.md#userpreferencesusername) of your project.
+Um arquivo `dependency-lock.json` foi criado na pasta [`userPreferences`](architecture.md#userpreferencesusername) do seu projeto.
 
 This file logs information such as the state of dependencies, paths, urls, loading errors, as well as other information. It could be useful for component loading management or troubleshooting.
 
@@ -558,4 +558,4 @@ Somente as dependências declaradas no arquivo [**dependencies.json**](#dependen
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-If you confirm the dialog box, the removed dependency [status](#dependency-status) is automatically flagged "Unload after restart". It will be unloaded once the application restarts.
+Se você confirmar a caixa de diálogo, a dependência [estado](#dependency-status) removida é automaticamente sinalizada "Unload after restart". It will be unloaded once the application restarts.
