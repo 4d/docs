@@ -256,7 +256,7 @@ Para declarar parámetros genéricos, se utiliza una directiva del compilador a 
 ```
 
 
-Este comando significa que a partir del cuarto parámetro (incluido), el método puede recibir un número variable de parámetros de tipo texo. Los tres primeros parámetros pueden ser de todo tipo de datos. Sin embargo, si se utiliza $2 por indirección, el tipo de datos utilizado será el tipo genérico. Así, será del tipo de datos texto, aunque para usted fuera, por ejemplo, del tipo de datos Real.
+Este comando significa que a partir del cuarto parámetro (incluido), el método puede recibir un número variable de parámetros de tipo texo. Este comando significa que a partir del cuarto parámetro (incluido), el método puede recibir un número variable de parámetros de tipo texo. Sin embargo, si se utiliza $2 por indirección, el tipo de datos utilizado será el tipo genérico. Así, será del tipo de datos texto, aunque para usted fuera, por ejemplo, del tipo de datos Real.
 
 > El número en la declaración tiene que ser una constante y no una variable.
 
