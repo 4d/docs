@@ -5181,7 +5181,7 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 
 The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
 
-> If the *formula* is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-method) command.
+> If the *formula* is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. Se um método 4D é usado, ele deve ser permitido com o comando [`VP SET ALLOWED METHODS`](#vp-set-allowed-method).
 
 O parametro opcional *formatPattern* define um [pattern](configuring.md#cell-format) para a *formula*.
 
@@ -5236,7 +5236,7 @@ O parâmetro *formulasCol* é uma coleção bidimensional:
 * A coleção de primeiro nível contém subcoleções de fórmulas. Cada subcolecção define uma linha.
 * Cada subcoleção define os valores das células para a linha. Values must be text elements containing the formulas to assign to the cells.
 
-> If the formula is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-method) command.
+> If the formula is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. Se um método 4D é usado, ele deve ser permitido com o comando [`VP SET ALLOWED METHODS`](#vp-set-allowed-method).
 
 You remove the formulas in *rangeObj* by replacing them with an empty string ("").
 
@@ -6017,7 +6017,7 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 
 The *textValue* parameter specifies a text value to be assigned to the *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *textValue* parameter.
+O parâmetro opcional *formatPattern* define um [pattern](configuring.md#cell-format) para o parâmetro *textValue*.
 
 #### Exemplo
 
@@ -6052,7 +6052,7 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 
 The *timeValue* parameter specifies a time expressed in seconds to be assigned to the *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *timeValue* parameter.
+O parâmetro opcional *formatPattern* define um [pattern](configuring.md#cell-format) para o parâmetro *timeValue*.
 
 #### Exemplo
 
