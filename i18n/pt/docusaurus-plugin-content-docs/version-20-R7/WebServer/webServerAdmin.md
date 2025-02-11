@@ -213,7 +213,7 @@ Dado que un archivo *logweb.txt* puede llegar a ser considerablemente grande, es
 
 Cuando se activa la copia de seguridad del archivo de registro web, el archivo de registro se archiva en una carpeta llamada "Archivos Logweb", que se crea en el mismo nivel que el archivo *logweb.txt*.
 
-O arquivo arquivado é renomeado com base no seguinte exemplo: “DYYYY_MM_DDD_Thh_mm_ss.txt.” Por exemplo, para um dossiê arquivado em 4 de Setembro de 2020 às 3h50. e 7 segundos: “D2020_09_04_T15_50_07.txt.”
+O arquivo arquivado é renomeado com base no seguinte exemplo: “DYYYY_MM_DDD_Thh_mm_ss.txt.” Por exemplo, para um dossiê arquivado em 4 de Setembro de 2020 às 3h50. e 7 segundos: “D2020_09_04_T15_50_07.txt.” e 7 segundos: “D2020_09_04_T15_50_07.txt.”
 
 #### Parâmetros de backup
 
@@ -230,7 +230,7 @@ First you must choose the frequency (days, weeks, etc.) or the file size limit c
 
 - **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduza 1 se pretender efetuar uma cópia de segurança diária. Quando essa opção estiver marcada, você deve indicar a hora em que o backup deve ser iniciado.
 
-- **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar. Por exemplo, você pode usar essa opção para definir dois backups semanais: um nas quartas-feiras e outro na sexta-feira.
+- **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar.
 
 - **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Digite 1 se quiser realizar uma cópia de segurança mensal. Quando essa opção estiver marcada, você deve indicar o dia do mês e a hora em que o backup deve ser iniciado.
 
