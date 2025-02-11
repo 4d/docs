@@ -64,4 +64,4 @@ Obtenemos el siguiente error en la segunda entidad y por lo tanto la primera ent
 }
 ```
 
-> Aunque el salario de la primera entidad tiene un valor de 45000, este valor no se guardó en el servidor y tampoco se modificó el _timestamp (__STAMP)_. Si recargamos la entidad, veremos el valor anterior.
+> Aunque el salario de la primera entidad tiene un valor de 45000, este valor no se guardó en el servidor y tampoco se modificó el *timestamp (__STAMP)*. Si recargamos la entidad, veremos el valor anterior.
