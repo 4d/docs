@@ -5,7 +5,7 @@ title: Fundo e margem
 
 ## Cor de fundo alternado
 
-Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por padrão, _Automático_ está selecionado: a coluna usa a cor de fundo alternativa definida no nível da caixa de listagem.
+Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por padrão, *Automático* está selecionado: a coluna usa a cor de fundo alternativa definida no nível da caixa de listagem.
 
 Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
@@ -25,7 +25,7 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 Define a cor de fundo de um objeto.
 
-No caso de uma caixa de listagem, por padrão, _Automático_ é selecionado: a coluna usa a cor de fundo definida no nível da caixa de listagem.
+No caso de uma caixa de listagem, por padrão, *Automático* é selecionado: a coluna usa a cor de fundo definida no nível da caixa de listagem.
 
 Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
@@ -49,7 +49,7 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 `List box de tipo coleção e seleção de entidades`
 
-Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. Para mais informações, consulte a descrição do comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) no _Manual de Linguagem 4D_.
+Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. Para mais informações, consulte a descrição do comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) no *Manual de Linguagem 4D*.
 
 Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) com a constante `lk color expression`.
 
