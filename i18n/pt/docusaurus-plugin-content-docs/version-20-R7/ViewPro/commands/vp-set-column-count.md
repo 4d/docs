@@ -17,7 +17,7 @@ title: VP SET COLUMN COUNT
 
 #### Descrição
 
-The `VP SET COLUMN COUNT` command <!-- REF #_method_.VP SET COLUMN COUNT.Summary -->defines the total number of columns in *vpAreaName*<!-- END REF -->.
+O comando <!-- REF #_method_.VP SET COLUMN COUNT.Summary --> define o número total de colunas no *vpAreaName*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
