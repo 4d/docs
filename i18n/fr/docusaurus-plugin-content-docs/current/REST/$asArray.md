@@ -7,7 +7,7 @@ Retourne le résultat d'une requête sous forme de tableau (c'est-à-dire une co
 
 ## Description
 
-Si vous souhaitez obtenir la réponse sous forme de tableau, il vous suffit d'ajouter `$asArray` à votre requête REST (_ex :_, `$asArray=true`).
+Si vous souhaitez obtenir la réponse sous forme de tableau, il vous suffit d'ajouter `$asArray` à votre requête REST (*ex :*, `$asArray=true`).
 
 ## Exemple
 
