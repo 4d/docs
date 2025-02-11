@@ -275,7 +275,7 @@ A propriedade `.id` contém <!-- REF #SessionClass.id.Summary --> o identificado
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands/session-storage.md) command.
+Você pode usar essa propriedade para obter o objeto [`.storage`](#storage) de uma sessão graças ao comando [`storage`](../commands/session-storage.md).
 
 :::
 
