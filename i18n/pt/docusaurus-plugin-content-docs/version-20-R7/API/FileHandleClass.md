@@ -146,7 +146,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.charset` property returns <!-- REF #FileHandleClass.charset.Summary -->the charset used when reading from or writing to the file<!-- END REF -->.
+A propriedade `.charset` retorna <!-- REF #FileHandleClass.charset.Summary --> o conjunto de caracteres usado durante a leitura ou escrita para o arquivo<!-- END REF -->.
 
 O conjunto de caracteres pode ser definido na criação do identificador com a função [`file.open()`](FileClass#open). Por padrão é "UTF-8".
 
@@ -214,7 +214,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns the current size of the document, expressed in bytes<!-- END REF -->.
+A função `.getSize()` <!-- REF #FileHandleClass.getSize().Summary -->retorna o tamanho atual do documento, expresso em bytes<!-- END REF -->.
 
 > Essa função retorna o mesmo valor que a propriedade ([.size](FileClass#size)) da classe `File`.
 
