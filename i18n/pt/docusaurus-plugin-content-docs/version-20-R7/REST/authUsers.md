@@ -37,7 +37,7 @@ A sequência de login do usuário é a seguinte:
 
 In the user login phase, license usage is disconnected from web user sessions. A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.
 
-All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. A execução dessa função aciona o consumo da licença 4D.
+All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. Para atribuir privilégios a uma sessão web, você precisa executar a função [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) para a sessão. A execução dessa função aciona o consumo da licença 4D.
 
 ### Solicitações REST descritivas
 
