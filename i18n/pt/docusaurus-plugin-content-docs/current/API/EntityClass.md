@@ -493,7 +493,7 @@ Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja,
 
 #### Descrição
 
-The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
+A função `.fromObject()` <!-- REF #EntityClass.fromObject().Summary -->preenche uma entidade com o conteúdo *filler*<!-- END REF -->.
 
 > Essa função modifica a entidade original.
 
@@ -580,7 +580,7 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
 
 #### Descrição
 
-The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. Esta função é útil para configurar o código genérico.
+A função `.getDataClass()` <!-- REF #EntityClass.getDataClass().Summary -->retorna a dataclass da entidade<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 #### Exemplo
 
@@ -771,7 +771,7 @@ Se a entidade não pertence à seleção de uma entidade, a função retorna Nul
 
 A função `.getStamp()` <!-- REF #EntityClass.getStamp().Summary --> retorna o valor atual do carimbo da entidade<!-- END REF -->.
 
-O selo interno é automaticamente incrementado por 4D cada vez que a entidade é gravada. It manages concurrent user access and modifications to the same entities (see [**Entity locking**](ORDA/entities.md#entity-locking)).
+O selo interno é automaticamente incrementado por 4D cada vez que a entidade é gravada. Ele gerencia os acessos simultâneos e as modificações de usuários às mesmas entidades (consulte [**bloqueio de uma entidade**](ORDA/entities.md#entity-locking)).
 
 > Para uma nova entidade (nunca salva), a função retorna 0. Para saber se uma entidade acabou de ser criada, recomenda-se a utilização de [.isNew()](#isnew).
 
