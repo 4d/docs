@@ -463,7 +463,7 @@ You can use the `.dataType` property of the [options object](#options-object) to
 
 The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
 
-The type of the message is defined according to the [`dataType`](#datatype) attribute.
+El tipo del mensaje se define en función del atributo [`dataType`](#datatype).
 
 Esta propiedad es de **solo lectura**.
 
