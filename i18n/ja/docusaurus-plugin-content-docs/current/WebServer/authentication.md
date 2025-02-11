@@ -88,7 +88,7 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 
 ### シンタックス
 
-**On Web Authentication**( _$url_ : Text ; _$content_ : Text ; _$IPClient_ : Text ; _$IPServer_ : Text ; _$user_ : Text ; _$password_ : Text ) -> $accept : Boolean
+**On Web Authentication**( *$url* : Text ; *$content* : Text ; *$IPClient* : Text ; *$IPServer* : Text ; *$user* : Text ; *$password* : Text ) -> $accept : Boolean
 
 | 引数        | 型       |                             | 説明                                              |
 | --------- | ------- | :-------------------------: | ----------------------------------------------- |
