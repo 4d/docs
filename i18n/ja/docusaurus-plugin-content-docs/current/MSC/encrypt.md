@@ -4,15 +4,15 @@ title: 暗号化ページ
 sidebar_label: 暗号化ページ
 ---
 
-このページを使用して、データベースの各テーブルに対して定義された **暗号化可能** 属性に基づいて、データファイルを暗号化または _復号化_ (つまりデータから暗号化を解除) することができます。
+このページを使用して、データベースの各テーブルに対して定義された **暗号化可能** 属性に基づいて、データファイルを暗号化または *復号化* (つまりデータから暗号化を解除) することができます。
 
 :::info
 
-4D のデータ暗号化についての詳細な情報に関しては、_デザインリファレンス_ マニュアルの [データの暗号化](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.ja.html) の章を参照してください。 また、[A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) のブログ記事 (英文) も参照ください。
+4D のデータ暗号化についての詳細な情報に関しては、*デザインリファレンス* マニュアルの [データの暗号化](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.ja.html) の章を参照してください。 また、[A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) のブログ記事 (英文) も参照ください。
 
 :::
 
-暗号化/復号化操作をおこなうたびに、新しいフォルダーが作成されます。 そのフォルダーは "Replaced Files (Encrypting) _yyyy-mm-dd hh-mm-ss_" あるいは "Replaced Files (Decrypting) _yyyy-mm-dd hh-mm-ss_" と名前が付けられます。
+暗号化/復号化操作をおこなうたびに、新しいフォルダーが作成されます。 そのフォルダーは "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*" あるいは "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*" と名前が付けられます。
 
 > 暗号化は [メンテナンスモード](overview.md#メンテナンスモードでの表示) でのみ利用可能です。 標準モードでこの操作を実行しようとすると、警告ダイアログが表示され、アプリケーションを終了してメンテナンスモードで再起動することを知らせます。
 
@@ -127,7 +127,7 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 
 ## ログファイル
 
-暗号化オペレーションが完了すると、4D はアプリケーションの Logsフォルダー内にファイルを生成します。 このファイルは XML形式で作成され、"_ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml_" または "_ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml_" という名前がつけられます。
+暗号化オペレーションが完了すると、4D はアプリケーションの Logsフォルダー内にファイルを生成します。 このファイルは XML形式で作成され、"*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" または "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" という名前がつけられます。
 
 新しくログファイルが生成されるたび、MSCページに <strong x-id="1">ログファイルを開く</strong> ボタンが表示されます。
 
