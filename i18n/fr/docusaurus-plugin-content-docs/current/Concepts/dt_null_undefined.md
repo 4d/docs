@@ -92,12 +92,12 @@ Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous
 | --------- | -------------------------- | -------- | -------------------------------------------------------------- | ------ |
 | Egalité   | Null `=` Null              | Boolean  | a.nullProp `=` b.nullProp      | True   |
 |           | Null `=` Undefined         | Boolean  | a.nullProp `=` b.undefinedProp | True   |
-|           | Null `=` _valeur scalaire_ | Boolean  | a.nullProp `=` 42                              | False  |
+|           | Null `=` *valeur scalaire* | Boolean  | a.nullProp `=` 42                              | False  |
 | Inégalité | Null `#` Null              | Boolean  | a.nullProp `#` b.nullProp      | False  |
 |           | Null `#` Undefined         | Boolean  | a.nullProp `#` b.undefinedProp | False  |
-|           | Null `#` _valeur scalaire_ | Boolean  | a.nullProp `#` 42                              | True   |
+|           | Null `#` *valeur scalaire* | Boolean  | a.nullProp `#` 42                              | True   |
 
-Les _valeurs scalaires_ sont des valeurs de type chaîne, date, heure, booléen, numérique ou Blob. Lorsqu'elles sont déclarées, leur [valeur par défaut](data-types.md#valeurs-par-defaut) n'est ni undefined ni null. Les autres types (pointeur, image, objet, collection) ont une valeur par défaut undefined ou null. Ex :
+Les *valeurs scalaires* sont des valeurs de type chaîne, date, heure, booléen, numérique ou Blob. Lorsqu'elles sont déclarées, leur [valeur par défaut](data-types.md#valeurs-par-defaut) n'est ni undefined ni null. Les autres types (pointeur, image, objet, collection) ont une valeur par défaut undefined ou null. Ex :
 
 ```4d
 var $object : Object
@@ -119,16 +119,16 @@ Les comparaisons avec les opérateurs Supérieur à (`>`), Inférieur à (`<`), 
 | ------------------- | ----------------------------------------- | -------- | ------------------------------------------------------------------- | ------ |
 | Egalité             | Undefined `=` Undefined                   | Boolean  | a.undefinedProp `=` b.undefinedProp | True   |
 |                     | Undefined `=` Null                        | Boolean  | a.undefinedProp `=` c.nullProp      | True   |
-|                     | Undefined `=` _autres valeurs_            | Boolean  | a.undefinedProp `=` 42                              | False  |
+|                     | Undefined `=` *autres valeurs*            | Boolean  | a.undefinedProp `=` 42                              | False  |
 | Inégalité           | Undefined `#` Undefined                   | Boolean  | a.undefinedProp `#` b.undefinedProp | False  |
 |                     | Undefined `#` Null                        | Boolean  | a.undefinedProp `#` b.nullProp      | False  |
-|                     | Undefined `#` _autres valeurs_            | Boolean  | a.undefinedProp `#` 42                              | True   |
+|                     | Undefined `#` *autres valeurs*            | Boolean  | a.undefinedProp `#` 42                              | True   |
 | Supérieur à         | Undefined `>` string, Date, Time, number  | Boolean  | a.undefinedProp `>` "abc"                           | False  |
 | Inférieur à         | Undefined `<` string, Date, Time, number  | Boolean  | a.undefinedProp `<` "abc"                           | False  |
 | Supérieur ou égal à | Undefined `>=` string, Date, Time, number | Boolean  | a.undefinedProp `>=` "abc"                          | False  |
 | Inférieur ou égal à | Undefined `<=` string, Date, Time, number | Boolean  | a.undefinedProp `<=` "abc"                          | False  |
 
-_autres valeurs_ sont des expressions de tout type dont la valeur n'est ni Undefined ni Null.
+*autres valeurs* sont des expressions de tout type dont la valeur n'est ni Undefined ni Null.
 
 :::info
 
