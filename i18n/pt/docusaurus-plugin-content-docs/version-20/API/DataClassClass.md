@@ -193,7 +193,7 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 
 #### Descrição
 
-The `.getDataStore( )` function <!-- REF #DataClassClass.clearRemoteCache().Summary -->devolve o datastore para a dataclass especificada<!-- END REF -->.
+A função `.getRemoteCache()` <!-- REF #DataClassClass.clearRemoteCache().Summary -->devolve um objecto que contém o conteúdo da cache ORDA para uma dataclass.<!-- END REF -->.
 
 > Esta função não reinicia os valores `timeout` e `maxEntries`.
 
@@ -526,7 +526,7 @@ Este exemplo ilustra o uso da propriedade *context* :
 
 #### Descrição
 
-A função `.new( )` <!-- REF #DataClassClass.getCount().Summary --> cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
+The `.getDataStore( )` function <!-- REF #DataClassClass.getCount().Summary --> devolve o datastore para a dataclass especificada<!-- END REF -->.
 
 Se esta função for utilizada dentro de uma transacção, as entidades criadas durante a transação serão levadas em consideração.
 
@@ -566,7 +566,7 @@ $number:=$ds. Persons.getCount()
 
 #### Descrição
 
-A função `.newSelection( )` <!-- REF #DataClassClass.getDataStore().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
+A função `.new()` <!-- REF #DataClassClass.getDataStore().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
 
 A datastore pode ser:
 
@@ -696,7 +696,7 @@ A função `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devolve u
 
 #### Descrição
 
-A função `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devolve um objecto que contém o conteúdo da cache ORDA para uma dataclass.<!-- END REF -->.
+A função `.setRemoteCacheSettings()` <!-- REF #DataClassClass.getRemoteCache().Summary -->define o tempo limite e o tamanho máximo da cache ORDA para um dataclass.<!-- END REF -->.
 
 Chamar esta função a partir de uma aplicação 4D monousuário retorna `Null`.
 
@@ -707,15 +707,15 @@ O objeto retornado tem as propriedades abaixo:
 | maxEntries  | Integer    | Número máximo de entradas recolhidas.                                              |
 | stamp       | Integer    | Carimbo da cache.                                                                  |
 | timeout     | Integer    | Tempo restante antes que as novas entradas na cache sejam marcadas como expiradas. |
-| |           | Collection | Contém um objecto de entrada para cada entidade na cache.                          |
+| |           | Collection | Collection | Contém um objecto de entrada para cada entidade na cache.             |
 
 Cada objecto de entrada na colecção `entradas` tem as seguintes propriedades:
 
-| Propriedade | Tipo       | Descrição                             |
-| ----------- | ---------- | ------------------------------------- |
-| data        | Object     | Objeto que contém os dados da entrada |
-| expired     | Parâmetros | True se a entrada tiver expirado      |
-| |           | Text       | Chave primária da entidade.           |
+| Propriedade | Tipo       | Descrição                                |
+| ----------- | ---------- | ---------------------------------------- |
+| data        | Object     | Objeto que contém os dados da entrada    |
+| expired     | Parâmetros | True se a entrada tiver expirado         |
+| |           | Text       | Text       | Chave primária da entidade. |
 
 O objecto `data` em cada entrada contém as seguintes propriedades:
 
@@ -1549,7 +1549,7 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
 
 #### Descrição
 
-A função `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->define o tempo limite e o tamanho máximo da cache ORDA para um dataclass.<!-- END REF -->.
+A função `.new( )` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
 
 No parâmetro *settings*, passe um objeto contendo as propriedades abaixo:
 
