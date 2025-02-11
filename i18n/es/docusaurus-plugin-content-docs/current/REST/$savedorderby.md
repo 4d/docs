@@ -3,7 +3,7 @@ id: savedorderby
 title: $savedorderby
 ---
 
-Guarda el filtro definido por `$orderby` al crear un conjunto de entidades (_por ejemplo_, `$savedorderby="{orderby}"`)
+Guarda el filtro definido por `$orderby` al crear un conjunto de entidades (*por ejemplo*, `$savedorderby="{orderby}"`)
 
 ## Descripción
 
