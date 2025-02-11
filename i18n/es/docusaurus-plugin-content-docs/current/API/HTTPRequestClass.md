@@ -501,7 +501,7 @@ Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
 
 :::note
 
-During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls.  You can exit from a .wait() by calling [`terminate()`](#terminate) from a callback.
+During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls.  Puede salir de un .wait() llamando a [`terminate()`](#terminate) desde una retrollamada.
 
 :::
 
