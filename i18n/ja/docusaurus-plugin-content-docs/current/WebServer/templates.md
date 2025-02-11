@@ -13,7 +13,7 @@ title: テンプレートページ
 <P><!--#4DTEXT vtSiteName--> へようこそ！ </P>
 ```
 
-4D変数 _vtSiteName_ の値が HTMLページに挿入されます。
+4D変数 *vtSiteName* の値が HTMLページに挿入されます。
 
 ## テンプレート用タグ
 
