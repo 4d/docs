@@ -11,7 +11,7 @@ title: On Mouse Leave
 
 Esse evento é gerado uma vez, quando o cursor do mouse deixa na área gráfica de um objeto.
 
-El evento `On Mouse Leave` actualiza las variables sistema _MouseX_ y _MouseY_.
+El evento `On Mouse Leave` actualiza las variables sistema *MouseX* y *MouseY*.
 
 Os objetos tornados invisíveis por meio do comando `OBJECT SET VISIBLE` ou da propriedade [Visibility](FormObjects/properties_Display.md#visibility) não geram esse evento.
 
