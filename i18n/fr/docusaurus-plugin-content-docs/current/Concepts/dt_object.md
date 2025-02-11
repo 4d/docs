@@ -248,7 +248,7 @@ Sur la base du code ci-dessus, la table de comparaison est :
 
 ## Resources
 
-Les objets utilisent des _ressources_, telles que des documents, des verrous d'entités et, bien sûr, de la mémoire. Ces ressources sont conservées aussi longtemps que les objets en ont besoin. Généralement, vous n'avez pas à vous en soucier, 4D libère automatiquement toutes les ressources rattachées à un objet lorsqu'il détecte que l'objet lui-même n'est plus référencé par aucune variable ou autre objet.
+Les objets utilisent des *ressources*, telles que des documents, des verrous d'entités et, bien sûr, de la mémoire. Ces ressources sont conservées aussi longtemps que les objets en ont besoin. Généralement, vous n'avez pas à vous en soucier, 4D libère automatiquement toutes les ressources rattachées à un objet lorsqu'il détecte que l'objet lui-même n'est plus référencé par aucune variable ou autre objet.
 
 Par exemple, lorsqu'il n'y a plus de références à une entité sur laquelle vous avez mis un verrou avec [`$entity.lock()`](../API/EntityClass.md#lock), 4D libérera la mémoire mais relâchera aussi automatiquement le verrou associé, un appel à [`$entity.unlock()`](../API/EntityClass.md#unlock) est inutile.
 
