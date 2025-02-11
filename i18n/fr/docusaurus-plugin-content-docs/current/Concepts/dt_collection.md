@@ -13,7 +13,7 @@ Pour accéder à un élément d'une collection, vous devez passer le numéro de 
 collectionRef[expression]
 ```
 
-Vous pouvez passer n'importe quelle expression 4D valide qui retourne un entier positif dans _expression_. Exemples :
+Vous pouvez passer n'importe quelle expression 4D valide qui retourne un entier positif dans *expression*. Exemples :
 
 ```4d
  myCollection[5]  //accès au 6e élément de la collection
@@ -112,7 +112,7 @@ Pour plus d'informations, consultez la section [Objets et collections partagés]
 
 ## Fonctions de collection
 
-Les références de collections 4D bénéficient de fonctions de classe spéciales (aussi nommées _fonctions membres_). Les fonctions de collection sont listées dans la section [Collection Class](../API/CollectionClass.md) .
+Les références de collections 4D bénéficient de fonctions de classe spéciales (aussi nommées *fonctions membres*). Les fonctions de collection sont listées dans la section [Collection Class](../API/CollectionClass.md) .
 
 Par exemple :
 
@@ -130,12 +130,12 @@ Certaines fonctions retournent la collection d'origine après modification, de m
 
 ### paramètre propertyPath
 
-Plusieurs fonctions acceptent un paramètre _propertyPath_. Ce paramètre peut contenir :
+Plusieurs fonctions acceptent un paramètre *propertyPath*. Ce paramètre peut contenir :
 
 - soit un nom de propriété d'objet, par exemple "nomComplet"
 - soit un chemin de propriété d'objet, c'est-à-dire une séquence hiérarchique de sous-propriétés reliées par des points, par exemple "employé.enfant.prénom".
 
-**Attention** : Lorsque vous utilisez des fonctions et des paramètres _propertyPath_, vous ne pouvez pas utiliser ".", "[ ]" ou des espaces dans les noms de propriétés, car cela empêcherait 4D d'analyser correctement le chemin :
+**Attention** : Lorsque vous utilisez des fonctions et des paramètres *propertyPath*, vous ne pouvez pas utiliser ".", "[ ]" ou des espaces dans les noms de propriétés, car cela empêcherait 4D d'analyser correctement le chemin :
 
 ```4d
  $vmin:=$col.min("My.special.property") //undefined
