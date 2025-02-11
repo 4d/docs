@@ -108,7 +108,7 @@ Les objets partagés et les collections partagées permettent d'établir des com
 
 :::note
 
-N'oubliez pas que les [fonctions de collection](../API/CollectionClass.md) qui modifient les collections partagées déclenchent automatiquement un **Use** interne pour cette collection partagée pendant l'exécution de la fonction.
+[Collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed, making an explicit call to the structure unnecessary. It's also the case for `ARRAY TO COLLECTION` and `OB REMOVE` commands.
 
 :::
 
