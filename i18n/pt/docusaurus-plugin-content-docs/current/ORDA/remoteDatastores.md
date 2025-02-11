@@ -39,7 +39,7 @@ No exemplo a seguir, dois processos estão sendo executados na mesma sessão:
 
 ## Fechamento das sessões
 
-Conforme descrito no [tempo de vida da sessão](../WebServer/sessions.md#session-lifetime), uma sessão web é fechada automaticamente por 4D quando não há atividade durante seu período limite. El tiempo de espera por defecto es de 60 mn, pero este valor puede modificarse utilizando el parámetro _connectionInfo_ del comando `Open datastore`.
+Conforme descrito no [tempo de vida da sessão](../WebServer/sessions.md#session-lifetime), uma sessão web é fechada automaticamente por 4D quando não há atividade durante seu período limite. El tiempo de espera por defecto es de 60 mn, pero este valor puede modificarse utilizando el parámetro *connectionInfo* del comando `Open datastore`.
 
 Se uma solicitação for enviada ao repositório de dados remoto depois que a sessão tiver sido fechada, ela será recriada automaticamente, se possível (licença disponível, servidor não parado...). However, keep in mind that the context of the session regarding locks and transactions is lost (see below).
 
