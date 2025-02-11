@@ -298,7 +298,7 @@ The `wait()` function <!-- REF #4D.TCPConnection.wait().Summary -->waits until  
 
 :::note
 
-During the `.wait()` execution, callback functions are executed, whether they originate from other `SystemWorker` instances. You can exit from a `.wait()` by calling [`shutdown()`](#shutdown) from a callback.
+During the `.wait()` execution, callback functions are executed, whether they originate from other `SystemWorker` instances. Puede salir de un `.wait()` llamando a [`shutdown()`](#shutdown) desde una retrollamada.
 
 :::
 
