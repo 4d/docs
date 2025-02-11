@@ -514,7 +514,7 @@ A página de Licenças e Certificados pode ser usada:
 
 ### Licenças
 
-This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. Por padrão, a lista está vazia.
+Esta aba exibe a lista de [licenças de implantação disponíveis que você pode incorporar](#about-licenses) em sua aplicação. Por padrão, a lista está vazia.
 
 :::info
 
