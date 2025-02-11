@@ -100,7 +100,7 @@ Si tiene intención de utilizar VCS o los editores de código externos con sus n
 
 > Esta opción sólo puede aplicarse a proyectos (las bases de datos binarias siempre incluyen tokens).
 
-> Siempre puede obtener el código con tokens llamando a [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) con 1 en el parámetro _option_.
+> Siempre puede obtener el código con tokens llamando a [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) con 1 en el parámetro *option*.
 
 #### Exclusión de los tokens en los proyectos existentes
 
