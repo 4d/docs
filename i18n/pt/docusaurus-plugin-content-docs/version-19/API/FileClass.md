@@ -272,7 +272,7 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 #### Descrição
 
-A função `.delete()` <!-- REF #FileClass.delete().Summary -->apaga o arquivo<!-- END REF -->.
+A função `.delete()` <!-- REF #FileClass.delete().Summary -->A função `.delete()`<!-- END REF -->.
 
 Se o arquivo não existir no disco, a função não faz nada (não é gerado nenhum erro).
 
@@ -283,7 +283,7 @@ Se o ficheiro estiver atualmente aberto, o resultado depende do sistema operativ
 
 :::caution
 
-`.delete()` pode apagar qualquer ficheiro num disco. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete()` deve ser utilizado com extrema cautela. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
+`.delete()` pode apagar qualquer ficheiro num disco. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete()` pode apagar qualquer ficheiro num disco. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
 
 :::
 
