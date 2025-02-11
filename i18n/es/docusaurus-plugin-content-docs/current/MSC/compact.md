@@ -36,10 +36,10 @@ Una vez finalizada la operación, los archivos compactados sustituyen automátic
 
 ## Abrir archivo de historial
 
-Una vez finalizada la compactación, 4D genera un archivo de historial en la carpeta Logs del proyecto. Este archivo permite ver todas las operaciones realizadas. Se crea en formato XML y se llama:  _ApplicationName\*\*_Compact_Log_yyyy-mm-dd hh-mm-ss.xml_" donde:
+Una vez finalizada la compactación, 4D genera un archivo de historial en la carpeta Logs del proyecto. Este archivo permite ver todas las operaciones realizadas. Se crea en formato XML y se llama:  *ApplicationName\*\*_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" donde:
 
-- _ApplicationName_ es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
-- _yyyy-mm-dd hh-mm-ss_ es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
+- *ApplicationName* es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
+- *yyyy-mm-dd hh-mm-ss* es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
 
 Al presionar el botón **Abrir archivo de historial**, 4D muestra el archivo de historial más reciente en el navegador por defecto de la máquina.
 
