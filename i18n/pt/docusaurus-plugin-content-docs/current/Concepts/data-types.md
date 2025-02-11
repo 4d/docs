@@ -29,7 +29,7 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 
 (1) Note que ORDA maneja campos de bancos de dados através de objetos (entidades) e assim, só é compatível com tipos de dados disponíveis a esses objetos. Para obter mais informações, consulte a descrição do tipo de dados [Object] (Concepts/dt_object.md).
 
-(2) Na verdade, a variante não é um tipo de _dado_, mas um tipo de _variável_ que pode conter um valor de qualquer outro tipo de dado.
+(2) Na verdade, a variante não é um tipo de *dado*, mas um tipo de *variável* que pode conter um valor de qualquer outro tipo de dado.
 
 ## Valor padrão
 
@@ -54,7 +54,7 @@ O valor por defeito depende do tipo de variável:
 
 ### Null como valor padrão
 
-As variáveis do tipo Object, Collection, Pointer e Picture têm **null** como valor padrão, mas na verdade recebem um status intermediário quando são declaradas e não atribuídas. Eles _se comportam como_ valores **null**, mas com algumas diferenças, gerar menos erros quando o código tenta acessá-los.
+As variáveis do tipo Object, Collection, Pointer e Picture têm **null** como valor padrão, mas na verdade recebem um status intermediário quando são declaradas e não atribuídas. Eles *se comportam como* valores **null**, mas com algumas diferenças, gerar menos erros quando o código tenta acessá-los.
 
 ## Conversão de tipos de dados
 
