@@ -131,7 +131,7 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(theSum)
 
 ## Actions standard
 
-Quatre actions standard spécifiques sont disponibles pour gérer automatiquement les zones web : `Open Back URL`, `Open Forward URL`, `Refresh Current URL` et `Stop Loading URL`. Ces actions peuvent être associées à des boutons ou des commandes de menu et permettre une implémentation rapide d'interfaces Web basiques. These actions are described in [Standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html).
+Quatre actions standard spécifiques sont disponibles pour gérer automatiquement les zones web : `Open Back URL`, `Open Forward URL`, `Refresh Current URL` et `Stop Loading URL`. Ces actions peuvent être associées à des boutons ou des commandes de menu et permettre une implémentation rapide d'interfaces Web basiques. Ces actions peuvent être associées à des boutons ou des commandes de menu et permettre une implémentation rapide d'interfaces Web basiques.
 
 ## Evénements formulaire
 

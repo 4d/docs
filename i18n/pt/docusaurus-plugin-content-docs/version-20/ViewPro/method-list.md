@@ -3099,7 +3099,7 @@ O comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summa
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Em *viewPro*, passe um objeto 4D View Pro válido. Este objeto pode ter sido criado usando [VP Export to object](#vp-export-to-object) ou manualmente. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
+Em *viewPro*, passe um objeto 4D View Pro válido. Este objeto pode ter sido criado usando [VP Export to object](#vp-export-to-object) ou manualmente. Para mais informações sobre os objectos 4D View Pro, consulte a seção [objeto 4D View Pro](configuring.md#4d-view-pro-object).
 
 Um erro é retornado se o objeto *viewPro* for inválido.
 
@@ -4884,7 +4884,7 @@ Case of
 
 #### Descrição
 
-O comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define o contexto de dados de uma folha<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. On the other hand, the [VP Get data context](#vp-get-data-context) command can return a context containing user modifications.
+O comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define o contexto de dados de uma folha<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. Por outro lado, o comando [VP Get data context](#vp-get-data-context) pode retornar um contexto contendo modificações de usuário.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -5181,9 +5181,9 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 
 The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
 
-> If the *formula* is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-method) command.
+> If the *formula* is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. Se um método 4D é usado, ele deve ser permitido com o comando [`VP SET ALLOWED METHODS`](#vp-set-allowed-method).
 
-The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *formula*.
+O parametro opcional *formatPattern* define um [pattern](configuring.md#cell-format) para a *formula*.
 
 You remove the formula in *rangeObj* by replacing it with an empty string ("").
 
@@ -5229,14 +5229,14 @@ VP SET FORMULA($range; "SUM(A1,B7,C11)") //"," para separar parâmetros
 
 O comando `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->atribui uma coleção de fórmulas que começa no intervalo de células especificado<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell (created with [VP Cell](#vp-cell)) whose formula you want to specify. Se *rangeObj* incluir vários intervalos, somente o primeiro será usado.
+No *rangeObj*, passe uma faixa da célula (criada com [VP Cell](#vp-cell)) cuja fórmula você quer especificar. Se *rangeObj* incluir vários intervalos, somente o primeiro será usado.
 
 O parâmetro *formulasCol* é uma coleção bidimensional:
 
 * A coleção de primeiro nível contém subcoleções de fórmulas. Cada subcolecção define uma linha.
 * Cada subcoleção define os valores das células para a linha. Values must be text elements containing the formulas to assign to the cells.
 
-> If the formula is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-method) command.
+> If the formula is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. Se um método 4D é usado, ele deve ser permitido com o comando [`VP SET ALLOWED METHODS`](#vp-set-allowed-method).
 
 You remove the formulas in *rangeObj* by replacing them with an empty string ("").
 
@@ -5349,7 +5349,7 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 
 The *numberValue* parameter specifies a numeric value to be assigned to the *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *numberValue* parameter.
+O parâmetro opcional *formatPattern* define um [pattern](configuring.md#cell-format) para o parâmetro *numberValue*.
 
 #### Exemplo
 
@@ -5668,7 +5668,7 @@ O comando `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary
 
 Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
-Pass an object containing definitions for the options to set in the *sheetOptions* parameter. To view the full list of the available options, see the [Sheet Options](configuring.md#sheet-options) paragraph.
+Pass an object containing definitions for the options to set in the *sheetOptions* parameter. Para ver a lista completa das opções disponíveis, veja parágrafo [Opções de folha](configuring.md#sheet-options).
 
 No parâmetro opcional *sheet*, pode designar uma planilha específica (a contagem começa em 0). Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
 
@@ -6017,7 +6017,7 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 
 The *textValue* parameter specifies a text value to be assigned to the *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *textValue* parameter.
+O parâmetro opcional *formatPattern* define um [pattern](configuring.md#cell-format) para o parâmetro *textValue*.
 
 #### Exemplo
 
@@ -6052,7 +6052,7 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 
 The *timeValue* parameter specifies a time expressed in seconds to be assigned to the *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *timeValue* parameter.
+O parâmetro opcional *formatPattern* define um [pattern](configuring.md#cell-format) para o parâmetro *timeValue*.
 
 #### Exemplo
 
@@ -6090,11 +6090,11 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 
 The parameter *valueObj* is an object that includes properties for the value and the [format](configuring.md#cell-format) to assign to *rangeObj*. Pode incluir as seguintes propriedades:
 
-| Propriedade | Tipo                                     | Descrição                                                                                                                                                            |
-| ----------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value       | Integer, Real, Boolean, Text, Date, Null | Valor a atribuir a *rangeObj* (exceto - hora). Passar null para apagar o conteúdo da célula.                                                                         |
-| time        | Real                                     | Valor hora (em segundos) a atribuir a *rangeObj*                                                                                                                     |
-| format      | Text                                     | Padrão para propriedade valor/tempo. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
+| Propriedade | Tipo                                     | Descrição                                                                                                                                                             |
+| ----------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value       | Integer, Real, Boolean, Text, Date, Null | Valor a atribuir a *rangeObj* (exceto - hora). Passar null para apagar o conteúdo da célula.                                                                          |
+| time        | Real                                     | Valor hora (em segundos) a atribuir a *rangeObj*                                                                                                                      |
+| format      | Text                                     | Padrão para propriedade valor/tempo. Para informações sobre padrões e caracteres de formatação, consulte o parágrafo [Formato de célula](configuring.md#cell-format). |
 
 #### Exemplo
 
@@ -6213,13 +6213,13 @@ A tabela seguinte lista as opções de libro disponíveis:
 | calcOnDemand                          | boolean                 | As fórmulas só são calculadas quando são solicitadas.                                                                                                                                                                                                                              |
 | columnResizeMode                      | number                  | Modo de redimensionamento de colunas. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Utilizar o modo de redimensionamento normal (ou seja, as restantes colunas são afetadas)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Usar o modo split (ou seja, as colunas restantes não são afetadas)</td></tr></table>                                                                                                                                                                                              |
 | copyPasteHeaderOptions                | number                  | Cabeçalhos a incluir quando os dados são copiados ou colados. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                                      |
-| customList                            | collection              | The list for users to customize drag fill, prioritize matching this list in each fill. Cada item da coleção é um conjunto de cadeias de caracteres. See on [GrapeCity's website](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b).                         |
+| customList                            | collection              | The list for users to customize drag fill, prioritize matching this list in each fill. Cada item da coleção é um conjunto de cadeias de caracteres. Veja no [site web de GrapeCity](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b).                      |
 | cutCopyIndicatorBorderColor           | string                  | Border color for the indicator displayed when the user cuts or copies the selection.                                                                                                                                                                                               |
 | cutCopyIndicatorVisible               | boolean                 | Apresenta um indicador quando se copia ou corta o item selecionado.                                                                                                                                                                                                                |
 | defaultDragFillType                   | number                  | O tipo de preenchimento de arrastamento padrão. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Preenche automaticamente as células. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Limpa os valores das células.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Preenche as células com todos os objetos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Preenche as células apenas com formatação.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Preenche as células com séries. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Preenche as células com valores e não com formatação. </td></tr></table>                                                                                                                                                                                    |
 | enableAccessibility                   | boolean                 | O suporte de acessibilidade está ativado na folha de cálculo.                                                                                                                                                                                                                      |
 | enableFormulaTextbox                  | boolean                 | A caixa de texto da fórmula está activada.                                                                                                                                                                                                                                         |
-| grayAreaBackColor                     | string                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                                          |
+| grayAreaBackColor                     | string                  | Uma string de cores usada para representar a cor de fundo da área cinza, como "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", e assim por diante.                                                                                                                                    |
 | highlightInvalidData                  | boolean                 | Os dados inválidos são realçados.                                                                                                                                                                                                                                                  |
 | iterativeCalculation                  | boolean                 | Ativa o cálculo iterativo. Veja em [o site de Grapecity](https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html).                                                                                                                                           |
 | iterativeCalculationMaximumChange     | numeric                 | Quantidade máxima de variação entre dois valores de cálculo.                                                                                                                                                                                                                       |

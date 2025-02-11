@@ -62,7 +62,7 @@ Les options suivantes sont prises en charge :
 
   Lorsque cette option est sélectionnée, le compilateur de 4D vérifiera que la méthode est effectivement capable et retournera des erreurs si ce n'est pas le cas -- par exemple, si elle appelle directement ou indirectement des commandes ou d'autres méthodes qui, elles, ne peuvent pas être exécutées en mode préemptif (toute la chaîne d'appel est analysée mais les erreurs sont signalées uniquement au premier niveau). Dans ce cas, vous pourrez modifier la méthode afin de la rendre "thread-safe" ou sélectionner une autre option.
 
-  Si l'éligibilité de la méthode au mode préemptif est confirmée par le compilateur, elle est étiquetée "thread-safe" en interne et sera exécutée en mode préemptif à chaque fois que les conditions requises seront réunies. Cette propriété définit son éligibilité pour le mode préemptif mais ne garantit pas que la méthode sera réellement exécutée en mode préemptif, car ce mode d'exécution nécessite un [contexte spécifique](#when-is-a-process-started-preemptively).
+  Si l'éligibilité de la méthode au mode préemptif est confirmée par le compilateur, elle est étiquetée "thread-safe" en interne et sera exécutée en mode préemptif à chaque fois que les conditions requises seront réunies. Si l'éligibilité de la méthode au mode préemptif est confirmée par le compilateur, elle est étiquetée "thread-safe" en interne et sera exécutée en mode préemptif à chaque fois que les conditions requises seront réunies.
 
 - **Ne peut pas être exécutée dans un process préemptif** : En sélectionnant cette option, vous déclarez que la méthode ne doit jamais être exécutée en mode préemptif, et doit par conséquent toujours être exécutée en mode coopératif. La propriété "preemptive" de la méthode prend pour valeur "incapable".
 
@@ -189,7 +189,7 @@ Les seuls accès possibles à l'interface utilisateur depuis un thread préempti
 
 - [Dialogue d'erreurs standard](../Debugging/basics). La boîte de dialogue est affichée dans le process du mode utilisateur (sur 4D) ou dans le process de l'interface utilisateur du serveur (4D Server). Le bouton **Trace** est désactivé.
 - Les indicateurs de progression standard
-- Les dialogues `ALERT`, `Request` et `CONFIRM`. La boîte de dialogue est affichée dans le process du mode utilisateur (sur 4D) ou dans le process de l'interface utilisateur du serveur (4D Server). Notez que si 4D Server a été lancé en tant que service sur Windows sans autorisation de l'utilisateur, les dialogues ne seront pas affichés.
+- Les dialogues `ALERT`, `Request` et `CONFIRM`. La boîte de dialogue est affichée dans le process du mode utilisateur (sur 4D) ou dans le process de l'interface utilisateur du serveur (4D Server). La boîte de dialogue est affichée dans le process du mode utilisateur (sur 4D) ou dans le process de l'interface utilisateur du serveur (4D Server).
 
 ### Triggers
 

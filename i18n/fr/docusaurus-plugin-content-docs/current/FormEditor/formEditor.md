@@ -138,7 +138,7 @@ Vous pouvez travailler avec deux types d'objets dans vos formulaires :
 
 - **les objets statiques** (filets, cadres, images d'arrière-plan, etc.) : ces objets sont généralement utilisés pour le décor, les libellés ou encore l'interface graphique. Ces objets sont accessibles via la barre d'objets de l'éditeur de formulaires. Vous pouvez également définir leurs attributs graphiques (taille, couleur, police, etc.) et leurs propriétés de redimensionnement en utilisant la Liste de propriétés. A la différence des objets actifs, les objets statiques ne sont pas associés à des variables. A noter qu'il est possible d'insérer des éléments dynamiques dans les objets statiques.
 
-- **les objets actifs** : un objet actif est un objet qui réalise une tâche ou une fonction de l’interface. Il existe de nombreux types d’objets actifs : champs, boutons, listes déroulantes, etc. Un objet actif est associé soit à un champ, soit à une variable.
+- **les objets actifs** : un objet actif est un objet qui réalise une tâche ou une fonction de l’interface. Un objet actif est associé soit à un champ, soit à une variable.
 
 ### Sélectionner des objets
 
@@ -697,7 +697,7 @@ Sélectionnez simplement la vue de destination, faites un clic droit puis sélec
 
 ![](../assets/en/FormEditor/moveObject.png)
 
-OU
+OR
 
 Sélectionnez la vue de destination de la sélection et cliquez sur le bouton **Déplacer vers** en bas de la palette des vues :
 

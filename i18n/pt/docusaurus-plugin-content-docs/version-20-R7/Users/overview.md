@@ -18,9 +18,9 @@ Aplicações multi-usuário são implementadas com 4D Server. Incluem aplicaçõ
 
 En las aplicaciones multiusuario, el control de acceso se realiza a través de [usuarios y grupos 4D](handling_users_groups.md). You create users, assign passwords, create access groups that have different levels of privileges in the application.
 
-Inicie el sistema de control de acceso por contraseña 4D con 4D Server, [ asignando una contraseña al usuario Diseñador](handling_users_groups.md#designer-and-administrator). Hasta que no le asigne una contraseña al Diseñador, todos los accesos a la aplicación se hacen con los derechos de acceso del Diseñador, incluso si ha [configurado usuarios y grupos](handling_users_groups.md) (cuando se abre la aplicación, no se requiere  Qualquer parte da aplicação pode ser aberta.
+Inicie el sistema de control de acceso por contraseña 4D con 4D Server, [ asignando una contraseña al usuario Diseñador](handling_users_groups.md#designer-and-administrator). Quando uma senha for estabelecida para o Designer, todos os privilégios de acesso têm efeito. Para conectarse a la aplicación o a un [servidor con acceso protegido](handling_users_groups.md#assigning-group-access), los usuarios remotos deben introducir un nombre de usuario/contraseña. Qualquer parte da aplicação pode ser aberta.
 
-Quando uma senha for estabelecida para o Designer, todos os privilégios de acesso têm efeito. Para conectarse a la aplicación o a un [servidor con acceso protegido](handling_users_groups.md#assigning-group-access), los usuarios remotos deben introducir un nombre de usuario/contraseña.
+Quando uma senha for estabelecida para o Designer, todos os privilégios de acesso têm efeito. Inicie el sistema de control de acceso por contraseña 4D con 4D Server, [ asignando una contraseña al usuario Diseñador](handling_users_groups.md#designer-and-administrator).
 
 Para desativar o sistema de acesso a senhas, precisa remover a senha Designer.
 

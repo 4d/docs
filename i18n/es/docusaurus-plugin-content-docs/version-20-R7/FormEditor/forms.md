@@ -87,7 +87,7 @@ Puede crear varias páginas para un formulario de entrada. Si tiene más campos 
 
 - Coloque la información más importante en la primera página y la menos importante en otras.
 - Organice cada tema en su propia página.
-- Reduce or eliminate scrolling during data entry by setting the [entry order](formEditor.md#data-entry-order).
+- Reducir o eliminar el desplazamiento durante la entrada de datos definiendo el [orden de entrada](formEditor.md#data-entry-order).
 - Deje espacio alrededor de los elementos del formulario para lograr un diseño de pantalla atractivo.
 
 Las páginas múltiples son útiles sólo para los formularios de entrada. No son para imprimir. Cuando se imprime un formulario de varias páginas, sólo se imprime la primera.

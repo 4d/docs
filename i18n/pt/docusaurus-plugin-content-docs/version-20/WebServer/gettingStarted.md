@@ -41,7 +41,7 @@ Case of
         WEB SEND TEXT("Hello World!")
     Else 
         // Erro 404 por exemplo
-End case 
+    End case 
 ```
 
 O método banco de dados [`On Web Connection`](httpRequests.md#on-web-connection) é chamado para as solicitações recebidas e recebe a URL de destino no parâmetro `$1`. Este código muito simples apenas envia o texto para o navegador.
@@ -203,9 +203,9 @@ A maneira mais simples e segura para registrar um usuário no servidor da Web 4D
 2. Escreva e execute o seguinte código para criar um usuário:
 
 ```4d
-var $webUser : cs.WebUsersEntity
+var $webUser : cs. WebUsersEntity
 
-$webUser:=ds.WebUsers.new()
+$webUser:=ds. WebUsers.new()
 $webUser.firstName:="John"
 $webUser.lastName:="Doe"
 // a senha seria inserida pelo usuário
@@ -227,12 +227,10 @@ $webUser.save()
 ```4d
 var $indexUserId; $indexPassword : Integer
 var $userId; $password : Text
-var $user; $info : Object
-ARRAY TEXT($anames; 0)
+var $user; $info : Object ARRAY TEXT($anames; 0)
 ARRAY TEXT($avalues; 0)
 
-// get values sent in the header of the request
-WEB GET VARIABLES($anames; $avalues)
+// get values sent in the header of the request WEB GET VARIABLES($anames; $avalues)
 
 // look for header login fields
 $indexUserId:=Find in array($anames; "userId")
@@ -241,9 +239,7 @@ $indexPassword:=Find in array($anames; "password")
 $password:=$avalues{$indexPassword}
 
 //look for a user with the entered name in the users table
-$user:=ds.WebUsers.query("userId = :1"; $userId).first()
-
-If ($user#Null) //a user was found
+$user:=ds. WebUsers.query("userId = :1"; $userId).first() If ($user#Null) //a user was found
         //check the password
     If (Verify password hash($password; $user.password))
             //password ok, fill the session
@@ -254,9 +250,10 @@ If ($user#Null) //a user was found
         WEB SEND TEXT("Welcome "+Session.userName)
     Else 
         WEB SEND TEXT("Wrong user name or password.")
-    End if 
-Else 
+    End if
+    Else 
     WEB SEND TEXT("Wrong user name or password.")
+End if
 End if 
 ```
 

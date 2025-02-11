@@ -21,7 +21,7 @@ title: Document Class
 
 #### Descrição
 
-The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->the creation date of the file<!-- END REF -->.
+A propriedade `.creationDate` retorna <!-- REF #document.creationDate.Summary -->a data de criação do arquivo<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -65,7 +65,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
+A propriedade `.exists` retorna <!-- REF #document.exists.Summary -->true se o arquivo existe no disco<!-- END REF --> e false caso contrário.
 
 Essa propriedade é **somente leitura**.
 
@@ -87,7 +87,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. Uma extensão sempre começa com ".". Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome do arquivo não tiver extensão.
+A propriedade `.extension` retorna <!-- REF #document.extension.Summary --> a extensão do nome do arquivo (se houver)<!-- END REF -->. Uma extensão sempre começa com ".". Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome do arquivo não tiver extensão.
 
 Essa propriedade é **somente leitura**.
 
@@ -175,7 +175,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.isFile` property returns <!-- REF #document.isFile.Summary -->always true for a file<!-- END REF -->.
+A propriedade `.isFile` retorna <!-- REF #document.isFile.Summary -->sempre true para um arquivo<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -197,7 +197,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always false for a file<!-- END REF -->.
+A propriedade `.isFolder` retorna <!-- REF #document.isFolder.Summary -->sempre false para um arquivo<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -219,7 +219,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
+A propriedade `.isWritable` retorna <!-- REF #document.isWritable.Summary -->true se o arquivo existe no disco e é gravável<!-- END REF -->.
 
 > The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file.
 
@@ -252,7 +252,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->the date of the file's last modification<!-- END REF -->.
+A propriedade `.modificationDate` retorna <!-- REF #document.modificationDate.Summary --> a data da última modificação do arquivo<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -296,7 +296,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
+A propriedade `.name` retorna <!-- REF #document.name.Summary --> o nome do arquivo sem extensão (se houver)<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -345,7 +345,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.parent` property returns <!-- REF #document.parent.Summary -->the parent folder object of the file<!-- END REF -->. .
+A propriedade `.parent` retorna <!-- REF #document.parent.Summary --> o objeto pasta pai do arquivo<!-- END REF -->. .
 
 Essa propriedade é **somente leitura**.
 
@@ -367,7 +367,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.path` property returns <!-- REF #document.path.Summary -->the POSIX path of the file<!-- END REF -->. .
+A propriedade `.path` retorna <!-- REF #document.path.Summary --> o caminho POSIX do arquivo<!-- END REF -->. .
 
 Essa propriedade é **somente leitura**.
 
@@ -411,7 +411,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. Se o arquivo não existir em disco, o tamanho é 0.
+A propriedade `.size` retorna <!-- REF #document.size.Summary --> o tamanho do arquivo expresso em bytes<!-- END REF -->. Se o arquivo não existir em disco, o tamanho é 0.
 
 Essa propriedade é **somente leitura**.
 
@@ -444,7 +444,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.copyTo()` function <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified *destinationFolder* <!-- END REF -->.
+A função `.copyTo()` <!-- REF #document.copyTo().Summary -->copia o objeto `File` para a *destinationFolder*<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
@@ -542,7 +542,7 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 
 #### Descrição
 
-The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
+A função `.getIcon()` retorna <!-- REF #document.getIcon().Summary -->o ícone do arquivo<!-- END REF -->.
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 
@@ -581,7 +581,7 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 #### Descrição
 
-The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
+A função `.getText()` <!-- REF #document.getText().Summary -->retorna o conteúdo do arquivo como texto<!-- END REF -->.
 
 Opcionalmente, você pode designar o conjunto de caracteres a ser usado na leitura do conteúdo. Você pode passar também:
 

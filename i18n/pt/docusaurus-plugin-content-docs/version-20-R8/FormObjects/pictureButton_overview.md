@@ -54,7 +54,7 @@ Estão disponíveis os seguintes outros modos:
 - [Alterne quando Roll Over] (properties_Animation.md#switch-when-roll-over)
 - [Alterne continuamente nos cliques](properties_Animation.md#switch-continuously-on-clicks)
 - [Use Last frame as disabled] (properties_Animation.md#use-last-frame-as-disabled)
-- [Switch every x ticks](./properties_Animation.md#switch-every-x-ticks)
+- [Mudar cada x ticks](./properties_Animation.md#switch-every-x-ticks)
 
 > A [variável associada](properties_Object.md#variable-or-expression) do botão de imagem retorna o número de índice, na tabela de miniaturas, da imagem atual exibida. A numeração das imagens no quadro começa com 0.
 

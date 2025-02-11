@@ -142,7 +142,7 @@ The following example uses the path to a .json form to display the records in an
  DIALOG("/RESOURCES/OutputPersonnel.json";*)
 ```
 
-which displays:
+que muestra:
 
 ![](../assets/en/commands/pict3687439.en.png)
 
@@ -182,5 +182,5 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 |                    |                                                                     |
 | ------------------ | ------------------------------------------------------------------- |
 | Número de comando  | 40                                                                  |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+| Hilo seguro        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
 | Modifies variables | OK, error                                                           |

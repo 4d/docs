@@ -106,6 +106,7 @@ Si existe un archivo llamado `\<MethodName>.md` en la carpeta `\<package>/docume
   Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
   Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
   Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
+  Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
   Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.
 
 :::note

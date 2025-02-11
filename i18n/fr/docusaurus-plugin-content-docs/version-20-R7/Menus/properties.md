@@ -90,7 +90,7 @@ Les groupes de commandes de menus peuvent être séparés par un filet. Cette fo
 
 Vous ajoutez un filet de séparation en créant une commande de menu.
 
-Dans l'éditeur de menus, au lieu de saisir le nom de la commande de menu, il suffit de cocher l’option **Ligne de séparation**. La ligne apparaît alors dans la zone de la commande courante. Lorsque cette option est cochée, les autres propriétés sont sans effet.
+Dans l'éditeur de menus, au lieu de saisir le nom de la commande de menu, il suffit de cocher l’option **Ligne de séparation**. La ligne apparaît alors dans la zone de la commande courante. La ligne apparaît alors dans la zone de la commande courante. Lorsque cette option est cochée, les autres propriétés sont sans effet.
 **Note :** Sous macOS, il est possible de procéder en faisant commencer le nom de la commande par un tiret “-”. Cette commande sera alors affichée comme une ligne de séparation.
 
 Dans le langage 4D, vous insérez une ligne de séparation en saisissant `-` ou `(-` comme itemText pour les commandes `APPEND MENU ITEM`, `INSERT MENU ITEM`, ou `SET MENU ITEM`.

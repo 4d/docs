@@ -123,6 +123,8 @@ Pour créer un groupe :
 
 2. Cliquez sur le bouton ![](../assets/en/Users/PlussNew.png) situé au-dessous de la liste des groupes.\
    OU
+   Cliquez avec le bouton droit de la souris dans la liste des groupes et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.\
+   OU
    Cliquez avec le bouton droit de la souris dans la liste des groupes et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
 
 > La commande Dupliquer permet de créer rapidement plusieurs groupes ayant des caractéristiques communes.
@@ -177,7 +179,7 @@ Les groupes sont hiérarchisés afin que les privilèges soient correctement aff
   ![](../assets/en/Users/schema2.png)
 
 - Le groupe Comptabilité contient des opérateurs de saisie mais aussi les utilisateurs des groupes Dir. finance et donc Direction générale.
-  ![](../assets/en/Users/schema3.png)
+  Super_Utilisateur et Administrateur
 
 Vous pouvez ensuite décider des privilèges affectés à chaque groupe suivant le niveau de responsabilité des utilisateurs qu’il contient.
 
@@ -205,6 +207,6 @@ Les utilisateurs, les groupes ainsi que leurs droits d'accès sont stockés dans
 Ce fichier peut être stocké aux emplacements suivants, en fonction de vos besoins :
 
 - Si vous souhaitez utiliser le même répertoire pour tous les fichiers de données (ou si vous utilisez un seul fichier de données), stockez le fichier **directory.json** dans le dossier des paramètres de l'utilisateur, c'est-à-dire dans le dossier "Settings" au [même niveau que le dossier "Project"](Project/architecture.md#project-folder) (emplacement par défaut).
-- Si vous souhaitez utiliser un fichier répertoire spécifique par fichier de données, stockez le fichier **directory.json** dans le dossier des paramètres des données, c'est-à-dire dans le dossier ["Settings" du dossier "Data"](Project/architecture.md#setti Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
+- Si vous souhaitez utiliser un fichier répertoire spécifique par fichier de données, stockez le fichier **directory.json** dans le dossier des paramètres des données, c'est-à-dire dans le dossier ["Settings" du dossier "Data"](Project/architecture.md#setti Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
 
 > Pour permettre des changements sûrs de mots de passe et d'appartenance à des groupes dans un environnement déployé, vous pouvez inclure votre fichier **directory.json** dans l'application serveur pendant le build, en utilisant l'[option correspondante du build application](../Desktop/building.md#incorporer-les-utilisateurs-et-les-groupes-du-projet-dans-l'application-serveur-construite).

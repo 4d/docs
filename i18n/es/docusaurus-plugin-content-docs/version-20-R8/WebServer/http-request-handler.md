@@ -19,7 +19,7 @@ Custom HTTP request handlers meet various needs, including:
 
 Custom HTTP Request handlers are supported:
 
-- when [scalable sessions](./sessions.md#enabling-web-sessions) are enabled,
+- cuando las [sesiones escalables](./sessions.md#enabling-web-sessions) están habilitadas,
 - with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
 
 ## HTTPHandlers.json File
@@ -276,7 +276,7 @@ The **HTTPHandlers.json** file:
 
 The called URL is: http://127.0.0.1:8044/putFile?fileName=testFile
 
-The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. It is received in the [`urlQuery`](../API/IncomingMessageClass.md#urlquery) object in the request.
+The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. Se recibe en el objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) en la petición.
 
 ```4d
     //UploadFile class

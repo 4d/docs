@@ -309,7 +309,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
+A propriedade `.name` retorna <!-- REF #directory.name.Summary --> o nome da pasta, sem extensão (se houver)<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -333,7 +333,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
+A propriedade `.original` retorna <!-- REF #directory.original.Summary -->o mesmo objeto Pasta da pasta<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -359,7 +359,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->. .
+A propriedade `.parent` retorna <!-- REF #directory.parent.Summary --> o objeto pasta pai da pasta<!-- END REF -->. .
 
 Se a pasta não tiver um pai (raiz), é devolvido o valor nulo.
 
@@ -385,7 +385,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. .
+A propriedade `.path` retorna <!-- REF #directory.path.Summary --> o caminho POSIX da pasta<!-- END REF -->. .
 
 Essa propriedade é **somente leitura**.
 
@@ -543,7 +543,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 #### Descrição
 
-The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
+A função `.files()` retorna <!-- REF #directory.files().Summary -->uma coleção de objetos `File` contidos na pasta<!-- END REF -->.
 
 > Os apelidos ou links simbolicos não são resolvidos.
 
@@ -704,7 +704,7 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 
 #### Descrição
 
-The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
+A função `.getIcon()` <!-- REF #directory.getIcon().Summary -->retorna o ícone da pasta <!-- END REF -->.
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 

@@ -138,7 +138,7 @@ ASSERT($status.success)
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
-Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. Normalmente "prime256v1" para ES256 (por defeito), "secp384r1" para ES384, "secp521r1" para ES512.
+Definido somente para chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nome da curva normalizada da chave<!-- END REF -->. Normalmente "prime256v1" para ES256 (por defeito), "secp384r1" para ES384, "secp521r1" para ES512.
 
 <!-- END REF -->
 
@@ -374,7 +374,7 @@ A representação utf8 de *mensagem*.
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
-Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. .
+Definido somente para chaves RSA: <!-- REF #CryptoKey.size.Summary -->o tamanho da chave em bits<!-- END REF -->. .
 
 <!-- REF CryptoKey.type -->
 
@@ -392,10 +392,10 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
 
-Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.
+Contém o nome <!-- REF #CryptoKey.type.Summary -->do tipo de chave - "RSA", "ECDSA", "PEM" <!-- END REF -->.
 
 - "RSA": um par de chaves RSA, usando `settings.size` como [.size](#size).
-- "ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Lembre que chaves ECDSA não podem ser usadas para a criptografia mas só pela assinatura.
+- "ECDSA": um par de chaves Elliptic Curve Digital Signature Algorithm, usando `settings.curve` como [.curve](#curve). Lembre que chaves ECDSA não podem ser usadas para a criptografia mas só pela assinatura.
 - "PEM": uma definição de par chave em formato PEM, usando `settings.pem` como [.pem](#pem).
 
 <!-- REF CryptoKey.verify().Desc -->

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo                                               |                             | Descrição                              |
 | --------- | -------------------------------------------------- | --------------------------- | -------------------------------------- |
-| winRef    | Integer                                            | &#8594; | Window reference number                |
+| winRef    | Integer                                            | &#8594; | Número de referência da janela         |
 | image     | Imagem                                             | &#8594; | Ícone personalizado                    |
 | file      | 4D.File, 4D.Folder | &#8594; | Caminho do arquivo ou caminho da pasta |
 

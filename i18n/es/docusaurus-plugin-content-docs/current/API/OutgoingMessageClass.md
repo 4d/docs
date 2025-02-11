@@ -34,7 +34,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 	return $result
 ```
 
-### OutgoingMessage Object
+### Objeto OutgoingMessage
 
 4D.OutgoingMessage objects provide the following properties and functions:
 
@@ -118,7 +118,7 @@ When this function is used, the content-type header is automatically set dependi
 - Content-Type:text/plain if the body is a Text
 - Content-Type:application/octet-stream if body is a Blob
 - Content-Type:application/json if body is an Object
-- Content-Type:image/jpeg, image/gif... if body is an Image
+- Content-Type:image/jpeg, image/gif... si el body es una imagen
 
 If *body* is not of a supported value type, an error is returned.
 

@@ -416,7 +416,7 @@ Utilizado para associar um formato de visualização aos dados da coluna. Os for
 
 As colunas booleanas e numéricas (numéricas ou inteiras) podem ser exibidas como caixas de seleção. En este caso, se puede definir la propiedad [Título](#title).
 
-As colunas booleanas também podem ser apresentadas como menus pop-up. In this case, the [Text when False and Text when True](#text-when-falsetext-when-true) properties must be defined.
+As colunas booleanas também podem ser apresentadas como menus pop-up. Nesse caso, as propriedades [Text when False e Text when True](#text-when-falsetext-when-true) devem ser definidas.
 
 #### Gramática JSON
 

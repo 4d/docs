@@ -90,7 +90,7 @@ The Blink engine has the following limitations:
 
 :::note
 
-You can customize CEF area parameters by creating a local [4DCEFParameters.json configuration file](webArea_overview.md#4dcefparametersjson).
+Você pode personalizar os parâmetros da área CEF criando um arquivo de configuração local [4DCEFParameters.json](webArea_overview.md#4dcefparametersjson).
 
 :::
 

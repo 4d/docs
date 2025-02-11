@@ -59,7 +59,7 @@ Os seguintes esquemas estão disponíveis:
 -   **Dark**: the application will use the Default Dark Theme ![](../assets/en/settings/dark-appearance.png)
 -   **Inherited** (default): the application will inherit from the higher priority level (i.e., OS user preferences)
 
-> Os temas predefinidos podem ser tratados com CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section.
+> Os temas predefinidos podem ser tratados com CSS. Para mais informações, consulte a seção [Media Queries](../FormEditor/createStylesheet.md#media-queries).
 
 O esquema de aplicação principal será aplicado aos formulários por defeito. No entanto, ele pode ser substituído:
 

@@ -11,16 +11,16 @@ Para abrir uma janela de administração do servidor a partir de uma máquina cl
 
 Esta janela pode ser acedida de duas maneiras:
 
-- Choose the **Administration Window** command from the **Help** menu or click on the corresponding button in the 4D tool bar.
+- Escolha o comando **Janela de administração** a partir do menu **Ajudar** ou clique no botão correspondente na barra de ferramentas 4D.
 - Executar o comando `OPEN ADMINISTRATION WINDOW`.
 
-A [server administration window](monitor.md) then appears on the client machine.
+Uma [janela de administração do servidor](monitor.md) então aparece na máquina cliente.
 
 
 ## Especificidades da administração via uma máquina 4D remota
 
-A client machine displaying the server administration window has access to all the available information and can act upon the processes and the starting/stopping of servers. When the server administration window is displayed on a remote machine, there are nevertheless certain restrictions and specific features concerning its operation:
+Uma máquina cliente exibindo a janela de administração do servidor possui acesso a todas as informações disponíveis e pode agir após os processos e o início/parada dos servidores. Quando a janela de administração do servidor é exibida em uma máquina remota, existem, no entanto, certas restrições e características específicas relativas à sua operação:
 
-- On the [Process page](processes.md), it is not possible to debug a user process (since the debug window appears on the server machine).
-- On the [Maintenance Page](maintenance.md), it is possible to execute actions that cause all the clients to be disconnected and the server to be restarted (compacting and restarting operations). In this case, the client machine requesting the operation is automatically reconnected on restarting.
-- On the [Maintenance Page](maintenance.md), the **View Report** buttons are renamed **Download Report** after the execution of a maintenance operation. These files are downloaded into the local database folder on the client machine before being displayed.
+- Na [página Processo](processes.md), não é possível depurar um processo de usuário (já que a janela de depuração aparece na máquina do servidor).
+- Na [página Manutenção](maintenance.md), é possível executar ações que fazem com que todos os clientes sejam desconectados e que o servidor seja reiniciado (operações de compactação e reinicialização). Neste caso, a máquina cliente solicitando a operação é automaticamente reconectada ao reiniciar.
+- Na [página Manutenção](maintenance.md), os botões **Ver Relatório** são renomeados **Descarregar Relatório** após a execução de uma operação de manutenção. Esses arquivos são baixados para a pasta do banco de dados local na máquina cliente antes de serem exibidos.

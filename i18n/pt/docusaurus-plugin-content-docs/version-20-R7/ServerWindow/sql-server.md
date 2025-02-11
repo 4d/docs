@@ -3,11 +3,11 @@ id: sql-server
 title: Página servidor SQL
 ---
 
-La página **Servidor SQL** agrupa información sobre el servidor SQL integrado de 4D Server. It also includes a button that can be used to control the activation of the server.
+La página **Servidor SQL** agrupa información sobre el servidor SQL integrado de 4D Server. Também inclui um botão que pode ser usado para controlar a ativação do servidor.
 
 ![](../assets/en/Admin/server-admin-sql-page.png)
 
-The upper part of the page provides information about the current status of the SQL server of 4D Server.
+A parte superior da página fornece informações sobre o status atual do servidor SQL de 4D Server.
 
 - **Estado**: Iniciado o Detenido
 - **Hora de inicio**: fecha y hora en que el servidor SQL se inició por última vez.
@@ -17,16 +17,16 @@ The upper part of the page provides information about the current status of the 
 
 Este botão alterna e pode ser usado para controlar a ativação do servidor SQL de 4D Server.
 
-- Cuando el estado del servidor SQL es "Iniciado", el botón se etiqueta **Detener el servidor SQL**. If you click on this button, the 4D Server SQL server is immediately stopped; it no longer replies to any external SQL requests received on the designated TCP port.
-- Cuando el estado del servidor SQL es "Detenido", el botón se etiqueta **Iniciar el servidor SQL**. If you click on this button, the 4D Server SQL server is immediately started; it replies to any external SQL queries received on the designated TCP port. Note that you will need a suitable license to be able to use the 4D SQL server.
+- Cuando el estado del servidor SQL es "Iniciado", el botón se etiqueta **Detener el servidor SQL**. Se você clicar neste botão, o servidor SQL de 4D é parado imediatamente; ele não responde mais a nenhuma solicitação externa SQL recebida na porta TCP designada.
+- Cuando el estado del servidor SQL es "Detenido", el botón se etiqueta **Iniciar el servidor SQL**. Se você clicar neste botão, o servidor SQL de 4D é iniciado imediatamente; ele responde a qualquer consulta SQL externa recebida na porta TCP designada. Note que você precisará de uma licença adequada para poder usar o servidor SQL de 4D.
 
-> The SQL server can also be launched automatically on application startup (option in the Settings) or by programming.
+> O servidor SQL também pode ser executado automaticamente na inicialização da aplicação (opção das Preferências) ou pela programação.
 
 ## Informação
 
 ### Configuração
 
-This area provides information about the SQL server configuration parameters: automatic launching on startup, listening IP address, TCP port (19812 by default) and enabling of SSL for SQL connections (does not concern 4D nor HTTP connections).
+Esta área fornece informações sobre os parâmetros de configuração do servidor SQL: inicialização automática em inicialização, escutando o endereço IP, Porta TCP (19812 por padrão) e habilitação de SSL para conexões SQL (não diz respeito a conexões 4D nem HTTP).
 
 Estes parâmetros podem ser modificados através das Preferências 4D.
 

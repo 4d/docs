@@ -62,7 +62,7 @@ Permet de définir une liste dont les valeurs ne peuvent pas être saisies dans 
 Limite les entrées valides aux éléments de la liste. Par exemple, vous pouvez souhaiter utiliser une liste pour les titres de postes afin que les entrées valides soient limitées aux intitulés qui ont été approuvés par la direction.
 
 La création d'une liste obligatoire n'affiche pas automatiquement la liste lorsque le champ est sélectionné. Si vous souhaitez afficher la liste requise, assignez la même liste à la propriété [Choice List](properties_DataSource.md#choice-list).
-Cependant, contrairement à la propriété [Choice List](properties_DataSource.md#choice-list), lorsqu'une liste obligatoire est définie, la saisie au clavier n'est plus possible, seule la sélection d'une valeur de liste à l'aide du pop-up menu est autorisée If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
+Cependant, contrairement à la propriété [Choice List](properties_DataSource.md#choice-list), lorsqu'une liste obligatoire est définie, la saisie au clavier n'est plus possible, seule la sélection d'une valeur de liste à l'aide du pop-up menu est autorisée If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
 
 > Si une énumération spécifiée est hiérarchique, seuls les éléments du premier niveau sont pris en compte.
 

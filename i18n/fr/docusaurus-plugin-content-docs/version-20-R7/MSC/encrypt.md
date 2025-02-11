@@ -34,6 +34,7 @@ Trois étapes sont nécessaires pour effectuer le tout premier chiffrement de vo
    Cela signifie que le statut **Chiffrable** défini pour au moins une table a été modifié et que le fichier de données n'a toujours pas été chiffré.
    \*\*Note : \*\*Le même message s'affiche lorsque le statut **Encryptable** a été modifié dans un fichier de données déjà crypté ou après que le fichier de données a été décrypté (voir ci-dessous).</p>
 3. Cliquez sur le bouton image Chiffrer.\
+   Cliquez sur le bouton image Chiffrer.\
    ![](../assets/en/MSC/MSC_encrypt3.png)\
    Vous serez invité à saisir une phrase secrète pour votre fichier de données:
    ![](../assets/en/MSC/MSC_encrypt4.png)
@@ -67,10 +68,11 @@ Pour des raisons de sécurité, toutes les opérations de maintenance liées au 
 À ce stade, deux options s'offrent à vous :
 
 - entrez la phrase secrète courante(2) et cliquez sur **OK**.
-  OU
+  OR
 - connectez un périphérique tel qu'une clé USB et cliquez sur le bouton **Scanner les disques**.
 
 (1) Le trousseau 4D stocke toutes les clés de chiffrement des données valides qui ont été saisies au cours de la session d'application.\
+(2) La phrase secrète courante est la phrase secrète utilisée pour générer la clé de chiffrement courante.\
 (2) La phrase secrète courante est la phrase secrète utilisée pour générer la clé de chiffrement courante.
 
 Dans tous les cas, si des informations valides sont fournies, 4D redémarre en mode maintenance (si ce n'est pas déjà le cas) et exécute l'opération.

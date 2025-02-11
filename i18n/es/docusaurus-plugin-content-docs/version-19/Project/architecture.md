@@ -9,7 +9,7 @@ Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de u
   - Componentes
   - Datos
     - Logs
-    - Settings
+    - Propiedades
   - Documentation
   - Plugins
   - Project
@@ -17,7 +17,7 @@ Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de u
     - Sources
     - Trash
   - Resources
-  - Settings
+  - Propiedades
   - userPreferences.username
   - WebFolder
 

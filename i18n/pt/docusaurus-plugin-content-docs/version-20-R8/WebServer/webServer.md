@@ -4,21 +4,21 @@ slug: overview
 title: Servidor Web
 ---
 
-4D in local mode, 4D in remote mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
+4D no modo local, 4D em modo remoto e 4D Server incluem um mecanismo de servidor web (também conhecido como servidor http) que permite a você projetar e publicar poderosas aplicações web que podem aproveitar ao máximo seus bancos de dados 4D.
 
 ## Monitorização fácil
 
-Você pode iniciar ou parar a publicação da aplicação web a qualquer momento. To do so, you just need to select a menu command or execute a single line of code.
+Você pode iniciar ou parar a publicação da aplicação web a qualquer momento. Para fazer isso, você só precisa selecionar um comando de menu ou executar uma única linha de código.
 
 Monitorar o servidor 4D é fácil e pode ser feito usando a janela de administração do Servidor 4D ou através de [URLs especiais](webServerAdmin.md#administration-urls).
 
 ## Pronto a usar
 
-The 4D web server automatically creates a default root folder and a default home page for an instantaneous availability.
+O servidor 4D cria automaticamente uma pasta raiz padrão e uma página inicial padrão para uma disponibilidade instantânea.
 
 ## Segurança
 
-A segurança dos dados está presente em todos os estágios das implementações do servidor web 4D. Security levels are scalable and default settings usually select the most secure options. A segurança do servidor web 4D é baseada nos seguintes elementos:
+A segurança dos dados está presente em todos os estágios das implementações do servidor web 4D. Os níveis de segurança são escalonáveis e as configurações padrão geralmente selecionam as opções mais seguras. A segurança do servidor web 4D é baseada nos seguintes elementos:
 
 - Suporte estendido do [**Protocolo TLS (HTTPS)**](../Admin/tls.md),
 
@@ -41,7 +41,7 @@ El servidor web 4D incluye completas funcionalidades automáticas para gestionar
 
 ## Ponto de acesso para solicitações REST
 
-The 4D web server allows accessing data stored in your 4D applications through REST requests. REST requests provide direct access to any database operation such as adding, reading, editing, ordering, or searching data.
+O servidor web 4D permite acessar os dados armazenados em suas aplicações 4D através de solicitações REST. Solicitações REST fornecem acesso direto a qualquer operação de banco de dados, como adicionar, ler, editar, ordenar ou pesquisar dados.
 
 Las peticiones REST se detallan en la sección [Servidor REST](REST/gettingStarted.md).
 
@@ -51,7 +51,7 @@ La configuración del servidor web 4D se define a través de un amplio conjunto 
 
 ## Modelos e URLs
 
-The 4D web server supports access to data stored in your 4D applications through template pages and specific URLs.
+O servidor web 4D suporta acesso a dados armazenados em suas aplicações 4D através de páginas de modelos e URLs específicas.
 
 - Las páginas de plantillas contienen [etiquetas especiales](templates.md) que inician el procesamiento del servidor web en el momento en que se envían a los navegadores.
 

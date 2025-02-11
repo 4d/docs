@@ -35,7 +35,7 @@ Dependiendo del proceso desde el que se llame al comando, la sesión de usuario 
 - the stored procedures session,
 - the *designer* session in a standalone application.
 
-For more information, see the [Session types](../API/SessionClass.md#session-types) paragraph.
+Para obtener más información, consulte el párrafo [Tipos de sesion](../API/SessionClass.md#session-types).
 
 If the command is called from a non supported context (e.g. scalable sessions disabled), it returns *Null*.
 
@@ -107,4 +107,4 @@ IP:port/4DACTION/action_Session
 |                   |                                                                     |
 | ----------------- | ------------------------------------------------------------------- |
 | Número de comando | 1714                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

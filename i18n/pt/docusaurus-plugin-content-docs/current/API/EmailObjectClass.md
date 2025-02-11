@@ -7,7 +7,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 
 `Email` objects are created when receiving mails through a *transporter* class function:
 
-- IMAP - [`.getMail()`](IMAPTransporterClass.md#getmail) and [`.getMails()`](IMAPTransporterClass.md#getmails) functions to get emails from an IMAP server
+- IMAP - funções [`.getMail()`](IMAPTransporterClass.md#getmail) e [`.getMails()`](IMAPTransporterClass.md#getmails) para obter e-mails de um servidor IMAP
 - POP3 - Função [`.getMail()`](POP3TransporterClass.md#getmail) para obter um e-mail de um servidor POP3.
 
 > Você também pode criar um novo objeto `Email` em branco e preenchê-lo com [propriedades do objeto Email](#email-object).
@@ -171,7 +171,7 @@ The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon 
 
 #### Descrição
 
-The `.comments` property contains an <!-- REF #EmailObjectClass.comments.Summary -->additional comments header<!-- END REF -->.
+A propriedade `.comments` contém um <!-- REF #EmailObjectClass.comments.Summary --> cabeçalho de comentários adicional<!-- END REF -->.
 
 Os comentários só aparecem na seção de cabeçalho da mensagem (mantendo o corpo da mensagem intocado).
 
@@ -183,7 +183,7 @@ Para requisitos específicos de formatação, consulte a [RFC#5322](https://tool
 
 #### Descrição
 
-The `.from` property contains the <!-- REF #EmailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
+A propriedade `.from` contém o <!-- REF #EmailObjectClass.from.Summary -->[a(s) endereço(es)](#email-addresses) de origem do e-mail<!-- END REF -->.
 
 Cada e-mail que você envia tem os endereços [sender](#sender) e **from**:
 
@@ -225,7 +225,7 @@ The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summar
 
 [IMAP transporter](IMAPTransporterClass.md) unicamente.
 
-The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique ID from the IMAP server<!-- END REF -->.
+A propriedade `.id` contém o <!-- REF #EmailObjectClass.id.Summary --> ID exclusivo do servidor IMAP<!-- END REF -->.
 
 ## .inReplyTo
 
@@ -272,7 +272,7 @@ Palavra-chave reservada.
 
 #### Descrição
 
-The `.messageId` property contains a <!-- REF #EmailObjectClass.messageId.Summary -->message identifier header ("message-id")<!-- END REF -->.
+A propriedade `.messageId` contém um <!-- REF #EmailObjectClass.messageId.Summary -->cabeçalho de identificador de mensagem ("message-id")<!-- END REF -->.
 
 Este cabeçalho geralmente é "lettersOrNumbers@domainname", por exemplo, "abcdef.123456@4d.com". Este ID exclusivo é usado em particular em fóruns ou listas públicas de e-mail. Em geral, os servidores de email adicionam automaticamente este cabeçalho às mensagens que enviam.
 
@@ -302,7 +302,7 @@ Para requisitos específicos de formatação, consulte a [RFC#5322](https://tool
 
 #### Descrição
 
-The `.replyTo` property contains the <!-- REF #EmailObjectClass.replyTo.Summary -->[addresse(s)](#email-addresses) for responses<!-- END REF -->.
+A propriedade `.replyTo` contém os <!-- REF #EmailObjectClass.replyTo.Summary -->[endereços](#email-addresses) para respostas<!-- END REF -->.
 
 ## .sendAt
 
@@ -310,7 +310,7 @@ The `.replyTo` property contains the <!-- REF #EmailObjectClass.replyTo.Summary 
 
 #### Descrição
 
-The `.sendAt` property contains the <!-- REF #EmailObjectClass.sendAt.Summary -->Email timestamp in ISO 8601 UTC format<!-- END REF -->.
+A propriedade `.sendAt` contém o <!-- REF #EmailObjectClass.sendAt.Summary --> Carimbo de e-mail no formato UTC ISO 8601<!-- END REF -->.
 
 ## .sender
 
@@ -343,7 +343,7 @@ The `.size` property contains the <!-- REF #EmailObjectClass.size.Summary -->siz
 
 #### Descrição
 
-The `.subject` property contains the <!-- REF #EmailObjectClass.subject.Summary -->description of topic<!-- END REF -->.
+A propriedade `.subject` contém a <!-- REF #EmailObjectClass.subject.Summary -->descrição do tópico<!-- END REF -->.
 
 ## .textBody
 
@@ -359,4 +359,4 @@ The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summar
 
 #### Descrição
 
-The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+A propriedade `.to` contém <!-- REF #EmailObjectClass.to.Summary --> os [endereços](#email-addresses) dos destinatários primários de e-mail<!-- END REF -->.

@@ -478,14 +478,14 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *timeout* : Real } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| 引数   | 型                              |                             | 説明                                    |
-| ---- | ------------------------------ | :-------------------------: | ------------------------------------- |
-| time | Real                           |              ->             | レスポンスを待機する最長時間 (秒) |
-| 戻り値  | 4D.HTTPRequest | <- | HTTPRequest オブジェクト                    |
+| 引数      | 型                              |                             | 説明                           |
+| ------- | ------------------------------ | :-------------------------: | ---------------------------- |
+| timeout | Real                           |              ->             | Maximum wait time in seconds |
+| 戻り値     | 4D.HTTPRequest | <- | HTTPRequest オブジェクト           |
 
 <!-- END REF -->
 
@@ -493,12 +493,16 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 > この関数はスレッドセーフです。
 
-`wait()` 関数は、<!-- REF #HTTPRequestClass.wait().Summary -->サーバーのレスポンスを待ちます<!-- END REF -->。
+The `wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->waits waits for a response from the server or until the specified `timeout` is reached<!-- END REF -->.
 
-*time* 引数が渡されると、関数は最長で、定義された秒数だけ待機します。
+If a *timeout* is provided, the function waits for the specified duration in this parameter. Decimals are accepted.
 
 サーバーのレスポンスがすでに到着している場合、関数は即座に返されます。
 
-`.wait()` の実行中、他の `HTTPRequest` や [`SystemWorker`](SystemWorkerClass.md) インスタンス、または他の [`CALL WORKER`](../commands-legacy/call-worker.md) の呼び出しによるコールバック関数は実行されます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+:::note
+
+During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls.  You can exit from a .wait() by calling [`terminate()`](#terminate) from a callback.
+
+:::
 
 <!-- END REF -->

@@ -66,7 +66,7 @@ La propriété `.cid` contient <!-- REF #MailAttachmentClass.cid.Summary --> l'I
 
 #### Description
 
-La propriété `.disposition` contient <!-- REF #MailAttachmentClass.disposition.Summary -->la valeur de l'en-tête `Content-Disposition`<!-- END REF -->. .
+La propriété `.disposition` contient <!-- REF #MailAttachmentClass.disposition.Summary -->la valeur de l'en-tête `Content-Disposition`<!-- END REF -->. . .
 
 - "inline" : la pièce jointe est rendue dans le contenu du message, à l'emplacement "cid". Le rendu dépend du client de messagerie.
 - "attachment" : la pièce jointe est fournie sous forme de lien dans le message.

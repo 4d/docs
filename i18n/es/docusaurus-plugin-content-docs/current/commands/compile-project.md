@@ -48,7 +48,7 @@ Compilation errors, if any, are returned as objects in the *errors* collection.
 
 **Note:** You cannot call this command when another compilation is running (for example, a compilation launched from the Compilation window).
 
-##### options Parameter
+##### Parámetro options
 
 The *options* parameter is an object. Here are the available compilation options:
 
@@ -99,7 +99,7 @@ The object returned by **Compile project** has up to three properties:
 | symbols.methods\[\].params       | Collection           | Collection of parameter types (Value type numerical codes)                                                            |
 | symbols.methods\[\]. threadSafe  | Boolean              | Indicates if this method is thread safe                                                                                                  |
 
-For more information, see [Compilation tools](../Project/compiler.md#compilation-tools).
+Para obtener más información, consulte [Herramientas de compilación](../Project/compiler.md#compilation-tools).
 
 ###### variable objects
 
@@ -196,4 +196,4 @@ var $result:=Compile project($options)
 |                   |                                                                     |
 | ----------------- | ------------------------------------------------------------------- |
 | Número de comando | 1760                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

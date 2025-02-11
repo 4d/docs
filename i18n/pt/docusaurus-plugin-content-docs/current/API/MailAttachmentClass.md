@@ -58,7 +58,7 @@ The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary
 
 #### Descrição
 
-The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the ID of the attachment<!-- END REF -->. Essa funcionalidade é usada em mensagens HTML apenas. Se essa propriedade faltar, o arquivo é manejado como um anexo simples (link).
+A propriedade `.cid` contém <!-- REF #MailAttachmentClass.cid.Summary --> o ID do anexo<!-- FIM REF -->. Essa funcionalidade é usada em mensagens HTML apenas. Se essa propriedade faltar, o arquivo é manejado como um anexo simples (link).
 
 ## .disposition
 
@@ -93,7 +93,7 @@ The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary 
 
 #### Descrição
 
-The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the name and extension of the attachment<!-- END REF -->.  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
+A propriedade `.name` contém <!-- REF #MailAttachmentClass.name.Summary --> o nome e a extensão do anexo<!-- END REF -->.  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
 
 ## .path
 
@@ -101,7 +101,7 @@ The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the 
 
 #### Descrição
 
-The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the POSIX path of the attachment file, if it exists<!-- END REF -->.
+A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary --> o caminho POSIX do arquivo de anexo, se ele existir<!-- END REF -->.
 
 ## .platformPath
 
@@ -133,4 +133,4 @@ The `.size` property contains <!-- REF #MailAttachmentClass.size.Summary -->the 
 
 #### Descrição
 
-The `.type` property contains <!-- REF #MailAttachmentClass.type.Summary -->the `content-type` of the attachment file<!-- END REF -->. If this type is not explicitly passed to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command, the `content-type` is based on its file extension.
+A propriedade `.type` contém <!-- REF #MailAttachmentClass.type.Summary -->o `content-type` do arquivo anexo<!-- END REF -->. If this type is not explicitly passed to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command, the `content-type` is based on its file extension.

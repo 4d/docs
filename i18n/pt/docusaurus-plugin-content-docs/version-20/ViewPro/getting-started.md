@@ -31,7 +31,7 @@ No entanto, 4D View Pro requer uma licença. You need to activate this license i
 
 You can also select a preconfigured 4D View Pro area in the [Object library](FormEditor/objectLibrary.md).
 
-> 4D View Pro areas can also be [created and used offscreen](method-list.md#vp-run-offscreen-area).
+> As áreas 4D View Pro também podem ser [criadas e usadas fora da tela](method-list.md#vp-run-offscreen-area).
 
 You can [configure the area](configuring.md) using the Property List and 4D View Pro methods.
 

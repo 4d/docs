@@ -25,16 +25,16 @@ Ao escrever uma fórmula, pode utilizar diferentes atalhos:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. To do so, enter these formulas using the [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) command.
+Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. Para fazer isso, insira essas fórmulas usando o comando [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name).
 
 ### Operadores e Operandos
 
 Todas as fórmulas têm operandos e operadores:
 
-*   **Operators**: see [Values and operators](#values-and-operators) below.
+*   **Operadores**: veja [Valores e operadores](#values-and-operators) abaixo.
 *   **Operandos** inclui várias categorias:
     *   Os [valores](#values-and-operators) (5 tipos de dados são suportados)
-    *   [references to other cells](#cell-references) (relative, absolute, mixed or by name)
+    *   As [referências a outras células](#cell-references) (relativo, absoluto, misto ou por nome)
     *   [funções standard de folha de cálculo](#using-functions)
     *   [funções 4D](#4d-functions) baseadas em fórmulas 4D e que fornecem acesso a variáveis, campos, métodos, comandos ou expressões 4D.
 
@@ -112,13 +112,13 @@ A convenient, fast and accurate way to specify an absolute reference is to name 
 
 A tabela seguinte mostra o efeito das diferentes notações:
 
-| Exemplo        | Tipo de referência | Descrição                                                                                                                                        |
-| -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                     |
-| $C$5           | Absoluto           | A referência é absoluta. Referir-se-á sempre à célula C5, independentemente do local onde for utilizada.                                         |
-| $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.             |
-| C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used              |
-| Nome da célula | Absoluto           | A referência é absoluta. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
+| Exemplo        | Tipo de referência | Descrição                                                                                                                                                  |
+| -------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                               |
+| $C$5           | Absoluto           | A referência é absoluta. Referir-se-á sempre à célula C5, independentemente do local onde for utilizada.                                                   |
+| $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.                       |
+| C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used                        |
+| Nome da célula | Absoluto           | A referência é absoluta. Sempre irá se referir à [célula ou intervalo nomeado](method-list.md#vp-add-range-name) não importa onde a referência seja usada. |
 
 
 
@@ -145,7 +145,7 @@ Consulte a [**lista ampliada de funções de SpreadJS**](https://www.grapecity.c
 
 As funções personalizadas 4D podem receber [parâmetros](#parameters) da área 4D View Pro e retornar valores.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Exemplos:
+Você declara todas as suas funções usando o método [`VP SET CUSTOM`](method-list.md#vp-set-custom-functions). Exemplos:
 
 ```4d
 o:=New object
@@ -274,7 +274,7 @@ $o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information
 
 ## Compatibidade
 
-Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. However, using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method is recommended.
+Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. No entanto, é recomendável usar o método [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions).
 
 ### Referência a campos utilizando a estrutura virtual
 

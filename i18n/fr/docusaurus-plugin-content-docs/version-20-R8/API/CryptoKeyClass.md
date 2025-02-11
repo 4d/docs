@@ -320,10 +320,10 @@ Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé pr
 
 <details><summary>Historique</summary>
 
-| Release | Modifications              |
-| ------- | -------------------------- |
-| 20 R8   | Support of message as Blob |
-| 18 R4   | Ajout                      |
+| Release | Modifications                               |
+| ------- | ------------------------------------------- |
+| 20 R8   | Prise en charge de message en tant que Blob |
+| 18 R4   | Ajout                                       |
 
 </details>
 
@@ -333,13 +333,13 @@ Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé pr
 
 | Paramètres | Type         |                             | Description                                                                |
 | ---------- | ------------ | --------------------------- | -------------------------------------------------------------------------- |
-| message    | Text OR Blob | ->                          | Message to sign                                                            |
+| message    | Text OU Blob | ->                          | Message à signer                                                           |
 | options    | Object       | ->                          | Options de signature                                                       |
 | Résultat   | Text         | <- | Signature en représentation Base64 ou Base64URL, selon l'option "encoding" |
 
 <!-- END REF -->
 
-The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string or Blob<!-- END REF --> using the `CryptoKey` object keys and provided *options*. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
+La fonction `.sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentation utf8 d'une chaîne ou d'un blob *message*<!-- END REF --> en utilisant les clés de l'objet `CryptoKey` et les *options* fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
 
 `CryptoKey` doit contenir une clé **privée** valide.
 
@@ -350,11 +350,11 @@ The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repr
 | hash              | text    | Algorithme de hachage à utiliser. Par exemple : "SHA256", "SHA384" ou "SHA512". Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@ |
 | encodingEncrypted | text    | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                                                 |
 | pss               | boolean | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la production d'un JWT pour l'algorithme PS@                                                                                                |
-| encoding          | text    | Representation to be used for result signature. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                                                            |
+| encoding          | text    | Représentation à utiliser pour la signature du résultat. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                                                   |
 
 #### *Result*
 
-The utf8 representation of the *message*.
+La représentation utf8 du *message*.
 
 <!-- END REF -->
 
@@ -404,10 +404,10 @@ Contient le <!-- REF #CryptoKey.type.Summary -->nom du type de clé - "RSA", "EC
 
 <details><summary>Historique</summary>
 
-| Release | Modifications              |
-| ------- | -------------------------- |
-| 20 R8   | Support of message as Blob |
-| 18 R4   | Ajout                      |
+| Release | Modifications                               |
+| ------- | ------------------------------------------- |
+| 20 R8   | Prise en charge de message en tant que Blob |
+| 18 R4   | Ajout                                       |
 
 </details>
 
@@ -417,7 +417,7 @@ Contient le <!-- REF #CryptoKey.type.Summary -->nom du type de clé - "RSA", "EC
 
 | Paramètres | Type         |                             | Description                                                                                     |
 | ---------- | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------- |
-| message    | Text OR Blob | ->                          | Message that was used to produce the signature                                                  |
+| message    | Text OU Blob | ->                          | Message qui a été utilisé pour produire la signature                                            |
 | signature  | Text         | ->                          | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
 | options    | Object       | ->                          | Options de signature                                                                            |
 | Résultat   | Object       | <- | Statut de la vérification                                                                       |

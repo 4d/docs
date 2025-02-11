@@ -64,7 +64,7 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Funciones del servidor web
 
-Un [objeto de clase Web srver](API/WebServerClass.md#web-server-object) contiene las siguientes funciones:
+Un [objeto de clase Web server](API/WebServerClass.md#web-server-object) contiene las siguientes funciones:
 
 | Funciones                                | Parámetros       | Valor devuelto  | Descripción             |
 | ---------------------------------------- | ---------------- | --------------- | ----------------------- |

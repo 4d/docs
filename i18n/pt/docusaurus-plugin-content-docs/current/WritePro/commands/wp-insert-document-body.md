@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parâmetro   | Tipo    |                             | Descrição                                                |
 | ----------- | ------- | --------------------------- | -------------------------------------------------------- |
 | targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document                |
-| wpDoc       | Object  | &#8594; | 4D Write Pro document                                    |
+| wpDoc       | Object  | &#8594; | Documento 4D Write Pro                                   |
 | mode        | Integer | &#8594; | Insertion mode                                           |
 | rangeUpdate | Integer | &#8594; | Range update mode                                        |
 | Resultado   | Object  | &#8592; | Text range object referencing the inserted document body |
@@ -22,9 +22,9 @@ displayed_sidebar: docs
 
 The **WP Insert document body** command<!--REF #_command_.WP Insert document body.Summary--> inserts the body of the *wpDoc* document into the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and it returns the range of the inserted document body.<!-- END REF-->
 
-In *targetObj*, pass:
+Em *targetObj*, passe:
 
-- A range, or
+- Um intervalo, ou
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
 - a 4D Write Pro document.
 

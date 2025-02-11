@@ -428,7 +428,7 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 
 > Esta função é thread segura.
 
-The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. Desencadeia o evento `onTerminate`.
+A função `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->aborta a solicitação HTTP <!-- END REF -->. Desencadeia o evento `onTerminate`.
 
 <!-- END REF -->
 
@@ -464,7 +464,7 @@ The `.timeout` property contains <!-- REF #HTTPRequestClass.timeout.Summary -->t
 
 #### Descrição
 
-The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL of the HTTP request<!-- END REF -->.
+A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary --> a URL da solicitação HTTP <!-- END REF -->.
 
 <!-- END REF -->
 
@@ -472,14 +472,14 @@ The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *timeout* : Real } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| Parâmetro  | Tipo                           |                             | Descrição                                           |
-| ---------- | ------------------------------ | :-------------------------: | --------------------------------------------------- |
-| time       | Real                           |              ->             | Tempo máximo em segundos para esperar pela resposta |
-| Resultados | 4D.HTTPRequest | <- | HTTPRequest object                                  |
+| Parâmetro  | Tipo                           |                             | Descrição                    |
+| ---------- | ------------------------------ | :-------------------------: | ---------------------------- |
+| timeout    | Real                           |              ->             | Maximum wait time in seconds |
+| Resultados | 4D.HTTPRequest | <- | HTTPRequest object           |
 
 <!-- END REF -->
 
@@ -487,12 +487,16 @@ The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 
 > Esta função é thread segura.
 
-The `wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->waits for the response from the server<!-- END REF -->.
+The `wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->waits waits for a response from the server or until the specified `timeout` is reached<!-- END REF -->.
 
-If a *time* parameter is passed, the function will wait at most the defined number of seconds.
+If a *timeout* is provided, the function waits for the specified duration in this parameter. Decimals are accepted.
 
 Se a resposta do servidor já tiver chegado, a função regressa imediatamente.
 
-During a `.wait()` execution, callback functions are executed, whether from other `HTTPRequest` or [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls. Você pode sair de um `.wait()` chamando [`terminate()`](#terminate) de um retorno de chamada.
+:::note
+
+During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls.  Você pode sair de uma .wait() chamando [`terminate()`](#terminate) de um retorno de chamada.
+
+:::
 
 <!-- END REF -->

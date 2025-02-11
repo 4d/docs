@@ -270,7 +270,7 @@ End if
 
 #### Descrição
 
-The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the session on the server<!-- END REF -->. Esta string única é automaticamente atribuída pelo servidor para cada sessão e permite que você identifique seus processos.
+A propriedade `.id` contém <!-- REF #SessionClass.id.Summary --> o identificador único (UUID) da sessão no servidor<!-- END REF -->. Esta string única é automaticamente atribuída pelo servidor para cada sessão e permite que você identifique seus processos.
 
 :::tip
 
@@ -576,7 +576,7 @@ End use
 
 #### Descrição
 
-The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. Pode usá-la para identificar o usuário dentro de seu código.
+A propriedade `.userName` contém <!-- REF #SessionClass.userName.Summary -->o nome de usuário associado à sessão<!-- END REF -->. Pode usá-la para identificar o usuário dentro de seu código.
 
 - Com sessões da Web, essa propriedade é uma cadeia de caracteres vazia por padrão. Ele pode ser definido usando a propriedade `privileges` da função [`setPrivileges()`](#setprivileges).
 - With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.

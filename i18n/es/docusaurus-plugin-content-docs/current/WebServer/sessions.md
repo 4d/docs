@@ -100,7 +100,7 @@ Puede cerrar una sesión desde un formulario Qodly utilizando la función [**log
 
 ## Privilegios
 
-Fecha de caducidad de la sesión En el servidor web, puede proporcionar un acceso o unas funcionalidades específicas en función de los privilegios de la sesión.
+Fecha de caducidad de la sesión Fecha de caducidad de la sesión En el servidor web, puede proporcionar un acceso o unas funcionalidades específicas en función de los privilegios de la sesión.
 
 Puedes asignar privilegios utilizando la función [`.setPrivileges()`](API/SessionClass.md#setprivileges). En su código, puede comprobar los privilegios de la sesión para permitir o denegar el acceso utilizando la función [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). Por defecto, las sesiones nuevas no tienen ningún privilegio: son sesiones **Invitadas** (la función [`.isGuest()`](API/SessionClass.md#isguest) devuelve true).
 
@@ -233,7 +233,7 @@ Using the `$4DSID` parameter is the most simple way to process a callback from t
 
 :::note
 
-A [`4DACTION`](./httpRequests.md#4daction) url can also be used on the 4D side.
+Una url [`4DACCIÓN`](./httpRequests.md#4daction) también puede ser usada en el lado 4D.
 
 :::
 
@@ -461,7 +461,7 @@ A new user is created, and some information is stored in the session, especially
 ### Supported contexts
 
 - Both HTTP and HTTPS schemas are supported.
-- Only [scalable sessions](#enabling-web-sessions) can be reused with tokens.
+- Sólo [sesiones escalables](#enabling-web-sessions) pueden ser reutilizados con tokens.
 - Only sessions of the host database can be reused (sessions created in component web servers cannot be restored).
 - Tokens are not supported with client/server sessions or single-user sessions.
 

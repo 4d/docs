@@ -16,7 +16,7 @@ title: VP SET CURRENT SHEET
 
 #### Descrição
 
-The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . A folha atual é a folha selecionada no documento.
+O comando <!-- REF #_method_.VP SET ATUALIZADOR DO SHEET.Summary --> define a folha atual em *vpAreaName*<!-- END REF -->. A folha atual é a folha selecionada no documento.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 

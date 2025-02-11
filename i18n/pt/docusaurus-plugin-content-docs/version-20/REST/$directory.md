@@ -24,7 +24,7 @@ Todos os parâmetros devem ser transmitidos nos **cabeçalhos ** de um método P
 
 :::caution
 
-Since the password is transmitted in plain text, it is strongly recommended to use a secured https connection for the login request.
+Como a senha é transmitida em texto simples, é fortemente recomendado utilizar uma conexão segura https para a solicitação de login.
 
 :::
 

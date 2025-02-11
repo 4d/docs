@@ -19,7 +19,7 @@ Ces erreurs de frappe provoquent généralement des erreurs de syntaxe (dans l'i
 
 ### Erreurs de syntaxe
 
-Certaines erreurs ne peuvent être détectées que lorsque vous exécutez la méthode. La [fenêtre d'erreur de syntaxe](#syntax-error-window) apparaît lorsqu'une erreur se produit pendant l'exécution du code. Par exemple :
+Certaines erreurs ne peuvent être détectées que lorsque vous exécutez la méthode. Certaines erreurs ne peuvent être détectées que lorsque vous exécutez la méthode. Par exemple :
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 

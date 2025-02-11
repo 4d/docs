@@ -120,11 +120,11 @@
     "description": "The generated-index page title for category Cache Management in sidebar docs"
   },
   "sidebar.docs.category.Collections": {
-    "message": "Collections",
+    "message": "Coleções",
     "description": "The label for category Collections in sidebar docs"
   },
   "sidebar.docs.category.Collections.link.generated-index.title": {
-    "message": "Collections",
+    "message": "Coleções",
     "description": "The generated-index page title for category Collections in sidebar docs"
   },
   "sidebar.docs.category.Communications": {
@@ -152,11 +152,11 @@
     "description": "The generated-index page title for category Data Entry in sidebar docs"
   },
   "sidebar.docs.category.Data Security": {
-    "message": "Data Security",
+    "message": "Segurança dos dados",
     "description": "The label for category Data Security in sidebar docs"
   },
   "sidebar.docs.category.Data Security.link.generated-index.title": {
-    "message": "Data Security",
+    "message": "Segurança dos dados",
     "description": "The generated-index page title for category Data Security in sidebar docs"
   },
   "sidebar.docs.category.Database Methods": {
@@ -408,19 +408,19 @@
     "description": "The generated-index page title for category Printing in sidebar docs"
   },
   "sidebar.docs.category.Process (Communications)": {
-    "message": "Process (Communications)",
+    "message": "Processo (Comunicações)",
     "description": "The label for category Process (Communications) in sidebar docs"
   },
   "sidebar.docs.category.Process (Communications).link.generated-index.title": {
-    "message": "Process (Communications)",
+    "message": "Processo (Comunicações)",
     "description": "The generated-index page title for category Process (Communications) in sidebar docs"
   },
   "sidebar.docs.category.Process (User Interface)": {
-    "message": "Process (User Interface)",
+    "message": "Processo (Interface do Usuário)",
     "description": "The label for category Process (User Interface) in sidebar docs"
   },
   "sidebar.docs.category.Process (User Interface).link.generated-index.title": {
-    "message": "Process (User Interface)",
+    "message": "Processo (Interface do Usuário)",
     "description": "The generated-index page title for category Process (User Interface) in sidebar docs"
   },
   "sidebar.docs.category.Processes.link.generated-index.title": {
@@ -548,11 +548,11 @@
     "description": "The generated-index page title for category Styled Text in sidebar docs"
   },
   "sidebar.docs.category.Subrecords": {
-    "message": "Subrecords",
+    "message": "Sub-registros",
     "description": "The label for category Subrecords in sidebar docs"
   },
   "sidebar.docs.category.Subrecords.link.generated-index.title": {
-    "message": "Subrecords",
+    "message": "Sub-registros",
     "description": "The generated-index page title for category Subrecords in sidebar docs"
   },
   "sidebar.docs.category.System Documents": {
@@ -696,7 +696,7 @@
     "description": "The label for category Classes in sidebar docs"
   },
   "sidebar.docs.category.Classes.link.generated-index.title": {
-    "message": "Class Functions",
+    "message": "Classes",
     "description": "The generated-index page title for category Classes in sidebar docs"
   },
   "sidebar.docs.category.Classes.link.generated-index.description": {

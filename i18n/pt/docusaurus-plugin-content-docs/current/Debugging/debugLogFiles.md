@@ -17,6 +17,7 @@ Informação gravada precisa ser analisada para detectar e corrigir os problemas
 - [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [ORDA requests log file](#orda-requests)
+- [4DTCPLog.txt](#4dtcplogtxt)
 
 > Nota: quando um arquivo de histórico for gerado seja em 4D Server ou em cliente remoto, a palavra "Server" é adicionada ao nome do arquivo do lado servidor, por exemplo "4DRequestsLogServer.txt"
 
@@ -451,6 +452,43 @@ Eis um exemplo de um registo de registo ORDA do lado do servidor:
 
 ```
 
+## 4DTCPLog.txt
+
+This log file records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+
+Como iniciar esse log:
+
+- Use the `SET DATABASE PARAMETER` command:
+
+  ```4d
+  SET DATABASE PARAMETER(TCP log; 1)
+  ```
+
+- Configure o log através de um [arquivo de configuração JSON](#using-a-log-configuration-file):
+
+  ```json
+  {
+      "TCPLogs":{
+        "state" : 1
+           }
+  }
+  ```
+
+Os campos abaixo estão registrados para cada evento:
+
+| Campo nome  | Tipo      | Descrição                                                                                  |
+| ----------- | --------- | ------------------------------------------------------------------------------------------ |
+| time        | Date/Time | Date and time of the event in ISO 8601 format                                              |
+| localPort   | Number    | Local port used for the connection                                                         |
+| peerAddress | Text      | IP address of the remote peer                                                              |
+| peerPort    | Number    | Port of the remote peer                                                                    |
+| protocol    | Text      | Indicates whether the event is related to `TCP`                                            |
+| "event"     | Text      | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
+| size        | Number    | The amount of data sent or received (in bytes), 0 if not applicable     |
+| excerpt     | Number    | First 10 bytes of data in hexadecimal format                                               |
+| textExcerpt | Text      | First 10 bytes of data in text format                                                      |
+| comment     | Text      | Additional information about the event, such as error details or encryption status         |
+
 ## Utilizar um ficheiro de configuração de log
 
 Você pode usar um **arquivo de configuração de log** para gerenciar facilmente a gravação de logs em um ambiente de produção. Este arquivo é pré-configurado pelo programador. Normalmente, pode ser enviado aos clientes para que estes apenas tenham de o selecionar ou copiar para uma pasta local. Uma vez ativado, o arquivo de configuração de registos desencadeia a gravação de registos específicos.
@@ -628,7 +666,7 @@ O arquivo de configuração do registo é um arquivo `.json` que deve estar em c
 
 :::note
 
-- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\\`,...).
+- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\\\`,...).
 - For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
 

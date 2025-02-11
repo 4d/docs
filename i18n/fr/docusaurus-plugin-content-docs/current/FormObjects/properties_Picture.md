@@ -5,7 +5,7 @@ title: Picture
 
 ## Chemin d'accès
 
-Chemin d'une image source statique pour un [bouton image](pictureButton_overview.md), [un menu pop-up ](picturePopupMenu_overview.md) ou une [image ou une image statique](staticPicture.md). Vous devez utiliser la syntaxe POSIX.
+Mosaïque Vous devez utiliser la syntaxe POSIX.
 
 Les emplacements suivants peuvent être utilisés pour le chemin d'images statiques :
 
@@ -49,7 +49,7 @@ Si le champ est réduit à une taille plus petite que celle de l'image d'origine
 
 `Grammaire JSON : "truncatedCenter" / "truncatedTopLeft"`
 
-Le format **Centre** permet à 4D de centrer l'image dans la zone et de rogner toute partie qui ne rentre pas dans la zone. 4D rogne de manière égale à partir de chaque bord et du haut et du bas.
+Image non tronquée 4D rogne de manière égale à partir de chaque bord et du haut et du bas.
 
 Avec le format **Image tronquée (non centrée)**, 4D place le coin supérieur gauche de l'image dans le coin supérieur gauche de la zone et rogne toute partie qui ne rentre pas dans la zone. 4D rogne à partie de la droite et du bas.
 

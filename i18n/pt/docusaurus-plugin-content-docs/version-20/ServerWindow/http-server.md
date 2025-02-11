@@ -4,7 +4,7 @@ title: Página Servidor HTTP
 ---
 
 
-A página **HTTP Server** agrupa as informações sobre as operações do servidor Web e do servidor SOAP de 4D Server. The Web server lets you publish Web content such as HTML pages or pictures for Web browsers, and to handle REST requests. O servidor SOAP gere a publicação de serviços Web. Esses servidores dependem do servidor HTTP interno de 4D Server.
+A página **HTTP Server** agrupa as informações sobre as operações do servidor Web e do servidor SOAP de 4D Server. O servidor web permite que você publique conteúdo Web como páginas HTML ou imagens para navegadores Web e para lidar com solicitações REST. O servidor SOAP gere a publicação de serviços Web. Esses servidores dependem do servidor HTTP interno de 4D Server.
 
 ![](../assets/en/Admin/server-admin-web-page.png)
 
@@ -21,37 +21,37 @@ A parte superior da página fornece informações sobre o estado atual do servid
 
 Esse botão alterna e pode ser usado para controlar a ativação do servidor HTTP do 4D Server.
 
-- When the HTTP server state is "Started," the button is titled **Stop HTTP Server**. If you click on this button, the 4D Server HTTP server is immediately stopped; the Web server, REST server, and SOAP server no longer accept any requests.
+- Quando o estado do servidor HTTP é "Iniciado", o botão é intitulado **Iniciar o servidor HTTP**. Se você clicar neste botão, o servidor HTTP 4D é parado imediatamente; o servidor Web, o servidor REST e o servidor SOAP não aceitam mais quaisquer solicitações.
 - Quando o estado do servidor HTTP é "interrompido", o botão é intitulado **Iniciar o servidor HTTP**. Se você clicar nesse botão, o servidor HTTP de 4D Server será iniciado imediatamente; solicitações Web, REST e SOAP serão aceitas.
 
 > Você deve ter uma licença adequada para poder iniciar o servidor HTTP.
 > 
-> The HTTP server can also be launched automatically on application startup (Settings) or by programming.
+> O servidor HTTP também pode ser iniciado automaticamente na inicialização do aplicativo (configurações) ou pela programação.
 
 ## Informação Web
 
 Esta área fornece informações específicas sobre o servidor Web de 4D Server.
 
 - **Pedidos Web**: aceites ou rejeitados. Esta informação indica se o servidor Web está ativado. Como o servidor da Web está diretamente vinculado ao servidor HTTP, as solicitações Web são aceitas quando o servidor HTTP é iniciado e rejeitadas quando ele é interrompido.
-- **Maximum connections**: Maximum number of Web connections allowed. Este valor depende da licença instalada na máquina do servidor.
+- **Máximo de conexões**: Número máximo de conexões da Web permitido. Este valor depende da licença instalada na máquina do servidor.
 
 ## Informação SOAP
 
-This area provides specific information about the SOAP server of 4D Server and includes a control button.
+Esta área fornece informações específicas sobre o servidor SOAP do 4D Server e inclui um botão de controle.
 
 - **Pedidos SOAP**: aceites ou rejeitados. Esta informação indica se o servidor SOAP está ativado. Para que as solicitações SOAP sejam aceitas, o servidor HTTP deve ser iniciado e o servidor SOAP deve aceitar explicitamente as solicitações (consulte o botão Aceitar/Rejeitar).
 - **Máximo de ligações**: Número máximo de ligações SOAP permitidas. Este valor depende da licença instalada na máquina do servidor.
-- Botón **Aceptar/rechazar las peticiones SOAP**: este botón se alterna y puede utilizarse para controlar la activación del servidor SOAP de 4D Server. This button modifies the value of the **Allow Web Services Requests** option on the "Web Services" page of the Settings (and vice versa). You can also use the [`SOAP REJECT NEW REQUESTS`](https://doc.4d.com/4dv19/help/command/en/page1636.html) command to refuse new SOAP requests, however this does not modify the value of the **Allow Web Services Requests** option.
+- **Aceitar/Rejeitar SOAP requests** : Este botão alterna e pode ser usado para controlar a ativação do servidor SOAP do servidor 4D. Este botão modifica o valor do **Permitir pedidos de serviços web** opção na página "Serviços da Web" das Configurações (e vice-versa). Você também pode usar o comando [`SOAP REJEITAR NOVOS REQUESTS`](https://doc.4d.com/4dv19/help/command/en/page1636.html) para recusar novas solicitações SOAP, no entanto, isto não modifica o valor do **Permitir a opção de Requisições de Serviços Web**.
 
 Se você clicar no botão **Aceitar solicitações SOAP** e o servidor HTTP for interrompido, o 4D automaticamente o inicia.
 
 ## Configuração servidor HTTP
 
-This area provides information about the configuration parameters and operation of the HTTP server:
+Esta área fornece informações sobre os parâmetros de configuração e a operação do servidor HTTP:
 
-- **Auto-launched at startup**: parameter set via the Settings.
+- **Auto-iniciado na inicialização**: parâmetro definido através das configurações.
 - **Processos servidor HTTP (usados/total)**: número de processos HTTP criados no servidor (número atual de processos / total de todos os processos criados).
-- **Cache memory**: size of HTTP server cache memory, when it is activated (size actually used by cache / maximum size theoretically allocated to the cache in the Settings). You can click on the **Clear Cache** button to empty the current cache.
-- **Listening to IP**, **HTTP Port** (80 by default), **TLS enabled** for HTTP connections (does not concern 4D nor SQL connections) and **HTTPS Port** used: current [configuration parameters](WebServer/webServerConfig.md) of the HTTP server, specified through the Settings or by programming.
-- **Log file information**: name, format and date of the next automatic log backup of the HTTP server (logweb.txt file).
+- **Cache de memória**: tamanho da memória de cache do servidor HTTP, quando ativado (tamanho realmente usado pelo cache / tamanho máximo alocado para o cache nas Configurações). Você pode clicar no botão **Limpar Cache** para esvaziar o cache atual.
+- **Listening to IP**, **HTTP Port** (80 é o padrão), **TLS ativado** para conexões HTTP (não influencia conexões 4D ou SQL) e **HTTPS Port** usada:  [parâmetros](WebServer/webServerConfig.md) atuais do servidor HTTP, especificados nas configurações ou por programação.
+- **Informação do arquivo de log**: nome, formato e data do próximo backup automático do log do servidor HTTP (arquivo logweb.txt)
 

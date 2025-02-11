@@ -123,14 +123,14 @@ When a document is displayed in "display expressions" mode, references to tables
 
 :::
 
-## Displaying formulas
+## Mostrar fórmulas
 
 You can control how formulas are displayed in your documents:
 
 - as *values* or as *references*
 - when shown as references, display source text, symbol, or name.
 
-### References or Values
+### Referencias o Valores
 
 By default, 4D formulas are displayed as values. When you insert a 4D formula, 4D Write Pro computes and displays its current value.  If you wish to know which formula is used or what is its name, you need to display it as a reference.
 
@@ -174,7 +174,7 @@ To display formula references as symbols, you can:
 - use the displayFormulaAsSymbol standard action (see *Using 4D Write Pro standard actions*), or
 - use the [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) command with the `wk display formula as symbol` selector to **True**.
 
-### References as names
+### Referencias como nombres
 
 You can assign names to formulas, making 4D Write Pro template documents easier to read and understand for end-users. When formulas are displayed as references (and not displayed as symbols) and you have defined a name for a formula, the formula name is displayed.
 

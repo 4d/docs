@@ -359,7 +359,7 @@ O estilo de botão Personalizado aceita uma imagem de fundo personalizada e perm
 
 - [Nome do caminho do plano de fundo](properties_TextAndPicture.md#background-pathname)
 - [Deslocamento do ícone](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) e [Margem vertical](properties_TextAndPicture.md#vertical-margin)
 
 It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parâmetro      | Tipo                     |                             | Descrição                                                  |
 | -------------- | ------------------------ | --------------------------- | ---------------------------------------------------------- |
-| wpDoc          | Object                   | &#8594; | 4D Write Pro document                                      |
+| wpDoc          | Object                   | &#8594; | Documento 4D Write Pro                                     |
 | picture        | Imagem                   | &#8594; | 4D picture                                                 |
 | picturePath    | Text                     | &#8594; | Picture path                                               |
 | pictureFileObj | 4D. File | &#8594; | 4D.File object representing a picture file |
@@ -32,7 +32,7 @@ For the optional second parameter, you can pass either:
 
 :::note
 
-Any picture format [supported by 4D](../../FormEditor/pictures.md#native-formats-supported) can be used. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
+Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
 
 :::
 

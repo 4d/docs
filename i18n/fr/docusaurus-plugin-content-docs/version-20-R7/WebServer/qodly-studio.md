@@ -118,7 +118,7 @@ The Qodly Studio documentation is available on the [Qodly documentation website]
 
 You can rely on this documentation and its associated resources for developing web applications powered by Qodly pages. Cependant, en fonction de la phase de mise en œuvre, les développeurs 4D utiliseront soit Qodly Studio, soit 4D IDE (voir [Comparaison des fonctionnalités](#feature-comparison)).
 
-Les exemples de code sont fournis en [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), mais étant donné que QodlyScript hérite du langage 4D, vous ne serez pas perdu. Pour plus d'informations, consultez la page [De QodlyScript au langage 4D](from-qodlyscript-to-4d.md).
+Les exemples de code sont fournis en [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), mais étant donné que QodlyScript hérite du langage 4D, vous ne serez pas perdu. Les exemples de code sont fournis en [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), mais étant donné que QodlyScript hérite du langage 4D, vous ne serez pas perdu.
 
 :::info
 
@@ -139,7 +139,8 @@ Il n'y a pas de compatibilité directe entre les applications implémentées ave
 | Rôles et privilèges REST/Web                                                                       | Edition directe roles.json / Éditeur de rôles et privilèges de Qodly Studio                                                                                                                           | Éditeur de rôles et privilèges de Qodly Studio                                 |
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens.<br/>
-(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). Note that in 4D single-user, if you open some 4D code with the Qodly Studio code editor, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
+(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). (1) The **Model** item is disabled in Qodly Studio.<br/>
+(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)).
 
 ### Langage
 

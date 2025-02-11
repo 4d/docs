@@ -104,7 +104,7 @@ The `.headers` property is read-only. Para definir um cabeçalho, use a função
 
 #### Descrição
 
-The `.setBody()` function <!-- REF #OutgoingMessageClass.setBody().Summary -->sets the outgoing message *body*<!-- END REF -->.
+A função `.setBody()` <!-- REF #OutgoingMessageClass.setBody().Summary -->define a mensagem de saída *body*<!-- END REF -->.
 
 The following data types are supported in the *body*:
 
@@ -185,6 +185,6 @@ For a list of HTTP status codes, please refer the [HTTP status code list on Wiki
 
 #### Descrição
 
-The `.status` property contains <!-- REF #OutgoingMessageClass.status.Summary -->the current status of the outgoing message<!-- END REF -->. Essa propriedade pode ser definida com a função [`setStatus()`](setstatus).
+A propriedade `.status` contém <!-- REF #OutgoingMessageClass.status.Summary --> o status atual da mensagem de saída <!-- END REF -->. Essa propriedade pode ser definida com a função [`setStatus()`](setstatus).
 
 <!-- END REF -->

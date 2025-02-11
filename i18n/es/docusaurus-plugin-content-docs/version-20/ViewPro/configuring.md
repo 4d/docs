@@ -37,15 +37,15 @@ Con barra de fórmula visible:
 
 Tanto la interfaz de la cinta de opciones como la de la barra de herramientas agrupan funciones relacionadas en pestañas:
 
-| Pestaña  | Acciones                        | Interfaz Cinta | Interfaz Barra de herramientas |
-| -------- | ------------------------------- |:--------------:|:------------------------------:|
-| File     | Gestión de archivos             |       X        |                                |
-| Inicio   | Apariencia del texto            |       X        |               X                |
-| Insertar | Añadir elementos                |       X        |               X                |
-| Fórmulas | Cálculos de fórmulas y librería |       X        |               X                |
-| Datos    | Gestión de los datos            |       X        |               X                |
-| Mostrar  | Presentación visual             |       X        |               X                |
-| Settings | Presentación de la hoja         |       X        |                                |
+| Pestaña     | Acciones                        | Interfaz Cinta | Interfaz Barra de herramientas |
+| ----------- | ------------------------------- |:--------------:|:------------------------------:|
+| File        | Gestión de archivos             |       X        |                                |
+| Inicio      | Apariencia del texto            |       X        |               X                |
+| Insertar    | Añadir elementos                |       X        |               X                |
+| Fórmulas    | Cálculos de fórmulas y librería |       X        |               X                |
+| Datos       | Gestión de los datos            |       X        |               X                |
+| Mostrar     | Presentación visual             |       X        |               X                |
+| Propiedades | Presentación de la hoja         |       X        |                                |
 
 ## Eventos formulario
 

@@ -65,7 +65,7 @@ Les certificats TLS gérés par 4D doivent être au format **PEM**. Si votre pre
 
 4D prend en charge les certificats dans les formats de cryptage standard suivants :
 
-- [**RSA**](https://en.wikipedia.org/wiki/RSA_\(cryptosystem\))
+- [**RSA**](https://en.wikipedia.org/wiki/RSA_\\(cryptosystem\\))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
 :::info Compatibilité
@@ -94,7 +94,7 @@ Les deux fichiers **key.pem** et **cert.pem** doivent être localisés :
 
 ### Activation du TLS
 
-Pour que les connexions TLS soient acceptées par le serveur HTTP, vous devez activer HTTPS. Reportez-vous au paragraphe [**Activer HTTPS**](WebServer/webServerConfig.md#enable-https) pour connaître les différentes façons d'activer TLS pour le serveur HTTP.
+Pour que les connexions TLS soient acceptées par le serveur HTTP, vous devez activer HTTPS. Vue d’ensemble
 
 :::note
 

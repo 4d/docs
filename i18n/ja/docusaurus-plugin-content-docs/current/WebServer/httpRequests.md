@@ -25,7 +25,7 @@ You can also implement your own HTTP request handlers for a customized control o
 
 The `On Web Connection` database method is automatically called when the server receives any URL that is not a valid path to an existing page on the server (and is not a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md)).
 
-<code>On Web Connection</code> データベースメソッドは、サーバー上に存在しないページへのパスをサーバーが URL として受け取った場合に、自動的に呼び出されます。
+データベースメソッドは、URL とともに呼び出されます。
 
 たとえば、"_a/b/c_" という URL はデータベースメソッドを呼び出しますが、[WebFolder](webServerConfig.md#ルートフォルダー) の "a/b" サブフォルダーに "c.html" というページが存在する場合、"_a/b/c.html_" はデータベースメソッドを呼び出しません。
 
@@ -55,7 +55,7 @@ You must declare these parameters:
 
 ```
 
-> インターフェース要素 を表示する 4Dコマンド (`DIALOG`、`ALERT` など)  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。
+> インターフェース要素 を表示する 4Dコマンド (`DIALOG`、`ALERT` など)  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。
 
 ### $url - URL extra data
 
@@ -75,7 +75,7 @@ The first parameter ($url) is the URL entered by users in the address area of th
 
 ### $header - Header and Body of the HTTP request
 
-The second parameter ($header) is the header and the body of the HTTP request sent by the web browser. この情報は `On Web Connection` データベースメソッドに "そのまま" 渡されることに留意してください。 その内容は、接続を試みた Webブラウザーの仕様により異なります。 その内容は、接続を試みた Webブラウザーの仕様により異なります。 その内容は、接続を試みた Webブラウザーの仕様により異なります。 その内容は、接続を試みた Webブラウザーの仕様により異なります。 その内容は、接続を試みた Webブラウザーの仕様により異なります。 その内容は、接続を試みた Webブラウザーの仕様により異なります。
+The second parameter ($header) is the header and the body of the HTTP request sent by the web browser. この情報は `On Web Connection` データベースメソッドに "そのまま" 渡されることに留意してください。 その内容は、接続を試みた Webブラウザーの仕様により異なります。
 
 アプリケーションでこの情報を使用するには、開発者がヘッダーとボディを解析しなければなりません。 `WEB GET HTTP HEADER` や `WEB GET HTTP BODY` コマンドを使うことができます。
 
@@ -278,6 +278,7 @@ return false
 - 送信のための **Submit** ボタンが 3つあります: `vsbLogOn`, `vsbRegister` そして `vsbInformation`。
 - **Log On** をクリックすると、フォームからの送信はまず初めに JavaScript関数 `LogOn` によって処理されます。 名前が入力されていない場合、フォームは 4Dに送信すらされず、JavaScript による警告が表示されます。 名前が入力されていない場合、フォームは 4Dに送信すらされず、JavaScript による警告が表示されます。
 - フォームは POST 4Dメソッドに加えて、ブラウザープロパティを _vtNav_App_ から始まる名称の 4つの隠しオブジェクトへとコピーする投稿スクリプト (_GetBrowserInformation_) を持っています。
+  また、このページには `vtUserName` オブジェクトも含まれます。
   また、このページには `vtUserName` オブジェクトも含まれます。
   また、このページには `vtUserName` オブジェクトも含まれます。
   また、このページには `vtUserName` オブジェクトも含まれます。

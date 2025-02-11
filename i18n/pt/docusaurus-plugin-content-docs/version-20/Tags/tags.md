@@ -635,12 +635,15 @@ Como 4D executa métodos em sua ordem de aparição, é absolutamente possível 
 
 #### Sintaxe alternativa: `$4DTEXT(expressão)`
 
-A etiqueta `<<!--#4DTEXT expression--></code> permite que você insira uma referência a uma variável 4D ou a uma expressão que retorna um valor. Por exemplo, se escrever (numa página HTML):</p>
+A etiqueta `< permite que você insira uma referência a uma variável 4D ou a uma expressão que retorna um valor. Por exemplo, se escrever (numa página HTML):
 
-<pre><code class="html"><P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
-`</pre>
+```html
+<P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
+```
 
-O valor da variável 4D `vtSiteName` será inserido na página HTML quando ela for enviada. Esse valor é inserido como texto simples, e os caracteres HTML especiais, como ">" são automaticamente escapados.
+! `</pre>
+
+O valor da variável 4D `vtSiteName` será inserido na página HTML quando ela for enviada. Esse valor é inserido como texto simples, e os caracteres HTML especiais, como ">" são automaticamente escapados.</p>
 
 Também é possível inserir expressões 4D. Você pode, por exemplo, inserir diretamente o conteúdo de um campo (`<! -#4DTEXT [tableName]fieldName-->`), um elemento de array (`<! -#4DTEXT tabarr{1}-->`) ou um método retornando um valor (`<!--#4DTEXT mymethod-->`). A conversão de expressões segue as mesmas regras das variáveis. Além disso, a expressão deve respeitar as regras de sintaxe 4D.
 

@@ -88,7 +88,7 @@ Con:
 
 :::warning ponteiros Null
 
-Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Por exemplo:
+Tentar atribuir ou ler um ponteiro null (também conhecido como "nil") irá produzir um erro em tempo de execução. Por exemplo:
 
 ```4d
 var $p : Pointer // Ponteiro não inicializado (Nil value)
@@ -96,7 +96,7 @@ $v:=$p-> // erro
 $p->:=$v // erro
 ```
 
-To prevent such errors, you can write:
+Para evitar tais erros, você pode escrever:
 
 ```4d
 If ($p#Null)
@@ -145,7 +145,7 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 Quando se utilizam apontadores para processar ou variáveis locais, é necessário ter a certeza de que a variável apontada já está definida quando o apontador é utilizado. Tenha em mente que as variáveis locais são eliminadas quando o método que as criou tiver concluído a sua execução e as variáveis de processo são eliminadas no final do processo que as criou. Quando um ponteiro chama uma variável que já não existe, isto causa um erro de sintaxe no modo interpretado (variável não definida) mas pode gerar um erro mais grave no modo compilado.
 
-Os ponteiros para variáveis locais permitem-lhe guardar variáveis de processo em muitos casos. Os ponteiros para variáveis locais só podem ser utilizados dentro do mesmo processo. No depurador, quando se mostra um ponteiro para uma variável local que tenha sido declarada noutro método, o nome do método original é indicado entre parênteses, após o ponteiro. For example, if you write in *Method1*:
+Os ponteiros para variáveis locais permitem-lhe guardar variáveis de processo em muitos casos. Os ponteiros para variáveis locais só podem ser utilizados dentro do mesmo processo. No depurador, quando se mostra um ponteiro para uma variável local que tenha sido declarada noutro método, o nome do método original é indicado entre parênteses, após o ponteiro. Por exemplo, se você escrever em *Method1*:
 
 ```4d
  $MyVar:="Hello world"
@@ -157,13 +157,13 @@ Os ponteiros para variáveis locais permitem-lhe guardar variáveis de processo 
 #DECLARE($param : Pointer)
 ...
 ```
-The debugger will display $param as follows:
+O depurador irá exibir $param da seguinte forma:
 
 | $param | ->$MyVar (Method1) |
 | ------ | ------------------ |
 |        |                    |
 
-You can expand $param and its value will be:
+Você pode expandir $param e seu valor será:
 
 | $MyVar | "Hello world" |
 | ------ | ------------- |
@@ -200,9 +200,8 @@ Se precisar de se referir ao quarto elemento do array usando o ponteiro, faça d
 Pode passar um ponteiro como parâmetro para um método. Dentro do método, você pode modificar o objeto referenciado pelo ponteiro. Por exemplo, o seguinte método, `takeTwo`, toma dois parâmetros que são indicadores. Altera o objecto referenciado pelo primeiro parâmetro para caracteres maiúsculos, e o objecto referenciado pelo segundo parâmetro para caracteres minúsculos. Aqui está o método do projecto:
 
 ```4d
-  //$changeLow – Pointer to a string field or variable. //takeTwo project method
-  //$changeUp – Pointer to a string field or variable.
-  Mudar isto para minúsculas. Alterar isto para maiúsculas.
+  //$changeLow – Pointer to a string field or variable. Alterar isto para maiúsculas.
+  Mudar isto para minúsculas. Mudar isto para minúsculas.
  #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)

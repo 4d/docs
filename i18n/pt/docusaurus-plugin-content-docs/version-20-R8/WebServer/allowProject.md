@@ -7,7 +7,7 @@ As tags 4D, como `4DEVAL`, `4DTEXT`, `4DHTML`... as well as the [`/4DACTION URL`
 
 Este mecanismo representa, portanto, um risco de segurança para a aplicação, em especial se um utilizador da Internet acionar intencionalmente (ou não) um método não destinado a ser executado através da Web. Este risco pode ser evitado das seguintes formas:
 
-- Filter the methods called via the URLS using the [`On Web Authentication`](authentication.md#on-web-authentication) database method. Desvantagens: Se a base de dados incluir um grande número de métodos, este sistema pode ser difícil de gerir.
+- Filtre os métodos chamados através as URLS usando o método banco de dados [`On Web Authentication`](authentication.md#on-web-authentication). Desvantagens: Se a base de dados incluir um grande número de métodos, este sistema pode ser difícil de gerir.
 
 - Utilice la opción **Disponible a través de etiquetas 4D y URLs (4DACTION...)** que se encuentra en la caja de diálogo de propiedades del método:
 

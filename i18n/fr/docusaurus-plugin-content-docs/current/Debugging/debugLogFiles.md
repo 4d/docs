@@ -17,6 +17,7 @@ Les informations stockées dans les journaux doivent être analysées pour déte
 - [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [Fichier journal des requêtes ORDA](#orda-requests)
+- [4DTCPLog.txt](#4dtcplogtxt)
 
 > Lorsqu'un fichier journal peut être généré soit sur 4D Server, soit sur le client distant, le mot "Server" est ajouté au nom du fichier côté serveur, par exemple "4DRequestsLogServer.txt"
 
@@ -456,6 +457,43 @@ Voici un exemple d'enregistrement ORDA côté serveur :
 
 ```
 
+## 4DTCPLog.txt
+
+This log file records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+
+Pour lancer ce journal :
+
+- Use the `SET DATABASE PARAMETER` command:
+
+  ```4d
+  SET DATABASE PARAMETER(TCP log; 1)
+  ```
+
+- Le fichier de configuration du journal est un fichier `.json` qui doit respecter le schéma json suivant :
+
+  ```json
+  {
+      "TCPLogs":{
+        "state" : 1
+           }
+  }
+  ```
+
+Les champs suivants sont enregistrés pour chaque évènement :
+
+| Noms des champs | Type      | Description                                                                                |
+| --------------- | --------- | ------------------------------------------------------------------------------------------ |
+| time            | Date/Time | Date and time of the event in ISO 8601 format                                              |
+| localPort       | Number    | Local port used for the connection                                                         |
+| peerAddress     | Text      | IP address of the remote peer                                                              |
+| peerPort        | Number    | Port of the remote peer                                                                    |
+| protocol        | Text      | Indicates whether the event is related to `TCP`                                            |
+| event           | Text      | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
+| size            | Number    | The amount of data sent or received (in bytes), 0 if not applicable     |
+| excerpt         | Number    | First 10 bytes of data in hexadecimal format                                               |
+| textExcerpt     | Text      | First 10 bytes of data in text format                                                      |
+| comment         | Text      | Additional information about the event, such as error details or encryption status         |
+
 ## Utilisation d'un fichier de configuration de log
 
 Vous pouvez utiliser un **fichier de configuration de log** pour gérer facilement l'enregistrement des journaux dans un environnement de production. Ce fichier est préconfiguré par le développeur. En général, il peut être envoyé aux clients pour qu'ils n'aient qu'à le sélectionner ou à le copier dans un dossier local. Une fois activé, le fichier de configuration de log déclenche l'enregistrement de journaux spécifiques.
@@ -484,7 +522,7 @@ Si un fichier `logConfig.json` est installé à la fois dans les dossiers Settin
 
 ### Description du fichier JSON
 
-Le fichier de configuration du journal est un fichier `.json` qui doit respecter le schéma json suivant :
+Voici un exemple de fichier de configuration de log :
 
 ```json
 {
@@ -633,7 +671,7 @@ Le fichier de configuration du journal est un fichier `.json` qui doit respecter
 
 :::note
 
-- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\`,...).
+- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\`,...).
 - For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
 
@@ -641,7 +679,7 @@ Le fichier de configuration du journal est un fichier `.json` qui doit respecter
 
 ### Exemple
 
-Voici un exemple de fichier de configuration de log :
+Pour lancer ce journal :
 
 ```json
 {

@@ -183,7 +183,7 @@ Ao criar um aplicativo autônomo, o 4D copia o conteúdo da pasta 4D Volume Desk
 - Personalize o conteúdo da pasta *Resources*.
 
 > Construir um pacote de projeto
-> &#062; No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. Para modificá-lo, você deve primeiro exibir seu conteúdo (**Control+clique** no ícone).
+> &#062; Construir um pacote de projeto &#062; No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. Para modificá-lo, você deve primeiro exibir seu conteúdo (**Control+clique** no ícone).
 
 #### Localização dos arquivos da Web
 
@@ -503,18 +503,18 @@ Os seguintes módulos opcionais podem ser desmarcados:
 
 A página de Licenças e Certificados pode ser usada:
 
-- designate the license number(s) that you want to integrate into your single-user [stand-alone application](#application-page),
+- indique o(s) número(s) de licença(s) que você deseja integrar ao seu único usuário [aplicação autônoma](#application-page),
 - assinar a aplicação através de um certificado no macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licenças
 
-This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. Por padrão, a lista está vazia.
+Esta aba exibe a lista de [licenças de implantação disponíveis que você pode incorporar](#about-licenses) em sua aplicação. Por padrão, a lista está vazia.
 
 :::info
 
-If you keep the list empty, you build a stand-alone application without embedded deployment license. In this case, the end-user will have to purchase and enter a per-user *4D Desktop* license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. For more information, see the [**About licenses**](#about-licenses) paragraph.
+If you keep the list empty, you build a stand-alone application without embedded deployment license. In this case, the end-user will have to purchase and enter a per-user *4D Desktop* license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. Para obter mais informações, consulte o parágrafo [**Sobre licenças**](#about-licenses).
 
 :::
 

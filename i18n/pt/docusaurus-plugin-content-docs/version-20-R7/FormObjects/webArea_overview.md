@@ -16,7 +16,7 @@ Several dedicated [standard actions](#standard-actions), numerous [language comm
 Duas variáveis específicas podem ser associadas a cada área web:
 
 - [`URL`](properties_WebArea.md#url) -- para controlar a URL exibida pela área Web
-- [`Progression`](properties_WebArea.md#progression) -- to control the loading percentage of the page displayed in the web area.
+- [`Progression`](properties_WebArea.md#progression) -- para controlar a porcentagem de carregamento da página exibida na área Web.
 
 > As of 4D v19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
 
@@ -28,7 +28,7 @@ A seleção do motor de renderização web aninhado permite chamar aos métodos 
 
 ### Acessar métodos 4D
 
-When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a web area.
+Quando a propriedade [Acessar aos métodos 4D](properties_WebArea.md#access-4d-methods) estiver selecionada, você pode chamar métodos 4D de uma área web.
 
 :::note Notas
 
@@ -159,7 +159,7 @@ Além disso, áreas web são compatíveis com os eventos de formulário genéric
 Quando o formulário for executado, as funções da interface de navegador padrão estão disponíveis para o usuário na área web, o que permite a interação com outras áreas do formulário:
 
 - **Edit menu commands**: When the web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
-- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the web area. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+- **Menu contextual**: é possível usar o [menu contextual](properties_Entry.md#context-menu) padrão do sistema com a área web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 - **Drag and drop**: The user can drag and drop text, pictures and documents within the web area or between a web area and the 4D form objects, according to the 4D object properties.
   Por razões de segurança, não é permitido mudar os conteúdos da área Web arrastando e soltando seja um arquivo ou URL. Neste caso, o cursor exibe um ícone "proibido" ![](../assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` statement to display a "drop" icon and generate the [`On Window Opening Denied`](Events/onWindowOpeningDenied.md) event. In this event, you can call the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
 
@@ -215,7 +215,7 @@ When you have done the settings as described above, you then have new options su
 
 The 4DCEFParameters.json is a configuration file that allows customization of CEF parameters to manage the behavior of web areas within 4D applications.
 
-[Default switches](#default-file) are provided, but you can override them by using a custom 4DCEFParameters.json file.
+Os [Interruptores padrão](#default-file) são fornecidos, mas você pode substituí-los usando um arquivo 4DCEFParameters.json personalizado.
 
 In the development phase (using 4D application), create a 4DCEFParameters.json file at the following location:
 

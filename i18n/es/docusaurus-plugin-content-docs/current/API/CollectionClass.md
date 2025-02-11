@@ -277,7 +277,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 #### Descripción
 
-Colección compartida que se agrupa con la colección resultante
+Descripción Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
 > Esta función no modifica la colección original.
 
@@ -435,7 +435,7 @@ Mayor que
 
 #### Descripción
 
-Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
+Descripción Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
 Si la colección contiene objetos, puede pasar el parámetro *propertyPath*. En este caso, sólo se tienen en cuenta los elementos que contienen el *propertyPath*.
 
@@ -1261,7 +1261,7 @@ Esta función es idéntica a una llamada a [`map()`](#map) seguida de una llamad
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
-- Para una descripción detallada de los parámetros *queryString* y *value*, consulte la función `dataClass.query()`.
+- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un `Object` en el primer parámetro ($1).
 
@@ -1743,7 +1743,7 @@ La función `.map()` <!-- REF #collection.map().Summary -->crea una nueva colecc
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
-- Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer
+- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
 
@@ -1930,7 +1930,7 @@ La fórmula recibe los siguientes parámetros:
 
 **Ordenación sincronizada multinivel**
 
-Desea ordenar la colección resultante:
+Ordenar una colección de números de forma ascendente y descendente:
 
 Los niveles de ordenación vienen determinados por el orden en que se pasan las colecciones en el parámetro *colsToSort*: la posición de un objeto `collection`/`order` en la sintaxis determina su nivel de ordenación.
 
@@ -2173,7 +2173,7 @@ Ordenar con una ruta de propiedad:
 
 #### Descripción
 
-Ordenar una colección de números de forma ascendente y descendente:
+Descripción Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
@@ -2183,7 +2183,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 
-- Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer
+- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 
 En la retrolamada, pase un código que compare dos valores y devuelva **true** si el primer valor es menor que el segundo. Puede ofrecer los parámetros *extraParam* a la retrollamada si es necesario.
 
@@ -2311,7 +2311,7 @@ Lanzamiento
 
 #### Descripción
 
-`.pop()`, utilizado junto con [`.push()`](#push), puede utilizarse para implementar una funcionalidad primera entrada última salida de tratamiento de datos apilados:
+Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 > Esta función modifica la colección original.
 
@@ -2756,7 +2756,7 @@ La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplic
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
-- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
+- o *methodName*, el nombre de un método proyecto (texto).
 
 Tipo
 

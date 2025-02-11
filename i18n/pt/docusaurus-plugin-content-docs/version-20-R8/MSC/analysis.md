@@ -49,6 +49,11 @@ Essas informações permitem que você identifique a origem e o contexto de cada
   Only values represented in alphanumeric form are displayed.\
   Only values represented in alphanumeric form are displayed.\
   Only values represented in alphanumeric form are displayed.\
+  ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*\
+  Only values represented in alphanumeric form are displayed.\
+  Only values represented in alphanumeric form are displayed.\
+  Only values represented in alphanumeric form are displayed.\
+  Only values represented in alphanumeric form are displayed.\
   ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
 
 - **Registros**: número del registro.

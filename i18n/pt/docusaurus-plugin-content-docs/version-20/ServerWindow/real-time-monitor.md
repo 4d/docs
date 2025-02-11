@@ -4,56 +4,56 @@ title: Página do monitor em tempo real
 ---
 
 
-The Real Time Monitor page monitors the progress of "long" operations performed by the application in real time. These operations are, for example, sequential queries, execution of formulas, etc.
+A página do Monitor em Tempo Real monitora o progresso de operações "longas" realizadas pela aplicação em tempo real. Estas operações são, por exemplo, consultas sequenciais, execução de fórmulas, etc.
 
 ![](../assets/en/Admin/server-admin-monitor-page.png)
-> This page is available in the administration window of the server machine and also from a remote 4D machine. In the case of a remote machine, this page displays data from operations performed on the server machine.
+> Esta página está disponível na janela de administração da máquina do servidor e também de uma máquina 4D remota. No caso de uma máquina remota, esta página exibe dados de operações realizadas na máquina do servidor.
 
-É acrescentada uma linha para cada operação longa efetuada nos dados. This line automatically disappears when the operation is complete (you can check the **Display operations at least 5 seconds** option to keep quick operations on screen for 5 seconds, see below).
+É acrescentada uma linha para cada operação longa efetuada nos dados. Esta linha desaparece automaticamente quando a operação está concluída (você pode verificar as operações **pelo menos 5 segundos** opção para manter operações rápidas na tela por 5 segundos, veja abaixo).
 
 As informações seguintes são fornecidas para cada linha:
 
-- **Start Time**: starting time of operation in the format: "dd/mm/yyyy - hh:mm:ss"
+- **Horário de início**: hora de início da operação no formato: "dd/mm/yyyy - hh:mm:ss"
 - **Duração** (ms): duração em milissegundos da operação em curso
 - **Informações**: título da operação.
-- **Details**: this area displays detailed information which will vary according to the type of operation selected. Mais especificamente:
-    + **Created on**: indidates whether the operation results from a client action (Created on client) or if it was started explicitly on the server by means of a stored procedure or the "Execute on server" option (Created on server).
-    + **Operation Details**: Operation type and (for query operations) query plan.
-    + **Sub-operations** (if any): Dependent operations of the selected operation (e.g. deleting related records before a parent record).
-    + **Process Details**: Additional information concerning the table, field, process or client, depending on the type of operation
+- **Detalhes**: esta área exibe informações detalhadas, que variarão de acordo com o tipo de operação selecionada. Mais especificamente:
+    + **Criado em**: indica se a operação resulta de uma ação do cliente (Criado no cliente) ou se foi iniciado explicitamente no servidor por meio de um procedimento armazenado ou a opção "Executar no servidor" (Criado no servidor).
+    + **Detalhes da operação**: tipo de operação e plano de consulta (para operações de consulta)
+    + **Sub-operações** (se houver): Operações dependentes da operação selecionada (ex. excluir registros relacionados antes de um registro pai).
+    + **Detalhes do processo**: Informações adicionais sobre a tabela, campo, processo ou cliente, dependendo do tipo de operação
 
-> Real-time monitoring page uses the [`GET ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) command internally. Para mais informações, consultar a descrição deste comando.
+> A página de monitoramento em tempo real usa o comando [`GET ATIVIDADE SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) internamente. Para mais informações, consultar a descrição deste comando.
 
-A página está ativa e é atualizada permanentemente assim que é exibida. It should be noted that its operation can significantly slow the execution of the application. It is possible to suspend the updating of this page in one of the following ways:
+A página está ativa e é atualizada permanentemente assim que é exibida. Note-se que o seu funcionamento pode atrasar significativamente a execução da aplicação. É possível suspender a atualização desta página de uma das seguintes maneiras:
 
 - clicando no botão **Pause**,
 - clicando na lista,
 - premindo a barra de espaços.
 
-When you pause the page, a "PAUSED" message appears and the button label changes to **Resume**. You can resume monitoring of the operations by performing the same action as for pausing.
+Quando você pausa a página, uma mensagem "PAUSADA" aparece e o rótulo do botão será exibido para **Retume**. Você pode retomar o monitoramento das operações realizando a mesma ação que realizar a pausa.
 
 ## Modo avançado
 
-The RTM page can display additional information, if necessary, for each listed operation.
+A página RTM pode exibir informações adicionais, se necessário, para cada operação listada.
 
-To access the advanced mode for an operation, press **Shift** and select the desired operation. All available information is then displayed in the "Process Details" area without any filtering (as returned by the `GET ACTIVITY SNAPSHOT` command). As informações disponíveis dependem da operação selecionada.
+Para acessar o modo avançado para uma operação, pressione **Shift** e selecione a operação desejada. Todas as informações disponíveis são então exibidas na área "Detalhes do Processo" sem qualquer filtro (conforme retornado pelo comando `ATIVAR SNAPSHOT`). A informação disponível depende da operação selecionada.
 
 Eis um exemplo de informações apresentadas no modo padrão:
 
 ![](../assets/en/Admin/server-admin-monitor-adv1.png)
 
 
-In advanced mode (**Shift+Click** on the operation), additional information is displayed:
+Modo avançado (**Shift+Clique** na operação), informações adicionais são exibidas:
 
 ![](../assets/en/Admin/server-admin-monitor-adv2.png)
 
 ## Botão instantânea
 
-The **Snapshot** button allows you to copy to the clipboard all the operations displayed in the RTM panel, as well as their related details (process and sub-operation info):
+O botão **Snapshot** permite que você copie para a área de transferência todas as operações exibidas no painel RTM, assim como seus detalhes relacionados (informações de processo e suboperação):
 
 ![](../assets/en/Admin/server-admin-monitor-snapshot.png)
 
 
 ## Mostrar operações durante pelo menos 5 segundos
 
-If you check the **Display operations at least 5 seconds** option, any listed operation will be displayed on the page for at least five seconds, even after its execution is finished. As operações retidas aparecem esbatidas na lista de operações. Esta funcionalidade é útil para obter informações sobre operações que são executadas muito rapidamente.
+Se você marcar a opção **Exibir operações pelo menos 5 segundos** , qualquer operação listada será exibida na página por pelo menos cinco segundos, mesmo após a conclusão da execução. As operações retidas aparecem esbatidas na lista de operações. Esta funcionalidade é útil para obter informações sobre operações que são executadas muito rapidamente.

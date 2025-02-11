@@ -32,7 +32,7 @@ In *id*, pass the UUID of the session for which you want to get the storage. It 
 
 **Note:** You can get the session identifiers using the [Process activity](process-activity.md) command.
 
-The returned object is the [**.storage**](../API/SessionClass.md#storage) property of the session. It is a shared object used to store information available to all processes of the session.
+El objeto devuelto es la propiedad [**.storage**](../API/SessionClass.md#storage) de la sesión. It is a shared object used to store information available to all processes of the session.
 
 #### Ejemplo
 
@@ -68,4 +68,4 @@ This method modifies the value of a "settings" property stored in the storage ob
 |                   |                                                                     |
 | ----------------- | ------------------------------------------------------------------- |
 | Número de comando | 1839                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

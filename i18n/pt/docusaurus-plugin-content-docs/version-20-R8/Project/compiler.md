@@ -61,7 +61,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 :::info Compatibidade
 
-This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](../Project/compiler.md#generate-typing).
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. Para informações sobre este botão, consulte a [documentação de versões 4D anteriores](../Project/compiler.md#generate-typing).
 
 :::
 
@@ -131,9 +131,9 @@ In projects converted from 4D versions prior to 20 R7, additional compilation op
 - **Default typing**
 - **Métodos Compilador para...**
 
-These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](../Project/compiler.md#compiler-settings).
+These options are only maintained for compatibility with legacy code. Para mais informações, consulte a [documentação de lançamentos 4D anteriores](../Project/compiler.md#compiler-settings).
 
-In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
+Em projetos convertidos, é recomendado [ativar o modo de digitação direta](#enabling-direct-typing) e escrever o código de declaração em conformidade, i.e.:
 
 - declarar explicitamente todas as variáveis [usando palavras-chave `var`](../Concepts/variables.md#declaring-variables)
 - declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).

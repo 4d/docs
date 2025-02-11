@@ -38,7 +38,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D Server**. In other environments, components are managed differently:
 
 - in [4D in remote mode](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application.
-- in merged applications, components are [included at the build step](../Desktop/building.md#plugins--components-page).
+- em aplicações mescladas, componentes são [incluídos na etapa de compilação](../Desktop/building.md#plugins--components-page).
 
 :::
 
@@ -69,7 +69,7 @@ O arquivo **dependencies.json** faz referência a todos os componentes necessár
 
 Pode conter:
 
-- names of components [stored locally](#declaring-local-components) (default path or path defined in an **environment4d.json** file),
+- nomes de componentes [armazenado localmente](#declaring-local-components) (caminho ou caminho padrão definido em um arquivo **environment4d.json**),
 - names of components [stored on GitHub repositories](#declaring-components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
 
 #### environment4d.json
@@ -297,7 +297,7 @@ Referenced GitHub components are downloaded in a local cache folder then loaded 
 
 ### dependency-lock.json
 
-A `dependency-lock.json` file is created in the [`userPreferences` folder](architecture.md#userpreferencesusername) of your project.
+Um arquivo `dependency-lock.json` foi criado na pasta [`userPreferences`](architecture.md#userpreferencesusername) do seu projeto.
 
 This file logs information such as the state of dependencies, paths, urls, loading errors, as well as other information. It could be useful for component loading management or troubleshooting.
 
@@ -321,7 +321,7 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 
 ### Filtering dependencies
 
-By default, all dependencies identified by the Dependency manager are listed, whatever their [status](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
+Por padrão, todas as dependências identificadas pelo gerenciador de dependências são listadas, independentemente de seu [estado](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
@@ -360,7 +360,7 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 As seguintes origens são possíveis:
 
-| Origin tag                        | Descrição                                                                    |
+| Etiqueta de origem                | Descrição                                                                    |
 | --------------------------------- | ---------------------------------------------------------------------------- |
 | Componente 4D                     | Componente 4D incorporado, armazenado na pasta `Components` da aplicação 4D  |
 | dependencies.json | Component declared in the [`dependencies.json`](#dependenciesjson) file      |
@@ -390,7 +390,7 @@ To add a local dependency, click on the **+** button in the footer area of the p
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-Certifique-se de que a aba **Local** esteja selecionada e clique no botão **...**. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md##applicationname4dproject-file) file.
+Certifique-se de que a aba **Local** esteja selecionada e clique no botão **...**. A standard Open file dialog box is displayed, allowing you to select the component to add. Você pode selecionar um arquivo [**.4DZ**](../Desktop/building.md#build-component) ou um arquivo [**.4DProject**](architecture.md##applicationname4dproject-file).
 
 If the selected item is valid, its name and location are displayed in the dialog box.
 
@@ -409,7 +409,7 @@ If no [**environment4d.json**](#environmen4djson) file is already defined for th
 
 :::
 
-The dependency is added to the [inactive dependency list](#dependency-status) with the **Available after restart** status. It will be loaded once the application restarts.
+A dependência é adicionada à [lista de dependências inativas](#dependency-status) com o estado **Disponível após reiniciar**. It will be loaded once the application restarts.
 
 ### Adding a GitHub dependency
 
@@ -429,7 +429,7 @@ If the component is stored on a [private GitHub repository](#private-repositorie
 
 :::
 
-Define the [dependency version range](#tags-and-versions) to use for this project. By defaut, "Latest" is selected, which means that the lastest version will be automatically used.
+Defina o [intervalo de versão de dependência](#tags-and-versions) para usar neste projeto. By defaut, "Latest" is selected, which means that the lastest version will be automatically used.
 
 Clique no botão **Adicionar** para adicionar a dependência ao projeto.
 
@@ -442,9 +442,9 @@ Você pode definir a opção [tag ou versão](#tags-and-versions) para uma depen
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
 - **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version.
-- **Up to Next Major Version**: Define a [semantic version range](#tags-and-versions) to restrict updates to the next major version.
+- **Até a próxima versão major**: defina um [intervalo de versão semântica](#tags-and-versions) para restringir as atualizações para a próxima versão principal.
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
-- **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
+- **Versão exata (etiqueta)**: selecione ou insira manualmente uma [etiqueta específica](#tags-and-versions) na lista disponível.
 
 The current GitHub dependency version is displayed on the right side of the dependency item:
 
@@ -527,7 +527,7 @@ When this option is unchecked, a new component version matching your [component 
 Registering your personal access token in the Dependency manager is:
 
 - obrigatório se o componente estiver armazenado em um [repositório GitHub privado](#private-repositories),
-- recommended for a more frequent [checking of dependency updates](#updating-github-dependencies).
+- recomendado para uma [verificação de atualizações de dependências](#updating-github-dependencies).
 
 To provide your GitHub access token, you can either:
 
@@ -542,7 +542,7 @@ You can then enter your personal access token:
 
 You can only enter one personal access token. Once a token has been entered, you can edit it.
 
-The provided token is stored in a **github.json** file in the [active 4D folder](../commands-legacy/get-4d-folder.md#active-4d-folder).
+O token fornecido é armazenado em um arquivo **github.json** na [pasta 4D ativa](../commands-legacy/get-4d-folder.md#active-4d-folder).
 
 ### Removing a dependency
 
@@ -558,4 +558,4 @@ Somente as dependências declaradas no arquivo [**dependencies.json**](#dependen
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-If you confirm the dialog box, the removed dependency [status](#dependency-status) is automatically flagged "Unload after restart". It will be unloaded once the application restarts.
+Se você confirmar a caixa de diálogo, a dependência [estado](#dependency-status) removida é automaticamente sinalizada "Unload after restart". It will be unloaded once the application restarts.

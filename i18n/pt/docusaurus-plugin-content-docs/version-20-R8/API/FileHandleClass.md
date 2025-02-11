@@ -13,7 +13,7 @@ Thanks to the standard 4D object *refcounting*, a file handle is automatically d
 
 :::note
 
-Os recursos de um objeto, como documentos, são liberados quando não existem mais referências na memória, que acontece, por exemplo, no final do método de execução das variáveis locais. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources).
+Os recursos de um objeto, como documentos, são liberados quando não existem mais referências na memória, que acontece, por exemplo, no final do método de execução das variáveis locais. Se você quiser "forçar" a liberação dos recursos do objeto a qualquer momento, você pode [anular suas referências](../Concepts/dt_object.md#resources).
 
 :::
 
@@ -408,7 +408,7 @@ Essa função assume que a propriedade [`.offset`](#offset) é um número de car
 
 :::
 
-If the *stopChar* parameter is passed and not found, `.readText()` returns an empty string and the [.offset](#offset) is left untouched.
+Se o parâmetro *stopChar* for passado e não for encontrado, `.readText()` retorna uma string vazia e o [.offset](#offset) permanecerá intocado.
 
 > Quando esta função é executada pela primeira vez num handle de arquivo, todo o conteúdo do documento é carregado num buffer.
 
@@ -442,7 +442,7 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 
 #### Descrição
 
-The `.setSize()` function <!-- REF #FileHandleClass.setSize().Summary -->sets a new *size* in bytes for the document<!-- END REF -->.
+A função `.setSize()` <!-- REF #FileHandleClass.setSize().Summary -->define um novo tamanho de *size* em bytes para o documento<!-- END REF -->.
 
 If the *size* value is less than the current document size, the document content is truncated from the beginning to get the new *size* .
 
@@ -512,7 +512,7 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 
 The `.writeLine()` function <!-- REF #FileHandleClass.writeLine().Summary -->writes *lineOfText* content at the current position and inserts an end-of-line delimiter<!-- END REF --> (unlike the [.writeText()](#writetext) function). By default, a native end-of-line delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.
 
-When this function is executed, the current position ([.offset](#offset)) is updated after the end-of-line delimiter.
+Quando esta função é executada, a posição atual ([.offset](#offset)) é atualizada após o delimitador de fim de linha.
 
 #### Veja também
 
@@ -546,7 +546,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 The `.writeText()` function <!-- REF #FileHandleClass.writeText().Summary -->writes *textToWrite* content at the current position and does not insert a final end-of-line delimiter<!-- END REF --> (unlike the [.writeLine()](#writeline) function). By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.
 
-When this function is executed, the current position ([.offset](#offset)) is updated after the next end-of-line delimiter.
+Quando esta função é executada, a posição atual ([.offset](#offset)) é atualizada após o próximo delimitador de fim de linha.
 
 #### Veja também
 

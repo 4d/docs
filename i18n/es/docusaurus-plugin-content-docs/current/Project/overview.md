@@ -11,7 +11,7 @@ Los archivos de proyecto 4D se abren y editan con las aplicaciones estándar de 
 
 Como los proyectos se encuentran en archivos legibles, en texto plano (JSON, XML, etc.), pueden ser leídos o editados manualmente por los desarrolladores, utilizando cualquier editor de código.
 
-Además, los archivos de proyecto 4D facilitan la programación genérica, la creación de plantillas de aplicaciones y el compartir código. Los proyectos se organizan internamente en [carpetas y archivos](Project/architecture.md).
+Además, los archivos de proyecto 4D facilitan la programación genérica, la creación de plantillas de aplicaciones y el compartir código. Los archivos del proyecto pueden ser [compilados](compiler.md) y fácilmente desplegados.
 
 ## Desarrollo
 

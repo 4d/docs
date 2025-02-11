@@ -9,9 +9,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Params-->
 
-| Parámetros | Tipo    |                             | Descripción       |
-| ---------- | ------- | --------------------------- | ----------------- |
-| Resultado  | Integer | &#8592; | Form event number |
+| Parámetros | Tipo    |                             | Descripción                 |
+| ---------- | ------- | --------------------------- | --------------------------- |
+| Resultado  | Integer | &#8592; | Número de evento formulário |
 
 <!-- END REF-->
 
@@ -354,4 +354,4 @@ As a result, the red rectangle follows the scrolling of the list box:
 |                   |                                                                     |
 | ----------------- | ------------------------------------------------------------------- |
 | Número de comando | 388                                                                 |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

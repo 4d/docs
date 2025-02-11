@@ -47,7 +47,7 @@ Você também pode executar uma função usando as funções [`apply()`](#apply)
 
 #### Utilização de parâmetros
 
-You can pass parameters to your formulas using the [sequential parameter syntax](Concepts/parameters.md#sequential-parameters) based upon $1, $2...$n. Por exemplo, pode escrever:
+Você pode passar parâmetros para suas fórmulas usando a [sintaxe sequencial do parâmetro](Concepts/parameters.md#sequential-parameters) com base em $1, $2...$n. Por exemplo, pode escrever:
 
 ```4d
  var $f : Object
@@ -224,7 +224,7 @@ Observe que `.call()` é semelhante a [`.apply()`](#apply), exceto pelo fato de 
 
 #### Descrição
 
-The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
+A propriedade `.source` <!-- REF #FunctionClass.source.Summary -->contém a expressão de origem da `fórmula` como texto<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 

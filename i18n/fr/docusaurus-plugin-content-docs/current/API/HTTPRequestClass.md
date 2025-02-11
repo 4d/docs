@@ -478,13 +478,13 @@ La propriété `.url` contient <!-- REF #HTTPRequestClass.url.Summary -->l'URL d
 
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *timeout* : Real } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
 | Paramètres | Type                           |                             | Description                                         |
 | ---------- | ------------------------------ | :-------------------------: | --------------------------------------------------- |
-| time       | Real                           |              ->             | Délai d'attente maximum en secondes pour la réponse |
+| timeout    | Real                           |              ->             | Délai d'attente maximum en secondes pour la réponse |
 | Résultat   | 4D.HTTPRequest | <- | Objet HTTPRequest                                   |
 
 <!-- END REF -->
@@ -495,10 +495,14 @@ La propriété `.url` contient <!-- REF #HTTPRequestClass.url.Summary -->l'URL d
 
 La fonction `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->attend la réponse du serveur<!-- END REF -->.
 
-Si un paramètre *time* est passé, la fonction attendra au maximum le nombre de secondes défini.
+Si un paramètre *time* est passé, la fonction attendra au maximum le nombre de secondes défini. Decimals are accepted.
 
 Si la réponse du serveur est déjà arrivée, la fonction rend la main immédiatement.
 
-Lors d'une exécution `.wait()`, les fonctions de rappel sont exécutées, que ce soit à partir d'autres instances `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou d'autres appels [`CALL WORKER`](../commands-legacy/call-worker.md) . Vous pouvez sortir d'un `.wait()` en appelant [`terminate()`](#terminate) à partir d'une callback.
+:::note
+
+Lors d'une exécution `.wait()`, les fonctions de rappel sont exécutées, que ce soit à partir d'autres instances `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou d'autres appels [`CALL WORKER`](../commands-legacy/call-worker.md) .  Vous pouvez sortir d'un `.wait()` en appelant [`terminate()`](#terminate) à partir d'une callback.
+
+:::
 
 <!-- END REF -->

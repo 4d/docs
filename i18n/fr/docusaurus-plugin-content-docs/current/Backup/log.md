@@ -7,7 +7,7 @@ Une application exploitée de manière continue enregistre en permanence des mod
 
 En outre, 4D travaille en permanence avec un cache de données situé en mémoire. Toute modification apportée aux données de l'application est stockée temporairement dans le cache avant d'être écrite sur le disque dur. Ce principe permet d’accélérer le fonctionnement des applications ; en effet, les accès mémoire sont bien plus rapides que les accès disque. Si un incident survient sur l'application avant que les données stockées dans le cache aient pu être écrites sur le disque, vous devrez intégrer le fichier d’historique courant afin de récupérer entièrement l'application.
 
-Enfin, 4D dispose d'une fonction d'analyse du contenu du fichier d'historique, permettant également de faire remonter en arrière les opérations exécutées sur les données de l'application. Ces fonctions sont accessibles via le CSM : reportez-vous aux sections [Page Analyse d'activités](MSC/analysis.md) et [Page Retour arrière](MSC/rollback.md).
+Enfin, 4D dispose d'une fonction d'analyse du contenu du fichier d'historique, permettant également de faire remonter en arrière les opérations exécutées sur les données de l'application. Fonctionnement du fichier d'historique
 
 ## Fonctionnement du fichier d'historique
 

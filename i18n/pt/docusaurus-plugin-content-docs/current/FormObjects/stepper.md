@@ -21,7 +21,7 @@ Um stepper pode ser associado diretamente a uma variável número, hora ou data.
 
 > For the stepper to work with a time or date variable, it is imperative to set its type in the form AND to [declare it explicitly](../Concepts/variables.md#declaring-variables) as `Time` or `Date`.
 
-For more information, please refer to [Using indicators](progressIndicator.md#using-indicators) in the "Progress Indicator" page.
+Para mais informações, consulte [Usando indicadores](progressIndicator.md#using-indicators) na página "Indicador de Progresso".
 
 ## Propriedades compatíveis
 

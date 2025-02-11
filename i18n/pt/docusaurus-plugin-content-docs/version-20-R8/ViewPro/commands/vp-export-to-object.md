@@ -28,7 +28,7 @@ In the *options* parameter, you can pass the following export options, if requir
 | includeFormatInfo    | Parâmetros | Verdadeiro (padrão) para incluir informações de formatação; caso contrário, falso. As informações de formatação são úteis em alguns casos, por exemplo, para exportação para SVG. Por outro lado, a definição dessa propriedade como False permite reduzir o tempo de exportação. |
 | includeBindingSource | Parâmetros | True (padrão) para exportar os valores do contexto de dados atual como valores de célula no objeto exportado (os contextos de dados em si não são exportados). Caso contrário, false. Cell binding sempre é exportada.                                         |
 
-For more information on 4D View Pro objects, please refer to the [4D View Pro object](../configuring.md#4d-view-pro-object) paragraph.
+Para mais informações sobre objetos 4D View Pro, consulte parágrafo [4D View Pro](../configuring.md#4d-view-pro-object).
 
 #### Exemplo 1
 

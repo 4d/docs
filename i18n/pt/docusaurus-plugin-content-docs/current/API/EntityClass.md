@@ -145,7 +145,7 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Nã
 
 #### Descrição
 
-The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
+A função `.diff()` <!-- REF #EntityClass.diff().Summary -->compara o conteúdo de duas entidades e retorna suas diferenças<!-- END REF -->.
 
 No *entityToCompare*, passe a entidade a ser comparada à entidade original.
 
@@ -455,7 +455,7 @@ Example with `dk force drop if stamp changed` option:
 
 The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
 
-If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
+Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja, [.getSelection( )](#getselection) retorna Null), a função retorna um valor Null.
 
 #### Exemplo
 
@@ -493,7 +493,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 #### Descrição
 
-The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
+A função `.fromObject()` <!-- REF #EntityClass.fromObject().Summary -->preenche uma entidade com o conteúdo *filler*<!-- END REF -->.
 
 > Essa função modifica a entidade original.
 
@@ -501,7 +501,7 @@ O mapeamento entre o objecto e a entidade é feito sobre os nomes dos atributos:
 
 - Se uma propriedade do objeto não existe nos dados (dataclass), ela é ignorada.
 - Os tipos de dados devem ser equivalentes. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see [`Converting data types`](Concepts/data-types.md#converting-data-types)), otherwise the attribute is left untouched.
-- A chave primária pode ser dada como é ou com uma propriedade "__KEY" (preenchida com o valor da chave primária). If it does not already exist in the dataclass, the entity is created with the given value when [.save()](#save) is called. Se a chave primária não for dada, a entidade é criada e o valor da chave primária é atribuído de acordo com as regras da base de dados. O auto-incremento só é calculado se a chave primária for nula.
+- A chave primária pode ser dada como é ou com uma propriedade "__KEY" (preenchida com o valor da chave primária). Se ela ainda não existir na classe de dados, a entidade será criada com o valor fornecido quando [.save()](#save) for chamado. Se a chave primária não for dada, a entidade é criada e o valor da chave primária é atribuído de acordo com as regras da base de dados. O auto-incremento só é calculado se a chave primária for nula.
 
 *filler* pode tratar de uma entidade relacionada sob as seguintes condições:
 
@@ -580,7 +580,7 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
 
 #### Descrição
 
-The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. Esta função é útil para configurar o código genérico.
+A função `.getDataClass()` <!-- REF #EntityClass.getDataClass().Summary -->retorna a dataclass da entidade<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 #### Exemplo
 
@@ -628,7 +628,7 @@ O seguinte código genérico duplica qualquer entidade:
 
 #### Descrição
 
-The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
+A função `.getKey()` <!-- REF #EntityClass.getKey().Summary -->retorna o valor da chave primária da entidade<!-- END REF -->.
 
 As chaves primárias podem ser números (Inteiro) ou strings. You can "force" the returned primary key value to be a string, no matter the actual primary key type, by passing the `dk key as string` option in the *mode* parameter.
 
@@ -672,7 +672,7 @@ As chaves primárias podem ser números (Inteiro) ou strings. You can "force" th
 
 The `.getRemoteContextAttributes()` function <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity <!-- END REF -->.
 
-If there is no [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) for the entity, the function returns an empty Text.
+Se não houver [contexto de otimização](../ORDA/remoteDatastores.md#clientserver-optimization) para a entidade, a função retornará um texto vazio.
 
 #### Exemplo
 
@@ -725,7 +725,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### Descrição
 
-The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->.
+A função `.getSelection()` <!-- REF #EntityClass.getSelection().Summary -->retorna a seleção da entidade à qual a entidade pertence<!-- END REF -->.
 
 Se a entidade não pertence à seleção de uma entidade, a função retorna Null.
 
@@ -769,9 +769,9 @@ Se a entidade não pertence à seleção de uma entidade, a função retorna Nul
 
 #### Descrição
 
-The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
+A função `.getStamp()` <!-- REF #EntityClass.getStamp().Summary --> retorna o valor atual do carimbo da entidade<!-- END REF -->.
 
-O selo interno é automaticamente incrementado por 4D cada vez que a entidade é gravada. It manages concurrent user access and modifications to the same entities (see [**Entity locking**](ORDA/entities.md#entity-locking)).
+O selo interno é automaticamente incrementado por 4D cada vez que a entidade é gravada. Ele gerencia os acessos simultâneos e as modificações de usuários às mesmas entidades (consulte [**bloqueio de uma entidade**](ORDA/entities.md#entity-locking)).
 
 > Para uma nova entidade (nunca salva), a função retorna 0. Para saber se uma entidade acabou de ser criada, recomenda-se a utilização de [.isNew()](#isnew).
 
@@ -818,7 +818,7 @@ O selo interno é automaticamente incrementado por 4D cada vez que a entidade é
 
 #### Descrição
 
-The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
+A função `.indexOf()` <!-- REF #EntityClass.indexOf().Summary -->retorna a posição da entidade em uma entity selection<!-- END REF -->.
 
 By default if the *entitySelection* parameter is omitted, the function returns the entity's position within its own entity selection. Caso contrário, ele retorna a posição da entidade dentro da *entitySelection*.
 
@@ -908,7 +908,7 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 
 The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
 
-If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
+Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja, [.getSelection( )](#getselection) retorna Null), a função retorna um valor Null.
 
 #### Exemplo
 
@@ -947,7 +947,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 #### Descrição
 
-The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. The [lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
+A função `.lock()` <!-- REF #EntityClass.lock().Summary -->coloca um bloqueio pessimista no registro referenciado pela entidade<!-- END REF -->. O [bloqueio é definido](ORDA/entities.md#entity-locking) para um registro e todas as referências da entidade no processo atual.
 
 Other processes will see this record as locked (the `result.success` property will contain False if they try to lock the same entity using this function). Só as funções executadas na sessão de "bloqueio" são permitidas para editar e guardar os atributos da entidade. A entidade pode ser carregada como apenas leitura por outras sessões, mas não serão capazes de introduzir e guardar valores.
 
@@ -1353,7 +1353,7 @@ Atualização de uma entidade com a opção `dk auto merge`:
 
 #### Descrição
 
-The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Os nomes das propriedades no objecto correspondem aos nomes dos atributos da entidade.
+A função `.toObject()` <!-- REF #EntityClass.toObject().Summary -->retorna um objeto que foi criado a partir da entidade<!-- END REF -->. Os nomes das propriedades no objecto correspondem aos nomes dos atributos da entidade.
 
 If no filter is specified, or if the *filterString* parameter contains an empty string or "\*", the returned object will contain:
 

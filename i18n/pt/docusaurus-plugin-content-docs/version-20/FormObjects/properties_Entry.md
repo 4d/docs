@@ -33,7 +33,7 @@ Para um tipo de texto [multi-estilo](properties_Text.md#multi-style) [input](inp
 - **Recent fonts (Fontes recentes**): exibe os nomes das fontes recentes selecionadas durante a sessão. A lista pode armazenar até 10 fontes (além disso, a última fonte usada substitui a mais antiga). Por padrão, essa lista está vazia e a opção não é exibida. Você pode gerenciar essa lista usando os comandos `SET RECENT FONTS` e `FONT LIST`.
 - comandos para as modificações de estilo suportadas: tipo de letra, tamanho, estilo, cor e cor de fundo. Quando o usuário modifica um atributo de estilo por meio desse menu pop-up, o 4D gera o evento de formulário `On After Edit`.
 
-Em uma [área da Web](webArea_overview.md), o conteúdo do menu depende do mecanismo de renderização da plataforma. It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
+Em uma [área da Web](webArea_overview.md), o conteúdo do menu depende do mecanismo de renderização da plataforma. É possível controlar o acesso ao menu de contexto através do comando `WA SET PREFERENCE`.
 
 #### Gramática JSON
 
@@ -43,7 +43,7 @@ Em uma [área da Web](webArea_overview.md), o conteúdo do menu depende do mecan
 
 #### Objectos suportados
 
-[Input](input_overview.md) - [Web Area](webArea_overview.md) - [4D Write Pro áreas](writeProArea_overview.md)
+[Entrada](input_overview.md) - [Área da Web](webArea_overview.md) - [Áreas 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -63,13 +63,13 @@ Quando essa propriedade está desativada, todos os menus pop-up associados a uma
 
 #### Objectos suportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Barra de progresso](progressIndicator.md) - [Regra](ruler.md) - [Stepper](stepper.md)
 
 ---
 
 ## Filtro de entrada
 
-Um filtro de entrada controla exatamente o que o usuário pode digitar durante a entrada de dados. Ao contrário de uma lista [necessária](properties_RangeOfValues.md#required-list) , por exemplo, os filtros de entrada operam em uma base de caractere por caractere. Por exemplo, se um número de parte sempre consiste em duas letras seguidas por três dígitos, você pode usar um filtro de postagens para restringir o usuário a esse padrão. Pode até controlar as letras e os números específicos.
+Um filtro de entrada controla exatamente o que o usuário pode digitar durante a entrada de dados. Ao contrário de uma lista [necessária](properties_RangeOfValues.md#required-list), por exemplo, os filtros de entrada operam em uma base de caractere por caractere. Por exemplo, se um número de parte sempre consiste em duas letras seguidas por três dígitos, você pode usar um filtro de postagens para restringir o usuário a esse padrão. Pode até controlar as letras e os números específicos.
 
 Um filtro de entrada funciona apenas durante a introdução de dados. Não tem nenhum efeito na apresentação de dados após o usuário ter anulado a seleção do objeto. Em geral, você usa filtros de entrada e [formatos de exibição](properties_Display.md) juntos. O filtro restringe a entrada de dados e o formato garante a exibição adequada do valor após a entrada de dados.
 
@@ -163,7 +163,7 @@ Por padrão, o objeto utiliza a disposição atual do teclado.
 
 #### Objetos compatíveis
 
-[4D Write Pro áreas](writeProArea_overview.md) - [Input](input_overview.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md)
 
 ---
 
@@ -219,7 +219,7 @@ Você pode usar uma referência XLIFF no formulário ":xliff:resname" como um es
  :xliff:PH_Lastname
 
 Você só passa a referência no campo "Placeholder"; não é possível combinar uma referência com um texto estático.
-> You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
+> Você também pode definir e obter o texto do espaço reservado programando usando os comandos `OBJETO SET PLACEHOLDER` e `OBJECT Get placeholder`.
 
 #### Gramática JSON
 
@@ -229,7 +229,7 @@ Você só passa a referência no campo "Placeholder"; não é possível combinar
 
 #### Objetos compatíveis
 
-[Combo Box](comboBox_overview.md) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Entrada](input_overview.md)
 
 #### Veja também
 
@@ -249,7 +249,7 @@ Essa propriedade mantém a seleção visível dentro do objeto depois que ele pe
 
 #### Objectos compatíveis
 
-[Áreas do 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md)
 
 ---
 

@@ -76,7 +76,7 @@ You want to handle the On Display Details on a list box object with a method set
 
 ![](../assets/en/commands/pict4843812.en.png)
 
-The *setColor* method:
+El método *setColor*:
 
 ```4d
  var $event;$0;$meta : Object
@@ -103,7 +103,7 @@ The resulting list box when rows are selected:
 
 #### Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1606                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1606                            |
+| Hilo seguro       | &amp;check; |

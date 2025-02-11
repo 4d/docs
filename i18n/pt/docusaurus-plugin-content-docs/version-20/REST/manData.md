@@ -20,7 +20,7 @@ Com o REST API, pode realizar todas as manipulações de dados que quiser em 4D.
 
 Para adicionar e modificar entidades, pode chamar [`$method=update`]($method.md#methodupdate). Se quiser apagar uma ou mais entidades, pode usar [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Além de recuperar uma única entidade em um dataclass usando [\{dataClass\}({key})](dataClass.md#dataclasskey), você também pode escrever uma [função de classe](ClassFunctions.md#function-calls) que retorne uma seleção de entidade (ou uma coleção).
 
 Antes de devolver a coleção, também pode ordená-la utilizando [`$orderby`]($orderby.md) um ou vários atributos (mesmo os atributos de relação).
 
@@ -225,7 +225,7 @@ Quanto tiver [criado um conjunto de entidade](#creating-and-managing-entity-set)
  `` `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer ``
 
 
-## Vendo um atributo de imagem
+## Visualizando um atributo imagem
 
 Se quiser ver um atributo de imagem integralmente, escreva o abaixo:
 

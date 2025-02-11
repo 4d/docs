@@ -133,7 +133,7 @@ Contiene la <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts y de
   - 192.168.\*
   - 192.168.\*:8081
   - <http://192.168.5.17:8081>
-  - <http://\\\\\*.myDomain.com>
+  - <http://\\\\\\\\\\*.myDomain.com>
   - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com
@@ -236,7 +236,7 @@ El estado del protocolo <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP<!--
 
 <!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Number<!-- END REF -->
 
-El <!-- REF #WebServerClass.HTTPPort.Summary -->escuchando número de puerto IP para HTTP<!-- END REF -->.
+El <!-- REF #WebServerClass.HTTPPort.Summary -->número de puerto IP de escucha para HTTP<!-- END REF -->.
 
 Por defecto = 80
 

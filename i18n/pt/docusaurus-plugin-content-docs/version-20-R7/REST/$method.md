@@ -23,7 +23,7 @@ Elimina a entidade, coleção de entidades ou seleção de entidades atual (cria
 
 Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
 
-You can also delete the entities in an entity set, by calling [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
+Também pode apagar as entidades em um conjunto de entidades, chamando [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
 ### Exemplo
 
@@ -83,7 +83,7 @@ Libera um conjunto de entidades existente armazenado no cache do 4D Server.
 
 ### Descrição
 
-You can release an entity set, which you created using [`$method=entityset`](#methodentityset), from 4D Server's cache.
+Você pode lançar um entity set, que você criou usando [`$method=entityset`](#methodentityset), no cache do servidor 4D.
 
 ### Exemplo
 
