@@ -29,7 +29,7 @@ Hay varias formas de conseguir que el depurador se muestre:
 
 Cuando se llama, la ventana del depurador ofrece el nombre del método o de la función de clase que se está rastreando en ese momento, y la acción que provoca la aparición inicial de la ventana del depurador. Por ejemplo, en la ventana del depurador arriba:
 
-- _drop_ is the method being traced
+- *drop* is the method being traced
 - The debugger window appeared because of a break point.
 
 La visualización de una nueva ventana del depurador utiliza la misma configuración que la última ventana visualizada en la misma sesión. Si ejecuta varios procesos usuario, puede rastrearlos independientemente y tener una ventana de depuración abierta para cada proceso.
@@ -367,7 +367,7 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-- **Display**: Selects the [display mode](#display-mode) to be used for all debugger windows.
+- **Mostrar**: selecciona el [modo de visualización](#display-mode) para todas las ventanas de depuración.
 - **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
   ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
   For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
@@ -455,8 +455,8 @@ El menú contextual de la Ventana de evaluación de los métodos da acceso a var
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Show documentation**: Opens the documentation for the target element. Este comando está disponible para:
-  - _Project methods_, _user classes_: Selects the method in the Explorer and switches to the documentation tab
-  - _4D commands, functions, class names:_ Displays the online documentation.
+  - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
+  - *4D commands, functions, class names:* Displays the online documentation.
 - **Buscar Referencias** (también disponible en el Editor de Código): busca todos los objetos del proyecto (métodos y formularios) en los que se hace referencia al elemento actual del método. El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Este puede ser el nombre de un campo, variable, comando, cadena, etc. Los resultados de la búsqueda se muestran en una nueva ventana de resultados estándar.
 - **Copiar**: copia estándar de la expresión seleccionada al portapapeles.
 - **Copiar en la ventana de expresión**: copiar la expresión seleccionada en la Ventana de evaluación.
