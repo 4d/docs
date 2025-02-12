@@ -12,7 +12,7 @@ title: VP Get values
 | Parámetros | Tipo       |                             | Descripción          |                  |
 | ---------- | ---------- | --------------------------- | -------------------- | ---------------- |
 | rangeObj   | Object     | ->                          | Objeto rango         |                  |
-| Result     | Collection | <- | Colección de valores | <!-- END REF --> |
+| Resultado  | Collection | <- | Colección de valores | <!-- END REF --> |
 
 #### Descripción
 
