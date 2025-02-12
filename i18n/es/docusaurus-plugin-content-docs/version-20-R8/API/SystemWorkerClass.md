@@ -551,7 +551,7 @@ Esta propiedad es de **solo lectura**.
 | Parámetros | Tipo                            |                             | Descripción                                       |
 | ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------- |
 | timeout    | Real                            |              ->             | Tiempo de espera (en segundos) |
-| Result     | 4D.SystemWorker | <- | Objeto SystemWorker                               |
+| Resultado  | 4D.SystemWorker | <- | Objeto SystemWorker                               |
 
 <!-- END REF -->
 
