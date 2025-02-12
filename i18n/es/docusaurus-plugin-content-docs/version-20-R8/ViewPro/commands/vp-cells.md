@@ -25,7 +25,7 @@ title: VP Cells
 | columnCount | Integer | ->                          | Número de columnas                                             |                  |
 | rowCount    | Integer | ->                          | Número de líneas                                               |                  |
 | sheet       | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result      | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
+| Resultado   | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
 
 #### Descripción
 
