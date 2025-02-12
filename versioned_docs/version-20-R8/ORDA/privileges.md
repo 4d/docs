@@ -39,7 +39,7 @@ Each time a resource is accessed within a session (whatever the way it is access
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 
-- A permission action defined at the datastore level is automatically assigned to all dataclasses.
+- A permission action defined at the datastore level is automatically assigned to all dataclasses. The *execute* permission action defined at the datastore level applies to all functions of the project, including all [singleton](../REST/$singleton.md) functions. 
 - A permission action defined at a dataclass level overrides the datastore setting (if any). By default, all attributes of the dataclass inherit from the dataclass permission(s).
 - Unlike dataclass permissions, a permission action defined at the attribute level does not override the parent dataclass permission(s), but is added to. For example, if you assigned the "general" privilege to a dataclass and the "detail" privilege to an attribute of the dataclass, both "general" and "detail" privileges must be set to the session to access the attribute.
 
@@ -60,14 +60,14 @@ Available actions are related to target resource.
 |**read**|Read attributes in any dataclass|Read attributes in this dataclass|Read this attribute content|n/a|
 |**update**|Update attributes in any dataclass. |Update attributes in this dataclass.|Update this attribute content (ignored for alias attributes).|n/a|
 |**drop**|Delete data in any dataclass. |Delete data in this dataclass. |Delete a not null value for this attribute (except for alias and computed attribute).|n/a|
-|**execute**|Execute any function on the project (datastore, dataclass, entity selection, entity)|Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions|n/a|Execute this function|
+|**execute**|Execute any function on the project (datastore, dataclass, entity selection, entity, singleton)|Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions|n/a|Execute this function|
 |**promote**|n/a|n/a|n/a|Associates a given privilege during the execution of the function. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session.|
 
 **Notes:**
 
 - An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
 - A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
-- You can assign a permission action to a singleton class (`singleton` type), in which case it will be applied to all its exposed functions, or to a singleton function (`singletonMethod` type).
+- You can assign a permission action to a singleton class (`singleton` type), in which case it will be applied to all its exposed functions, or to a singleton function (`singletonMethod` type). 
 - Default values: in the current implementation, only *Null* is available as default value.
 - In REST [force login mode](../REST/authUsers.md#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
 
