@@ -45,7 +45,7 @@ Para obtener una visión general de esta clase, consulte la entrada del blog [**
 | Parámetros | Tipo                         |                             | Descripción                                       |
 | ---------- | ---------------------------- | --------------------------- | ------------------------------------------------- |
 | settings   | Object                       | ->                          | Parámetros para generar o cargar un par de llaves |
-| Result     | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
+| Resultado  | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
 
 <!-- END REF -->
 
@@ -162,7 +162,7 @@ Definido sólo para llaves RSA: <!-- REF #CryptoKey.size.Summary -->el tamaño d
 | ---------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | message    | Text   | ->                          | Cadena mensaje que se descodificará utilizando `options.encodingEncrypted` y se descifrará. |
 | options    | Object | ->                          | Opciones de decodificación                                                                                  |
-| Result     | Object | <- | Estado                                                                                                      |
+| Resultado  | Object | <- | Estado                                                                                                      |
 
 <!-- END REF -->
 
@@ -212,7 +212,7 @@ En caso de que *message* no haya podido ser descifrado por no haber sido cifrado
 | ---------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------------- |
 | message    | Text   | ->                          | Cadena mensaje a codificar utilizando `options.encodingDecrypted` y encriptada. |
 | options    | Object | ->                          | Opciones de codificación                                                                        |
-| Result     | Text   | <- | Mensaje encriptado y codificado utilizando la opción `options.encodingEncrypted`                |
+| Resultado  | Text   | <- | Mensaje encriptado y codificado utilizando la opción `options.encodingEncrypted`                |
 
 <!-- END REF -->
 
@@ -252,7 +252,7 @@ El valor devuelto es un mensaje encriptado.
 
 | Parámetros | Tipo |                             | Descripción                  |
 | ---------- | ---- | --------------------------- | ---------------------------- |
-| Result     | Text | <- | Llave privada en formato PEM |
+| Resultado  | Text | <- | Llave privada en formato PEM |
 
 <!-- END REF -->
 
@@ -282,7 +282,7 @@ El valor devuelto es la llave privada.
 
 | Parámetros | Tipo |                             | Descripción                  |
 | ---------- | ---- | --------------------------- | ---------------------------- |
-| Result     | Text | <- | Llave pública en formato PEM |
+| Resultado  | Text | <- | Llave pública en formato PEM |
 
 <!-- END REF -->
 
@@ -334,7 +334,7 @@ Definición PEM de una llave de cifrado a cargar. Si la llave es una llave priva
 | ---------- | ------ | --------------------------- | --------------------------------------------------------------------- |
 | message    | Text   | ->                          | Cadena mensaje a firmar                                               |
 | options    | Object | ->                          | Opciones de firma                                                     |
-| Result     | Text   | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
+| Resultado  | Text   | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
 
 <!-- END REF -->
 
@@ -418,7 +418,7 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 | message    | Text   | ->                          | Cadena mensaje utilizada para generar la firma                                                |
 | signature  | Text   | ->                          | Firma a verificar, en representación Base64 o Base64URL, según el valor de `options.encoding` |
 | options    | Object | ->                          | Opciones de firma                                                                             |
-| Result     | Object | <- | Estado de la verificación                                                                     |
+| Resultado  | Object | <- | Estado de la verificación                                                                     |
 
 <!-- END REF -->
 
