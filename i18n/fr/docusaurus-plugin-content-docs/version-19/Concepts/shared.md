@@ -52,8 +52,8 @@ Si vous avez besoin d'exécuter plusieurs modifications sur la même collection,
 ```4d
 $col:=Storage.mySharedCollection
 Use($col)
-	$col[0]:="omega" //La modification d'un élément nécessite d'être effectuée dans Use/End use
-	$col.push("alpha") //.push() déclenche en interne Use/End use, mais nous voulons faire les deux modifications de façon atomique
+    $col[0]:="omega" //La modification d'un élément nécessite d'être effectuée dans Use/End use
+    $col.push("alpha") //.push() déclenche en interne Use/End use, mais nous voulons faire les deux modifications de façon atomique
 End use
 ```
 
@@ -136,7 +136,7 @@ Vous souhaitez lancer plusieurs process qui vont effectuer des tâches d'inventa
 Dans la méthode "HowMany", l'inventaire est effectué et l'objet partagé $inventory est mis à jour dès que possible :
 
 ```4d
-    	//HowMany
+    //HowMany
  #DECLARE ($what : Text ; $inventory : Object)
 
  $count:=CountMethod($what) //méthode pour compter les produits
