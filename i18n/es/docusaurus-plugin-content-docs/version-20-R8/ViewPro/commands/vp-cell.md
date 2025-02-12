@@ -15,7 +15,7 @@ title: VP Cell
 | column     | Integer | ->                          | Índice de la columna                                           |
 | row        | Integer | ->                          | Índice de la línea                                             |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |
-| Result     | Object  | <- | Objeto rango de una sola celda                                 |
+| Resultado  | Object  | <- | Objeto rango de una sola celda                                 |
 
 <!-- END REF -->
 
