@@ -331,7 +331,7 @@ Al igual que la etiqueta `4DTEXT`, esta etiqueta le permite evaluar una variable
 
 Por ejemplo, aquí están los resultados del procesamiento de la variable de texto 4D myvar con las etiquetas disponibles:
 
-| Valor myvar          | Etiquetas                    | Result              |
+| Valor myvar          | Etiquetas                    | Resultado           |
 | -------------------- | ---------------------------- | ------------------- |
 | `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
 | `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`         |
