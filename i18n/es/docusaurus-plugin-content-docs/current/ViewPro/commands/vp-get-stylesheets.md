@@ -13,7 +13,7 @@ title: VP Get stylesheets
 | ---------- | ---------- | --------------------------- | --------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | ->                          | Nombre de objeto formulario área 4D View Pro                    |                  |
 | sheet      | Integer    | ->                          | Alcance objetivo (por defecto = hoja actual) |                  |
-| Result     | Collection | <- | Colección de objetos de hojas de estilo                         | <!-- END REF --> |
+| Resultado  | Collection | <- | Colección de objetos de hojas de estilo                         | <!-- END REF --> |
 
 #### Descripción
 
