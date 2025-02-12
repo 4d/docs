@@ -19,7 +19,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo                               |                             | Descripción                                                                       |
 | ---------- | ---------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
 | server     | Object                             | &#8594; | Información del servidor de correo                                                |
-| Result     | 4D.IMAPTransporter | &#8592; | [Objeto IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object) |
+| Resultado  | 4D.IMAPTransporter | &#8592; | [Objeto IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object) |
 
 <!-- END REF -->
 
@@ -44,7 +44,7 @@ En el parámetro *server*, pase un objeto que contenga las siguientes propiedade
 
 > **Atención**: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.
 
-#### Result
+#### Resultado
 
 La función devuelve un [**objeto IMAP transporter**](../API/IMAPTransporterClass.md#imap-transporter-object). Todas las propiedades devueltas son de sólo lectura\*\*.
 
