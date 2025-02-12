@@ -513,7 +513,7 @@ La página de Licencias y certificados puede utilizarse para:
 
 ### Licencias
 
-This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. Por defecto, la lista está vacía.
+Esta pestaña muestra la lista de [licencias de despliegue que puede incorporar](#about-licenses) en su aplicación. Por defecto, la lista está vacía.
 
 :::info
 
