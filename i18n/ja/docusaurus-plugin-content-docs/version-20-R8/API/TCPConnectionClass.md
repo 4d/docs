@@ -3,15 +3,15 @@ id: TCPConnectionClass
 title: TCPConnection
 ---
 
-The `TCPConnection` class allows you to manage Transmission Control Protocol (TCP) client connections to a server, enabling you to send and receive data, and handle connection lifecycle events using callbacks.
+`TCPConnection` クラスを使用すると、サーバーへのTransmission Control Protocol (TCP) クライアント接続を管理でき、これによってデータの送受信と、コールバックを使用した接続ライフサイクルイベントの管理が可能になります。
 
-The `TCPConnection` class is available from the `4D` class store. You can create a TCP connection using the [4D.TCPConnection.new()](#4dtcpconnectionnew) function, which returns a [TCPConnection object](#tcpconnection-object).
+`TCPConnection` クラスは`4D` クラスストアにて提供されています。 TCP 接続は、[TCPConnection オブジェクト](#tcpconnection-オブジェクト) を返す[4D.TCPConnection.new()](#4dtcpconnectionnew) 関数を使用して作成できます。
 
-All `TCPConnection` class functions are thread-safe.
+全ての`TCPConnection` クラス関数はスレッドセーフです。
 
-Thanks to the standard 4D object *refcounting*, a TCPConnection is automatically released when it is no longer referenced. Consequently, the associated resources, are properly cleaned up without requiring explicit closure.
+標準の4D オブジェクトの*refcounting* のおかげで、TCPConnection は参照されなくなったら自動的にリリースされるようになっています。 結果的に、それに関連したリソースは、明示的な終了を必要とせずに適切にクリーンアップされます。
 
-TCPConnection objects are released when no more references to them exist in memory. This typically occurs, for example, at the end of a method execution for local variables. If you want to "force" the closure of a connection at any moment, [**nullify** its references by setting them to **Null**](../Concepts/dt_object.md#resources).
+TCPConnection オブジェクトはメモリ内にそれへの参照が存在しなくなった時にリリースされます。 これ一般的に、例えばメソッド実行の最後にローカル変数が消去されるときに発生します。 接続を"強制的に" 終了させたい場合には、[**Null** を代入することで**参照を無効化**してください](../Concepts/dt_object.md#リソース)。
 
 <details><summary>履歴</summary>
 
@@ -23,36 +23,36 @@ TCPConnection objects are released when no more references to them exist in memo
 
 ### 例題
 
-The following examples demonstrate how to use the 4D.TCPConnection and 4D.TCPEvent classes to manage a TCP client connection, handle events, send data, and properly close the connection. Both synchronous and asynchronous examples are provided.
+以下の例題は、4D.TCPConnection および 4D.TCPEvent クラスを使用してどのようにTCP クライアント接続を管理し、イベントを扱い、データを送信し、そして適切に接続を閉じるかを表しています。 同期の例と非同期の例の両方が提供されています。
 
-#### Synchronous Example
+#### 同期の例
 
-This example shows how to establish a connection, send data, and shut it down using a simple object for configuration:
+以下の例題は、設定にシンプルなオブジェクトを使うことでどのように接続を確立し、データを送信し、通信を終了するかを表しています:
 
 ```4d
 var $domain : Text := "127.0.0.1"
 var $port : Integer := 10000
-var $options : Object := New object() // Configuration object
+var $options : Object := New object() // 設定オブジェクト
 var $tcpClient : 4D.TCPConnection
 var $message : Text := "test message"
 
-// Open a connection
+// 接続を開く
 $tcpClient := 4D.TCPConnection.new($domain; $port; $options)
 
-// Send data
+// データを送信する
 var $blobData : Blob
 TEXT TO BLOB($message; $blobData; UTF8 text without length)
 $tcpClient.send($blobData)
 
-// Shutdown
+// シャットダウンする
 $tcpClient.shutdown()
 $tcpClient.wait(0)
 
 ```
 
-#### Asynchronous Example
+#### 非同期の例
 
-This example defines a class that handles the connection lifecycle and events, showcasing how to work asynchronously:
+以下の例題は、接続ライフサイクルとイベントを管理するクラスを定義し、非同期に使用する方法を表しています:
 
 ```4d
 // Class definition: cs.MyAsyncTCPConnection
@@ -62,49 +62,49 @@ Class constructor($url : Text; $port : Integer)
     This.url := $url
     This.port := $port
 
-// Connect to one of the servers launched inside workers
+// ワーカーの中でローンチされたサーバーの一つに接続する
 Function connect()
     This.connection := 4D.TCPConnection.new(This.url; This.port; This)
 
-// Disconnect from the server
+// サーバーへの接続を切断する
 Function disconnect()
     This.connection.shutdown()
     This.connection := Null
 
-// Send data to the server
+// サーバーにデータを送信する
 Function getInfo()
     var $blob : Blob
     TEXT TO BLOB("Information"; $blob)
     This.connection.send($blob)
 
-// Callback called when the connection is successfully established
+// 接続が正常に確立された時に呼び出されるコールバック
 Function onConnection($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
     ALERT("Connection established")
 
-// Callback called when the connection is properly closed
+// 接続が適切に閉じられた時に呼び出されるコールバック
 Function onShutdown($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
     ALERT("Connection closed")
 
-// Callback called when receiving data from the server
+// サーバーからデータが受信されたときに呼び出されるコールバック
 Function onData($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
     ALERT(BLOB to text($event.data; UTF8 text without length))
 
-	//Warning: There's no guarantee you'll receive all the data you need in a single network packet.
-	
-// Callback called when the connection is closed unexpectedly
+	// 警告: 一つのネットワークパケットで必要なデータを全て受け取れる保証はありません。	
+
+// 接続が予期せず閉じられた時に呼び出されるコールバック
 Function onError($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
     ALERT("Connection error")
 
-// Callback called after onShutdown/onError just before the TCPConnection object is released
+// TCPConnection オブジェクトがリリースされる直前、onShutdown/onError の後に呼び出されるコールバック
 Function onTerminate($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
 	ALERT("Connection terminated")
 
 
 ```
 
-##### Usage example
+##### 使用例
 
-Create a new method named AsyncTCP, to initialize and manage the TCP connection:
+AsyncTCP という名前の新しいメソッドを作成し、このメソッドでTCP 接続を初期化して管理します:
 
 ```4d
 var $myObject : cs.MyAsyncTCPConnection
@@ -115,18 +115,18 @@ $myObject.disconnect()
 
 ```
 
-Call the AsyncTCP method in a worker:
+AsyncTCP メソッドをワーカー内で呼び出します:
 
 ```4d
 CALL WORKER("new process"; "Async_TCP")
 
 ```
 
-### TCPConnection Object
+### TCPConnection オブジェクト
 
-A TCPConnection object is a non-sharable object.
+TCPConnection オブジェクトは共有不可のオブジェクトです。
 
-TCPConnection objects provide the following properties and functions:
+TCPConnection オブジェクトは以下のプロパティと関数を提供します:
 
 |                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------- |
@@ -145,53 +145,53 @@ TCPConnection objects provide the following properties and functions:
 
 <!-- REF #4D.TCPConnection.new().options -->
 
-| 引数            | 型             |                             | 説明                                                             |
-| ------------- | ------------- | --------------------------- | -------------------------------------------------------------- |
-| serverAddress | Text          | ->                          | Domain name or IP address of the server                        |
-| serverPort    | Integer       | ->                          | Port number of the server                                      |
-| options       | Object        | ->                          | Configuration [options](#options-parameter) for the connection |
-| 戻り値           | TCPConnection | <- | New TCPConnection object                                       |
+| 引数            | 型             |                             | 説明                        |
+| ------------- | ------------- | --------------------------- | ------------------------- |
+| serverAddress | Text          | ->                          | サーバーのドメイン名またはIP アドレス      |
+| serverPort    | Integer       | ->                          | サーバーのポート番号                |
+| options       | Object        | ->                          | 接続の設定[オプション](#options-引数) |
+| 戻り値           | TCPConnection | <- | 新しいTCPConnection オブジェクト   |
 
 <!-- END REF -->
 
 #### 説明
 
-The `4D.TCPConnection.new()` function <!-- REF #4D.TCPConnection.new().Summary -->creates a new TCP connection to the specified *serverAddress* and *serverPort*, using the defined *options*, and returns a `4D.HTTPRequest` object<!-- END REF -->.
+`4D.TCPConnection.new()` 関数は、<!-- REF #4D.TCPConnection.new().Summary -->*serverAddress* および *serverPort* 引数で接続したサーバーへ、*options* 引数で定義されたオプションを使用して、新規のTCP 接続を作成し、`4D.HTTPRequest` オブジェクトを返します<!-- END REF -->。
 
 #### `options` 引数
 
 *options* に渡すオブジェクトは、次のプロパティを持つことができます:
 
-| プロパティ        | 型       | 説明                                                                     | デフォルト |
-| ------------ | ------- | ---------------------------------------------------------------------- | ----- |
-| onConnection | Formula | Callback triggered when the connection is established. | 未定義   |
-| onData       | Formula | Callback triggered when data is received                               | 未定義   |
-| onShutdown   | Formula | Callback triggered when the connection is properly closed              | 未定義   |
-| onError      | Formula | Callback triggered in case of an error                                 | 未定義   |
-| onTerminate  | Formula | Callback triggered just before the TCPConnection is released           | 未定義   |
-| noDelay      | Boolean | **Read-only** Disables Nagle's algorithm if `true`                     | false |
+| プロパティ        | 型       | 説明                                          | デフォルト |
+| ------------ | ------- | ------------------------------------------- | ----- |
+| onConnection | Formula | 接続が確立した時にトリガーされるコールバック                      | 未定義   |
+| onData       | Formula | データが受信されたときにトリガーされるコールバック                   | 未定義   |
+| onShutdown   | Formula | 接続が適切に閉じられた時にトリガーされるコールバック                  | 未定義   |
+| onError      | Formula | エラーの場合にトリガーされるコールバック                        | 未定義   |
+| onTerminate  | Formula | TCPConnection がリリースされる直前にトリガーされるコールバック      | 未定義   |
+| noDelay      | Boolean | **読み出し専用** `true` の場合にはNagle のアルゴリズムを無効化します | false |
 
 #### コールバック関数
 
-All callback functions receive two parameters:
+すべてのコールバック関数は、2つの引数を受け取ります:
 
-| 引数          | 型                                               | 説明                                                    |
-| ----------- | ----------------------------------------------- | ----------------------------------------------------- |
-| $connection | [`TCPConnection` object](#tcpconnection-object) | The current TCP connection instance.  |
-| $event      | [`TCPEvent` object](#tcpevent-object)           | Contains information about the event. |
+| 引数          | 型                                               | 説明                      |
+| ----------- | ----------------------------------------------- | ----------------------- |
+| $connection | [`TCPConnection` オブジェクト](#tcpconnection-オブジェクト) | カレントのTCP 接続インスタンス       |
+| $event      | [`TCPEvent` オブジェクト](#tcpevent-オブジェクト)           | イベントに関する情報が含まれているオブジェクト |
 
-**Sequence of Callback Calls:**
+**コールバックの呼び出しの順番:**
 
-1. `onConnection` is triggered when the connection is established.
-2. `onData` is triggered each time data is received.
-3. Either `onShutdown` or `onError` is triggered:
-   - `onShutdown` is triggered when the connection is properly closed.
-   - `onError` is triggered if an error occurs.
-4. `onTerminate` is always triggered just before the TCPConnection is released (connection is closed or an error occured).
+1. `onConnection` は接続が確立した時にトリガーされます。
+2. `onData` はデータが受信されるたびにトリガーされます。
+3. `onShutdown` または `onError` はそれぞれ以下の場合にトリガーされます:
+   - `onShutdown` は接続が適切に閉じられた時にトリガーされます。
+   - `onError` はエラーが発生した場合にトリガーされます。
+4. `onTerminate` は常にTCPConnection がリリースされる直前にトリガーされます(接続が閉じられたか、エラーが発生した場合です)。
 
-#### TCPEvent object
+#### TCPEvent オブジェクト
 
-A [`TCPEvent`](TCPEventClass.md) object is returned when a [callback function](#callback-functions) is called.
+[コールバック関数](#コールバック関数) が呼ばれた際には[`TCPEvent`](TCPEventClass.md) オブジェクトが返されます。
 
 <!-- END REF -->
 
@@ -203,7 +203,7 @@ A [`TCPEvent`](TCPEventClass.md) object is returned when a [callback function](#
 
 #### 説明
 
-The `.closed` property contains <!-- REF #4D.TCPConnection.closed.Summary -->whether the connection is closed<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
+`.closed` プロパティには<!-- REF #4D.TCPConnection.closed.Summary -->接続が閉じられたかどうかの情報が格納されています<!-- END REF -->。 エラーによって、あるいは`shutdown()` を呼び出したから、あるいはサーバーが閉じられたなどの理由で接続が閉じられている場合には`true` を返します。
 
 <!-- END REF -->
 
@@ -215,7 +215,7 @@ The `.closed` property contains <!-- REF #4D.TCPConnection.closed.Summary -->whe
 
 #### 説明
 
-The `.errors` property contains <!-- REF #4D.TCPConnection.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+`.errors` プロパティには、<!-- REF #4D.TCPConnection.errors.Summary -->接続に関連したエラーオブジェクトのコレクションが格納されています<!-- END REF -->。 各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
 
 | プロパティ  |                                                                                           | 型          | 説明                  |
 | ------ | ----------------------------------------------------------------------------------------- | ---------- | ------------------- |
@@ -234,7 +234,7 @@ The `.errors` property contains <!-- REF #4D.TCPConnection.errors.Summary -->a c
 
 #### 説明
 
-The `.noDelay` property contains <!-- REF #4D.TCPConnection.noDelay.Summary -->whether Nagle's algorithm is disabled (`true`) or enabled (`false`)<!-- END REF -->. このプロパティは **読み取り専用** です。
+`.noDelay` プロパティには、<!-- REF #4D.TCPConnection.noDelay.Summary -->whether Nagle のアルゴリズムが無効化されている(`true`) か有効化されている(`false`) かの情報が格納されています<!-- END REF -->。 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
@@ -246,15 +246,15 @@ The `.noDelay` property contains <!-- REF #4D.TCPConnection.noDelay.Summary -->w
 
 <!-- REF #4D.TCPConnection.send().options -->
 
-| 引数   | 型    |    | 説明              |
-| ---- | ---- | -- | --------------- |
-| data | BLOB | -> | Data to be sent |
+| 引数   | 型    |    | 説明      |
+| ---- | ---- | -- | ------- |
+| data | BLOB | -> | 送信するデータ |
 
 <!-- END REF -->
 
 #### 説明
 
-The `send()` function <!-- REF #4D.TCPConnection.send().Summary -->sends data to the server<!-- END REF -->. If the connection is not established yet, the data is sent once the connection is established.
+`send()` 関数は<!-- REF #4D.TCPConnection.send().Summary -->データをサーバーに送信します<!--END REF -->。 接続がまだ確立されていない場合には、データは接続が確立されたあとに送信されます。
 
 <!-- END REF -->
 
@@ -274,7 +274,7 @@ The `send()` function <!-- REF #4D.TCPConnection.send().Summary -->sends data to
 
 #### 説明
 
-The `shutdown()` function <!-- REF #4D.TCPConnection.shutdown().Summary -->closes the *write* channel of the connection (client to server stream)<!-- END REF --> while keeping the *read* channel (server to client stream) open, allowing you to continue receiving data until the connection is fully closed by the server or an error occurs.
+`shutdown()` 関数は、<!-- REF #4D.TCPConnection.shutdown().Summary -->接続の*write* チャンネル(クライアントからサーバーへのストリーム)を閉じます<!-- END REF -->。その一方で、*read* チャンネル(サーバーからクライアントへのストリーム)は開かれたままとなります。これによって、接続がサーバーによって完全に閉じられるか、エラーが発生するまでは、データを受信し続けることができます。
 
 <!-- END REF -->
 
@@ -294,11 +294,11 @@ The `shutdown()` function <!-- REF #4D.TCPConnection.shutdown().Summary -->close
 
 #### 説明
 
-The `wait()` function <!-- REF #4D.TCPConnection.wait().Summary -->waits until  the TCP connection is closed or the specified `timeout` is reached<!-- END REF -->
+`wait()` 関数は<!-- REF #4D.TCPConnection.wait().Summary -->TCP 接続が閉じられるか、あるいは`timeout` 引数で指定した秒数に達するまで待ちます<!-- END REF -->。
 
 :::note
 
-During the `.wait()` execution, callback functions are executed, whether they originate from other `SystemWorker` instances. You can exit from a `.wait()` by calling [`shutdown()`](#shutdown) from a callback.
+During the `.wait()` execution, callback functions are executed, whether they originate from other `SystemWorker` instances. コールバックから[`shutdown()`](#shutdown) を呼び出すことで、`.wait()` を終了することができます。
 
 :::
 
