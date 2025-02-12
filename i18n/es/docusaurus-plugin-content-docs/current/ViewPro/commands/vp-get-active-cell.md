@@ -13,7 +13,7 @@ title: VP Get active cell
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | Object  | <- | Objeto rango de una sola celda                                 | <!-- END REF --> |
+| Resultado  | Object  | <- | Objeto rango de una sola celda                                 | <!-- END REF --> |
 
 #### Descripción
 
