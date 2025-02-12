@@ -560,7 +560,7 @@ La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validación de
 | Parámetros | Tipo   |                             | Descripción                                     |
 | ---------- | ------ | --------------------------- | ----------------------------------------------- |
 | settings   | Object | ->                          | Parámetros del servidor web a definir al inicio |
-| Result     | Object | <- | Estado del inicio del servidor web              |
+| Resultado  | Object | <- | Estado del inicio del servidor web              |
 
 <!-- END REF -->
 
