@@ -867,7 +867,7 @@ Consulte la sección [Parámetros](../REST/classFunctions#parameters) en la docu
 
 ### resultado
 
-A function with `onHttpGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
+Una función con la palabra clave `onHttpGet` puede devolver cualquier valor de un tipo soportado (igual que para [parámetros](../REST/classFunctions#parameters) REST).
 
 :::info
 
