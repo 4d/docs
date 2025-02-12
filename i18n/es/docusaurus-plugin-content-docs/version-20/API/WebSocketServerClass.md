@@ -115,7 +115,7 @@ Los objetos de servidor WebSocket ofrecen las siguientes propiedades y funciones
 | ----------------------------------- | ------------------ |:--:| ------------------------------------------------------------------------------- |
 | [WSSHandler](#wsshandler-parameter) | Object             | -> | Objeto de la clase usuario que declara las retrollamadas del servidor WebSocket |
 | [options](#options-parameter)       | Object             | -> | Parámetros de configuración de WebSocket                                        |
-| Result                              | 4D.WebSocketServer | <- | Nuevo objeto WebSocketServer                                                    |
+| Resultado                           | 4D.WebSocketServer | <- | Nuevo objeto WebSocketServer                                                    |
 <!-- END REF -->
 
 
