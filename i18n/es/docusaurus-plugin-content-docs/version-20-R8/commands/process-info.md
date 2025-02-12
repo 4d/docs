@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros    | Tipo    |                             | Descripción                   |
 | ------------- | ------- | :-------------------------: | ----------------------------- |
 | processNumber | Integer | &#8594; | Process number                |
-| Result        | Object  | &#8592; | Information about the process |
+| Resultado     | Object  | &#8592; | Information about the process |
 
 <!-- END REF -->
 
