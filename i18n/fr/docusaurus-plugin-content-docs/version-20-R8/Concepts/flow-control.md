@@ -140,7 +140,7 @@ Chaque expression booléenne débute par le caractère deux points (`:`). La com
 
 Seules les instructions suivant le premier cas TRUE (et ce, jusqu’au cas suivant) seront exécutées. Rappelez-vous qu’avec une structure de type `Case of...Else...End case`, seul le premier cas TRUE rencontré est exécuté.
 
-Vous pouvez placer une instruction Else après le dernier cas. Si tous les cas sont FALSE, les instructions suivant le `Else` seront exécutées.
+Vous pouvez placer une instruction Else après le dernier cas. Seules les instructions suivant le premier cas TRUE (et ce, jusqu’au cas suivant) seront exécutées.
 
 #### Exemple
 
