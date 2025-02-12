@@ -50,7 +50,7 @@ The `.type` property contains <!-- REF #4D.TCPEvent.type.Summary -->the type of 
 
 #### Descripción
 
-The `.data` property contains <!-- REF #4D.TCPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type `"data"`.
+La propiedad `.data` contiene <!-- REF #4D.TCPEvent.data.Summary -->los datos asociados con el evento<!-- END REF -->. It is only valid for events of type `"data"`.
 
 :::note
 
