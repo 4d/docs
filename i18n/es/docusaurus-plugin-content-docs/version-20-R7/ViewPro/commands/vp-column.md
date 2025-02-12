@@ -15,7 +15,7 @@ title: VP Column
 | column      | Integer | ->                          | Índice de la columna                                           |                  |
 | columnCount | Integer | ->                          | Número de columnas                                             |                  |
 | sheet       | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result      | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
+| Resultado   | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
 
 #### Descripción
 
