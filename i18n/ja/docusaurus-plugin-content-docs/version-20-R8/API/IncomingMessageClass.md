@@ -222,9 +222,9 @@ $value := $request.getHeader("content-type")
 
 #### 説明
 
-The `.getText()` function <!-- REF #IncomingMessageClass.getText().Summary -->returns the body of the request as a text value<!-- END REF -->.
+`.getText()` 関数は、<!-- REF #IncomingMessageClass.getText().Summary -->リクエストの本文部分をテキスト値として返します<!-- END REF -->。
 
-If the body has not been given as a string value, the function tries to convert the value but it can give unexpected results.
+本文が文字列の値として渡されていない場合、この関数は値をテキストに変換することを試みますが、想定外の結果を返す可能性もあります。
 
 <!-- END REF -->
 
@@ -236,11 +236,11 @@ If the body has not been given as a string value, the function tries to convert 
 
 #### 説明
 
-The `.headers` property contains <!-- REF #IncomingMessageClass.headers.Summary -->the current headers of the incoming message as key/value pairs (strings)<!-- END REF -->.
+`.headers` プロパティには<!-- REF #IncomingMessageClass.headers.Summary -->受信したメッセージのカレントのヘッダーがキー/値のペア(文字列)が格納されています<!-- END REF -->。
 
 The `.headers` property is read-only.
 
-Header names (keys) are lowercased. Note header names are case sensitive.
+ヘッダー名(キー)は全て小文字となっています。 ヘッダー名は全て大文字・小文字は区別されます。
 
 <!-- END REF -->
 
@@ -252,15 +252,15 @@ Header names (keys) are lowercased. Note header names are case sensitive.
 
 #### 説明
 
-The `.url` property contains <!-- REF #IncomingMessageClass.url.Summary -->the URL of the request without the *IP:port* part and as a string<!-- END REF -->.
+`.url` プロパティには、<!-- REF #IncomingMessageClass.url.Summary -->リクエストのURL から*IP:port* 部分を抜いたものが文字列として格納されています<!-- END REF -->。
 
-For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.url` property is "/docs/invoices/today".
+例えば、リクエストが "http://127.0.0.1:80/docs/invoices/today" だった場合、`.url` プロパティには"/docs/invoices/today" が格納されています。
 
-The `.url` property is read-only.
+`.url` プロパティは、読み出し専用です。
 
 :::note
 
-The "host" part of the request (*IP:port*) is provided by the [`host` header](#headers).
+リクエストの"host" 部分(*IP:port*) は、[`host` ヘッダー](#headers) にて提供されています。
 
 :::
 
@@ -274,11 +274,11 @@ The "host" part of the request (*IP:port*) is provided by the [`host` header](#h
 
 #### 説明
 
-The `.urlPath` property contains <!-- REF #IncomingMessageClass.urlPath.Summary -->the URL of the request without the *IP:port* part and as a collection of strings<!-- END REF -->.
+`.urlPath` プロパティには、<!-- REF #IncomingMessageClass.urlPath.Summary -->リクエストのURL から*IP:port* 部分を抜いたものが文字列のコレクションとして格納されています<!-- END REF -->。
 
-For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.urlPath` property is ["docs", "invoices" ,"today"].
+例えば、リクエストが "http://127.0.0.1:80/docs/invoices/today" だった場合、`.urlPath` プロパティには、["docs", "invoices" ,"today"] が格納されています。
 
-The `.urlPath` property is read-only.
+`.urlPath` プロパティは、読み出し専用です。
 
 <!-- END REF -->
 
@@ -290,34 +290,34 @@ The `.urlPath` property is read-only.
 
 #### 説明
 
-The `.urlQuery` property contains <!-- REF #IncomingMessageClass.urlQuery.Summary -->the parameters of the request when they have been given in the URL as key/value pairs<!-- END REF -->.
+`.urlQuery` プロパティには、<!-- REF #IncomingMessageClass.urlQuery.Summary -->リクエストの引数がURL 内でキー/値のペアとして渡されていた場合にはそれが格納されています<!-- END REF -->。
 
-The `.urlQuery` property is read-only.
+`.urlQuery` プロパティは、読み出し専用です。
 
-Parameters can be passed in the URL of requests **directly** or **as JSON contents**.
+引数はリクエストのURL 内に**直接**または**JSON コンテンツとして**渡すことができます。
 
-#### Direct parameters
+#### 直接引数
 
-Example: `http://127.0.0.1:8044/myCall?firstname=Marie&id=2&isWoman=true`
+例: `http://127.0.0.1:8044/myCall?firstname=Marie&id=2&isWoman=true`
 
-In this case, parameters are received as stringified values in the `urlQuery` property: `urlQuery = {"firstname":"Marie" ,"id":"2" ,"isWoman":"true"}`
+この場合、引数は`urlQuery` プロパティ内に文字列化された値として受け取られます: `urlQuery = {"firstname":"Marie" ,"id":"2" ,"isWoman":"true"}`
 
-#### JSON contents parameters
+#### JSONコンテンツ引数
 
-Example: `http://127.0.0.1:8044/myCall/?myparams='[{"firstname": "Marie","isWoman": true,"id": 3}]'`.
+例: `http://127.0.0.1:8044/myCall/?myparams='[{"firstname": "Marie","isWoman": true,"id": 3}]'`
 
-Parameters are passed in JSON format and enclosed within a collection.
+引数はJSON フォーマットで渡されかつコレクションとして括られています。
 
-In this case, parameters are received as JSON text in the `urlQuery` property and can be parsed using [`JSON Parse`](../commands-legacy/json-parse.md).
+この場合、引数は`urlQuery` プロパティ内にJSON テキストとして受け取られ、[`JSON Parse`](../commands-legacy/json-parse.md) を使用することでパースすることができます。
 
 ```4d
 //urlQuery.myparams: "[{"firstname": "Marie","isWoman": true,"id": 3}]"
 $test:=Value type(JSON Parse($r.urlQuery.myparams))=Is collection) //true
 ```
 
-Special characters such as simple quotes or carriage returns must be escaped.
+シングルクオーテーションやキャリッジリターンなどの特殊文字はエスケープする必要があります。
 
-Example: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
+例: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
 
 ````4d
 //urlQuery.mdcode = ```4d
@@ -326,7 +326,7 @@ $test:=Length($r.urlQuery.mdcode) //5
 
 :::note
 
-Parameters given in the body of the request using POST or PUT verbs are handled through dedicated functions: [`getText()`](#gettext), [`getPicture()`](#getpicture), [`getBlob()`](#getblob), [`getJSON()`](#getjson).
+POST または PUT 動詞を使用してリクエストの本文部分に渡された引数は、専用の関数を通して管理されます: [`getText()`](#gettext)、[`getPicture()`](#getpicture)、[`getBlob()`](#getblob)、[`getJSON()`](#getjson)
 
 :::
 
@@ -340,10 +340,10 @@ Parameters given in the body of the request using POST or PUT verbs are handled 
 
 #### 説明
 
-The `.verb` property contains <!-- REF #IncomingMessageClass.verb.Summary -->the verb used by the request<!-- END REF -->.
+`.verb` プロパティには、<!-- REF #IncomingMessageClass.verb.Summary -->リクエストで使用された動詞が格納されています<!-- END REF -->。
 
-HTTP and HTTPS request verbs include for example "get", "post", "put", etc.
+HTTP または HTTPS リクエスト動詞には、例えば"get"、"post"、"put" などと言ったものが含まれます。
 
-The `.verb` property is read-only.
+`.verb` プロパティは、読み出し専用です。
 
 <!-- END REF -->
