@@ -20,7 +20,7 @@ title: VP Get binding path
 | Parámetros | Tipo   |                             | Descripción                              |                  |
 | ---------- | ------ | --------------------------- | ---------------------------------------- | ---------------- |
 | rangeObj   | Object | ->                          | Objeto rango                             |                  |
-| Result     | Text   | <- | Nombre del atributo vinculado a la celda | <!-- END REF --> |
+| Resultado  | Text   | <- | Nombre del atributo vinculado a la celda | <!-- END REF --> |
 
 #### Descripción
 
