@@ -392,7 +392,7 @@ Por defecto, esta opción no está activa.
 
 Modifica la orientación (rotación) de un área de texto. Las áreas de texto pueden girarse en incrementos de 90°. Cada valor de orientación se aplica manteniendo el mismo punto de partida inferior izquierdo para el objeto:
 
-| Valor de orientación               | Result                                         |
+| Valor de orientación               | Resultado                                      |
 | ---------------------------------- | ---------------------------------------------- |
 | 0 (por defecto) | ![](../assets/en/FormObjects/orientation1.png) |
 | 90                                 | ![](../assets/en/FormObjects/orientation2.png) |
