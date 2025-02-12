@@ -17,19 +17,19 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Folder.Params -->
 
-| 引数             | 型                         |                             | 説明                                                                |
-| -------------- | ------------------------- | :-------------------------: | ----------------------------------------------------------------- |
-| path           | Text                      | &#8594; | フォルダーパス                                                           |
-| folderConstant | Integer                   | &#8594; | 4Dフォルダー定数                                                         |
-| pathType       | Integer                   | &#8594; | `fk posix path` (デフォルト) または `fk platform path` |
-| \*             | operator                  | &#8594; | ホストデータベースのフォルダーを返すには \* を渡します                                     |
-| 戻り値            | 4D.Folder | &#8592; | 新規フォルダーオブジェクト                                                     |
+| 引数             | 型                                                  |                             | 説明                                                                |
+| -------------- | -------------------------------------------------- | :-------------------------: | ----------------------------------------------------------------- |
+| path           | Text                                               | &#8594; | フォルダーパス                                                           |
+| folderConstant | Integer                                            | &#8594; | 4Dフォルダー定数                                                         |
+| pathType       | Integer                                            | &#8594; | `fk posix path` (デフォルト) または `fk platform path` |
+| \*             | operator                                           | &#8594; | ホストデータベースのフォルダーを返すには \* を渡します                                     |
+| 戻り値            | [4D.Folder](../API/FolderClass.md) | &#8592; | 新規フォルダーオブジェクト                                                     |
 
 <!-- END REF -->
 
 #### 説明
 
-`Folder` コマンドは、<!-- REF #_command_.Folder.Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。 このコマンドは 2種類のシンタックスを受け入れます。 このコマンドは 2種類のシンタックスを受け入れます。 このコマンドは 2種類のシンタックスを受け入れます。 このコマンドは 2種類のシンタックスを受け入れます。 このコマンドは 2種類のシンタックスを受け入れます。
+The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. このコマンドは 2種類のシンタックスを受け入れます。
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -71,13 +71,14 @@ displayed_sidebar: docs
 
 #### 参照
 
+[`4D.Folder` class](../API/FolderClass.md)
 [File](file.md)\
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
 
 #### プロパティ
 
-|         |                                                                 |
-| ------- | --------------------------------------------------------------- |
-| コマンド番号  | 1567                                                            |
-| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1567                        |
+| スレッドセーフ | &check; |
