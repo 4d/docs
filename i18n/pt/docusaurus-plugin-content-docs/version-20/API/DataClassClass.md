@@ -189,11 +189,13 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 | --------- | ---- |::| ----------------------------------------------------- |
 |           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
+
 |
+
 
 #### Descrição
 
-A função `.getRemoteCache()` <!-- REF #DataClassClass.clearRemoteCache().Summary -->devolve um objecto que contém o conteúdo da cache ORDA para uma dataclass.<!-- END REF -->.
+A função `.clearRemoteCache()` <!-- REF #DataClassClass.clearRemoteCache().Summary -->devolve um objecto que contém o conteúdo da cache ORDA para uma dataclass.<!-- END REF -->.
 
 > Esta função não reinicia os valores `timeout` e `maxEntries`.
 
@@ -463,7 +465,7 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 
 :::info
 
-When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/entities.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+Quando você chama a função `.get()` **sem o parâmetro** *settings*, uma solicitação para valores de atributo é enviada diretamente para o servidor (a [cache ORDA](../ORDA/entities.md#orda-cache) não é usada). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
 
 :::
 
@@ -1549,7 +1551,7 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
 
 #### Descrição
 
-A função `.new( )` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
+A função `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
 
 No parâmetro *settings*, passe um objeto contendo as propriedades abaixo:
 
