@@ -13,7 +13,7 @@ title: VP Export to object
 | ---------- | ------ | --------------------------- | -------------------------------------------- | ---------------- |
 | vpAreaName | Text   | ->                          | Nombre de objeto formulario área 4D View Pro |                  |
 | options    | Object | ->                          | Opciones de exportación                      |                  |
-| Result     | Object | <- | Objeto 4D View Pro                           | <!-- END REF --> |
+| Resultado  | Object | <- | Objeto 4D View Pro                           | <!-- END REF --> |
 
 #### Descripción
 
