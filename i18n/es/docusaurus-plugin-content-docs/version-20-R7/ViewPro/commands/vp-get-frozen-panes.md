@@ -13,7 +13,7 @@ title: VP Get frozen panes
 | ---------- | ------- | --------------------------- | ---------------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                           |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite)         |                  |
-| Result     | Object  | <- | Objeto que contiene la información de las columnas y líneas congeladas | <!-- END REF --> |
+| Resultado  | Object  | <- | Objeto que contiene la información de las columnas y líneas congeladas | <!-- END REF --> |
 
 #### Descripción
 
