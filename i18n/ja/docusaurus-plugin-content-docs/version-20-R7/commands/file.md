@@ -17,19 +17,19 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.File.Params -->
 
-| 引数           | 型                       |                             | 説明                                                                |
-| ------------ | ----------------------- | :-------------------------: | ----------------------------------------------------------------- |
-| path         | Text                    | &#8594; | ファイルパス                                                            |
-| fileConstant | Integer                 | &#8594; | 4Dファイル定数                                                          |
-| pathType     | Integer                 | &#8594; | `fk posix path` (デフォルト) または `fk platform path` |
-| \*           | operator                | &#8594; | ホストデータベースのファイルを返すには \* を渡します                                      |
-| 戻り値          | 4D.File | &#8592; | 新規ファイルオブジェクト                                                      |
+| 引数           | 型                                              |                             | 説明                                                                |
+| ------------ | ---------------------------------------------- | :-------------------------: | ----------------------------------------------------------------- |
+| path         | Text                                           | &#8594; | ファイルパス                                                            |
+| fileConstant | Integer                                        | &#8594; | 4Dファイル定数                                                          |
+| pathType     | Integer                                        | &#8594; | `fk posix path` (デフォルト) または `fk platform path` |
+| \*           | operator                                       | &#8594; | ホストデータベースのファイルを返すには \* を渡します                                      |
+| 戻り値          | [4D.File](../API/FileClass.md) | &#8592; | 新規ファイルオブジェクト                                                      |
 
 <!-- END REF -->
 
 #### 説明
 
-`File` コマンドは、<!-- REF #_command_.File.Summary -->`4D.File` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。 このコマンドは 2種類のシンタックスを受け入れます。 このコマンドは 2種類のシンタックスを受け入れます。 このコマンドは 2種類のシンタックスを受け入れます。 このコマンドは 2種類のシンタックスを受け入れます。 このコマンドは 2種類のシンタックスを受け入れます。
+The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the [`4D.File`](../API/FileClass.md) type<!-- END REF -->. このコマンドは 2種類のシンタックスを受け入れます。
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -80,14 +80,15 @@ displayed_sidebar: docs
 
 #### 参照
 
-[Folder](folder.md)\
+[`4D.File` class](../API/FileClass.md)
+[Folder](folder.md)
 [Get 4D file](../commands-legacy/get-4d-file.md)\
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
 
 #### プロパティ
 
-|         |                                                                 |
-| ------- | --------------------------------------------------------------- |
-| コマンド番号  | 1566                                                            |
-| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1566                        |
+| スレッドセーフ | &check; |
