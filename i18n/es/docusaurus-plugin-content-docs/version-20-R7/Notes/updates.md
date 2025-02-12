@@ -32,7 +32,7 @@ Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/),
 
 - La documentación del [Lenguaje 4D](../commands/command-index.md) y del [Lenguaje 4D Write Pro](../WritePro/commands/command-index.md) ya está disponible en developer.4d.com. Descubra todas las novedades y cambios relativos a estas documentaciones en esta nota de la versión.
 - El comando [`File`](../commands/file.md) (así como [`4D.File.new()`](../API/FileClass.md#4dfilenew)) es más estricto a la hora de comprobar la sintaxis de *path* suministrada como parámetro.
-- The **describe** action [permission](../ORDA/privileges.md#permission-actions) has been removed from available actions. Access to [`/rest/$catalog`](../REST/$catalog.md) urls is no longer controlled. Session *describe* privileges are now ignored.
+- La acción de [permission](../ORDA/privileges.md#permission-actions) ha sido eliminada de las acciones disponibles. Access to [`/rest/$catalog`](../REST/$catalog.md) urls is no longer controlled. Session *describe* privileges are now ignored.
 
 ## 4D 20 R6
 
@@ -73,7 +73,7 @@ Lea [**Novedades en 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), 
 - La capa de red QUIC ahora soporta [broadcasting](../Desktop/clientServer.md#opening-a-remote-project), [SSO](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html), e [IPv6](https://doc.4d.com/4Dv20R5/4D/20-R5/IP-Settings.300-6932707.en.html).
 - Soporte de [selecciones de entidades restringidas](../ORDA/entities.md#restricting-entity-selections).
 - Soporte de [clases compartidas](../Concepts/classes.md#shared-classes) y de [clases singleton](../Concepts/classes.md#singleton-classes). Nuevas propiedades de clase: [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#isingleton), [`me`](../API/ClassClass.md#me).
-- Support for [initializing a class property in its declaration line](../Concepts/classes.md#initializing-the-property-in-the-declaration-line).
+- Soporte para [inicializar una propiedad de clase en su línea de declaración](../Concepts/classes.md#initializing-the-property-in-the-declaration-line).
 - Nuevo modo [forzar login para peticiones REST](../REST/authUsers.md#force-login-mode) con un [soporte específico en Qodly Studio for 4D](../WebServer/qodly-studio.md#force-login).
 - Nuevo parámetro REST [$format](../REST/$format.md).
 - El objeto [`Session`](../commands/session.md) está ahora disponible en sesiones de usuario remotas y en sesiones de procedimientos almacenados.
