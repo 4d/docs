@@ -14,7 +14,7 @@ title: VP Get formula by name
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                  |                  |
 | name       | Text    | ->                          | Nombre del rango nombrado                                     |                  |
 | scope      | Integer | ->                          | Alcance objetivo (por defecto=hoja actual) |                  |
-| Result     | Object  | <- | Definición de la fórmula o rango con nombre                   | <!-- END REF --> |
+| Resultado  | Object  | <- | Definición de la fórmula o rango con nombre                   | <!-- END REF --> |
 
 #### Descripción
 
