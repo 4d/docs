@@ -82,7 +82,7 @@ También puede definir la propiedad `.body` utilizando la función [`setBody()`]
 
 #### Descripción
 
-The `.headers` property contains <!-- REF #OutgoingMessageClass.headers.Summary -->the current headers of the outgoing message as key/value pairs<!-- END REF -->.
+La propiedad `.headers` contiene <!-- REF #OutgoingMessageClass.headers.Summary -->los encabezados actuales del mensaje saliente en forma de pares clave/valor<!-- END REF -->.
 
 La propiedad `.headers` es de sólo lectura. Para definir un encabezado, use la función [`setHeader()`](#setheader).
 
@@ -141,7 +141,7 @@ If *body* is not of a supported value type, an error is returned.
 
 #### Descripción
 
-The `.setHeader()` function <!-- REF #OutgoingMessageClass.setHeader().Summary -->sets the outgoing message header *key* with the provided *value*<!-- END REF -->. If both parameters are not Text values, an error is raised.
+La función `.setHeader()` <!-- REF #OutgoingMessageClass.setHeader().Summary -->define lla llave *key* del encabezado del mensaje saliente con el *valuer* suministrado<!-- END REF -->. If both parameters are not Text values, an error is raised.
 
 When returning a 4D.OutgoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `WASID4D=...` and `4DSID__ProjectName_=....`).
 
@@ -169,7 +169,7 @@ If you set a *value* for the "Content-Type" header *key*, make sure you call thi
 
 #### Descripción
 
-The `.setStatus()` function <!-- REF #OutgoingMessageClass.setStatus().Summary -->sets the `status` property with the given *status*<!-- END REF -->.
+La función `.setStatus()` <!-- REF #OutgoingMessageClass.setStatus().Summary -->establece la propiedad `status` con el *status*<!-- END REF -->.
 
 If *status* is not an integer value, an error is raised.
 
@@ -185,6 +185,6 @@ For a list of HTTP status codes, please refer the [HTTP status code list on Wiki
 
 #### Descripción
 
-The `.status` property contains <!-- REF #OutgoingMessageClass.status.Summary -->the current status of the outgoing message<!-- END REF -->. This property can be set using the [`setStatus()`](setstatus) function.
+La propiedad `.status` contiene <!-- REF #OutgoingMessageClass.status.Summary -->el estado actual del mensaje saliente<!-- END REF -->. This property can be set using the [`setStatus()`](setstatus) function.
 
 <!-- END REF -->

@@ -136,7 +136,7 @@ If the body has not been given as a binary content, the function tries to conver
 
 #### Descripción
 
-The `.getHeader()` function <!-- REF #IncomingMessageClass.getHeader().Summary -->returns the value of the *key* header<!-- END REF -->.
+La función `.getHeader()` <!-- REF #IncomingMessageClass.getHeader().Summary -->devuelve el valor del encabezado *key* <!-- END REF -->.
 
 :::note
 
@@ -170,7 +170,7 @@ $value := $request.getHeader("content-type")
 
 #### Descripción
 
-The `.getJSON()` function <!-- REF #IncomingMessageClass.getJSON().Summary -->returns the body of the request as a JSON resolution<!-- END REF -->.
+La función `.getJSON()` <!-- REF #IncomingMessageClass.getJSON().Summary -->devuelve el cuerpo de la solicitud como una resolución JSON<!-- END REF -->.
 
 If the body has not been given as JSON valid content, an error is raised.
 
@@ -222,7 +222,7 @@ If the body is not received as a valid picture, the function returns null.
 
 #### Descripción
 
-The `.getText()` function <!-- REF #IncomingMessageClass.getText().Summary -->returns the body of the request as a text value<!-- END REF -->.
+La función `.getText()` <!-- REF #IncomingMessageClass.getText().Summary -->devuelve el cuerpo de la solicitud como un valor de texto<!-- END REF -->.
 
 If the body has not been given as a string value, the function tries to convert the value but it can give unexpected results.
 
@@ -252,7 +252,7 @@ Header names (keys) are lowercased. Note header names are case sensitive.
 
 #### Descripción
 
-The `.url` property contains <!-- REF #IncomingMessageClass.url.Summary -->the URL of the request without the *IP:port* part and as a string<!-- END REF -->.
+La propiedad `.url` contiene <!-- REF #IncomingMessageClass.url.Summary -->la URL de la petición sin la parte *IP:port* y como cadena<!-- END REF -->.
 
 For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.url` property is "/docs/invoices/today".
 

@@ -94,7 +94,7 @@ Les pages `.shtml` sont automatiquement traitées par le serveur web. Votre page
 
 ### Requête REST
 
-Si nous ne voulons pas seulement _afficher_ des données, mais aussi les _utiliser_, nous pouvons faire appel à ORDA et au serveur REST. Grâce au concept [ORDA](ORDA/overview.md), la table `Friends` est automatiquement disponible sous forme de dataclass et est disponible via [REST](REST/gettingStarted.md).
+Si nous ne voulons pas seulement *afficher* des données, mais aussi les *utiliser*, nous pouvons faire appel à ORDA et au serveur REST. Grâce au concept [ORDA](ORDA/overview.md), la table `Friends` est automatiquement disponible sous forme de dataclass et est disponible via [REST](REST/gettingStarted.md).
 
 1. Nous allons utiliser le serveur REST pour accéder aux données : dans la boîte de dialogue des \*\* Paramètres\*\*, sélectionnez **Web** > **Fonctionnalités Web**, et cochez l'option **Exposer en tant que serveur REST**.
 
@@ -188,8 +188,8 @@ Dans les sections ci-dessus, nous obtenons un accès libre à l'application à p
 
 La façon la plus simple et sécurisée de connecter un utilisateur sur le serveur web 4D est basée sur le scénario suivant :
 
-- Les utilisateurs sont stockés dans une table dédiée et non exposée (nommée _WebUsers_ par exemple)
-- La table _WebUsers_ pourrait être [chiffrée](MSC/encrypt.md) et stocke le nom d'utilisateur et un hachage de leur mot de passe.
+- Les utilisateurs sont stockés dans une table dédiée et non exposée (nommée *WebUsers* par exemple)
+- La table *WebUsers* pourrait être [chiffrée](MSC/encrypt.md) et stocke le nom d'utilisateur et un hachage de leur mot de passe.
 
 1. Créez une table avec certains champs, par exemple :
 

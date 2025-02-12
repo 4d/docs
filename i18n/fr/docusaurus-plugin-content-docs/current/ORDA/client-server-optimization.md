@@ -58,7 +58,7 @@ Considérons le code suivant :
  End for each
 ```
 
-Grâce à l'optimisation, cette requête récupérera uniquement les données des attributs utilisés (firstname, lastname, employer, employer.name) dans _$sel_ à partir de la deuxième itération de la boucle.
+Grâce à l'optimisation, cette requête récupérera uniquement les données des attributs utilisés (firstname, lastname, employer, employer.name) dans *$sel* à partir de la deuxième itération de la boucle.
 
 ### Réutilisation de la propriété `context`
 

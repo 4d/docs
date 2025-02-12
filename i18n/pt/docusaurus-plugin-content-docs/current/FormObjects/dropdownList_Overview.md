@@ -20,7 +20,7 @@ Pode criar diferentes tipos de listas pendentes com diferentes funcionalidades. 
 | Lista de opções guardada como valor | Construído com base numa lista de opções (“padrão”)               | Lista             | Valor do item seleccionado            | `dataSourceTypeHint: text` + `saveAs: value`                                                                                        |
 | Salvar como                         | Construído sobre numa lista de escolha. A posição do item é guardada | Lista             | Referência do item seleccionado       | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                 |
 | Lista de seleção hierárquica        | Pode apresentar conteúdos hierárquicos                                               | Lista             | Referência da lista                   | `dataSourceTypeHint: integer`                                                                                                       |
-| Ação padrão                         | Criado automaticamente pela ação                                                     | _qualquer_        | _qualquer exceto referência de lista_ | toda definición + `action: <action>` (+ `focusable: false` para acciones que se aplican a otras áreas)           |
+| Ação padrão                         | Criado automaticamente pela ação                                                     | *qualquer*        | *qualquer exceto referência de lista* | toda definición + `action: <action>` (+ `focusable: false` para acciones que se aplican a otras áreas)           |
 
 ## Manuseamento de listas pendentes
 

@@ -40,19 +40,19 @@ Entrez ensuite le numéro de licence du produit à activer. Ce numéro se trouve
 Si vous ne pouvez pas utiliser [l'activation immédiate](#instant-activation) parce que votre ordinateur n'a pas d'accès Internet, vous pouvez effectuer une activation différée comme décrit dans les étapes suivantes.
 
 1. Dans la fenêtre du Gestionnaire de licences de 4D accessible depuis le menu Aide, sélectionnez l'onglet **Activation différée**.
-2. Entrez votre Numéro de licence ainsi que votre adresse E-mail, puis cliquez sur **Générer le fichier...** afin de créer le fichier d'ID (_reg.txt_).
+2. Entrez votre Numéro de licence ainsi que votre adresse E-mail, puis cliquez sur **Générer le fichier...** afin de créer le fichier d'ID (*reg.txt*).
 
 ![](../assets/en/getStart/activ3.png)
 
-3. Enregistrez le fichier _reg.txt_ sur un support USB puis connectez ce support à un ordinateur qui a un accès Internet.
+3. Enregistrez le fichier *reg.txt* sur un support USB puis connectez ce support à un ordinateur qui a un accès Internet.
 4. Depuis la machine qui a un accès Internet, connectez-vous sur [https://activation.4d.com](https://activation.4d.com).
-5. Dans la page Web, cliquez sur le bouton **Parcourir...** et sélectionnez le fichier _reg.txt_ généré lors des étapes 3 et 4 ; puis cliquez sur le bouton **Activer**.
+5. Dans la page Web, cliquez sur le bouton **Parcourir...** et sélectionnez le fichier *reg.txt* généré lors des étapes 3 et 4 ; puis cliquez sur le bouton **Activer**.
 6. Téléchargez le(s) fichier(s) de licence.
 
 ![](../assets/en/getStart/activ4.png)
 
-7. Enregistrez le ou les fichier(s) _license4d_ sur un support partagé et transférez-le(s) sur la machine 4D utilisée lors de l'étape 1.
-8. De retour sur la machine avec 4D, toujours dans l'écran **Activation différée**, cliquez sur le bouton **Suivant** ; puis cliquez sur le bouton **Charger...** et sélectionnez un fichier _license4d_ depuis le media partagé utilisé à l'étape 7.
+7. Enregistrez le ou les fichier(s) *license4d* sur un support partagé et transférez-le(s) sur la machine 4D utilisée lors de l'étape 1.
+8. De retour sur la machine avec 4D, toujours dans l'écran **Activation différée**, cliquez sur le bouton **Suivant** ; puis cliquez sur le bouton **Charger...** et sélectionnez un fichier *license4d* depuis le media partagé utilisé à l'étape 7.
 
 ![](../assets/en/getStart/activ5.png)
 

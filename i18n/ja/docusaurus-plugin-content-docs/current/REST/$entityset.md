@@ -14,7 +14,7 @@ title: $entityset
 
 ## $entityset/\{entitySetID\}
 
-既存のエンティティセットを取得します(_例_: `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+既存のエンティティセットを取得します(*例*: `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
 ### 説明
 

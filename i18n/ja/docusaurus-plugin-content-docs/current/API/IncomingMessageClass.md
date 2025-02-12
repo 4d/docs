@@ -127,20 +127,20 @@ There are 2 url parts - Url parts are: start - example
 
 <!-- REF #IncomingMessageClass.getHeader().Params -->
 
-| 引数  | 型    |                             | 説明                           |
-| --- | ---- | --------------------------- | ---------------------------- |
-| key | Text | ->                          | Header property to get       |
-| 戻り値 | Text | <- | Value of the header property |
+| 引数  | 型    |                             | 説明             |
+| --- | ---- | --------------------------- | -------------- |
+| key | Text | ->                          | 取得したいヘッダープロパティ |
+| 戻り値 | Text | <- | ヘッダープロパティの値    |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.getHeader()` function <!-- REF #IncomingMessageClass.getHeader().Summary -->returns the value of the *key* header<!-- END REF -->.
+`.getHeader()` 関数は、<!-- REF #IncomingMessageClass.getHeader().Summary -->*key* 引数でキーを指定したヘッダーの値を返しますheader<!-- END REF -->。
 
 :::note
 
-The *key* parameter is not case sensitive.
+*key* 引数は大文字と小文字を区別しません。
 
 :::
 
@@ -162,17 +162,17 @@ $value := $request.getHeader("content-type")
 
 <!-- REF #IncomingMessageClass.getJSON().Params -->
 
-| 引数  | 型       |                             | 説明                                         |
-| --- | ------- | --------------------------- | ------------------------------------------ |
-| 戻り値 | Variant | <- | JSON resolution of the body of the request |
+| 引数  | 型       |                             | 説明               |
+| --- | ------- | --------------------------- | ---------------- |
+| 戻り値 | Variant | <- | JSON解決したリクエストの本文 |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.getJSON()` function <!-- REF #IncomingMessageClass.getJSON().Summary -->returns the body of the request as a JSON resolution<!-- END REF -->.
+`.getJSON()` 関数は、<!-- REF #IncomingMessageClass.getJSON().Summary -->JSON 解決をしたリクエストの本文を返します<!-- END REF -->。
 
-If the body has not been given as JSON valid content, an error is raised.
+本文がJSON として有効なコンテンツとして与えられていなかった場合、エラーが発生します。
 
 <!-- END REF -->
 
@@ -184,25 +184,25 @@ If the body has not been given as JSON valid content, an error is raised.
 
 <!-- REF #IncomingMessageClass.getPicture().Params -->
 
-| 引数  | 型       |                             | 説明                             |
-| --- | ------- | --------------------------- | ------------------------------ |
-| 戻り値 | Picture | <- | Body of the request as picture |
+| 引数  | 型       |                             | 説明               |
+| --- | ------- | --------------------------- | ---------------- |
+| 戻り値 | Picture | <- | ピクチャー形式のリクエストの本文 |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.getPicture()` function <!-- REF #IncomingMessageClass.getPicture().Summary -->returns the body of the request as a picture (in case of a body sent as a picture)<!-- END REF -->.
+`.getPicture()` 関数は、<!-- REF #IncomingMessageClass.getPicture().Summary -->リクエストの本文をピクチャーとして返します(本文がピクチャーとして送信されていた場合)<!-- END REF -->。
 
-The content-type must be given in the headers to indicate that the body is a picture.
+本文がピクチャーであるということを示すために、ヘッダー内でcontent-type が与えられている必要があります。
 
 :::note
 
-If the request is built using the [`HTTPRequest` class](HTTPRequestClass.md), the picture must be sent in the body as a Blob with the appropriate content-type.
+リクエストが[`HTTPRequest` クラス](HTTPRequestClass.md) を使用してビルドされていた場合、ピクチャーは本文内にてBlob として送信されるとともに、適切なcontent-type が指定されている必要があります。
 
 :::
 
-If the body is not received as a valid picture, the function returns null.
+本文が有効なピクチャーとして受信されていない場合、この関数はnull を返します。
 
 <!-- END REF -->
 
@@ -214,9 +214,9 @@ If the body is not received as a valid picture, the function returns null.
 
 <!-- REF #IncomingMessageClass.getText().Params -->
 
-| 引数  | 型    |                             | 説明                          |
-| --- | ---- | --------------------------- | --------------------------- |
-| 戻り値 | Text | <- | Body of the request as text |
+| 引数  | 型    |                             | 説明              |
+| --- | ---- | --------------------------- | --------------- |
+| 戻り値 | Text | <- | テキスト形式のリクエストの本文 |
 
 <!-- END REF -->
 

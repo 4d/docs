@@ -66,7 +66,7 @@ A propriedade `.cid` contém <!-- REF #MailAttachmentClass.cid.Summary --> o ID 
 
 #### Descrição
 
-The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.Summary -->the value of the `Content-Disposition` header<!-- END REF -->. Dois valores esetão disponíveis:
+A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.Summary -->o valor do cabeçalho \`Content-Disposition<!-- END REF -->. Dois valores esetão disponíveis:
 
 - "inline": o anexo é renderizado dentro dos conteúdos da mensagem, no local "cid". A renderização depende do cliente mail.
 - "attachment": o anexo é fornecido como um link na mensagem.

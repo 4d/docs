@@ -503,9 +503,9 @@ $o.age:="Smith" //error con la sintaxis de verificación
 
 Si no se accede a la propiedad, el código nunca se ejecuta.
 
-Las propiedades calculadas están diseñadas para manejar datos que no necesitan ser guardados en memoria. Generalmente se basan en propiedades persistentes. Por ejemplo, si un objeto de clase contiene como propiedad persistente el _precio bruto_ y el _tipo de IVA_, El _precio neto_ podría ser manejado por una propiedad calculada.
+Las propiedades calculadas están diseñadas para manejar datos que no necesitan ser guardados en memoria. Generalmente se basan en propiedades persistentes. Por ejemplo, si un objeto de clase contiene como propiedad persistente el *precio bruto* y el *tipo de IVA*, El *precio neto* podría ser manejado por una propiedad calculada.
 
-En el archivo de definición de la clase, las declaraciones de propiedades calculadas utilizan las palabras claves `Function get` (_getter_) y `Function set` (_setter_) seguido por el nombre de la propiedad. El nombre debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
+En el archivo de definición de la clase, las declaraciones de propiedades calculadas utilizan las palabras claves `Function get` (*getter*) y `Function set` (*setter*) seguido por el nombre de la propiedad. El nombre debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 
 `Función get` devuelve un valor del tipo de la propiedad y `Function set` toma un parámetro del tipo de la propiedad. Ambos argumentos deben cumplir con los [parámetros de función](#parameters) estándar.
 
@@ -515,7 +515,7 @@ Si la función se declara en una [clase compartida](#clases-compartidas), puede 
 
 El tipo de la propiedad calculada es definido por la declaración de tipo `$return` del \*getter \*. Puede ser de cualquier [tipo de propiedad válido](dt_object.md).
 
-> Asignar _undefined_ a una propiedad de objeto limpia su valor mientras se preserva su tipo. Para ello, la `Function get` es llamada primero para recuperar el tipo de valor, luego `Function set` es llamado con un valor vacío de ese tipo.
+> Asignar *undefined* a una propiedad de objeto limpia su valor mientras se preserva su tipo. Para ello, la `Function get` es llamada primero para recuperar el tipo de valor, luego `Function set` es llamado con un valor vacío de ese tipo.
 
 #### Ejemplo 1
 
@@ -737,7 +737,7 @@ La siguiente tabla indica el alcance de una instancia singleton dependiendo de d
 | ------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------ |
 | **4D monopuesto**   | Proceso                                                                                                         | Aplicación                       | Aplicación o sesión Web/REST                                                   |
 | **4D Server**       | Proceso                                                                                                         | Máquina 4D Server                | Sesión cliente/servidor o sesión Web/REST o sesión de procedimiento almacenado |
-| **Modo remoto 4D**  | Proceso (_nota_: los singletons no están sincronizados en el proceso gemelo) | Máquina remota 4D                | Máquina remota 4D o sesión Web/REST                                            |
+| **Modo remoto 4D**  | Proceso (*nota*: los singletons no están sincronizados en el proceso gemelo) | Máquina remota 4D                | Máquina remota 4D o sesión Web/REST                                            |
 
 Una vez instanciado, existe una clase singleton (y su singleton) siempre que exista una referencia a ella en algún lugar de la aplicación que se ejecuta en la máquina.
 
@@ -828,7 +828,7 @@ Luego puede llamar al singleton **cs.VehicleFactory** para obtener un nuevo veh�
 $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")
 ```
 
-Dado que la función _buildVehicle()_ modifica el singleton **cs.VehicleFactory** (incrementando `This.vehicleBuilt`), debe agregar la palabra clave `shared`.
+Dado que la función *buildVehicle()* modifica el singleton **cs.VehicleFactory** (incrementando `This.vehicleBuilt`), debe agregar la palabra clave `shared`.
 
 #### Singleton de sesión
 

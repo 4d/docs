@@ -108,7 +108,7 @@ If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the 
 
 You can mix absolute and relative references by inserting a dollar sign in front of the letter or the number alone, for example, `$C5` or `C$5`. A mixed reference allows you to specify either the row or the column as absolute, while allowing the other portion of the address to refer relatively.
 
-A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. Uma referência a uma célula nomeada é sempre absoluta. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name) method.
+A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. Uma referência a uma célula nomeada é sempre absoluta. Você pode criar ou modificar células nomeadas, ou intervalos de células usando o método [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name).
 
 A tabela seguinte mostra o efeito das diferentes notações:
 
@@ -358,8 +358,8 @@ You can call directly 4D project methods from within your 4D View Pro formulas. 
 
 Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 
-*   **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
+*   **Permitido**: ele foi declarado explicitamente usando o método [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
 *   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
 *   **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
-> > > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
+> > > > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
 

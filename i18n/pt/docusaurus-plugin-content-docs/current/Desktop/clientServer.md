@@ -57,9 +57,9 @@ Uma vez que a conexão com o servidor tenha sido estabelecida, o projeto remoto 
 
 ### Atualizando arquivos do projeto no servidor
 
-O 4D Server cria e envia automaticamente para as máquinas remotas uma versão [.4dz](building.md#build-compiled-structure) do arquivo de projeto _.4DProject_ (não compactado) em modo interpretado.
+O 4D Server cria e envia automaticamente para as máquinas remotas uma versão [.4dz](building.md#build-compiled-structure) do arquivo de projeto *.4DProject* (não compactado) em modo interpretado.
 
-- Uma versão .4dz atualizada do projeto é automaticamente produzida quando necessário, _ou seja_, quando o projeto foi modificado e recarregado pelo 4D Server. O projeto foi recarregado:
+- Uma versão .4dz atualizada do projeto é automaticamente produzida quando necessário, *ou seja*, quando o projeto foi modificado e recarregado pelo 4D Server. O projeto foi recarregado:
   - automaticamente quando a janela de aplicação do Servidor 4D chega à frente do sistema operacional ou quando o aplicativo 4D na mesma máquina salva uma modificação (veja abaixo).
   - quando o comando `RELOAD PROJECT` é executado. Chamar este comando é necessário, por exemplo, quando você puxou uma nova versão do projeto a partir da plataforma de controle de origem.
 

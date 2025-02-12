@@ -13,7 +13,7 @@ Par exemple, si vous écrivez dans une page HTML:
 <P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
 ```
 
-La valeur de la variable 4D _vtSiteName_ sera insérée dans la page HTML.
+La valeur de la variable 4D *vtSiteName* sera insérée dans la page HTML.
 
 ## Balises pour les templates
 

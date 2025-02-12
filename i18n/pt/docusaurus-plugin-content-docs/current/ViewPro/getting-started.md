@@ -99,7 +99,7 @@ Uma área 4D View Pro lida com vários objetos e elementos.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-Most of 4D View Pro commands require a _vpAreaName_ parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). Este nombre es la propiedad del [nombre del objeto](FormObjects/properties_Object.md#object-name).
+Most of 4D View Pro commands require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). Este nombre es la propiedad del [nombre del objeto](FormObjects/properties_Object.md#object-name).
 
 Por exemplo, se quiser definir o número total de colunas de uma área chamada "myVpArea", escreva:
 
@@ -111,7 +111,7 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilização de objectos de intervalo
 
-Algunos comandos 4D View Pro requieren un parámetro _rangeObj_. No 4D View Pro, um intervalo é um objeto que referir-se a uma área em uma planilha. Esta área pode ser composta por uma ou várias células. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
+Algunos comandos 4D View Pro requieren un parámetro *rangeObj*. No 4D View Pro, um intervalo é um objeto que referir-se a uma área em uma planilha. Esta área pode ser composta por uma ou várias células. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
 
 Por exemplo, para criar um objeto intervalo para as seguintes células:
 
@@ -129,7 +129,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 
 - área - O nome da área 4D View Pro
-- intervalos - Uma coleção de objeto(s) intervalo. Available properties within each range object depend on the range object type. Por ejemplo, un objeto rango de tipo columna sólo incluirá las propiedades _.column_ y _.sheet_.
+- intervalos - Uma coleção de objeto(s) intervalo. Available properties within each range object depend on the range object type. Por ejemplo, un objeto rango de tipo columna sólo incluirá las propiedades *.column* y *.sheet*.
 
 | Propriedade |                                                                                       | Tipo       | Descrição                                                                                                       | Disponível para                                              |
 | ----------- | ------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |

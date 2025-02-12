@@ -38,7 +38,7 @@ Certaines données sont également collectées à intervalles réguliers.
 | license                 | Object                                   | Nom commercial et description des licences des produits                                                                              |
 | isRosetta               | Boolean                                  | True si 4D est émulé par Rosetta sous macOS, False sinon (non émulé ou sous Windows).             |
 | uniqueID                | Text                                     | ID unique du serveur 4D                                                                                                              |
-| id                      | Texte (chaîne hachée) | Identifiant unique associé à la base de données (_Hachage par roulement polynomial du nom de la base de données_) |
+| id                      | Texte (chaîne hachée) | Identifiant unique associé à la base de données (*Hachage par roulement polynomial du nom de la base de données*) |
 | dataFileSize            | Number                                   | Taille du fichier de données en octets                                                                                               |
 | indexesSize             | Number                                   | Taille des index en octets                                                                                                           |
 | cacheSize               | Number                                   | Taille du cache en octets                                                                                                            |

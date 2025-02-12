@@ -247,7 +247,7 @@ Exibe/oculta o quadro da página quando o [modo de exibição da página](#view-
 
 ## Mostrar referências
 
-Apresenta todas as expressões 4D inseridas no documento 4D Write Pro como _referências_. Quando esta opção for desativada, expressões 4D são exibidas como _valores_. Por padrão, quando você insere um campo ou expressão 4D, o 4D Write Pro calcula e exibe seu valor atual. Selecione essa propriedade se quiser saber qual campo ou expressão é exibido. O campo ou as referências de expressão em seguida, aparecem em seu documento, com um fundo cinza.
+Apresenta todas as expressões 4D inseridas no documento 4D Write Pro como *referências*. Quando esta opção for desativada, expressões 4D são exibidas como *valores*. Por padrão, quando você insere um campo ou expressão 4D, o 4D Write Pro calcula e exibe seu valor atual. Selecione essa propriedade se quiser saber qual campo ou expressão é exibido. O campo ou as referências de expressão em seguida, aparecem em seu documento, com um fundo cinza.
 
 Por exemplo, se você tiver inserido a data atual junto com um formato, a data será exibida:
 

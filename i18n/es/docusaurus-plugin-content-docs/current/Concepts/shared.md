@@ -3,18 +3,18 @@ id: shared
 title: Objetos y colecciones compartidos
 ---
 
-**Los objetos compartidos** y **las colecciones compartidas** son [objetos](Concepts/dt_object.md) y [colecciones](Concepts/dt_collection.md) específicas cuyo contenido se comparte entre procesos. A diferencia de las [variables interproceso](Concepts/variables.md#variables-interproceso), los objetos compartidos y las colecciones compartidas tienen la ventaja de ser compatibles con los **procesos 4D apropiativos**: pueden pasarse por referencia como parámetros a comandos como [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html) o [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html).
+**Shared objects** and **shared collections** are specific [objects](./dt_object.md) and [collections](./dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
 
-Los objetos compartidos y las colecciones compartidas se almacenan en variables estándar [`Object`](dt_object.md) y [`Collection`](dt_collection.md), pero deben instanciarse utilizando comandos específicos:
+Shared objects and shared collections are stored in standard [`Object`](./dt_object.md) and [`Collection`](./dt_collection.md) type variables, but must be instantiated using specific commands:
 
-- para crear un objeto compartido, utilice el comando [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) o llama a la función [`new()`](../API/ClassClass.md#new) de una [clase compartida](classes.md#clases-compartidas),
+- to create a shared object, use the [`New shared object`](../commands-legacy/new-shared-object.md) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](./classes.md#shared-classes),
 - para crear una colección compartida, utilice el comando [`New shared collection`](../commands/new-shared-collection.md).
 
 Los objetos y colecciones compartidas solo pueden contener valores escalares u otros objetos y colecciones compartidas. Sin embargo, los objetos y colecciones compartidos pueden establecerse como propiedades de objetos o colecciones estándar (no compartidos).
 
 Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**. La lectura de un valor de objeto/colección compartido no requiere **Use...End use**.
 
-Un catálogo único y global devuelto por el comando [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) siempre está disponible en toda la aplicación y sus componentes, y puede ser utilizado para almacenar todos los objetos compartidos y colecciones.
+A unique, global catalog returned by the [`Storage`](../commands-legacy/storage.md) command is always available throughout the application and its components, and can be used to store all shared objects and collections.
 
 ## Utilización de objetos o colecciones compartidos
 
@@ -81,11 +81,11 @@ Llamar a `OB Copy` con un objeto compartido (o con un objeto cuyas propiedades s
 
 ### Storage
 
-**Storage** es un objeto compartido único, disponible automáticamente en cada aplicación y máquina. Este objeto compartido es devuelto por el comando [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html). Puede utilizar este objeto para hacer referencia a todos los objetos/colecciones compartidos definidos durante la sesión que desee que estén disponibles desde cualquier proceso preventivo o estándar.
+**Storage** es un objeto compartido único, disponible automáticamente en cada aplicación y máquina. This shared object is returned by the [`Storage`](../commands-legacy/storage.md) command. Puede utilizar este objeto para hacer referencia a todos los objetos/colecciones compartidos definidos durante la sesión que desee que estén disponibles desde cualquier proceso preventivo o estándar.
 
 Tenga en cuenta que, a diferencia de los objetos compartidos estándar, el objeto `Storage` no crea un grupo compartido cuando se añaden objetos/colecciones compartidos como sus propiedades. Esta excepción permite utilizar el objeto **Storage** sin bloquear todos los objetos o colecciones compartidos conectados.
 
-Para más información, consulte la descripción del comando [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html).
+For more information, refer to the [`Storage`](../commands-legacy/storage.md) command description.
 
 ## Use...End use
 
@@ -97,25 +97,25 @@ La sintaxis de la estructura `Use...End use` es:
  End use
 ```
 
-La estructura `Use...End use` define una secuencia de instrucciones que ejecutarán tareas sobre el parámetro _Shared_object_or_Shared_collection_ bajo la protección de un semáforo interno. _Shared_object_or_Shared_collection_ puede ser cualquier objeto o colección compartido válido.
+La estructura `Use...End use` define una secuencia de instrucciones que ejecutarán tareas sobre el parámetro *Shared_object_or_Shared_collection* bajo la protección de un semáforo interno. *Shared_object_or_Shared_collection* puede ser cualquier objeto o colección compartido válido.
 
 Los objetos compartidos y las colecciones compartidas están diseñados para permitir la comunicación entre procesos, en particular, **procesos 4D preferentes**. Se pueden pasar por referencia como parámetros de un proceso a otro. Es obligatorio rodear las modificaciones en los objetos o colecciones compartidas con las palabras clave `Use...End use` para evitar el acceso concurrente entre procesos.
 
-- Una vez que la línea **Use** se ejecuta con éxito, todas las propiedades/elementos de _Shared_object_or_Shared_collection_ están bloqueados para todos los demás procesos en acceso de escritura hasta que se ejecute la línea `End use` correspondiente.
-- La secuencia _statement(s)_ puede ejecutar cualquier modificación en las propiedades/elementos de Shared_object_o_Shared_collection sin riesgo de acceso concurrente.
-- Si se añade otro objeto o colección compartida como propiedad del parámetro _Shared_object_or_Shared_collection_, se conectan dentro del mismo grupo compartido.
-- Si otro proceso intenta acceder a una de las propiedades _Shared_object_or_Shared_collection_ o una propiedad conectada mientras se está ejecutando una secuencia **Use...End use**, se pone automáticamente en espera y espera hasta que la secuencia actual finalice.
-- La línea **End use** desbloquea las propiedades _Shared_object_or_Shared_collection_ y todos los objetos del mismo grupo.
+- Una vez que la línea **Use** se ejecuta con éxito, todas las propiedades/elementos de *Shared_object_or_Shared_collection* están bloqueados para todos los demás procesos en acceso de escritura hasta que se ejecute la línea `End use` correspondiente.
+- La secuencia *statement(s)* puede ejecutar cualquier modificación en las propiedades/elementos de Shared_object_o_Shared_collection sin riesgo de acceso concurrente.
+- Si se añade otro objeto o colección compartida como propiedad del parámetro *Shared_object_or_Shared_collection*, se conectan dentro del mismo grupo compartido.
+- Si otro proceso intenta acceder a una de las propiedades *Shared_object_or_Shared_collection* o una propiedad conectada mientras se está ejecutando una secuencia **Use...End use**, se pone automáticamente en espera y espera hasta que la secuencia actual finalice.
+- La línea **End use** desbloquea las propiedades *Shared_object_or_Shared_collection* y todos los objetos del mismo grupo.
 - En el código 4D se pueden anidar varias estructuras **Use...End use**. Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**.
 
-:::note
+### Automatic Use...End use calls
 
-Las siguientes funciones activan automáticamente un **Use/End use** interno, haciendo innecesaria una llamada explícita a la estructura cuando se ejecuta la función:
+The following features automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when it is executed:
 
-- [funciones de collection](../API/CollectionClass.md) que modifican las colecciones compartidas
+- [collection functions](../API/CollectionClass.md) that modify shared collections,
+- [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md) command,
+- [`OB REMOVE`](../commands-legacy/ob-remove.md) command,
 - [funciones compartidas](classes.md#shared-functions) (definidas en [clases compartidas](classes.md#shared-classes)).
-
-:::
 
 ## Ejemplo 1
 

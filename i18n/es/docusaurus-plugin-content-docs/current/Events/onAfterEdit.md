@@ -13,7 +13,7 @@ title: On After Edit
 
 Este evento se puede utilizar para filtrar la entrada de datos en los objetos editables por teclado en el nivel más bajo.
 
-Cuando se utiliza, este evento se genera después de cada cambio realizado en el contenido de un objeto editable, independientemente de la acción que haya provocado la modificación, _es decir_:
+Cuando se utiliza, este evento se genera después de cada cambio realizado en el contenido de un objeto editable, independientemente de la acción que haya provocado la modificación, *es decir*:
 
 - Acciones de edición estándar que modifican el contenido como pegar, cortar, borrar o cancelar;
 - Soltar un valor (acción similar a pegar);

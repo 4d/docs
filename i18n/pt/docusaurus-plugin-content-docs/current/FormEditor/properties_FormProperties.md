@@ -40,7 +40,7 @@ Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de 
 
 ## Classe de formulário
 
-Nome de uma [classe usuário](../Concepts/classes.md#class-definition) existente para associar ao formulário. A classe do usuário pode pertencer ao projeto host ou a um [componente](../Extensions/develop-components.md#sharing-of-classes), caso em que a sintaxe formal é "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
+Nome de uma [classe usuário](../Concepts/classes.md#class-definition) existente para associar ao formulário. A classe do usuário pode pertencer ao projeto host ou a um [componente](../Extensions/develop-components.md#sharing-of-classes), caso em que a sintaxe formal é "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
 
 A associação de uma classe ao formulário oferece os seguintes benefícios:
 
@@ -52,7 +52,7 @@ A associação de uma classe ao formulário oferece os seguintes benefícios:
 
 - Você também pode se beneficiar de [recursos de preenchimento automático](../code-editor/write-class-method.md#autocomplete-functions) no editor de código.
 
-- Quando o formulário for executado, 4D instancia automaticamente um objeto de classe de usuário para o formulário, que é retornado pelo objeto [`Form`](../commands/form.md). Seu código pode acessar diretamente as funções de classe definidas na classe do usuário por meio do comando `Form` (por exemplo, `Form.message()`) sem precisar passar um objeto _formData_ como parâmetro para os comandos [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md) ou [`FORM LOAD`](../commands/form-load.md).
+- Quando o formulário for executado, 4D instancia automaticamente um objeto de classe de usuário para o formulário, que é retornado pelo objeto [`Form`](../commands/form.md). Seu código pode acessar diretamente as funções de classe definidas na classe do usuário por meio do comando `Form` (por exemplo, `Form.message()`) sem precisar passar um objeto *formData* como parâmetro para os comandos [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md) ou [`FORM LOAD`](../commands/form-load.md).
 
 :::note
 
@@ -64,7 +64,7 @@ Consulte [esta postagem no blog](http://blog.4d.com/empower-your-development-pro
 
 | Nome      | Tipo de dados | Valores possíveis                                                                                                                |
 | --------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| formClass | string        | nome de uma classe de usuário existente ("_className_" ou "_componentNameSpace_._className_") |
+| formClass | string        | nome de uma classe de usuário existente ("*className*" ou "*componentNameSpace*.*className*") |
 
 ---
 
@@ -80,11 +80,11 @@ O nome do formulário é definido pelo nome da pasta que contém o arquivo form.
 
 ## Tipo de formulário
 
-O tipo de formulário, _ou seja_, seu destino, define as características que estarão disponíveis para o formulário. Por exemplo, [markers](properties_Markers.md) só pode ser definido para formulários de tabela de lista (saída).
+O tipo de formulário, *ou seja*, seu destino, define as características que estarão disponíveis para o formulário. Por exemplo, [markers](properties_Markers.md) só pode ser definido para formulários de tabela de lista (saída).
 
 Cada tabela de um banco de dados tem geralmente pelo menos duas formas de tabela. Uma para listar os registos no ecrã e a outra para visualizar um registo de cada vez (utilizada para a introdução de dados e modificações):
 
-- Formulário de saída - o _formulário de saída_ ou _formulário de lista_ exibe uma lista de registros, com uma única linha por registro. Os resultados das consultas são apresentados num formulário de saída e os usuários podem fazer duplo clique numa linha para visualizar o formulário de entrada para esse registo.
+- Formulário de saída - o *formulário de saída* ou *formulário de lista* exibe uma lista de registros, com uma única linha por registro. Os resultados das consultas são apresentados num formulário de saída e os usuários podem fazer duplo clique numa linha para visualizar o formulário de entrada para esse registo.
   ![](../assets/en/FormObjects/formOutput.png)
 
 - Formulário de entrada - utilizado para entrada de dados. Exibe um único registro por tela e, normalmente, tem botões para salvar e cancelar modificações no registro e para navegar de registro em registro (\*primeiro registro, último registro, registro anterior, próximo registro).
@@ -98,7 +98,7 @@ Os tipos suportados dependem da categoria do formulário:
 | Formulário detalhado para impressão | detailPrinter    | Um relatório impresso com uma página por registo, como uma fatura    | Formulários projeto - Formulários tabela |
 | Formulário lista                    | listScreen       | Um formulário para listar os registos no ecrã                        | Formularios tabla                        |
 | Formulário de lista para impressão  | listPrinter      | Um relatório impresso que lista os registos                          | Formularios tabla                        |
-| Nenhum                              | _no destination_ | Um formulário sem caraterística específica                           | Formulários projeto - Formulários tabela |
+| Nenhum                              | *no destination* | Um formulário sem caraterística específica                           | Formulários projeto - Formulários tabela |
 
 #### Gramática JSON
 

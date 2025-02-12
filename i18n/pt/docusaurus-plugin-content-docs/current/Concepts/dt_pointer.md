@@ -158,14 +158,14 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 Quando se utilizam apontadores para processar ou variáveis locais, é necessário ter a certeza de que a variável apontada já está definida quando o apontador é utilizado. Tenha em mente que as variáveis locais são eliminadas quando o método que as criou tiver concluído a sua execução e as variáveis de processo são eliminadas no final do processo que as criou. Quando um ponteiro chama uma variável que já não existe, isto causa um erro de sintaxe no modo interpretado (variável não definida) mas pode gerar um erro mais grave no modo compilado.
 
-Os ponteiros para variáveis locais permitem-lhe guardar variáveis de processo em muitos casos. Os ponteiros para variáveis locais só podem ser utilizados dentro do mesmo processo. No depurador, quando se mostra um ponteiro para uma variável local que tenha sido declarada noutro método, o nome do método original é indicado entre parênteses, após o ponteiro. For example, if you write in _Method1_:
+Os ponteiros para variáveis locais permitem-lhe guardar variáveis de processo em muitos casos. Os ponteiros para variáveis locais só podem ser utilizados dentro do mesmo processo. No depurador, quando se mostra um ponteiro para uma variável local que tenha sido declarada noutro método, o nome do método original é indicado entre parênteses, após o ponteiro. For example, if you write in *Method1*:
 
 ```4d
  $MyVar:="Hello world"
  Method2(->$MyVar)
 ```
 
-_Method2_:
+*Method2*:
 
 ```4d
 #DECLARE($param : Pointer)

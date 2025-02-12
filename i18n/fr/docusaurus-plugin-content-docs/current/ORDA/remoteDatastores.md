@@ -39,7 +39,7 @@ Dans l'exemple suivant, deux process sont en cours d'exécution pour la même se
 
 ## Fermeture des sessions
 
-Comme décrit dans le paragraphe [durée de vie de la session](../WebServer/sessions.md#session-lifetime), une session web est automatiquement fermée par 4D lorsqu'il n'y a pas eu d'activité pendant une durée déterminée par son timeout. Le timeout par défaut est de 60 mn mais cette valeur peut être paramétrée à l'aide du paramètre _connectionInfo_ de la commande `Open datastore`.
+Comme décrit dans le paragraphe [durée de vie de la session](../WebServer/sessions.md#session-lifetime), une session web est automatiquement fermée par 4D lorsqu'il n'y a pas eu d'activité pendant une durée déterminée par son timeout. Le timeout par défaut est de 60 mn mais cette valeur peut être paramétrée à l'aide du paramètre *connectionInfo* de la commande `Open datastore`.
 
 Si une demande est envoyée au datastore distant après la fermeture de la session, elle est automatiquement recréée si possible (licence disponible, serveur non arrêté, etc.). Cependant, gardez à l'esprit que le contexte de la session concernant les verrous et les transactions est perdu (voir ci-dessous).
 

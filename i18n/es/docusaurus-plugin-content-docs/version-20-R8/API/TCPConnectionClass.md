@@ -5,7 +5,7 @@ title: TCPConnection
 
 The `TCPConnection` class allows you to manage Transmission Control Protocol (TCP) client connections to a server, enabling you to send and receive data, and handle connection lifecycle events using callbacks.
 
-The `TCPConnection` class is available from the `4D` class store. You can create a TCP connection using the [4D.TCPConnection.new()](#4dtcpconnectionnew) function, which returns a [TCPConnection object](#tcpconnection-object).
+The `TCPConnection` class is available from the `4D` class store. Puede crear una conexión TCP utilizando la función [4D.TCPConnection.new()](#4dtcpconnectionnew) que devuelve un [TCPConnection object](#tcpconnection-object).
 
 All `TCPConnection` class functions are thread-safe.
 
@@ -215,7 +215,7 @@ The `.closed` property contains <!-- REF #4D.TCPConnection.closed.Summary -->whe
 
 #### Descripción
 
-The `.errors` property contains <!-- REF #4D.TCPConnection.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+La propiedad `.errors` contiene <!-- REF #4D.TCPConnection.errors.Summary -->una colección de objetos de error asociados con la conexión<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
 
 | Propiedad |                                                                                           | Tipo       | Descripción                                           |
 | --------- | ----------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------- |
@@ -294,11 +294,11 @@ The `shutdown()` function <!-- REF #4D.TCPConnection.shutdown().Summary -->close
 
 #### Descripción
 
-The `wait()` function <!-- REF #4D.TCPConnection.wait().Summary -->waits until  the TCP connection is closed or the specified `timeout` is reached<!-- END REF -->
+La función `wait()` <!-- REF #4D.TCPConnection.wait().Summary -->espera hasta que se cierre la conexión TCP o se alcance el `timeout` especificado<!-- END REF -->
 
 :::note
 
-During the `.wait()` execution, callback functions are executed, whether they originate from other `SystemWorker` instances. You can exit from a `.wait()` by calling [`shutdown()`](#shutdown) from a callback.
+During the `.wait()` execution, callback functions are executed, whether they originate from other `SystemWorker` instances. Puede salir de un `.wait()` llamando a [`shutdown()`](#shutdown) desde una retrollamada.
 
 :::
 

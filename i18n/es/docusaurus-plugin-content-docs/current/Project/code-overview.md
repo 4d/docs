@@ -30,7 +30,7 @@ Para más información, consulte la sección [Clases](../Concepts/classes.md).
 
 Para eliminar un método o clase existente, puede:
 
-- en su disco, elimine el archivo _.4dm_ de la carpeta "Sources",
+- en su disco, elimine el archivo *.4dm* de la carpeta "Sources",
 - en el Explorador 4D, seleccione el método y haga clic ![](../assets/en/Users/MinussNew.png) o elija **Mover a la Papelera** en el menú contextual.
 
 > Para eliminar un método objeto, seleccione **Borrar el método de objeto** en el [editor de formularios](../FormEditor/formEditor.md) (menú **Objeto** o menú contextual).
@@ -46,8 +46,8 @@ La función de importación/exportación es multiplataforma: un método exportad
 
 4D puede exportar e importar métodos en dos formatos:
 
-- Método 4D (extensión _.c4d_): en este formato, los métodos se exportan codificados. Los nombres de los objetos están tokenizados (se transforman en referencias). Este formato se utiliza especialmente para el intercambio de métodos entre las aplicaciones 4D y los plug-ins en diferentes idiomas. Por el contrario, no es posible visualizarlos en un editor de texto.
-- Texto (extensión _.txt_): en este formato, los métodos se exportan en forma de texto. En este caso, los métodos se pueden leer con un editor de texto estándar o con una herramienta de control de código fuente.
+- Método 4D (extensión *.c4d*): en este formato, los métodos se exportan codificados. Los nombres de los objetos están tokenizados (se transforman en referencias). Este formato se utiliza especialmente para el intercambio de métodos entre las aplicaciones 4D y los plug-ins en diferentes idiomas. Por el contrario, no es posible visualizarlos en un editor de texto.
+- Texto (extensión *.txt*): en este formato, los métodos se exportan en forma de texto. En este caso, los métodos se pueden leer con un editor de texto estándar o con una herramienta de control de código fuente.
 
 ## Propiedades del método proyecto
 
@@ -149,7 +149,7 @@ Para más información, consulte [Implementación del motor SQL de 4D](https://d
 
 #### Servidor REST
 
-_Esta opción está obsoleta. La llamada a código a través de llamadas REST sólo es compatible con [Funciones clase modelo de datos ORDA](../REST/ClassFunctions.md)._
+*Esta opción está obsoleta. La llamada a código a través de llamadas REST sólo es compatible con [Funciones clase modelo de datos ORDA](../REST/ClassFunctions.md).*
 
 #### Modificar de atributos globalmente
 

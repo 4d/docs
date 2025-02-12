@@ -1066,7 +1066,7 @@ Exemplo com a opção `dk reload if stamp changed`:
 
 The `.next()` function <!-- REF #EntityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
 
-If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
+Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja, [.getSelection()](#getselection) retorna Null), a função retorna um valor Null.
 
 Se não houver entidade seguinte válida na selecção da entidade (ou seja, se estiver na última entidade da selecção), a função devolve Null. Se a entidade seguinte tiver sido abandonada, a função devolve a entidade válida seguinte (e eventualmente Nula).
 
@@ -1109,7 +1109,7 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 
 The `.previous()` function <!-- REF #EntityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
 
-If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
+Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja, [.getSelection()](#getselection) retorna Null), a função retorna um valor Null.
 
 Se não houver nenhuma entidade anterior válida na seleção da entidade (ou seja, você está na primeira entidade da seleção), a função retorna Null. Se a entidade anterior foi abandonada, a função retorna a entidade válida anterior (e eventualmente Null).
 
@@ -1214,7 +1214,7 @@ The object returned by `.reload( )` contains the following properties:
 
 #### Descrição
 
-The `.save()` function <!-- REF #EntityClass.save().Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. na tabela relacionada para a dataClass Deve salvar este método depois de criar ou modificar uma entidade se quiser salvar as mudanças feitas nela.
+A função `.save()` <!-- REF #EntityClass.save().Summary -->salva as alterações feitas na entidade<!-- END REF --> na tabela relacionada à sua classe de dados. na tabela relacionada para a dataClass Deve salvar este método depois de criar ou modificar uma entidade se quiser salvar as mudanças feitas nela.
 
 The save operation is executed only if at least one entity attribute has been "touched" (see the [`.touched()`](#touched) and [`.touchedAttributes()`](#touchedattributes) functions). Senão a função não faz nada (o trigger não é ativado)
 

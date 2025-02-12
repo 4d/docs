@@ -130,7 +130,7 @@ Este mecanismo tem duas vantagens:
 
 ### List box array
 
-For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as _dataSource_ value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
+For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as *dataSource* value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
 
 #### Objectos suportados
 
@@ -311,7 +311,7 @@ Existem vários tipos de cálculos disponíveis. A tabela a seguir mostra quais 
 
 Os cálculos automáticos ignoram o estado mostrado/oculto das linhas de list box. Se você quiser restringir um cálculo para apenas linhas visíveis, você deve usar um cálculo personalizado.
 
-_Null_ no se tienen en cuenta para ningún cálculo.
+*Null* no se tienen en cuenta para ningún cálculo.
 
 Se a coluna contiver diferentes tipos de valores (coluna baseada em coleção, por exemplo):
 

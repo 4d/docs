@@ -105,7 +105,7 @@ Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na 
 
 :::info
 
-For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
+Para obter mais informações sobre o tipo de atributos, consulte o parágrafo [Atributos de armazenamento e de relação](dsMapping.md#storage-and-relation-attributes).
 
 :::
 

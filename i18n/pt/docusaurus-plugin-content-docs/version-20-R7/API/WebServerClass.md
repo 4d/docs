@@ -185,7 +185,7 @@ O <!-- REF #WebServerClass.HSTSEnabled.Summary -->estado do HTTP Strict Transpor
 
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
-The <!-- REF #WebServerClass.HSTSMaxAge.Summary -->maximum length of time (in seconds) that HSTS is active for each new client connection<!-- END REF -->. Esta informação é armazenada no lado do Cliente durante a duração especificada.
+O <!-- REF #WebServerClass.HSTSMaxAge.Summary -->tempo máximo (em segundos) que HSTS está ativo para cada nova conexão cliente<!-- END REF -->. Esta informação é armazenada no lado do Cliente durante a duração especificada.
 
 Valor padrão: 63072000 (2 anos).
 
@@ -360,7 +360,7 @@ O <!-- REF #WebServerClass.logRecording.Summary --> modo de registro do log das 
 
 <!-- REF #WebServerClass.maxConcurrentProcesses.Syntax -->**.maxConcurrentProcesses** : Number<!-- END REF -->
 
-The <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->maximum number of concurrent web processes supported by the web server<!-- END REF -->. Quando este número (menos um) é alcançado, 4D não cria outro processos e retorna o status HTTP 503 - Serviço indisponível para novas petições.
+O <!-- REF #WebServerClass.maxConcurrentProcesses.Summary --> número máximo de processos web simultâneos suportados pelo servidor<!-- END REF -->. Quando este número (menos um) é alcançado, 4D não cria outro processos e retorna o status HTTP 503 - Serviço indisponível para novas petições.
 
 Valores possíveis: 10 - 32000
 

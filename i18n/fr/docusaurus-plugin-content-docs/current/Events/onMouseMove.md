@@ -16,7 +16,7 @@ Cet événement est généré :
 
 Si l'événement est coché pour un objet uniquement, il est généré uniquement lorsque le curseur se trouve dans la zone graphique de l'objet.
 
-L'événement `On Mouse Move` met à jour les variables système _MouseX_ et _MouseY_.
+L'événement `On Mouse Move` met à jour les variables système *MouseX* et *MouseY*.
 
 Les objets rendus invisibles à l'aide de la commande `OBJECT SET VISIBLE` ou de la propriété [Visibility](FormObjects/properties_Display.md#visibility) ne génèrent pas cet événement.
 

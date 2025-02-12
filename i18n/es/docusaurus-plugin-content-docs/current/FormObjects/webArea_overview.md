@@ -5,7 +5,7 @@ title: Área Web
 
 Las áreas web pueden mostrar varios tipos de contenido web dentro de sus formularios: páginas HTML con contenidos estáticos o dinámicos, archivos, imágenes, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-Es posible crear varias áreas web en el mismo formulario. Note, however, that the use of web areas must follow [several rules](#web-area-rules).
+Es posible crear varias áreas web en el mismo formulario. Tenga en cuenta, sin embargo, que el uso de las áreas web debe seguir [varias reglas](#web-area-rules).
 
 Several dedicated [standard actions](#standard-actions), numerous [language commands](../category/web-area) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Se pueden utilizar variables específicas para intercambiar información entre el área y el entorno 4D.
 
@@ -15,7 +15,7 @@ Several dedicated [standard actions](#standard-actions), numerous [language comm
 
 Se pueden asociar dos variables específicas a cada área web:
 
-- [`URL`](properties_WebArea.md#url) --to control the URL displayed by the web area
+- [`URL`](properties_WebArea.md#url) --para controlar la URL mostrada por el área web
 - [`Progression`](properties_WebArea.md#progression) -- to control the loading percentage of the page displayed in the web area.
 
 > As of 4D v19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
@@ -32,7 +32,7 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 
 :::note Notas
 
-- This property is only available if the web area [uses the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
+- Esta propiedad sólo está disponible si el área web [utiliza el motor de renderizado web integrado](properties_WebArea.md#use-embedded-web-rendering-engine).
 - Por razones de seguridad, ya que permite ejecutar código 4D, esta opción solo debe habilitarse para páginas de confianza, como las páginas generadas por la aplicación.
 
 :::

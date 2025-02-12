@@ -43,8 +43,8 @@ Com esta sintaxe:
 Na sintaxe POSIX, utiliza-se geralmente `filesystem` pathnames com os comandos [`File`](../API/FileClass.md#file) e [`Folder`](../API/FolderClass.md#folder) , por exemplo:
 
 ```4d
-var $pathFile : 4D.File
-var $pathFolder : 4D.Folder
+var $pathFile : 4D. File
+var $pathFolder : 4D. Folder
 
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
@@ -115,7 +115,7 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //ficheiro criado na pasta de da
 As funções dos objetos pasta, tais como [`folder.file()`](../API/FolderClass.md#file) e [`folder.folder()`](../API/FolderClass.md#folder-1) esperam nomes de caminho POSIX relativos. Por exemplo:
 
 ```4d
-var $userImages : 4D.Folder
+var $userImages : 4D. Folder
 var $ok : Boolean
 
 //para referenciar uma pasta "Picture" dentro da pasta de documentos do utilizador

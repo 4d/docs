@@ -65,8 +65,8 @@ While building invoices, you want to insert page breaks except on the last page:
 ```4d
  $nbInvoices:=Records in selection([INVOICE])
  For($j;1;$nbInvoices)
-    ... //processing invoices
-    If($j#$nbInvoices) //insert page break except for last page
+    ... //procesando facturas
+    If($j#$nbInvoices) //insertar ruptura de página excepto para la última página
        WP Insert break($buildRange;wk page break;wk append;wk exclude from range)
     End if
  End for

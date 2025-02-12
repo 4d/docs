@@ -33,8 +33,8 @@ Ocasionalmente, pode não haver memória suficiente para criar um BLOB. Ou, quan
 
 Estes são geralmente o tipo de erro mais difícil de encontrar. Com exceção dos erros de digitação, todos os tipos de erros acima enumerados são, em certa medida, abrangidos pela expressão "erro de conceção ou de lógica". Utilice el [depurador ](debugger.md) para detectarlos. Por exemplo:
 
-- Puede ocurrir un _error de sintaxis_ cuando intenta utilizar una variable que aún no está inicializada.
-- Puede ocurrir un _error de entorno_ cuando intenta abrir un documento, porque el nombre de ese documento es recibido por una subrutina que no obtuvo el valor correcto como parámetro.
+- Puede ocurrir un *error de sintaxis* cuando intenta utilizar una variable que aún no está inicializada.
+- Puede ocurrir un *error de entorno* cuando intenta abrir un documento, porque el nombre de ese documento es recibido por una subrutina que no obtuvo el valor correcto como parámetro.
 
 Os erros de concepção ou lógicos incluem também situações como:
 

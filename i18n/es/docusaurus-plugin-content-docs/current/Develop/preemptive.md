@@ -7,9 +7,9 @@ El código 4D compilado puede ejecutarse en **procesos apropiativos**. Gracias a
 
 ## ¿Qué es un proceso apropiativo?
 
-Cuando se ejecuta en modo _apropiativo_, un proceso se dedica a una CPU. La gestión de procesos se delega entonces en el sistema, que puede asignar cada CPU por separado en una máquina multinúcleo.
+Cuando se ejecuta en modo *apropiativo*, un proceso se dedica a una CPU. La gestión de procesos se delega entonces en el sistema, que puede asignar cada CPU por separado en una máquina multinúcleo.
 
-Cuando se ejecuta en modo _cooperativo_, todos los procesos son gestionados por el hilo padre de la aplicación y comparten la misma CPU, incluso en una máquina multinúcleo.
+Cuando se ejecuta en modo *cooperativo*, todos los procesos son gestionados por el hilo padre de la aplicación y comparten la misma CPU, incluso en una máquina multinúcleo.
 
 Como resultado, en modo apropiativo, se mejora el rendimiento general de la aplicación, especialmente en máquinas de múltiples núcleos, ya que varios procesos (hilos) pueden ejecutarse realmente de forma simultánea. Sin embargo, las ganancias reales dependen de las operaciones que se ejecuten. A cambio, dado que cada hilo es independiente de los demás en modo apropiativo y no es administrado directamente por la aplicación, existen restricciones específicas aplicadas al código que se desea que cumpla con el uso apropiativo. Además, la ejecución apropiativa sólo está disponible en determinados contextos específicos.
 
@@ -88,7 +88,7 @@ La ejecución en modo apropiativo solo está disponible en modo compilado.
 
 :::
 
-En modo compilado, cuando se inicia un proceso creado por los comandos `New process` o `CALL WORKER`, 4D lee la propiedad apropiativa del método del proceso (también llamado método _padre_) y ejecuta el proceso en modo apropiativo o cooperativo, dependiendo de esta propiedad:
+En modo compilado, cuando se inicia un proceso creado por los comandos `New process` o `CALL WORKER`, 4D lee la propiedad apropiativa del método del proceso (también llamado método *padre*) y ejecuta el proceso en modo apropiativo o cooperativo, dependiendo de esta propiedad:
 
 - Si el método del proceso es hilo seguro (validado durante la compilación), el proceso se ejecuta en un hilo apropiativo.
 - Si el método del proceso no es hilo seguro, el proceso se ejecuta en un hilo cooperativo.

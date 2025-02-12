@@ -281,7 +281,7 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 #### Descrição
 
-A função `.delete()` <!-- REF #FileClass.delete().Summary -->apaga o arquivo<!-- END REF -->.
+A função `.delete()` <!-- REF #FileClass.delete().Summary -->A função `.delete()`<!-- END REF -->.
 
 Se o arquivo não existir no disco, a função não faz nada (não é gerado nenhum erro).
 
@@ -292,7 +292,7 @@ Se o ficheiro estiver atualmente aberto, o resultado depende do sistema operativ
 
 :::caution
 
-`.delete()` pode apagar qualquer ficheiro num disco. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete()` deve ser utilizado com extrema cautela. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
+`.delete()` pode apagar qualquer ficheiro num disco. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete()` pode apagar qualquer ficheiro num disco. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
 
 :::
 
@@ -467,15 +467,15 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | 18 R6   | Adicionado |
 </details>
 
-<!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
+<!--REF #FileClass.open().Syntax -->$tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs") If($tempo.exists) $tempo.delete() ALERT("User preference file deleted.") End if<!-- END REF -->
 
 
 <!--REF #FileClass.open().Params -->
-| Parâmetro  | Tipo                             |    | Descrição                                          |
-| ---------- | -------------------------------- | -- | -------------------------------------------------- |
-| mode       | Text                             | -> | Modo de abertura: "read", "write", "append"        |
-| options    | Object                           | -> | Opções de abertura                                 |
-| Resultados | [4D.FileHandle](FileHandleClass) | <- | Novo objeto File handle|<!-- END REF -->
+| Parâmetro  | Tipo                              |    | Descrição                                          |
+| ---------- | --------------------------------- | -- | -------------------------------------------------- |
+| mode       | Text                              | -> | Modo de abertura: "read", "write", "append"        |
+| options    | Object                            | -> | Opções de abertura                                 |
+| Resultados | [4D. FileHandle](FileHandleClass) | <- | Novo objeto File handle|<!-- END REF -->
 
 |
 

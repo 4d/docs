@@ -503,7 +503,7 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 
 La página de Licencias y certificados puede utilizarse para:
 
-* designate the license number(s) that you want to integrate into your single-user [stand-alone application](#application-page),
+* designe el número o los números de licencia que desea integrar en su [aplicación ejecutable monopuesto](#application-page),
 * firmar la aplicación mediante un certificado en macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)

@@ -7,7 +7,7 @@ Frequentemente será preciso passar dados para seus métodos. Isso é facilmente
 
 ## Visão Geral
 
-Os **parâmetros** (ou **argumentos**) são partes de dados que um método ou uma função de classe precisa para executar sua tarefa. Os termos _parâmetro_ e _argumento_ são usados de forma intercambiável ao longo deste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a cadeia de caracteres "Hello" é um argumento para o comando interno `ALERT`:
+Os **parâmetros** (ou **argumentos**) são partes de dados que um método ou uma função de classe precisa para executar sua tarefa. Os termos *parâmetro* e *argumento* são usados de forma intercambiável ao longo deste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a cadeia de caracteres "Hello" é um argumento para o comando interno `ALERT`:
 
 ```4d
 ALERT("Hello")
@@ -35,7 +35,7 @@ EXECUTE METHOD IN SUBFORM("Cal2"; "SetCalendarDate";*;!05/05/20!)
 //no contexto de um subformulário
 ```
 
-Os dados também podem ser **retornados** a partir de métodos e funções de classe. Por exemplo, a linha a seguir é uma instrução que usa o comando interno, `Length`, para retornar o comprimento de uma cadeia de caracteres. A instrução coloca o valor retornado por `Length` em uma variável chamada _MyLength_. Esta é a instrução:
+Os dados também podem ser **retornados** a partir de métodos e funções de classe. Por exemplo, a linha a seguir é uma instrução que usa o comando interno, `Length`, para retornar o comprimento de uma cadeia de caracteres. A instrução coloca o valor retornado por `Length` em uma variável chamada *MyLength*. Esta é a instrução:
 
 ```4d
 MyLength:=Length("How did I get here?")
@@ -170,7 +170,7 @@ Function square($x : Integer) -> $result : Integer
 
 :::note
 
-Internally, `return x` executes `myReturnValue:=x`, and returns to the caller. Se `return` for usado sem uma expressão, a função ou o método retornará um valor nulo do tipo de retorno declarado (se houver), caso contrário, _indefinido_.
+Internally, `return x` executes `myReturnValue:=x`, and returns to the caller. Se `return` for usado sem uma expressão, a função ou o método retornará um valor nulo do tipo de retorno declarado (se houver), caso contrário, *indefinido*.
 
 :::
 
@@ -383,7 +383,7 @@ Com variáveis com nome, qualquer parâmetro pode ser opcional. No exemplo acima
 
 ## Parâmetros opcionais
 
-No manual Linguagem de 4D, os caracteres { } (chaves) indicam parâmetros opcionais. Por ejemplo, `ALERT (message{; okButtonTitle})` significa que el parámetro _okButtonTitle_ puede omitirse al llamar al comando. Pode fazer a chamada de duas maneiras:
+No manual Linguagem de 4D, os caracteres { } (chaves) indicam parâmetros opcionais. Por ejemplo, `ALERT (message{; okButtonTitle})` significa que el parámetro *okButtonTitle* puede omitirse al llamar al comando. Pode fazer a chamada de duas maneiras:
 
 ```4d
 ALERT("Are you sure?";"Yes I am") //2 parameters ALERT("Time is over") //1 parameter
@@ -496,7 +496,7 @@ This second technique of returning a value by a subroutine is called "using a fu
 
 Deve prestar atenção ao fato de que os tipos de dados Objeto e Coleção só podem ser manejados através de uma referência (ou seja, um  ponteiro interno\*).
 
-Por isso, quando usar esses tipos de dados como parâmetros, `$param, $return...` não contém _valores_ mas sim _referências_. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$param, $return...` parameters do not need to be dereferenced in the subroutine.
+Por isso, quando usar esses tipos de dados como parâmetros, `$param, $return...` não contém *valores* mas sim *referências*. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$param, $return...` parameters do not need to be dereferenced in the subroutine.
 
 Por exemplo, considere o método `CreatePerson` que cria um objeto e o envia como parâmetro:
 

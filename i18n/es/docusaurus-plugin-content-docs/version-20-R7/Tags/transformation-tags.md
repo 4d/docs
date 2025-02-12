@@ -69,7 +69,7 @@ Para asegurar la correcta evaluación de las expresiones procesadas a través de
 
 La etiqueta `<!--#4DBASE -->` designa el directorio de trabajo que utilizará la etiqueta `<!--#4DINCLUDE-->`.
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--#4DBASE -->`, if any. If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
+Cuando se llama en una página Web, la etiqueta `<!--#4DBASE -->` modifica todas las llamadas posteriores a `<!--#4DINCLUDE-->` en esta página, hasta la siguiente `<!--#4DBASE -->`, si la hay. If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
 
 El parámetro *folderPath* debe contener un nombre de ruta relativo a la página actual y debe terminar con una barra (`/`). La carpeta designada debe estar ubicada dentro de la carpeta Web.
 

@@ -36,7 +36,7 @@ Vous pouvez modifier la taille du cache dans la zone **Taille du cache des pages
 
 | Peut être configuré via | Nom                 | Commentaires                                                                                                                                                       |
 | ----------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| objet webServer         | `certificateFolder` | Propriété Texte, mais peut être un objet [`4D.Folder`](API/FolderClass.md) lorsque utilisée avec le paramètre _settings_ de la fonction `start()`. |
+| objet webServer         | `certificateFolder` | Propriété Texte, mais peut être un objet [`4D.Folder`](API/FolderClass.md) lorsque utilisée avec le paramètre *settings* de la fonction `start()`. |
 
 Dossier qui contient les fichiers de certificat TLS pour le serveur web.
 
@@ -44,7 +44,7 @@ Par défaut, avec 4D ou 4D Server, ces fichiers doivent être placés à côté 
 
 Avec 4D à distance, ces fichiers doivent être placés dans le dossier des ressources locales de la base de données sur la machine distante (voir le paragraphe `Dossier base 4D Client` de la commande `Dossier 4D`). Vous devez copier ces fichiers manuellement sur la machine distante.
 
-> Les fichiers de certificat TLS sont _key.pem_ (document contenant la clé de chiffrement privée) et _cert.pem_ (document contenant le certificat).
+> Les fichiers de certificat TLS sont *key.pem* (document contenant la clé de chiffrement privée) et *cert.pem* (document contenant le certificat).
 
 ## Jeu de caractères
 
@@ -119,7 +119,7 @@ Séparez chaque méthode par un ";" (ex : "post;get"). Si Méthodes est vide, nu
 | objet webServer         | `debugLog`      | number       |
 | `WEB SET OPTION`        | `Web debug log` | number       |
 
-Statut du fichier journal des requêtes HTTP du serveur web ([_HTTPDebugLog_nn.txt_](../Debugging/debugLogFiles.md#httpdebuglogtxt), stocké dans le dossier "Logs" de l'application - nn est le numéro de fichier). Il est utile pour déboguer les problèmes liés au serveur Web. Il enregistre chaque requête et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent également être enregistrées.
+Statut du fichier journal des requêtes HTTP du serveur web ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stocké dans le dossier "Logs" de l'application - nn est le numéro de fichier). Il est utile pour déboguer les problèmes liés au serveur Web. Il enregistre chaque requête et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent également être enregistrées.
 
 | Valeur | Constante                      | Description                                                                                                                     |
 | ------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -360,7 +360,7 @@ Statut de la gestion des anciennes sessions pour le serveur Web 4D (obsolète).
 | `WEB SET OPTION`                 | `Web log recording`                                                       |              |
 | Boîte de dialogue des Propriétés | [Page Journal (format)](../settings/web.md#log-format) | Menu popup   |
 
-Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier _logweb.txt_ et définit son format. Par défaut, les requêtes ne sont pas enregistrées (0/Pas de journal). Lorsqu'il est activé, le fichier _logweb.txt_ est automatiquement placé dans le dossier Logs.
+Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier *logweb.txt* et définit son format. Par défaut, les requêtes ne sont pas enregistrées (0/Pas de journal). Lorsqu'il est activé, le fichier *logweb.txt* est automatiquement placé dans le dossier Logs.
 
 Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs possibles :
 
@@ -507,7 +507,7 @@ Dans ce cas, les robots n'auront accès à aucune partie du site.
 
 | Peut être configuré via          | Nom                                                                               | Commentaires                                                                                                                                      |
 | -------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objet webServer                  | [`rootFolder`](API/WebServerClass.md#rootfolder)                                  | Propriété Texte, mais peut être un objet [`4D.Folder`](API/FolderClass.md) lorsque utilisée avec le paramètre _settings_ de la fonction `start()` |
+| objet webServer                  | [`rootFolder`](API/WebServerClass.md#rootfolder)                                  | Propriété Texte, mais peut être un objet [`4D.Folder`](API/FolderClass.md) lorsque utilisée avec le paramètre *settings* de la fonction `start()` |
 | `WEB SET ROOT FOLDER`            |                                                                                   |                                                                                                                                                   |
 | Boîte de dialogue des Propriétés | [Page Configuration/Racine HTML par défaut](../settings/web.md#default-html-root) |                                                                                                                                                   |
 
@@ -602,7 +602,7 @@ Les paramètres suivants sont toujours pris en charge mais reposent sur des fonc
 
 #### Autoriser l'accès aux bases de données par le biais des URL 4DSYNC
 
-Cette option contrôle le support des requêtes de synchronisation HTTP contenant des URLs dépréciées _/4DSYNC_.
+Cette option contrôle le support des requêtes de synchronisation HTTP contenant des URLs dépréciées */4DSYNC*.
 
 #### Validation de l'adresse IP de la session
 

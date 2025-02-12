@@ -112,7 +112,7 @@ The following table lists all supported patterns for date and time formats.
 
 ### `L` (monopuesto) vs `M`
 
-In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "_rendez-vous_ in January".
+In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
 
 ### `e` vs `c`
 
@@ -130,7 +130,7 @@ In general, when the number of letters in the formatting string is higher than t
 
 Some parts of the outputs, such as "midnight" or "Tuesday" are localized, according to regional settings.
 
-Por ejemplo, para la hora `13:25:34`, "B" aparecerá _in the afternoon_ en un sistema estadounidense, y _après-midi_ en un sistema francés.
+Por ejemplo, para la hora `13:25:34`, "B" aparecerá *in the afternoon* en un sistema estadounidense, y *après-midi* en un sistema francés.
 
 ### Letras extras
 

@@ -58,7 +58,7 @@ Dado o seguinte código:
  End for each
 ```
 
-Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in _$sel_ from the second iteration of the loop.
+Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in *$sel* from the second iteration of the loop.
 
 ### Reutilizando a propriedade `context`
 
@@ -133,7 +133,7 @@ Por motivos de otimização, os dados solicitados do servidor por meio do ORDA s
 
 Os dados contidos no cache são considerados expirados quando o tempo limite é atingido. Qualquer acesso a dados expirados enviará um pedido ao servidor. Os dados expirados permanecem na cache até que seja necessário espaço.
 
-You can force entity selection data in the ORDA cache to expire at any moment by using the [`refresh()`](../API/EntitySelectionClass.md#refresh) function.
+Você pode forçar os dados de seleção de entidades no cache ORDA a expirar a qualquer momento usando a função [`refresh()`](../API/EntitySelectionClass.md#refresh).
 
 Por padrão, o cache ORDA é tratado de forma transparente pelo 4D. No entanto, você pode controlar seu conteúdo usando as seguintes funções da classe ORDA:
 

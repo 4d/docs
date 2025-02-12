@@ -9,7 +9,7 @@ Las horas están en formato de 24 horas.
 
 Un valor de tiempo puede ser tratado como un número. El número devuelto de una hora es el número de segundos desde la medianoche (00:00:00) que representa esa hora.
 
-**Nota:** en el manual de _referencia del lenguaje 4D_, los parámetros de tipo Hora en las descripciones de los comandos se llaman Hora, excepto cuando se indique lo contrario.
+**Nota:** en el manual de *referencia del lenguaje 4D*, los parámetros de tipo Hora en las descripciones de los comandos se llaman Hora, excepto cuando se indique lo contrario.
 
 ## Constantes literales de tipo hora
 

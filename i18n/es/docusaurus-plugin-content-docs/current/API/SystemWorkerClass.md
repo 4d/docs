@@ -344,7 +344,7 @@ The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Su
 
 #### Descripción
 
-The `.dataType` property <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. Valores posibles: "text" o "blob".
+La propiedad `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contiene el tipo de contenido del cuerpo de la respuesta<!-- END REF -->. Valores posibles: "text" o "blob".
 
 Esta propiedad es de **solo lectura**.
 
@@ -358,7 +358,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. Esta propiedad sólo está disponible si el [`dataType`](#datatype) es "text".
+La propiedad `.encoding` <!-- REF #SystemWorkerClass.encoding.Summary -->contiene la codificación del contenido del cuerpo de la respuesta<!-- END REF -->. Esta propiedad sólo está disponible si el [`dataType`](#datatype) es "text".
 
 Esta propiedad es de **solo lectura**.
 
@@ -372,7 +372,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.errors` property <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s) if any<!-- END REF -->.
+La propiedad `.errors` <!-- REF #SystemWorkerClass.errors.Summary -->contiene una colección de errores 4D en caso de error(es) de ejecución si los hubiera<!-- END REF -->.
 
 Cada elemento de la colección es un objeto con las siguientes propiedades:
 
@@ -394,7 +394,7 @@ If no error occured, `.errors` is undefined.
 
 #### Descripción
 
-The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
+La propiedad `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contiene el código de salida devuelto por el proceso externo<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
 
 Esta propiedad es de **solo lectura**.
 
@@ -422,7 +422,7 @@ Esta propiedad está en **lectura-escritura**.
 
 #### Descripción
 
-The `.pid` property <!-- REF #SystemWorkerClass.pid.Summary -->contains the process unique identifier of the external process at the system level<!-- END REF -->.
+La propiedad `.pid` <!-- REF #SystemWorkerClass.pid.Summary -->contiene el identificador único del proceso externo a nivel de sistema<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -449,7 +449,7 @@ The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary 
 
 The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
 
-You can use the `.dataType` property of the [options object](#options-object) to make response body return Blob values.
+Puede utilizar la propiedad `.dataType` del objeto [options](#options-object) para hacer que el cuerpo de la respuesta devuelva valores Blob.
 
 <!-- END REF -->
 
@@ -463,7 +463,7 @@ You can use the `.dataType` property of the [options object](#options-object) to
 
 The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
 
-The type of the message is defined according to the [`dataType`](#datatype) attribute.
+El tipo del mensaje se define en función del atributo [`dataType`](#datatype).
 
 Esta propiedad es de **solo lectura**.
 
@@ -497,7 +497,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 #### Descripción
 
-The `.terminate()` function <!-- REF #SystemWorkerClass.terminate().Summary -->forces the `SystemWorker` to terminate its execution<!-- END REF -->.
+La función `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->fuerza al `SystemWorker` a terminar su ejecución<!-- END REF -->.
 
 Esta función envía la instrucción de terminar y devolver el control al script en ejecución.
 
@@ -511,7 +511,7 @@ Esta función envía la instrucción de terminar y devolver el control al script
 
 #### Descripción
 
-The `.terminated` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
+La propiedad `.terminated` <!-- REF #SystemWorkerClass.terminated.Summary -->contiene **true** si el proceso externo está terminado<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 

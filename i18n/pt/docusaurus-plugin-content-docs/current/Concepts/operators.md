@@ -242,7 +242,7 @@ Nesse caso, `$phone` armazenará um número de telefone ou a cadeia de caractere
 
 #### Exemplo 2
 
-Dada uma tabela chamada Person com um campo _name_, bem como um campo _maiden name_ para mulheres casadas.
+Dada uma tabela chamada Person com um campo *name*, bem como um campo *maiden name* para mulheres casadas.
 
 O exemplo seguinte verifica se existe um nome de solteira e armazena-o numa variável; caso contrário, armazena simplesmente o nome da pessoa:
 
@@ -341,7 +341,7 @@ Todos os outros valores são considerados **verdadeiros**, inclusive:
 
 - 0 - zero numérico (inteiro ou não)
 
-Em 4D, a avaliação **verdadeira** e **falsa** reflete a **utilização** de um valor, o que significa que um valor verdadeiro existe e pode ser processado pelo código sem gerar erros ou resultados inesperados. A lógica por trás disso é fornecer uma maneira conveniente de lidar com valores _indefinidos_ e _nulos_ em objetos e coleções, de modo que um número reduzido de instruções [If…Else] (flow-control.md#ifelseend-if) seja necessário para evitar erros de tempo de execução.
+Em 4D, a avaliação **verdadeira** e **falsa** reflete a **utilização** de um valor, o que significa que um valor verdadeiro existe e pode ser processado pelo código sem gerar erros ou resultados inesperados. A lógica por trás disso é fornecer uma maneira conveniente de lidar com valores *indefinidos* e *nulos* em objetos e coleções, de modo que um número reduzido de instruções [If…Else] (flow-control.md#ifelseend-if) seja necessário para evitar erros de tempo de execução.
 
 Por exemplo, quando você usa um [operador OR de curto-circuito] (#short-circuit-or-operator-):
 
@@ -349,7 +349,7 @@ Por exemplo, quando você usa um [operador OR de curto-circuito] (#short-circuit
 $value:=$object.value || $defaultValue
 ```
 
-... você obtém o valor padrão sempre que _$object_ não contém a propriedade `value` OU quando ela é _nula_. Assim, este operador verifica a existência ou a possibilidade de utilização do valor em vez de um valor específico. Note-se que, como o valor numérico 0 existe e é utilizável, não é tratado de forma especial, pelo que é truthy\*\*.
+... você obtém o valor padrão sempre que *$object* não contém a propriedade `value` OU quando ela é *nula*. Assim, este operador verifica a existência ou a possibilidade de utilização do valor em vez de um valor específico. Note-se que, como o valor numérico 0 existe e é utilizável, não é tratado de forma especial, pelo que é truthy\*\*.
 
 Com relação aos valores que representam coleções, objetos ou cadeias de caracteres, os valores "vazios" são considerados **falsos**. É útil quando se pretende atribuir um valor por defeito sempre que se encontra um valor vazio.
 

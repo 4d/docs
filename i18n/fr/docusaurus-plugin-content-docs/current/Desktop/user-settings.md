@@ -38,7 +38,7 @@ Vous pouvez accéder à ces boîtes de dialogue en utilisant le menu **Développ
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-Vous pouvez également accéder à ces boîtes de dialogue à l'aide de la commande [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) avec le sélecteur _settingsType_ approprié.
+Vous pouvez également accéder à ces boîtes de dialogue à l'aide de la commande [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) avec le sélecteur *settingsType* approprié.
 
 La boîte de dialogue Propriétés de structure est identique à la boîte de dialogue Propriétés standard et permet d'accéder à toutes ses propriétés (qui peuvent être écrasées par des propriétés utilisateur).
 
@@ -73,7 +73,7 @@ Le tableau suivant répertorie les pages de paramètres des boîtes de dialogue 
 | [Page Sécurité](../settings/security.md)                                                             | N/a                                             | N/a                                                         |
 | [Page Compatibilité](../settings/compatibility.md)                                                   | N/a                                             | N/a                                                         |
 
-Lorsque vous modifiez les paramètres dans cette boîte de dialogue, ils sont automatiquement enregistrés dans le fichier correspondant _settings.4DSettings_ (voir ci-dessous) ou le fichier _Backup.4DSettings_ (consultez la page [Paramètres de sauvegarde](../Backup/settings.md) pour plus d'informations).
+Lorsque vous modifiez les paramètres dans cette boîte de dialogue, ils sont automatiquement enregistrés dans le fichier correspondant *settings.4DSettings* (voir ci-dessous) ou le fichier *Backup.4DSettings* (consultez la page [Paramètres de sauvegarde](../Backup/settings.md) pour plus d'informations).
 
 ## `SET DATABASE PARAMETER` et propriétés utilisateur
 
@@ -93,7 +93,7 @@ Le fichier de propriété utilisateur standard est automatiquement créé et pla
 
 [`ProjectFolder/Settings/settings.4DSettings`](../Project/architecture.md#settings-user)
 
-... où _ProjectFolder_ est le nom du dossier contenant le fichier de structure du projet.
+... où *ProjectFolder* est le nom du dossier contenant le fichier de structure du projet.
 
 Dans les applications fusionnées, le fichier de propriétés utilisateur est placé à l'emplacement suivant :
 
@@ -106,7 +106,7 @@ Le fichier de propriétés utilisateur lié au fichier de données est automatiq
 
 [`Data/Settings/settings.4DSettings`](../Project/architecture.md#settings-user-data)
 
-... où _Data_ est le nom du dossier contenant le fichier de données courant de l'application.
+... où *Data* est le nom du dossier contenant le fichier de données courant de l'application.
 
 > Lorsque le fichier de données est situé au même niveau que le fichier de structure du projet, les fichiers de propriétés utilisateur basés sur la structure et sur les données partagent le même emplacement et le même fichier. Propriétés utilisateur
 
@@ -122,8 +122,8 @@ Les propriétés peuvent être stockées à trois niveaux. Chaque paramètre dé
 
 | **Niveau de priorité**                | **Nom**                                                                                                                   | **Emplacement**                                                                                                                                                                                                        | **Commentaires**                                                                                                                                                                                |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 3 (le plus faible) | Paramètres de structure (ou Paramètres lorsque la fonction "Paramètres utilisateur" n'est pas activée) | Fichier _**settings.4DSettings**_ dans le dossier Sources (bases projet) ou dans le dossier Settings au même niveau que le fichier de structure (bases binaires) | Emplacement unique lorsque les paramètres utilisateur ne sont pas activés. Appliqué à toutes les copies de l'application.                                       |
-| 2                                     | Propriétés utilisateur (tous les fichiers de données)                                                  | Fichier _**settings.4DSettings**_ dans le dossier Settings au même niveau que le dossier Project                                                                                                       | Remplace les propriétés de structure. Stocké dans le package de l'application.                                                                                  |
-| 1 (le plus élevé)  | Propriétés utilisateur (fichier de données courant)                                                    | Fichier _**settings.4DSettings**_ dans le dossier Settings au même niveau que le fichier de données                                                                                                    | Remplace les propriétés de structure et les propriétés utilisateur. S'applique uniquement lorsque le fichier de données associé est utilisé avec l'application. |
+| 3 (le plus faible) | Paramètres de structure (ou Paramètres lorsque la fonction "Paramètres utilisateur" n'est pas activée) | Fichier ***settings.4DSettings*** dans le dossier Sources (bases projet) ou dans le dossier Settings au même niveau que le fichier de structure (bases binaires) | Emplacement unique lorsque les paramètres utilisateur ne sont pas activés. Appliqué à toutes les copies de l'application.                                       |
+| 2                                     | Propriétés utilisateur (tous les fichiers de données)                                                  | Fichier ***settings.4DSettings*** dans le dossier Settings au même niveau que le dossier Project                                                                                                       | Remplace les propriétés de structure. Stocké dans le package de l'application.                                                                                  |
+| 1 (le plus élevé)  | Propriétés utilisateur (fichier de données courant)                                                    | Fichier ***settings.4DSettings*** dans le dossier Settings au même niveau que le fichier de données                                                                                                    | Remplace les propriétés de structure et les propriétés utilisateur. S'applique uniquement lorsque le fichier de données associé est utilisé avec l'application. |
 
 A noter que les fichiers de propriétés utilisateur ne contiennent qu'un sous-ensemble de paramètres pertinents, tandis que le fichier de structure contient tous les paramètres personnalisés, y compris les paramètres de bas niveau.

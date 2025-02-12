@@ -47,7 +47,7 @@ Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no l
 You must declare these parameters:
 
 ```4d
-// On Web Connection database method
+// Método banco de dados On Web Connection 
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text)

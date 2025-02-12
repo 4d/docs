@@ -138,7 +138,7 @@ Dans cette documentation, le type de données "Mixte" est utilisé pour désigne
 - collection
 - image(\*)
 
-_(\*) le type Image n'est pas supporté par des méthodes statistiques telles que dans_ `entitySelection.max()`.
+*(\*) le type Image n'est pas supporté par des méthodes statistiques telles que dans* `entitySelection.max()`.
 
 ## Verrouillage optimiste
 
@@ -156,7 +156,7 @@ La possibilité de lancer une ou plusieurs [actions](#actions) sur des [ressourc
 
 Voir [Attribut](#attribute).
 
-> Les _attributs_ et les _propriétés_ sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+> Les *attributs* et les *propriétés* sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## PropertyPath
 

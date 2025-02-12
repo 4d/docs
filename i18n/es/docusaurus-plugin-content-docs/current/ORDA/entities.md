@@ -131,7 +131,7 @@ Puede acceder a los datos a través del objeto(s) relacionado(s):
  $EntitySel:=ds.Company.all().first().companyProjects //obtener la selección de proyectos de la empresa
 ```
 
-Observe que tanto _theClient_ como _companyProjects_ en el ejemplo anterior son atributos de relación primaria y representan una relación directa entre las dos dataclasses. Sin embargo, los atributos de relación también pueden crearse a partir de rutas vía las relaciones de varios niveles, incluidas las referencias circulares. Por ejemplo, consideremos la siguiente estructura:
+Observe que tanto *theClient* como *companyProjects* en el ejemplo anterior son atributos de relación primaria y representan una relación directa entre las dos dataclasses. Sin embargo, los atributos de relación también pueden crearse a partir de rutas vía las relaciones de varios niveles, incluidas las referencias circulares. Por ejemplo, consideremos la siguiente estructura:
 
 ![](../assets/en/ORDA/entityAttributes2.png)
 
@@ -254,7 +254,7 @@ Puede crear y utilizar simultáneamente tantas selecciones de entidades diferent
 
 :::note
 
-Cuando se eliminan entidades, sus referencias permanecen en la selección de entidades con un valor _undefined_. En este caso, puede llamar a la función [`.clean()`](API/EntitySelectionClass.md#clean) para obtener una nueva selección de entidades pero sin las referencias de entidades eliminadas.
+Cuando se eliminan entidades, sus referencias permanecen en la selección de entidades con un valor *undefined*. En este caso, puede llamar a la función [`.clean()`](API/EntitySelectionClass.md#clean) para obtener una nueva selección de entidades pero sin las referencias de entidades eliminadas.
 
 :::
 
@@ -284,7 +284,7 @@ La naturaleza **compartible** o **modificable** de una entity selection se defin
 Una nueva entity selection es **compartible** en los siguientes casos:
 
 - la nueva entity selection resulta de una función de clase ORDA aplicada a una dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
-- la nueva entity selection se basa en una relación [entity._attributeName_](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando _attributeName_ es un atributo relacionado uno a muchos pero la entidad no pertenece a una entity selection.
+- la nueva entity selection se basa en una relación [entity.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado uno a muchos pero la entidad no pertenece a una entity selection.
 - la nueva entity selection se copia explícitamente como compartible con [entitySelection.copy()](API/EntitySelectionClass.md#copy) o `OB Copy` (es decir, con la opción `ck shared`).
 
 Ejemplo:
@@ -312,8 +312,8 @@ Una nueva entity selection **hereda** de la naturaleza de la entity selection or
 
 - la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - la nueva entity selection se basa en una relación:
-  - [entity._attributeName_](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando _attributeName_ es un atributo relacionado uno a muchos y la entidad pertenece a una entity selection (misma naturaleza que [.getSelection()](API/EntityClass.md#getselection)),
-  - [entitySelection._attributeName_](API/EntitySelectionClass.md#attributename) (por ejemplo, "employees.employer") cuando _attributeName_ es un atributo relacionado (misma naturaleza que la entity selection),
+  - [entity.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado uno a muchos y la entidad pertenece a una entity selection (misma naturaleza que [.getSelection()](API/EntityClass.md#getselection)),
+  - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (por ejemplo, "employees.employer") cuando *attributeName* es un atributo relacionado (misma naturaleza que la entity selection),
   - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
 
 Ejemplos:
@@ -412,7 +412,7 @@ $locals:=ds.Person.query("city = :1"; "San Jose") //selección de entidades de p
 $localEmails:=$locals.emailAddress //colección de direcciones de correo electrónico (cadenas)
 ```
 
-Este código devuelve en _$localEmails_ una colección de direcciones de correo electrónico como cadenas.
+Este código devuelve en *$localEmails* una colección de direcciones de correo electrónico como cadenas.
 
 ### Selecciones de entidades y atributos de relación
 
@@ -428,7 +428,7 @@ $myInvoices:=$myParts.invoiceItems.invoice
   //Todas las facturas con al menos una partida relacionada con una pieza en $myParts
 ```
 
-La última línea devolverá en _$myInvoices_ una selección de entidades de todas las facturas que tengan al menos una partida de factura relacionada con una parte en la selección de entidades myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades y no se devuelve ninguna entidad, el resultado es una selección de entidades vacía, no nula.
+La última línea devolverá en *$myInvoices* una selección de entidades de todas las facturas que tengan al menos una partida de factura relacionada con una parte en la selección de entidades myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades y no se devuelve ninguna entidad, el resultado es una selección de entidades vacía, no nula.
 
 ## Restringir la selección de entidades
 
@@ -525,8 +525,8 @@ Los filtros no se aplican a las selecciones heredadas de registros manejadas a t
 | [entitySelection.minus()](../API/EntitySelectionClass.md#minus)       | Sólo se devuelven las entidades que coinciden con el filtro                                                                                                                                                                                                                                                                                                                                 |
 | [dataclass.query()](../API/DataClassClass.md#query)                   |                                                                                                                                                                                                                                                                                                                                                                                             |
 | [entitySelection.query()](../API/EntitySelectionClass.md#query)       |                                                                                                                                                                                                                                                                                                                                                                                             |
-| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | Filtro aplicado si _attributeName_ es una entidad relacionada o entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                                                                                            |
-| [entity.attributeName](../API/EntityClass.md#attributename)                              | Filtro aplicado si _attributeName_ corresponde a entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                                                                                                           |
+| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | Filtro aplicado si *attributeName* es una entidad relacionada o entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                                                                                            |
+| [entity.attributeName](../API/EntityClass.md#attributename)                              | Filtro aplicado si *attributeName* corresponde a entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                                                                                                           |
 | [Create entity selection](../commands/create-entity-selection.md)                                        |                                                                                                                                                                                                                                                                                                                                                                                             |
 
 Otras funciones ORDA que acceden a los datos no activan directamente el filtro, pero sin embargo se benefician de él. Por ejemplo, la función [`entity.next()`](../API/EntityClass.md#next) devolverá la siguiente entidad de la selección de entidades ya filtrada. Por otro lado, si la selección de entidades no está filtrada, [`entity.next()`](../API/EntityClass.md#next) funcionará en entidades no filtradas.
@@ -550,7 +550,7 @@ ORDA le ofrece dos modos de bloqueo de entidad:
 
 Este mecanismo automático se basa en el concepto de "bloqueo optimista", especialmente adaptado a los problemas de las aplicaciones web. Este concepto se caracteriza por los siguientes principios de funcionamiento:
 
-- Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" _a priori_ de las entidades.
+- Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" *a priori* de las entidades.
 - Cada entidad tiene un sello de bloqueo interno que se incrementa cada vez que se guarda.
 - Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
   - Cuando los valores coinciden, se guarda la entidad y se incrementa el valor del marcador interno.

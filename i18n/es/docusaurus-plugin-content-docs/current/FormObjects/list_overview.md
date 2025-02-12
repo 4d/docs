@@ -16,13 +16,13 @@ El contenido de un objeto formulario lista jerárquica se puede inicializar de u
 - Asociar una [lista de opciones](properties_DataSource.md#choice-list) existente al objeto. La lista de elección debe haber sido definida en el editor de listas en modo Diseño.
 - Asigne directamente una referencia de lista jerárquica a la [variable o expresión](properties_Object.md#variable-or-expression) asociada al objeto formulario.
 
-En ambos casos, se gestiona una lista jerárquica en tiempo de ejecución a través de su referencia _ListRef_, utilizando los comandos [lista jerárquica](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) del lenguaje 4D.
+En ambos casos, se gestiona una lista jerárquica en tiempo de ejecución a través de su referencia *ListRef*, utilizando los comandos [lista jerárquica](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) del lenguaje 4D.
 
 ## RefList y nombre de objeto
 
 Una lista jerárquica es a la vez un **objeto de lenguaje** existente en memoria y un **objeto de formulario**.
 
-El **objeto de lenguaje** está referenciado por un ID interno único de tipo Entero largo, designado por _ListRef_ en el manual de Lenguaje 4D. Este ID es devuelto por los comandos que se pueden usar para crear listas: `New list`, `Copy list`, `Load list`, `BLOB to list`. Sólo hay una instancia del objeto lenguaje en la memoria y cualquier modificación realizada en este objeto se traslada inmediatamente a todos los lugares donde se utiliza.
+El **objeto de lenguaje** está referenciado por un ID interno único de tipo Entero largo, designado por *ListRef* en el manual de Lenguaje 4D. Este ID es devuelto por los comandos que se pueden usar para crear listas: `New list`, `Copy list`, `Load list`, `BLOB to list`. Sólo hay una instancia del objeto lenguaje en la memoria y cualquier modificación realizada en este objeto se traslada inmediatamente a todos los lugares donde se utiliza.
 
 El **objeto de formulario** no es necesariamente único: puede haber varias representaciones de la misma lista jerárquica en el mismo formulario o en otros diferentes. Al igual que con otros objetos formulario, se especifica el objeto en el lenguaje utilizando la sintaxis (\*; "NomLista", etc.).
 
@@ -50,7 +50,7 @@ Debe utilizar el identificador `RefLista` con los comandos del lenguaje cuando q
 SET LIST ITEM FONT(*;"mylist1";*;thefont)
 ```
 
-> ... está indicando que quiere modificar la fuente de un elemento de la lista jerárquica asociada al objeto de formulario _mylist1_. El comando tendrá en cuenta el elemento actual del objeto _mylist1_ para definir el elemento a modificar, pero esta modificación se trasladará a todas las representaciones de la lista en todos los procesos.
+> ... está indicando que quiere modificar la fuente de un elemento de la lista jerárquica asociada al objeto de formulario *mylist1*. El comando tendrá en cuenta el elemento actual del objeto *mylist1* para definir el elemento a modificar, pero esta modificación se trasladará a todas las representaciones de la lista en todos los procesos.
 
 ### Soporte de @
 
@@ -109,11 +109,11 @@ Este principio se aplica independientemente del orden de llamada de los comandos
 Normalmente se puede trabajar de dos maneras con el contenido de las listas jerárquicas: por posición o por referencia.
 
 - Cuando se trabaja por posición, 4D se basa en la posición con respecto a los elementos de la lista que aparecen en pantalla para identificarlos. El resultado será diferente según se expandan o colapsen determinados elementos jerárquicos. Tenga en cuenta que en el caso de las representaciones múltiples, cada objeto formulario tiene su propia configuración de elementos expandidos/colapsados.
-- Cuando se trabaja por referencia, 4D se basa en el número de identificación _itemRef_ de los elementos de la lista. Así, cada elemento puede especificarse individualmente, independientemente de su posición o de su visualización en la lista jerárquica.
+- Cuando se trabaja por referencia, 4D se basa en el número de identificación *itemRef* de los elementos de la lista. Así, cada elemento puede especificarse individualmente, independientemente de su posición o de su visualización en la lista jerárquica.
 
 ### Utilizar los números de referencia de los artículos (itemRef)
 
-Cada elemento de una lista jerárquica tiene un número de referencia (_itemRef_) del tipo Entero largo. Este valor sólo está destinado a su propio uso: 4D simplemente lo mantiene.
+Cada elemento de una lista jerárquica tiene un número de referencia (*itemRef*) del tipo Entero largo. Este valor sólo está destinado a su propio uso: 4D simplemente lo mantiene.
 
 > Atención: puede utilizar cualquier tipo de valor entero largo como número de referencia, excepto 0. De hecho, para la mayoría de los comandos de este tema, se utiliza el valor 0 para especificar el último elemento añadido a la lista.
 
@@ -121,14 +121,14 @@ He aquí algunos consejos para utilizar los números de referencia:
 
 1. No es necesario identificar cada elemento con un número único (nivel principiante).
 
-   - Primer ejemplo: se construye por programación un sistema de pestañas, por ejemplo, una libreta de direcciones. Como el sistema devuelve el número de la pestaña seleccionada, probablemente no necesitará más información que ésta. En este caso, no se preocupe por los números de referencia de los elementos: pase un valor cualquiera (excepto 0) en el parámetro _itemRef_. Tenga en cuenta que para un sistema de libreta de direcciones, puede predefinir una lista A, B, ..., Z en el modo Diseño. También se puede crear por programación para eliminar las letras para las que no hay registros.
-   - Segundo ejemplo: al trabajar con una base, se construye progresivamente una lista de palabras clave. Puede guardar esta lista al final de cada sesión utilizando los comandos `SAVE LIST` o `LIST TO BLOB` y volver a cargarla al comienzo de cada nueva sesión utilizando el `Load list` o `BLOB to list`. Puede mostrar esta lista en una paleta flotante; cuando cada usuario hace clic en una palabra clave de la lista, el elemento elegido se inserta en el área introducible que está seleccionada en el proceso en primer plano. Lo importante es que sólo procese el elemento seleccionado, porque el comando `Select list items` devuelve la posición del elemento que debe procesar. Cuando se utiliza este valor de posición, se obtiene el título del elemento mediante el comando `GET LIST ITEM`. También en este caso, no es necesario identificar cada elemento individualmente; puede pasar cualquier valor (excepto 0) en el parámetro _itemRef_.
+   - Primer ejemplo: se construye por programación un sistema de pestañas, por ejemplo, una libreta de direcciones. Como el sistema devuelve el número de la pestaña seleccionada, probablemente no necesitará más información que ésta. En este caso, no se preocupe por los números de referencia de los elementos: pase un valor cualquiera (excepto 0) en el parámetro *itemRef*. Tenga en cuenta que para un sistema de libreta de direcciones, puede predefinir una lista A, B, ..., Z en el modo Diseño. También se puede crear por programación para eliminar las letras para las que no hay registros.
+   - Segundo ejemplo: al trabajar con una base, se construye progresivamente una lista de palabras clave. Puede guardar esta lista al final de cada sesión utilizando los comandos `SAVE LIST` o `LIST TO BLOB` y volver a cargarla al comienzo de cada nueva sesión utilizando el `Load list` o `BLOB to list`. Puede mostrar esta lista en una paleta flotante; cuando cada usuario hace clic en una palabra clave de la lista, el elemento elegido se inserta en el área introducible que está seleccionada en el proceso en primer plano. Lo importante es que sólo procese el elemento seleccionado, porque el comando `Select list items` devuelve la posición del elemento que debe procesar. Cuando se utiliza este valor de posición, se obtiene el título del elemento mediante el comando `GET LIST ITEM`. También en este caso, no es necesario identificar cada elemento individualmente; puede pasar cualquier valor (excepto 0) en el parámetro *itemRef*.
 
 2. Necesita identificar parcialmente los elementos de la lista (nivel intermediario).\
    Se utiliza el número de referencia del elemento para almacenar la información necesaria cuando debe trabajar con el elemento; este punto se detalla en el ejemplo del comando `APPEND TO LIST`. En este ejemplo, utilizamos los números de referencia de los artículos para almacenar los números de registro. Sin embargo, debemos ser capaces de establecer una distinción entre los elementos que corresponden a los registros [Department] y los que corresponden a los registros [Employees].
 
 3. Debe identificar cada los elementos de la lista individualmente (nivel avanzado).\
-   Programe una gestión elaborada de listas jerárquicas en la que es absolutamente necesario poder identificar cada elemento individualmente en cada nivel de la lista. Una forma sencilla de ponerlo en práctica es mantener un contador personal. Suponga que crea una lista _hlList_ utilizando el comando `APPEND TO LIST`. En esta etapa, se inicializa un contador _vhlCounter_ en 1. Cada vez que se llama a `APPEND TO LIST` o `INSERT IN LIST`, se incrementa este contador `(vhlCounter:=vhlCounter+1)`, y se pasa el número del contador como número de referencia del elemento. El truco consiste en no disminuir nunca el contador cuando se eliminan elementos: el contador sólo puede aumentar. De este modo, se garantiza la unicidad de los números de referencia de los elementos. Como estos números son de tipo Entero largo, puede añadir o insertar más de dos mil millones de elementos en una lista que ha sido reiniciada... (sin embargo, si está trabajando con un número tan grande de elementos, esto suele significar que debe utilizar una tabla en lugar de una lista.)
+   Programe una gestión elaborada de listas jerárquicas en la que es absolutamente necesario poder identificar cada elemento individualmente en cada nivel de la lista. Una forma sencilla de ponerlo en práctica es mantener un contador personal. Suponga que crea una lista *hlList* utilizando el comando `APPEND TO LIST`. En esta etapa, se inicializa un contador *vhlCounter* en 1. Cada vez que se llama a `APPEND TO LIST` o `INSERT IN LIST`, se incrementa este contador `(vhlCounter:=vhlCounter+1)`, y se pasa el número del contador como número de referencia del elemento. El truco consiste en no disminuir nunca el contador cuando se eliminan elementos: el contador sólo puede aumentar. De este modo, se garantiza la unicidad de los números de referencia de los elementos. Como estos números son de tipo Entero largo, puede añadir o insertar más de dos mil millones de elementos en una lista que ha sido reiniciada... (sin embargo, si está trabajando con un número tan grande de elementos, esto suele significar que debe utilizar una tabla en lugar de una lista.)
 
 > Si se utilizan operadores Bitwise, también se pueden utilizar los números de referencia de los elementos para almacenar información que se puede poner en un Entero largo, es decir, 2 enteros, valores de 4 bytes o de nuevo 32 booleanos.
 

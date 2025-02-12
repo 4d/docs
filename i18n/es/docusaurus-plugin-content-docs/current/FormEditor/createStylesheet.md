@@ -43,9 +43,9 @@ Aunque adaptadas para satisfacer las necesidades específicas de los formularios
 
 Cada regla de estilo de una hoja de estilo contiene dos partes:
 
-- un _selector_ - Un selector define dónde aplicar el estilo. 4D soporta los selectores "object type", "object name", "class", "all objects" y "attribute value".
+- un *selector* - Un selector define dónde aplicar el estilo. 4D soporta los selectores "object type", "object name", "class", "all objects" y "attribute value".
 
-- una _declaración_ - La declaración define el estilo real a aplicar. Se pueden agrupar varias líneas de declaración para formar un bloque de declaración. Cada línea de un bloque de declaración CSS debe terminar con un punto y coma, y todo el bloque debe estar rodeado de llaves.
+- una *declaración* - La declaración define el estilo real a aplicar. Se pueden agrupar varias líneas de declaración para formar un bloque de declaración. Cada línea de un bloque de declaración CSS debe terminar con un punto y coma, y todo el bloque debe estar rodeado de llaves.
 
 ## Selectores de hojas de estilo
 
@@ -57,7 +57,7 @@ Especifique el tipo de objeto, luego entre llaves, declare el estilo o los estil
 
 > El tipo objeto corresponde a la propiedad JSON [tipo](FormObjects/properties_Object.md#type) de los objetos formulario.
 
-En el siguiente ejemplo, todos los objetos del tipo _botón_ mostrarán el texto en la fuente Helvetica Neue, con un tamaño de 20 píxeles:
+En el siguiente ejemplo, todos los objetos del tipo *botón* mostrarán el texto en la fuente Helvetica Neue, con un tamaño de 20 píxeles:
 
 ```
 button {
@@ -259,7 +259,7 @@ Los atributos listados a continuación pueden aceptar el nombre 4D o el nombre C
 | `textDecoration` | `text-decoration`  |
 | `verticalAlign`  | `vertical-align`   |
 
-> Los valores específicos 4D (_por ejemplo_, `hundido`) no se soportan cuando se utilizan nombres de atributos CSS.
+> Los valores específicos 4D (*por ejemplo*, `hundido`) no se soportan cuando se utilizan nombres de atributos CSS.
 
 #### Valores de atributos específicos
 
@@ -337,7 +337,7 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 > Las rutas de los archivos pueden ser relativas o absolutas.
 >
 > - Las rutas relativas se resuelven en relación con el archivo de descripción del formulario JSON.
-> - Por razones de seguridad, sólo se aceptan las rutas del sistema de archivos para las rutas absolutas. (_e.g._, "/RESOURCES", "/DATA")
+> - Por razones de seguridad, sólo se aceptan las rutas del sistema de archivos para las rutas absolutas. (*e.g.*, "/RESOURCES", "/DATA")
 
 ## Ver también
 

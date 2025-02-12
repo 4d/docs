@@ -3,7 +3,7 @@ id: filter
 title: $filter
 ---
 
-Permite consultar los datos de una clase de datos o de un método _(p. ej._, `$filter="firstName!='' AND salary>30000"`)
+Permite consultar los datos de una clase de datos o de un método *(p. ej.*, `$filter="firstName!='' AND salary>30000"`)
 
 ## Descripción
 
@@ -48,7 +48,7 @@ Para más información sobre cómo consultar datos en 4D, consulte la documentac
 
 ## Atributo
 
-Si el atributo está en la misma clase de datos, puede pasarlo directamente (_p. ej._, `firstName`). Sin embargo, si quiere consultar otra clase de datos, debe incluir el nombre del atributo relacional y el nombre del atributo, es decir, la ruta de acceso (_por ejemplo_, nombre.empleador). El nombre del atributo distingue entre mayúsculas y minúsculas (`firstName` no es igual a `FirstName`).
+Si el atributo está en la misma clase de datos, puede pasarlo directamente (*p. ej.*, `firstName`). Sin embargo, si quiere consultar otra clase de datos, debe incluir el nombre del atributo relacional y el nombre del atributo, es decir, la ruta de acceso (*por ejemplo*, nombre.empleador). El nombre del atributo distingue entre mayúsculas y minúsculas (`firstName` no es igual a `FirstName`).
 
 También puede consultar los atributos de tipo Object utilizando la anotación de puntos. Por ejemplo, si tiene un atributo cuyo nombre es "objAttributo" con la siguiente estructura:
 
