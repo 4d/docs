@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | zipStructure    | Object                    | &#8594; | Objeto archivo o carpeta a comprimir                                 |
 | destinationFile | 4D.File   | &#8594; | Archivo de destino del archivo                                       |
 | options         | Integer                   | &#8594; | Opción *folderToZip*: `ZIP Without enclosing folder` |
-| Result          | Object                    | &#8592; | Objeto estado                                                        |
+| Resultado       | Object                    | &#8592; | Objeto estado                                                        |
 
 <!-- END REF -->
 
