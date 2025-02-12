@@ -12,7 +12,7 @@ title: VP Get spans
 | Parámetros | Tipo   |                             | Descripción                                      |                  |
 | ---------- | ------ | --------------------------- | ------------------------------------------------ | ---------------- |
 | rangeObj   | Object | ->                          | Objeto rango                                     |                  |
-| Result     | Object | <- | Objeto de celdas fusionadas en el rango definido | <!-- END REF --> |
+| Resultado  | Object | <- | Objeto de celdas fusionadas en el rango definido | <!-- END REF --> |
 
 #### Descripción
 
