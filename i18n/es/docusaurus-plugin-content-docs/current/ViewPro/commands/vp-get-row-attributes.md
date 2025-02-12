@@ -12,7 +12,7 @@ title: VP Get row attributes
 | Parámetros | Tipo       |                             | Descripción                          |                  |
 | ---------- | ---------- | --------------------------- | ------------------------------------ | ---------------- |
 | rangeObj   | Object     | ->                          | Objeto rango                         |                  |
-| Result     | Collection | <- | Colección de propiedades de la línea | <!-- END REF --> |
+| Resultado  | Collection | <- | Colección de propiedades de la línea | <!-- END REF --> |
 
 #### Descripción
 
