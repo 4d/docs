@@ -150,7 +150,7 @@ TCPConnection objects provide the following properties and functions:
 | serverAddress | Text          | ->                          | Domain name or IP address of the server                        |
 | serverPort    | Integer       | ->                          | Port number of the server                                      |
 | options       | Object        | ->                          | Configuration [options](#options-parameter) for the connection |
-| Result        | TCPConnection | <- | New TCPConnection object                                       |
+| Resultado     | TCPConnection | <- | New TCPConnection object                                       |
 
 <!-- END REF -->
 
