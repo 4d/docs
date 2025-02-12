@@ -544,7 +544,7 @@ Class constructor ($side : Integer)
 | Parámetros | Tipo   |    | Descripción                                           |
 | ---------- | ------ | -- | ----------------------------------------------------- |
 | param      | any    | -> | Parámetro(s) a pasar al constructor de la clase padre |
-| Result     | Object | <- | Padre del objeto|<!-- END REF -->
+| Resultado  | Object | <- | Padre del objeto|<!-- END REF -->
 
 |
 
@@ -663,7 +663,7 @@ $message:=$square.description() //tengo 4 lados iguales
 <!-- REF #_command_.This.Params -->
 | Parámetros | Tipo   |    | Descripción                              |
 | ---------- | ------ | -- | ---------------------------------------- |
-| Result     | Object | <- | Objeto actual|<!-- END REF -->
+| Resultado  | Object | <- | Objeto actual|<!-- END REF -->
 
 |
 
