@@ -374,7 +374,7 @@ Super {( param{;...;paramN} )} {-> Object}
 | Parámetros | Tipo   |    | Descripción                                           |
 | ---------- | ------ | -- | ----------------------------------------------------- |
 | param      | mixto  | -> | Parámetro(s) a pasar al constructor de la clase padre |
-| Result     | object | <- | Padre del objeto                                      |
+| Resultado  | object | <- | Padre del objeto                                      |
 
 La palabra clave `Super` permite llamadas a la `superclass`, es decir, a la clase padre.
 
@@ -487,7 +487,7 @@ This -> Object
 
 | Parámetros | Tipo   |    | Descripción   |
 | ---------- | ------ | -- | ------------- |
-| Result     | object | <- | Objeto actual |
+| Resultado  | object | <- | Objeto actual |
 
 La palabra clave `This` devuelve una referencia al objeto procesado actualmente. En 4D, se puede utilizar en [contextos diferentes](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
