@@ -188,6 +188,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 |---------|--- |:---:|------|
 ||||Does not require any parameters|<!-- END REF -->
 
+
 #### Description
 
 The `.clearRemoteCache()` function <!-- REF #DataClassClass.clearRemoteCache().Summary -->empties the ORDA cache of a dataclass<!-- END REF -->.
