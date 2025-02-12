@@ -132,7 +132,7 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 | Parámetros | Tipo        |    | Descripción                                                        |
 | ---------- | ----------- |:--:| ------------------------------------------------------------------ |
 | formulaExp | Expression  | -> | Fórmula a devolver como objeto                                     |
-| Result     | 4D.Function | <- | Función nativa que encapsula la fórmula|<!-- END REF -->
+| Resultado  | 4D.Function | <- | Función nativa que encapsula la fórmula|<!-- END REF -->
 
 
 |
@@ -271,7 +271,7 @@ Llamar a una fórmula utilizando la notación de objetos:
 | Parámetros    | Tipo        |    | Descripción                                                       |
 | ------------- | ----------- |:--:| ----------------------------------------------------------------- |
 | formulaString | Text        | -> | Fórmula texto a devolver como objeto                              |
-| Result        | 4D.Function | <- | Objeto nativo que encapsula la fórmula|<!-- END REF -->
+| Resultado     | 4D.Function | <- | Objeto nativo que encapsula la fórmula|<!-- END REF -->
 
 
 |
@@ -331,7 +331,7 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 | ------------- | ---------- |:--:| ----------------------------------------------------------------------------- |
 | thisObj       | Object     | -> | Objeto a devolver por el comando This en la fórmula                           |
 | formulaParams | Collection | -> | Colección de valores que se pasan como $1...$n cuando se ejecuta la `fórmula` |
-| Result        | any        | <- | Valor de la ejecución de la fórmula|<!-- END REF -->
+| Resultado     | any        | <- | Valor de la ejecución de la fórmula|<!-- END REF -->
 
 
 |
@@ -405,7 +405,7 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 | ---------- | ------ | -- | ------------------------------------------------------------------ |
 | thisObj    | Object | -> | Objeto a devolver por el comando This en la fórmula                |
 | params     | any    | -> | Valor(es) que se pasa(n) como $1...$n cuando se ejecuta la fórmula |
-| Result     | any    | <- | Valor de la ejecución de la fórmula|<!-- END REF -->
+| Resultado  | any    | <- | Valor de la ejecución de la fórmula|<!-- END REF -->
 
 
 |
