@@ -45,7 +45,7 @@ Todas as fórmulas têm operandos e operadores:
 | Tipos de dados                       | Valores                                               | Operadores                                                                                                                                                                                                                                      |
 | ------------------------------------ | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Number](Concepts/dt_number.md)      | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (adição)<br/>- (subtração)<br/>* (multiplicação)<br/>/ (divisão)<br/>^ (expoente, o número de vezes para multiplicar um número por ele mesmo)<br/>% (porcentagem -- dividir o número antes do operador por cem) |
-| [Date](Concepts/dt_date.md)          | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                       |
+| [Date](Concepts/dt_date.md)          | 10/24/2017                                            | + (data + número de dias -> data)<br/>+ (data + hora -> data + hora do dia)<br/>- (data - número de dias -> data)<br/>- (data - data - data -> número de dias entre os dois)                                                  |
 | [Hora](Concepts/dt_time.md)          | 10:12:10                                              | Operadores de duração:<br/>+ (adição)<br/>- (subtração)<br/>* (duração * número -> duração)<br/>/ (duração / número -> duração)                                                                                       |
 | [String](Concepts/dt_string.md)      | 'Sophie' ou "Sophie"                                  | & (concatenação)                                                                                                                                                                                                                                |
 | [Parâmetros](Concepts/dt_boolean.md) | TRUE ou FALSE                                         | -                                                                                                                                                                                                                                               |
@@ -226,9 +226,9 @@ Observe que os ( ) são obrigatórios, mesmo que nenhum parâmetro seja passado:
 =METHODWITHOUTNAME()
 ```
 
-You can declare the name, type, and number of parameters through the *parameters* collection of the function you declared using the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) method. Optionally, you can control the number of parameters passed by the user through *minParams* and *maxParams* properties.
+Você pode declarar o nome, o tipo e o número de parâmetros por meio da coleção de *parâmetros* da função que declarou usando o método [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions). Optionally, you can control the number of parameters passed by the user through *minParams* and *maxParams* properties.
 
-For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) method description.
+Para obter mais informações sobre os parâmetros de entrada compatíveis, consulte a descrição do método [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions).
 
 > If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:   
 > |Property|    Type|   Description| |---|---|---| |value|   Date|   Date value| |time |Real|  Time in seconds|
@@ -351,7 +351,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 
 ### Declaração dos métodos permitidos
 
-You can call directly 4D project methods from within your 4D View Pro formulas. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
+You can call directly 4D project methods from within your 4D View Pro formulas. Por motivos de segurança, você deve declarar explicitamente os métodos que podem ser chamados pelo usuário com o método [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
 
 
 #### Requisitos
@@ -359,7 +359,7 @@ You can call directly 4D project methods from within your 4D View Pro formulas. 
 Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 
 *   **Permitido**: ele foi declarado explicitamente usando o método [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
-*   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
+*   **Executável**: pertence ao projeto host ou a um componente carregado com a opção "Compartilhado por componentes e projeto host" ativada (consulte [Compartilhamento de métodos projeto](../Concepts/components.md#sharing-of-project-methods)).
 *   **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
-> If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
+> If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. Nesse caso, os nomes dos métodos projeto devem estar em conformidade com a gramática do identificador JavaScript (consulte o [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
 
