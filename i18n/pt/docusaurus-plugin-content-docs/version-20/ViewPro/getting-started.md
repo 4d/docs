@@ -133,7 +133,7 @@ var $myRange : Object
 $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 a D7
 ```
 
-You can then pass `$myRange` to another 4D View Pro method to modify these cells (for example add a border to the set of cells with [VP SET BORDER](method-list.md#vp-set-border)).
+Você pode então passar `$myRange` para outro método 4D View Pro para modificar essas células (por exemplo, adicionar uma borda ao conjunto de células com [VP SET BORDER](method-list.md#vp-set-border)).
 
 Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 
@@ -166,4 +166,4 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 * .txt e .csv
 * .pdf (apenas para exportação)
 
-For more details, check out the description of [VP IMPORT DOCUMENT](method-list.md#vp-import-document) and [VP EXPORT DOCUMENT](method-list.md#vp-export-document).
+Para obter mais detalhes, consulte a descrição de [VP IMPORT DOCUMENT](method-list.md#vp-import-document) e [VP EXPORT DOCUMENT](method-list.md#vp-export-document).
