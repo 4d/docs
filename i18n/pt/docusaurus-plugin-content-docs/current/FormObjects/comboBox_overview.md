@@ -19,7 +19,7 @@ Você inicializa uma caixa de combinação exatamente da mesma forma que uma [li
 
 > Esta funcionalidade só está disponível em projectos 4D.
 
-Um [objeto](Concepts/dt_object.md) encapsulando uma [coleção](../Concepts/dt_collection.md) pode ser usado como a fonte de dados de uma caixa de combinação. O objeto deve conter as seguintes propriedades:
+An [object](../Concepts/dt_object.md) encapsulating a [collection](../Concepts/dt_collection.md) can be used as the data source of a combo box. O objeto deve conter as seguintes propriedades:
 
 | Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                                |
 | -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
