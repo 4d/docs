@@ -465,7 +465,7 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 
 :::info
 
-Quando você chama a função `.get()` **sem o parâmetro** *settings*, uma solicitação para valores de atributo é enviada diretamente para o servidor (a [cache ORDA](../ORDA/entities.md#orda-cache) não é usada). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+Quando você chama a função `.get()` **sem o parâmetro** *settings*, uma solicitação para valores de atributo é enviada diretamente para o servidor (a [cache ORDA](../ORDA/entities.md#orda-cache) não é usada). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. Nesse caso, pode ser aconselhável chamar [`reload()`](EntityClass.md#reload) para garantir que os dados mais recentes sejam recuperados do servidor.
 
 :::
 
