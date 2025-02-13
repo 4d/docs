@@ -54,7 +54,7 @@ La disponibilidad de las propiedades y funciones del objeto `Session` depende de
 
 | Parámetros | Tipo    |                             | Descripción                                        |
 | ---------- | ------- | :-------------------------: | -------------------------------------------------- |
-| Result     | Boolean | <- | True si la ejecución se ha realizado correctamente |
+| Resultado  | Boolean | <- | True si la ejecución se ha realizado correctamente |
 
 <!-- END REF -->
 
@@ -134,7 +134,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 | Parámetros | Tipo       |                             | Descripción                                                      |
 | ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------- |
-| Result     | Collection | <- | Colección de nombres de privilegios (cadenas) |
+| Resultado  | Collection | <- | Colección de nombres de privilegios (cadenas) |
 
 <!-- END REF -->
 
@@ -230,7 +230,7 @@ $privileges := Session.getPrivileges()
 | Parámetros | Tipo    |                             | Descripción                                                  |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------ |
 | privilege  | Text    |              ->             | Nombre del privilegio a verificar                            |
-| Result     | Boolean | <- | True si la sesión tiene *privilege*, False en caso contrario |
+| Resultado  | Boolean | <- | True si la sesión tiene *privilege*, False en caso contrario |
 
 <!-- END REF -->
 
@@ -401,7 +401,7 @@ Dado que `.info` es una propiedad calculada, se recomienda llamarla una vez y lu
 
 | Parámetros | Tipo    |                             | Descripción                                                    |
 | ---------- | ------- | :-------------------------: | -------------------------------------------------------------- |
-| Result     | Boolean | <- | True si la sesión es una sesión Guest, False en caso contrario |
+| Resultado  | Boolean | <- | True si la sesión es una sesión Guest, False en caso contrario |
 
 <!-- END REF -->
 
@@ -449,7 +449,7 @@ End if
 | privilege  | Text       |              ->             | Nombre del privilegio                                                          |
 | privileges | Collection |              ->             | Colección de nombres de privilegios                                            |
 | settings   | Object     |              ->             | Objeto con una propiedad "privilegios" (cadena o colección) |
-| Result     | Boolean    | <- | True si la ejecución se ha realizado correctamente                             |
+| Resultado  | Boolean    | <- | True si la ejecución se ha realizado correctamente                             |
 
 <!-- END REF -->
 

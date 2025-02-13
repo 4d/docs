@@ -21,7 +21,7 @@ title: VP Copy to object
 | ---------- | ------ | --------------------------- | ------------------------------------------------------------ | ---------------- |
 | rangeObj   | Object | ->                          | Objeto rango                                                 |                  |
 | options    | Object | ->                          | Opciones adicionales                                         |                  |
-| Result     | Object | <- | Objeto devuelto. Contiene los datos copiados | <!-- END REF --> |
+| Resultado  | Object | <- | Objeto devuelto. Contiene los datos copiados | <!-- END REF --> |
 
 #### Descripción
 

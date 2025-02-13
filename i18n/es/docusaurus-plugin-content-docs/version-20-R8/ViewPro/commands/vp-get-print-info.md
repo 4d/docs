@@ -13,7 +13,7 @@ title: VP Get print info
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | Object  | <- | Objeto que contiene la información de impresión                | <!-- END REF --> |
+| Resultado  | Object  | <- | Objeto que contiene la información de impresión                | <!-- END REF --> |
 
 #### Descripción
 

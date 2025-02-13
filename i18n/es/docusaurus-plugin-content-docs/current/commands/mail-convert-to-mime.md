@@ -21,7 +21,7 @@ displayed_sidebar: docs
 | ---------- | ------ | :-------------------------: | ---------------------------------------------- |
 | mail       | Object | &#8594; | Objeto Email                                   |
 | options    | Object | &#8594; | Opciones de codificación y de charset del mail |
-| Result     | Text   | &#8592; | Objeto email convertido en MIME                |
+| Resultado  | Text   | &#8592; | Objeto email convertido en MIME                |
 
 <!-- END REF -->
 

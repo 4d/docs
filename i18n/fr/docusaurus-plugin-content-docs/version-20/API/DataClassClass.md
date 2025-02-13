@@ -189,7 +189,9 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 | ---------- | ---- |::| ------------------------------------------------------ |
 |            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
 
+
 |
+
 
 #### Description
 

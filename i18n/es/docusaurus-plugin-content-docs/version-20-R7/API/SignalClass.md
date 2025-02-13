@@ -181,7 +181,7 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 | Parámetros | Tipo    |                             | Descripción                                     |
 | ---------- | ------- | --------------------------- | ----------------------------------------------- |
 | timeout    | Real    | ->                          | Tiempo máximo de espera de la señal en segundos |
-| Result     | Boolean | <- | Estado de la propiedad `.signaled`              |
+| Resultado  | Boolean | <- | Estado de la propiedad `.signaled`              |
 
 <!-- END REF -->
 

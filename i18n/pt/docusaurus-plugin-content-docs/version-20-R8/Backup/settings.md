@@ -139,7 +139,7 @@ Esta funcionalidade implica que o programa analise todos os ficheiros de registo
 
 O usuário não vê uma caixa de diálogo, a operação é automática. O objetivo é fazer com que seja tão fácil quanto possível. A operação é registrada no diário de cópias de backup.
 
-> In the case of an automatic restore, only the following elements are restored:
+> No caso de uma restauração automática, somente os seguintes elementos são restaurados:
 >
 > - ficheiro .4DD
 > - ficheiro .4DIndx

@@ -12,7 +12,7 @@ title: VP Get column attributes
 | Parámetros | Tipo       |                             | Descripción                          |                  |
 | ---------- | ---------- | --------------------------- | ------------------------------------ | ---------------- |
 | rangeObj   | Object     | ->                          | Objeto rango                         |                  |
-| Result     | Collection | <- | Colección de propiedades de columnas | <!-- END REF --> |
+| Resultado  | Collection | <- | Colección de propiedades de columnas | <!-- END REF --> |
 
 #### Descripción
 

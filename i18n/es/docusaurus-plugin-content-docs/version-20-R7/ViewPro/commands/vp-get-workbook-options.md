@@ -14,7 +14,7 @@ title: VP Get workbook options
 | Parámetros | Tipo   |                             | Descripción                                           |                  |
 | ---------- | ------ | --------------------------- | ----------------------------------------------------- | ---------------- |
 | vpAreaName | Text   | ->                          | Nombre de objeto formulario área 4D View Pro          |                  |
-| Result     | Object | <- | Objeto que contiene las opciones del libro de trabajo | <!-- END REF --> |
+| Resultado  | Object | <- | Objeto que contiene las opciones del libro de trabajo | <!-- END REF --> |
 
 #### Descripción
 

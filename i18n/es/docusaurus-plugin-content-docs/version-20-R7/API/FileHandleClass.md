@@ -208,7 +208,7 @@ Esta propiedad es de **solo lectura**.
 
 | Parámetros | Tipo |                             | Descripción                   |
 | ---------- | ---- | --------------------------- | ----------------------------- |
-| Result     | Real | <- | Tamaño del documento en bytes |
+| Resultado  | Real | <- | Tamaño del documento en bytes |
 
 <!-- END REF -->
 
@@ -313,7 +313,7 @@ $s:=$fh.readText()
 | Parámetros | Tipo                                 |                             | Descripción              |
 | ---------- | ------------------------------------ | --------------------------- | ------------------------ |
 | *bytes*    | Real                                 | ->                          | Número de bytes a leer   |
-| Result     | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo |
+| Resultado  | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo |
 
 <!-- END REF -->
 
@@ -347,7 +347,7 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 | Parámetros | Tipo |                             | Descripción    |
 | ---------- | ---- | --------------------------- | -------------- |
-| Result     | Text | <- | Línea de texto |
+| Resultado  | Text | <- | Línea de texto |
 
 <!-- END REF -->
 
@@ -390,7 +390,7 @@ Esta función asume que la propiedad [`.offset`](#offset) es un número de carac
 | Parámetros | Tipo |                             | Descripción                                              |
 | ---------- | ---- | --------------------------- | -------------------------------------------------------- |
 | *stopChar* | Text | ->                          | Caracter(es) en los que dejar de leer |
-| Result     | Text | <- | Texto del archivo                                        |
+| Resultado  | Text | <- | Texto del archivo                                        |
 
 <!-- END REF -->
 

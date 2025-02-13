@@ -20,7 +20,7 @@ title: VP Find table
 | Parámetros | Tipo   |                             | Descripción        |                  |
 | ---------- | ------ | --------------------------- | ------------------ | ---------------- |
 | rangeObj   | Object | ->                          | Rango de celdas    |                  |
-| Result     | Text   | <- | Nombre de la tabla | <!-- END REF --> |
+| Resultado  | Text   | <- | Nombre de la tabla | <!-- END REF --> |
 
 #### Descripción
 

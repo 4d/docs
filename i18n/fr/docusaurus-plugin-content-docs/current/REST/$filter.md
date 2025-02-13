@@ -40,7 +40,7 @@ Pour plus d'informations sur la façon de rechercher des données dans 4D, repor
 > <li>Quotes ('): \u0027</li>
 > <li>Guillemets doubles ("): \u0022</li>
 >
-> Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété _params_ :\
+> Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété *params* :\
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 >
 > Si vous passez la valeur directement, vous pouvez écrire ce qui suit:

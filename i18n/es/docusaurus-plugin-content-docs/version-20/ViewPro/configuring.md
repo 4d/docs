@@ -284,7 +284,7 @@ Los atributos de encabezado y pie de página se utilizan para especificar texto 
 
 Los siguientes caracteres especiales permiten añadir o dar formato automáticamente a la información del encabezado y pie de página cuando se imprime el área de 4D View Pro.
 
-| Caracter | Descripción                       | Ejemplo                                                                | Result                                               |
+| Caracter | Descripción                       | Ejemplo                                                                | Resultado                                            |
 | -------- | --------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
 | &        | Caracter de escape                | (ver ejemplos más abajo)                                               |                                                      |
 | P        | Página actual                     | printInfo.headerLeft:="Esta es la página &P."                          | Esta es la página 5.|                                |

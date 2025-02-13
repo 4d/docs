@@ -46,7 +46,7 @@ Dado que HTTPAgent es un objeto compartible, puede añadir uno a una clase singl
 | Parámetros | Tipo                                              |                             | Descripción                            |
 | ---------- | ------------------------------------------------- | :-------------------------: | -------------------------------------- |
 | options    | Object                                            |              ->             | opciones por defecto para el HTTPAgent |
-| Result     | [4D.HTTPAgent](#httpagent-object) | <- | Nuevo objeto HTTPAgent                 |
+| Resultado  | [4D.HTTPAgent](#httpagent-object) | <- | Nuevo objeto HTTPAgent                 |
 
 <!-- END REF -->
 

@@ -124,7 +124,7 @@ Cette option permet l'accès utilisateur à [Qodly Studio](../WebServer/qodly-st
 
 ## Configuration de WebAdmin sans interface
 
-Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramètres WebAdmin](#settings-dialog-box) de l'application 4D avec une interface, et la lancer sans interface ensuite. Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server.
+Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramètres WebAdmin](#settings-dialog-box) de l'application 4D avec une interface, et la lancer sans interface ensuite. Boîte de dialogue des Propriétés Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server.
 
 Dans le cas d'une application 4D ou 4D Server sans interface, vous pouvez configurer et utiliser le fichier `WebAdmin.4DSettings` par défaut, ou désigner un fichier `.4DSettings` personnalisé.
 

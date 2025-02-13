@@ -22,7 +22,7 @@ displayed_sidebar: docs
 | ------------- | --------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
 | formulaString | Text                        | &#8594; | Fórmula texto a devolver como objeto                                                              |
 | context       | Number                      | &#8594; | `sk execute in current database` (por defecto) o `sk execute in host database` |
-| Result        | 4D.Function | &#8592; | Objeto nativo que encapsula la fórmula                                                            |
+| Resultado     | 4D.Function | &#8592; | Objeto nativo que encapsula la fórmula                                                            |
 
 <!-- END REF -->
 

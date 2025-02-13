@@ -21,7 +21,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo                        |                             | Descripción                             |
 | ---------- | --------------------------- | :-------------------------: | --------------------------------------- |
 | formulaExp | Expression                  | &#8594; | Fórmula a devolver como objeto          |
-| Result     | 4D.Function | &#8592; | Función nativa que encapsula la fórmula |
+| Resultado  | 4D.Function | &#8592; | Función nativa que encapsula la fórmula |
 
 <!-- END REF -->
 

@@ -150,7 +150,7 @@ La siguiente tabla lista los operadores a nivel de bits y sus efectos:
 
 ### Ejemplos
 
-| Operación         | Ejemplo                             | Result     |
+| Operación         | Ejemplo                             | Resultado  |
 | ----------------- | ----------------------------------- | ---------- |
 | Y                 | 0x0000FFFF & 0xFF00FF00             | 0x0000FF00 |
 | O (inclusive)     | 0x0000FFFF &#124; 0xFF00FF00        | 0xFF00FFFF |

@@ -160,7 +160,7 @@ Para más información, consulte la [descripción de `.setWarning()` en la docum
 
 | Parámetros | Tipo                       |                             | Descripción                  |
 | ---------- | -------------------------- | :-------------------------: | ---------------------------- |
-| Result     | 4D.WebForm | <- | Nuevo objeto proxy `WebForm` |
+| Resultado  | 4D.WebForm | <- | Nuevo objeto proxy `WebForm` |
 
 <!-- END REF -->
 
@@ -178,7 +178,7 @@ Para más información, consulte la [descripción de `webForm` en la documentaci
 
 | Parámetros | Tipo   |                             | Descripción |
 | ---------- | ------ | :-------------------------: | ----------- |
-| Result     | object | <- | object      |
+| Resultado  | object | <- | object      |
 
 <!-- END REF -->
 

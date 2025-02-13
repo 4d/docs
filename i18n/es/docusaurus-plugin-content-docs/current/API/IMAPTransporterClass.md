@@ -51,7 +51,7 @@ Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter]
 | Parámetros | Tipo                               |                             | Descripción                                           |
 | ---------- | ---------------------------------- | :-------------------------: | ----------------------------------------------------- |
 | server     | Object                             |              ->             | Información del servidor de correo                    |
-| Result     | 4D.IMAPTransporter | <- | [Objeto transportador IMAP](#objeto-imap-transporter) |
+| Resultado  | 4D.IMAPTransporter | <- | [Objeto transportador IMAP](#objeto-imap-transporter) |
 
 <!-- END REF -->
 
@@ -175,7 +175,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 | mailObj        | Object |              ->             | Objeto Email                                |
 | destinationBox | Text   |              ->             | Buzón para recibir el objeto Email          |
 | options        | Object |              ->             | Objeto que contiene información del charset |
-| Result         | Object | <- | Estado de la operación                      |
+| Resultado      | Object | <- | Estado de la operación                      |
 
 <!-- END REF -->
 
@@ -289,7 +289,7 @@ La propiedad `.checkConnectionDelay` contiene <!-- REF #IMAPTransporterClass.che
 | msgsIDs        | Collection |              ->             | Colección de identificadores únicos de mensajes (cadenas) |
 | allMsgs        | Integer    |              ->             | `IMAP all`: todos los mensajes en el buzón seleccionado      |
 | destinationBox | Text       |              ->             | Buzón para recibir mensajes copiados                                         |
-| Result         | Object     | <- | Estado de la operación de copia                                              |
+| Resultado      | Object     | <- | Estado de la operación de copia                                              |
 
 <!-- END REF -->
 
@@ -389,7 +389,7 @@ Para copiar todos los mensajes del buzón actual:
 | Parámetros | Tipo   |                             | Descripción                                  |
 | ---------- | ------ | :-------------------------: | -------------------------------------------- |
 | name       | Text   |              ->             | Nombre del nuevo buzón                       |
-| Result     | Object | <- | Estado de la operación de creación del buzón |
+| Resultado  | Object | <- | Estado de la operación de creación del buzón |
 
 <!-- END REF -->
 
@@ -468,7 +468,7 @@ End if
 | ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------- |
 | msgsIDs    | Collection |              ->             | Colección de identificadores únicos de mensajes (cadenas) |
 | allMsgs    | Integer    |              ->             | `IMAP all`: todos los mensajes en el buzón seleccionado      |
-| Result     | Object     | <- | Estado de la operación de eliminación                                        |
+| Resultado  | Object     | <- | Estado de la operación de eliminación                                        |
 
 <!-- END REF -->
 
@@ -567,7 +567,7 @@ Para eliminar todos los mensajes del buzón actual:
 | Parámetros | Tipo   |                             | Descripción                                     |
 | ---------- | ------ | :-------------------------: | ----------------------------------------------- |
 | name       | Text   |              ->             | Nombre del buzón a eliminar                     |
-| Result     | Object | <- | Estado de la operación de eliminación del buzón |
+| Resultado  | Object | <- | Estado de la operación de eliminación del buzón |
 
 <!-- END REF -->
 
@@ -644,7 +644,7 @@ End if
 
 | Parámetros | Tipo   |                             | Descripción                    |
 | ---------- | ------ | :-------------------------: | ------------------------------ |
-| Result     | Object | <- | Estado de la operación expunge |
+| Resultado  | Object | <- | Estado de la operación expunge |
 
 <!-- END REF -->
 
@@ -714,7 +714,7 @@ $status:=$transporter.expunge()
 | Parámetros | Tipo   |                             | Descripción      |
 | ---------- | ------ | :-------------------------: | ---------------- |
 | name       | Text   |              ->             | Nombre del buzón |
-| Result     | Object | <- | objeto boxInfo   |
+| Resultado  | Object | <- | objeto boxInfo   |
 
 <!-- END REF -->
 
@@ -770,7 +770,7 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 | Parámetros | Tipo       |                             | Descripción                  |
 | ---------- | ---------- | :-------------------------: | ---------------------------- |
 | parameters | Object     |              ->             | Objeto de parámetro          |
-| Result     | Collection | <- | Colección de objetos mailbox |
+| Resultado  | Collection | <- | Colección de objetos mailbox |
 
 <!-- END REF -->
 
@@ -787,7 +787,7 @@ En el parámetro opcional `parameters`, pase un objeto que contenga valores para
 | withBoxProperties | Boolean    | Si true (por defecto): agrega los atributos `selectable`, `inferior` e `interesting` al objeto de resultado. Si es false, se omiten estos atributos. |
 | withBoxInfo       | Boolean    | El valor por defecto es false. Si true, agrega los atributos `mailCount`, `mailRecent` e `id` al objeto resultado.                                                                      |
 
-#### Result
+#### Resultado
 
 Cada objeto de la colección devuelta contiene las siguientes propiedades:
 
@@ -843,7 +843,7 @@ Si la cuenta no contiene buzones, se devuelve una colección vacía.
 
 | Parámetros | Tipo |                             | Descripción                       |
 | ---------- | ---- | :-------------------------: | --------------------------------- |
-| Result     | Text | <- | Caracter delimitador de jerarquía |
+| Resultado  | Text | <- | Caracter delimitador de jerarquía |
 
 <!-- END REF -->
 
@@ -902,7 +902,7 @@ Caracter delimitador del nombre del buzón.
 | msgNumber  | Integer |              ->             | Número de secuencia del mensaje                |
 | msgID      | Text    |              ->             | ID único del mensaje                           |
 | options    | Object  |              ->             | Instrucciones sobre la gestión de mensajes     |
-| Result     | Object  | <- | [Objet Email](EmailObjectClass.md#objet-email) |
+| Resultado  | Object  | <- | [Objet Email](EmailObjectClass.md#objet-email) |
 
 <!-- END REF -->
 
@@ -926,7 +926,7 @@ El parámetro opcional *options* permite pasar un objeto que define las instrucc
 > - Si no se selecciona ningún buzón con la función [`.selectBox()`](#selectbox), se genera un error,
 > - Si no hay ninguna conexión abierta, `.getMail()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox)\`.
 
-#### Result
+#### Resultado
 
 `.getMail()` devuelve un objeto [`Email`](EmailObjectClass.md#email-object) con las siguientes propiedades IMAP específicas: *id*, *receivedAt*, y *size*.
 
@@ -979,7 +979,7 @@ Quiere obtener el mensaje con ID = 1:
 | startMsg   | Integer    |              ->             | Número de secuencia del primer mensaje                                                                                                                                                            |
 | endMsg     | Integer    |              ->             | Número de secuencia del último mensaje                                                                                                                                                            |
 | options    | Object     |              ->             | Instrucciones sobre la gestión de mensajes                                                                                                                                                        |
-| Result     | Object     | <- | Objeto que contiene<br/><ul><li>una colección de [objetos Email](EmailObjectClass.md#email-object) y</li><li>una colección de IDs o de números para los mensajes que faltan, si los hay</li></ul> |
+| Resultado  | Object     | <- | Objeto que contiene<br/><ul><li>una colección de [objetos Email](EmailObjectClass.md#email-object) y</li><li>una colección de IDs o de números para los mensajes que faltan, si los hay</li></ul> |
 
 <!-- END REF -->
 
@@ -1019,7 +1019,7 @@ El parámetro opcional *options* permite definir las partes de los mensajes a de
 > - Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error.
 > - Si no hay ninguna conexión abierta, `.getMails()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox).
 
-#### Result
+#### Resultado
 
 `.getMails()` devuelve un objeto que contiene las siguientes colecciones:
 
@@ -1081,7 +1081,7 @@ Quiere recuperar los 20 correos electrónicos más recientes sin cambiar el esta
 | msgNumber  | Integer |              ->             | Número de secuencia del mensaje                                                                                            |
 | msgID      | Text    |              ->             | ID único del mensaje                                                                                                       |
 | updateSeen | Boolean |              ->             | Si True, el mensaje se marca como "visto" en el buzón. Si False, el mensaje se deja igual. |
-| Result     | BLOB    | <- | Blob de la cadena MIME devuelta por el servidor de correo                                                                  |
+| Resultado  | BLOB    | <- | Blob de la cadena MIME devuelta por el servidor de correo                                                                  |
 
 <!-- END REF -->
 
@@ -1158,7 +1158,7 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 | msgsIDs        | Collection |              ->             | Colección de identificadores únicos de mensajes (cadenas) |
 | allMsgs        | Integer    |              ->             | `IMAP all`: todos los mensajes en el buzón seleccionado      |
 | destinationBox | Text       |              ->             | Buzón para recibir los mensajes desplazados                                  |
-| Result         | Object     | <- | Estado de la operación de desplazamiento                                     |
+| Resultado      | Object     | <- | Estado de la operación de desplazamiento                                     |
 
 <!-- END REF -->
 
@@ -1260,7 +1260,7 @@ Para mover todos los mensajes del buzón actual:
 | ---------- | ---------- | :-------------------------: | ----------------------------------------------- |
 | startMsg   | Integer    |              ->             | Número de secuencia del primer mensaje          |
 | endMsg     | Integer    |              ->             | Número de secuencia del último mensaje          |
-| Result     | Collection | <- | Colección de identificadores de mensajes únicos |
+| Resultado  | Collection | <- | Colección de identificadores de mensajes únicos |
 
 <!-- END REF -->
 
@@ -1272,7 +1272,7 @@ En el parámetro *startMsg*, pase un valor entero correspondiente al número del
 
 En el parámetro *endMsg*, pase un valor entero correspondiente al número del último mensaje que se incluirá en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
 
-#### Result
+#### Resultado
 
 La función devuelve una colección de cadenas (IDs únicos).
 
@@ -1324,7 +1324,7 @@ La función devuelve una colección de cadenas (IDs únicos).
 | ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | msgIDs     | Collection |              ->             | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
 | keywords   | Object     |              ->             | Banderas de palabras claves a eliminar                                                                                                                                                                                                                     |
-| Result     | Object     | <- | Estado de la operación removeFlags                                                                                                                                                                                                                         |
+| Resultado  | Object     | <- | Estado de la operación removeFlags                                                                                                                                                                                                                         |
 
 <!-- END REF -->
 
@@ -1415,7 +1415,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 | ----------- | ------ | :-------------------------: | -------------------------------- |
 | currentName | Text   |              ->             | Nombre del nuevo actual          |
 | newName     | Text   |              ->             | Nuevo nombre del buzón           |
-| Result      | Object | <- | Estado de la operación renombrar |
+| Resultado   | Object | <- | Estado de la operación renombrar |
 
 <!-- END REF -->
 
@@ -1493,7 +1493,7 @@ End if
 | Parámetros     | Tipo       |                             | Descripción                      |
 | -------------- | ---------- | :-------------------------: | -------------------------------- |
 | searchCriteria | Text       |              ->             | Criterio de búsqueda             |
-| Result         | Collection | <- | Colección de números de mensajes |
+| Resultado      | Collection | <- | Colección de números de mensajes |
 
 <!-- END REF -->
 
@@ -1643,7 +1643,7 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 | ---------- | ------- | :-------------------------: | ------------------------- |
 | name       | Text    |              ->             | Nombre del buzón          |
 | state      | Integer |              ->             | Estado de acceso al buzón |
-| Result     | Object  | <- | objeto boxInfo            |
+| Resultado  | Object  | <- | objeto boxInfo            |
 
 <!-- END REF -->
 
@@ -1720,7 +1720,7 @@ Si la cadena `permanentFlags` incluye la bandera especial \*, significa que el s
 | Parámetros | Tipo   |                             | Descripción                      |
 | ---------- | ------ | :-------------------------: | -------------------------------- |
 | name       | Text   |              ->             | Nombre del buzón                 |
-| Result     | Object | <- | Estado de la operación subscribe |
+| Resultado  | Object | <- | Estado de la operación subscribe |
 
 <!-- END REF -->
 
@@ -1793,7 +1793,7 @@ End if
 | Parámetros | Tipo   |                             | Descripción                        |
 | ---------- | ------ | :-------------------------: | ---------------------------------- |
 | name       | Text   |              ->             | Nombre del buzón                   |
-| Result     | Object | <- | Estado de la operación unsubscribe |
+| Resultado  | Object | <- | Estado de la operación unsubscribe |
 
 <!-- END REF -->
 

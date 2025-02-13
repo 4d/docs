@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo   |                             | Descripción                                                              |
 | ---------- | ------ | --------------------------- | ------------------------------------------------------------------------ |
 | param      | any    | ->                          | Parámetro(s) a pasar al constructor de la clase padre |
-| Result     | Object | <- | Padre del objeto                                                         |
+| Resultado  | Object | <- | Padre del objeto                                                         |
 
 <!-- END REF -->
 

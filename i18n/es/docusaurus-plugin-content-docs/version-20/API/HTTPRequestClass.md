@@ -92,7 +92,7 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 | ---------- | -------------- |:--:| --------------------------------------------------- |
 | url        | Text           | -> | URL a la que enviar la solicitud                    |
 | options    | Object         | -> | Propiedades de configuración de la petición         |
-| Result     | 4D.HTTPRequest | <- | Nuevo objeto HTTPRequest|<!-- END REF -->
+| Resultado  | 4D.HTTPRequest | <- | Nuevo objeto HTTPRequest|<!-- END REF -->
 
 |
 
@@ -372,7 +372,7 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 | Parámetros | Tipo           |    | Descripción                                         |
 | ---------- | -------------- |:--:| --------------------------------------------------- |
 | time       | Real           | -> | Tiempo máximo en segundos para esperar la respuesta |
-| Result     | 4D.HTTPRequest | <- | Objeto HTTPRequest|<!-- END REF -->
+| Resultado  | 4D.HTTPRequest | <- | Objeto HTTPRequest|<!-- END REF -->
 
 |
 

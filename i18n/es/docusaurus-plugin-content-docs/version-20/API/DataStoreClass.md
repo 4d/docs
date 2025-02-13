@@ -50,7 +50,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 | Parámetros | Tipo         |    | Descripción                                               |
 | ---------- | ------------ | -- | --------------------------------------------------------- |
 | localID    | Text         | -> | ID local del almacén de datos remoto a devolver           |
-| Result     | cs.DataStore | <- | Referencia al almacén de datos|<!-- END REF -->
+| Resultado  | cs.DataStore | <- | Referencia al almacén de datos|<!-- END REF -->
 
 |
 
@@ -120,7 +120,7 @@ Utilizando el almacén de datos principal de la base 4D:
 | -------------- | ------------ | -- | -------------------------------------------------------------------------------- |
 | connectionInfo | Object       | -> | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto      |
 | localID        | Text         | -> | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
-| Result         | cs.DataStore | <- | Objeto del almacén de datos|<!-- END REF -->
+| Resultado      | cs.DataStore | <- | Objeto del almacén de datos|<!-- END REF -->
 
 |
 
@@ -327,7 +327,7 @@ En estos casos, puede utilizar `.clearAllRemoteContexts()` para reinicializar su
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | Parámetros | Tipo   |    | Descripción                                                                                         |
 | ---------- | ------ |:--:| --------------------------------------------------------------------------------------------------- |
-| Result     | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla|<!-- END REF -->
+| Resultado  | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla|<!-- END REF -->
 
 |
 
@@ -485,7 +485,7 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 | Parámetros | Tipo       |    | Descripción                                                               |
 | ---------- | ---------- | -- | ------------------------------------------------------------------------- |
-| Result     | Collection | <- | Colección de objetos contextos de optimización|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de objetos contextos de optimización|<!-- END REF -->
 
 |
 
@@ -562,7 +562,7 @@ $info:=$ds.getAllRemoteContexts()
 <!-- REF #DataStoreClass.getInfo().Params -->
 | Parámetros | Tipo   |    | Descripción                                                 |
 | ---------- | ------ |:--:| ----------------------------------------------------------- |
-| Result     | Object | <- | Propiedades del almacén de datos|<!-- END REF -->
+| Resultado  | Object | <- | Propiedades del almacén de datos|<!-- END REF -->
 
 |
 
@@ -632,7 +632,7 @@ En un almacén de datos remoto:
 | Parámetros  | Tipo   |    | Descripción                                                         |
 | ----------- | ------ | -- | ------------------------------------------------------------------- |
 | contextName | Text   | -> | Nombre del contexto                                                 |
-| Result      | Object | <- | Descripción del contexto de optimización|<!-- END REF -->
+| Resultado   | Object | <- | Descripción del contexto de optimización|<!-- END REF -->
 
 |
 
@@ -682,7 +682,7 @@ Ver el ejemplo de la sección [.setRemoteContextInfo()](#example-1-3).
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 | Parámetros | Tipo       |    | Descripción                                                                              |
 | ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------- |
-| Result     | Collection | <- | Colección de objetos, donde cada objeto describe una petición|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de objetos, donde cada objeto describe una petición|<!-- END REF -->
 
 |
 
@@ -721,7 +721,7 @@ Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 | Parámetros | Tipo    |    | Descripción                                                                                                                |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto)|<!-- END REF -->
+| Resultado  | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto)|<!-- END REF -->
 
 |
 
@@ -755,7 +755,7 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 <!-- REF #DataStoreClass.locked().Params -->
 | Parámetros | Tipo    |    | Descripción                                  |
 | ---------- | ------- | -- | -------------------------------------------- |
-| Result     | Boolean | <- | True si bloqueado|<!-- END REF -->
+| Resultado  | Boolean | <- | True si bloqueado|<!-- END REF -->
 
 
 |
@@ -831,7 +831,7 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 | ------------- | ------ | -- | ----------------------------------------------------------------------------------- |
 | curPassPhrase | Text   | -> | Frase de cifrado actual                                                             |
 | curDataKey    | Object | -> | Llave de encriptación de datos actual                                               |
-| Result        | Object | <- | Resultado de la coincidencia de la llave de encriptación|<!-- END REF -->
+| Resultado     | Object | <- | Resultado de la coincidencia de la llave de encriptación|<!-- END REF -->
 
 |
 
@@ -850,7 +850,7 @@ Si se aporta una llave de cifrado de datos válida, se añade a la *keyChain* de
 * todas las modificaciones de datos en las tablas encriptadas se cifran en el disco (.4DD, .journal. 4Dindx)
 * todos los datos cargados desde tablas encriptadas se descifran en memoria
 
-**Result**
+**Resultado**
 
 El resultado de la orden se describe en el objeto devuelto:
 

@@ -307,7 +307,7 @@ Repeat
     {break}  
     {continue} Until(Boolean_Expression)
 ```
-A outra diferença com um loop `Repeat... A outra diferença com um loop <code>Repeat...</p>
+Um ciclo `Repeat...Until` é como um ciclo [While...End while](flow-control.md#whileend-while), exceto que testa a expressão booleana depois do ciclo e não antes. A outra diferença com um loop `Repeat...</p>
 
 <p spaces-before="0">A outra diferença com um loop <code>Repeat...Until` é que o loop continua até que a expressão booleana seja TRUE.
 

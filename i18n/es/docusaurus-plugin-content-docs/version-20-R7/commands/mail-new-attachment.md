@@ -28,7 +28,7 @@ displayed_sidebar: docs
 | cid         | Text                              | &#8594;           | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid     |
 | type        | Text                              | &#8594;           | Valor del encabezado content-type                                                                  |
 | disposition | Text                              | &#8594;           | Valor del encabezado content-disposition: "inline" o "attachment". |
-| Result      | 4D.MailAttachment | &#8592;           | Objeto adjunto                                                                                     |
+| Resultado   | 4D.MailAttachment | &#8592;           | Objeto adjunto                                                                                     |
 
 <!-- END REF-->
 

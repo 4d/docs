@@ -13,7 +13,7 @@ title: VP Combine ranges
 | ------------- | ------ | --------------------------- | -------------------------------------- | ---------------- |
 | rangeObj      | Object | ->                          | Objeto rango                           |                  |
 | otherRangeObj | Object | ->                          | Objeto rango                           |                  |
-| Result        | Object | <- | Objeto que contiene un rango combinado | <!-- END REF --> |
+| Resultado     | Object | <- | Objeto que contiene un rango combinado | <!-- END REF --> |
 
 #### Descripción
 

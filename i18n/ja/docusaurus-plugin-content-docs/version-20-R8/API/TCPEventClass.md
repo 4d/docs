@@ -3,7 +3,7 @@ id: TCPEventClass
 title: TCPEvent
 ---
 
-The `TCPEvent` class provides information about events occurring during the lifecycle of a TCP connection. It is generated when a [TCPConnection](TCPConnectionClass.md) is opened and is typically utilized in callbacks such as `onConnection`, `onData`, `onError`, and others.
+`TCPEvent` クラスはTCP 接続のライフサイクル中に発生するイベントに関する情報を提供します。 これは[TCPConnection](TCPConnectionClass.md) が開いた時に生成され、一般的には`onConnection`、`onData`、`onError` などのコールバックの中で使用されます。
 
 <details><summary>履歴</summary>
 
@@ -13,9 +13,9 @@ The `TCPEvent` class provides information about events occurring during the life
 
 </details>
 
-### TCPEvent Object
+### TCPEvent オブジェクト
 
-A `TCPEvent` object is immutable and non-streamable.
+`TCPEvent` オブジェクトは変更不可であり、ストリーム不可です。
 
 次のプロパティを利用することができます:
 
@@ -32,13 +32,13 @@ A `TCPEvent` object is immutable and non-streamable.
 
 #### 説明
 
-The `.type` property contains <!-- REF #4D.TCPEvent.type.Summary -->the type of the event<!-- END REF -->. とりうる値:
+`.type` プロパティには、<!-- REF #4D.TCPEvent.type.Summary -->イベントのタイプ<!-- END REF --> が格納されます。 とりうる値:
 
-- `"connection"`: Indicates that a TCPConnection was successfully established.
-- `"data"`: Indicates that data has been received.
-- `"error"`: Indicates that an error occurred during the TCPConnection.
-- `"close"`: Indicates that the TCPConnection has been properly closed.
-- `"terminate"`: Indicates that the TCPConnection is about to be released.
+- `"connection"`: TCPConnection が正常に確立されたことを表します。
+- `"data"`: データが受信されたことを表します。
+- `"error"`: TCPConnection の最中にエラーが発生したことを示します。
+- `"close"`: TCPConnection が適切に閉じられたことを示します。
+- `"terminate"`: TCPConnection がリリースされる直前であることを示します。
 
 <!-- END REF -->
 
@@ -50,11 +50,11 @@ The `.type` property contains <!-- REF #4D.TCPEvent.type.Summary -->the type of 
 
 #### 説明
 
-The `.data` property contains <!-- REF #4D.TCPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type `"data"`.
+`.data` プロパティには、<!-- REF #4D.TCPEvent.data.Summary -->イベントに関連づけられたデータ<!-- END REF -->が格納されています。 これは`"data"` 型のイベントにおいてのみ有効です。
 
 :::note
 
-When working with low-level TCP/IP connections, keep in mind there is no guarantee that all data will arrive in a single packet. Data arrives in order but may be fragmented across multiple packets.
+ローレベルな TCP/IP 接続を扱っている場合、全てのデータが単一のパケットで到着するという保証はない、という点に留意して下さい。 データは順番通りに届きますが、複数のパケットに断片化されて届く可能性があります。
 
 :::
 

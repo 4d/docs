@@ -55,7 +55,7 @@ Cette zone permet de désigner les fichiers et/ou dossiers à copier lors de la 
 - **Fichier de structure utilisateur (uniquement pour les bases binaires)** : *fonctionnalité obsolète*
 - **Attachments** : cette zone permet de désigner un ensemble de fichiers et/ou de dossiers à sauvegarder en même temps que l'application. Ces fichiers peuvent être de tout type (documents ou modèles de plug-ins, étiquettes, états, images, etc.). Vous pouvez désigner soit des fichiers individuels, soit des dossiers dont le contenu sera intégralement sauvegardé. Chaque élément joint est listé avec son chemin d’accès complet dans la zone “Fichiers joints”.
   - **Supprimer** : retire de la liste des fichiers joints l’élément sélectionné.
-  - **Ajouter dossier...** : affiche une boîte de dialogue permettant de sélectionner un dossier à joindre à la sauvegarde. En cas de restitution, le dossier sera récupéré avec sa structure interne. Vous pouvez désigner tout dossier ou volume connecté au poste, à l’exception du dossier contenant les fichiers de l'application.
+  - Gestion du fichier d'historique En cas de restitution, le dossier sera récupéré avec sa structure interne. Vous pouvez désigner tout dossier ou volume connecté au poste, à l’exception du dossier contenant les fichiers de l'application.
   - **Ajouter fichier...** : affiche une boîte de dialogue permettant de sélectionner un fichier à joindre à la sauvegarde.
 
 ### Emplacement des fichiers de sauvegarde

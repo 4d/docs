@@ -132,7 +132,7 @@ Considerando las propiedades de tabla siguientes:
 | Parámetros | Tipo               |    | Descripción                                                                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------- |
 | settings   | Object             | -> | Opciones de construcción: context                                                                   |
-| Result     | 4D.EntitySelection | <- | Referencias sobre todas las entidades relacionadas con la clase de datos|<!-- END REF -->
+| Resultado  | 4D.EntitySelection | <- | Referencias sobre todas las entidades relacionadas con la clase de datos|<!-- END REF -->
 
 |
 
@@ -183,7 +183,7 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 | ---------- | ------------------ |:--:| ----------------------------------------------------------------------------- |
 | objectCol  | Collection         | -> | Colección de objetos a mapear con entidades                                   |
 | settings   | Object             | -> | Opciones de construcción: context                                             |
-| Result     | 4D.EntitySelection | <- | Selección de entidades llenadas desde la colección|<!-- END REF -->
+| Resultado  | 4D.EntitySelection | <- | Selección de entidades llenadas desde la colección|<!-- END REF -->
 
 |
 
@@ -379,7 +379,7 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 | ---------- | --------------- |:--:| ------------------------------------------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Valor de la llave primaria de la entidad a recuperar                            |
 | settings   | Object          | -> | Opciones de construcción: context                                               |
-| Result     | 4D.Entity       | <- | Entidad que coincide con la llave primaria designada|<!-- END REF -->
+| Resultado  | 4D.Entity       | <- | Entidad que coincide con la llave primaria designada|<!-- END REF -->
 
 |
 
@@ -453,7 +453,7 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 <!-- REF #DataClassClass.getDataStore().Params -->
 | Parámetros | Tipo         |    | Descripción                                          |
 | ---------- | ------------ |:--:| ---------------------------------------------------- |
-| Result     | cs.DataStore | <- | Datastore de la dataclass|<!-- END REF -->
+| Resultado  | cs.DataStore | <- | Datastore de la dataclass|<!-- END REF -->
 
 |
 
@@ -506,7 +506,7 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 <!-- REF #DataClassClass.getInfo().Params -->
 | Parámetros | Tipo   |    | Descripción                                                    |
 | ---------- | ------ | -- | -------------------------------------------------------------- |
-| Result     | Object | <- | Información sobre la clase de datos|<!-- END REF -->
+| Resultado  | Object | <- | Información sobre la clase de datos|<!-- END REF -->
 
 
 
@@ -581,7 +581,7 @@ La función `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devuelve
 <!-- REF #DataClassClass.new().Params -->
 | Parámetros | Tipo      |    | Descripción                                                                 |
 | ---------- | --------- | -- | --------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Nueva entidad que coincide con la clase de datos|<!-- END REF -->
+| Resultado  | 4D.Entity | <- | Nueva entidad que coincide con la clase de datos|<!-- END REF -->
 
 |
 
@@ -624,7 +624,7 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 | Parámetros | Tipo               |    | Descripción                                                                                                                                                    |
 | ---------- | ------------------ | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | keepOrder  | Integer            | -> | `dk keep ordered`: crea una selección de entidades ordenada,<br/>`dk no ordenada`: crea una selección de entidades no ordenada (por defecto si se omite) |
-| Result     | 4D.EntitySelection | <- | Nueva selección de entidades en blanco relacionadas con la clase de datos|<!-- END REF -->
+| Resultado  | 4D.EntitySelection | <- | Nueva selección de entidades en blanco relacionadas con la clase de datos|<!-- END REF -->
 
 |
 
@@ -671,7 +671,7 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 | formula       | Object             | -> | Criterios de búsqueda como objeto fórmula                                                                                                                                               |
 | value         | any                | -> | Valor(es) a utilizar para los marcadores de posición indexados                                                                                                                          |
 | querySettings | Object             | -> | Opciones de búsqueda: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                                        |
-| Result        | 4D.EntitySelection | <- | Nueva selección de entidades formada por las entidades de la clase de datos que cumplen los criterios de búsqueda especificados en *queryString* o *formula*|<!-- END REF -->
+| Resultado     | 4D.EntitySelection | <- | Nueva selección de entidades formada por las entidades de la clase de datos que cumplen los criterios de búsqueda especificados en *queryString* o *formula*|<!-- END REF -->
 
 |
 

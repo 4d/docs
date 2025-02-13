@@ -56,7 +56,7 @@ La disponibilidad de las propiedades y funciones del objeto `Session` depende de
 
 | Parámetros | Tipo    |                             | Descripción                                        |
 | ---------- | ------- | :-------------------------: | -------------------------------------------------- |
-| Result     | Boolean | <- | True si la ejecución se ha realizado correctamente |
+| Resultado  | Boolean | <- | True si la ejecución se ha realizado correctamente |
 
 <!-- END REF -->
 
@@ -102,7 +102,7 @@ $isGuest:=Session.isGuest() //$isGuest es True
 | Parámetros | Tipo    |                             | Descripción                       |
 | ---------- | ------- | :-------------------------: | --------------------------------- |
 | lifespan   | Integer |              ->             | Session token lifespan in seconds |
-| Result     | Text    | <- | UUID of the session               |
+| Resultado  | Text    | <- | UUID of the session               |
 
 <!-- END REF -->
 
@@ -184,7 +184,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 | Parámetros | Tipo       |                             | Descripción                                                      |
 | ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------- |
-| Result     | Collection | <- | Colección de nombres de privilegios (cadenas) |
+| Resultado  | Collection | <- | Colección de nombres de privilegios (cadenas) |
 
 <!-- END REF -->
 
@@ -280,7 +280,7 @@ $privileges := Session.getPrivileges()
 | Parámetros | Tipo    |                             | Descripción                                                  |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------ |
 | privilege  | Text    |              ->             | Nombre del privilegio a verificar                            |
-| Result     | Boolean | <- | True si la sesión tiene *privilege*, False en caso contrario |
+| Resultado  | Boolean | <- | True si la sesión tiene *privilege*, False en caso contrario |
 
 <!-- END REF -->
 
@@ -451,7 +451,7 @@ Dado que `.info` es una propiedad calculada, se recomienda llamarla una vez y lu
 
 | Parámetros | Tipo    |                             | Descripción                                                    |
 | ---------- | ------- | :-------------------------: | -------------------------------------------------------------- |
-| Result     | Boolean | <- | True si la sesión es una sesión Guest, False en caso contrario |
+| Resultado  | Boolean | <- | True si la sesión es una sesión Guest, False en caso contrario |
 
 <!-- END REF -->
 
@@ -496,7 +496,7 @@ End if
 | Parámetros | Tipo    |                             | Descripción                                                                        |
 | ---------- | ------- | :-------------------------: | ---------------------------------------------------------------------------------- |
 | token      | Text    |              ->             | Session token UUID                                                                 |
-| Result     | Boolean | <- | True if the current session has been successfully replaced by the session in token |
+| Resultado  | Boolean | <- | True if the current session has been successfully replaced by the session in token |
 
 <!-- END REF -->
 
@@ -560,7 +560,7 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 | privilege  | Text       |              ->             | Nombre del privilegio                                                          |
 | privileges | Collection |              ->             | Colección de nombres de privilegios                                            |
 | settings   | Object     |              ->             | Objeto con una propiedad "privilegios" (cadena o colección) |
-| Result     | Boolean    | <- | True si la ejecución se ha realizado correctamente                             |
+| Resultado  | Boolean    | <- | True si la ejecución se ha realizado correctamente                             |
 
 <!-- END REF -->
 

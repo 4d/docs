@@ -47,7 +47,7 @@ This property specifies if an object should be horizontally moved or resized whe
 
 Hay tres opciones disponibles:
 
-| Option   | Valor JSON | Result                                                                                                                                                |
+| Option   | Valor JSON | Resultado                                                                                                                                             |
 | -------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Agrandar | "grow"     | El mismo porcentaje se aplica al ancho del objeto cuando el usuario redimensiona el ancho de la ventana,                                              |
 | Mover    | "move"     | El objeto se desplaza la misma cantidad a la izquierda o a la derecha que el aumento del ancho cuando el usuario redimensiona el ancho de la ventana, |
@@ -73,7 +73,7 @@ This property specifies if an object should be vertically moved or resized when 
 
 Hay tres opciones disponibles:
 
-| Option   | Valor JSON | Result                                                                                                                                                |
+| Option   | Valor JSON | Resultado                                                                                                                                             |
 | -------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Agrandar | "grow"     | El mismo porcentaje se aplica a la altura del objeto cuando el usuario redimensiona el ancho de la ventana,                                           |
 | Mover    | "move"     | El objeto se desplaza la misma cantidad hacia arriba o hacia abajo que el aumento de la altura cuando el usuario redimensiona el ancho de la ventana, |

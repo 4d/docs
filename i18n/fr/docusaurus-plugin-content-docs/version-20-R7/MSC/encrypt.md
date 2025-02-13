@@ -35,6 +35,7 @@ Trois étapes sont nécessaires pour effectuer le tout premier chiffrement de vo
    \*\*Note : \*\*Le même message s'affiche lorsque le statut **Encryptable** a été modifié dans un fichier de données déjà crypté ou après que le fichier de données a été décrypté (voir ci-dessous).</p>
 3. Cliquez sur le bouton image Chiffrer.\
    Cliquez sur le bouton image Chiffrer.\
+   Cliquez sur le bouton image Chiffrer.\
    ![](../assets/en/MSC/MSC_encrypt3.png)\
    Vous serez invité à saisir une phrase secrète pour votre fichier de données:
    ![](../assets/en/MSC/MSC_encrypt4.png)
@@ -93,9 +94,9 @@ Cette opération est utile en cas de modification de la clé de chiffrement des 
 
 1. Cliquez sur **Changer votre phrase secrète et re-chiffrer les données**.
 2. Saisissez la clé de chiffrement des données actuelle.
-3. Saisissez la nouvelle phrase secrète (pour plus de sécurité, il vous est demandé de la saisir deux fois):
-   ![](../assets/en/MSC/MSC_encrypt9.png)
-   Le fichier de données est chiffré avec la nouvelle clé et le message de confirmation est affiché.
+3. (1) Le trousseau 4D stocke toutes les clés de chiffrement des données valides qui ont été saisies au cours de la session d'application.\
+   (2) La phrase secrète courante est la phrase secrète utilisée pour générer la clé de chiffrement courante.\
+   (2) La phrase secrète courante est la phrase secrète utilisée pour générer la clé de chiffrement courante.
    ![](../assets/en/MSC/MSC_encrypt8.png)
 
 ### Enlever le chiffrement de toutes les données

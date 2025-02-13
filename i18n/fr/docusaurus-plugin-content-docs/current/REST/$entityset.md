@@ -14,7 +14,7 @@ Après avoir [créé un entity set]($method.md#methodentityset) à l'aide de `$m
 
 ## $entityset/\{entitySetID\}
 
-Récupère un entity set existant (_e.g._, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+Récupère un entity set existant (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
 ### Description
 

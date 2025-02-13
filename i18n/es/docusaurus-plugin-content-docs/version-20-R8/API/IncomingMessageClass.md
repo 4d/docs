@@ -107,7 +107,7 @@ A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 | Parámetros | Tipo |                             | Descripción                   |
 | ---------- | ---- | --------------------------- | ----------------------------- |
-| Result     | Blob | <- | Body of the request as a Blob |
+| Resultado  | Blob | <- | Body of the request as a Blob |
 
 <!-- END REF -->
 
@@ -130,7 +130,7 @@ If the body has not been given as a binary content, the function tries to conver
 | Parámetros | Tipo |                             | Descripción                          |
 | ---------- | ---- | --------------------------- | ------------------------------------ |
 | key        | Text | ->                          | Header property to get               |
-| Result     | Text | <- | Valor de la propiedad del encabezado |
+| Resultado  | Text | <- | Valor de la propiedad del encabezado |
 
 <!-- END REF -->
 
@@ -164,7 +164,7 @@ $value := $request.getHeader("content-type")
 
 | Parámetros | Tipo    |                             | Descripción                                |
 | ---------- | ------- | --------------------------- | ------------------------------------------ |
-| Result     | Variant | <- | JSON resolution of the body of the request |
+| Resultado  | Variant | <- | JSON resolution of the body of the request |
 
 <!-- END REF -->
 
@@ -186,7 +186,7 @@ If the body has not been given as JSON valid content, an error is raised.
 
 | Parámetros | Tipo    |                             | Descripción                    |
 | ---------- | ------- | --------------------------- | ------------------------------ |
-| Result     | Picture | <- | Body of the request as picture |
+| Resultado  | Picture | <- | Body of the request as picture |
 
 <!-- END REF -->
 
@@ -216,7 +216,7 @@ If the body is not received as a valid picture, the function returns null.
 
 | Parámetros | Tipo |                             | Descripción                 |
 | ---------- | ---- | --------------------------- | --------------------------- |
-| Result     | Text | <- | Body of the request as text |
+| Resultado  | Text | <- | Body of the request as text |
 
 <!-- END REF -->
 

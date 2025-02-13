@@ -23,7 +23,7 @@ title: VP Get table dirty rows
 | tableName  | Text       | ->                          | Nombre de la tabla                                                                                                   |                  |
 | reset      | Boolean    | ->                          | True para borrar el estado sucio de la tabla actual, False para mantenerlo intacto. Por defecto=True |                  |
 | sheet      | Integer    | ->                          | Índice de la hoja (hoja actual si se omite)                                                       |                  |
-| Result     | Collection | <- | Colección de objetos con todos los elementos modificados desde el último reinicio                                    | <!-- END REF --> |
+| Resultado  | Collection | <- | Colección de objetos con todos los elementos modificados desde el último reinicio                                    | <!-- END REF --> |
 
 #### Descripción
 

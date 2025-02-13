@@ -92,7 +92,7 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 | ---------- | ------------------------------ | :-------------------------: | ------------------------------------------- |
 | url        | Text                           |              ->             | URL a la que enviar la solicitud            |
 | options    | Object                         |              ->             | Propiedades de configuración de la petición |
-| Result     | 4D.HTTPRequest | <- | Nuevo objeto HTTPRequest                    |
+| Resultado  | 4D.HTTPRequest | <- | Nuevo objeto HTTPRequest                    |
 
 <!-- END REF -->
 
@@ -219,7 +219,7 @@ Un objeto de autenticación maneja la propiedad `options.serverAuthentication` o
 | Parámetros | Tipo       |                             | Descripción                                                   |
 | ---------- | ---------- | :-------------------------: | ------------------------------------------------------------- |
 | data       | Text, Blob |              ->             | Datos a analizar                                              |
-| Result     | Object     | <- | Objeto, cada propiedad es parte de los datos de varias partes |
+| Resultado  | Object     | <- | Objeto, cada propiedad es parte de los datos de varias partes |
 
 <!-- END REF -->
 
@@ -485,7 +485,7 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 | Parámetros | Tipo                           |                             | Descripción                  |
 | ---------- | ------------------------------ | :-------------------------: | ---------------------------- |
 | timeout    | Real                           |              ->             | Maximum wait time in seconds |
-| Result     | 4D.HTTPRequest | <- | Objeto HTTPRequest           |
+| Resultado  | 4D.HTTPRequest | <- | Objeto HTTPRequest           |
 
 <!-- END REF -->
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ---------- | ----------------------------- | :-------------------------: | ------------------------------------- |
 | zIPFile    | 4D.File       | &#8594; | Archivos Zip                          |
 | contraseña | Text                          | &#8594; | Contraseña del archivo ZIP, si la hay |
-| Result     | 4D.ZipArchive | &#8592; | Objeto archivo                        |
+| Resultado  | 4D.ZipArchive | &#8592; | Objeto archivo                        |
 
 <!-- END REF -->
 

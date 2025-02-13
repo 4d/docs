@@ -378,7 +378,7 @@ La propiedad `.to` contiene la(s) <!-- REF #EmailObjectClass.to.Summary -->[dire
 | Parámetros | Tipo       |    | Descripción                             |
 | ---------- | ---------- |:--:| --------------------------------------- |
 | mime       | Blob, Text | -> | Email en MIME                           |
-| Result     | Object     | <- | Objeto Email|<!-- END REF -->
+| Resultado  | Object     | <- | Objeto Email|<!-- END REF -->
 
 |
 
@@ -465,7 +465,7 @@ $status:=$transporter.send($email)
 | ---------- | ------ |:--:| ---------------------------------------------------------- |
 | mail       | Object | -> | Objeto Email                                               |
 | options    | Object | -> | Opciones de codificación y de charset del mail             |
-| Result     | Text   | <- | Objeto email convertido en MIME|<!-- END REF -->
+| Resultado  | Text   | <- | Objeto email convertido en MIME|<!-- END REF -->
 
 |
 

@@ -370,7 +370,7 @@ La propiedad `.user` contiene <!-- REF #transporter.user.Summary --> el nombre d
 
 | Parámetros | Tipo   |                             | Descripción                                    |
 | ---------- | ------ | :-------------------------: | ---------------------------------------------- |
-| Result     | Object | <- | Estado de la conexión del objeto transportador |
+| Resultado  | Object | <- | Estado de la conexión del objeto transportador |
 
 <!-- END REF -->
 
