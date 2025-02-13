@@ -3,11 +3,11 @@ id: attributes
 title: $attributes
 ---
 
-Allows selecting the attribute(s) to get from the dataclass (*e.g.*, `Company(1)?$attributes=name,city`, `Company(1)?$attributes=employees.lastname`, or `Employee?$attributes=employer.name`).
+データクラスから取得する属性を選択するのに使います (*例:* `Company(1)?$attributes=name,city`、`Company(1)?$attributes=employees.lastname`、あるいは `Employee?$attributes=employer.name`)。
 
 ## 説明
 
-If you have relation attributes in a dataclass, use `$attributes` to define the path of attributes whose values you want to get for the related entity or entities.
+データクラスにリレーション属性が含まれている場合、`$attributes` を使用することでリレート先のエンティティまたはエンティティセレクションの属性のうち値を取得するものを選択することができます。
 
 `$attributes` はエンティティ (*例:* People(1)) またはエンティティセレクション (*例:* People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) に対して適用できます。
 
