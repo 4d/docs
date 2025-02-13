@@ -89,7 +89,7 @@ Form.myDrop.index //3
 
 この場合、フォームのオブジェクトに紐付けた [変数](properties_Object.md#変数あるいは式) は `aCities` でなければなりません。 このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
 
-- オブジェクトが表示される前に、[LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/ja/page288.html) コマンドを使ってリストの値を配列にロードします。 例:
+- Before the object is displayed, load the values of a list into the array using the [`LIST TO ARRAY`](../commands-legacy/list-to-array.md) command. 例:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -103,13 +103,13 @@ Form.myDrop.index //3
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) // 新規レコードの場合
-          aCities:=3 // デフォルトの値を表示します
-       Else // 既存レコードの場合には、保存された値を表示します
+       If(Record number([People])<0) //new record
+          aCities:=3 //display a default value
+       Else //existing record, display stored value
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) // ユーザーが選択を変更した場合
-       City:=aCities{aCities} // フィールドに新しい値を代入
+    :(Form event=On Clicked) //user modified selection
+       City:=aCities{aCities} //field gets new value
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)
