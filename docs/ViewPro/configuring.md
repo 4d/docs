@@ -228,7 +228,7 @@ In addition to the special characters and codes described in the previous sectio
 |^ |Caret| #\^#|
 |' |Apostrophe| '######|
 |{ } |Curly brackets| {###,###,###}|
-|`< >` |Less-than and greater than signs| ## >##|
+|`< >` |Less-than and greater than signs| ``## >##``|
 |= |Equal sign| #+#=##|
 |/ |Forward slash. When used with numbers, displays them as fractions.| mm/dd/yyyy|
 |! |Exclamation point| $###.00!|

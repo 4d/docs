@@ -89,7 +89,7 @@ To initialize the array associated to the drop-down list, you can:
 
 In this case, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. This code could be placed in the form method and be executed when the `On Load` form event runs.
   
-* Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command. For example:
+* Before the object is displayed, load the values of a list into the array using the [`LIST TO ARRAY`](../commands-legacy/list-to-array.md) command. For example:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -103,13 +103,13 @@ If you need to save the user’s choice into a field, you would use an assignmen
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) `new record
-          aCities:=3 `display a default value
-       Else `existing record, display stored value
+       If(Record number([People])<0) //new record
+          aCities:=3 //display a default value
+       Else //existing record, display stored value
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) `user modified selection
-       City:=aCities{aCities} `field gets new value
+    :(Form event=On Clicked) //user modified selection
+       City:=aCities{aCities} //field gets new value
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)

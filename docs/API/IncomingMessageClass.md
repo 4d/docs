@@ -62,7 +62,7 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ```
 
-The request is received on the server as *$request*, an object instance of the [4D.IncomingMessage class](../API/IncomingMessageClass.md).
+The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
 
 Here is the response:
 
