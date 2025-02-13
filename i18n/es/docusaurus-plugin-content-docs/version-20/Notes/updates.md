@@ -14,16 +14,16 @@ Lea las [**novedades de 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), l
 
 #### Lo más destacado
 
-- 4D 20.6 LTS is certified on Windows Server 2025
+- 4D 20.6 LTS está certificado en Windows Server 2025
 
-:::warning KNOWN ISSUE ON WINDOWS SERVER 2025
+:::warning PROBLEMA CONOCIDO EN WINDOWS SERVER 2025
 
-On Windows Server 2025, some custom options in the new Windows Print dialog box are not available and are still under investigation. A fix will be available in the next hotfix.
+En Windows Server 2025, algunas opciones personalizadas de la nueva caja de diálogo Imprimir de Windows no están disponibles y aún se están investigando. La solución estará disponible en la próxima revisión.
 
 :::
 
-- Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.6): list of all bugs that have been fixed in 4D 20.6 LTS.
+- Posibilidad de [crear aplicaciones independientes sin licencias integradas](../Desktop/building.md#licenses).
+- [**Lista de bugs corregidos**](https://bugs.4d.com/fixes?version=20.6): lista de todos los bugs corregidos en 4D 20.6 LTS.
 
 
 
@@ -171,7 +171,7 @@ Lea las [**novedades de 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 #### Cambios de comportamiento
 
 - Para el cumplimiento con la RFC HTTP, la propiedad [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) devuelve ahora todos los nombres de encabezados **en minúsculas**. Si desea que su código siga funcionando como antes, utilice la nueva propiedad [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
-- When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
+- Cuando una acción estándar es asignada a un [botón bevel con menú emergente vinculado](../FormObjects/properties_TextAndPicture.md#with-pop-up-menu), la acción estándar ya no se genera si se selecciona una opción de menú emergente.
 - En las áreas Web que utilizan blink (CEF), los diálogos mostrados desde scripts externos ahora se bloquean si no se llaman desde una función `setTimeout()` JS. Esto se debe a las actualizaciones actuales CEF, en las que los diálogos mostrados por funciones como `alert()` o `print()` ya no son gestionados por el SO sino por el área Web. Ver [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) y [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
 
 
@@ -221,7 +221,7 @@ Lea las [**novedades de 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 
 ### 4D 19 R5
 
-- The project [directory.json file](../Users/handling_users_groups.md#directoryjson-file) can now be [embedded in the server](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
+- El archivo [directory.json](../Users/handling_users_groups.md#directoryjson-file) del proyecto ahora puede ser [integrado al servidor](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) al momento de la generación, lo que le permite desplegar una aplicación cliente/servidor con una configuración básica de la seguridad de los usuarios y de los grupos.
 - Ahora puede [deseleccionar los módulos inútiles](../Desktop/building.md#deselecting-modules) en sus aplicaciones generadas.
 - La librería *MeCab* se incluye por defecto en todas las aplicaciones 4D en macOS. En versiones anteriores, esta librería, diseñada específicamente para gestionar texto japonés, sólo estaba disponible en la versión japonesa de 4D en macOS. Si no necesita esta librería en sus aplicaciones finales, ahora puede [deseleccionarla](../Desktop/building.md#deselecting-modules).
 - [Optimización cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization): nuevas funciones clase permiten manejar la caché ORDA y el contenido de un contexto de optimización. Ver [Preconfiguración de contextos](../ORDA/remoteDatastores.md#preconfiguring-contexts) y [Caché ORDA](../ORDA/remoteDatastores.md#orda-cache) para más información.
