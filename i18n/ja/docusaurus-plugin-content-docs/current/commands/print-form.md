@@ -91,7 +91,12 @@ displayed_sidebar: docs
 
 **formData**
 
-オプションとして、*form* 引数のフォームに、*formData* オブジェクトを使用してパラメーターを渡すことができます。あるいは、[フォームにユーザークラスを割り当てる](../FormEditor/properties_FormProperties.md#form-class) ことをしていた場合に4D によって自動的にインスタンス化されるフォームクラスオブジェクトを使うこともできます。 form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。 formData オブジェクトは、[`On Printing Detail` form event](../Events/onPrintingDetail.md) フォームイベント内で利用可能です。
+オプションとして、*form* 引数のフォームに、*formData* オブジェクトを使用してパラメーターを渡すことができます。あるいは、[フォームにユーザークラスを割り当てる](../FormEditor/properties_FormProperties.md#form-class) ことをしていた場合に4D によって自動的にインスタンス化されるフォームクラスオブジェクトを使うこともできます。 form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。
+formData オブジェクトは、[`On Load` form event](../Events/onLoad.md)フォームイベント内で利用可能です。 form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。
+formData オブジェクトは、[`On Load` form event](../Events/onLoad.md)フォームイベント内で利用可能です。 form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。
+formData オブジェクトは、[`On Load` form event](../Events/onLoad.md)フォームイベント内で利用可能です。 form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。
+formData オブジェクトは、[`On Load` form event](../Events/onLoad.md)フォームイベント内で利用可能です。 form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。
+formData オブジェクトは、[`On Load` form event](../Events/onLoad.md)フォームイベント内で利用可能です。 form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。 formData オブジェクトは、[`On Printing Detail` form event](../Events/onPrintingDetail.md) フォームイベント内で利用可能です。
 
 form data オブジェクトについての詳細な情報については、[`DIALOG`](dialog.md) コマンドを参照してください。
 
