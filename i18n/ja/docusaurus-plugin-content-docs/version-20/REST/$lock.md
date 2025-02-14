@@ -52,23 +52,23 @@ REST API によってロックされたエンティティは、次の場合に�
 | success      |                | boolean | ロックに成功した場合 (あるいはエンティティがすでにカレントセッションでロックされていた場合) には true、それ以外は false (この場合は返されません)。                                                                |
 |              |                |         | ***エラーの場合にのみ利用可能:***                                                                                                                              |
 | status       |                | number  | エラーコード、以下参照                                                                                                                                       |
-| statusText   |                | text    | エラーの詳細、以下参照                                                                                                                                       |
+| statusText   |                | テキスト    | エラーの詳細、以下参照                                                                                                                                       |
 | lockKind     |                | number  | ロックコード                                                                                                                                            |
-| lockKindText |                | text    | "Locked by session" RESTセッションによるロック、"Locked by record" 4Dプロセスによるロック                                                                               |
+| lockKindText |                | テキスト    | "Locked by session" RESTセッションによるロック、"Locked by record" 4Dプロセスによるロック                                                                               |
 | lockInfo     |                | object  | ロック元についての情報。 返されるプロパティはロック元 (4Dプロセスまたは RESTセッション) によって異なります。                                                                                      |
 |              |                |         | ***4Dプロセスによるロックの場合:***                                                                                                                            |
 |              | task_id        | number  | プロセスID                                                                                                                                            |
-|              | user_name      | text    | マシン上でのセッションユーザー名                                                                                                                                  |
-|              | user4d_alias   | text    | 4D ユーザーの名前またはエイリアス                                                                                                                                |
+|              | user_name      | テキスト    | マシン上でのセッションユーザー名                                                                                                                                  |
+|              | user4d_alias   | テキスト    | 4D ユーザーの名前またはエイリアス                                                                                                                                |
 |              | user4d_id      | number  | 4DデータベースディレクトリでのユーザーID                                                                                                                            |
-|              | host_name      | text    | マシン名                                                                                                                                              |
-|              | task_name      | text    | プロセス名                                                                                                                                             |
-|              | client_version | text    | クライアントのリリース                                                                                                                                       |
+|              | host_name      | テキスト    | マシン名                                                                                                                                              |
+|              | task_name      | テキスト    | プロセス名                                                                                                                                             |
+|              | client_version | テキスト    | クライアントのリリース                                                                                                                                       |
 |              |                |         | ***RESTセッションによるロックの場合:***                                                                                                                         |
-|              | host           | text    | エンティティをロックした URL (例: "127.0.0.1:8043")                                                                                                            |
-|              | IPAddr         | text    | ロック元の IPアドレス (例: "127.0.0.1")                                                                                                                     |
+|              | host           | テキスト    | エンティティをロックした URL (例: "127.0.0.1:8043")                                                                                                            |
+|              | IPAddr         | テキスト    | ロック元の IPアドレス (例: "127.0.0.1")                                                                                                                     |
 |              | recordNumber   | number  | ロックされたレコードのレコード番号                                                                                                                                 |
-|              | userAgent      | text    | ロック元の userAgent (例: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
+|              | userAgent      | テキスト    | ロック元の userAgent (例: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
 
 エラー時には *__STATUS* オブジェクトの *status* および *statusText* プロパティに以下のいずれかの値が返されます:
