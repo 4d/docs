@@ -24,7 +24,7 @@ Sólo un depurador puede depurar una aplicación 4D Server en un momento dado. S
 El depurador asociado es llamado cada vez que se encuentra un 4D Server:
 
 - un punto de ruptura
-- un comando `TRACE`
+- a `TRACE` command
 - un comando de captura
 - un error
 
@@ -75,7 +75,7 @@ Para volver a conectar el depurador al servidor:
 
 - On a remote 4D client, this option is named **Attach Remote Debugger At Startup**. Cuando se selecciona, el cliente 4D remoto intentará automáticamente adjuntar el depurador remoto en cada conexión posterior a la misma base de datos 4D Server. If the attachment is accepted (see [Rejected attachment requests](#rejected-attachment-requests)), the remote debugger is automatically attached to the remote 4D client and the **Detach Remote Debugger option is displayed**.
 
-> Esta configuración se aplica por proyecto y se almacena localmente en el archivo [`.4DPreferences`](Project/architecture.md#userpreferencesusername).
+> This setting is applied per project and is stored locally in the [`.4DPreferences`](Project/architecture.md#userpreferencesusername) file.
 
 ## Peticiones de adjuntos rechazadas
 
