@@ -737,7 +737,7 @@ $status:=$transporter.expunge()
 | name       | Text   | メールボックスの名称                                                    |
 | mailCount  | Number | メールボックス内のメッセージの数                                              |
 | mailRecent | Number | (新しいメッセージであることを表す) "recent" フラグがついたメッセージの数 |
-| id         | text   | メールボックスの固有ID                                                  |
+| id         | テキスト   | メールボックスの固有ID                                                  |
 | mailUnseen | Number | "unseen" フラグがついたメッセージの数                                       |
 
 #### 例題
@@ -1680,9 +1680,9 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 | name           | Text   | メールボックスの名称                                                                           |
 | mailCount      | number | メールボックス内のメッセージの数                                                                     |
 | mailRecent     | number | "recent" フラグがついたメッセージの数                                                              |
-| id             | text   | メールボックスの固有ID                                                                         |
-| flags          | text   | メールボックスで現在使用されているフラグのリスト (スペース区切り)。                               |
-| permanentFlags | text   | クライアントが永続的に変更可能なフラグ (IMAPサーバーが管理する \Recent フラグを除く) の、スペース区切りのリスト。 |
+| id             | テキスト   | メールボックスの固有ID                                                                         |
+| flags          | テキスト   | メールボックスで現在使用されているフラグのリスト (スペース区切り)。                               |
+| permanentFlags | テキスト   | クライアントが永続的に変更可能なフラグ (IMAPサーバーが管理する \Recent フラグを除く) の、スペース区切りのリスト。 |
 
 :::info
 
