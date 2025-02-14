@@ -261,7 +261,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
+A propriedade `.modificationDate` retorna <!-- REF #directory.modificationDate.Summary --> a data da última modificação da pasta<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -285,7 +285,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.modificationTime` property returns <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+A propriedade `.modificationTime` retorna <!-- REF #directory.modificationTime.Summary -->a hora da última modificação da pasta<!-- END REF --> (expressa como um número de segundos a partir de 00:00).
 
 Essa propriedade é **somente leitura**.
 
@@ -409,7 +409,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
+A propriedade `.platformPath` retorna <!-- REF #directory.platformPath.Summary -->o caminho da pasta expresso com a sintaxe da plataforma atual<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -444,7 +444,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
+A função `.copyTo()` <!-- REF #directory.copyTo().Summary -->copia o objeto `Folder` para a *destinationFolder* especificada<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
@@ -609,7 +609,7 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 #### Descrição
 
-The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
+A função `.folder()` <!-- REF #directory.folder().Summary -->cria um objeto `Folder` dentro do objeto `Folder` pai e retorna sua referência<!-- END REF -->.
 
 Em *path*, passe uma rota relativa POSIX para designar a pasta a devolver. A rota se avaliará a partir da pasta pai como raíz.
 
@@ -653,7 +653,7 @@ Um objeto `Folder` ou null se *path* for inválido.
 
 #### Descrição
 
-The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
+A função `.folders()` <!-- REF #directory.folders().Summary -->retorna uma coleção de objetos `Folder` contidos na pasta principal<!-- END REF -->.
 
 By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
