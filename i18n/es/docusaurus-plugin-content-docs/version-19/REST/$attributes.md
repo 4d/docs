@@ -3,7 +3,7 @@ id: attributes
 title: '$attributes'
 ---
 
-Allows selecting the attribute(s) to get from the dataclass (*e.g.*, `Company(1)?$attributes=name,city`, `Company(1)?$attributes=employees.lastname`, or `Employee?$attributes=employer.name`).
+Permite seleccionar el atributo o atributos a obtener de la dataclass (*e.g.*, `Company(1)?$attributes=name,city`, `Company(1)?$attributes=employees.lastname`, o `Employee?$attributes=employer.name`).
 
 
 ## Descripción
@@ -26,7 +26,7 @@ Puede aplicar `$attributes` a una entidad (*p. Ej.*, People(1)) o una entity sel
     - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: sólo se devuelven los atributos de las entidades relacionadas.
 
 
-- If `$attributes` is specified for **storage** attributes:
+- Si `$attributes` se especifica para los atributos de **almacenamiento**:
     - `$attributes=attribute1, attribute2, ...`: solo son devueltos aquellos atributos de las entidades.
 
 
