@@ -178,10 +178,10 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 
 <!-- REF #SignalClass.wait().Params -->
 
-| Paramètres | Type    |                             | Description                                   |
-| ---------- | ------- | --------------------------- | --------------------------------------------- |
-| timeout    | Real    | ->                          | Délai d'attente maximum du signal en secondes |
-| Résultat   | Boolean | <- | Etat de la propriété `.signaled`              |
+| Paramètres | Type    |                             | Description                                         |
+| ---------- | ------- | --------------------------- | --------------------------------------------------- |
+| timeout    | Real    | ->                          | Délai d'attente maximum en secondes pour la réponse |
+| Résultat   | Boolean | <- | Etat de la propriété `.signaled`                    |
 
 <!-- END REF -->
 
