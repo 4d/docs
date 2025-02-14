@@ -191,7 +191,7 @@ The [symbol file](../Project/compiler.md#complete-list-of-methods), if enabled, 
 - 標準の進捗インジケーター
 - `ALERT`、`Request` そして `CONFIRM` ダイアログ。 ダイアログはユーザーモードプロセス (4D)、あるいはサーバーユーザーインターフェースプロセス (4D Server) 内で表示されます。 ただし、4D Server を Windows上でユーザー操作を許可しないサービスとしてローンチした場合には、ダイアログは表示されないという点に注意して下さい。
 
-### トリガー
+### Triggers
 
 [トリガー](https://doc.4d.com/4Dv20R6/4D/20-R6/Triggers.300-6958353.ja.html) を呼び出すことのあるコマンドをメソッドが使用している場合、4Dコンパイラーはメソッドがスレッドセーフであるかどうかをチェックするために、トリガーがスレッドセーフかどうかを評価します:
 
