@@ -28,7 +28,7 @@ title: VP SET COLUMN ATTRIBUTES
 | pageBreak | boolean | レンジ内の先頭カラムの前に改ページを挿入する場合には true、それ以外は false |
 | visible   | boolean | カラムが表示状態であれば true、それ以外は false               |
 | resizable | boolean | カラムがリサイズ可能であれば true、それ以外は false             |
-| header    | text    | カラムヘッダーのテキスト                                |
+| header    | テキスト    | カラムヘッダーのテキスト                                |
 
 #### 例題
 
