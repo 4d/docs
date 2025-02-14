@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 `This` コマンドは<!--REF #_command_.This.Summary-->現在処理中のオブジェクトへの参照を返します<!-- END REF-->。
 
-`This` の値は、呼ばれ方によって決まります。 この値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
+`This` の値は、呼ばれ方によって決まります。 <code>This</code> の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
 
 このコマンドは以下で説明するように、異なるコンテキストで使用することができます。 これらのコンテキストの中においては、**This.<*propertyPath*\>** を通してオブジェクト/コレクションの要素プロパティやエンティティの属性にアクセスすることができます。 例えば、*This.name* や*This.employer.lastName* はオブジェクト、要素やエンティティプロパティへの有効なパスとなります。
 
@@ -94,7 +94,7 @@ $val:=$o.f() //8
 
 コレクションまたはエンティティセレクションに割り当てられたリストボックスのコンテキストにおいては、[`On Display Detail`](../Events/onDisplayDetail.md) あるいは [`On Data Change`](../Events/onDataChange.md) イベントの最中において、は現在の行を表示するためにリストボックス割り当てられたコレクション要素またはエンティティへの参照を返します。
 
-:::注意
+:::note
 
 スカラー値のコレクションをリストボックスに対して使用した場合、4D はそれぞれの要素に対して、単一のプロパティ**value** を持つオブジェクトを作成します。 Thus, the element value is returned by the **This.value** non-assignable expression. そのため、要素の値は**This.value** という代入不可の式によって返されます。
 
@@ -157,7 +157,7 @@ $val:=$o.f() //8
 
 ![](../assets/en/commands/pict3872844.en.png)
 
-注意:
+注:
 
 - *This.ID*、*This.Title* および *This.Date* は、ds.Event データクラス内の対応する属性を直接参照します。
 - *This.meetings* は(1対N リレーション名に基づいた)リレーション属性であり、ds.Meeting データクラスのエンティティセレクションを返します。
