@@ -679,7 +679,7 @@ Voici un exemple de fichier de configuration de log :
 
 ### Exemple
 
-Pour lancer ce journal :
+Voici un exemple de fichier de configuration de log :
 
 ```json
 {
