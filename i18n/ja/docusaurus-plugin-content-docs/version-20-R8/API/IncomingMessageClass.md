@@ -127,10 +127,10 @@ There are 2 url parts - Url parts are: start - example
 
 <!-- REF #IncomingMessageClass.getHeader().Params -->
 
-| 引数  | 型    |                             | 説明                           |
-| --- | ---- | --------------------------- | ---------------------------- |
-| key | Text | ->                          | 取得したいヘッダープロパティ               |
-| 戻り値 | Text | <- | Value of the header property |
+| 引数  | 型    |                             | 説明             |
+| --- | ---- | --------------------------- | -------------- |
+| key | Text | ->                          | 取得したいヘッダープロパティ |
+| 戻り値 | Text | <- | ヘッダープロパティの値    |
 
 <!-- END REF -->
 
@@ -238,7 +238,7 @@ $value := $request.getHeader("content-type")
 
 `.headers` プロパティには<!-- REF #IncomingMessageClass.headers.Summary -->受信したメッセージのカレントのヘッダーがキー/値のペア(文字列)が格納されています<!-- END REF -->。
 
-The `.headers` property is read-only.
+`.headers` プロパティは、読み出し専用です。
 
 ヘッダー名(キー)は全て小文字となっています。 ヘッダー名は全て大文字・小文字は区別されます。
 
