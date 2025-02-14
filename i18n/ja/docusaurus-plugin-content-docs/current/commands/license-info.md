@@ -56,11 +56,11 @@ displayed_sidebar: docs
 }
 ```
 
-| **プロパティ**           | **型**                 | **説明**                                                                                                                                      | **例**                                                                             |
+| **プロパティ**           | **型**                 | **Description**                                                                                                                             | **Example**                                                                       |
 | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | name                | string                | ライセンス名                                                                                                                                      | "4D Developer Professional vXX"                                                   |
 | key                 | number                | インストールされたプロダクトのID 4D アプリケーション(4D Server、ローカル4D、4D デスクトップなど) には固有の番号が マシン上にインストールされているアプリケーションに割り振られています。 この番号は暗号化されています。 | 12356789                                                                          |
-| licenseNumber       | string                | ライセンス番号                                                                                                                                     | "4DDP16XXXXX1123456789"                                                           |
+| licenseNumber       | string                | License number                                                                                                                              | "4DDP16XXXXX1123456789"                                                           |
 | version             | string                | 製品バージョン番号                                                                                                                                   | "16", "16R2"                                                                      |
 | attributes          | collection of strings | (該当する場合であれば) ライセンスのタイプ(オプション)                                                                         | \["application","OEM"\]     |
 | userName            | string                | 4D ストアアカウントでの名前                                                                                                                             | "John Smith"                                                                      |
@@ -69,13 +69,13 @@ displayed_sidebar: docs
 | platforms           | collection of strings | ライセンスを使用しているプラットフォーム                                                                                                                        | \["macOS", "windows"\]      |
 | expirationDate      | object                | 有効期限(オプション)                                                                                                              | {"day":2, "month":6, "year":2018} |
 | renewalFailureCount | number                | 少なくとも一つの製品ライセンスに対して自動更新に失敗した回数(オプション)                                                                                    | 3                                                                                 |
-| products            | collection of objects | 製品ライセンスの詳細(各要素が製品ライセンスそれぞれの詳細を表す) 以下参照。 以下参照。 以下参照。 以下参照。 以下参照。 以下参照。                                                    |                                                                                   |
+| products            | Object の Collection   | 製品ライセンスの詳細(各要素が製品ライセンスそれぞれの詳細を表す) 以下参照。 以下参照。 以下参照。 以下参照。 以下参照。 以下参照。                                                    |                                                                                   |
 
 `products` コレクションの各オブジェクトは、以下のプロパティが格納されています:
 
-| **プロパティ**    |                                                                                            | **型**               | **説明**                                        | **例**                                                                                       |
+| **プロパティ**    |                                                                                            | **型**               | **Description**                               | **Example**                                                                                 |
 | ------------ | ------------------------------------------------------------------------------------------ | ------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| id           |                                                                                            | number              | ライセンス番号                                       | 取りうる値については、[Is license available](../commands-legacy/is-license-available.md) コマンドを参照して下さい。 |
+| id           |                                                                                            | number              | License number                                | 取りうる値については、[Is license available](../commands-legacy/is-license-available.md) コマンドを参照して下さい。 |
 | name         |                                                                                            | string              | ライセンス名                                        | "4D Write - 4D Write Pro"                                                                   |
 | usedCount    |                                                                                            | number              | 消費接続数                                         | 8                                                                                           |
 | allowedCount |                                                                                            | number              | 有効期限内においてその製品に対して許可される総接続数                    | 15                                                                                          |
