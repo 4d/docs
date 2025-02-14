@@ -2898,7 +2898,7 @@ module.exports =
 											"WritePro/commands/wp-delete-subsection",
 											"WritePro/commands-legacy/wp-delete-text-box",
 											"WritePro/commands/wp-export-document",
-											"WritePro/commands-legacy/wp-export-variable",
+											"WritePro/commands/wp-export-variable",
 											"WritePro/commands-legacy/wp-find-all",
 											"WritePro/commands-legacy/wp-find-next",
 											"WritePro/commands-legacy/wp-find-previous",

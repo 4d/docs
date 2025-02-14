@@ -23,7 +23,7 @@ By default, if you omit the *source* parameter, the command returns an empty 4D 
 
 If the *source* parameter is used, the new 4D Write Pro object will be filled with the contents of the *source*. You can pass:
 
-* a [string](# "A character string") parameter: In this case, you pass a 4D HTML source, *i.e.* a text exported by [WP EXPORT VARIABLE](wp-export-variable.md) with the wk web page html 4D option. This text can contain references (4D tags and expressions) and embedded images.
+* a [string](# "A character string") parameter: In this case, you pass a 4D HTML source, *i.e.* a text exported by [WP EXPORT VARIABLE](../commands/wp-export-variable.md) with the wk web page html 4D option. This text can contain references (4D tags and expressions) and embedded images.
 * a [blob](# "A series of bytes (from 0 to 2 GB in length)") parameter: In this case, you pass either:  
    * a 4D Write Pro (.4wp) format document stored in a BLOB.  
    For more information about the 4D Write Pro document format, please refer to *.4wp document format*.  

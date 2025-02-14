@@ -23,7 +23,7 @@ Por padrão, se omitir o parâmetro *fonte*, o comando devolve um objeto 4D Writ
 
 Também pode utilizar o parâmetro *fonte*, em cujo caso o novo objeto 4D Write Pro será preenchido com o conteúdo da *fonte*. Pode passar:
 
-* um parâmetro *cadeia*: Neste caso, passe uma fonte HTML 4D, ou seja, um texto exportado por [WP EXPORT VARIABLE](wp-export-variable.md) com a opção wk web page html 4D. Este texto pode conter referências (etiquetas e expressões 4D) e imagens aninhadas).
+* um parâmetro *cadeia*: Neste caso, passe uma fonte HTML 4D, ou seja, um texto exportado por [WP EXPORT VARIABLE](../commands/wp-export-variable.md) com a opção wk web page html 4D. Este texto pode conter referências (etiquetas e expressões 4D) e imagens aninhadas).
 * ou um parâmetro *blob*: Neste caso, deve passar ou:  
    * um formato de documento 4D Write Pro (.4wp) armazenado em um BLOB. Para saber mais sobre o formato 4D Write Pro, veja *formato de documento .4wp*.  
    * uma área de legado 4D Write carregada em um BLOB (Blobs contendo documentos .4w7 ou .4wt são suportados). Para uma lista detalhada de propriedades de 4D Write suportadas em documentos 4D Write Pro, veja a seção *Importar documentos 4D Write*  
