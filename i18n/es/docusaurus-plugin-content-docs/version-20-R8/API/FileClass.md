@@ -426,7 +426,7 @@ Si utiliza el parámetro *mode* (texto), pase el modo de apertura para el file h
 
 Si utiliza el parámetro *options* (object), puede pasar más opciones para el file handle a través de las siguientes propiedades (estas propiedades se pueden leer después desde el objeto [file handle](FileHandleClass) abierto):
 
-| *opciones*        | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
+| *options*         | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | `.mode`           | Text           | Modo de apertura (ver *mode* arriba)                                                                                                                             | "read"       |
 | `.charset`        | Text           | Conjunto de caracteres utilizado al leer o escribir en el archivo. Utilice el nombre estándar del conjunto (por ejemplo, "ISO-8859-1" o "UTF-8") | "UTF-8"      |
