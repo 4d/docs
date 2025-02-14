@@ -112,7 +112,7 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 1. `onOpen` は 1回実行されます。
 2. `onMessage` が 0回以上実行されます。
 3. `onError` が 0回または 1回実行されます (処理を停止します)。
-4. `onTerminate` は常に実行されます。
+4. `onTerminate` is always executed
 
 #### 例題
 
