@@ -112,7 +112,7 @@ Voici la séquence des appels de callbacks :
 1. `onOpen` est exécuté une fois
 2. Zéro ou plusieurs `onMessage` sont exécutés
 3. Zéro ou un `onError` est exécuté (stoppe le traitement)
-4. `onTerminate` est toujours exécuté
+4. `onTerminate` is always executed
 
 #### Exemple
 
