@@ -81,7 +81,7 @@ Appeler `OB Copy` avec un objet partagé (ou avec un objet dont des propriétés
 
 ### Storage
 
-**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard. This shared object is returned by the [`Storage`](../commands-legacy/storage.md) command.
+**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
 
 A noter que, à la différence de objets partagés standard, l'objet `Storage` ne crée par de groupe partagé lorsque des objets/collection lui sont assigné(e)s en tant que propriétés. Cette exception permet à l'objet **Storage** d'être utilisé sans verrouiller les objets/collections partagé(e)s connecté(e)s.
 
