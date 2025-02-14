@@ -276,7 +276,7 @@ ELF (Extended Log Format) または WLF (WebStar Log Format) を選択すると�
 
 RESTサーバーを開始/停止します。 [RESTサーバー設定](../REST/configuration.md) 参照。
 
-### アクセス権
+### アクセス
 
 :::info 非推奨
 
