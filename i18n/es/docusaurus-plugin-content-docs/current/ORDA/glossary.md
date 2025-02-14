@@ -156,7 +156,7 @@ La capacidad de ejecutar una o varias [acciones](#actions) en [recursos](#resour
 
 Ver [Atributo](#attribute).
 
-> \> <em x-id="3">Attributes</em> and <em x-id="3">properties</em> are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
+> &#062; Attributes and properties are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
 
 ## PropertyPath
 
