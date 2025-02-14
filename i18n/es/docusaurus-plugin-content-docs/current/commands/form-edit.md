@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM EDIT.Params-->
 
-| Parámetros | Tipo  |                             | Descripción                                                                                                              |
-| ---------- | ----- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| aTable     | Tabla | &#8594; | Tabla a la cual pertenece el formulario o si se omite: tabla por defecto o uso de un formulario proyecto |
-| form       | Text  | &#8594; | Nombre del formulario                                                                                                    |
-| object     | Text  | &#8594; | Nombre del objeto del formulario o nombre del grupo                                                                      |
+| Parámetros | Tipo  |                             | Descripción                                                                               |
+| ---------- | ----- | --------------------------- | ----------------------------------------------------------------------------------------- |
+| aTable     | Tabla | &#8594; | Table owning the form or If omitted: default table or use of project form |
+| form       | Text  | &#8594; | Nombre del formulario                                                                     |
+| object     | Text  | &#8594; | Nombre del objeto del formulario o nombre del grupo                                       |
 
 <!-- END REF-->
 
