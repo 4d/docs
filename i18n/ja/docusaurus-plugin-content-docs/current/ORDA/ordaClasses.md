@@ -863,7 +863,7 @@ exposed onHttpGet Function <functionName>(params) : result
 
 :::
 
-### 引数
+### params
 
 `onHttpGet` キーワードを持つ関数は、[引数](../Concepts/parameters.md) を受け入れます。
 
