@@ -306,7 +306,7 @@ Le fenêtre d'évaluation sert à évaluer les expressions. Elle est similaire a
 - pointer
 - calcul
 - commande 4D
-- méthode
+- method
 - et tout ce qui renvoie une valeur
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
