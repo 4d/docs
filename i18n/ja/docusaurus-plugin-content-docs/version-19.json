@@ -80,7 +80,7 @@
     "description": "The label for category Client/Server in sidebar docs"
   },
   "sidebar.docs.category.Forms": {
-    "message": "フォーム",
+    "message": "Forms",
     "description": "The label for category Forms in sidebar docs"
   },
   "sidebar.docs.category.Form Properties": {
