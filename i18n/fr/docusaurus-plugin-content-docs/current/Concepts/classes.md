@@ -27,7 +27,7 @@ Function sayHello() -> $welcome : Text
  $welcome:="Hello "+This.fullName
 ```
 
-Dans une méthode, créons une "Personne" :
+Dans une méthode, créons une "Person" :
 
 ```4d
 var $person : cs.Person //objet de classe Person
@@ -409,8 +409,8 @@ Le type de propriété peut être l'un des suivants :
 | `Collection`                 | Valeur collection                                                         |
 | `Variant`                    | Valeur variant                                                            |
 | `Object`                     | Objet de classe par défaut (4D.Object) |
-| `4D.<className>`             | Object de la classe 4D className                                          |
-| `cs.<className>`             | Object de la classe utilisateur className                                 |
+| `4D.<className>`             | Objet de la classe 4D className                                           |
+| `cs.<className>`             | Objet de la classe utilisateur className                                  |
 | `cs.<namespace>.<className>` | Object de la classe className du composant `<namespace>`                  |
 
 Si vous omettez le type dans la ligne de déclaration, la propriété est créée en tant que variant.
