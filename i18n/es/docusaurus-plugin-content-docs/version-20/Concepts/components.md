@@ -18,7 +18,7 @@ Un proyecto local que se ejecuta en modo interpretado puede utilizar componentes
 
 :::note
 
-Interpreted component package folder name must be suffixed ".4dbase".
+El nombre de la carpeta del paquete de componentes interpretado debe llevar el sufijo ".4dbase".
 
 :::
 
