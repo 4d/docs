@@ -30,4 +30,4 @@ Para más información, consulte [Uso de indicadores](progressIndicator.md#using
 ## Ver también
 
 - [indicadores de progreso](progressIndicator.md)
-- [reglas](ruler.md)
+- [rulers](ruler.md)
