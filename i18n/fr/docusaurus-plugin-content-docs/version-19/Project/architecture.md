@@ -6,7 +6,7 @@ title: Architecture d'un projet
 Un projet 4D est composé de plusieurs dossiers et fichiers, stockés dans un dossier racine de projet (dossier package). Par exemple :
 
 - MyPackage (*dossier racine du projet*)
-  - Components
+  - Composants
   - Data
     - Logs
     - Propriétés
