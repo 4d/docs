@@ -112,7 +112,7 @@ Voici la séquence des appels de callbacks :
 1. `onData` et `onDataError` sont exécutés une ou plusieurs fois
 2. s'il est appelé, `onError` est exécuté une fois (arrête le traitement du system worker)
 3. si aucune erreur ne s'est produite, `onResponse` est exécuté une fois
-4. `onTerminate` est toujours exécuté
+4. `onTerminate` is always executed
 
 :::info
 
@@ -548,10 +548,10 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
-| Paramètres | Type                            |                             | Description                                      |
-| ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------ |
-| timeout    | Real                            |              ->             | Temps d'attente (en secondes) |
-| Résultat   | 4D.SystemWorker | <- | Objet SystemWorker                               |
+| Paramètres | Type                            |                             | Description                                         |
+| ---------- | ------------------------------- | :-------------------------: | --------------------------------------------------- |
+| timeout    | Real                            |              ->             | Délai d'attente maximum en secondes pour la réponse |
+| Résultat   | 4D.SystemWorker | <- | Objet SystemWorker                                  |
 
 <!-- END REF -->
 
