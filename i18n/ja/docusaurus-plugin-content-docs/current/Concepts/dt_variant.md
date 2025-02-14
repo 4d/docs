@@ -8,18 +8,18 @@ title: Variant
 バリアント型の変数は以下のデータタイプの値を格納することができます:
 
 - BLOB
-- ブール
-- コレクション
-- 日付
+- boolean
+- collection
+- date
 - longint
-- オブジェクト
-- ピクチャー
-- ポインター
+- object
+- picture
+- pointer
 - real
 - テキスト
-- 時間
+- time
 - null
-- 未定義
+- undefined
 
 > バリアント型変数に配列を格納することはできません。
 
