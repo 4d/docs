@@ -450,7 +450,7 @@ End if
 
 | 引数  | 型       |                             | 説明                            |
 | --- | ------- | :-------------------------: | ----------------------------- |
-| 戻り値 | Boolean | <- | ゲストセッションの場合は True、それ以外は False |
+| 戻り値 | Boolean | <- | ゲストセッションの場合は true、それ以外は false |
 
 <!-- END REF -->
 
@@ -693,7 +693,7 @@ End use
 
 #### 説明
 
-`.userName` プロパティは、<!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 With 4D Server, this unique string is automatically assigned by the server for each session and allows you to identify its processes.
+`.userName` プロパティは、<!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 このプロパティは、コード内でユーザーを確認するのに使用できます。
 
 - Webセッションでは、このプロパティはデフォルトで空の文字列です。  これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
 - リモートおよびストアドプロシージャーセッションでは、このプロパティは [`Current user`](../commands-legacy/current-user.md) コマンドと同じユーザー名を返します。
