@@ -215,7 +215,7 @@ A continuación, puede obtener los empleados con un salario superior a la media 
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 ```
 
-### Clase Entity
+### Entity Class
 
 Cada tabla expuesta con ORDA ofrece una clase Entity en el class store `cs`.
 
