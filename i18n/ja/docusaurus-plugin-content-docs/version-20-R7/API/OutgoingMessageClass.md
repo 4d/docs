@@ -141,13 +141,13 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 #### 説明
 
-The `.setHeader()` function <!-- REF #OutgoingMessageClass.setHeader().Summary -->sets the outgoing message header *key* with the provided *value*<!-- END REF -->. If both parameters are not Text values, an error is raised.
+`.setHeader()` 関数は、<!-- REF #OutgoingMessageClass.setHeader().Summary -->送信するメッセージのヘッダーの、*key* 引数で指定したキーを、*value* 引数で指定した値で設定します<!-- END REF -->。 両方の引数ともテキスト値でない場合、エラーが発生します。
 
-When returning a 4D.OutgoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `WASID4D=...` and `4DSID__ProjectName_=....`).
+4D.OutgoingMessage オブジェクトのインスタンスを返すとき、4D は一部のヘッダーを自動的に設定します(例: `Set-Cookie` を `WASID4D=...` および `4DSID__ProjectName_=....` に設定)。
 
 :::note
 
-If you set a *value* for the "Content-Type" header *key*, make sure you call this function after the call to [`setBody()`](#setbody), because `setBody()` automatically fills this header. For a list of "Content-Type" header values, please refer to the [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) documentation.
+*value* 引数の値を、*key* 引数で"Content-Type" ヘッダーを指定して設定しようとする場合、この関数を、[`setBody()`](#setbody) の後に呼び出すようにして下さい。`setBody()` は自動的にヘッダーに値を入れるからです。 "Content-Type" ヘッダーの値の一覧については、の[`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) ドキュメンテーションを参照して下さい。
 
 :::
 
@@ -161,19 +161,19 @@ If you set a *value* for the "Content-Type" header *key*, make sure you call thi
 
 <!-- REF #OutgoingMessageClass.setStatus().Params -->
 
-| 引数     | 型       |    | 説明            |
-| ------ | ------- | -- | ------------- |
-| status | Integer | -> | Status to set |
+| 引数     | 型       |    | 説明        |
+| ------ | ------- | -- | --------- |
+| status | Integer | -> | 設定するステータス |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.setStatus()` function <!-- REF #OutgoingMessageClass.setStatus().Summary -->sets the `status` property with the given *status*<!-- END REF -->.
+`.setStatus()` 関数は、<!-- REF #OutgoingMessageClass.setStatus().Summary -->*status* 引数で与えられたステータスを`status` プロパティに設定します<!-- END REF -->。
 
-If *status* is not an integer value, an error is raised.
+*status* が整数値でない場合、エラーが発生します。
 
-For a list of HTTP status codes, please refer the [HTTP status code list on Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+HTTP ステータスコードの一覧については、[Wikipedia のHTTP ステータスコードの一覧(英文)](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) のページを参照して下さい。
 
 <!-- END REF -->
 
@@ -185,6 +185,6 @@ For a list of HTTP status codes, please refer the [HTTP status code list on Wiki
 
 #### 説明
 
-The `.status` property contains <!-- REF #OutgoingMessageClass.status.Summary -->the current status of the outgoing message<!-- END REF -->. This property can be set using the [`setStatus()`](setstatus) function.
+`.status` プロパティには、<!-- REF #OutgoingMessageClass.status.Summary -->送信メッセージのカレントのステータス<!-- END REF -->が格納されています。 このプロパティは、[`setStatus()`](setstatus) 関数を使用して設定することができます。
 
 <!-- END REF -->
