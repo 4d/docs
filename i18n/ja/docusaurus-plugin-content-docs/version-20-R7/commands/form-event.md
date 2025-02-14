@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### 説明
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred. 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** は、発生したフォームイベントに関する情報を格納しているオブジェクトを返します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。
 
 **返されるオブジェクト**
 
