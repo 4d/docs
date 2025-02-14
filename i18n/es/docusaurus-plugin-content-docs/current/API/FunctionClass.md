@@ -9,7 +9,7 @@ Un objeto **`4D.Function`** contiene un trozo de código que puede ser ejecutado
 - **funciones usuario**, creadas en [clases usuario](Concepts/classes.md) utilizando la [palabra clave Function](Concepts/classes.md#function).
 - **funciones de fórmula**, es decir, funciones que pueden ejecutar cualquier fórmula 4D.
 
-### Objetos Fórmula
+### Objetos fórmula
 
 Los comandos [Formula](../commands/formula.md) y [Formula from string](../commands/formula-from-string.md) le permiten crear [objetos`4D.Function`](#about-4dfunction-objects) para ejecutar cualquier expresión 4D o código expresado como texto.
 
