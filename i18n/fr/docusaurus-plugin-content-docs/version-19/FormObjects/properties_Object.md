@@ -150,7 +150,7 @@ Toutefois, cette propriété a une fonction de typage dans les cas spécifiques 
 
 | Nom                | Type de données | Valeurs possibles                                  |
 | ------------------ | --------------- | -------------------------------------------------- |
-| dataSourceTypeHint | string          | <li>**objets standard:** "integer", "boolean", "number", "picture", "text", "date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**colonnes de list box** : "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li> |
+| dataSourceTypeHint | string          | <li>**objets standard:** "integer", "boolean", "number", "picture", "text", "date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li> |
 
 #### Objets pris en charge
 
