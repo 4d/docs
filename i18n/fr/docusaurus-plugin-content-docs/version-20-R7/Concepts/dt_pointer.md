@@ -7,7 +7,7 @@ Les variables ou expressions de type Pointeur sont des références à d'autres 
 
 Les pointeurs sont des outils de programmation avancée. Lorsque vous utilisez le langage de 4D, vous vous référez aux différents objets par l’intermédiaire de leur nom — en particulier les tables, champs, variables et tableaux. Cependant, il est parfois utile de pouvoir appeler ou référencer ces éléments sans nécessairement connaître leur nom. C’est ce que permettent les pointeurs.
 
-Le concept de pointeur n’est pas tellement éloigné de la vie courante. Vous vous référez souvent à des choses sans connaître leur identité exacte. Par exemple, vous pourriez dire à un ami : "Allons faire un tour avec ta voiture" au lieu de "Allons faire un tour avec la voiture qui a la plaque d’immatriculation 123ABD". Dans ce cas, vous faites référence à la voiture avec la plaque d'immatriculation 123ABD en utilisant l'expression "ta voiture". For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
+Le concept de pointeur n’est pas tellement éloigné de la vie courante. Vous vous référez souvent à des choses sans connaître leur identité exacte. Par exemple, vous pourriez dire à un ami : "Allons faire un tour avec ta voiture" au lieu de "Allons faire un tour avec la voiture qui a la plaque d’immatriculation 123ABD". Dans ce cas, vous faites référence à la voiture avec la plaque d'immatriculation 123ABD en utilisant l'expression "ta voiture". L'expression "la voiture qui a la plaque d'immatriculation 123ABD" est le nom d'un objet, et l'expression "ta voiture" revient à utiliser un pointeur pour référencer l'objet.
 
 La capacité de se référer à quelque chose sans connaître son identité exacte est très utile. Si votre ami s’achetait une nouvelle voiture, l’expression "ta voiture" serait toujours exacte — ce serait toujours une voiture et vous pourriez toujours aller quelque part avec. Les pointeurs fonctionnent de la même manière. Par exemple, un pointeur peut pointer à un moment donné vers un champ numérique appelé Age, et plus tard vers une variable numérique appelée Ancien âge. Dans les deux cas, le pointeur référence des données numériques pouvant être utilisée dans des calculs.
 
@@ -37,7 +37,7 @@ var $MyPointer : Pointer
 $MyPointer:=->$MyVar
 ```
 
-The -&#062; symbol means “get a pointer to.” The -&#062; symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MyVar. Ce pointeur est assigné à $MyPointer via l’opérateur d’assignation.
+The -&#062; symbol means “get a pointer to.” Ce symbole est formé du caractère "tiret" (-) suivi du caractère "supérieur à". Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MyVar. Ce pointeur est assigné à $MyPointer via l’opérateur d’assignation.
 
 $MyPointer est désormais une variable qui contient un pointeur vers $MyVar. $MyPointer ne contient pas "Hello", la valeur de $MyVar, mais vous pouvez utiliser $MyPointer pour obtenir cette valeur. L’expression suivante retourne la valeur de $MyVar :
 
@@ -94,7 +94,7 @@ Avec :
 
 :::warning Null Pointers
 
-Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Par exemple :
+Tenter d'assigner ou de lire un pointeur null (alias "nil") produira une erreur à l'exécution. Par exemple :
 
 ```4d
 var $p : Pointer // non initialized pointer (Nil value)
@@ -102,7 +102,7 @@ $v:=$p-> // error
 $p->:=$v // error
 ```
 
-To prevent such errors, you can write:
+Pour éviter de telles erreurs, vous pouvez écrire :
 
 ```4d
 If ($p#Null)
@@ -266,7 +266,7 @@ Voici la description de chaque ligne de l’exemple :
 - ($PointerTwo->)->:="Goodbye"
   \--> $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la valeur "Goodbye" est assignée à $MyVar.
 - ALERTE (($PointerTwo->)->)
-  \--> Même chose : $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Therefore ($PointerTwo-&#062;)-&#062; references the contents of $MyVar.
+  \--> Même chose : $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la boîte d'alerte affiche le contenu de $MyVar.
 
 La ligne suivante place la valeur "Hello" dans $MyVar :
 
