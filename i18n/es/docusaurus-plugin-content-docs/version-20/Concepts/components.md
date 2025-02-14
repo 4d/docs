@@ -12,13 +12,13 @@ Varios componentes están [preinstalados en el entorno de desarrollo 4D](Extensi
 
 ## Instalación de los componentes
 
-To install a component, you simply need to copy the component package folder into the [`Components` folder of the project](Project/architecture.md). Puede utilizar alias o atajos.
+Para instalar un componente, basta con copiar la carpeta del componente en la carpeta [`Components` del proyecto](Project/architecture.md). Puede utilizar alias o atajos.
 
 Un proyecto local que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados. Un proyecto local que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
 
 :::note
 
-Interpreted component package folder name must be suffixed ".4dbase".
+El nombre de la carpeta del paquete de componentes interpretado debe llevar el sufijo ".4dbase".
 
 :::
 

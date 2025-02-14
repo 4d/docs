@@ -64,9 +64,9 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 - 計算属性を構成する属性に対するアクセス権をセッションが持っていない場合でも、計算属性へのアクセス権があれば、これを読み取ることができます。
 - シングルトンクラス (`singleton` 型) には許諾アクションを割り当てることができます。その場合、そのシングルトンクラスの公開関数すべて、および、シングルトン関数 (`singletonMethod` 型）に適用されます。
 - デフォルト値: 現在の実装では、*Null* のみデフォルト値として利用可能です。
-- In REST [force login mode](../REST/authUsers.md#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
+- REST の [強制ログインモード](../REST/authUsers.md#強制ログインモード) では、[`authentify()`関数](../REST/authUsers.md#function-authentify) は、権限の設定に関係なく常にゲストユーザーによって実行可能です。
 
-Setting permissions requires to be consistent, in particular **update** and **drop** permissions also need **read** permission (but **create** does not need it).
+権限の設定には一貫性が必要です。特に、**update** および **drop** 権限は**read** 権限も必要とします(ただし**create** はそれを必要としません)。
 
 ## 権限とロール
 

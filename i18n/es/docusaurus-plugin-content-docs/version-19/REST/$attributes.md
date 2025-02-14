@@ -8,7 +8,7 @@ Allows selecting the attribute(s) to get from the dataclass (*e.g.*, `Company(1)
 
 ## Descripción
 
-If you have relation attributes in a dataclass, use `$attributes` to define the path of attributes whose values you want to get for the related entity or entities.
+Si tiene atributos relacionales en una dataclass, utilice `$attributes` para definir la ruta de los atributos cuyos valores desea obtener para la entidad o entidades relacionadas.
 
 Puede aplicar `$attributes` a una entidad (*p. Ej.*, People(1)) o una entity selection (*p. Ej.*, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF).
 
@@ -27,7 +27,7 @@ Puede aplicar `$attributes` a una entidad (*p. Ej.*, People(1)) o una entity sel
 
 
 - If `$attributes` is specified for **storage** attributes:
-    - `$attributes=attribute1, attribute2, ...`: only those attributes of the entities are returned.
+    - `$attributes=attribute1, attribute2, ...`: solo son devueltos aquellos atributos de las entidades.
 
 
 

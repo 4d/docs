@@ -22,8 +22,8 @@ title: $attributes
   - `$attributes=relatedEntities.*`: リレートエンティティズの属性がすべて返されます。
   - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: リレートエンティティズの指定された属性だけが返されます。
 
-- If `$attributes` is specified for **storage** attributes:
-  - `$attributes=attribute1, attribute2, ...`: only those attributes of the entities are returned.
+- **ストアレージ** 属性を対象に`$attributes` が指定された場合:
+  - `$attributes=attribute1, attribute2, ...`: エンティティの属性のみが返されます。
 
 ## リレートエンティティズの例
 

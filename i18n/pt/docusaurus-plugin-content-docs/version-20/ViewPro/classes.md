@@ -174,7 +174,7 @@ A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->nome da fonte (c
 <!-- REF #TableStyle.textDecoration.Syntax -->
 **.textDecoration** : Integer<!-- END REF -->
 
-A propriedade `.textDecoration` é a <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md#fonts-and-text))<!-- END REF -->.
+A propriedade `.textDecoration` é a <!-- REF #TableStyle.textDecoration.Summary -->decoração de texto da tabela (consulte [**Fontes e texto**](configuring.md#fonts-and-text))<!-- END REF -->.
 
 
 ### .borderLeft

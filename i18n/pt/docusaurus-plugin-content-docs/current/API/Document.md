@@ -43,7 +43,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+A propriedade `.creationTime` retorna <!-- REF #document.creationTime.Summary -->o horário de criação do arquivo<!-- END REF --> (expresso como um número de segundos a partir de 00:00).
 
 Essa propriedade é **somente leitura**.
 
@@ -109,7 +109,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
+A propriedade `.fullName` retorna <!-- REF #document.fullName.Summary -->o nome completo do arquivo, incluindo sua extensão (se houver)<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -131,7 +131,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+A propriedade `.hidden` retorna <!-- REF #document.hidden.Summary -->true se o arquivo estiver definido como "hidden" no nível do sistema<!-- END REF -->, e false caso contrário.
 
 Essa propriedade é **leitura/escrita**.
 
@@ -153,7 +153,7 @@ Essa propriedade é **leitura/escrita**.
 
 #### Descrição
 
-The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
+A propriedade `.isAlias` retorna <!-- REF #document.isAlias.Summary -->true se o arquivo for um alias, um atalho ou um link simbólico<!-- END REF -->, e false caso contrário.
 
 Essa propriedade é **somente leitura**.
 
@@ -274,7 +274,7 @@ Essa propriedade é **somente leitura**.
 
 ##### Descrição
 
-The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->the time of the file's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+A propriedade `.modificationTime` retorna <!-- REF #document.modificationTime.Summary -->a hora da última modificação do arquivo<!-- END REF --> (expressa como um número de segundos a partir de 00:00).
 
 Essa propriedade é **somente leitura**.
 

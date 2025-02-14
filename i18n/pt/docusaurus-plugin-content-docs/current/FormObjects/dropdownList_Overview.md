@@ -88,7 +88,7 @@ Para inicializar o array associado à lista pendente, pode:
 
 Nesse caso, o nome da [variável] (properties_Object.md#variable-or-expression) associada ao objeto no formulário deve ser `aCities`. Esse código pode ser colocado no método do formulário e ser executado quando o evento `On Load` do formulário for executado.
 
-- Antes de que se muestre el objeto, cargue los valores de una lista en el array utilizando el comando [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html). Por exemplo:
+- Before the object is displayed, load the values of a list into the array using the [`LIST TO ARRAY`](../commands-legacy/list-to-array.md) command. Por exemplo:
 
 ```4d
    LIST TO ARRAY("Cities";$aCities)
@@ -102,13 +102,13 @@ Se precisar salvar as escolhas do usuário em um campo, precisa usar uma declara
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) `new record
-          aCities:=3 `display a default value
-       Else `existing record, display stored value
+       If(Record number([People])<0) //new record
+          aCities:=3 //display a default value
+       Else //existing record, display stored value
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) `user modified selection
-       City:=aCities{aCities} `field gets new value
+    :(Form event=On Clicked) //user modified selection
+       City:=aCities{aCities} //field gets new value
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)

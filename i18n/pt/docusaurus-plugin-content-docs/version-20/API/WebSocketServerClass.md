@@ -301,18 +301,18 @@ Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
 Function onOpen($ws : 4D.WebSocketConnection; $message : Object)
     // Send a message to new connected users
     $ws.send("Welcome on the chat!")
-    // Send "New client connected" message to all other chat clients
-    This.broadcast($ws;"New client connected")
+    // Enviar a mensagem "Novo cliente ligado" a todos os outros clientes de chat
+    This.broadcast($ws; "Novo cliente ligado")
 
 Function onTerminate($ws : 4D.WebSocketConnection; $message : Object)
-    // Send "Client disconnected" message to all other chat clients
-    This.broadcast($ws;"Client disconnected")
+    // Enviar a mensagem "Cliente desligado" a todos os outros clientes de chat
+    This.broadcast($ws; "Cliente desligado")
 
 Function broadcast($ws : 4D.WebSocketConnection; $message:text)
     var $client:4D.WebSocketConnection
-    // Resend the message to all chat clients
+    // Reenviar a mensagem a todos os clientes de conversação
     For each ($client; $ws.wss.connections)
-        // Check that the id is not the current connection
+        // Verificar se o id não é a ligação actual
         If ($client.id#$ws.id)
             $client.send($message)
         End if
