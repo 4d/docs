@@ -119,7 +119,7 @@ Webサイト管理用の URL を使用して、サーバー上に公開してい
 | Server     | 4D/バージョン番号                           | 4D/18.5.0 (Build 18R5.257368)                                                                                                                                                                                                                                                   |
 | User-Agent | 名前とバージョン @ IPクライアントアドレス | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
 
-## ログ
+## Logs
 
 4Dでは、Webリクエストのログを2種類作成することができます:
 
