@@ -3,11 +3,11 @@ id: attributes
 title: $attributes
 ---
 
-データクラスから取得する属性を選択するのに使います (*例:* `Company(1)?$attributes=name,city`、`Company(1)?$attributes=employees.lastname`、あるいは `Employee?$attributes=employer.name`)。
+Allows selecting the attribute(s) to get from the dataclass (*e.g.*, `Company(1)?$attributes=name,city`, `Company(1)?$attributes=employees.lastname`, or `Employee?$attributes=employer.name`).
 
 ## 説明
 
-データクラスにリレーション属性が含まれている場合、`$attributes` を使用することでリレート先のエンティティまたはエンティティセレクションの属性のうち値を取得するものを選択することができます。
+If you have relation attributes in a dataclass, use `$attributes` to define the path of attributes whose values you want to get for the related entity or entities.
 
 `$attributes` はエンティティ (*例:* People(1)) またはエンティティセレクション (*例:* People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) に対して適用できます。
 
@@ -22,8 +22,8 @@ title: $attributes
   - `$attributes=relatedEntities.*`: リレートエンティティズの属性がすべて返されます。
   - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: リレートエンティティズの指定された属性だけが返されます。
 
-- **ストアレージ** 属性を対象に`$attributes` が指定された場合:
-  - `$attributes=attribute1, attribute2, ...`: エンティティの属性のみが返されます。
+- If `$attributes` is specified for **storage** attributes:
+  - `$attributes=attribute1, attribute2, ...`: only those attributes of the entities are returned.
 
 ## リレートエンティティズの例
 
