@@ -3,11 +3,11 @@ id: OutgoingMessageClass
 title: OutgoingMessage
 ---
 
-The `4D.OutgoingMessage` class allows you to build messages to be returned by your application functions in response to [REST requests](../REST/REST_requests.md). If the response is of type `4D.OutgoingMessage`, the REST server does not return an object but the object instance of the `OutgoingMessage` class.
+`4D.OutgoingMessage` クラスを使うと、アプリケーションの関数が[REST リクエスト](../REST/REST_requests.md) に応答して返すメッセージを作成することができます。 レスポンスが`4D.OutgoingMessage` 型であった場合、REST サーバーはオブジェクトを返すのではなく、`OutgoingMessage` クラスのオブジェクトインスタンスを返します。
 
-Typically, this class can be used in custom [HTTP request handler functions](../WebServer/http-request-handler.md#function-configuration) or in functions declared with the [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword and designed to handle HTTP GET requests. このようなリクエストは、例えば、ファイルのダウンロード、画像の生成、ダウンロードなどの機能を実装するためや、ブラウザを介して任意のコンテンツタイプを受信するために使用されます。
+通常、このクラスは、カスタムの[HTTP リクエストハンドラー関数](../WebServer/http-request-handler.md#関数の設定) またはHTTP GET リクエストを管理するようにデザインされた、[`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードで宣言された関数内で使用することができます。 このようなリクエストは、例えば、ファイルのダウンロード、画像の生成、ダウンロードなどの機能を実装するためや、ブラウザを介して任意のコンテンツタイプを受信するために使用されます。
 
-このクラアスのインスタンスは4D Server 上にビルドされ、[4D REST サーバー](../REST/gettingStarted.md) によってのみブラウザに送信することができます。 このクラスを使用することで、HTTP 以外のテクノロジー(例: モバイルなど)を使用することができます。 このクラスを使用することで、HTTP 以外のテクノロジー(例: モバイルなど)を使用することができます。
+このクラスのインスタンスは4D Server 上にビルドされ、[4D REST サーバー](../REST/gettingStarted.md) によってのみブラウザに送信することができます。 このクラスを使用することで、HTTP 以外のテクノロジー(例: モバイルなど)を使用することができます。 このクラスを使用することで、HTTP 以外のテクノロジー(例: モバイルなど)を使用することができます。
 
 <details><summary>履歴</summary>
 
@@ -36,7 +36,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 ### OutgoingMessage Object
 
-4D.OutgoingMessage objects provide the following properties and functions:
+4D.OutgoingMessage オブジェクトは以下のプロパティと関数を提供します:
 
 |                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,7 +49,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 :::note
 
-A 4D.OutgoingMessage object is a [non-sharable](../Concepts/shared.md) object.
+4D.OutgoingMessage オブジェクトは[共有不可](../Concepts/shared.md) オブジェクトです。
 
 :::
 
@@ -61,7 +61,7 @@ A 4D.OutgoingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 #### 説明
 
-The `.body` property contains <!-- REF #OutgoingMessageClass.body.Summary -->the outgoing message body<!-- END REF -->. `.body` プロパティでは以下のデータ型がサポートされます:
+`.body` プロパティには<!-- REF #OutgoingMessageClass.body.Summary -->送信されるメッセージ本文<!-- END REF -->が格納されています。 `.body` プロパティでは以下のデータ型がサポートされます:
 
 - テキスト
 - blob
@@ -82,9 +82,9 @@ The `.body` property contains <!-- REF #OutgoingMessageClass.body.Summary -->the
 
 #### 説明
 
-The `.headers` property contains <!-- REF #OutgoingMessageClass.headers.Summary -->the current headers of the outgoing message as key/value pairs<!-- END REF -->.
+`.headers` プロパティには<!-- REF #OutgoingMessageClass.headers.Summary -->送信されるメッセージのカレントのヘッダーがキー/値のペアとして格納されてます<!-- END REF -->。
 
-The `.headers` property is read-only. To set a header, use the [`setHeader()`](#setheader) function.
+`.headers` プロパティは、読み出し専用です。 ヘッダーを設定するには、[`setHeader()`](#setheader) 関数を使用します。
 
 <!-- END REF -->
 
@@ -96,31 +96,31 @@ The `.headers` property is read-only. To set a header, use the [`setHeader()`](#
 
 <!-- REF #OutgoingMessageClass.setBody().Params -->
 
-| 引数   | 型   |    | 説明                           |
-| ---- | --- | -- | ---------------------------- |
-| body | any | -> | Body of the outgoing message |
+| 引数   | 型   |    | 説明         |
+| ---- | --- | -- | ---------- |
+| body | any | -> | 送信メッセージの本文 |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.setBody()` function <!-- REF #OutgoingMessageClass.setBody().Summary -->sets the outgoing message *body*<!-- END REF -->.
+`.setBody()` 関数は、<!-- REF #OutgoingMessageClass.setBody().Summary -->*body* 引数をメッセージの本文として設定します<!-- END REF -->。
 
-The following data types are supported in the *body*:
+*body* 引数では以下のデータ型がサポートされています:
 
 - Text
 - BLOB
 - Object
 - ピクチャー
 
-When this function is used, the content-type header is automatically set depending on the *body* type:
+この関数が使用された場合、content-type ヘッダーは*body* 引数の型に応じて自動的に設定されます:
 
-- Content-Type:text/plain if the body is a Text
-- Content-Type:application/octet-stream if body is a Blob
-- Content-Type:application/json if body is an Object
-- Content-Type:image/jpeg, image/gif... if body is an Image
+- Content-Type: 本文がテキストの場合にはtext/plain
+- Content-Type: 本文がBlob の場合にはapplication/octet-stream
+- Content-Type: 本文がオブジェクトの場合にはapplication/json
+- Content-Type: image/jpeg、image/gif... (本文が画像の場合)
 
-If *body* is not of a supported value type, an error is returned.
+*body* がサポートされていない値の型だった場合、エラーが返されます。
 
 <!-- END REF -->
 
@@ -132,10 +132,10 @@ If *body* is not of a supported value type, an error is returned.
 
 <!-- REF #OutgoingMessageClass.setHeader().Params -->
 
-| 引数    | 型    |    | 説明                           |
-| ----- | ---- | -- | ---------------------------- |
-| key   | Text | -> | Header property to set       |
-| value | Text | -> | Value of the header property |
+| 引数    | 型    |    | 説明            |
+| ----- | ---- | -- | ------------- |
+| key   | Text | -> | 設定するヘッダープロパティ |
+| value | Text | -> | ヘッダープロパティの値   |
 
 <!-- END REF -->
 
