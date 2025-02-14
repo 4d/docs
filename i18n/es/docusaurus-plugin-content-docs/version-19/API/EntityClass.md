@@ -94,7 +94,7 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 
 La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->.
 
-Esta función permite actualizar las entidades por separado. Sin embargo, tenga en cuenta que, por razones de rendimiento, la nueva entidad comparte la misma referencia de atributos de objeto que la entidad clonada.
+Esta función permite actualizar las entidades por separado. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
 > Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado solo cuando se ejecute la función [`.save()`](#save).
 
 Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que [`.isNew()`](#isnew) devuelve **True**).
@@ -1072,7 +1072,7 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 | status(\*)     | number  | Código de error, ver abajo                                                                                |
 | statusText(\*) | text    | Descripción del error, ver abajo                                                                          |
 
-(\*) Los siguientes valores pueden ser devueltos en las propiedades *status* y *statusText* del objeto *Result* en caso de error:
+(\*) Los siguientes valores pueden ser devueltos en las propiedadese *status* y *statusText* del objeto *Result* en caso de error:
 
 | Constante                                 | Valor | Comentario                                                                                                                                                                                                            |
 | ----------------------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
