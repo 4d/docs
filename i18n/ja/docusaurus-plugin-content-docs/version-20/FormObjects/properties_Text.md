@@ -1,6 +1,6 @@
 ---
 id: propertiesText
-title: テキスト
+title: Text
 ---
 
 ---
@@ -32,7 +32,7 @@ title: テキスト
 
 | プロパティ      | データタイプ | とりうる値            |
 | ---------- | ------ | ---------------- |
-| fontWeight | text   | "normal", "bold" |
+| fontWeight | テキスト   | "normal", "bold" |
 
 #### 対象オブジェクト
 
