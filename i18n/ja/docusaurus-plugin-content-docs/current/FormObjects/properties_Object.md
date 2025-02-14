@@ -290,7 +290,7 @@ When using 4D’s language, you can refer to an active form object by its object
 
 | 名称   | データタイプ | とりうる値     |
 | ---- | ------ | --------- |
-| text | string | なんらかのテキスト |
+| テキスト | string | なんらかのテキスト |
 
 #### 対象オブジェクト
 
