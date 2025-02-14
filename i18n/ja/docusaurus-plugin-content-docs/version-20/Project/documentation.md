@@ -11,7 +11,7 @@ title: ドキュメンテーション
 
 - メソッド (データベースメソッド、コンポーネントメソッド、プロジェクトメソッド、フォームメソッド、4D Mobile メソッド、トリガー)
 - クラス
-- フォーム
+- Forms
 - テーブルとフィールド
 
 ドキュメンテーションファイルは Markdown記法 (.md ファイル) で記述します。これには、Markdown をサポートしている任意のエディターを使うことができます。 これらはそれぞれ独立したファイルとしてプロジェクトフォルダー内に格納されます。
@@ -39,7 +39,7 @@ title: ドキュメンテーション
 `Documentation` フォルダーのアーキテクチャーは次のとおりです:
 
 - `Documentation`
-    + `Classes`
+    + `クラス`
         * myClass.md
     + `DatabaseMethods`
         * onStartup.md
@@ -47,7 +47,7 @@ title: ドキュメンテーション
     + `Forms`
         * loginDial.md
         * ...
-    + `Methods`
+    + `メソッド`
         * myMethod.md
         * ...
     + `TableForms`
