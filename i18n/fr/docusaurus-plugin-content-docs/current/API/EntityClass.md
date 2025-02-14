@@ -5,7 +5,7 @@ title: Entity
 
 Une [entity](ORDA/dsMapping.md#entity) est une instance d'une [Dataclass](ORDA/dsMapping.md#dataclass), tel un enregistrement de la table correspondant à la dataclass contenue dans son datastore associé. Elle contient les mêmes attributs que la dataclass ainsi que les valeurs des données et des propriétés et fonctions spécifiques.
 
-### Summary
+### Sommaire
 
 |                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -239,7 +239,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResult1 (toutes les différences sont retournées) :
+vCompareResult3 (seules les différences sur les attributs touchés de $e1 sont retournées)
 
 ```4d
 [
@@ -1109,7 +1109,7 @@ La fonction `.previous()` <!-- REF #EntityClass.previous().Summary --> renvoie u
 
 Si l'entité n'appartient à aucune entity selection existante (i.e. [.getSelection()](#getselection) retourne Null), la fonction renvoie une valeur Null.
 
-S'il n'y a pas d'entité précédente valide dans l'entity selection (i.e. vous êtes sur la première entité de la sélection), la fonction retourne Null. Si l'entité précédente a été supprimée, la fonction retourne l'entité précédente valide (et finalement Null).
+Si l'entité n'appartient à aucune entity selection (i.e. <a href="#getselection">.getSelection( )</a> retourne Null), la fonction renvoie une valeur Null.
 
 #### Exemple
 
