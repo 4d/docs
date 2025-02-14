@@ -208,7 +208,7 @@
     "description": "The generated-index page description for category Access Rights in sidebar docs"
   },
   "sidebar.docs.category.Forms": {
-    "message": "フォーム",
+    "message": "Forms",
     "description": "The label for category Forms in sidebar docs"
   },
   "sidebar.docs.category.Form Editor": {
