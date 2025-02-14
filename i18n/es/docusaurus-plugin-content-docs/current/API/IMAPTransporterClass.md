@@ -851,7 +851,7 @@ Si la cuenta no contiene buzones, se devuelve una colección vacía.
 
 La función `.getDelimiter()` <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->devuelve el caracter utilizado para delimitar niveles de jerarquía en el nombre del buzón<!-- END REF -->.
 
-El delimitador es un caracter que puede utilizarse para:
+El delimitador es un carácter que puede utilizarse para:
 
 - crear buzones de nivel inferior
 - buscar más arriba o más abajo en la jerarquía del buzón
@@ -1332,7 +1332,7 @@ La función devuelve una colección de cadenas (IDs únicos).
 
 La función `.removeFlags()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->elimina las banderas de los `msgIDs` para las `keywords` especificadas<!-- END REF -->.
 
-En el parámetro `msgIDs`, puede pasar:
+En el parámetro `msgIDs`, puedes pasar:
 
 - una *colección* que contiene los IDs únicos de mensajes específicos o
 - el ID único (*text*) de un solo mensaje o
