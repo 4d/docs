@@ -86,9 +86,9 @@ Esta funcionalidad crea un archivo *.4dz* en una carpeta `Compiled Database/<pro
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
-Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. El tamaño compacto y optimizado de los archivos .4dz hace que los paquetes de proyectos sean fáciles de desplegar. El tamaño compacto y optimizado de los archivos .4dz hace que los paquetes de proyectos sean fáciles de desplegar.
+Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. El tamaño compacto y optimizado de los archivos .4dz hace que los paquetes de proyectos sean fáciles de desplegar.
 
-> Al generar archivos .4dz, 4D utiliza por defecto un formato zip **estándar**. La ventaja de este formato es que es fácilmente legible por cualquier herramienta unzip. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
+> Al generar archivos .4dz, 4D utiliza por defecto un formato zip **estándar**. La ventaja de este formato es que es fácilmente legible por cualquier herramienta unzip. Si no desea utilizar este formato estándar, añada la llave XML `UseStandardZipFormat` con el valor `False` en su archivo [`buildApp.4DSettings`](#build-application-settings) (para más información, consulte el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
 
 #### Incluir las carpetas asociadas
 
@@ -122,12 +122,12 @@ Al marcar la opción **Crear una aplicación autónoma** y hacer clic en **Gener
 
 The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine). Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito.
 
-- You can define a default data file or allow users to [create and use their own data file](#management-of-data-files).
-- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**About licenses**](#about-licenses) paragraph).
+- Puede definir un archivo de datos por defecto o permitir a los usuarios [crear y utilizar su propio archivo de datos](#management-of-data-files).
+- Puede incorporar una licencia de despliegue o dejar que el usuario final introduzca su licencia en el primer inicio de la aplicación (consulte la sección [**Acerca de las licencias**](#about-licenses)).
 
 :::note
 
-It is possible to [automate the update of merged single-user applications](#automatic-updating-of-server-or-single-user-applications) by means of a sequence of language commands.
+Es posible [automatizar la actualización de aplicaciones fusionadas de un solo usuario](#automatic-updating-of-server-or-single-user-applications) mediante una secuencia de comandos de lenguaje.
 
 :::
 
@@ -180,7 +180,7 @@ Cuando se construye una aplicación independiente, 4D copia el contenido de la c
 * Instalar una versión de 4D Volume Desktop correspondiente a un lenguaje específico;
 * Añadir una carpeta *PlugIns* personalizada;
 * Personalizar el contenido de la carpeta *Resources*.
-> The macOS packages built contain the same items as the Windows subfolders. Puede visualizar su contenido (**Control+clic** en el icono) para poder modificarlo.
+> The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
 
 #### Ubicación de los archivos web
 
@@ -199,11 +199,11 @@ Los elementos deben ser instalados:
 
 A stand-alone application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
 
-| Deployment license     | Descripción                                                        | Where to enter it                                                                          |
-| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
-| *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                         | [Licenses page](#licenses) of the Build application dialog                                 |
-| *4D Desktop*           | Per-user license, allowing them to use stand-alone 4D applications | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
+| Deployment license     | Descripción                                                        | Where to enter it                                                                         |
+| ---------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | [Página Licencias](#licenses) del diálogo Crear aplicación                                |
+| *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                         | [Página Licencias](#licenses) del diálogo Crear aplicación                                |
+| *4D Desktop*           | Per-user license, allowing them to use stand-alone 4D applications | Diálogo [Primera activación](../Admin/licenses.md#first-activation) en la máquina usuario |
 
 
 
@@ -381,7 +381,7 @@ El contenido de estas carpetas varía en función de la plataforma actual:
 * *Windows* - Cada carpeta contiene el archivo ejecutable de la aplicación, denominado `<ApplicationName>Client.exe` para la parte cliente y `<ApplicationName>Server.exe` para la parte servidor, así como los archivos .rsr correspondientes. Las carpetas también contienen varios archivos y carpetas necesarios para que las aplicaciones funcionen y elementos personalizados que pueden estar en las carpetas originales de 4D Volume Desktop y 4D Server.
 * *macOS* - Cada carpeta contiene únicamente el paquete de la aplicación, denominado `<ApplicationName>Client` para la parte cliente y `<ApplicationName>Server` para la parte servidor. Cada paquete contiene todos los elementos necesarios para que la aplicación funcione. En macOS, un paquete se lanza haciendo doble clic en él.
 
- > > Los paquetes macOS generados contienen los mismos elementos que las subcarpetas Windows. Puede visualizar su contenido (**Control+clic** en el icono) para poder modificarlo.
+ > Los paquetes macOS generados contienen los mismos elementos que las subcarpetas Windows. Puede visualizar su contenido (**Control+clic** en el icono) para poder modificarlo.
 
 Si ha marcado la opción "Permitir la actualización automática de la aplicación cliente", se añade una subcarpeta adicional llamada *Upgrade4DClient* en la carpeta/paquete `<ApplicationName>Server`. Esta subcarpeta contiene la aplicación cliente en formato macOS y/o Windows como archivo comprimido. Esta subcarpeta contiene la aplicación cliente en formato macOS y/o Windows como archivo comprimido.
 
@@ -510,7 +510,7 @@ La página de Licencias y certificados puede utilizarse para:
 
 ### Licencias
 
-This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. Por defecto, la lista está vacía.
+Esta pestaña muestra la lista de [licencias de despliegue que puede integrar](#about-licenses) en su aplicación. Por defecto, la lista está vacía.
 
 :::info
 
