@@ -115,7 +115,7 @@ $message:=$square.description() //tengo 4 lados iguales
 
 #### Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1706                                                                |
-| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1706                            |
+| Hilo seguro       | &amp;check; |
