@@ -225,7 +225,7 @@ Una vez que haya [creado un conjunto de entidades](#creating-and-managing-entity
  `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer`
 
 
-## Visualización de un atributo imagen
+## Visualización de un atributo de imagen
 
 Si desea visualizar un atributo de imagen en su totalidad, escriba lo siguiente:
 
