@@ -723,7 +723,7 @@ $infoPlistFile.setAppInfo($info)
 <!--REF #FileClass.setText().Params -->
 | 引数          | 型       |    | 説明                                  |
 | ----------- | ------- | -- | ----------------------------------- |
-| text        | Text    | -> | ファイルに保存するテキスト                       |
+| テキスト        | Text    | -> | ファイルに保存するテキスト                       |
 | charSetName | Text    | -> | 文字セットの名前                            |
 | charSetNum  | Integer | -> | 文字セットの番号                            |
 | breakMode   | Integer | -> | 改行の処理モード|<!-- END REF -->
