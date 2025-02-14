@@ -1085,10 +1085,10 @@ La función `.findIndex()` <!-- REF #collection.findIndex().Summary -->devuelve 
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Descripción Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
+- *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un `Object` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede efecturar toda prueba, con o sin los parámetros, y debe devolver *true* para cada elemento que cumpla la prueba. Recibe un `Object` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1261,9 +1261,9 @@ Esta función es idéntica a una llamada a [`map()`](#map) seguida de una llamad
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
-- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
+- o *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un `Object` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1417,11 +1417,11 @@ En *toSearch*, pase la expresión a encontrar en la colección. Puede pasar:
 
 Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.
 
-Índice para iniciar la búsqueda en
+Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 - Si *startFrom* >= la longitud de la colección, se devuelve -1, lo que significa que la colección no se busca.
 - Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
-  Tenga en cuenta que incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
+  **Nota**: incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
 - Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 #### Ejemplo
@@ -1743,7 +1743,7 @@ La función `.map()` <!-- REF #collection.map().Summary -->crea una nueva colecc
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
-- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
+- o *methodName*, el nombre de un método proyecto (texto).
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
 
@@ -2183,7 +2183,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 
-- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
+- o *methodName*, el nombre de un método proyecto (texto).
 
 En la retrolamada, pase un código que compare dos valores y devuelva **true** si el primer valor es menor que el segundo. Puede ofrecer los parámetros *extraParam* a la retrollamada si es necesario.
 
@@ -2384,7 +2384,7 @@ propertyPath comparator value {logicalOperator propertyPath comparator value}
 
 donde:
 
-- **propertyPath**: ruta de la propiedad sobre la cual quiere ejecutar la consulta. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre".) En el caso de una ruta de atributo cuyo tipo es `Collection`, se utiliza la notación `[]` para manejar todas las ocurrencias (por ejemplo `children[].age`).
+- **propertyPath**: ruta de la propiedad sobre la cual quiere ejecutar la consulta. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre".) En el caso de una ruta de atributos de tipo <code>Collection</code>, se utiliza la notación \[ ] para manejar todas las ocurrencias (por ejemplo "niños[ ].edad"). En el caso de una ruta de atributo cuyo tipo es `Collection`, se utiliza la notación `[]` para manejar todas las ocurrencias (por ejemplo `children[].age`).
 
 - **comparator**: símbolo que compara *propertyPath* y *value*. Se soportan los siguientes símbolos:
 
@@ -2514,10 +2514,10 @@ Puede consultar en una colección utilizando una referencia de objeto o una refe
 
 Para una descripción detallada de los parámetros *queryString* y *value*, consulte la función `dataClass.query()`.
 
-| Comparación       | Símbolo(s) |
-| ----------------- | ----------------------------- |
-| Igual a           | =, ==                         |
-| Menor o igual que | #, !=                         |
+| Comparación  | Símbolo(s) |
+| ------------ | ----------------------------- |
+| Igual a      | =, ==                         |
+| Diferente de | #, !=                         |
 
 Para construir una consulta con un objeto o una referencia de colección, debe utilizar la sintaxis del parámetro *querySettings*. Ejemplo con una referencia de objeto:
 
@@ -2671,7 +2671,7 @@ La función `.reduce()` <!-- REF #collection.reduce().Summary -->aplica la *form
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
-- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
+- o *methodName*, el nombre de un método proyecto (texto).
 
 Tipo
 
@@ -3076,10 +3076,10 @@ La función `.some()` <!-- REF #collection.some().Summary --> devuelve true si a
 
 Se designa el código 4D de retrollamada (callback) a ejecutar para evaluar los elementos de la colección utilizando:
 
-- Descripción Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
+- *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede efecturar toda prueba, con o sin los parámetros, y debe devolver *true* para cada elemento que cumpla la prueba. Recibe un `Object` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -3090,7 +3090,7 @@ La retrollamada recibe los siguientes parámetros:
 Puede definir los siguientes parámetros:
 
 - Expresión a buscar en la colección
-- *$1.stop* (booleano, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
+- *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 Descripción
 
@@ -3140,12 +3140,12 @@ Incluído en
 
 <!-- REF #collection.sort().Params -->
 
-| Parámetros | Tipo                        |                             | Descripción                 |
-| ---------- | --------------------------- | :-------------------------: | --------------------------- |
-| formula    | 4D.Function |              ->             | Objeto fórmula              |
-| methodName | Text                        |              ->             | Nombre de un método         |
-| extraParam | any                         |              ->             | Parámetros del método       |
-| Resultado  | Collection                  | <- | Colección original ordenada |
+| Parámetros | Tipo                        |                             | Descripción                                                                                 |
+| ---------- | --------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------- |
+| formula    | 4D.Function |              ->             | Objeto fórmula                                                                              |
+| methodName | Text                        |              ->             | Nombre de un método                                                                         |
+| extraParam | any                         |              ->             | Parámetros del método                                                                       |
+| Resultado  | Collection                  | <- | o *methodName*, el nombre de un método proyecto (texto). |
 
 <!-- END REF -->
 
