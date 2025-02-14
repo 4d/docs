@@ -76,7 +76,7 @@ En la depuración remota, si el método se ejecuta en el servidor, se llama al m
 
 Cuando se ejecuta una línea que llama a otro método (subrutina o función), haga clic en este botón para mostrar el otro método y recorrerlo paso a paso.
 
-El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada](#call-chain-pane) de la ventana del depurador.
+The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
@@ -385,7 +385,7 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 - **Tablas y campos ordenados**: muestra la tabla y los campos en orden alfabético.
 - **Mostrar números enteros en hexadecimal**: muestra los números en notación hexadecimal. Para introducir un valor numérico en hexadecimal, escriba 0x (cero + "x"), seguido de los dígitos hexadecimales.
 
-## Panel de evaluación del código
+## Panel de código fuente
 
 El panel de código fuente muestra el código fuente del método o de la función que se está rastreando actualmente.
 
