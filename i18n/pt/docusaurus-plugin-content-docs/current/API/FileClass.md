@@ -366,7 +366,7 @@ ALERT($info.Copyright)
 
 A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->move ou renomeia o objeto `File` para a *destinationFolder* especificada<!-- END REF -->.
 
-A *destinationFolder* deve existir em disco, senão um erro é gerado.
+The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 Por padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
