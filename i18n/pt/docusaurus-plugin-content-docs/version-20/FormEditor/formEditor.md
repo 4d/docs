@@ -22,13 +22,13 @@ Você pode mostrar ou ocultar vários elementos da interface na página atual do
 - **Rótulos dos marcadores**: rótulos dos marcadores, disponíveis apenas quando as linhas de controle de saída forem exibidas. Esse elemento só pode aparecer por padrão nos [formulários lista](properties_FormProperties.md#form-type).
 - **Limites**: limites do formulário. Quando essa opção é selecionada, o formulário é exibido no editor de formulários como aparece no modo Aplicação. Desta forma, você pode ajustar seu formulário sem precisar trocar para o modo de Aplicação para ver o resultado.
 
-> Os parâmetros [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor margin**](properties_FormSize.md#hor-margin) and [**Vert margin**](properties_FormSize.md#vert-margin) de propriedades do formulário afetam os limites do formulário. Ao usar essas configurações, os limites são baseados nos objetos do formulário. Quando você modifica o tamanho de um objeto localizado próximo à borda do formulário, ele é modificado para refletir essa alteração.
+> Os parâmetros [**Tamanho Baseado em**](properties_FormSize.md#size-based-on), [**margem Hor**](properties_FormSize.md#hor-margin) e [**Vert margin**](properties_FormSize.md#vert-margin) das propriedades do formulário afetam os limites do formulário. Ao usar essas configurações, os limites são baseados nos objetos do formulário. Quando você modifica o tamanho de um objeto localizado próximo à borda do formulário, ele é modificado para refletir essa alteração.
 
 #### Visualização por defeito
 
 Quando um formulário é aberto no editor, os elementos da interface são exibidos ou ocultos por padrão, dependendo de:
 
-- as opções de **exibição padrão do novo formulário** definidas nas Preferências - as opções não marcadas não podem ser exibidas por padrão.
+- as opções **Exibição padrão do novo formulário** definidas nas Preferências - as opções não marcadas não podem ser exibidas por padrão.
 - o [tipo de formulário](properties_FormProperties.md#form-type) atual:
   - Marcadores e rótulos de marcadores são sempre exibidos por padrão em formulários lista
   - O papel é apresentado por defeito nos formulários "para impressão".
@@ -60,8 +60,8 @@ A barra de ferramentas contém os seguintes elementos:
 | ![](../assets/en/FormEditor/zOrder.png)          | [Ordem de entrada](#selecting-objects)                    | Alterna para o modo "Ordem de entrada", onde é possível visualizar e alterar a ordem de entrada atual do formulário. Observe que os escudos permitem a visualização da ordem de entrada atual, enquanto você ainda trabalha no formulário.                                                                                                                                      |
 | ![](../assets/en/FormEditor/moving.png)          | [Deslocamento](#moving-objects)                           | Alterne para o modo "Mover", onde for possível alcançar qualquer parte do formulário rapidamente usando arrastar e soltar na janela. O cursor assume a forma de uma mão. Este modo de navegação é particularmente útil ao ampliar o formulário.                                                                                                                                 |
 | ![](../assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                             | Permite modificar a percentagem de visualização do formulário (100% por padrão). Você pode alternar para o modo "Zoom" clicando na lupa ou clicando diretamente na barra desejada. Esta função é descrita em pormenor na secção anterior.                                                                                                                                       |
-| ![](../assets/en/FormEditor/alignment.png)       | [Alinhamento](#aligning-objects)                          | Este botão está ligado a um menu que permite alinhar os objetos no formulário. Ele é ativado (ou não) dependendo dos objetos selecionados.<br/>Desativado se a posição de um objeto selecionado estiver bloqueada por uma propriedade CSS                                                                                                                                 |
-| ![](../assets/en/FormEditor/distribution.png)    | [Distribuição](#distributing-objects)                     | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. Ele é ativado (ou não) dependendo dos objetos selecionados.<br/>Desativado se a posição de um objeto selecionado estiver bloqueada por uma propriedade CSS                                                                                                           |
+| ![](../assets/en/FormEditor/alignment.png)       | [Alinhamento](#aligning-objects)                          | Este botão está ligado a um menu que permite alinhar os objetos no formulário. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                                         |
+| ![](../assets/en/FormEditor/distribution.png)    | [Distribuição](#distributing-objects)                     | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                   |
 | ![](../assets/en/FormEditor/level.png)           | [Nível](#layering-objects)                                | Este botão está ligado a um menu que permite alterar o nível dos objetos no formulário. É ativada (ou não) em função dos objetos selecionados.                                                                                                                                                                                                                                  |
 | ![](../assets/en/FormEditor/group.png)           | [Grupo/Ungrupo](#grouping-objects)                        | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. É ativada (ou não) em função dos objetos selecionados.                                                                                                                                                                                                                     |
 | ![](../assets/en/FormEditor/displyAndPage.png)   | [Visualização e gestão de páginas](forms.html#form-pages) | Esta área permite passar de uma página de formulário para outra e adicionar páginas. Para navegar entre páginas de formulários, clique nos botões de seta, ou clique na área central e escolha a página a exibir a partir do menu que aparece. Se clicar no botão da seta para a direita enquanto é exibida a última página do formulário, 4D permite-lhe adicionar uma página. |
@@ -195,7 +195,7 @@ A caixa de diálogo "Duplicar muitos" aparece quando se seleciona um ou mais obj
 
 - Na área superior, introduza o número de colunas e linhas (linhas) de objectos que pretende obter. Por exemplo, se quiser três colunas e duas linhas de objectos, introduza 3 na área de Coluna(s) e 2 na área de Linha(s). Na área superior, introduza o número de colunas e linhas (linhas) de objectos que pretende obter.
 
-- Para linhas e colunas, defina o offset que deseja deixar entre cada cópia. O valor deve ser expresso em pontos. Será aplicado a cada cópia, ou cópia, em relação ao objeto original. ou exemplo, se você quiser deixar um deslocamento vertical de 20 pontos entre cada objeto e a altura do objeto fonte é de 50 pontos insira 70 na área “Offset” da coluna.
+- Para linhas e colunas, defina o offset que deseja deixar entre cada cópia. O valor deve ser expresso em pontos. It will be applied to each copy, or copies, in relation to the original object. For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
 
 - Se desejar criar uma matriz de variáveis, seleccione a opção **Number Variables** e seleccione a direcção em que as variáveis devem ser numeradas, seja por linha(s) ou por coluna(s). Esta opção só está activa quando o objecto seleccionado é uma variável. Para obter mais informações sobre essa opção, consulte **Duplicação em uma matriz** no *Manual de Desenho*.
 
@@ -223,11 +223,11 @@ Para mover um objeto em passos:
 
 4D permite agrupar objetos para você poder selecionar, mover e modificar o grupo como um único objeto. Os objetos agrupados mantêm a sua posição em relação aos outros. Normalmente, você agruparia um campo e seu rótulo, um botão invisível e seu ícone, e assim por diante.
 
-Quando você redimensiona um grupo, todos os objetos do grupo são redimensionados proporcionalmente (exceto as áreas de texto, que são redimensionadas em etapas de acordo com o tamanho da fonte).
+Quando você redimensiona um grupo, todos os objetos do grupo são redimensionados proporcionalmente (exceto as áreas de texto, redimensionadas em etapas conforme o tamanho da fonte).
 
 Você pode desagrupar um grupo de objetos a qualquer momento e tratá-los novamente como objetos independentes.
 
-Um objecto activo que tenha sido agrupado deve ser desarticulado antes de se poder aceder às suas propriedades ou método. No entanto, é possível selecionar um objeto pertencente a um grupo sem desagrupar o conjunto: para isso, **Ctrl+clique** (Windows) ou **Command+clique** (macOS) no objeto (o grupo deve ser selecionado antes).
+Um objecto activo que tenha sido agrupado deve ser desarticulado antes de se poder aceder às suas propriedades ou método. No entanto, é possível selecionar um objeto pertencente a um grupo sem desagrupar o conjunto: para isso, **Ctrl+clique** (Windows) ou **Comando+clique** (macOS) no objeto (o grupo deve ser selecionado antes).
 
 O agrupamento só afeta os objetos no editor de formulários. Quando o formulário é executado, todos os objetos agrupados agem como se não estivessem agrupados.
 > Não é possível agrupar objetos pertencentes a diferentes visualizações e somente os objetos pertencentes à visualização atual podem ser agrupados (consulte [Views](#views)).
@@ -252,7 +252,7 @@ Pode-se alinhar objectos uns com os outros ou utilizar uma grelha invisível no 
 
 #### Usando as ferramentas de alinhamento instantâneo
 
-As ferramentas de alinhamento na barra de ferramentas e no submenu Alinhar do menu Objeto permitem alinhar rapidamente os objetos selecionados.
+As ferramentas de alinhamento na barra de ferramentas e no submenu Alinhar do menu Objecto permitem alinhar rapidamente os objectos seleccionados.
 
 ![](../assets/en/FormEditor/alignmentMenu.png)
 
@@ -398,7 +398,7 @@ Por defeito, todos os objetos que suportam a propriedade focusable são incluíd
 
 2. **Maiúsculas-clic** no objeto
 
-3. **clique com o botão direito** no objeto e selecione **Remover da ordem de entrada** opção do menu de contexto
+3. **Clique com o botão direito do mouse** no objeto e selecione a opção **Remover da ordem de entrada** no menu de contexto
 
 ## Pré-visualização CSS
 
@@ -423,7 +423,7 @@ Seleccione um dos seguintes modos de pré-visualização a partir do menu:
 
 O modo de visualização CSS reflete a ordem de prioridade aplicada às folhas de estilo vs atributos JSON, conforme definido na seção [JSON vs Folha de Estilo](stylesheets.html#json-vs-style-sheet).
 
-Uma vez que o modo de pré-visualização CSS é selecionado, os objetos são exibidos automaticamente com os estilos definidos em uma folha de estilo (se houver).
+Quando o modo de pré-visualização CSS é selecionado, os objetos são exibidos automaticamente com os estilos definidos em uma folha de estilo (se houver).
 > Ao copiar ou duplicar objetos, apenas as referências do CSS (se houver) e os valores JSON são copiados.
 
 ### Suporte CSS na lista de propriedades
@@ -473,7 +473,7 @@ O construtor de List box permite criar e preencher list boxes de tipo seleção 
 
  ![](../assets/en/FormEditor/listboxBuilderTable.png)
 
-3. Selecione os campos para a caixa de listagem na área **Fields**:
+3. Selecione os campos do list box na área **Campos**:
 
  ![](../assets/en/FormEditor/listboxBuilderFields.png)
 
@@ -521,7 +521,7 @@ O desenho do formulário resultante depende do formulário:
 
 ## Escudos
 
-O Editor de Formulário 4D usa escudos para facilitar a visualização das propriedades do objeto. Pode encontrá-los na barra de ferramentas do formulário:
+O editor de formulários 4D usa escudos para facilitar a visualização das propriedades do objeto. Pode encontrá-los na barra de ferramentas do formulário:
 
 ![](../assets/en/FormEditor/shields.png)
 
@@ -534,7 +534,7 @@ Essa função funciona da seguinte forma: cada escudo é associado a uma proprie
 Para ativar um escudo, clique no ícone *Escudo* na barra de ferramentas até que o escudo desejado seja selecionado. Você também pode clicar no lado direito do botão e selecionar o tipo de escudo para exibir diretamente no menu associado:
 
 Se você não quer exibir escudos, selecione **Sem Escudos** no menu de seleção.
-> Você pode definir quais escudos devem ser exibidos por padrão na Página de Formulários das Preferências do aplicativo.
+> Você pode definir quais escudos devem ser exibidos por padrão na Página de Formulários das Preferências da aplicação.
 
 ### Descrição do badge
 
@@ -675,7 +675,7 @@ Para criar um objeto em outra visualização, basta selecionar a visualização 
 
 #### Mover objectos entre vistas
 
-Também é possível mover um ou mais objetos de uma visualização para outra. No formulário, selecionar o(s) objeto(s) cuja vista se pretende alterar. A lista de visualizações indica, por meio de um símbolo, a visualização à qual a seleção pertence:
+Também é possível mover um ou mais objetos de uma visualização para outra. No formulário, selecionar o(s) objeto(s) cuja vista se pretende alterar. A lista de visualizações indica, por um símbolo, a visualização à qual a seleção pertence:
 
 ![](../assets/en/FormEditor/symbol.png)
 > A seleção pode conter vários objetos pertencentes a diferentes visualizações.
@@ -715,7 +715,7 @@ Também pode utilizar o botão na parte inferior da paleta de vistas:
 
 Você pode mostrar ou ocultar objetos pertencentes a uma visualização a qualquer momento na página atual do formulário. Essa função pode ser usada, por exemplo, para focar em determinados objetos ao modificar o formulário.
 
-Por padrão, todas as exibições são mostradas, conforme indicado pelo ícone *Show/Hide*:
+Por padrão, todas as exibições são mostradas, conforme indicado pelo ícone *Mostrar/Ocultar*:
 
 ![](../assets/en/FormEditor/showHide.png)
 
