@@ -38,7 +38,7 @@ A pasta Project contém normalmente a seguinte hierarquia:
 - DerivedData
 - Trash (se houver)
 
-### Arquivo  *nomApplication*.4DProject
+### Ficheiro *nomApplication*.4DProject
 
 Arquivo de desenvolvimento do projeto, utilizado para designar e lançar o projeto. Esse arquivo pode ser aberto por:
 
