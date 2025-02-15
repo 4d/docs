@@ -100,7 +100,7 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->.
 
-Esta função permite que você atualize as entidades separadamente. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
 
 > Tenha em mente que quaisquer modificações feitas em entidades serão salvas no registro referenciado somente quando a função [`.save()`](#save) for executada.
 
@@ -242,7 +242,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResultado1 (todas as diferenças são devolvidas):
+vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 
 ```4d
 [
@@ -291,7 +291,7 @@ vCompareResult2 (apenas diferenças em $attributesToInspect foram retornadas)
 ]
 ```
 
-vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
+vCompareResultado1 (todas as diferenças são devolvidas):
 
 ```4d
 [
@@ -858,9 +858,9 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 <!-- REF #EntityClass.isNew().Params -->
 
-| Parâmetro  | Tipo       |                             | Descrição                                                                                                                  |
-| ---------- | ---------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | É verdade se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso. |
+| Parâmetro  | Tipo       |                             | Descrição                                                                                                               |
+| ---------- | ---------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | É True se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso. |
 
 <!-- END REF -->
 
@@ -1780,9 +1780,9 @@ Um registro é destrancado automaticamente quando não for mais referenciado por
 
 O objeto retornado por `.unlock()` contém a seguinte propriedade:
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                     |
-| ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success     | Parâmetros | Verdadeiro se a ação de destrancar for bem-sucedida, Falso caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
+| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                               |
+| ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success     | Parâmetros | True se a ação de destrancar for bem-sucedida, False caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
 
 #### Exemplo
 
