@@ -112,7 +112,7 @@ Aqui está a sequência de chamadas de retorno:
 1. `onData` e `onDataError` são executados uma ou várias vezes
 2. se chamado, `onError` é executado uma vez (pára o processamento do system worker)
 3. se não ocorreu nenhum erro, `onResponse` é executado uma vez
-4. `onTerminate` é sempre executado uma vez
+4. `onTerminate` is always executed
 
 :::info
 
