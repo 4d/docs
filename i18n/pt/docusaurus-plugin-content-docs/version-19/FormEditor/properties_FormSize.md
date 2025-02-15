@@ -54,7 +54,7 @@ Esse valor também determina as margens do lado direito dos formulários usados 
 
 ---
 
-## Margem hor.
+## Margem der.
 
 Valor a ser adicionado (em píxeis) para a margem inferior do formulário quando o tamanho [do formulário](#size-based-on) é **Tamanho Automático** ou `\&#060;object name&#062;`.
 
