@@ -242,7 +242,7 @@ Propriedades compatíveis dependem do tipo de list box.
 
 #### Propriedades adicionais
 
-Os eventos de formulário em objetos de caixa de listagem ou de coluna de caixa de listagem podem retornar as seguintes propriedades adicionais:
+Os eventos formulário nos list box ou colunas de list box podem retornar as seguintes propriedades adicionais:
 
 | Propriedade          | Tipo          | Descrição                                                                    |
 | -------------------- | ------------- | ---------------------------------------------------------------------------- |
@@ -421,7 +421,7 @@ Seleções são gerenciadas diretamente, dependendo de se a list box é a basead
 
 - **List box de tipo coleção/seleção de entidades**: as seleções se gerenciam através das propriedades de list box dedicado:
     - [Elemento atual](properties_DataSource.md#current-item) é um objeto que receberá o elemento/a entidade selecionado
-    - [Itens Selecionados](properties_DataSource.md#selected-items) é um objeto de seleção de coleção/entidade dos itens selecionados
+    - [Itens Selecionados](properties_DataSource.md#selected-items) é uma coleção/objeto entity selection dos itens selecionados
     - [Posição do elemento atual](properties_DataSource.md#current-item-position) devolve a posição do elemento ou da entidade selecionada.
 
 - **List box de tipo array**: o comando `LISTBOX SELECT ROW` pode utilizar-se para selecionar uma ou mais linhas de list box por programação. A [variável associada ao objeto List box](propiedades_Objeto.md#variable-o-expresión) se utiliza para obter, definir ou armazenar as seleções de linhas no objeto. Esta variável corresponde a um array de booleanos que é criado e mantido automaticamente por 4D. O tamanho deste array vem determinado pelo tamanho do list box: contém o mesmo número de elementos que o menor array associado às colunas. Cada elemento deste array contém `True` se selecionar a línha correspondente e `False` em caso contrário. 4D atualiza o conteúdo deste array em função das ações de usuário. Do lado contrário, pode mduar o valor dos elementos array para mudar a seleção na list box. Mas não se pode inserir nem apagar linhas nesse array; nem se pode reescrever as linhas. O comando `Count in array` pode ser usado para encontrar o número de líneas selecionadas. Por exemplo, este método permite inverter a seleção da primeira línha de list box (tipo array):
@@ -539,7 +539,7 @@ O suporte de ordenação padrão depende do tipo de list box:
 | ----------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Uma coleção de objetos        | Sim                         | <ul><li>As colunas "This.a" ou "This.a.b" podem ser ordenadas.</li><li>A [propriedade source do list box](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                  |
 | Colecção de valores escalares | Não                         | Use a classificação personalizada com a função[`orderBy()`](../API/CollectionClass.md#orderby)               |
-| Seleção de entidades          | Sim                         | <li>A [propriedade source do list box](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Suportado: classifica propriedades de atributos de objetos (por exemplo, "This.data.city" quando "data" é um atributo de objeto)</li><li>Suportado: ordena por atributos relacionados (por exemplo, "This.company.name")</li><li>Não suportado: classifica propriedades de atributos de objetos por meio de atributos relacionados (por exemplo, "This.company.data.city"). Para isso, você precisa usar a classificação personalizada com a função [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (veja o exemplo abaixo)</li> |
+| Seleção de entidades          | Sim                         | <li>A [propriedade source do list box](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Suportado: classifica propriedades de atributos de objetos (por exemplo, "This.data.city" quando "data" é um atributo de objeto)</li><li>Suportado: ordena por atributos relacionados (por exemplo, "This.company.name")</li><li>Não suportado: classifica propriedades de atributos de objetos por atributos relacionados (por exemplo, "This.company.data.city"). Para isso, você precisa usar a classificação personalizada com a função [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (veja o exemplo abaixo)</li> |
 | Selecção actual               | Sim                         | Somente expressões simples podem ser classificadas (por exemplo, `[Table_1]Field_2`)                         |
 | Seleção temporal              | Não                         |                                                                                                              |
 | Arrays                        | Sim                         | As colunas ligadas a arrays de imagens e ponteiros não podem ser ordenadas                                   |
@@ -558,11 +558,11 @@ As ordenações personalizadas permitem-lhe:
 
 #### Exemplo
 
-Você deseja classificar uma caixa de lista usando valores de uma propriedade armazenada em um atributo de objeto relacionado. Tem a seguinte estrutura:
+Você deseja classificar um list box usando valores de uma propriedade armazenada em um atributo de objeto relacionado. Tem a seguinte estrutura:
 
 ![](../assets/en/FormObjects/relationLB.png)
 
-Você projeta um list box do tipo de seleção de entidades, vinculada à expressão `Form.child`. No evento formulário `On Load`, você executa `Form.child:=ds.Child.all()`.
+Você projeta um list box entity selection, vinculada à expressão `Form.child`. In the `On Load` form event, you execute `Form.child:=ds. Child.all()`.
 
 São exibidas duas colunas:
 
@@ -1033,7 +1033,7 @@ O atributo behavior fornece variações para a representação regular de valore
 
 #### requiredList e choiceList
 
-Quando um atributo "choiceList" ou "requiredList" está presente no objeto, a entrada de texto é substituída por uma lista suspensa ou uma caixa de combinação, dependendo do atributo:
+Quando um atributo "choiceList" ou "requiredList" está presente no objeto, a entrada de texto é substituída por uma lista suspensa ou uma combo box, dependendo do atributo:
 
 *   Se o atributo é "choiceList", a célula é apresentada como um combo box. Isto significa que o usuário pode selecionar ou escrever um valor.
 *   Se o atributo for "requiredList", então a célula é exibida como uma lista suspensa e o usuário só pode selecionar um dos valores fornecidos na lista.
@@ -1043,7 +1043,7 @@ Em ambos os casos, um atributo "valor" pode ser usado para pré-selecionar um va
 
 Exemplos:
 
-*   Se quiser exibir uma lista suspensa com apenas duas opções: "Aberto" ou "Fechado". "Closed" deve ser pré-selecionada:
+*   Se quiser exibir uma lista suspensa com apenas duas opções: "Open" ou "Closed". "Closed" deve ser pré-selecionada:
 
 ```4d
     ARRAY TEXT($RequiredList;0)
@@ -1074,7 +1074,7 @@ Exemplos:
 
 #### requiredListName e requiredListReference
 
-Os atributos "requiredListName" e "requiredListReference" permitem que você use, em uma célula da caixa de listagem, uma lista definida no 4D no modo Desenho (no editor de Listas da caixa de ferramentas) ou por programação (usando o comando Nova lista). A célula será então apresentada como uma lista pendente. Isso significa que o usuário só pode selecionar um dos valores fornecidos na lista.
+Os atributos "requiredListName" e "requiredListReference" permitem que você use, em uma célula do list box, uma lista definida no 4D no modo Desenho (no editor de Listas da caixa de ferramentas) ou por programação (usando o comando New list). A célula será então apresentada como uma lista pendente. Isso significa que o usuário só pode selecionar um dos valores fornecidos na lista.
 
 Use "requiredListName" ou "requiredListReference" dependendo da origem da lista: se a lista vier da Caixa de ferramentas, você passará um nome; caso contrário, se a lista tiver sido definida por programação, você passará uma referência. Em ambos os casos, um atributo "valor" pode ser usado para pré-selecionar um valor no widget.
 > * Se quiser definir esses valores através de uma matriz simples, você precisará usar o atributo "requiredList".
@@ -1116,10 +1116,10 @@ Exemplos:
 
 #### choiceListName e choiceListReference
 
-Os atributos "choiceListName" e "choiceListReference" permitem que você use, em uma célula de caixa de listagem, uma lista definida no 4D no modo Desenho (na caixa de ferramentas) ou por programação (usando o comando Nova lista). A célula é então exibida como uma caixa de combinação, o que significa que o usuário pode selecionar ou digitar um valor.
+Os atributos "choiceListName" e "choiceListReference" permitem que você use, em uma célula de list box, uma lista definida no 4D no modo Desenho (na caixa de ferramentas) ou por programação (usando o comando New list). A célula é então exibida como uma combo box, o que significa que o usuário pode selecionar ou digitar um valor.
 
 Use "choiceListName" ou "choiceListReference" dependendo da origem da lista: se a lista vier da Caixa de ferramentas, você passará um nome; caso contrário, se a lista tiver sido definida por programação, você passará uma referência. Em ambos os casos, um atributo "valor" pode ser usado para pré-selecionar um valor no widget.
-> * Se quiser definir esses valores através de uma matriz simples, você precisará usar o atributo "choiceList".
+> * Se quiser definir esses valores através de um array simples, você precisará usar o atributo "choiceList".
 > * Se a lista contiver itens de texto que representem valores reais, o separador decimal deverá ser um ponto ("."), independentemente das configurações locais, por exemplo: "17.6" "1234.456".
 
 Exemplo:
@@ -1151,7 +1151,7 @@ Independentemente da forma como a lista de unidades é definida, ela pode ser as
 
 *   "unitReference": um valor único que contenha o índice (de 1 a x) do item selecionado na lista de valores "unitsListReference" ou "unitsListName".
 
-A unidade atual é exibida como um botão que percorre os valores "unitList", "unitsListReference" ou "unitsListName" sempre que é clicado (por exemplo, "pixeil" -> "rows" -> "cm" -> "pixels" -> etc.)
+A unidade atual é exibida como um botão que percorre os valores "unitList", "unitsListReference" ou "unitsListName" sempre que é clicado (por exemplo, "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
 
 Exemplo:
 
@@ -1199,7 +1199,7 @@ O valueType "color" permite-lhe apresentar uma cor ou um texto.
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
 
-*   Si el valor es un texto, entonces se muestra el texto (*por ejemplo*: "valor"; "Automatic").
+*   Se o valor for um texto, o texto será exibido*(por exemplo,*: "value"; "Automatic").
 
 
 #### event valueType
