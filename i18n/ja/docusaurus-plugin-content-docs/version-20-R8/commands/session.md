@@ -68,7 +68,7 @@ Web ユーザーセッションに関する詳細な情報については、[Web
 - [`Execute on server`](../commands-legacy/execute-on-server.md) コマンドで呼び出されたメソッド
 - `On Server Startup`、`On Server Shutdown`、`On Backup Startup`、`On Backup Shutdown`、および `On System event` データベースメソッド
 
-ストアドプロシージャーの仮想ユーザーセッションに関する情報については、[4D Serverと4Dランゲージ](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html) のページを参照ください。
+For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html) page.
 
 #### スタンドアロンセッション
 
@@ -76,7 +76,7 @@ Web ユーザーセッションに関する詳細な情報については、[Web
 
 #### 例題
 
-"公開オプション: 4DタグとURL(4DACTION...)" を有効にした `action_Session` メソッドを定義しました。 ブラウザーに次の URL を入力してメソッドを呼び出します:
+"公開オプション: 4DタグとURL(4DACTION...)" ブラウザーに次の URL を入力してメソッドを呼び出します:
 
 ```
 IP:port/4DACTION/action_Session
@@ -104,7 +104,7 @@ IP:port/4DACTION/action_Session
 
 #### プロパティ
 
-|         |                                 |
-| ------- | ------------------------------- |
-| コマンド番号  | 1714                            |
-| スレッドセーフ | &amp;check; |
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1714                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
