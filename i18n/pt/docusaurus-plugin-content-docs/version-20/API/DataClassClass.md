@@ -704,20 +704,20 @@ Chamar esta função a partir de uma aplicação 4D monousuário retorna `Null`.
 
 O objeto retornado tem as propriedades abaixo:
 
-| Propriedade | Tipo       | Descrição                                                                          |
-| ----------- | ---------- | ---------------------------------------------------------------------------------- |
-| maxEntries  | Integer    | Número máximo de entradas recolhidas.                                              |
-| stamp       | Integer    | Carimbo da cache.                                                                  |
-| timeout     | Integer    | Tempo restante antes que as novas entradas na cache sejam marcadas como expiradas. |
-| |           | Collection | Collection | Contém um objecto de entrada para cada entidade na cache.             |
+| Propriedade | Tipo       | Descrição                                                                           |
+| ----------- | ---------- | ----------------------------------------------------------------------------------- |
+| maxEntries  | Integer    | Número máximo de entradas recolhidas.                                               |
+| stamp       | Integer    | Carimbo da cache.                                                                   |
+| timeout     | Integer    | Tempo restante antes que as novas entradas na cache sejam marcadas como expiradas.  |
+| |           | Collection | Collection | Collection | Contém um objecto de entrada para cada entidade na cache. |
 
 Cada objecto de entrada na colecção `entradas` tem as seguintes propriedades:
 
-| Propriedade | Tipo       | Descrição                                |
-| ----------- | ---------- | ---------------------------------------- |
-| data        | Object     | Objeto que contém os dados da entrada    |
-| expired     | Parâmetros | True se a entrada tiver expirado         |
-| |           | Text       | Text       | Chave primária da entidade. |
+| Propriedade | Tipo       | Descrição                                             |
+| ----------- | ---------- | ----------------------------------------------------- |
+| data        | Object     | Objeto que contém os dados da entrada                 |
+| expired     | Parâmetros | True se a entrada tiver expirado                      |
+| |           | Text       | Text       | Text       | Chave primária da entidade. |
 
 O objecto `data` em cada entrada contém as seguintes propriedades:
 
