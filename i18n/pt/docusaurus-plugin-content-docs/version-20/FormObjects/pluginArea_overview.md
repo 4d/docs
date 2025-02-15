@@ -12,10 +12,10 @@ Quando abrir um banco de dados, 4D cria uma lista interna de plug-ins [instalado
 
 > Alguns plug-ins, como 4D Internet Commands, não podem ser usados em formulários ou janelas externas. Quando um plug-in não pode ser usado em um formulário, ele não aparece na lista de plug-ins da Lista de propriedades.
 
-Se você desenhar uma área de plugin muito pequena, 4D irá exibi-lo como um botão cujo título é o nome da variável associada à área. Durante a execução, o usuário pode clicar nesse botão para abrir uma janela específica que exiba o plug-in.
+Se você desenhar uma área de plug-in muito pequena, 4D irá exibi-lo como um botão cujo título é o nome da variável associada à área. Durante a execução, o usuário pode clicar nesse botão para abrir uma janela específica que exiba o plug-in.
 
 
-## Propriedades Avançadas
+## Propriedades avançadas
 
 Se as opções avançadas forem fornecidas pelo autor do plug-in, um tema **de plug-in** que contenha uma seção [**Propriedades avançadas**](properties_Plugins.md) pode ser ativado na lista de propriedades. Nesse caso, você pode clicar nesse botão para definir essas opções, geralmente por uma caixa de diálogo personalizada.
 
