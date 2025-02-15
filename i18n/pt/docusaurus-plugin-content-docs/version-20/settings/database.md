@@ -12,66 +12,66 @@ Esta página é utilizada para configurar o armazenamento de dados no disco para
 
 #### Permitir a utilização do ficheiro de dados só de leitura
 
-This option allows configuration of the application operation when opening a locked data file at the operating system level. 4D includes a mechanism that automatically prevents the opening of a database when its data file, or one of its segments, is locked. In this case, when this detection option is activated, 4D displays a warning message and does not open the database:
+Essa opção permite a configuração da operação do aplicativo ao abrir um arquivo de dados bloqueado no nível do sistema operacional. 4D inclui um mecanismo que impede automaticamente a abertura de uma base de dados quando seu arquivo de dados, ou um de seus segmentos, está bloqueado. Neste caso, quando esta opção de detecção é ativada, 4D exibe uma mensagem de aviso e não abre o banco de dados:
 
 ![](../assets/en/settings/data-locked.png)
 
-Unless this option is checked, it is not possible to open a database when its data file is locked (default operation for 4D databases).
+A menos que essa opção esteja marcada, não é possível abrir um banco de dados quando seu arquivo de dados estiver bloqueado (operação padrão para bancos de dados 4D).
 
-#### Sobre ficheiros bloqueados
+#### Sobre arquivos bloqueados
 
-Os ficheiros bloqueados podem ser lidos, mas o seu conteúdo não pode ser modificado. For example, files are locked when they are stored on a non-rewritable support (DVD type) or when they are copied from this type of support. 4D can work in a transparent manner with locked data files, which allows, more particularly, the use of projects stored on DVD. However, this operation runs the risk of inadvertent use of a locked data file in which modifications will not be saved. This is why by default 4D does not allow databases with a locked data file to be opened.
+Os arquivos bloqueados podem ser lidos, mas seu conteúdo não pode ser modificado. Por exemplo, os arquivos são bloqueados quando são armazenados em um suporte não regravável (tipo DVD) ou quando são copiados deste tipo de suporte. 4D pode trabalhar de forma transparente com arquivos de dados bloqueados, o que permite, mais particularmente, o uso de projetos armazenados em DVD. No entanto, esta operação corre o risco de usar inadvertidamente um arquivo de dados bloqueado no qual as modificações não serão salvas. É por isso que por padrão 4D não permite que bancos de dados com arquivo de dados bloqueado sejam abertos.
 
 ### Localização da pasta temporária
 
-This area lets you change the location of temporary files created while 4D is running. The temporary files folder is used by the application, when necessary, to temporarily save the data in memory to disk.
+Essa área permite que você altere o local dos arquivos temporários criados enquanto o 4D está em execução. A pasta de arquivos temporários é usada pelo aplicativo, quando necessário, para salvar temporariamente os dados da memória no disco.
 
-The current location of this folder is displayed in the "Current:" area. Você pode clicar nessa área para mostrar o nome do caminho como uma lista suspensa:
+A localização atual desta pasta é exibida na área "Atual:". Você pode clicar nessa área para mostrar o nome do caminho como uma lista suspensa:
 
 ![](../assets/en/settings/temporary-file-location.png)
 
 São oferecidos três opções de localização:
 
--   **System**: When this option is selected, the 4D temporary files are created in a folder placed at the location specified by Windows and/or macOS. Você pode descobrir o local atual definido pelo seu sistema usando o comando 4D [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html). The files are put into a subfolder whose name consists of the database name and a unique identifier.
--   **Data File Folder** (default option): When this option is selected, the 4D temporary files are created in a folder named "temporary files" located at the same level as the data file of the database.
--   **User Defined**: This option is used to set a custom location. If the location option is modified, it will be necessary to restart the database in order for the new option to be taken into account. 4D verifica se a pasta selecionada pode ser acedida por escrita. If this is not the case, the application tries other options until a valid folder is found.
+-   **Sistema**: Quando essa opção é selecionada, os arquivos temporários 4D são criados em uma pasta colocada no local especificado pelo Windows e/ou macOS. Você pode descobrir o local atual definido pelo seu sistema usando o comando 4D [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html). Os arquivos são colocados em uma subpasta cujo nome consiste no nome do banco de dados e em um identificador exclusivo.
+-   **Pasta de arquivo de dados** (opção padrão): Quando esta opção é selecionada, os arquivos temporários 4D são criados em uma pasta chamada "arquivos temporários" localizada no mesmo nível do arquivo de dados do banco de dados.
+-   **Usuário Definido**: Esta opção é usada para definir um local personalizado. Se a opção local for modificada, será necessário reiniciar a base de dados para que a nova opção seja tida em conta. 4D verifica se a pasta selecionada pode ser acessada por gravação. Se não for esse o caso, o aplicativo tenta outras opções até que uma pasta válida seja encontrada.
 
-> This option is stored in the "extra properties" of the structure that is available when the structure definition is exported in XML (see [Exporting and importing structure definitions](https://doc.4d.com/4Dv19/4D/19/Exporting-and-importing-structure-definitions.300-5416829.en.html)).
+> Esta opção é armazenada nas "propriedades extras" da estrutura que está disponível quando a definição de estrutura é exportada em XML (veja [Exportar e importar definições de estrutura](https://doc.4d.com/4Dv19/4D/19/Exporting-and-importing-structure-definitions.300-5416829.en.html)).
 
 ### Comparação de textos
 
-> If you change one of these options, you have to quit and reopen the database to make the change effective. Quando a base de dados é reaberta, todos os índices da base de dados são automaticamente reindexados.
+> Se você alterar uma dessas opções, é preciso sair e reabrir o banco de dados para tornar a alteração eficaz. Quando a base de dados for reaberta, todos os índices da base de dados são automaticamente reindexados.
 
--   **Consider @ as a wildcard only when at the beginning or end of text patterns**: Allows you to set how the at sign "@" will be interpreted when used in a query or a character string comparison, when it is located in a word. When this option is not checked (default value), the at sign is used as the wildcard character, in other words, it replaces any character (see [Wildcard character (@)](https://doc.4d.com/4Dv19/4D/19/Query-editor.300-5416813.en.html#463876)).
+-   **Considerar @ como curinga somente quando estiver no início ou no final de padrões de texto**: Permite definir como o sinal de arroba "@" será interpretado quando usado em uma consulta ou em uma comparação de cadeia de caracteres, quando estiver localizado em uma palavra. Quando esta opção não é marcada (valor padrão), o sinal de presente é usado como caractere coringa, em outras palavras, substitui qualquer caractere (veja [caractere curinga (@)](https://doc.4d.com/4Dv19/4D/19/Query-editor.300-5416813.en.html#463876)).
 
-    When the option is checked, the at sign is regarded as a simple character if it is located within a word. This setting is especially useful when searching for E-mail addresses, where the @ sign is used internally. This option has an influence on searches, sorts, string comparisons, as well as on data stored in tables and data found in memory, like arrays. Fields and variables of the alpha (indexed or not) and text type are concerned by how the @ character is interpreted in searches and sorts.
+    Quando a opção estiver marcada, o sinal de arroba é considerado um caractere simples se estiver localizado em uma palavra. Essa configuração é especialmente útil quando se procura por endereços de e-mail, onde o sinal @ é usado internamente. Esta opção tem influência em pesquisas, ordenações, comparações de string, bem como em dados armazenados em tabelas e dados encontrados na memória, como arrays. Campos e variáveis do alfa (indexado ou não) e tipo de texto estão preocupados com a forma como o caractere @ é interpretado em pesquisas e tipos de caracteres.
 
      **Notas:**
-    -   For searches, if the search criteria begins or ends with @, the "@" character will be treated as a wildcard. Only if the "@" character is placed in the middle of a word (for example: bill@cgi.com) does 4D treat it differently.
-    -   This option can also have an influence on the behavior of the commands in the [Objects (Forms)](https://doc.4d.com/4Dv19/4D/19/Objects-Forms.201-5391558.en.html) theme that accept the wildcard character ("@") in the object parameter.
-    -   For security reasons, only the Administrator or Designer of the database can modify this parameter.
+    -   Para pesquisas, se os critérios de pesquisa iniciam ou terminam com @, o caractere "@" será tratado como um caractere curinga. Somente se o caractere "@" for colocado no meio de uma palavra (por exemplo: bill@cgi.com) é tratado por 4D de maneira diferente.
+    -   Essa opção também pode influenciar o comportamento dos comandos no tema [Objetos (Formulários)](https://doc.4d.com/4Dv19/4D/19/Objects-Forms.201-5391558.en.html) que aceitam o caractere curinga ("@") no parâmetro do objeto.
+    -   Por razões de segurança, apenas o Administrador ou Designer da base de dados podem modificar este parâmetro.
 
--   **Current data language:** Used to configure the language used for character string processing and comparison. A escolha do idioma influencia diretamente a classificação e a pesquisa de texto, bem como as letras maiúsculas e minúsculas, mas não afeta a tradução de textos nem os formatos de data, hora ou moeda, que permanecem no idioma do sistema. Por padrão, 4D usa a linguagem do sistema.
+-   **Idioma atual dos dados:** Usado para configurar o idioma usado para processamento e comparação de cadeias de caracteres. A escolha do idioma influencia diretamente a classificação e a pesquisa de texto, bem como as letras maiúsculas e minúsculas, mas não afeta a tradução de textos nem os formatos de data, hora ou moeda, que permanecem no idioma do sistema. Por padrão, 4D usa a linguagem do sistema.
 
-    Um projeto 4D pode, portanto, operar em uma linguagem diferente da do sistema. When a project is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the project engine or the language, are done in the same language.
+    Um projeto 4D pode, portanto, operar em uma linguagem diferente da do sistema. Quando um projeto for aberto, o mecanismo 4D detecta o idioma usado pelo arquivo de dados e o fornece ao idioma (modo interpretador ou compilado). As comparações de texto, independentemente de serem realizadas pelo mecanismo de projeto ou pelo idioma, são feitas no mesmo idioma.
 
-    > You can modify this setting in the application Preferences (see [General Page](../Preferences/general.md)). In this case, the setting applies to all the new databases created by 4D.
+    > Você pode modificar essa configuração nas Preferências do aplicativo (consulte [Página Geral](../Preferences/general.md)). Neste caso, a configuração aplica-se a todas as novas bases de dados criadas pela 4D.
 
--   **Consider only non-alphanumeric chars for keywords**: Modifies the algorithm used by 4D to identify keyword separators and hence build their indexes. By default, when this option is not checked, 4D uses a sophisticated algorithm that takes linguistic characteristics into account.
+-   **Considere apenas caracteres não alfanuméricos para palavras-chave**: Modifica o algoritmo usado por 4D para identificar separadores de palavras-chave e, portanto, compilar seus índices. Por padrão, quando esta opção não é verificada, a 4D usa um algoritmo sofisticado que leva em conta as características linguísticas.
 
-    This algorithm is similar to the one used by word-processing software to determine the boundaries when selecting a word that is double-clicked. Para obter mais informações sobre este algoritmo, consulte o seguinte endereço: `http://userguide.icu-project.org/boundaryanalysis`.
+    Este algoritmo é semelhante ao usado pelo software de processamento de palavras para determinar os limites ao selecionar uma palavra que é clicada duplo. Para obter mais informações sobre este algoritmo, consulte o seguinte endereço: `http://userguide.icu-project.org/boundaryanalysis`.
 
-    Quando esta opção está selecionada, 4D utiliza um algoritmo simplificado. In this configuration, any non-alphanumeric character (i.e., not a letter or a number) is considered as a keyword separator. This setting meets specific requirements associated with certain languages such as Japanese.
+    Quando esta opção está selecionada, 4D utiliza um algoritmo simplificado. Nessa configuração, qualquer caractere não alfanumérico (ou seja, que não seja uma letra ou um número) é considerado um separador de palavras-chave. Essa configuração atende a requisitos específicos associados a determinados idiomas, como o japonês.
 
--   **Sorting order appropriate for searching**: This option is only displayed when the Japanese language is selected. Modifies the interpretation of characters such as the "Katakana-Hiragana Prolonged Sound Mark" or "長音記号" or the "Japanese Iteration Marks" such as "ゝ" or "ゞ". Typical Japanese speaker is likely to prefer the results when the setting is enabled.
+-   **Ordem de classificação apropriada para pesquisa**: Essa opção só é exibida quando o idioma japonês for selecionado. Modifica a interpretação de caracteres como a "Marca de som prolongado Katakana-Hiragana" ou "長音記号" ou as "Marcas de iteração japonesas" como "ゝ" ou "ゞ". Um falante típico de japonês provavelmente preferirá os resultados com a configuração  ativada.
 
-#### Suporte do MeCab (versão japonesa)
+#### Compatibilidade do MeCab (versão japonesa)
 
-On Japanese systems, 4D supports the *MeCab* library, with a indexing algorithm for keywords that is particularly suited for the Japanese language.
+Em sistemas japoneses, 4D é compatível com a biblioteca *MeCab*, com um algoritmo de indexação de palavras-chave que é particularmente adequado para o idioma japonês.
 
-Este algoritmo é usado por defeito nas versões japonesas de 4D. If needed, you can disable the use of the *MeCab* algorithm and use the conventional *ICU* library.
+Este algoritmo é usado por padrão nas versões japonesas da 4D. Se necessário, você pode desativar o uso do algoritmo *MeCab* e usar a biblioteca *ICU* convencional.
 
-To disable *MeCab*, just check the **Consider only non-alphanumeric chars for keywords** option:
+Para desativar *o MeCab*, basta marcar a opção **Considerar apenas caracteres não alfanuméricos para palavras-chave**:
 
 
 ![](../assets/en/settings/non-alphanumeric-chars.png)
@@ -79,15 +79,15 @@ To disable *MeCab*, just check the **Consider only non-alphanumeric chars for ke
 
 ## Página Memória
 
-You use the settings on this tab to configure the cache memory for the database.
+Você usa as configurações nesta aba para configurar a memória em cache para o banco de dados.
 
 ### Parâmetros da cache do banco de dados
 
--   **Calculation of adaptive cache**: When this option is checked, management of the memory cache is done dynamically by the system --- respecting limits that you set. This allows configuration of a high performance memory cache adapted to most configurations. The size of the memory cache is then calculated dynamically depending on set parameters. Os valores oferecidos por defeito correspondem à utilização normal de 4D.
+-   **Cálculo do cache adaptativo**: Quando essa opção estiver marcada, o gerenciamento do cache de memória é feito dinamicamente pelo sistema, respeitando os limites definidos por você. Isto permite a configuração de um cache de memória de alto desempenho adaptado à maioria das configurações. O tamanho do cache de memória é então calculado dinamicamente dependendo dos parâmetros definidos. Os valores oferecidos por defeito correspondem à utilização normal de 4D.
 
-    -   **Memory to be reserved for other applications and for the system**: Portion of the RAM memory to reserve for the System and other applications. This value is increased for optimization when other applications are running on the same machine as 4D.
-    -   **Percentage of available memory used for cache**: Percentage of the remaining memory allocated to the cache by default.\
-      To obtain the size allocated by default to the cache, simply perform the following calculation: (Physical memory -- Physical memory to be reserved) X Percentage of the memory used for the cache. In the adaptive mode, the size of the memory cache varies dynamically depending on the needs of the application and the system. Pode definir limites utilizando as duas opções seguintes:
+    -   **Memória a ser reservada para outros aplicativos e para o sistema**: Parte da memória RAM a ser reservada para o sistema e outros aplicativos. Esse valor é aumentado para otimização quando outros aplicativos são executados na mesma máquina que a 4D.
+    -   **Porcentagem de memória disponível usada em cache**: Porcentagem da memória restante alocada ao cache por padrão.\
+      Para obter o tamanho alocado por padrão para o cache, simplesmente faça o seguinte cálculo: memória física -- memória física a ser reservada) Porcentagem X da memória usada para o cache. No modo adaptável, o tamanho do cache de memória varia dinamicamente dependendo das necessidades do aplicativo e do sistema. Você pode definir limites usando as seguintes duas opções:
     -   **Tamanho mínimo**: quantidade mínima de memória a ser reservada para o cache. Este valor não pode ser inferior a 100 MB.
     -   **Tamanho máximo**: quantidade máxima de memória que o cache pode usar. This value is virtually unlimited.\  
       Setting limits is particularly useful for databases that are distributed on machines for which you do not know the memory configuration a priori. Nesse caso, os limites definidos garantem um desempenho mínimo em todos os casos. O diagrama seguinte ilustra este comportamento:
@@ -96,14 +96,14 @@ You use the settings on this tab to configure the cache memory for the database.
 
     ![](../assets/en/settings/memory-maximum-size.png)
 
--   **Calculation of adaptive cache not checked**:  this mode, you set the size of the memory cache for the database yourself. 4D then displays an entry area that allows setting the memory cache to use as well as information related to the physical memory (RAM available on the machine), the current cache and cache after restart (taking your changes into account).
+-   **Cálculo do cache adaptativo não verificado**: nesse modo, você mesmo define o tamanho do cache de memória para o banco de dados. O 4D então exibe uma área de entrada que permite a configuração do cache de memória para uso, bem como informações relacionadas à memória física (RAM disponíveis na máquina), o cache atual e o cache após reiniciar (levando suas alterações em conta).
 
-    The size of the memory cache that you enter will be reserved for the 4D database, regardless of the state of machine resources. This setting can be used in certain specific configurations, or when the database is designed to be used on dissimilar systems in terms of memory. Geralmente, a cache adaptativa oferece um melhor desempenho.
+    O tamanho do cache de memória que você inserir será reservado para o banco de dados 4D, independentemente do estado dos recursos da máquina. Esta configuração pode ser usada em certas configurações específicas, ou quando a base de dados é projetada para ser usada em sistemas diferentes em termos de memória. Geralmente, a cache adaptativa oferece um melhor desempenho.
 
--   **Limpar a cache a cada ... Seconds/Minutes**: Specifies the time period between each automatic saving of the data cache, i.e., its writing to disk. 4D salva os dados colocados no cache em intervalos regulares. Você pode especificar qualquer intervalo de tempo entre 1 segundo e 500 minutos. Por padrão, 4D salva seus dados a cada 20 segundos. The application also saves your data to disk each time you change to another environment or exit the application. Você também pode chamar o comando [FLUSH CACHE](https://doc.4d.com/4dv19R/help/command/en/page297.html) para acionar a descarga a qualquer momento.
+-   **Limpar a cache a cada ... Segundos/Minutos**: Especifica o período de tempo entre cada salvamento automático do cache de dados, ou seja, sua gravação no disco. 4D salva os dados colocados no cache em intervalos regulares. Você pode especificar qualquer intervalo de tempo entre 1 segundo e 500 minutos. Por padrão, 4D salva seus dados a cada 20 segundos. O aplicativo também salva seus dados em disco toda vez que você alterar para outro ambiente ou sair do aplicativo. Você também pode chamar o comando [FLUSH CACHE](https://doc.4d.com/4dv19R/help/command/en/page297.html) para acionar a descarga a qualquer momento.
 
-    When you anticipate heavy data entry, consider setting a short time interval between saves. In case of a power failure, you will only lose the data entered since the previous save (if the database is running without a log file).
+    Quando você antecipar uma entrada de dados pesada, considere definir um curto intervalo de tempo entre saves. Em caso de falha de poder, você só perderá os dados inseridos desde o salvamento anterior (se o banco de dados estiver sendo executado sem um arquivo de log).
 
-    If there is a noticeable slowing down of the database each time the cache is flushed, you need to adjust the frequency. Essa lentidão significa que uma grande quantidade de registros está sendo salva. A shorter period between saves would therefore be more efficient since each save would involve fewer records and hence be faster.
+    Se houver uma lentidão notável no banco de dados toda vez que o cache for liberado, você precisará ajustar a frequência. Essa lentidão significa que uma grande quantidade de registros está sendo salva. Um período mais curto entre as economias seria portanto mais eficaz, uma vez que cada poupança implicaria menos registos e, por conseguinte, mais rápido.
 
-    Por padrão, 4D exibe uma pequena janela quando o cache é liberado. If you do not want this visual reminder, you can uncheck the **Flushing progress** option on the [Interface page](./interface.md).
+    Por padrão, 4D exibe uma pequena janela quando o cache é liberado. Se não quiser esse lembrete visual, você pode desmarcar a opção **Flushing progress** na [página Interface](./interface.md).
