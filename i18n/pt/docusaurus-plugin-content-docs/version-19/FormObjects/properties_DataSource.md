@@ -295,7 +295,7 @@ Especifica uma variável ou expressão à qual serão atribuídos os elementos o
 
 | Nome                | Tipo de dados | Valores possíveis                          |
 | ------------------- | ------------- | ------------------------------------------ |
-| selectedItemsSource | string        | Expression collection ou objeto atribuível |
+| selectedItemsSource | string        | Assignable collection or object expression |
 
 #### Objectos suportados
 
