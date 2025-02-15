@@ -31,7 +31,7 @@ $myHour:=?08:12:55? //atribui uma hora literal
 
 Você DEVE diferenciar o operador atribuição := dos outros operadores. Ao invés de combinar expressões a uma nova, o operador de atribuição copia o valor da expressão para a direita do operador de atribuição para a variável ou campo para a esquerda do operador.
 
-**Importante:** não confunda o operador de atribuição := com o operador de comparação de igualdade =. Um operador de atribuição diferente (e não =) foi escolhido deliberadamente para evitar problemas e confusão que ocorrem frequentemente em outras linguagens com operadores como == ou ===. Esses erros são geralmente difíceis de reconhecer pelo compilador e geram problemas trabalhosos.
+**Importante:** Não confunda o operador de atribuição := com o operador de comparação de igualdade =. Um operador de atribuição diferente (e não =) foi escolhido deliberadamente para evitar problemas e confusão que ocorrem frequentemente em outras linguagens com operadores como == ou ===. Esses erros são geralmente difíceis de reconhecer pelo compilador e geram problemas trabalhosos.
 
 ## Variáveis.
 
@@ -49,13 +49,13 @@ var myPerson : cs.Person
 ```
 
 
-Mesmo que isso não seja recomendado, você pode criar variáveis simplesmente usando-as; você não precisa necessariamente defini-las formalmente. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
+Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-A linha de código lê “MyOtherDate gets the current date plus 30 days.” Essa linha cria a variável, atribui-lhe o tipo de data (temporária) e um conteúdo. Uma variável criada por atribuição é interpretada como sem tipo, ou seja, pode ser atribuída com outros tipos em outras linhas e mudar de tipo dinamicamente. Esta flexibilidade não se aplica às variáveis declaradas com a palavra-chave `var` (seu tipo não pode mudar) e em [modo compilado](interpreted.md) onde o tipo nunca pode ser alterado, independentemente de como a variável foi criada.
+A linha de código lê “MyOtherDate gets the current date plus 30 days.” Essa linha cria a variável, atribui-lhe o tipo de data (temporária) e um conteúdo. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and change of type dynamically. Esta flexibilidade não se aplica às variáveis declaradas com a palavra-chave `var` (seu tipo não pode mudar) e em [modo compilado](interpreted.md) onde o tipo nunca pode ser alterado, independentemente de como a variável foi criada.
 
 ## Comandos
 
