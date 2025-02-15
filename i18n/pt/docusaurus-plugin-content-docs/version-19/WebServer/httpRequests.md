@@ -16,7 +16,7 @@ O servidor da web 4D oferece várias funcionalidades para lidar com solicitaçõ
 
 O método banco de dados `On Web Connection` pode ser usado como ponto de entrada para o servidor Web 4D.
 
-### Chamadas métodos de base
+### Chamadas dos métodos banco
 
 O método da base de dados é chamado com o URL. The `On Web Connection` database method is automatically called when the server receives any URL that is not a path to an existing page on the server.
 
