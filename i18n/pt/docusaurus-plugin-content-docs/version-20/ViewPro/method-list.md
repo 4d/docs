@@ -3640,7 +3640,7 @@ O seguinte código:
 
 #### Descrição
 
-O comando `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->avalia imediatamente todas as fórmulas em *vpAreaName*<!-- END REF -->. Por padrão, o 4D calcula automaticamente fórmulas quando elas são inseridas, importadas ou exportadas. `VP RECOMPUTE FORMULAS` permite forçar o cálculo a qualquer momento (por exemplo, se as fórmulas forem modificadas ou se as fórmulas contiverem chamadas para o banco de dados). The command launches the execution of the [VP FLUSH COMMANDS](#vp-flush-commands) command to execute any stored commands and clear the command buffer, then calculates all formulas in the workbook.
+O comando `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->avalia imediatamente todas as fórmulas em *vpAreaName*<!-- END REF -->. Por padrão, o 4D calcula automaticamente fórmulas quando elas são inseridas, importadas ou exportadas. `VP RECOMPUTE FORMULAS` permite forçar o cálculo a qualquer momento (por exemplo, se as fórmulas forem modificadas ou se as fórmulas contiverem chamadas para o banco de dados). O comando inicia a execução do comando [VP FLUSH COMMANDS](#vp-flush-commands) para executar quaisquer comandos armazenados e limpar a memória temporária de comandos e, em seguida, calcula todas as fórmulas na pasta de trabalho.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 > Certifique-se de que o comando [VP SUSPEND COMPUTANDO](#vp-suspend-computing) não foi executado antes de usar `VP RECOMPUTE FORMULAS`, caso contrário, o comando não faz nada.
@@ -4884,7 +4884,7 @@ Case of
 
 #### Descrição
 
-O comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define o contexto de dados de uma folha<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. Por outro lado, o comando [VP Get data context](#vp-get-data-context) pode retornar um contexto contendo modificações de usuário.
+O comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define o contexto de dados de uma folha<!-- END REF -->. Um contexto de dados é um objeto ou uma coleção vinculada a uma planilha e cujo conteúdo pode ser usado para preencher automaticamente as células da planilha, seja usando uma opção de geração automática ou o método [VP SET BINDING PATH](#vp-set-binding-path). Por outro lado, o comando [VP Get data context](#vp-get-data-context) pode retornar um contexto contendo modificações de usuário.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -4906,7 +4906,7 @@ In *options*, you can pass an object that specifies additional options. As propr
 
 In *sheet*, pass the index of the sheet that will receive the data context. Se nenhum índice for passado, o contexto será aplicado à folha atual.
 
-If you export your document to an object using [VP Export to object](#vp-export-to-object), or to a 4DVP document using [VP EXPORT DOCUMENT](#vp-export-document), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. Para obter mais detalhes, consulte a descrição desses métodos.
+Se você exportar o documento para um objeto usando [VP Export to object](#vp-export-to-object) ou para um documento 4DVP usando [VP EXPORT DOCUMENT](#vp-export-document), a opção `includeBindingSource` permite copiar o conteúdo dos contextos atuais como valores de célula no objeto ou documento exportado. Para obter mais detalhes, consulte a descrição desses métodos.
 
 #### Exemplo
 
@@ -5143,7 +5143,7 @@ O comando `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->atribui um c
 
 Em *rangeObj*, passe um intervalo dá(s) célula(s) cujo valor pretende especificar. In *rangeObj*, pass a range of the cell(s) whose value you want to specify.
 
-The *field* parameter specifies a 4D database [virtual field](formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the *rangeObj*. The virtual structure name for *field* can be viewed in the formula bar. If any of the cells in *rangeObj* have existing content, it will be replaced by *field*.
+O parâmetro *field* especifica um [campo virtual](formulas.md#referencing-fields-using-the-virtual-structure) do banco de dados 4D a ser atribuído ao *rangeObj*. The virtual structure name for *field* can be viewed in the formula bar. If any of the cells in *rangeObj* have existing content, it will be replaced by *field*.
 
 The optional *formatPattern* defines a pattern for the *field* parameter. Você pode passar qualquer [formato personalizado](configuring.md#cell-format) válido.
 
@@ -6084,11 +6084,11 @@ O parâmetro opcional *formatPattern* define um [pattern](configuring.md#cell-fo
 
 O comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->atribui um valor especificado a um intervalo de células designado<!-- END REF -->.
 
-The command allows you to use a generic code to set and format the types of values in *rangeObj*, whereas other commands, such as [`VP SET TEXT VALUE`](#vp-set-text-value) and [`VP SET NUM VALUE`](#vp-set-num-value), reduce the values to specific types.
+O comando permite que você use um código genérico para definir e formatar os tipos de valores em *rangeObj*, enquanto outros comandos, como [`VP SET TEXT VALUE`](#vp-set-text-value) e [`VP SET NUM VALUE`](#vp-set-num-value)reduzem os valores a tipos específicos.
 
 Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) cujo valor você deseja especificar. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
-The parameter *valueObj* is an object that includes properties for the value and the [format](configuring.md#cell-format) to assign to *rangeObj*. Pode incluir as seguintes propriedades:
+O parâmetro *valueObj* é um objeto que inclui propriedades para o valor e o [formato](configuring.md#cell-format) a ser atribuído a *rangeObj*. Pode incluir as seguintes propriedades:
 
 | Propriedade | Tipo                                     | Descrição                                                                                                                                                             |
 | ----------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
