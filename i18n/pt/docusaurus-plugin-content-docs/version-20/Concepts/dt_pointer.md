@@ -88,7 +88,7 @@ Con:
 
 :::warning ponteiros Null
 
-Tentar atribuir ou ler um ponteiro null (também conhecido como "nil") irá produzir um erro em tempo de execução. Por exemplo:
+Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Por exemplo:
 
 ```4d
 var $p : Pointer // Ponteiro não inicializado (Nil value)
@@ -96,7 +96,7 @@ $v:=$p-> // erro
 $p->:=$v // erro
 ```
 
-Para evitar tais erros, você pode escrever:
+To prevent such errors, you can write:
 
 ```4d
 If ($p#Null)
@@ -157,13 +157,13 @@ Os ponteiros para variáveis locais permitem-lhe guardar variáveis de processo 
 #DECLARE($param : Pointer)
 ...
 ```
-O depurador irá exibir $param da seguinte forma:
+The debugger will display $param as follows:
 
 | $param | ->$MyVar (Method1) |
 | ------ | ------------------ |
 |        |                    |
 
-Você pode expandir $param e seu valor será:
+You can expand $param and its value will be:
 
 | $MyVar | "Hello world" |
 | ------ | ------------- |
@@ -201,7 +201,7 @@ Pode passar um ponteiro como parâmetro para um método. Dentro do método, voc�
 
 ```4d
   //takeTwo project method
-  //$changeUp – Pointer para um campo de string ou variável. //$changeLow – Pointer to a string field or variable.
+  //$changeUp – Pointer para um campo de string ou variável. Alterar isto para maiúsculas.
   Mudar isto para minúsculas. Mudar isto para minúsculas.
  #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
  $changeUp->:=Uppercase($changeUp->)
@@ -231,22 +231,22 @@ Exibe uma caixa de alerta com a palavra "Adeus".
 
 Aqui está uma explicação de cada linha do exemplo:
 
-- $MyVar:="Hello" --> This line puts the string "Hello" into the variable $MyVar.
-- $PointerOne:=->$MyVar --> $PointerOne now contains a pointer to $MyVar.
-- $PointerTwo:=->$PointerOne --> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
-- ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar. Assim, neste caso, $MyVar é atribuído o "Adeus".
+- $MyVar:="Hello" --> Essa linha coloca o texto "Hello" na variável $MyVar.
+- $PointerOne:=->$MyVar --> $PointerOne agora contém um ponteiro para $MyVar.
+- $PointerTwo:=->$PointerOne --> $PointerTwo (uma nova variável) contém um ponteiro para $PointerOne, que aponta para $MyVar.
+- ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> faz referência ao conteúdo de $PointerOne, que referir-se a $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar. Assim, neste caso, $MyVar é atribuído o "Adeus".
 - ALERTA (($PointerTwo->)->) --> O mesmo: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar.
 
-A seguinte linha coloca "Olá" em $MyVar:
+A seguinte linha coloca "Hello" em $MyVar:
 ```4d
 ($PointerTwo->)->:="Hello"
 ```
 
-A seguinte linha recebe "Olá" de $MyVar e coloca-o em $NewVar:
+A seguinte linha recebe "Hello" de $MyVar e coloca-o em $NewVar:
 ```
 $NewVar:=($PointerTwo->)->
 ```
 
-**Importante:** A desreferência múltipla requer parênteses.
+**Importante:** a desreverência múltipla requer parênteses.
 
 
