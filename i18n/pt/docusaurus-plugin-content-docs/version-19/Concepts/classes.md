@@ -169,7 +169,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-Não existe uma palavra-chave final para o código de uma função. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
+There is no ending keyword for function code. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
 
 :::
 
@@ -277,7 +277,7 @@ $area:=$rect.getArea() //5000
 
 :::note
 
-Não existe uma palavra-chave final para o código de função class constructor. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
+There is no ending keyword for class constructor function code. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
 
 :::
 
