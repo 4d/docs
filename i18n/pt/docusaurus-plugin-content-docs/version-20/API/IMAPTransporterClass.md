@@ -964,7 +964,7 @@ O parâmetro opcional *opções* permite-lhe passar um objecto definindo instru�
 
 | Propriedade | Tipo    | Descrição                                                                                                                                 |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| updateSeen  | boolean | Se Verdadeiro, a mensagem é marcada como "visto" na caixa de correio. Se false, a mensagem não é marcada como "visto". Valor padrão: True |
+| updateSeen  | boolean | Se Verdadeiro, a mensagem é marcada como "visto" na caixa de correio. Se falso, a mensagem não é marcada como "visto". Valor padrão: True |
 | withBody    | boolean | Pass True para devolver o corpo da mensagem. Se falso, apenas o cabeçalho da mensagem é devolvido. Valor padrão: True                     |
 > * A função gera um erro e devolve **Null** se *msgID* designar uma mensagem inexistente,
 > * Se nenhuma caixa de correio for seleccionada com a função [`.selectBox()`](#selectbox) , é gerado um erro,
