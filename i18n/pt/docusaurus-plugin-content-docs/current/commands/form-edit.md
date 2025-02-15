@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM EDIT.Params-->
 
-| Parâmetro | Tipo   |                             | Descrição                                                                                                   |
-| --------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| aTable    | Tabela | &#8594; | Tabela que contém o formulário ou Se omitido: tabela padrão ou uso do formulário do projeto |
-| form      | Text   | &#8594; | Nome do formulario                                                                                          |
-| object    | Text   | &#8594; | Nome do objeto do formulário ou nome do grupo                                                               |
+| Parâmetro | Tipo   |                             | Descrição                                                                                 |
+| --------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------- |
+| aTable    | Tabela | &#8594; | Table owning the form or If omitted: default table or use of project form |
+| form      | Text   | &#8594; | Nome do formulario                                                                        |
+| object    | Text   | &#8594; | Nome do objeto do formulário ou nome do grupo                                             |
 
 <!-- END REF-->
 
@@ -66,7 +66,7 @@ Para abrir o formulário de projeto *ContatoPage* com o objeto "nome-entrada" se
 
 #### Propriedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1749                            |
-| Thread seguro     | &amp;cross; |
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1749                            |
+| Thread safe    | &amp;cross; |
