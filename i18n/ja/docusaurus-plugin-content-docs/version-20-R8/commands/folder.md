@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 #### 説明
 
-`Folder` コマンドは、<!-- REF #_command_.File.Summary -->[`4D.Folder`](../API/FolderClass.md) 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
+The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. このコマンドは 2種類のシンタックスを受け入れます。
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-*path* には、フォルダーパス文字列を渡します。 カスタムの文字列または [ファイルシステム](../Concepts/paths.md#ファイルシステムパス名) (例: "/DATA") を渡すことができます。
+*path* には、フォルダーパス文字列を渡します。 *path* には、フォルダーパス文字列を渡します。 *path* には、フォルダーパス文字列を渡します。 *path* には、フォルダーパス文字列を渡します。 *path* には、フォルダーパス文字列を渡します。 *path* には、フォルダーパス文字列を渡します。 カスタムの文字列または [ファイルシステム](../Concepts/paths.md#ファイルシステムパス名) (例: "/DATA") を渡すことができます。
 
 > `Folder` コマンドでは絶対パス名のみがサポートされます。
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
 | fk user preferences folder | 0   | ユーザー環境設定ファイルを保存している、ユーザーホームフォルダー内の 4Dフォルダー                                               |
 | fk web root folder         | 8   | データベースのカレントの Webルートフォルダー: ただし "/PACKAGE/path" のパッケージ内にある場合。そうでない場合はフルパス。 |
 
-コマンドがコンポーネントから呼び出されている場合、`*` 引数を渡してホストデータベースのパスを取得するようにします。 `*` 引数を省略すると、常に null オブジェクトが返されます。
+コマンドがコンポーネントから呼び出されている場合、`*` 引数を渡してホストデータベースのパスを取得するようにします。 `*` 引数を省略すると、常に null オブジェクトが返されます。 `*` 引数を省略すると、常に null オブジェクトが返されます。 `*` 引数を省略すると、常に null オブジェクトが返されます。 `*` 引数を省略すると、常に null オブジェクトが返されます。
 
 > Windows の場合、組み込みクライアントでは、`ShareLocalResourcesOnWindowsClient` [BuildApp キー](../Desktop/building.md#buildapp4dsettings) を使用されていた場合、ビルトインフォルダーの場所が変更されています。
 
