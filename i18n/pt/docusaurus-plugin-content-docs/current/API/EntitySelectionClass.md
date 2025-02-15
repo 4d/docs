@@ -687,7 +687,7 @@ No parâmetro *attributePath*, passe o atributo de entidade cujos valores distin
 
 Você pode usar a notação `[]` para designar uma coleção quando *attributePath* é um caminho dentro de um objeto (ver exemplos).
 
-No parâmetro *options*, você pode passar uma ou uma combinação das seguintes constantes:
+No parâmetro *opções*, você pode passar uma ou uma combinação das seguintes constantes:
 
 | Parâmetros        | Valor | Comentário                                                                                                                                                                                                                                 |
 | ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -2142,7 +2142,7 @@ Se um filtro for especificado para um atributo do tipo `relatedEntity`:
 
 Se um filtro for especificado para um atributo do tipo `relatedEntities`:
 
-- propertyPath = "relatedEntities.\*" \*" -> se extraem todas as propriedades
+- propertyPath = "relatedEntities.\*" -> all the properties are extracted
 - propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> só se extraem essas propriedades
 
 No parâmetro *options*, você pode passar o(s) seletor(es) `dk with primary key` e/ou `dk with stamp` para adicionar as chaves primárias e/ou os selos da entidade nos objetos extraídos.
