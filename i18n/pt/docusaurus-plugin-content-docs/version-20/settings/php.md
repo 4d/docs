@@ -3,14 +3,14 @@ id: php
 title: Página PHP
 ---
 
-In 4D, you can execute PHP scripts directly by configuring the PHP page of the Database Settings (see [Executing PHP scripts in 4D](https://doc.4d.com/4D-Language-Reference-19-R4/PHP/Executing-PHP-scripts-in-4D.300-5739898.en.html) in the 4D *Language Reference* manual).
+Em 4D, você pode executar scripts PHP diretamente configurando a página do PHP nas Configurações do Banco de Dados (consulte [executar scripts PHP em 4D](https://doc.4d.com/4D-Language-Reference-19-R4/PHP/Executing-PHP-scripts-in-4D.300-5739898.en.html) no 4D *Idioma de Referência* manual).
 
 ## Intérprete
 
--   **IP Address** and Port number By default, 4D provides a PHP interpreter, compiled in FastCGI. Por motivos relacionados à arquitetura interna, as solicitações de execução vão para o interpretador PHP em um endereço HTTP específico. Por padrão, 4D usa o endereço 127.0.0.1 e a porta 8002. You can change this address and/or port if they are already used by another service or if you have several interpreters on the same machine. To do this, you modify the **IP Address** and **Port number** parameters.\
-  Note that the HTTP address must be on the same machine as 4D.
+-   **Endereço IP** e número da porta Por padrão, 4D fornece um interpretador PHP, compilado em FastCGI. Por motivos relacionados à arquitetura interna, as solicitações de execução vão para o interpretador PHP em um endereço HTTP específico. Por padrão, 4D usa o endereço 127.0.0.1 e a porta 8002. Você pode alterar esse endereço e/ou porta se eles já forem usados por outro serviço ou se você tiver vários intérpretes na mesma máquina. Para fazer isso, você modifica os parâmetros **IP Address (endereço IP** ) e **Port number (número da porta** ).\
+  Observe que o endereço HTTP deve estar na mesma máquina que 4D.
 
--   **External interpreter** If you use an external PHP interpreter, it must be compiled in FastCGI and be on the same machine as 4D (see "Using another PHP interpreter or another php.ini file" in [Executing PHP scripts in 4D](https://doc.4d.com/4Dv19/4D/19.1/Executing-PHP-scripts-in-4D.300-5654093.en.html)). Select this option so 4D does not attempt a connection with the internal interpreter when executing a PHP request. Note that this configuration requires your manual execution and control of the external interpreter.
+-   **Interpretador externo** Se você usar um interpretador PHP externo, ele deve ser compilado em FastCGI e estar na mesma máquina que 4D (consulte "Usando outro interpretador PHP ou outro arquivo php.ini" em [Executando scripts PHP em 4D](https://doc.4d.com/4Dv19/4D/19.1/Executing-PHP-scripts-in-4D.300-5654093.en.html)). Select this option so 4D does not attempt a connection with the internal interpreter when executing a PHP request. Note that this configuration requires your manual execution and control of the external interpreter.
 
 **4D Server:** These settings are shared between 4D Server and the 4D remote machines so it is not possible to use an external interpreter on the server machine and simultaneously use the internal interpreter on the client machines (and vice versa). Also, if the server uses an external interpreter on port 9002, the client machines must also use an interpreter on this port.
 
