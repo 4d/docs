@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 #### 説明
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. このコマンドは 2種類のシンタックスを受け入れます。
+`Folder` コマンドは、<!-- REF #_command_.Folder.Summary -->[`4D.Folder`](../API/FolderClass.md) 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-*path* には、フォルダーパス文字列を渡します。 *path* には、フォルダーパス文字列を渡します。 *path* には、フォルダーパス文字列を渡します。 *path* には、フォルダーパス文字列を渡します。 *path* には、フォルダーパス文字列を渡します。 *path* には、フォルダーパス文字列を渡します。 カスタムの文字列または [ファイルシステム](../Concepts/paths.md#ファイルシステムパス名) (例: "/DATA") を渡すことができます。
+*path* には、フォルダーパス文字列を渡します。 カスタムの文字列または [ファイルシステム](../Concepts/paths.md#ファイルシステムパス名)(例: "/DATA") を渡すことができます。
 
 > `Folder` コマンドでは絶対パス名のみがサポートされます。
 
