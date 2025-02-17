@@ -42,13 +42,13 @@ title: CryptoKey
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| 引数       | 型            |    | 説明                                      |
-| -------- | ------------ | -- | --------------------------------------- |
-| settings | Object       | -> | Settings to generate or load a key pair |
-| 戻り値      | 4D.CryptoKey | <- | 暗号化キーペアをカプセル化したオブジェクト                   |
+| 引数       | 型            |    | 説明                    |
+| -------- | ------------ | -- | --------------------- |
+| settings | Object       | -> | キーペアを生成またはロードするための設定  |
+| 戻り値      | 4D.CryptoKey | <- | 暗号化キーペアをカプセル化したオブジェクト |
 <!-- END REF -->
 
-`4D.CryptoKey.new()` 関数は、 <!-- REF #4D.CryptoKey.new().Summary -->暗号化キーペアをカプセル化する `4D.CryptoKey` オブジェクトを新規作成します<!-- END REF -->。この暗号化キーペアは *settings* オブジェクト引数に基づきます。 It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+`4D.CryptoKey.new()` 関数は、 <!-- REF #4D.CryptoKey.new().Summary -->暗号化キーペアをカプセル化する `4D.CryptoKey` オブジェクトを新規作成します<!-- END REF -->。この暗号化キーペアは *settings* オブジェクト引数に基づきます。 これを使用することで新規のRSA またはECDSA キーを生成できるほか、PEM 定義から既存のキーペアをロードすることができます。
 
 #### *settings*
 
@@ -62,7 +62,7 @@ title: CryptoKey
 
 #### *CryptoKey*
 
-戻り値の `CryptoKey` オブジェクトは、暗号化キーペアをカプセル化します。 It is a shared object and can therefore be used by multiple 4D processes simultaneously.
+戻り値の `CryptoKey` オブジェクトは、暗号化キーペアをカプセル化します。 これは共有オブジェクトのため、複数の 4D プロセスによって同時使用できます。
 
 #### 例題 1
 
