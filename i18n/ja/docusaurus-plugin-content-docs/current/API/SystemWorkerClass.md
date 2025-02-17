@@ -550,7 +550,7 @@ $output:=$worker.response
 
 | 引数      | 型                               |                             | 説明                           |
 | ------- | ------------------------------- | :-------------------------: | ---------------------------- |
-| timeout | Real                            |              ->             | Maximum wait time in seconds |
+| timeout | Real                            |              ->             | 最大待機時間(秒) |
 | 戻り値     | 4D.SystemWorker | <- | SystemWorker オブジェクト          |
 
 <!-- END REF -->
