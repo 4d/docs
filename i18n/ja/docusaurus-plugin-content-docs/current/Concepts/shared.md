@@ -3,18 +3,18 @@ id: shared
 title: 共有オブジェクトと共有コレクション
 ---
 
-**Shared objects** and **shared collections** are specific [objects](./dt_object.md) and [collections](./dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
+**共有オブジェクト** および **共有コレクション** はプロセス間でコンテンツを共有することができる、特殊な [オブジェクト](./dt_object.md) と [コレクション](./dt_collection.md) です。 [インタープロセス変数](./variables.md#インタープロセス変数) に比べると、共有オブジェクトと共有コレクションは **プリエンプティブ4Dプロセス** と互換性があるという点で利点があります。つまり、[`New process`](../commands-legacy/new-process.md) や [`CALL WORKER`](../commands-legacy/call-worker.md) といったコマンドの引数として、参照の形で渡すことができるということです。
 
-Shared objects and shared collections are stored in standard [`Object`](./dt_object.md) and [`Collection`](./dt_collection.md) type variables, but must be instantiated using specific commands:
+共有オブジェクトと共有コレクションは、標準の [`Object`](./dt_object.md) および [`Collection`](./dt_collection.md) 型の変数に保存されますが、以下のように専用のコマンドを使用してインスタンス化されている必要があります:
 
-- to create a shared object, use the [`New shared object`](../commands-legacy/new-shared-object.md) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](./classes.md#shared-classes),
-- to create a shared collection, use the [`New shared collection`](../commands/new-shared-collection.md) command.
+- 共有オブジェクトを作成するには、[`New shared object`](../commands-legacy/new-shared-object.md) コマンドを使用するか、[共有クラス](./classes.md#共有クラス) の [`new()`](../API/ClassClass.md#new) 関数を呼び出します。
+- 共有コレクションを作成するには、[`New shared collection`](../commands/new-shared-collection.md) コマンドを使用します。
 
 共有オブジェクトと共有コレクションには、スカラー値または他の共有オブジェクトや共有コレクションのみを含めることができます。 ただし、共有オブジェクトや共有コレクションは、標準の (非共有の) オブジェクトおよびコレクションのプロパティとして設定することができます。
 
 共有オブジェクト/コレクションを編集するには、**Use...End use** 構文を使う必要があります。 共有オブジェクト/コレクションの値を読むにあたっては、**Use...End use** は必要ありません。
 
-A unique, global catalog returned by the [`Storage`](../commands-legacy/storage.md) command is always available throughout the application and its components, and can be used to store all shared objects and collections.
+[`Storage`](../commands-legacy/storage.md) コマンドが返す、データベースにおいて固有かつグローバルなカタログは、そのアプリケーション内あるいはコンポーネントからいつでも利用することができ、すべての共有オブジェクトおよびコレクションを保存するのに使用することができます。
 
 ## 共有オブジェクト/共有コレクションの使用
 
@@ -82,11 +82,11 @@ End Use
 
 ### ストレージ
 
-**ストレージ** は固有の共有オブジェクトで、各アプリケーションおよびマシン上で利用可能です。 This shared object is returned by the [`Storage`](../commands-legacy/storage.md) command. このオブジェクトは、他のプリエンティブあるいは標準プロセスからでも利用出来るように、セッション中に定義されたすべての共有オブジェクト/コレクションを参照するためのものです。
+**ストレージ** は固有の共有オブジェクトで、各アプリケーションおよびマシン上で利用可能です。 この共有オブジェクトは[`Storage`](../commands-legacy/storage.md) コマンドによって返されます。 このオブジェクトは、他のプリエンティブあるいは標準プロセスからでも利用出来るように、セッション中に定義されたすべての共有オブジェクト/コレクションを参照するためのものです。
 
 `ストレージ` オブジェクトは標準の共有オブジェクトとは異なり、共有オブジェクト/コレクションがプロパティとして追加されたときでも共有グループを作成しないという点に注意してください。 この例外的な振る舞いにより、**ストレージ** オブジェクトを使用するたびに、リンクされている共有オブジェクト/コレクションをすべてロックせずに済みます。
 
-For more information, refer to the [`Storage`](../commands-legacy/storage.md) command description.
+詳細については、[`Storage`](../commands-legacy/storage.md) コマンドの説明を参照してください。
 
 ## Use...End use
 
@@ -109,7 +109,7 @@ For more information, refer to the [`Storage`](../commands-legacy/storage.md) co
 - **End use** は、*Shared_object_or_Shared_collection* プロパティおよび、同じグループのすべてのオブジェクトのロックを解除します。
 - 4D コード内では、複数の **Use...End use** 構文を入れ子にすることができます。 グループの場合、**Use** を使用するごとにグループのロックカウンターが 1 増加し、 **End use** ごとに 1 減少します。最後の **End use** によってロックカウンターが 0 になった場合にのみ、すべてのプロパティ/要素のロックが解除されます。
 
-### Automatic Use...End use calls
+### 自動的な Use...End use 呼び出し
 
 The following features automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when it is executed:
 
