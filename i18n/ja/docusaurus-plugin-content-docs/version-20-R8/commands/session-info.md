@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 #### 説明
 
-コマンドは*sessionID* 引数にID を渡したセッションの[`.info`](../API/SessionClass.md#info) プロパティを返します。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。 *sessionID* 引数に無効なID を渡した場合、コマンドはnull オブジェクトを返します。 *sessionID* 引数に無効なID を渡した場合、コマンドはnull オブジェクトを返します。
+`Session info` コマンドは、<!-- REF #_command_.Session info.Summary -->*sessionID* 引数に渡した ID を持つセッションの詳細を記述したオブジェクトを返します<!-- END REF -->。 *sessionID* 引数に無効なID を渡した場合、コマンドはnull オブジェクトを返します。
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 :::note
 
-コマンドは*sessionID* 引数にID を渡したセッションの[`.info`](../API/SessionClass.md#info) プロパティを返します。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。
+コマンドは*sessionID* 引数に ID を渡したセッションの[`.info`](../API/SessionClass.md#info) プロパティを返します。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。
 
 :::
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
 
 #### 参照
 
-[`Session` class](../API/SessionClass.md)
+[`Session` クラス](../API/SessionClass.md)
 [Session](session.md)
 [Session storage](session-storage.md)\
 [Process info](process-info.md)
