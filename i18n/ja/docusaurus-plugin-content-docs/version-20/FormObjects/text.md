@@ -1,5 +1,5 @@
 ---
-id: テキスト
+id: text
 title: Text
 ---
 
