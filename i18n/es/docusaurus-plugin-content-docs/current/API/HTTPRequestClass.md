@@ -493,7 +493,7 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 > Esta función es hilo seguro.
 
-The `wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->waits waits for a response from the server or until the specified `timeout` is reached<!-- END REF -->.
+La función `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->espera una respuesta del servidor o hasta que se alcance el `timeout` especificado<!-- END REF -->.
 
 If a *timeout* is provided, the function waits for the specified duration in this parameter. Decimals are accepted.
 
