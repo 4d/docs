@@ -98,7 +98,7 @@ as páginas `.shtml` são processadas automaticamente pelo servidor web. A sua p
 Se não queremos apenas *exibir* dados, mas para *usar*, podemos utilizar ORDA e o servidor REST. Graças ao conceito [ORDA](ORDA/overview.md), a tabela `Friends` é automaticamente mapeada para um dataclass e está disponível através de [REST](REST/gettingStarted.md).
 
 
-1. We will use the REST server to access data: go the **Settings** dialog box, select **Web** > **Web Features**, and check the **Expose as REST server** option.
+1. Usaremos o servidor REST para acessar os dados: vá para a caixa de diálogo **Parâmetros**, selecione **Web** > **Funcionalidades Web** e marque a opção **Expor como servidor REST**).
 
 ![](../assets/en/WebServer/hello5.png)
 
