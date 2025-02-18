@@ -148,7 +148,7 @@ La propiedad `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownLi
 <!-- REF #TableStyle.backColor.Syntax -->
 **.backColor**: Text<!-- END REF -->
 
-La propiedad `.backColor` es el <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md#background--foreground) of the table<!-- END REF -->.
+La propiedad `.backColor` es el <!-- REF #TableStyle.backColor.Summary -->[color de fondo](configuring.md#background--foreground) de la tabla<!-- END REF -->.
 
 
 ### .forecolor
@@ -156,7 +156,7 @@ La propiedad `.backColor` es el <!-- REF #TableStyle.backColor.Summary -->[backg
 <!-- REF #TableStyle.forecolor.Syntax -->
 **.forecolor**: Text<!-- END REF -->
 
-La propiedad `.forecolor` es el <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->.
+La propiedad `.forecolor` es el <!-- REF #TableStyle.forecolor.Summary -->[color de primer plano](configuring.md#background--foreground) de la tabla<!-- END REF -->.
 
 
 
@@ -165,7 +165,7 @@ La propiedad `.forecolor` es el <!-- REF #TableStyle.forecolor.Summary -->[foreg
 <!-- REF #TableStyle.font.Syntax -->
 **.font**: Text<!-- END REF -->
 
-La propiedad `.font` es el <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md#fonts-and-text)) of the table<!-- END REF -->.
+La propiedad `.font` es el <!-- REF #TableStyle.font.Summary -->nombre de la fuente (ver [**Fuentes y texto**](configuring.md#fonts-and-text)) de la tabla<!-- END REF -->.
 
 
 
