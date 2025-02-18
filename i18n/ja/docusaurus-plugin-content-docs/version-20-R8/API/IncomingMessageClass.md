@@ -3,7 +3,7 @@ id: IncomingMessageClass
 title: IncomingMessage
 ---
 
-`4D.IncomingMessage` クラスを使用すると、カスタムの[**HTTP リクエストハンドラー**](../WebServer/http-request-handler.md) が受信したオブジェクトを管理できるようになります。 HTTP リクエストおよびそのプロパティは`4D.IncomingMessage` クラスのインスタンスとして自動的に受信されます。 GET 動詞とともにリクエストに直接渡された引数は[`.urlQuery`](#urlquery) プロパティで管理される一方、リクエストの本文に渡された引数は[`.getBlob()`](#getblob) あるいは [`getText()`](#gettext) といった関数を通して利用可能です。 HTTP リクエストおよびそのプロパティは`4D.IncomingMessage` クラスのインスタンスとして自動的に受信されます。 GET 動詞とともにリクエストに直接渡された引数は[`.urlQuery`](#urlquery) プロパティで管理される一方、リクエストの本文に渡された引数は[`.getBlob()`](#getblob) あるいは [`getText()`](#gettext) といった関数を通して利用可能です。
+`4D.IncomingMessage` クラスを使用すると、カスタムの[**HTTP リクエストハンドラー**](../WebServer/http-request-handler.md) が受信したオブジェクトを管理できるようになります。  HTTP リクエストおよびそのプロパティは`4D.IncomingMessage` クラスのインスタンスとして自動的に受信されます。 GET 動詞とともにリクエストに直接渡された引数は[`.urlQuery`](#urlquery) プロパティで管理される一方、リクエストの本文に渡された引数は[`.getBlob()`](#getblob) あるいは [`getText()`](#gettext) といった関数を通して利用可能です。
 
 HTTP リクエストハンドラーはあらゆる値を返すことが可能です(あるいは返さないことも可能です)。 通常は、[`4D.OutgoingMessage`](OutgoingMessageClass.md) クラスのインスタンスを返します。 通常は、[`4D.OutgoingMessage`](OutgoingMessageClass.md) クラスのインスタンスを返します。
 
@@ -59,7 +59,7 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ```
 
-The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
+このリクエストはサーバー上では\*$request\* として受信されます。これは`4D.IncomingMessage` クラスのインスタンスのオブジェクトです。
 
 レスポンスのヘッダーは以下のようになります:
 
