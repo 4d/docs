@@ -2915,7 +2915,7 @@ Se tentar remover um elemento de uma coleção vazia, o método não faz nada (n
 
 #### Descrição
 
-The `.resize()` function <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
+A função `.resize()` <!-- REF #collection.resize().Summary -->define o comprimento da coleção para o novo tamanho especificado e retorna a coleção redimensionada<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 
@@ -2968,7 +2968,7 @@ Por padrão, novos elementos são preenchidos com valores **null**. Pode especif
 
 #### Descrição
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.reverse()` <!-- REF #collection.reverse().Summary -->retorna uma cópia profunda da coleção com todos os seus elementos em ordem inversa<!-- END REF -->. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 
 > Essa função não modifica a coleção original.
 
@@ -3006,7 +3006,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 #### Descrição
 
-The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
+A função `.shift()` <!-- REF #collection.shift().Summary -->remove o primeiro elemento da coleção e o retorna como o resultado da função<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 
@@ -3184,7 +3184,7 @@ You want to know if at least one collection value is >0.
 
 #### Descrição
 
-The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection and also returns the sorted collection<!-- END REF --> .
+A função `.sort()` <!-- REF #collection.sort().Summary -->classifica os elementos da coleção original e também retorna a coleção classificada<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 
