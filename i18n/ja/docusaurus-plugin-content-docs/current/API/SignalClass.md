@@ -180,7 +180,7 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 | 引数      | 型       |                             | 説明                           |
 | ------- | ------- | --------------------------- | ---------------------------- |
-| timeout | Real    | ->                          | Maximum wait time in seconds |
+| timeout | Real    | ->                          | 最大待機時間(秒) |
 | 戻り値     | Boolean | <- | `.signaled` プロパティの状態         |
 
 <!-- END REF -->
@@ -189,7 +189,7 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 `.wait( )` 関数は、<!-- REF #SignalClass.wait().Summary -->シグナルオブジェクトの`.signaled` が**true** になるか、`timeout` で指定したタイムアウト時間が経過するまで、待機します<!-- END REF -->。
 
-コード実行のブロッキングを防ぐため、*timeout* 引数に最大の待機時間を秒単位で渡すことができます。 Decimals are accepted.
+コード実行のブロッキングを防ぐため、*timeout* 引数に最大の待機時間を秒単位で渡すことができます。 小数点以下も指定可能です。
 
 If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
