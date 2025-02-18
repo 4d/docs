@@ -484,7 +484,7 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 | 引数      | 型                              |                             | 説明                           |
 | ------- | ------------------------------ | :-------------------------: | ---------------------------- |
-| timeout | Real                           |              ->             | Maximum wait time in seconds |
+| timeout | Real                           |              ->             | 最大待機時間(秒) |
 | 戻り値     | 4D.HTTPRequest | <- | HTTPRequest オブジェクト           |
 
 <!-- END REF -->
@@ -493,15 +493,15 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 > この関数はスレッドセーフです。
 
-The `wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->waits waits for a response from the server or until the specified `timeout` is reached<!-- END REF -->.
+`wait()` 関数は<!-- REF #HTTPRequestClass.wait().Summary -->サーバーからのレスポンスが来るか、`timeout` 引数で指定した秒数に達するまで待ちます<!-- END REF -->。
 
-If a *timeout* is provided, the function waits for the specified duration in this parameter. Decimals are accepted.
+*timeout* 引数でタイムアウトまでの時間が指定された場合、関数はこの引数で指定された時間待機します。 小数点以下も指定可能です。
 
 サーバーのレスポンスがすでに到着している場合、関数は即座に返されます。
 
 :::note
 
-During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls.  You can exit from a .wait() by calling [`terminate()`](#terminate) from a callback.
+.wait() の実行中、それが`HTTPRequest` あるいは  [`SystemWorker`](SystemWorkerClass.md) インスタンス、あるいは他の [`CALL WORKER`](../commands-legacy/call-worker.md) 呼び出しから発生したかにかかわらず、ワーカーからのコールバックは実行されます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
 
 :::
 
