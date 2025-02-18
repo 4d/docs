@@ -318,7 +318,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. O elemento alvo pode ser:
+A propriedade `.original` retorna <!-- REF #document.original.Summary -->o elemento de destino para um alias, um atalho ou um arquivo de link simbólico<!-- END REF -->. O elemento alvo pode ser:
 
 - um objeto File
 - um objeto folder
@@ -389,7 +389,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->the path of the file expressed with the current platform syntax<!-- END REF -->.
+A propriedade `.platformPath` retorna <!-- REF #document.platformPath.Summary -->o caminho do arquivo expresso com a sintaxe da plataforma atual<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -497,7 +497,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### Descrição
 
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
+A função `.getContent()` <!-- REF #document.getContent().Summary -->retorna um objeto `4D.Blob` que contém todo o conteúdo de um arquivo<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
 
 **Valor retornado**
 
