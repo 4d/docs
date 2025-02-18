@@ -288,7 +288,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 | 引数      | 型    |     | 説明                           |
 | ------- | ---- | :-: | ---------------------------- |
-| timeout | Real |  -> | Maximum wait time in seconds |
+| timeout | Real |  -> | 最大待機時間(秒) |
 
 <!-- END REF -->
 
