@@ -318,7 +318,7 @@ A propriedade `.sendAt` contém o <!-- REF #EmailObjectClass.sendAt.Summary --> 
 
 #### Descrição
 
-A propriedade `.sender` contém os <!-- REF #EmailObjectClass.sender.Summary -- [endereços](#email-addresses) fonte do e-mail<!-- END REF -->.
+A propriedade `.sender` contém os <!-- REF #EmailObjectClass.sender.Summary --> [endereços](#email-addresses) fonte do e-mail<!-- END REF -->.
 
 Cada e-mail que você envia tem os endereços **sender** e **[from](#from)**:
 
@@ -335,7 +335,7 @@ Para uma melhor capacidade de entrega, é recomendado usar o mesmo endereço de 
 
 [IMAP transporter](IMAPTransporterClass.md) unicamente.
 
-The `.size` property contains the <!-- REF #EmailObjectClass.size.Summary -->size (expressed in bytes) of the Email object returned by the IMAP server<!-- END REF -->.
+A propriedade `.size` contém o tamanho <!-- REF #EmailObjectClass.size.Summary -->(expresso em bytes) do objeto Email retornado pelo servidor IMAP<!-- END REF -->.
 
 ## .subject
 
@@ -351,7 +351,7 @@ A propriedade `.subject` contém a <!-- REF #EmailObjectClass.subject.Summary --
 
 #### Descrição
 
-The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. Consulte a seção [Gerenciamento do corpo](#handling-body-part).
+A propriedade `.textBody` contém a <!-- REF #EmailObjectClass.textBody.Summary -->representação em texto simples da mensagem de e-mail (conjunto de caracteres padrão é UTF-8) (opcional, somente SMTP)<!-- END REF -->. Consulte a seção [Gerenciamento do corpo](#handling-body-part).
 
 ## .to
 
