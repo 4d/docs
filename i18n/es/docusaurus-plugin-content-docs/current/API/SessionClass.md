@@ -508,7 +508,7 @@ This function is only available with web user sessions. It returns False in othe
 
 :::
 
-The `.restore()` function <!-- REF #SessionClass.restore().Summary -->replaces the current web user session with their original session corresponding to the *token* UUID<!-- END REF -->. Session's storage and privileges are restored.
+La función `.restore()` <!-- REF #SessionClass.restore().Summary -->sustituye la sesión actual del usuario web por su sesión original correspondiente al *token* UUID<!-- END REF -->. Session's storage and privileges are restored.
 
 If the original user session has been correctly restored, the function returns `true`.
 
