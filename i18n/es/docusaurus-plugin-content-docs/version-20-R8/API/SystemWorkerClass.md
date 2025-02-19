@@ -332,7 +332,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Summary -->contains the working directory in which the external process is executed<!-- END REF -->.
+La propiedad `.currentDirectory` <!-- REF #SystemWorkerClass.currentDirectory.Summary -->contiene el directorio de trabajo en el que se ejecuta el proceso externo<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -408,7 +408,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.hideWindow` property <!-- REF #SystemWorkerClass.hideWindow.Summary -->can be used to hide the window of the DOS console or the window of the launched executable (**Windows only**)<!-- END REF -->.
+La propiedad `.hideWindow` <!-- REF #SystemWorkerClass.hideWindow.Summary -->puede utilizarse para ocultar la ventana de la consola DOS o la ventana del ejecutable lanzado (**sólo Windows**)<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -445,7 +445,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary -->allows you to write on the input stream (stdin) of the external process<!-- END REF -->. In the *message* parameter, pass the text to write in *stdin*.
+La función `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite escribir en el flujo de entrada (stdin) del proceso externo<!-- END REF -->. In the *message* parameter, pass the text to write in *stdin*.
 
 The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
 
@@ -461,7 +461,7 @@ Puede utilizar la propiedad `.dataType` del objeto [options](#options-object) pa
 
 #### Descripción
 
-The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
+La propiedad `.response` <!-- REF #SystemWorkerClass.response.Summary -->contiene la concatenación de todos los datos devueltos una vez finalizada la petición<!-- END REF -->, es decir, el mensaje completo recibido de la salida del proceso.
 
 El tipo del mensaje se define en función del atributo [`dataType`](#datatype).
 
@@ -477,7 +477,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary -->contains the concatenation of all the errors returned, once the request is terminated<!-- END REF -->.
+La propiedad `.responseError` <!-- REF #SystemWorkerClass.responseError.Summary -->contiene la concatenación de todos los errores devueltos, una vez finalizada la petición<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -525,7 +525,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.timeout` property <!-- REF #SystemWorkerClass.timeout.Summary -->contains the duration in seconds before the external process will be killed if it is still alive<!-- END REF -->.
+La propiedad `.timeout` <!-- REF #SystemWorkerClass.timeout.Summary -->contiene la duración en segundos antes de que el proceso externo sea eliminado si sigue vivo<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
