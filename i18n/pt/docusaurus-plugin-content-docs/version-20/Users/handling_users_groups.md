@@ -68,7 +68,7 @@ Para adicionar um usuário da Barra de Ferramentas:
 
 A lista de usuários exibe todos os usuários, incluindo o[Designer and the Administrator](#designer-and-administrator).
 
-2. Clique no botão ![](../assets/en/Users/PlussNew.png) que está abaixo da lista de usuários. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
+2. Clique no botão ![](../assets/en/Users/PlussNew.png) que está abaixo da lista de usuários. OU Clique com o botão direito do mouse na lista de usuários e escolha **Adicionar** ou **Duplicar** no menu de contexto.
 
 > O comando **Duplicate** pode ser usado para criar rapidamente vários usuários com as mesmas características.
 
@@ -174,7 +174,7 @@ Tal sistema hierárquico facilita lembrar para qual grupo um novo usuário deve 
 
 ## Atribuir grupos de acesso
 
-Groups are assigned access privileges to specific parts or features of the application:
+Os grupos recebem privilégios de acesso a partes ou recursos específicos da aplicação:
 
 - Acesso ao ambiente Desenho e ao Explorador de execução,
 - Servidor HTTP,
@@ -191,7 +191,7 @@ Você também usa grupos para [distribuir licenças disponíveis](#assigning-a-g
 
 Os usuários, grupos, bem como seus direitos de acesso são armazenados em um arquivo específico do projeto chamado **directory.json**.
 
-This file can be stored at the following locations, depending on your needs:
+Esse arquivo pode ser armazenado nos seguintes locais, dependendo de suas necessidades:
 
 - Se você quiser usar o mesmo diretório para todos os arquivos de dados (ou se você usar um arquivo de dados único), armazene o arquivo **directory.json** na pasta de configurações do usuário, ou seja, na pasta "Configurações" no [mesmo nível que a pasta "Projeto"](Project/architecture.md#project-folder) (local padrão).
 - Se você quiser usar um arquivo de diretório específico por arquivo de dados, armazene o diretório **directory.json** na pasta dos parâmetros de dados, ou seja, na pasta ["Settings" da pasta "Data"](Project/architecture.md#settings). Se um arquivo **directory.json** estiver presente neste local, ele terá prioridade sobre o arquivo na pasta Settings usuário. This custom/local Users and Groups configuration will left untouched by an application upgrade.
