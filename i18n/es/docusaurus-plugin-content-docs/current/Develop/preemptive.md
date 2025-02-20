@@ -179,7 +179,7 @@ Es posible [desactivar localmente la verificación de la seguridad de los hilos]
 
 :::
 
-The [symbol file](../Project/compiler.md#complete-list-of-methods), if enabled, also contains the thread safety status for each method.
+Si está activado, el [archivo de símbolos](../Project/compiler.md#complete-list-of-methods), también contiene el estado de seguridad de los hilos para cada método.
 
 ### Interfaz de usuario
 
