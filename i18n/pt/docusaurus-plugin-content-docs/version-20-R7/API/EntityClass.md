@@ -98,7 +98,7 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 #### Descrição
 
-The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->.
+A função `.clone()` <!-- REF #EntityClass.clone().Summary -->cria na memória uma nova entidade referenciando o mesmo registro que a entidade original<!-- END REF -->.
 
 This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
 
@@ -346,7 +346,7 @@ vCompareResultado1 (todas as diferenças são devolvidas):
 
 #### Descrição
 
-The `.drop()` function <!-- REF #EntityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note-se que a entidade permanece na memória.
+A função `.drop()` <!-- REF #EntityClass.drop().Summary -->exclui os dados contidos na entidade do armazenamento de dados<!-- END REF -->, da tabela relacionada à sua classe de dados. Note-se que a entidade permanece na memória.
 
 In a multi-user or multi-process application, the `.drop()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
 
