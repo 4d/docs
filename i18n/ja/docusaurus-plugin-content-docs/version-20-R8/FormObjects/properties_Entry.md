@@ -239,7 +239,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 この場合、"プレースホルダー" のフィールドには参照のみを渡します。参照と静的なテキストを組み合わせることはできません。
 
-> You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) and [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) commands.
+> [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) および [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) コマンドを使用することで、プレースホルダーのテキストをプログラミングによって設定あるいは取得することができます。
 
 #### JSON 文法
 
@@ -275,15 +275,15 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 ## ショートカット
 
-[ボタン](button_overview.md)、[ラジオボタン](radio_overview.md) および [チェックボックス](checkbox_overview.md) にキーボードショートカットを割り当てることができます。 ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。 ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。 ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。
+[ボタン](button_overview.md)、[ラジオボタン](radio_overview.md) および [チェックボックス](checkbox_overview.md) にキーボードショートカットを割り当てることができます。  ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。
 
 ショートカットの設定をおこなうには、プロパティリストのショートカットプロパティの [...]  ボタンをクリックします。
 
 ![](../assets/en/FormObjects/property_shortcut.png)
 
-> カスタムメニューコマンドにもショートカットを割り当てることができます。 2つのショートカットに衝突がある場合には、アクティブオブジェクトが優先されます。 カスタムメニューコマンドにもショートカットを割り当てることができます。 2つのショートカットに衝突がある場合には、アクティブオブジェクトが優先されます。 For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
+> カスタムメニューコマンドにもショートカットを割り当てることができます。 2つのショートカットに衝突がある場合には、アクティブオブジェクトが優先されます。 メニューにショートカットを割り当てる方法の詳細については、[メニュープロパティの設定](../Menus/properties.md) を参照して下さい。
 
-To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](../Preferences/shortcuts.md) in the Preferences dialog box.
+4D のデザイン環境で使用できるショートカットの一覧は、環境設定ダイアログの [ショートカットページ](../Preferences/shortcuts.md) にて確認できます。
 
 #### JSON 文法
 
@@ -307,7 +307,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 リストボックスにおいて、編集モードへの直接移行を可能にします。
 
-このオプションがチェックされている場合、そのリストボックスの当該エリアが事前に選択されていたかどうかに関わらず、ユーザーのワンクリックだけでリストボックスセルを編集モードへと移行させることができます。 このオプションがチェックされている場合、そのリストボックスの当該エリアが事前に選択されていたかどうかに関わらず、ユーザーのワンクリックだけでリストボックスセルを編集モードへと移行させることができます。 このオプションは、リストボックスの [選択モード](properties_ListBox.md#選択モード) が "なし" に設定されている場合でもセルの編集を可能にすると言う点に注意してください。 このオプションは、リストボックスの [選択モード](properties_ListBox.md#選択モード) が "なし" に設定されている場合でもセルの編集を可能にすると言う点に注意してください。 このオプションは、リストボックスの [選択モード](properties_ListBox.md#選択モード) が "なし" に設定されている場合でもセルの編集を可能にすると言う点に注意してください。
+このオプションがチェックされている場合、そのリストボックスの当該エリアが事前に選択されていたかどうかに関わらず、ユーザーのワンクリックだけでリストボックスセルを編集モードへと移行させることができます。 このオプションは、リストボックスの [選択モード](properties_ListBox.md#選択モード) が "なし" に設定されている場合でもセルの編集を可能にすると言う点に注意してください。
 
 このオプションがチェックされていない場合、セルの内容を編集するにはユーザーはまず最初に編集したいセルの行を選択し、その次に編集するセルを選択する必要があります。
 
