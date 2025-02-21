@@ -107,7 +107,7 @@ To format Picture fields or variables, pass Char(n) in *displayFormat*, where *n
 
 To format fields or variables of the Alpha or Number type, pass the label of the format directly in the *displayFormat* parameter.
 
-For more information about display formats, see the *Number formats* and *Alpha formats* sections of the 4D *Design Reference* manual.
+For more information about display formats, see the [Number formats](../FormObjects/properties_Display.md#number-format) and [Alpha formats](../FormObjects/properties_Display.md#alpha-format) sections.
 
 **Note:** In *displayFormat*, to use custom display formats that you may have created in the tool box, prefix the name of the format with a vertical bar (|).
 
