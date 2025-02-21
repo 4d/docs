@@ -357,11 +357,11 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 
 カスタムスタイルのチェックボックスは、背景ピクチャーを使用できるほか、さまざまな追加パラメーターを管理することができます:
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname)
+- [背景パス名](properties_TextAndPicture.md#背景パス名)
 - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- [横方向マージン](properties_TextAndPicture.md#横方向マージン) と [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
 
-It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
+カスタムチェックボックスには通常、[4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられ、これは同じく4つの状態を持つ [背景ピクチャー](properties_TextAndPicture.md#背景パス名) と同時に使用することができます。
 
 #### JSON 例:
 
@@ -394,5 +394,8 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
 
 [ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
 
-- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- カスタム: [背景パス名](properties_TextAndPicture.md#背景パス名) -
+  [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) -
+  [横方向マージン](properties_TextAndPicture.md#横方向マージン) -
+  [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
 - 通常、フラット: [スリーステート](properties_Display.md#スリーステート)
