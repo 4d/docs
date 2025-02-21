@@ -28,7 +28,7 @@ macOS においては、ドロップダウンリストは "ポップアップメ
 
 > この機能は 4Dプロジェクトでのみ利用可能です。
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) can be used as the data source of a drop-down list. このオブジェクトには、次のプロパティが格納されていなくてはなりません:
+ドロップダウンリストのデータソースとして、[コレクション](Concepts/dt_collection.md) を内包した [オブジェクト](Concepts/dt_object.md) を使用できます。 このオブジェクトには、次のプロパティが格納されていなくてはなりません:
 
 | プロパティ          | 型               | 説明                                                                                                                                                                                    |
 | -------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -89,7 +89,7 @@ Form.myDrop.index //3
 
 この場合にも 、フォームのオブジェクトに紐付けた [変数](properties_Object.md#変数あるいは式) は `aCities` でなければなりません。 このコードは、前述した代入命令文の代わりに実行できます。 このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
 
-- Before the object is displayed, load the values of a list into the array using the [`LIST TO ARRAY`](../commands-legacy/list-to-array.md) command. 例:
+- オブジェクトが表示される前に、[`LIST TO ARRAY`](../commands-legacy/list-to-array.md) コマンドを使ってリストの値を配列にロードします。 例:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -103,13 +103,13 @@ Form.myDrop.index //3
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) //new record
-          aCities:=3 //display a default value
-       Else //existing record, display stored value
+       If(Record number([People])<0) // 新規レコードなら
+          aCities:=3 // デフォルト値を表示
+       Else // 既存レコードの場合、保存された値を表示
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) //user modified selection
-       City:=aCities{aCities} //field gets new value
+    :(Form event=On Clicked) // ユーザーがセレクションを変更した場合
+       City:=aCities{aCities} // フィールドに新しい値を代入
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)
