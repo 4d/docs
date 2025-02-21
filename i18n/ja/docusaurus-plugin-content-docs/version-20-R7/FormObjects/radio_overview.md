@@ -139,7 +139,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 ### カスタム
 
-The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
+カスタムスタイルのラジオボタンは、カスタムされた背景ピクチャーを使用できるほか、さまざまな追加パラメーターを管理することができます ([アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) や [マージン](properties_TextAndPicture.md#横方向マージン))。
 
 ## プロパティ一覧
 
@@ -152,4 +152,7 @@ The Custom radio button style accepts a personalized background picture and allo
 
 [ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
 
-- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- カスタム: [背景パス名](properties_TextAndPicture.md#背景パス名) -
+  [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) -
+  [横方向マージン](properties_TextAndPicture.md#横方向マージン) -
+  [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
