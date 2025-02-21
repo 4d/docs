@@ -22,7 +22,7 @@ Você pode mostrar ou ocultar vários elementos da interface na página atual do
 - **Rótulos dos marcadores**: rótulos dos marcadores, disponíveis apenas quando as linhas de controle de saída forem exibidas. Esse elemento só pode aparecer por padrão nos [formulários lista](properties_FormProperties.md#form-type).
 - **Limites**: limites do formulário. Quando essa opção é selecionada, o formulário é exibido no editor de formulários como aparece no modo Aplicação. Desta forma, você pode ajustar seu formulário sem precisar trocar para o modo de Aplicação para ver o resultado.
 
-> Os parâmetros [**Tamanho Baseado em**](properties_FormSize.md#size-based-on), [**margem Hor**](properties_FormSize.md#hor-margin) e [**Vert margin**](properties_FormSize.md#vert-margin) das propriedades do formulário afetam os limites do formulário. Ao usar essas configurações, os limites são baseados nos objetos do formulário. Quando você modifica o tamanho de um objeto localizado próximo à borda do formulário, ele é modificado para refletir essa alteração.
+> Os parâmetros [**Tamanho baseado em**](properties_FormSize.md#size-based-on), [**margem Hor**](properties_FormSize.md#hor-margin) e [**Vert margin**](properties_FormSize.md#vert-margin) das propriedades do formulário afetam os limites do formulário. Ao usar essas configurações, os limites são baseados nos objetos do formulário. Quando você modifica o tamanho de um objeto localizado próximo à borda do formulário, ele é modificado para refletir essa alteração.
 
 #### Visualização por defeito
 
