@@ -213,24 +213,24 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 
 ## 4DCEFParameters.json
 
-The 4DCEFParameters.json is a configuration file that allows customization of CEF parameters to manage the behavior of web areas within 4D applications.
+4DCEFParameters.json は4D アプリケーション内でのWeb エリアの振る舞いを管理するためのCEF パラメーターをカスタマイズすることができる設定ファイルです。
 
-[Default switches](#default-file) are provided, but you can override them by using a custom 4DCEFParameters.json file.
+[デフォルトスイッチ](#default-file) は提供されていますが、カスタムの4DCEFParameters.json ファイルを使用することでこれらをオーバーライドすることができます。
 
-In the development phase (using 4D application), create a 4DCEFParameters.json file at the following location:
+(4D アプリケーションを使用した)開発フェーズにおいては、以下の場所に4DCEFParameters.json ファイルを作成してください:
 
 - Windows: `Users\[userName]\AppData\Roaming\4D\4DCEFParameters.json`
 - macOS: `$HOME/Library/Application Support/4D/4DCEFParameters.json`
 
-Before building a final application, add the custom 4DCEFParameters.json file to the Resources folder of the project.
+そして最終アプリケーションをビルドする前に、カスタムの4DCEFParameters.json ファイルを、プロジェクトのResources ファイルに追加してください。
 
 :::warning
 
-Adding a custom 4DCEFParameters.json file can fundamentally impact all 4D embedded web areas, including [4D View Pro areas](../ViewPro/configuring.md#form-area-properties). It is the developer's responsibility to ensure that the custom switches do not destabilize the 4D application.
+カスタムの4DCEFParameters.json ファイルを追加することは、[4D View Pro エリア](../ViewPro/configuring.md#フォームエリアプロパティ) を含め、基本的に4D の全ての埋め込みWeb エリアに影響し得ます。 このカスタムのスイッチが4D アプリケーションを不安定にしないようにするのは開発者の責任です。
 
 :::
 
-The 4DCEFParameters.json file format is as the following:
+4DCEFParameters.json ファイルのフォーマットは以下のようになっています:
 
 ```json
 
@@ -251,17 +251,17 @@ The 4DCEFParameters.json file format is as the following:
 }
 ```
 
-The 4DCEFParameters.json file structure contains:
+4DCEFParameters.json ファイルのストラクチャーには以下のものが含まれます:
 
-- **switches**: a list of CEF switches and their corresponding values applied for both macOS and Windows.
-- **macOS.switches**: macOS-specific CEF switches.
-- **windows.switches**: Windows-specific CEF switches.
+- **switches**: macOS とWindows の両OS において適用されるCEF スイッチとそれに対応する値の一覧。
+- **macOS.switches**: macOS 専用のCEF スイッチ。
+- **windows.switches**: Windows 専用のCEF スイッチ。
 
-The switches in the custom file take precedence. In case of duplication of switches within the same file, the switches defined in the platform-specific subsection ("macOS.switches" or "windows.switches") are given priority and used for configuration.
+カスタムファイル内のスイッチが優先されます。 同一ファイル内においてスイッチが重複して定義されていた場合、プラットフォーム固有のサブセクション内("macOS.switches" or "windows.switches")で定義されているスイッチが優先され、設定として使用されます。
 
 :::note
 
-The list of supported switches is constantly evolving and is managed by the CEF development team. For information about available switches, you need to refer to the CEF developer community.
+サポートされているスイッチの一覧は常に進化しており、CEF 開発チームによって管理されています。 利用可能なスイッチ一覧については、CEF デベロッパーコミュニティを参照する必要があります。
 
 :::
 
@@ -269,7 +269,7 @@ The list of supported switches is constantly evolving and is managed by the CEF 
 
 #### デフォルトファイル
 
-The default 4DCEFParameters.json file contains the following switches:
+デフォルトの4DCEFParameters.json ファイルには以下のスイッチが格納されています:
 
 ```json
 {
@@ -291,7 +291,7 @@ The default 4DCEFParameters.json file contains the following switches:
 
 ```
 
-#### Example of disabling default Switch
+#### デフォルトのスイッチを無効化する例題
 
 ```json
 {
@@ -302,7 +302,7 @@ The default 4DCEFParameters.json file contains the following switches:
 }
 ```
 
-#### Example for Autoplay
+#### Autoplay の例題
 
 ```json
 {
@@ -314,4 +314,4 @@ The default 4DCEFParameters.json file contains the following switches:
 
 ### 参照
 
-[Specify your own parameters to initialize the embedded web area (blog post)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)
+[Specify your own parameters to initialize the embedded web area (blog 記事)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)
