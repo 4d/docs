@@ -89,7 +89,7 @@ Form.myDrop.index //3
 
 この場合にも 、フォームのオブジェクトに紐付けた [変数](properties_Object.md#変数あるいは式) は `aCities` でなければなりません。 このコードは、前述した代入命令文の代わりに実行できます。 このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
 
-- オブジェクトが表示される前に、[LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/ja/page288.html) コマンドを使ってリストの値を配列にロードします。 例:
+- オブジェクトが表示される前に、[`LIST TO ARRAY`](../commands-legacy/list-to-array.md) コマンドを使ってリストの値を配列にロードします。 例:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -103,12 +103,12 @@ Form.myDrop.index //3
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) // 新規レコードの場合
-          aCities:=3 // デフォルトの値を表示します
-       Else // 既存レコードの場合には、保存された値を表示します
+       If(Record number([People])<0) // 新規レコードなら
+          aCities:=3 // デフォルト値を表示
+       Else // 既存レコードの場合、保存された値を表示
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) // ユーザーが選択を変更した場合
+    :(Form event=On Clicked) // ユーザーがセレクションを変更した場合
        City:=aCities{aCities} // フィールドに新しい値を代入
     :(Form event=On Validate)
        City:=aCities{aCities}
@@ -167,35 +167,4 @@ Form.myDrop.index //3
 
 ## プロパティ一覧
 
-[文字フォーマット](properties_Display.md#文字フォーマット) -
-[太字](properties_Text.md#太字) -
-[下](properties_CoordinatesAndSizing.md#下) -
-[ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) -
-[選択リスト](properties_DataSource.md#選択リスト) -
-[CSSクラス](properties_Object.md#cssクラス) -
-[データタイプ (式の型)](properties_DataSource.md#データタイプ-式の型) -
-[データタイプ (リスト)](properties_DataSource.md#データタイプ-リスト) -
-[日付フォーマット](properties_Display.md#日付フォーマット) -
-[式の型](properties_Object.md#式の型式タイプ) -
-[フォーカス可](properties_Entry.md#フォーカス可) -
-[フォント](properties_Text.md#フォント) -
-[フォントカラー](properties_Text.md#フォントカラー) -
-[フォントサイズ](properties_Text.md#フォントサイズ) -
-[高さ](properties_CoordinatesAndSizing.md#高さ) -
-[ヘルプTips](properties_Help.md#ヘルプtips) -
-[横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
-[イタリック](properties_Text.md#イタリック) -
-[左](properties_CoordinatesAndSizing.md#左) -
-[レンダリングしない](properties_Display.md#レンダリングしない) -
-[オブジェクト名](properties_Object.md#オブジェクト名) -
-[右](properties_CoordinatesAndSizing.md#右) -
-[標準アクション](properties_Action.md#標準アクション) -
-[値を記憶](properties_Object.md#値を記憶) -
-[時間フォーマット](properties_Display.md#時間フォーマット) -
-[上](properties_CoordinatesAndSizing.md#上) -
-[タイプ](properties_Object.md#タイプ) -
-[下線](properties_Text.md#下線) -
-[変数あるいは式](properties_Object.md#変数あるいは式) -
-[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
-[表示状態](properties_Display.md#表示状態) -
-[幅](properties_CoordinatesAndSizing.md#幅)
+[Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (expression type)](properties_DataSource.md#data-type-expression-type) - [Data Type (list)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save value](properties_Object.md#save-value) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
