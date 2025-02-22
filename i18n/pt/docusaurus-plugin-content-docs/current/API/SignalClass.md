@@ -63,17 +63,17 @@ Método ***OpenForm*** :
  var $form : Object
  $form:=New object("value";0)
 
-  // Open the form
+  // Abrir o formulário
  $win:=Open form window("Information";Movable form dialog box)
  DIALOG("Information";$form)
  CLOSE WINDOW($win)
 
-  // Add a new attribute to your $signal shared object to pass your result to the other process:
+  // Adicione um novo atributo ao seu objeto compartilhado $signal para passar seu resultado ao outro processo:
  Use($signal)
     $signal.result:=$form.value
  End use
 
-  // Trigger the signal to the waiting process
+  // Disparar o sinal para o processo de espera
  $signal.trigger()
 ```
 
@@ -156,7 +156,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.trigger( )` function <!-- REF #SignalClass.trigger().Summary -->sets the `signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
+A função `.trigger( )` <!-- REF #SignalClass.trigger().Summary -->define a propriedade `signaled` do objeto de sinal como **true**<!-- END REF --> e desperta todos os workers ou processos esperando por este sinal.
 
 Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signaled` já for **true**), a função não faz nada.
 
@@ -187,7 +187,7 @@ Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signa
 
 #### Descrição
 
-The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->waits until the `.signaled` property of the Signal object becomes **true** or the specified `timeout` is reached<!-- END REF -->.
+A função `.wait( )` <!-- REF #SignalClass.wait().Summary -->faz com que o processo atual aguarde até que a propriedade `.signaled` do objeto signal se torne **true** ou o *timeout* opcional expire<!-- END REF -->.
 
 To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter. Decimals are accepted.
 
