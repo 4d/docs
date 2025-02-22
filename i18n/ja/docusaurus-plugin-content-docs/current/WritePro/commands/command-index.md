@@ -30,8 +30,8 @@ title: 4D View Pro コマンド
 
 <a id="E"><b>E</b></a>
 
-[`WP EXPORT DOCUMENT`](wp-export-document.md) ***Modified 4D 20 R8***<br/>
-[`WP EXPORT VARIABLE`](../commands-legacy/wp-export-variable.md)
+[`WP EXPORT DOCUMENT`](wp-export-document.md) **Modified 4D 20 R9**<br/>
+[`WP EXPORT VARIABLE`](wp-export-variable.md) **Modified 4D 20 R9**
 
 <a id="F"><b>F</b></a>
 
