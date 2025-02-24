@@ -917,11 +917,11 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="生年月日が入力されていません。" 
+        $status.statusText:="生年月日が入力されていません。 " 
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False
-        $status.statusText:="生徒の年齢は 15 〜 30 の範囲で入力してください。この生徒の年齢は "+String(This.age()+"です。")
+        $status.statusText:="生徒の年齢は 15 〜 30 の範囲で入力してください。 この生徒の年齢は "+String(This.age()+"です。 ")
 End case
 ```
 
