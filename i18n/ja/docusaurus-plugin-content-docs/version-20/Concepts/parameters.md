@@ -32,11 +32,11 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-// サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し
+// サブフォーム "Cal2" のコンテキストにおいて // サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し
 // その際に引数として日付リテラル !05/05/20! を渡します
 ```
 
-メソッドやクラス関数からデータを **返す** こともできます。 以下は、文字列のデータ長を返すビルトインの `Length` コマンドを用いたステートメントです。 このステートメントでは、`Length` 関数が *MyLength* という変数に値を返します。
+メソッドやクラス関数からデータを **返す** こともできます。 以下は、文字列のデータ長を返すビルトインの `Length` コマンドを用いたステートメントです。 このステートメントでは、`Length` 関数が *MyLength* という変数に値を返します。 という変数に値を返します。
 
 ```4d
 MyLength:=Length("How did I get here?")
@@ -154,7 +154,7 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 ### 初期化
 
-引数は宣言されると、[**その型に対応するデフォルト値**](data-types.md#デフォルト値) に初期化されます。別の値が代入されない限り、セッション中はこの値が保持されます。
+引数は宣言されると、[**その型に対応するデフォルト値**](data-types.md#デフォルト値) に初期化されます。 別の値が代入されない限り、セッション中はこの値が保持されます。
 
 
 
@@ -198,7 +198,7 @@ Function getValue -> $v : Integer
 
 ## 引数の間接参照 (${N})
 
-4Dプロジェクトメソッドは、可変個の引数を受け取ることができます。 `For...End for` ループや [`Count parameters`](https://doc.4d.com/4dv19/help/command/ja/page259.html) コマンド、**引数の間接参照シンタックス** を使って、これらの引数を扱うことができます。 メソッド内で、間接参照は `${N}` のように表示します。ここの `N` は数値式です。 `${N}` を **ジェネリックパラメーター** (generic parameter) と呼びます。
+4Dプロジェクトメソッドは、可変個の引数を受け取ることができます。 `For...End for` ループや [`Count parameters`](https://doc.4d.com/4dv19/help/command/ja/page259.html) コマンド、**引数の間接参照シンタックス** を使って、これらの引数を扱うことができます。 メソッド内で、間接参照は `${N}` のように表示します。 ここの `N` は数値式です。 `${N}` を **ジェネリックパラメーター** (generic parameter) と呼びます。
 
 
 
@@ -217,7 +217,7 @@ Function getValue -> $v : Integer
  $result:=String($sum;$format)
 ```
 
-このメソッドの引数は正しい順序で渡す必要があります。最初に表示形式、次に可変個の数値引数です。
+このメソッドの引数は正しい順序で渡す必要があります。 最初に表示形式、次に可変個の数値引数です。
 
 ```4d
  Result:=MySum("##0.00";125,2;33,5;24) // "182.70"
@@ -318,13 +318,13 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 - `On Drag Over` フォームイベントを受け入れるフォームオブジェクト - `On Drag Over` フォームイベントの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーが型を決定します。 定義する場合は、オブジェクトメソッドの中でおこなう必要があります。 **注:** コンパイラーは $0 を初期化しません。 したがって、`On Drag Over` フォームイベントを使用したら、直ちに $0 を初期化しなければなりません。 例:
 
 ```4d
- C_LONGINT($0)
- If(Form event code=On Drag Over)
-    $0:=0
-    ...
-    If($DataType=Is picture)
+ If($DataType=Is picture)
        $0:=-1
     End if
+    ...
+    C_LONGINT($0)
+ If(Form event code=On Drag Over)
+    $0:=0
     ...
  End if
 ```
@@ -343,7 +343,7 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 
 ```4d
 // method2
-method1(42) // 型間違い。期待されるのはテキスト
+method1(42) // 型間違い。 期待されるのはテキスト
 ```
 
 このケースは、コンテキストに応じて 4D で処理されます。
@@ -379,7 +379,7 @@ method1(42) // 型間違い。期待されるのはテキスト
  var $1; $para : Object
  $para:=$1  
  $para.Age:=$para.Age+10
- ALERT($para.Name+" は "+String($para.Age)+" 歳です。")
+ ALERT($para.Name+" は "+String($para.Age)+" 歳です。 ")
 ```
 
 これは [任意パラメーター](#任意パラメーター) を指定するにあたって非常に便利な方法です (後述参照)。 この場合、引数の不足は次のように対処できます:
@@ -394,7 +394,7 @@ method1(42) // 型間違い。期待されるのはテキスト
  var $1; $para : Object
  $para:=$1  
  $para.Age:=Num($para.Age)+10
- ALERT(String($para.Name)+" は "+String($para.Age)+"歳です。")
+ ALERT(String($para.Name)+" は "+String($para.Age)+"歳です。 ")
 ```
 すると、引数が不足してもエラーは生成されず、両方が欠落した場合の結果は " は 10歳です" となってしまうにせよ、いずれの引数も任意となります。
 
@@ -411,7 +411,7 @@ If ($para.toAdd=Null)
     $para.toAdd:=10
 End if
 $para.Age:=Num($para.Age)+$para.toAdd
-ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
+ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。 ")
 ```
 
 このように、既存のコードを変える必要はありません。 変更後のコードは変更前と同じように動作しますが、引数によって加算年数に数値を指定することもできるようになりました。
@@ -495,7 +495,7 @@ ALERT([People]Name)
 
 もし `DO_SOMETHING` メソッド内でフィールドの値を変更したいのであれば、2通りのやり方があります:
 
-1. サブルーチンに渡す式としてフィールドではなく、フィールドへのポインターを指定することができます。この場合、以下のようにコードを書きます:
+1. サブルーチンに渡す式としてフィールドではなく、フィールドへのポインターを指定することができます。 この場合、以下のようにコードを書きます:
 
 ```4d
   // MY_METHOD メソッド

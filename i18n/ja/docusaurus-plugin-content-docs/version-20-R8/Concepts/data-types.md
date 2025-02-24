@@ -14,7 +14,7 @@ title: データタイプの概要
 | [日付](Concepts/dt_date.md)                             | ◯                          | ◯       | `Date`                                  | `ARRAY DATE`            |
 | [時間](Concepts/dt_time.md)                             | ◯                          | ◯       | `Time`                                  | `ARRAY TIME`            |
 | [ブール](Concepts/dt_boolean.md)                         | ◯                          | ◯       | `Boolean`                               | `ARRAY BOOLEAN`         |
-| [整数](Concepts/dt_number.md)                           | ◯                          | 倍長整数に変換 | `Integer`                               | `ARRAY INTEGER`         |
+| [整数](Concepts/dt_number.md)                           | ◯                          | ブールに変換  | `Integer`                               | `ARRAY INTEGER`         |
 | [倍長整数](Concepts/dt_number.md)                         | ◯                          | ◯       | `Integer`                               | `ARRAY LONGINT`         |
 | [64ビット整数](Concepts/dt_number.md)                      | ◯ (SQL) | 実数に変換   | -                                       | -                       |
 | [実数](Concepts/dt_number.md)                           | ◯                          | ◯       | `Real`                                  | `ARRAY REAL`            |
