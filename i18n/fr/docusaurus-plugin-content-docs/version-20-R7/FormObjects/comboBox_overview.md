@@ -55,7 +55,7 @@ Les objets de type combo box acceptent deux options spécifiques :
 - [Insertion automatique](properties_DataSource.md#automatic-insertion) : permet d'ajouter automatiquement une valeur à la source de données lorsque l'utilisateur saisit une valeur qui ne se trouve pas dans la liste associée à la combo box.
 - `valeurs` Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
 
-> Utiliser une énumération Dans une interface, si un objet doit proposer une liste finie de valeurs obligatoires, il faut utiliser un objet de type [liste déroulante](dropdownList_Overview.md#overview).
+> Utiliser une énumération Utiliser une énumération Dans une interface, si un objet doit proposer une liste finie de valeurs obligatoires, il faut utiliser un objet de type [liste déroulante](dropdownList_Overview.md#overview).
 
 ## Propriétés prises en charge
 

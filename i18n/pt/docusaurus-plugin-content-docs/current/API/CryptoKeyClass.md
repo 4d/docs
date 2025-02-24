@@ -42,27 +42,27 @@ Para obter uma visão geral abrangente dessa classe, consulte a postagem do blog
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
-| Parâmetro  | Tipo                         |                             | Descrição                                          |
-| ---------- | ---------------------------- | --------------------------- | -------------------------------------------------- |
-| settings   | Object                       | ->                          | Parâmetros para gerar ou carregar um par de chaves |
-| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação  |
+| Parâmetro  | Tipo                         |                             | Descrição                                         |
+| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------- |
+| settings   | Object                       | ->                          | Settings to generate or load a key pair           |
+| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
 
 <!-- END REF -->
 
-A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um novo objeto `4D.CryptoKey` que encapsula um par de chaves de criptografia<!-- END REF -->, com base no parâmetro objeto *settings*. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
+A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um novo objeto `4D.CryptoKey` que encapsula um par de chaves de criptografia<!-- END REF -->, com base no parâmetro objeto *settings*. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *parâmetros*
 
-| Propriedade     | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| --------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [type](#type)   | text    | Defines the type of the key to create: <li>"RSA": generates a RSA key pair, using [.size](#size) as size.</li><li>"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using [.curve](#curve) as curve. Note that ECDSA keys cannot be used for encryption but only for signature.</li><li>"PEM": loads a key pair definition in PEM format, using [.pem](#pem).</li> |
-| [curve](#curve) | text    | Nome da curva ECDSA                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| [pem](#pem)     | text    | Definição PEM de uma chave de cifrado a carregar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| [size](#size)   | integer | Tamanho da chave RSA em bits                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Propriedade     | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| --------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [type](#type)   | text    | Define o tipo de chave a ser criada: <li>"RSA": gera um par de chaves RSA, usando [.size](#size) como tamanho.</li><li>"ECDSA": gera um par de chaves Elliptic Curve Digital Signature Algorithm, usando [.curve](#curve) como curva. Note que chaves ECDSA não podem ser usadas para criptografia, mas apenas para assinatura.</li><li>"PEM": carrega uma definição de par chave no formato PEM, usando [.pem](#pem).</li> |
+| [curve](#curve) | text    | Nome da curva ECDSA                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [pem](#pem)     | text    | Definição PEM de uma chave de cifrado a carregar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| [size](#size)   | integer | Tamanho da chave RSA em bits                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 #### *CryptoKey*
 
-O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. É um objeto compartido, portanto, pode ser utilizado por vários processos 4D simultaneamente.
+O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
 
 #### Exemplo 1
 
@@ -225,7 +225,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 | Propriedade       | Tipo | Descrição                                                                                                                                                                                                    |
 | ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                   |
-| encodingEncrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".       |
+| encodingEncrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".        |
 | encodingDecrypted | text | Encoding used to convert the `message` parameter into the binary representation to encrypt. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
 
 #### *Resultado*
@@ -256,7 +256,7 @@ O valor devolvido é uma mensagem encriptada.
 
 <!-- END REF -->
 
-The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
+A função ’.getPrivateKey()`<!-- REF #CryptoKey.getPrivateKey().Summary -->retorna a chave privada do objeto`CryptoKey\`<!-- END REF --> no formato PEM ou uma cadeia de caracteres vazia se não houver nenhuma disponível.
 
 #### *Resultado*
 
@@ -286,7 +286,7 @@ O valor devolvido é a chave privada.
 
 <!-- END REF -->
 
-The `.getPublicKey()` function <!-- REF #CryptoKey.getPublicKey().Summary -->returns the public key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
+A função `.getPublicKey()` <!-- REF #CryptoKey.getPublicKey().Summary -->retorna a chave pública do objeto `CryptoKey`<!-- END REF --> no formato PEM ou uma cadeia de caracteres vazia se não houver nenhuma disponível.
 
 #### *Resultado*
 
@@ -339,7 +339,7 @@ Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave pri
 
 <!-- END REF -->
 
-The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string or Blob<!-- END REF --> using the `CryptoKey` object keys and provided *options*. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
+A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de uma string *message* ou Blob<!-- END REF --> usando as chaves do objeto `CryptoKey` e as *opções* fornecidas. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
 
 A `CryptoKey` deve conter uma chave **privada** válida.
 
@@ -350,7 +350,7 @@ A `CryptoKey` deve conter uma chave **privada** válida.
 | hash              | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | encodingEncrypted | text    | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                 |
 | pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passe `true` ao produzir um JWT para o algoritmo PS@                                                                                         |
-| encoding          | text    | Representation to be used for result signature. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                                                             |
+| encoding          | text    | Representation to be used for result signature. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                                                                                   |
 
 #### *Resultado*
 
@@ -424,7 +424,7 @@ Contém o nome <!-- REF #CryptoKey.type.Summary -->do tipo de chave - "RSA", "EC
 
 <!-- END REF -->
 
-The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.
+A função `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica a assinatura base64 em relação à representação utf8 da *message*<!-- END REF --> usando as chaves do objeto `CryptoKey` e as *options* fornecidas.
 
 A `CryptoKey` deve conter uma chave **pública** válida.
 
@@ -434,7 +434,7 @@ A `CryptoKey` deve conter uma chave **pública** válida.
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash        | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | pss         | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao verficar um JWT para o algoritmo PS@                                                                                         |
-| encoding    | text    | Representation to be used for result signature. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                                                             |
+| encoding    | text    | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                |
 
 #### *Resultado*
 

@@ -44,12 +44,12 @@ title: CryptoKey
 
 | 引数       | 型                            |                             | 説明                    |
 | -------- | ---------------------------- | --------------------------- | --------------------- |
-| settings | Object                       | ->                          | キーペアを生成・ロードするための設定    |
+| settings | Object                       | ->                          | キーペアを生成またはロードするための設定  |
 | 戻り値      | 4D.CryptoKey | <- | 暗号化キーペアをカプセル化したオブジェクト |
 
 <!-- END REF -->
 
-`4D.CryptoKey.new()` 関数は、*settings* オブジェクト引数に基づいて<!-- REF #4D.CryptoKey.new().Summary -->暗号化キーペアをカプセル化する `4D.CryptoKey` オブジェクトを新規作成します<!-- END REF -->。 新規の RSA または ECDSA キーを生成するほか、PEM 形式の既存のキーペアをロードすることができます。
+`4D.CryptoKey.new()` 関数は、*settings* オブジェクト引数に基づいて<!-- REF #4D.CryptoKey.new().Summary -->暗号化キーペアをカプセル化する `4D.CryptoKey` オブジェクトを新規作成します<!-- END REF -->。 これを使用することで新規のRSA またはECDSA キーを生成できるほか、PEM 定義から既存のキーペアをロードすることができます。
 
 #### *settings*
 
@@ -170,7 +170,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 キーは RSA キーでなければならず、アルゴリズムは RSA-OAEP です ([RFC 3447](https://tools.ietf.org/html/rfc3447) 参照)。
 
-#### *オプション*
+#### *options*
 
 | プロパティ             | 型    | 説明                                                                                                                         |
 | ----------------- | ---- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -220,7 +220,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 キーは RSA キーでなければならず、アルゴリズムは RSA-OAEP です ([RFC 3447](https://tools.ietf.org/html/rfc3447) 参照)。
 
-##### *オプション*
+##### *options*
 
 | プロパティ             | 型    | 説明                                                                                                                                |
 | ----------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -321,10 +321,10 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                         |
-| ----- | -------------------------- |
-| 20 R8 | Support of message as Blob |
-| 18 R4 | 追加                         |
+| リリース  | 内容                 |
+| ----- | ------------------ |
+| 20 R8 | Blob 形式のメッセージをサポート |
+| 18 R4 | 追加                 |
 
 </details>
 
@@ -332,30 +332,30 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.sign().Params -->
 
-| 引数      | 型            |                             | 説明                                              |
-| ------- | ------------ | --------------------------- | ----------------------------------------------- |
-| message | Text OR Blob | ->                          | Message to sign                                 |
-| options | Object       | ->                          | 署名オプション                                         |
-| 戻り値     | Text         | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |
+| 引数      | 型             |                             | 説明                                              |
+| ------- | ------------- | --------------------------- | ----------------------------------------------- |
+| message | Text または Blob | ->                          | 署名するメッセージ                                       |
+| options | Object        | ->                          | 署名オプション                                         |
+| 戻り値     | Text          | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |
 
 <!-- END REF -->
 
-The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string or Blob<!-- END REF --> using the `CryptoKey` object keys and provided *options*. `options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。
+`.sign()` 関数は、`CryptoKey` オブジェクトキーおよび指定された *options* を使って、<!-- REF #CryptoKey.sign().Summary --> utf8 形式の *message* 文字列またはBlob を署名します<!-- END REF -->。 `options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。
 
 `CryptoKey` は有効な **秘密** 鍵を格納していなくてはなりません。
 
-#### *オプション*
+#### *options*
 
 | プロパティ             | 型       | 説明                                                                                                                                                                                               |
 | ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | hash              | テキスト    | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。 JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
 | encodingEncrypted | テキスト    | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                                              |
 | pss               | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                                                                            |
-| encoding          | テキスト    | Representation to be used for result signature. 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                 |
+| encoding          | テキスト    | 戻り値の署名のエンコード方式。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                                                                 |
 
 #### *結果*
 
-The utf8 representation of the *message*.
+utf8 形式の *message* 。
 
 <!-- END REF -->
 
@@ -405,10 +405,10 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                         |
-| ----- | -------------------------- |
-| 20 R8 | Support of message as Blob |
-| 18 R4 | 追加                         |
+| リリース  | 内容                 |
+| ----- | ------------------ |
+| 20 R8 | Blob 形式のメッセージをサポート |
+| 18 R4 | 追加                 |
 
 </details>
 
@@ -416,12 +416,12 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| 引数        | 型            |                             | 説明                                                          |
-| --------- | ------------ | --------------------------- | ----------------------------------------------------------- |
-| message   | Text OR Blob | ->                          | Message that was used to produce the signature              |
-| signature | Text         | ->                          | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
-| options   | Object       | ->                          | 署名オプション                                                     |
-| 戻り値       | Object       | <- | 検証ステータス                                                     |
+| 引数        | 型             |                             | 説明                                                          |
+| --------- | ------------- | --------------------------- | ----------------------------------------------------------- |
+| message   | Text または Blob | ->                          | 署名の生成に使用されたメッセージ                                            |
+| signature | Text          | ->                          | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
+| options   | Object        | ->                          | 署名オプション                                                     |
+| 戻り値       | Object        | <- | 検証ステータス                                                     |
 
 <!-- END REF -->
 
@@ -429,7 +429,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 `CryptoKey` は有効な **公開** 鍵を格納していなくてはなりません。
 
-#### *オプション*
+#### *options*
 
 | プロパティ    | 型       | 説明                                                                                                                                                                                               |
 | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

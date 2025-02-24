@@ -12,7 +12,7 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 Além disso, os objectos de arquivos e pastas suportam `fileSystems`, que fornecem o caminho contextual para as pastas principais da aplicação.
 
 
-4D aceita vários `filesystem` pathnames que designam pastas 4D específicas com localização variável em macOS e Windows. Um caminho de acesso filesystem é avaliado com relação ao contexto sendo retornado como um caminho absoluto.
+4D aceita vários `filesystem` pathnames que designam pastas 4D específicas com localização variável em macOS e Windows. A filesystem path is evaluated with regards to the context and is returned as an absolute path.
 
 Os nomes de caminho do sistema de arquivos são úteis por duas razões principais:
 

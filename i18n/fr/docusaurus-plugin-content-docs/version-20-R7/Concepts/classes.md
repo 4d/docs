@@ -27,7 +27,7 @@ Function sayHello() -> $welcome : Text
  $welcome:="Hello "+This.fullName
 ```
 
-Dans une méthode, créons une "Personne" :
+Dans une méthode, créons une "Person" :
 
 ```4d
 var $person : cs.Person //objet de classe Person
@@ -149,7 +149,7 @@ Vous voulez lister les classes 4D intégrées :
  ALERT("There are "+String($keys.length)+" built-in classes.")
 ```
 
-## L'objet classe
+## L'objet class
 
 Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
@@ -347,7 +347,7 @@ Vous pouvez créer et saisir des propriétés d'instance dans le constructeur (v
 
 L'utilisation du mot-clé `shared` crée une **classe partagée**, utilisée pour n'instancier que des objets partagés. Pour plus d'informations, reportez-vous au paragraphe [Classes partagées](#shared-classes).
 
-L'utilisation du mot-clé `singleton` crée un **singleton**, utilisé pour créer une seule instance de la classe. Un `singleton session` crée une seule instance par session. Pour plus d'informations, référez-vous au paragraphe [Classes singleton](#singleton-classes).
+Un `singleton session` crée une seule instance par session. Pour plus d'informations, référez-vous au paragraphe [Classes singleton](#singleton-classes). L'utilisation du mot-clé `singleton` crée un **singleton**, utilisé pour créer une seule instance de la classe.
 
 #### Exemple
 
@@ -409,8 +409,8 @@ Le type de propriété peut être l'un des suivants :
 | `Collection`                 | Valeur collection                                                         |
 | `Variant`                    | Valeur variant                                                            |
 | `Object`                     | Objet de classe par défaut (4D.Object) |
-| `4D.<className>`             | Object de la classe 4D className                                          |
-| `cs.<className>`             | Object de la classe utilisateur className                                 |
+| `4D.<className>`             | Objet de la classe 4D className                                           |
+| `cs.<className>`             | Objet de la classe utilisateur className                                  |
 | `cs.<namespace>.<className>` | Object de la classe className du composant `<namespace>`                  |
 
 Si vous omettez le type dans la ligne de déclaration, la propriété est créée en tant que variant.

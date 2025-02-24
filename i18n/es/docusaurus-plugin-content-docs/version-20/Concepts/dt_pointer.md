@@ -202,7 +202,7 @@ Puede pasar un puntero como parámetro de un método. Dentro del método, puede 
 
 ```4d
   //$changeLow – Pointer to a string field or variable. Cambia la cadena a mayúsculas.
-  Cambia la cadena a minúsculas. Cambia la cadena a mayúsculas.
+  Cambia la cadena a minúsculas. Cambia la cadena a minúsculas.
  #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)

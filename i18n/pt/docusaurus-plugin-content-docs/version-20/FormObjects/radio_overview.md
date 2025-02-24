@@ -143,7 +143,7 @@ O estilo Contrair/Expandir tem o nome "disclosure" na [gramática JSON do estilo
 
 ### Botão disclosure
 
-O estilo do botão radio disclosure exibe o botão de opção como um botão disclosure padrão, normalmente usado para mostrar/ocultar informações adicionais. O símbolo do botão aponta para baixo com o valor 0 e para cima com o valor 1.
+O estilo do botão divulgação exibe o botão rádio como um botão de divulgação padrão, normalmente usado para mostrar/ocultar informações adicionais. O símbolo do botão aponta para baixo com o valor 0 e para cima com o valor 1.
 
 ![](../assets/en/FormObjects/checkbox_disclosure.png)
 

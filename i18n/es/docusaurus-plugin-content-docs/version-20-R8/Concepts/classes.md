@@ -158,7 +158,7 @@ Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el
 - función [`new()`](API/ClassClass.md#new), que permite instanciar objetos de clase
 - propiedad [`isShared`](API/ClassClass.md#isshared), true si la clase es [compartida](#clases-compartidas)
 - propiedad [`isSingleton`](API/ClassClass.md#issingleton), verdadero si la clase define una [clase singleton](#singleton-classes).
-- propiedad [`isSectionSingleton`](API/ClassClass.md#issectionsingleton), true si la clase define un [singleton de sesión](#singleton-classes).
+- propiedad [`isSectionSingleton`](API/ClassClass.md#issectionsingleton), true si la clase define un [sesión singleton](#singleton-classes).
 - Propiedad [`me`](API/ClassClass.md#me), que permite instanciar y acceder a [singletons](#singleton-classes).
 
 Además, un objeto clase puede hacer referencia a un objeto [`constructor`](#class-constructor) (opcional).
@@ -503,7 +503,7 @@ $o.age:="Smith" //error con la sintaxis de verificación
 
 Si no se accede a la propiedad, el código nunca se ejecuta.
 
-Las propiedades calculadas están diseñadas para manejar datos que no necesitan ser guardados en memoria. Generalmente se basan en propiedades persistentes. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.</p><p spaces-before="0" line-breaks-before="2">In the class definition file, computed property
+Las propiedades calculadas están diseñadas para manejar datos que no necesitan ser guardados en memoria. Generalmente se basan en propiedades persistentes. Por ejemplo, si un objeto de clase contiene como propiedad persistente el *precio bruto* y el *tipo de IVA*, El *precio neto* podría ser manejado por una propiedad calculada.
 
 En el archivo de definición de la clase, las declaraciones de propiedades calculadas utilizan las palabras claves `Function get` (*getter*) y `Function set` (*setter*) seguido por el nombre de la propiedad. El nombre debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 

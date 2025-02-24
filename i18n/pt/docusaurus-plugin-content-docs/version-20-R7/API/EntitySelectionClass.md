@@ -5,7 +5,7 @@ title: EntitySelection
 
 Uma seleção de entidade é um objeto que contém uma ou mais referências a [entidades](ORDA/dsMapping.md#entity) pertencentes à mesma [Dataclass](ORDA/dsMapping.md#dataclass). Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
 
-As seleções de entidades podem ser criadas a partir de seleções existentes usando várias funções da classe [`DataClass`](DataClassClass.md), como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou funções da própria classe `EntityClass`, como [`.and()`](#and) ou [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create entity selection`](../commands/create-entity-selection.md) command.
+As seleções de entidades podem ser criadas a partir de seleções existentes usando várias funções da classe [`DataClass`](DataClassClass.md), como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou funções da própria classe `EntityClass`, como [`.and()`](#and) ou [`orderBy()`](#orderby). Você também pode criar seleções de entidades em branco usando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create entity selection`](../commands/create-entity-selection.md).
 
 ### Resumo
 
@@ -461,7 +461,7 @@ A função `.clean()` <!-- REF #EntitySelectionClass.clean().Summary -->retorna 
 
 Por padrão, quando uma entidade é [descartada](EntitySelectionClass.md#drop), sua(s) referência(s) na(s) seleção(ões) de entidade(s) existente(s) se torna(m) *indefinida(s)*, mas não é(são) removida(s) do(s) objeto(s) de seleção de entidade. As entidades excluídas ainda estão incluídas na propriedade [`.length`](#length) e são exibidas como linhas em branco se a seleção da entidade estiver vinculada a um objeto de interface, como uma lista. Nesse caso, chamar a função `.clean()` na seleção de entidades permite que você obtenha uma seleção de entidades nova e atualizada, que não contenha referências de entidades *undefined*.
 
-The resulting entity selection keeps the same [order criteria](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) and the same [alterable/shareable](../ORDA/entities.md#shareable-or-alterable-entity-selections) property as the original entity selection.
+A seleção da entidade resultante mantém os [critérios de ordem](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) e a mesma propriedade [alterable/shareable](../ORDA/entities.md#shareable-or-alterable-entity-selections) como a seleção da entidade original.
 
 #### Exemplo
 

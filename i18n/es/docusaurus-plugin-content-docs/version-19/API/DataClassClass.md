@@ -693,7 +693,7 @@ attributePath|formula comparator value
 
 donde:
 
-* **attributePath**: ruta del atributo sobre el que se quiere ejecutar la búsqueda. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre".) En el caso de una ruta de atributos de tipo `Collection`, se utiliza la notación \[ ] para manejar todas las ocurrencias (por ejemplo "niños[ ].edad"). Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass También puede utilizar un **marcador** (ver más abajo).
+* **attributePath**: ruta del atributo sobre el que se quiere ejecutar la búsqueda. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre"). Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass También puede utilizar un **marcador** (ver más abajo).
 > *No puede utilizar directamente atributos cuyo nombre contenga caracteres especiales como ".", "\[ ]", o "=", ">", "#"..., porque se evaluarán incorrectamente en la cadena de consulta. Si necesita consultar dichos atributos, debe considerar el uso de marcadores, que permiten un rango ampliado de caracteres en las rutas de los atributos (ver* **Uso de marcadores de posición** *a continuación).*
 
 * **formula**: una fórmula válida pasada como `Text` o en `Object`. La fórmula se evaluará para cada entidad procesada y debe devolver un valor booleano. Dentro de la fórmula, la entidad está disponible a través del objeto `This`.
@@ -814,7 +814,7 @@ No obtendrá el resultado esperado porque el valor null será evaluado por 4D co
  $vSingles:=ds.Person.query("spouse = null") // Sintaxis correcta
 ```
 
-#### No es igual a valores nulos o indefinidos
+#### Not equal to null or undefined values
 
 El comparador "not equal to *value*" (`#` o `!`) no devuelve atributos cuyo valor es null o indefinido. Por ejemplo, la siguiente consulta solo devolverá personas cuyo estado "info.married" es `false` y no personas cuya propiedad "info.married" es "null" o falta:
 
@@ -825,7 +825,7 @@ $notMarried:=ds.Person.query("info.married#true") //encuentra personas con valor
 Si desea encontrar personas cuyo estado "info.married" es `false`, null, o no definido, necesita escribir:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") //encuentra atributos false, null e indefinidos
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //encuentra atributos false, null e undefined
 ```
 
 

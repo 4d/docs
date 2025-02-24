@@ -18,7 +18,7 @@ Un objeto `4D.Signal` contiene los siguientes métodos y propiedades integrados:
 - [`.signaled`](#signaled)
 - [`.description`](#description).
 
-Lanzamiento Lanzamiento Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. Lanzamiento
+Lanzamiento Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. Lanzamiento
 
 Tenga en cuenta que para evitar situaciones de bloqueo, el método `.wait()` también puede regresar después de que se haya alcanzado un tiempo de espera definido.
 
@@ -178,10 +178,10 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 
 <!-- REF #SignalClass.wait().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                                     |
-| ---------- | ------- | --------------------------- | ----------------------------------------------- |
-| timeout    | Real    | ->                          | Tiempo máximo de espera de la señal en segundos |
-| Resultado  | Boolean | <- | Estado de la propiedad `.signaled`              |
+| Parámetros | Tipo    |                             | Descripción                        |
+| ---------- | ------- | --------------------------- | ---------------------------------- |
+| timeout    | Real    | ->                          | Maximum wait time in seconds       |
+| Resultado  | Boolean | <- | Estado de la propiedad `.signaled` |
 
 <!-- END REF -->
 
@@ -191,7 +191,7 @@ La función `.wait( )` <!-- REF #SignalClass.wait().Summary -->hace que el proce
 
 Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera en segundos en el parámetro *timeout* (se aceptan decimales). Decimals are accepted.
 
-Si la señal ya está en estado de señalización (es decir, la propiedad `.signaled` ya es **true**), la función vuelve inmediatamente, sin esperar.
+If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
 La función devuelve el valor de la propiedad `.signaled`.
 

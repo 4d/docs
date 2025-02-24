@@ -984,7 +984,7 @@ Após a conclusão da operação de exportação, o `VP EXPORT DOCUMENT` aciona 
 
 #### Passagem de um método de retorno de chamada (fórmula)
 
-When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` command allows you to use the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command to call a 4D method which will be executed once the export has completed. O método de retorno de chamada receberá os seguintes valores em variáveis locais:
+Ao incluir o parâmetro opcional *paramObj*, o comando `VP EXPORT DOCUMENT` permite que você use o comando [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) para chamar um método 4D que será executado após a conclusão da exportação. O método de retorno de chamada receberá os seguintes valores em variáveis locais:
 
 | Variável |               | Tipo    | Descrição                                                    |
 | -------- | ------------- | ------- | ------------------------------------------------------------ |
@@ -1096,10 +1096,10 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 No parâmetro *options* , você pode passar as seguintes opções de exportação, se necessário:
 
-| Propriedade          | Tipo       | Descrição                                                                                                                                                                                                                                                                         |
-| -------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| includeFormatInfo    | Parâmetros | Verdadeiro (padrão) para incluir informações de formatação; caso contrário, falso. As informações de formatação são úteis em alguns casos, por exemplo, para exportação para SVG. Por outro lado, a definição dessa propriedade como False permite reduzir o tempo de exportação. |
-| includeBindingSource | Parâmetros | True (padrão) para exportar os valores do contexto de dados atual como valores de célula no objeto exportado (os contextos de dados em si não são exportados). Caso contrário, false. Cell binding sempre é exportada.                                                            |
+| Propriedade          | Tipo       | Descrição                                                                                                                                                                                                                                                                   |
+| -------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| includeFormatInfo    | Parâmetros | True (padrão) para incluir informações de formatação; caso contrário, false. As informações de formatação são úteis em alguns casos, por exemplo, para exportação para SVG. Por outro lado, a definição dessa propriedade como False permite reduzir o tempo de exportação. |
+| includeBindingSource | Parâmetros | True (padrão) para exportar os valores do contexto de dados atual como valores de célula no objeto exportado (os contextos de dados em si não são exportados). Caso contrário, false. Cell binding sempre é exportada.                                                      |
 
 Para mais informações sobre os objectos 4D View Pro, consulte o parágrafo [objeto 4D View Pro](configuring.md#4d-view-pro-object).
 
@@ -1166,7 +1166,7 @@ Você pode passar o parâmetro opcional *searchCondition* para especificar como 
 | order       | Integer    | <table><tr><td>`vk find order by columns`</td><td>A pesquisa é efectuada por colunas. Cada linha de uma coluna é pesquisada antes que a pesquisa continue para a próxima coluna.</td></tr><tr><td>`vk find order by rows`</td><td>A pesquisa é efectuada por linhas. Cada coluna de uma linha é pesquisada antes de a pesquisa continuar para a próxima linha (padrão)</td></tr></table>                                                                                                                                                                                                           |
 | target      | Integer    | <table><tr><td>`vk find target formula`</td><td>A pesquisa é efectuada na fórmula da célula</td></tr><tr><td>`vk find target tag`</td><td>A pesquisa é efetuada na etiqueta da célula</td></tr><tr><td>`vk find target text`</td><td>A pesquisa é efetuada no texto da célula (padrão)</td></tr></table><p>Esses marcadores podem ser combinados. Por exemplo:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                                 |
 
-No parâmetro opcional *replaceValue* , você pode passar o texto para substituir qualquer instância do texto em *searchValue* encontrado no *rangeObj*.
+No parâmetro opcional *replaceValue*, você pode passar o texto para substituir qualquer instância do texto em *searchValue* encontrado no *rangeObj*.
 
 #### Objecto devolvido
 
@@ -1195,15 +1195,15 @@ $range:=VP All("ViewProArea")
 
 $condition:=New object
 $condition.target:=vk find target text
-$condition.all:=True //Search entire document
+$condition.all:=True //Pesquisa em todo o documento
 $condition.flags:=vk find flag exact match
 
-  // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
-$result:=VP Find($range;"Total";$condition;"Grand Total")
+  // Substituir as células que contêm apenas 'Total' na folha atual por "Total Geral"
+$result:=VP Find($range; "Total";$condition; "Total Geral")
 
-  // Check for empty range object
+  // Verificar se existe um objeto de intervalo vazio
 If($result.ranges.length=0)
-    ALERT("No result found")
+    ALERT("Nenhum resultado encontrado")
 Else
     ALERT($result.ranges.length+" results found")
 End if
@@ -1375,9 +1375,9 @@ No parâmetro opcional *sheet*, pode designar uma folha específica onde o inter
 O código seguinte irá obter as coordenadas da célula ativa:
 
 ```4d
-$activeCell:=VP Get active cell("myVPArea")
+$activeCell:=VP Obter cell("myVPArea")
 
-  //returns a range object containing:
+   //retorna um objeto com intervalo contendo:
   //$activeCell.ranges[0].column=3
   //$activeCell.ranges[0].row=4
   //$activeCell.ranges[0].sheet=0
@@ -1675,7 +1675,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 #### Descrição
 
-O comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->devolve um objeto style por padrão para uma folha<!-- END REF -->. O objeto retornado contém propriedades básicas de renderização de documentos, bem como as configurações de estilo padrão (se houver) previamente definidas pelo método [VP SET DEFAULT STYLE](#vp-set-default-style) . Para obter mais informações sobre propriedades de estilo, consulte [Style Objects & Style Sheets](configuring.md#style-objects--style-sheets).
+O comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->devolve um objeto style por padrão para uma folha<!-- END REF -->. O objeto retornado contém propriedades básicas de renderização de documentos, bem como as configurações de estilo padrão (se houver) previamente definidas pelo método [VP SET DEFAULT STYLE](#vp-set-default-style) . Para obter mais informações sobre propriedades de estilo, consulte [Objetos estilo e folhas de estilo](configuring.md#style-objects--style-sheets).
 
 Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -2373,11 +2373,11 @@ Se quiser centrar o texto das células fusionadas neste documento:
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Search for all cell spans
+// Pesquisar todos os intervalos de células
 $range:=VP Get spans(VP All("ViewProArea"))
 
-//center text
-$style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
+//centralizar o texto
+$style:=New object("vAlign";vk vertical align center; "hAlign";vk horizontal align center)
 VP SET CELL STYLE($range;$style)
 ```
 
@@ -3425,9 +3425,9 @@ No parâmetro *folha* opcional, você pode designar uma planilha específica ond
 Pretende atribuir um valor ao intervalo nomeado "Total".
 
 ```4d
-// name the B5 cell as Total
-VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
-$name:=VP Name("ViewProArea";"Total")
+// nomear a célula B5 como Total
+VP ADD RANGE NAME(VP Cell("ViewProArea";1;4); "Total")
+$name:=VP Name("ViewProArea"; "Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
@@ -3490,13 +3490,13 @@ O comando `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->re
 
 Em *fontObj*, passe um objeto que contém as propriedades da fonte. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                           | Valores possíveis                                                                                                                                                                                                                                                                                                        | Obrigatório |
-| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| family      | text | Especifica o tipo de letra.                                                                                         | qualquer família de tipos de letra padrão ou genérica. Ex. Ex. Ex. "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                     | Sim         |
-| size        | text | Defines the size of the font. The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | um número com uma das seguintes unidades: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>ou uma das seguintes:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>                 | Sim         |
-| style       | text | O estilo do tipo de letra.                                                                                          | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                     | Não         |
-| variant     | text | Especifica o tipo de letra em pequenas maiúsculas.                                                                  | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | Não         |
-| weight      | text | Define a espessura do tipo de letra.                                                                                | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | Não         |
+| Propriedade | Tipo | Descrição                                                                                                                 | Valores possíveis                                                                                                                                                                                                                                                                                                        | Obrigatório |
+| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| family      | text | Especifica o tipo de letra.                                                                                               | qualquer família de tipos de letra padrão ou genérica. Ex. Ex. Ex. "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                     | Sim         |
+| size        | text | Define o tamanho da fonte. A linha-altura pode ser adicionada ao tamanho da fonte: font-size/line-height: Ex: "15pt/20pt" | um número com uma das seguintes unidades: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>ou uma das seguintes:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>                 | Sim         |
+| style       | text | O estilo do tipo de letra.                                                                                                | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                     | Não         |
+| variant     | text | Especifica o tipo de letra em pequenas maiúsculas.                                                                        | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | Não         |
+| weight      | text | Define a espessura do tipo de letra.                                                                                      | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | Não         |
 
 Este objeto pode ser criado com o comando [Fonte VP para objeto](#vp-font-to-object).
 
@@ -3640,7 +3640,7 @@ O seguinte código:
 
 #### Descrição
 
-O comando `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->avalia imediatamente todas as fórmulas em *vpAreaName*<!-- END REF -->. Por padrão, o 4D calcula automaticamente fórmulas quando elas são inseridas, importadas ou exportadas. `VP RECOMPUTE FORMULAS` permite forçar o cálculo a qualquer momento (por exemplo, se as fórmulas forem modificadas ou se as fórmulas contiverem chamadas para o banco de dados). The command launches the execution of the [VP FLUSH COMMANDS](#vp-flush-commands) command to execute any stored commands and clear the command buffer, then calculates all formulas in the workbook.
+O comando `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->avalia imediatamente todas as fórmulas em *vpAreaName*<!-- END REF -->. Por padrão, o 4D calcula automaticamente fórmulas quando elas são inseridas, importadas ou exportadas. `VP RECOMPUTE FORMULAS` permite forçar o cálculo a qualquer momento (por exemplo, se as fórmulas forem modificadas ou se as fórmulas contiverem chamadas para o banco de dados). O comando inicia a execução do comando [VP FLUSH COMMANDS](#vp-flush-commands) para executar quaisquer comandos armazenados e limpar a memória temporária de comandos e, em seguida, calcula todas as fórmulas na pasta de trabalho.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 > Certifique-se de que o comando [VP SUSPEND COMPUTANDO](#vp-suspend-computing) não foi executado antes de usar `VP RECOMPUTE FORMULAS`, caso contrário, o comando não faz nada.
@@ -3724,7 +3724,7 @@ O comando `VP REMOVE SHEET` <!-- REF #_method_.VP REMOVE SHEET.Summary -->remove
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
+No *index*, passe o índice da folha para remover. Se o *index* passado não existir, o comando não fará nada.
 > A indexação começa em 0.
 
 #### Exemplo
@@ -3949,9 +3949,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 #### Descrição
 
-removes one or *count* row(s) from the specified *tableName* at the specified *row* index <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->O comando `VP REMOVE TABLE ROWS`<!-- END REF -->. O comando remove valores e estilos.
+O comando `VP REMOVE TABLE ROWS` <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->remove uma ou *count* linha(s) do *tableName* especificado no índice *row* especificado<!-- END REF -->. O comando remove valores e estilos.
 
-Este comando remove linhas da tabela *nome da tabela* , não da folha. O número total de linhas da folha não é impactado pelo  comando. Dados presentes abaixo da tabela (se houver) são movidos automaticamente de acordo com o número de linhas removidas.
+Este comando remove linhas da tabela *nome da tabela*, não da folha. O número total de linhas da folha não é impactado pelo  comando. Dados presentes abaixo da tabela (se houver) são movidos automaticamente de acordo com o número de linhas removidas.
 
 Se a tabela *tableName* está vinculada a um contexto [de dados](#vp-set-data-context), o comando remove o(s) elemento(s) da coleção.
 
@@ -4101,7 +4101,7 @@ O comando reativa o serviço de cálculo de 4D View Pro. Quaisquer fórmulas afe
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-> O serviço de cálculo de 4D View Pro mantém um contador de ações de sugastar/retomar. Portanto, cada execução de `VP RESUME COMPUTING` deve ser balanceada por uma execução [VP SUSPEND COMPUTANDO](#vp-suspend-computing).
+> O serviço de cálculo de 4D View Pro mantém um contador de ações de sugastar/retomar. Portanto, cada execução de `VP RESUME COMPUTING` deve ser balanceada por uma execução [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
 #### Exemplo
 
@@ -4132,7 +4132,7 @@ O comando `VP Row` <!-- REF #_method_.VP Row.Summary -->devolve um novo objeto i
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-O parâmetro *row* define a primeira linha do intervalo de linhas. Passar o índice da linha (a contagem começa em 0) neste parâmetro. *rowCount* must be greater than 0.
+O parâmetro *row* define a primeira linha do intervalo de linhas. Passar o índice da linha (a contagem começa em 0) neste parâmetro. Se o intervalo contém várias linhas, você também deve usar o parâmetro opcional*rowCount*.
 
 O parâmetro *rowCount* opcional permite que você defina o número total de linhas do intervalo. *rowCount* tem de ser superior a 0. Se for omisso, o valor será definido como 1 por padrão.
 
@@ -4200,10 +4200,10 @@ Resultados:
 
 <!-- REF #_method_.VP Run offscreen area.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                                                                                 |
-| ---------- | ------ | -- | --------------------------------------------------------------------------------------------------------- |
-| parameters | Object | -> | Objeto que contém os atributos da área fora do ecrã                                                       |
-| Resultados | Mixed  | <- | `.result` propriedade do objeto `.onEvent` , ou Null se não retorna um valor™️.<!-- END REF -->
+| Parâmetro  | Tipo   |    | Descrição                                                                                              |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------ |
+| parameters | Object | -> | Objeto que contém os atributos da área fora do ecrã                                                    |
+| Resultados | Mixed  | <- | `.result` propriedade do objeto `.onEvent`, ou Null se não retorna um valor|<!-- END REF -->
 
 |
 
@@ -4244,11 +4244,11 @@ Os seguintes comandos podem ser utilizados no método de retorno de chamada:
 Se quiser criar uma zona fora da área da tela do 4D View Pro e ler o valor de uma célula:
 
 ```4d
-// cs.OffscreenArea class declaration
+// Declaração classe cs.OffscreenArea
 Class constructor ($path : Text)
  This.filePath:=$path
 
-// This function will be called on each event of the offscreen area
+// Esta função será chamada em cada evento da área fora de tela
 Function onEvent()
  Case of
   :(FORM Event.code=On VP Ready)
@@ -4290,19 +4290,19 @@ Se quiser carregar um grande documento offscreen, aguardar todos os cálculos pa
    SET TIMER(60)
 
   :(FORM Event.code=On VP Range Changed)
- // Fim de cálculo detectado. Restarts the timer
+ // Fim de cálculo detectado. Reinicia o temporizador
          If(This.isWaiting)
            SET TIMER(60)
          End if
 
   :(FORM Event.code=On Timer)
- // To be sure to not restart the timer if you call others 4D View command after this point
+ //  Para ter certeza de não reiniciar o temporizador se você chamar o comando 4D View após este ponto
          This.isWaiting:=False
 
- // Stop the timer
+ //  Pare o timer
    SET TIMER(0)
 
- // Start the PDF export
+ // Inicie a exportação em PDF
         VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
 
      :(FORM Event.code=On URL Loading Error)
@@ -4572,7 +4572,7 @@ VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
 
 #### Exemplo 2
 
-Esse código demonstra a diferença entre `VP SET BORDER` e a definição de bordas com o comando [`VP SET CELL STYLE`](#vp-set-cell-style) :
+Esse código demonstra a diferença entre `VP SET BORDER` e a definição de bordas com o comando [`VP SET CELL STYLE`](#vp-set-cell-style):
 
 ```4d
 // Definir margens usando VP SET BORDER
@@ -4623,7 +4623,7 @@ Para remover um estilo e reverter para as configurações de estilo padrão (se 
 * O fato de dar ao parâmetro *styleObj* um valor NULL removerá todas as configurações de estilo do parâmetro *rangeObj*,
 * Atribuir um valor NULL a um atributo removerá esse atributo específico do *rangeObj*.
 
-Para obter mais informações sobre objetos de estilo e folhas de estilo, consulte o parágrafo [Style Objects](configuring.md#style-objects) .
+Para obter mais informações sobre objetos de estilo e folhas de estilo, consulte o parágrafo [Style Objects](configuring.md#style-objects).
 
 #### Exemplo
 
@@ -4662,9 +4662,9 @@ $style.backgroundImage:=Null //remove a specific attribute VP SET CELL STYLE(VP 
 
 O comando `VP SET COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> aplica os atributos definidos na propriedade *propertyObj* às colunas no intervalo *rangeObj*<!-- END REF -->.
 
-Em *rangeObj*, passe um objeto que contenha um intervalo. If the range contains both columns and rows, attributes are applied only to the columns.
+Em *rangeObj*, passe um objeto que contenha um intervalo. Se o intervalo contiver colunas e linhas, os atributos são aplicados apenas às colunas.
 
-The *propertyObj* parameter lets you specify the attributes to apply to the columns in the *rangeObj*. Estes atributos são:
+O parâmetro *propertyObj* permite-lhe especificar os atributos a aplicar às colunas no *rangeObj*. Estes atributos são:
 
 | Propriedade | Tipo    | Descrição                                                                                 |
 | ----------- | ------- | ----------------------------------------------------------------------------------------- |
@@ -4714,7 +4714,7 @@ O comando `VP SET COLUMN COUNT` <!-- REF #_method_.VP SET COLUMN COUNT.Summary -
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Pass the total number of columns in the *columnCount* parameter. *columnCount* deve ser superior a 0.
+Passe o número total de colunas no parâmetro *columnCount*. *columnCount* deve ser superior a 0.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the *columnCount* will be applied (counting begins at 0). Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
 
@@ -4884,7 +4884,7 @@ Case of
 
 #### Descrição
 
-O comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define o contexto de dados de uma folha<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. Por outro lado, o comando [VP Get data context](#vp-get-data-context) pode retornar um contexto contendo modificações de usuário.
+O comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define o contexto de dados de uma folha<!-- END REF -->. Um contexto de dados é um objeto ou uma coleção vinculada a uma planilha e cujo conteúdo pode ser usado para preencher automaticamente as células da planilha, seja usando uma opção de geração automática ou o método [VP SET BINDING PATH](#vp-set-binding-path). Por outro lado, o comando [VP Get data context](#vp-get-data-context) pode retornar um contexto contendo modificações de usuário.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -4906,7 +4906,7 @@ In *options*, you can pass an object that specifies additional options. As propr
 
 In *sheet*, pass the index of the sheet that will receive the data context. Se nenhum índice for passado, o contexto será aplicado à folha atual.
 
-If you export your document to an object using [VP Export to object](#vp-export-to-object), or to a 4DVP document using [VP EXPORT DOCUMENT](#vp-export-document), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. Para obter mais detalhes, consulte a descrição desses métodos.
+Se você exportar o documento para um objeto usando [VP Export to object](#vp-export-to-object) ou para um documento 4DVP usando [VP EXPORT DOCUMENT](#vp-export-document), a opção `includeBindingSource` permite copiar o conteúdo dos contextos atuais como valores de célula no objeto ou documento exportado. Para obter mais detalhes, consulte a descrição desses métodos.
 
 #### Exemplo
 
@@ -5143,7 +5143,7 @@ O comando `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->atribui um c
 
 Em *rangeObj*, passe um intervalo dá(s) célula(s) cujo valor pretende especificar. In *rangeObj*, pass a range of the cell(s) whose value you want to specify.
 
-The *field* parameter specifies a 4D database [virtual field](formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the *rangeObj*. The virtual structure name for *field* can be viewed in the formula bar. If any of the cells in *rangeObj* have existing content, it will be replaced by *field*.
+O parâmetro *field* especifica um [campo virtual](formulas.md#referencing-fields-using-the-virtual-structure) do banco de dados 4D a ser atribuído ao *rangeObj*. The virtual structure name for *field* can be viewed in the formula bar. If any of the cells in *rangeObj* have existing content, it will be replaced by *field*.
 
 The optional *formatPattern* defines a pattern for the *field* parameter. Você pode passar qualquer [formato personalizado](configuring.md#cell-format) válido.
 
@@ -6084,11 +6084,11 @@ O parâmetro opcional *formatPattern* define um [pattern](configuring.md#cell-fo
 
 O comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->atribui um valor especificado a um intervalo de células designado<!-- END REF -->.
 
-The command allows you to use a generic code to set and format the types of values in *rangeObj*, whereas other commands, such as [`VP SET TEXT VALUE`](#vp-set-text-value) and [`VP SET NUM VALUE`](#vp-set-num-value), reduce the values to specific types.
+O comando permite que você use um código genérico para definir e formatar os tipos de valores em *rangeObj*, enquanto outros comandos, como [`VP SET TEXT VALUE`](#vp-set-text-value) e [`VP SET NUM VALUE`](#vp-set-num-value)reduzem os valores a tipos específicos.
 
 Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) cujo valor você deseja especificar. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
-The parameter *valueObj* is an object that includes properties for the value and the [format](configuring.md#cell-format) to assign to *rangeObj*. Pode incluir as seguintes propriedades:
+O parâmetro *valueObj* é um objeto que inclui propriedades para o valor e o [formato](configuring.md#cell-format) a ser atribuído a *rangeObj*. Pode incluir as seguintes propriedades:
 
 | Propriedade | Tipo                                     | Descrição                                                                                                                                                             |
 | ----------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -6130,7 +6130,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 
 O comando `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary -->atribui uma coleção de valores começando no intervalo de células especificado<!-- END REF -->.
 
-In *rangeObj*, pass a range for the cell (created with [`VP Cell`](#vp-cell)) whose value you want to specify. The cell defined in the *rangeObj* is used to determine the starting point.
+Em *rangeObj*, passe um intervalo para a célula (criado com [`VP Cell`](#vp-cell)) cujo valor você deseja especificar. The cell defined in the *rangeObj* is used to determine the starting point.
 > * If *rangeObj* is not a cell range, only the first cell of the range is used.
 > * If *rangeObj* includes multiple ranges, only the first cell of the first range is used.
 
@@ -6207,7 +6207,7 @@ A tabela seguinte lista as opções de libro disponíveis:
 | allowUserResize                       | boolean                 | As colunas e as linhas podem ser redimensionadas                                                                                                                                                                                                                                   |
 | allowUserZoom                         | boolean                 | É permitido fazer zoom (ctrl + roda do rato)                                                                                                                                                                                                                                       |
 | autoFitType                           | number                  | O conteúdo é formatado para caber em células, ou células e cabeçalhos. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> O conteúdo ajusta-se automaticamente às células</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> O conteúdo ajusta automaticamente as células e os cabeçalhos</td></tr></table>                                                                                                                                                              |
-| backColor                             | string                  | A color string used to represent the background color of the area, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5". A cor de fundo inicial fica oculta quando uma backgroundImage é definida.                                                                                 |
+| backColor                             | string                  | Uma cadeia de cores usada para representar a cor de fundo da área, como "red" (vermelho), "#FFFF00", "rgb(255,0,0)", "Accent 5". A cor de fundo inicial fica oculta quando uma backgroundImage é definida.                                                                         |
 | backgroundImage                       | string / picture / file | Imagem de fundo para a área.                                                                                                                                                                                                                                                       |
 | backgroundImageLayout                 | number                  | Como é apresentada a imagem de fundo. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> No centro da zona.</td></tr><tr><td> vk image layout none </td><td>3</td><td> No canto superior esquerdo da área, com seu tamanho original.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Preenche a área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Mostrado com o seu rácio de aspeto original.</td></tr></table>                                                                                                                                                                                              |
 | calcOnDemand                          | boolean                 | As fórmulas só são calculadas quando são solicitadas.                                                                                                                                                                                                                              |

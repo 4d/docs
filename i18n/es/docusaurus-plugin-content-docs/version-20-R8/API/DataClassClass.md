@@ -910,7 +910,7 @@ attributePath|formula comparator value
 
 donde:
 
-- **attributePath**: ruta del atributo sobre el que se quiere ejecutar la búsqueda. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre".) En el caso de una ruta de atributos de tipo <code>Collection</code>, se utiliza la notación \[ ] para manejar todas las ocurrencias (por ejemplo "niños[ ].edad"). En el caso de una ruta de atributo cuyo tipo es `Collection`, se utiliza la notación `[]` para manejar todas las ocurrencias (por ejemplo `children[].age`).
+- **attributePath**: ruta del atributo sobre el que se quiere ejecutar la búsqueda. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre"). En el caso de una ruta de atributo cuyo tipo es `Collection`, se utiliza la notación `[]` para manejar todas las ocurrencias (por ejemplo `children[].age`).
 
 > \*No puede utilizar directamente atributos cuyo nombre contenga caracteres especiales como ".", "\[ ]", o "=", ">", "#"..., porque se evaluarán incorrectamente en la cadena de consulta. Si necesita consultar dichos atributos, debe considerar el uso de marcadores, que permiten un rango ampliado de caracteres en las rutas de los atributos (ver **Uso de marcadores de posición** *a continuación*)
 
@@ -1040,7 +1040,7 @@ No obtendrá el resultado esperado porque el valor null será evaluado por 4D co
 
 #### Not equal to null or undefined values
 
-The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+El comparador "no igual a *value*" (`#` o `!=`) no devuelve atributos cuyo valor es null o indefinido. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
 
 ```4d
 $notMarried:=ds.Person.query("info.married#true") //encuentra personas con valor de atributo false
@@ -1049,7 +1049,7 @@ $notMarried:=ds.Person.query("info.married#true") //encuentra personas con valor
 If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //encuentra atributos false, null e undefined
 ```
 
 #### No igual a en colecciones

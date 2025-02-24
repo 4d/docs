@@ -1102,7 +1102,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - *methodName*, o nome de um método projeto (texto).
 
-A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para cada elemento que cumpra o teste. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1273,7 +1273,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - ou *methodName*, o nome de um método projeto (texto).
 
-A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -2859,7 +2859,7 @@ Com o seguinte método ***Flatten***:
 
 #### Descrição
 
-A função `.remove()` <!-- REF #collection.remove(). Resumo -->remove um ou mais elemento(s) da posição *índice* especificada na coleção e retorna a coleção editada<!-- END REF -->.
+A função `.remove()` <!-- REF #collection.remove().Summary-->remove um ou mais elemento(s) da posição *índice* especificada na coleção e retorna a coleção editada<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 
@@ -2915,7 +2915,7 @@ Se tentar remover um elemento de uma coleção vazia, o método não faz nada (n
 
 #### Descrição
 
-The `.resize()` function <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
+A função `.resize()` <!-- REF #collection.resize().Summary -->define o comprimento da coleção para o novo tamanho especificado e retorna a coleção redimensionada<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 
@@ -2968,7 +2968,7 @@ Por padrão, novos elementos são preenchidos com valores **null**. Pode especif
 
 #### Descrição
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.reverse()` <!-- REF #collection.reverse().Summary -->retorna uma cópia profunda da coleção com todos os seus elementos em ordem inversa<!-- END REF -->. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 
 > Essa função não modifica a coleção original.
 
@@ -3006,7 +3006,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 #### Descrição
 
-The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
+A função `.shift()` <!-- REF #collection.shift().Summary -->remove o primeiro elemento da coleção e o retorna como o resultado da função<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 
@@ -3055,7 +3055,7 @@ A função `.slice()` <!-- REF #collection.slice().Summary -->retorna uma parte 
 
 > Essa função não modifica a coleção original.
 
-A coleção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se apenas for especificado o parâmetro *startFrom*, a coleção devolvida contém todos os elementos desde *startFrom* até ao último elemento da coleção original.
+A coleção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se *valor* for uma coleção, todos os elementos da coleção serão adicionados à coleção original
 
 - Se *startFrom* < 0, ele é recalculado como *startFrom:=startFrom+length* (é considerado como o deslocamento a partir do final da coleção).
 - Se o valor calculado < 0, *startFrom* é definido como 0.
@@ -3112,7 +3112,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - ou *methodName*, o nome de um método projeto (texto).
 
-A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para cada elemento que cumpra o teste. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -3184,7 +3184,7 @@ You want to know if at least one collection value is >0.
 
 #### Descrição
 
-The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection and also returns the sorted collection<!-- END REF --> .
+A função `.sort()` <!-- REF #collection.sort().Summary -->classifica os elementos da coleção original e também retorna a coleção classificada<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 

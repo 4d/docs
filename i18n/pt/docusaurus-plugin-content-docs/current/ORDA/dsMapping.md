@@ -3,7 +3,7 @@ id: dsmapping
 title: Objetos Data Model
 ---
 
-A tecnologia ORDA baseia-se em um mapeamento automático de uma estrutura de banco de dados subjacente. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). Como resultado, ORDA expõe todo o banco de dados como um conjunto de objetos de modelo de dados.
+A tecnologia ORDA baseia-se em um mapeamento automático de uma estrutura de banco de dados subjacente. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). Como resultado, ORDA expõe toda a base de dados como um conjunto de objetos de modelo de dados.
 
 ## Mapeamento da estrutura
 
@@ -224,7 +224,7 @@ No entanto, as propriedades de seleção de entidades são enumeráveis:
 
 #### Entity selections ordenadas ou não ordenadas
 
-Por razones de optimización, por defecto, 4D ORDA normalmente crea selecciones de entidades no ordenadas, excepto cuando utiliza el método `orderBy( )` o utiliza opciones específicas. Nesta documentação, a menos que especificado, "seleção de entidade" geralmente se refere a uma "seleção de entidade não ordenada".
+Por razones de optimización, por defecto, 4D ORDA normalmente crea selecciones de entidades no ordenadas, excepto cuando utiliza el método `orderBy( )` o utiliza opciones específicas. Nesta documentação, a menos que especificado, "entity selection" geralmente se refere a uma "entity selection não ordenada".
 
 As seleções das entidades ordenadas são criadas apenas quando necessárias ou quando solicitadas especificamente usando opções, ou seja, nos seguintes casos:
 

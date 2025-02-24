@@ -19,7 +19,7 @@ L'initialisation d'une combo box se fait exactement de la même manière que cel
 
 > Cette fonctionnalité n'est disponible que dans les projets 4D.
 
-Un [objet ](Concepts/dt_object.md) encapsulant une [collection ](../Concepts/dt_collection.md) peut être utilisé comme source de données d'une combo box. Cet objet doit avoir les propriétés suivantes :
+An [object](../Concepts/dt_object.md) encapsulating a [collection](../Concepts/dt_collection.md) can be used as the data source of a combo box. Cet objet doit avoir les propriétés suivantes :
 
 | Propriété      | Type                   | Description                                                                                                                                                                                                                                                                                      |
 | -------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -55,7 +55,7 @@ Les objets de type combo box acceptent deux options spécifiques :
 - [Insertion automatique](properties_DataSource.md#automatic-insertion) : permet d'ajouter automatiquement une valeur à la source de données lorsque l'utilisateur saisit une valeur qui ne se trouve pas dans la liste associée à la combo box.
 - `valeurs` Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
 
-> Utiliser une énumération Dans une interface, si un objet doit proposer une liste finie de valeurs obligatoires, il faut utiliser un objet de type [liste déroulante](dropdownList_Overview.md#overview).
+> Utiliser une énumération Utiliser une énumération Dans une interface, si un objet doit proposer une liste finie de valeurs obligatoires, il faut utiliser un objet de type [liste déroulante](dropdownList_Overview.md#overview).
 
 ## Propriétés prises en charge
 

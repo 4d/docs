@@ -60,7 +60,7 @@ Webサーバー用の TLS証明書ファイルが置かれているフォルダ�
 
 | 設定できる場所          | 名称                                                 | コメント |
 | ---------------- | -------------------------------------------------- | ---- |
-| webServer オブジェクト | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | テキスト |
+| webServer オブジェクト | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Text |
 
 セキュアプロトコルに使用される暗号リストです。Webサーバーが実装する暗号アルゴリズムの優先順位を設定します。 コロン区切りの文字列として設定できます (例: "ECDHE-RSA-AES128-...")。 詳細は Open SSL サイトの [ciphers ページ](https://www.openssl.org/docs/manmaster/man1/ciphers.html) を参照ください。
 
@@ -112,10 +112,10 @@ CORS を介したサーバーへのデータリクエスト送信が許可され
 
 ## デバッグログ
 
-| 設定できる場所          | 名称              | コメント |
-| ---------------- | --------------- | ---- |
-| webServer オブジェクト | `debugLog`      | 数値   |
-| `WEB SET OPTION` | `Web debug log` | 数値   |
+| 設定できる場所          | 名称              | コメント   |
+| ---------------- | --------------- | ------ |
+| webServer オブジェクト | `debugLog`      | number |
+| `WEB SET OPTION` | `Web debug log` | number |
 
 Webサーバーの HTTPリクエストログファイル (アプリケーションの "Logs" フォルダーに格納されている HTTPDebugLog_nn.txt (nn はファイル番号)) の状態を指定します。 このログファイルは、Webサーバーに関連する問題をデバッグするのに便利です。 ログには、各リクエスト・レスポンスが rawモードで記録されます。 ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
 
@@ -129,7 +129,7 @@ Webサーバーの HTTPリクエストログファイル (アプリケーショ�
 
 | 設定できる場所             | 名称                                                         | コメント              |
 | ------------------- | ---------------------------------------------------------- | ----------------- |
-| webServer オブジェクト    | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | テキスト              |
+| webServer オブジェクト    | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | Text              |
 | `WEB SET HOME PAGE` |                                                            | Webプロセス毎に異なる設定が可能 |
 | 設定ダイアログボックス         | 設定ページ / デフォルトホームページ                                        |                   |
 
@@ -169,21 +169,21 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 ## HTTPを有効化
 
-| 設定できる場所          | 名称                                                 | コメント |
-| ---------------- | -------------------------------------------------- | ---- |
-| webServer オブジェクト | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | ブール  |
-| `WEB SET OPTION` | `Web HTTP enabled`                                 |      |
-| 設定ダイアログボックス      | 設定ページ / HTTPを有効化                                   |      |
+| 設定できる場所          | 名称                                                 | コメント    |
+| ---------------- | -------------------------------------------------- | ------- |
+| webServer オブジェクト | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | boolean |
+| `WEB SET OPTION` | `Web HTTP enabled`                                 |         |
+| 設定ダイアログボックス      | 設定ページ / HTTPを有効化                                   |         |
 
 安全でない接続を Webサーバーが受け入れるかどうかを示します。
 
 ## HTTPSを有効にする
 
-| 設定できる場所          | 名称                                                   | コメント |
-| ---------------- | ---------------------------------------------------- | ---- |
-| webServer オブジェクト | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | ブール  |
-| `WEB SET OPTION` | `Web HTTPS enabled`                                  |      |
-| 設定ダイアログボックス      | 設定ページ / HTTPSを有効にする                                  |      |
+| 設定できる場所          | 名称                                                   | コメント    |
+| ---------------- | ---------------------------------------------------- | ------- |
+| webServer オブジェクト | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | boolean |
+| `WEB SET OPTION` | `Web HTTPS enabled`                                  |         |
+| 設定ダイアログボックス      | 設定ページ / HTTPSを有効にする                                  |         |
 
 Webサーバーがセキュアな接続を受け入れるか受け入れないかを指定します。 このオプションは [TLSプロトコル](Admin/tls.md) で説明しています。
 
@@ -239,11 +239,11 @@ HSTS によって、4D Webサーバーはブラウザーに対し、セキュア
 
 ## HTTP ポート
 
-| 設定できる場所          | 名称                                           | コメント |
-| ---------------- | -------------------------------------------- | ---- |
-| webServer オブジェクト | [`HTTPPort`](API/WebServerClass.md#httpport) | 数値   |
-| `WEB SET OPTION` | `Web port ID`                                |      |
-| 設定ダイアログボックス      | 設定ページ / HTTPポート                              |      |
+| 設定できる場所          | 名称                                           | コメント   |
+| ---------------- | -------------------------------------------- | ------ |
+| webServer オブジェクト | [`HTTPPort`](API/WebServerClass.md#httpport) | number |
+| `WEB SET OPTION` | `Web port ID`                                |        |
+| 設定ダイアログボックス      | 設定ページ / HTTPポート                              |        |
 
 HTTP接続を受け付ける IP (TCP) ポート番号。 デフォルトで、4D は通常の Web HTTPポート (TCPポート) 番号である 80番を使用して Webアプリケーションを公開します。 他の Webサービスによってこのポート番号が既に使用されている場合、4D が使用する HTTPポート番号を変更する必要があります。
 
@@ -265,11 +265,11 @@ HTTP接続を受け付ける IP (TCP) ポート番号。 デフォルトで、4D
 
 ## HTTPS ポート
 
-| 設定できる場所          | 名称                                             | コメント |
-| ---------------- | ---------------------------------------------- | ---- |
-| webServer オブジェクト | [`HTTPSPort`](API/WebServerClass.md#httpsport) | 数値   |
-| `WEB SET OPTION` | `Web HTTPS port ID`                            |      |
-| 設定ダイアログボックス      | 設定ページ / HTTPSポート                               |      |
+| 設定できる場所          | 名称                                             | コメント   |
+| ---------------- | ---------------------------------------------- | ------ |
+| webServer オブジェクト | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number |
+| `WEB SET OPTION` | `Web HTTPS port ID`                            |        |
+| 設定ダイアログボックス      | 設定ページ / HTTPSポート                               |        |
 
 TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォルトで HTTPSポート番号は 443です。 ポート番号に関する詳細については、[HTTP ポート](#http-ポート) を参照ください。
 
@@ -403,9 +403,9 @@ Webサーバーに処理を許可する HTTPリクエスト (POST) の最大サ�
 
 ## 最低TLSバージョン
 
-| 設定できる場所          | 名称                                                     | コメント |
-| ---------------- | ------------------------------------------------------ | ---- |
-| webServer オブジェクト | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | 数値   |
+| 設定できる場所          | 名称                                                     | コメント   |
+| ---------------- | ------------------------------------------------------ | ------ |
+| webServer オブジェクト | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | number |
 
 接続に必要な最低TLSバージョン。 これよりも低いバージョンのみをサポートするクライアントからの接続は拒否されます。
 

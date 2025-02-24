@@ -268,13 +268,13 @@ Aqui está uma explicação de cada linha do exemplo:
 - ALERT (($PointerTwo->)->)
   \--> A mesma coisa: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Por conseguinte ($PointerTwo-&#062;)-&#062; faz referência ao conteúdo de $MyVar.
 
-A seguinte linha coloca "Olá" em $MyVar:
+A seguinte linha coloca "Hello" em $MyVar:
 
 ```4d
 ($PointerTwo->)->:="Hello"
 ```
 
-A seguinte linha recebe "Olá" de $MyVar e coloca-o em $NewVar:
+A seguinte linha recebe "Hello" de $MyVar e coloca-o em $NewVar:
 
 ```
 $NewVar:=($PointerTwo->)->

@@ -222,7 +222,7 @@ title: 背景色と境界線
 
 ## 透過
 
-リストボックスの背景を透明にします。 When set, any [alternate background color](#alternate-background-color) or [background color](#background-color--fill-color) defined for the column is ignored.
+リストボックスの背景を透明にします。 このプロパティが有効になっていると、列に対して設定されている [交互に使用する背景色](#交互に使用する背景色) および [背景色](#背景色-塗りカラー) の設定は無視されます。
 
 #### JSON 文法
 
@@ -236,4 +236,4 @@ title: 背景色と境界線
 
 #### 参照
 
-[Background Color / Fill Color](#background-color--fill-color)
+[背景色/塗りカラー](#背景色-塗りカラー)

@@ -3,11 +3,11 @@ id: IncomingMessageClass
 title: IncomingMessage
 ---
 
-`4D.IncomingMessage` クラスを使用すると、カスタムの[**HTTP リクエストハンドラー**](../WebServer/http-request-handler.md) が受信したオブジェクトを管理できるようになります。 HTTP リクエストおよびそのプロパティは`4D.IncomingMessage` クラスのインスタンスとして自動的に受信されます。 GET 動詞とともにリクエストに直接渡された引数は[`.urlQuery`](#urlquery) プロパティで管理される一方、リクエストの本文に渡された引数は[`.getBlob()`](#getblob) あるいは [`getText()`](#gettext) といった関数を通して利用可能です。
+`4D.IncomingMessage` クラスを使用すると、カスタムの[**HTTP リクエストハンドラー**](../WebServer/http-request-handler.md) が受信したオブジェクトを管理できるようになります。  HTTP リクエストおよびそのプロパティは`4D.IncomingMessage` クラスのインスタンスとして自動的に受信されます。 GET 動詞とともにリクエストに直接渡された引数は[`.urlQuery`](#urlquery) プロパティで管理される一方、リクエストの本文に渡された引数は[`.getBlob()`](#getblob) あるいは [`getText()`](#gettext) といった関数を通して利用可能です。
 
-HTTP リクエストハンドラーはあらゆる値を返すことが可能です(あるいは返さないことも可能です)。 通常は、[`4D.OutgoingMessage`](OutgoingMessageClass.md) クラスのインスタンスを返します。
+HTTP リクエストハンドラーはあらゆる値を返すことが可能です(あるいは返さないことも可能です)。 通常は、[`4D.OutgoingMessage`](OutgoingMessageClass.md) クラスのインスタンスを返します。 通常は、[`4D.OutgoingMessage`](OutgoingMessageClass.md) クラスのインスタンスを返します。
 
-このクラスの全てのプロパティは読み出し専用です。 これらはリクエストハンドラーによって自動的に値が入れられます。
+このクラスの全てのプロパティは読み出し専用です。 これらはリクエストハンドラーによって自動的に値が入れられます。 これらはリクエストハンドラーによって自動的に値が入れられます。
 
 <details><summary>履歴</summary>
 
@@ -32,7 +32,7 @@ HTTP リクエストハンドラーはあらゆる値を返すことが可能で
 ]
 ```
 
-`http://127.0.0.1/start/example?param=demo&name=4D` リクエストが、`GET` 動詞とともにブラウザ内で実行されます。 このリクエストは、以下の*GeneralHandling* シングルトンクラスの*gettingStarted* 関数によって管理されます:
+`http://127.0.0.1/start/example?param=demo&name=4D` リクエストが、`GET` 動詞とともにブラウザ内で実行されます。 このリクエストは、以下の*GeneralHandling* シングルトンクラスの*gettingStarted* 関数によって管理されます: このリクエストは、以下の*GeneralHandling* シングルトンクラスの*gettingStarted* 関数によって管理されます:
 
 ```4d
 shared singleton Class constructor()
@@ -59,7 +59,7 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ```
 
-The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
+このリクエストはサーバー上では\*$request\* として受信されます。これは`4D.IncomingMessage` クラスのインスタンスのオブジェクトです。
 
 レスポンスのヘッダーは以下のようになります:
 
@@ -240,7 +240,7 @@ $value := $request.getHeader("content-type")
 
 `.headers` プロパティは、読み出し専用です。
 
-ヘッダー名(キー)は全て小文字となっています。 ヘッダー名は全て大文字・小文字は区別されます。
+ヘッダー名(キー)は全て小文字となっています。 ヘッダー名は全て大文字・小文字は区別されます。 ヘッダー名は全て大文字・小文字は区別されます。
 
 <!-- END REF -->
 

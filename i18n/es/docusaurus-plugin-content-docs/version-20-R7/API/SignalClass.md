@@ -193,7 +193,7 @@ Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera e
 
 > **Atención**: la llamada a `.wait( )` sin un *timeout* en el proceso principal de 4D no es recomendable porque podría congelar toda la aplicación 4D.
 
-Si la señal ya está en estado de señalización (es decir, la propiedad `.signaled` ya es **true**), la función vuelve inmediatamente, sin esperar.
+If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
 La función devuelve el valor de la propiedad `.signaled`. Evaluar este valor permite saber si la función retornó porque el `.trigger( )` ha sido llamado (`.signaled` es **true**) o si el *timeout* expiró (`.signaled` es **false**).
 

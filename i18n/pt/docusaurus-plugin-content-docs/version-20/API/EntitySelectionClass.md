@@ -154,7 +154,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 *index* pode ser qualquer número entre 0 e `.length`-1.
 
 *   Se *index* está fora do intervalo, se devolve um erro.
-*   Se *index* corresponder a uma entidade descartada, um valor Null será retornado.
+*   If *attributeName* kind is `storage`: `.attributeName` returns a collection of values of the same type as *attributeName*.
 
 :::caution
 
@@ -209,7 +209,7 @@ Quaalquer atributo de dataclass pode ser usado como um apropriedade de uma sele�
 
 *   Se o "kind" de *attributeName* é `storage`: `.attributeName` devolve uma coleção de valores do mesmo tipo que *attributeName*.
 *   If *attributeName* kind is `relatedEntity`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
-*   Se *attributeName* type é `relatedEntities`: `.attributeName` retorna uma nova seleção de entidade de valores relacionados do mesmo tipo como *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
+*   If *attributeName* kind is `relatedEntities`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
 
 
 Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned.

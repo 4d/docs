@@ -235,7 +235,7 @@ Essa sintaxe irá iterar por cada *propriedade* do *objeto*. A porção de códi
 
 O parâmetro *entity* é uma variável objeto da classe entity selection.
 
-O número de loops é baseado no número de entidades da seleção de entidades. Em cada iteração, a variável do objeto *entity* é automaticamente preenchida com a entidade correspondente da entity selection.
+O número de loops é baseado no número de entidades na entity selection. Em cada iteração, a variável do objeto *entity* é automaticamente preenchida com a entidade correspondente da entity selection.
 
 #### Exemplo com uma tabela html
 
@@ -323,7 +323,7 @@ Em caso de erro durante a interpretação, o texto inserido será no formulário
 
 #### Sintaxe alternativa: `$4DHTML(expressão)`
 
-Como a tag `4DTEXT` , esta tag permite avaliar uma variável 4D ou expressão que retorne um valor e inseri-la como uma expressão HTML. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
+Como a tag `4DTEXT` , esta tag permite avaliar uma variável 4D ou expressão que retorne um valor e inseri-la como uma expressão HTML. Diferente da tag `4DTEXT` , esta tag não escapa de caracteres especiais do HTML (por exemplo, ">").
 
 Por exemplo, aqui estão os resultados do processamento da variável de texto 4D myvar com as tags disponíveis:
 
@@ -345,7 +345,7 @@ Usado com os comentários `<!--#4DELSEIF-->` (opcional), `<! -#4DELSE-->` (opcio
 O parâmetro *expression* pode conter qualquer expressão 4D válida que retorne um valor booleano. Deve ser indicado entre parênteses e estar em conformidade com as regras da sintaxe 4D.
 
 
-In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
+Os blocos `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` podem ser aninhados em vários níveis. Como em 4D, cada `<!--#4DIF expression-->` deve corresponder com `<!--#4DENDIF-->`.
 
 Em caso de erro de interpretação, o texto "`<! -#4DIF expression-->`: uma expressão booliana foi esperada" é inserida em vez do conteúdo localizado entre `<! -#4DIF -->` e `<!--#4DENDIF-->`. Da mesma forma, se não houver tantos `<!--#4DENDIF-->` como `<! -#4DIF -->`, o texto "`<! -#4DIF expression-->`: 4DENDIF esperado" é inserido ao invés do conteúdo localizado entre `<! -#4DIF -->` e `<!--#4DENDIF-->`.
 
@@ -390,8 +390,10 @@ Este exemplo de código inserido em uma página HTML estática exibe um rótulo 
 ```html
 <BODY>
 ...
-<!--#4DIF (vname#"")--> Names starting with <!--#4DTEXT vname-->.
-<!--#4DELSE--> No name has been found.
+<!--#4DIF (vname#"")-->
+Names starting with <!--#4DTEXT vname-->.
+<!--#4DELSE-->
+No name has been found.
 <!--#4DENDIF-->
 ...
 </BODY>
@@ -609,7 +611,7 @@ Podem ser mostradas as seguintes mensagens:
 
 #### Sintaxe: `<!--#4DSCRIPT/MethodName/MyParam-->`
 
-A etiqueta `4DSCRIPT` permite que você execute métodos 4D ao processar o modelo. A presença da tag `<!--#4DSCRIPT/MyMethod/MyParam-->` como um comentário HTML inicia a execução do método `MyMethod` com o parâmetro `Param` como uma string em `$1`.
+A etiqueta `4DSCRIPT` permite que você execute métodos 4D ao processar o modelo. A presença da etiqueta `<!--#4DSCRIPT/MyMethod/MyParam-->` como um comentário HTML inicia a execução do método `MyMethod` com o parâmetro `Param` como uma string em `$1`.
 
 > Se a etiqueta for chamada no contexto de um processo Web, quando a página for carregada, 4D chamará o método de banco de dados `On Web Authentication` (se existir). Se retornar True, 4D executa o método.
 
@@ -711,7 +713,7 @@ Os seguintes exemplos mostram o resultado do processamento dependendo da sintaxe
  myName:="<!--#4DHTML QUIT 4D-->" // inserto malicioso
  input:="My name is: <!--#4DHTML myName-->"
  PROCESS 4D TAGS(input;output)
-  //4D vai sair!
+  //4D vai fechar!
 ```
 
 ```4d

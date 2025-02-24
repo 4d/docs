@@ -2435,7 +2435,7 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 | ---------- | ------- |:--:| --------------------------------------------------------------------------------------- |
 | startFrom  | Integer | -> | Índice para iniciar la prueba en                                                        |
 | methodName | Text    | -> | Nombre del método a llamar para la prueba                                               |
-| param      | Mixto   | -> | Parámetro(s) a pasar a *methodName*                                                     |
+| param      | Mixed   | -> | Parámetro(s) a pasar a *methodName*                                                     |
 | Resultado  | Boolean | <- | True si al menos un elemento ha superado la prueba con éxito|<!-- END REF -->
 
 |

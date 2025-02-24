@@ -11,7 +11,7 @@ When developing in 4D, the component files can be transparently stored in your c
 
 ## Componentes interpretados e compilados
 
-Os componentes podem ser interpretados ou [compilados](../Desktop/building.md).
+Components can be interpreted or [compiled](../Desktop/building.md).
 
 - A 4D project running in interpreted mode can use either interpreted or compiled components.
 - A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.

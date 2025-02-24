@@ -501,7 +501,7 @@ Quando o método, classe ou função é validado, 4D verifica:
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-> If you click on an enclosing character in the code, 4D indicates its match with gray rectangles by default. You can modify the way 4D indicates matching enclosing characters or disable this feature in **Preferences** > **Methods** > **Options** > **Matching parentheses**.
+> If you click on an enclosing character in the code, 4D indicates its match with gray rectangles by default. Você pode modificar a maneira como 4D indica os caracteres correspondentes ou desativar esse recurso em **Preferências** > **Métodos** > **Opções** > **Parenteses correspondentes**.
 
 The Code Editor can only check for obvious syntax errors (misspellings and the like). Não verifica os erros que só ocorrem durante a execução. Erros de execução são capturados por 4D quando o código é executado.
 

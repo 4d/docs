@@ -3,7 +3,7 @@ id: text
 title: Text
 ---
 
-A text object allows you to display static written content (*e.g.*, instructions, titles, labels, etc.) on a form. Ces zones de texte statique peuvent devenir dynamiques lorsqu'elles incluent des références dynamiques. Pour plus d'informations, reportez-vous à la section [Utiliser des références dans les textes statiques](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html).
+A text object allows you to display static written content (*e.g.*, instructions, titles, labels, etc.) on a form. Ces zones de texte statique peuvent devenir dynamiques lorsqu'elles incluent des références dynamiques. Ces zones de texte statique peuvent devenir dynamiques lorsqu'elles incluent des références dynamiques.
 
 #### Exemple JSON :
 

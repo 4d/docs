@@ -17,11 +17,11 @@ La valeur par défaut ne peut être utilisée que si le [type de source de donn�
 
 4D fournit des balises pour générer des valeurs par défaut pour la date, l'heure et le numéro de séquence. La date et l'heure proviennent de la date et de l'heure du système. 4D génère automatiquement les numéros de séquence nécessaires. Le tableau ci-dessous indique la balise à utiliser pour générer automatiquement des valeurs par défaut :
 
-| Balise | Description        |
-| ------ | ------------------ |
-| #D     | Date courante      |
-| #H     | Heure courante     |
-| #N     | Numéro de séquence |
+| Stamp | Description        |
+| ----- | ------------------ |
+| #D    | Date courante      |
+| #H    | Heure courante     |
+| #N    | Numéro de séquence |
 
 Vous pouvez utiliser un numéro de séquence pour créer un numéro unique pour chaque enregistrement de la table dans le fichier de données courant. Un numéro de séquence est un entier qui est généré pour chaque nouvel enregistrement. Les numéros commencent à un (1) et s'incrémentent de un (1). Un numéro de séquence n'est jamais répété, même si l'enregistrement auquel il est attribué est supprimé de la table. Chaque table possède son propre compteur interne de numéros de séquence. Pour plus d'informations, voir le paragraphe [Autoincrement](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029).
 

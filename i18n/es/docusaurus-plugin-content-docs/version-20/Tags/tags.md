@@ -349,7 +349,7 @@ Utilizado con los comentarios `<!--#4DELSEIF-->` (opcional), `<!--#4DELSE-->` (o
 El parámetro *expresión* puede contener toda expresión 4D válida que devuelva un valor booleano. Debe indicarse entre paréntesis y cumplir con las reglas de sintaxis de 4D.
 
 
-In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
+Los bloques `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` pueden ser anidados en varios niveles. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
 
 En caso de un error de interpretación, se inserta el texto "`<!--#4DIF expression-->`: Se esperaba una expresión booleana" en lugar del contenido situado entre `<!--#4DIF -->` y `<!--#4DENDIF-->`. The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
 

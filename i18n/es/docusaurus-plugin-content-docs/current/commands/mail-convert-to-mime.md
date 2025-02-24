@@ -87,7 +87,7 @@ $mime:=MAIL Convert to MIME($mail)
 
 #### Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1604                                                                |
-| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1604                            |
+| Hilo seguro       | &amp;check; |

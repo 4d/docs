@@ -223,10 +223,10 @@ Si debe referirse al cuarto elemento del array utilizando el puntero, haga lo si
 Puede pasar un puntero como parámetro de un método. Dentro del método, puede modificar el objeto referenciado por el puntero. Por ejemplo, el siguiente método, `takeTwo`, toma dos parámetros que son punteros. Cambia el objeto referenciado por el primer parámetro a caracteres en mayúsculas, y el objeto referenciado por el segundo parámetro a caracteres en minúsculas. Este es el método del proyecto:
 
 ```4d
-  //takeTwo project method
-  //$changeUp – Pointer to a string field or variable. Change this to uppercase.
-  //$changeLow – Pointer to a string field or variable. Change this to lowercase.
- #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
+  //método proyecto takeTwo
+  //$changeUp - Puntero a un campo cadena o variable. Cámbielo a mayúsculas.
+  //$changeLow - Puntero a un campo o variable cadena. Cámbielo a minúsculas.
+ #DECLARE($changeUp : Puntero ; $changeLow : Pointer)
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)
 ```

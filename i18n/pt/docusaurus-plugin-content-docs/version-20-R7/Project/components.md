@@ -11,7 +11,7 @@ When developing in 4D, the component files can be transparently stored in your c
 
 ## Componentes interpretados e compilados
 
-Os componentes podem ser interpretados ou [compilados](../Desktop/building.md). A pasta do pacote de um componente pode conter:
+Components can be interpreted or [compiled](../Desktop/building.md). A pasta do pacote de um componente pode conter:
 
 - either a [Project folder](../Project/architecture.md) named with a **.4dbase** suffix (interpreted component)
 - ou um arquivo .4DZ (componente compilado)

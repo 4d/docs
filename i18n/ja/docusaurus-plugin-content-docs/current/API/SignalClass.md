@@ -189,9 +189,9 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 `.wait( )` 関数は、<!-- REF #SignalClass.wait().Summary -->シグナルオブジェクトの`.signaled` が**true** になるか、`timeout` で指定したタイムアウト時間が経過するまで、待機します<!-- END REF -->。
 
-コード実行のブロッキングを防ぐため、*timeout* 引数に最大の待機時間を秒単位で渡すことができます。 小数の値も指定可能です。
+コード実行のブロッキングを防ぐため、*timeout* 引数に最大の待機時間を秒単位で渡すことができます。 小数点以下も指定可能です。
 
-Signal がすでにシグナルされている (つまり `signaled` プロパティが **true** になっている) 状態であった場合、この関数は待機をせずに即座に実行を戻します。
+If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
 この関数は .signaled プロパティの値を返します:
 

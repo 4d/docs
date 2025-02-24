@@ -49,12 +49,12 @@ title: ピクチャーボタン
 
 次のモードを選択することができます:
 
-- [Loop back to first frame](properties_Animation.md#loop-back-to-first-frame)
+- [先頭フレームに戻る](properties_Animation.md#先頭フレームに戻る)
 - [マウスアップで戻る](properties_Animation.md#マウスアップで戻る)
 - [ロールオーバー効果](properties_Animation.md#ロールオーバー効果)
 - [マウス押下中は自動更新](properties_Animation.md#マウス押下中は自動更新)
 - [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用)
-- [Switch every x ticks](./properties_Animation.md#switch-every-x-ticks)
+- [アニメーション間隔 (tick)](./properties_Animation.md#アニメーション間隔-tick)
 
 > ピクチャーボタンに [関連付けた変数](properties_Object.md#変数あるいは式) は、ピクチャーのサムネールテーブルで現在表示されているピクチャーのインデックス番号を返します。  このテーブル内のピクチャー番号は 0 から始まります。
 

@@ -181,7 +181,7 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 #### Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1470                                                                |
-| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1470                            |
+| Hilo seguro       | &amp;check; |

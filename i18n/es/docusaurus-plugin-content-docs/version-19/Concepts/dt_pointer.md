@@ -87,7 +87,7 @@ Con:
 
 :::warning punteros Null
 
-Intentar asignar o leer un puntero null (también conocido como "nil") producirá un error en tiempo de ejecución. Por ejemplo:
+Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Por ejemplo:
 
 ```4d
 var $p : Puntero // Puntero no inicializado (Valor Nil)
@@ -95,7 +95,7 @@ $v:=$p-> // error
 $p->:=$v // error
 ```
 
-Para prevenir tales errores, puede escribir:
+To prevent such errors, you can write:
 
 ```4d
 If ($p#Null)

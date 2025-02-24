@@ -26,15 +26,15 @@ displayed_sidebar: docs
 
 #### 説明
 
-<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.**FORM EDIT** コマンドは*aTable* 引数で指定したテーブルに関連づけられている、*form* 引数で指定したフォームを4D フォームエディターで開きます。オプションとして、*object* 引数で指定したフォームオブジェクトを選択した状態で開くこともできます。 このとき、デザイン環境へのアクセスが必要である点に注意してください。ない場合には、エラー -9804("フォームを開けません")エラーが生成されます。 このとき、デザイン環境へのアクセスが必要である点に注意してください。ない場合には、エラー -9804("フォームを開けません")エラーが生成されます。 このとき、デザイン環境へのアクセスが必要である点に注意してください。ない場合には、エラー -9804("フォームを開けません")エラーが生成されます。 このとき、デザイン環境へのアクセスが必要である点に注意してください。ない場合には、エラー -9804("フォームを開けません")エラーが生成されます。 このとき、デザイン環境へのアクセスが必要である点に注意してください。ない場合には、エラー -9804("フォームを開けません")エラーが生成されます。 このとき、デザイン環境へのアクセスが必要である点に注意してください。ない場合には、エラー -9804("フォームを開けません")エラーが生成されます。
+<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->**FORM EDIT** コマンドは *aTable* 引数で指定したテーブルに関連づけられている、*form* 引数で指定したフォームを4D フォームエディターで開きます。オプションとして、*object* 引数で指定したフォームオブジェクトを選択した状態で開くこともできます。 このとき、デザイン環境へのアクセスが必要である点に注意してください。ない場合には、エラー -9804("フォームを開けません")エラーが生成されます。
 
 このコマンドは非同期です。つまりこのコマンドは呼び出されたあとすぐに呼び出し元メソッドへと戻り、フォームが開かれるのを待つことはしないということです。
 
-任意の*aTable* 引数を渡した場合、そのテーブルに関連づけられたフォームを*form* 引数で指定します。 この引数を省略した場合、*form* 引数はプロジェクトフォームであることを指定します。 任意の*aTable* 引数を渡した場合、そのテーブルに関連づけられたフォームを*form* 引数で指定します。 この引数を省略した場合、*form* 引数はプロジェクトフォームであることを指定します。 この引数を省略した場合、*form* 引数はプロジェクトフォームであることを指定します。
+任意の*aTable* 引数を渡した場合、そのテーブルに関連づけられたフォームを *form* 引数で指定します。 この引数を省略した場合、 *form* 引数はプロジェクトフォームであることを指定します。
 
-*form* 引数には、4D フォームエディターで開くフォームの名前を渡します。 存在しない名前を渡した場合、エラー 81("フォームが見つかりません")が生成されます。 存在しない名前を渡した場合、エラー 81("フォームが見つかりません")が生成されます。 存在しない名前を渡した場合、エラー 81("フォームが見つかりません")が生成されます。 存在しない名前を渡した場合、エラー 81("フォームが見つかりません")が生成されます。 存在しない名前を渡した場合、エラー 81("フォームが見つかりません")が生成されます。 存在しない名前を渡した場合、エラー 81("フォームが見つかりません")が生成されます。
+*form* 引数には、 4D フォームエディターで開くフォームの名前を渡します。 存在しない名前を渡した場合、エラー 81("フォームが見つかりません")が生成されます。
 
-オプションとして、引数にフォームオブジェクト名またはグループ名を渡すことで、4D フォームエディター内でそれ(またはそれら)を自動的に選択された状態にします。 この機能を使用することで、例えば、[`Compile project`](compile-project.md) から返された式のエラーに基づいたフォームをデバッグする場合などに時間を節約できます。 この機能を使用することで、例えば、[`Compile project`](compile-project.md) から返された式のエラーに基づいたフォームをデバッグする場合などに時間を節約できます。
+オプションとして、引数にフォームオブジェクト名またはグループ名を渡すことで、 4D フォームエディター内でそれ(またはそれら)を自動的に選択された状態にします。 この機能を使用することで、例えば、[`Compile project`](compile-project.md) から返された式のエラーに基づいたフォームをデバッグする場合などに時間を節約できます。
 
 *form* のフォーム内にて*object* 引数で指定したフォームオブジェクトが見つからない場合でも、フォームは開かれエラーは特に返されません。
 

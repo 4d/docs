@@ -299,7 +299,7 @@ $sellist2:=$sellist2.add($sellist1)
 La función `.and()` <!-- REF #EntitySelectionClass.and().Summary -->combina la entity selection con un parámetro *entity* o *entitySelection* utilizando el operador lógico AND<!-- END REF -->; devuelve una nueva entity selection desordenada que contiene sólo las entidades a las que se hace referencia tanto en la entity selection como en el parámetro.
 
 - Si pasa *entity* como parámetro, se combina esta entidad con la entity selection. Si la entidad pertenece a la entity selection, se devuelve una nueva entity selection que sólo contiene la entidad. En caso contrario, se devuelve una selección de entidades vacía.
-- Si se pasa *entitySelection* como parámetro, se combinan ambas selecciones de entidades. Se devuelve una nueva entity selection que contiene sólo las entidades referenciadas en ambas selecciones. En caso contrario, se devuelve una nueva entity selection que contiene la entity selection original y la entidad.
+- Si se pasa *entitySelection* como parámetro, se combinan ambas selecciones de entidades. If the entity belongs to the entity selection, a new reference to the entity selection is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
 
 > Puede comparar las [entity selections ordenadas y/o desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). La selección resultante es siempre desordenada.
 
@@ -1500,7 +1500,7 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 La función `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combina la entity selection con el parámetro *entity* o *entitySelection* utilizando el operador lógico OR (no exclusivo)<!-- END REF -->; devuelve una nueva entity selection desordenada que contiene todas las entidades de la entity selection y el parámetro.
 
-- Si se pasa como parámetro *entity*, se compara esta entidad con la selección de entidades. Se devuelve una nueva selección de entidades que contiene sólo las entidades a las que se hace referencia en ambas selecciones. En caso contrario, se devuelve una nueva entity selection que contiene la entity selection original y la entidad.
+- Si se pasa como parámetro *entity*, se compara esta entidad con la selección de entidades. Se devuelve una nueva selección de entidades que contiene sólo las entidades a las que se hace referencia en ambas selecciones. A new entity selection that contains only the entities that are referenced in both selections is returned.
 - Si se pasa *entitySelection* como parámetro, se comparan las entity selections. Una nueva entity selection que contiene las entidades pertenecientes a la selección de entidades original o *entitySelection* es devuelta (o no es exclusiva, las entidades referenciadas en ambas selecciones no se duplican en la selección resultante).
 
 > Puede comparar las [entity selections ordenadas y/o desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). La selección resultante es siempre desordenada.

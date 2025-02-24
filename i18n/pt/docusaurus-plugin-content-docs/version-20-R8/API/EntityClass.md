@@ -3,7 +3,7 @@ id: EntityClass
 title: Entity
 ---
 
-An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. Contém os mesmos atributos que o dataclass assim como os valores de dados e propriedades e funções específicas.
+Uma [entity](ORDA/dsMapping.md#entity) é uma instância de uma [Dataclass](ORDA/dsMapping.md#dataclass), como um registro da tabela que corresponde à dataclass em seu datastore associado. Contém os mesmos atributos que o dataclass assim como os valores de dados e propriedades e funções específicas.
 
 ### Resumo
 
@@ -98,9 +98,9 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 #### Descrição
 
-The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->.
+A função `.clone()` <!-- REF #EntityClass.clone().Summary -->cria na memória uma nova entidade referenciando o mesmo registro que a entidade original<!-- END REF -->.
 
-Esta função permite que você atualize as entidades separadamente. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
 
 > Tenha em mente que quaisquer modificações feitas em entidades serão salvas no registro referenciado somente quando a função [`.save()`](#save) for executada.
 
@@ -346,7 +346,7 @@ vCompareResultado1 (todas as diferenças são devolvidas):
 
 #### Descrição
 
-The `.drop()` function <!-- REF #EntityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note-se que a entidade permanece na memória.
+A função `.drop()` <!-- REF #EntityClass.drop().Summary -->exclui os dados contidos na entidade do armazenamento de dados<!-- END REF -->, da tabela relacionada à sua classe de dados. Note-se que a entidade permanece na memória.
 
 In a multi-user or multi-process application, the `.drop()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
 
@@ -866,7 +866,7 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 #### Descrição
 
-The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. Caso contrário, devolve False.
+A função `.isNew()` <!-- REF #EntityClass.isNew().Summary --> retorna True se a entidade à qual ela é aplicada tiver acabado de ser criada e ainda não tiver sido salva no repositório de dados<!-- END REF -->. Caso contrário, devolve False.
 
 #### Exemplo
 
@@ -906,7 +906,7 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 
 #### Descrição
 
-The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
+A função `.last()` <!-- REF #EntityClass.last().Summary -->retorna uma referência à entidade na última posição da seleção de entidades à qual a entidade pertence<!-- END REF -->.
 
 Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja, [.getSelection( )](#getselection) retorna Null), a função retorna um valor Null.
 
@@ -1064,7 +1064,7 @@ Exemplo com a opção `dk reload if stamp changed`:
 
 #### Descrição
 
-The `.next()` function <!-- REF #EntityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
+A função `.next()` <!-- REF #EntityClass.next().Summary -->retorna uma referência à próxima entidade na seleção de entidades à qual a entidade pertence<!-- END REF -->.
 
 Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja, [.getSelection()](#getselection) retorna Null), a função retorna um valor Null.
 
@@ -1107,7 +1107,7 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 
 #### Descrição
 
-The `.previous()` function <!-- REF #EntityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
+A função `.previous()` <!-- REF #EntityClass.previous().Summary --> retorna uma referência à entidade anterior na seleção de entidades à qual a entidade pertence<!-- END REF -->.
 
 Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja, [.getSelection()](#getselection) retorna Null), a função retorna um valor Null.
 
@@ -1149,7 +1149,7 @@ Se não houver nenhuma entidade anterior válida na seleção da entidade (ou se
 
 #### Descrição
 
-The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. A recarga só é feita se a entidade ainda existir com a mesma chave primária.
+A função `.reload()` <!-- REF #EntityClass.reload().Summary -->recarrega o conteúdo da entidade na memória<!-- END REF -->, de acordo com as informações armazenadas na tabela relacionada à classe de dados no datacastore. A recarga só é feita se a entidade ainda existir com a mesma chave primária.
 
 **Resultado**
 
@@ -1216,9 +1216,9 @@ The object returned by `.reload( )` contains the following properties:
 
 A função `.save()` <!-- REF #EntityClass.save().Summary -->salva as alterações feitas na entidade<!-- END REF --> na tabela relacionada à sua classe de dados. na tabela relacionada para a dataClass Deve salvar este método depois de criar ou modificar uma entidade se quiser salvar as mudanças feitas nela.
 
-The save operation is executed only if at least one entity attribute has been "touched" (see the [`.touched()`](#touched) and [`.touchedAttributes()`](#touchedattributes) functions). Senão a função não faz nada (o trigger não é ativado)
+A operação de salvamento é executada somente se pelo menos um atributo de entidade tiver sido "tocado" (consulte as funções [`.touched()`](#touched) e [`.touchedAttributes()`](#touchedattributes)). Senão a função não faz nada (o trigger não é ativado)
 
-In a multi-user or multi-process application, the `.save()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
+Em uma aplicação multi-usuário ou multi-processo, a função `.save()` é executada sob um mecanismo de ["bloqueio otimista"](ORDA/entities.md#entity-locking), onde um selo de bloqueio interno é automaticamente incrementado cada vez que o registro é salvo.
 
 By default, if the *mode* parameter is omitted, the method will return an error (see below) whenever the same entity has been modified by another process or user in the meantime, no matter the modified attribute(s).
 
@@ -1358,7 +1358,7 @@ A função `.toObject()` <!-- REF #EntityClass.toObject().Summary -->retorna um 
 If no filter is specified, or if the *filterString* parameter contains an empty string or "\*", the returned object will contain:
 
 - todos os atributos de entidade de armazenagem
-- attributes of the `relatedEntity` [kind](DataClassClass.md#attributename): you get a property with the same name as the related entity (name of the many-to-one link). Atributo é extraido com um formulário simples.
+- atributos de [kind](DataClassClass.md#attributename) `relatedEntity`: você obtém uma propriedade com o mesmo nome da entidade relacionada (nome do link de muitos para um). Atributo é extraido com um formulário simples.
 - atributos de `relatedEntities` [kind](DataClassClass.md#attributename): o atributo não é retornado.
 
 No primeiro par|âmetro, passa os atributos entidade a extrair. Pode passar:
@@ -1639,7 +1639,7 @@ Retorna:
 
 #### Descrição
 
-The `.touched()` function <!-- REF #EntityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
+A função `.touched()` <!-- REF #EntityClass.touched().Summary -->testa se um atributo de entidade foi ou não modificado desde que a entidade foi carregada na memória ou salva<!-- END REF -->.
 
 Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. Pode usar essa função para determinar se precisar salvar a entidade.
 
@@ -1685,7 +1685,7 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 
 #### Descrição
 
-The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
+A função `.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary --> retorna os nomes dos atributos que foram modificados desde que a entidade foi carregada na memória<!-- END REF -->.
 
 Isso se aplica para atributos [kind](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
 
@@ -1760,7 +1760,7 @@ Nesse modo:
 
 #### Descrição
 
-The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF --> in the datastore and table related to its dataclass.
+A função `.unlock()` <!-- REF #EntityClass.unlock().Summary -->remove o bloqueio pessimista do registro correspondente à entidade<!-- END REF --> no armazenamento de dados e na tabela relacionada à sua dataclass.
 
 > Para mais informações, consulte a seção [Bloqueio de entidades](ORDA/entities.md#entity-locking).
 

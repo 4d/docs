@@ -487,7 +487,7 @@ El campo <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" de la 
 
 <!-- REF #WebServerClass.sessionCookieName.Syntax -->**.sessionCookieName** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->.
+El <!-- REF #WebServerClass.sessionCookieName.Summary -->nombre de la cookie utilizada para almacenar el ID de sesión<!-- END REF -->.
 
 *Propiedad de sólo lectura*
 

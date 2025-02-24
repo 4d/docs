@@ -225,7 +225,7 @@ Quanto tiver [criado um conjunto de entidade](#creating-and-managing-entity-set)
  `` `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer ``
 
 
-## Vendo um atributo imagem
+## Vendo um atributo de imagem
 
 Se quiser ver um atributo de imagem integralmente, escreva o abaixo:
 

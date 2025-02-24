@@ -112,7 +112,7 @@ Voici la séquence des appels de callbacks :
 1. `onData` et `onDataError` sont exécutés une ou plusieurs fois
 2. s'il est appelé, `onError` est exécuté une fois (arrête le traitement du system worker)
 3. si aucune erreur ne s'est produite, `onResponse` est exécuté une fois
-4. `onTerminate` est toujours exécuté
+4. `onTerminate` is always executed
 
 :::info
 

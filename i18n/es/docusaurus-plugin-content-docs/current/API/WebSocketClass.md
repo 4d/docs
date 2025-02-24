@@ -112,7 +112,7 @@ Esta es la secuencia de llamadas de retorno:
 1. `onOpen` se ejecuta una vez
 2. Cero o varios `onMessage` son ejecutados
 3. Cero o un `onError` es ejecutado (detiene el procesamiento)
-4. `onTerminate` se ejecuta siempre una vez
+4. `onTerminate` is always executed
 
 #### Ejemplo
 

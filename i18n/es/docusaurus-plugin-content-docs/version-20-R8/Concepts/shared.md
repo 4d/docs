@@ -3,11 +3,11 @@ id: shared
 title: Objetos y colecciones compartidos
 ---
 
-**Shared objects** and **shared collections** are specific [objects](./dt_object.md) and [collections](./dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
+**Shared objects** and **shared collections** are specific [objects](./dt_object.md) and [collections](./dt_collection.md) whose contents are shared between processes. A diferencia de las [variables interproceso](./variables.md#interprocess-variables), los objetos compartidos y las colecciones compartidas tienen la ventaja de ser compatibles con los **procesos 4D apropiativos**: pueden pasarse por referencia como parámetros a comandos como [`New process`](../commands-legacy/new-process.md) o [`CALL WORKER`](../commands-legacy/call-worker.md).
 
 Shared objects and shared collections are stored in standard [`Object`](./dt_object.md) and [`Collection`](./dt_collection.md) type variables, but must be instantiated using specific commands:
 
-- to create a shared object, use the [`New shared object`](../commands-legacy/new-shared-object.md) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](./classes.md#shared-classes),
+- para crear un objeto compartido, utilice el comando [`New shared object`](../commands-legacy/new-shared-object.md) o llama a la función [`new()`](../API/ClassClass.md#new) de una [clase compartida](./classes.md#shared-classes),
 - para crear una colección compartida, utilice el comando [`New shared collection`](../commands/new-shared-collection.md).
 
 Los objetos y colecciones compartidas solo pueden contener valores escalares u otros objetos y colecciones compartidas. Sin embargo, los objetos y colecciones compartidos pueden establecerse como propiedades de objetos o colecciones estándar (no compartidos).

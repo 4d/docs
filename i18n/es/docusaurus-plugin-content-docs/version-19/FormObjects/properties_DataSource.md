@@ -293,9 +293,9 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles                         |
-| ------------------- | -------------- | ---------------------------------------- |
-| selectedItemsSource | string         | Expression collection u objeto asignable |
+| Nombre              | Tipos de datos | Valores posibles                           |
+| ------------------- | -------------- | ------------------------------------------ |
+| selectedItemsSource | string         | Assignable collection or object expression |
 
 #### Objetos soportados
 

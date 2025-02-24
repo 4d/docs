@@ -94,7 +94,7 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 A função `.touched()` <!-- REF #EntityClass.clone().Summary -->comprova se um atributo da entidade tiver sido modificado ou não desde que se carregou a entidade na memória ou se salvou<!-- END REF -->.
 
-Esta função permite que você atualize as entidades separadamente. No entanto, por razões de desempenho, a nova entidade compartilha a mesma referência de atributos de objeto que a entidade clonada.
+This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
 > Tenha em mente que quaisquer modificações feitas a entidades serão salvas no registro referenciado somente quando a função [`.save()`](#save) for executada.
 
 Esta função só pode ser usada com entidades já salvas no banco de dados. Ele não pode ser chamado em uma entidade recém-criada (para a qual [`.isNew()`](#isnew) retorna **Verdadeiro**).

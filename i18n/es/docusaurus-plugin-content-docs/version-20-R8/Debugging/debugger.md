@@ -76,7 +76,7 @@ En la depuración remota, si el método se ejecuta en el servidor, se llama al m
 
 Cuando se ejecuta una línea que llama a otro método (subrutina o función), haga clic en este botón para mostrar el otro método y recorrerlo paso a paso.
 
-El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada](#call-chain-pane) de la ventana del depurador.
+The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
@@ -333,7 +333,7 @@ Whatever the display mode, you can add custom expressions at any moment.
 
 ### Gestión de expresiones
 
-You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pin-an-expression).
+You can enter any expression to evaluate. Una expresión personalizada sólo se muestra en la ventana actual del depurador, excepto si la [fija](#pin-an-expression).
 
 Hay varias formas de añadir expresiones a la lista:
 
@@ -341,7 +341,7 @@ Hay varias formas de añadir expresiones a la lista:
 - Seleccione una expresión en el [panel código fuente](#source-code-pane) y presione **ctrl+D**  (Windows) o **cmd+D** (macOS)
 - Haga doble clic en algún lugar del espacio vacío del panel de control personalizado (añade una expresión con un nombre de marcador de posición que puede editar)
 - Selecciona una [opción de visualización](#display-mode) que inserta automáticamente las expresiones.
-- Select **New Expression...** in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**. Puede introducir cualquier fórmula que devuelva un resultado.
+- Seleccione **Nueva Expresión...** en el [menú contextual del panel de Reloj Personalizado](#contextual-menu) para añadir una expresión usando el **Editor de Fórmula**. Puede introducir cualquier fórmula que devuelva un resultado.
 
 Para editar una expresión, haga clic en ella para seleccionarla y, a continuación, vuelva a hacer clic o presione **Intro** en su teclado.
 

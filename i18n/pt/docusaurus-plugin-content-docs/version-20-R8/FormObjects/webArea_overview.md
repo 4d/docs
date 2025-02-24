@@ -3,7 +3,7 @@ id: webAreaOverview
 title: Área Web
 ---
 
-As áreas da Web podem exibir vários tipos de conteúdo da Web em seus formulários: Páginas HTML com conteúdo estático ou dinâmico, arquivos, imagens, JavaScript, etc. O mecanismo de renderização da área da Web depende da plataforma de execução do aplicativo e da [opção de mecanismo de renderização] selecionada (properties_WebArea.md#use-embedded-web-rendering-engine).
+As áreas da Web podem exibir vários conteúdo Web em seus formulários: páginas HTML com conteúdo estático ou dinâmico, arquivos, imagens, JavaScript, etc. As áreas web podem mostrar vários tipos de conteúdo web dentro de seus formulários: Páginas HTML com conteúdos estáticos ou dinâmicos, arquivos, imagens, Javascript, etc. O motor de renderizado da área web depende da plataforma de execução da aplicação e de <a href="properties_WebArea.md#use-embedded-web-rendering-engine">a opção motor de renderizado</a> selecionada. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 É possível criar várias áreas web no mesmo formulário. No entanto, observe que o uso de áreas web deve seguir [várias regras](#web-area-rules).
 
@@ -16,32 +16,32 @@ Several dedicated [standard actions](#standard-actions), numerous [language comm
 Duas variáveis específicas podem ser associadas a cada área web:
 
 - [`URL`](properties_WebArea.md#url) -- para controlar a URL exibida pela área Web
-- [`Progression`](properties_WebArea.md#progression) -- para controlar a porcentagem de carregamento da página exibida na área da Web.
+- [`Progression`](properties_WebArea.md#progression) -- para controlar a porcentagem de carregamento da página exibida na área Web.
 
-> A partir do 4D v19 R5, a variável Progression não é mais atualizada em Web Areas usando o [mecanismo de renderização do sistema Windows](./webArea_overview.md#web-rendering-engine).
+> As of 4D v19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
 
 ### Motor de renderização Web
 
-Você pode escolher entre [dois mecanismos de renderização] (properties_WebArea.md#use-embedded-web-rendering-engine) para a área da Web, dependendo das especificidades do seu aplicativo.
+You can choose between [two rendering engines](properties_WebArea.md#use-embedded-web-rendering-engine) for the web area, depending on the specifics of your application.
 
 A seleção do motor de renderização web aninhado permite chamar aos métodos 4D desde a área web. A seleção do mecanismo de renderização do sistema é recomendada quando a área da web está conectada à internet, porque ela sempre se beneficia das últimas atualizações de segurança.
 
 ### Acessar métodos 4D
 
-Quando a propriedade [Access 4D methods](properties_WebArea.md#access-4d-methods) estiver selecionada, você pode chamar métodos 4D de uma área web.
+Quando a propriedade [Acessar aos métodos 4D](properties_WebArea.md#access-4d-methods) estiver selecionada, você pode chamar métodos 4D de uma área web.
 
 :::note Notas
 
-- Essa propriedade só estará disponível se a área da Web [usar o mecanismo de renderização da Web incorporado] (properties_WebArea.md#use-embedded-web-rendering-engine).
-- Por motivos de segurança, já que permite a execução de código 4D, essa opção só deve ser ativada para páginas confiáveis, como as páginas geradas pelo aplicativo.
+- This property is only available if the web area [uses the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
+- Por motivos de segurança, já que permite a execução de código 4D, essa opção só deve ser ativada para páginas confiáveis, como as páginas geradas pela aplicação.
 
 :::
 
 ### Objecto $4d
 
-O [4D embedded web rendering engine] (properties_WebArea.md#use-embedded-web-rendering-engine) fornece à área um objeto JavaScript chamado $4d que você pode associar a qualquer método de projeto 4D usando a notação de objeto ".".
+The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
 
-Por exemplo, para chamar o método `HelloWorld` 4D, basta executar a seguinte instrução:
+For example, to call the `HelloWorld` 4D method, you just execute the following statement:
 
 ```js
 $4d. HelloWorld();
@@ -55,19 +55,19 @@ A sintaxe das chamadas aos métodos 4D é a seguinte:
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
 
-- `param1...paramN`: Você pode passar tantos parâmetros quanto precisa para o método 4D.
-  Esses parâmetros podem ser de qualquer tipo suportado pelo JavaScript (cadeia de caracteres, número, matriz, objeto).
+- `param1...paramN`: You can pass as many parameters as you need to the 4D method.
+  Esses parâmetros podem ser de qualquer tipo suportado pelo JavaScript (cadeia de caracteres, número, array, objeto).
 
-- `function(result)`: Função a ser passada como último argumento. Esta função "callback" é chamada de forma síncrona quando o método 4D termina de ser executado. Ele recebe o parâmetro `result`.
+- `function(result)`: Function to pass as last argument. Esta função "callback" é chamada de forma síncrona quando o método 4D termina de ser executado. It receives the `result` parameter.
 
-- `result`: Execution result of the 4D method. Esse resultado pode ser de qualquer tipo suportado pelo JavaScript (cadeia de caracteres, número, matriz, objeto).
+- `result`: Execution result of the 4D method. Este resultado pode ser de qualquer tipo suportado pelo JavaScript (cadeia de caracteres, número, array, objeto).
 
-> Por padrão, 4D trabalha em UTF-8. Quando você retornar texto contendo caracteres estendidos, por exemplo, caracteres com acentos, certifique-se de que a codificação da página exibida na área da Web seja declarada como UTF-8, caso contrário, os caracteres poderão ser renderizados incorretamente. Nesse caso, adicione a seguinte linha na página HTML para declarar a codificação:
+> Por padrão, 4D trabalha em UTF-8. Quando você retornar texto contendo caracteres estendidos, por exemplo, caracteres com acentos, certifique-se de que a codificação da página exibida na área Web seja declarada como UTF-8, caso contrário, os caracteres poderão ser renderizados incorretamente. In this case, add the following line in the HTML page to declare the encoding:
 > `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
 #### Exemplo 1
 
-Dado um método de projeto 4D chamado `today` que não recebe parâmetros e retorna a data atual como uma string.
+Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
 
 Código 4D do método `today`:
 
@@ -107,7 +107,7 @@ $4d.today(function(result)
 
 The 4D project method `calcSum` receives parameters and returns their sum:
 
-Código 4D do método `calcSum`:
+4D code of `calcSum` method:
 
 ```4d
  #DECLARE (... : Real) -> $sum : Real 
@@ -131,7 +131,7 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(theSum)
 
 ## Ações padrão
 
-Quatro ações padrão específicas estão disponíveis para gerenciar áreas da Web automaticamente: `Abrir URL anterior`, `Abrir URL anterior`, `Refrescar URL atual` e `Parar de carregar URL`. Essas ações podem ser associadas com botões ou comandos de menu e permite implementação rápida de interfaces web básicas. Essas ações podem ser associadas com botões ou comandos de menu e permite implementação rápida de interfaces web básicas.
+Four specific standard actions are available for managing web areas automatically: `Open Back URL`, `Open Forward URL`, `Refresh Current URL` and `Stop Loading URL`. Essas ações podem ser associadas com botões ou comandos de menu e permite implementação rápida de interfaces web básicas. Essas ações podem ser associadas com botões ou comandos de menu e permite implementação rápida de interfaces web básicas.
 
 ## Eventos formulário
 
@@ -158,12 +158,12 @@ Além disso, áreas web são compatíveis com os eventos de formulário genéric
 
 Quando o formulário for executado, as funções da interface de navegador padrão estão disponíveis para o usuário na área web, o que permite a interação com outras áreas do formulário:
 
-- Comandos do menu **Editar**: Quando a área da Web está em foco, os comandos do menu **Edit** podem ser usados para executar ações como copiar, colar, selecionar tudo etc., de acordo com a seleção.
-- **Menu de contexto**: É possível usar o [contexto menu](properties_Entry.md#context-menu) padrão do sistema com a área web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
-- **Arrastar e soltar**: O usuário pode arrastar e soltar texto, imagens e documentos dentro da área da Web ou entre uma área da Web e os objetos do formulário 4D, de acordo com as propriedades do objeto 4D.
-  Por razões de segurança, não é permitido mudar os conteúdos da área Web arrastando e soltando seja um arquivo ou URL. Neste caso, o cursor exibe um ícone "proibido" ![](../assets/en/FormObjects/forbidden.png). Você precisa usar a instrução `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para exibir um ícone "drop" e gerar o evento [`On Window Opening Denied`] (Events/onWindowOpeningDenied.md). In this event, you can call the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
+- **Edit menu commands**: When the web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
+- **Menu contextual**: é possível usar o [menu contextual](properties_Entry.md#context-menu) padrão do sistema com a área web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+- **Drag and drop**: The user can drag and drop text, pictures and documents within the web area or between a web area and the 4D form objects, according to the 4D object properties.
+  Por razões de segurança, não é permitido mudar os conteúdos da área Web arrastando e soltando seja um arquivo ou URL. Neste caso, o cursor exibe um ícone "proibido" ![](../assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` statement to display a "drop" icon and generate the [`On Window Opening Denied`](Events/onWindowOpeningDenied.md) event. In this event, you can call the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
 
-> Os recursos de arrastar e soltar descritos acima não são compatíveis com as áreas da Web que usam o [mecanismo de renderização do sistema macOS] (properties_WebArea.md#use-embedded-web-rendering-engine).
+> Drag and drop features described above are not supported in web areas using the [macOS system rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 ### Subformulários
 
@@ -186,7 +186,7 @@ As URLs manejadas por programação em áreas web em macOS devem começar com o 
 
 Pode ver e usar um inspetor web dentro das áreas web de seus formulários. The web inspector is a debugger which is provided by the embedded Web engine. It allows parsing the code and the flow of information of the web pages.
 
-Para exibir o inspetor da Web, você pode executar o comando `WA OPEN WEB INSPECTOR` ou usar o menu de contexto da área da Web.
+To display the Web inspector, you can either execute the `WA OPEN WEB INSPECTOR` command, or use the context menu of the web area.
 
 - **Execute the `WA OPEN WEB INSPECTOR` command**<br/>
   This command can be used directly with onscreen (form object) and offscreen web areas.
@@ -196,41 +196,41 @@ Para exibir o inspetor da Web, você pode executar o comando `WA OPEN WEB INSPEC
   - o [menu contextual](properties_Entry.md#context-menu) para a área web está ativado
   - o uso do inspetor é expressamente permitido na área por meio da seguinte declaração:
   ```4d
-  	WA SET PREFERENCE(*; "WA";WA enable Web inspector;True)  
+  	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
   ```
 
-> Com [engenharia de renderização de sistema Windows](properties_WebArea. d#use-embedded-web-rendering-engine), uma mudança nesta preferência requer que uma ação de navegação na área (por exemplo, uma atualização de página) seja levada em conta.
+> With [Windows system rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine), a change in this preference requires a navigation action in the area (for example, a page refresh) to be taken into account.
 
 For more information, refer to the description of the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 
-Quando você fez as configurações conforme descrito acima, você tem novas opções como **Inspecionar Elemento** no menu de contexto da área. Quando selecionar essa opção, a janela do inspetor Web é exibida.
+When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. Quando selecionar essa opção, a janela do inspetor Web é exibida.
 
 > Para uma descrição detalhada nas funcionalidades do depurador, veja a documentação fornecida pelo motor de renderização web.
 
 ## Propriedades compatíveis
 
-[Estilo de linha de bordo](properties_BackgroundAndBorder.md#border-line-style) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Menu de contexto](properties_Entry.md#context-menu) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Método](properties_Action.md#method) - [Nome do objeto](properties_Object.md#object-name) - [Progressão](properties_WebArea.md#progression) - [Dereita](properties_CoordinatesAndSizing.md#right) - [Topo](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Usar o mecanismo de renderização da Web](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variável ou Expressão](properties_Object.md#variable-or-expression) - [Tamanho Vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
+[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Use embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 ## 4DCEFParameters.json
 
-O 4DCEFParameters.json é um arquivo de configuração que permite a personalização dos parâmetros CEF para gerenciar o comportamento das áreas da Web nos aplicativos 4D.
+The 4DCEFParameters.json is a configuration file that allows customization of CEF parameters to manage the behavior of web areas within 4D applications.
 
-[As opções padrão](#default-file) são fornecidas, mas você pode substituí-las usando um arquivo 4DCEFParameters.json personalizado.
+Os [Interruptores padrão](#default-file) são fornecidos, mas você pode substituí-los usando um arquivo 4DCEFParameters.json personalizado.
 
-Na fase de desenvolvimento (usando o aplicativo 4D), crie um arquivo 4DCEFParameters.json no seguinte local:
+In the development phase (using 4D application), create a 4DCEFParameters.json file at the following location:
 
 - Windows: `Users\[userName]\AppData\Roaming\4D\4DCEFParameters.json`
 - macOS: `$HOME/Library/Application Support/4D/4DCEFParameters.json`
 
-Antes de criar um aplicativo final, adicione o arquivo personalizado 4DCEFParameters.json à pasta Resources do projeto.
+Before building a final application, add the custom 4DCEFParameters.json file to the Resources folder of the project.
 
 :::warning
 
-A adição de um arquivo 4DCEFParameters.json personalizado pode afetar fundamentalmente todas as áreas da Web incorporadas 4D, incluindo [áreas 4D View Pro](../ViewPro/configuring.md#form-area-properties). É responsabilidade do desenvolvedor garantir que os switches personalizados não desestabilizem o aplicativo 4D.
+Adding a custom 4DCEFParameters.json file can fundamentally impact all 4D embedded web areas, including [4D View Pro areas](../ViewPro/configuring.md#form-area-properties). It is the developer's responsibility to ensure that the custom switches do not destabilize the 4D application.
 
 :::
 
-O formato do arquivo 4DCEFParameters.json é o seguinte:
+The 4DCEFParameters.json file format is as the following:
 
 ```json
 
@@ -251,17 +251,17 @@ O formato do arquivo 4DCEFParameters.json é o seguinte:
 }
 ```
 
-A estrutura do arquivo 4DCEFParameters.json contém:
+The 4DCEFParameters.json file structure contains:
 
-- **switches**: uma lista de switches CEF e seus valores correspondentes aplicados ao macOS e ao Windows.
-- **macOS.switches**: switches CEF específicos do macOS.
-- **windows.switches**: Comutadores CEF específicos do Windows.
+- **switches**: a list of CEF switches and their corresponding values applied for both macOS and Windows.
+- **macOS.switches**: macOS-specific CEF switches.
+- **windows.switches**: Windows-specific CEF switches.
 
-Os interruptores no arquivo personalizado têm prioridade. Em caso de duplicação de switches no mesmo arquivo, os switches definidos na subseção específica da plataforma ("macOS.switches" ou "windows.switches") têm prioridade e são usados para configuração.
+The switches in the custom file take precedence. In case of duplication of switches within the same file, the switches defined in the platform-specific subsection ("macOS.switches" or "windows.switches") are given priority and used for configuration.
 
 :::note
 
-A lista de switches compatíveis está em constante evolução e é gerenciada pela equipe de desenvolvimento da CEF. Para obter informações sobre os switches disponíveis, você precisa consultar a comunidade de desenvolvedores da CEF.
+The list of supported switches is constantly evolving and is managed by the CEF development team. For information about available switches, you need to refer to the CEF developer community.
 
 :::
 
@@ -269,7 +269,7 @@ A lista de switches compatíveis está em constante evolução e é gerenciada p
 
 #### Arquivo padrão
 
-O arquivo 4DCEFParameters.json padrão contém os seguintes botões:
+The default 4DCEFParameters.json file contains the following switches:
 
 ```json
 {
@@ -291,7 +291,7 @@ O arquivo 4DCEFParameters.json padrão contém os seguintes botões:
 
 ```
 
-#### Exemplo de desativação do switch padrão
+#### Example of disabling default Switch
 
 ```json
 {
@@ -314,4 +314,4 @@ O arquivo 4DCEFParameters.json padrão contém os seguintes botões:
 
 ### Veja também
 
-[Especifique seus próprios parâmetros para inicializar a área Web incorporada (postagem no blog)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)
+[Specify your own parameters to initialize the embedded web area (blog post)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)

@@ -12,7 +12,7 @@ Controlar se e como o usuário pode arrastar o objeto. Por defeito, não é perm
 Estão disponíveis dois modos de arrastamento:
 
 - **Personalizado**: nesse modo, qualquer operação de arrastar executada no objeto aciona o evento de formulário `On Begin Drag` no contexto do objeto. Em seguida, você gerencia a ação de arrastar usando um método.   
-  No modo personalizado, basicamente toda a operação de arrastar e soltar é gerenciada pelo programador. Esse modo permite que você implemente qualquer interface baseada em arrastar e soltar, incluindo interfaces que não necessariamente transportam dados, mas podem executar qualquer ação, como abrir arquivos ou acionar um cálculo. Esse modo é baseado em uma combinação de propriedades, eventos e comandos específicos do tema `Pasteboard`.
+  No modo personalizado, basicamente toda a operação de arrastar e soltar é gerenciada pelo programador. Esse modo permite que você implemente qualquer interface baseada em arrastar e soltar, incluindo interfaces que não necessariamente transportam dados, mas podem executar qualquer ação, como abrir arquivos ou acionar um cálculo. Esse modo é baseado em uma combinação de propriedades, eventos e comandos específicos do tema `Portapapeles`.
 - **Automático**: nesse modo, 4D **cópia** o texto ou as imagens diretamente do objeto formulário. Poderá então ser utilizado na mesma área de 4D, entre duas áreas 4D ou entre 4D e outra aplicação. Por exemplo, o arrastar (e largar) automático permite-lhe copiar um valor entre dois campos sem utilizar a programação:  
   ![](../assets/en/FormObjects/property_automaticDragDrop.png)  
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png) Neste modo, o evento do formulário `On Begin Drag` NÃO é gerado. Se você quiser "forçar" o uso do arrasto personalizado enquanto o arrasto automático estiver ativado, mantenha pressionada a tecla **Alt** (Windows) ou **Option** (macOS) durante a ação. Esta opção não está disponível para as imagens.
@@ -45,7 +45,7 @@ Controle se e como o objeto pode ser o destino de uma operação de arrastar e s
 Há dois modos de soltar em 4D:
 
 - **Personalizado**: nesse modo, qualquer operação de soltar executada no objeto aciona os eventos de formulário `On Drag Over` e `On Drop` no contexto do objeto. Em seguida, você gerencia a ação de soltar usando um método.    
-  No modo personalizado, basicamente toda a operação de arrastar e soltar é gerenciada pelo programador. Esse modo permite que você implemente qualquer interface baseada em arrastar e soltar, incluindo interfaces que não necessariamente transportam dados, mas podem executar qualquer ação, como abrir arquivos ou acionar um cálculo. Esse modo é baseado em uma combinação de propriedades, eventos e comandos específicos do tema `Pasteboard`.
+  No modo personalizado, basicamente toda a operação de arrastar e soltar é gerenciada pelo programador. Esse modo permite que você implemente qualquer interface baseada em arrastar e soltar, incluindo interfaces que não necessariamente transportam dados, mas podem executar qualquer ação, como abrir arquivos ou acionar um cálculo. Esse modo é baseado em uma combinação de propriedades, eventos e comandos específicos do tema `Portapapeles`.
 - **Automático**: neste modo, 4D gere automaticamente - se possível - a inserção de dados arrastados do tipo texto ou imagem largada no objeto (os dados são colados no objeto). Os eventos formulário `On Drag Over` e `On Drop` NÃO são gerados. Por outro lado, são gerados os eventos `On After Edit` (durante a descida) e `On Data Change` (quando o objeto perde o foco).
 
 Para mais informações, consulte [Arraste e Solte](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) no manual *Linguajem 4D*.
@@ -78,7 +78,7 @@ Quando essa opção está ativada, o método objeto é executado com o evento `O
 
 #### Objectos suportados
 
-[Barra de progresso](progressIndicator.md) - [Régua](ruler.md) - [Degrau](stepper.md)
+[Barra de progresso](progressIndicator.md) - [Régua](ruler.md) - [Passo](stepper.md)
 
 
 
@@ -96,11 +96,11 @@ São suportados vários tipos de referências de métodos:
   `ObjectMethods/objectName.4dm`  
   ... em que `objectName` é o [nome do objeto](properties_Object.md#object-name) real. Este tipo de referência indica que o arquivo de método está localizado no local padrão ("sources/forms/*formName*/ObjectMethods/"). Nesse caso, 4D trata automaticamente o método objeto quando as operações são executadas no objeto formulário (renomeação, duplicação, copiar/colar...)
 
-- um nome de método projeto: nome de um método projeto existente sem extensão de arquivo, ou seja: `myMethod` Nesse caso, o 4D não oferece suporte automático para operações objeto.
+- um nome de método projeto: nome de um método projeto existente sem extensão de arquivo, ou seja: `myMethod` Nesse caso, 4D não oferece suporte automático para operações objeto.
 
 - um caminho de arquivo de método personalizado incluindo a extensão .4dm, por exemplo:  
   `../../CustomMethods/myMethod.4dm` Você também pode usar um sistema de arquivos:  
-  `/RESOURCES/Buttons/bOK.4dm` Nesse caso, o 4D não oferece suporte automático para operações objeto.
+  `/RESOURCES/Buttons/bOK.4dm` Nesse caso, 4D não oferece suporte automático para operações objeto.
 
 
 #### Gramática JSON

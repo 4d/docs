@@ -21,7 +21,7 @@ Si un utilisateur tente d'exécuter une action et ne dispose pas des droits d'ac
 
 Pour un aperçu détaillé de l'architecture des permissions, veuillez lire l'article de blog [**Filtrer l'accès à vos données avec un système complet de permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/).
 
-## Ressources
+## Resources
 
 You can assign specific permission actions to the following resources in your project:
 

@@ -366,7 +366,7 @@ ALERT($info.Copyright)
 
 A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->move ou renomeia o objeto `File` para a *destinationFolder* especificada<!-- END REF -->.
 
-A *destinationFolder* deve existir em disco, senão um erro é gerado.
+The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 Por padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
@@ -492,7 +492,7 @@ $fhandle:=$f.open("read")
 
 #### Descrição
 
-The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
+A função `.rename()` <!-- REF #FileClass.rename().Summary -->renomeia o arquivo com o nome que você passou em *newName* e retorna o objeto `File` renomeado<!-- END REF -->.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
@@ -627,7 +627,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descrição
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
+A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do arquivo usando os dados armazenados no BLOB *content*<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
 
 #### Exemplo
 

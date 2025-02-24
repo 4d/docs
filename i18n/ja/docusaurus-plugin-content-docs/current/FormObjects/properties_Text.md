@@ -34,7 +34,7 @@ title: Text
 
 | プロパティ      | データタイプ | とりうる値            |
 | ---------- | ------ | ---------------- |
-| fontWeight | text   | "normal", "bold" |
+| fontWeight | テキスト   | "normal", "bold" |
 
 #### 対象オブジェクト
 
@@ -345,16 +345,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) -
-[チェックボックス](checkbox_overview.md) (通常とフラット以外のスタイル) -
-[グループボックス](groupBox.md) -
-[入力](input_overview.md) -
-[リストボックス](listbox_overview.md) -
-[リストボックス列](listbox_overview.md#リストボックス列) -
-[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) -
-[リストボックスフッター](listbox_overview.md#リストボックスフッター) -
-[ラジオボタン](radio_overview.md) (通常とフラット以外のスタイル) -
-[テキストエリア](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
 
 ---
 

@@ -174,7 +174,7 @@ Uma lista de palavras separadas por espaços utilizadas como seletores de classe
 
 ---
 
-## Collection ou entity selection
+## Seleção de entidade ou coleção
 
 Para usar elementos da coleção ou entidades para definir o conteúdo da linha da list box.
 

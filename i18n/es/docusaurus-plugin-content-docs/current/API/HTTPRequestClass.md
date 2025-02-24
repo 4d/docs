@@ -358,7 +358,7 @@ La propiedad `.headers` contiene <!-- REF #HTTPRequestClass.headers.Summary -->l
 
 #### Descripción
 
-La propiedad `.method` contiene <!-- REF #HTTPRequestClass.method.Summary -->el `method` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. Si fue omitido, contiene "GET".
+La propiedad `.method` contiene <!-- REF #HTTPRequestClass.method.Summary -->el `method` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -394,13 +394,13 @@ La propiedad `.response` contiene <!-- REF #HTTPRequestClass.response.Summary --
 
 Un objeto `response` es un objeto no compartible. Ofrece las siguientes propiedades:
 
-| Propiedad                   | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                         |
-| --------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .body       | Variant | Cuerpo de la respuesta. El tipo del mensaje se define según la propiedad [`dataType`](#datatype). Indefinido si el cuerpo no se ha recibido todavía                                                                                                                                                                                                                 |
-| .headers    | Object  | Encabezados de la respuesta. Los nombres de los encabezados se devuelven en minúsculas. `<headername>.key` = valor (el valor puede ser una colección si la misma llave aparece varias veces). Indefinido si el los encabezados no se ha recibido aún.                                                            |
-| .status     | Number  | Código de estado de la respuesta                                                                                                                                                                                                                                                                                                                                                                    |
-| .statusText | Text    | Mensaje explicando el código de estado                                                                                                                                                                                                                                                                                                                                                              |
-| .rawHeaders | Object  | Encabezados de la respuesta. Los nombres de los encabezadoss se devuelven intactos (con sus mayúsculas y minúsculas originales). `<headerName>.key` = valor (el valor puede ser una colección si la misma llave aparece varias veces). Undefined si el los encabezados no se ha recibido aún. |
+| Propiedad                   | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| .body       | Variant | Cuerpo de la respuesta. El tipo del mensaje se define según la propiedad [`dataType`](#datatype). Indefinido si el cuerpo no se ha recibido todavía                                                                                                                                                                                                                  |
+| .headers    | Object  | Encabezados de la respuesta. Los nombres de los encabezados se devuelven en minúsculas. `<headername>.key` = valor (el valor puede ser una colección si la misma llave aparece varias veces). Indefinido si el los encabezados no se ha recibido aún.                                                             |
+| .status     | Number  | Código de estado de la respuesta                                                                                                                                                                                                                                                                                                                                                                     |
+| .statusText | Text    | Mensaje explicando el código de estado                                                                                                                                                                                                                                                                                                                                                               |
+| .rawHeaders | Object  | Encabezados de la respuesta. Los nombres de los encabezadoss se devuelven intactos (con sus mayúsculas y minúsculas originales). `<headerName>.key` = valor (el valor puede ser una colección si la misma llave aparece varias veces). Indefinido si el los encabezados no se ha recibido aún. |
 
 <!-- END REF -->
 
@@ -458,7 +458,7 @@ La propiedad `.terminated` contiene <!-- REF #HTTPRequestClass.terminated.Summar
 
 #### Descripción
 
-La propiedad `.timeout` contiene <!-- REF #HTTPRequestClass.timeout.Summary -->el `timeout` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. Si se omite, contiene Undefined.
+La propiedad `.timeout` contiene <!-- REF #HTTPRequestClass.timeout.Summary -->el `timeout` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -493,7 +493,7 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 > Esta función es hilo seguro.
 
-The `wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->waits waits for a response from the server or until the specified `timeout` is reached<!-- END REF -->.
+La función `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->espera una respuesta del servidor o hasta que se alcance el `timeout` especificado<!-- END REF -->.
 
 If a *timeout* is provided, the function waits for the specified duration in this parameter. Decimals are accepted.
 

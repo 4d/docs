@@ -159,7 +159,7 @@ Tenga en cuenta que la entidad correspondiente se vuelve a cargar desde el almac
 *index* puede ser cualquier número entre 0 y `.length`-1.
 
 *   Si *index* está fuera de rango, se devuelve un error.
-*   Si *index* corresponde a una entidad eliminada, se devuelve un valor Null.
+*   Si el "kind" de *attributeName* es `storage`: `.attributeName` devuelve una colección de valores del mismo tipo que *attributeName*.
 
 :::caution
 

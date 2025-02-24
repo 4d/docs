@@ -15,7 +15,7 @@ title: コードエディター
 
 :::note
 
-If you are used to coding with **VS Code**, you can also use this editor with 4D code after installing the [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode) extension.
+**VS Code**でコーディングすることに慣れている場合、[4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode) 拡張機能をインストールすれば、このエディターを4D コードで使用することもできます。
 
 :::
 

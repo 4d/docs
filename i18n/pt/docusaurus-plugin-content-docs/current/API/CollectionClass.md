@@ -364,9 +364,9 @@ $sharedObject:=New shared object
 $text:=Document to text(Get 4D folder(Current resources folder)+"lastnames.txt")
 $lastnames:=JSON Parse($text) //$lastnames is a regular collection
 
-$sharedLastnames:=$lastnames.copy(ck shared) //$sharedLastnames é uma coleção partilhada
+$sharedLastnames:=$lastnames.copy(ck shared) //$sharedLastnames is a shared collection
 
-//Agora colocamos $sharedLastnames em $sharedObject Use($sharedObject)
+//Now we can put $sharedLastnames into $sharedObject Use($sharedObject)
     $sharedObject.lastnames:=$sharedLastnames End use
 ```
 
@@ -380,7 +380,7 @@ var $sharedColl1;$sharedColl2;$copyColl : Collection
 $sharedColl1:=New shared collection(New shared object("lastname";"Smith"))
 $sharedColl2:=New shared collection(New shared object("lastname";"Brown"))
 
-//$copyColl pertence ao mesmo grupo partilhado que $sharedColl2
+//$copyColl belongs to the same shared group as $sharedColl2
  $copyColl:=$sharedColl1.copy(ck shared;$sharedColl2)
  Use($sharedColl2)
     $sharedColl2.combine($copyColl)
@@ -396,9 +396,9 @@ var $lastnames;$sharedLastnames : Collection
 var $text : Text
 
 $text:=Document to text(Get 4D folder(Current resources folder)+"lastnames.txt")
-$lastnames:=JSON Parse($text) //$lastnames é uma coleção regular
+$lastnames:=JSON Parse($text) //$lastnames is a regular collection
 
-$sharedLastnames:=$lastnames.copy(ck shared) // cópia partilhada Use(Storage)
+$sharedLastnames:=$lastnames.copy(ck shared) // shared copy Use(Storage)
     Storage.lastnames:=$sharedLastnames End use
 ```
 
@@ -1102,7 +1102,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - *methodName*, o nome de um método projeto (texto).
 
-A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para cada elemento que cumpra o teste. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1273,7 +1273,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - ou *methodName*, o nome de um método projeto (texto).
 
-A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1289,14 +1289,13 @@ Pode definir o(s) seguinte(s) parâmetro(s):
 #### Exemplo 1
 
 ```4d
-var $col ; $result : Collection
-$col:=New collection(1; 2; 3; 4)
+C_OBJECT($1)
+ C_LONGINT($2)
+ If(OB Get type($1;"value")=$2)
 
-$result:=$col.map(Formula(New collection($1.value*2))
- // [[2],[4],[6],[8]]
 
-$result:=$col.flatMap(Formula(New collection($1.value*2))
-// [2,4,6,8]
+    $1.result:=True
+ End if
 ```
 
 #### Exemplo 2
@@ -2059,7 +2058,7 @@ Esta função devolve uma cópia superficial, o que significa que os objectos ou
 
 > Essa função não modifica a coleção original.
 
-Se você não passar nenhum parâmetro, a função ordena os valores escalares na coleção em ordem crescente (outros tipos de elementos, como objetos ou coleções, são retornados com uma ordem interna). Você pode modificar essa ordem automática passando as constantes `ck ascending` ou `ck descending` no parâmetro *ascOrDesc* (veja abaixo).
+If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned with an internal order). Você pode modificar essa ordem automática passando as constantes `ck ascending` ou `ck descending` no parâmetro *ascOrDesc* (veja abaixo).
 
 Também pode passar um parâmetro de critérios para definir como devem ordenar-se os elementos da coleção. Três sintaxes são compatíveis com esse parâmetro:
 
@@ -2916,7 +2915,7 @@ Se tentar remover um elemento de uma coleção vazia, o método não faz nada (n
 
 #### Descrição
 
-The `.resize()` function <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
+A função `.resize()` <!-- REF #collection.resize().Summary -->define o comprimento da coleção para o novo tamanho especificado e retorna a coleção redimensionada<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 
@@ -2969,7 +2968,7 @@ Por padrão, novos elementos são preenchidos com valores **null**. Pode especif
 
 #### Descrição
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.reverse()` <!-- REF #collection.reverse().Summary -->retorna uma cópia profunda da coleção com todos os seus elementos em ordem inversa<!-- END REF -->. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 
 > Essa função não modifica a coleção original.
 
@@ -3007,7 +3006,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 #### Descrição
 
-The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
+A função `.shift()` <!-- REF #collection.shift().Summary -->remove o primeiro elemento da coleção e o retorna como o resultado da função<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 
@@ -3113,7 +3112,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - ou *methodName*, o nome de um método projeto (texto).
 
-A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para cada elemento que cumpra o teste. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -3185,7 +3184,7 @@ You want to know if at least one collection value is >0.
 
 #### Descrição
 
-The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection and also returns the sorted collection<!-- END REF --> .
+A função `.sort()` <!-- REF #collection.sort().Summary -->classifica os elementos da coleção original e também retorna a coleção classificada<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 

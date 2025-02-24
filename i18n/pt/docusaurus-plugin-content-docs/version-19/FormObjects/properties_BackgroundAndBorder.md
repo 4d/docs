@@ -135,7 +135,7 @@ Você também pode definir essa propriedade usando o comando [`OBJECT SET RGB CO
 
 > Essa propriedade também está disponível para objetos baseados em texto e, nesse caso, ela designa a cor da fonte e as linhas do objeto; consulte [Cor da fonte](properties_Text.md#font-color).
 
-#### Objetos compatíveis
+#### Objectos suportados
 
 [Linha](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle)
 
@@ -151,7 +151,7 @@ Designa a espessura de uma linha.
 | ----------- | ------------- | ------------------------------------------------------------------------------------- |
 | strokeWidth | number        | 0 para a largura mais pequena num formulário impresso, ou qualquer valor inteiro < 20 |
 
-#### Objetos compatíveis
+#### Objectos suportados
 
 [Linha](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle)
 
@@ -193,7 +193,7 @@ Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET UMA ARTA`](h
 | ------------- | ------------- | --------------------------- |
 | rowFillSource | string        | O nome de um array longint. |
 
-#### Objetos compatíveis
+#### Objectos suportados
 
 [Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
@@ -209,7 +209,7 @@ Define o fundo do list box como "Transparent". Quando definido, qualquer [cor de
 | ---- | ------------- | ----------------- |
 | fill | text          | "transparent"     |
 
-#### Objetos compatíveis
+#### Objectos suportados
 
 [List Box](listbox_overview.md#overview)
 

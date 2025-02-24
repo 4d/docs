@@ -139,7 +139,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+A propriedade `.hidden` retorna <!-- REF #directory.hidden.Summary -->true se o arquivo estiver definido como "hidden" no nível do sistema<!-- END REF -->, e false caso contrário.
 
 Essa propriedade é **somente leitura**.
 

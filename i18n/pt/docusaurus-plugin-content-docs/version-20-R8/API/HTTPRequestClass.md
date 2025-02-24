@@ -3,9 +3,9 @@ id: HTTPRequestClass
 title: HTTPRequest
 ---
 
-The `HTTPRequest` class allows you to handle [`HTTPRequest objects`](#httprequest-object) that can be used to configure and send requests to an HTTP server, as well as to process the HTTP server responses.
+A classe `HTTPRequest` permite que você lide com [`objetos HTTPRequest`](#httprequest-object) que pode ser usado para configurar e enviar solicitações a um servidor HTTP, além de processar as respostas do servidor HTTP.
 
-A classe `HTTPRequest` está disponível no class store `4D`. You create and send HTTP requests using the [4D.HTTPRequest.new()](#4dhttprequestnew) function, that returns a [`HTTPRequest object`](#httprequest-object).
+A classe `HTTPRequest` está disponível no class store `4D`. Você cria e envia solicitações HTTP usando a função [4D.HTTPRequest.new()](#4dhttprequestnew) que retorna uma [`HTTPRequest object`](#httprequest-object).
 
 <details><summary>História</summary>
 
@@ -92,7 +92,7 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 #### Descrição
 
-The `4D.HTTPRequest.new()` function <!-- REF #4D.HTTPRequest.new().Summary -->creates and sends a HTTP request to the HTTP server defined in *url* with the defined *options*, and returns a `4D.HTTPRequest` object<!-- END REF -->.
+A função `4D.HTTPRequest.new()` <!-- REF #4D.HTTPRequest.new().Summary -->cria e envia uma solicitação HTTP para o servidor HTTP definido na *url* com as *opções* definidas e retorna um objeto `4D.HTTPRequest`<!-- END REF -->.
 
 The returned `HTTPRequest` object is used to process responses from the HTTP server and call methods.
 
@@ -169,7 +169,7 @@ Aqui está a sequência de chamadas de retorno:
 
 :::info
 
-For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NOT [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+Para as funções de callback serem chamadas quando você não usa [`wait()`](#wait) (chamada assíncrona), o processo deve ser um [worker](../Develop/processes.md#worker-processes) criado com [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NÃO [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
 
 :::
 

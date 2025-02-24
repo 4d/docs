@@ -185,7 +185,7 @@ Tal sistema hierárquico facilita lembrar para qual grupo um novo usuário deve 
 
 ## Atribuir grupos de acesso
 
-Groups are assigned access privileges to specific parts or features of the application:
+Os grupos recebem privilégios de acesso a partes ou recursos específicos da aplicação:
 
 - Acesso ao ambiente Desenho e ao Explorador de execução,
 - Servidor HTTP,
@@ -202,7 +202,7 @@ También se utilizan grupos para [distribuir las licencias disponibles](#assigni
 
 Los usuarios, grupos, así como sus derechos de acceso se almacenan en un archivo específico del proyecto llamado **directory.json**.
 
-This file can be stored at the following locations, depending on your needs:
+Esse arquivo pode ser armazenado nos seguintes locais, dependendo de suas necessidades:
 
 - Se você quiser usar o mesmo diretório para todos os arquivos de dados (ou se você usar um arquivo de dados único), armazene o arquivo **directory.json** na pasta de configurações do usuário, i.e. na pasta "Settings" [no mesmo nível que a pasta "Projeto"](Project/architecture.md#project-folder) (local padrão).
 - Si desea utilizar un archivo directorio específico para archivar datos, almacene el archivo **directory.json** en la carpeta["Settings" de la carpeta "Data"](Project/architecture.md#settings). Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. This custom/local Users and Groups configuration will left untouched by an application upgrade.

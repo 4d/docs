@@ -190,7 +190,7 @@ A coleção deve conter apenas **elementos do mesmo tipo**, caso contrário, um 
 O número de loops é baseado no número de elementos da coleção. A cada iteração, a variável *item* é automaticamente preenchida com o elemento correspondente da coleção. Os pontos abaixo devem ser considerados:
 
 - Se a variável *item* for do tipo objeto ou do tipo coleção (ou seja, se *expressão* for uma coleção de objetos ou de coleções), a modificação dessa variável modificará automaticamente o elemento correspondente da coleção (porque objetos e coleções compartilham as mesmas referências). Se a variável for de tipo escalar, só se modificará a variável.
-- A variável *item* recebe o mesmo tipo que o primeiro elemento da coleção. A variável *item* recebe o mesmo tipo que o primeiro elemento da coleção. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
+- A variável *item* recebe o mesmo tipo que o primeiro elemento da coleção. Se algum elemento da coleção não for do mesmo tipo que a variável, será gerado um erro e o loop será interrompido.
 - Se a coleção contiver elementos com um valor Null, será gerado um erro se o tipo de variável *item* não for compatível com valores Null (como variáveis longint).
 
 #### Exemplo com uma coleção de valores escalares
@@ -237,7 +237,7 @@ Essa sintaxe itera em cada *entity* da *entitySelection*. A parte do código loc
 
 O parâmetro *entidade* é uma variável de objeto da classe de seleção da entidade.
 
-O número de loops é baseado no número de entidades da seleção de entidades. Em cada iteração, a variável de objeto *entidade* é automaticamente preenchida com a entidade correspondente à seleção da entidade.
+O número de loops é baseado no número de entidades na entity selection. Em cada iteração, a variável de objeto *entidade* é automaticamente preenchida com a entidade correspondente à seleção da entidade.
 
 #### Exemplo com uma tabela html
 

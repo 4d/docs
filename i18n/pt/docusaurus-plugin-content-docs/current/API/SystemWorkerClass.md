@@ -71,7 +71,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 #### Descrição
 
-The `4D.SystemWorker.new()` function <!-- REF #4D.SystemWorker.new().Summary -->creates and returns a `4D.SystemWorker` object that will execute the *commandLine* you passed as parameter to launch an external process<!-- END REF -->.
+A função `4D.SystemWorker.new()` <!-- REF #4D.SystemWorker.new().Summary --> cria e retorna um objeto `4D.SystemWorker` que executará o *commandLine* que você passou como parâmetro para iniciar um processo externo <!-- END REF -->.
 
 O objecto worker do sistema devolvido pode ser utilizado para postar mensagens ao worker e obter a saída do worker.
 
@@ -112,11 +112,11 @@ Aqui está a sequência de chamadas de retorno:
 1. `onData` e `onDataError` são executados uma ou várias vezes
 2. se chamado, `onError` é executado uma vez (pára o processamento do system worker)
 3. se não ocorreu nenhum erro, `onResponse` é executado uma vez
-4. `onTerminate` é sempre executado uma vez
+4. `onTerminate` is always executed
 
 :::info
 
-For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NOT [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+Para as funções de callback serem chamadas quando você não usa [`wait()`](#wait) (chamada assíncrona), o processo deve ser um [worker](../Develop/processes.md#worker-processes) criado com [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NÃO [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
 
 :::
 
@@ -280,7 +280,7 @@ Function _createFile($title : Text; $textBody : Text)
 
 #### Descrição
 
-The `.closeInput()` function <!-- REF #SystemWorkerClass.closeInput().Summary -->closes the input stream (*stdin*) of the external process<!-- END REF -->.
+A função `.closeInput()` <!-- REF #SystemWorkerClass.closeInput().Summary -->fecha o fluxo de entrada (*stdin*) do processo externo<!-- END REF -->.
 
 When the executable waits for all data to be received through `postMessage()`, `.closeInput()` is useful to indicate to the executable that data sending is finished and that it can proceed.
 
@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### Descrição
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4d-systemworker-new) function<!-- END REF -->.
+A propriedade `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contém a linha de comando passada como parâmetro para a função [`new()`](#4d-systemworker-new)<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -332,7 +332,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Summary -->contains the working directory in which the external process is executed<!-- END REF -->.
+A propriedade `.currentDirectory` <!-- REF #SystemWorkerClass.currentDirectory.Summary -->contém o diretório de trabalho no qual o processo externo é executado<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -372,7 +372,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.errors` property <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s) if any<!-- END REF -->.
+A propriedade `.errors` <!-- REF #SystemWorkerClass.errors.Summary -->contém uma coleção de erros 4D em caso de erro(s) de execução(ões) se algum<!-- END REF -->.
 
 Cada elemento da coleção é um objeto com as seguintes propriedades:
 
@@ -408,7 +408,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.hideWindow` property <!-- REF #SystemWorkerClass.hideWindow.Summary -->can be used to hide the window of the DOS console or the window of the launched executable (**Windows only**)<!-- END REF -->.
+A propriedade `.hideWindow` <!-- REF #SystemWorkerClass.hideWindow.Summary -->pode ser usado para ocultar a janela do console DOS ou a janela do executável (**apenas Windows**)<!-- END REF -->.
 
 <!-- END REF -->
 

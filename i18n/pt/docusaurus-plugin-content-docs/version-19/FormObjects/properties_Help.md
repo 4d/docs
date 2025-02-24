@@ -4,7 +4,7 @@ title: Ajuda
 ---
 
 
-## Dica de ajuda
+## Dica de Ajuda
 
 Essa propriedade permite associar mensagens de ajuda a objetos ativos em seus formulários. Podem ser apresentados em tempo de execução:
 

@@ -259,7 +259,7 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Regular y Plano) - [Caja de grupo](groupBox.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Pie List Box](listbox_overview.md#list-box-footers) - [Botón de opción](radio_overview.md) (todos los estilos excepto Regular y Plano) - [Área de texto](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
 
 ---
 

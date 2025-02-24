@@ -42,7 +42,7 @@ Essa opção deve ser selecionada no nível da estrutura 4D para cada tabela e c
 
 ### Actualização do modelo de dados
 
-Quaisquer modificações aplicadas no nível da estrutura da base de dados invalidam a camada de modelo atual da ORDA. Estas modificações incluem:
+Quaisquer modificações aplicadas no nível da estrutura da base de dados invalidam a camada atual de data ORDA. Estas modificações incluem:
 
 *   adicionar ou remover uma tabela, um campo ou uma relação
 *   renomeação de uma tabela, um campo ou uma relação
@@ -52,7 +52,7 @@ Quando a camada atual do modelo ORDA é invalidada, ela é automaticamente recar
 
 No entanto, a camada atualizada do modelo ORDA não está automaticamente disponível nos seguintes contextos:
 
-*   uma aplicação remota 4D conectado ao servidor 4D -- o aplicativo remoto deve reconectar ao servidor.
+*   uma aplicação remota 4D conectada a 4D Server -- a aplicação remota deve reconectar ao servidor.
 *   um datastore remoto aberto usando `Open datastore` ou por [chamadas REST](REST/gettingStarted.md) - uma nova sessão deve ser aberta.
 
 
@@ -60,7 +60,7 @@ No entanto, a camada atualizada do modelo ORDA não está automaticamente dispon
 
 ### Datastore
 
-O datastore é o objeto de interface para um banco de dados. Constrói uma representação de todo o banco de dados como objeto. Uma datastore é feita de um **modelo** e **dados**:
+O datastore é o objeto de interface para um banco de dados. Constrói uma representação de todo o banco de dados como objeto. Uma datastore é feita de um **modelo** e **data**:
 
 - O modelo contém e descreve todas as dataclasses que compõem o datastore. É independente do próprio banco de dados subjacente.
 - Os dados referem-se à informação que vai ser utilizada e armazenada neste modelo. Por exemplo, nomes, endereços e datas de nascimento dos funcionários são peças de dados com os quais você pode trabalhar em um datastore.
@@ -113,7 +113,7 @@ $compClass:=ds. Company //assigns the Company dataclass reference to $compClass
 
 Um objeto de classe de dados pode conter:
 
-*   atributos
+*   attributes
 *   atributos relacionais
 
 A classe de dados oferece uma abstração do banco de dados físico e permite a manipulação de um modelo de dados conceitual. A dataclass é a única forma de consultar o datastore. Uma consulta é feita a partir de uma única dataclass. As consultas são construídas em torno de atributos e nomes de atributos de relação das dataclasses. Assim, os atributos de relação são o meio de envolver várias tabelas ligadas numa consulta.
@@ -151,7 +151,7 @@ All eligible fieds in a table are available as attributes of their parent [datac
 
 Atributos da Dataclass vêm em vários tipos: armazenamento, relatedEntity e relatedEntities. Attributes that are scalar (*i.e.*, provide only a single value) support the standard 4D data type (integer, text, object, etc.).
 
-*   Um **atributo de armazenamento** é equivalente a um campo no banco de dados 4D e pode ser indexado. Os valores atribuídos a um atributo de armazenamento são armazenados como parte da entidade quando ela é salva. Quando um atributo de armazenamento é acessado, seu valor vem diretamente do datastore. Atributos de armazenamento são o bloco de construção mais básico de uma entidade e são definidos pelo nome e tipo de dados.
+*   Um **atributo de armazenamento** é equivalente a um campo no banco de dados 4D e pode ser indexado. Os valores atribuídos a um atributo de armazenamento são armazenados como parte da entidade quando ela é salva. Quando um atributo de armazenamento é acessado, seu valor vem diretamente do datastore. Atributos de armazenamento são o bloco de construção mais básico de uma entidade sendo definidos pelo nome e tipo de dados.
 *   Um **atributo de relação** fornece acesso a outras entidades. Os atributos relação podem resultar em uma única entidade (ou nenhuma entidade) ou em uma seleção de entidades (de 0 a N). Os atributos relacional são criados com base em relações "clássicas" na estrutura relacional para fornecer acesso direto a entidades relacionadas ou a entidades relacionadas. Os atributos de relação estão diretamente disponíveis no ORDA usando seus nomes.
 
 Por exemplo, considere a seguinte estrutura de banco de dados parcial e as propriedades de relação:
@@ -165,9 +165,9 @@ Todos os atributos de armazenamento estarão automaticamente disponíveis:
 
 Além disso, os seguintes atributos de relação também estarão automaticamente disponíveis:
 
-*   na classe de dados Project: atributo **theClient**, do tipo "relatedEntity"; há no máximo uma empresa para cada projeto (o cliente)
-*   na classe de dados Empresa: atributo **companyProjects**, do tipo "relatedEntities"; para cada empresa, há qualquer número de projetos relacionados.
-> A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
+*   na dataclass Project: o atributo **theClient**, do tipo "relatedEntity"; há no máximo uma empresa para cada projeto (o cliente)
+*   na dataclass Company: o atributo **companyProjects**, do tipo "relatedEntities"; para cada empresa, há qualquer número de projetos relacionados.
+> > > > > A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
 
 Todos os atributos da dataclass são expostos como propriedades da dataclass:
 
@@ -214,7 +214,7 @@ $e:=ds. Employee.all() //assigns the resulting entity selection reference to the
 
 As seleções de entidades podem ser "classificadas" ou "não classificadas" ([consulte abaixo](#ordered-or-unordered-entity-selection)).
 
-> As entity selections também podem ser "compartilháveis" ou "não compartilháveis", dependendo de [como foram criadas](entities.md#shareable-or-alterable-entity-selections).
+> As seleções de entidades também podem ser "compartilháveis" ou "não compartilháveis", dependendo de [como foram criadas](entities.md#shareable-or-alterable-entity-selections).
 
 O próprio objeto de seleção de entidades não pode ser copiado como um objeto:
 
@@ -234,7 +234,7 @@ No entanto, as propriedades de seleção de entidades são enumeráveis:
 
 #### Entity selections ordenadas ou não ordenadas
 
-Por motivos de otimização, por padrão, o 4D ORDA geralmente cria seleções de entidades não ordenadas, exceto quando você usa o método `orderBy( )` ou usa opções específicas. Nesta documentação, a menos que especificado, "seleção de entidade" geralmente se refere a uma "seleção de entidade não ordenada".
+Por motivos de otimização, por padrão, 4D ORDA geralmente cria seleções de entidades não ordenadas, exceto quando você usa o método `orderBy( )` ou usa opções específicas. Nesta documentação, a menos que especificado, "entity selection" geralmente se refere a uma "entity selection não ordenada".
 
 As seleções das entidades ordenadas são criadas apenas quando necessárias ou quando solicitadas especificamente usando opções, ou seja, nos seguintes casos:
 

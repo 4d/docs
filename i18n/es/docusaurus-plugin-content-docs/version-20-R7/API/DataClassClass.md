@@ -40,7 +40,7 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece un objeto de interfaz a una 
 
 #### Descripción
 
-Los atributos de las clases de datos son<!-- REF ClaseDeDatos.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
+Los atributos de las clases de datos son<!-- REF DataClassClass.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
 
 Los objetos devueltos tienen propiedades que puede leer para obtener información sobre los atributos de su clase de datos.
 
@@ -579,7 +579,7 @@ $number:=$ds.Persons.getCount()
 
 #### Descripción
 
-La función `.getDataStore()` <!-- REF #DataClass.getDataStore().Summary -->devuelve el datastore para la clase de datos especificada<!-- END REF -->.
+La función `.getDataStore()` <!-- REF #DataClassClass.getDataStore().Summary -->devuelve el datastore para la clase de datos especificada<!-- END REF -->.
 
 El almacén de datos puede ser:
 
@@ -846,7 +846,7 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 
 #### Descripción
 
-La función `.newSelection()` <!-- REF #DataClassClass.newSelection(). Summary -->crea una nueva selección de entidades en blanco, no compartible, relacionada con la clase de datos, en memoria<!-- END REF -->.
+La función `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->crea una nueva selección de entidades en blanco, no compartible, relacionada con la clase de datos, en memoria<!-- END REF -->.
 
 > Para obtener información sobre las selecciones de entidades no compartibles, consulte [esta sección](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -910,7 +910,7 @@ attributePath|formula comparator value
 
 donde:
 
-- **attributePath**: ruta del atributo sobre el que se quiere ejecutar la búsqueda. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre".) En el caso de una ruta de atributo cuyo tipo es `Collection`, se utiliza la notación `[]` para manejar todas las ocurrencias (por ejemplo `children[].age`).
+- **attributePath**: ruta del atributo sobre el que se quiere ejecutar la búsqueda. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre"). En el caso de una ruta de atributo cuyo tipo es `Collection`, se utiliza la notación `[]` para manejar todas las ocurrencias (por ejemplo `children[].age`).
 
 > \*No puede utilizar directamente atributos cuyo nombre contenga caracteres especiales como ".", "\[ ]", o "=", ">", "#"..., porque se evaluarán incorrectamente en la cadena de consulta. Si necesita consultar dichos atributos, debe considerar el uso de marcadores, que permiten un rango ampliado de caracteres en las rutas de los atributos (ver **Uso de marcadores de posición** *a continuación*)
 
@@ -943,8 +943,8 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
 | Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |
 | Contiene palabra clave                | %                             | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                                                                                                                                   |
 
-- **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. Por ejemplo, si se introduce la cadena "v20" como **value** para comparar con un atributo entero, se convertirá a 20. For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
-  Tenga en cuenta que, en caso de no coincidencia de tipo con tipos escalares (texto, fecha, número...), 4D intentará convertir el tipo **value** al tipo de datos del atributo siempre que sea posible, para un manejo más fácil de los valores procedentes de Internet.
+- Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Tenga en cuenta que, en caso de no coincidencia de tipo con tipos escalares (texto, fecha, número...), 4D intentará convertir el tipo **value** al tipo de datos del atributo siempre que sea posible, para un manejo más fácil de los valores procedentes de Internet. Por ejemplo, si se introduce la cadena "v20" como **value** para comparar con un atributo entero, se convertirá a 20.
+  For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
   - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
   - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
   - Valores constantes de **tipo numérico**: los decimales se separan con un '.' (punto).
@@ -1040,7 +1040,7 @@ No obtendrá el resultado esperado porque el valor null será evaluado por 4D co
 
 #### Not equal to null or undefined values
 
-The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+El comparador "no igual a *value*" (`#` o `!=`) no devuelve atributos cuyo valor es null o indefinido. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
 
 ```4d
 $notMarried:=ds.Person.query("info.married#true") //encuentra personas con valor de atributo false
@@ -1049,7 +1049,7 @@ $notMarried:=ds.Person.query("info.married#true") //encuentra personas con valor
 If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //encuentra atributos false, null e undefined
 ```
 
 #### No igual a en colecciones

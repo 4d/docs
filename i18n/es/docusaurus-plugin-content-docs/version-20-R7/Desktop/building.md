@@ -59,7 +59,7 @@ Cuando se crea una aplicación, 4D genera un archivo de registro llamado *BuildA
 - Todos los errores que se han producido,
 - Todo problema de firma (por ejemplo, un plug-in no firmado).
 
-Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to [notarize](#about-notarization) your application on macOS.
+La comprobación de este archivo puede ayudarle a ahorrar tiempo durante los siguientes pasos de despliegue, por ejemplo si tiene intención de [notarizar](#about-notarization) su aplicación en macOS.
 
 > Use the `Get 4D file(Build application log file)` statement to get the log file location.
 
@@ -87,7 +87,7 @@ Esta funcionalidad crea un archivo *.4dz* en una carpeta `Compiled Database/<pro
 
 Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. El tamaño compacto y optimizado de los archivos .4dz hace que los paquetes de proyectos sean fáciles de desplegar.
 
-> Al generar archivos .4dz, 4D utiliza por defecto un formato zip **estándar**. La ventaja de este formato es que es fácilmente legible por cualquier herramienta unzip. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual).
+> Al generar archivos .4dz, 4D utiliza por defecto un formato zip **estándar**. La ventaja de este formato es que es fácilmente legible por cualquier herramienta unzip. Si no quiere utilizar este formato estándar, añada la llave XML `UseStandardZipFormat` con valor `False` en su archivo [`buildApp.4DSettings`](#build-application-settings) (para más información, vea el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html)).
 
 #### Incluir las carpetas asociadas
 
@@ -123,7 +123,7 @@ Checking the **Build stand-alone Application** option and clicking **Build** wil
 Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine).
 
 - Puede definir un archivo de datos predeterminado o permitir a los usuarios [crear y utilizar su propio archivo de datos](#management-of-data-files).
-- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**About licenses**](#about-licenses) paragraph).
+- Puede integrar una licencia de despliegue o dejar que el usuario final introduzca su licencia en el primer inicio de la aplicación (consulte la sección [**Acerca de las licencias**](#about-licenses)).
 
 :::note
 
