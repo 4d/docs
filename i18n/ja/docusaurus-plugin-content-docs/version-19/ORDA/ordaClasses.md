@@ -227,7 +227,7 @@ $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManage
 $city:=$cityManager.City.getCity("Caguas")
 
 If ($city.isBigCity())
- ALERT($city.name + " は大きな町です。")
+ ALERT($city.name + " は大きな町です。 ")
 End if
 ```
 
@@ -368,11 +368,11 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="生年月日が入力されていません。" 
+        $status.statusText:="生年月日が入力されていません。 " 
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False
-        $status.statusText:="生徒の年齢は 15 〜 30 の範囲で入力してください。この生徒の年齢は "+String(This.age()+"です。")
+        $status.statusText:="生徒の年齢は 15 〜 30 の範囲で入力してください。 この生徒の年齢は "+String(This.age()+"です。 ")
 End case
 ```
 
