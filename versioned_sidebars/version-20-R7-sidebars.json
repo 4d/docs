@@ -746,7 +746,7 @@
                 "commands-legacy/http-get",
                 "commands-legacy/http-get-certificates-folder",
                 "commands-legacy/http-get-option",
-                "commands-legacy/http-parse-message",
+                "commands/http-parse-message",
                 "commands-legacy/http-request",
                 "commands-legacy/http-set-certificates-folder",
                 "commands-legacy/http-set-option"
