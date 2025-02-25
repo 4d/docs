@@ -7,25 +7,25 @@ title: データタイプの概要
 
 この2つはおおよそ同じものですが、データベースレベルで提供されているいくつかのデータタイプはランゲージにおいては直接利用可能ではなく、自動的に適宜変換されます。 同様に、いくつかのデータタイプはランゲージでしか利用できません。 各場所で利用可能なデータタイプと、ランゲージでの宣言の仕方の一覧です:
 
-| データタイプ                                  | データベース  | ランゲージ   | [`var` 宣言](variables.md#var-キーワードによる宣言) | [`C_` または `ARRAY` 宣言](variables.md#c_-指示子による宣言) |
-| --------------------------------------- | ------- | ------- | --------------------------------------- | ----------------------------------------------- |
-| [文字列](dt_string.md)                     | ◯       | テキストに変換 | -                                       | -                                               |
-| [Text](Concepts/dt_string.md)           | ◯       | ◯       | Text                                    | `C_TEXT`, `ARRAY TEXT`                          |
-| [Date](Concepts/dt_date.md)             | ◯       | ◯       | Date                                    | `C_DATE`, `ARRAY DATE`                          |
-| [Time](Concepts/dt_time.md)             | ◯       | ◯       | Time                                    | `C_TIME`, `ARRAY TIME`                          |
-| [Boolean](Concepts/dt_boolean.md)       | ◯       | ◯       | Boolean                                 | `C_BOOLEAN`, `ARRAY BOOLEAN`                    |
-| [Integer](Concepts/dt_number.md)        | ◯       | ブールに変換  | Integer                                 | `ARRAY INTEGER`                                 |
-| [倍長整数](Concepts/dt_number.md)           | ◯       | ◯       | Integer                                 | `C_LONGINT`, `ARRAY LONGINT`                    |
-| [64ビット整数](Concepts/dt_number.md)        | ◯ (SQL) | 実数に変換   | -                                       | -                                               |
-| [Real](Concepts/dt_number.md)           | ◯       | ◯       | Real                                    | `C_REAL`, `ARRAY REAL`                          |
-| [未定義](Concepts/dt_null_undefined.md)    | -       | ◯       | -                                       | -                                               |
-| [Null](Concepts/dt_null_undefined.md)   | -       | ◯       | -                                       | -                                               |
-| [Pointer](Concepts/dt_pointer.md)       | -       | ◯       | Pointer                                 | `C_POINTER`, `ARRAY POINTER`                    |
-| [Picture](Concepts/dt_picture.md)       | ◯       | ◯       | Picture                                 | `C_PICTURE`, `ARRAY PICTURE`                    |
-| [BLOB](Concepts/dt_blob.md)             | ◯       | ◯       | BLOB                                    | `C_BLOB`, `ARRAY BLOB`                          |
-| [Object](Concepts/dt_object.md)         | ◯       | ◯       | Object                                  | `C_OBJECT`, `ARRAY OBJECT`                      |
-| [Collection](Concepts/dt_collection.md) | -       | ◯       | Collection                              | `C_COLLECTION`                                  |
-| [バリアント](Concepts/dt_variant.md)(2)      | -       | ◯       | Variant                                 | `C_VARIANT`                                     |
+| データタイプ                                  | データベース  | ランゲージ    | [`var` 宣言](variables.md#var-キーワードによる宣言) | [`C_` または `ARRAY` 宣言](variables.md#c_-指示子による宣言) |
+| --------------------------------------- | ------- | -------- | --------------------------------------- | ----------------------------------------------- |
+| [文字列](dt_string.md)                     | ◯       | テキストに変換  | -                                       | -                                               |
+| [Text](Concepts/dt_string.md)           | ◯       | ◯        | Text                                    | `C_TEXT`, `ARRAY TEXT`                          |
+| [Date](Concepts/dt_date.md)             | ◯       | ◯        | Date                                    | `C_DATE`, `ARRAY DATE`                          |
+| [Time](Concepts/dt_time.md)             | ◯       | ◯        | Time                                    | `C_TIME`, `ARRAY TIME`                          |
+| [Boolean](Concepts/dt_boolean.md)       | ◯       | ◯        | Boolean                                 | `C_BOOLEAN`, `ARRAY BOOLEAN`                    |
+| [Integer](Concepts/dt_number.md)        | ◯       | 倍長整数 に変換 | Integer                                 | `ARRAY INTEGER`                                 |
+| [倍長整数](Concepts/dt_number.md)           | ◯       | ◯        | Integer                                 | `C_LONGINT`, `ARRAY LONGINT`                    |
+| [64ビット整数](Concepts/dt_number.md)        | ◯ (SQL) | 実数に変換    | -                                       | -                                               |
+| [Real](Concepts/dt_number.md)           | ◯       | ◯        | Real                                    | `C_REAL`, `ARRAY REAL`                          |
+| [未定義](Concepts/dt_null_undefined.md)    | -       | ◯        | -                                       | -                                               |
+| [Null](Concepts/dt_null_undefined.md)   | -       | ◯        | -                                       | -                                               |
+| [Pointer](Concepts/dt_pointer.md)       | -       | ◯        | Pointer                                 | `C_POINTER`, `ARRAY POINTER`                    |
+| [Picture](Concepts/dt_picture.md)       | ◯       | ◯        | Picture                                 | `C_PICTURE`, `ARRAY PICTURE`                    |
+| [BLOB](Concepts/dt_blob.md)             | ◯       | ◯        | BLOB                                    | `C_BLOB`, `ARRAY BLOB`                          |
+| [Object](Concepts/dt_object.md)         | ◯       | ◯        | Object                                  | `C_OBJECT`, `ARRAY OBJECT`                      |
+| [Collection](Concepts/dt_collection.md) | -       | ◯        | Collection                              | `C_COLLECTION`                                  |
+| [バリアント](Concepts/dt_variant.md)(2)      | -       | ◯        | Variant                                 | `C_VARIANT`                                     |
 
 (1) ORDA では、オブジェクト (エンティティ) を介してデータベースフィールドを扱うため、オブジェクトにおいて利用可能なデータタイプのみがサポートされます。 詳細については [オブジェクト](Concepts/dt_object.md) のデータタイプの説明を参照ください。
 

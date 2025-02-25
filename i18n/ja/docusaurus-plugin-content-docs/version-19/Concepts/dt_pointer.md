@@ -189,10 +189,7 @@ SORT ARRAY($ArrPtr->;>) // 配列の並べ替え
   //takeTwo プロジェクトメソッド
   //$1 – 文字列フィールドまたは変数へのポインター。 これを大文字に変換します。
   //$2 – 文字列フィールドまたは変数へのポインター。 これを小文字に変換します。
- これを小文字に変換します。
- これを小文字に変換します。
- これを小文字に変換します。
- $1->:=Uppercase($1->)
+  $1->:=Uppercase($1->)
  $2->:=Lowercase($2->)
 ```
 
@@ -222,7 +219,7 @@ takeTwo(->[myTable]myField;->$MyVar)
 - $PointerOne:=->$MyVar --> 変数 $PointerOne に、変数 $MyVar へのポインターを代入しています。
 - $PointerTwo:=->$PointerOne --> 新たな変数 $PointerTwo に、$MyVar を参照する $PointerOne へのポインターを代入しています。
 - ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。
-- ALERT (($PointerTwo->)->) --> 先の説明と同様に $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVar を示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。
+- ALERT (($PointerTwo->)->) --> 先の説明と同様に $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVar を示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。
 
 以下の例では、$MyVar に "Hello" が代入されます:
 ```4d

@@ -200,87 +200,6 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTP Parse message.Desc -->
-
-## HTTP Parse message
-
-<details><summary>履歴</summary>
-
-| リリース  | 内容 |
-| ----- | -- |
-| 20 R4 | 追加 |
-
-</details>
-
-<!-- REF #HTTP Parse message.Syntax -->**HTTP Parse message**( *data* : Text ) : Object<br/>**HTTP Parse message**( *data* : Blob ) : Object<!-- END REF -->
-
-<!-- REF #HTTP Parse message.Params -->
-
-| 引数   | 型          |                             | 説明                                                |
-| ---- | ---------- | :-------------------------: | ------------------------------------------------- |
-| data | Text, Blob |              ->             | 解析するデータ                                           |
-| 戻り値  | Object     | <- | オブジェクト (各プロパティは、マルチパートの各データです) |
-
-<!-- END REF -->
-
-#### 説明
-
-`HTTP Parse message` コマンドは、<!-- REF #HTTP Parse message.Summary -->multipart/form-*data* のテキストまたは Blob (HTTP "response" メッセージ) をパースし、コンテンツをオブジェクトに抽出します。 戻り値のオブジェクトの各プロパティは、マルチパートの各データに対応します<!-- END REF -->。
-
-:::info
-
-HTTP 自体はステートレスな通信プロトコルです。 このフレームワークの中で、クライアントは、メソッド・ターゲット・ヘッダー・コンテンツなどの詳細を指定した "request" メッセージをサーバーに送ることによって通信を開始します。 サーバーは、同じ詳細を含む "response" メッセージで応答します。 `HTTP Parse message` コマンドは、"request" または "response" メッセージを解析し、オブジェクトの形式に整えます。
-
-:::
-
-#### 例題
-
-次の例では、HTTPリクエストを格納するテキストファイルのデータを解析します。
-
-ファイルの中身は次のとおりです:
-
-```
-POST /batch/gmail/v1/ HTTP/1.1
-Accept-Encoding: gzip, deflate
-Authorization: Bearer xxxxxx
-Connection: Close
-Content-Length: 442
-Content-Type: multipart/mixed; boundary=batch_19438756D576A14ABA87C112F56B9396; charset=UTF-8
-Date: Wed, 29 Nov 2023 13:51:35 GMT
-Host: gmail.googleapis.com
-User-Agent: 4D/20.4.0
-
-
---batch_19438756D576A14ABA87C112F56B9396
-Content-Type: application/http
-Content-ID: <item1>
-
-GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58689824c92?format=raw HTTP/1.1
-
-
---batch_19438756D576A14ABA87C112F56B9396
-Content-Type: application/http
-Content-ID: <item2>
-
-GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58642b28e2b?format=raw HTTP/1.1
-
---batch_19438756D576A14ABA87C112F56B9396--
-```
-
-ファイルを解析します:
-
-```4d
-var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
-var $parsedMessage : Object:=HTTP Parse message($message)
-//$parsedMessage= {
-//headers:{"User-Agent":"4D/20.4.0",...},
-//parts:[{"contentType":"application/http","contentID":"item1",...}],
-//requestLine:"POST /batch/gmail/v1/ HTTP/1.1"
-//}
-```
-
-<!-- END REF -->
-
 <!-- REF #HTTPRequestClass.agent.Desc -->
 
 ## .agent
@@ -478,14 +397,14 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *timeout* : Real } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| 引数   | 型                              |                             | 説明                                    |
-| ---- | ------------------------------ | :-------------------------: | ------------------------------------- |
-| time | Real                           |              ->             | レスポンスを待機する最長時間 (秒) |
-| 戻り値  | 4D.HTTPRequest | <- | HTTPRequest オブジェクト                    |
+| 引数      | 型                              |                             | 説明                           |
+| ------- | ------------------------------ | :-------------------------: | ---------------------------- |
+| timeout | Real                           |              ->             | 最大待機時間(秒) |
+| 戻り値     | 4D.HTTPRequest | <- | HTTPRequest オブジェクト           |
 
 <!-- END REF -->
 
@@ -493,12 +412,16 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 > この関数はスレッドセーフです。
 
-`wait()` 関数は、<!-- REF #HTTPRequestClass.wait().Summary -->サーバーのレスポンスを待ちます<!-- END REF -->。
+`wait()` 関数は<!-- REF #HTTPRequestClass.wait().Summary -->サーバーからのレスポンスが来るか、`timeout` 引数で指定した秒数に達するまで待ちます<!-- END REF -->。
 
-*time* 引数が渡されると、関数は最長で、定義された秒数だけ待機します。
+*timeout* 引数でタイムアウトまでの時間が指定された場合、関数はこの引数で指定された時間待機します。 小数点以下も指定可能です。
 
 サーバーのレスポンスがすでに到着している場合、関数は即座に返されます。
 
-`.wait()` の実行中、他の `HTTPRequest` や [`SystemWorker`](SystemWorkerClass.md) インスタンス、または他の [`CALL WORKER`](../commands-legacy/call-worker.md) の呼び出しによるコールバック関数は実行されます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+:::note
+
+.wait() の実行中、それが`HTTPRequest` あるいは  [`SystemWorker`](SystemWorkerClass.md) インスタンス、あるいは他の [`CALL WORKER`](../commands-legacy/call-worker.md) 呼び出しから発生したかにかかわらず、ワーカーからのコールバックは実行されます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+
+:::
 
 <!-- END REF -->
