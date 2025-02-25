@@ -130,7 +130,7 @@ TCPConnection objects provide the following properties and functions:
 
 |                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE ##4D.TCPConnection.closed.Syntax -->](#closed)<br/><!-- INCLUDE ##4D.TCPConnection.closed.Summary -->         |
+| [<!-- INCLUDE #4D.TCPConnection.closed.Syntax -->](#closed)<br/><!-- INCLUDE #4D.TCPConnection.closed.Summary -->           |
 | [<!-- INCLUDE #4D.TCPConnection.errors.Syntax -->](#errors)<br/><!-- INCLUDE #4D.TCPConnection.errors.Summary -->           |
 | [<!-- INCLUDE #4D.TCPConnection.noDelay.Syntax -->](#noDelay)<br/><!-- INCLUDE #4D.TCPConnection.noDelay.Summary -->        |
 | [<!-- INCLUDE #4D.TCPConnection.send().Syntax -->](#send)<br/><!-- INCLUDE #4D.TCPConnection.send().Summary -->             |
