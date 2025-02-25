@@ -5,7 +5,7 @@ title: HTTPRequest
 
 `HTTPRequest` クラスを使って、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を扱うことができます。このオブジェクトは、HTTPサーバーへのリクエストの設定と送信、および HTTPサーバーのレスポンスを処理するのに使用します。
 
-`HTTPRequest` クラスは、`4D` クラスストアにて提供されています。 HTTPリクエストを作成・送信するには、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を返す [4D.HTTPRequest.new()](#4dhttprequestnew) 関数を使用します。
+`HTTPRequest` クラスは、`4D` クラスストアにて提供されています。 `HTTPRequest` クラスは、`4D` クラスストアにて提供されています。 HTTPリクエストを作成・送信するには、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を返す [4D.HTTPRequest.new()](#4dhttprequestnew) 関数を使用します。
 
 <details><summary>履歴</summary>
 
@@ -102,7 +102,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 返される `HTTPRequest` オブジェクトは、HTTPサーバーのレスポンスの処理と、メソッドを呼び出すのに使用されます。
 
-*url* には、リクエスト送信先の URL を渡します。 シンタックスは以下の通りです:
+*url* には、リクエスト送信先の URL を渡します。 シンタックスは以下の通りです: シンタックスは以下の通りです:
 
 ```
 {http://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
@@ -137,7 +137,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 | dataType               | Text                                              | レスポンス本文のデータ型。 値: "text", "blob", "object", または "auto"。 "auto" の場合、本文の型は MIMEタイプから推定されます (JSON ならオブジェクト、テキスト・javascript・xml・httpメッセージ・URLエンコードされたフォームなどはテキスト、それ以外は BLOB)。 | "auto"            |
 | decodeData             | Boolean                                           | true の場合、`onData` コールバックが受け取るデータは非圧縮です                                                                                                                                                                      | false             |
 | encoding               | Text                                              | `body` のあるリクエストの場合にのみ使用 (`post` または `put` メソッド)。 本文がテキストの場合のエンコーディング。ヘッダーにて content-type が指定されている場合は無視されます。                                                                              | "UTF-8"           |
-| headers                | Object                                            | リクエストのヘッダー。 シンタックス: `headers.key=value` (同じ key に対して *value* を複数指定する場合、*value* にコレクションを使用できます)                                                                           | 空のオブジェクト          |
+| headers                | Object                                            | リクエストのヘッダー。 リクエストのヘッダー。 シンタックス: `headers.key=value` (同じ key に対して *value* を複数指定する場合、*value* にコレクションを使用できます)                                                               | 空のオブジェクト          |
 | method                 | Text                                              | "POST"、"GET"、またはその他のメソッド                                                                                                                                                                                    | "GET"             |
 | minTLSVersion          | Text                                              | TLS の最小バージョンを指定します: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                      | "`TLSv1_2`"       |
 | onData                 | [Function](FunctionClass.md)                      | 本文のデータ受信時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                                   | undefined         |
@@ -148,7 +148,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 | protocol               | Text                                              | "auto" または "HTTP1"。 "auto" は現在の実装における HTTP1 を意味します。                                                                                                                                                         | "auto"            |
 | proxyAuthentication    | [authentication オブジェクト](#authentication-オブジェクト)   | プロキシ認証のためのオブジェクト                                                                                                                                                                                            | undefined         |
 | serverAuthentication   | [authentication オブジェクト](#authentication-オブジェクト)   | サーバー認証のためのオブジェクト                                                                                                                                                                                            | undefined         |
-| returnResponseBody     | Boolean                                           | false の場合、レスポンス本文は [`response` オブジェクト](#response) に返されません。 false かつ `onData` が未定義の場合にエラーを返します。                                                                                                              | true              |
+| returnResponseBody     | Boolean                                           | false の場合、レスポンス本文は [`response` オブジェクト](#response) に返されません。 false かつ `onData` が未定義の場合にエラーを返します。 false かつ `onData` が未定義の場合にエラーを返します。                                                                          | true              |
 | timeout                | Real                                              | タイムアウト (秒単位) 未定義 = タイムアウトなし                                                                                                                                                              | 未定義               |
 | validateTLSCertificate | Boolean                                           | false の場合、4D は TLS証明書の検証をおこなわず、無効 (期限切れ、自己署名など) であってもエラーを返しません。 重要: 現在の実装では、認証局そのものは検証されません。                                                                             | true              |
 
@@ -181,16 +181,16 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 #### event オブジェクト
 
-`event` オブジェクトは、[コールバック関数](#コールバック関数) が呼ばれたときに返されます。 このオブジェクトには次のプロパティが含まれます:
+`event` オブジェクトは、[コールバック関数](#コールバック関数) が呼ばれたときに返されます。 このオブジェクトには次のプロパティが含まれます: このオブジェクトには次のプロパティが含まれます:
 
 | プロパティ                 | 型    | 説明                                                                                     |
 | --------------------- | ---- | -------------------------------------------------------------------------------------- |
-| .data | blob | 取得データ。 *onData* コールバック以外の場合は常に `undefined` です。                                         |
+| .data | blob | 取得データ。 取得データ。 *onData* コールバック以外の場合は常に `undefined` です。                                  |
 | .type | テキスト | イベントの種類。 取り得る値: "response", "error", "headers", "data", または "terminate |
 
 #### authentication オブジェクト
 
-authentication オブジェクトは `options.serverAuthentication` または `options.proxyAuthentication` プロパティに使用します。 このオブジェクトには以下のプロパティを含めることができます:
+authentication オブジェクトは `options.serverAuthentication` または `options.proxyAuthentication` プロパティに使用します。 このオブジェクトには以下のプロパティを含めることができます: このオブジェクトには以下のプロパティを含めることができます:
 
 | プロパティ    | 型    | 説明                                              | デフォルト     |
 | -------- | ---- | ----------------------------------------------- | --------- |
@@ -265,7 +265,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.headers` プロパティは、<!-- REF #HTTPRequestClass.headers.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `headers` を格納します<!-- END REF -->。 (省略された場合は空のオブジェクト)
+`.headers` プロパティは、<!-- REF #HTTPRequestClass.headers.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `headers` を格納します<!-- END REF -->。 (省略された場合は空のオブジェクト) (省略された場合は空のオブジェクト)
 
 <!-- END REF -->
 
@@ -277,7 +277,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.method` プロパティは、<!-- REF #HTTPRequestClass.method.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `method` を格納します<!-- END REF -->。 (省略された場合は "GET")
+`.method` プロパティは、<!-- REF #HTTPRequestClass.method.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `method` を格納します<!-- END REF -->。 (省略された場合は "GET") (省略された場合は "GET")
 
 <!-- END REF -->
 
@@ -289,7 +289,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.protocol` プロパティは、<!-- REF #HTTPRequestClass.protocol.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `protocol` を格納します<!-- END REF -->。 (省略時、または "auto" の場合は、使用されたプロトコルのバージョン)
+`.protocol` プロパティは、<!-- REF #HTTPRequestClass.protocol.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `protocol` を格納します<!-- END REF -->。 (省略時、または "auto" の場合は、使用されたプロトコルのバージョン) (省略時、または "auto" の場合は、使用されたプロトコルのバージョン)
 
 <!-- END REF -->
 
@@ -299,9 +299,9 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                              |
-| ----- | ----------------------------------------------- |
-| 19 R8 | `.headers` は小文字の名前を返します。 `.rawHeaders` プロパティの追加 |
+| リリース  | 内容                                                                     |
+| ----- | ---------------------------------------------------------------------- |
+| 19 R8 | `.headers` は小文字の名前を返します。 `.rawHeaders` プロパティの追加 `.rawHeaders` プロパティの追加 |
 
 </details>
 
@@ -311,15 +311,15 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 `.response` プロパティは、<!-- REF #HTTPRequestClass.response.Summary -->少なくともステータスコードを受け取った場合には、リクエストへのレスポンスを格納します (それ以外の場合は未定義)<!-- END REF -->。
 
-`response` オブジェクトは共有できないオブジェクトです。 このオブジェクトは次のプロパティを提供します:
+`response` オブジェクトは共有できないオブジェクトです。 このオブジェクトは次のプロパティを提供します: このオブジェクトは次のプロパティを提供します:
 
-| プロパティ                       | 型       | 説明                                                                                                                                                                                                         |
-| --------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .body       | Variant | レスポンスのボディ。 メッセージのデータ型は [`dataType`](#datatype) プロパティによって定義されています。 ボディがまだ受信されていない場合は未定義です。                                                                                                                  |
-| .headers    | Object  | レスポンスのヘッダー。 ヘッダー名は小文字で返されます。 `<headername>.key` = value (同じ key が複数指定されている場合、*value* はコレクションでありえます) ヘッダーがまだ受信されていない場合は未定義です。 ヘッダーがまだ受信されていない場合は未定義です。                                   |
-| .status     | Number  | レスポンスのステータスコード                                                                                                                                                                                             |
-| .statusText | Text    | ステータスコードを説明するメッセージ                                                                                                                                                                                         |
-| .rawHeaders | Object  | レスポンスのヘッダー。 ヘッダー名はそのまま (大文字小文字を変えずに) 返されます。 `<headerName>.key` = value (同じ key が複数指定されている場合、*value* はコレクションでありえます) ヘッダーがまだ受信されていない場合は未定義です。 ヘッダーがまだ受信されていない場合は未定義です。 |
+| プロパティ                       | 型       | 説明                                                                                                                                                                                                                                                               |
+| --------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| .body       | Variant | レスポンスのボディ。 レスポンスのボディ。 メッセージのデータ型は [`dataType`](#datatype) プロパティによって定義されています。 ボディがまだ受信されていない場合は未定義です。 ボディがまだ受信されていない場合は未定義です。                                                                                                                                     |
+| .headers    | Object  | レスポンスのヘッダー。 ヘッダー名は小文字で返されます。 `<headername>.key` = value (同じ key が複数指定されている場合、*value* はコレクションでありえます) ヘッダーがまだ受信されていない場合は未定義です。 ヘッダーがまだ受信されていない場合は未定義です。                                                                                         |
+| .status     | Number  | レスポンスのステータスコード                                                                                                                                                                                                                                                   |
+| .statusText | Text    | ステータスコードを説明するメッセージ                                                                                                                                                                                                                                               |
+| .rawHeaders | Object  | レスポンスのヘッダー。 ヘッダー名はそのまま (大文字小文字を変えずに) 返されます。 レスポンスのヘッダー。 ヘッダー名は小文字で返されます。 `<headername>.key` = value (同じ key が複数指定されている場合、*value* はコレクションでありえます) ヘッダーがまだ受信されていない場合は未定義です。 ヘッダーがまだ受信されていない場合は未定義です。 ヘッダーがまだ受信されていない場合は未定義です。 |
 
 <!-- END REF -->
 
@@ -331,7 +331,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.returnResponseBody` プロパティは、<!-- REF #HTTPRequestClass.returnResponseBody.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された` returnResponseBody` を格納します<!-- END REF -->。 (省略された場合は true)。
+`.returnResponseBody` プロパティは、<!-- REF #HTTPRequestClass.returnResponseBody.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された` returnResponseBody` を格納します<!-- END REF -->。 (省略された場合は true)。 (省略された場合は true)。
 
 <!-- END REF -->
 
@@ -353,7 +353,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 > この関数はスレッドセーフです。
 
-`.terminate()` 関数は、<!-- REF #HTTPRequestClass.terminate().Summary -->HTTPリクエストを中止します<!-- END REF -->。 また、`onTerminate` イベントをトリガーします。
+`.terminate()` 関数は、<!-- REF #HTTPRequestClass.terminate().Summary -->HTTPリクエストを中止します<!-- END REF -->。 また、`onTerminate` イベントをトリガーします。 また、`onTerminate` イベントをトリガーします。
 
 <!-- END REF -->
 
@@ -377,7 +377,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.timeout` プロパティは、<!-- REF #HTTPRequestClass.timeout.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `timeout` を格納します<!-- END REF -->。 (省略された場合は未定義)。
+`.timeout` プロパティは、<!-- REF #HTTPRequestClass.timeout.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `timeout` を格納します<!-- END REF -->。 (省略された場合は未定義)。 (省略された場合は未定義)。
 
 <!-- END REF -->
 
@@ -414,13 +414,13 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 `wait()` 関数は<!-- REF #HTTPRequestClass.wait().Summary -->サーバーからのレスポンスが来るか、`timeout` 引数で指定した秒数に達するまで待ちます<!-- END REF -->。
 
-*timeout* 引数でタイムアウトまでの時間が指定された場合、関数はこの引数で指定された時間待機します。 小数点以下も指定可能です。
+*timeout* 引数でタイムアウトまでの時間が指定された場合、関数はこの引数で指定された時間待機します。 小数点以下も指定可能です。 小数点以下も指定可能です。
 
 サーバーのレスポンスがすでに到着している場合、関数は即座に返されます。
 
 :::note
 
-.wait() の実行中、それが`HTTPRequest` あるいは  [`SystemWorker`](SystemWorkerClass.md) インスタンス、あるいは他の [`CALL WORKER`](../commands-legacy/call-worker.md) 呼び出しから発生したかにかかわらず、ワーカーからのコールバックは実行されます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+.wait() の実行中、それが`HTTPRequest` あるいは  [`SystemWorker`](SystemWorkerClass.md) インスタンス、あるいは他の [`CALL WORKER`](../commands-legacy/call-worker.md) 呼び出しから発生したかにかかわらず、ワーカーからのコールバックは実行されます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
 
 :::
 
