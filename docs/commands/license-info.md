@@ -57,6 +57,7 @@ The returned object contains the following properties:
 | **Property**      | **Type**              | **Description**     | **Example**        |
 | --------------------|------- |----|----------|
 | name  | string                | Commercial name                                                                                       | "4D Developer Professional vXX"                                                       |
+| evaluation  | boolean                | True if the license is an evaluation license                        | False                                                      |
 | key  | number                |  ID of the installed product. A unique number is associated to a 4D application (such as 4D Server, 4D in local mode, 4D Desktop, etc.) installed on a machine. This number is encrypted.         | 12356789                                                              |
 | licenseNumber | string                | License number                                                                                        | "4DDP16XXXXX1123456789"                                                               |
 | version | string                | Product version number                                                                                | "16", "16R2"                                                                          |
