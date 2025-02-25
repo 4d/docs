@@ -32,11 +32,11 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-// サブフォーム "Cal2" のコンテキストにおいて // サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し
+// サブフォーム "Cal2" のコンテキストにおいて  SetCalendarDate を実行し
 // その際に引数として日付リテラル !05/05/20! を渡します
 ```
 
-メソッドやクラス関数からデータを **返す** こともできます。 以下は、文字列のデータ長を返すビルトインの `Length` コマンドを用いたステートメントです。 このステートメントでは、`Length` 関数が *MyLength* という変数に値を返します。 という変数に値を返します。
+メソッドやクラス関数からデータを **返す** こともできます。 以下は、文字列のデータ長を返すビルトインの `Length` コマンドを用いたステートメントです。 このステートメントでは、`Length` 関数が *MyLength* という変数に値を返します。  コードは以下のようになります:
 
 ```4d
 MyLength:=Length("How did I get here?")
@@ -154,7 +154,7 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 ### 初期化
 
-引数は宣言されると、[**その型に対応するデフォルト値**](data-types.md#デフォルト値) に初期化されます。 別の値が代入されない限り、セッション中はこの値が保持されます。
+引数は宣言されると、[**その型に対応するデフォルト値**](data-types.md#default-values) に初期化されます。 別の値が代入されない限り、セッション中はこの値が保持されます。
 
 
 
@@ -322,10 +322,10 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
        $0:=-1
     End if
     ...
-    C_LONGINT($0)
- If(Form event code=On Drag Over)
-    $0:=0
-    ...
+    If($DataType=Is picture)
+       $0:=-1
+    End if
+    ... 
  End if
 ```
 
