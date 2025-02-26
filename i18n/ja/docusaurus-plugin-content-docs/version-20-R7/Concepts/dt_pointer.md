@@ -265,7 +265,7 @@ takeTwo(->[myTable]myField;->$MyVar)
 - ($PointerTwo->)->:="Goodbye"
   \--> $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示します。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。
 - ALERT (($PointerTwo->)->)
-  \--> 先の説明と同様に $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 つまり、($PointerTwo-&#062;)-&#062; は、$MyVar を示しています。
+  \--> 先の説明と同様に $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。
 
 以下の例では、$MyVar に "Hello" が代入されます:
 

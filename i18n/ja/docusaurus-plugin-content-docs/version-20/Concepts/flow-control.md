@@ -272,8 +272,8 @@ vResult = 1の判定により他の条件を見る前に分岐するので、第
 #### 例題
 
 ```4d
- CONFIRM("新規レコードを追加しますか？ // ユーザーに確認します
- ") // ユーザーに確認します
+ CONFIRM("新規レコードを追加しますか？")  // ユーザーに確認します
+ ")  // ユーザーに確認します
  While(OK=1) // 利用者が望む限りループします
     ADD RECORD([aTable]) // 新規にレコードを追加します
  End while // ループは必ず End while によって終わります
@@ -292,7 +292,7 @@ Repeat
     {continue}
 Until(Boolean_Expression)
 ```
-`Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。 `While...End while` ループと `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。
+`Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。 `While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。
 
 もう一つの `While...End while` ループとの相違点は、 `Repeat...Until` はブール式が true になるまでループを続行することです。
 
@@ -300,7 +300,7 @@ Until(Boolean_Expression)
 
 #### 例題
 
-以下の例を、`While...End while` ループの例と比較してください。 システム変数　`OK` を初期化する `CONFIRM` コマンドはありません。
+以下の例を、`While...End while` ループの例と比較してください。 システム変数 `OK` を初期化する `CONFIRM` コマンドはありません。
 
 ```4d
  Repeat
@@ -359,9 +359,10 @@ End for
 
 ```4d
  For($vlElem;Size of array(anArray);1;-1)
-  // 各配列要素に対する処理
+  // 各配列要素に対する処理 
     anArray{$vlElem}:=...
-    End for
+    End if
+ End for 
 ```
 
 4. 以下の例は、テーブル [aTable] のカレントセクションの各レコードについて処理をおこないます:
@@ -396,8 +397,8 @@ End for
 6. 以下の例は、配列 anArray の全要素に対して処理をおこないます:
 
 ```4d
- For($vlElem;2;Size of array(anArray);2)
-  // 偶数要素 #2,#4...#2n に対する処理
+ For($vlElem;Size of array(anArray);1;-1)
+  // 各配列要素に対する処理 
     anArray{$vlElem}:=...
  End for
 ```
@@ -408,10 +409,11 @@ End for
  For($vlChar;Length(vtSomeText);1;-1)
     // 文字がタブであれば
     If(Character code(vtSomeText[[$vlChar]])=Tab)
-        // なんらかの処理をします
+        // なんらかの処理をします 
     End if
  End for
-    End for
+    End if
+ End for 
 ```
 
 8. 以下の例は、テーブル [aTable] のカレントセクションの各レコードについて処理をおこないます:
@@ -462,7 +464,7 @@ End for
  End for
 ```
 
-`Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。 つまり、`Repeat...Until` ループは最低でも1回は必ずループを実行しますが、`While...End while` ループは最初のブール式が FALSE である場合には、ループを1回も実行しません。
+`While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。 つまり、 `Repeat...Until` ループは最低でも1回は必ずループを実行しますが、`While...End while` ループは最初のブール式が FALSE である場合には、ループを1回も実行しません。
 ```4d
  $i:=1 // カウンターの初期化
  While($i<=100) // 100回のループ
@@ -482,7 +484,7 @@ End for
 
 :::tip
 
-`For...End for` ループは、`While...End while` や `Repeat...Until` ループよりも高速です。これは 4D が内部的にカウンター変数のテストおよび増加をおこなうからです。 そのため、*Expression* が空あるいは null でないかぎり、ループは少なくとも1回は実行されます。
+`For...End for` ループは、`While...End while` や `Repeat...Until` ループよりも高速です。これは 4D が内部的にカウンター変数のテストおよび増加をおこなうからです。 したがって、可能な限り `For...End for` ループの使用が推奨されます。
 
 :::
 
@@ -540,7 +542,7 @@ End for
  End for each
 ```
 
-`For each...End for each` 構造は、*Expression* に含まれるすべての*Current_item* に対して処理を繰り返します。 *Current_item* の型は *Expression* の型に依存します。 `For each...End for each` ループは3種類の *Expression * を対象に反復処理をおこなうことができます:
+`For each...End for each` 構造は、*Expression* に含まれるすべての*Current_item* に対して処理を繰り返します。 *Current_item* の型は *Expression* の型に依存します。 `For each...End for each` ループは3種類の *Expression* を対象に反復処理をおこなうことができます:
 
 - コレクション: コレクションの各要素をループします
 - エンティティセレクション: 各エンティティをループします
@@ -666,7 +668,7 @@ Employees データクラスの中から、英国の従業員の給与を引き�
 - *begin* には、*Expression* においてループを開始したい要素位置を渡します (このとき *begin* の値が指す要素はループに含まれます)。
 - *end* には、*Expression* においてループを終了する要素位置を渡します (このとき *end* の値が指す要素はループに含まれません)。
 
-*end* が省略されている、あるいは *end* が *Expression* の要素数より大きい場合、*begin* 引数の位置から最後の要素まで (含まれる) をループします。 *begin* と *end* が正の値の場合、それらは *Expression* 内の要素の実際の位置を表します。 *begin* 引数が負の値の場合、それは `begin:=begin+Expression のサイズ` として再計算されます (つまり、*Expression* の終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*begin* は0に設定されます。 **注:** *begin* が負の値だったとしても、繰り返しそのものは標準の順番で実行されます。 *end* が負の値だった場合、それは `end:=end+Expression のサイズ` として再計算されます。
+*end* が省略されている、あるいは *end* が *Expression* の要素数より大きい場合、*begin* 引数の位置から最後の要素まで (含まれる) をループします。 *begin* と *end* が正の値の場合、それらは *Expression* 内の要素の実際の位置を表します。 *begin* 引数が負の値の場合、それは `begin:=begin+Expression のサイズ` として再計算されます (つまり、*Expression* の終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*begin* は0に設定されます。 **注:** begin が負の値だったとしても、繰り返しそのものは標準の順番で実行されます。 *end* が負の値だった場合、それは `end:=end+Expression のサイズ` として再計算されます。
 
 例:
 - コレクションには 10の要素が格納されています (ナンバリングは #0から#9)
@@ -692,12 +694,12 @@ Employees データクラスの中から、英国の従業員の給与を引き�
 
 ### Until と While 条件
 
-`For each...End for each` の実行は、`Until` あるいは `While` 条件を追加することでコントロールすることができます。 `Until(condition)` 条件がループに組み込まれた場合、condition の式が true に評価されるとループは停止します。 `While(condition)` 条件の場合は逆に、condition の式が false になるとループが停止します。
+`For each...End for each` の実行は、`Until` あるいは `While` 条件を追加することでコントロールすることができます。 `Until(condition)` 条件がループに組み込まれた場合、condition の式が `true` に評価されるとループは停止します。 `While(condition)` 条件の場合は逆に、condition の式が `false` になるとループが停止します。
 
 使用する条件は状況に応じて選べます:
 
 - `Until` 条件は各ループの終わりにテストされます。そのため、*Expression* が空あるいは null でないかぎり、ループは少なくとも1回は実行されます。
-- `While` 条件は各ループの始めにテストされます。
+- `While` 条件は各ループの始めにテストされます。そのため、評価の結果次第では、ループは一度も実行されないことも有り得ます。
 
 #### 例題
 

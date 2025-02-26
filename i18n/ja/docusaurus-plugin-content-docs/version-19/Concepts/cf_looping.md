@@ -31,9 +31,10 @@ title: ループ構造
 
 ```4d
  CONFIRM("新規レコードを追加しますか？")  // ユーザーに確認します
+ ")  // ユーザーに確認します
  While(OK=1) // 利用者が望む限りループします
     ADD RECORD([aTable]) // 新規にレコードを追加します
- End while // ループは必ず End while によって終わります 
+ End while // ループは必ず End while によって終わります
 ```
 
 この例では、まずループに入る前に `CONFIRM` コマンドによりシステム変数 `OK` がセットされます。 ユーザーがダイアログボックスで **OK** ボタンをクリックすると、システム変数 `OK` に1がセットされ、ループを開始します。 それ以外の場合はシステム変数 `OK` に0が設定され、ループをスキップします。 ループに入ると、`ADD RECORD` コマンドはループを続けます。 これは、ユーザーがレコードを保存した時点で、システム変数 `OK` に1が設定されるからです。 ユーザーが最後のレコードを取り消した (保存しない) 時点で、システム変数 `OK` に0がセットされ、ループは終了します。
@@ -46,13 +47,13 @@ title: ループ構造
     statement(s)
  Until(Boolean_Expression)
 ```
-`Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。 つまり、 `Repeat...Until` ループは最低でも1回は必ずループを実行しますが、`While...End while` ループは最初のブール式が FALSE である場合には、ループを1回も実行しません。
+`Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。 `While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。
 
 もう一つの `While...End while` ループとの相違点は、 `Repeat...Until` はブール式が true になるまでループを続行することです。
 
 ### 例題
 
-以下の例を、`While...End while` ループの例と比較してください。 ブール式を、初期化しておく必要がない点に注目してください。システム変数 `OK` を初期化する `CONFIRM` コマンドはありません。
+以下の例を、`While...End while` ループの例と比較してください。 システム変数 `OK` を初期化する `CONFIRM` コマンドはありません。
 
 ```4d
  Repeat
@@ -106,10 +107,9 @@ title: ループ構造
 3. テキスト変数 vtSomeText の文字を一つ一つループ処理します:
 
 ```4d
- For($vlChar;1;Length(vtSomeText))
-    // 文字がタブであれば
-    If(Character code(vtSomeText[[$vlChar]])=Tab)
-        // なんらかの処理をします 
+ For($vlElem;Size of array(anArray);1;-1)
+  // 各配列要素に対する処理 
+    anArray{$vlElem}:=...
     End if
  End for 
 ```
@@ -158,6 +158,8 @@ title: ループ構造
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         // なんらかの処理をします 
     End if
+ End for
+    End if
  End for 
 ```
 
@@ -197,7 +199,7 @@ title: ループ構造
  End for
 ```
 
-`While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。 以下は、同じ処理を実行する `While...End while` ループです:
+`While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。 つまり、 `Repeat...Until` ループは最低でも1回は必ずループを実行しますが、`While...End while` ループは最初のブール式が FALSE である場合には、ループを1回も実行しません。
 ```4d
  $i:=1 // カウンターの初期化
  While($i<=100) // 100回のループ

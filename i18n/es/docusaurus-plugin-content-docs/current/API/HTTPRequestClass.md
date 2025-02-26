@@ -277,7 +277,7 @@ La propiedad `.headers` contiene <!-- REF #HTTPRequestClass.headers.Summary -->l
 
 #### Descripción
 
-La propiedad `.method` contiene <!-- REF #HTTPRequestClass.method.Summary -->el `method` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
+La propiedad `.returnResponseBody` contiene <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->el `returnResponseBody` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -331,7 +331,7 @@ Un objeto `response` es un objeto no compartible. Ofrece las siguientes propieda
 
 #### Descripción
 
-La propiedad `.returnResponseBody` contiene <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->el `returnResponseBody` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. Si se omite, contiene True.
+La propiedad `.method` contiene <!-- REF #HTTPRequestClass.method.Summary -->el `method` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. . Si se omite, contiene True.
 
 <!-- END REF -->
 
@@ -377,7 +377,7 @@ La propiedad `.terminated` contiene <!-- REF #HTTPRequestClass.terminated.Summar
 
 #### Descripción
 
-La propiedad `.timeout` contiene <!-- REF #HTTPRequestClass.timeout.Summary -->el `timeout` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
+La propiedad `.timeout` contiene <!-- REF #HTTPRequestClass.timeout.Summary -->el `timeout` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. . .
 
 <!-- END REF -->
 

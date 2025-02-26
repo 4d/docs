@@ -1353,7 +1353,7 @@ En *toSearch*, pase la expresión a encontrar en la colección. Puede pasar:
 - el valor null,
 - una referencia de objeto o de colección.
 
-Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.
+*toSearch* debe coincidir exactamente con el elemento a encontrar (se aplican las mismas reglas que para el operador de igualdad del tipo de datos).
 
 Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
@@ -1415,7 +1415,7 @@ En *toSearch*, pase la expresión a encontrar en la colección. Puede pasar:
 - el valor null,
 - una referencia de objeto o de colección.
 
-Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.
+*toSearch* debe coincidir exactamente con el elemento a encontrar (se aplican las mismas reglas que para el operador de igualdad del tipo de datos).
 
 Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
@@ -1653,7 +1653,7 @@ Propiedad
 
 #### Descripción
 
-Ejemplo
+La función `.lastIndexOf()` <!-- REF #collection.lastIndexOf().Summary -->busca la expresión *toSearch* entre los elementos de la colección y devuelve el índice de la última ocurrencia <!-- END REF -->, o -1 si no se encontró.
 
 > Esta función no modifica la colección original.
 
@@ -1844,7 +1844,7 @@ Si la colección está vacía, `.max()` devuelve *Undefined*.
 
 #### Descripción
 
-Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
+La función `.min()` <!-- REF #collection.min().Summary -->devuelve el elemento con el valor más pequeño de la colección<!-- END REF --> (el primer elemento de la colección tal y como se ordenaría en orden ascendente utilizando la función [`.sort()`](#sort)).
 
 > Esta función no modifica la colección original.
 
