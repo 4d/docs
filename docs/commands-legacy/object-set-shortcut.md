@@ -64,10 +64,10 @@ In the *modifiers* parameter, you can pass one or more modifier keys to associat
 
 | Constant         | Type    | Value | Comment                                                    |
 | ---------------- | ------- | ----- | ---------------------------------------------------------- |
-| Command key mask | Integer | 256   | Ctrl key under Windows, Command key under OS X             |
-| Control key mask | Integer | 4096  | Ctrl key under OS X, or right click under Windows and OS X |
-| Option key mask  | Integer | 2048  | Alt key (also called Option under OS X)                    |
-| Shift key mask   | Integer | 512   | Windows and OS X                                           |
+| Command key mask | Integer | 256   | Ctrl key under Windows, Command key under macOS             |
+| Control key mask | Integer | 4096  | Ctrl key under macOS, or right click under Windows and macOS |
+| Option key mask  | Integer | 2048  | Alt key (also called Option under macOS)                    |
+| Shift key mask   | Integer | 512   | Windows and macOS                                           |
 
 **Note:** When you omit the *modifiers* parameter, the object is enabled as soon as you press the key that was set. For example, if you associate the "H" key with a button, this button is enabled whenever you press the H key. This kind of functioning is to be reserved for specific interfaces.
 

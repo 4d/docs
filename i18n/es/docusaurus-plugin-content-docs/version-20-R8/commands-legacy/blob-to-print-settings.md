@@ -38,7 +38,7 @@ El comando devuelve uno de los siguientes códigos de estado:
 
 (\*) Los parámetros dependen de la impresora actual seleccionada en el momento en que el BLOB se guardó. La aplicación de estos valores en otra impresora es soportada si ambas impresoras son del mismo modelo. Si las impresoras son diferentes, se restaurarán sólo los parámetros comunes.
 
-##### Windows / OS X 
+##### Windows / macOS 
 
 El BLOB *confImp* se puede guardar y leer en ambas plataformas. Sin embargo, incluso si ciertos parámetros de impresión son comunes, algunos otros son específicos de la plataforma y dependen de los controladores de impresión y de las versiones del sistema operativo. Si el mismo BLOB *confImp* se comparte entre ambas plataformas, es posible que pierda partes de información.
 

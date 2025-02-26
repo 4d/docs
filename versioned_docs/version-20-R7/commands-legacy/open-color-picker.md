@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->The **OPEN COLOR PICKER** command displays the system color picker dialog box.<!-- END REF--> 
 
-**Note:** This is a modal dialog box under Windows but not under OS X.
+**Note:** This is a modal dialog box under Windows but not under macOS.
 
 When the user selects a color and validates the dialog box, this color is applied to the current text selection in the object with the focus, if the "Allow Font/Color Picker" property is checked for this object (see the *Design Reference* manual).
 

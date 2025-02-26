@@ -513,7 +513,7 @@ A built 4D application requires a deployment license. It can be embedded at buil
 |*4D OEM Desktop*|Embedded custom license, contact 4D Sales for information|[Licenses page](#licenses) of the Build application dialog|
 |*4D Unlimited Desktop*|**Discontinued** - Embedded custom license |[Licenses page](#licenses) of the Build application dialog|
 |*4D Desktop*|Per-user license, allowing them to use stand-alone 4D applications|[First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine|
-|*4D OEM Server*|Embedded custom license, contact 4D Sales for information|[Licenses page](#licenses) of the Build application dialog|
+|*4D Server OEM*|Embedded custom license, contact 4D Sales for information|[Licenses page](#licenses) of the Build application dialog|
 |*4D Server*|Per-user license, allowing them to use 4D Server and clients|[First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine|
 
 

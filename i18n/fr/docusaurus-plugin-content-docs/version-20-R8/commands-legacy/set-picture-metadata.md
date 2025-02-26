@@ -41,7 +41,7 @@ Sous Windows, si une erreur se produit durant l’exécution de la commande, la 
 **Notes :**
 
 * Seuls certains formats d'images (notamment JPEG et TIFF) prennent en charge les métadonnées. A l'inverse, des formats tels que GIF ou BMP n'acceptent pas les métadonnées. En cas de conversion d'une image avec métadonnées dans un format ne les prenant pas en charge, les informations sont perdues.
-* Sous OS X version 10.7 (Lion), un bogue du framework natif utilisé pour l'encodage et le décodage des métadonnées d'images peut entraîner des erreurs de précision dans les coordonnées GPS. Dans ce cas, une mise à jour vers OS X 10.8 (Mountain Lion) ou 10.9 (Maverick) est fortement recommandée.
+* Sous macOS version 10.7 (Lion), un bogue du framework natif utilisé pour l'encodage et le décodage des métadonnées d'images peut entraîner des erreurs de précision dans les coordonnées GPS. Dans ce cas, une mise à jour vers macOS 10.8 (Mountain Lion) ou 10.9 (Maverick) est fortement recommandée.
 
 #### Exemple 1 
 

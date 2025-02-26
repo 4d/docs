@@ -31,7 +31,7 @@ Em Windows, o mecanismo para o reconhecimento do nome da aplicação é a mesma 
  "winword" para iniciar MS Word (se está instalado)
 
 **Nota**: encontrará a lista de aplicações instaladas no *registry* na seguinte chave: HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths  
-Sob OS X, o mecanismo utiliza o Finder que indexa automaticamente todas as aplicações instaladas. Pode reconhecer toda aplicação .app por seu nome de package (com ou sem o sufixo .app). Por exemplo, pode passar:  
+Sob macOS, o mecanismo utiliza o Finder que indexa automaticamente todas as aplicações instaladas. Pode reconhecer toda aplicação .app por seu nome de package (com ou sem o sufixo .app). Por exemplo, pode passar:  
   
  "safari"  
  "FireFox"  

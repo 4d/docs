@@ -120,7 +120,7 @@ L'exemple suivant ouvre une fenêtre dont le titre et la taille proviennent des 
 
 #### Exemple 4 
 
-Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres feuille sous Mac OS X :
+Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres feuille sous macOS :
 
 ```4d
  $maFenêtre:=Open window(10;10;400;400;Sheet window)

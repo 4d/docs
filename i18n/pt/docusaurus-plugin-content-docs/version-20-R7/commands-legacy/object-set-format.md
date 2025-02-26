@@ -234,7 +234,7 @@ Para dar formato a botões 3D, passe no parâmetro *formatSaída* uma string de 
 \- *estilo* \= 9: Bevel arredondado  
 \- *estilo* \= 10: Colapsar/expandir  
 \- *estilo* \= 11: Ajuda  
-\- *estilo* \= 12: OS X Textura  
+\- *estilo* \= 12: macOS Textura  
 \- *estilo* \= 13: OS X Gradiente
 * *horMargem* \= Margem horizontal. Número de píxels delimitando as margens internas a direita e a esquerda do botão (áreas que o ícone e o texto não devem invadir).
 * *vertMargem* \= Margem vertical. Número de píxels delimitando as margens superior e inferior do botão (áreas que o ícone e o texto não devem invadir).

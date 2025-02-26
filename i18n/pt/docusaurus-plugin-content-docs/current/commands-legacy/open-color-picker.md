@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->O comando **OPEN COLOR PICKER** mostra a caixa de diálogo de seleção de cor do sistema.<!-- END REF-->  
   
-**Nota**: Esta caixa de diálogo é modal em Windows mas não em OS X.  
+**Nota**: Esta caixa de diálogo é modal em Windows mas não em macOS.  
   
 Se o usuário seleciona uma cor e valida a caixa de diálogo, esta cor se aplica a seleção atual de texto no objeto com o foco, se a propriedade "Aceitar seletor cor/fonte" está selecionada para este objeto (ver o manual de *Desenho*).  
   

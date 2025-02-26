@@ -23,8 +23,8 @@ displayed_sidebar: docs
 Em *nomeArquivo*, passe o nome ou caminho de acesso do arquivo a ler. O arquivo deve existir no disco, caso contrário é gerado um erro. Pode passar:
 
 * Só o nome do arquivo, por exemplo "meuArquivo.txt": neste caso, o arquivo deve estar localizado junto ao arquivo de estrutura da aplicação.
-* Um caminho de acesso relativo ao arquivo de estrutura da aplicação, por exemplo, "\\\\docs\\\\meuArquivo.txt" em Windows ou ": docs: meuArquivo.txt" em OS X.
-* Um caminho de acesso absoluto, por exemplo, "c:\\\\app\\\\docs\\\\meuArquivo.txt" em Windows ou "MacHD:docs:meuArquivo.txt" em OS X.
+* Um caminho de acesso relativo ao arquivo de estrutura da aplicação, por exemplo, "\\\\docs\\\\meuArquivo.txt" em Windows ou ": docs: meuArquivo.txt" em macOS.
+* Um caminho de acesso absoluto, por exemplo, "c:\\\\app\\\\docs\\\\meuArquivo.txt" em Windows ou "MacHD:docs:meuArquivo.txt" em macOS.
 
 Em *conjCaracteres*, se passa o conjunto de caracteres a utilizar para a leitura dos conteúdos. Pode passar uma cadeia com o nome estandarte do conjunto (por exemplo, "ISO-8859-1" ou "UTF-8") ou seu ID MIBEnum (inteiro longo). Para mais informação sobre a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando [CONVERT FROM TEXT](convert-from-text.md).  
   
@@ -33,17 +33,17 @@ Se o documento contém um Byte Order Mark (BOM), 4D utiliza o conjunto de caract
 Se o documento não contém um BOM e se for omitido o parâmetro *conjCaracteres,* 4D utiliza por padrão os seguintes conjuntos de caracteres:
 
 * Sob Windows: ANSI
-* Sob OS X: MacRoman
+* Sob macOS: MacRoman
 
 Em breakMode, pode passar um inteiro longo que indica o processo a realizar nos caracteres de fim de linha presentes no documento. Pode passar uma das seguintes constantes, do tema "*Documentos Sistema*":
 
 | Constante                   | Tipo          | Valor | Comentário                                                                                                                                                                  |
 | --------------------------- | ------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Document unchanged          | Inteiro longo | 0     | Sem processamento                                                                                                                                                           |
-| Document with CR            | Inteiro longo | 3     | As linhas de ruptura se convertem ao formato OS X: CR (*retorno de carro*)                                                                                                  |
+| Document with CR            | Inteiro longo | 3     | As linhas de ruptura se convertem ao formato macOS: CR (*retorno de carro*)                                                                                                  |
 | Document with CRLF          | Inteiro longo | 2     | As linhas de ruptura se convertem ao formato Windows: CRLF (*return + salto de linha*)                                                                                      |
 | Document with LF            | Inteiro longo | 4     | As linhas de ruptura se convertem ao formato Unix: LF (*salto de linha*)                                                                                                    |
-| Document with native format | Inteiro longo | 1     | (Por padrão) as linhas de ruptura se convertem ao formato nativo do sistema operativo: CR (retorno de carro) em OS X, CRLF (*retorno de carro + salto de linha*) em Windows |
+| Document with native format | Inteiro longo | 1     | (Por padrão) as linhas de ruptura se convertem ao formato nativo do sistema operativo: CR (retorno de carro) em macOS, CRLF (*retorno de carro + salto de linha*) em Windows |
 
 Por padrão, quando se omite o parâmetro *modoRetorno*, os saltos de linha se processam em modo nativo (1).
 

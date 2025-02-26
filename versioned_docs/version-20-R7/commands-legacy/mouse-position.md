@@ -24,7 +24,7 @@ The horizontal and vertical coordinates are returned in *mouseX* and *mouseY*. I
 
 The parameter *mouseButton* returns the state of the buttons, as listed previously.
 
-**Note:** The values 2 and 3 can be returned under Mac OS X starting with version 10.2.5 only.
+**Note:** The values 2 and 3 can be returned under macOS starting with version 10.2.5 only.
 
 #### Example 
 

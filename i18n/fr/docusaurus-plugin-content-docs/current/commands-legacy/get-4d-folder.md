@@ -109,7 +109,7 @@ Avec l'application 4D Client, cette constante équivaut strictement à la consta
 
 ##### Dossier base syntaxe Unix 
 
-Dossier contenant le fichier de structure de la base. Cette constante désigne le même dossier que la précédente, mais le chemin d’accès retourné est exprimé avec la syntaxe Unix (Posix), du type /Users/... Cette syntaxe est principalement utile lorsque vous utilisez la commande [LAUNCH EXTERNAL PROCESS](launch-external-process.md) sous OS X. 
+Dossier contenant le fichier de structure de la base. Cette constante désigne le même dossier que la précédente, mais le chemin d’accès retourné est exprimé avec la syntaxe Unix (Posix), du type /Users/... Cette syntaxe est principalement utile lorsque vous utilisez la commande [LAUNCH EXTERNAL PROCESS](launch-external-process.md) sous macOS. 
 
 ##### Dossier Resources courant 
 

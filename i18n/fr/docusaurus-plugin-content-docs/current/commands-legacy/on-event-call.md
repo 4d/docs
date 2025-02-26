@@ -57,10 +57,10 @@ Les constantes à utiliser en fonction du *modifier* à tester et de la plate-fo
 | ------------------------------------ | ------------------------------------------------------------ |  
 | Majuscule                            | Bit touche majuscule / Masque touche majuscule               |  
 | Verr. majuscule                      | Bit touche verrouillage maj / Masque touche verrouillage maj |  
-| Alt (aussi appelée Option sous OS X) | Bit touche option / Masque touche option                     |  
+| Alt (aussi appelée Option sous macOS) | Bit touche option / Masque touche option                     |  
 | Ctrl sous Windows                    | Bit touche commande / Masque touche commande                 |  
-| Ctrl sous OS X                       | Bit touche contrôle / Masque touche contrôle                 |  
-| Commande sous OS X                   | Bit touche commande / Masque touche commande                 |  
+| Ctrl sous macOS                       | Bit touche contrôle / Masque touche contrôle                 |  
+| Commande sous macOS                   | Bit touche commande / Masque touche commande                 |  
 | Clic droit                           | Bit touche contrôle / Masque touche contrôle                 |
 * Les variables systèmes MouseX et MouseY contiennent les coordonnées horizontale et verticale du clic souris, exprimées dans le système de coordonnées locales de la fenêtre dans laquelle le clic s'est produit. L'angle supérieur gauche de la fenêtre a les coordonnées 0,0\. Ces variables n'ont de signification que lorsqu'un clic souris a eu lieu.
 * La variable système MouseProc contient le numéro de référence du process dans lequel le clic souris s'est produit.

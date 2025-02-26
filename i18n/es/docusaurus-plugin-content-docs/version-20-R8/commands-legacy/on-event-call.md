@@ -57,10 +57,10 @@ Puede utilizar una de las siguientes constantes, dependiendo de la tecla del mod
 | ------------------------------------ | -------------------------------------- |  
 | Mayúscula                            | Shift key bit / Shift key mask         |  
 | Bloqueo de mayúsculas                | Caps lock key bit / Caps lock key mask |  
-| Alt (también llamado Opción en OS X) | Option key bit / Option key mask       |  
+| Alt (también llamado Opción en macOS) | Option key bit / Option key mask       |  
 | Ctrl en Windows                      | Command key bit / Command key mask     |  
-| Ctrl en OS X                         | Control key bit / Control key mask     |  
-| Comando en OS X                      | Command key bit / Command key mask     |  
+| Ctrl en macOS                         | Control key bit / Control key mask     |  
+| Comando en macOS                      | Command key bit / Command key mask     |  
 | Clic derecho                         | Control key bit / Control key mask     |
 * Las variables sistema MouseX y MouseY contienen las posiciones horizontal y vertical del clic del ratón, expresadas en el sistema de coordenadas locales de la ventana donde el clic se produjo. La esquina superior izquierda de la ventana es la posición 0,0\. Estas variables son significativas sólo cuando hay un clic del ratón.
 * La variable sistema MouseProc contiene el número de referencia del proceso en el cual ocurrió el evento (clic del ratón).

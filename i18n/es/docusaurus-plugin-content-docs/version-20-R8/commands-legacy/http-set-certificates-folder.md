@@ -29,7 +29,7 @@ En 4D v14, ahora es posible utilizar varios certificados clientes.
   
 En *carpetaCertificados*, pase la ruta de acceso de la carpeta personalizada que contiene los certificados clientes. Puede pasar una ruta de acceso relativa al archivo de estructura de la aplicación, o una ruta de acceso absoluta. La ruta debe ser expresada con la sintaxis del sistema, por ejemplo:
 
-* (OS X): Disk:Applications:myserv:folder
+* (macOS): Disk:Applications:myserv:folder
 * (Windows): C:\\Applications\\myserv\\folder
 
 Una vez ejecutado este comando, la nueva ruta se tiene en cuenta inmediatamente por comandos tales como [HTTP Request](http-request.md) que se ejecuten después (no es necesario reiniciar la aplicación). Se utiliza en todos los procesos de la base.

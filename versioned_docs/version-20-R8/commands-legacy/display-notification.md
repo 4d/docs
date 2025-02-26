@@ -23,7 +23,7 @@ Usually this kind of message is used by the OS or an application to inform the u
 
 * Under Windows, the message appears in the notification area of the taskbar:  
 ![](../assets/en/commands/pict1206085.en.png)
-* Under OS X (version 10.8 minimum), the message appears in a small sliding window in the top right corner of the screen.  
+* Under macOS (version 10.8 minimum), the message appears in a small sliding window in the top right corner of the screen.  
 ![](../assets/en/commands/pict1206031.en.png)  
 Note that in compliance with Apple specifications, the notification is only displayed when the application is not in the foreground. However, the message still appears in the "notification center" list.
 

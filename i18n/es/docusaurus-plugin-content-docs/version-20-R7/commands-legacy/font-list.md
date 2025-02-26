@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | fuentes | Text array | &#8592; | Array de nombres de fuentes disponibles |
-| tipoLista | Integer, * | &#8594;  | Tipo de lista de fuente a devolver o * para devolver los nombres de fuente en OS X |
+| tipoLista | Integer, * | &#8594;  | Tipo de lista de fuente a devolver o * para devolver los nombres de fuente en macOS |
 
 <!-- END REF-->
 
@@ -22,11 +22,11 @@ El parámetro *tipoLista* permite designar el tipo de la lista de fuente a obten
 
 | Constante      | Tipo         | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | -------------- | ------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Favorite fonts | Entero largo | 1     | *fuentes* contiene la lista de fuentes favoritas.<br/>- Bajo de Windows: lista de nombres de familias de fuentes activas en el panel de control de Windows.<br/>- Bajo OS X: lista de nombres de familias de fuentes de la colección "com.apple.Favorites" que se encuentra en el panel de control, llamada "Favorites" en Inglés, "Favoris" en francés, "Favoriten" en alemán, etc. Esta colección puede estar en blanco si el usuario no ha añadido fuentes favoritas. |
+| Favorite fonts | Entero largo | 1     | *fuentes* contiene la lista de fuentes favoritas.<br/>- Bajo de Windows: lista de nombres de familias de fuentes activas en el panel de control de Windows.<br/>- Bajo macOS: lista de nombres de familias de fuentes de la colección "com.apple.Favorites" que se encuentra en el panel de control, llamada "Favorites" en Inglés, "Favoris" en francés, "Favoriten" en alemán, etc. Esta colección puede estar en blanco si el usuario no ha añadido fuentes favoritas. |
 | Recent fonts   | Entero largo | 2     | *fuentes* contiene la lista de fuentes recientes (lista de fuentes utilizadas durante la sesión 4D). Esta lista es utilizada particularmente por las áreas de texto multiestilo.                                                                                                                                                                                                                                                                                                         |
 | System fonts   | Entero largo | 0     | *fuentes* contiene la lista de todas las fuentes del sistema. Opción por defecto si se omite *tipoLista*.                                                                                                                                                                                                                                                                                                                                                                                |
 
-Bajo Mac OS X, cuando se pasa el parámetro opcional *\**, el comando llena el array *fuentes* con los nombres de las fuentes y no con los nombres de las familias de fuentes. La operación por defecto simplifica la gestión programada de áreas de texto enriquecidas, que utilizan familias de fuente. Si pasa el parámetro *\**, los nombres de fuente, por ejemplo "Arial bold", "Arial italic", "Arial narrow italic," son devueltos en lugar de las familias, tales como "Arial", "Arial black" o "Arial narrow".
+Bajo macOS, cuando se pasa el parámetro opcional *\**, el comando llena el array *fuentes* con los nombres de las fuentes y no con los nombres de las familias de fuentes. La operación por defecto simplifica la gestión programada de áreas de texto enriquecidas, que utilizan familias de fuente. Si pasa el parámetro *\**, los nombres de fuente, por ejemplo "Arial bold", "Arial italic", "Arial narrow italic," son devueltos en lugar de las familias, tales como "Arial", "Arial black" o "Arial narrow".
 
 Bajo Windows, el parámetro *\** no tiene efecto. El comando devuelve siempre las familias de fuentes.
 
@@ -36,7 +36,7 @@ Bajo Windows, el parámetro *\** no tiene efecto. El comando devuelve siempre la
 
 Este comando devuelve sólo las fuentes escalables. No se recomienda el uso de fuentes no vectoriales (es decir, fuentes de mapa de bits) para el diseño de interfaces, ya que se basan en una tecnología obsoleta y sufren de limitaciones en cuanto a las variaciones de tamaño. No son compatibles con las funcionalidades más recientes de 4D como las áreas 4D Write Pro.
 
-En OS X, este principio aplica desde OS X 10.4 (las fuentes de mapa de bits QuickDraw son obsoletas a partir de esta versión).
+En macOS, este principio aplica desde macOS 10.4 (las fuentes de mapa de bits QuickDraw son obsoletas a partir de esta versión).
 
 Bajo Windows, este principio se aplica comenzando con 4D v15 R4\. Con el fin de ayudar a los desarrolladores a seleccionar sólo fuentes modernas para sus interfaces, sólo las fuentes vectoriales "TrueType" u "OpenType" se listan. Por ejemplo, "ASI\_Mono", "MS Sans Serif" y "Syistem" ya no están disponibles. Además, también se ignoran los nombres GDI; sólo los nombres de familias de fuente DirectWrite son soportados. Por ejemplo, las fuentes "Arial Black" o "Segoe UI Black" no están en la lista; Sólo "Arial" y "Segoe" se devuelven.
 

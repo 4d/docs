@@ -28,7 +28,7 @@ A progress thermometer is displayed during export. The user can cancel the opera
 
 By default, the command uses by default the UTF-8 character set. You can use the [USE CHARACTER SET](use-character-set.md) command to change this character set. 
 
-Using EXPORT TEXT, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return character (code 13) under OS X and the carraige return+line feed (code 13 + code 10) under Windows. You can change these defaults by assigning values to the two delimiter *System Variables*: **FldDelimit** and **RecDelimit**. The user can change the default values in the Design environment Export Data dialog box. Note that if exported fields contain characters defined as field or record delimiters, these characters are automatically replaced with spaces in the exported file, in order to avoid disrupting the importing process.
+Using EXPORT TEXT, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return character (code 13) under macOS and the carraige return+line feed (code 13 + code 10) under Windows. You can change these defaults by assigning values to the two delimiter *System Variables*: **FldDelimit** and **RecDelimit**. The user can change the default values in the Design environment Export Data dialog box. Note that if exported fields contain characters defined as field or record delimiters, these characters are automatically replaced with spaces in the exported file, in order to avoid disrupting the importing process.
 
 #### Example 
 

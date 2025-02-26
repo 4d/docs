@@ -47,7 +47,7 @@ Les paramètres optionnels *débutSél* et *finSél* permettent de désigner une
 
 **Note :** Si *débutSél* est supérieur à *finSél* (hormis si *finSél* vaut 0), la commande ne fait rien et la variable *OK* prend la valeur 0.
 
-Une fois le lien inséré, il est actif : l’action **Ctrl+clic** (Windows) ou **Commande+clic** (OS X) sur le lien ouvre une page du navigateur par défaut à l’adresse définie dans le paramètre *adresseURL*.
+Une fois le lien inséré, il est actif : l’action **Ctrl+clic** (Windows) ou **Commande+clic** (macOS) sur le lien ouvre une page du navigateur par défaut à l’adresse définie dans le paramètre *adresseURL*.
 
 #### Exemple 
 

@@ -41,7 +41,7 @@ Em Windows, se ocorre um erro durante a execução do comando, a variável OK to
 **Notas:** 
   
 * Só certos formatos de imagens (especificamente JPEG e TIFF) suportam os metadados. Pelo contrário, os formatos tais como GIF ou BMP não aceitam os metadados. Quando converte uma imagem com metadados a um formato que não os suporta, se perde a informação.
-* Em OS X versão 10.7 (Lion), um bug do framework nativo utilizado para a codificação e decodificação dos metadados pode causar erros de precisão nas coordenadas de GPS. Neste caso, se recomenda uma atualização a OS X 10.8 (Mountain Lion) ou 10.9 (Maverick).
+* Em macOS versão 10.7 (Lion), um bug do framework nativo utilizado para a codificação e decodificação dos metadados pode causar erros de precisão nas coordenadas de GPS. Neste caso, se recomenda uma atualização a macOS 10.8 (Mountain Lion) ou 10.9 (Maverick).
 
 #### Exemplo 1 
 

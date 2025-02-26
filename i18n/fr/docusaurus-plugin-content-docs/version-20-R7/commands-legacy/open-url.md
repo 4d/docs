@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN URL.Summary-->La commande **OPEN URL** ouvre le fichier ou l'URL passé dans le paramètre *chemin* avec l'application éventuellement désignée par *nomApp*.<!-- END REF-->
 
-Le paramètre *chemin* peut contenir aussi bien un URL standard qu’un chemin d'accès de fichier. La commande accepte des ':' sous OS X, des '\\' sous Windows ou un URL posix commençant par file://.
+Le paramètre *chemin* peut contenir aussi bien un URL standard qu’un chemin d'accès de fichier. La commande accepte des ':' sous macOS, des '\\' sous Windows ou un URL posix commençant par file://.
 
 Si le paramètre *nomApp* est omis, 4D tente d'abord d'interpréter le paramètre *chemin* comme un chemin d'accès de fichier. Si c'est le cas, 4D demande au système d'ouvrir le fichier avec l'application la plus adaptée (par exemple un navigateur pour les .html, Word pour les .doc, etc.). Le paramètre *\**, s'il est passé, est ignoré dans ce cas.  
 Si le paramètre *chemin* contient un URL standard (protocoles mailto:, news:, http:, etc), 4D lance le navigateur Web par défaut et accède à l’URL. S’il n’y a pas de navigateur sur les volumes connectés à l’ordinateur, la commande ne fait rien.
@@ -33,7 +33,7 @@ Sous Windows, le mécanisme de reconnaissance du nom de l'application est le mê
 
 **Note :** Vous pouvez trouver la liste des applications installées dans la *registry* à la clé suivante : HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths
 
-Sous OS X, le mécanisme utilise la base du Finder qui indexe automatiquement toutes les applications installées. Il reconnaît toute application .app via son nom de package (avec ou sans le suffixe .app). Vous pouvez passer par exemple :
+Sous macOS, le mécanisme utilise la base du Finder qui indexe automatiquement toutes les applications installées. Il reconnaît toute application .app via son nom de package (avec ou sans le suffixe .app). Vous pouvez passer par exemple :
 
 * "safari"
 * "FireFox"

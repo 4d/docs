@@ -38,7 +38,7 @@ The command returns one of the following status codes:
 
 (\*) Settings depend on the currently selected printer at the moment the BLOB was saved. Applying these settings to a another printer is supported if both printers are of the same model. If the printers are different, only common parameters will be restored.
 
-##### Windows / OS X 
+##### Windows / macOS 
 
 The *printSettings* BLOB can be saved and read on both platforms. However, even if some print settings are common, some others are platform-specific and depend on the drivers and system versions. If the same *printSettings* BLOB is shared between both platforms, you may lose parts of the information.   
 When used in a heterogeneous environment, in order to restore the maximum settings available for each platform (and not only the common part), it is recommended that you work with two *printSettings* BLOBs, one for each platform.

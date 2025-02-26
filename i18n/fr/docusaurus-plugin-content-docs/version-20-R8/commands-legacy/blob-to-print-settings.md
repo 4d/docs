@@ -38,7 +38,7 @@ La commande retourne un des codes d'état suivants :
 
 (\*) Les paramètres dépendent de l'imprimante courante sélectionnée au moment où le BLOB a été stocké. Appliquer ces paramètres à une autre imprimante sera pris en charge si les deux imprimantes sont du même modèle. Si les imprimantes sont différentes, seuls les paramètres communs seront restaurés.
 
-##### Windows / OS X 
+##### Windows / macOS 
 
 Le BLOB *paramImpression* peut être sauvegardé et lu sur les deux plate-formes. Toutefois, même si certains paramètres d'impression sont communs, d'autres sont spécifiques à la plate-forme et dépendent du pilote d'impression et des versions de l'OS. Si le même BLOB *paramImpression* est partagé entre les deux plate-formes, vous pouvez perdre des informations.\*
 

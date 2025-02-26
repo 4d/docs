@@ -71,7 +71,7 @@ Notez que vous êtes libre d'utiliser ce paramètre à votre convenance. 4D igno
 Le deuxième paramètre (*$2*) est l'en-tête suivi du corps de la requête *HTTP* envoyée par le navigateur Web. Notez que ces informations sont passées telles quelles à votre **On Web Connection database method**. Le contenu varie en fonction du type de navigateur Web qui tente de se connecter.  
 Avec Safari sous Mac OS, vous recevrez un en-tête semblable à celui-ci :  
 ```RAW  
-GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; fr-fr) AppleWebKit/523.10.3 (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
+GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent: Mozilla/5.0 (Macintosh; U; Intel macOS; fr-fr) AppleWebKit/523.10.3 (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
 ```  
     
     

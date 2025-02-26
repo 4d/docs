@@ -30,7 +30,7 @@ Puede utilizar el parámetro *diccionario* para cambiar el diccionario. Puede pa
 * un nombre de diccionario Hunspell (que corresponde al nombre de archivo del diccionario Hunspell, con o sin la extensión),
 * un código de lenguaje BCP 47, ISO 639-1 o ISO 639-2\. Por ejemplo, con el código de lenguaje BCP 47, "en-US" designa Inglés Americano y "en-GB" designa Inglés británico. Estos códigos son redirigidos internamente al diccionario actual correspondiente (Hunspell o nativo macOS).
 
-**Nota de compatibilidad:** en versiones anteriores de 4D, se soportaron los diccionarios "Cordial". Por compatibilidad, aún es posible pasar un número de diccionario "Cordial" en el parámetro *diccionario* (valor o constante del tema "*Diccionarios*"). En este caso, sin embargo, el diccionario se redirige internamente a un diccionario Hunspell equivalente (o el diccionario nativo en OS X).
+**Nota de compatibilidad:** en versiones anteriores de 4D, se soportaron los diccionarios "Cordial". Por compatibilidad, aún es posible pasar un número de diccionario "Cordial" en el parámetro *diccionario* (valor o constante del tema "*Diccionarios*"). En este caso, sin embargo, el diccionario se redirige internamente a un diccionario Hunspell equivalente (o el diccionario nativo en macOS).
 
 #### Variables y conjuntos del sistema 
 

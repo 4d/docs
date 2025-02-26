@@ -121,7 +121,7 @@ The following example opens a window whose size and title come from the properti
 
 #### Example 4 
 
-This example illustrates the “delay” mechanism for displaying sheet windows under Mac OS X:
+This example illustrates the “delay” mechanism for displaying sheet windows under macOS:
 
 ```4d
  $myWindow:=Open window(10;10;400;400;Sheet window)

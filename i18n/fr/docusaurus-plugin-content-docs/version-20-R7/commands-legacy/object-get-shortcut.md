@@ -28,10 +28,10 @@ Le paramètre *modifiers* retourne une valeur indiquant la ou les touche(s) de m
 
 | Constante        | Type        | Valeur | Comment                                                   |
 | ---------------- | ----------- | ------ | --------------------------------------------------------- |
-| Command key mask | Entier long | 256    | Touche Ctrl sous Windows, touche Commande sous OS X       |
-| Control key mask | Entier long | 4096   | Touche Ctrl sous OS X, ou clic droit sous Windows et OS X |
-| Option key mask  | Entier long | 2048   | Touche Alt (aussi appelée Option sous OS X)               |
-| Shift key mask   | Entier long | 512    | Windows et OS X                                           |
+| Command key mask | Entier long | 256    | Touche Ctrl sous Windows, touche Commande sous macOS       |
+| Control key mask | Entier long | 4096   | Touche Ctrl sous macOS, ou clic droit sous Windows et macOS |
+| Option key mask  | Entier long | 2048   | Touche Alt (aussi appelée Option sous macOS)               |
+| Shift key mask   | Entier long | 512    | Windows et macOS                                           |
 
 Si aucune touche de modification n’a été définie dans l’équivalent clavier, *modifiers* retourne 0\. 
 

@@ -30,12 +30,12 @@ En el parámetro *de*, pase el sistema de coordenadas inicial del punto de entra
 | ----------------- | ------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | XY Current form   | Entero largo | 1     | El origen es la esquina superior izquierda del formulario actual                                                                                                      |
 | XY Current window | Entero largo | 2     | El origen es la esquina superior izquierda de la ventana actual                                                                                                       |
-| XY Main window    | Entero largo | 4     | En Windows: origen es la esquina superior izquierda de la ventana principal; en OS X: igual que XY Screen                                                             |
+| XY Main window    | Entero largo | 4     | En Windows: origen es la esquina superior izquierda de la ventana principal; en macOS: igual que XY Screen                                                             |
 | XY Screen         | Entero largo | 3     | El origen es la esquina superior izquierda de la pantalla principal (igual que para el comando [SCREEN COORDINATES](screen-coordinates.md))<br/><br/> |
 
 Cuando este comando se llama desde el método de un subformulario o un objeto de un subformulario, y si uno de los selectores es XY Current form, a continuación, las coordenadas son relativas al subformulario en sí, no a su formulario padre.
 
-Al convertir desde/hacia la posición de una ventana de formulario (por ejemplo, una conversión desde los resultados de [GET WINDOW RECT](get-window-rect.md), o con los valores pasados ​​a [Open form window](open-form-window.md)), XY Main window debe ser utilizado, ya que es el sistema de coordenadas utilizado por los comandos de la ventana en Windows. También se puede utilizar para este propósito en OS X, donde es equivalente a XY Screen.
+Al convertir desde/hacia la posición de una ventana de formulario (por ejemplo, una conversión desde los resultados de [GET WINDOW RECT](get-window-rect.md), o con los valores pasados ​​a [Open form window](open-form-window.md)), XY Main window debe ser utilizado, ya que es el sistema de coordenadas utilizado por los comandos de la ventana en Windows. También se puede utilizar para este propósito en macOS, donde es equivalente a XY Screen.
 
 Cuando *de* es XY Current form y el punto se encuentra en la sección del cuerpo de un formulario listado, el resultado depende del contexto de llamada del comando:
 

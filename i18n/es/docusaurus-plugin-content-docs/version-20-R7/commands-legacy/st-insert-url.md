@@ -47,7 +47,7 @@ Los parámetros opcionales *inicioSel* y *finSel* designan una selección de tex
   
 **Nota**: si *inicioSel* es mayor que *finSel* (excepto cuando *finSel* es 0) , el comando no hace nada y la variable OK toma el valor 0.
 
-Una vez insertado el enlace, es activa: el uso de **Ctrl+clic** (Windows) o **Comando+clic** (OS X) abre una página del navegador por defecto en la dirección especificada en el parámetro *direccionURL*.
+Una vez insertado el enlace, es activa: el uso de **Ctrl+clic** (Windows) o **Comando+clic** (macOS) abre una página del navegador por defecto en la dirección especificada en el parámetro *direccionURL*.
 
 #### Ejemplo 
 

@@ -27,7 +27,7 @@ Le BLOB généré ne doit pas être modifié par programmation : il ne peut êtr
 
 La commande retourne 1 si le BLOB a été correctement généré et 0 si aucune imprimante courante n'est sélectionnée.
 
-##### Windows / OS X 
+##### Windows / macOS 
 
 Le BLOB *paramImpression* peut être sauvegardé et lu sur les deux plateformes. Toutefois, même si certains paramètres d'impression sont communs, d'autres sont spécifiques à la plateforme et dépendent du pilote d'impression et des versions de l'OS. Si le même BLOB *paramImpression* est partagé entre les deux plateformes, vous pouvez perdre des informations.  
   

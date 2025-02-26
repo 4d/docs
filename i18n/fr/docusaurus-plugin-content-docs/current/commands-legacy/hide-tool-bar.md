@@ -20,7 +20,7 @@ Si une fenêtre barre d'outils a été créée par la commande [Open form window
 
 #### Exemple 
 
-Sous OS X, vous avez défini une barre d'outils personnalisée ainsi qu'une fenêtre standard ayant l'option Has full screen mode Mac. Lorsque la fenêtre standard est passée en plein écran par un utilisateur alors que la barre d'outils est affichée, vous ne voulez pas que la barre d'outils empiète sur la fenêtre plein écran. 
+Sous macOS, vous avez défini une barre d'outils personnalisée ainsi qu'une fenêtre standard ayant l'option Has full screen mode Mac. Lorsque la fenêtre standard est passée en plein écran par un utilisateur alors que la barre d'outils est affichée, vous ne voulez pas que la barre d'outils empiète sur la fenêtre plein écran. 
 
 Pour cela, dans l'événement On Resize du formulaire de la fenêtre standard, il suffit de détecter le passage en mode plein écran et d'appeler **HIDE TOOL BAR** dans ce cas :
 

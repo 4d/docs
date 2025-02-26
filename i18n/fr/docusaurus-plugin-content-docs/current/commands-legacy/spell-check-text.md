@@ -25,7 +25,7 @@ La commande retourne la position du premier caractère de ce mot dans *posErr* e
 
 Si la vérification démarre sans erreur et qu’un mot inconnu est rencontré, la variable système OK prend la valeur 0\. Si une erreur d’initialisation se produit lors de la vérification ou si aucun mot n’est inconnu, OK prend la valeur 1\. 
 
-**Note OS X :** Sous OS X lorsque le correcteur natif est activé, cette commande ne prend pas en charge la correction grammaticale. 
+**Note macOS :** Sous macOS lorsque le correcteur natif est activé, cette commande ne prend pas en charge la correction grammaticale. 
 
 #### Exemple 
 

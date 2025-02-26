@@ -28,7 +28,7 @@ A progress thermometer is displayed during export. The user can cancel the opera
 
 By default, the command uses the UTF-8 character set. Since SYLK format documents generally use the ISO-8859-1 character set, you may need to use the [USE CHARACTER SET](use-character-set.md "USE CHARACTER SET") command to specify the appropriate character set. 
 
-When using **EXPORT SYLK**, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return (code 13) under OS X and the carriage return+line feed (code 13 + code 10) under Windows. You can modify these values by assigning new values to the two *System Variables* *FldDelimit* and *RecDelimit*. The user can change these default values in the export dialog box of the Design mode. Note that if exported fields contain characters defined as field or record delimiters, these characters are automatically replaced with spaces in the exported file, in order to avoid disrupting the importing process.
+When using **EXPORT SYLK**, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return (code 13) under macOS and the carriage return+line feed (code 13 + code 10) under Windows. You can modify these values by assigning new values to the two *System Variables* *FldDelimit* and *RecDelimit*. The user can change these default values in the export dialog box of the Design mode. Note that if exported fields contain characters defined as field or record delimiters, these characters are automatically replaced with spaces in the exported file, in order to avoid disrupting the importing process.
 
 #### Example 
 

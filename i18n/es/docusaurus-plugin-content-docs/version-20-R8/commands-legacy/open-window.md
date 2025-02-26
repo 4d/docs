@@ -123,7 +123,7 @@ El siguiente ejemplo abre una ventana cuyo tamaño y título provienen de las pr
 
 #### Ejemplo 4 
 
-Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo Mac OS X:
+Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo macOS:
 
 ```4d
  $miVentana:=Open window(10;10;400;400;Sheet window)

@@ -122,7 +122,7 @@ O exemplo abaixo abre uma janela cujo tamanho e título provém das propriedades
 
 #### Exemplo 4 
 
-Este exemplo ilustra o mecanismo de “atraso” de mostrar janelas em Mac OS X: 
+Este exemplo ilustra o mecanismo de “atraso” de mostrar janelas em macOS: 
 
 ```4d
  $minhaJanela:=Open window(10;10;400;400;Sheet window)

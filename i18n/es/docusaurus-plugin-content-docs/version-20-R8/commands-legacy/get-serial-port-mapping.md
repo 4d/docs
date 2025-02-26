@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET SERIAL PORT MAPPING.Summary-->El comando GET SERIAL PORT MAPPING devuelve dos arrays, *arrNumeros* y *arrNombres*, que contienen los números y nombres de puertos seriales del equipo actual.<!-- END REF-->
 
-Este comando es útil en Mac OS X, donde el sistema operativo asigna dinámicamente el número de puerto cuando utiliza un adaptador serial USB. Puede direccionar cualquier puerto serial extendido utilizando su nombre (estático), sin importar su número actual.
+Este comando es útil en macOS, donde el sistema operativo asigna dinámicamente el número de puerto cuando utiliza un adaptador serial USB. Puede direccionar cualquier puerto serial extendido utilizando su nombre (estático), sin importar su número actual.
 
 **Nota:** este comando no devuelve valores significativos con puertos estándar. Si quiere direccionar un puerto estándar, debe pasar su valor (0 o 1) directamente utilizando el comando [SET CHANNEL](set-channel.md "SET CHANNEL") (modo antiguo de funcionamiento de 4D). 
 
@@ -37,7 +37,7 @@ Este método de proyecto puede utilizarse para direccionar el mismo puerto seria
   // vNombrePuerto contiene el nombre del puerto a utilizar; puede venir de una ventana,
   // de un valor almacenado en un campo, etc.
  If(arrNumsPuertos{$vNumPuerto}=0)
-    vNumPuertoFinal:=0 //caso especial sobre Mac OS X
+    vNumPuertoFinal:=0 //caso especial sobre macOS
  else
     vNumPuertoFinal:=arrNumsPuertos{$vNumPuerto}+100
  End if

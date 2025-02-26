@@ -29,7 +29,7 @@ La possibilité d’utiliser plusieurs certificats clients est une nouveauté de
 
 Passez dans *dossierCertificats* le chemin d’accès du dossier personnalisé contenant les certificats clients. Vous pouvez passer soit un chemin d’accès relatif au fichier de structure de l’application, soit un chemin d’accès absolu. Le chemin doit être exprimé avec la syntaxe système, par exemple :
 
-* (OS X) : Disk:Applications:myserv:folder
+* (macOS) : Disk:Applications:myserv:folder
 * (Windows) : C:\\Applications\\myserv\\folder
 
 Lorsque cette commande a été exécutée, le nouveau chemin est immédiatement pris en compte par les commandes telles que [HTTP Request](http-request.md) exécutées ultérieurement (il n’est pas nécessaire de redémarrer l’application). Il est utilisé dans tous les process de la base.

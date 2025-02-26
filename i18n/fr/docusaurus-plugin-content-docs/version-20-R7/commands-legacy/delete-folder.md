@@ -34,7 +34,7 @@ Par défaut pour des raisons de sécurité, si vous omettez le paramètre *optio
    * Si le dossier désigné ou un des fichiers qu'il contient ne peut pas être supprimé, la procédure de suppression est abandonnée dès que le premier élément inaccessible est atteint, et une erreur(\*) est retournée. Dans ce cas, le dossier ne sera que partiellement supprimé. Il est cependant possible d'utiliser la commande [Last errors](last-errors.md)  pour obtenir le nom et le chemin d’accès du fichier à l'origine de l'erreur.  
    * Si le dossier désigné n'existe pas, la commande ne fait rien et aucune erreur n'est générée.  
    (\*) sous Windows : -54 (Tentative d'écriture dans un fichier verrouillé)  
-   sous OS X : -45 (Fichier verrouillé ou chemin d'accès invalide)
+   sous macOS : -45 (Fichier verrouillé ou chemin d'accès invalide)
 
 Vous pouvez intercepter ces erreurs à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md) .
 

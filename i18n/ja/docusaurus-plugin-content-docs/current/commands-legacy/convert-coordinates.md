@@ -30,7 +30,7 @@ displayed_sidebar: docs
 | ----------------- | ---- | - | ------------------------------------------------------------------- |
 | XY Current form   | 倍長整数 | 1 | 原点はカレントフォームの左上端                                                     |
 | XY Current window | 倍長整数 | 2 | 原点はカレントウィンドウの左上端                                                    |
-| XY Main window    | 倍長整数 | 4 | Windows:原点はメインウィンドウの左上端 OS X:XY Screenと同じ                           |
+| XY Main window    | 倍長整数 | 4 | Windows:原点はメインウィンドウの左上端 macOS:XY Screenと同じ                           |
 | XY Screen         | 倍長整数 | 3 | 原点はメインスクリーンの左上端([SCREEN COORDINATES](screen-coordinates.md)コマンドと同じ) |
 
 このコマンドがサブフォームまたはサブフォームのオブジェクトから呼び出され、セレクターのどれか一つがXY Current formであった場合、座標系はサブフォーム自身に対して相対的であり、親フォームに対して相対的ではありません。

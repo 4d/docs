@@ -16,16 +16,16 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.PLAY.Summary-->The **PLAY** command plays sound or multimedia files.<!-- END REF--> You pass the full pathname of the file you want to play in *objectName*. On OS X, the command can also be used to play a system sound. 
+<!--REF #_command_.PLAY.Summary-->The **PLAY** command plays sound or multimedia files.<!-- END REF--> You pass the full pathname of the file you want to play in *objectName*. On macOS, the command can also be used to play a system sound. 
 
 * To play a file, pass its name and pathname in *objectName*. You can pass a full pathname or a pathname relative to the database structure file.  
-The main sound and multimedia file formats are supported: .WAV, .MP3, .AIFF (OS X), etc. Under OS X, the command supports more particularly the Core Audio formats.
-* (OS X only) To play a system sound, pass its name directly in the *objectName* parameter.
+The main sound and multimedia file formats are supported: .WAV, .MP3, .AIFF (macOS), etc. Under macOS, the command supports more particularly the Core Audio formats.
+* (macOS only) To play a system sound, pass its name directly in the *objectName* parameter.
 
 **Note:** 'snd' resources, as used on Mac OS 9 and older, are no longer supported.
 
 The *async* parameter specifies that the sound will play asynchronously on Windows. Synchronous play means that all processing stops until the sound has finished playing; asynchronous means that processing does not stop and the sound plays in the background. If *async* is passed and contains 0 (or any longint value), the sound is played asynchronously. If omitted, the sound is played synchronously.  
-**Note:** On OS X, the sound is always played asynchronously, with or without the *async* parameter.
+**Note:** On macOS, the sound is always played asynchronously, with or without the *async* parameter.
 
 To stop playing an asynchronous sound, use the following statement:
 
@@ -47,7 +47,7 @@ The following example shows how to play a WAV file on Windows:
 
 #### Example 2 
 
-The following example code plays a system sound on OS X:
+The following example code plays a system sound on macOS:
 
 ```4d
  PLAY("Submarine.aiff")

@@ -21,7 +21,7 @@ displayed_sidebar: docs
 The Windows serial port buffer is limited in size to 10 Kbytes. This means that the buffer can overflow. When it is full and new characters are received, the new characters replace the oldest characters. The old characters are lost; therefore, it is essential that the buffer is read quickly when new characters are received.
 
 **On Mac OS**  
-The Mac OS X serial port buffer capacity is, in theory, unlimited (depending on the available memory). If the buffer is full and new characters are received, the new characters replace the oldest characters. The old characters are lost; therefore, it is essential that the buffer is read quickly when new characters are received.
+The macOS serial port buffer capacity is, in theory, unlimited (depending on the available memory). If the buffer is full and new characters are received, the new characters replace the oldest characters. The old characters are lost; therefore, it is essential that the buffer is read quickly when new characters are received.
 
 RECEIVE BUFFER is different from [RECEIVE PACKET](receive-packet.md) in that it takes whatever is in the buffer and then immediately returns. [RECEIVE PACKET](receive-packet.md) waits until it finds a specific character or until a given number of characters are in the buffer.
 

@@ -29,7 +29,7 @@ Em 4D v14, agora é possível utilizar vários certificados clientes.
   
 Em *pastaCertificados*, passe a rota de acesso da pasta personalizada que contém os certificados clientes. Pode passar uma rota de acesso relativa ao arquivo de estrutura da aplicação, ou uma rota de acesso absoluta. A rota deve ser expressada com a sintaxe do sistema, por exemplo:
 
-* (OS X): Disk:Applications:myserv:folder
+* (macOS): Disk:Applications:myserv:folder
 * (Windows): C:\\Applications\\myserv\\folder
 
 Uma vez executado este comando, a nova rota é levada em conta imediatamente (não é necessário reiniciar a aplicação). Se utiliza em todos os processos da base.

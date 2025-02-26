@@ -47,10 +47,10 @@ As teclas modificadoras não geram um evento; também deve pressionar outra tecl
 | ---------------------------------- | -------------------------------------- |
 | Maiúscula                          | Shift key bit / Shift key mask         |
 | Bloqueio de maiúsculas             | Caps lock key bit / Caps lock key mask |
-| Alt (também chamado Opção em OS X) | Option key bit / Option key mask       |
+| Alt (também chamado Opção em macOS) | Option key bit / Option key mask       |
 | Ctrl em Windows                    | Command key bit / Command key mask     |
-| Ctrl em OS X                       | Control key bit / Control key mask     |
-| Comando em OS X                    | Command key bit / Command key mask     |
+| Ctrl em macOS                       | Control key bit / Control key mask     |
+| Comando em macOS                    | Command key bit / Command key mask     |
 | Clic direito                       | Control key bit / Control key mask     |
 
   

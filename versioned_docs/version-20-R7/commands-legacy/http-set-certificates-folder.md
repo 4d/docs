@@ -29,7 +29,7 @@ The client certificates folder is the one where 4D looks for the client certific
 
 In *certificatesFolder*, pass the pathname of the custom folder containing the client certificates. You can pass either a pathname relative to the application structure file, or an absolute pathname. The path must be expressed using the system syntax, for example:
 
-* (OS X): Disk:Applications:myserv:folder
+* (macOS): Disk:Applications:myserv:folder
 * (Windows): C:\\Applications\\myserv\\folder
 
 Once this command has been executed, the new path is immediately taken into account by commands such as [HTTP Request](http-request.md) that are executed later on (you do not have to restart the application). It is used in all the processes of the database.

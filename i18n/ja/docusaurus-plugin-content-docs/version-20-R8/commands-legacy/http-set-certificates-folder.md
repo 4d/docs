@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 *certificatesFolder* 引数には、クライアント証明書を内包しているユーザー定義のフォルダのパス名を渡します。アプリケーションのストラクチャーファイルからの相対パスか、ま たは絶対パスを渡すことができます。パスは以下の例のようにシステムシンタックスに従って書かれている必要があります:
 
-* (OS X): Disk:Applications:myserv:folder
+* (macOS): Disk:Applications:myserv:folder
 * (Windows): C:\\Applications\\myserv\\folder
 
 自動的に作成されます。

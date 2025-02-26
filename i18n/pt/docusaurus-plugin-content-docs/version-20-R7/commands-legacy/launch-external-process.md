@@ -26,12 +26,12 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-O comando **LAUNCH EXTERNAL PROCESS** permite iniciar um processo externo de 4D, em Mac OS X e Windows.  
-Em Mac OS X, este comando oferece acesso a todas as aplicações executáveis que possam ser iniciadas desde o Terminal.  
+O comando **LAUNCH EXTERNAL PROCESS** permite iniciar um processo externo de 4D, em macOS e Windows.  
+Em macOS, este comando oferece acesso a todas as aplicações executáveis que possam ser iniciadas desde o Terminal.  
   
 Passe no parâmetro *nomArquivo* a rota de acesso da aplicação a executar, como também os argumentos requeridos (se for necessário).  
   
-Em Mac OS X, pode também passar apenas o nome da aplicação a executar; 4D utilizará então a variável do ambiente PATH para localizar o executável.  
+Em macOS, pode também passar apenas o nome da aplicação a executar; 4D utilizará então a variável do ambiente PATH para localizar o executável.  
   
 **Advertência**: este comando apenas pode iniciar aplicações executáveis; não pode executar instruções que façam parte do shell (intérprete de comandos). Por exemplo, em Mac OS não é possível utilizar este comando para executar a instrução *feito* ou as indireções.  
   
@@ -49,17 +49,17 @@ Estas variáveis são válidas no processo atual para a chamada abaixo a **LAUNC
   
 Quando for passado, o parâmetro *pid* (inteiro longo) devolve a ID única do processo criado para lançar o comando, independentemente do estado da opção *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS*. Com esta informação, é mais fácil interagir com os processos externos criados pelo comando, por exemplo. para detê-lo. Se o lançamento do processo falha, não é devolvido o parâmetro *pid*.
 
-#### Exemplos em Mac OS X 
+#### Exemplos em macOS 
 
-Os exemplos abaixo utilizam o Terminal Mac OS X, disponível na pasta Aplicações/Utilidades.
+Os exemplos abaixo utilizam o Terminal macOS, disponível na pasta Aplicações/Utilidades.
 
-1\. Para modificar os acessos a um arquivo (*chmod* é o comando Mac OS X utilizado para modificar o acesso aos arquivos):
+1\. Para modificar os acessos a um arquivo (*chmod* é o comando macOS utilizado para modificar o acesso aos arquivos):
 
 ```4d
  LAUNCH EXTERNAL PROCESS("chmod +x /pasta/meuarquivo.txt")
 ```
 
-2\. Para editar um arquivo de tipo texto (*cat* é o comando Mac OS X utilizado para editar os arquivos). Neste exemplo, a rota de acesso completa do comando é passada:
+2\. Para editar um arquivo de tipo texto (*cat* é o comando macOS utilizado para editar os arquivos). Neste exemplo, a rota de acesso completa do comando é passada:
 
 ```4d
  var entrada;saída : Text
@@ -67,7 +67,7 @@ Os exemplos abaixo utilizam o Terminal Mac OS X, disponível na pasta Aplicaçõ
  LAUNCH EXTERNAL PROCESS("/bin/cat /pasta/meuarquivo.txt";entrada;saída)
 ```
 
-3\. Para obter os conteúdos da pasta “Usuários” (*ls -l* é o equivalente Mac OS X do comando *dir* em DOS):
+3\. Para obter os conteúdos da pasta “Usuários” (*ls -l* é o equivalente macOS do comando *dir* em DOS):
 
 ```4d
  var $In;$Out : Text

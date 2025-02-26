@@ -377,11 +377,11 @@ You can designate as many valid files as you want. When building an executable a
 
 After the application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
 
-### OS X signing certificate
+### macOS signing certificate
 
 The application builder can sign merged 4D applications under macOS (single-user applications, 4D Server and client parts under macOS). Signing an application authorizes it to be executed using the Gatekeeper functionality of macOS when the "Mac App Store and identified Developers" option is selected (see "About Gatekeeper" below).
 
-* Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs:
+* Check the **Sign application** option to include certification in the application builder procedure for macOS. 4D will check the availability of elements required for certification when the build occurs:
 
 ![](../assets/en/Project/buildapposxcertProj.png)
 
@@ -397,7 +397,7 @@ To obtain a developer certificate from Apple, Inc., you can use the commands of 
 
 #### About Gatekeeper  
 
-Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. If a downloaded application does not come from the Apple Store or is not signed, it is rejected and cannot be launched.
+Gatekeeper is a security feature of macOS that controls the execution of applications downloaded from the Internet. If a downloaded application does not come from the Apple Store or is not signed, it is rejected and cannot be launched.
 
 The **Sign application** option of the 4D application builder lets you generate applications that are compatible with this option by default.
 

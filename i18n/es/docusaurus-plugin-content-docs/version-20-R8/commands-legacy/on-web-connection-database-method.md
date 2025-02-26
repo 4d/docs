@@ -73,7 +73,7 @@ Note que usted es libre de utilizar este parámetro a su conveniencia. 4D simple
 El segundo parámetro ($2) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Note que esta información se pasa a su Método base On Web Connection tal como está. El contenido varía en función del tipo de navegador web que esté intentando la conexión  
 Con Safari corriendo en Mac OS, puede recibir un encabezado similar a este:  
 ```RAW  
-GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent:  Mozilla/5.0 (Macintosh; U; Intel Mac OS X; fr-fr) AppleWebKit/523.10.3  (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
+GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent:  Mozilla/5.0 (Macintosh; U; Intel macOS; fr-fr) AppleWebKit/523.10.3  (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
 ```  
     
     

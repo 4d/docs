@@ -34,7 +34,7 @@ Por defecto, por razones de seguridad, si se omite el parámetro *opcionEliminac
    * Si esta carpeta, o cualquiera de los archivos que contiene, no se pueden eliminar, la eliminación se interrumpe tan pronto como se detecta el primer elemento inaccesible, y se devuelve un error (\*). En este caso, la carpeta se puede eliminar sólo parcialmente. Cuando se cancela la eliminación, puede utilizar el comando \[#cmd id="1015"/\] para recuperar el nombre y la ruta del archivo que origina el error.  
    * Si la carpeta especificada no existe, el comando no hace nada y ningún error se devuelve.  
    (\*) En Windows: -54 (Intento de abrir un archivo bloqueado para escritura)  
-   En OS X: -45 (El archivo está bloqueado o la ruta de acceso no es correcta)
+   En macOS: -45 (El archivo está bloqueado o la ruta de acceso no es correcta)
 
 Puede interceptar estos errores utilizando un método instalado por el comando [ON ERR CALL](on-err-call.md).  
 

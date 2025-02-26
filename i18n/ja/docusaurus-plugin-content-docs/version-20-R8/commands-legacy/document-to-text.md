@@ -31,7 +31,7 @@ displayed_sidebar: docs
 ドキュメントがBOMを含まず、 *charSet*  set引数が省略されていた場合、4Dはデフォルトで以下の文字コードを使用します。
 
 * Windows: ANSI
-* OS X: MacRoman
+* macOS: MacRoman
 
 *breakMode* 引数には、ドキュメントの改行文字の処理を指示する倍長整数を渡します。 "*System Documents*"テーマ内にある、以下の定数のどれかを渡すことが出きます。
 
