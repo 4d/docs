@@ -203,22 +203,6 @@ Items must be installed:
 * **on macOS**: next to the *MyProject.app* software package.
 
 
-### About licenses
-
-A stand-alone application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
-
-|Deployment license|Description|Where to enter it|
-|---|----|---|
-|*4D OEM Desktop*|Embedded custom license, contact 4D Sales for information|[Licenses page](#licenses) of the Build application dialog|
-|*4D Unlimited Desktop*|**Discontinued** - Embedded custom license |[Licenses page](#licenses) of the Build application dialog|
-|*4D Desktop*|Per-user license, allowing them to use stand-alone 4D applications|[First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine|
-
-:::note
-
-You can also build an [evaluation application](#evaluation-application), in which case a limited term deployment license is automatically provided to the user at startup.  
-
-:::
-
 ## Client/Server page
 
 On this tab, you can build customized client-server applications that are homogenous, cross-platform and with an automatic update option.
@@ -520,40 +504,67 @@ The Licences & Certificate page can be used to:
 
 ![](../assets/en/Admin/buildappCertif.png)
 
+### About licenses
+
+A built 4D application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+
+|Deployment license|Description|Where to enter it|
+|---|----|---|
+|*4D OEM Desktop*|Embedded custom license, contact 4D Sales for information|[Licenses page](#licenses) of the Build application dialog|
+|*4D Unlimited Desktop*|**Discontinued** - Embedded custom license |[Licenses page](#licenses) of the Build application dialog|
+|*4D Desktop*|Per-user license, allowing them to use stand-alone 4D applications|[First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine|
+|*4D OEM Server*|Embedded custom license, contact 4D Sales for information|[Licenses page](#licenses) of the Build application dialog|
+|*4D Server*|Per-user license, allowing them to use 4D Server and clients|[First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine|
+
+
+:::note
+
+You can also build an [evaluation application](#build-an-evaluation-application), in which case a limited term deployment license is automatically provided to the user at startup.  
+
+:::
+
+
 ### Licenses
 
-This tab displays the [Build an evaluation application](#build-an-evaluation-application) option and the list of available [deployment licenses that you can embed](#about-licenses) into your application. By default, the list is empty. 
+This tab displays the [Build an evaluation application](#build-an-evaluation-application) option and the list of available [deployment licenses that you can embed](#about-licenses) into your application (stand-alone or client-server). By default, the list is empty. 
 
 You can use this tab to build:
 
 - an evaluation application,
-- a licensed stand-alone application without embedded license (the user has to have a per-user license),
+- a licensed application without embedded license (the user has to have a per-user license),
 - a licensed application with embedded license(s). 
 
 #### Build an evaluation application
 
 Check this option to create an evaluation version of your application. 
 
-An evaluation application allows the end-user to run a full-featured version of your stand-alone or server application on their machine for a limited period of time, starting at first launch. At the end of the evaluation period, the application can no longer be used. An application can only be evaluated once on the same machine.
+An evaluation application allows the end-user to run a full-featured version of your stand-alone or server application on their machine for a limited period of time, starting at first launch. At the end of the evaluation period, the application can no longer be used for a certain period of time on the same machine.  
 
-:::note
+:::info
 
 An internet connection is required on the user machine at the first launch of the evaluation application. 
 
 :::
 
-As soon as the "Build evaluation application" option is enabled, deployment licenses are ignored. 
+As soon as the "Build an evaluation application" option is enabled, deployment licenses are ignored. 
 
+:::note Notes
 
-#### Build a stand-alone licensed application without embedded license
+- The [`License info`](../commands/license-info.md) command allows you to know the application license type (*.attributes* collection) and its expiration date (*.expirationDate* object).
+- The BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) and [`EvaluationName`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationName.300-7542474.en.html) xml keys allow you to handle evaluation versions.
+- The [`CHANGE LICENCES`] command does nothing when called from an evaluation version. 
 
-To build a stand-alone application without embedded deployment license, just keep the license list empty and make sure the "Build an evaluation application" option is unchecked. 
+:::
 
-In this case, the end-user will have to purchase and enter a per-user *4D Desktop* license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. For more information, see the [**About licenses**](#about-licenses) paragraph.
+#### Build a licensed application without embedded license(s)
+
+To build an application without embedded deployment license, just keep the license list empty and make sure the "Build an evaluation application" option is **unchecked**. 
+
+In this case, the end-user will have to purchase and enter a per-user *4D Desktop* or *4D Server* license at first application startup (when you embed a deployment license, the user does not have to enter or use their own license number). For more information, see the [**About licenses**](#about-licenses) paragraph.
 
 #### Build a licensed application with embedded license(s)
 
-This option allows you to build a ready-to-use application (stand-alone or client-server), in which necessary licenses are already embedded. 
+This option allows you to build a ready-to-use application, in which necessary licenses are already embedded. 
 
 You must designate the files that contain your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased. Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
 
