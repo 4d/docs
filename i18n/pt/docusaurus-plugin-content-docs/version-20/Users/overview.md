@@ -3,12 +3,12 @@ id: overview
 title: Descrição geral do controlo de acesso
 ---
 
-Se mais de uma pessoa usar uma aplicação, que geralmente é o caso em arquitetura cliente-servidor ou interfaces Web, você precisa controlar o acesso ou fornecer diferentes recursos, conforme os usuários conectados. It is also essential to provide security for sensitive data, even in single-user applications.
+Se mais de uma pessoa usar uma aplicação, que geralmente é o caso em arquitetura cliente-servidor ou interfaces Web, você precisa controlar o acesso ou fornecer diferentes recursos, conforme os usuários conectados. É também essencial garantir a segurança de dados sensíveis, mesmo em aplicações usuário único.
 
 A estratégia de controle de acesso 4D depende da configuração de sua implementação:
 
 - em aplicações multi-usuário, pode confiar nos usuários e grupos 4D,
-- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
+- em aplicações de usuário único, o acesso do usuário é controlado por meio da sessão do sistema, usando comandos como [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
 
 > Para uma visão geral das funções de segurança de 4D, consulte o [Guia de segurança de 4D](https://blog.4d.com/4d-security-guide/).
 
@@ -19,9 +19,9 @@ A estratégia de controle de acesso 4D depende da configuração de sua implemen
 
 Aplicações multi-usuário são implementadas com 4D Server. Incluem aplicações cliente-servidor, Web ou REST.
 
-In multi-user applications, access control is done through [4D users and groups](handling_users_groups.md). You create users, assign passwords, create access groups that have different levels of privileges in the application.
+Em aplicações multiusuário, o controle de acesso é feito através de [usuários e grupos 4D](handling_users_groups.md). Você cria usuários, atribuir senhas, criar grupos de acesso que tenham diferentes níveis de privilégios na aplicação.
 
-O sistema de controle de acesso por senha 4D é iniciado com 4D Server, [atribuindo uma senha ao usuário Designer](handling_users_groups.md#designer-and-administrator). Until you give the Designer a password, all application access are done with the Designer's access rights, even if you have [set up users and groups](handling_users_groups.md) (when the application opens, no ID is required). Qualquer parte da aplicação pode ser aberta.
+O sistema de controle de acesso por senha 4D é iniciado com 4D Server, [atribuindo uma senha ao usuário Designer](handling_users_groups.md#designer-and-administrator). Até você dar uma senha ao Designer, todo o acesso da aplicação será feito com os direitos de acesso do Designer mesmo que você tenha [configurado usuários e grupos](handling_users_groups.md) (quando o aplicativo abrir, nenhum ID é necessária). Qualquer parte da aplicação pode ser aberta.
 
 Quando uma senha for estabelecida para o Designer, todos os privilégios de acesso têm efeito. Para se conectar à aplicação ou a um servidor [protegido com acesso](handling_users_groups.md#assigning-group-access), os usuários remotos devem informar login/senha.
 
@@ -32,7 +32,7 @@ Para desativar o sistema de acesso a senhas, precisa remover a senha Designer.
 
 
 
-Single-user applications are desktop applications, deployed with 4D or merged with 4D Volume License. Em aplicações únicas, todos os usuários que abrem à aplicação são [Designers](handling_users_groups.md#designer-and-administrator), eles têm todos os privilégios e seu nome é "Designer". Access control is not based upon 4D users and groups, but upon **user sessions**.
+As aplicações usuário único são aplicações de desktop, implantados com 4D ou mesclados com 4D Volume License. Em aplicações únicas, todos os usuários que abrem à aplicação são [Designers](handling_users_groups.md#designer-and-administrator), eles têm todos os privilégios e seu nome é "Designer". Access control is not based upon 4D users and groups, but upon **user sessions**.
 
 ### Identificação de usuário
 
