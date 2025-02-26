@@ -194,7 +194,7 @@ Os usuários, grupos, bem como seus direitos de acesso são armazenados em um ar
 Esse arquivo pode ser armazenado nos seguintes locais, dependendo de suas necessidades:
 
 - Se você quiser usar o mesmo diretório para todos os arquivos de dados (ou se você usar um arquivo de dados único), armazene o arquivo **directory.json** na pasta de configurações do usuário, ou seja, na pasta "Configurações" no [mesmo nível que a pasta "Projeto"](Project/architecture.md#project-folder) (local padrão).
-- Se você quiser usar um arquivo de diretório específico por arquivo de dados, armazene o diretório **directory.json** na pasta dos parâmetros de dados, ou seja, na pasta ["Settings" da pasta "Data"](Project/architecture.md#settings). Se um arquivo **directory.json** estiver presente neste local, ele terá prioridade sobre o arquivo na pasta Settings usuário. This custom/local Users and Groups configuration will left untouched by an application upgrade.
+- Se você quiser usar um arquivo de diretório específico por arquivo de dados, armazene o diretório **directory.json** na pasta dos parâmetros de dados, ou seja, na pasta ["Settings" da pasta "Data"](Project/architecture.md#settings). Se um arquivo **directory.json** estiver presente neste local, ele terá prioridade sobre o arquivo na pasta Settings usuário. Essa configuração personalizada/local de usuários e grupos não será afetada por uma atualização da aplicação.
 
 > Para permitir alterações seguras de senhas e associações de grupos em um ambiente implantado, você pode incluir o arquivo **directory.json** na aplicação do servidor durante a compilação, usando a opção [correspondente da aplicação de compilação](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
 
