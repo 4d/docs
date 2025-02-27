@@ -13,13 +13,13 @@ Usando a lista de propriedades da área, você pode definir as [propriedades obj
 
 ### Selecção de uma interface utilizador
 
-You can select the interface to use with your 4D View Pro form areas in the **Property List**, under **Appearance**:
+Você pode selecionar a interface para usar com suas áreas de formulário 4D View Pro no **Propriedade List**, , sob **Aparência**:
 
 ![](../assets/en/ViewPro/vpUserInterface.PNG)
 
 > Você também pode usar a [`userInterface`](FormObjects/properties_Appearance.md#user-interface) e [`withFormulaBar`](FormObjects/properties_Appearance.md#show-formula-bar)(apenas com a interface "toolbar") em JSON.
 
-As interfaces permitem modificações básicas e a manipulação de dados. User-defined modifications are saved in the 4D View Pro object when the user saves the document.
+As interfaces permitem modificações básicas e a manipulação de dados. Modificações definidas pelo usuário são salvas no objeto 4D View Pro quando o usuário salva o documento.
 
 #### Fita
 
@@ -35,7 +35,7 @@ Com barra de fórmula visível:
 
 #### Funcionalidades
 
-Both the Ribbon and the Toolbar interfaces group related features into tabs:
+Tanto os recursos relacionados ao Ribbon como o grupo da interface de ferramentas (toolbar) nas abas:
 
 | Tab      | Acções                           | Interface Ribbon | Interface da barra de ferramentas |
 | -------- | -------------------------------- |:----------------:|:---------------------------------:|
@@ -51,7 +51,7 @@ Both the Ribbon and the Toolbar interfaces group related features into tabs:
 
 Os seguintes eventos de formulário estão disponíveis na lista de propriedades para as áreas 4D View Pro.
 
-Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Some standard form events provide extended information in the object returned by the [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific or provide additional information to 4D View Pro areas:
+Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Alguns eventos de formulário padrão fornecem informações estendidas no objeto retornado pelo comando [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) quando eles são gerados em 4D View Pro. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
 
 | Eventos 4D ‘standard’                           | Eventos 4D View Pro específicos e alargados           |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -67,7 +67,7 @@ Some of the events are standard form events (available to all active objects) an
 
 ## Opções folha
 
-The 4D View Pro sheet options object allows you to control various options of your 4D View Pro areas. Este objeto é tratado pelos seguintes comandos:
+O objeto 4D View Pro permite controlar várias opções de suas áreas 4D View Pro. Este objeto é tratado pelos seguintes comandos:
 
 * [VP SET SHEET OPTIONS](method-list.md#vp-set-sheet-options)
 * [VP Get sheet options](method-list.md#vp-get-sheet-options)
@@ -86,8 +86,8 @@ The 4D View Pro sheet options object allows you to control various options of yo
 |                      | showHorizontalGridline | boolean       | Especifica se a linha de grelha horizontal deve ser mostrada.                                                                                                                                                                                                                                                          |
 | rowHeaderVisible     |                        | boolean       | Especifica se o cabeçalho da linha é visível.                                                                                                                                                                                                                                                                          |
 | colHeaderVisible     |                        | boolean       | Especifica se o cabeçalho da coluna é visível.                                                                                                                                                                                                                                                                         |
-| rowHeaderAutoText    |                        | inteiro longo | Specifies whether the row header displays letters or numbers or is blank. Valores disponíveis: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                               |
-| colHeaderAutoText    |                        | inteiro longo | Specifies whether the column header displays letters or numbers or is blank. Valores disponíveis: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                            |
+| rowHeaderAutoText    |                        | inteiro longo | Especifica se o cabeçalho da linha exibe letras ou números ou está em branco. Valores disponíveis: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                           |
+| colHeaderAutoText    |                        | inteiro longo | Especifica se o cabeçalho da coluna exibe letras ou números ou está em branco. Valores disponíveis: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                          |
 | selectionBackColor   |                        | string        | A cor de fundo da seleção para a folha. (formato RGBA preferido)                                                                                                                                                                                                                                                       |
 | selectionBorderColor |                        | string        | A cor do contorno da seleção para a folha.                                                                                                                                                                                                                                                                             |
 | sheetAreaOffset      |                        | object        | As opções de sheetAreaOffset.                                                                                                                                                                                                                                                                                          |
@@ -97,11 +97,11 @@ The 4D View Pro sheet options object allows you to control various options of yo
 
 ### Protecção da folha
 
-To lock the whole sheet, you only need to set the *isProtected* property to **true**. Em seguida, você pode desbloquear as células individualmente definindo a propriedade de estilo de célula [bloqueada](#layout).
+Para bloquear toda a planilha, você só precisa definir a propriedade *isProtected* para **true**. Em seguida, você pode desbloquear as células individualmente definindo a propriedade de estilo de célula [bloqueada](#layout).
 
 | Propriedade       |                          | Tipo    | Descrição                                                                                                           |
 | ----------------- | ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------- |
-| isProtected       |                          | boolean | Specifies whether cells on this sheet that are marked as protected cannot be edited.                                |
+| isProtected       |                          | boolean | Especifica se as células nesta folha que são marcadas como protegidas não podem ser editadas.                       |
 | protectionOptions |                          | object  | Um valor que indica os elementos que os usuários podem modificar. Se null: o parâmetro protectionOptions é reposto. |
 |                   | allowSelectLockedCells   | boolean | Especifica se o usuário pode selecionar células bloqueadas, opcional. True por defeito.                             |
 |                   | allowSelectUnlockedCells | boolean | Especifica se o usuário pode selecionar células desbloqueadas, opcional. True por defeito.                          |
@@ -110,8 +110,8 @@ To lock the whole sheet, you only need to set the *isProtected* property to **tr
 |                   | allowEditObjects         | boolean | Especifica se o usuário pode editar objetos flutuantes, opcional. Padrão é falso.                                   |
 |                   | allowResizeRows          | boolean | Especifica se o usuário pode redimensionar as linhas, opcional. Padrão é falso.                                     |
 |                   | allowResizeColumns       | boolean | Especifica se o usuário pode redimensionar colunas, opcional. Padrão é falso.                                       |
-|                   | allowDragInsertRows      | boolean | Specifies whether the user can perform the drag operation to insert rows, optional. Padrão é falso.                 |
-|                   | allowDragInsertColumns   | boolean | Specifies whether the user can perform the drag operation to insert columns, optional. Padrão é falso.              |
+|                   | allowDragInsertRows      | boolean | Especifica se o usuário pode executar a operação de arrastar para inserir linhas, opcional. Padrão é falso.         |
+|                   | allowDragInsertColumns   | boolean | Especifica se o usuário pode executar a operação de arrastar para inserir colunas, opcional. Padrão é falso.        |
 |                   | allowInsertRows          | boolean | Especifica se o usuário pode inserir linhas, opcional. Padrão é falso.                                              |
 |                   | allowInsertColumns       | boolean | Especifica se o usuário pode inserir colunas, opcional. Padrão é falso.                                             |
 |                   | allowDeleteRows          | boolean | Especifica se o usuário pode eliminar linhas, opcional. Padrão é falso.                                             |
@@ -120,32 +120,32 @@ To lock the whole sheet, you only need to set the *isProtected* property to **tr
 
 ## Formato das células
 
-Defining a format pattern ensures that the content of your 4D View Pro documents is displayed the way you intended. Os formatos podem ser definidos usando a [interface](#selecting-a-user-interface) 4D View Pro selecionada ou usando os métodos [VP SET VALUE](method-list.md#vp-set-value) ou [VP SET NUM VALUE](method-list.md#vp-set-num-value).
+Definir um padrão de formato garante que o conteúdo dos seus documentos 4D View Pro seja exibido como deveria. Os formatos podem ser definidos usando a [interface](#selecting-a-user-interface) 4D View Pro selecionada ou usando os métodos [VP SET VALUE](method-list.md#vp-set-value) ou [VP SET NUM VALUE](method-list.md#vp-set-num-value).
 
-4D View Pro has built-in formats for numbers, dates, times, and text, but you can also create your own patterns to format the contents of cells using special characters and codes.
+A versão 4D View Pro tem formatos embutidos para números, datas, horas e texto, mas você também pode criar seus próprios padrões para formatar o conteúdo das células usando caracteres especiais e códigos.
 
 Por exemplo, ao usar os métodos [VP SET VALUE](method-list.md#vp-set-value) ou [VP SET NUM VALUE](method-list.md#vp-set-num-value) para inserir valores em uma fatura, você pode querer que os símbolos de moeda ($, €, ¥, etc.) sejam alinhados independentemente do espaço exigido pelo número (ou seja, se o valor é $5,00 ou $5.000,00). Você poderia usar caracteres de formatação e especificar o padrão _($* #,##0.00_) que exibiria os valores conforme mostrado:
 
 ![](../assets/en/ViewPro/apx_vpCellFormat1.PNG)
 
-Note that when creating your own format patterns, only the display of the data is modified. O valor dos dados mantém-se inalterado.
+Observe que, ao criar seus próprios padrões de formato, apenas a exibição dos dados é modificada. O valor dos dados mantém-se inalterado.
 
 ### Formatos número e texto
 
-Number formats apply to all number types (e.g., positive, negative, and zeros).
+Formatos de números se aplicam a todos os tipos de números (por exemplo, positivos, negativos e zeros).
 
 | Caracteres | Descrição                                                                                                                                                                                                                               | Exemplo                                                                                                                                    |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | 0          | Marcador de posição mostrando zeros.                                                                                                                                                                                                    | #.00 mostrará 1.1 como 1.10                                                                                                                |
 | .          | Exibe um ponto decimal                                                                                                                                                                                                                  | 0.00 mostrará 1999 como 1999.00                                                                                                            |
 | ,          | Mostra o separador de milhares num número. Milhares são separados por vírgulas se o formato contém uma vírgula entre os sinais de número "#" ou por zeros. Uma vírgula após um marcador de posição de dígito escala o número por 1.000. | #,0 mostrará 12200000 como 12,200,000                                                                                                      |
-| \_       | Salta a largura do carácter seguinte.                                                                                                                                                                                                   | Usually used in combination with parentheses to add left and right indents, \_( and _) respectively.                                     |
+| \_       | Salta a largura do carácter seguinte.                                                                                                                                                                                                   | Geralmente usado em combinação com parênteses para adicionar parágrafos esquerdos, \_(e _), respectivamente.                             |
 | @          | Formatador de texto. Aplica o formato a todo o texto da célula                                                                                                                                                                          | "\[Red]@" aplica a cor de letra vermelha aos valores de texto.                                                                            |
 | *          | Repete o carácter seguinte para preencher a largura da coluna.                                                                                                                                                                          | 0*- incluirá traços suficientes após um número para preencher a célula, enquanto *0 antes de qualquer formato incluirá zeros à esquerda. |
 | " "        | Exibe o texto dentro das aspas sem interpretá-lo.                                                                                                                                                                                       | "8%" será exibido como: 8%                                                                                                                 |
 | %          | Mostra os números como uma percentagem de 100.                                                                                                                                                                                          | 8% será exibido como 0,08                                                                                                                  |
-| \#       | Espaço reservado para dígitos que não apresenta zeros extra. If a number has more digits to the right of the decimal than there are placeholders, the number is rounded up.                                                             | #.# mostrará 1.54 como 1.5                                                                                                                 |
-| ?          | Digit placeholder that leaves space for extra zeros, but does not display them. Normalmente utilizado para alinhar números pelo ponto decimal.                                                                                          | $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                                               |
+| \#       | Espaço reservado para dígitos que não apresenta zeros extra. Se um número tem mais dígitos à direita do que existem espaços reservados, o número será arredondado.                                                                      | #.# mostrará 1.54 como 1.5                                                                                                                 |
+| ?          | Espaço reservado digito que deixa espaço para zeros extras, mas não exibe-os. Normalmente utilizado para alinhar números pelo ponto decimal.                                                                                            | $?? mostra um máximo de 2 casas decimais e faz com que os sinais de dólar alinhem para valores variáveis.                                  |
 | \         | Exibe o caractere seguinte.                                                                                                                                                                                                             | #.00\? mostrará 123 como 123.00?                                                                                                          |
 | /          | Quando utilizado com números, apresenta-os como fracções. Quando utilizado com códigos de texto, data ou hora, é apresentado "tal e qual".                                                                                              | #/# mostrará .75 como 3/4                                                                                                                  |
 | \[ ]      | Cria formatos condicionais.                                                                                                                                                                                                             | \[>100]\[GREEN]#,##0;\[`<=-100`]\[YELLOW]#,##0;\[BLUE]#,##0                                                                        |
@@ -160,17 +160,17 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 
 ### Formatos data e hora
 
-4D View Pro provides the following constants for ISO 8601 date and time patterns:
+4D View Pro fornece as seguintes constantes para padrões de data e hora do ISO 8601:
 
 | Parâmetros                                | Valor                                | Comentário                                                                                                                                                            |
 | ----------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `vk pattern full date time`               | "*fullDateTimePattern*"              | ISO 8601 format for the full date and time in current localization.USA default pattern: "dddd, dd MMMM yyyy HH:mm:ss"                                                 |
-| `vk pattern long date`                    | "*longDatePattern*"                  | ISO 8601 format for the full date in current localization.USA default pattern: "dddd, dd MMMM yyyy"                                                                   |
-| `vk pattern long time`                    | "*longTimePattern*"                  | ISO 8601 format for the time in current localization.USA default pattern: "HH:mm:ss"                                                                                  |
-| `vk pattern month day`                    | "*monthDayPattern*"                  | ISO 8601 format for the month and day in current localization.USA default pattern: "MMMM dd"                                                                          |
-| `vk pattern short date`                   | "*shortDatePattern*"                 | Abbreviated ISO 8601 format for the date in current localization.USA default pattern: "MM/dd/yyyy"                                                                    |
-| `vk pattern short time`                   | "*shortTimePattern*"                 | Abbreviated ISO 8601 format for the time in current localization.USA default pattern: "HH:mm"                                                                         |
-| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | ISO 8601 format for the date and time in current localization which can be sorted.USA default pattern: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"            |
+| `vk pattern full date time`               | "*fullDateTimePattern*"              | Formato ISO 8601 para a data e hora completas no padrão de localização.EUA atual: "dddd, dd MMMM yyyy HH:mm:ss"                                                       |
+| `vk pattern long date`                    | "*longDatePattern*"                  | Formato ISO 8601 para a data completa no padrão de localização atual: "dddd, dd MMMM yyyy"                                                                            |
+| `vk pattern long time`                    | "*longTimePattern*"                  | Formato ISO 8601 para a hora na localização atual. Padrão padrão EUA: "HH:mm:ss"                                                                                      |
+| `vk pattern month day`                    | "*monthDayPattern*"                  | Formato ISO 8601 para o mês e dia no padrão da localização atual: "MMMM dd"                                                                                           |
+| `vk pattern short date`                   | "*shortDatePattern*"                 | Formato ISO 8601 abreviado para a data na data atual de localização.USA padrão padrão: "MM/dd/yyyy"                                                                   |
+| `vk pattern short time`                   | "*shortTimePattern*"                 | Formato abreviado ISO 8601 para a hora no padrão de localização.EUA atual: "HH:mm"                                                                                    |
+| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | Formato ISO 8601 para a data e hora na localização atual que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'dd\'T\'H\':\'mm\':\':\'mm\':\'ss"     |
 | `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | ISO 8601 format for the date and time in current localization using UTC which can be sorted.USA default pattern: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'" |
 | `vk pattern year month`                   | "*yearMonthPattern*"                 | ISO 8601 format for the month and year in current localization.USA default pattern: "yyyy MMMM"                                                                       |
 
@@ -182,7 +182,7 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 
 ### Formatos data e hora personalizados
 
-To create your own date and time patterns, in your current localization, you can use combinations of the following codes:
+Para criar seus próprios padrões de data e hora, na sua localização atual, você pode usar combinações dos seguintes códigos:
 
 |      | Código<br/>(não sensível a maiúsculas e minúsculas) | Descrição                                                      | Exemplo              |
 | ---- | --------------------------------------------------------- | -------------------------------------------------------------- | -------------------- |
@@ -208,11 +208,11 @@ To create your own date and time patterns, in your current localization, you can
 |      | \[mm]                                                    | Tempo decorrido em minutos                                     | 843                  |
 |      | \[ss]                                                    | Tempo decorrido em segundos                                    | 50585                |
 |      | AM/PM                                                     | Períodos do dia. Se omitido, utiliza-se o formato de 24 horas. | PM                   |
-> O código "m" é interpretado de acordo com sua posição no padrão. If it's immediately after 'h' or 'hh' or immediately before 's' or 'ss', it will be interpreted as minutes, otherwise it will be interpreted as months.
+> O código "m" é interpretado de acordo com sua posição no padrão. Se for imediatamente após 'h' ou 'hh' ou imediatamente antes 't' ou 'ss', será interpretado como actos, caso contrário será interpretado como meses.
 
 ### Símbolos adicionais
 
-In addition to the special characters and codes described in the previous sections, there are additional characters and symbols that can be used in your format patterns. These additional characters and symbols do not require a \ or "" and do not impact the interpretation of the format pattern. Aparecem "tal como estão" no padrão.
+Além dos caracteres especiais e códigos descritos nas seções anteriores, existem caracteres adicionais e símbolos que podem ser usados em seus padrões de formato. Esses caracteres e símbolos adicionais não exigem uma \ ou "" e não afetam a interpretação do padrão de formatos. Aparecem "tal como estão" no padrão.
 
 | Caracteres  | Descrição                                                                    | Exemplo              |
 | ----------- | ---------------------------------------------------------------------------- | -------------------- |
@@ -237,14 +237,14 @@ In addition to the special characters and codes described in the previous sectio
 
 ## Atributos de impressão
 
-4D View Pro print attributes allow you to control all aspects of printing 4D View Pro areas. Esses atributos são tratados pelos seguintes comandos:
+Os atributos de impressão 4D View Pro permitem que você controle todos os aspectos da impressão de áreas 4D View Pro. Esses atributos são tratados pelos seguintes comandos:
 
 * [VP SET PRINT INFO](method-list.md#vp-set-print-info)
 * [VP Get print info](method-list.md#vp-get-print-info)
 
 ### Colunas / Linhas
 
-Column and row attributes are used to specify the beginning, end, and repetition of columns and rows.
+Atributos de coluna e linha são usados para especificar o início, o fim e a repetição de colunas e linhas.
 
 | Propriedade       | Tipo          | Descrição                                                                                                               |
 | ----------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -259,7 +259,7 @@ Column and row attributes are used to specify the beginning, end, and repetition
 
 ### Cabeçalhos / Rodapés
 
-Header and footer attributes are used to specify text or images in the left, right, and center header/footer sections.
+Atributos de cabeçalho e rodapé são usados para especificar texto ou imagens na seção esquerda, direita e cabeçalho central.
 
 | Propriedade       | Tipo                 | Descrição                                                        |
 | ----------------- | -------------------- | ---------------------------------------------------------------- |
@@ -276,7 +276,7 @@ Header and footer attributes are used to specify text or images in the left, rig
 | headerRight       | text                 | O texto e o formato do cabeçalho direito nas páginas impressas.  |
 | headerRightImage  | picture &#124; text* | A imagem para a secção direita do cabeçalho.                     |
 
-\* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. If you pass a relative path, the file should be located next to the database structure file. No Windows, a extensão do ficheiro deve ser indicada. Independentemente do tipo usado para definir uma imagem, a própria imagem (não uma referência) é armazenada na área 4D View Pro sendo retornada pelo comando [VP Get print info](method-list.md#vp-get-print-info).
+\* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. Se você passar por um caminho relativo, o arquivo deve estar localizado ao lado do arquivo de estrutura do banco de dados. No Windows, a extensão do ficheiro deve ser indicada. Independentemente do tipo usado para definir uma imagem, a própria imagem (não uma referência) é armazenada na área 4D View Pro sendo retornada pelo comando [VP Get print info](method-list.md#vp-get-print-info).
 
 ### Caracteres especiais
 
@@ -393,7 +393,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 |               | \[ ].x        | inteiro longo        | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                             |
 |               | \[ ].y        | inteiro longo        | The vertical coordinate of the top left point of the watermark text / image.                                                                                                               |
 
-\* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. If you pass a relative path, the file should be located next to the database structure file. No Windows, a extensão do ficheiro deve ser indicada. Independentemente do tipo usado para definir uma imagem, a própria imagem (não uma referência) é armazenada na área 4D View Pro sendo retornada pelo comando [VP Get print info](method-list.md#vp-get-print-info).
+\* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. Se você passar por um caminho relativo, o arquivo deve estar localizado ao lado do arquivo de estrutura do banco de dados. No Windows, a extensão do ficheiro deve ser indicada. Independentemente do tipo usado para definir uma imagem, a própria imagem (não uma referência) é armazenada na área 4D View Pro sendo retornada pelo comando [VP Get print info](method-list.md#vp-get-print-info).
 
 ## Objetos Estilo
 
