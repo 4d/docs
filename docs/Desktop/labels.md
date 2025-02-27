@@ -39,10 +39,6 @@ You use the Label page to specify the contents of the label and the Layout page 
 
 The Label page contains several areas with settings for designing and formatting labels. 
 
-You can zoom in your label design by dragging the resize cursor at the bottom right of the window.
-
-![](../assets/en/Desktop/label-zoom.png)
-
 
 ### List of Fields
 
