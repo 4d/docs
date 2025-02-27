@@ -15,6 +15,7 @@ title: リリースノート
 - [スタンドアロンセッション](../API/SessionClass.md) のサポート。これによりクライアント/サーバーアプリケーションのローカルなコーディングが単純化されます。
 - [4D デバッガ](../Debugging/debugger.md): 新デザイン、自動保存、表示モードなどの新機能
 - Apple 公証ガイドラインにより合致する[新しくビルトされたコンポーネントアーキテクチャ](../Desktop/building.md#build-component)
+- You can now easily [build evaluation applications](../Desktop/building.md#build-an-evaluation-application) in the Build application dialog box.
 - 依存関係: 依存関係マネージャーを使用して、GitHub 上のコンポーネントの[新バージョンをチェック](../Project/components.md#新バージョンをチェック) したり[更新する](../Project/components.md#依存関係の更新) ことができます。
 - 新しい [`TCPConnection`](../API/TCPConnectionClass.md) および [`TCPEvent`](../API/TCPEventClass.md) クラスを使用してTCP クライアント接続を管理したり、イベントを管理したり、データ転送のコントロールを改善することができます。 追加された[`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) を使用することでTCP イベントの詳細なログを取ることができます。
 - [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) および [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) の新しいオプションを使用して、スタイル、フォーミュラ、データ整合性、そしてパスワードによる保護などを管理することができます。
