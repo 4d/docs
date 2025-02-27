@@ -275,6 +275,7 @@ vResult = 1の判定により他の条件を見る前に分岐するので、第
  CONFIRM("新規レコードを追加しますか？")  // ユーザーに確認します
  ")  // ユーザーに確認します
  ")  // ユーザーに確認します
+ ")  // ユーザーに確認します
  While(OK=1) // 利用者が望む限りループします
     ADD RECORD([aTable]) // 新規にレコードを追加します
  End while // ループは必ず End while によって終わります
@@ -293,7 +294,7 @@ Repeat
     {continue}
 Until(Boolean_Expression)
 ```
-`Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。 `Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。
+`While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。 `Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。
 
 もう一つの `While...End while` ループとの相違点は、 `Repeat...Until` はブール式が true になるまでループを続行することです。
 
