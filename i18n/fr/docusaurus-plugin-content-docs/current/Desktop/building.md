@@ -135,7 +135,7 @@ Il est possible d'[automatiser la mise à jour des applications fusionnées pour
 
 :::
 
-#### Emplacement du 4D Volume Desktop
+### Emplacement du 4D Volume Desktop
 
 Afin de créer une application autonome, il convient d'abord de désigner le dossier contenant le fichier 4D Volume Desktop :
 
@@ -148,7 +148,7 @@ Une fois le dossier sélectionné, son chemin d’accès complet est affiché et
 
 > Le numéro de version de 4D Volume Desktop doit correspondre à celui du 4D Developer Edition. For example, if you use 4D 20, you must select a 4D Volume Desktop 20.
 
-#### Mode de liaison des données
+### Mode de liaison des données
 
 Cette option vous permet de sélectionner le mode de liaison entre l'application fusionnée et le fichier de données local. Deux modes de liaison sont disponibles :
 
@@ -158,7 +158,7 @@ Cette option vous permet de sélectionner le mode de liaison entre l'application
 
 Pour plus d'informations sur le mode de liaison des données, reportez-vous au paragraphe [Dernier fichier de données ouvert](#last-data-file-opened).
 
-#### Fichiers générés
+### Fichiers générés
 
 Lorsque vous cliquez sur le bouton **Générer**, 4D crée automatiquement un dossier **Final Application** dans le **Dossier de destination** défini. Dans le dossier Final Application, se trouve un sous-dossier contenant le nom de l'application spécifiée.
 
@@ -199,16 +199,6 @@ Des éléments doivent être installés :
 
 - **Sous Windows** : dans le sous-dossier *Final Application\MonAppli\Database*.
 - **Sous macOS** : à côté du progiciel *MonProjet.app*.
-
-#### About licenses
-
-A stand-alone application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
-
-| Deployment license     | Description                                                        | Where to enter it                                                                          |
-| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
-| *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                         | [Licenses page](#licenses) of the Build application dialog                                 |
-| *4D Desktop*           | Per-user license, allowing them to use stand-alone 4D applications | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
 
 ## Page Client/Serveur
 
@@ -506,28 +496,74 @@ Les modules optionnels suivants peuvent être désélectionnés :
 
 La page Licences & Certificat vous permet de :
 
-- designate the license number(s) that you want to integrate into your single-user [stand-alone application](#application-page),
+- designate the license(s) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
 - signer l'application à l'aide d'un certificat sous macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
-### Licences
+### About licenses
 
-This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. Par défaut, la liste est vide.
+A built 4D application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
 
-:::info
+| Deployment license     | Description                                                        | Where to enter it                                                                          |
+| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
+| *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                         | [Licenses page](#licenses) of the Build application dialog                                 |
+| *4D Desktop*           | Per-user license, allowing them to use stand-alone 4D applications | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
+| *4D Server OEM*        | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
+| *4D Server*            | Per-user license, allowing them to use 4D Server and clients       | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
 
-If you keep the list empty, you build a stand-alone application without embedded deployment license. In this case, the end-user will have to purchase and enter a per-user *4D Desktop* license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. For more information, see the [**About licenses**](#about-licenses) paragraph.
+:::note
+
+You can also build an [evaluation application](#build-an-evaluation-application), in which case a limited term deployment license is automatically provided to the user at startup.
 
 :::
 
-Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
+### Licences
 
-Pour ajouter ou supprimer des licences, utilisez les boutons **[+]** et **[-]** situés en bas de la fenêtre.
+This tab displays the [Build an evaluation application](#build-an-evaluation-application) option and the list of available [deployment licenses that you can embed](#about-licenses) into your application (stand-alone or client-server). Par défaut, la liste est vide.
 
-Lorsque vous cliquez sur le bouton \[+], une boîte de dialogue d’ouverture de document apparaît, affichant par défaut le contenu du dossier *[Licenses]* de votre poste. For more information about the location of this folder, refer to the [Get 4D folder](../commands-legacy/get-4d-folder.md) command.
+You can use this tab to build:
 
-Vous devez désigner les fichiers contenant votre licence Developer et ainsi que vos licences de déploiement. These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased.
+- an evaluation application,
+- a licensed application without embedded license (the user has to have a per-user license),
+- a licensed application with embedded license(s).
+
+#### Build an evaluation application
+
+Check this option to create an evaluation version of your application.
+
+An evaluation application allows the end-user to run a full-featured version of your stand-alone or server application on their machine for a limited period of time, starting at first launch. At the end of the evaluation period, the application can no longer be used for a certain period of time on the same machine.
+
+:::info
+
+An internet connection is required on the user machine at the first launch of the evaluation application.
+
+:::
+
+As soon as the "Build an evaluation application" option is enabled, deployment licenses are ignored.
+
+:::note Notes
+
+- The [`License info`](../commands/license-info.md) command allows you to know the application license type (*.attributes* collection) and its expiration date (*.expirationDate* object).
+- The BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) and [`EvaluationName`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationName.300-7542474.en.html) xml keys allow you to handle evaluation versions.
+- The [`CHANGE LICENCES`] command does nothing when called from an evaluation version.
+
+:::
+
+#### Build a licensed application without embedded license(s)
+
+To build an application without embedded deployment license, just keep the license list empty and make sure the "Build an evaluation application" option is **unchecked**.
+
+In this case, the end-user will have to purchase and enter a per-user *4D Desktop* or *4D Server* license at first application startup (when you embed a deployment license, the user does not have to enter or use their own license number). For more information, see the [**About licenses**](#about-licenses) paragraph.
+
+#### Build a licensed application with embedded license(s)
+
+This option allows you to build a ready-to-use application, in which necessary licenses are already embedded.
+
+You must designate the files that contain your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased. Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
+
+Pour ajouter ou supprimer des licences, utilisez les boutons **[+]** et **[-]** situés en bas de la fenêtre. Lorsque vous cliquez sur le bouton \[+], une boîte de dialogue d’ouverture de document apparaît, affichant par défaut le contenu du dossier *[Licenses]* de votre poste. For more information about the location of this folder, refer to the [Get 4D folder](../commands-legacy/get-4d-folder.md) command.
 
 Une fois que vous avez sélectionné un fichier, la liste indique les caractéristiques de la licence qu’il contient.
 
