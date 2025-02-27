@@ -57,16 +57,19 @@ The search area allows you to narrow the list of fields displayed to those conta
 
 ### Label preview
 
-You use this area to design your label zone by placing and positioning all the items that you want to include in your label. The white rectangle represents a single label (its size is configured on the [Layout page](#layout-page)). You can drag fields onto the label.
-
-- You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space. If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
-- You can drag and drop picture files as well as label files (".4lbp" files only) from the desktop of the OS.
-- Contents inserted in the area can be modified. To do this, you can simply double-click on the contents in order to switch to editing mode. When you double-click on fields, the **Formula editor** is displayed, allowing you to remove or modify concatenated items:
+You use this area to design your label zone by placing and positioning all the items that you want to include in your label. The white rectangle represents a single label (its size is configured on the [Layout page](#layout-page)). 
+- You can drag fields onto the label.
+- You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space. 
+![](../assets/en/Desktop/label-concat.png)
+If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
+- You can add a formula onto the label by selecting the **Formula** tool (or choosing **Tool>Formula** in the contextual menu) and drawing an area. The **Formula editor** is then displayed:
+![](../assets/en/Desktop/label-formula1.png)
+- To modify the area, double-click on the contents in order to switch to editing mode. When you double-click on fields or formulas, the **Formula editor** is displayed, allowing you to remove or modify items in the :
 ![](../assets/en/Desktop/label-formula.png)
-
-- You can apply a format to a field using the [`String`](../commands-legacy/string.md) command, for example:
+For example, you can apply a format to a field using the [`String`](../commands-legacy/string.md) command:
 ![](../assets/en/Desktop/label-formula2.png)
 
+- You can drag and drop picture files as well as label files (".4lbp" files) from the desktop of the OS.
 
 ### Form to use 
 
