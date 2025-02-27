@@ -595,13 +595,13 @@ Si el documento no contiene una BOM y si *charSetName* o *charSetNum* se omite, 
 
 En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea en el documento. Las siguientes constantes del tema "Documentos del sistema" están disponibles:
 
-| Constante                     | Valor | Comentario                                                                                                                                                                                                                                           |
-| ----------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Sin procesar                                                                                                                                                                                                                                         |
-| `Document with native format` | 1     | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: CR (retorno de carro) en OS X, CRLF (retorno de carro + salto de línea) en Windows |
-| `Document with CRLF`          | 2     | Los saltos de línea se convierten al formato de Windows: CRLF (retorno de carro + salto de línea)                                                                                                                 |
-| `Document with CR`            | 3     | Los saltos de línea se convierten al formato OS X: CR (retorno de carro)                                                                                                                                          |
-| `Document with LF`            | 4     | Los saltos de línea se convierten al formato Unix: LF (salto de línea)                                                                                                                                            |
+| Constante                     | Valor | Comentario                                                                                                                                                                                                                                    |
+| ----------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Sin procesar                                                                                                                                                                                                                                  |
+| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under macOS, CRLF (carriage return + line feed) under Windows |
+| `Document with CRLF`          | 2     | Los saltos de línea se convierten al formato de Windows: CRLF (retorno de carro + salto de línea)                                                                                                          |
+| `Document with CR`            | 3     | Line breaks are converted to macOS format: CR (carriage return)                                                                                                                                            |
+| `Document with LF`            | 4     | Los saltos de línea se convierten al formato Unix: LF (salto de línea)                                                                                                                                     |
 
 Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se procesan en modo nativo (1).
 
