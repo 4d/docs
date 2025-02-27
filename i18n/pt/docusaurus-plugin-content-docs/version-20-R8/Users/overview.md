@@ -3,7 +3,7 @@ id: overview
 title: Descrição geral do controlo de acesso
 ---
 
-Se mais de uma pessoa usar uma aplicação, que geralmente é o caso em arquitetura cliente-servidor ou interfaces Web, você precisa controlar o acesso ou fornecer diferentes recursos, conforme os usuários conectados. It is also essential to provide security for sensitive data, even in single-user applications.
+Se mais de uma pessoa usar uma aplicação, que geralmente é o caso em arquitetura cliente-servidor ou interfaces Web, você precisa controlar o acesso ou fornecer diferentes recursos, conforme os usuários conectados. É também essencial garantir a segurança de dados sensíveis, mesmo em aplicações usuário único.
 
 A estratégia de controle de acesso 4D depende da configuração de sua implementação:
 
@@ -16,7 +16,7 @@ A estratégia de controle de acesso 4D depende da configuração de sua implemen
 
 Aplicações multi-usuário são implementadas com 4D Server. Incluem aplicações cliente-servidor, Web ou REST.
 
-En las aplicaciones multiusuario, el control de acceso se realiza a través de [usuarios y grupos 4D](handling_users_groups.md). You create users, assign passwords, create access groups that have different levels of privileges in the application.
+En las aplicaciones multiusuario, el control de acceso se realiza a través de [usuarios y grupos 4D](handling_users_groups.md). Você cria usuários, atribuir senhas, criar grupos de acesso que tenham diferentes níveis de privilégios na aplicação.
 
 Inicie el sistema de control de acceso por contraseña 4D con 4D Server, [ asignando una contraseña al usuario Diseñador](handling_users_groups.md#designer-and-administrator). Quando uma senha for estabelecida para o Designer, todos os privilégios de acesso têm efeito. Para conectarse a la aplicación o a un [servidor con acceso protegido](handling_users_groups.md#assigning-group-access), los usuarios remotos deben introducir un nombre de usuario/contraseña. Qualquer parte da aplicação pode ser aberta.
 
