@@ -64,7 +64,8 @@ You use this area to design your label zone by placing and positioning all the i
 If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
 - You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. The **Formula editor** is then displayed:
 ![](../assets/en/Desktop/label-formula1.png)<br/>
-For example, you can apply a format to a field using the [`String`](../commands-legacy/string.md) command:<br/>
+For example, you can apply a format to a field using the [`String`](../commands-legacy/string.md) command:
+<br/>
 ![](../assets/en/Desktop/label-formula2.png)
 - You can drag and drop picture files as well as label files (".4lbp" files) from the desktop of the OS.
 
