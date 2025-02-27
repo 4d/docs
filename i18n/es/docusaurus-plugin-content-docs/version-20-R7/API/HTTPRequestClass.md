@@ -277,7 +277,7 @@ La propiedad `.headers` contiene <!-- REF #HTTPRequestClass.headers.Summary -->l
 
 #### Descripción
 
-La propiedad `.returnResponseBody` contiene <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->el `returnResponseBody` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
+La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary -->el `protocol` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -289,7 +289,7 @@ La propiedad `.returnResponseBody` contiene <!-- REF #HTTPRequestClass.returnRes
 
 #### Descripción
 
-La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary -->el `protocol` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. Si se ha omitido o si se ha utilizado "auto", contiene la versión del protocolo utilizada.
+La propiedad `.method` contiene <!-- REF #HTTPRequestClass.method.Summary -->el `method` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. . Si se ha omitido o si se ha utilizado "auto", contiene la versión del protocolo utilizada.
 
 <!-- END REF -->
 
@@ -331,7 +331,7 @@ Un objeto `response` es un objeto no compartible. Ofrece las siguientes propieda
 
 #### Descripción
 
-La propiedad `.method` contiene <!-- REF #HTTPRequestClass.method.Summary -->el `method` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. . Si se omite, contiene True.
+La propiedad `.returnResponseBody` contiene <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->el `returnResponseBody` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. . Si se omite, contiene True.
 
 <!-- END REF -->
 

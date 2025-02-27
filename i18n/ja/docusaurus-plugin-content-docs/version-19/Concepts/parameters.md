@@ -32,7 +32,7 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-// サブフォーム "Cal2" のコンテキストにおいて  SetCalendarDate を実行し
+// サブフォーム "Cal2" のコンテキストにおいて // サブフォーム "Cal2" のコンテキストにおいて  SetCalendarDate を実行し
 // その際に引数として日付リテラル !05/05/20! を渡します
 ```
 
@@ -126,7 +126,7 @@ $entitySelection:=ds.User.query("login=:1"; $user)
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-矢印と出力変数名を省略して、コロン (:) 記号の後に戻り値のデータ型だけを指定(`: type` を追加)した場合は、自動的に `$0` が使用されます。([受け渡し順シンタックス](#returned-value-1) 参照)。 例:
+[名前付き引数シンタックス](#named-parameters) を利用している場合には、それらの引数は `#DECLARE` キーワードまたは `Function` プロトタイプによって自動的に宣言されます。 例:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer

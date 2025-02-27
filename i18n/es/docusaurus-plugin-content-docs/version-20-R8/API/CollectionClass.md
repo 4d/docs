@@ -237,7 +237,7 @@ Por defecto, los elementos *col2* se añaden al final de la colección original.
 
 > **Atención**: recuerde que los elementos de la colección están numerados desde 0.
 
-- Ejemplo 1
+- Si *index* es mayor que la longitud de la colección, el índice inicial real se definirá en la longitud de la colección.
 - Si *index* < 0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
 - En caso de incoherencia, se aplican las siguientes reglas:
 
@@ -281,7 +281,7 @@ La función.`.concat()` <!-- REF #collection.concat().Summary -->devuelve una nu
 
 > Esta función no modifica la colección original.
 
-Si *value* es una colección, todos sus elementos se añaden al final de la colección original. Si *value* no es una colección, se añade ella misma como un nuevo elemento.
+La colección devuelta contiene el elemento especificado por *startFrom* y todos los elementos subsiguientes hasta, pero sin incluir, el elemento especificado por *end*. Si sólo se especifica el parámetro *startFrom*, la colección devuelta contiene todos los elementos desde *startFrom* hasta el último elemento de la colección original.
 
 #### Ejemplo
 
@@ -627,7 +627,7 @@ La función `.equal()` <!-- REF #collection.equal().Summary -->compara recursiva
 
 :::
 
-Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluación diferencie entre mayúsculas y minúsculas o que diferencie los caracteres acentuados, pase la constante `ck diacritical` en el parámetro option.
+Por defecto, se realiza una evaluación no diacrítica. La evaluación distingue entre mayúsculas y minúsculas y diferencia los caracteres acentuados.
 
 :::tip
 
@@ -1889,7 +1889,7 @@ Si la colección está vacía, `.min()` devuelve *Undefined*.
 | ---------- | --------------------------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | formula    | 4D.Function |              ->             | Objeto fórmula                                                                                                                                           |
 | colsToSort | Collection                  |              ->             | Colección de colecciones y/u objetos con propiedades {`collection`:*colToSort*;`order`:`ck ascending` o `ck descending`} |
-| Resultado  | Collection                  | <- | o *methodName*, el nombre de un método proyecto (texto).                                                              |
+| Resultado  | Collection                  | <- | La nueva colección                                                                                                                                       |
 
 <!-- END REF -->
 
@@ -2032,7 +2032,7 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 #### Descripción
 
-La nueva colección
+Descripción Sin embargo, ten en cuenta que las fórmulas no están soportadas por la función `collection.query()`, ni en el parámetro *queryString* ni como parámetro objeto *formula*.
 
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
@@ -2462,7 +2462,7 @@ $o.parameters:={name:"Chicago")
 $c:=$myCol.query(":att=:name";$o)
 ```
 
-Puede mezclar todos los tipos de argumentos en *queryString*. Un *queryString* puede contener, para los parámetros *propertyPath* y *value*:
+Puede mezclar todos los tipos de argumentos en *queryString*. Puede mezclar todos los tipos de argumentos en *queryString*.
 
 - valores directos (sin marcadores),
 - marcadores indexados y/o con nombre.
@@ -2837,7 +2837,7 @@ La función `.remove()` <!-- REF #collection.remove().Summary -->elimina uno o m
 
 En *index*, pase la posición donde quiere eliminar el elemento de la colección.
 
-> **Atención**: recuerde que los elementos de la colección están numerados desde 0. Si *index* es mayor que la longitud de la colección, el índice inicial real se definirá en la longitud de la colección.
+> **Atención**: recuerde que los elementos de la colección están numerados desde 0. Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 - Si *index* < 0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
 - Si el valor calculado < 0, *index* toma el valor 0.
@@ -3144,12 +3144,12 @@ Quiere saber si al menos un valor de la colección es >0.
 
 <!-- REF #collection.sort().Params -->
 
-| Parámetros | Tipo                        |                             | Descripción                                                                                 |
-| ---------- | --------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------- |
-| formula    | 4D.Function |              ->             | Objeto fórmula                                                                              |
-| methodName | Text                        |              ->             | Nombre de un método                                                                         |
-| extraParam | any                         |              ->             | Parámetros del método                                                                       |
-| Resultado  | Collection                  | <- | o *methodName*, el nombre de un método proyecto (texto). |
+| Parámetros | Tipo                        |                             | Descripción           |
+| ---------- | --------------------------- | :-------------------------: | --------------------- |
+| formula    | 4D.Function |              ->             | Objeto fórmula        |
+| methodName | Text                        |              ->             | Nombre de un método   |
+| extraParam | any                         |              ->             | Parámetros del método |
+| Resultado  | Collection                  | <- | La nueva colección    |
 
 <!-- END REF -->
 
