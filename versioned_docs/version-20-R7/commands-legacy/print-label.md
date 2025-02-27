@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table to print, or Default table, if omitted |
 | document | Text | &#8594;  | Name of disk label document |
-| * &#124; > | &#8594;  | * to suppress the printing dialog box, or > to not reinitialize print settings |
+| * &#124; > |Operator| &#8594;  | * to suppress the printing dialog box, or > to not reinitialize print settings |
 
 <!-- END REF-->
 

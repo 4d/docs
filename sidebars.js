@@ -3391,6 +3391,11 @@ module.exports =
 							type: "doc",
 							label: "Build Application",
 							id: "Desktop/building"
+						},
+						{
+							type: "doc",
+							label: "Labels",
+							id: "Desktop/labels"
 						}
 					]
 				},
