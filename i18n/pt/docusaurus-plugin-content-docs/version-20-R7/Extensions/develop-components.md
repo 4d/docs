@@ -194,7 +194,7 @@ Quando você usa ponteiros para permitir que os componentes e o projeto host se 
 - O comando `Get pointer` não retornará um ponteiro para uma variável do projeto host se for chamado a partir de um componente e vice-versa.
 
 - A arquitetura de componentes permite a coexistência, no mesmo projeto interpretado, de componentes interpretados e compilados (por outro lado, somente componentes compilados podem ser usados em um projeto compilado). Para utilizar apontadores neste caso, deve respeitar o seguinte princípio: o intérprete pode desconectar um ponteiro construído em modo compilado; no entanto, em modo compilado, não pode deconectar um ponteiro construído em modo interpretado.
-  Vamos ilustrar esse princípio com o seguinte exemplo: dados dois componentes, C (compilados) e eu (interpretados), instalados no mesmo projeto host.
+ Vamos ilustrar esse princípio com o seguinte exemplo: dados dois componentes, C (compilados) e eu (interpretados), instalados no mesmo projeto host.
 
 - Se o componente C definir a variável `myCvar`, o componente I poderá acessar o valor dessa variável usando o ponteiro `->myCvar`.
 
