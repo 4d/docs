@@ -56,11 +56,11 @@ title: Entity
 この属性値タイプは属性の種類 (.kind; リレーションまたはストレージ) によります。
 
 - *attributeName* で指定した属性がストレージ型の場合:
-  `.attributeName` は *attributeName* と同じ型の値を返します。
+ `.attributeName` は *attributeName* と同じ型の値を返します。
 - *attributeName* で指定した属性が**リレートエンティティ**型の場合:
-  `.attributeName` はリレートエンティティを返します。 リレートエンティティの値は、ドット記法でプロパティを繋げることでアクセス可能です。例: "myEntity.employer.employees[0].lastname"
+ `.attributeName` はリレートエンティティを返します。 リレートエンティティの値は、ドット記法でプロパティを繋げることでアクセス可能です。例: "myEntity.employer.employees[0].lastname"
 - *attributeName* で指定した属性が**リレートエンティティズ型**の場合:
-  `.attributeName` はリレートエンティティの新しいエンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
+ `.attributeName` はリレートエンティティの新しいエンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
 
 #### 例題
 
