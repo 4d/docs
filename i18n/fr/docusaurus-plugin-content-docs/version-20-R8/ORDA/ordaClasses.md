@@ -265,8 +265,8 @@ End if
 Lors de la création ou de la modification de classes de modèles de données, vous devez veiller aux règles décrites ci-dessous :
 
 - Puisqu'ils sont utilisés pour définir des noms de classe DataClass automatiques dans le [class store](Concepts/classes.md#class-stores) **cs**, les tables 4D doivent être nommées afin d'éviter tout conflit dans l'espace de nommage **cs**. En particulier :
-  - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](Concepts/classes.md#class-names) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
-  - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
+ - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](Concepts/classes.md#class-names) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
+ - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
 
 - Lors de la définition d'une classe, assurez-vous que l'instruction [`Class extends`](Concepts/classes.md#class-extends-classnameclass) correspond exactement au nom de la classe parente (rappelez-vous qu'ils sont sensibles à la casse). Par exemple, `Class extends EntitySelection` pour une classe de sélection d'entité.
 
@@ -427,13 +427,13 @@ Cette fonction prend en charge trois syntaxes :
 - Avec la première syntaxe, vous traitez l'ensemble de la requête via la propriété de l'objet objet `$event.result`.
 - Avec les deuxième et troisième syntaxes, la fonction retourne une valeur dans *$result* :
 
-  - Si *$result* est Text, il doit s'agir d'une chaîne de requête valide
-  - Si *$result* est Object, il doit contenir deux propriétés :
+ - Si *$result* est Text, il doit s'agir d'une chaîne de requête valide
+ - Si *$result* est Object, il doit contenir deux propriétés :
 
-  | Propriété                          | Type       | Description                                                                                                                  |
-  | ---------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------- |
-  | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
-  | $result.parameters | Collection | valeurs pour placeholders                                                                                                    |
+ | Propriété                          | Type       | Description                                                                                                                  |
+ | ---------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------- |
+ | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
+ | $result.parameters | Collection | valeurs pour placeholders                                                                                                    |
 
 La fonction `query` s'exécute à chaque fois qu'une requête utilisant l'attribut calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés.
 
