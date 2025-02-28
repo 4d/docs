@@ -21,8 +21,8 @@ Les règles suivantes s'appliquent à toutes les conversions :
 
 - Les noms de table, de champ et de relation correspondent à des noms de propriété d'objet. Assurez-vous que ces noms sont conformes aux règles générales de dénomination des objets, comme expliqué dans la section [Conventions de dénomination des objets](Concepts/identifiers.md).
 - Un datastore ne référence que les tables avec une seule clé primaire. Les tables suivantes ne sont pas référencées :
-  - Tables sans clé primaire
-  - Tables avec clés primaires composites.
+ - Tables sans clé primaire
+ - Tables avec clés primaires composites.
 - Les champs BLOB sont automatiquement disponibles comme attributs de type [objet Blob](Concepts/dt_blob.md#blob-types).
 
 > La correspondance ORDA ne prend pas en compte :
