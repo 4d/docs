@@ -258,15 +258,15 @@ Cet exemple affiche une boîte de dialogue d’alerte contenant “Goodbye”.
 Voici la description de chaque ligne de l’exemple :
 
 - $MyVar:="Hello"
-  \--> Cette ligne place la chaîne "Hello" dans la variable $MyVar.
+ \--> Cette ligne place la chaîne "Hello" dans la variable $MyVar.
 - $PointerOne:=->$MyVar
-  \--> $PointerOne contient maintenant un pointeur vers $MyVar.
+ \--> $PointerOne contient maintenant un pointeur vers $MyVar.
 - $PointerTwo:=->$PointerOne
-  \--> $PointerTwo (une nouvelle variable) contient un pointeur vers $PointerOne, qui pointe à son tour vers $MyVar.
+ \--> $PointerTwo (une nouvelle variable) contient un pointeur vers $PointerOne, qui pointe à son tour vers $MyVar.
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la valeur "Goodbye" est assignée à $MyVar.
+ \--> $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la valeur "Goodbye" est assignée à $MyVar.
 - ALERTE (($PointerTwo->)->)
-  \--> Même chose : $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la boîte d'alerte affiche le contenu de $MyVar.
+ \--> Même chose : $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la boîte d'alerte affiche le contenu de $MyVar.
 
 La ligne suivante place la valeur "Hello" dans $MyVar :
 
@@ -281,3 +281,5 @@ $NewVar:=($PointerTwo->)->
 ```
 
 **Important :** Vous devez utiliser des parenthèses lors des déréférencements multiples.
+
+
