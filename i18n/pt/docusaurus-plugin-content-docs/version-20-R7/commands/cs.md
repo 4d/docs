@@ -16,3 +16,5 @@ A palavra-chave **cs** está descrita na [**Página Conceito para Classes**](../
 | -------------- | ------------------------------- |
 | Command number | 1710                            |
 | Thread safe    | &amp;check; |
+
+
