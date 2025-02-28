@@ -64,3 +64,5 @@ This example authorizes all methods starting with “formula” and the “Total
 | ----------------- | ------------------------------------------------------------------- |
 | Número de comando | 805                                                                 |
 | Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+
+
