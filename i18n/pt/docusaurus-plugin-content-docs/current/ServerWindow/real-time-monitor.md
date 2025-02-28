@@ -17,10 +17,10 @@ As informações seguintes são fornecidas para cada linha:
 - **Duración** (ms): duración en milisegundos de la operación en curso
 - **Información**: título de la operación.
 - **Detalles**: esta área muestra información detallada que variará en función del tipo de operación seleccionada. Mais especificamente:
-  - **Creada en**: indica si la operación es el resultado de una acción del cliente (Creada en cliente) o si se inició explícitamente en el servidor mediante un procedimiento almacenado o la opción "Ejecutar en el servidor" (Creada en servidor).
-  - **Detalles de la operación**: tipo de operación y (para las operaciones de consulta) plan de búsqueda.
-  - **Suboperaciones** (si las hay): operaciones dependientes de la operación seleccionada (por ejemplo, eliminar registros relacionados antes que un registro padre).
-  - **Detalles del proceso**: información adicional relativa a la tabla, campo, proceso o cliente, en función del tipo de operación
+    - **Creada en**: indica si la operación es el resultado de una acción del cliente (Creada en cliente) o si se inició explícitamente en el servidor mediante un procedimiento almacenado o la opción "Ejecutar en el servidor" (Creada en servidor).
+    - **Detalles de la operación**: tipo de operación y (para las operaciones de consulta) plan de búsqueda.
+    - **Suboperaciones** (si las hay): operaciones dependientes de la operación seleccionada (por ejemplo, eliminar registros relacionados antes que un registro padre).
+    - **Detalles del proceso**: información adicional relativa a la tabla, campo, proceso o cliente, en función del tipo de operación
 
 > Real-time monitoring page uses the [`ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) command internally. Para mais informações, consultar a descrição deste comando.
 
