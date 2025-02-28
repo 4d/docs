@@ -29,3 +29,11 @@ Vous pouvez modifier les paramètres d'impression suivants :
 | scale       | number          | minimum : 0                                                                                                                             |
 
 ---
+
+
+
+
+
+
+
+
