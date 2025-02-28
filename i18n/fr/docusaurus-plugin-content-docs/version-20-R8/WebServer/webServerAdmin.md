@@ -14,8 +14,8 @@ Un projet 4D peut démarrer et surveiller un serveur Web pour l'application prin
 Il y a plusieurs manières de démarrer le serveur Web principal :
 
 - via un bouton/une commande de menu :
-  - 4D: **Exécution\>Démarrer le serveur Web**<br/>![](../assets/en/WebServer/start1.png)
-  - 4D Server : Bouton **Démarrer le serveur HTTP** dans la page Serveur HTTP<br/>![](../assets/en/WebServer/start2.png)
+    - 4D: **Exécution\>Démarrer le serveur Web**<br/>![](../assets/en/WebServer/start1.png)
+    - 4D Server : Bouton **Démarrer le serveur HTTP** dans la page Serveur HTTP<br/>![](../assets/en/WebServer/start2.png)
 
 - automatiquement à l'ouverture de l'application 4D. Pour ce faire, affichez la page **Web\/Configuration** des Propriétés et cochez la case **Lancer le serveur Web au démarrage** :<br/>![](../assets/en/WebServer/config.png)
 
@@ -228,7 +228,7 @@ D'abord, vous devez choisir la fréquence (jours, semaines, etc.) ou le critère
 - **Pas de sauvegarde du journal** : La fonction de sauvegarde programmée est désactivée.
 
 - **Toutes les X heure(s)** : Cette option est utilisée pour programmer des sauvegardes sur une base horaire. Vous pouvez entrer une valeur entre 1 et 24.
-  - **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
+    - **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
 
 - **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
 
