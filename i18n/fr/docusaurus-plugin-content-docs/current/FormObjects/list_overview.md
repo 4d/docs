@@ -57,26 +57,26 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 Comme pour les autres commandes de gestion des propriété d’objets, il est possible d’utiliser le caractère “@” dans le paramètre `NomListe`. En principe, cette syntaxe permet de désigner un ensemble d’objets dans le formulaire. Toutefois, dans le contexte des commandes de liste hiérarchique, ce principe n’est pas applicable dans tous les cas. Cette syntaxe aura deux effets différents en fonction du type de commande :
 
 - Pour les commandes fixant des propriétés, cette syntaxe désigne tous les objets dont le nom correspond (fonctionnement standard). Par exemple, le paramètre "LH@" désigne tous les objets de type liste hiérarchique dont le nom débute par “LH”
-  - `DELETE FROM LIST`
-  - `INSERT IN LIST`
-  - `SELECT LIST ITEMS BY POSITION`
-  - `SET LIST ITEM`
-  - `SET LIST ITEM FONT`
-  - `SET LIST ITEM ICON`
-  - `SET LIST ITEM PARAMETER`
-  - `SET LIST ITEM PROPERTIES`
+    - `DELETE FROM LIST`
+    - `INSERT IN LIST`
+    - `SELECT LIST ITEMS BY POSITION`
+    - `SET LIST ITEM`
+    - `SET LIST ITEM FONT`
+    - `SET LIST ITEM ICON`
+    - `SET LIST ITEM PARAMETER`
+    - `SET LIST ITEM PROPERTIES`
 
 - Pour les commandes récupérant des propriétés, cette syntaxe désigne le premier objet dont le nom correspond. Ces commandes sont :
-  - `Count list items`
-  - `Find in list`
-  - `GET LIST ITEM`
-  - `Get list item font`
-  - `GET LIST ITEM ICON`
-  - `GET LIST ITEM PARAMETER`
-  - `GET LIST ITEM PROPERTIES`
-  - `List item parent`
-  - `List item position`
-  - `Selected list items`
+    - `Count list items`
+    - `Find in list`
+    - `GET LIST ITEM`
+    - `Get list item font`
+    - `GET LIST ITEM ICON`
+    - `GET LIST ITEM PARAMETER`
+    - `GET LIST ITEM PROPERTIES`
+    - `List item parent`
+    - `List item position`
+    - `Selected list items`
 
 ## Commandes génériques utilisables avec les listes hiérarchiques
 
@@ -121,18 +121,18 @@ Voici quelques astuces quant à l'utilisation du numéro de référence unique :
 
 1. Vous n'avez pas besoin d'identifier chaque élément de façon unique (niveau débutant).
 
-   - Premier exemple : vous construisez par programmation un système d'onglets, par exemple, un carnet d'adresses. Comme le système vous retournera le numéro de l'onglet sélectionné, vous n'aurez probablement pas besoin de davantage d'informations. Dans ce cas, ne vous préoccupez pas des numéros de référence des éléments : passez n'importe quelle valeur (hormis 0) dans le paramètre *réfElément*. Notez que pour un système de carnet d'adresses, vous pouvez prédéfinir une liste A, B,..., Z en mode Développement. Vous pouvez également la créer par programmation afin d'éliminer les lettres pour lesquelles il n'y a pas d'enregistrement.
-   - Deuxième exemple : en travaillant avec une base, vous construisez progressivement une liste de mots-clés. Vous pouvez sauvegarder la liste à la fin de chaque session, en utilisant les commandes `SAVE LIST` ou `LIST TO BLOB`, et la recharger au début de chaque session, à l'aide des commandes `Load list` ou `BLOB to list`. Vous pouvez afficher cette liste dans une palette flottante ; lorsque l'utilisateur clique sur un mot-clé de la liste, l'élément choisi est inséré dans la zone saisissable sélectionnée du process de premier plan. En tout état de cause, l'important est que vous ne traitez que l'élément sélectionné (par clic ou glisser-déposer), car la commande `Selected list items`vous retourne la position de l'élément que vous devez traiter. En utilisant cette valeur de position, vous obtenez le libellé de l'élément grâce à la commande `GET LIST ITEM`. Ici aussi, vous n'avez pas besoin d'identifier de façon unique chaque élément ; vous pouvez passer n'importe quelle valeur (hormis 0) dans le paramètre *réfElément*.
+    - Premier exemple : vous construisez par programmation un système d'onglets, par exemple, un carnet d'adresses. Comme le système vous retournera le numéro de l'onglet sélectionné, vous n'aurez probablement pas besoin de davantage d'informations. Dans ce cas, ne vous préoccupez pas des numéros de référence des éléments : passez n'importe quelle valeur (hormis 0) dans le paramètre *réfElément*. Notez que pour un système de carnet d'adresses, vous pouvez prédéfinir une liste A, B,..., Z en mode Développement. Vous pouvez également la créer par programmation afin d'éliminer les lettres pour lesquelles il n'y a pas d'enregistrement.
+    - Deuxième exemple : en travaillant avec une base, vous construisez progressivement une liste de mots-clés. Vous pouvez sauvegarder la liste à la fin de chaque session, en utilisant les commandes `SAVE LIST` ou `LIST TO BLOB`, et la recharger au début de chaque session, à l'aide des commandes `Load list` ou `BLOB to list`. Vous pouvez afficher cette liste dans une palette flottante ; lorsque l'utilisateur clique sur un mot-clé de la liste, l'élément choisi est inséré dans la zone saisissable sélectionnée du process de premier plan. En tout état de cause, l'important est que vous ne traitez que l'élément sélectionné (par clic ou glisser-déposer), car la commande `Selected list items`vous retourne la position de l'élément que vous devez traiter. En utilisant cette valeur de position, vous obtenez le libellé de l'élément grâce à la commande `GET LIST ITEM`. Ici aussi, vous n'avez pas besoin d'identifier de façon unique chaque élément ; vous pouvez passer n'importe quelle valeur (hormis 0) dans le paramètre *réfElément*.
 
 2. Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
-   Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
-   Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
-   You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command. Dans cet exemple, nous utilisons les numéros de référence des éléments pour stocker des numéros d'enregistrements. Cependant, nous devons pouvoir établir une distinction entre les éléments qui correspondent aux enregistrements [Départements] et ceux qui correspondent aux enregistrements [Employés].
+    Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
+    Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
+    You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command. Dans cet exemple, nous utilisons les numéros de référence des éléments pour stocker des numéros d'enregistrements. Cependant, nous devons pouvoir établir une distinction entre les éléments qui correspondent aux enregistrements [Départements] et ceux qui correspondent aux enregistrements [Employés].
 
 3. Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
-   Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
-   Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
-   Vous programmez une gestion élaborée de listes hiérarchiques, dans laquelle vous devez absolument pouvoir identifier chaque élément de manière unique à tous les niveaux de la liste. Un moyen simple d'implémenter ce fonctionnement est de maintenir un compteur personnel. Supposons que vous créez une liste *hlList* à l'aide de la commande `APPEND TO LIST`. A ce stade, vous initialisez un compteur *vlhCounter* à 1. A chaque fois que vous appelez `APPEND TO LIST` ou `INSERT IN LIST`, vous incrémentez ce compteur `(vlhCounter:=vlhCounter+1)`, et vous passez le compteur comme numéro de référence de l'élément. L'astuce consiste à ne pas décrémenter le compteur lorsque vous détruisez des éléments — le compteur ne peut qu'augmenter. En procédant ainsi, vous garantissez l'unicité des numéros de référence des éléments. Puisque ces numéros sont des valeurs de type Entier long, vous pouvez ajouter ou insérer plus de deux milliards d'éléments dans une liste qui a été réinitialisée... (si vous manipulez d'aussi grandes quantités d'éléments, cela signifie généralement que vous devriez utiliser une table plutôt qu'une liste.)
+    Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
+    Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
+    Vous programmez une gestion élaborée de listes hiérarchiques, dans laquelle vous devez absolument pouvoir identifier chaque élément de manière unique à tous les niveaux de la liste. Un moyen simple d'implémenter ce fonctionnement est de maintenir un compteur personnel. Supposons que vous créez une liste *hlList* à l'aide de la commande `APPEND TO LIST`. A ce stade, vous initialisez un compteur *vlhCounter* à 1. A chaque fois que vous appelez `APPEND TO LIST` ou `INSERT IN LIST`, vous incrémentez ce compteur `(vlhCounter:=vlhCounter+1)`, et vous passez le compteur comme numéro de référence de l'élément. L'astuce consiste à ne pas décrémenter le compteur lorsque vous détruisez des éléments — le compteur ne peut qu'augmenter. En procédant ainsi, vous garantissez l'unicité des numéros de référence des éléments. Puisque ces numéros sont des valeurs de type Entier long, vous pouvez ajouter ou insérer plus de deux milliards d'éléments dans une liste qui a été réinitialisée... (si vous manipulez d'aussi grandes quantités d'éléments, cela signifie généralement que vous devriez utiliser une table plutôt qu'une liste.)
 
 > Si vous exploitez les Opérateurs sur les bits, vous pouvez également utiliser les numéros de référence des éléments pour stocker des informations qui peuvent être logées dans un Entier long, c'est-à-dire 2 Entiers, des valeurs de 4 octets ou encore 32 Booléens.
 
