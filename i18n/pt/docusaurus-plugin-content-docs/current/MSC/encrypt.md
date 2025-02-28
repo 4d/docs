@@ -27,20 +27,20 @@ Para encriptar os seus dados pela primeira vez utilizando o CSM, são necessári
 
 1. En el editor de estructuras, marque el atributo **Encriptable** de cada tabla cuyos datos desee encriptar. Ver a secção "Propriedades das tabelas".
 2. Abra a página Encriptar do CSM.
-   If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page:
-   ![](../assets/en/MSC/MSC_encrypt1.png)
-   Otherwise, the following message is displayed:
-   ![](../assets/en/MSC/MSC_encrypt2.png)<p>
-   This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
-   \*\*Note: \*\*The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</p>
+  If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page:
+  ![](../assets/en/MSC/MSC_encrypt1.png)
+  Otherwise, the following message is displayed:
+  ![](../assets/en/MSC/MSC_encrypt2.png)<p>
+  This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
+  \*\*Note: \*\*The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</p>
 3. Click on the Encrypt picture button.\
-   ![](../assets/en/MSC/MSC_encrypt3.png)\
-   You will be prompted to enter a passphrase for your data file:
-   ![](../assets/en/MSC/MSC_encrypt4.png)
-   The passphrase is used to generate the data encryption key. Uma frase-chave é uma versão mais segura de uma palavra-passe e pode conter um grande número de caracteres. Por exemplo, pode introduzir uma frase-chave como "Todos nós viemos para Montreux" ou "A minha primeira grande frase-chave!"
-   The security level indicator can help you evaluate the strength of your passphrase:
-   ![](../assets/en/MSC/MSC_encrypt5.png)
-   (deep green is the highest level)
+  ![](../assets/en/MSC/MSC_encrypt3.png)\
+  You will be prompted to enter a passphrase for your data file:
+  ![](../assets/en/MSC/MSC_encrypt4.png)
+  The passphrase is used to generate the data encryption key. Uma frase-chave é uma versão mais segura de uma palavra-passe e pode conter um grande número de caracteres. Por exemplo, pode introduzir uma frase-chave como "Todos nós viemos para Montreux" ou "A minha primeira grande frase-chave!"
+  The security level indicator can help you evaluate the strength of your passphrase:
+  ![](../assets/en/MSC/MSC_encrypt5.png)
+  (deep green is the highest level)
 4. Introduza para confirmar a sua frase-passe protegida.
 
 O processo de encriptação é então iniciado. Se o MSC foi aberto em modo padrão, o banco de dados é reaberto em modo manutenção.
@@ -92,9 +92,9 @@ Esta operação é útil quando é necessário alterar a chave de encriptação 
 1. Haga clic en **Cambiar su frase de contraseña y volver a cifrar los datos**.
 2. Introduzir a chave de encriptação de dados atual.
 3. Enter the new passphrase (for added security, you are prompted to enter it twice):
-   ![](../assets/en/MSC/MSC_encrypt9.png)
-   The data file is encrypted with the new key and the confirmation message is displayed.
-   ![](../assets/en/MSC/MSC_encrypt8.png)
+  ![](../assets/en/MSC/MSC_encrypt9.png)
+  The data file is encrypted with the new key and the confirmation message is displayed.
+  ![](../assets/en/MSC/MSC_encrypt8.png)
 
 ### Desencriptar todos os dados
 
