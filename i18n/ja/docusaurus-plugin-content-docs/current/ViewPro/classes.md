@@ -403,3 +403,7 @@ The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summar
 **.wholeTableStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
 `.wholeTableStyle` プロパティは、 <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->データエリアのデフォルトスタイルを指定します<!-- END REF -->。
+
+
+
+
