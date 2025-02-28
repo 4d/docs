@@ -261,8 +261,8 @@ End if
 Ao criar ou editar classes de modelo de dados, é necessário preste atenção às seguintes regras:
 
 - Como eles são usados para definir nomes automáticos de classe de DataClass nos **cs** [loja de classe](Concepts/classes.md#class-stores), tabelas 4D devem ser nomeadas para evitar qualquer conflito no namespace **cs**. Em particular:
-  - Não dê o mesmo nome a uma tabela 4D e a um [nome de classe de usuário](Concepts/classes.md#class-names). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
-  - Não use um nome reservado para uma tabela 4D (por exemplo, "DataClass").
+ - Não dê o mesmo nome a uma tabela 4D e a um [nome de classe de usuário](Concepts/classes.md#class-names). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
+ - Não use um nome reservado para uma tabela 4D (por exemplo, "DataClass").
 
 - Ao definir uma classe, verifique se a instrução [`class extends`](Concepts/classes.md#class-extends-classnameclass) corresponde exatamente ao nome da classe pai (lembre-se de que são sensíveis a maiúsculas e minúsculas). Por exemplo, 'Classe amplia EntitySelection' para uma classe de seleção de entidade.
 
@@ -423,13 +423,13 @@ Esta função suporta três sintaxes:
 - Com a primeira sintaxe, você manipula toda a consulta através da propriedade de objeto$event.result\\\\\\\\`.
 - Com a segunda e terceira sintaxes, a função retorna um valor em *$result*:
 
-  - Se *$result* é um Texto, deve ser uma string de consulta válida
-  - Se *$result* é um objeto, ele deve conter duas propriedades:
+ - Se *$result* é um Texto, deve ser uma string de consulta válida
+ - Se *$result* é um objeto, ele deve conter duas propriedades:
 
-  | Propriedade                        | Tipo       | Descrição                                                                                                                             |
-  | ---------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-  | $result.query      | Text       | Cadeia de consulta válida com marcadores de posição (:1, :2, etc.) |
-  | $result.parameters | Collection | valores para marcadores                                                                                                               |
+ | Propriedade                        | Tipo       | Descrição                                                                                                                             |
+ | ---------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+ | $result.query      | Text       | Cadeia de consulta válida com marcadores de posição (:1, :2, etc.) |
+ | $result.parameters | Collection | valores para marcadores                                                                                                               |
 
 A função `query` é executada sempre que é lançada uma consulta que utiliza o atributo calculado. É útil personalizar e otimizar as consultas com base em atributos indexados. Quando a função 'query' não estiver implementada para um atributo computado, a busca sempre é sequencial (baseada na avaliação de todos os valores usando a função `obter <AttributeName>`).
 
