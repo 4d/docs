@@ -149,7 +149,7 @@ Toutefois, cette propriété a une fonction de typage dans les cas spécifiques 
 - **[Dynamic variables](#dynamic-variables)**: you can use this property to declare the type of dynamic variables.
 - **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. Les formats fournis dépendent du type de variable (list box de type tableau) ou du type de données/de champ (list box de type sélection et collection). Les formats 4D standard qui peuvent être utilisés sont les suivants : Alpha, Numérique, Date, Heure, Image et Booléen. Le type Texte n'a pas de format d'affichage spécifique. Tous les formats personnalisés existants sont également disponibles.
 - **[Picture variables](input_overview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires.
-  Sinon, la variable image ne sera pas affichée correctement (uniquement en mode interprété).
+ Sinon, la variable image ne sera pas affichée correctement (uniquement en mode interprété).
 
 #### Grammaire JSON
 
