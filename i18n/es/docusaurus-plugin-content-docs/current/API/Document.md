@@ -87,7 +87,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-Lanzamiento Una extensión siempre comienza por ".". La propiedad devuelve una cadena vacía si el nombre del archivo no tiene extensión.
+La propiedad `.extension` devuelve <!-- REF #document.extension.Summary -->la extensión del nombre del archivo (si lo hay)<!-- END REF -->. Una extensión siempre comienza por ".". La propiedad devuelve una cadena vacía si el nombre del archivo no tiene extensión.
 
 Esta propiedad es de **solo lectura**.
 
@@ -318,7 +318,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-Lanzamiento El elemento objetivo puede ser:
+La propiedad `.original` devuelve<!-- REF #document.original.Summary -->el elemento de destino para un alias, un acceso directo o un archivo de enlace simbólico<!-- END REF -->. El elemento objetivo puede ser:
 
 - un objeto File
 - un objeto de la carpeta
@@ -345,7 +345,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-Comentario Si la ruta representa una ruta del sitema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.
+La propiedad `.parent` devuelve <!-- REF #document.parent.Summary -->el objeto carpeta padre del archivo<!-- END REF -->. Si la ruta representa una ruta del sitema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.
 
 Esta propiedad es de **solo lectura**.
 
@@ -367,7 +367,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-Comentario Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
+La propiedad `.path` devuelve <!-- REF #document.path.Summary -->la ruta POSIX del archivo<!-- END REF -->. Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
 
 Esta propiedad es de **solo lectura**.
 
@@ -411,7 +411,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-Lanzamiento Si el archivo no existe en el disco, el tamaño es 0.
+La propiedad `.size` devuelve <!-- REF #document.size.Summary -->el tamaño del archivo expresado en bytes<!-- END REF -->. Si el archivo no existe en el disco, el tamaño es 0.
 
 Esta propiedad es de **solo lectura**.
 
@@ -497,7 +497,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### Descripción
 
-Lanzamiento Lanzamiento Lanzamiento Lanzamiento Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
+La función `.getContent()`  <!-- REF #document.getContent().Summary -->devuelve un objeto `4D.Blob` que contiene todo el contenido de un archivo<!-- END REF -->. Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
 
 **Valor devuelto**
 
@@ -626,7 +626,7 @@ Cuando se ejecuta este código:
  $txt:=$myFile.getText()
 ```
 
-... Lanzamiento
+... obtiene lo siguiente para `$txt`:
 
 "id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
 
