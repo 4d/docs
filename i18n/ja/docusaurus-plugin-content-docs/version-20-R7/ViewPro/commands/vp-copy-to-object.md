@@ -65,3 +65,4 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 [VP MOVE CELLS](vp-move-cells.md)<br/>
 [VP Get workbook options](vp-get-workbook-options.md)<br/>
 [VP SET WORKBOOK OPTIONS](vp-set-workbook-options.md)
+
