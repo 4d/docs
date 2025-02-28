@@ -91,3 +91,5 @@ Para extraer desde la carpeta root:
 | ----------------- | ------------------------------- |
 | Número de comando | 1637                            |
 | Hilo seguro       | &amp;check; |
+
+
