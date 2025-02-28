@@ -65,7 +65,7 @@ Les certificats TLS gérés par 4D doivent être au format **PEM**. Si votre pre
 
 4D prend en charge les certificats dans les formats de cryptage standard suivants :
 
-- [**RSA**](https://en.wikipedia.org/wiki/RSA_\\\(cryptosystem\\\))
+- [**RSA**](https://en.wikipedia.org/wiki/RSA_\\\\(cryptosystem\\\\))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
 :::info Compatibilité
@@ -136,10 +136,10 @@ Pour obtenir un certificat numérique :
 2. Etablissez une demande de certificat à l’aide de la commande `GENERER DEMANDE CERTIFICAT.`
 
 3. Envoyez la demande de certificat à l’autorité de certification que vous avez choisie.
-   Pour remplir la demande de certificat, il vous sera peut-être nécessaire de contacter l’autorité de certification. Les autorités de certification vérifient la réalité des informations qui leur ont été transmises. La demande de certificat est générée dans un BLOB au format PKCS encodé en base64 (format PEM). Ce principe autorise le copier-coller des clés sous forme de texte et leur envoi par E-mail en toute sécurité, sans risque d’altération de leur contenu. Vous pouvez donc par exemple sauvegarder le BLOB contenant la demande de certificat dans un document texte (à l’aide de `BLOB VERS DOCUMENT`), puis l’ouvrir et copier-coller son contenu dans un E-mail ou un formulaire Web destiné à l’autorité de certifica
+ Pour remplir la demande de certificat, il vous sera peut-être nécessaire de contacter l’autorité de certification. Les autorités de certification vérifient la réalité des informations qui leur ont été transmises. La demande de certificat est générée dans un BLOB au format PKCS encodé en base64 (format PEM). Ce principe autorise le copier-coller des clés sous forme de texte et leur envoi par E-mail en toute sécurité, sans risque d’altération de leur contenu. Vous pouvez donc par exemple sauvegarder le BLOB contenant la demande de certificat dans un document texte (à l’aide de `BLOB VERS DOCUMENT`), puis l’ouvrir et copier-coller son contenu dans un E-mail ou un formulaire Web destiné à l’autorité de certifica
 
 4. Une fois que vous avez reçu votre certificat, créez un fichier texte que vous nommerez “cert.pem” et copiez dans ce fichier le contenu du certificat.
-   Vous pouvez recevoir votre certificat sous plusieurs formes (généralement via un E-mail ou un formulaire HTML). 4D accepte la plupart des formats de texte (macOS, PC, Linux...) pour les certificats. En revanche, le certificat doit être au format [PEM](#format), *c'est-à-dire*, PKCS encodé en base64.
+ Vous pouvez recevoir votre certificat sous plusieurs formes (généralement via un E-mail ou un formulaire HTML). 4D accepte la plupart des formats de texte (macOS, PC, Linux...) pour les certificats. En revanche, le certificat doit être au format [PEM](#format), *c'est-à-dire*, PKCS encodé en base64.
 
 > Les caractères de fins de ligne CR ne sont pas pris en charge. Vous devez utiliser CRLF ou LF.
 
