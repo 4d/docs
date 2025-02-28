@@ -87,3 +87,5 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 | -------------- | ------------------------------- |
 | Command number | 1472                            |
 | Thread safe    | &amp;check; |
+
+
