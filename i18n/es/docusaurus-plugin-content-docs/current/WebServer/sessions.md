@@ -24,7 +24,7 @@ Las sesiones web se utilizan para:
 La funcionalidad de gestión de sesiones puede ser activada y desactivada en su servidor web 4D. Hay diferentes maneras de habilitar la gestión de la sesión:
 
 - Using the **Scalable sessions** OTPion on the "Web/OTPions (I)" page of the Settings (permanent setting):
-  ![alt-text](../assets/en/WebServer/settingsSession.png)
+ ![alt-text](../assets/en/WebServer/settingsSession.png)
 
 This OTPion is selected by default in new projects. It can however be disabled by selecting the **No sessions** OTPion, in which case the web session features are disabled (no `Session` object is available).
 
