@@ -333,7 +333,7 @@ Definición PEM de una llave de cifrado a cargar. Si la llave es una llave priva
 
 | Parámetros | Tipo         |                             | Descripción                                                           |
 | ---------- | ------------ | --------------------------- | --------------------------------------------------------------------- |
-| message    | Text OR Blob | ->                          | Message to sign                                                       |
+| message    | Texto O Blob | ->                          | Message to sign                                                       |
 | options    | Object       | ->                          | Opciones de firma                                                     |
 | Resultado  | Text         | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
 
@@ -417,7 +417,7 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 
 | Parámetros | Tipo         |                             | Descripción                                                                                   |
 | ---------- | ------------ | --------------------------- | --------------------------------------------------------------------------------------------- |
-| message    | Text OR Blob | ->                          | Message that was used to produce the signature                                                |
+| message    | Texto O Blob | ->                          | Message that was used to produce the signature                                                |
 | signature  | Text         | ->                          | Firma a verificar, en representación Base64 o Base64URL, según el valor de `options.encoding` |
 | options    | Object       | ->                          | Opciones de firma                                                                             |
 | Resultado  | Object       | <- | Estado de la verificación                                                                     |
