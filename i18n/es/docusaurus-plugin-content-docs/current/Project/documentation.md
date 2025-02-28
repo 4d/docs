@@ -35,25 +35,25 @@ Todos los archivos de documentación se almacenan en la carpeta `Documentación`
 La arquitectura de la carpeta `Documentation` es la siguiente:
 
 - `Documentation`
-  - `Clases`
-    - myClass.md
-  - `DatabaseMethods`
-    - onStartup.md
-    - ...
-  - `Formularios`
-    - loginDial.md
-    - ...
-  - `Métodos`
-    - myMethod.md
-    - ...
-  - `TableForms`
-    - **1**
-      - input.md
-      - ...
-    - ...
-  - `Triggers`
-    - table1.md
-    - ...
+    - `Clases`
+        - myClass.md
+    - `DatabaseMethods`
+        - onStartup.md
+        - ...
+    - `Formularios`
+        - loginDial.md
+        - ...
+    - `Métodos`
+        - myMethod.md
+        - ...
+    - `TableForms`
+        - **1**
+            - input.md
+            - ...
+        - ...
+    - `Triggers`
+        - table1.md
+        - ...
 
 - Un formulario proyecto y su método de formulario proyecto comparten el mismo archivo de documentación para el formulario y el método.
 
@@ -103,7 +103,7 @@ Si existe un archivo llamado `\<MethodName>.md` en la carpeta `\<package>/docume
 - Todo texto introducido en una etiqueta de comentario HTML (`<!-- command documentation -->`) en la parte superior del archivo markdown.
 
 - O, si no se usa ninguna etiqueta de comentario html, la primera frase después de una etiqueta `# Description` del archivo markdown.\
-  En este caso, la primera línea contiene el **prototipo** del método, generado automáticamente por el analizador de código de 4D.
+    En este caso, la primera línea contiene el **prototipo** del método, generado automáticamente por el analizador de código de 4D.
 
 :::note
 
