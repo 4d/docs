@@ -265,13 +265,13 @@ O mapeamento entre os objetos da coleção e as entidades é feito sobre os **no
 Para cada objeto de *objectCol*:
 
 - Se o objeto conter uma propriedade booleana "\__NEW" estabelecida em false (ou não conter uma propriedade booleana "\__NEW"), a entidade se atualiza ou se cria com os valores correspondentes das propriedades do objeto. Nenhuma comprovação é realizada com respeito à chave primária:
-  - Se a chave primária for dada e existir, a entidade é atualizada. Nesse caso, a chave primária pode ser dada como etá ou com uma propriedade "\_\_KEY"  (preenchida com o valor da chave primária).
-  - Se a chave primária for dada (como é) e não existir, a entidade é criada
-  - Se a chave primária não for dada, a entidade é criada e o valor da chave primária é assignado com respeito às regras padrão de database.
+ - Se a chave primária for dada e existir, a entidade é atualizada. Nesse caso, a chave primária pode ser dada como etá ou com uma propriedade "\_\_KEY"  (preenchida com o valor da chave primária).
+ - Se a chave primária for dada (como é) e não existir, a entidade é criada
+ - Se a chave primária não for dada, a entidade é criada e o valor da chave primária é assignado com respeito às regras padrão de database.
 - Se o objeto conter uma propriedade boolean "\_\_NEW" estabelecida como **true**, a entidade é criada com os valores correspondente dos atributos de objeto. Uma comprovação é realizada com relação à chave primária:
-  - Se a chave primária for dada (como está) e existir, um erro é enviado.
-  - Se a chave primária for dada (como é) e não existir, a entidade é criada
-  - Se a chave primária não for dada, a entidade é criada e o valor da chave primária é assignado com respeito às regras padrão de database.
+ - Se a chave primária for dada (como está) e existir, um erro é enviado.
+ - Se a chave primária for dada (como é) e não existir, a entidade é criada
+ - Se a chave primária não for dada, a entidade é criada e o valor da chave primária é assignado com respeito às regras padrão de database.
 
 > A propriedade "\*\*KEY" que contém um valor só é tida em conta quando a propriedade "\*\*NEW" está definida como **false** (ou é omitida) e existe uma entidade correspondente. Em todos os outros casos, o valor da propriedade "\_\_KEY" é ignorado, o valor da chave primária deve ser passado "tal como está".
 
@@ -913,8 +913,8 @@ onde:
 
 - **formula**: uma fórmula válida passada como `Text` ou `Object`. A fórmula será avaliada para cada entidade processada e deve retornar um valor booleano. Na fórmula, a entidade está disponível através do objeto `This`.
 
-  - **Text**: a string de fórmula deve ser precedida pela declaração `eval()`, para que o parser da consulta avalie a expressão corretamente. Por exemplo: *"eval(length(This.lastname) >=30) "*
-  - **Objeto**: o [objeto fórmula](FunctionClass.md) é passado como um **marcador de posição** (ver abaixo). A fórmula deve ter sido criada usando o comando [`Fórmula`](FunctionClass.md#formula) ou [`Formula da string`](FunctionClass.md#formula-from-string).
+ - **Text**: a string de fórmula deve ser precedida pela declaração `eval()`, para que o parser da consulta avalie a expressão corretamente. Por exemplo: *"eval(length(This.lastname) >=30) "*
+ - **Objeto**: o [objeto fórmula](FunctionClass.md) é passado como um **marcador de posição** (ver abaixo). A fórmula deve ter sido criada usando o comando [`Fórmula`](FunctionClass.md#formula) ou [`Formula da string`](FunctionClass.md#formula-from-string).
 
 > * Lembre que as fórmulas 4D só suportam os símbolos `&` e `|` como operadores lógicos.
 > * Se a fórmula não for o único critério de pesquisa, o otimizador de motor debusca poderia processar outros critérios previamente (por exemplo atributos indexados) e assim, a fórmula poderia ser avaliada apenas para um subconjunto de entidades.
@@ -941,13 +941,13 @@ Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto est
 | Contém palavra chave                     | %                           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                                                                              |
 
 - Pode ser um **marcador** (ver **Uso de marcadores** abaixo) ou qualquer expressão que coincida com a propriedade de tipo de dados. **value**: o valor a comparar ao valor atual da propriedade de cada entidade na seleção de entidade. Observe que, em caso de incompatibilidade de tipo com tipos escalares (texto, data, número...), 4D tentará converter o tipo **value** para o tipo de atributo sempre que possível, para um tratamento mais fácil de valores vindos da Internet. Por exemplo, se a string "v20" for digitada como **value** para comparar com um atributo inteiro, ela será convertida em 20.
-  Quando usar um valor constante, as regras abaixo devem ser respeitadas:
-  - A constante de tipo texto pode ser passada com ou sem aspas simples (ver **Uso de aspas mais abaixo**). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
-  - Valores constantes de tipo **booleano**: **true** ou **false** (diferencia maiúscula de minúscula).
-  - \*\*Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
-  - constantes de tipo **date**: formato "YYYY-MM-DD"
-  - **null** constante: usando a palavra-chave "null" irá encontrar as propriedades **null** e **undefined**.
-  - no caso de uma pesquisa com um comparador IN, *valor* deve ser uma coleção, ou valores que coincidam com o tipo da rota do atributo entre \[ ] separados por vírgulas (para as strings, os caracteres `"` devem ser escapados com `\`).
+ Quando usar um valor constante, as regras abaixo devem ser respeitadas:
+ - A constante de tipo texto pode ser passada com ou sem aspas simples (ver **Uso de aspas mais abaixo**). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
+ - Valores constantes de tipo **booleano**: **true** ou **false** (diferencia maiúscula de minúscula).
+ - \*\*Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
+ - constantes de tipo **date**: formato "YYYY-MM-DD"
+ - **null** constante: usando a palavra-chave "null" irá encontrar as propriedades **null** e **undefined**.
+ - no caso de uma pesquisa com um comparador IN, *valor* deve ser uma coleção, ou valores que coincidam com o tipo da rota do atributo entre \[ ] separados por vírgulas (para as strings, os caracteres `"` devem ser escapados com `\`).
 - **logicalOperator**: usado para participar de múltiplas condições na consulta (opcional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
 
 | Conjunção | Símbolos                                                                            |
