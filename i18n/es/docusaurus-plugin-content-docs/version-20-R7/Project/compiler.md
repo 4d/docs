@@ -13,9 +13,9 @@ La compilación se realiza desde su aplicación 4D y es totalmente automática.
 
 1. Abra la ventana de compilación seleccionando el comando **Compilador...** en el menú **Diseño** o el botón **Compilador** de la barra de herramientas.
 
-   ![](../assets/en/Project/compilerWin1.png)
+ ![](../assets/en/Project/compilerWin1.png)
 
-   ![](../assets/en/Project/comp1.png)
+ ![](../assets/en/Project/comp1.png)
 
 > También puede lanzar directamente la compilación seleccionando el elemento de menú **Iniciar compilación** en el menú **Diseño**.
 
@@ -231,13 +231,13 @@ Estas dos listas contienen cuatro columnas:
 - Tipo de la variable. Los tipos se definen por medio de comandos de directivas de compilación o son determinados por el compilador en función del uso de la variable. Si no se puede determinar el tipo de una variable, la columna está vacía.
 - Número de dimensiones si la variable es un array.
 - Referencia al contexto en el que el compilador estableció el tipo de la variable. Si la variable se utiliza en varios contextos, el contexto mencionado es el que utiliza el compilador para determinar su tipo.
-  - Si la variable se encuentra en un método base, se indica el nombre del método base, precedido por (M)\*.
-  - Si la variable se encuentra en un método proyecto, el método se identifica como se ha definido en 4D, precedido de (M).
-  - Si la variable se encuentra en un trigger, se indica el nombre de la tabla, precedido por (TM).
-  - Si la variable se encontró en un método formulario, se da el nombre del formulario, precedido por el nombre de la tabla y (FM).
-  - Si la variable se encontró en un método objeto, se da el nombre del método objeto, precedido por el nombre del formulario, el nombre de la tabla y por (OM).
-  - Si la variable es un objeto de un formulario y no aparece en ningún método proyecto, formulario, objeto o trigger, se indica el nombre del formulario en el que aparece, precedido de (F).
-    Al final de cada lista, puede encontrar los tamaños de las variables proceso e interproceso en bytes.
+ - Si la variable se encuentra en un método base, se indica el nombre del método base, precedido por (M)\*.
+ - Si la variable se encuentra en un método proyecto, el método se identifica como se ha definido en 4D, precedido de (M).
+ - Si la variable se encuentra en un trigger, se indica el nombre de la tabla, precedido por (TM).
+ - Si la variable se encontró en un método formulario, se da el nombre del formulario, precedido por el nombre de la tabla y (FM).
+ - Si la variable se encontró en un método objeto, se da el nombre del método objeto, precedido por el nombre del formulario, el nombre de la tabla y por (OM).
+ - Si la variable es un objeto de un formulario y no aparece en ningún método proyecto, formulario, objeto o trigger, se indica el nombre del formulario en el que aparece, precedido de (F).
+  Al final de cada lista, puede encontrar los tamaños de las variables proceso e interproceso en bytes.
 
 > Al compilar, el compilador no puede determinar en qué proceso se utiliza una determinada variable proceso. Una variable proceso puede tener un valor diferente en cada proceso. En consecuencia, todas las variables proceso se duplican sistemáticamente cuando se lanza cada nuevo proceso: por lo tanto, es aconsejable vigilar la cantidad de memoria que ocuparán. También hay que tener en cuenta que el espacio para las variables proceso no está relacionado con el tamaño de la pila del proceso.
 
@@ -279,9 +279,9 @@ La estructura del archivo de errores es la siguiente:
 
 - En la parte superior del archivo se encuentra la lista de errores y advertencias, ordenados por método y en su orden de creación en 4D.
 - En la sección ***Errores generales*** se agrupan todas las imposibilidades de digitación y las ambigüedades de identidad. Estos errores y advertencias se listan utilizando el siguiente formato:
-  - el número de línea en el método (0 indica errores generales)
-  - el atributo warning indica si la anomalía detectada es una advertencia (warning="true") o un error (warning="false")
-  - diagnóstico que describe el error
+ - el número de línea en el método (0 indica errores generales)
+ - el atributo warning indica si la anomalía detectada es una advertencia (warning="true") o un error (warning="false")
+ - diagnóstico que describe el error
 
 Si su proyecto no tiene errores generales, el archivo no tendrá una sección *Errores generales*.
 
@@ -290,8 +290,8 @@ Un archivo de error puede contener tres tipos de mensajes:
 - **Errores asociados a una línea específica**: estos errores se muestran en contexto -la línea en la que se encontraron y con una explicación. El compilador informa de este tipo de error cuando encuentra una expresión en la que ve una incoherencia relacionada con el tipo de datos o la sintaxis. En la ventana del compilador, haga doble clic en cada error detectado para abrir el método en cuestión directamente en el editor de código 4D, con la línea que contiene el error resaltada.
 
 - **Errores generales**: son errores que imposibilitan la compilación del proyecto. Hay dos casos en los que el compilador informa de un error general:
-  - No se ha podido determinar el tipo de datos de una variable proceso.
-  - Dos tipos diferentes de objetos tienen el mismo nombre.
+ - No se ha podido determinar el tipo de datos de una variable proceso.
+ - Dos tipos diferentes de objetos tienen el mismo nombre.
 
 Los errores generales se denominan así porque no pueden vincularse a ningún método específico. En el primer caso, el compilador no pudo realizar una tipificación específica en ninguna parte del proyecto. En el segundo, no pudo decidir si asociar un nombre determinado con un objeto y no con otro.
 
@@ -347,8 +347,8 @@ El código compilado resultante se almacena en la carpeta [Libraries](architectu
 - **Ordenador Apple**: el compilador Silicon sólo puede ejecutarse desde una máquina Apple.
 - **Arquitectura proyecto de 4D**: el compilador Silicon sólo está disponible para los desarrollos 4D que utilizan la [arquitectura proyecto](architecture.md).
 - **Herramientas Xcode o Developer**: el compilador Silicon llama al compilador de código abierto de macOS **Clang** para compilar el proyecto a partir de código C++ en el [segundo paso](#compilador-incremental) de la compilación. *clang* requiere librerías Apple nativas, que son proporcionadas por el paquete **Xcode** o **Developer Tools**.
-  - **Si ya tiene** Xcode o Developer Tools instalados en su ordenador, sólo tiene que asegurarse de que su versión cumple con los requisitos de 4D.
-  - **Si no tiene** ninguna de estas herramientas instaladas en su ordenador, tendrá que descargar una de ellas desde el sitio web Apple Developer.
+ - **Si ya tiene** Xcode o Developer Tools instalados en su ordenador, sólo tiene que asegurarse de que su versión cumple con los requisitos de 4D.
+ - **Si no tiene** ninguna de estas herramientas instaladas en su ordenador, tendrá que descargar una de ellas desde el sitio web Apple Developer.
 
 > Recomendamos instalar **Xcode**, que es bastante sencillo de instalar. Puede decidir instalar **Developer Tools** que es más compacto, sin embargo su instalación es un poco más compleja.
 
