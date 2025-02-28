@@ -203,3 +203,4 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 次のリクエストは、名前が "Jones" である社員 (Employee) の公開データをすべて返します。
 
 `GET  /rest/Employee:lastname(Jones)`
+
