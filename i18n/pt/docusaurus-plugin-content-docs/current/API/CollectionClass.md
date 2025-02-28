@@ -800,7 +800,7 @@ Os conteúdos da coleção retornada depende do parâmetro *targetPath*:
 
 - Se o parâmetro *targetPath* for omitido, `.extract()` preenche a nova coleção com os valores *propertyPath* da coleção original.
 
-  Como padrão, elementos para os quais *propertyPath* for null ou undefined são ignorados na coleção resultante. Você pode passar a constante `ck keep null` no parâmetro *option* para incluir esses valores como elementos **null** na coleção retornada.
+ Como padrão, elementos para os quais *propertyPath* for null ou undefined são ignorados na coleção resultante. Você pode passar a constante `ck keep null` no parâmetro *option* para incluir esses valores como elementos **null** na coleção retornada.
 
 - Se um ou mais parâmetros *targetPath* forem passados (correspondentes a um ou mais parâmetros *propertyPath*), `.extract()` preenche a nova coleção com as propriedades *propertyPath* e cada elemento da nova coleção é um objeto com as propriedades *targetPath* preenchidas com as propriedades correspondentes *propertyPath*. Os valores null são mantidos (o parâmetro *option* é ignorado com essa sintaxe).
 
@@ -1030,8 +1030,8 @@ Por padrão, `.find()` pesquisa em toda a coleção. Opcionalmente pode passar e
 
 - Se *startFrom* >= o tamanho da coleção, -1 é retornado, o que significa que a coleção não é pesquisada.
 - Se *startFrom* < 0, é considerada como offset do final da coleção
-  (*startFrom:=startFrom+length*).
-  **Nota**: mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
+ (*startFrom:=startFrom+length*).
+ **Nota**: mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
 - Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo 1
@@ -1119,8 +1119,8 @@ Por padrão, `.findIndex()` pesquisa em toda a coleção. Opcionalmente pode pas
 
 - Se *startFrom* >= o tamanho da coleção, -1 é retornado, o que significa que a coleção não é pesquisada.
 - Se *startFrom* < 0, é considerada como offset do final da coleção
-  (*startFrom:=startFrom+length*).
-  **Nota**: mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
+ (*startFrom:=startFrom+length*).
+ **Nota**: mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
 - Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
@@ -1366,7 +1366,7 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 - Se *startFrom* >= tamanho da coleção, é retornado false, o que significa que a coleção não é pesquisada.
 - Se *startFrom* < 0, é considerada como offset do final da coleção
-  (*startFrom:=startFrom+length*). Note que mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
+ (*startFrom:=startFrom+length*). Note que mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
 - Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
@@ -1429,8 +1429,8 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 - Se *startFrom* >= o tamanho da coleção, -1 é retornado, o que significa que a coleção não é pesquisada.
 - Se *startFrom* < 0, é considerada como offset do final da coleção
-  (*startFrom:=startFrom+length*).
-  **Nota**: mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
+ (*startFrom:=startFrom+length*).
+ **Nota**: mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
 - Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
@@ -1686,7 +1686,7 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 - Se *startFrom* >= o comprimento da coleção menos um (coll.length-1), toda a coleção será pesquisada (padrão).
 - Se *startFrom* < 0, ele é recalculado como *startFrom:=startFrom+length* (é considerado como o deslocamento a partir do final da coleção). Se o valor calculado for negativo, -1 é retornado (a coleção não é pesquisada).
-  **Nota**: mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da direita para esquerda.
+ **Nota**: mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da direita para esquerda.
 - Se *startFrom* = 0, será retornado -1, o que significa que a coleção não será pesquisada.
 
 #### Exemplo
@@ -1944,8 +1944,8 @@ Se quiser classificar as coleções em outra ordem que não seja a ascendente, v
 A fórmula recebe os seguintes parâmetros:
 
 - $1 (objeto), onde:
-  - *$1.value* (qualquer tipo): valor do primeiro elemento a ser comparado
-  - *$1.value2* (qualquer tipo): valor do segundo elemento a ser comparado
+ - *$1.value* (qualquer tipo): valor do primeiro elemento a ser comparado
+ - *$1.value2* (qualquer tipo): valor do segundo elemento a ser comparado
 - $2...$N (qualquer tipo): parâmetros adicionais
 
 **Classificação sincronizada em vários níveis**
@@ -2078,12 +2078,12 @@ Também pode passar um parâmetro de critérios para definir como devem ordenar-
 
 - *ascOrDesc* : Integer. Se passar uma das seguintes constantes do tema **Objects and collections**:
 
-  | Parâmetros    | Tipo    | Valor | Comentário                                                                     |
-  | ------------- | ------- | ----- | ------------------------------------------------------------------------------ |
-  | ck ascending  | Integer | 0     | Os elementos são ordenados de forma ascendente (por padrão) |
-  | ck descending | Integer | 1     | Os elementos são ordenados de forma descendente                                |
+ | Parâmetros    | Tipo    | Valor | Comentário                                                                     |
+ | ------------- | ------- | ----- | ------------------------------------------------------------------------------ |
+ | ck ascending  | Integer | 0     | Os elementos são ordenados de forma ascendente (por padrão) |
+ | ck descending | Integer | 1     | Os elementos são ordenados de forma descendente                                |
 
-  Essa sintaxe ordena apenas os valores escalares da coleção (outros tipos de elementos como objetos ou coleções são retornados sem ordenar).
+ Essa sintaxe ordena apenas os valores escalares da coleção (outros tipos de elementos como objetos ou coleções são retornados sem ordenar).
 
 Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se <em x-id="3">attributePath</em> levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 
@@ -2210,9 +2210,9 @@ No retorno de chamada, passe algum código que compare dois valores e retorne **
 A chamada de retorno recebe os seguintes parâmetros:
 
 - $1 (objeto), onde:
-  - *$1.value* (qualquer tipo): valor do primeiro elemento a ser comparado
-  - *$1.value2* (qualquer tipo): valor do segundo elemento a ser comparado
-  - $2...$N (qualquer tipo): parâmetros adicionais
+ - *$1.value* (qualquer tipo): valor do primeiro elemento a ser comparado
+ - *$1.value2* (qualquer tipo): valor do segundo elemento a ser comparado
+ - $2...$N (qualquer tipo): parâmetros adicionais
 
 Se utilizou um método, este deve definir o seguinte parâmetro:
 
@@ -2425,13 +2425,13 @@ onde:
 | Incluído em                              | IN                          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                                                  |
 
 - **value**: o valor a ser comparado com o valor atual da propriedade de cada elemento da coleção. Pode ser qualquer expressão de valor constante que corresponda à propriedade de tipo de dados do elemento ou um [**placeholder**](#using-placeholders).
-  Quando usar um valor constante, as regras abaixo devem ser respeitadas:
-  - A constante de tipo texto pode ser passada com ou sem aspas simples (ver **Uso de aspas mais abaixo**). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
-  - Valores constantes de tipo **booleano**: **true** ou **false** (diferencia maiúscula de minúscula).
-  - \*\*Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
-  - constantes de tipo **date**: formato "YYYY-MM-DD"
-  - **null** constante: usando a palavra-chave "null" irá encontrar as propriedades **null** e **undefined**.
-  - no caso de uma pesquisa com um comparador IN, *valor* deve ser uma coleção, ou valores que coincidam com o tipo da rota do atributo entre \[ ] separados por vírgulas (para as strings, os caracteres `"` devem ser escapados com `\`).
+ Quando usar um valor constante, as regras abaixo devem ser respeitadas:
+ - A constante de tipo texto pode ser passada com ou sem aspas simples (ver **Uso de aspas mais abaixo**). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
+ - Valores constantes de tipo **booleano**: **true** ou **false** (diferencia maiúscula de minúscula).
+ - \*\*Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
+ - constantes de tipo **date**: formato "YYYY-MM-DD"
+ - **null** constante: usando a palavra-chave "null" irá encontrar as propriedades **null** e **undefined**.
+ - no caso de uma pesquisa com um comparador IN, *valor* deve ser uma coleção, ou valores que coincidam com o tipo da rota do atributo entre \[ ] separados por vírgulas (para as strings, os caracteres `"` devem ser escapados com `\`).
 
 - **logicalOperator**: usado para participar de múltiplas condições na consulta (opcional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
 
@@ -3203,8 +3203,8 @@ Se pretender ordenar os elementos da coleção por outra ordem ou ordenar qualqu
 A chamada de retorno recebe os seguintes parâmetros:
 
 - $1 (objeto), onde:
-  - *$1.value* (qualquer tipo): valor do primeiro elemento a ser comparado
-  - *$1.value2* (qualquer tipo): valor do segundo elemento a ser comparado
+ - *$1.value* (qualquer tipo): valor do primeiro elemento a ser comparado
+ - *$1.value2* (qualquer tipo): valor do segundo elemento a ser comparado
 - $2...$N (qualquer tipo): parâmetros adicionais
 
 Se utilizou um método, deve definir o parâmetro seguinte:
