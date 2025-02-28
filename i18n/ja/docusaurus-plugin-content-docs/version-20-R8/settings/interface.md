@@ -37,7 +37,7 @@ title: インターフェースページ
 
 - **WindowsでSDIモードを使用する**: このオプションが選択されていると、[対応している環境](../Menus/sdi.md#SDIモード利用条件) で組み込みアプリが実行された場合に、4D は自動で [SDIモード (Single-Document Interface)](../Menus/sdi.md) を有効にします。 このオプションを選択すると、Windows では、4D メニューバーの **実行** メニューからアプリケーションの実行モードが選択できます:
 
-  ![](../assets/en/settings/sdi-mdi.png)
+    ![](../assets/en/settings/sdi-mdi.png)
 
 :::note
 
@@ -79,3 +79,5 @@ title: インターフェースページ
 ![](../assets/en/settings/shortcut.png)
 
 ショートカットを変更するにはキーボードで新しいキーの組み合わせをタイプし、**OK** をクリックします。 ショートカットを無効にするには、**クリア** ボタンをクリックします。
+
+
