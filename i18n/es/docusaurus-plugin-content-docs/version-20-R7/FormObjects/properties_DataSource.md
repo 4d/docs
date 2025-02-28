@@ -198,21 +198,21 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
 - Una **variable simple** (en este caso, debe ser declarada explícitamente para la compilación). Se puede utilizar cualquier tipo de variable excepto BLOBs y arrays. El valor de la variable se calculará generalmente en el evento `On Display Detail`.
 
 - Un **campo** que utiliza la sintaxis estándar [Tabla]Campo (solo [list box tipo selección](listbox_overview.md#selection-list-boxes)), por ejemplo: `[Employees]LastName`. Se pueden utilizar los siguientes tipos de campos:
-  - String
-  - Numeric
-  - Fecha
-  - Hora
-  - Picture
-  - Boolean\
-    Puede utilizar campos de la tabla maestra o de otras tablas.
+ - String
+ - Numeric
+ - Fecha
+ - Hora
+ - Picture
+ - Boolean\
+  Puede utilizar campos de la tabla maestra o de otras tablas.
 
 - Una **expresión 4D** (expresión simple, fórmula o método 4D). La expresión debe devolver un valor. La expresión debe devolver un valor. El resultado de la expresión se mostrará automáticamente cuando cambie al modo Aplicación. La expresión se evaluará para cada registro de la selección (actual o temporal) de la tabla maestra (para list boxes de tipo selección), cada elemento de la colección (para list boxes de tipo colección) o cada entidad de la selección (para list boxes selección de entidades). Si está vacía, la columna no mostrará ningún resultado.
-  Se soportan los siguientes tipos de expresiones:
-  - String
-  - Numeric
-  - Fecha
-  - Picture
-  - Boolean
+ Se soportan los siguientes tipos de expresiones:
+ - String
+ - Numeric
+ - Fecha
+ - Picture
+ - Boolean
 
 Para los list boxes colección/entity selection, Null o tipos no soportados se muestran como cadenas vacías.\
 Cuando utilice colecciones o selecciones de entidades, normalmente declarará la propiedad del elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).\
