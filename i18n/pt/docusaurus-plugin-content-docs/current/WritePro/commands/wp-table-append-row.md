@@ -24,12 +24,12 @@ he **WP Table append row** command<!--REF #_command_.WP Table append row.Summary
 The command supports two syntaxes:
 
 - **Using values as parameters:**
-  Adds as many cells in the row as there are values provided in the *value* parameter(s). You can pass any number of values of different types.
+ Adds as many cells in the row as there are values provided in the *value* parameter(s). You can pass any number of values of different types.
 
 - **Using a collection of values (*valueColl)*:**
-  Fills the row with values from the *valueColl* collection. Each element of the collection corresponds to a cell in the row.
+ Fills the row with values from the *valueColl* collection. Each element of the collection corresponds to a cell in the row.
 
-  The following value types are supported in both syntaxes: Text, Number, Time, Date, Picture and Object (formulas or named formulas returning a row element).
+ The following value types are supported in both syntaxes: Text, Number, Time, Date, Picture and Object (formulas or named formulas returning a row element).
 
 The default cell alignment will depend on the value type:
 
