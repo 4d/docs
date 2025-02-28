@@ -79,3 +79,5 @@ criará e aplicará o seguinte objeto estilo denominado *GreenDashDotStyle*:
 [VP REMOVE STYLESHEET](vp-remove-stylesheet.md)<br/>
 [VP SET CELL STYLE](vp-set-cell-style.md)<br/>
 [VP SET DEFAULT STYLE](vp-set-default-style.md)
+
+
