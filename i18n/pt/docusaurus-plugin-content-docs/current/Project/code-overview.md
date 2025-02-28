@@ -160,7 +160,7 @@ Para a definição em lote dos atributos do método:
 1. En la página [Métodos](https://doc.4d.com/4Dv19R5/4D/19-R5/Methods-Page.300-5851337.en.html) del Explorador 4D, despliegue el menú de opciones y elija el comando **Modificar atributos globalmente...**. Aparece la caja de diálogo **Atributos de los métodos**.
 
 2. Na área "Nome do método correspondente:", introduza uma string que lhe permita designar os métodos que pretende modificar como um lote.
-   A cadeia de caracteres é utilizada como critério de pesquisa para os nomes dos métodos.
+  A cadeia de caracteres é utilizada como critério de pesquisa para os nomes dos métodos.
 
 Utilize o carácter curinga @ para ajudar a definir grupos de métodos:
 
@@ -179,3 +179,4 @@ Utilize o carácter curinga @ para ajudar a definir grupos de métodos:
 **Nota:** si el atributo "Publicado en WSDL" se establece como True, sólo se aplicará a los métodos proyecto que ya contengan el atributo "Ofrecido como servicio web".
 
 4. Haga clic en **Aplicar**. A modificação é aplicada instantaneamente a todos os métodos de projeto designados pela cadeia de caracteres introduzida.
+
