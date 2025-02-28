@@ -70,3 +70,4 @@ End if
 #### Ver también
 
 [VP IMPORT FROM BLOB](vp-import-from-blob.md)
+
