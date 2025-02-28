@@ -9,7 +9,7 @@ Dado que 4D View Pro es alimentado por la [solución de hoja de cálculo SpreadJ
 
 ## Exemplo prático: Esconder a faixa de opções
 
-Since 4D View Pro is a web area, you can select a webpage element and modify its behavior using Javascript. El siguiente ejemplo oculta la [cinta](./configuring.md#ribbon) spreadJS:
+Uma vez que 4D View Pro é uma área web, você pode selecionar um elemento da página da Web e modificar seu comportamento usando Javascript. El siguiente ejemplo oculta la [cinta](./configuring.md#ribbon) spreadJS:
 
 ```4d
 //Método objeto do botão
@@ -25,7 +25,7 @@ $answer:=WA Evaluate JavaScript(*; "ViewProArea"; $js)
 
 ## Chamar métodos Transcriptase do SpreadJS
 
-You can tap into the SpreadJS library of Javascript methods and call them directly to control your spreadsheets.
+Você pode tocar na biblioteca SpreadJS de métodos Javascript e chamá-los diretamente para controlar suas planilhas.
 
 4D has a built-in `Utils.spread` property that gives access to the spreadsheet document (also called workbook) inside the 4D View Pro area, making it simpler to call the SpreadJS [Workbook methods](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Workbook).
 
