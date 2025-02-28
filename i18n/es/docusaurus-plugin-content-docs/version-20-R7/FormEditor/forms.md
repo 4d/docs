@@ -111,7 +111,7 @@ Cuando se ejecuta un formulario, los objetos se cargan y combinan en el siguient
 3. Página cero del formulario abierto
 4. Página actual del formulario abierto.
 
-This order determines the default [entry order](formEditor.md#data-entry-order) of objects in the form.
+Este orden determina el [orden de entrada](formEditor.md#data-entry-order) de los objetos en el formulario.
 
 > Sólo las páginas 0 y 1 del formulario heredado pueden aparecer en otros formularios.
 
