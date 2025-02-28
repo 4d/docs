@@ -17,18 +17,18 @@ Essas informações permitem que você identifique a origem e o contexto de cada
 - **Operación**: número de secuencia de la operación en el archivo de historial.
 
 - **Acción**: tipo de operación realizada sobre los datos. Esta coluna pode conter uma das seguintes operações:
-  - Abertura de ficheiro de dados: abertura de um ficheiro de dados.
-  - Encerramento do ficheiro de dados: encerramento de um ficheiro de dados aberto.
-  - Criação de um contexto: criação de um processo que especifica um contexto de execução.
-  - Encerramento de um contexto: encerramento de um processo.
-  - Adição: Criação e armazenamento de um registo.
-  - Adicionar um BLOB: armazenamento de um BLOB num campo BLOB.
-  - Eliminação: eliminação de um registo.
-  - Modificação: modificação de um registo.
-  - Início da transação: a transação foi iniciada.
-  - Validação da transação: transação validada.
-  - Cancelamento da transação: transação cancelada.
-  - Contexto de actualización: cambio de datos adicionales (por ejemplo, una llamada a `CHANGE CURRENT USER` o `SET USER ALIAS`).
+    - Abertura de ficheiro de dados: abertura de um ficheiro de dados.
+    - Encerramento do ficheiro de dados: encerramento de um ficheiro de dados aberto.
+    - Criação de um contexto: criação de um processo que especifica um contexto de execução.
+    - Encerramento de um contexto: encerramento de um processo.
+    - Adição: Criação e armazenamento de um registo.
+    - Adicionar um BLOB: armazenamento de um BLOB num campo BLOB.
+    - Eliminação: eliminação de um registo.
+    - Modificação: modificação de um registo.
+    - Início da transação: a transação foi iniciada.
+    - Validação da transação: transação validada.
+    - Cancelamento da transação: transação cancelada.
+    - Contexto de actualización: cambio de datos adicionales (por ejemplo, una llamada a `CHANGE CURRENT USER` o `SET USER ALIAS`).
 
 - **Tabla**: tabla a la que pertenece el registro añadido/borrado/modificado o el BLOB.
 
@@ -45,17 +45,18 @@ Essas informações permitem que você identifique a origem e o contexto de cada
 - **Usuario 4D**: nombre de usuario 4D del usuario que ha realizado la operación. Se um alias for definido para o usuário, o alias será exibido em vez do nome de usuário 4D.
 
 - **Valores**: valores de los campos del registro en caso de adición o de modificación. Os valores são separados por ";". Only values represented in alphanumeric form are displayed.\
-  Only values represented in alphanumeric form are displayed.\
-  Only values represented in alphanumeric form are displayed.\
-  Only values represented in alphanumeric form are displayed.\
-  Only values represented in alphanumeric form are displayed.\
-  ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*\
-  Only values represented in alphanumeric form are displayed.\
-  Only values represented in alphanumeric form are displayed.\
-  Only values represented in alphanumeric form are displayed.\
-  Only values represented in alphanumeric form are displayed.\
-  ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
+    Only values represented in alphanumeric form are displayed.\
+    Only values represented in alphanumeric form are displayed.\
+    Only values represented in alphanumeric form are displayed.\
+    Only values represented in alphanumeric form are displayed.\
+    ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*\
+    Only values represented in alphanumeric form are displayed.\
+    Only values represented in alphanumeric form are displayed.\
+    Only values represented in alphanumeric form are displayed.\
+    Only values represented in alphanumeric form are displayed.\
+    ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
 
 - **Registros**: número del registro.
 
 Haga clic en **Analizar** para actualizar el contenido del archivo de historial actual de la aplicación seleccionada (llamado por defecto nomdatos.journal). O botão Navegar pode ser usado para selecionar e abrir outro arquivo de histórico para o banco de dados. El botón **Exportar...** puede utilizarse para exportar el contenido del archivo como texto.
+
