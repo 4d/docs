@@ -68,27 +68,27 @@ El editor de usuarios permite crear cuentas de usuario, definir sus propiedades 
 Para añadir un usuario desde la caja de herramientas :
 
 1. Seleccione **Caja de herramientas > Usuarios** en el menú **Diseño** o haga clic en el botón **Caja de herramientas** de la barra de herramientas de 4D.
-   4D muestra el editor de usuarios.
+  4D muestra el editor de usuarios.
 
 La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el Administrador](#designer-and-administrator).
 
 2. Haga clic en el botón ![](../assets/en/Users/PlussNew.png) ubicado debajo de la lista de usuarios.
-   OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
+  OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
 
 > El comando **Duplicar** se puede utilizar para crear varios usuarios que tengan las mismas características rápidamente.
 
 4D añade un nuevo usuario a la lista, llamado por defecto "Nuevo usuarioX".
 
 3. Introduzca el nombre de usuario.
-   Introduzca el nombre de usuario. Puede renombrar un usuario en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
+  Introduzca el nombre de usuario. Puede renombrar un usuario en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
 
 4. Para introducir una contraseña del usuario, haga clic en el botón **Editar...** en el área de propiedades del usuario e introduzca la contraseña dos veces en la caja de diálogo.
-   Puede utilizar hasta 15 caracteres alfanuméricos para una contraseña. El editor de contraseñas es sensible a las mayúsculas y minúsculas.
+  Puede utilizar hasta 15 caracteres alfanuméricos para una contraseña. El editor de contraseñas es sensible a las mayúsculas y minúsculas.
 
 > Los usuarios pueden cambiar su contraseña en cualquier momento según las opciones de la página "Seguridad" de las propiedades de la estructura, o utilizando el comando `CHANGE PASSWORD`.
 
 5. Defina el grupo o los grupos a los que pertenece el usuario mediante la tabla "Miembro de los grupos".
-   Puede añadir o eliminar el usuario seleccionado a un grupo marcando la opción correspondiente en la columna Miembro.
+  Puede añadir o eliminar el usuario seleccionado a un grupo marcando la opción correspondiente en la columna Miembro.
 
 La pertenencia de los usuarios a los distintos grupos también puede definirse por grupos en la página [Grupos](#configuring-access-groups).
 
@@ -118,19 +118,19 @@ Tenga en cuenta que una vez que se ha creado un grupo, no se puede eliminar. Si 
 Para crear un grupo:
 
 1. Seleccione **Caja de herramientas > Grupos** en el menú **Diseño** o haga clic en el botón **Caja de herramientas** de la barra de herramientas de 4D luego haga clic en el botón **Grupos**.
-   4D muestra la ventana del editor de grupos. La lista de grupos muestra todos los grupos del proyecto de aplicación.
+  4D muestra la ventana del editor de grupos. La lista de grupos muestra todos los grupos del proyecto de aplicación.
 
 2. Haga clic en el botón ![](../assets/en/Users/PlussNew.png) situado debajo de la lista de grupos.\
-   O\
-   Haga clic con el botón derecho del ratón en la lista de grupos y elija el comando **Añadir** o **Duplicar** en el menú contextual.
+  O\
+  Haga clic con el botón derecho del ratón en la lista de grupos y elija el comando **Añadir** o **Duplicar** en el menú contextual.
 
 > El comando Duplicar se puede utilizar para crear varios grupos que tengan las mismas características rápidamente.
 
 4D añade un nuevo grupo a la lista, llamado por defecto "Nuevo grupoX".
 
 3. Introduzca el nombre del nuevo grupo.
-   El nombre del grupo puede tener hasta 15 caracteres.
-   Puede renombrar un grupo en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
+  El nombre del grupo puede tener hasta 15 caracteres.
+  Puede renombrar un grupo en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
 
 ### Colocar los usuarios o los grupos en grupos
 
@@ -207,3 +207,4 @@ Este archivo puede ser almacenado en las siguientes ubicaciones, dependiendo de 
 - Si desea utilizar un archivo directorio específico para archivar datos, almacene el archivo **directory.json** en la carpeta["Settings" de la carpeta "Data"](Project/architecture.md#settings). Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. Esta configuración personalizada/local de los usuarios y de los grupos no se verá afectada por una actualización de la aplicación.
 
 > Para permitir cambios seguros de contraseñas y pertenencias a grupos en un entorno desplegado, puede incluir su archivo **directory.json** en la aplicación del servidor durante la creación, utilizando la [opción correspondiente a la aplicación de creación](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
+
