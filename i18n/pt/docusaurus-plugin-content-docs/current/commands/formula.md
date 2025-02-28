@@ -146,3 +146,5 @@ Chamar uma fórmula usando notação de objeto:
 | -------------- | ------------------------------- |
 | Command number | 1597                            |
 | Thread safe    | &amp;check; |
+
+
