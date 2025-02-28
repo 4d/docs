@@ -41,3 +41,4 @@ Para reiniciar los parámetros a sus valores por defecto y eliminar el estilo ne
 ![](../assets/en/Preferences/overviewSettings.png)
 
 Este botão repõe todos os parâmetros da página atual. Fica ativo quando pelo menos um parâmetro tiver sido modificado na página atual.
+
