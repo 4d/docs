@@ -50,3 +50,4 @@ VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 [4D View Pro セルフォーマット](../configuring.md#セルフォーマット)<br/>
 [VP SET DATE TIME VALUE](vp-set-date-time-value.md)<br/>
 [VP SET VALUE](vp-set-value.md)
+
