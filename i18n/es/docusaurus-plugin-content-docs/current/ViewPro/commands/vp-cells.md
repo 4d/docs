@@ -63,3 +63,4 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // de C5 a D7
 [VP Combine ranges](vp-combine-ranges.md)<br/>
 [VP Name](vp-name.md)<br/>
 [VP Row](vp-row.md)
+
