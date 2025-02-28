@@ -29,10 +29,10 @@ As opções encontradas nessa aba permitem estabelecer e  configurar as cópias 
 - **Toda semana**: Programa um backup automático toda semana. Duas áreas de entrada adicionais lhe permitem indicar o dia e a hora em que deve começar a cópia de segurança.
 - **Todos os meses**: Programa uma cópia de segurança automática todos os meses. Duas áreas de entrada adicionais lhe permitem indicar o dia do mês e a hora em que deve começar a cópia de segurança.
 - **Personalizado**: sirve para configurar las copias de seguridad automáticas "a medida". Quando selecionar esta opção, várias áreas de entradas aparecem:
-  - **Cada X hora(s)**: Permite programar as cópias de segurança com frequência horária. Pode digitar um valor entre 1 e 24.
-  * **Todos os X dia(s) no x**: permite backups de programação diariamente. Por exemplo, introduza 1 se quiser realizar uma cópia de segurança diária. Quando esta opção estiver marcada, deve digitar a hora quando o backup deve começar.
-  * **A cada X semana(s) no x**: permite backups de programação semanais. Digite 1 se quiser realizar o backup 1 vez por semana. Quando essa opção estiver marcada, deve digitar o dia da semana e a hora em que quer começar o backup. Pode selecionar vários dias da semana se quiser. Por exemplo. pode usar essa opção para estabelecer dois backups por semana: um nas quartas feiras e outro nas sextas.
-  * **Cada X mes(es), X día a x**: Permite programar copias de seguridad de forma mensual. Digite 1 se quiser realizar uma cópia de segurança mensal. Quando essa opção estiver marcada, tem que indicar o dia do mês e a hora em que o backup deve começar.
+    - **Cada X hora(s)**: Permite programar as cópias de segurança com frequência horária. Pode digitar um valor entre 1 e 24.
+    * **Todos os X dia(s) no x**: permite backups de programação diariamente. Por exemplo, introduza 1 se quiser realizar uma cópia de segurança diária. Quando esta opção estiver marcada, deve digitar a hora quando o backup deve começar.
+    * **A cada X semana(s) no x**: permite backups de programação semanais. Digite 1 se quiser realizar o backup 1 vez por semana. Quando essa opção estiver marcada, deve digitar o dia da semana e a hora em que quer começar o backup. Pode selecionar vários dias da semana se quiser. Por exemplo. pode usar essa opção para estabelecer dois backups por semana: um nas quartas feiras e outro nas sextas.
+    * **Cada X mes(es), X día a x**: Permite programar copias de seguridad de forma mensual. Digite 1 se quiser realizar uma cópia de segurança mensal. Quando essa opção estiver marcada, tem que indicar o dia do mês e a hora em que o backup deve começar.
 
 > As mudanças de hora padrão para hora de verão podem afetar temporariamente ao programador automático e ativar a próxima cópia de segurança com uma diferença de uma hora. Isso acontece só uma vez e os próximos backups rodam na hora prevista.
 
@@ -49,14 +49,14 @@ A página Cópia de segurança| Configuração das propriedades do banco de dado
 Essa área lhe permite determinar quais os arquivos ou pastas que devem ser copiados durante o backup.
 
 - **Dados**: Arquivo de dados do aplicativo. Quando esta opção for marcada, o arquivo de histórico do banco de dados, se existir, recebe um backup na mesma hora que os dados.
-  - o arquivo de histórico atual da aplicação (se houver),
-  - a pasta completa `Settings` localizada [ao lado do arquivo de dados](Project/architecture.md#pasta-de-configurações) (se existir), ou seja os *parâmetros usuário para os dados*.
+    - o arquivo de histórico atual da aplicação (se houver),
+    - a pasta completa `Settings` localizada [ao lado do arquivo de dados](Project/architecture.md#pasta-de-configurações) (se existir), ou seja os *parâmetros usuário para os dados*.
 - **Estrutura**: Pastas e arquivos do projeto da aplicação. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. Quando esta opção estiver marcada, uma cópia de segurança é feita automaticamente da pasta completa Settings situada no mesmo nível que a pasta Project, ou seja, os parâmetros usuário.
 - **Arquivo de estrutura usuário (só para bancos binários)**: *funcionalidade obsoleta*
 - **Arquivos anexos**: Esta área permite especificar um conjunto de arquivos e/ou pastas para serem copiados em backup ao mesmo tempo que o aplicativo. Esses arquivos podem ser de qualquer tipo (documentos ou modelos de plug-ins, etiquetas, relatórios, imagens, etc). Pode estabelecer arquivos ou pastas individuais cujos conteúdos serão respaldados completamente. Cada elemento anexado é listado com sua rota de acesso completa na área "Anexos".
-  - **Eliminar**: retira o arquivo selecionado da lista de arquivos anexos.
-  - **Adicionar pasta...**: Mostra uma caixa de diálogo que permite selecionar uma pasta para adicionar à cópia de segurança. No caso de uma restauração, a pasta vai recuperar sua estrutura interna. Pode selecionar toda pasta ou volume conectado à máquina, exceto a pasta que conter os arquivos do banco de dados.
-  - **Adicionar pasta...**: Mostra uma caixa de diálogo que permite selecionar um arquivo para adicionar à cópia de segurança.
+    - **Eliminar**: retira o arquivo selecionado da lista de arquivos anexos.
+    - **Adicionar pasta...**: Mostra uma caixa de diálogo que permite selecionar uma pasta para adicionar à cópia de segurança. No caso de uma restauração, a pasta vai recuperar sua estrutura interna. Pode selecionar toda pasta ou volume conectado à máquina, exceto a pasta que conter os arquivos do banco de dados.
+    - **Adicionar pasta...**: Mostra uma caixa de diálogo que permite selecionar um arquivo para adicionar à cópia de segurança.
 
 ### Pasta de destino de arquivo de cópia de segurança
 
@@ -83,8 +83,8 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 ### Parâmetros gerais
 
 - **Mantenha apenas os últimos arquivos de backup X**: Este parâmetro ativa e configura o mecanismo usado para excluir os arquivos de backup mais antigos. que evita o risco de saturar a unidade de disco. Esta funcionalidade opera da seguinte maneira: uma vez finalizado o backup atual, 4D elimina o arquivo mais antigo se for encontrado no mesmo local que o arquivo do qual se está fazendo o backup e tiver o mesmo nome (pode solicitar que o arquivo mais antigo se elimine antes do backup para poupar espaço).
-  Se, por exemplo, o número de conjuntos se definir como 3, as três primeiras cópias de segurança criam os arquivos MyBase-0001, MyBase-0002 e MyBase-0003 respectivamente. Durante o quarto backup, o arquivo MyBase-0004 é criado e MyBase-0001 é apagado. Como padrão, o mecanismo de eliminação de conjuntos está ativado e 4D salva 3 conjuntos de cópias de segurança.
-  Para desativar o mecanismo, simplesmente desmarque a opção.
+    Se, por exemplo, o número de conjuntos se definir como 3, as três primeiras cópias de segurança criam os arquivos MyBase-0001, MyBase-0002 e MyBase-0003 respectivamente. Durante o quarto backup, o arquivo MyBase-0004 é criado e MyBase-0001 é apagado. Como padrão, o mecanismo de eliminação de conjuntos está ativado e 4D salva 3 conjuntos de cópias de segurança.
+    Para desativar o mecanismo, simplesmente desmarque a opção.
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
@@ -95,10 +95,10 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 - **Excluir arquivo de backup mais antigo antes de/após backup**: Esta opção só é usada se a opção "Manter apenas os últimos X arquivos de backup" estiver marcada. Especifica se o 4D deve começar apagando o arquivo mais antigo antes de iniciar o backup (opção **before**) ou se a exclusão deve ocorrer após a conclusão do backup (opção **after**). Para que os mecanismos funcionem, o arquivo mais velho não deve ser renomeado nem movido.
 
 - **Se a cópia de segurança falhar**: Esta opção permite definir o mecanismo usado para lidar com cópias de segurança falhadas (cópia de segurança impossível). Quando uma cópia de segurança não puder ser realizada, 4D deixa que realize uma nova tentativa.
-  - **Tente novamente na próxima data e hora agendadas**: essa opção só faz sentido quando trabalhar com backups automáticos programados. Equivale a anular a cópia de segurança que falhou. Um erro é gerado.
-  - **Tentar novamente após X segundo(s), minuto(s) ou hora(s)**: Quando esta opção é marcada, uma nova tentativa de backup é executada após o período de espera. Este mecanismo permite antecipar certas circunstancias que possam bloquear a cópia de segurança. Pode estabelecer um período de espera em segundos, minutos ou horas utilizando o menu correspondente. Se a nova tentativa também falhar, um erro é gerado e a falha é notada na área de status do último backup e no arquivo de histórico de backup.
-  - **Cancele a operação após X tentativas**: Este parâmetro é usado para definir o número máximo de tentativas de backup falhadas. Se o backup não tiver sido realizado com sucesso depois do número máximo de tentativas estabelecido tiver sido alcançado, ele será cancelado e o erro 1401 é gerado ("Número máximo de tentativas de backup foi alcançado; backup automático foi desativado temporariamente"). Nesse caso, não se fará mais backups automáticos até que a aplicação seja reiniciada ou um backup manual se realize com sucesso.
-    Este parâmetro é útil para evitar um caso em que um problema prolongado (que exija a intervenção humana) que impedisse a realização de uma cópia de segurança levasse a aplicação a tentar repetidamente a cópia de segurança, comprometendo seu rendimento geral. Como padrão, esse parâmetro não é marcado.
+    - **Tente novamente na próxima data e hora agendadas**: essa opção só faz sentido quando trabalhar com backups automáticos programados. Equivale a anular a cópia de segurança que falhou. Um erro é gerado.
+    - **Tentar novamente após X segundo(s), minuto(s) ou hora(s)**: Quando esta opção é marcada, uma nova tentativa de backup é executada após o período de espera. Este mecanismo permite antecipar certas circunstancias que possam bloquear a cópia de segurança. Pode estabelecer um período de espera em segundos, minutos ou horas utilizando o menu correspondente. Se a nova tentativa também falhar, um erro é gerado e a falha é notada na área de status do último backup e no arquivo de histórico de backup.
+    - **Cancele a operação após X tentativas**: Este parâmetro é usado para definir o número máximo de tentativas de backup falhadas. Se o backup não tiver sido realizado com sucesso depois do número máximo de tentativas estabelecido tiver sido alcançado, ele será cancelado e o erro 1401 é gerado ("Número máximo de tentativas de backup foi alcançado; backup automático foi desativado temporariamente"). Nesse caso, não se fará mais backups automáticos até que a aplicação seja reiniciada ou um backup manual se realize com sucesso.
+        Este parâmetro é útil para evitar um caso em que um problema prolongado (que exija a intervenção humana) que impedisse a realização de uma cópia de segurança levasse a aplicação a tentar repetidamente a cópia de segurança, comprometendo seu rendimento geral. Como padrão, esse parâmetro não é marcado.
 
 > 4D considera um backup como tendo falhado se o banco de dados não tiver sido lançado na hora que estava programada o backup automático.
 
@@ -107,19 +107,19 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 Essas opções se aplicam aos arquivos de cópia de segurança principais e aos arquivos de cópia de segurança do histórico.
 
 - **Tamanho do Segmento (Mb)**
-  4D permite que você segmente arquivos, ou seja, para cortá-lo em tamanhos menores. Esse funcionamento permite, por exemplo, armazenar uma cópia de segurança em vários discos diferentes (DVD, dispositivos usb pendrive, etc). Durante a restauração, 4D vai fusionar automaticamente os segmentos. <strong x-id="1">Segment Size (Mb)</strong> 4D allows you to segment archives, i.e., to cut it up into smaller sizes. This behavior allows, for example, the storing of a backup on several different disks (DVDs, usb devices, etc.).
-  O menu **Tamanho do Segmento** é uma caixa de combinação que permite que você defina o tamanho em MB para cada segmento do backup. Pode escolher um dos tamanhos pré-estabelecidos ou digitar um tamanho específico entre 0 e 2048. Se você passar 0, nenhum segmento ocorre (isso é o equivalente a passar **Nenhum**).
+    4D permite que você segmente arquivos, ou seja, para cortá-lo em tamanhos menores. Esse funcionamento permite, por exemplo, armazenar uma cópia de segurança em vários discos diferentes (DVD, dispositivos usb pendrive, etc). Durante a restauração, 4D vai fusionar automaticamente os segmentos. <strong x-id="1">Segment Size (Mb)</strong> 4D allows you to segment archives, i.e., to cut it up into smaller sizes. This behavior allows, for example, the storing of a backup on several different disks (DVDs, usb devices, etc.).
+    O menu **Tamanho do Segmento** é uma caixa de combinação que permite que você defina o tamanho em MB para cada segmento do backup. Pode escolher um dos tamanhos pré-estabelecidos ou digitar um tamanho específico entre 0 e 2048. Se você passar 0, nenhum segmento ocorre (isso é o equivalente a passar **Nenhum**).
 
 - **Taxa de Compressão**
-  Por padrão, o 4D comprime os backups para ajudar a economizar espaço em disco. Entretanto, a fase de compressão de arquivo pode retardar o processo de backup quando lidar com grandes volumes de dados. A opção **Taxa de Compressão** permite ajustar a compressão de arquivo:
-  - **Nenhum:** Não se aplica compressão de arquivos. O backup é mais rápido, mas os arquivos são bem maiores.
-  - **Rápido** (padrão): Essa opção é um compromisso entre a velocidade de backup e tamanho de arquivo.
-  - **Compact**: A taxa máxima de compressão é aplicada aos arquivos. Os arquivos ocupam o mínimo espaço possível no disco, mas o backup é mais lento.
+    Por padrão, o 4D comprime os backups para ajudar a economizar espaço em disco. Entretanto, a fase de compressão de arquivo pode retardar o processo de backup quando lidar com grandes volumes de dados. A opção **Taxa de Compressão** permite ajustar a compressão de arquivo:
+    - **Nenhum:** Não se aplica compressão de arquivos. O backup é mais rápido, mas os arquivos são bem maiores.
+    - **Rápido** (padrão): Essa opção é um compromisso entre a velocidade de backup e tamanho de arquivo.
+    - **Compact**: A taxa máxima de compressão é aplicada aos arquivos. Os arquivos ocupam o mínimo espaço possível no disco, mas o backup é mais lento.
 
 - **Taxa de Interlúção e Taxa de Redundância**
-  4D gera arquivos usando algoritmos específicos que são baseados nos mecanismos de otimização (intercrição) e segurança (redundância). Pode estabelecer esses mecanismos de acordo com suas necessidades. Os menus para essas opções contêm as taxas **Baixo**, **Médio**, **Alto** e **Nenhum** (padrão).
-  - **Taxa de Entrelaçamento**: O Interlacing consiste de armazenar dados em setores não adjacentes para limitar riscos no caso de danos de setor. Quanto maior a taxa, maior a segurança; entretanto, o processamento de dados usa mais memória.
-  - **Taxa de redundância**: Redundância permite a segurança de dados presentes em um arquivo ao repetir a mesma informação várias vezes. Quanto maior a taxa de redundância, melhor a segurança, mas o armazenamento é mais lento e o tamanho dos arquivos aumenta.
+    4D gera arquivos usando algoritmos específicos que são baseados nos mecanismos de otimização (intercrição) e segurança (redundância). Pode estabelecer esses mecanismos de acordo com suas necessidades. Os menus para essas opções contêm as taxas **Baixo**, **Médio**, **Alto** e **Nenhum** (padrão).
+    - **Taxa de Entrelaçamento**: O Interlacing consiste de armazenar dados em setores não adjacentes para limitar riscos no caso de danos de setor. Quanto maior a taxa, maior a segurança; entretanto, o processamento de dados usa mais memória.
+    - **Taxa de redundância**: Redundância permite a segurança de dados presentes em um arquivo ao repetir a mesma informação várias vezes. Quanto maior a taxa de redundância, melhor a segurança, mas o armazenamento é mais lento e o tamanho dos arquivos aumenta.
 
 ### Restauro automático e integração de registos
 
