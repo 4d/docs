@@ -454,11 +454,11 @@ Pode designar o número de ficheiros válidos que desejar. Ao construir uma apli
 
 Depois que o aplicativo é construído, um novo arquivo de licença de implantação é automaticamente incluído na pasta Licenças ao lado do aplicativo executável (Windows) ou no pacote (macOS).
 
-### Certificação de aplicativos OS X
+### macOS signing certificate
 
 O construtor de aplicações pode assinar aplicações 4D mesclados no macOS (aplicações de usuário único, servidor 4D e partes de clientes sob macOS). A assinatura de um aplicativo autoriza que ele seja executado usando a funcionalidade de Gatekeeper do macOS quando a opção "Mac App Store e Desenvolvedores identificados" estiver selecionada (veja "Sobre Gatekeeper" abaixo).
 
-* Verifique a opção do Sinal **** para incluir certificação no procedimento de construtor de aplicativos para OS X. 4D irá verificar a disponibilidade de elementos necessários para a certificação quando a compilação ocorrer:
+* Check the **Sign application** option to include certification in the application builder procedure for macOS. 4D will check the availability of elements required for certification when the build occurs:
 
 ![](../assets/en/Admin/buildapposxcertProj.png)
 
@@ -477,7 +477,7 @@ Para obter um certificado de desenvolvedor da Apple, Inc., você pode usar os co
 
 #### Sobre Gatekeeper
 
-Gatekeeper é um recurso de segurança do OS X que controla a execução de aplicativos baixados da internet. Se um aplicativo baixado não vem da Apple Store ou não estiver assinado, será rejeitado e não poderá ser iniciado.
+Gatekeeper is a security feature of macOS that controls the execution of applications downloaded from the Internet. Se um aplicativo baixado não vem da Apple Store ou não estiver assinado, será rejeitado e não poderá ser iniciado.
 
 A opção **Assinar a aplicação** no Gerador de aplicações 4D permite que você gere aplicações compatíveis com essa opção por padrão.
 
