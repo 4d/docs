@@ -25,7 +25,7 @@ O modo de login legado baseado no método de banco de dados `On REST Authenticat
 A sequência de login do usuário é a seguinte:
 
 1. At the first REST call (for a Qodly page call for example), a "guest" web user session is created. Não tem privilégios, nenhum direito de executar solicitações diferentes da [solicitações REST descritivas](#descriptive-rest-requests), sem consumo de licença.\
-   Descriptive REST requests are always processed by the server, even if no web user session using a license is opened. In this case, they are processed through "guest" sessions.
+    Descriptive REST requests are always processed by the server, even if no web user session using a license is opened. In this case, they are processed through "guest" sessions.
 
 2. You call your [`authentify()` function](#authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges. `authentify()` deve ser uma [função de datastore class](../ORDA/ordaClasses.md#datastore-class) exposta.
 
