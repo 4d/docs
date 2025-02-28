@@ -33,10 +33,10 @@ Todas as fórmulas têm operandos e operadores:
 
 - **Operadores**: consulte [Valores e operadores](#valores-e-operadores) abaixo.
 - Os **Operandos** inclui várias categorias:
-  - [valores](#values-and-operators) (há suporte para 5 tipos de dados)
-  - [referências a outras células](#cell-referências) (relativas, absolutas, mistas ou por nome)
-  - [funções de planilha padrão](#using-functions)
-  - [funções 4D](#4d-functions) com base em fórmulas 4D e fornecendo acesso a variáveis, campos, métodos, comandos ou expressões.
+ - [valores](#values-and-operators) (há suporte para 5 tipos de dados)
+ - [referências a outras células](#cell-referências) (relativas, absolutas, mistas ou por nome)
+ - [funções de planilha padrão](#using-functions)
+ - [funções 4D](#4d-functions) com base em fórmulas 4D e fornecendo acesso a variáveis, campos, métodos, comandos ou expressões.
 
 ## Valores e operadores
 
@@ -191,11 +191,11 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
 
 3. Editar o conteúdo de uma célula numa área 4D View Pro e digitar:
 
-   ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+ ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
-   "myMethod" é então chamado por 4D e a célula aparece:
+ "myMethod" é então chamado por 4D e a célula aparece:
 
-   ![](../assets/en/ViewPro/vpProjMeth2.PNG)
+ ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### Parâmetros
 
@@ -246,10 +246,10 @@ Os parâmetros Date e Object são tratados da seguinte maneira:
 - [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
 - [object](Concepts/dt_object.md) com as duas propriedades a seguir (permitindo a passagem de uma data e hora):
 
-  | Propriedade | Tipo | Descrição         |
-  | ----------- | ---- | ----------------- |
-  | value       | Date | Valor data        |
-  | time        | Real | Tempo em segundos |
+ | Propriedade | Tipo | Descrição         |
+ | ----------- | ---- | ----------------- |
+ | value       | Date | Valor data        |
+ | time        | Real | Tempo em segundos |
 
 If the 4D method returns nothing, an empty string is automatically returned.
 
@@ -319,19 +319,19 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 
 2. Execute o seguinte código para inicializar uma estrutura virtual:
 
-   ```4d
-   ARRAY TEXT($tableTitles;1)
-   ARRAY LONGINT($tableNum;1)
-   $tableTitles{1}:="Emp"
-   $tableNum{1}:=2
-   SET TABLE TITLES($tableTitles;$tableNum;*)
-    
-   ARRAY TEXT($fieldTitles;1)
-   ARRAY LONGINT($fieldNum;1)
-   $fieldTitles{1}:="Name"
-   $fieldNum{1}:=2 //last name
-   SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
-   ```
+ ```4d
+ ARRAY TEXT($tableTitles;1)
+ ARRAY LONGINT($tableNum;1)
+ $tableTitles{1}:="Emp"
+ $tableNum{1}:=2
+ SET TABLE TITLES($tableTitles;$tableNum;*)
+  
+ ARRAY TEXT($fieldTitles;1)
+ ARRAY LONGINT($fieldNum;1)
+ $fieldTitles{1}:="Name"
+ $fieldNum{1}:=2 //last name
+ SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+ ```
 
 3. Edite o conteúdo de uma célula na área do 4D View Pro e digite "=e":
 
@@ -360,3 +360,4 @@ Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 - **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
 
 > If neither the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) nor the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
+
