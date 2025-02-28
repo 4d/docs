@@ -9,10 +9,10 @@ Independentemente da simplicidade ou da complexidade de um método, sempre utili
 - **Branching**: Uma estrutura de bifurcação permite que os métodos testem uma condição e sigam caminhos alternativos, dependendo do resultado. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE. Uma estrutura condicional é a estrutura [`Se...Senão...Fim se`](#ifelseend-if), que direciona o fluxo do programa ao longo de um dos dois caminhos. A outra estrutura ramificada é a [`Caso do...Senão...Caso final`](#case-ofelseend-case), que direciona o fluxo do programa para um dos muitos caminhos.
 - **Loop**: ao escrever métodos, é muito comum descobrir que você precisa de uma sequência de afirmações para repetir várias vezes. Para lidar com esta necessidade, a linguagem 4D oferece as estruturas de loop abaixo:
 
-  - [`While...End while`](#whileend-while)
-  - [`Repeat...Until`](#repeatuntil)
-  - [`For...End for`](#forend-for)
-  - [`For each...End for each`](#for-eachend-for-each)
+ - [`While...End while`](#whileend-while)
+ - [`Repeat...Until`](#repeatuntil)
+ - [`For...End for`](#forend-for)
+ - [`For each...End for each`](#for-eachend-for-each)
 
 Os loops são controlados de duas maneiras: ou fazem loop até que uma condição seja satisfeita, ou fazem loop um número especificado de vezes. Cada estrutura de repetição pode ser usada de qualquer maneira, mas laços `While` e laços `repeat` são mais apropriados para repetir até que uma condição seja atendida, e laços `For` são mais apropriados para repetir um número específico de vezes. \`For each... End for each permite misturar ambas as formas e foi concebido para fazer loop dentro de objectos e colecções.
 
@@ -562,8 +562,8 @@ La siguiente tabla compara los tres tipos de `For each... End for each`:
 - Por padrão, as  instruções anexas são executadas para cada valor de Expressão\*. Entretanto, é possível sair do loop comprovando uma condição ao início do loop (While) ou ao final do loop (Until).
 - Os parâmetros opcionais *begin* e *end* podem ser usados com coleções e seleções de entidades para definir os limites do loop.
 - O laço `Para cada... Fim para cada` pode ser usado em uma **coleção compartilhada** ou um **objeto compartilhado**. Se seu código precisar modificar um ou mais elemento(s) das propriedades de coleção ou objeto, você precisa usar as palavras-chave `Use...End use`. Dependendo de suas necessidades, você pode chamar as palavras-chave `Use...End use`:
-  - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
-  - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
+ - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
+ - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
 As instruções `break` e `continue` são [descritas abaixo](#break-and-continue).
 
@@ -807,3 +807,4 @@ logConsole($message)
 // 5A
 
 ```
+
