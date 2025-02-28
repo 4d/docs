@@ -46,3 +46,5 @@ Se o comando for executado com o parâmetro \* de um processo no computador do s
 | -------------- | ------------------------------- |
 | Command number | 372                             |
 | Thread safe    | &amp;check; |
+
+
