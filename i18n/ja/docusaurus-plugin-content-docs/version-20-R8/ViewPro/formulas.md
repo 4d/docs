@@ -33,10 +33,10 @@ title: フォーミュラとファンクション
 
 - **演算子**: 後述の [値と演算子](#値と演算子) 参照。
 - **オペランド** は、いくつかのカテゴリーに分けられます:
-  - [値](#値と演算子) (5つのデータ型がサポートされています)
-  - [他のセルへの参照](#セル参照) (相対参照、絶対参照、ミックス参照、あるいは名前での参照)
-  - [標準のスプレッドシートファンクション (関数)](#ビルトインファンクション)
-  - 4Dフォーミュラに基づく [4Dファンクション](#4dファンクション) (4D変数、フィールド、メソッド、コマンド、式が利用可能です)
+ - [値](#値と演算子) (5つのデータ型がサポートされています)
+ - [他のセルへの参照](#セル参照) (相対参照、絶対参照、ミックス参照、あるいは名前での参照)
+ - [標準のスプレッドシートファンクション (関数)](#ビルトインファンクション)
+ - 4Dフォーミュラに基づく [4Dファンクション](#4dファンクション) (4D変数、フィールド、メソッド、コマンド、式が利用可能です)
 
 ## 値と演算子
 
@@ -191,11 +191,11 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
 3. 4D View Pro エリアのセルに次を入力します:
 
-   ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+ ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
-   すると、4D によって "myMethod "が呼び出され、セルの表示は次のようになります:
+ すると、4D によって "myMethod "が呼び出され、セルの表示は次のようになります:
 
-   ![](../assets/en/ViewPro/vpProjMeth2.PNG)
+ ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### 引数
 
@@ -246,10 +246,10 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 - [ピクチャー](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg, その他のタイプは png に変換) の場合、URI (data:image/png;base64,xxxx) が作成され、フォーミュラを実行した 4D View Pro のセルにおいて背景として使用されます。
 - 次の 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) (日付と時間の受け渡しを可能にします):
 
-  | プロパティ | 型    | 説明                          |
-  | ----- | ---- | --------------------------- |
-  | value | Date | 日付値                         |
-  | time  | Real | 数値 (秒単位) |
+ | プロパティ | 型    | 説明                          |
+ | ----- | ---- | --------------------------- |
+ | value | Date | 日付値                         |
+ | time  | Real | 数値 (秒単位) |
 
 4Dメソッドが何も返さない場合は、自動的に空の文字列が返されます。
 
@@ -321,19 +321,19 @@ TABLENAME_FIELDNAME()
 
 2. 次のコードを実行して、仮想ストラクチャーを初期化します:
 
-   ```4d
-   ARRAY TEXT($tableTitles;1)
-   ARRAY LONGINT($tableNum;1)
-   $tableTitles{1}:="Emp"
-   $tableNum{1}:=2
-   SET TABLE TITLES($tableTitles;$tableNum;*)
-    
-   ARRAY TEXT($fieldTitles;1)
-   ARRAY LONGINT($fieldNum;1)
-   $fieldTitles{1}:="Name"
-   $fieldNum{1}:=2 // ラストネーム
-   SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
-   ```
+ ```4d
+ ARRAY TEXT($tableTitles;1)
+ ARRAY LONGINT($tableNum;1)
+ $tableTitles{1}:="Emp"
+ $tableNum{1}:=2
+ SET TABLE TITLES($tableTitles;$tableNum;*)
+  
+ ARRAY TEXT($fieldTitles;1)
+ ARRAY LONGINT($fieldNum;1)
+ $fieldTitles{1}:="Name"
+ $fieldNum{1}:=2 // ラストネーム
+ SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+ ```
 
 3. 4D View Pro エリアのセルに "=e" と入力します":
 
@@ -362,3 +362,4 @@ TABLENAME_FIELDNAME()
 - 既存の 4D View Pro ファンクションと **競合していない**: 4D View Pro ビルトインファンクションと同じ名前のプロジェクトメソッドを呼び出した場合、ファンクションの方が呼び出されます。
 
 > [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) および [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) コマンドのいずれもがセッション中に実行されていない場合、4D View Pro カスタムファンクションには 4D の汎用的な `SET ALLOWED METHODS` コマンドで許可されたメソッドが使用できます。 この場合、プロジェクトメソッド名は JavaScript の字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。 ストラクチャー設定のグローバルなフィルタリングオプション (セキュリティページ ＞ データアクセス権) はいずれの場合でも無視されます。
+
