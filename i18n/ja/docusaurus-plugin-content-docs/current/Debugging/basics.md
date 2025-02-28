@@ -78,8 +78,8 @@ title: デバッガー
 
 - **Abort**: Stops method execution and returns to the state before the method started executing:
 
-  - イベントに対してフォームメソッドまたはオブジェクトメソッドが実行されている場合には、これらは停止され、フォームに戻ります。
-  - メソッドがアプリケーションモードから実行されている場合には、このモードに戻ります。
+    - イベントに対してフォームメソッドまたはオブジェクトメソッドが実行されている場合には、これらは停止され、フォームに戻ります。
+    - メソッドがアプリケーションモードから実行されている場合には、このモードに戻ります。
 
 - **Copy**: Copies the debugging information into the clipboard. この情報はエラーの内部環境 (番号や内部コンポーネント等) を説明します。 情報はタブ区切り形式で記述されます。
 
