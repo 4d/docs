@@ -36,14 +36,14 @@ En règle générale, lorsque le code tente de lire ou d'assigner des expression
 ```
 
 - L'affectation d'une valeur indéfinie à une propriété d'objet existante réinitialise ou efface sa valeur, selon son type :
-  - Objet, collection, pointeur : Null
-  - Image : image vide
-  - Booléen : False
-  - Chaîne : ""
-  - Numérique : 0
-  - Date : !00-00-00! si la base utilise le type date pour les objets, sinon ""
-  - Heure : 0 (nombre de ms)
-  - Indéfini, Null : pas de changement
+ - Objet, collection, pointeur : Null
+ - Image : image vide
+ - Booléen : False
+ - Chaîne : ""
+ - Numérique : 0
+ - Date : !00-00-00! si la base utilise le type date pour les objets, sinon ""
+ - Heure : 0 (nombre de ms)
+ - Indéfini, Null : pas de changement
 
 ```4d
      var $o : Object
@@ -183,3 +183,4 @@ $result:=($vObj.undefined>$vObj.null)  //Erreur
 $result:=($vVar < 42) //False
 
 ```
+
