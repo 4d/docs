@@ -40,3 +40,4 @@ Si vous définissez les pages personnalisées suivantes dans votre dossier web :
 - la page "4xx.html" sera servie pour tout autre état d'erreur 4xx (400, 401, etc.),
 
 - la page "5xx.html" sera servie pour tout état d'erreur 5xx.
+
