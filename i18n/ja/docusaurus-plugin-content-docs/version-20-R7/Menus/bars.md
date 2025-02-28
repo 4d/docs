@@ -42,7 +42,7 @@ title: メニューバーの管理
 
 :::info
 
-If the **Use SDI mode on Windows** option is selected in the ["Interface" page of the Settings dialog box](../settings/interface.md#display-windows), the **Test Application** menu allows you to test your application in [SDI or MDI mode](sdi.md) on Windows:
+[ストラクチャー設定ダイアログボックスの "インターフェース" ページ](../settings/interface#ウィンドウの表示) 内にある **WindowsでSDIモードを使用する** オプションがチェックしてある場合、Windows では**アプリケーションをテストする** メニューを使用することでアプリケーションを [SDI または MDI モード](sdi.md) でテストすることができます:
 
 ![](../assets/en/settings/sdi-mdi.png)
 
