@@ -12,7 +12,7 @@ El sello de modificación global es un número, siempre mantenido por 4D, inclus
 Una vez [configurado y habilitado el seguimiento de cambios de datos](#configuring-data-change-tracking), las siguientes acciones son ejecutadas automáticamente por 4D en cada modificación de registro (añadir, modificar, borrar):
 
 1. El valor actual del sello de modificación global se guarda en el atributo especial "__GlobalStamp" de la entidad implicada.
-   En caso de eliminación, una nueva entidad también se añade a la tabla `__DeletedRecords` con información sobre la entidad eliminada y el valor actual del sello de modificación global se guarda en el atributo "__Stamp".
+    En caso de eliminación, una nueva entidad también se añade a la tabla `__DeletedRecords` con información sobre la entidad eliminada y el valor actual del sello de modificación global se guarda en el atributo "__Stamp".
 
 2. Se incrementa el valor del sello de modificación global.
 
