@@ -24,3 +24,5 @@ Tenga en cuenta que la dirección HTTP debe estar en la misma máquina que 4D.
 Número de puerto del intérprete PHP. Por defecto, 4D utiliza el puerto 8002.
 
 Puede cambiar la dirección y/o el puerto si ya están siendo utilizados por otro servicio o si tiene varios intérpretes en la misma máquina.
+
+
