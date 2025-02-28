@@ -75,3 +75,5 @@ Contrairement aux collections standard (non partagées), les collections partag�
 | ------------------ | --------------------------------------------------------------- |
 | Numéro de commande | 1527                                                            |
 | Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+
+
