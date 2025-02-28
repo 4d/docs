@@ -9,7 +9,7 @@ Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 #### Lo más destacado
 
-- Support of [session tokens](../WebServer/sessions.md#session-token-otp) handled with [`Session.createOTP()`](../API/SessionClass.md#createotp) and [`Session.restore()`](../API/SessionClass.md#restore) new functions.
+- Soporte de [token de sesión](../WebServer/sessions.md#session-token-otp) manejado con las nuevas funciones [`Session.createOTP()`](../API/SessionClass.md#createotp) y [`Session.restore()`](../API/SessionClass.md#restore).
 
 ## 4D 20 R8
 
@@ -22,10 +22,10 @@ Lea [**Novedades en 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R8/),
 - Puede [asociar una clase a un formulario](../FormEditor/properties_FormProperties.md#form-class) para habilitar la anticipación del tipo de código y la instanciación automática de los datos del formulario cuando utilice el comando [`Form`](../commands/form.md).
 - Soporte de [sesiones autónomas](../API/SessionClass.md) para simplificar la codificación local de aplicaciones cliente/servidor.
 - [4D debugger](../Debugging/debugger.md): new design and auto-save, display mode features.
-- [New built component architecture](../Desktop/building.md#build-component) for a better compliance with Apple notarization guidelines.
-- You can now easily [build evaluation applications](../Desktop/building.md#build-an-evaluation-application) in the Build application dialog box.
-- Dependencies: Use the Dependency manager to [check for new versions](../Project/components.md#checking-for-new-versions) and [update](../Project/components.md#updating-dependencies) GitHub components.
-- New [`TCPConnection`](../API/TCPConnectionClass.md) and [`TCPEvent`](../API/TCPEventClass.md) classes to manage TCP client connections, handle events, and enhance control over data transmission. Added [`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) for detailed logging of TCP events.
+- [Nueva arquitectura de componentes construidos](../Desktop/building.md#build-component) para un mejor cumplimiento de las pautas de notarización de Apple.
+- Ahora puede [crear fácilmente aplicaciones de evaluación](../Desktop/building.md#build-an-evaluation-application) en el cuadro de diálogo de Build App.
+- Dependencias: use el administrador de Dependencias para [buscar nuevas versiones](../Project/components.md#checking-for-new-versions) y [actualizar](../Project/components.md#updating-dependencies) componentes GitHub.
+- New [`TCPConnection`](../API/TCPConnectionClass.md) and [`TCPEvent`](../API/TCPEventClass.md) classes to manage TCP client connections, handle events, and enhance control over data transmission. Añadido [`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) para un registro detallado de eventos TCP.
 - New options in [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) and [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) to control styles, formulas, data integrity, and password protection.
 - 4D Write Pro:
     - The following commands now allow parameters such as objects or collections: [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md), [WP Get attributes](../WritePro/commands/wp-get-attributes.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md), [WP Table append row](../WritePro/commands/wp-table-append-row.md), [WP Import document](../WritePro/commands/wp-import-document.md), [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md), [WP Add picture](../WritePro/commands/wp-add-picture.md), and [WP Insert picture](../WritePro/commands/wp-insert-picture.md).
@@ -55,7 +55,7 @@ Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/),
 - Nueva clase [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) para que el servidor REST devuelva cualquier contenido web.
 - Qodly Studio: ahora puede [adjuntar el depurador Qodly a 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server).
 - Nuevas llaves Build Application para que las aplicaciones 4D remotas validen las [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.en.html) y/o los [dominios](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.en.html).
-- Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
+- Posibilidad de [crear aplicaciones autónomas sin licencias integradas](../Desktop/building.md#licenses).
 - Lenguaje 4D:
     - Nuevos comandos: [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
     - Comandos modificados: [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
