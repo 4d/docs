@@ -210,17 +210,17 @@ title: フォーミュラの管理
 
 - フォーミュラに名前がない場合、tips はフォーミュラのソーステキストを表示します:
 
-  ![](../assets/en/WritePro/wp-formulas7.png)
+ ![](../assets/en/WritePro/wp-formulas7.png)
 
 - フォーミュラに名前はついているものの値または記号として表示されている場合、tips はフォーミュラ名を表示します:
 
-  ![](../assets/en/WritePro/wp-formulas8.png)
+ ![](../assets/en/WritePro/wp-formulas8.png)
 
 このコンテキストでは、フォーミュラ上をホバーしているときに**Ctrl** (Windows) または **Cmd** (macOS) キーを押すことでフォーミュラのソーステキストを表示できます。
 
 - フォーミュラに名前がついていて、名前として表示されている場合、デフォルトではtips は表示されません。
-  フォーミュラ上をホバーしているときに**Ctrl** (Windows) または **Cmd** (macOS) キーを押すことでフォーミュラのソーステキストを表示できます:
-  ![](../assets/en/WritePro/wp-formulas9.png)
+ フォーミュラ上をホバーしているときに**Ctrl** (Windows) または **Cmd** (macOS) キーを押すことでフォーミュラのソーステキストを表示できます:
+ ![](../assets/en/WritePro/wp-formulas9.png)
 
 #### 参照
 
