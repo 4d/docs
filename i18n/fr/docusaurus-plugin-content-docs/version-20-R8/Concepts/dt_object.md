@@ -8,15 +8,15 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
 - Un nom de propriété est toujours un texte, par exemple "Nom". Il doit suivre [des règles spécifiques](identifiers.md#proprietes-des-objets).
 
 - Une valeur de propriété peut être du type suivant :
-  - Numérique (réel, entier long, etc.)
-  - text
-  - Null
-  - boolean
-  - pointeur (stocké en tant que tel, évalué en utilisant la commande `JSON Stringify` ou lors de la copie),
-  - Date (type date ou chaîne au format date ISO)
-  - Objet(1) (les objets peuvent être imbriqués sur plusieurs niveaux)
-  - Image(2)
-  - collection
+ - Numérique (réel, entier long, etc.)
+ - text
+ - Null
+ - boolean
+ - pointeur (stocké en tant que tel, évalué en utilisant la commande `JSON Stringify` ou lors de la copie),
+ - Date (type date ou chaîne au format date ISO)
+ - Objet(1) (les objets peuvent être imbriqués sur plusieurs niveaux)
+ - Image(2)
+ - collection
 
 (1) Les **objets non streamables** tels que les objets ORDA ([entités](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [serveur web](../API/WebServerClass.md)... ne peuvent pas être stockés dans des **champs objets**. Une erreur est retournée si vous essayez de le faire ; toutefois, ils sont entièrement pris en charge dans les **variables objets** en mémoire.
 
@@ -112,14 +112,14 @@ Vous pouvez créer deux types d'objets :
 
 - des objets standard (non-partagés), en utilisant la commande [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.fr.html) ou la syntaxe d'objet littéral (`{}`). Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
 - des objets partagés, en utilisant la commande [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.fr.html). Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs.
-  Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
+ Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
 
 ## Propriétés
 
 Vous accédez aux valeurs des propriétés de l'objet à travers une chaîne de tokens. On peut accéder aux propriétés des objets de deux manières :
 
 - en utilisant un symbole "point" :
-  > object.propertyName
+ > object.propertyName
 
 Voici un exemple :
 
@@ -128,7 +128,7 @@ Voici un exemple :
 ```
 
 - en utilisant une chaîne entre crochets :
-  > object["propertyName"]
+ > object["propertyName"]
 
 Exemples :
 
@@ -149,7 +149,7 @@ Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une 
 La notation objet est utilisable avec tout élément de langage qui contient ou retourne un objet, c'est-à-dire :
 
 - **les objets** eux-mêmes (stockés dans des variables, des champs, des propriétés d'objets, des tableaux d'objets ou des éléments de collection).
-  Exemples :
+ Exemples :
 
 ```4d
      $age:=$myObjVar.employee.age //variable
@@ -160,14 +160,14 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 ```
 
 - **les commandes 4D** qui retournent des objets.
-  Voici un exemple :
+ Voici un exemple :
 
 ```4d
      $measures:=Database measures.DB.tables
 ```
 
 - **les méthodes projet** ou **les fonctions** qui retournent des objets.
-  Voici un exemple :
+ Voici un exemple :
 
 ```4d
       // MyMethod1
@@ -179,7 +179,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 ```
 
 - **les collections**
-  Exemple:
+ Exemple:
 
 ```4d
      myColl.length //taille de la collection
