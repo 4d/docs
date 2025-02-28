@@ -160,7 +160,7 @@ Pour modifier globalement les attributs des méthodes :
 1. Dans la Page Méthodes de l'Explorateur de 4D, déployez le menu d'options puis choisissez la commande **Modifier attributs globalement...** La boîte de dialogue **Attributs des méthodes** apparaît. La boîte de dialogue **Attributs des méthodes** apparaît.
 
 2. Dans la zone “Méthodes à modifier”, saisissez une chaîne de caractères permettant de désigner les méthodes que vous souhaitez modifier globalement.
-   La chaîne de caractères est utilisée comme critère de recherche des noms de méthodes.
+  La chaîne de caractères est utilisée comme critère de recherche des noms de méthodes.
 
 Utilisez le caractère générique @ pour vous aider à définir des groupes de méthodes :
 
@@ -179,3 +179,4 @@ Utilisez le caractère générique @ pour vous aider à définir des groupes de 
 **Note :** Si l'attribut "Publié dans WSDL" est défini à Vrai, il ne sera appliqué qu'aux méthodes projet qui contiennent déjà l'attribut "Web Service".
 
 4. Cliquez sur **Appliquer**. La modification est appliquée instantanément à toutes les méthodes projet désignées par la chaîne de caractères saisie.
+
