@@ -6,20 +6,20 @@ title: Arquitectura de un proyecto
 Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de una carpeta raíz del proyecto (carpeta paquete). Por ejemplo:
 
 - MyPackage (*carpeta raíz del proyecto*)
-  - `Componentes`
-  - `Data`
-    - `Logs`
+    - `Componentes`
+    - `Data`
+        - `Logs`
+        - `Settings`
+    - `Documentation`
+    - `Plugins`
+    - `Project`
+        - `DerivedData`
+        - `Sources`
+        - `Trash`
+    - `Resources`
     - `Settings`
-  - `Documentation`
-  - `Plugins`
-  - `Project`
-    - `DerivedData`
-    - `Sources`
-    - `Trash`
-  - `Resources`
-  - `Settings`
-  - `userPreferences.jSmith`
-  - `WebFolder`
+    - `userPreferences.jSmith`
+    - `WebFolder`
 
 > Si su proyecto se ha convertido desde una base binaria, puede haber carpetas adicionales. Ver "Conversión de bases en proyectos" en [doc.4d.com](https://doc.4d.com).
 
@@ -29,12 +29,12 @@ La carpeta Project suele contener la siguiente jerarquía:
 
 - archivo `<applicationName>.4DProject`
 - `Sources`
-  - `Clases`
-  - `DatabaseMethods`
-  - `Métodos`
-  - `Formularios`
-  - `TableForms`
-  - `Triggers`
+    - `Clases`
+    - `DatabaseMethods`
+    - `Métodos`
+    - `Formularios`
+    - `TableForms`
+    - `Triggers`
 - `DerivedData`
 - `Trash` (si hay)
 
