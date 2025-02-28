@@ -73,7 +73,7 @@ Ver la sección [Funciones expuestas vs. no expuestas](../ORDA/ordaClasses.md#ex
 
 ### `onHttpGet`
 
-Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
+Las funciones permitidas para ser llamadas desde solicitudes HTTP `GET` también deben ser declaradas específicamente con la [palabra clave `onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
 
 ```4d
 //allowing GET requests
@@ -138,7 +138,7 @@ También puede pasar valores para todos los atributos de la entidad. Estos valor
 - If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
 
 Ver ejemplos de [creación](#creating-an-entity) o [actualización](#updating-an-entity) entidades con peticiones POST.
-See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
+Ver un ejemplo de [descarga de contenidos usando una entidad](#using-an-entity-to-download-contents) con una petición GET.
 
 #### Parámetro de entidad asociado
 
@@ -158,7 +158,7 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 | __DATASET  | Text    | Obligatorio - entitySetID (UUID) de la selección de entidades           |
 | __ENTITIES | Boolean | Obligatorio - True para indicar al servidor que el parámetro es una selección de entidades |
 
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
+Ver ejemplo para [recibir una selección de entidad](#receiving-an-entity-selection-as-parameter) con una petición POST.
 See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
 
 ## POST request examples
