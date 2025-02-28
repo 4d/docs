@@ -34,3 +34,4 @@ Você deseja rastrear a execução dos comandos e esvaziar o buffer de comandos:
  VP FLUSH COMMANDS("ViewProArea1")
  TRACE
 ```
+
