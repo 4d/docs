@@ -128,16 +128,16 @@ Pour plus d'informations sur CORS, veuillez consulter la [page de partage de res
 Contient la <!-- REF #WebServerClass.CORSSettings.Summary -->liste d'hôtes et de méthodes autorisées pour le service CORS<!-- END REF --> (voir la propriété [`CORSEnabled`](#corsenabled)). Chaque objet doit contenir une propriété **host** et, optionnellement, une propriété **methods** :
 
 - **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Plusieurs syntaxes sont supportées :
-  - 192.168.5.17:8081
-  - 192.168.5.17
-  - 192.168.\*
-  - 192.168.\*:8081
-  - <http://192.168.5.17:8081>
-  - <http://\\\\\\\\\\*.myDomain.com>
-  - <http://myProject.myDomain.com>
-  - \*.myDomain.com
-  - myProject.myDomain.com
-  - \*
+ - 192.168.5.17:8081
+ - 192.168.5.17
+ - 192.168.\*
+ - 192.168.\*:8081
+ - <http://192.168.5.17:8081>
+ - <http://\\\\\\\\\\*.myDomain.com>
+ - <http://myProject.myDomain.com>
+ - \*.myDomain.com
+ - myProject.myDomain.com
+ - \*
 
 - **methods** (texte, facultatif) : méthode(s) HTTP acceptée(s) pour l'hôte CORS correspondant. Séparez chaque méthode par un ";" (ex : "post;get"). Si *methods* est vide, null ou non défini, toutes les méthodes sont activées.
 
