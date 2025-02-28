@@ -92,7 +92,7 @@ Les fichiers `.4DLink` peuvent enregistrer l'adresse d'un projet 4D ainsi que se
 4D génère automatiquement un fichier `.4DLink` lors de la première ouverture d'un projet local ou lors de la première connexion à un serveur. Le fichier est stocké dans le dossier des préférences locales à l'emplacement suivant :
 
 * Windows 7 et ultérieur : C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-* OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
+* macOS : Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX représente le numéro de version de l'application. Par exemple, "Favoris v19" pour 4D v19.
 
