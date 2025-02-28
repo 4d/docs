@@ -14,3 +14,4 @@ L'événement `On Printing Detail` ne peut être utilisé que dans le contexte d
 La commande `Print form` génère un seul événement `On Printing Detail` pour la méthode formulaire.
 
 > Cet événement ne peut pas être sélectionné pour les formulaires projet, il est uniquement disponible avec les **formulaires table**.
+
