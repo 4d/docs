@@ -116,3 +116,4 @@ Pour supprimer un point d'arrêt sur commande :
 L'ajout de conditions vous permet d'arrêter l'exécution lorsque la commande est invoquée uniquement si la condition est remplie. Par exemple, si vous associez la condition `Records in selection(\[Emp]>10)` au point d'arrêt de la commande `DELETE SELECTION`, le code ne sera pas arrêté pendant l'exécution de la commande `DELETE SELECTION` si la sélection courante de la table \[Emp] ne contient que 9 enregistrements (ou moins).
 
 L'ajout de conditions aux points d'arrêt sur commandes ralentit l'exécution, car la condition doit être évaluée chaque fois qu'une exception est rencontrée. En revanche, l'ajout de conditions accélère le processus de débogage, car 4D ignore automatiquement les occurrences qui ne correspondent pas aux conditions.
+
