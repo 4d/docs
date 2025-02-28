@@ -87,10 +87,10 @@ Dentro de un método de gestión de errores personalizado, tiene acceso a varios
 
 - las variables sistema dedicadas:
 
-  - `Error` (entero largo): código de error
-  - `Error method`(texto): nombre del método que ha provocado el error
-  - `Error line` (entero largo): número de línea del método que ha provocado el error
-  - `Error formula` (texto): fórmula del código 4D (texto bruto) que está en el origen del error.
+ - `Error` (entero largo): código de error
+ - `Error method`(texto): nombre del método que ha provocado el error
+ - `Error line` (entero largo): número de línea del método que ha provocado el error
+ - `Error formula` (texto): fórmula del código 4D (texto bruto) que está en el origen del error.
 
 :::info
 
