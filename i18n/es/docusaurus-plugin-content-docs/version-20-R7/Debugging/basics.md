@@ -74,8 +74,8 @@ La ventana de error de sintaxis propone varias opciones:
 
 - **Abort**: Stops method execution and returns to the state before the method started executing:
 
-  - Si un método formulario o método objeto se está ejecutando en respuesta a un evento, se detiene y se vuelve al formulario.
-  - Si el método se está ejecutando desde dentro del entorno de la aplicación, volverá a ese entorno.
+    - Si un método formulario o método objeto se está ejecutando en respuesta a un evento, se detiene y se vuelve al formulario.
+    - Si el método se está ejecutando desde dentro del entorno de la aplicación, volverá a ese entorno.
 
 - **Copy**: Copies the debugging information into the clipboard. La información describe el entorno interno del error (número, componente interno, etc.). Está formateado como texto tabulado.
 
