@@ -356,3 +356,6 @@ En cuanto a los valores que representan las colecciones, los objetos o las caden
 ```4d
 $phone:=$emp.phone || "n/a"
 ```
+
+
+
