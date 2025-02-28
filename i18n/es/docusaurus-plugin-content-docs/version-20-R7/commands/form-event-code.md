@@ -354,3 +354,5 @@ As a result, the red rectangle follows the scrolling of the list box:
 | ----------------- | ------------------------------------------------------------------- |
 | Número de comando | 388                                                                 |
 | Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+
+
