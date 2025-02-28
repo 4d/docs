@@ -16,3 +16,5 @@ La palabra clave **cs** se describe en la [**página Concepto para Clases**](../
 | ----------------- | ------------------------------- |
 | Número de comando | 1710                            |
 | Hilo seguro       | &amp;check; |
+
+
