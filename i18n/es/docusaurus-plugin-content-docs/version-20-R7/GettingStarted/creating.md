@@ -14,13 +14,13 @@ Para crear un nuevo proyecto:
 1. Lance 4D o 4D Server.
 
 2. Haga una de las siguientes cosas:
-   - Selecciona **Nuevo > Proyecto...** en el menú **Archivo**: ![](../assets/en/getStart/projectCreate1.png)
-   - (solo 4D) Seleccione **Proyecto...** desde el **Nuevo** botón de la barra de herramientas:<p>![](../assets/en/getStart/projectCreate2.png)</p>Aparece un diálogo **Guardar** estándar para que pueda elegir el nombre y la ubicación de la carpeta principal del proyecto 4D.
+ - Selecciona **Nuevo > Proyecto...** en el menú **Archivo**: ![](../assets/en/getStart/projectCreate1.png)
+ - (solo 4D) Seleccione **Proyecto...** desde el **Nuevo** botón de la barra de herramientas:<p>![](../assets/en/getStart/projectCreate2.png)</p>Aparece un diálogo **Guardar** estándar para que pueda elegir el nombre y la ubicación de la carpeta principal del proyecto 4D.
 
 3. Introduzca el nombre de su carpeta de proyecto y haga clic en **Guardar**. Este nombre se utilizará:
 
-   - como nombre de la carpeta del proyecto,
-   - como nombre del archivo .4DProject en el primer nivel de la [carpeta "Project"](../Project/architecture.md#project-folder).
+ - como nombre de la carpeta del proyecto,
+ - como nombre del archivo .4DProject en el primer nivel de la [carpeta "Project"](../Project/architecture.md#project-folder).
 
 Puedes elegir cualquier nombre permitido por su sistema operativo. Sin embargo, si su proyecto está destinado a funcionar en otros sistemas o a ser guardado a través de una herramienta de control de fuente, debe tener en cuenta sus recomendaciones de denominación específicas.
 
@@ -34,26 +34,26 @@ Para abrir un proyecto existente desde 4D:
 
 1. Haga una de las siguientes cosas:
 
-   - Seleccione **Abrir/Proyecto local...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
-   - Seleccione **Abrir un proyecto de aplicación local** en el diálogo del Asistente de Bienvenida
+ - Seleccione **Abrir/Proyecto local...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
+ - Seleccione **Abrir un proyecto de aplicación local** en el diálogo del Asistente de Bienvenida
 
 Aparece la caja de diálogo estándar de apertura de archivos.
 
 2. Seleccione el archivo `.4dproject` del proyecto (situado dentro de la carpeta ["Project" del proyecto](../Project/architecture.md#project-folder)) y haga clic en **Abrir**.
 
-   Por defecto, el proyecto se abre con su archivo de datos actual. Se sugieren otros tipos de archivos:
+ Por defecto, el proyecto se abre con su archivo de datos actual. Se sugieren otros tipos de archivos:
 
-   - *Archivos de proyectos empaquetados*: extensión `.4dz` - proyectos de despliegue
-   - *Archivos de acceso directo*: extensión `.4DLink` - almacenan los parámetros adicionales necesarios para abrir proyectos o aplicaciones (direcciones, identificadores, etc.)
-   - *Archivos binarios*: extensión `.4db` o `.4dc` - formatos de base de datos 4D heredados
+ - *Archivos de proyectos empaquetados*: extensión `.4dz` - proyectos de despliegue
+ - *Archivos de acceso directo*: extensión `.4DLink` - almacenan los parámetros adicionales necesarios para abrir proyectos o aplicaciones (direcciones, identificadores, etc.)
+ - *Archivos binarios*: extensión `.4db` o `.4dc` - formatos de base de datos 4D heredados
 
 ### Opciones
 
 Además de las opciones sistema estándar, la caja de diálogo *Abrir* de 4D ofrece dos menús con opciones específicas disponibles utilizando el botón **Abrir** y el menú **Archivo de datos**.
 
 - **Abrir** - modo de apertura del proyecto:
-  - **Interpretado** o **Compilado**: estas opciones están disponibles cuando el proyecto seleccionado contiene [código interpretado y compilado](Concepts/interpreted.md).
-  - **[Centro de seguridad y de mantenimiento](MSC/overview.md)**: apertura en modo seguro que permite el acceso a los proyectos dañados para realizar las reparaciones necesarias.
+ - **Interpretado** o **Compilado**: estas opciones están disponibles cuando el proyecto seleccionado contiene [código interpretado y compilado](Concepts/interpreted.md).
+ - **[Centro de seguridad y de mantenimiento](MSC/overview.md)**: apertura en modo seguro que permite el acceso a los proyectos dañados para realizar las reparaciones necesarias.
 
 - **Archivo de datos** - especifica el archivo de datos a utilizar con el proyecto. Por defecto, está seleccionada la opción **Archivo de datos actual**.
 
@@ -62,11 +62,11 @@ Además de las opciones sistema estándar, la caja de diálogo *Abrir* de 4D ofr
 4D ofrece varias formas de abrir proyectos directamente y evitar el diálogo de apertura:
 
 - mediante las opciones de menú:
-  - *Barra de menús* - **Archivo** > **Abrir proyectos recientes / {project name}**
-  - *Barra de herramientas 4D* - Seleccione el proyecto en el menú asociado al botón **Abrir**
+ - *Barra de menús* - **Archivo** > **Abrir proyectos recientes / {project name}**
+ - *Barra de herramientas 4D* - Seleccione el proyecto en el menú asociado al botón **Abrir**
 
 - vía las preferencias:
-  - Fije la preferencia general **Al inicio** en **Abrir el último proyecto utilizado**.
+ - Fije la preferencia general **Al inicio** en **Abrir el último proyecto utilizado**.
 
 - utilizando un archivo `.4DLink`.
 
@@ -104,3 +104,4 @@ Esa carpeta está dividida en dos subcarpetas:
 Los archivos `.4DLink` también pueden crearse con un editor XML.
 
 4D ofrece un DTD que describe las llaves XML que pueden utilizarse para crear un archivo `.4DLink`. Este DTD se llama database_link.dtd y se encuentra en la subcarpeta `\Resources\DTD\` de la aplicación 4D.
+
