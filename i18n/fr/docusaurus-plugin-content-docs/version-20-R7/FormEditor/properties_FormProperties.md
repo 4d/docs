@@ -179,3 +179,5 @@ Vous pouvez utiliser des références dynamiques pour définir les noms de fenê
 | Nom         | Type de données | Valeurs possibles                                             |
 | ----------- | --------------- | ------------------------------------------------------------- |
 | windowTitle | string          | Le nom de la fenêtre sous forme de texte brut ou de référence |
+
+
