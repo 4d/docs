@@ -808,7 +808,7 @@ Le contenu de la collection retournée dépend du paramètre *targetPath* :
 
 - Si le paramètre *targetPath* est omis, `.extract()` remplit la nouvelle collection avec les valeurs de *propertyPath* de la collection d'origine.
 
-  Par défaut, les éléments pour lesquels *propertyPath* est null ou indéfini sont ignorés dans la collection résultante. Vous pouvez passer la constante `ck keep null` dans le paramètre *option* pour inclure ces valeurs en tant qu'éléments null dans la collection retournée.
+ Par défaut, les éléments pour lesquels *propertyPath* est null ou indéfini sont ignorés dans la collection résultante. Vous pouvez passer la constante `ck keep null` dans le paramètre *option* pour inclure ces valeurs en tant qu'éléments null dans la collection retournée.
 
 - Si un ou plusieurs paramètre(s) *targetPath* sont passés (correspondant à un ou plusieurs paramètre(s) *propertyPath*), `.extract()` remplit la nouvelle collection avec les propriétés *propertyPath* et chaque élément de la nouvelle collection est un objet avec les propriétés *targetPath* remplies avec les propriétés *propertyPath* correspondantes. Les valeurs null sont conservées (le paramètre *option* est ignoré avec cette syntaxe).
 
@@ -1038,7 +1038,7 @@ Par défaut, `.find()` effectue une recherche dans la totalité de la collection
 
 - Si *startFrom* >= la longueur de la collection, -1 est retourné, ce qui signifie que la recherche n'est pas effectuée.
 - Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*).
-  **Note**: Même si *startFrom* est négatif, la collection est toujours recherchée de gauche à droite.
+ **Note**: Même si *startFrom* est négatif, la collection est toujours recherchée de gauche à droite.
 - Si *startFrom* = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple 1
@@ -1126,7 +1126,7 @@ Par défaut, `.findIndex()` effectue une recherche dans la totalité de la colle
 
 - Si *startFrom* >= la longueur de la collection, -1 est retourné, ce qui signifie que la recherche n'est pas effectuée.
 - Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*).
-  **Note**: Même si *startFrom* est négatif, la collection est toujours recherchée de gauche à droite.
+ **Note**: Même si *startFrom* est négatif, la collection est toujours recherchée de gauche à droite.
 - Si *startFrom* = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple
@@ -1442,7 +1442,7 @@ Optionnellement, vous pouvez passer l'indice de la collection à partir duquel d
 
 - Si *startFrom* >= la longueur de la collection, -1 est retourné, ce qui signifie que la recherche n'est pas effectuée.
 - Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*).
-  **Note**: Même si *startFrom* est négatif, la collection est toujours recherchée de gauche à droite.
+ **Note**: Même si *startFrom* est négatif, la collection est toujours recherchée de gauche à droite.
 - Si *startFrom* = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple
@@ -1698,7 +1698,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 - Si *startFrom* >= taille de la collection (coll.length-1), l'ensemble de la collection est évalué (défaut).
 - Si *startFrom* < 0, il est recalculé comme *startFrom:=startFrom+length* (il est considéré comme partant de la fin de la collection). Si la position calculée est négative, -1 est retourné (la collection n'est pas évaluée).
-  **Note** : Même si *startFrom* est négatif, la recherche est effectuée de la droite vers la gauche.
+ **Note** : Même si *startFrom* est négatif, la recherche est effectuée de la droite vers la gauche.
 - Si *startFrom* = 0, -1 est retourné, ce qui signifie que la recherche n'est pas effectuée.
 
 #### Exemple
@@ -1963,8 +1963,8 @@ Si vous souhaitez trier les collections dans un ordre autre que croissant, vous 
 La formule reçoit les paramètres suivants :
 
 - $1 (object), où :
-  - *$1.value* (tout type) : valeur du premier élément à comparer
-  - *$1.value2* (tout type) : valeur du second élément à comparer
+ - *$1.value* (tout type) : valeur du premier élément à comparer
+ - *$1.value2* (tout type) : valeur du second élément à comparer
 - $2...$N (tout type) : paramètres supplémentaires (extraParam)
 
 **Tri synchronisé à plusieurs niveaux**
@@ -2097,12 +2097,12 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 
 - *ascOrDesc* : Integer. Passez une des constantes suivantes du thème **Objets et collections** :
 
-  | Constante     | Type    | Valeur | Commentaire                                                             |
-  | ------------- | ------- | ------ | ----------------------------------------------------------------------- |
-  | ck ascending  | Integer | 0      | Les éléments sont triés par ordre croissant (défaut) |
-  | ck descending | Integer | 1      | Les éléments sont triés par ordre décroissant                           |
+ | Constante     | Type    | Valeur | Commentaire                                                             |
+ | ------------- | ------- | ------ | ----------------------------------------------------------------------- |
+ | ck ascending  | Integer | 0      | Les éléments sont triés par ordre croissant (défaut) |
+ | ck descending | Integer | 1      | Les éléments sont triés par ordre décroissant                           |
 
-  Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
+ Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
 
 Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 
@@ -2229,9 +2229,9 @@ Dans la callback, passez votre code qui compare deux valeurs et retourne **true*
 La callback reçoit les paramètres suivants :
 
 - $1 (object), où :
-  - *$1.value* (tout type) : valeur du premier élément à comparer
-  - *$1.value2* (tout type) : valeur du second élément à comparer
-  - $2...$N (tout type) : paramètres supplémentaires (extraParam)
+ - *$1.value* (tout type) : valeur du premier élément à comparer
+ - *$1.value2* (tout type) : valeur du second élément à comparer
+ - $2...$N (tout type) : paramètres supplémentaires (extraParam)
 
 Si vous avez utilisé une méthode, elle doit définir le paramètre suivant :
 
@@ -2450,13 +2450,13 @@ où :
 | Inclus parmi                            | IN                            | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)                                                                    |
 
 - **valeur** : valeur à comparer à la valeur actuelle de la propriété de chaque élément de la collection. Il peut s'agir de n'importe quelle valeur d'expression constante correspondant au type de données de l'élément ou d'un [**placeholder**](#using-placeholders).
-  Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
-  - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
-  - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
-  - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
-  - Constantes de type **date** : "YYYY-MM-DD" format
-  - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
-  - Dans le cas d'une recherche avec un comparateur IN, *value*doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
+ Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
+ - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
+ - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
+ - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
+ - Constantes de type **date** : "YYYY-MM-DD" format
+ - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
+ - Dans le cas d'une recherche avec un comparateur IN, *value*doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
 
 - **logicalOperator** : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
 
@@ -3227,8 +3227,8 @@ Si vous souhaitez trier les éléments de la collection dans un autre ordre ou t
 La callback reçoit les paramètres suivants :
 
 - $1 (object), où :
-  - *$1.value* (tout type) : valeur du premier élément à comparer
-  - *$1.value2* (tout type) : valeur du second élément à comparer
+ - *$1.value* (tout type) : valeur du premier élément à comparer
+ - *$1.value2* (tout type) : valeur du second élément à comparer
 - $2...$N (tout type) : paramètres supplémentaires (extraParam)
 
 Si vous avez utilisé une méthode, elle doit définir le paramètre suivant :
