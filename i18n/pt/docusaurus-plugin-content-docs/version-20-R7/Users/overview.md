@@ -12,7 +12,7 @@ A estratégia de controle de acesso 4D depende da configuração de sua implemen
 
 > Consulte la documentación [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/) para una visión de conjunto de las funciones de seguridad de 4D.
 
-## Controlo de acesso em aplicações multi-usuário
+## Controle de acesso em aplicativos multiusuário
 
 Aplicações multi-usuário são implementadas com 4D Server. Incluem aplicações cliente-servidor, Web ou REST.
 
@@ -32,7 +32,7 @@ As aplicações usuário único são aplicações de desktop, implantados com 4D
 
 To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html) command, which returns the user who opened the system session. Assim, a autenticação do usuário é delegada ao nível do SO.
 
-You can then allow or deny access within your application by using code such as:
+Você pode então permitir ou negar acesso em sua aplicação usando códigos, tais como:
 
 ```4d
 If(Current system user = $user) //você pode armazenar os usuários em uma tabela de banco de dados
@@ -50,7 +50,7 @@ SET USER ALIAS(Current system user)
 
 #### Privilégios
 
-On a machine that is shared by several users, you can install the 4D application in a folder and give appropriate user access privileges to the folder at the OS level.
+Em uma máquina que é compartilhada por vários usuários Você pode instalar o aplicativo 4D em uma pasta e dar privilégios de acesso ao usuário para a pasta no nível do SO
 
 #### Encriptação de dados
 

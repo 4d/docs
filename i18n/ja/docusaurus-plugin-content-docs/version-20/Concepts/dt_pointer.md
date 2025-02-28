@@ -88,7 +88,7 @@ $MyVar:="Goodbye"
 
 :::warning Null Pointers
 
-null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。 例: 例: 例: 例: 例:
+null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。 例: 例: 例: 例: 例: 例:
 
 ```4d
 var $p : Pointer // non initialized pointer (Nil value)
@@ -205,6 +205,7 @@ SORT ARRAY($ArrPtr->;>) // 配列の並べ替え
   //$changeUp – Pointer to a string field or variable. これを大文字に変換します。
   これを大文字に変換します。
   //$changeLow – Pointer to a string field or variable. これを小文字に変換します。
+ これを小文字に変換します。
  これを小文字に変換します。
  これを小文字に変換します。
  これを小文字に変換します。

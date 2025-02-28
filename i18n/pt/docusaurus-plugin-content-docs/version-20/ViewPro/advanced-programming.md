@@ -9,7 +9,7 @@ Como 4D View Pro é alimentado pela [solução de planilha eletrônica SpreadJS]
 
 ## Exemplo prático: Esconder a faixa de opções
 
-Since 4D View Pro is a web area, you can select a webpage element and modify its behavior using Javascript. O exemplo a seguir esconde o [Ribbon](./configuring.md#ribbon) spreadJS:
+Uma vez que 4D View Pro é uma área web, você pode selecionar um elemento da página da Web e modificar seu comportamento usando Javascript. O exemplo a seguir esconde o [Ribbon](./configuring.md#ribbon) spreadJS:
 
 ```4d
 //Método objeto do botão
@@ -25,9 +25,9 @@ $answer:=WA Evaluate JavaScript(*; "ViewProArea"; $js)
 
 ## Chamar métodos Transcriptase do SpreadJS
 
-You can tap into the SpreadJS library of Javascript methods and call them directly to control your spreadsheets.
+Você pode tocar na biblioteca SpreadJS de métodos Javascript e chamá-los diretamente para controlar suas planilhas.
 
-4D has a built-in `Utils.spread` expression that points at the spreadsheet (also called workbook) inside the 4D View Pro area, making it simpler to call the SpreadJS [Workbook methods](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Workbook.html).
+4D tem um U `integrado. Espalhe a propriedade` que dá acesso ao documento da planilha (também chamado de livro de trabalho) dentro da área 4D View Pro, tornando mais simples chamar os métodos SpreadJS [Workbook](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Workbook.html).
 
 #### Exemplo
 
@@ -39,4 +39,4 @@ WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 
 ## Repositório 4D View Pro Tips
 
-[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) is a GitHub repository that contains a project full of useful functions, allowing to manage floating pictures, sort columns or rows, create a custom culture, and much more! Sinta-se à vontade para o clonar e experimentar com o projeto. 
+[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) é um repositório GitHub que contém um projeto cheio de funções úteis, permitindo gerenciar imagens flutuantes, ordenar colunas ou linhas, criar uma cultura personalizada, e muito mais! Sinta-se à vontade para o clonar e experimentar com o projeto. 

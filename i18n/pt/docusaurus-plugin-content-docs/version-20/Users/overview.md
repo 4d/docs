@@ -15,7 +15,7 @@ A estratégia de controle de acesso 4D depende da configuração de sua implemen
 
 
 
-## Controlo de acesso em aplicações multi-usuário
+## Controle de acesso em aplicativos multiusuário
 
 Aplicações multi-usuário são implementadas com 4D Server. Incluem aplicações cliente-servidor, Web ou REST.
 
@@ -32,17 +32,17 @@ Para desativar o sistema de acesso a senhas, precisa remover a senha Designer.
 
 
 
-As aplicações usuário único são aplicações de desktop, implantados com 4D ou mesclados com 4D Volume License. Em aplicações únicas, todos os usuários que abrem à aplicação são [Designers](handling_users_groups.md#designer-and-administrator), eles têm todos os privilégios e seu nome é "Designer". Access control is not based upon 4D users and groups, but upon **user sessions**.
+As aplicações usuário único são aplicações de desktop, implantados com 4D ou mesclados com 4D Volume License. Em aplicações únicas, todos os usuários que abrem à aplicação são [Designers](handling_users_groups.md#designer-and-administrator), eles têm todos os privilégios e seu nome é "Designer". Controle de Acesso não é baseado em usuários 4D e grupos, mas em **sessões usuários**.
 
 ### Identificação de usuário
 
 Para identificar o usuário atual em um aplicativo 4D de usuário único, você pode contar com o comando [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html), que retorna o usuário que abriu a sessão do sistema. Assim, a autenticação do usuário é delegada ao nível do SO.
 
-You can then allow or deny access within your application by using code such as:
+Você pode então permitir ou negar acesso em sua aplicação usando códigos, tais como:
 
 ```4d
-If(Current system user = $user) //you can store users in a database table
-    // give access to some features End if
+If(Current system user = $user) //pode armazenar usuários em uma tabela de database
+    // dá acesso a funcionalidades End if
 ```
 
 Se quiser usar o nome de usuário do sistema em 4D em vez de "Desenhador" (por exemplo, em arquivos de registro), é possível chamar o comando [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html), por exemplo:
@@ -55,8 +55,8 @@ SET USER ALIAS(Current system user)
 
 #### Privilégios
 
-On a machine that is shared by several users, you can install the 4D application in a folder and give appropriate user access privileges to the folder at the OS level.
+Em uma máquina que é compartilhada por vários usuários Você pode instalar o aplicativo 4D em uma pasta e dar privilégios de acesso ao usuário para a pasta no nível do SO
 
 #### Encriptação de dados
 
-If you want to protect access to the application data, we recommend to [encrypt data](MSC/encrypt.md) and provide the encryption key to the authorized user(s). 
+Se você deseja proteger o acesso aos dados do aplicativo, recomendamos [criptografar dados](MSC/encrypt.md) e fornecer a chave de criptografia do(s) usuário(s) autorizado(s). 

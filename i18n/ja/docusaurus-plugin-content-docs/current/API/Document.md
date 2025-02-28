@@ -595,13 +595,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 *breakMode* には、ドキュメントの改行文字に対しておこなう処理を指定する倍長整数を渡します。 "System Documents" テーマの、以下の定数を使用することができます:
 
-| 定数                            | 値 | 説明                                                                                                                                                                 |
-| ----------------------------- | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Document unchanged`          | 0 | 何も処理をしません。                                                                                                                                                         |
-| `Document with native format` | 1 | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
-| `Document with CRLF`          | 2 | 改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。                                                                                            |
-| `Document with CR`            | 3 | 改行は macOSフォーマット (CR、キャリッジリターン) へと変換されます。                                                                                                        |
-| `Document with LF`            | 4 | 改行は Unixフォーマット (LF、ラインフィード) へと変換されます。                                                                                                           |
+| 定数                            | 値 | 説明                                                                                                                                                                                                                                            |
+| ----------------------------- | - | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0 | 何も処理をしません。                                                                                                                                                                                                                                    |
+| `Document with native format` | 1 | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under macOS, CRLF (carriage return + line feed) under Windows |
+| `Document with CRLF`          | 2 | 改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。                                                                                                                                                                       |
+| `Document with CR`            | 3 | Line breaks are converted to macOS format: CR (carriage return)                                                                                                                                            |
+| `Document with LF`            | 4 | 改行は Unixフォーマット (LF、ラインフィード) へと変換されます。                                                                                                                                                                                      |
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 

@@ -135,7 +135,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\(�
 
 :::
 
-#### 4D Volume Desktopの場所
+### 4D Volume Desktopの場所
 
 ダブルクリックで起動されるアプリケーションをビルドするには、まず 4D Volume Desktop が格納されているフォルダーの場所を指定しなければなりません:
 
@@ -148,7 +148,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\(�
 
 > 4D Volume Desktop のバージョン番号は、4D Developer のバージョン番号と合致する必要があります。 For example, if you use 4D 20, you must select a 4D Volume Desktop 20.
 
-#### データリンクモードの基準
+### データリンクモードの基準
 
 このオプションを使って、組み込みアプリケーションとローカルデータファイルとのリンクモードを選択します。 二種類のリンクモードから選択可能です:
 
@@ -158,7 +158,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\(�
 
 データリンクモードについての詳細は [最後に開かれたデータファイル](#最後に開かれたデータファイル) を参照してください。
 
-#### 生成されるファイル
+### 生成されるファイル
 
 **ビルド** ボタンをクリックすると、4D は **保存先フォルダー** に **Final Application** フォルダーを作成し、 その中に指定したアプリケーション名のサブフォルダーを作成します。 その中に指定したアプリケーション名のサブフォルダーを作成します。
 
@@ -199,16 +199,6 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\(�
 
 - **Windows**: *Final Application\MyProject\Database* サブフォルダー内
 - **macOS**: *MyProject.app* ソフトウェアパッケージと同階層
-
-#### About licenses
-
-A stand-alone application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
-
-| Deployment license     | 説明                                                                 | Where to enter it                                                                          |
-| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
-| *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                         | [Licenses page](#licenses) of the Build application dialog                                 |
-| *4D Desktop*           | Per-user license, allowing them to use stand-alone 4D applications | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
 
 ## クライアント/サーバーページ
 
@@ -506,28 +496,74 @@ If you want to integrate other plug-ins or components into the executable applic
 
 ライセンス&証明書のページでは、次のようなことができます:
 
-- designate the license number(s) that you want to integrate into your single-user [stand-alone application](#application-page),
+- designate the license(s) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
 - macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
 
 ![](../assets/en/Admin/buildappCertif.png)
 
-### ライセンスリスト
+### About licenses
 
-This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. デフォルトでリストは空です。
+A built 4D application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
 
-:::info
+| Deployment license     | 説明                                                                 | Where to enter it                                                                          |
+| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
+| *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                         | [Licenses page](#licenses) of the Build application dialog                                 |
+| *4D Desktop*           | Per-user license, allowing them to use stand-alone 4D applications | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
+| *4D Server OEM*        | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
+| *4D Server*            | Per-user license, allowing them to use 4D Server and clients       | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
 
-If you keep the list empty, you build a stand-alone application without embedded deployment license. In this case, the end-user will have to purchase and enter a per-user *4D Desktop* license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. For more information, see the [**About licenses**](#about-licenses) paragraph.
+:::note
+
+You can also build an [evaluation application](#build-an-evaluation-application), in which case a limited term deployment license is automatically provided to the user at startup.
 
 :::
 
-Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
+### ライセンスリスト
 
-ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。
+This tab displays the [Build an evaluation application](#build-an-evaluation-application) option and the list of available [deployment licenses that you can embed](#about-licenses) into your application (stand-alone or client-server). デフォルトでリストは空です。
 
-\[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 \[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 For more information about the location of this folder, refer to the [Get 4D folder](../commands-legacy/get-4d-folder.md) command.
+You can use this tab to build:
 
-開発ライセンスとそれに対応した配布ライセンスを選択します。 開発ライセンスとそれに対応した配布ライセンスを選択します。 These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased.
+- an evaluation application,
+- a licensed application without embedded license (the user has to have a per-user license),
+- a licensed application with embedded license(s).
+
+#### Build an evaluation application
+
+Check this option to create an evaluation version of your application.
+
+An evaluation application allows the end-user to run a full-featured version of your stand-alone or server application on their machine for a limited period of time, starting at first launch. At the end of the evaluation period, the application can no longer be used for a certain period of time on the same machine.
+
+:::info
+
+An internet connection is required on the user machine at the first launch of the evaluation application.
+
+:::
+
+As soon as the "Build an evaluation application" option is enabled, deployment licenses are ignored.
+
+:::note 注記
+
+- The [`License info`](../commands/license-info.md) command allows you to know the application license type (*.attributes* collection) and its expiration date (*.expirationDate* object).
+- The BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) and [`EvaluationName`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationName.300-7542474.en.html) xml keys allow you to handle evaluation versions.
+- The [`CHANGE LICENCES`] command does nothing when called from an evaluation version.
+
+:::
+
+#### Build a licensed application without embedded license(s)
+
+To build an application without embedded deployment license, just keep the license list empty and make sure the "Build an evaluation application" option is **unchecked**.
+
+In this case, the end-user will have to purchase and enter a per-user *4D Desktop* or *4D Server* license at first application startup (when you embed a deployment license, the user does not have to enter or use their own license number). For more information, see the [**About licenses**](#about-licenses) paragraph.
+
+#### Build a licensed application with embedded license(s)
+
+This option allows you to build a ready-to-use application, in which necessary licenses are already embedded.
+
+You must designate the files that contain your deployment licenses. 開発ライセンスとそれに対応した配布ライセンスを選択します。 These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased. Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
+
+ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。 \[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 \[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 For more information about the location of this folder, refer to the [Get 4D folder](../commands-legacy/get-4d-folder.md) command.
 
 ファイルを選択すると、リストに選択内容が反映されます:
 

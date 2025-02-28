@@ -139,7 +139,7 @@ Para obtener un certificado digital:
    Para llenar una solicitud de certificado, es posible que tenga que ponerse en contacto con la autoridad de certificación. La autoridad de certificación comprueba que la información transmitida es correcta. La petición de certificado se genera en un BLOB utilizando el formato PKCS codificado en base64 (formato PEM). Este principio permite copiar y pegar las llaves como texto y enviarlas por correo electrónico sin modificar el contenido de la llave. Por ejemplo, puede guardar el BLOB que contiene la solicitud de certificado en un documento de texto (usando el comando `BLOB TO DOCUMENT`), luego abrir y copiar y pegar su contenido en un correo electrónico o un formulario Web para ser enviado a la autoridad de certificación.
 
 4. Una vez que tenga el certificado, cree un archivo de texto llamado "cert.pem" y pegue en él el contenido del certificado.
-   Puede recibir un certificado de diferentes maneras (normalmente por correo electrónico o formulario HTML). 4D acepta todos los formatos de texto relacionados con la plataforma para los certificados (OS X, PC, Linux, etc.). Sin embargo, el certificado debe estar en [formato PEM](#format), *es decir,*, PKCS codificado en base64.
+   Puede recibir un certificado de diferentes maneras (normalmente por correo electrónico o formulario HTML). 4D accepts all platform-related text formats for certificates (macOS, PC, Linux, etc.). Sin embargo, el certificado debe estar en [formato PEM](#format), *es decir,*, PKCS codificado en base64.
 
 > Los caracteres de fin de línea CR no se soportan por sí solos; debe utilizar CRLF o LF.
 
