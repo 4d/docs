@@ -30,3 +30,4 @@ Quiere obtener un objeto 4D View Pro a partir de un área 4D View almacenada en 
 C_OBJECT($vpObj)
 $vpObj:=VP Convert from 4D View($pvblob)
 ```
+
