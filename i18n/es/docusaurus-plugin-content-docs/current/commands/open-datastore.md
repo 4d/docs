@@ -151,3 +151,5 @@ En caso de error, el comando devuelve **Null**. Si no se puede acceder al almac√
 | N√∫mero de comando  | 1452                            |
 | Hilo seguro        | &amp;check; |
 | Modifies variables | error                           |
+
+
