@@ -14,9 +14,9 @@ title: ステッパー
 ステッパーには数値、時間、日付変数を割り当てることができます。
 
 - 時間型の値では最小、最大、<a href="properties_Scale.md#ステップ">ステップ</a> プロパティは秒を表します。 たとえば、ステッパーを 8:00 から 18:00 まで 10分のステップで設定するには:
-  - [minimum](properties_Scale.md#minimum) = 28 800 (8\*60\*60)
-  - [最大](properties_Scale.md#最大) = 64,800 (18\*60\*60)
-  - [ステップ](properties_Scale.md#ステップ) = 600 (10\*60)
+    - [minimum](properties_Scale.md#minimum) = 28 800 (8\*60\*60)
+    - [最大](properties_Scale.md#最大) = 64,800 (18\*60\*60)
+    - [ステップ](properties_Scale.md#ステップ) = 600 (10\*60)
 - 日付タイプの値では [ステップ](properties_Scale.md#ステップ) プロパティに入力された値が日数を表します。 最小と最大プロパティは無視されます。
 
 > 時間や日付変数に対してステッパーを動作させるためには、プロパティリストで型を設定するだけでなく、`Time` または `Date` 型として [明示的に宣言](../Concepts/variables.md#変数の宣言) する必要があります。
@@ -31,3 +31,9 @@ title: ステッパー
 
 - [進捗インジケーター](progressIndicator.md)
 - [ルーラー](ruler.md)
+
+
+
+
+
+
