@@ -58,7 +58,7 @@ var $myFile : 4D.File  // File クラスオブジェクト変数
 var $myVar // バリアント型変数
 ```
 
-`varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。      
+`varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。       
 このシンタックスは [ローカル変数とプロセス変数](#ローカル変数とプロセス変数) の宣言のみサポートしています。 [インタープロセス変数](#インタープロセス変数) および [配列](Concepts/arrays.md) には使用できません。
 
 `varType` には次が指定できます:
