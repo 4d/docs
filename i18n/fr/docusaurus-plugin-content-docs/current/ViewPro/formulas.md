@@ -33,10 +33,10 @@ Toutes les formules ont des opérandes et des opérateurs :
 
 - **Opérateurs** : voir [Valeurs et opérateurs](#values-and-operators) ci-dessous.
 - **Les opérandes** comprennent plusieurs catégories:
-  - [valeurs](#values-and-operators) (5 types de données sont pris en charge)
-  - [Les références à d'autres cellules](#cell-references) (relatives, absolues, mixtes ou par nom)
-  - [fonctions de feuille de calcul standard](#using-functions)
-  - [Fonctions 4D](#4d-functions) basées sur des formules 4D et donnant accès à des variables, champs, méthodes, commandes ou expressions 4D.
+ - [valeurs](#values-and-operators) (5 types de données sont pris en charge)
+ - [Les références à d'autres cellules](#cell-references) (relatives, absolues, mixtes ou par nom)
+ - [fonctions de feuille de calcul standard](#using-functions)
+ - [Fonctions 4D](#4d-functions) basées sur des formules 4D et donnant accès à des variables, champs, méthodes, commandes ou expressions 4D.
 
 ## Valeurs et opérateurs
 
@@ -191,11 +191,11 @@ Nous souhaitons imprimer "Hello World" dans une cellule de la zone 4D View Pro e
 
 3. Modifiez le contenu d'une cellule dans une zone 4D View Pro et saisissez :
 
-   ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+ ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
-   "myMethod" est alors appelé par 4D et la cellule s'affiche :
+ "myMethod" est alors appelé par 4D et la cellule s'affiche :
 
-   ![](../assets/en/ViewPro/vpProjMeth2.PNG)
+ ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### Paramètres
 
@@ -246,10 +246,10 @@ Les méthodes projet 4D peuvent également retourner des valeurs dans la formule
 - [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg autres types convertis en png) crée un URI (data:image/png;base64,xxxx) et ensuite utilisé comme fond dans 4D View Pro dans la cellule où la formule est exécutée
 - [objet](Concepts/dt_object.md) avec les deux propriétés suivantes (permettant de passer une date et une heure) :
 
-  | Propriété | Type | Description       |
-  | --------- | ---- | ----------------- |
-  | value     | Date | Valeur date       |
-  | time      | Real | Heure en secondes |
+ | Propriété | Type | Description       |
+ | --------- | ---- | ----------------- |
+ | value     | Date | Valeur date       |
+ | time      | Real | Heure en secondes |
 
 Si la méthode 4D ne retourne rien, une chaîne vide est automatiquement retournée.
 
@@ -321,19 +321,19 @@ Nous souhaitons imprimer le nom d'une personne dans une cellule de la zone 4D Vi
 
 2. Exécuter le code suivant pour initialiser une structure virtuelle :
 
-   ```4d
-   ARRAY TEXT($tableTitles;1)
-   ARRAY LONGINT($tableNum;1)
-   $tableTitles{1}:="Emp"
-   $tableNum{1}:=2
-   SET TABLE TITLES($tableTitles;$tableNum;*)
-    
-   ARRAY TEXT($fieldTitles;1)
-   ARRAY LONGINT($fieldNum;1)
-   $fieldTitles{1}:="Name"
-   $fieldNum{1}:=2 //nom de famille
-   SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
-   ```
+ ```4d
+ ARRAY TEXT($tableTitles;1)
+ ARRAY LONGINT($tableNum;1)
+ $tableTitles{1}:="Emp"
+ $tableNum{1}:=2
+ SET TABLE TITLES($tableTitles;$tableNum;*)
+  
+ ARRAY TEXT($fieldTitles;1)
+ ARRAY LONGINT($fieldNum;1)
+ $fieldTitles{1}:="Name"
+ $fieldNum{1}:=2 //nom de famille
+ SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+ ```
 
 3. Modifiez le contenu d'une cellule de la zone 4D View Pro et saisir "=e" :
 
@@ -362,3 +362,4 @@ Pour être appelée dans une formule 4D View Pro, une méthode projet doit être
 - **Pas de conflit** avec une fonction de tableur 4D View Pro existante : si vous appelez une méthode projet portant le même nom qu'une fonction intégrée 4D View Pro, la fonction est appelée.
 
 > Si ni la commande [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) ni la commande [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) n'ont été exécutées pendant la session, les fonctions personnalisées de 4D View Pro s'appuient sur les méthodes autorisées définies par la commande générique `SET ALLOWED METHODS` de 4D. Dans ce cas, les noms de méthode du projet doivent être conformes à la grammaire des identifiants JavaScript (voir également [la norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). L'option de filtrage global dans la boîte de dialogue Paramètres (voir *Accès aux données*) est ignorée dans tous les cas.
+
