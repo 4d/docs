@@ -24,7 +24,7 @@ Les sessions Web sont utilisées par :
 La gestion de session peut être activée et désactivée sur votre serveur Web 4D. Il y a différentes façons d'activer la gestion de session :
 
 - Utiliser l'option **Sessions évolutives** dans la page "Web/Options (I)" des Propriétés (réglage permanent) :
-  ![alt-text](../assets/en/WebServer/settingsSession.png)
+    ![alt-text](../assets/en/WebServer/settingsSession.png)
 
 Cette option est sélectionnée par défaut dans les nouveaux projets. Elle peut cependant être désactivée en sélectionnant l'option **Pas de sessions**, auquel cas les fonctionnalités de session web sont désactivées (aucun objet `Session` n'est disponible).
 
