@@ -148,3 +148,5 @@ HTTPRequest に関連付けられたエージェントがない場合、デフ�
 `.freeSocketsCount` プロパティは、<!-- REF #HTTPAgentClass.freeSocketsCount.Summary -->HTTPAgent に関連付けられた `maxSockets` に対する空きソケット数<!-- END REF -->を格納します。
 
 <!-- END REF -->
+
+
