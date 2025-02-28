@@ -104,3 +104,5 @@ $workbookOptions.allowExtendPasteRange:=True VP SET WORKBOOK OPTIONS("ViewProAre
 #### Veja também
 
 [VP Get workbook options](vp-get-workbook-options.md)
+
+
