@@ -15,9 +15,9 @@ Uma cópia de segurança pode ser iniciada de três maneiras:
 ## Cópia de segurança manual
 
 1. Selecione o comando **Backup...** no menu 4D **File**.
-   A janela de backup é exibida:
-   ![](../assets/en/Backup/backup01.png)
-   Você pode ver o local da pasta de backup usando o menu pop-up ao lado da área "Backup destination". Essa localização é definida na página de **Backup/Configuração** das Configurações do Banco de Dados.
+ A janela de backup é exibida:
+ ![](../assets/en/Backup/backup01.png)
+ Você pode ver o local da pasta de backup usando o menu pop-up ao lado da área "Backup destination". Essa localização é definida na página de **Backup/Configuração** das Configurações do Banco de Dados.
 
 - Você também pode abrir o [Maintenance and Security Center] (MSC/overview.md) do 4D e exibir a [Backup page] (MSC/backup.md).
 
@@ -67,8 +67,8 @@ Em todos os casos tenha em mente que o status do último backup (bem sucedido ou
 - \*\*Interrupção de Usuário: The Botão Parar na caixa de diálogo de progresso permite aos usuários interromper o processo de cópia de segurança a qualquer momento. Nesse caso, a cópia de elementos para sendo gerado o erro 1406. Você pode interceptar esse erro no método de banco de dados `On Backup Shutdown`.
 - **Arquivo anexado não encontrado**: Quando um arquivo anexado não pode ser encontrado, 4D realiza um backup parcial (backup de arquivos de aplicação e arquivos anexados acessíveis) e retorna um erro.
 - **Backup impossível** (o disco está cheio ou protegido contra gravação, falta de disco, falha de disco, transação incompleta, aplicativo não iniciado no momento do backup automático programado, etc.):
-  Se esse for um erro de primeira vez, 4D fará uma segunda tentativa de realizar o backup. A espera entre as duas tentativas é definida na página **Backup/Backup & Restore** nas Configurações.
-  Se a segunda tentativa falhar, um diálogo de alerta de sistema é exibido e um erro é gerado. Você pode interceptar esse erro no método de banco de dados `On Backup Shutdown`.
+ Se esse for um erro de primeira vez, 4D fará uma segunda tentativa de realizar o backup. A espera entre as duas tentativas é definida na página **Backup/Backup & Restore** nas Configurações.
+ Se a segunda tentativa falhar, um diálogo de alerta de sistema é exibido e um erro é gerado. Você pode interceptar esse erro no método de banco de dados `On Backup Shutdown`.
 
 ## Página de Backup
 
