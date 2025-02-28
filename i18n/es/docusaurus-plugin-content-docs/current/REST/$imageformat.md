@@ -26,3 +26,4 @@ Si no hay ninguna imagen para cargar o el formato no permite cargar la imagen, l
 El siguiente ejemplo define el formato de la imagen a JPEG independientemente del tipo real de la foto y pasa el número de versión real enviado por el servidor:
 
 `GET  /rest/Employee(1)/photo?$imageformat=.jpeg&$version=3&$expand=photo`
+
