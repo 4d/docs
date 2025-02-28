@@ -595,13 +595,13 @@ If the document does not contain a BOM and if *charSetName* or *charSetNum* is o
 
 In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters in the document. As seguintes constantes do tema "Documentos do Sistema" estão disponíveis:
 
-| Parâmetros                    | Valor | Comentário                                                                                                                                                                                                                                              |
-| ----------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Não processado                                                                                                                                                                                                                                          |
-| `Document with native format` | 1     | (Padrão) As quebras de linha são convertidas para o formato nativo do sistema operacional: CR (retorno de carro) sob OS X, CRLF (retorno do carro + salto de linha) em Windows |
-| `Documento com CRLF`          | 2     | Quebras de linha são convertidas em formato Windows: CRLF (retorno de carro + quebra de linha)                                                                                                                       |
-| `Documento com CR`            | 3     | Quebras de linha são convertidas para o formato OS X: CR (retorno de carro)                                                                                                                                          |
-| `Documento com LF`            | 4     | Quebras de linha são convertidas em formato Unix: LF (feed de linha)                                                                                                                                                 |
+| Parâmetros                    | Valor | Comentário                                                                                                                                                                                                                                    |
+| ----------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Não processado                                                                                                                                                                                                                                |
+| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under macOS, CRLF (carriage return + line feed) under Windows |
+| `Documento com CRLF`          | 2     | Quebras de linha são convertidas em formato Windows: CRLF (retorno de carro + quebra de linha)                                                                                                             |
+| `Documento com CR`            | 3     | Line breaks are converted to macOS format: CR (carriage return)                                                                                                                                            |
+| `Documento com LF`            | 4     | Quebras de linha são convertidas em formato Unix: LF (feed de linha)                                                                                                                                       |
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
