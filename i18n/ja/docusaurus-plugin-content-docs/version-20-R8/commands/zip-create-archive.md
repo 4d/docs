@@ -170,3 +170,5 @@ $err:=ZIP Create archive($zip; $destination)
 | ------- | ------------------------------- |
 | コマンド番号  | 1640                            |
 | スレッドセーフ | &amp;check; |
+
+
