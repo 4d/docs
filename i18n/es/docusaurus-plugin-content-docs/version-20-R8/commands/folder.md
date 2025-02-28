@@ -82,3 +82,5 @@ Si el comando se llama desde un componente, pase el parámetro opcional `*` para
 | ----------------- | --------------------------- |
 | Número de comando | 1567                        |
 | Hilo seguro       | &check; |
+
+
