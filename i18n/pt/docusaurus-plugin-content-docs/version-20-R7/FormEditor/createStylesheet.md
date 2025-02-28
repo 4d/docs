@@ -270,13 +270,13 @@ icon: url("edit.png"); /* rota relativa ao arquivo de formulário */
 
 - Para `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` y `verticalLineStroke`, se soportan tres sintaxis:
 
-  - Nombre del color CSS: `fill: red;`
-  - Valor hexadécimal: `fill: #FF0000;`
-  - función `rgb()`: `fill:rgb(255,0,0)`
+ - Nombre del color CSS: `fill: red;`
+ - Valor hexadécimal: `fill: #FF0000;`
+ - función `rgb()`: `fill:rgb(255,0,0)`
 
 - Se uma string utilizar caracteres proibidos em CSS, pode rodear a string com aspas simples ou duplas. Por exemplo:
-  - una referencia xliff: `tooltip: ":xliff:CommonMenuFile";`
-  - un datasource con la expresión de campo: `dataSource: "[Table_1:1]ID:1";`
+ - una referencia xliff: `tooltip: ":xliff:CommonMenuFile";`
+ - un datasource con la expresión de campo: `dataSource: "[Table_1:1]ID:1";`
 
 ## Ordem de prioridade
 
