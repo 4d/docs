@@ -14,16 +14,16 @@ If you have relation attributes in a dataclass, use `$attributes` to define the 
 - クエリに `$attributes` が指定されていない場合、または "\*" が渡された場合、すべての取得可能な属性が取得されます。 **リレートエンティティ** 属性は、`__KEY` (プライマリーキー) と `URI` プロパティを持つオブジェクトという簡単な形で抽出されます。 **リレートエンティティズ** 属性は抽出されません。
 
 - **リレートエンティティ** 属性を対象に `$attributes` が指定された場合:
-  - `$attributes=relatedEntity`: リレートエンティティは簡単な形で返されます (`__KEY` (プライマリーキー) と `URI` プロパティを持つ deferred オブジェクト)
-  - `$attributes=relatedEntity.*`: リレートエンティティの属性がすべて返されます。
-  - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: リレートエンティティの指定された属性だけが返されます。
+ - `$attributes=relatedEntity`: リレートエンティティは簡単な形で返されます (`__KEY` (プライマリーキー) と `URI` プロパティを持つ deferred オブジェクト)
+ - `$attributes=relatedEntity.*`: リレートエンティティの属性がすべて返されます。
+ - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: リレートエンティティの指定された属性だけが返されます。
 
 - **リレートエンティティズ** 属性を対象に `$attributes` が指定された場合:
-  - `$attributes=relatedEntities.*`: リレートエンティティズの属性がすべて返されます。
-  - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: リレートエンティティズの指定された属性だけが返されます。
+ - `$attributes=relatedEntities.*`: リレートエンティティズの属性がすべて返されます。
+ - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: リレートエンティティズの指定された属性だけが返されます。
 
 - If `$attributes` is specified for **storage** attributes:
-  - `$attributes=attribute1, attribute2, ...`: only those attributes of the entities are returned.
+ - `$attributes=attribute1, attribute2, ...`: only those attributes of the entities are returned.
 
 ## リレートエンティティズの例
 
