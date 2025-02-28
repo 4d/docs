@@ -18,8 +18,8 @@ L'événement `On Begin Drag Over` est utile pour préparer l'action de glisser.
 - Ajouter des données et des signatures au conteneur (via la commande `APPEND DATA TO PASTEBOARD`).
 - Utiliser une icône personnalisée pendant l'action de glissement (via la commande `SET DRAG ICON`).
 - Accept or refuse dragging via the result of the method of the dragged object.
-  - To indicate that drag actions are accepted, the method of the source object must return 0 (zero).
-  - To indicate that drag actions are refused, the method of the source object must return -1 (minus one).
-  - Si aucun résultat n'est retourné, 4D considère que les actions de glissement sont acceptées.
+    - To indicate that drag actions are accepted, the method of the source object must return 0 (zero).
+    - To indicate that drag actions are refused, the method of the source object must return -1 (minus one).
+    - Si aucun résultat n'est retourné, 4D considère que les actions de glissement sont acceptées.
 
 Les données 4D sont placées dans le presse-papiers avant d'appeler l'événement. Par exemple, dans le cas d'un glissement sans l'action de **glissement automatique**, le texte glissé se trouve déjà dans le conteneur lorsque l'événement est appelé.
