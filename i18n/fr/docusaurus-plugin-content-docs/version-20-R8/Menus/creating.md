@@ -31,12 +31,12 @@ Vous pouvez modifier cette barre de menus comme vous le souhaitez ou créer des 
 ### A l'aide de l'éditeur de menus
 
 1. Select the item you want to create and click the add ![](../assets/en/Menus/PlussNew.png) button below the menu bar area.
-   OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list.
-   Si vous avez créé une barre de menu, une nouvelle barre de menus apparaît dans la liste, contenant les menus par défaut (Fichier et Edition).
+  OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list.
+  Si vous avez créé une barre de menu, une nouvelle barre de menus apparaît dans la liste, contenant les menus par défaut (Fichier et Edition).
 2. (Facultatif) Effectuez un double-clic sur le nom du menu/de la barre de menus afin de le rendre éditable et saisissez un nom personnalisé.
-   OU
-   Saisissez le nom personnalisé dans la zone “Titre”.
-   Les noms des barres de menu doivent être uniques. Ils peuvent comporter jusqu’à 31 caractères. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
+  OU
+  Saisissez le nom personnalisé dans la zone “Titre”.
+  Les noms des barres de menu doivent être uniques. Ils peuvent comporter jusqu’à 31 caractères. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
 
 ### A l'aide du langage 4D
 
@@ -55,14 +55,14 @@ Pour chacun des menus, vous devez ajouter les commandes qui apparaissent lorsque
 Pour ajouter une ligne de menu :
 
 1. Dans la liste des menus source, sélectionnez le menu auquel vous souhaitez ajouter une commande.
-   Si le menu contient déjà des commandes, elles seront affichées dans la liste centrale. Si vous souhaitez insérer la nouvelle commande, sélectionnez celle que vous souhaitez voir apparaître ci-dessus. Il est toujours possible de réorganiser le menu ultérieurement par glisser-déposer.
+  Si le menu contient déjà des commandes, elles seront affichées dans la liste centrale. Si vous souhaitez insérer la nouvelle commande, sélectionnez celle que vous souhaitez voir apparaître ci-dessus. Il est toujours possible de réorganiser le menu ultérieurement par glisser-déposer.
 2. Choisissez **Add an item to menu “MenuName”** dans le menu d'options de l'éditeur ou depuis le menu contextuel (clic droit dans la liste centrale).
-   OR
-   Click on the add ![](../assets/en/Menus/PlussNew.png) button located below the central list.
-   4D ajoute une nouvelle ligne avec le nom par défaut “Ligne X”, où X représente le nombre de lignes déjà créées.
+  OR
+  Click on the add ![](../assets/en/Menus/PlussNew.png) button located below the central list.
+  4D ajoute une nouvelle ligne avec le nom par défaut “Ligne X”, où X représente le nombre de lignes déjà créées.
 3. Double-cliquez sur le nom de la commande pour passer en mode édition et saisissez un nom personnalisé.
-   OU
-   Saisissez le nom personnalisé dans la zone “Titre”. Il peut comporter jusqu’à 31 caractères. Vous pouvez saisir le nom comme "en dur" ou saisir une référence (voir ci-dessous).
+  OU
+  Saisissez le nom personnalisé dans la zone “Titre”. Il peut comporter jusqu’à 31 caractères. Vous pouvez saisir le nom comme "en dur" ou saisir une référence (voir ci-dessous).
 
 ### A l'aide du langage 4D
 
