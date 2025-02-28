@@ -11,7 +11,7 @@ Un plug-in est un morceau de code, écrit dans n'importe quel langage tel que C 
 
 ## Où se trouvent les plug-ins ?
 
-De nombreux plug-ins ont déjà été écrits par la communauté 4D. Les plug-ins publiés [sont disponibles sur GitHub](https://github.com/search?q=4d-plugin\\&type=Repositories). De plus, vous pouvez [développer vos propres plug-ins](Extensions/develop-plug-ins.md).
+De nombreux plug-ins ont déjà été écrits par la communauté 4D. Les plug-ins publiés sont disponibles sur GitHub. De plus, vous pouvez développer vos propres plug-ins.
 
 ## Installer un plug-in
 
@@ -22,3 +22,5 @@ Les plug-ins et les composants sont chargés par 4D lors du lancement de l’app
 ## Utilisation des plug-ins
 
 Les commandes de plug-ins peuvent être utilisées comme des commandes 4D classiques de votre développement 4D. Les commandes de plug-ins apparaissent dans la page **Plug-ins** de l'Explorateur.
+
+
