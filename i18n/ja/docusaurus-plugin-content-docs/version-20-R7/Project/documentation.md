@@ -35,25 +35,25 @@ title: ドキュメンテーション
 `Documentation` フォルダーのアーキテクチャーは次のとおりです:
 
 - `Documentation`
-  - `Classes`
-    - myClass.md
-  - `DatabaseMethods`
-    - onStartup.md
-    - ...
-  - `Forms`
-    - loginDial.md
-    - ...
-  - `Methods`
-    - myMethod.md
-    - ...
-  - `TableForms`
-    - **1**
-      - input.md
-      - ...
-    - ...
-  - `Triggers`
-    - table1.md
-    - ...
+    - `Classes`
+        - myClass.md
+    - `DatabaseMethods`
+        - onStartup.md
+        - ...
+    - `Forms`
+        - loginDial.md
+        - ...
+    - `Methods`
+        - myMethod.md
+        - ...
+    - `TableForms`
+        - **1**
+            - input.md
+            - ...
+        - ...
+    - `Triggers`
+        - table1.md
+        - ...
 
 - プロジェクトフォームとそのプロジェクトフォームメソッドは、同じドキュメンテーションファイルをフォームとメソッドの両方について共有します。
 
@@ -103,7 +103,7 @@ title: ドキュメンテーション
 - Markdown ファイルの先頭に設置した、HTML コメントタグで囲まれたテキスト (`<!-- コマンドの説明 -->`)
 
 - HTML のコメントタグが使用されていなければ、Markdown ファイルの `## Description` タグ後の最初の文章。\
-  この場合、最初の文章には 4D コードパーサーによって自動生成されたメソッドの **プロトタイプ** が入ります。
+    この場合、最初の文章には 4D コードパーサーによって自動生成されたメソッドの **プロトタイプ** が入ります。
 
 :::note
 
