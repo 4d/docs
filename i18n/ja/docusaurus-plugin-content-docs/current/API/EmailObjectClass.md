@@ -362,3 +362,5 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 #### 説明
 
 `.to` プロパティは、<!-- REF #EmailObjectClass.to.Summary -->メールのメインの受信者 [アドレス](#メールアドレス)<!-- END REF --> を格納します。
+
+
