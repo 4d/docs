@@ -40,3 +40,4 @@ Se definir as seguintes páginas personalizadas na sua pasta Web:
 - a página "4xx.html" será servida para qualquer outro status de erro 4xx (400, 401, etc.),
 
 - a página "5xx.html" será apresentada para qualquer estado de erro 5xx.
+
