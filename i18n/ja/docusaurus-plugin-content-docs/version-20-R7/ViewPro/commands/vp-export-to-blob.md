@@ -70,3 +70,4 @@ End if
 #### 参照
 
 [VP IMPORT FROM BLOB](vp-import-from-blob.md)
+
