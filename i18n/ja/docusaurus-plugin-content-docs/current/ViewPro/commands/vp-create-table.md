@@ -115,3 +115,4 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); 
 [VP SET DATA CONTEXT](vp-set-data-context.md)<br/>
 [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md)<br/>
 [VP SET TABLE THEME](vp-set-table-theme.md)
+
