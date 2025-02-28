@@ -28,3 +28,6 @@ Fondamentalement, ORDA gère des objets. Dans ORDA, tous les concepts principaux
 Les objets dans ORDA peuvent être manipulés comme des objets standard 4D, mais ils bénéficient automatiquement de propriétés et de fonctions spécifiques.
 
 Les objets ORDA sont créés et instanciés lorsque nécessaire par les méthodes 4D (vous n'avez pas besoin de les créer). Cependant, les objets du modèle de données ORDA sont associés à [des classes où vous pouvez ajouter des fonctions personnalisées](ordaClasses.md).
+
+
+
