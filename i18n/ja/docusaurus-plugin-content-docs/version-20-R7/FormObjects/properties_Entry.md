@@ -32,8 +32,8 @@ title: 入力
 - **フォント...**: フォントシステムダイアログボックスを表示させます。
 - **最近使用したフォント**: セッション中に最近使用されたフォント名を表示します。 リストには最大で 10フォントまで表示されます (それ以上は古いものから置き換えられていきます)。 デフォルトではリストは空になっているので、このオプションは表示されません。 このリストは `SET RECENT FONTS` と `FONT LIST` コマンドを使用して管理することができます。
 - スタイルの変更をおこなうためのコマンド: スタイル、サイズ、カラー、背景色。
-  スタイルの変更をおこなうためのコマンド: スタイル、サイズ、カラー、背景色。
-  このポップアップメニューを使用してユーザーがスタイル属性を編集する と、4D は `On After Edit` フォームイベントを生成します。
+ スタイルの変更をおこなうためのコマンド: スタイル、サイズ、カラー、背景色。
+ このポップアップメニューを使用してユーザーがスタイル属性を編集する と、4D は `On After Edit` フォームイベントを生成します。
 
 [Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 [Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command. [Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 
@@ -193,13 +193,13 @@ title: 入力
 
 - 一行の入力オブジェクトでは、行の最後にある単語はエリアからはみ出し、改行はおこなわれません。
 - 複数行の入力オブジェクトの場合、4D は自動で改行します:\
-  ![](../assets/en/FormObjects/multilineAuto.png)
+ ![](../assets/en/FormObjects/multilineAuto.png)
 
 #### ×
 
 - 一行の入力オブジェクトでは、行の最後にある単語はエリアからはみ出し、改行はおこなわれません。
 - テキストは常に一行で表示されます。 改行はおこなわれません。テキストは常に一行で表示されます。 改行はおこなわれません。テキストは常に一行で表示されます。 文字やテキストのフィールドまたは変数が改行文字を含んでいる場合、エリアが更新されるとすぐに最初のキャリッジリターンより後のテキストが取り除かれます:\
-  ![](../assets/en/FormObjects/multilineNo.png)
+ ![](../assets/en/FormObjects/multilineNo.png)
 
 #### ◯
 
