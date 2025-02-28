@@ -51,7 +51,7 @@ title: ヘルプ
 1. ストラクチャーレベル (最低優先度)
 2. フォームエディターレベル
 3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-HELP-TIP.301-4505445.ja.html)** コマンド
-   (最高優先度)
+  (最高優先度)
 
 #### 参照
 
