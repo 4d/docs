@@ -48,3 +48,4 @@ title: VP ADD SPAN
 [4D View Pro レンジオブジェクトプロパティ](../getting-started.md#レンジオブジェクトの使い方)<br/>
 [VP Get spans](vp-get-spans.md)<br/>
 [VP REMOVE SPAN](vp-remove-span.md)
+
