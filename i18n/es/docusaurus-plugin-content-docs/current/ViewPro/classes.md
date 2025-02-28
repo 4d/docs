@@ -403,3 +403,7 @@ La propiedad `.secondRowStripStyle` es el estilo de la <!-- REF #TableThemeOptio
 **.wholeTableStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
 La propiedad `.wholeTableStyle` es el <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->estilo predeterminado del área de datos<!-- END REF -->.
+
+
+
+
