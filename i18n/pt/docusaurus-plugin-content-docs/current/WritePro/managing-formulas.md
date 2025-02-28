@@ -210,18 +210,18 @@ Whatever the formula display mode, you can get additional information on formula
 
 - When formulas do not have names, tips provide the source text of formulas:
 
-  ![](../assets/en/WritePro/wp-formulas7.png)
+ ![](../assets/en/WritePro/wp-formulas7.png)
 
 - When formulas have names but are displayed as values or as symbols, the tip provides the name of formulas:
 
-  ![](../assets/en/WritePro/wp-formulas8.png)
+ ![](../assets/en/WritePro/wp-formulas8.png)
 
 In this context, you can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula.
 
 - When formulas have names and are displayed as names, no tip is displayed by default.
-  You can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula:
-  [
-  ![](../assets/en/WritePro/wp-formulas9.png)
+ You can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula:
+ [
+ ![](../assets/en/WritePro/wp-formulas9.png)
 
 #### Veja também
 
