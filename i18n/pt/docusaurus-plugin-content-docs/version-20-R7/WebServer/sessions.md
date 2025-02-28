@@ -24,7 +24,7 @@ As sessões Web são usadas para:
 A funcionalidade de gerenciamento de sessão pode ser ativado e desativado no seu servidor web 4D. Existem diferentes formas de ativar a gestão de sessões:
 
 - Usando a opção **Sessões escalonáveis** na página "Web/Opções (I)" das Propriedades (configuração permanente):
-  ![alt-text](../assets/en/WebServer/settingsSession.png)
+    ![alt-text](../assets/en/WebServer/settingsSession.png)
 
 Esta opção é selecionada por defeito nos novos projetos. Sin embargo, se puede desactivar seleccionando la opción **Sin sesiones**, en cuyo caso las funcionalidades de la sesión web se desactivan (no hay ningún objeto `Session` disponible).
 
