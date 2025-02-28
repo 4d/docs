@@ -106,3 +106,5 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 #### Voir également
 
 [VP Get workbook options](vp-get-workbook-options.md)
+
+
