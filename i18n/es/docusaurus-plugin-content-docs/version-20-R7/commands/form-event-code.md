@@ -40,7 +40,7 @@ This example shows the On Validate event being used to automatically assign (to 
 In this example, the complete handling of a drop-down list (initialization, user clicks, and object release) is encapsulated in the method of the object:
 
 ```4d
-  //asBurgerSize Drop-down list Object Method
+  //Método Objeto lista desplegable asBurgerSize 
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asBurgerSize;3)
@@ -145,7 +145,7 @@ For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystrok
 This example shows how to treat clicks and double clicks in the same way in a scrollable area:
 
 ```4d
-  //asChoices scrollable area object method
+  //Método objeto para el área de desplazamiento asChoices
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asChoices;...)
@@ -153,7 +153,7 @@ This example shows how to treat clicks and double clicks in the same way in a sc
        asChoices:=0
     :((Form event code=On Clicked)|(Form event code=On Double Clicked))
        If(asChoices#0)
-  //An item has been clicked, do something here
+  //Al hacer clic en un elemento, hacer algo aquí
   //...
        End if
   //...
