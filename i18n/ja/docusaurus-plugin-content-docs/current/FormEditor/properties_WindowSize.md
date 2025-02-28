@@ -52,3 +52,4 @@ title: ウィンドウサイズ
 | -------------- | ------ | ----- |
 | windowMinWidth | number | 整数値   |
 | windowMaxWidth | number | 整数値   |
+
