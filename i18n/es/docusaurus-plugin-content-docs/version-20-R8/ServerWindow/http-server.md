@@ -51,3 +51,4 @@ Esta área ofrece información sobre los parámetros de configuración y el func
 - **Memoria caché**: tamaño de la memoria caché del servidor HTTP, cuando está activada (tamaño realmente utilizado por la caché / tamaño máximo teóricamente asignado a la caché en las Propiedades). Puede hacer clic en el botón **Borrar caché** para vaciar la caché actual.
 - **Escuchando IP**, **puerto HTTP** (80 por defecto), **TLS habilitado** para conexiones HTTP (no afecta a conexiones 4D ni SQL) y **puerto HTTP** utilizado: [parámetros de configuración](WebServer/webServerConfig. d) del servidor HTTP, especificado a través de la Configuración o por programación.
 - **Información del archivo de registro**: nombre, formato y fecha de la siguiente copia de seguridad automática del registro del servidor HTTP (archivo logweb.txt).
+
