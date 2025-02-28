@@ -91,3 +91,5 @@ $mime:=MAIL Convert to MIME($mail)
 | ------------------ | --------------------------------------------------------------- |
 | Numéro de commande | 1604                                                            |
 | Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+
+
