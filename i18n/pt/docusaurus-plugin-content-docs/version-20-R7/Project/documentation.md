@@ -35,25 +35,25 @@ Todos los archivos de documentación se almacenan en la carpeta `Documentación`
 La arquitectura de la carpeta `Documentation` es la siguiente:
 
 - `Documentation`
-  - `Classes`
-    - myClass.md
-  - `DatabaseMethods`
-    - onStartup.md
-    - ...
-  - `Formulários`
-    - loginDial.md
-    - ...
-  - `Página Métodos`
-    - myMethod.md
-    - ...
-  - `TableForms`
-    - **1**
-      - input.md
-      - ...
-    - ...
-  - `Triggers`
-    - table1.md
-    - ...
+    - `Classes`
+        - myClass.md
+    - `DatabaseMethods`
+        - onStartup.md
+        - ...
+    - `Formulários`
+        - loginDial.md
+        - ...
+    - `Página Métodos`
+        - myMethod.md
+        - ...
+    - `TableForms`
+        - **1**
+            - input.md
+            - ...
+        - ...
+    - `Triggers`
+        - table1.md
+        - ...
 
 - Um formulário projeto e seu método de formulário projeto compartilham o mesmo arquivo de documentação para formulário e método.
 
@@ -103,11 +103,11 @@ Si existe un archivo llamado `\<MethodName>.md` en la carpeta `\<package>/docume
 - Todo texto introducido en una etiqueta de comentario HTML (`<!-- command documentation -->`) en la parte superior del archivo markdown.
 
 - Or, if no html comment tag is used, the first sentence after a `# Description` tag of the markdown file.\
-  Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
-  Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
-  Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
-  Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
-  Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.
+    Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
+    Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
+    Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
+    Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
+    Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.
 
 :::note
 
