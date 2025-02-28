@@ -48,3 +48,4 @@ Para fusionar las celdas First quarter y Second quarter a través de las dos cel
 [4D View Pro Range Object Properties](../getting-started.md#using-range-objects)<br/>
 [VP Get spans](vp-get-spans.md)<br/>
 [VP REMOVE SPAN](vp-remove-span.md)
+
