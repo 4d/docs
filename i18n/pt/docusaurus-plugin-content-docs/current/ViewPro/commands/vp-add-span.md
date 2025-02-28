@@ -48,3 +48,4 @@ Para abranger as células do primeiro trimestre e do segundo trimestre nas duas 
 [4D View Pro Range Object Properties](../getting-started.md#using-range-objects)<br/>
 [VP Get spans](vp-get-spans.md)<br/>
 [VP REMOVE SPAN](vp-remove-span.md)
+
