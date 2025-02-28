@@ -203,3 +203,4 @@ Si vous souhaitez utiliser un attribut relationnel à l'aide de [$attributes]($a
 La requête suivante retourne toutes les données publiques de l'employé nommé "Jones".
 
 `GET  /rest/Employee:lastname(Jones)`
+
