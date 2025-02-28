@@ -1555,7 +1555,7 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 最後の 2例については、最初の検索キーリストのカッコを取り除いてしまうと検索結果が異なることに注意してください。
 
 - *searchCriteria* 引数には任意の \[CHARSET] 指定を含めることができます。 これは "CHARSET" という単語の後に実際の文字コード \[CHARSET] (US ASCII, ISO-8859 など) が続きます。 これは *searchCriteria* 文字列の文字コードを指定します。 そのため、\[CHARSET] 指定を使用する場合には *searchCriteria* 文字列を指定された文字コードへと変換する必要があります (詳細については `CONVERT FROM TEXT` または `Convert to text` コマンドを参照ください)。
-  デフォルトでは、searchCriteria 引数に拡張された文字列が含まれていた場合には4D はそれを Quotable Printable へとエンコードします。
+ デフォルトでは、searchCriteria 引数に拡張された文字列が含まれていた場合には4D はそれを Quotable Printable へとエンコードします。
 
 ```
 searchCriteria = CHARSET "ISO-8859" BODY "Help"
@@ -1568,24 +1568,24 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 検索キーによっては、次の型の検索値が必要となる場合があります:
 
 - **日付値の検索キー**:
-  date は日付を指定する文字列で、以下のようにフォーマットされている必要があります: *date-day+"-"+date-month+"-"+date-year*。ここでの date-day は日付の数値 (最大2桁) を意味し、date-month は月の名前 (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) を意味し、date-year は年 (4桁) を意味します。
-  例: `searchCriteria = SENTBEFORE 1-Feb-2000` (日付は特殊文字を含まないため、通常は引用符でくくる必要はありません)
+ date は日付を指定する文字列で、以下のようにフォーマットされている必要があります: *date-day+"-"+date-month+"-"+date-year*。ここでの date-day は日付の数値 (最大2桁) を意味し、date-month は月の名前 (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) を意味し、date-year は年 (4桁) を意味します。
+ 例: `searchCriteria = SENTBEFORE 1-Feb-2000` (日付は特殊文字を含まないため、通常は引用符でくくる必要はありません)
 
 - **文字列値の検索キー**: string はあらゆる文字列を含みうるため、引用符でくくらなければなりません。 文字列が特殊文字 (スペース文字など) をまったく含まない場合には、引用符で括る必要はありません。 このような文字列を引用符でくくることは、渡した文字列値が正確に解釈されることを保証します。
-  例: `searchCriteria = FROM "SMITH"`<br />
-  文字列を使用するすべての検索キーに対し、フィールドの文字列に検索キーが含まれる場合には検索に合致したとみなされます。 合致は文字の大小を区別しません。
+ 例: `searchCriteria = FROM "SMITH"`<br />
+ 文字列を使用するすべての検索キーに対し、フィールドの文字列に検索キーが含まれる場合には検索に合致したとみなされます。 合致は文字の大小を区別しません。
 
 - **field-name 値の検索キー**: field-name はヘッダーフィールドの名称です。
-  例: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
+ 例: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 
 - **フラグ値の検索キー**: flag は一つ以上のキーワードを (標準のフラグを含めて) 受け入れます。複数指定する場合にはスペースで区切ります。
-  例: `searchCriteria = KEYWORD \Flagged \Draft`
+ 例: `searchCriteria = KEYWORD \Flagged \Draft`
 
 - **メッセージセット値の検索キー**: 複数のメッセージを識別します。 メッセージシーケンス番号は、1 から始まりメールボックスのメッセージの総数までの連続した番号です。 個別の番号はカンマで区切ります。コロンは、その前後の番号を含めた連続した番号を指定します。
-  例:<br />
-  `2,4:7,9,12:*` は、15通あるメールボックスの場合に `2,4,5,6,7,9,12,13,14,15` を指定します。
-  `searchCriteria = 1:5 ANSWERED` は、メッセージシーケンス番号 1 から 5番のメッセージのうち、\Answered フラグが設定されているメッセージを検索します。
-  `searchCriteria= 2,4 ANSWERED` は、メッセージセレクション (メッセージ番号 2番と4番) のうち、\Answered フラグが設定されているメッセージを検索します。
+ 例:<br />
+ `2,4:7,9,12:*` は、15通あるメールボックスの場合に `2,4,5,6,7,9,12,13,14,15` を指定します。
+ `searchCriteria = 1:5 ANSWERED` は、メッセージシーケンス番号 1 から 5番のメッセージのうち、\Answered フラグが設定されているメッセージを検索します。
+ `searchCriteria= 2,4 ANSWERED` は、メッセージセレクション (メッセージ番号 2番と4番) のうち、\Answered フラグが設定されているメッセージを検索します。
 
 #### 利用可能な検索キー
 
