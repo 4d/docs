@@ -40,3 +40,4 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 [セルフォーマット](../configuring.md#セルフォーマット)<br/>
 [VP SET DATE TIME VALUE](vp-set-date-time-value.md)<br/>
 [VP SET VALUE](vp-set-value.md)
+
