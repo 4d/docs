@@ -101,7 +101,7 @@ The <!-- REF #WebServerClass.characterSet.Summary -->character set that the 4D W
 
 <!-- REF #WebServerClass.cipherSuite.Syntax -->**.cipherSuite** : Text<!-- END REF -->
 
-A <!-- REF #WebServerClass.cipherSuite.Resumo -->lista de cifras usada para o protocolo seguro<!-- END REF -->. Define a prioridade dos algoritmos de criptografia implementados pelo servidor web 4D. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a [página ciphers](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
+A <!-- REF #WebServerClass.cipherSuite.Summary-->lista de cifras usada para o protocolo seguro<!-- END REF -->. Define a prioridade dos algoritmos de criptografia implementados pelo servidor web 4D. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a [página ciphers](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
 
 <!-- END REF -->
 
@@ -128,16 +128,16 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and methods for the CORS service<!-- END REF --> (see [`CORSEnabled`](#corsenabled) property). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **methods**:
 
 - **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
-  - 192.168.5.17:8081
-  - 192.168.5.17
-  - 192.168.\*
-  - 192.168.\*:8081
-  - <http://192.168.5.17:8081>
-  - <http://\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*.myDomain.com>
-  - <http://myProject.myDomain.com>
-  - \*.myDomain.com
-  - myProject.myDomain.com
-  - \*
+ - 192.168.5.17:8081
+ - 192.168.5.17
+ - 192.168.\*
+ - 192.168.\*:8081
+ - <http://192.168.5.17:8081>
+ - <http://\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*.myDomain.com>
+ - <http://myProject.myDomain.com>
+ - \*.myDomain.com
+ - myProject.myDomain.com
+ - \*
 
 - **methods** (texto, opcional): métodos HTTP aceito(s) para o host CORS correspondente. Separar cada método com um ";" (por exemplo: "post;get"). Separar cada método com um ";" (por exemplo: "post;get").
 
@@ -419,7 +419,7 @@ Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 
 *Propriedade apenas leitura*
 
-O <!-- REF #WebServerClass.name.Resumo --> nome da aplicação web server<!-- END REF -->.
+O <!-- REF #WebServerClass.name.Summary--> nome da aplicação web server<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -443,7 +443,7 @@ A <!-- REF #WebServerClass.openSSLVersion.Summary --> versão da biblioteca Open
 
 *Propriedade apenas leitura*
 
-A <!-- REF #WebServerClass.perfectForwardSecrecy.Resumo --> disponibilidade de PFS no servidor<!-- END REF -->.
+A <!-- REF #WebServerClass.perfectForwardSecrecy.Summary --> disponibilidade de PFS no servidor<!-- END REF -->.
 
 <!-- END REF -->
 
