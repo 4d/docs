@@ -46,3 +46,4 @@ Con cada solicitud REST, se obtiene el estado junto con la respuesta. A continua
 La respuesta (en formato JSON) varía en función de la petición.
 
 Si se produce un error, se enviará junto con la respuesta del servidor o será la respuesta del servidor.
+
