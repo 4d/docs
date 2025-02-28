@@ -56,7 +56,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 ```
 
 - `param1...paramN`: 4Dメソッドに対して必要なだけ引数を渡すことができます。
-  これらの引数は、JavaScript にサポートされている型であればどんなものでも渡せます (文字列、数値、配列、オブジェクト)。
+ これらの引数は、JavaScript にサポートされている型であればどんなものでも渡せます (文字列、数値、配列、オブジェクト)。
 
 - `function(result)`: 最後の引数として渡される関数です。 この "コールバック" 関数は、4Dメソッドが実行を終えると同時に呼び出されます。 この関数は `result` 引数を受け取ります。
 
@@ -161,7 +161,7 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 - **編集メニューコマンド**: Webエリアにフォーカスがあるとき、**編集** メニューコマンドを使用してコピーやペースト、すべてを選択などのアクションを選択に応じて実行できます。
 - **コンテキストメニュー**: Web エリアでは、システムの標準の[コンテキストメニュー](properties_Entry.md#コンテキストメニュー) を使用することができます。 コンテキストメニューの表示は[`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) コマンドを使用することによってコントロール可能です。
 - **ドラッグ＆ドロップ**: 4D のオブジェクトプロパティに基づき、ユーザーは Webエリア内で、または Webエリアと 4Dフォームオブジェクト間で、テキストやピクチャー、ドキュメントをドラッグ＆ドロップできます。
-  セキュリティ上の理由から、ファイルまたは URL のドラッグ＆ドロップによって Webエリアのコンテンツを変更することは、デフォルトで禁止されています。 この場合、カーソルは"禁止"アイコン![](../assets/en/FormObjects/forbidden.png) を表示します。 "ドロップ" アイコンを表示し、[`On Window Opening Denied`](Events/onWindowOpeningDenied.md) イベントを発生させるには、`WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` 文を使う必要があります。 このイベントにおいては、[`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドを呼び出すか、または[URL 変数](properties_WebArea.md#url) を設定することでユーザードロップに対応することができます。
+ セキュリティ上の理由から、ファイルまたは URL のドラッグ＆ドロップによって Webエリアのコンテンツを変更することは、デフォルトで禁止されています。 この場合、カーソルは"禁止"アイコン![](../assets/en/FormObjects/forbidden.png) を表示します。 "ドロップ" アイコンを表示し、[`On Window Opening Denied`](Events/onWindowOpeningDenied.md) イベントを発生させるには、`WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` 文を使う必要があります。 このイベントにおいては、[`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドを呼び出すか、または[URL 変数](properties_WebArea.md#url) を設定することでユーザードロップに対応することができます。
 
 > 上記のドラッグ&ドロップ機能は[macOS のシステムレンダリングエンジン](properties_WebArea.md#use-embedded-web-rendering-engine) を使用したWeb エリアではサポートされていません。
 
@@ -189,15 +189,15 @@ macOS 上の Webエリアで、プログラムにより処理される URL は�
 Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コマンドを実行するか、 Webエリアのコンテキストメニューを使用します。
 
 - **`WA OPEN WEB INSPECTOR` コマンドを実行する**<br/>
-  このコマンドは、オンスクリーンのWeb エリア(フォームオブジェクト)とオフスクリーンのWeb エリアでも直接使用することができます。
+ このコマンドは、オンスクリーンのWeb エリア(フォームオブジェクト)とオフスクリーンのWeb エリアでも直接使用することができます。
 
 - **Web エリアのコンテキストメニューを使用する**<br/>
-  この機能はオンスクリーンのWeb エリアでのみ使用することができ、以下の条件を見たいしてる必要があります:
-  - Web エリアにおいて[コンテキストメニュー](properties_Entry.md#コンテキストメニュー) が有効化されている
-  - インスペクターの使用が、以下の宣言を用いて明示的に有効化されている:
-  ```4d
-  	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
-  ```
+ この機能はオンスクリーンのWeb エリアでのみ使用することができ、以下の条件を見たいしてる必要があります:
+ - Web エリアにおいて[コンテキストメニュー](properties_Entry.md#コンテキストメニュー) が有効化されている
+ - インスペクターの使用が、以下の宣言を用いて明示的に有効化されている:
+ ```4d
+ 	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
+ ```
 
 > [Windows のシステムレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) の場合にこの環境設定を変更すると、変更を反映するのにエリア内でのナビゲーション操作 (たとえば、ページの更新など) が必要です。
 
@@ -315,3 +315,7 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 ### 参照
 
 [Specify your own parameters to initialize the embedded web area (blog 記事)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)
+
+
+
+
