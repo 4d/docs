@@ -29,8 +29,8 @@ La primera vez que se conecte a un proyecto 4D Server a través de un 4D remoto,
 Para conectarse remotamente a un proyecto 4D Server:
 
 1. Haga una de las siguientes cosas:
-   - Seleccione **Conectar a 4D Server** en la caja de diálogo del asistente de bienvenida
-   - Seleccione **Abrir/Proyecto remoto...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
+  - Seleccione **Conectar a 4D Server** en la caja de diálogo del asistente de bienvenida
+  - Seleccione **Abrir/Proyecto remoto...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
 
 Aparece el diálogo de conexión de 4D Server. Este diálogo tiene tres pestañas: **Reciente**, **Disponible** y **Personalizado**.
 
@@ -113,3 +113,4 @@ Todos los procedimientos almacenados en el servidor comparten la misma sesión d
 ### Ver también (entrada de blog)
 
 [Objeto sesión remota 4D con conexión cliente/servidor y procedimiento almacenado](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
+
