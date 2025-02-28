@@ -319,15 +319,15 @@ Valeurs possibles: Chaîne de caractères représentant l'adresse IP. Les format
 #### À propos du support de l'IPv6
 
 - **Aucun avertissement lorsque le port TCP est occupé**<br/>
-  Lorsque le serveur est configuré pour répondre sur "Toutes" les adresses IP, si le port TCP est utilisé par une autre application, cela n'est pas indiqué au démarrage du serveur. En fait, le serveur 4D ne détecte pas d'erreur dans ce cas car le port reste libre sur l'adresse IPv6. Cependant, il n'est pas possible d'y accéder en utilisant l'adresse IPv4 de la machine, ni au moyen de l'adresse locale : 127.0.0.1.
+   Lorsque le serveur est configuré pour répondre sur "Toutes" les adresses IP, si le port TCP est utilisé par une autre application, cela n'est pas indiqué au démarrage du serveur. En fait, le serveur 4D ne détecte pas d'erreur dans ce cas car le port reste libre sur l'adresse IPv6. Cependant, il n'est pas possible d'y accéder en utilisant l'adresse IPv4 de la machine, ni au moyen de l'adresse locale : 127.0.0.1.
 
 Si votre serveur 4D ne semble pas répondre sur le port défini, vous pouvez tester l'adresse [::1] sur la machine serveur (équivalent à 127.0.0.1 pour IPv6, ajoutez [:portNum] pour tester un autre numéro de port). Si 4D répond, il est probable qu'une autre application utilise le port en IPv4.
 
 - **Adresses IPv6 avec mappage d'IPv4**<br/>
-  Pour standardiser le traitement, 4D fournit une représentation hybride standard des adresses IPv4 en IPv6. Ces adresses sont écrites avec un préfixe de 96 bits au format IPv6, suivi de 32 bits écrits dans la notation décimale à point d'IPv4. Par exemple, ::ffff:192.168.2.34 représente l'adresse IPv4 192.168.2.34.
+   Pour standardiser le traitement, 4D fournit une représentation hybride standard des adresses IPv4 en IPv6. Ces adresses sont écrites avec un préfixe de 96 bits au format IPv6, suivi de 32 bits écrits dans la notation décimale à point d'IPv4. Par exemple, ::ffff:192.168.2.34 représente l'adresse IPv4 192.168.2.34.
 
 - **Indication des numéros de port**<br/>
-  Comme la notation IPv6 utilise les deux-points (:), l'ajout de numéros de port peut entraîner une certaine confusion, par exemple :
+   Comme la notation IPv6 utilise les deux-points (:), l'ajout de numéros de port peut entraîner une certaine confusion, par exemple :
 
 ```code4d
 	2001:0DB8::85a3:0:ac1f:8001 // adresse IPv6
@@ -627,7 +627,8 @@ Dans certains cas, d'autres fonctions internes optimisées peuvent être appelé
 Deux options permettent de définir le mode de fonctionnement des connexions persistantes :
 
 - **Nombre de demandes par connexion** : Permet de définir le nombre maximal de requêtes et de réponses capables d'être transmises sur une connexion persistante. Limiter le nombre de demandes par connexion permet d'éviter le server flooding, provoqué par un trop grand nombre de requêtes entrantes (technique utilisée par les pirates informatiques).<p>
-  La valeur par défaut (100) peut être augmentée ou diminuée en fonction des ressources de la machine hébergeant le Serveur Web 4D.</p>
+   La valeur par défaut (100) peut être augmentée ou diminuée en fonction des ressources de la machine hébergeant le Serveur Web 4D.</p>
 
 - **Délai avant déconnexion** : Cette valeur définit l'attente maximale (en secondes) pour le maintien d'une connexion TCP sans réception d'une requête de la part du navigateur web. Une fois cette période terminée, le serveur ferme la connexion.<p>
-  Si le navigateur Web envoie une requête après la fermeture de la connexion, une nouvelle connexion TCP est automatiquement créée. Cette opération est invisible pour l'utilisateur.</p>
+   Si le navigateur Web envoie une requête après la fermeture de la connexion, une nouvelle connexion TCP est automatiquement créée. Cette opération est invisible pour l'utilisateur.</p>
+
