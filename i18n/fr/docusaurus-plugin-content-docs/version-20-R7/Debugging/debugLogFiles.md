@@ -290,10 +290,10 @@ Ces fichiers journaux enregistrent chaque échange entre l'application 4D et le 
 Les fichiers peuvent être générés en deux versions :
 
 - une version classique :
-  - fichiers nommés 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
-  - sans pièces jointes
-  - avec un recyclage automatique tous les 10 MB
-  - conçue pour des fonctions de débogage habituelles
+ - fichiers nommés 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
+ - sans pièces jointes
+ - avec un recyclage automatique tous les 10 MB
+ - conçue pour des fonctions de débogage habituelles
 
 Pour démarrer ce journal :
 
@@ -308,10 +308,10 @@ SET DATABASE PARAMETER(IMAP Log;1) //démarrer le journal IMAP
 Ce chemin d'accès au journal est retourné par la commande `Get 4D file`.
 
 - une version étendue :
-  - pièce(s) jointe(s) inclue(s)
-    pas de recyclage automatique
-  - nom personnalisé
-  - réservée à des fins spécifiques
+ - pièce(s) jointe(s) inclue(s)
+  pas de recyclage automatique
+ - nom personnalisé
+ - réservée à des fins spécifiques
 
 Pour démarrer ce journal :
 
@@ -467,14 +467,14 @@ Il existe plusieurs façons d'activer le fichier de configuration du journal, en
 - **4D Server avec interface** : vous pouvez ouvrir la page Maintenance et cliquer sur le bouton [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file), puis sélectionner le fichier. Dans ce cas, vous pouvez utiliser n'importe quel nom pour le fichier de configuration. Il est immédiatement activé sur le serveur.
 - **un projet interprété ou compilé** : le fichier doit être nommé `logConfig.json` et copié dans le [dossier Settings](../Project/architecture.md#settings-1) du projet (situé au même niveau que le dossier [`Project`](../Project/architecture.md#project-folder)). Il est activé au démarrage du projet (uniquement sur le serveur en client/serveur).
 - **une application générée** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
-  - Windows : `Users\[userName]\AppData\Roaming\[application]`
-  - macOS : `/Users/[userName]/Library/ApplicationSupport/[application]`
+ - Windows : `Users\[userName]\AppData\Roaming\[application]`
+ - macOS : `/Users/[userName]/Library/ApplicationSupport/[application]`
 - **tous projets avec un 4D monoposte ou distant** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
-  - Windows: `Users\[userName]\AppData\Roaming\4D`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+ - Windows: `Users\[userName]\AppData\Roaming\4D`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **tous projets avec 4D Server** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
-  - Windows: `Users\[userName]\AppData\Roaming\4D Server`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+ - Windows: `Users\[userName]\AppData\Roaming\4D Server`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
