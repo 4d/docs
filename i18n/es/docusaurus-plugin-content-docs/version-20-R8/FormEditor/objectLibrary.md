@@ -23,10 +23,10 @@ La ventana tiene las siguientes características principales:
 
 - Área de vista previa con mensajes de ayuda: el área central muestra una vista previa de cada objeto. Puede pasar el ratón por encima de un objeto para obtener información sobre el mismo en un mensaje de ayuda.
 - Puede filtrar el contenido de la ventana utilizando el menú **Categorías**:
-  ![](../assets/en/FormEditor/library3.png)
+    ![](../assets/en/FormEditor/library3.png)
 - Para utilizar un objeto de la librería en su formulario, puede:
-  - hacer clic derecho en un objeto y seleccionar **Copiar** en el menú contextual
-  - or drag and drop the object from the library The object is then added to the form.
+    - hacer clic derecho en un objeto y seleccionar **Copiar** en el menú contextual
+    - or drag and drop the object from the library The object is then added to the form.
 
 Esta librería es de sólo lectura. Si desea editar objetos por defecto o crear su propia librería de objetos preconfigurados o formularios proyecto, deberá crear una librería de objetos personalizada (ver abajo).
 
@@ -98,3 +98,4 @@ A continuación se muestra una lista de objetos dependientes que se pegarán en 
 - Imágenes
 - Mensajes de ayuda (asociados a un campo)
 - Métodos objeto
+
