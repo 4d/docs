@@ -30,3 +30,4 @@ BLOB に保存されている 4D View エリアから 4D View Pro オブジェ�
 C_OBJECT($vpObj)
 $vpObj:=VP Convert from 4D View($pvblob)
 ```
+
