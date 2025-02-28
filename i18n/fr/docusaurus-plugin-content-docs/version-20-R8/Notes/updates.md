@@ -20,12 +20,12 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - New [`TCPConnection`](../API/TCPConnectionClass.md) and [`TCPEvent`](../API/TCPEventClass.md) classes to manage TCP client connections, handle events, and enhance control over data transmission. Added [`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) for detailed logging of TCP events.
 - New options in [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) and [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) to control styles, formulas, data integrity, and password protection.
 - 4D Write Pro :
-  - The following commands now allow parameters such as objects or collections: [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md), [WP Get attributes](../WritePro/commands/wp-get-attributes.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md), [WP Table append row](../WritePro/commands/wp-table-append-row.md), [WP Import document](../WritePro/commands/wp-import-document.md), [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md), [WP Add picture](../WritePro/commands/wp-add-picture.md), and [WP Insert picture](../WritePro/commands/wp-insert-picture.md).
-  - [WP Insert formula](../WritePro/commands/wp-insert-formula.md), [WP Insert document body](../WritePro/commands/wp-insert-document-body.md), and [WP Insert break](../WritePro/commands/wp-insert-break.md), are now functions that return ranges.
-  - New expressions related to document attributes: [This.sectionIndex](../WritePro/managing-formulas.md), [This.sectionName](../WritePro/managing-formulas.md) and [This.pageIndex](../WritePro/managing-formulas.md).
+    - The following commands now allow parameters such as objects or collections: [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md), [WP Get attributes](../WritePro/commands/wp-get-attributes.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md), [WP Table append row](../WritePro/commands/wp-table-append-row.md), [WP Import document](../WritePro/commands/wp-import-document.md), [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md), [WP Add picture](../WritePro/commands/wp-add-picture.md), and [WP Insert picture](../WritePro/commands/wp-insert-picture.md).
+    - [WP Insert formula](../WritePro/commands/wp-insert-formula.md), [WP Insert document body](../WritePro/commands/wp-insert-document-body.md), and [WP Insert break](../WritePro/commands/wp-insert-break.md), are now functions that return ranges.
+    - New expressions related to document attributes: [This.sectionIndex](../WritePro/managing-formulas.md), [This.sectionName](../WritePro/managing-formulas.md) and [This.pageIndex](../WritePro/managing-formulas.md).
 - Langage 4D :
-  - Modified commands: [`FORM EDIT`](../commands/form-edit.md)
-  - [`.sign()`](../API/CryptoKeyClass.md#sign) and [`.verify()`](../API/CryptoKeyClass.md#verify) functions of the [4D.CryptoKey class](../API/CryptoKeyClass.md) support Blob in the *message* parameter.
+    - Modified commands: [`FORM EDIT`](../commands/form-edit.md)
+    - [`.sign()`](../API/CryptoKeyClass.md#sign) and [`.verify()`](../API/CryptoKeyClass.md#verify) functions of the [4D.CryptoKey class](../API/CryptoKeyClass.md) support Blob in the *message* parameter.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R8): list of all bugs that have been fixed in 4D 20 R8.
 
 #### Changements de comportement
@@ -49,12 +49,12 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fr-whats-new-in-4d-2
 - Nouvelles clés Build Application pour que les applications 4D distantes valident les [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.fe.html) et/ou les [domaines](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.fe.html) des autorités de certification des serveurs.
 - Possibilité de [construire des applications autonomes sans licences intégrées](../Desktop/building.md#licenses).
 - Langage 4D :
-  - Nouvelles commandes : [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
-  - Commandes modifiées : [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
+    - Nouvelles commandes : [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
+    - Commandes modifiées : [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
 - 4D Write Pro :
-  - Nouvelle commande : [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
-  - Commandes modifiées : [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
-  - [Liste des nouveautés](https://doc.4d.com/4Dv20R7/4D/20-R7/What-s-new.901-7239607.fe.html) dans le manuel 4D Write Pro Reference.
+    - Nouvelle commande : [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
+    - Commandes modifiées : [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
+    - [Liste des nouveautés](https://doc.4d.com/4Dv20R7/4D/20-R7/What-s-new.901-7239607.fe.html) dans le manuel 4D Write Pro Reference.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R7) : liste de tous les bugs qui ont été corrigés dans 4D 20 R7.
 
 #### Changements de comportement
