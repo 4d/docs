@@ -32,3 +32,5 @@ Navegue no Github para obter uma lista de componentes 4D públicos reunidos no t
 Plugins fazem coisas que 4D não faz nativamente (por exemplo, tecnologia específica da plataforma), ou seria muito difícil escrever apenas usando 4D. Como se describe en [esta página](develop-plug-ins.md), puede desarrollar sus propios plug-ins.
 
 Muitas funcionalidades são cobertas pelos plug-ins 4D existentes. Navegue pelo Github para ter uma lista de plugins 4D públicos reunidos com o tópico [`4d-plugin`](https://github.com/topics/4d-plugin).
+
+
