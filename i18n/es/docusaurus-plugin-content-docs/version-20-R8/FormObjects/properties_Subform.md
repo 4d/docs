@@ -26,7 +26,7 @@ Especifica si el usuario puede eliminar subregistros en un subformulario listado
 Esta propiedad se utiliza para declarar el formulario detallado que se utilizará en el subformulario. Puede ser:
 
 - un widget, es decir, un subformulario de tipo página dotado de funciones específicas. En este caso, las propiedades [list subform](#list-form) y [Source](#source) deben estar vacías o no estar presentes.\
-  Puede seleccionar un nombre de formulario de componente cuando se publica en el componente.
+    Puede seleccionar un nombre de formulario de componente cuando se publica en el componente.
 
 > Para ello, basta con hacer dos clics en el campo a modificar para que pase al modo edición (asegúrese de dejar suficiente tiempo entre los dos clics para no generar un doble clic).
 
@@ -155,11 +155,11 @@ Designa la opción para permitir a los usuarios seleccionar líneas:
 
 - **Ninguna**: las líneas no se pueden seleccionar si se elige este modo. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Editable en lista](subform_overview.md#enterable-in-list) esté activada. Las teclas de navegación sólo hacen que la lista se desplace; no se genera el evento de formulario `On Selection Change`.
 - **Simple**: en este modo se puede seleccionar una línea a la vez. Si hace clic en una línea, la seleccionará. Un **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en una fila cambia su estado (entre seleccionado o no).\
-  Las teclas de flecha arriba y abajo seleccionan el registro anterior/siguiente en la lista. Las otras teclas de navegación se desplazan por la lista. El evento de formulario `On Selection Change` se genera cada vez que se cambia la línea actual.
+    Las teclas de flecha arriba y abajo seleccionan el registro anterior/siguiente en la lista. Las otras teclas de navegación se desplazan por la lista. El evento de formulario `On Selection Change` se genera cada vez que se cambia la línea actual.
 - **Múltiple**: en este modo se pueden seleccionar varias líneas simultáneamente.
-  - Los subregistros seleccionados son devueltos por el comando `GET HIGHLIGHTED RECORDS`.
-  - Al hacer clic en el registro se selecciona, pero no se modifica el registro actual.
-  - Un **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en un registro cambia su estado (entre seleccionado o no). Las teclas de flecha arriba y abajo seleccionan el registro anterior/siguiente en la lista. Las otras teclas de navegación se desplazan por la lista. El evento de formulario `On Selection Change` se genera cada vez que el registro seleccionado se modifica.
+    - Los subregistros seleccionados son devueltos por el comando `GET HIGHLIGHTED RECORDS`.
+    - Al hacer clic en el registro se selecciona, pero no se modifica el registro actual.
+    - Un **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en un registro cambia su estado (entre seleccionado o no). Las teclas de flecha arriba y abajo seleccionan el registro anterior/siguiente en la lista. Las otras teclas de navegación se desplazan por la lista. El evento de formulario `On Selection Change` se genera cada vez que el registro seleccionado se modifica.
 
 #### Gramática JSON
 
