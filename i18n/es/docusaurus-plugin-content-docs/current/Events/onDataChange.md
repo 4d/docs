@@ -14,3 +14,4 @@ Cuando se selecciona la propiedad de evento `On Data Change` para un objeto, se 
 El evento se genera en cuanto la variable asociada al objeto es actualizada internamente por 4D (es decir, en general, cuando la zona de entrada del objeto pierde el foco).
 
 > Con los [subformularios](FormObjects/subform_overview.md), el evento `On Data Change` se dispara cuando el valor de la variable del objeto subformulario ha sido modificado.
+
