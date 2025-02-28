@@ -17,18 +17,18 @@ Les informations affichées permettent d’identifier la source et le contexte d
 - **Opération** : numéro de séquence de l’opération dans le fichier d’historique.
 
 - **Action** : type d’opération effectuée. Cette colonne peut contenir les opérations suivantes :
-  - Ouverture du fichier de données : ouverture d’un fichier de données.
-  - Fermeture du fichier de données : fermeture du fichier de données ouvert.
-  - Création d’un contexte : création d’un process définissant un contexte d’exécution.
-  - Fermeture d’un contexte : fermeture d’un process.
-  - Ajout : création et stockage d’un enregistrement.
-  - Ajout d’un BLOB : stockage d’un BLOB dans un champ BLOB.
-  - Suppression : suppression d’un enregistrement.
-  - Modification : modification d’un enregistrement.
-  - Début de transaction : transaction démarrée.
-  - Validation de transaction : transaction validée.
-  - Annulation de transaction : transaction annulée.
-  - Contexte de mise à jour : modification des données supplémentaires (ex : un appel à `CHANGE CURRENT USER` ou `SET USER ALIAS`).
+    - Ouverture du fichier de données : ouverture d’un fichier de données.
+    - Fermeture du fichier de données : fermeture du fichier de données ouvert.
+    - Création d’un contexte : création d’un process définissant un contexte d’exécution.
+    - Fermeture d’un contexte : fermeture d’un process.
+    - Ajout : création et stockage d’un enregistrement.
+    - Ajout d’un BLOB : stockage d’un BLOB dans un champ BLOB.
+    - Suppression : suppression d’un enregistrement.
+    - Modification : modification d’un enregistrement.
+    - Début de transaction : transaction démarrée.
+    - Validation de transaction : transaction validée.
+    - Annulation de transaction : transaction annulée.
+    - Contexte de mise à jour : modification des données supplémentaires (ex : un appel à `CHANGE CURRENT USER` ou `SET USER ALIAS`).
 
 - **Table** : table à laquelle appartient l’enregistrement ou le BLOB ajouté/supprimé/modifié.
 
@@ -45,10 +45,11 @@ Les informations affichées permettent d’identifier la source et le contexte d
 - **Utilisateur 4D** : nom de l’utilisateur 4D ayant effectué l’opération. Si un alias est défini pour l'utilisateur, l'alias s'affiche à la place du nom d'utilisateur 4D.
 
 - **Valeurs** : valeurs des champs de l’enregistrement en cas d’ajout ou de modification. Les valeurs sont séparées par des “;”. Seules les valeurs représentées sous forme alphanumérique sont affichées.\
-  Seules les valeurs représentées sous forme alphanumérique sont affichées.\
-  Seules les valeurs représentées sous forme alphanumérique sont affichées.\
-  ***Note :** Si la base de données est chiffrée et si aucune clé de données valide correspondant au fichier d'historique ouvert n'a été fournie, les valeurs chiffrées ne sont pas affichées dans cette colonne.*
+    Seules les valeurs représentées sous forme alphanumérique sont affichées.\
+    Seules les valeurs représentées sous forme alphanumérique sont affichées.\
+    ***Note :** Si la base de données est chiffrée et si aucune clé de données valide correspondant au fichier d'historique ouvert n'a été fournie, les valeurs chiffrées ne sont pas affichées dans cette colonne.*
 
 - **Enregistrements** : numéro de l’enregistrement.
 
 Cliquez sur **Analyser** pour mettre à jour le contenu du fichier d'historique courant de l'application sélectionnée (nommé par défaut dataname.journal). Le bouton Parcourir peut être utilisé pour sélectionner et ouvrir un autre fichier journal pour l'application. Le bouton **Exporter...** peut être utilisé pour exporter le contenu du fichier en tant que texte.
+
