@@ -14,16 +14,16 @@ Vous pouvez appliquer des `$attributes` à une entité (par exemple, People (1))
 - Si `$attributes` n'est pas spécifié dans une requête, ou si la valeur "\*" est passée, tous les attributs disponibles sont extraits. Les attributs de type **related entity** sont extraits avec la forme simple : un objet avec la propriété `__KEY` (clé primaire) et `URI`. Les attributs de type **related entities** ne sont pas extraits.
 
 - Si `$attributes` est spécifié pour les attributs **related entity** :
-  - `$attributes=relatedEntity` : l'entité liée est retournée sous une forme simple (propriété __KEY différée (clé primaire)) et `URI`.
-  - `$attributes=relatedEntity.*` : tous les attributs de l'entité liée sont retournés
-  - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...` : seuls ces attributs de l'entité liée sont retournés.
+ - `$attributes=relatedEntity` : l'entité liée est retournée sous une forme simple (propriété __KEY différée (clé primaire)) et `URI`.
+ - `$attributes=relatedEntity.*` : tous les attributs de l'entité liée sont retournés
+ - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...` : seuls ces attributs de l'entité liée sont retournés.
 
 - Si `$attributes` est spécifié pour les attributs **related entities** :
-  - `$attributes=relatedEntities.*` : toutes les propriétés des entités liées sont retournées
-  - `$attributes=relatedEntities.attributePath1, relatedEntity.attributePath2, ...` : seuls ces attributs des entités liées sont retournés.
+ - `$attributes=relatedEntities.*` : toutes les propriétés des entités liées sont retournées
+ - `$attributes=relatedEntities.attributePath1, relatedEntity.attributePath2, ...` : seuls ces attributs des entités liées sont retournés.
 
 - If `$attributes` is specified for **storage** attributes:
-  - `$attributes=attribute1, attribute2, ...`: only those attributes of the entities are returned.
+ - `$attributes=attribute1, attribute2, ...`: only those attributes of the entities are returned.
 
 ## Exemple avec plusieurs entités liées
 
