@@ -319,8 +319,8 @@ Este caso es tratado por 4D dependendo do contexto:
 
 - em [projetos compilados](interpreted.md), um erro é gerado na etapa de compilação sempre que possível. Senão, um erro é gerado quando o método for chamado.
 - em projetos interpretados:
-  - Se o parâmetro tiver sido declarado usando a [named syntax](#named-parameters) (`#DECLARE` ou `Function`), será gerado um erro quando o método for chamado.
-  - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
+ - Se o parâmetro tiver sido declarado usando a [named syntax](#named-parameters) (`#DECLARE` ou `Function`), será gerado um erro quando o método for chamado.
+ - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
 
 ## Usando propriedades objeto como parâmetros nomeados
 
