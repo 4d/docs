@@ -30,3 +30,4 @@ São suportados vários tipos de referências de métodos:
 | Nome   | Tipo de dados | Valores possíveis                                                  |
 | ------ | ------------- | ------------------------------------------------------------------ |
 | method | text          | Object method standard or custom file path, or project method name |
+
