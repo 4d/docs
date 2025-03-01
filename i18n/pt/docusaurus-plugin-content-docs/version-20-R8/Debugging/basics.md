@@ -78,8 +78,8 @@ To ignore an error that occurs repeatedly (for example, in loops), you can turn 
 
 - **Abort**: Stops method execution and returns to the state before the method started executing:
 
-  - Se um método formulário ou um método objeto estiver a ser executado em resposta a um evento, é interrompido e o usuário regressa ao formulário.
-  - Se o método estiver sendo executado a partir do ambiente Application, o usuário regressa a esse ambiente.
+    - Se um método formulário ou um método objeto estiver a ser executado em resposta a um evento, é interrompido e o usuário regressa ao formulário.
+    - Se o método estiver sendo executado a partir do ambiente Application, o usuário regressa a esse ambiente.
 
 - **Copy**: Copies the debugging information into the clipboard. A informação descreve o ambiente interno do erro (número, componente interno, etc.). Eles são formatados como texto tabulado.
 
