@@ -158,27 +158,27 @@ $c:=a+b
 
 1. Uma janela do depurador é aberta com o contador do programa definido para a linha com `a:=1`. Nesse momento, o tema **Line Objects** é exibido:
 
-   | $a | Indefinido |
-   | -- | ---------- |
+ | $a | Indefinido |
+ | -- | ---------- |
 
-   A variável `$a` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
+ A variável `$a` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 2. Você clica no botão **Step Over**. O contador do programa está agora definido para a linha `b:=a+1`. Neste ponto, o tema **Objetos linha** é exibido:
 
-   | $a | 1          |
-   | -- | ---------- |
-   | $b | Indefinido |
+ | $a | 1          |
+ | -- | ---------- |
+ | $b | Indefinido |
 
-   O valor da variável `$a` é agora 1. A variável `$b` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
+ O valor da variável `$a` é agora 1. A variável `$b` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 3. Você clica no botão **Step Over** novamente. O contador do programa está agora definido na linha com $c:=a+b. O tema **Objetos atuais** exibe:
 
-   | $c | Indefinido |
-   | -- | ---------- |
-   | $a | 1          |
-   | $b | 2          |
+ | $c | Indefinido |
+ | -- | ---------- |
+ | $a | 1          |
+ | $b | 2          |
 
-   O valor da variável `$b` é agora 2. A variável `$c` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
+ O valor da variável `$b` é agora 2. A variável `$c` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 #### Variáveis.
 
@@ -280,9 +280,9 @@ Na imagem acima:
 - O `thirdMethod` não recebeu nenhum parâmetro
 - \`$0 está atualmente indefinido, porque o método não atribuiu nenhum valor a $0 (porque ainda não executou esta atribuição ou por o método ser uma sub-rotina e não uma função)
 - O `secondMethod` recebeu três parâmetros do `firstMethod`:
-  - $1 é um ponteiro para a tabela `[Employee]`
-  - $2 é um ponteiro para o campo `ID` na tabela `[Employee]`
-  - $3 é um parâmetro alfanumérico cujo valor é "Z"
+ - $1 é um ponteiro para a tabela `[Employee]`
+ - $2 é um ponteiro para o campo `ID` na tabela `[Employee]`
+ - $3 é um parâmetro alfanumérico cujo valor é "Z"
 
 Você pode dar duplo clique no nome de qualquer método para exibir seu conteúdo no [Source Code Pane](#source-code-pane).
 
@@ -369,8 +369,8 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 
 - **Exibir**: seleciona o [modo de exibição](#display-mode) a ser usado para todas as janelas de depuração.
 - **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
-  ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
-  For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
+ ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
+ For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
 * **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
 * **Excluir tudo**: Remove todas as expressões do Painel de Vigia Personalizado.
@@ -416,9 +416,9 @@ Você pode copiar qualquer expressão selecionada do painel Código-fonte para o
 
 1. No painel de código fonte, selecione a expressão a avaliar
 2. Faça uma das seguintes opções:
-   - Arraste e solte o texto selecionado na área Expression (Expressão) do Custom Watch Pane (Painel de observação personalizada)
-   - Pressione **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
-   - Clique com o botão direito do mouse no texto selecionado **>** **Copiar para o painel de expressões**
+ - Arraste e solte o texto selecionado na área Expression (Expressão) do Custom Watch Pane (Painel de observação personalizada)
+ - Pressione **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
+ - Clique com o botão direito do mouse no texto selecionado **>** **Copiar para o painel de expressões**
 
 ### Contador do programa
 
@@ -455,8 +455,8 @@ O menu contextual do painel Código-fonte fornece acesso a várias funções que
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Show documentation**: Opens the documentation for the target element. Este comando está disponível para:
-  - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
-  - *4D commands, functions, class names:* Displays the online documentation.
+ - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
+ - *4D commands, functions, class names:* Displays the online documentation.
 - **Search References** (também disponível no Editor de código): Pesquisa todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
 - **Cópia**: Cópia padrão da expressão selecionada para a área de transferência.
 - **Copiar para o Painel de Expressão**: Copia a expressão selecionada para o painel de observação personalizado.
