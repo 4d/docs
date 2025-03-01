@@ -79,7 +79,7 @@ O estilo de botão Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel
 - *Windows* - el botón es idéntico al estilo [Bevel](#bevel).
 
 - *macOS* - las esquinas del botón están redondeadas.
-  ![](../assets/en/FormObjects/roundedBevel.png)
+ ![](../assets/en/FormObjects/roundedBevel.png)
 
 ### OS X Gradient
 
