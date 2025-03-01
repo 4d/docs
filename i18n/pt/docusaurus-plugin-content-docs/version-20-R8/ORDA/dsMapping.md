@@ -21,8 +21,8 @@ As seguintes regras são aplicadas a quaisquer conversões:
 
 - Os nomes de tabelas, campos e relações são mapeados para nomes de propriedade de objeto. Asegúrese de que dichos nombres cumplen con las reglas generales de denominación de objetos, como se explica en la sección [Convenciones de denominación de objetos](Concepts/identifiers.md).
 - Uma datastore só referencia as tabelas com uma única chave primária. As tabelas seguintes não são referenciadas:
-  - Tabelas sem chave primária
-  - Tabelas com chaves primárias compostas.
+ - Tabelas sem chave primária
+ - Tabelas com chaves primárias compostas.
 - Os campos BLOB estão automaticamente disponíveis como atributos do tipo [objeto Blob](Concepts/dt_blob.md#blob-types).
 
 > O mapeamento ORDA não leva em consideração:
