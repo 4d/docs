@@ -209,3 +209,5 @@ Você pode usar referências dinâmicas para definir os títulos das janelas dos
 | Nome        | Tipo de dados | Valores possíveis                                      |
 | ----------- | ------------- | ------------------------------------------------------ |
 | windowTitle | string        | O nome da janela como texto simples ou como referência |
+
+
