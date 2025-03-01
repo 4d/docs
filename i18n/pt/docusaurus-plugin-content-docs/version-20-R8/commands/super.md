@@ -116,3 +116,5 @@ Parâmetros
 | -------------- | ------------------------------- |
 | Command number | 1706                            |
 | Thread safe    | &amp;check; |
+
+
