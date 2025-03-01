@@ -52,3 +52,4 @@ Ancho máximo y mínimo (en píxeles) de una ventana de formulario redimensionab
 | -------------- | ------------- | ----------------- |
 | windowMinWidth | number        | valor inteiro     |
 | windowMaxWidth | number        | valor inteiro     |
+
