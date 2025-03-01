@@ -9,15 +9,15 @@ Os grupos de páginas de compatibilidade juntam parâmetros relacionados com a m
 > This page lists the compatibility options available for database/projects converted from 4D v18 onwards. Para opções de compatibilidade mais antigas, consulte a [Página de compatibilidade] (https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) em **doc.4d.com**.
 
 - **Use legacy network layer**: Starting with 4D v15, 4D applications propose a new network layer, named *ServerNet*, to handle communications between 4D Server and remote 4D machines (clients). A antiga camada de rede tornou-se obsoleta, mas é mantida para garantir a compatibilidade com as bases de dados existentes. Usando esta opção, você pode ativar a antiga camada de rede a qualquer momento nos seus aplicativos do servidor 4D dependendo das suas necessidades. *ServerNet* is used automatically for new databases and databases converted from a v15 release or later. Observe que, em caso de modificação, você precisa reiniciar o aplicativo para que a mudança seja levada em conta. Todos os aplicativos clientes que foram conectados também devem ser reiniciados para poderem se conectar à nova camada de rede.
-  **Nota:** esta opção também pode ser gerenciada programando usando o comando `SET DATABASE PARAMETER`.
+    **Nota:** esta opção também pode ser gerenciada programando usando o comando `SET DATABASE PARAMETER`.
 
 - **Usar XPath padrão:** oor padrão, essa opção está desmarcada para bancos de dados convertidos de uma versão 4D anterior à v18 R3 e marcada para bancos de dados criados com 4D v18 R3 e superior. A partir da v18 R3, a implementação do XPath no 4D foi modificada para ser mais compatível e suportar mais previsões. Consequentemente, as características não convencionais da anterior implementação já não funcionam. Estes incluem:
 
-  - inicial "/" não é apenas o nó raiz - usar um / como primeiro caractere em uma expressão XPath não declara um caminho absoluto do nó raiz
-  - não há nó atual implícito - o nó atual tem que ser incluído na expressão XPath
-  - não há pesquisa recursiva em estruturas repetidas - apenas o primeiro elemento é analisado.\
+    - inicial "/" não é apenas o nó raiz - usar um / como primeiro caractere em uma expressão XPath não declara um caminho absoluto do nó raiz
+    - não há nó atual implícito - o nó atual tem que ser incluído na expressão XPath
+    - não há pesquisa recursiva em estruturas repetidas - apenas o primeiro elemento é analisado.\
 
-  Although not standard, you might want to keep using these features so that your code continues to work as before -- in this case, just set the option *unchecked*. On the other hand, if your code does not rely on the non-standard implementation and if you want to benefit from the extended XPath features in your databases (as described in the [`DOM Find XML element`](https://doc.4d.com/4dv20/help/command/en/page864.html) command), make sure the **Use standard XPath** option is *checked*.
+    Although not standard, you might want to keep using these features so that your code continues to work as before -- in this case, just set the option *unchecked*. On the other hand, if your code does not rely on the non-standard implementation and if you want to benefit from the extended XPath features in your databases (as described in the [`DOM Find XML element`](https://doc.4d.com/4dv20/help/command/en/page864.html) command), make sure the **Use standard XPath** option is *checked*.
 
 - **Use LF for end of line on macOS:** Starting with 4D v19 R2 (and 4D v19 R3 for XML files), 4D writes text files with line feed (LF) as default end of line (EOL) character instead of CR (CRLF for xml SAX) on macOS in new projects. Se você deseja se beneficiar deste novo comportamento em projetos convertidos de versões anteriores da 4D, marque esta opção. See [`TEXT TO DOCUMENT`](https://doc.4d.com/4dv20/help/command/en/page1237.html), [`Document to text`](https://doc.4d.com/4dv19R/help/command/en/page1236.html), and [XML SET OPTIONS](https://doc.4d.com/4dv20/help/command/en/page1090.html).
 
