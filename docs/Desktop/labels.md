@@ -68,10 +68,17 @@ For example, you can apply a format to a field using the [`String`](../commands-
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 
+:::note
+
+Keep in mind that you can only enter methods that are "allowed" for the database in the Formula editor. Allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command.
+
+:::
+
+
 - You can drag and drop picture files as well as label files (".4lbp" files) from the desktop of the OS.
 
 - To modify the area, double-click on the contents in order to switch to editing mode. When you double-click on fields or formulas, the **Formula editor** is displayed, allowing you to remove or modify items:
-![](../assets/en/Desktop/label-formula.png)<br/>
+![](../assets/en/Desktop/label-formula.png)
 
 
 ### Form to use 
