@@ -185,12 +185,12 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 | プロパティ                 | 型    | 説明                                                                                     |
 | --------------------- | ---- | -------------------------------------------------------------------------------------- |
-| .data | blob | 取得データ。 取得データ。 取得データ。 取得データ。 取得データ。 *onData* コールバック以外の場合は常に `undefined` です。             |
+| .data | blob | 取得データ。 `onData` コールバック以外の場合は常に *undefined* です。                                         |
 | .type | テキスト | イベントの種類。 取り得る値: "response", "error", "headers", "data", または "terminate |
 
 #### authentication オブジェクト
 
-authentication オブジェクトは `options.serverAuthentication` または `options.proxyAuthentication` プロパティに使用します。 このオブジェクトには以下のプロパティを含めることができます: このオブジェクトには以下のプロパティを含めることができます: このオブジェクトには以下のプロパティを含めることができます: このオブジェクトには以下のプロパティを含めることができます: このオブジェクトには以下のプロパティを含めることができます:
+authentication オブジェクトは `options.serverAuthentication` または `options.proxyAuthentication` プロパティに使用します。  このオブジェクトには以下のプロパティを含めることができます:
 
 | プロパティ    | 型    | 説明                                              | デフォルト     |
 | -------- | ---- | ----------------------------------------------- | --------- |
@@ -265,7 +265,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.headers` プロパティは、<!-- REF #HTTPRequestClass.headers.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `headers` を格納します<!-- END REF -->。 (省略された場合は空のオブジェクト) (省略された場合は空のオブジェクト) (省略された場合は空のオブジェクト) (省略された場合は空のオブジェクト) (省略された場合は空のオブジェクト)
+`.headers` プロパティは、<!-- REF #HTTPRequestClass.headers.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `headers` を格納します<!-- END REF -->。  (省略された場合は空のオブジェクト)
 
 <!-- END REF -->
 
