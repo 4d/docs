@@ -87,7 +87,7 @@ title: Document クラス
 
 #### 説明
 
-`.extension` プロパティは、<!-- REF #document.extension.Summary -->ファイル名の拡張子<!-- END REF -->を返します (あれば)。 拡張子は必ず"." で始まります。 ファイル名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
+`.extension` プロパティは、<!-- REF #document.extension.Summary -->ファイル名の拡張子<!-- END REF -->を返します (あれば)。 拡張子は必ず"." で始まります。 ファイル名が拡張子を持たない場合には、このプロパティは空の文字列を返します。 拡張子は必ず"." で始まります。 ファイル名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
 
 このプロパティは **読み取り専用** です。
 
@@ -318,7 +318,7 @@ title: Document クラス
 
 #### 説明
 
-`.original` プロパティは、<!-- REF #document.original.Summary -->エイリアス、ショートカット、シンボリックリンクファイルのターゲット要素<!-- END REF -->を返します。 ターゲット要素は以下のいずれかです:
+`.original` プロパティは、<!-- REF #document.original.Summary -->エイリアス、ショートカット、シンボリックリンクファイルのターゲット要素<!-- END REF -->を返します。 ターゲット要素は以下のいずれかです: ターゲット要素は以下のいずれかです:
 
 - File オブジェクト
 - Folder オブジェクト
@@ -345,7 +345,7 @@ title: Document クラス
 
 #### 説明
 
-`.parent` プロパティは、<!-- REF #document.parent.Summary -->対象ファイルの親フォルダーオブジェクト<!-- END REF -->を返します。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
+`.parent` プロパティは、<!-- REF #document.parent.Summary -->対象ファイルの親フォルダーオブジェクト<!-- END REF -->を返します。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
 
 このプロパティは **読み取り専用** です。
 
@@ -367,7 +367,7 @@ title: Document クラス
 
 #### 説明
 
-`.path` プロパティは、<!-- REF #document.path.Summary -->ファイルの POSIXパス<!-- END REF -->を返します。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
+`.path` プロパティは、<!-- REF #document.path.Summary -->ファイルの POSIXパス<!-- END REF -->を返します。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
 
 このプロパティは **読み取り専用** です。
 
@@ -411,7 +411,7 @@ title: Document クラス
 
 #### 説明
 
-`.size` プロパティは、<!-- REF #document.size.Summary -->ファイルのサイズ (バイト単位)<!-- END REF --> を返します。 ファイルがディスク上に存在しない場合、サイズは 0 になります。
+`.size` プロパティは、<!-- REF #document.size.Summary -->ファイルのサイズ (バイト単位)<!-- END REF --> を返します。 ファイルがディスク上に存在しない場合、サイズは 0 になります。 ファイルがディスク上に存在しない場合、サイズは 0 になります。
 
 このプロパティは **読み取り専用** です。
 
@@ -450,7 +450,7 @@ title: Document クラス
 
 デフォルトで、ファイルは元の名前を維持したままコピーされます。 コピーの際にフォルダー名を変更したい場合、新しい名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
 
-*destinationFolder* 引数が指定するフォルダー内に同じ名前のファイルが既に存在する場合、4D はデフォルトでエラーを生成します。 *overwrite* に `fk overwrite` 定数を渡すことで、既存のフォルダーを無視して上書きすることができます:
+*destinationFolder* 引数が指定するフォルダー内に同じ名前のファイルが既に存在する場合、4D はデフォルトでエラーを生成します。 *overwrite* に `fk overwrite` 定数を渡すことで、既存のフォルダーを無視して上書きすることができます: *overwrite* に `fk overwrite` 定数を渡すことで、既存のフォルダーを無視して上書きすることができます:
 
 | 定数             | 値 | 説明                 |
 | -------------- | - | ------------------ |
@@ -497,7 +497,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### 説明
 
-`.getContent()` 関数は、<!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した `4D.Blob` オブジェクトを返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+`.getContent()` 関数は、<!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した `4D.Blob` オブジェクトを返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 **戻り値**
 
@@ -592,16 +592,17 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 ドキュメントにバイトオーダーマーク (BOM) が含まれている場合、4D は *charSetName* または *charSetNum* 引数で設定されている文字セットではなく、BOM で指定されたものを使用します (結果として引数は無視されます)。
 ドキュメントに BOM が含まれておらず、また *charSetName* および *charSetNum* 引数が渡されなかった場合、4D はデフォルトで "UTF-8" を文字セットとして使用します。
+ドキュメントに BOM が含まれておらず、また *charSetName* および *charSetNum* 引数が渡されなかった場合、4D はデフォルトで "UTF-8" を文字セットとして使用します。
 
-*breakMode* には、ドキュメントの改行文字に対しておこなう処理を指定する倍長整数を渡します。 "System Documents" テーマの、以下の定数を使用することができます:
+*breakMode* には、ドキュメントの改行文字に対しておこなう処理を指定する倍長整数を渡します。 "System Documents" テーマの、以下の定数を使用することができます: "System Documents" テーマの、以下の定数を使用することができます:
 
-| 定数                            | 値 | 説明                                                                                                                                                                 |
-| ----------------------------- | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Document unchanged`          | 0 | 何も処理をしません。                                                                                                                                                         |
-| `Document with native format` | 1 | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
-| `Document with CRLF`          | 2 | 改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。                                                                                            |
-| `Document with CR`            | 3 | 改行は macOSフォーマット (CR、キャリッジリターン) へと変換されます。                                                                                                        |
-| `Document with LF`            | 4 | 改行は Unixフォーマット (LF、ラインフィード) へと変換されます。                                                                                                           |
+| 定数                            | 値 | 説明                                                                                                                                                                                                                                            |
+| ----------------------------- | - | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0 | 何も処理をしません。                                                                                                                                                                                                                                    |
+| `Document with native format` | 1 | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under macOS, CRLF (carriage return + line feed) under Windows |
+| `Document with CRLF`          | 2 | 改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。                                                                                                                                                                       |
+| `Document with CR`            | 3 | Line breaks are converted to macOS format: CR (carriage return)                                                                                                                                            |
+| `Document with LF`            | 4 | 改行は Unixフォーマット (LF、ラインフィード) へと変換されます。                                                                                                                                                                                      |
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 

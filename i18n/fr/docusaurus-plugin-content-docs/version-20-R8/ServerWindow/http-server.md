@@ -51,3 +51,4 @@ Cette zone fournit plusieurs informations sur les paramètres de configuration e
 - **Mémoire cache** : taille de la mémoire cache du serveur HTTP, lorsqu’elle est activée (taille réellement occupée par le cache / taille maximale théorique allouée au cache dans les Propriétés). You can click on the **Clear Cache** button to empty the current cache.
 - **Listening to IP**, **HTTP Port** (80 by default), **TLS enabled** for HTTP connections (does not concern 4D nor SQL connections) and **HTTPS Port** used: current [configuration parameters](WebServer/webServerConfig.md) of the HTTP server, specified through the Settings or by programming.
 - **Informations sur le fichier journal** : nom, format et date de la prochaine sauvegarde automatique du journal du serveur HTTP (fichier logweb.txt).
+

@@ -74,3 +74,5 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 | ------------------ | --------------------------------------------------------------- |
 | Numéro de commande | 1482                                                            |
 | Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+
+

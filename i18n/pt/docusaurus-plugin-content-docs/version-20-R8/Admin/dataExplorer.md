@@ -23,8 +23,8 @@ O Data Explorer depende do componente web server [`WebAdmin`](webAdmin.md) para 
 Para ligar à página Web do Explorador de dados:
 
 - A partir de uma aplicação 4D (com interface):
-  - Se usar a aplicação 4D com interface, selecione o comando **Data Explorer...** :
-  - Para abrir o Explorador de dados num separador de browser externo, seleccione **Explorador de dados no browser** no menu **Registos** ou prima a tecla **Alt** (Windows)/**Option** (macOS) e clique no botão **Dados** na barra de ferramentas principal.
+ - Se usar a aplicação 4D com interface, selecione o comando **Data Explorer...** :
+ - Para abrir o Explorador de dados num separador de browser externo, seleccione **Explorador de dados no browser** no menu **Registos** ou prima a tecla **Alt** (Windows)/**Option** (macOS) e clique no botão **Dados** na barra de ferramentas principal.
 
 - no menu **Window**  (em 4D Server)
 
@@ -74,22 +74,22 @@ Pode mudar para o modo escuro \*\*\*\* mostrar o tema usando o selector no fundo
 A página contém várias áreas:
 
 - Resultados Os atributos são ordenados de acordo com a ordem de criação da estrutura subjacente. A chave primária e os atributos indexados têm um ícone específico. É possível filtrar a lista de nomes de dataclass propostos e nomes de atributos utilizando as respectivas áreas de pesquisa.
-  ![alt-text](../assets/en/Admin/dataExplorer3.png)
+ ![alt-text](../assets/en/Admin/dataExplorer3.png)
 
 - A parte central contém a área de pesquisa \*\*\*\* e a grade de dados \*\*\*\* (lista de entidades da classe de dados seleccionada). Cada coluna da grade representa um atributo de datastore.
-  - Como padrão, todas as entidades são exibidas. É possível filtrar as entidades apresentadas utilizando a área de pesquisa. Estão disponíveis dois modos de consulta: [Consulta sobre atributos](#query-on-attributes) (seleccionado por defeito), e a consulta avançada [com expressão](#advanced-query-with-expression). Você seleciona o modo de consulta clicando no botão correspondente (o botão **X** permite reiniciar a área de consulta e assim parar a filtragem):
-    ![alt-text](../assets/en/Admin/dataExplorer4b.png)
-  - O nome da classe de dados seleccionada é adicionado como um separador por cima da grelha de dados. Utilizando estas abas, é possível alternar entre os valores já selecionados. Pode remover um dataclass referenciado clicando no ícone "remover" à direita do nome do dataclass.
-  - É possível reduzir o número de colunas desmarcando os atributos do lado esquerdo. Também pode mudar as colunas da grade de dados utilizando arrastar e soltar. Pode clicar no cabeçalho de uma coluna  para [ordenar entidades](#ordering-entities) de acordo com seus valores (quando for possível).
-  - Se uma operação exigir muito tempo, é mostrada uma barra de progresso. Você pode parar a operação a qualquer momento clicando no botão vermelho:<br/>
-    ![alt-text](../assets/en/Admin/dataExplorer5.png)
+ - Como padrão, todas as entidades são exibidas. É possível filtrar as entidades apresentadas utilizando a área de pesquisa. Estão disponíveis dois modos de consulta: [Consulta sobre atributos](#query-on-attributes) (seleccionado por defeito), e a consulta avançada [com expressão](#advanced-query-with-expression). Você seleciona o modo de consulta clicando no botão correspondente (o botão **X** permite reiniciar a área de consulta e assim parar a filtragem):
+  ![alt-text](../assets/en/Admin/dataExplorer4b.png)
+ - O nome da classe de dados seleccionada é adicionado como um separador por cima da grelha de dados. Utilizando estas abas, é possível alternar entre os valores já selecionados. Pode remover um dataclass referenciado clicando no ícone "remover" à direita do nome do dataclass.
+ - É possível reduzir o número de colunas desmarcando os atributos do lado esquerdo. Também pode mudar as colunas da grade de dados utilizando arrastar e soltar. Pode clicar no cabeçalho de uma coluna  para [ordenar entidades](#ordering-entities) de acordo com seus valores (quando for possível).
+ - Se uma operação exigir muito tempo, é mostrada uma barra de progresso. Você pode parar a operação a qualquer momento clicando no botão vermelho:<br/>
+  ![alt-text](../assets/en/Admin/dataExplorer5.png)
 
 - Do lado esquerdo encontra-se a área **Dataclasses** e **Attributes area**, permitindo-lhe seleccionar os dataclasses e atributos a exibir. Pode navegar entre as entidades da dataclass cliando nos links **First** / **Previous** / **Next** / **Last** na parte inferior da área.
-  - Todos os tipos de atributos são exibidos, incluindo imagens, objetos (expressos em json) assim como atributos [calculados](../ORDA/ordaClasses.md#computed-attributes-1) e atributos [alias](../ORDA/ordaClasses.md#alias-attributes-1).
-  - Dados relacionados (many-to-one e one-to-many relações) podem ser exibidos através de áreas expansíveis/collapsable:<br/>
-    ![alt-text](../assets/en/Admin/dataExplorerRelated.png)
-  - **Ctrl+Click** (Windows) ou **Command+Click** (macOS) em um nome de atributo relacionado na área do lado direito exibe os valores do atributo em um independente. área flutuante:<br/>
-    ![alt-text](. /assets/pt-BR/Admin/dataExplorerFloat.png)
+ - Todos os tipos de atributos são exibidos, incluindo imagens, objetos (expressos em json) assim como atributos [calculados](../ORDA/ordaClasses.md#computed-attributes-1) e atributos [alias](../ORDA/ordaClasses.md#alias-attributes-1).
+ - Dados relacionados (many-to-one e one-to-many relações) podem ser exibidos através de áreas expansíveis/collapsable:<br/>
+  ![alt-text](../assets/en/Admin/dataExplorerRelated.png)
+ - **Ctrl+Click** (Windows) ou **Command+Click** (macOS) em um nome de atributo relacionado na área do lado direito exibe os valores do atributo em um independente. área flutuante:<br/>
+  ![alt-text](. /assets/pt-BR/Admin/dataExplorerFloat.png)
 
 ### Ordenar entidades
 

@@ -290,10 +290,10 @@ Estos archivos de registro registran cada intercambio entre la aplicación 4D y 
 Los archivos de historial pueden producirse en dos versiones:
 
 - una versión normal:
-  - archivos llamados 4DSMTPLog.txt, 4DPOP3Log.txt, o 4DIMAPLog.txt
-  - sin adjuntos
-  - utiliza un reciclaje automático de archivos circulares cada 10 MB
-  - destinado a la depuración habitual
+ - archivos llamados 4DSMTPLog.txt, 4DPOP3Log.txt, o 4DIMAPLog.txt
+ - sin adjuntos
+ - utiliza un reciclaje automático de archivos circulares cada 10 MB
+ - destinado a la depuración habitual
 
 Para iniciar este historial:
 
@@ -308,9 +308,9 @@ SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
 Esta ruta al historial es devuelta por el comando `Get 4D file`.
 
 - una versión extendida:
-  - attachment(s) included no automatic recycling
-  - nombre personalizado
-  - reservado con fines específicos
+ - attachment(s) included no automatic recycling
+ - nombre personalizado
+ - reservado con fines específicos
 
 Para iniciar este historial:
 
@@ -466,14 +466,14 @@ Hay varias maneras de activar el archivo de configuración de registro, dependie
 - **4D Server con interfaz**: puede abrir la página de mantenimiento y hacer clic en el botón [Cargar el archivo de configuración de logs](ServerWindow/maintenance.md#load-logs-configuration-file) y luego seleccionar el archivo. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
 - **un proyecto interpretado o compilado**: el archivo debe llamarse `logConfig.json` y copiarse en la [carpeta de Configuración](../Project/architecture.md#settings-1) del proyecto (situada al mismo nivel que la [carpeta `Proyecto`](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
 - **una aplicación construida**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
-  - Windows: `Users\[userName]\AppData\Roaming\[application]`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+ - Windows: `Users\[userName]\AppData\Roaming\[application]`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
 - **todos los proyectos con un 4D autónomo o remoto**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
-  - Windows: `Users\[userName]\AppData\Roaming\4D`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+ - Windows: `Users\[userName]\AppData\Roaming\4D`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **todos los proyectos con 4D Server**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
-  - Windows: `Users\[userName]\AppData\Roaming\4D Server`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+ - Windows: `Users\[userName]\AppData\Roaming\4D Server`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 

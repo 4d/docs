@@ -199,21 +199,21 @@ Uma expressão 4D a associar a uma coluna. Você pode entrar:
 - Uma **variável simple** (nesse caso, ela deve ser declarada explicitamente para compilação). Pode utilizar qualquer tipo de variável, exceto BLOBs e arrays. El valor de la variable se calculará generalmente en el evento `On Display Detail`.
 
 - Um **campo** usando a sintaxe padrão [Tabela]Campo (solo [selection type list box](listbox_overview.md#selection-list-boxes)), por exemplo: `[Employees]LastName`. Podem ser utilizados os seguintes tipos de campos:
-  - String
-  - Numeric
-  - Date
-  - Hora
-  - Imagem
-  - Booliano\
-    Você pode usar campos da tabela mestre ou de outras tabelas.
+ - String
+ - Numeric
+ - Date
+ - Hora
+ - Imagem
+ - Booliano\
+  Você pode usar campos da tabela mestre ou de outras tabelas.
 
 - Uma **expressão 4D** (expressão simples, fórmula ou método 4D). A expressão deve devolver um valor. A expressão deve devolver um valor. O resultado da expressão será automaticamente apresentado quando mudar para o modo Aplicação. A expressão será avaliada para cada registro da seleção (atual ou nomeada) da Tabela mestre (para os list box de tipo de seleção), cada elemento da coleção (para as list box de tipo coleção) ou cada entidade da seleção (para os list box de tipo entity selection). Se estiver vazia, a coluna não apresentará nenhum resultado.
-  São suportados os seguintes tipos de expressão:
-  - String
-  - Numeric
-  - Date
-  - Imagem
-  - Parâmetros
+ São suportados os seguintes tipos de expressão:
+ - String
+ - Numeric
+ - Date
+ - Imagem
+ - Parâmetros
 
 Nos list boxes coleção/entity selection, Null ou tipos sem suporte são exibidos como cadeias vazias.\
 Nos list boxes coleção/entity selection, Null ou tipos sem suporte são exibidos como cadeias vazias.\

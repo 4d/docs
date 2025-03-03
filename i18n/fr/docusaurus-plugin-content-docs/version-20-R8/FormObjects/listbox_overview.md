@@ -401,15 +401,15 @@ La gestion des sélections s'effectue différemment selon que la list box de typ
 - **List box de type sélection :** les sélections sont gérées par l'intermédiaire d'un ensemble appelé par défaut `$ListboxSetN` (N débute à 0 et est incrémenté en fonction du nombre de list box dans le formulaire), que vous pouvez modifier si nécessaire. Cet ensemble est [défini dans les propriétés](properties_ListBox.md#highlight-set) de la list box. Il est maintenu automatiquement par 4D : si l'utilisateur sélectionne une ou plusieurs ligne(s) dans la list box, l'ensemble est immédiatement mis à jour. A l'inverse, il est possible d'utiliser les commandes du thème "Ensembles" afin de modifier par programmation la sélection dans la list box.
 
 - **List box de type collection/entity selection** : les sélections sont gérées via des propriétés de list box dédiées :
-  - [Elément courant](properties_DataSource.md#current-item) est un objet qui reçoit l'élément/l'entité sélectionné(e),
-  - [Selected Items](properties_DataSource.md#selected-items) is a collection/entity selection object of selected items
-  - [Position élément courant](properties_DataSource.md#current-item-position) retourne la position de l'élément ou de l'entité sélectionné(e).
+ - [Elément courant](properties_DataSource.md#current-item) est un objet qui reçoit l'élément/l'entité sélectionné(e),
+ - [Selected Items](properties_DataSource.md#selected-items) is a collection/entity selection object of selected items
+ - [Position élément courant](properties_DataSource.md#current-item-position) retourne la position de l'élément ou de l'entité sélectionné(e).
 
 - **List box de type tableau :** la commande `LISTBOX SELECT ROW` permet de sélectionner par programmation une ou plusieurs lignes de list box.
-  En outre, [la variable associée à l’objet List box](properties_Object.md#variable-or-expression) peut être utilisée pour lire, fixer ou stocker les sélections de lignes dans l’objet. Cette variable correspond à un tableau de booléens automatiquement créé et maintenu par 4D. La taille de ce tableau est déterminée par celle de la list box : il contient le même nombre d’éléments que le plus petit tableau associé aux colonnes.
-  Chaque élément de ce tableau contient `Vrai` si la ligne correspondante est sélectionnée et `Faux` sinon. 4D met à jour le contenu de ce tableau en fonction des actions utilisateur. A l’inverse, vous pouvez modifier la valeur des éléments de ce tableau afin de modifier la sélection dans la list box.
-  En revanche, vous ne pouvez ni insérer ni supprimer de ligne dans ce tableau ; il n’est pas possible non plus de le retyper. La commande `Count in array` est utile dans ce cas pour connaître le nombre de lignes sélectionnées.
-  Par exemple, cette méthode permet d’inverser la sélection de la première ligne de la list box (type tableau) :
+ En outre, [la variable associée à l’objet List box](properties_Object.md#variable-or-expression) peut être utilisée pour lire, fixer ou stocker les sélections de lignes dans l’objet. Cette variable correspond à un tableau de booléens automatiquement créé et maintenu par 4D. La taille de ce tableau est déterminée par celle de la list box : il contient le même nombre d’éléments que le plus petit tableau associé aux colonnes.
+ Chaque élément de ce tableau contient `Vrai` si la ligne correspondante est sélectionnée et `Faux` sinon. 4D met à jour le contenu de ce tableau en fonction des actions utilisateur. A l’inverse, vous pouvez modifier la valeur des éléments de ce tableau afin de modifier la sélection dans la list box.
+ En revanche, vous ne pouvez ni insérer ni supprimer de ligne dans ce tableau ; il n’est pas possible non plus de le retyper. La commande `Count in array` est utile dans ce cas pour connaître le nombre de lignes sélectionnées.
+ Par exemple, cette méthode permet d’inverser la sélection de la première ligne de la list box (type tableau) :
 
 ```4d
  ARRAY BOOLEAN(tBListBox;10)
@@ -566,13 +566,13 @@ End if
 La valeur de la variable [variable associée à l’en-tête d’une colonne](properties_Object.md#variable-or-expression) permet de gérer une information supplémentaire : le tri courant de la colonne (lecture) et l’affichage de la flèche de tri.
 
 - Si la variable est définie sur 0, la colonne n'est pas triée et la flèche de tri n'est pas affichée.\
-  ![](../assets/en/FormObjects/sorticon0.png)
+ ![](../assets/en/FormObjects/sorticon0.png)
 
 - If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed.
-  ![](../assets/en/FormObjects/sorticon1.png)
+ ![](../assets/en/FormObjects/sorticon1.png)
 
 - If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
-  ![](../assets/en/FormObjects/sorticon2.png)
+ ![](../assets/en/FormObjects/sorticon2.png)
 
 > Seules les [variables](Concepts/variables.md) déclarées ou dynamiques peuvent être utilisées comme variables d'en-tête de colonne. Les autres types d'[expressions](Concepts/quick-tour.md#expressions) telles que `Form.sortValue` ne sont pas pris en charge.
 
@@ -656,7 +656,7 @@ Dans ce mode :
 
 - La hauteur de l’objet list box est automatiquement réduite lorsque le nombre de lignes à imprimer est inférieur à la hauteur d’origine de l’objet (il n’y a pas de lignes "vides" imprimées). En revanche, la hauteur n’augmente pas automatiquement en fonction du contenu de l’objet. La taille de l’objet effectivement imprimé peut être obtenue via la commande `LISTBOX GET PRINT INFORMATION`.
 - L'objet list box est imprimé "tel quel", c’est-à-dire en tenant compte de ses paramètres d’affichage courants : visibilité des en-têtes et des grilles, lignes affichées et masquées, etc.
-  Ces paramètres incluent également la première ligne à imprimer : si vous appelez la commande `OBJECT SET SCROLL POSITION` avant de lancer l’impression, la première ligne imprimée dans la list box sera celle désignée par la commande.
+ Ces paramètres incluent également la première ligne à imprimer : si vous appelez la commande `OBJECT SET SCROLL POSITION` avant de lancer l’impression, la première ligne imprimée dans la list box sera celle désignée par la commande.
 - Un mécanisme automatique facilite l’impression des list box contenant plus de lignes qu’il est possible d’en afficher : des appels successifs à `Print object` permettent d’imprimer à chaque fois un nouvel ensemble de lignes. La commande `LISTBOX GET PRINT INFORMATION` permet de contrôler le statut de l’impression durant l'opération.
 
 ## List box hiérarchiques
@@ -848,10 +848,10 @@ L'emploi des événements formulaire `On Expand` et `On Collapse` permet de s’
 Dans ce cas, le remplissage et le vidage des tableaux doivent être effectués par le code. Les principes à mettre en oeuvre sont :
 
 - A l’affichage de la listbox, seul le premier tableau doit être rempli. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons:
-  ![](../assets/en/FormObjects/hierarch15.png)
+ ![](../assets/en/FormObjects/hierarch15.png)
 
 - Lorsque l’utilisateur clique sur un bouton de déploiement, vous pouvez traiter l’événement `On Expand`. The `LISTBOX GET CELL POSITION` command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the `SELECTION TO ARRAY` command and you insert as many rows as needed in the list box using the `LISTBOX INSERT ROWS` command.
-  ![](../assets/en/FormObjects/hierarch16.png)
+ ![](../assets/en/FormObjects/hierarch16.png)
 
 - Lorsque l’utilisateur clique sur un bouton de contraction, vous pouvez traiter l’événement `On Collapse`. La commande `LISTBOX GET CELL POSITION` retourne la cellule concernée : vous supprimez de la list box autant de lignes que nécessaire à l’aide de la commande `LISTBOX DELETE ROWS`.
 
@@ -1189,11 +1189,11 @@ L'attribut "valueType" de valeur "color" vous permet d'afficher soit une couleur
 
 - Si la valeur est un nombre, un rectangle de couleur est dessiné à l'intérieur de la cellule. Voici un exemple :
 
-  ```4d
-  C_OBJECT($ob4)
-  OB SET($ob4;"valueType";"color")
-  OB SET($ob4;"value";0x00FF0000)
-  ```
+ ```4d
+ C_OBJECT($ob4)
+ OB SET($ob4;"valueType";"color")
+ OB SET($ob4;"value";0x00FF0000)
+ ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
@@ -1220,10 +1220,10 @@ OB SET($ob;"label";"Edit...")
 Plusieurs événements peuvent être gérés lors de l'utilisation d'une listbox tableau d'objets :
 
 - **Sur données modifiées** : L'événement `On Data Change` est généré en cas de modification d'une valeur de la colonne, quel que soit le widget :
-  - zone de saisie de texte
-  - listes déroulante
-  - zone de combo box
-  - bouton d'unité (passage valeur x à valeur x+1)
-  - case à cocher (passage cochée/non cochée)
+ - zone de saisie de texte
+ - listes déroulante
+ - zone de combo box
+ - bouton d'unité (passage valeur x à valeur x+1)
+ - case à cocher (passage cochée/non cochée)
 - **Sur clic** : Lorsque l'utilisateur clique sur un bouton installé à l'aide de l'attribut *valueType*, un événement `On Clicked` est généré. Cet événement doit être ensuite géré par le programmeur.
 - **Sur clic alternatif** : Lorsque l'utilisateur clique sur un bouton d'ellipse (attribut "alternateButton"), un événement `On Alternative Click` est généré. Cet événement doit être ensuite géré par le programmeur.

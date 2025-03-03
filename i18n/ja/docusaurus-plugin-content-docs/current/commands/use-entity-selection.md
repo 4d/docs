@@ -54,3 +54,5 @@ USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレ�
 | スレッドセーフ         | &amp;check; |
 | カレントレコードを変更する   |                                 |
 | カレントセレクションを変更する |                                 |
+
+

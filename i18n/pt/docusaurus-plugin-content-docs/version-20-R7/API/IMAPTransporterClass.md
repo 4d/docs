@@ -1549,7 +1549,7 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 No que diz respeito aos dois últimos exemplos, note que o resultado da pesquisa é diferente quando se remove os parênteses da primeira lista de chaves de pesquisa.
 
 - A *searchCriteria* pode incluir a especificação opcional \[CHARSET]. Esta consiste na palavra "CHARSET" seguida de uma palavra registada \[CHARSET] (US ASCII, ISO-8859). Indica o conjunto de caracteres da string *searchCriteria*. Portanto, você deve converter a cadeia de caracteres *searchCriteria* no conjunto de caracteres especificado se usar a especificação \[CHARSET] (consulte os comandos `CONVERT FROM TEXT` ou `Convert to text`).
-  Como padrão, os códigos 4D em Quotable Printable the searchCriteria string se conter caracteres estendidos
+ Como padrão, os códigos 4D em Quotable Printable the searchCriteria string se conter caracteres estendidos
 
 ```
 searchCriteria = CHARSET "ISO-8859" BODY "Help"
@@ -1562,23 +1562,23 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 - **Chaves de pesquisa com um valor de data**: a data é uma cadeia de caracteres que deve ser formatada da seguinte forma: *date-day+"-"+date-month+"-"+date-year* em que date-day indica o número do dia do mês (máximo de 2 caracteres), date-month indica o nome do mês (jan/fev/mar/abr/mai/jun/jul/ago/set/out/dez) e date-year indica o ano (4 caracteres).
-  Exemplo: `searchCriteria = SENTBEFORE 1-Feb-2020` (uma data geralmente não precisa ser colocada entre aspas, pois não contém nenhum caractere especial)
+ Exemplo: `searchCriteria = SENTBEFORE 1-Feb-2020` (uma data geralmente não precisa ser colocada entre aspas, pois não contém nenhum caractere especial)
 
 - **Chaves de pesquisa com um valor de cadeia**: a cadeia pode conter qualquer carácter e deve ser citada. Se a string não conter quaisquer caracteres especiais, como o carácter espacial, por exemplo, não precisa de ser citada. A citação de tais strings assegurará que o seu valor de strings será interpretado correctamente.
-  Exemplo: `searchCriteria = FROM "SMITH"`
-  Para todas as chaves de pesquisa que usam cadeias de caracteres, uma mensagem corresponde à chave se a cadeia de caracteres for uma subcadeia do campo. A correspondência não é sensível a maiúsculas e minúsculas.
+ Exemplo: `searchCriteria = FROM "SMITH"`
+ Para todas as chaves de pesquisa que usam cadeias de caracteres, uma mensagem corresponde à chave se a cadeia de caracteres for uma subcadeia do campo. A correspondência não é sensível a maiúsculas e minúsculas.
 
 - **Pesquisa-chaves com um valor de nome de campo**: o nome de campo é o nome de um campo de cabeçalho.
-  Exemplo: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
+ Exemplo: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 
 - **Search-keys com um valor de sinalizador**: o sinalizador pode aceitar uma ou várias palavras-chave (incluindo sinalizadores padrão), separadas por espaços.
-  Exemplo: `searchCriteria = KEYWORD \Flagged \Draft`
+ Exemplo: `searchCriteria = KEYWORD \Flagged \Draft`
 
 - **Pesquisa-chaves com um valor de conjunto de mensagens**: identifica um conjunto de mensagens. Para números de sequência de mensagens, estes são números consecutivos de 1 até ao número total de mensagens na caixa de correio. Uma vírgula delimita números individuais; uma vírgula delimita entre dois números, inclusive.
-  Exemplos:
-  `2,4:7,9,12:*` é `2,4,5,6,7,9,12,13,14,15` para uma caixa postal com 15 mensagens.
-  `searchCriteria = 1:5 ANSWERED` pesquisa na seleção de mensagens do número de sequência de mensagens 1 a 5 para mensagens que têm o sinalizador \Answered definido.
-  `searchCriteria= 2,4 ANSWERED` pesquisa na seleção de mensagens (números de mensagem 2 e 4) as mensagens que têm o sinalizador \Answered definido.
+ Exemplos:
+ `2,4:7,9,12:*` é `2,4,5,6,7,9,12,13,14,15` para uma caixa postal com 15 mensagens.
+ `searchCriteria = 1:5 ANSWERED` pesquisa na seleção de mensagens do número de sequência de mensagens 1 a 5 para mensagens que têm o sinalizador \Answered definido.
+ `searchCriteria= 2,4 ANSWERED` pesquisa na seleção de mensagens (números de mensagem 2 e 4) as mensagens que têm o sinalizador \Answered definido.
 
 #### Chaves de pesquisa autorizadas
 

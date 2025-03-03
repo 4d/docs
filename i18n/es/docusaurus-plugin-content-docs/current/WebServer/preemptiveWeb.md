@@ -27,19 +27,19 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 - Servidor web: maneja las [plantillas web](templates.md), [4DACTION y los métodos base](httpRequests.md)
 - Servidor de servicios web: gestiona las peticiones SOAP
 - ***web setting*** significa que el modo apropiativo depende de un valor de configuración:
-  - cuando se selecciona la opción de [**sesiones escalables**](sessions.md#enabling-sessions), el [modo apropiativo se utiliza automáticamente](sessions.md#preemptive-mode) para los procesos web.
-  - en caso contrario, se tendrá en cuenta la opción [**Utilizar procesos apropiativos**](webServerConfig.md#use-preemptive-processes).
-  - en lo que respecta a los procesos de servicios web (servidor o cliente), se soporta el modo apropiativo a nivel del método. Sólo tiene que seleccionar la propiedad "Puede ejecutarse en procesos apropiativos" para los métodos del servidor SOAP publicados (ver [Publicación de un servicio web con 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) o los métodos del cliente proxy (ver [Suscripción a un servicio web en 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) y asegurarse de que el compilador confirme que son hilo seguro.
+    - cuando se selecciona la opción de [**sesiones escalables**](sessions.md#enabling-sessions), el [modo apropiativo se utiliza automáticamente](sessions.md#preemptive-mode) para los procesos web.
+    - en caso contrario, se tendrá en cuenta la opción [**Utilizar procesos apropiativos**](webServerConfig.md#use-preemptive-processes).
+    - en lo que respecta a los procesos de servicios web (servidor o cliente), se soporta el modo apropiativo a nivel del método. Sólo tiene que seleccionar la propiedad "Puede ejecutarse en procesos apropiativos" para los métodos del servidor SOAP publicados (ver [Publicación de un servicio web con 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) o los métodos del cliente proxy (ver [Suscripción a un servicio web en 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) y asegurarse de que el compilador confirme que son hilo seguro.
 
 ## Escribir código servidor web hilo seguro
 
 Todo el código 4D ejecutado por el servidor web debe ser hilo seguro si quiere que sus procesos web se ejecuten en modo apropiativo. Cuando el [modo apropiativo está activo](#availability-of-preemptive-mode-for-web-processes), las siguientes partes de la aplicación serán evaluadas automáticamente por el compilador 4D:
 
 - Todos los métodos base relacionados con la web:
-  - [`On Web Authentication`](authentication.md#on-web-authentication)
-  - [`On Web Connection`](httpRequests.md#on-web-connection)
-  - [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method)
-  - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
+    - [`On Web Authentication`](authentication.md#on-web-authentication)
+    - [`On Web Connection`](httpRequests.md#on-web-connection)
+    - [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method)
+    - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
 - El método proyecto `compilador_web` (independientemente de su propiedad real "Modo de ejecución");
 

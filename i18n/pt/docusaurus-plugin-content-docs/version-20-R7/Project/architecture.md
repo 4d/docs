@@ -6,20 +6,20 @@ title: Arquitetura de um projeto 4D
 Um projeto 4D é composto por várias pastas e arquivos, armazenados numa pasta raiz do projeto (pasta de pacotes). Por exemplo:
 
 - MyPackage (*carpeta raíz del proyecto*)
-  - `Componentes`
-  - `Data`
-    - `Logs`
+    - `Componentes`
+    - `Data`
+        - `Logs`
+        - `Parâmetros`
+    - `Documentation`
+    - `Plugins`
+    - `Project`
+        - `DerivedData`
+        - `Sources`
+        - `Trash`
+    - `Resources`
     - `Parâmetros`
-  - `Documentation`
-  - `Plugins`
-  - `Project`
-    - `DerivedData`
-    - `Sources`
-    - `Trash`
-  - `Resources`
-  - `Parâmetros`
-  - `userPreferences.username`
-  - `WebFolder`
+    - `userPreferences.username`
+    - `WebFolder`
 
 > Se o seu projeto tiver sido convertido a partir de uma base de dados binária, poderão existir pastas adicionais. Ver "Conversión de bases en proyectos" en [doc.4d.com](https://doc.4d.com).
 
@@ -29,12 +29,12 @@ A pasta Project contém normalmente a seguinte hierarquia:
 
 - archivo `<applicationName>.4DProject`
 - `Sources`
-  - `Classes`
-  - `DatabaseMethods`
-  - `Página Métodos`
-  - `Formulários`
-  - `TableForms`
-  - `Triggers`
+    - `Classes`
+    - `DatabaseMethods`
+    - `Página Métodos`
+    - `Formulários`
+    - `TableForms`
+    - `Triggers`
 - `DerivedData`
 - `Trash` (si hay)
 

@@ -1555,7 +1555,7 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 A noter que dans les deux derniers exemples, le résultat de la recherche est différent lorsque vous enlevez les parenthèses de la première liste de mots-clés.
 
 - Le paramètre *searchCriteria* peut inclure optionnellement l'instruction \[CHARSET]. Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Elle indique le codage de caractères utilisé dans la chaine *searchCriteria*. Par conséquent, vous devez convertir la chaîne *searchCriteria* dans le jeu de caractères spécifié si vous utilisez l'instruction \[CHARSET] (voir les commandes `CONVERT FROM TEXT` ou `Convert to text`).
-  Par défaut, 4D encode la chaîne de critères searchCriteria en "Quotable Printable" si elle contient des caractères étendus.
+ Par défaut, 4D encode la chaîne de critères searchCriteria en "Quotable Printable" si elle contient des caractères étendus.
 
 ```
 searchCriteria = CHARSET "ISO-8859" BODY "Help"
@@ -1568,22 +1568,22 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 
 - **Valeurs de type date** : Les valeurs de type date sont placées dans des chaînes formatées de la manière suivante : *date-day+"-"+date-month+"-"+date-year* où date-day indique la date du jour dans le mois (2 caractères maxi), date-month indique le mois (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) et date-year indique l’année sur 4 chiffres.
-  Exemple : `searchCriteria = SENTBEFORE 1-Feb-2020` (il n’est généralement pas nécessaire de mettre une date entre guillemets puisqu’elle ne contient pas de caractères spéciaux)
+ Exemple : `searchCriteria = SENTBEFORE 1-Feb-2020` (il n’est généralement pas nécessaire de mettre une date entre guillemets puisqu’elle ne contient pas de caractères spéciaux)
 
 - \*\*Valeurs de type chaîne
-  \*\* : Les valeurs de type chaîne peuvent contenir tout type de caractère et doivent être placées entre des guillemets. Toutefois, si la chaîne ne contient pas de caractères spéciaux (des espaces par exemple), les guillemets ne sont pas obligatoires. Dans tous les cas, les guillemets vous permettent de vous assurer que la chaîne sera correctement interprétée.
-  Example: `searchCriteria = FROM "SMITH"` For all search keys that use strings, a message matches the key if the string is a substring of the field. La recherche ne tient pas compte de la casse des caractères.
+ \*\* : Les valeurs de type chaîne peuvent contenir tout type de caractère et doivent être placées entre des guillemets. Toutefois, si la chaîne ne contient pas de caractères spéciaux (des espaces par exemple), les guillemets ne sont pas obligatoires. Dans tous les cas, les guillemets vous permettent de vous assurer que la chaîne sera correctement interprétée.
+ Example: `searchCriteria = FROM "SMITH"` For all search keys that use strings, a message matches the key if the string is a substring of the field. La recherche ne tient pas compte de la casse des caractères.
 
 - **Noms de champs** : Les valeurs de type nom de champ contiennent le nom d’un champ d’en-tête.
-  Exemple : `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
+ Exemple : `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 
 - **Marqueurs** : Les valeurs de type marqueur (flags) acceptent un ou plusieurs mots-clés (y compris des marqueurs standard) séparés par des espaces.
-  Exemple : `searchCriteria = KEYWORD \Flagged \Draft`
+ Exemple : `searchCriteria = KEYWORD \Flagged \Draft`
 
 - **Ensemble de messages** : Les valeurs de ce type désignent un ensemble de messages. Elles contiennent une liste de numéros de messages dans un ordre croissant, de 1 au nombre total de messages dans la boîte aux lettres. Les numéros sont séparés par des virgules ; un deux-points (:) indique un intervalle (inclusif) de numéros.
-  Examples: `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages.
-  `searchCriteria = 1:5 ANSWERED` recherche, parmi les messages 1 à 5, ceux qui comportent le marqueur \Answered.
-  `searchCriteria= 2,4 ANSWERED` recherche, parmi les messages 2 et 4, ceux qui comportent le marqueur \Answered.
+ Examples: `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages.
+ `searchCriteria = 1:5 ANSWERED` recherche, parmi les messages 1 à 5, ceux qui comportent le marqueur \Answered.
+ `searchCriteria= 2,4 ANSWERED` recherche, parmi les messages 2 et 4, ceux qui comportent le marqueur \Answered.
 
 #### Mots-clés de recherche autorisés
 

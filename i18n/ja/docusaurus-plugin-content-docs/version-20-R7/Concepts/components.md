@@ -7,7 +7,7 @@ title: コンポーネント
 
 ## コンポーネントのインストール
 
-いくつかのコンポーネントは [4D開発環境にプリインストール](Extensions/overview.md) されていますが、4Dコミュニティによる多くの 4Dコンポーネントが [GitHub 上に公開](https://github.com/search?q=4d-component\&type=Repositories) されています。 また、[独自の 4Dコンポーネントを開発](Extensions/develop-components.md) することもできます。
+いくつかのコンポーネントは [4D開発環境にプリインストール](Extensions/overview.md) されていますが、4Dコミュニティによる多くの 4Dコンポーネントが GitHub 上に公開 されています。 また、独自の 4Dコンポーネントを開発 することもできます。
 
 4Dプロジェクトのコンポーネントのインストールとロードは、[4D依存関係マネージャー](../Project/components.md) を介しておこなわれます。
 

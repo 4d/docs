@@ -20,9 +20,9 @@ Um registro está prestes a ser exibido em um formulário de lista exibido via `
 Neste contexto, a seguinte sequência de chamadas para os métodos e eventos de formulário é ativada:
 
 - Para cada registo:
-  - Para cada objecto na área de detalhes:
-    - Método objecto com o evento `On Display Detail`
-  - Método formulário com o evento `On Display Detail`
+    - Para cada objecto na área de detalhes:
+        - Método objecto com o evento `On Display Detail`
+    - Método formulário com o evento `On Display Detail`
 
 > A área do cabeçalho é tratada usando o evento [`On Header`](onHeader.md).
 

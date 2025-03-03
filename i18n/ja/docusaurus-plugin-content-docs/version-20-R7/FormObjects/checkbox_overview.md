@@ -327,11 +327,11 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 
 - *Windows*
 
-  ![](../assets/en/FormObjects/checkbox_disclosure.png)
+ ![](../assets/en/FormObjects/checkbox_disclosure.png)
 
 - *macOS*
 
-  ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
+ ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 :::info
 
@@ -395,7 +395,7 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 [ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
 
 - カスタム: [背景パス名](properties_TextAndPicture.md#背景パス名) -
-  [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) -
-  [横方向マージン](properties_TextAndPicture.md#横方向マージン) -
-  [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
+ [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) -
+ [横方向マージン](properties_TextAndPicture.md#横方向マージン) -
+ [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
 - 通常、フラット: [スリーステート](properties_Display.md#スリーステート)

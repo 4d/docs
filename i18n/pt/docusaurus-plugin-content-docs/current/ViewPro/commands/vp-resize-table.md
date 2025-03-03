@@ -31,8 +31,8 @@ As regras abaixo são válidas:
 - Cabeçalhos devem permanecer na mesma linha e o intervalo de tabelas resultante deve sobrepor o intervalo de tabela original.
 - If the row count of the resized table is inferior to the initial row count, values inside cropped rows or columns are kept if they were not bound to a [data context](vp-set-data-context.md), otherwise they are deleted.
 - Se a tabela se expandir nas células que contêm dados:
-  - se as linhas forem adicionadas, os dados serão excluídos,
-  - se colunas forem adicionadas, dados serão mantidos e exibidos em novas colunas.
+    - se as linhas forem adicionadas, os dados serão excluídos,
+    - se colunas forem adicionadas, dados serão mantidos e exibidos em novas colunas.
 
 Se *tableName* não existir, não acontece nada.
 

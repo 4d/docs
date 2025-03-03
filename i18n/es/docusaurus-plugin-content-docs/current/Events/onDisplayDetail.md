@@ -20,9 +20,9 @@ Un registro está a punto de ser visualizado en un formulario de lista que se mu
 En este contexto, se desencadena la siguiente secuencia de llamadas a métodos y eventos de formulario:
 
 - Para cada registro:
-  - Para cada objeto en el área detallada:
-    - Método objeto con el evento `On Display Detail`
-  - Método formulario con el evento `On Display Detail`
+    - Para cada objeto en el área detallada:
+        - Método objeto con el evento `On Display Detail`
+    - Método formulario con el evento `On Display Detail`
 
 > El área del encabezado se maneja utilizando el evento [`On Header`](onHeader.md).
 

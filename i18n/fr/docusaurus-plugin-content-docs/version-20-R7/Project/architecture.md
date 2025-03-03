@@ -6,20 +6,20 @@ title: Architecture d'un projet
 Un projet 4D est composé de plusieurs dossiers et fichiers, stockés dans un dossier racine de projet (dossier package). Par exemple :
 
 - MyPackage (*dossier racine du projet*)
-  - `Composants`
-  - `Data`
-    - `Logs`
+    - `Composants`
+    - `Data`
+        - `Logs`
+        - `Settings`
+    - `Documentation`
+    - `Plugins`
+    - `Project`
+        - `DerivedData`
+        - `Sources`
+        - `Trash`
+    - `Resources`
     - `Settings`
-  - `Documentation`
-  - `Plugins`
-  - `Project`
-    - `DerivedData`
-    - `Sources`
-    - `Trash`
-  - `Resources`
-  - `Settings`
-  - `userPreferences.jSmith`
-  - `WebFolder`
+    - `userPreferences.jSmith`
+    - `WebFolder`
 
 > Si votre projet a été converti depuis une base binaire, des dossiers supplémentaires peuvent être présents. Voir "Conversion de bases en projets" sur [doc.4d.com](https://doc.4d.com).
 
@@ -29,12 +29,12 @@ La hiérarchie du dossier Project se présente généralement comme suit :
 
 - fichier `<applicationName>.4DProject`
 - `Sources`
-  - `Classes`
-  - `DatabaseMethods`
-  - `Methods`
-  - `Formulaires`
-  - `TableForms`
-  - `Les Triggers`
+    - `Classes`
+    - `DatabaseMethods`
+    - `Methods`
+    - `Formulaires`
+    - `TableForms`
+    - `Les Triggers`
 - `DerivedData`
 - `Trash` (le cas échéant)
 

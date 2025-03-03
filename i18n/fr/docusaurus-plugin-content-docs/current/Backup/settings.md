@@ -29,10 +29,10 @@ Les options regroupées dans cet onglet permettent de définir et de paramétrer
 - **Toutes les semaines** : programme une sauvegarde automatique par semaine. Deux zones de saisie supplémentaires vous permettent d'indiquer le jour et l'heure de la sauvegarde.
 - **Tous les mois** : programme une sauvegarde automatique par mois. Deux zones de saisie supplémentaires vous permettent d'indiquer le jour du mois et l'heure de la sauvegarde.
 - **Personnalisée** : permet de configurer des sauvegardes périodiques "sur-mesure". Lorsque vous sélectionnez cette, plusieurs zones de saisie supplémentaires apparaissent :
-  - **Toutes les N heure(s)** : permet de programmer des sauvegardes sur une base horaire. Vous pouvez saisir une valeur comprise entre 1 et 24.
-  * **Tous les jours** : programme une sauvegarde automatique par jour. Saisissez par exemple 1 si vous souhaitez une sauvegarde quotidienne. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
-  * **Toutes les N semaine(s), jour à N** : permet de programmer des sauvegardes sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jour(s) de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
-  * **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
+    - **Toutes les N heure(s)** : permet de programmer des sauvegardes sur une base horaire. Vous pouvez saisir une valeur comprise entre 1 et 24.
+    * **Tous les jours** : programme une sauvegarde automatique par jour. Saisissez par exemple 1 si vous souhaitez une sauvegarde quotidienne. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
+    * **Toutes les N semaine(s), jour à N** : permet de programmer des sauvegardes sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jour(s) de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
+    * **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
 
 > Les basculements entre l'heure standard et l'heure d'été peuvent affecter temporairement le planificateur automatique et déclencher la sauvegarde suivante avec un décalage d'une heure. Cela ne se produit qu'une seule fois et les sauvegardes ultérieures sont lancées à l'heure prévue.
 
@@ -49,14 +49,14 @@ La Page Sauvegarde/Configuration des Propriétés permet de désigner les fichie
 Cette zone permet de désigner les fichiers et/ou dossiers à copier lors de la prochaine sauvegarde.
 
 - **Data** : fichier de données de l'application. Lorsque cette option est cochée, les éléments suivants sont automatiquement sauvegardés en même temps que les données :
-  - le fichier journal courant de l'application (le cas échéant),
-  - le dossier `Settings` complet situé [à côté du fichier de données](Project/architecture.md#settings-folder) (le cas échéant), c'est-à-dire *les paramètres utilisateur pour les données*.
+    - le fichier journal courant de l'application (le cas échéant),
+    - le dossier `Settings` complet situé [à côté du fichier de données](Project/architecture.md#settings-folder) (le cas échéant), c'est-à-dire *les paramètres utilisateur pour les données*.
 - **Structure** : fichiers et dossiers du projet d'application. Dans le cas de projets compilés, cette option permet de sauvegarder le fichier .4dz. Lorsque cette option est cochée, le dossier complet `Settings` situé [au même niveau que le dossier Project](Project/architecture.md#settings-folder-1), c'est-à-dire les *paramètres utilisateur*, est automatiquement sauvegardé.
 - **Fichier de structure utilisateur (uniquement pour les bases binaires)** : *fonctionnalité obsolète*
 - **Attachments** : cette zone permet de désigner un ensemble de fichiers et/ou de dossiers à sauvegarder en même temps que l'application. Ces fichiers peuvent être de tout type (documents ou modèles de plug-ins, étiquettes, états, images, etc.). Vous pouvez désigner soit des fichiers individuels, soit des dossiers dont le contenu sera intégralement sauvegardé. Chaque élément joint est listé avec son chemin d’accès complet dans la zone “Fichiers joints”.
-  - **Supprimer** : retire de la liste des fichiers joints l’élément sélectionné.
-  - Gestion du fichier d'historique En cas de restitution, le dossier sera récupéré avec sa structure interne. Vous pouvez désigner tout dossier ou volume connecté au poste, à l’exception du dossier contenant les fichiers de l'application.
-  - **Ajouter fichier...** : affiche une boîte de dialogue permettant de sélectionner un fichier à joindre à la sauvegarde.
+    - **Supprimer** : retire de la liste des fichiers joints l’élément sélectionné.
+    - Gestion du fichier d'historique En cas de restitution, le dossier sera récupéré avec sa structure interne. Vous pouvez désigner tout dossier ou volume connecté au poste, à l’exception du dossier contenant les fichiers de l'application.
+    - **Ajouter fichier...** : affiche une boîte de dialogue permettant de sélectionner un fichier à joindre à la sauvegarde.
 
 ### Emplacement des fichiers de sauvegarde
 
@@ -83,8 +83,8 @@ La modification des options de sauvegarde et de restauration est facultative. Le
 ### Paramètres généraux
 
 - **Conserver uniquement les N derniers fichiers de sauvegarde** : ce paramètre permet d’activer et de configurer le mécanisme de suppression des fichiers de sauvegarde les plus anciens, afin d’éviter tout risque de saturation du volume. Le principe de fonctionnement est le suivant : après avoir terminé la sauvegarde courante, 4D efface l’archive la plus ancienne si celle-ci est localisée au même endroit que l’archive à sauvegarder et porte le même nom (vous pouvez, pour des raisons d’économie de place, demander que l’archive la plus ancienne soit effacée avant la sauvegarde).
-  Si, par exemple, le nombre de jeux est fixé à 3, les trois premières sauvegardes créent successivement les archives MaBase-0001, MaBase-0002 et MaBase-0003. Lors de la quatrième sauvegarde, l’archive MaBase-0004 est créée alors que l’archive MaBase-0001 est supprimée. Par défaut, le mécanisme de suppression des jeux est activé et 4D conserve 3 jeux de sauvegarde.
-  Pour ne pas activer le mécanisme, désélectionnez l’option.
+    Si, par exemple, le nombre de jeux est fixé à 3, les trois premières sauvegardes créent successivement les archives MaBase-0001, MaBase-0002 et MaBase-0003. Lors de la quatrième sauvegarde, l’archive MaBase-0004 est créée alors que l’archive MaBase-0001 est supprimée. Par défaut, le mécanisme de suppression des jeux est activé et 4D conserve 3 jeux de sauvegarde.
+    Pour ne pas activer le mécanisme, désélectionnez l’option.
 
 > Ce paramètre concerne à la fois les sauvegardes de l'application et les sauvegardes de l’historique.
 
@@ -95,10 +95,10 @@ La modification des options de sauvegarde et de restauration est facultative. Le
 - **Effacer la sauvegarde la plus ancienne avant sauvegarde / après sauvegarde** : cette option n’est utilisée que si l’option “Conserver uniquement les N derniers fichiers de sauvegarde” est cochée. Elle vous permet de spécifier si 4D doit commencer par effacer l’archive la plus ancienne avant d’effectuer une sauvegarde (option **avant**) ou si l’effacement doit être effectué après la sauvegarde (option **après**). Pour que ce mécanisme fonctionne, l’archive la plus ancienne ne doit pas avoir été renommée ou déplacée.
 
 - **Si la sauvegarde échoue** : cette option permet de définir le mécanisme de prise en charge des échecs des sauvegardes (sauvegarde impossible). Lorsqu’une sauvegarde est impossible, 4D permet d’effectuer une nouvelle tentative.
-  - Périodicité Elle revient à annuler la sauvegarde ayant échoué. Une erreur est générée.
-  - **Réessayer dans N seconde(s), minute(s) ou heure(s)** : lorsque cette option est cochée, une nouvelle tentative de sauvegarde est effectuée à l’issue du délai défini. Ce mécanisme permet d’anticiper certaines circonstances bloquant la sauvegarde. Vous pouvez fixer un délai en secondes, minutes ou heures à l’aide du menu correspondant. Si la nouvelle tentative échoue également, une erreur est générée et l’échec est inscrit dans les zones de statut de la dernière sauvegarde et dans le Journal des sauvegardes.
-  - **Annuler l’opération au bout de N tentatives** : ce paramètre permet de définir le nombre de fois que le module de sauvegarde réessaiera de lancer la sauvegarde en cas d’échec. Si, à l’issue du nombre d’essais défini, la sauvegarde n’a pas pu être effectuée, elle est annulée et l’erreur 1401 est générée (“Le nombre maximal de tentatives de sauvegarde est atteint, la sauvegarde automatique est temporairement désactivée”). Dans ce cas, aucune nouvelle sauvegarde automatique ne sera lancée tant que l’application n’aura pas été redémarrée ou qu’une sauvegarde manuelle n’aura été effectuée avec succès.
-    Ce paramètre est utile notamment pour éviter qu’en cas d’impossibilité prolongée de la sauvegarde (nécessitant une intervention humaine), l’application n’effectue inutilement de nombreuses tentatives au détriment de ses performances. Par défaut, ce paramètre n’est pas coché.
+    - Périodicité Elle revient à annuler la sauvegarde ayant échoué. Une erreur est générée.
+    - **Réessayer dans N seconde(s), minute(s) ou heure(s)** : lorsque cette option est cochée, une nouvelle tentative de sauvegarde est effectuée à l’issue du délai défini. Ce mécanisme permet d’anticiper certaines circonstances bloquant la sauvegarde. Vous pouvez fixer un délai en secondes, minutes ou heures à l’aide du menu correspondant. Si la nouvelle tentative échoue également, une erreur est générée et l’échec est inscrit dans les zones de statut de la dernière sauvegarde et dans le Journal des sauvegardes.
+    - **Annuler l’opération au bout de N tentatives** : ce paramètre permet de définir le nombre de fois que le module de sauvegarde réessaiera de lancer la sauvegarde en cas d’échec. Si, à l’issue du nombre d’essais défini, la sauvegarde n’a pas pu être effectuée, elle est annulée et l’erreur 1401 est générée (“Le nombre maximal de tentatives de sauvegarde est atteint, la sauvegarde automatique est temporairement désactivée”). Dans ce cas, aucune nouvelle sauvegarde automatique ne sera lancée tant que l’application n’aura pas été redémarrée ou qu’une sauvegarde manuelle n’aura été effectuée avec succès.
+        Ce paramètre est utile notamment pour éviter qu’en cas d’impossibilité prolongée de la sauvegarde (nécessitant une intervention humaine), l’application n’effectue inutilement de nombreuses tentatives au détriment de ses performances. Par défaut, ce paramètre n’est pas coché.
 
 > 4D considère qu’une sauvegarde a échoué si l'application n’était pas lancée au moment théorique de la sauvegarde automatique périodique.
 
@@ -107,16 +107,16 @@ La modification des options de sauvegarde et de restauration est facultative. Le
 Ces options s’appliquent aux fichiers de sauvegarde principaux et aux fichiers de sauvegarde de l’historique.
 
 - **Segment Size (Mb)** 4D allows you to segment archives, i.e., to cut it up into smaller sizes. Ce fonctionnement permet par exemple de stocker une sauvegarde sur plusieurs volumes (DVDs, usb, etc.). Au moment de la restitution, 4D fusionnera automatiquement les segments. Chaque segment est appelé MonApplication[xxxx-yyyy].4BK, où xxxx représente le numéro de la sauvegarde et yyyy celui du segment. Par exemple, les trois segments de la sixième sauvegarde de la base MonApplication seront appelés MonApplication[0006-0001].4BK, MonApplication[0006-0002].4BK et MonApplication[0006-0003].4BK.
-  Le menu **Taille du segment** est une combo box permettant de définir la taille en Mo de chaque segment de sauvegarde. Vous pouvez choisir une des tailles prédéfinies ou saisir une taille spécifique entre 0 et 2048. Si vous passez 0, aucune segmentation n’est effectuée (équivaut à la valeur **Aucune**).
+    Le menu **Taille du segment** est une combo box permettant de définir la taille en Mo de chaque segment de sauvegarde. Vous pouvez choisir une des tailles prédéfinies ou saisir une taille spécifique entre 0 et 2048. Si vous passez 0, aucune segmentation n’est effectuée (équivaut à la valeur **Aucune**).
 
 - **Compression Rate** By default, 4D compresses backups to help save disk space. En contrepartie, la phase de compression des fichiers peut ralentir sensiblement les sauvegardes dans le cas de la manipulation de gros volumes de données. L’option **Taux de compression** vous permet d’ajuster la compression :
-  - **Aucun** : aucune compression n’est appliquée. La sauvegarde peut être sensiblement plus rapide mais les fichiers d’archives sont plus volumineux sur le disque.
-  - **Normal** (par défaut) : cette option constitue un compromis vitesse de sauvegarde/taille des archives.
-  - **Elevé** : le taux de compression maximal est appliqué aux archives. Les fichiers d’archives prennent le moins de place possible sur le disque mais la sauvegarde peut être sensiblement ralentie.
+    - **Aucun** : aucune compression n’est appliquée. La sauvegarde peut être sensiblement plus rapide mais les fichiers d’archives sont plus volumineux sur le disque.
+    - **Normal** (par défaut) : cette option constitue un compromis vitesse de sauvegarde/taille des archives.
+    - **Elevé** : le taux de compression maximal est appliqué aux archives. Les fichiers d’archives prennent le moins de place possible sur le disque mais la sauvegarde peut être sensiblement ralentie.
 
 - **Taux d’entrelacement et Taux de redondance** 4D peut générer des archives à l’aide d’algorithmes spécifiques, basés sur des mécanismes d’optimisation (entrelacement) et de sécurisation (redondance). Vous pouvez paramétrer ces mécanismes en fonction de vos besoins. Les menus associés à ces options vous permettent de choisir un taux **Faible**, **Moyen**, **Elevé** ou **Aucun** (défaut).
-  - **Taux d’entrelacement** : l’entrelacement consiste à stocker les données dans des secteurs non contigus afin de limiter les risques en cas d’endommagement des secteurs. Plus le taux est élevé, plus la sécurité est élevée ; en contrepartie, le traitement des données consomme davantage de mémoire.
-  - **Taux de redondance** : la redondance permet de sécuriser les données présentes dans un fichier en répétant plusieurs fois les mêmes informations. Plus le taux est élevé, plus le fichier est sécurisé, mais plus le stockage est lent et la taille du fichier importante.
+    - **Taux d’entrelacement** : l’entrelacement consiste à stocker les données dans des secteurs non contigus afin de limiter les risques en cas d’endommagement des secteurs. Plus le taux est élevé, plus la sécurité est élevée ; en contrepartie, le traitement des données consomme davantage de mémoire.
+    - **Taux de redondance** : la redondance permet de sécuriser les données présentes dans un fichier en répétant plusieurs fois les mêmes informations. Plus le taux est élevé, plus le fichier est sécurisé, mais plus le stockage est lent et la taille du fichier importante.
 
 ### Restitution automatique et intégration des journaux
 

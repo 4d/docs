@@ -95,21 +95,21 @@ Qodly Studio ページは、[WebAdmin Webサーバーが起動されており](.
 Qodly Studio にアクセスするには 2つの方法があります:
 
 - **デザイン** メニュー (4Dシングルユーザー) または **ウィンドウ** メニュー (4D Server) から **Qodly Studio...** メニューコマンドを選択します。
-  WebAdmin Webサーバーがすでに起動されている場合は、その設定に応じて、デフォルトのブラウザーが `IPaddress:HTTPPort/studio` または `IPaddress:HTTPSPort/studio` を開きます。 それ以外の場合は、最初に WebAdmin Webサーバーを起動するかどうかを尋ねるメッセージが表示されます。
-  WebAdmin Webサーバーがすでに起動されている場合は、その設定に応じて、デフォルトのブラウザーが `IPaddress:HTTPPort/studio` または `IPaddress:HTTPSPort/studio` を開きます。 それ以外の場合は、最初に WebAdmin Webサーバーを起動するかどうかを尋ねるメッセージが表示されます。
+    WebAdmin Webサーバーがすでに起動されている場合は、その設定に応じて、デフォルトのブラウザーが `IPaddress:HTTPPort/studio` または `IPaddress:HTTPSPort/studio` を開きます。 それ以外の場合は、最初に WebAdmin Webサーバーを起動するかどうかを尋ねるメッセージが表示されます。
+    WebAdmin Webサーバーがすでに起動されている場合は、その設定に応じて、デフォルトのブラウザーが `IPaddress:HTTPPort/studio` または `IPaddress:HTTPSPort/studio` を開きます。 それ以外の場合は、最初に WebAdmin Webサーバーを起動するかどうかを尋ねるメッセージが表示されます。
 
 - 4D または 4D Server から WebAdmin Webサーバーが起動されている状態で、ブラウザーに次のアドレスを入力します:<br/>
-  `IPaddress:HTTPPort/studio`
+    `IPaddress:HTTPPort/studio`
 
-  または:
+    または:
 
-  `IPaddress:HTTPSPort/studio`
+    `IPaddress:HTTPSPort/studio`
 
-  たとえば、ポート7080 でローカルWebサーバーを起動した後、ブラウザーに次のアドレスを入力します:
+    たとえば、ポート7080 でローカルWebサーバーを起動した後、ブラウザーに次のアドレスを入力します:
 
-  `localhost:7080/studio`
+    `localhost:7080/studio`
 
-  すると、Qodly Studio にアクセスするための [アクセスキー](../Admin/webAdmin.md#アクセスキー) の入力を求められます。
+    すると、Qodly Studio にアクセスするための [アクセスキー](../Admin/webAdmin.md#アクセスキー) の入力を求められます。
 
 ## Qodly Studio を開発する
 
@@ -237,7 +237,7 @@ Qodly Studio デバッガーを実行中の 4D Server アプリケーション�
 :::
 
 2. Qodly Studio のツールバーで、**Debug** ボタンをクリックします。<br/>
-   ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
+    ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
 デバッグセッションが正常に開始されると、ボタンラベルに緑色の丸が表示され [qodly-debug](../assets/en/WebServer/debug2.png)、Qodly Studio デバッガーを使用できるようになります。
 
@@ -246,10 +246,10 @@ Qodly Studio デバッガーを実行中の 4D Server アプリケーション�
 実行中の 4D Server アプリケーションで Qodly Studio デバッガーを無効化するには:
 
 1. デバッグセッションがアクティブな状態で Qodly Studio ツールバーの **Debug** ボタンをクリックします。
-   警告ダイアログボックスが表示され、デバッガーを無効化するどうかを確認します。
-   警告ダイアログボックスが表示され、デバッガーを無効化するどうかを確認します。
-   警告ダイアログボックスが表示され、デバッガーを無効化するどうかを確認します。
-   警告ダイアログボックスが表示され、デバッガーを無効化するどうかを確認します。
+    警告ダイアログボックスが表示され、デバッガーを無効化するどうかを確認します。
+    警告ダイアログボックスが表示され、デバッガーを無効化するどうかを確認します。
+    警告ダイアログボックスが表示され、デバッガーを無効化するどうかを確認します。
+    警告ダイアログボックスが表示され、デバッガーを無効化するどうかを確認します。
 2. デバッガーを無効化する前に現在のメソッドまたは関数の終わりまでコードの評価を続けるには **Keep in progress** を選択します。デバッガーをすぐに無効化するには **Stop** を選択します。
 
 ## 強制ログイン
@@ -370,3 +370,4 @@ Qodly Studio のユーザー設定で、レンダラーのポップオーバー�
 - 別のブラウザータブでレンダラーを実行します (Qodlyページがレンダリングされた URL `IP:port/$lib/renderer/?w=QodlyPageName` を入力します)。
 - Qodly Studio とデータベースが同じ URLスキームでアクセスされていることを確認します。
 - プロジェクトデータベースの Webサーバーの [セッションcookie](webServerConfig.md#セッションcookie-samesite) には、`Lax` の値を使用してください。
+

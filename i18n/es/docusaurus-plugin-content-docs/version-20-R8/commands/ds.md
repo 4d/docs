@@ -74,3 +74,5 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 | ----------------- | ------------------------------- |
 | Número de comando | 1482                            |
 | Hilo seguro       | &amp;check; |
+
+

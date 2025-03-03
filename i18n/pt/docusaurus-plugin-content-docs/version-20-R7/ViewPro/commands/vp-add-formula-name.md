@@ -46,3 +46,4 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 [Cell references](../formulas.md#cell-references)<br/>
 [VP Get formula by name](vp-get-formula-by-name.md)<br/>
 [VP Get names](vp-get-names.md)
+

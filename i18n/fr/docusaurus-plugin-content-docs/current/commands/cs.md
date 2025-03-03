@@ -16,3 +16,5 @@ Le mot-clé **cs** est décrit dans la [**Page de concepts pour les classes**](.
 | ------------------ | --------------------------------------------------------------- |
 | Numéro de commande | 1710                                                            |
 | Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+
+

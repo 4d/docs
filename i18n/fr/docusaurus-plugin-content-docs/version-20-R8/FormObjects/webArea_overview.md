@@ -56,7 +56,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 ```
 
 - `param1...paramN` : Vous pouvez passer autant de paramètres que nécessaire à la méthode 4D.
-  Ces paramètres peuvent être de n'importe quel type pris en charge par JavaScript (chaîne, numérique, tableau, objet).
+ Ces paramètres peuvent être de n'importe quel type pris en charge par JavaScript (chaîne, numérique, tableau, objet).
 
 - `function(result)` : Fonction à passer comme dernier argument. Cette fonction "callback" est appelée de manière synchrone une fois que la méthode 4D a fini de s'exécuter. Elle reçoit le paramètre `result`.
 
@@ -161,7 +161,7 @@ Lors de l’exécution du formulaire, l’utilisateur dispose des fonctions d’
 - **Commandes du menu Edition**: lorsque la zone web a le focus, les commandes du menu **Edition** peuvent être utilisées pour effectuer des actions telles que copier, coller, tout sélectionner, etc. selon la sélection.
 - **Menu contextuel** : Il est possible d'utiliser le [menu contextuel](properties_Entry.md#context-menu) standard du système avec la zone web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 - **Glisser-déposer** : L'utilisateur peut glisser et déposer du texte, des images et des documents dans la zone web ou entre une zone web et les objets du formulaire 4D, en fonction des propriétés des objets 4D.
-  Pour des raisons de sécurité, le changement du contenu d'une zone web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur affiche une icône "interdit" ![](../assets/en/FormObjects/forbidden.png). Vous devez utiliser l'instruction `WA SET PREFERENCE(* ; "warea";WA enable URL drop;True)` pour afficher une icône "drop" et générer l'événement [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). In this event, you can call the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
+ Pour des raisons de sécurité, le changement du contenu d'une zone web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur affiche une icône "interdit" ![](../assets/en/FormObjects/forbidden.png). Vous devez utiliser l'instruction `WA SET PREFERENCE(* ; "warea";WA enable URL drop;True)` pour afficher une icône "drop" et générer l'événement [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). In this event, you can call the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
 
 > Les fonctions de glisser-déposer décrites ci-dessus ne sont pas prises en charge dans les zones web utilisant le [moteur de rendu du système macOS](properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -189,15 +189,15 @@ Vous pouvez visualiser et utiliser un inspecteur web dans les zones web de vos f
 Pour afficher l'inspecteur Web, vous pouvez soit exécuter la commande `WA OPEN WEB INSPECTOR`, soit utiliser le menu contextuel de la zone Web.
 
 - **Exécuter la commande `WA OPEN WEB INSPECTOR`**<br/>
-  Cette commande peut être utilisée directement avec les zones web à l'écran (objet formulaire) et hors écran.
+ Cette commande peut être utilisée directement avec les zones web à l'écran (objet formulaire) et hors écran.
 
 - **Utiliser le menu contextuel de la zone web**<br/>
-  Cette fonction ne peut être utilisée qu'avec les zones web à l'écran et nécessite que les conditions suivantes soient remplies :
-  - le [menu contextuel](properties_Entry.md#context-menu) de la zone web est activé
-  - l'utilisation de l'inspecteur est expressément autorisée dans la zone via la déclaration suivante :
-  ```4d
-  	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
-  ```
+ Cette fonction ne peut être utilisée qu'avec les zones web à l'écran et nécessite que les conditions suivantes soient remplies :
+ - le [menu contextuel](properties_Entry.md#context-menu) de la zone web est activé
+ - l'utilisation de l'inspecteur est expressément autorisée dans la zone via la déclaration suivante :
+ ```4d
+ 	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
+ ```
 
 > Avec le [moteur de rendu système de Windows](properties_WebArea.md#use-embedded-web-rendering-engine), une modification de cette préférence nécessite la prise en compte d'une action de navigation dans la zone (par exemple, un rafraîchissement de la page).
 
@@ -315,3 +315,7 @@ Le fichier 4DCEFParameters.json par défaut contient les commutateurs suivants :
 ### Voir également
 
 [Spécifiez vos propres paramètres pour initialiser la zone web intégrée (article de blog)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)
+
+
+
+

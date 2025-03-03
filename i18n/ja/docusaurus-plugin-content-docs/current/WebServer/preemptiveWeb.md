@@ -27,19 +27,19 @@ title: プリエンプティブWebプロセスの使用
 - Web サーバー: [Web テンプレート](templates.md)、[4DACTION とデータベースメソッド](httpRequests.md) を処理します
 - Web サービスサーバー: SOAPリクエストを処理します
 - ***Web設定*** とは、プリエンプティブモード実行が設定によることを表します:
-  - [**スケーラブルセッション**](sessions.md#セッションの有効化) が選択されている場合、Webプロセスにおいて [プリエンプティブモードが自動的に使用されます](sessions.md#プリエンプティブモード)。
-  - それ以外の場合は、[**プリエンプティブプロセスを使用**](webServerConfig.md#プリエンプティブプロセスを使用) オプションが考慮されます。
-  - Webサービスプロセス (サーバーまたはクライアント) のプリエンプティブモードは、メソッドレベルでサポートされています。 公開済みの SOAPサーバーメソッド ([4Dで Web サービスを公開する](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.ja.html) 参照) あるいはプロキシクライアントメソッド ([4Dから Web サービスへサブスクライブする](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.ja.html) 参照) の "プリエンプティブプロセスで実行可能" プロパティをチェックし、メソッドがコンパイラーによってスレッドセーフと確認されるようにします。
+    - [**スケーラブルセッション**](sessions.md#セッションの有効化) が選択されている場合、Webプロセスにおいて [プリエンプティブモードが自動的に使用されます](sessions.md#プリエンプティブモード)。
+    - それ以外の場合は、[**プリエンプティブプロセスを使用**](webServerConfig.md#プリエンプティブプロセスを使用) オプションが考慮されます。
+    - Webサービスプロセス (サーバーまたはクライアント) のプリエンプティブモードは、メソッドレベルでサポートされています。 公開済みの SOAPサーバーメソッド ([4Dで Web サービスを公開する](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.ja.html) 参照) あるいはプロキシクライアントメソッド ([4Dから Web サービスへサブスクライブする](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.ja.html) 参照) の "プリエンプティブプロセスで実行可能" プロパティをチェックし、メソッドがコンパイラーによってスレッドセーフと確認されるようにします。
 
 ## スレッドセーフなWebサーバーコードの書き方
 
 Webプロセスをプリエンプティモードで実行するには、Webサーバーで実行されるすべての 4Dコードがスレッドセーフでなければなりません。 [プリエンプティブモードが有効化](#webプロセスにおけるプリエンプティブモードの使用可能状況) されている場合、アプリケーションの以下の部分が 4Dコンパイラーによって自動的に評価されます:
 
 - すべての Web関連データベースメソッド:
-  - [`On Web Authentication`](authentication.md#on-web-authentication)
-  - [`On Web Connection`](httpRequests.md#on-web-connection)
-  - [`On REST Authentication`](REST/configuration.md#on-rest-authentication-データベースメソッドを使用する)
-  - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
+    - [`On Web Authentication`](authentication.md#on-web-authentication)
+    - [`On Web Connection`](httpRequests.md#on-web-connection)
+    - [`On REST Authentication`](REST/configuration.md#on-rest-authentication-データベースメソッドを使用する)
+    - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
 - `compiler_web` プロジェクトメソッド (実際の "実行モード" プロパティに関わらず評価されます)
 

@@ -124,11 +124,11 @@ Tenga en cuenta que la entidad correspondiente se vuelve a cargar desde el almac
 Todo atributo de dataclass puede ser utilizado como una propiedad de una entity selection para devolver <!-- REF EntitySelectionClass.attributeName.Summary --> una "proyección" de los valores del atributo en la entity selection<!-- END REF -->. Los valores proyectados pueden ser una colección o una nueva entity selection, dependiendo del [kind](DataClassClass.md#attributename) (`storage` o `relation`) del atributo.
 
 - Si el tipo de *attributeName* es `storage`:
-  `.attributeName` devuelve una colección de valores del mismo tipo que *attributeName*.
+ `.attributeName` devuelve una colección de valores del mismo tipo que *attributeName*.
 - Si el tipo de *attributeName* es `relatedEntity`:
-  `.attributeName` devuelve una nueva entity selection de valores relacionados del mismo tipo que *attributeName*. Se eliminan los duplicados (se devuelve una entity selection desordenada).
+ `.attributeName` devuelve una nueva entity selection de valores relacionados del mismo tipo que *attributeName*. Se eliminan los duplicados (se devuelve una entity selection desordenada).
 - Si el tipo de *attributeName* es `relatedEntities`:
-  `.attributeName` devuelve una nueva entity selection de valores relacionados del mismo tipo que *attributeName*. Se eliminan los duplicados (se devuelve una entity selection desordenada).
+ `.attributeName` devuelve una nueva entity selection de valores relacionados del mismo tipo que *attributeName*. Se eliminan los duplicados (se devuelve una entity selection desordenada).
 
 Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad.
 

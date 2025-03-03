@@ -26,3 +26,4 @@ S'il n'y a pas d'image à charger ou si le format ne permet pas de charger l'ima
 L'exemple suivant définit le format d'image au format JPEG, quel que soit le véritable type de la photo et passe le véritable numéro de version envoyé par le serveur :
 
 `GET  /rest/Employee(1)/photo?$imageformat=.jpeg&$version=3&$expand=photo`
+

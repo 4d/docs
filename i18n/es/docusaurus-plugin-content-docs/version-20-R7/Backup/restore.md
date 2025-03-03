@@ -6,9 +6,9 @@ title: Restaurar
 4D le permite restaurar conjuntos enteros de datos de una aplicación en caso de que se presente un incidente, independientemente de sus causas. Pueden producirse dos categorías principales de incidentes:
 
 - La parada inesperada de la aplicación mientras está en uso. Este incidente puede producirse por un corte de luz, un fallo de un elemento del sistema, etc. En este caso, dependiendo del estado actual de la caché de datos en el momento del incidente, la restauración de la aplicación puede requerir diferentes operaciones:
-  - Si la caché estaba vacía, la aplicación se abre normalmente. Se registraron todos los cambios realizados en la aplicación. Este caso no requiere ninguna operación particular.
-  - Si la caché contiene operaciones, el archivo de datos está intacto pero requiere integrar el archivo de historial actual.
-  - Si la caché estaba en proceso de escritura, es probable que el archivo de datos esté dañado. Hay que restaurar la última copia de seguridad e integrar el archivo de historial actual.
+    - Si la caché estaba vacía, la aplicación se abre normalmente. Se registraron todos los cambios realizados en la aplicación. Este caso no requiere ninguna operación particular.
+    - Si la caché contiene operaciones, el archivo de datos está intacto pero requiere integrar el archivo de historial actual.
+    - Si la caché estaba en proceso de escritura, es probable que el archivo de datos esté dañado. Hay que restaurar la última copia de seguridad e integrar el archivo de historial actual.
 
 - La pérdida de archivo(s) de la aplicación. Este incidente puede producirse por sectores defectuosos en el disco que contiene la aplicación, un virus, un error de manipulación, etc. Hay que restaurar la última copia de seguridad y luego integrar el archivo de historial actual. Para saber si una aplicación ha sido dañada tras un incidente, basta con relanzarla con 4D. El programa realiza un auto diagnóstico y detalla las operaciones de reparación a realizar. En modo automático, estas operaciones se realizan directamente sin ninguna intervención por parte del usuario. Si se ha puesto en marcha una estrategia regular de copias de seguridad, las herramientas de restauración de 4D le permitirán (en la mayoría de los casos) recuperar la aplicación en el estado exacto en que se encontraba antes del incidente.
 
@@ -24,11 +24,11 @@ La restauración manual de las copias de seguridad puede realizarse a través de
 Para restaurar manualmente una aplicación a través de una caja de diálogo estándar:
 
 1. Elija **Restituir...** en el menú de la aplicación 4D **Archivo**.
-   It is not mandatory that an application project be open.
-   OR Execute the `RESTORE` command from a 4D method.
-   Aparece una caja de diálogo estándar de apertura de archivos.
+    It is not mandatory that an application project be open.
+    OR Execute the `RESTORE` command from a 4D method.
+    Aparece una caja de diálogo estándar de apertura de archivos.
 2. Seleccione un archivo de copia de seguridad (.4bk) o un archivo de copia de seguridad del historial (.4bl) que desee restaurar y haga clic en **Abrir**.
-   Aparece una caja de diálogo que permite especificar la ubicación donde se restaurarán los archivos. Por defecto, 4D restaura los archivos en una carpeta llamada *Nomarchivo* (sin extensión) situada junto al archivo. Puede mostrar la ruta de acceso:
+    Aparece una caja de diálogo que permite especificar la ubicación donde se restaurarán los archivos. Por defecto, 4D restaura los archivos en una carpeta llamada *Nomarchivo* (sin extensión) situada junto al archivo. Puede mostrar la ruta de acceso:
 
 ![](../assets/en/Backup/backup07.png)
 

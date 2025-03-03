@@ -138,3 +138,4 @@ La propriété `.wss` contient <!-- REF #WebSocketConnectionClass.wss.Summary --
 Cette propriété est en lecture seule.
 
 <!-- END REF -->
+

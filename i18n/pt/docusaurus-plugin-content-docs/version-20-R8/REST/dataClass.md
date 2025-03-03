@@ -203,3 +203,4 @@ Si desea utilizar un atributo relacional utilizando [$attributes.md">]($attribut
 A petição abaixo retorna todos os dados públicos do funcionário chamado "Jones".
 
 `GET  /rest/Employee:lastname(Jones)`
+

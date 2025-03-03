@@ -44,13 +44,13 @@ Vous pouvez à tout moment savoir si votre application utilise un fichier d’hi
 Pour créer un fichier d’historique :
 
 1. Dans la page **Backup/Configuration** des Paramètres de structure, cochez l'option **Use Log** .
-   Le programme affiche une boîte de dialogue standard d'ouverture/création de fichier. Par défaut, le fichier journal est nommé *data.journal*.
+  Le programme affiche une boîte de dialogue standard d'ouverture/création de fichier. Par défaut, le fichier journal est nommé *data.journal*.
 
 2. Conservez le nom par défaut ou renommez-le, puis sélectionnez l'emplacement du fichier.
-   Si vous disposez d'au moins deux disques durs, il est recommandé de placer le fichier journal sur un disque autre que celui contenant le projet d'application. En cas de perte du disque dur de l'application, vous pouvez toujours rappeler votre fichier journal.
+  Si vous disposez d'au moins deux disques durs, il est recommandé de placer le fichier journal sur un disque autre que celui contenant le projet d'application. En cas de perte du disque dur de l'application, vous pouvez toujours rappeler votre fichier journal.
 
 3. Cliquez sur **Enregistrer**.
-   Le disque et le nom du fichier journal ouvert sont maintenant affichés dans la zone **Use Log** de la boîte de dialogue. Vous pouvez cliquer sur cette zone pour afficher un menu contextuel contenant le chemin d'accès au journal sur le disque.
+  Le disque et le nom du fichier journal ouvert sont maintenant affichés dans la zone **Use Log** de la boîte de dialogue. Vous pouvez cliquer sur cette zone pour afficher un menu contextuel contenant le chemin d'accès au journal sur le disque.
 
 4. Validez la boîte de dialogue des Propriétés.
 

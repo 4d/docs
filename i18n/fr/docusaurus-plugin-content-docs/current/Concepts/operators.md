@@ -356,3 +356,6 @@ En ce qui concerne les valeurs représentant des collections, des objets ou des 
 ```4d
 $phone:=$emp.phone || "n/a"
 ```
+
+
+

@@ -146,3 +146,5 @@ Llamar a una fórmula utilizando la notación de objetos:
 | ----------------- | ------------------------------- |
 | Número de comando | 1597                            |
 | Hilo seguro       | &amp;check; |
+
+

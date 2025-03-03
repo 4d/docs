@@ -26,8 +26,8 @@ Indique si l’utilisateur peut supprimer des sous-enregistrements dans un sous-
 Cette option permet de désigner un formulaire détaillé à utiliser dans un sous-formulaire. Il peut être :
 
 - un widget, c'est-à-dire un sous-formulaire de type page doté de fonctions spécifiques. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
-  You can select a component form name when it is published in the component.\
-  You can select a component form name when it is published in the component.
+    You can select a component form name when it is published in the component.\
+    You can select a component form name when it is published in the component.
 
 > Pour cela, il vous suffit de cliquer deux fois sur le champ à modifier afin de le passer en mode édition (veillez à laisser suffisamment de temps entre les deux clics pour ne pas générer de double-clic).
 
@@ -156,14 +156,14 @@ Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
 
 - **None**: Rows cannot be selected if this mode is chosen. Cliquer sur la liste n'aura aucun effet à moins que l'option [Saisissable en liste](subform_overview.md#enterable-in-list) soit activée. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
 - **Single**: One row at a time can be selected in this mode. Un clic sur une ligne la sélectionne. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
-  The Up and Down arrow keys select the previous/next row in the list.\
-  A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
-  The Up and Down arrow keys select the previous/next row in the list.\
-  The Up and Down arrow keys select the previous/next row in the list. Les autres touches de navigation font défiler la liste. The `On Selection Change` form event is generated every time the current row is changed.
+    The Up and Down arrow keys select the previous/next row in the list.\
+    A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
+    The Up and Down arrow keys select the previous/next row in the list.\
+    The Up and Down arrow keys select the previous/next row in the list. Les autres touches de navigation font défiler la liste. The `On Selection Change` form event is generated every time the current row is changed.
 - **Multiple**: Several rows can be selected simultaneously in this mode.
-  - Les sous-enregistrements sélectionnés sont retournés par la commande `GET HIGHLIGHTED RECORDS`.
-  - Cliquer sur l'enregistrement permettra de le sélectionner, mais ne modifiera pas l'enregistrement courant.
-  - Si vous pressez **Ctrl+clic** (Windows) ou **Commande+clic** (macOS) sur un enregistrement, cela fera basculer son état (entre sélectionné ou non). Les touches fléchées Haut et Bas sélectionnent l'enregistrement précédent/suivant dans la liste. Les autres touches de navigation font défiler la liste. L'événement formulaire `On Selection Change` est généré chaque fois que l'enregistrement sélectionné est modifié.
+    - Les sous-enregistrements sélectionnés sont retournés par la commande `GET HIGHLIGHTED RECORDS`.
+    - Cliquer sur l'enregistrement permettra de le sélectionner, mais ne modifiera pas l'enregistrement courant.
+    - Si vous pressez **Ctrl+clic** (Windows) ou **Commande+clic** (macOS) sur un enregistrement, cela fera basculer son état (entre sélectionné ou non). Les touches fléchées Haut et Bas sélectionnent l'enregistrement précédent/suivant dans la liste. Les autres touches de navigation font défiler la liste. L'événement formulaire `On Selection Change` est généré chaque fois que l'enregistrement sélectionné est modifié.
 
 #### Grammaire JSON
 

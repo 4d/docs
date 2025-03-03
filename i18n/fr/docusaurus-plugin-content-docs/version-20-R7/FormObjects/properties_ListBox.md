@@ -227,10 +227,10 @@ Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
 
 - **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
 - **Single**: One row at a time can be selected in this mode. Un clic sur une ligne la sélectionne. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
-  The Up and Down arrow keys select the previous/next row in the list.\
-  A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
-  The Up and Down arrow keys select the previous/next row in the list.\
-  The Up and Down arrow keys select the previous/next row in the list. Les autres touches de navigation font défiler la liste. The `On Selection Change` form event is generated every time the current row is changed.
+ The Up and Down arrow keys select the previous/next row in the list.\
+ A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
+ The Up and Down arrow keys select the previous/next row in the list.\
+ The Up and Down arrow keys select the previous/next row in the list. Les autres touches de navigation font défiler la liste. The `On Selection Change` form event is generated every time the current row is changed.
 - **Multiple**: Several rows can be selected simultaneously in this mode.
 
 #### Grammaire JSON

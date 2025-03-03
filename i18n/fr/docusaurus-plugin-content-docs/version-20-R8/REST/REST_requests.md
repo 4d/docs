@@ -46,3 +46,4 @@ Avec chaque requête REST, vous obtenez le statut et la réponse. Voici quelques
 La réponse (au format JSON) varie en fonction de la requête.
 
 Si une erreur survient, elle sera envoyée avec la réponse du serveur ou bien ce sera la réponse du serveur.
+

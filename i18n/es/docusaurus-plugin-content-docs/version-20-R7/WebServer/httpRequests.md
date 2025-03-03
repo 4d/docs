@@ -278,7 +278,7 @@ Las principales características de esta página son:
 - Incluye tres botones **Submit**: `vsbLogOn`, `vsbRegister` y `vsbInformation`.
 - Cuando se hace clic en **Log On**, el envío del formulario se procesa primero por la función de JavaScript `LogOn`. Si no se introduce ningún nombre, el formulario ni siquiera se envía a 4D, y se muestra una alerta de JavaScript.
 - El formulario tiene un método POST 4D así como un script Submit (*GetBrowserInformation*) que copia las propiedades del navegador a los cuatro objetos ocultos cuyos nombres empiezan por *vtNav_App*.
-  También incluye el objeto `vtUserName`.
+ También incluye el objeto `vtUserName`.
 
 Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace clic en uno de los botones del formulario HTML.
 

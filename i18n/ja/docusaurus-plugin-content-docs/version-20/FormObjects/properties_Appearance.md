@@ -54,7 +54,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 リストボックスのセレクションハイライトを非表示にします。
 
-このオプションが有効化されていると、リストボックスにおける行選択を可視化するセレクションハイライトが非表示になります。 しかしながら、画面上では選択状態が明示されなくなるため、[プログラムによって選択行を可視化](listbox_overview.md#選択行の見た目のカスタマイズ) する必要があります。
+このオプションが有効化されていると、リストボックスにおける行選択を可視化するセレクションハイライトが非表示になります。 ハイライトが非表示になっていても選択行は引き続き機能的に有効です。しかしながら、画面上では選択状態が明示されなくなるため、[プログラムによって選択行を可視化](listbox_overview.md#customizing-appearance-of-selected-rows) する必要があります。
 
 デフォルトでは、このオプションは有効化されていません。
 
@@ -92,7 +92,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[階層リスト](list_overview.md) - [サブフォーム](subform_overview.md) - [リストボックス](listbox_overview.md) - [入力](input_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
+[階層リスト](list_overview.md#overview) - [サブフォーム](subform_overview.md#overview) - [リストボックス](listbox_overview.md#overview) - [入力](input_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
 
 #### 参照
 
@@ -223,7 +223,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 ## HTML WYSYWIG 表示
 
-HTML WYSIWYG ビューを有効/無効にします。 このビューでは、すべてのブラウザーに対応していない 4D Write Pro の属性が取り除かれます。
+HTML WYSIWYG ビューを有効/無効にします。 このビューでは、すべてのブラウザーに対応していない 4D Write Pro の属性が取り除かれます。
 
 #### JSON 文法
 
@@ -363,7 +363,7 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 
 #### 対象オブジェクト
 
-[階層リスト](list_overview.md) - [サブフォーム](subform_overview.md) - [リストボックス](listbox_overview.md) - [入力](input_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
+[階層リスト](list_overview.md#overview) - [サブフォーム](subform_overview.md#overview) - [リストボックス](listbox_overview.md#overview) - [入力](input_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
 
 #### 参照
 

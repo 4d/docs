@@ -33,7 +33,7 @@ Un bouton image est créé de la manière suivante :
 
 1. Tout d’abord, vous préparez une image, dans laquelle la série d’images est organisée en colonnes, en lignes, ou les deux.
 
-   ![](../assets/en/FormObjects/pictureButton_grid.png)
+  ![](../assets/en/FormObjects/pictureButton_grid.png)
 
 Vous pouvez organiser les images sous la forme de colonnes, de lignes ou de tableaux. Dans ce dernier cas, les images sont alors numérotées de gauche à droite, ligne par ligne, en débutant par 0. Par exemple, la deuxième image de la deuxième ligne d’un tableau de 2 lignes et de 3 colonnes a pour numéro 4.
 

@@ -74,8 +74,8 @@ La fenêtre d'erreur de syntaxe propose plusieurs options :
 
 - **Abort**: Stops method execution and returns to the state before the method started executing:
 
-  - Si une méthode formulaire ou méthode objet s'exécute en réponse à un événement, elle est arrêtée et vous revenez au formulaire.
-  - Si la méthode est exécutée à partir de l'environnement de l'application, vous revenez à cet environnement.
+    - Si une méthode formulaire ou méthode objet s'exécute en réponse à un événement, elle est arrêtée et vous revenez au formulaire.
+    - Si la méthode est exécutée à partir de l'environnement de l'application, vous revenez à cet environnement.
 
 - **Copy**: Copies the debugging information into the clipboard. L'info décrit l'environnement interne de l'erreur (numéro, composant interne, etc.). Elles sont formatées sous forme de texte tabulé.
 

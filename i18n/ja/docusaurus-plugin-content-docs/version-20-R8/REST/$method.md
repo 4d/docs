@@ -197,7 +197,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 - **日付** は JavaScript 形式で表す必要があります: YYYY-MM-DDTHH:MM:SSZ (例: "2010-10-05T23:00:00Z")。 日付属性のためだけに日付プロパティを指定した場合、タイムゾーンおよび時刻 (時間・分・秒) の情報は削除されます。 この場合、レスポンスの形式 dd!mm!yyyy (例: 05!10!2013) を使って日付を送信することも可能です。
 - **ブール** は true または false です。
 - Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`
-  :::
+ :::
 
 ### 例題
 

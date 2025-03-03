@@ -52,7 +52,7 @@ Pour mettre à jour les autres machines clientes qui ne sont pas connectées, il
 - **SQL Server** : 19812 par défaut (peut être modifié via la page "SQL/Configuration" des Préférences).
 - **Serveur d'application** : 19813 par défaut (peut être modifié via la page "Client-Serveur/Configuration" des Préférences, voir ci-dessus).
 - **DB4D Server** (serveur de base de données) : 19814 par défaut. Ce numéro de port ne peut pas être modifié directement mais il est toujours composé du numéro de port du serveur d'application + 1. Lorsqu'un client 4D se connecte à 4D Server, il utilise le port TCP du serveur d'application (19813 ou le port indiqué après le signe ':' dans l'adresse IP affichée dans la boîte de dialogue de connexion). La connexion aux autres serveurs via leurs ports respectifs est alors automatique ; il n'est plus nécessaire de les spécifier.\
-  Notez que dans le cas d'un accès via un routeur ou un pare-feu, les ports TCP doivent être ouverts explicitement.
+    Notez que dans le cas d'un accès via un routeur ou un pare-feu, les ports TCP doivent être ouverts explicitement.
 - [**Débogueur à distance**](../Debugging/debugging-remote.md) : 19815 par défaut. Ce numéro de port ne peut pas être modifié directement mais il est toujours composé du numéro de port du serveur d'application + 2.
 
 #### Authentification de l'utilisateur auprès du serveur de domaine
@@ -71,17 +71,17 @@ Cette liste déroulante contient 3 options de couche réseau : **Historique**, *
 - **ServerNet** (par défaut) : Active la couche réseau ServerNet sur le serveur (disponible depuis 4D v15).
 - **QUIC** (disponible uniquement en mode projet) : Active la couche réseau QUIC sur le serveur.
 
-  **Notes** :
+    **Notes** :
 
-  - La sélection de cette option remplace l'option Utiliser l'ancienne couche réseau si elle a été définie à l'aide de la commande [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html).
-  - You can know if a 4D application is running with a QUIC network layer using the [Application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command.
-  - Étant donné que QUIC utilise le protocole UDP, assurez-vous que l'UDP est autorisé dans les paramètres de sécurité de votre réseau.
-  - QUIC se connecte automatiquement au port 19813 à la fois pour le serveur d'application et le serveur DB4D.
-  - Lorsque l'option de couche QUIC est sélectionnée :
-    - Un message bêta et une icône d'alerte sont affichés près du sélecteur.
-    - Les paramètres de [délai avant déconnexion client-serveur](#Client-Server-Connections-Timeout) sont masqués
-    - L'option [Crypter les communications Client-Serveur](#Crypter-les-communications-Client-Serveur) est masquée (les communications QUIC sont toujours en TLS, quel que soit votre mode sécurisé).
-  - **Compatibilité** : Vous devez déployer vos applications client/serveur avec 4D 20 ou une version supérieure avant de passer à la couche réseau QUIC.
+    - La sélection de cette option remplace l'option Utiliser l'ancienne couche réseau si elle a été définie à l'aide de la commande [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html).
+    - You can know if a 4D application is running with a QUIC network layer using the [Application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command.
+    - Étant donné que QUIC utilise le protocole UDP, assurez-vous que l'UDP est autorisé dans les paramètres de sécurité de votre réseau.
+    - QUIC se connecte automatiquement au port 19813 à la fois pour le serveur d'application et le serveur DB4D.
+    - Lorsque l'option de couche QUIC est sélectionnée :
+        - Un message bêta et une icône d'alerte sont affichés près du sélecteur.
+        - Les paramètres de [délai avant déconnexion client-serveur](#Client-Server-Connections-Timeout) sont masqués
+        - L'option [Crypter les communications Client-Serveur](#Crypter-les-communications-Client-Serveur) est masquée (les communications QUIC sont toujours en TLS, quel que soit votre mode sécurisé).
+    - **Compatibilité** : Vous devez déployer vos applications client/serveur avec 4D 20 ou une version supérieure avant de passer à la couche réseau QUIC.
 
 :::note
 
@@ -112,7 +112,7 @@ Ce paramètre permet de définir globalement le mode de mise à jour de l'instan
 - **Jamais** : Le dossier **Resources** local n'est pas mis à jour pendant la session. La notification envoyée par le serveur est ignorée. Le dossier **Resources** local peut être mis à jour manuellement à l'aide de la commande **Update Local Resources** du menu d'action (voir [Utilisation de l'explorateur de ressources](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788.en.html)).
 - **Toujours** : La synchronisation du dossier local **Resources** est automatiquement effectuée pendant la session chaque fois qu'une notification est envoyée par le serveur.
 - **Demander** : Lorsque la notification est envoyée par le serveur, une boîte de dialogue est affichée sur les postes clients, indiquant la modification. L'utilisateur peut ensuite accepter ou refuser la synchronisation du dossier **Resources** local.\
-  Le dossier **Resources** centralise les fichiers personnalisés nécessaires à l'interface de la base de données (fichiers de traduction, images, etc.). Des mécanismes automatiques ou manuels permettent de notifier chaque client lorsque le contenu de ce dossier a été modifié. Des mécanismes automatiques ou manuels permettent de notifier chaque client lorsque le contenu de ce dossier a été modifié.
+    Le dossier **Resources** centralise les fichiers personnalisés nécessaires à l'interface de la base de données (fichiers de traduction, images, etc.). Des mécanismes automatiques ou manuels permettent de notifier chaque client lorsque le contenu de ce dossier a été modifié. Des mécanismes automatiques ou manuels permettent de notifier chaque client lorsque le contenu de ce dossier a été modifié.
 
 ## Page Configuration IP
 
@@ -128,7 +128,7 @@ Le fonctionnement de la table de configuration est le suivant :
 - La colonne “Adresse IP” permet de désigner la ou les adresse(s) IP concernée(s) par la règle. Pour spécifier une adresse, cliquez dans la colonne et saisissez l’adresse sous la forme 123.45.67.89 (format IPv4) ou 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (format IPv6). Vous pouvez utiliser le caractère \* (étoile) pour spécifier des adresses du type “commence par”. Par exemple, 192.168.\* indique toutes les adresses débutant par 192.168.
 - L’application des règles s’effectue dans l’ordre d’affichage de la table. Si deux règles sont contradictoires, la priorité sera accordée à la règle située le plus haut dans le tableau. Vous pouvez réordonner les lignes en modifiant le tri courant (cliquez sur un en-tête de colonne pour alterner le sens de tri). Vous pouvez également déplacer des lignes par glisser-déposer.
 - Pour des raisons de sécurité, seules les adresses correspondant à une règle d’autorisation explicite pourront se connecter. En particulier, si la table contient uniquement une ou plusieurs règle(s) de type Refuser, toutes les adresses seront refusées car aucune ne satisfera à au moins une règle. Si vous souhaitez refuser certaines adresses et autoriser toutes les autres, ajoutez une règle Autoriser \* à la fin de la table. Par exemple :
-  - Refuser 192.168.\* (refuser toutes adresses débutant par 192.168)
-  - Autoriser \* (et autoriser les autres)
+    - Refuser 192.168.\* (refuser toutes adresses débutant par 192.168)
+    - Autoriser \* (et autoriser les autres)
 
 Par défaut, aucune restriction de connexion n’est appliquée par 4D Server : la première ligne de la table contient le libellé Autoriser et le caractère \* (toute adresse).

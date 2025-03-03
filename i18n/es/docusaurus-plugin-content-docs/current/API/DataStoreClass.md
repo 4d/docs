@@ -1033,7 +1033,7 @@ Para una descripción del formato del registro de peticiones ORDA, por favor con
 Para crear un registro de peticiones ORDA del lado del cliente, llame a esta función en una máquina remota. El registro puede enviarse a un archivo o a la memoria, según el tipo de parámetro:
 
 - Si se pasa un objeto *file* creado con el comando `File`, los datos de registro se escriben en este archivo como una colección de objetos (formato JSON). Cada objeto representa una petición.<br/>Si el archivo no existe ya, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
-  Si se llama a `.startRequestLog()` con un archivo mientras se inició previamente un registro en memoria, el registro en memoria se detiene y se vacía.
+ Si se llama a `.startRequestLog()` con un archivo mientras se inició previamente un registro en memoria, el registro en memoria se detiene y se vacía.
 
 > Debe añadirse manualmente un carácter \N al final del archivo para realizar una validación JSON
 

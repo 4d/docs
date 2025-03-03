@@ -272,13 +272,13 @@ icon: url("edit.png"); /* chemin relatif vers le fichier du formulaire */
 
 - Pour `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` et `verticalLineStroke`, trois syntaxes sont prises en charge :
 
-  - Nom la couleur CSS : `fill: red;`
-  - Valeur hexadécimale : `fill: #FF0000;`
-  - fonction `rgb()` : `fill:rgb(255,0,0)`
+ - Nom la couleur CSS : `fill: red;`
+ - Valeur hexadécimale : `fill: #FF0000;`
+ - fonction `rgb()` : `fill:rgb(255,0,0)`
 
 - Si une chaîne utilise des caractères interdits en CSS, vous pouvez l'entourer de guillemets simples ou doubles. Par exemple :
-  - une référence xliff : `tooltip: ":xliff:CommonMenuFile";`
-  - un datasource avec l'expression de champ : `dataSource: "[Table_1:1]ID:1";`
+ - une référence xliff : `tooltip: ":xliff:CommonMenuFile";`
+ - un datasource avec l'expression de champ : `dataSource: "[Table_1:1]ID:1";`
 
 ## Ordre de priorité
 

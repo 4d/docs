@@ -189,3 +189,5 @@ The code that calls the dialog then prints its body:
 | ------------------ | ------------------------------- |
 | Numéro de commande | 5                               |
 | Thread safe        | &amp;cross; |
+
+

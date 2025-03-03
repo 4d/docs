@@ -167,12 +167,12 @@ Le menu de format du journal propose les options suivantes :
 - **Pas de journal** : Lorsque cette option est sélectionnée, 4D ne génère pas d’historique des requêtes.
 
 - **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. Avec le format CLF, chaque ligne du fichier représente une requête, telle que :\
-  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\ Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF (caractère 13, caractère 10).
+    host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\ Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF (caractère 13, caractère 10).
 
-  - hôte : adresse IP du client (ex. 192.100.100.10)
-  - rfc931 : information non gérée par 4D, c’est toujours - (signe moins)
-  - utilisateur : nom de l’utilisateur tel qu’il s’est authentifié, sinon - (signe moins). Si le nom de l’utilisateur contient des espaces, ils sont remplacés par des _ (tiret bas).
-  - JJ : jour, MMM : mois abrégé en 3 lettres et toujours en anglais (Jan, Feb, ...), AAAA : année, HH : heure, MM : minutes, SS : secondes
+    - hôte : adresse IP du client (ex. 192.100.100.10)
+    - rfc931 : information non gérée par 4D, c’est toujours - (signe moins)
+    - utilisateur : nom de l’utilisateur tel qu’il s’est authentifié, sinon - (signe moins). Si le nom de l’utilisateur contient des espaces, ils sont remplacés par des _ (tiret bas).
+    - JJ : jour, MMM : mois abrégé en 3 lettres et toujours en anglais (Jan, Feb, ...), AAAA : année, HH : heure, MM : minutes, SS : secondes
 
 > La date et heure sont locales au serveur.
 
@@ -194,8 +194,8 @@ Le menu de format du journal propose les options suivantes :
 
 - **DLF (Combined Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format DLF. Le format DLF est semblable au format CLF dont il reprend exactement la structure. Il ajoute simplement deux champs HTTP supplémentaires à la fin de chaque requête : Referer et User-agent.
 
-  - Referer : contient l’URL de la page pointant vers le document demandé.
-  - User-agent : contient le nom et la version du navigateur ou du logiciel client à l’origine de la requête.
+    - Referer : contient l’URL de la page pointant vers le document demandé.
+    - User-agent : contient le nom et la version du navigateur ou du logiciel client à l’origine de la requête.
 
 > Le format DLF ne peut pas être personnalisé.
 
@@ -243,7 +243,7 @@ Paramètres d’archivage automatique du journal des requêtes. D'abord, vous de
 - **Pas de sauvegarde du journal** : La fonction de sauvegarde programmée est désactivée.
 - **Toutes les X heure(s)** : Cette option est utilisée pour programmer des sauvegardes sur une base horaire. Vous pouvez entrer une valeur entre 1 et 24.
 
-  - **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
+    - **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
 - **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
 - **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jours de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
 - **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.

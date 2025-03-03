@@ -57,3 +57,4 @@ Esta área indica la **memoria caché total** (parámetro definido en las prefer
 
 - **Máximo**: número máximo de conexiones cliente simultáneas permitidas para el servidor de aplicaciones. Este valor depende de la licencia instalada en el equipo servidor.
 - **Utilizado**: número real de conexiones que se están utilizando actualmente.
+

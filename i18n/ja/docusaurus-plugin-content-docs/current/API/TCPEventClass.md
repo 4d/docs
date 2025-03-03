@@ -59,3 +59,6 @@ title: TCPEvent
 - `"terminate"`: TCPConnection がリリースされる直前であることを示します。
 
 <!-- END REF -->
+
+
+

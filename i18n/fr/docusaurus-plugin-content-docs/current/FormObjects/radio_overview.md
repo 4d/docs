@@ -79,7 +79,7 @@ Le style du bouton Bevel arrondi est presque identique au style [Bevel](#bevel),
 - *Sous Windows* - ce bouton est identique au style [Bevel](#bevel).
 
 - *Sous macOS* - les coins du bouton sont arrondis.
-  ![](../assets/en/FormObjects/roundedBevel.png)
+ ![](../assets/en/FormObjects/roundedBevel.png)
 
 ### OS X Gradient
 

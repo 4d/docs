@@ -23,3 +23,4 @@ Esta opção varia o nível de detalho gráfico no editor de estrutura. Por defe
 ### Quando uma pasta é escurecida, o seu conteúdo é:
 
 Esta opción establece el aspecto de las tablas atenuadas en el editor de estructuras, cuando se realizan selecciones por carpetas (ver [Resaltar/atenuar tablas por carpeta](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html#4592928)) As opções possíveis são Reduzido (uma sombra substitui a imagem da tabela) e Invisível (a tabela desaparece completamente).
+

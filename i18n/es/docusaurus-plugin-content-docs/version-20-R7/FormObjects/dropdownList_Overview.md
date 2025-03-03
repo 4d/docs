@@ -158,9 +158,9 @@ Puede crear automáticamente una lista desplegable utilizando una acción están
 - Uso de la acción estándar `gotoPage`. En este caso, 4D mostrará automáticamente la [página del formulario](FormEditor/forms.md#form-pages) que corresponda al número del elemento seleccionado. Por ejemplo, si el usuario selecciona el tercer elemento, 4D mostrará la tercera página del formulario actual (si existe). En tiempo de ejecución, la lista desplegable muestra por defecto los números de página (1, 2...).
 
 - Uso de una acción estándar que muestra una sublista de elementos, por ejemplo `backgroundColor`. Esta funcionalidad requiere que:
-  - un área de texto con estilo ([área 4D Write Pro](writeProArea_overview.md) o [entrada](input_overview.md) con la propiedad [multiestilo](properties_Text.md#multi-style)) está presente en el formulario como objetivo de la acción estándar.
-  - la propiedad [focusable](properties_Entry.md#focusable) no está definida en la lista desplegable.
-    En tiempo de ejecución, la lista desplegable mostrará una lista automática de valores, por ejemplo, colores de fondo. Puede reemplazar esta lista automática asignando además una lista de selección en la que cada elemento tenga asignada una acción estándar personalizada.
+ - un área de texto con estilo ([área 4D Write Pro](writeProArea_overview.md) o [entrada](input_overview.md) con la propiedad [multiestilo](properties_Text.md#multi-style)) está presente en el formulario como objetivo de la acción estándar.
+ - la propiedad [focusable](properties_Entry.md#focusable) no está definida en la lista desplegable.
+  En tiempo de ejecución, la lista desplegable mostrará una lista automática de valores, por ejemplo, colores de fondo. Puede reemplazar esta lista automática asignando además una lista de selección en la que cada elemento tenga asignada una acción estándar personalizada.
 
 > Esta funcionalidad no puede utilizarse con una lista desplegable jerárquica.
 

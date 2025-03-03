@@ -180,3 +180,5 @@ Puede utilizar referencias dinámicas para definir los nombres de ventana de los
 | Nombre      | Tipos de datos | Valores posibles                                         |
 | ----------- | -------------- | -------------------------------------------------------- |
 | windowTitle | string         | El nombre de la ventana como texto plano o de referencia |
+
+

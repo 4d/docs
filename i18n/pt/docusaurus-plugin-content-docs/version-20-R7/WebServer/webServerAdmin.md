@@ -14,8 +14,8 @@ Um projeto 4D pode iniciar e monitorar um servidor web para a aplicação (host)
 O servidor web principal de 4D pode ser iniciado de diferentes maneiras:
 
 - Utilizar um botão/comando de menu.
-  - 4D: menu **Executar\>Iniciar o servidor Web** <br/>![](../assets/en/WebServer/start1.png)
-  - 4D Server: botão **Iniciar servidor HTTP** da página Servidor HTTP<br/>![](../assets/en/WebServer/start2.png)
+    - 4D: menu **Executar\>Iniciar o servidor Web** <br/>![](../assets/en/WebServer/start1.png)
+    - 4D Server: botão **Iniciar servidor HTTP** da página Servidor HTTP<br/>![](../assets/en/WebServer/start2.png)
 
 - Inicia automaticamente cada vez que a aplicação 4D é aberta. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
 
@@ -226,7 +226,7 @@ First you must choose the frequency (days, weeks, etc.) or the file size limit c
 - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
 
 - **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Pode digitar um valor entre 1 e 24.
-  - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
+    - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
 
 - **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduza 1 se pretender efetuar uma cópia de segurança diária. Quando essa opção estiver marcada, você deve indicar a hora em que o backup deve ser iniciado.
 

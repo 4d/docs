@@ -65,7 +65,7 @@ Certificados TLS gerenciados por 4D devem ser no **PEM format**. Se seu forneced
 
 4D fornece certificados nos formatos de criptografia abaixo:
 
-- [**RSA**](https://en.wikipedia.org/wiki/RSA_\(cryptosystem\))
+- [**RSA**](https://en.wikipedia.org/wiki/RSA_\\(cryptosystem\\))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
 :::info Compatibidade
@@ -136,10 +136,10 @@ Para obter um certificado digital:
 2. Use o comando `GENERATE CERTIFICATE REQUEST` para emitir uma petição de certificado.
 
 3. Envie a petição de certificado à autoridade de certificação escolhida.
-   Para preencher uma petição de certificado, pode ser necessário entrar em contato com a autoridade de certificação. A autoridade checa que a informação transmitida seja correta. A petição de certificado é gerada em um BLOB usando o formato PKCS codificado em base64 (formato PEM). Esse princípio permite que copie e cole as chaves como texto e as envie via E-mail sem modificar o conteúdo da chave. Por exemplo pode salvar o BLOB que contém a petição de certificado em um documento texto (usando o comando `BLOB TO DOCUMENT`), e então abrir e copiar e colar seu conteúdo em um mail ou um formulário web a ser enviado para a autoridade de certificação.
+ Para preencher uma petição de certificado, pode ser necessário entrar em contato com a autoridade de certificação. A autoridade checa que a informação transmitida seja correta. A petição de certificado é gerada em um BLOB usando o formato PKCS codificado em base64 (formato PEM). Esse princípio permite que copie e cole as chaves como texto e as envie via E-mail sem modificar o conteúdo da chave. Por exemplo pode salvar o BLOB que contém a petição de certificado em um documento texto (usando o comando `BLOB TO DOCUMENT`), e então abrir e copiar e colar seu conteúdo em um mail ou um formulário web a ser enviado para a autoridade de certificação.
 
 4. Quando tiver o certificado, crie um arquivo texto chamado "cert.pem" e cole seu conteúdo do certificado dentro dele.
-   Pode receber um certificado de várias maneiras (geralmente por email ou formulário HTML). 4D accepts all platform-related text formats for certificates (macOS, PC, Linux, etc.). No entanto, o certificado deve estar no formato [PEM](#format), *ou seja,*, PKCS codificado em base64.
+ Pode receber um certificado de várias maneiras (geralmente por email ou formulário HTML). 4D accepts all platform-related text formats for certificates (macOS, PC, Linux, etc.). No entanto, o certificado deve estar no formato [PEM](#format), *ou seja,*, PKCS codificado em base64.
 
 > Caracteres CR final de linha não são compatíveis em si; deve usar ou CRLF ou LF.
 

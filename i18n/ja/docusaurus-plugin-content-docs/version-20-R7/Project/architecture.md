@@ -6,20 +6,20 @@ title: プロジェクトのアーキテクチャー
 4D プロジェクトは、一つのプロジェクトルートフォルダー (パッケージフォルダー) に格納された、複数のファイルやフォルダーから構成されています。 例:
 
 - MyPackage (*プロジェクトルートフォルダー*)
-  - `Components`
-  - `Data`
-    - `Logs`
+    - `Components`
+    - `Data`
+        - `Logs`
+        - `Settings`
+    - `Documentation`
+    - `Plugins`
+    - `Project`
+        - `DerivedData`
+        - `Sources`
+        - `Trash`
+    - `Resources`
     - `Settings`
-  - `Documentation`
-  - `Plugins`
-  - `Project`
-    - `DerivedData`
-    - `Sources`
-    - `Trash`
-  - `Resources`
-  - `Settings`
-  - `userPreferences.username`
-  - `WebFolder`
+    - `userPreferences.username`
+    - `WebFolder`
 
 > バイナリデータベースから変換されたプロジェクトの場合には、追加のフォルダーが存在している場合があります  (doc.4d.com にて "<a href="https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html">データベースをプロジェクトモードに変換する</a>" 参照)。 (doc.4d.com にて "[データベースをプロジェクトモードに変換する](https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html)" 参照)。
 
@@ -29,12 +29,12 @@ title: プロジェクトのアーキテクチャー
 
 - `<applicationName>.4DProject` ファイル
 - `Sources`
-  - `Classes`
-  - `DatabaseMethods`
-  - `Methods`
-  - `Forms`
-  - `TableForms`
-  - `Triggers`
+    - `Classes`
+    - `DatabaseMethods`
+    - `Methods`
+    - `Forms`
+    - `TableForms`
+    - `Triggers`
 - `DerivedData`
 - `Trash` (あれば)
 

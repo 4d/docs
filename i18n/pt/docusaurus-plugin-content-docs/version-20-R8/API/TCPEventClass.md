@@ -59,3 +59,6 @@ A propriedade `.type` contém <!-- REF #4D.TCPEvent.type.Summary -->o tipo do ev
 - `"terminate"`: Indicates that the TCPConnection is about to be released.
 
 <!-- END REF -->
+
+
+

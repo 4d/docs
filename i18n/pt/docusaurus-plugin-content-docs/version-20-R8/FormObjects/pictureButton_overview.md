@@ -31,7 +31,7 @@ Clicar no objeto altera a imagem.
 
 1. Primeiro, prepare um único gráfico onde a série de imagens esteja organizada em uma linha, uma coluna ou uma grade de linha por coluna.
 
-   ![](../assets/en/FormObjects/pictureButton_grid.png)
+  ![](../assets/en/FormObjects/pictureButton_grid.png)
 
 Você pode organizar as imagens em colunas, linhas ou em uma grade de linha por coluna (como mostrado acima). Ao organizar as imagens em uma grade, elas são numeradas da esquerda para a direita, linha por linha, começando com 0. Por exemplo, a segunda imagem da segunda linha de uma grade que consiste em duas linhas e três colunas é numerada como 4 (a bandeira do Reino Unido no exemplo acima).
 

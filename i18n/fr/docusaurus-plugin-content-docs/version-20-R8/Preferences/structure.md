@@ -23,3 +23,4 @@ Cette option permet de faire varier le niveau de détail graphique de l’édite
 ### Quand un dossier est masqué, son contenu est :
 
 Cette option permet de configurer l’apparence graphique des tables masquées dans l’éditeur de structure, lorsque vous effectuez des sélections par dossier (cf. paragraphe [Filtrage des tables par dossier](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-edit Les options possibles sont Atténué (une ombre subsiste à l’emplacement de la table) et Invisible (la table disparaît entièrement). Les options possibles sont Atténué (une ombre subsiste à l’emplacement de la table) et Invisible (la table disparaît entièrement).
+

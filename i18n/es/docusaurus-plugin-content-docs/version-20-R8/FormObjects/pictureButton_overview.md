@@ -35,7 +35,7 @@ Puede implementar un botón imagen de la siguiente manera:
 
 1. En primer lugar, prepare un único gráfico en el que las series de imágenes estén dispuestas en líneas, en columnas o en las dos.
 
-   ![](../assets/en/FormObjects/pictureButton_grid.png)
+  ![](../assets/en/FormObjects/pictureButton_grid.png)
 
 Puede organizar las imágenes en columnas, líneas o en una cuadrícula (como se muestra arriba). Cuando se organizan las imágenes en forma de cuadrícula, se numeran de izquierda a derecha, línea por línea, empezando por 0. Por ejemplo, la segunda imagen de la segunda línea de una cuadrícula que consta de dos líneas y tres columnas, tiene el número 4 (la bandera del Reino Unido en el ejemplo anterior).
 

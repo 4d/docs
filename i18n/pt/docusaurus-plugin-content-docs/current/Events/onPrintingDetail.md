@@ -14,3 +14,4 @@ El evento `On Printing Detail` sólo puede utilizarse en el contexto de un **for
 El comando `Print form` genera sólo un evento `On Printing Detail` para el método formulario.
 
 > Este evento não pode ser selecionado para formulários projeto, está disponível apenas com **formulários tabela**.
+

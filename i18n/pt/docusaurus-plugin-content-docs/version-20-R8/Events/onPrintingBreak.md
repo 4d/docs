@@ -14,3 +14,6 @@ O evento `On Printing Break` só pode ser usado no contexto de um **formulário 
 Este evento geralmente segue uma chamada para o comando `Subtotal`.
 
 > Este evento não pode ser selecionado para formulários projeto, está disponível apenas com **formulários tabela**.
+
+
+

@@ -52,3 +52,4 @@ Largeur maximale et minimale (en pixels) d'une fenêtre de formulaire redimensio
 | -------------- | --------------- | ------------------ |
 | windowMinWidth | number          | valeur entier long |
 | windowMaxWidth | number          | valeur entier long |
+

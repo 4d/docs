@@ -160,7 +160,7 @@ Para la configuración global de los atributos del método:
 1. En la página [Métodos](https://doc.4d.com/4Dv19R5/4D/19-R5/Methods-Page.300-5851337.en.html) del Explorador 4D, despliegue el menú de opciones y elija el comando **Modificar atributos globalmente...**. Aparece la caja de diálogo **Atributos de los métodos**.
 
 2. En el área "Nombre del método coincidente:", introduzca una cadena que le permita designar los métodos que desea modificar globalmente.
-   La cadena de caracteres se utiliza como criterio de búsqueda para los nombres de los métodos.
+  La cadena de caracteres se utiliza como criterio de búsqueda para los nombres de los métodos.
 
 Utilice el caracter comodín @ para ayudar a definir los grupos de métodos:
 
@@ -179,3 +179,4 @@ Utilice el caracter comodín @ para ayudar a definir los grupos de métodos:
 **Nota:** si el atributo "Publicado en WSDL" se establece como True, sólo se aplicará a los métodos proyecto que ya contengan el atributo "Ofrecido como servicio web".
 
 4. Haga clic en **Aplicar**. La modificación se aplica instantáneamente a todos los métodos proyecto designados por la cadena de caracteres introducida.
+

@@ -44,13 +44,13 @@ Puede averiguar si su aplicación utiliza un archivo de historial en cualquier m
 Para crear un archivo de historial:
 
 1. En la página **Copia de seguridad/Configuración** de las Propiedades de estructura, marque la opción **Utilizar el archivo de historial**.
-   El programa muestra una caja de diálogo estándar de abrir/nuevo archivo. Por defecto, el archivo de historial se llama *data.journal*.
+  El programa muestra una caja de diálogo estándar de abrir/nuevo archivo. Por defecto, el archivo de historial se llama *data.journal*.
 
 2. Mantenga el nombre por defecto o cambie el nombre, y luego seleccione la ubicación del archivo.
-   Si tiene al menos dos discos duros, se recomienda colocar el archivo de historial en un disco distinto al que contiene el proyecto de aplicación. Si se pierde el disco duro de la aplicación, aún puede recuperar su archivo de historial.
+  Si tiene al menos dos discos duros, se recomienda colocar el archivo de historial en un disco distinto al que contiene el proyecto de aplicación. Si se pierde el disco duro de la aplicación, aún puede recuperar su archivo de historial.
 
 3. Presione **Guardar**.
-   El disco y el nombre del archivo de historial abierto se muestran ahora en el área **Utilizar historial** de la caja de diálogo. Puede hacer clic en esta área para que aparezca un menú emergente con la ruta del historial en el disco.
+  El disco y el nombre del archivo de historial abierto se muestran ahora en el área **Utilizar historial** de la caja de diálogo. Puede hacer clic en esta área para que aparezca un menú emergente con la ruta del historial en el disco.
 
 4. Valide la caja de diálogo de las Propiedades.
 

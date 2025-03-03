@@ -258,15 +258,15 @@ Exibe uma caixa de alerta com a palavra "Adeus".
 Aqui está uma explicação de cada linha do exemplo:
 
 - $MyVar:="Hello"
-  \--> This line puts the string "Hello" into the variable $MyVar.
+ \--> This line puts the string "Hello" into the variable $MyVar.
 - $PointerOne:=-$MyVar
-  \-- $PointerOne agora contém um ponteiro para $MyVar.
+ \-- $PointerOne agora contém um ponteiro para $MyVar.
 - $PointerTwo:=-$PointerOne
-  \-- $PointerTwo (uma nova variável) contém um ponteiro para $PointerOne, que por sua vez aponta para $MyVar.
+ \-- $PointerTwo (uma nova variável) contém um ponteiro para $PointerOne, que por sua vez aponta para $MyVar.
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Assim, neste caso, $MyVar é atribuído o "Adeus".
+ \--> $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Assim, neste caso, $MyVar é atribuído o "Adeus".
 - ALERT (($PointerTwo->)->)
-  \--> A mesma coisa: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Por conseguinte ($PointerTwo-&#062;)-&#062; faz referência ao conteúdo de $MyVar.
+ \--> A mesma coisa: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Por conseguinte ($PointerTwo-&#062;)-&#062; faz referência ao conteúdo de $MyVar.
 
 A seguinte linha coloca "Hello" em $MyVar:
 
@@ -281,3 +281,5 @@ $NewVar:=($PointerTwo->)->
 ```
 
 **Importante:** la desreferenciación múltiple requiere paréntesis.
+
+

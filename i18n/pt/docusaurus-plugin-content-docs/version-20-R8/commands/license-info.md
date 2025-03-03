@@ -141,3 +141,5 @@ You want to get information on your current 4D Server license:
 | -------------- | --------------------------- |
 | Command number | 1489                        |
 | Thread safe    | &check; |
+
+

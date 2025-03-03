@@ -88,7 +88,7 @@ $MyVar:="Goodbye"
 
 :::warning Null Pointers
 
-null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。 例: 例: 例: 例: 例: 例:
+null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。 例: 例: 例: 例: 例: 例: 例:
 
 ```4d
 var $p : Pointer // non initialized pointer (Nil value)
@@ -201,15 +201,10 @@ SORT ARRAY($ArrPtr->;>) // 配列の並べ替え
 ポインターは引数としてメソッドに渡すことができます。 メソッド内で、ポインターの参照先の値を変更することができます。 たとえば、以下のメソッド `takeTwo` は、2つのポインターを引数として受け取ります。 そして、最初の引数の参照先を大文字に変換し、2つめの引数の参照先を小文字に変換します。 当該プロジェクトメソッドのコードです:
 
 ```4d
-  //takeTwo project method
-  //$changeUp – Pointer to a string field or variable. これを大文字に変換します。
-  これを大文字に変換します。
-  //$changeLow – Pointer to a string field or variable. これを小文字に変換します。
- これを小文字に変換します。
- これを小文字に変換します。
- これを小文字に変換します。
- これを小文字に変換します。
- #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
+  //takeTwo プロジェクトメソッド
+  //$changeUp – 文字列フィールドまたは変数へのポインター。 これを大文字に変換します。
+    //$changeLow – Pointer to a string field or variable. これを小文字に変換します。
+  #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)
 ```

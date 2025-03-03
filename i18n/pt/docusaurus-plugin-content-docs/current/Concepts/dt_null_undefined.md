@@ -36,14 +36,14 @@ Normalmente, ao tentar ler ou atribuir expressões indefinidas, 4D gerará erros
 ```
 
 - A atribuição de um valor indefinido a um objecto existente reinicia ou limpa o seu valor, dependendo do seu tipo:
-  - Objecto, colecção, ponteiro: Null
-  - Imagem: Imagem vazia
-  - Booleano: Falso
-  - String: ""
-  - Número: 0
-  - Data: !00-00-00-00! se a configuração "Usar tipo de data em vez de formato de data ISO nos objetos" estiver habilitada, caso contrário ""
-  - Hora: 0 (número de ms)
-  - Indefinido, Null: sem mudança
+ - Objecto, colecção, ponteiro: Null
+ - Imagem: Imagem vazia
+ - Booleano: Falso
+ - String: ""
+ - Número: 0
+ - Data: !00-00-00-00! se a configuração "Usar tipo de data em vez de formato de data ISO nos objetos" estiver habilitada, caso contrário ""
+ - Hora: 0 (número de ms)
+ - Indefinido, Null: sem mudança
 
 ```4d
      C_OBJECT($o)
@@ -183,3 +183,4 @@ $result:=($vObj.undefined>$vObj.null)  //Error
 $result:=($vVar < 42) //False
 
 ```
+

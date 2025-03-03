@@ -327,11 +327,11 @@ En macOS y Windows, una casilla de selección con el estilo de botón "Divulgaci
 
 - *Windows*
 
-  ![](../assets/en/FormObjects/checkbox_disclosure.png)
+ ![](../assets/en/FormObjects/checkbox_disclosure.png)
 
 - *macOS*
 
-  ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
+ ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 :::info
 

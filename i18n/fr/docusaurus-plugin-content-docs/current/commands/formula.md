@@ -146,3 +146,5 @@ Appeler une formule à l'aide de la notation objet :
 | ------------------ | --------------------------------------------------------------- |
 | Numéro de commande | 1597                                                            |
 | Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+
+

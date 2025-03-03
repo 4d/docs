@@ -28,3 +28,4 @@ Se soportan varios tipos de referencias de métodos:
 | Nombre | Tipos de datos | Valores posibles                                                                  |
 | ------ | -------------- | --------------------------------------------------------------------------------- |
 | method | text           | Ruta estándar o personalizada del método formulario, o nombre del método proyecto |
+

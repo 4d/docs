@@ -54,3 +54,5 @@ USE ENTITY SELECTION($entitySel) //La sélection courante de la table Employee e
 | Thread safe               | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
 | Changes current record    |                                                                 |
 | Changes current selection |                                                                 |
+
+

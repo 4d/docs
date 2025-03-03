@@ -312,9 +312,9 @@ Una nueva entity selection **hereda** de la naturaleza de la entity selection or
 
 - la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - la nueva entity selection se basa en una relación:
-  - [entity.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado uno a muchos y la entidad pertenece a una entity selection (misma naturaleza que [.getSelection()](API/EntityClass.md#getselection)),
-  - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (por ejemplo, "employees.employer") cuando *attributeName* es un atributo relacionado (misma naturaleza que la entity selection),
-  - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
+ - [entity.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado uno a muchos y la entidad pertenece a una entity selection (misma naturaleza que [.getSelection()](API/EntityClass.md#getselection)),
+ - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (por ejemplo, "employees.employer") cuando *attributeName* es un atributo relacionado (misma naturaleza que la entity selection),
+ - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
 
 Ejemplos:
 
@@ -553,9 +553,9 @@ Este mecanismo automático se basa en el concepto de "bloqueo optimista", especi
 - Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" *a priori* de las entidades.
 - Cada entidad tiene un sello de bloqueo interno que se incrementa cada vez que se guarda.
 - Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
-  - Cuando los valores coinciden, se guarda la entidad y se incrementa el valor del marcador interno.
+ - Cuando los valores coinciden, se guarda la entidad y se incrementa el valor del marcador interno.
 
-  - Cuando los valores no coinciden, significa que otro usuario ha modificado esta entidad mientras tanto. No se guarda y se devuelve un error.
+ - Cuando los valores no coinciden, significa que otro usuario ha modificado esta entidad mientras tanto. No se guarda y se devuelve un error.
 
 El siguiente diagrama ilustra el bloqueo optimista:
 

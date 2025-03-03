@@ -20,20 +20,20 @@ ORDA client/server architectures that support the optimization are:
 O contexto de otimização é baseado nas seguintes implementações:
 
 - Quando um cliente solicita uma seleção de entidade do servidor, 4D "aprende" automaticamente quais atributos da seleção de entidade são realmente usados no lado do cliente durante a execução do código e constrói um "contexto de otimização" correspondente. Esse contexto é anexado à seleção da entidade e armazena os atributos usados. Será atualizado dinamicamente se outros atributos forem usados depois. Os seguintes métodos e funções accionam a fase de aprendizagem:
-  - [`Create entity selection`](../commands/create-entity-selection.md)
-  - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
-  - [`dataClass.all()`](../API/DataClassClass.md#all)
-  - [`dataClass.get()`](../API/DataClassClass.md#get)
-  - [`dataClass.query()`](../API/DataClassClass.md#query)
-  - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
+ - [`Create entity selection`](../commands/create-entity-selection.md)
+ - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
+ - [`dataClass.all()`](../API/DataClassClass.md#all)
+ - [`dataClass.get()`](../API/DataClassClass.md#get)
+ - [`dataClass.query()`](../API/DataClassClass.md#query)
+ - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
 
 - As solicitações subsequentes enviadas ao servidor sobre a mesma seleção de entidade reutilizam automaticamente o contexto de otimização e obtêm apenas os atributos necessários do servidor, o que acelera o processamento. For example, in an [entity selection-based list box](#entity-selection-based-list-box), the learning phase takes place during the display of the first row. a visualização das linhas seguintes é optimizada. As funções a seguir associam automaticamente o contexto de otimização da seleção da entidade de origem à seleção da entidade retornada:
-  - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
-  - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
-  - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
-  - [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderBy)
-  - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
-  - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
+ - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
+ - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
+ - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
+ - [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderBy)
+ - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
+ - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 
 - An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Reusing the context property](#reusing-the-context-property) below).
 

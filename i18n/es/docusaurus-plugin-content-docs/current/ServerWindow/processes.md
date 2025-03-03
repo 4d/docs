@@ -35,9 +35,9 @@ La actividad del proceso es el porcentaje de tiempo que 4D Server ha dedicado a 
 
 - Tipo de proceso (ver abajo),
 - Sesión/Información:
-  - Proceso 4D - en blanco,
-  - Proceso usuario - Nombre del usuario 4D,
-  - Proceso web - ruta URL,
+    - Proceso 4D - en blanco,
+    - Proceso usuario - Nombre del usuario 4D,
+    - Proceso web - ruta URL,
 - Nombre del proceso,
 - Número del proceso (devuelto por el comando [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) por ejemplo). El número de proceso es el número asignado en el servidor. En el caso de un proceso global, este número puede ser diferente del asignado en la máquina cliente.
 - Estado actual del proceso,
@@ -94,3 +94,4 @@ La página también tiene cinco botones de control que actúan sobre el proceso 
 > También puede depurar un proceso directamente sin mostrar la caja de diálogo de confirmación manteniendo presionada la tecla **Alt** mientras presiona este botón.
 
 - **Ver usuarios**: permite visualizar, en la [página Usuarios](users.md), todos los procesos del usuario o usuarios seleccionados. Este botón se activa cuando se selecciona al menos un proceso de usuario.
+

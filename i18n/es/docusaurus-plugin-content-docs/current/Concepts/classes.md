@@ -80,7 +80,7 @@ Para crear una nueva clase, puede:
 
 - seleccione la categoría **Clases** y haga clic en el botón ![](../assets/en/Users/PlussNew.png).
 - seleccione **Nueva clase...** en el menú de acciones de la parte inferior de la ventana del Explorador, o en el menú contextual del grupo Clases.
-  ![](../assets/en/Concepts/newClass.png)
+ ![](../assets/en/Concepts/newClass.png)
 - seleccione **Nueva > Clase...** en el menú contextual de la página de inicio del Explorador.
 
 #### Soporte del código de clase
@@ -88,10 +88,10 @@ Para crear una nueva clase, puede:
 En las diferentes ventanas 4D (editor de código, compilador, depurador, explorador de ejecución), el código de la clase se maneja básicamente como un método proyecto con algunas especificidades:
 
 - En el editor de código:
-  - una clase no puede ser ejecutada
-  - una función de clase es un bloque de código
-  - **Ir a la definición** en un objeto miembro busca las declaraciones de función de clase; por ejemplo, "$o.f()" encontrará "Function f".
-  - **Buscar referencias** en la declaración de función de clase busca la función utilizada como miembro de objeto; por ejemplo, "Function f" encontrará "$o.f()".
+ - una clase no puede ser ejecutada
+ - una función de clase es un bloque de código
+ - **Ir a la definición** en un objeto miembro busca las declaraciones de función de clase; por ejemplo, "$o.f()" encontrará "Function f".
+ - **Buscar referencias** en la declaración de función de clase busca la función utilizada como miembro de objeto; por ejemplo, "Function f" encontrará "$o.f()".
 - En el explorador de Ejecución y Depurador, las funciones clase se muestran con el formato `<ClassName>` constructor o `<ClassName>.<FunctionName>`.
 
 ## Class stores
@@ -238,8 +238,8 @@ En el código de la aplicación, las funciones de clases se llaman como los mét
 
 - uso del operador `()`. Por ejemplo, `myObject.methodName("hello")`
 - utilización de un método miembro de la clase "4D.Function":
-  - [`apply()`](API/FunctionClass.md#apply)
-  - [`call()`](API/FunctionClass.md#call)
+ - [`apply()`](API/FunctionClass.md#apply)
+ - [`call()`](API/FunctionClass.md#call)
 
 :::warning Aviso de seguridad del hilo
 

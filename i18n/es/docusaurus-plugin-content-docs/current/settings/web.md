@@ -167,13 +167,13 @@ El menú de formato de registro ofrece las siguientes opciones:
 - **Sin archivo de registro**: cuando se selecciona esta opción, 4D no generará un archivo de historial de peticiones.
 
 - **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. Con el formato CLF, cada línea del archivo representa una solicitud, como:\
-  host rfc931 user [DD/MMM/AAAA:HH:MM:SS] "request" state length\
-  Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF (character 13, character 10).
+    host rfc931 user [DD/MMM/AAAA:HH:MM:SS] "request" state length\
+    Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF (character 13, character 10).
 
-  - host: dirección IP del cliente (por ejemplo: "192.100.100.10)
-  - rfc931: información no generada por 4D, siempre es - (un signo menos)
-  - usuario: nombre del usuario como está autenticado, o - (un signo menos). Si el nombre de usuario contiene espacios, se remplazan por _ (un guión bajo).
-  - DD: día, MMM: una abreviatura de 3 letras para el nombre del mes (Jan, Feb,...), YYYY: año, HH: hora, MM: minutos, SS: segundos
+    - host: dirección IP del cliente (por ejemplo: "192.100.100.10)
+    - rfc931: información no generada por 4D, siempre es - (un signo menos)
+    - usuario: nombre del usuario como está autenticado, o - (un signo menos). Si el nombre de usuario contiene espacios, se remplazan por _ (un guión bajo).
+    - DD: día, MMM: una abreviatura de 3 letras para el nombre del mes (Jan, Feb,...), YYYY: año, HH: hora, MM: minutos, SS: segundos
 
 > La fecha y hora son locales al servidor.
 
@@ -195,8 +195,8 @@ El menú de formato de registro ofrece las siguientes opciones:
 
 - **DLF (Combined Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato DLF. El formato DLF es similar al formato CLF y utiliza exactamente la misma estructura. Simplemente añade dos campos HTTP adicionales al final de cada petición: Referer y User-agent.
 
-  - Referer: contiene la URL de la página que apunta al documento solicitado.
-  - User-agent: contiene el nombre y la versión del navegador o del software cliente en el origen de la petición.
+    - Referer: contiene la URL de la página que apunta al documento solicitado.
+    - User-agent: contiene el nombre y la versión del navegador o del software cliente en el origen de la petición.
 
 > El formato DLF no se puede personalizar.
 
@@ -244,7 +244,7 @@ Configure los parámetros de copia de seguridad automática para el registro de 
 - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
 - **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24 .
 
-  - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
+    - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
 - **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduzca 1 si desea realizar una copia de seguridad diaria. Cuando esta opción está marcada, debe indicar la hora a la que debe comenzar la copia de seguridad.
 - **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Introduzca 1 si desea realizar una copia de seguridad semanal. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
 - **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Introduzca 1 si desea realizar una copia de seguridad mensual. Enter 1 if you want to perform a monthly backup.

@@ -14,3 +14,4 @@ title: On Printing Detail
 `Print form` コマンドは `On Printing Detail` イベントを 1つだけ、フォームメソッドに対して生成します。
 
 > このイベントは、プロジェクトフォームでは選択できず、**テーブルフォーム** でのみ利用できます。
+

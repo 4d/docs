@@ -624,7 +624,8 @@ Em alguns casos, outras funções internas otimizadas podem ser invocadas. As li
 Duas opções permitem que você defina como funcionam as conexões persistentes:
 
 - **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
-  The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
+   The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
 - **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Once this period is over, the server closes the connection.<p>
-  If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. Esta operação não é visível para o usuário.</p>
+   If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. Esta operação não é visível para o usuário.</p>
+

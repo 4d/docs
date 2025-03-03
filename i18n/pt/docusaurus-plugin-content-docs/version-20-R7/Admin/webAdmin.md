@@ -110,7 +110,7 @@ A configuração de uma chave de acesso é obrigatória para desbloquear o acess
 Uma chave de acesso é parecida a uma senha, mas não está associada com um login.
 
 - Para definir uma nova chave de acesso: clique no botão **Definir**, introduza a string da chave de acesso na caixa de diálogo e clique em **OK**. La etiqueta del
-  botón se convierte en **Modificar**.
+    botón se convierte en **Modificar**.
 - Para modificar a chave de acesso: clique no botão **Modificar**, introduza a nova string da chave de acesso na caixa de diálogo e clique em **OK**.
 - Para eliminar a chave de acesso: clique no botão**Modificar**, deixe vazia a área daa chave de acesso e clique em **OK**.
 
@@ -152,3 +152,5 @@ Exemplo:
 - Quando uma página de gerenciamento é acessada diretamentee de um item menu 4D ou 4D Servidor (tal como **Records > Data Explorer** ou **Window > Data Explorer** (4D Server)), o acesso é garantido sem autenticação, e o usuário é autenticado automaticamente
 
 Quando o acesso é concedido, uma  [sessão web](WebServer/sessions.md) com o privilégio "WebAdmin" é criado na aplicação 4D. Enquanto a sessão atual tiver o privilégio "WebAdmin", o componente `WebAdmin` entrega páginas  solicitadas.
+
+

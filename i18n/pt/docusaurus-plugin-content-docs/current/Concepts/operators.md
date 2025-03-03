@@ -356,3 +356,6 @@ Com relação aos valores que representam coleções, objetos ou cadeias de cara
 ```4d
 $phone:=$emp.phone || "n/a"
 ```
+
+
+

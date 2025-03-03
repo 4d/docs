@@ -80,7 +80,7 @@ Para criar uma nova classe, pode:
 
 - selecione a categoria **Classes** e clique no botão ![](../assets/en/Users/PlussNew.png).
 - selecione **Nova Classe...** no menu de ação na parte inferior da janela do Explorer, ou no menu contextual do grupo Classes.
-  ![](../assets/en/Concepts/newClass.png)
+ ![](../assets/en/Concepts/newClass.png)
 - selecione **Novo > Classe...** a partir do menu contextual da página inicial do Explorador.
 
 #### Suporte de código de classe
@@ -88,10 +88,10 @@ Para criar uma nova classe, pode:
 Nas várias janelas 4D (editor de código, compilador, depurador, explorador de tempo de execução), o código de classe é basicamente tratado como um método de projecto com algumas especificidades:
 
 - No editor de código:
-  - uma aula não pode ser executada
-  - uma função de classe é um bloco de código
-  - **Ir para a definição** em um membro do objeto procura por declarações da classe Função; por exemplo, "$o.f()" encontrará "Função f".
-  - **Procurar referências** na declaração de função da classe procura a função utilizada como membro do objeto; por exemplo, "Função f" irá encontrar "$o.f()".
+ - uma aula não pode ser executada
+ - uma função de classe é um bloco de código
+ - **Ir para a definição** em um membro do objeto procura por declarações da classe Função; por exemplo, "$o.f()" encontrará "Função f".
+ - **Procurar referências** na declaração de função da classe procura a função utilizada como membro do objeto; por exemplo, "Função f" irá encontrar "$o.f()".
 - No explorador e Depurador de Runtime, as funções de classe são exibidas com o formato `<ClassName>` construtor ou `<ClassName>.<FunctionName>`.
 
 ## Lojas de classe
@@ -238,8 +238,8 @@ No código da aplicação, as funções de classe são chamadas como métodos me
 
 - utilização do operador `()`. Por exemplo, `myObject.methodName("olá")`
 - use of a "4D. Function" class member method:
-  - [`apply()`](API/FunctionClass.md#apply)
-  - [`call()`](API/FunctionClass.md#call)
+ - [`apply()`](API/FunctionClass.md#apply)
+ - [`call()`](API/FunctionClass.md#call)
 
 :::warning Aviso de segurança de thread
 

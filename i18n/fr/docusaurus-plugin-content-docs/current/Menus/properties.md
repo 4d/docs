@@ -55,7 +55,7 @@ Pour associer une méthode projet et/ou une action standard à une commande de m
 
 - **Nom de la méthode** : sélectionnez une méthode projet existante dans la combo box. If the project method does not exist, enter its name in the "Method Name" combo box then click on the [...] bouton. 4D affiche une boîte de dialogue de création de méthode de projet qui permet d'accéder à l'éditeur de code.
 - **Action standard associée** : Choisissez ou saisissez le nom de l’action que vous souhaitez associer dans la combo box "Action standard associée". Vous pouvez saisir toute action prise en charge et (optionnellement) tout paramètre dans la zone. Pour la liste complète des actions standard, veuillez vous reporter à la section **Actions standard** dans le *Mode Développement*.
-  **Note macOS :** Sous macOS, les commandes de menus créés associées à l'action *Quitter* sont automatiquement placées dans le menu de l’application, conformément aux normes d’interface de cette plate-forme.
+    **Note macOS :** Sous macOS, les commandes de menus créés associées à l'action *Quitter* sont automatiquement placées dans le menu de l’application, conformément aux normes d’interface de cette plate-forme.
 
 A l'aide du langage 4D, vous pouvez associer une méthode projet via la commande `SET MENU ITEM METHOD` et une action standard via la commande `SET MENU ITEM PROPERTY`.
 
@@ -102,16 +102,16 @@ Vous pouvez affecter des raccourcis clavier à toute commande de menu. Lorsqu’
 Vous pouvez également ajouter les touches **Majuscule** ainsi que **Alt** (Windows) ou **Option** (macOS) au raccourci clavier associé à une commande. Cette possibilité multiplie le nombre de raccourcis clavier utilisables dans les barres de menus. Les raccourcis clavier définis peuvent donc être de différents types :
 
 - Sous Windows :
-  - Ctrl+lettre
-  - Ctrl+Maj+lettre
-  - Ctrl+Alt+lettre
-  - Ctrl+Maj+Alt+lettre
+    - Ctrl+lettre
+    - Ctrl+Maj+lettre
+    - Ctrl+Alt+lettre
+    - Ctrl+Maj+Alt+lettre
 
 - Sous macOS :
-  - Commande+lettre
-  - Commande+Maj+lettre
-  - Commande+Option+lettre
-  - Commande+Maj+Option+lettre
+    - Commande+lettre
+    - Commande+Maj+lettre
+    - Commande+Option+lettre
+    - Commande+Maj+Option+lettre
 
 > Lorsque vous utilisez des actions standard, il est conseillé de conserver les raccourcis clavier qui leur sont associés par défaut.
 

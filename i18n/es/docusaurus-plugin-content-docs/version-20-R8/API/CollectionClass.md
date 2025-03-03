@@ -787,7 +787,7 @@ El contenido de la colección devuelta depende del parámetro *targetPath*:
 
 - Si se omite el parámetro *targetPath*, `.extract()` llena la nueva colección con los valores *propertyPath* de la colección original.
 
-  Por defecto, los elementos cuya *propertyPath* es null o indefinida se ignoran en la colección resultante. Puede pasar la constante `ck keep null` en el parámetro *option* para incluir estos valores como elementos null en la colección devuelta.
+ Por defecto, los elementos cuya *propertyPath* es null o indefinida se ignoran en la colección resultante. Puede pasar la constante `ck keep null` en el parámetro *option* para incluir estos valores como elementos null en la colección devuelta.
 
 - Si se pasan uno o más parámetros *targetPath* (correspondientes a uno o más parámetros *propertyPath*), `.extract()` llena la nueva colección con las propiedades *propertyPath* y cada elemento de la nueva colección es un objeto con propiedades *targetPath* llenadas con las propiedades *propertyPath* coincidentes. Se conservan los valores null (el parámetro *opción* se ignora con esta sintaxis).
 
@@ -1017,7 +1017,7 @@ Por defecto, `.find()` busca en toda la colección. Opcionalmente, se puede pasa
 
 - Si *startFrom* >= la longitud de la colección, se devuelve -1, lo que significa que la colección no se busca.
 - Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
-  **Nota**: incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
+ **Nota**: incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
 - Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 #### Ejemplo 1
@@ -1105,7 +1105,7 @@ Por defecto, `.findIndex()` busca en toda la colección. Opcionalmente, se puede
 
 - Si *startFrom* >= la longitud de la colección, se devuelve -1, lo que significa que la colección no se busca.
 - Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
-  **Nota**: incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
+ **Nota**: incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
 - Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 #### Ejemplo
@@ -1421,7 +1421,7 @@ Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final d
 
 - Si *startFrom* >= la longitud de la colección, se devuelve -1, lo que significa que la colección no se busca.
 - Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
-  **Nota**: incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
+ **Nota**: incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
 - Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 #### Ejemplo
@@ -1669,7 +1669,7 @@ Ejemplo 2
 
 - Si *startFrom* >= la longitud de la colección menos uno (coll.length-1), se busca en toda la colección (por defecto).
 - Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección). Si el valor calculado es negativo, se devuelve -1 (no se busca en la colección).
-  **Nota:** incluso si *startFrom* es negativo, la colección se sigue buscando de derecha a izquierda.
+ **Nota:** incluso si *startFrom* es negativo, la colección se sigue buscando de derecha a izquierda.
 - Descripción
 
 #### Ejemplo
@@ -1924,8 +1924,8 @@ Si desea ordenar las colecciones en algún otro orden que no sea ascendente, deb
 La fórmula recibe los siguientes parámetros:
 
 - $1 (objeto), donde:
-  - *$1.value* (todo tipo): valor del primer elemento a comparar
-  - *$1.value2* (todo tipo): valor del segundo elemento a comparar
+ - *$1.value* (todo tipo): valor del primer elemento a comparar
+ - *$1.value2* (todo tipo): valor del segundo elemento a comparar
 - $2...$N (cualquier tipo): parámetros adicionales
 
 **Ordenación sincronizada multinivel**
@@ -2032,7 +2032,7 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 #### Descripción
 
-Descripción Sin embargo, ten en cuenta que las fórmulas no están soportadas por la función `collection.query()`, ni en el parámetro *queryString* ni como parámetro objeto *formula*.
+La función `.orderBy()` <!-- REF #collection.orderBy().Summary -->devuelve una nueva colección que contiene todos los elementos de la colección en el orden especificado<!-- END REF -->.
 
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
@@ -2058,12 +2058,12 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 
 - *ascOrDesc* : Integer. Se pasa una de las siguientes constantes del tema **Objects and collections**:
 
-  | Constante     | Tipo    | Valor | Comentario                                                                    |
-  | ------------- | ------- | ----- | ----------------------------------------------------------------------------- |
-  | ck ascending  | Integer | 0     | Los elementos se ordenan de forma ascendente (por defecto) |
-  | ck descending | Integer | 1     | Los elementos se ordenan de forma descendente                                 |
+ | Constante     | Tipo    | Valor | Comentario                                                                    |
+ | ------------- | ------- | ----- | ----------------------------------------------------------------------------- |
+ | ck ascending  | Integer | 0     | Los elementos se ordenan de forma ascendente (por defecto) |
+ | ck descending | Integer | 1     | Los elementos se ordenan de forma descendente                                 |
 
-  Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados).
+ Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados).
 
 Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 
@@ -2190,9 +2190,9 @@ En la retrolamada, pase un código que compare dos valores y devuelva **true** s
 La retrollamada recibe los siguientes parámetros:
 
 - $1 (objeto), donde:
-  - *$1.value* (todo tipo): valor del primer elemento a comparar
-  - *$1.value2* (todo tipo): valor del segundo elemento a comparar
-  - $2...$N (cualquier tipo): parámetros adicionales
+ - *$1.value* (todo tipo): valor del primer elemento a comparar
+ - *$1.value2* (todo tipo): valor del segundo elemento a comparar
+ - $2...$N (cualquier tipo): parámetros adicionales
 
 Si utilizó un método, debe definir el siguiente parámetro:
 
@@ -2314,7 +2314,7 @@ Lanzamiento
 
 #### Descripción
 
-Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
+La función `.push()` <!-- REF #collection.push().Summary -->añade uno o más *elemento*(s) al final de la instancia de la colección y devuelve la colección editada<!-- END REF -->.
 
 > Esta función modifica la colección original.
 
@@ -2405,13 +2405,13 @@ donde:
 | Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |
 
 - **valor**: valor a comparar con el valor actual de la propiedad de cada elemento de la colección. Puede ser cualquier valor de expresión constante que coincida con la propiedad del tipo de datos del elemento o un [**marcador de posición**](#using-placeholders).
-  For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
-  - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
-  - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
-  - Valores constantes de **tipo numérico**: los decimales se separan con un '.' (punto).
-  - Constantes de tipo **date**: formato "YYYY-MM-DD"
-  - Constantes **null**: utilizando la palabra clave "null" se encontrarán las propiedades **null** y **undefined**.
-  - en el caso de una búsqueda con un comparador IN, *value* debe ser una colección, o los valores que coincidan con el tipo de la ruta del atributo entre \[ ] separados por comas (para las cadenas, los caracteres `"` deben escaparse con `\`).
+ For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
+ - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
+ - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
+ - Valores constantes de **tipo numérico**: los decimales se separan con un '.' (punto).
+ - Constantes de tipo **date**: formato "YYYY-MM-DD"
+ - Constantes **null**: utilizando la palabra clave "null" se encontrarán las propiedades **null** y **undefined**.
+ - en el caso de una búsqueda con un comparador IN, *value* debe ser una colección, o los valores que coincidan con el tipo de la ruta del atributo entre \[ ] separados por comas (para las cadenas, los caracteres `"` deben escaparse con `\`).
 
 - **logicalOperator**: utilizado para unir condiciones múltiples en la búsqueda (opcional). Puede utilizar uno de los siguientes operadores lógicos (se puede utilizar el nombre o el símbolo):
 
@@ -2559,10 +2559,10 @@ $col2:=$col.query("c = :v"; {parameters: {v: $c3}})
 
 En el parámetro *querySettings*, puede pasar un objeto que contenga marcadores de posición de consulta como objetos. Se soportan las siguientes propiedades:
 
-| Propiedad  | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parameters | Object | **Marcadores de posición con nombre para los valores** utilizados en *queryString*. Los valores se expresan como pares propiedad / valor, donde propiedad es el nombre del marcador de posición insertado para un valor en *queryString* o formula (":placeholder") y valor es el valor a comparar. Puede combinar marcadores de posición indexados (valores pasados directamente en parámetros de valor) y valores de marcadores de posición con nombre en la misma búsqueda.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| attributes | Object | **Marcadores de posición con nombre para rutas de atributos** utilizados en la *queryString*. Los atributos se expresan como pares propiedad / valor, donde propiedad es el nombre del marcador de posición insertado para una ruta de atributo en *queryString* (":placeholder"), y valor puede ser una cadena o una colección de cadenas. Cada valor es una ruta que puede designar una propiedad en un objeto de la colección<table><tr><th>Tipo de objeto</th><th>Descripción</th></tr><tr><td>Cadena</td><td>Ruta de acceso del atributo expresado utilizando la notación de punto, por ejemplo, "name" o "user.address.zipCode"</td></tr><tr><td>Colección de cadenas</td><td>Cada cadena de la colección representa un nivel de attributePath, por ejemplo, `["name"]` o `["user","address","zipCode"]`. El uso de una colección permite realizar consultas sobre atributos con nombres que no se ajustan a la notación de puntos, por ejemplo, \["4Dv17.1", "en/fr"]</td></tr></table>Puede mezclar marcadores de posición indexados (valores pasados directamente en parámetros *value*) y valores de marcador de posición con nombre en la misma consulta. |
+| Propiedad  | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters | Object | **Marcadores de posición con nombre para los valores** utilizados en *queryString*. Los valores se expresan como pares propiedad / valor, donde propiedad es el nombre del marcador de posición insertado para un valor en *queryString* o formula (":placeholder") y valor es el valor a comparar. Puede combinar marcadores de posición indexados (valores pasados directamente en parámetros de valor) y valores de marcadores de posición con nombre en la misma búsqueda.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| attributes | Object | **Marcadores de posición con nombre para rutas de atributos** utilizados en la *queryString*. Los atributos se expresan como pares propiedad / valor, donde propiedad es el nombre del marcador de posición insertado para una ruta de atributo en *queryString* (":placeholder"), y valor puede ser una cadena o una colección de cadenas. Cada valor es una ruta que puede designar una propiedad en un objeto de la colección<table><tr><th>Tipo de objeto</th><th>Descripción</th></tr><tr><td>Cadena</td><td>Ruta de acceso del atributo expresado utilizando la notación de punto, por ejemplo, "name" o "user.address.zipCode"</td></tr><tr><td>Colección de cadenas</td><td>Cada cadena de la colección representa un nivel de attributePath, por ejemplo, `\["name"]` o `\["user","address","zipCode"]`. El uso de una colección permite realizar consultas sobre atributos con nombres que no se ajustan a la notación de puntos, por ejemplo, \["4Dv17.1", "en/fr"]</td></tr></table>Puede mezclar marcadores de posición indexados (valores pasados directamente en parámetros *value*) y valores de marcador de posición con nombre en la misma consulta. |
 
 > El uso de este parámetro es obligatorio si desea consultar en una colección [utilizando una **referencia de colección** o una **referencia de un objeto**](#referencia-de-objeto-o-de-colección-como-valor).
 
@@ -3174,8 +3174,8 @@ Si quiere ordenar los elementos de la colección en algún otro orden o ordenar 
 La retrollamada recibe los siguientes parámetros:
 
 - $1 (objeto), donde:
-  - *$1.value* (todo tipo): valor del primer elemento a comparar
-  - *$1.value2* (todo tipo): valor del segundo elemento a comparar
+ - *$1.value* (todo tipo): valor del primer elemento a comparar
+ - *$1.value2* (todo tipo): valor del segundo elemento a comparar
 - $2...$N (cualquier tipo): parámetros adicionales
 
 Si utilizó un método, debe definir el siguiente parámetro:

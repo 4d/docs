@@ -43,8 +43,8 @@ If the current form is being displayed or loaded by a call to the [DIALOG](dialo
 If the current form is a subform, the returned object depends on the parent container variable:
 
 - **Form** returns the object associated with the table form displayed on screen.\
-  **Form** returns the object associated with the table form displayed on screen.\
-  In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
+ **Form** returns the object associated with the table form displayed on screen.\
+ In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  
@@ -121,3 +121,5 @@ Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le 
 | ------------------ | ------------------------------- |
 | Numéro de commande | 1466                            |
 | Thread safe        | &amp;cross; |
+
+

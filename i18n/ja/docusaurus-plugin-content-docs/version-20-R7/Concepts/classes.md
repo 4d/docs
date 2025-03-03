@@ -80,7 +80,7 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 - **クラス** カテゴリを選択し、![](../assets/en/Users/PlussNew.png) ボタンをクリックします。
 - エクスプローラーウィンドウの下部にあるアクションメニュー、またはクラスグループのコンテキストメニューから **新規クラス...** を選択します。
-  ![](../assets/en/Concepts/newClass.png)
+ ![](../assets/en/Concepts/newClass.png)
 - エクスプローラーのホームページのコンテキストメニューより **新規** > **クラス...** を選択します。
 
 #### クラスのコードサポート
@@ -88,10 +88,10 @@ Project フォルダー Project Sources Classes Polygon.4dm
 各種 4Dウィンドウ (コードエディター、コンパイラー、デバッガー、ランタイムエクスプローラー) において、クラスコードは "特殊なプロジェクトメソッド" のように扱われます:
 
 - コードエディター:
-  - クラスは実行できません
-  - クラスメソッドはコードのブロックです
-  - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
-  - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
+ - クラスは実行できません
+ - クラスメソッドはコードのブロックです
+ - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
+ - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
 - ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `<ClassName>` コンストラクターまたは `<ClassName>.<FunctionName>` 形式で表示されます。
 
 ## クラスストア
@@ -238,8 +238,8 @@ Function getFullname()->$fullname : Text
 
 - `()` 演算子の使用 。 例: `myObject.methodName("hello") `
 - "4D.Function" クラスメンバーメソッドの使用:
-  - [`apply()`](API/FunctionClass.md#apply)
-  - [`call()`](API/FunctionClass.md#call)
+ - [`apply()`](API/FunctionClass.md#apply)
+ - [`call()`](API/FunctionClass.md#call)
 
 :::warning スレッドセーフに関する警告
 

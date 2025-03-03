@@ -56,11 +56,11 @@ Todo atributo de la dataclass está disponible como una propiedad de una entidad
 El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attributename) (relation o storage):
 
 - Si el tipo de *attributeName* es **storage**:
-  `.attributeName` devuelve un valor del mismo tipo que *attributeName*.
+ `.attributeName` devuelve un valor del mismo tipo que *attributeName*.
 - Si el tipo de *attributeName* es **relatedEntity**:
-  `.attributeName` devuelve la entidad relacionada. Los valores de la entidad relacionada están disponibles directamente a través de las propiedades en cascada, por ejemplo "myEntity.employer.employees\[0].lastname".
+ `.attributeName` devuelve la entidad relacionada. Los valores de la entidad relacionada están disponibles directamente a través de las propiedades en cascada, por ejemplo "myEntity.employer.employees\[0].lastname".
 - Si el tipo *attributeName* es **relatedEnties**:
-  `.attributeName` devuelve una nueva selección de entidades relacionadas. Se eliminan los duplicados (se devuelve una entity selection desordenada).
+ `.attributeName` devuelve una nueva selección de entidades relacionadas. Se eliminan los duplicados (se devuelve una entity selection desordenada).
 
 #### Ejemplo
 

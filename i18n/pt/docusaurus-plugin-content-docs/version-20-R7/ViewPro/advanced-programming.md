@@ -39,4 +39,4 @@ WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 
 ## Repositório 4D View Pro Tips
 
-[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) es un repositorio GitHub que contiene un proyecto lleno de funciones útiles, que permiten gestionar imágenes flotantes, ordenar columnas o líneas, crear una cultura personalizada, ¡y mucho m Sinta-se à vontade para o clonar e experimentar com o projeto.
+[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) es un repositorio GitHub que contiene un proyecto lleno de funciones útiles, que permiten gestionar imágenes flotantes, ordenar columnas o líneas, crear una cultura personalizada, ¡y mucho m Sinta-se à vontade para o clonar e experimentar com o projeto. Sinta-se à vontade para o clonar e experimentar com o projeto.

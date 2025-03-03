@@ -14,3 +14,4 @@ L'événement `On Printing Footer` ne peut être utilisé que dans le contexte d
 Cet événement peut être déclenché dans le cadre d'une commande `PRINT SELECTION`.
 
 > Cet événement ne peut pas être sélectionné pour les formulaires projet, il est uniquement disponible avec les **formulaires table**.
+

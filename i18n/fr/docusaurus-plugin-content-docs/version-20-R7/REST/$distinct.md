@@ -25,3 +25,4 @@ Dans l'exemple ci-dessous, nous souhaitons récupérer les différentes valeurs 
     "Apple"
 ]
 ```
+

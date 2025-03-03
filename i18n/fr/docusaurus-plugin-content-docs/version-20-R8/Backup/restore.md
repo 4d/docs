@@ -6,9 +6,9 @@ title: Restitution
 4D vous permet de récupérer l’intégralité des données d’une application en cas d’incident, quelles que soient ses causes. Deux catégories principales d’incidents peuvent se produire :
 
 - L’arrêt inopiné de l'application pendant son exploitation. Cet incident peut se produire à cause d’une coupure de courant, la panne d’un élément du système, etc. Dans ce cas, en fonction de l’état courant du cache de données au moment de l’incident, la récupération de l'application peut nécessiter différentes opérations :
-  - Si le cache était vide, l'application s’ouvre normalement. Toutes les modifications apportées à l'application ont été enregistrées. Ce cas ne nécessite aucune opération particulière.
-  - Si le cache contenait des opérations, le fichier de données est intact mais il est nécessaire d’intégrer le fichier d’historique courant.
-  - Si le cache était en cours d’écriture, le fichier de données est probablement endommagé. Il est nécessaire de restituer la dernière sauvegarde et d’intégrer le fichier d’historique courant.
+    - Si le cache était vide, l'application s’ouvre normalement. Toutes les modifications apportées à l'application ont été enregistrées. Ce cas ne nécessite aucune opération particulière.
+    - Si le cache contenait des opérations, le fichier de données est intact mais il est nécessaire d’intégrer le fichier d’historique courant.
+    - Si le cache était en cours d’écriture, le fichier de données est probablement endommagé. Il est nécessaire de restituer la dernière sauvegarde et d’intégrer le fichier d’historique courant.
 
 - La perte de fichier(s) de l'application. Cet incident peut être causé par des secteurs défectueux sur le disque contenant l'application, un virus, une erreur de manipulation, etc. Il est nécessaire de restituer la dernière sauvegarde puis d’intégrer éventuellement l’historique courant. Pour savoir si une application a été endommagée à la suite d’un incident, il suffit de la relancer avec 4D. Le programme effectue un auto-diagnostic et précise les opérations de réparation à effectuer. En mode automatique, ces opérations sont effectuées directement, sans intervention de l’utilisateur. Si une stratégie de sauvegarde régulière a été mise en place, les outils de récupération de 4D vous permettront (dans la plupart des cas) de retrouver l'application dans l’état exact où elle se trouvait avant l’incident.
 
@@ -24,11 +24,11 @@ Intégration manuelle de l’historique La restitution via une boîte de dialogu
 Pour restituer manuellement une application via une boîte de dialogue standard :
 
 1. Lancez l’application 4D et choisissez la commande **Restituer...** dans le menu **Fichier**.
-   Il n'est pas obligatoire qu'un projet d'application soit ouvert.
-   OR Execute the `RESTORE` command from a 4D method.
-   Une boîte de dialogue standard d’ouverture de fichiers apparaît.
+    Il n'est pas obligatoire qu'un projet d'application soit ouvert.
+    OR Execute the `RESTORE` command from a 4D method.
+    Une boîte de dialogue standard d’ouverture de fichiers apparaît.
 2. Désignez le fichier de sauvegarde (.4bk) ou le fichier de sauvegarde de l’historique (.4bl) à restituer et cliquez sur **Ouvrir**.
-   Un boîte de dialogue apparaît, vous permettant de désigner l’emplacement auquel vous souhaitez que les fichiers soient restitués . Par défaut, 4D restitue les fichiers dans un dossier nommé *“Nomarchive”* (sans extension) placé à côté de l’archive. Vous pouvez afficher le chemin :
+    Un boîte de dialogue apparaît, vous permettant de désigner l’emplacement auquel vous souhaitez que les fichiers soient restitués . Par défaut, 4D restitue les fichiers dans un dossier nommé *“Nomarchive”* (sans extension) placé à côté de l’archive. Vous pouvez afficher le chemin :
 
 ![](../assets/en/Backup/backup07.png)
 

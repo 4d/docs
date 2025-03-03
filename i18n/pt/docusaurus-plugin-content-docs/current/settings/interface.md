@@ -37,7 +37,7 @@ Puede definir la [frecuencia de escritura de la caché](database.md#memory-page)
 
 - **Usar modo SDI en Windows**: cuando esta opción está marcada, 4D habilita automáticamente el [modo SDI (Single-Document Interface)](../Menus/sdi.md) en su aplicación cuando se ejecuta en un [contexto soportado](../Menus/sdi.md#sdi-mode-availability). Al seleccionar esta opción, en Windows el menú **Ejecutar** de la barra de menú de 4D le permite seleccionar el modo en el que desea probar la aplicación:
 
-  ![](../assets/en/settings/sdi-mdi.png)
+    ![](../assets/en/settings/sdi-mdi.png)
 
 :::note
 
@@ -54,9 +54,9 @@ Esse menu permite que você selecione o esquema de cores a ser usado no nível d
 Os seguintes esquemas estão disponíveis:
 
 - **Light**: the application will use the Default Light Theme
-  ![](../assets/en/settings/light-appearance.png)
+    ![](../assets/en/settings/light-appearance.png)
 - **Escuro**: o aplicativo irá usar o Tema Escuro Padrão
-  ![](../assets/en/settings/dark-appearance.png)
+    ![](../assets/en/settings/dark-appearance.png)
 - **Heredado** (por defecto): la aplicación heredará el nivel de prioridad superior (es decir, las preferencias del usuario del sistema operativo)
 
 > Os temas predefinidos podem ser tratados com CSS. Para más información, consulte la sección [Media Queries](../FormEditor/createStylesheet.md#media-queries).
@@ -81,3 +81,5 @@ Para cambiar el acceso directo de una operación, haga clic en el botón **Edita
 ![](../assets/en/settings/shortcut.png)
 
 Para cambiar el acceso directo, escriba la nueva combinación de teclas en su teclado y haga clic en **OK**. Si prefiere no tener un acceso directo para una operación, haga clic en **Borrar**.
+
+

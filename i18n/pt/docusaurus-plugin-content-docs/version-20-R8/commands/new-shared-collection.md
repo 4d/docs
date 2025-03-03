@@ -75,3 +75,5 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 | -------------- | ------------------------------- |
 | Command number | 1527                            |
 | Thread safe    | &amp;check; |
+
+

@@ -68,28 +68,28 @@ Vous utilisez l’éditeur d’utilisateurs pour créer des comptes utilisateurs
 Pour ajouter un utilisateur depuis la boite à outils :
 
 1. Sélectionnez **Boîte à outils > Utilisateurs** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D.
-   4D affiche la fenêtre d’édition des utilisateurs.
+  4D affiche la fenêtre d’édition des utilisateurs.
 
 La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Utilisateur et l'l’Administrateur](#designer-and-administrator).
 
 2. Cliquez sur le bouton ![](../assets/en/Users/PlussNew.png) situé au-dessous de la liste des utilisateurs.
-   OU
-   Cliquez avec le bouton droit de la souris dans la Liste des utilisateurs et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
+  OU
+  Cliquez avec le bouton droit de la souris dans la Liste des utilisateurs et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
 
 > La commande **Dupliquer** permet de créer rapidement plusieurs utilisateurs ayant des caractéristiques communes.
 
 4D ajoute un nouvel utilisateur à la liste, nommé par défaut "Nouvel utilisateurN".
 
 3. Saisissez le nom du nouvel utilisateur.
-   Saisissez le nom du nouvel utilisateur. Vous pouvez renommer un utilisateur à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
+  Saisissez le nom du nouvel utilisateur. Vous pouvez renommer un utilisateur à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
 
 4. Pour saisir le mot de passe de l’utilisateur, cliquez sur le bouton **Modifier...** dans la zone des propriétés de l’utilisateur et saisissez deux fois le mot de passe dans la boite de dialogue.
-   Vous pouvez saisir jusqu’à 15 caractères alphanumériques. L’éditeur de mots de passe tient compte de la casse des caractères (majuscules ou minuscules).
+  Vous pouvez saisir jusqu’à 15 caractères alphanumériques. L’éditeur de mots de passe tient compte de la casse des caractères (majuscules ou minuscules).
 
 > Les utilisateurs peuvent modifier leur mot de passe à tout moment en fonction des options de la page Sécurité des propriétés de la structure, ou à l'aide de la commande `CHANGE PASSWORD`.
 
 5. Définissez le ou les groupe(s) d’appartenance de l’utilisateur à l’aide du tableau “Membre des groupes”.
-   Vous pouvez ajouter l’utilisateur sélectionné à un groupe en cochant l’option correspondante dans la colonne Membre.
+  Vous pouvez ajouter l’utilisateur sélectionné à un groupe en cochant l’option correspondante dans la colonne Membre.
 
 L’appartenance des utilisateurs aux groupes peut également être définie par groupe dans la [page Groupes](#configuring-access-groups).
 
@@ -119,21 +119,21 @@ Attention, une fois créé, un groupe ne peut pas être supprimé. Si vous souha
 Pour créer un groupe :
 
 1. Sélectionnez **Boîte à outils > Groupes** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D puis cliquez sur le bouton **Groupes**.
-   4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes du projet d'application.
+  4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes du projet d'application.
 
 2. Cliquez sur le bouton ![](../assets/en/Users/PlussNew.png) situé au-dessous de la liste des groupes.\
-   OU
-   Cliquez avec le bouton droit de la souris dans la liste des groupes et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.\
-   OU
-   Cliquez avec le bouton droit de la souris dans la liste des groupes et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
+  OU
+  Cliquez avec le bouton droit de la souris dans la liste des groupes et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.\
+  OU
+  Cliquez avec le bouton droit de la souris dans la liste des groupes et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
 
 > La commande Dupliquer permet de créer rapidement plusieurs groupes ayant des caractéristiques communes.
 
 4D ajoute un nouveau groupe à la liste, nommé par défaut "Nouveau groupe1".
 
 3. Saisissez le nom du nouveau groupe.
-   Le nom du groupe peut avoir une longueur maximale de 15 caractères.
-   Vous pouvez renommer un groupe à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
+  Le nom du groupe peut avoir une longueur maximale de 15 caractères.
+  Vous pouvez renommer un groupe à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
 
 ### Placer des utilisateurs ou des groupes dans des groupes
 
@@ -210,3 +210,4 @@ Ce fichier peut être stocké aux emplacements suivants, en fonction de vos beso
 - Si vous souhaitez utiliser un fichier répertoire spécifique par fichier de données, stockez le fichier **directory.json** dans le dossier des paramètres des données, c'est-à-dire dans le dossier ["Settings" du dossier "Data"](Project/architecture.md#setti Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
 
 > Pour permettre des changements sûrs de mots de passe et d'appartenance à des groupes dans un environnement déployé, vous pouvez inclure votre fichier **directory.json** dans l'application serveur pendant le build, en utilisant l'[option correspondante du build application](../Desktop/building.md#incorporer-les-utilisateurs-et-les-groupes-du-projet-dans-l'application-serveur-construite).
+

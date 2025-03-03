@@ -298,7 +298,7 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 
 #### Descrição
 
-A propriedade `.port` contém <!-- REF #transportter.port.Summary --> o número da porta utilizada para transações de email<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
+A propriedade `.port` contém <!-- REF #transporter.port.Summary --> o número da porta utilizada para transações de email<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
 
 - **SMTP** - 587
 - **POP3** - 995

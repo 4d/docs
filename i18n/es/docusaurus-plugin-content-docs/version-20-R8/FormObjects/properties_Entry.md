@@ -32,7 +32,7 @@ Para un tipo de texto [multiestilo](properties_Text.md#multi-style) [input](inpu
 - **Fuentes...**: muestra el diálogo del sistema de fuentes
 - **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. La lista puede almacenar hasta 10 fuentes (más allá, la última fuente utilizada sustituye a la más antigua). Por defecto, esta lista está vacía y la opción no se muestra. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
 - comandos para las modificaciones de estilo soportados: fuente, tamaño, estilo, color y color de fondo.
-  Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
+ Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
 
 Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 
@@ -176,13 +176,13 @@ Esta propiedad está disponible para [objetos de entrada](input_overview.md) que
 
 - En las entradas de una línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
 - En las entradas multilínea, 4D realiza retornos de línea automáticos:\
-  ![](../assets/en/FormObjects/multilineAuto.png)
+ ![](../assets/en/FormObjects/multilineAuto.png)
 
 #### No
 
 - En las entradas de una línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
 - Nunca hay retornos de línea: el texto siempre se muestra en una sola línea. Si el campo o variable Alfa o Texto contiene retornos de carro, el texto situado después del primer retorno de carro se elimina en cuanto se modifica el área:\
-  ![](../assets/en/FormObjects/multilineNo.png)
+ ![](../assets/en/FormObjects/multilineNo.png)
 
 #### Sí
 

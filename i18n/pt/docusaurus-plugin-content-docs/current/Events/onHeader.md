@@ -16,8 +16,8 @@ El evento `On Header` se llama cuando un registro está a punto de ser visualiza
 Neste contexto, a seguinte sequência de chamadas para os métodos e eventos de formulário é ativada:
 
 - Para cada objecto na área do cabeçalho:
-  - Método objeto con el evento `On Header`
-  - Método formulario con el evento `On Header`
+    - Método objeto con el evento `On Header`
+    - Método formulario con el evento `On Header`
 
 > Os registros impressos são tratados usando o evento [`On Display Detail`](onDisplayDetail.md).
 

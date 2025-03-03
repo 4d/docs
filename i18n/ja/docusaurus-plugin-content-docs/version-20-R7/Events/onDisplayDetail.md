@@ -20,9 +20,9 @@ title: On Display Detail
 このコンテキストにおいて、メソッドやフォームイベントが呼び出される順序は以下のとおりです:
 
 - レコードごとに:
-  - 詳細エリアのオブジェクトごとに:
-    - オブジェクトメソッドの `On Display Detail` イベント
-  - フォームメソッドの `On Display Detail` イベント
+    - 詳細エリアのオブジェクトごとに:
+        - オブジェクトメソッドの `On Display Detail` イベント
+    - フォームメソッドの `On Display Detail` イベント
 
 > ヘッダーエリアは、[`On Header`](onHeader.md) イベントで処理されます。
 

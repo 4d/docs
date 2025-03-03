@@ -63,3 +63,4 @@ $vPict:=VP Convert to picture($vpAreaObj) //exportar toda el área
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
 [VP Export to object](vp-export-to-object.md)<br/>
 [VP SET PRINT INFO](vp-set-print-info.md)
+

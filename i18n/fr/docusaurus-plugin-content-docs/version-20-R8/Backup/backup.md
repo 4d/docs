@@ -15,9 +15,9 @@ Une sauvegarde peut être déclenchée de trois manières :
 ## Sauvegarde manuelle
 
 1. Choisissez la commande **Sauvegarde...** dans le menu **Fichier** de 4D.
-   La fenêtre de sauvegarde s'affiche:
-   ![](../assets/en/Backup/backup01.png)
-   Vous pouvez voir l'emplacement du dossier de sauvegarde en utilisant le menu déroulant à côté de la zone "Destination de la sauvegarde". Cet emplacement est défini dans la Page **Sauvegarde/Configuration** des Propriétés de la base.
+ La fenêtre de sauvegarde s'affiche:
+ ![](../assets/en/Backup/backup01.png)
+ Vous pouvez voir l'emplacement du dossier de sauvegarde en utilisant le menu déroulant à côté de la zone "Destination de la sauvegarde". Cet emplacement est défini dans la Page **Sauvegarde/Configuration** des Propriétés de la base.
 
 - Vous pouvez également sélectionner [Centre de sécurité et de maintenance](MSC/overview.md) de 4D et afficher la [Page Sauvegarde](MSC/backup.md).
 
@@ -67,7 +67,7 @@ Dans tous les cas, gardez à l'esprit que le statut de la dernière sauvegarde (
 - Automatiquement, via le programmateur paramétrable dans les Propriétés, Dans ce cas, la copie des éléments est stoppée et l'erreur 1406 est générée. Vous pouvez intercepter cette erreur dans la Méthode base `On Backup Shutdown`.
 - **Fichier joint introuvable** : lorsqu’un fichier joint est introuvable, 4D effectue une sauvegarde partielle (sauvegarde des fichiers de l'application et des fichiers joints accessibles) et retourne une erreur.
 - **Sauvegarde impossible** (disque plein ou protégé en écriture, disque manquant, panne du disque, transaction non terminée, projet non lancé au moment d’une sauvegarde automatique périodique, etc.) : S’il s’agit du premier échec, 4D effectuera ultérieurement une seconde tentative. Le délai d’attente entre les deux tentatives est défini dans la Page **Sauvegarde/Sauvegarde& et Restitution** des Propriétés.
-  Si la seconde tentative échoue également, une boîte de dialogue d’alerte système est affichée et une erreur est générée. Vous pouvez intercepter cette erreur dans la Méthode base `On Backup Shutdown`.
+ Si la seconde tentative échoue également, une boîte de dialogue d’alerte système est affichée et une erreur est générée. Vous pouvez intercepter cette erreur dans la Méthode base `On Backup Shutdown`.
 
 ## Journal de sauvegarde (Backup Journal)
 

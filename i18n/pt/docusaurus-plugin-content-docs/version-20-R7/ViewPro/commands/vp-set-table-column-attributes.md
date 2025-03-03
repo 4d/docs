@@ -104,3 +104,12 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 [VP Find table](vp-find-table.md)<br/>
 [VP Get table column attributes](vp-get-table-column-attributes.md)<br/>
 [VP RESIZE TABLE](vp-resize-table.md)
+
+
+
+
+
+
+
+
+

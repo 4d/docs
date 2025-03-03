@@ -18,3 +18,4 @@ La barra de menús del formulario funcionará tanto para los formularios de entr
 | Nombre  | Tipos de datos | Valores posibles            |
 | ------- | -------------- | --------------------------- |
 | menuBar | string         | Nombre de una barra de menú |
+
