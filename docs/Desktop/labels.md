@@ -143,8 +143,13 @@ To be eligible for label processing, a project method must comply with the follo
   - it must have the [Shared by components and host database](../Project/code-overview.md#shared-by-components-and-host-database) option.
 See also [this example](#printing-labels-using-forms-and-methods-example) below.
 
-**Note:** For advanced needs, you can restrict the list of methods available using a [specific json file](#controlling-available-forms-and-methods). 
+:::note 
+
+For advanced needs, you can restrict the list of methods available using a [specific json file](#controlling-available-forms-and-methods). 
 The **For each: Record or Label** options are used to specify whether to run the method once per label or once per record. This control has meaning only if you are printing more than one copy of each label and you are also executing a method at print time.
+
+:::
+
 - **Layout preview**: Provides a reduced view of how an entire page of labels will look, based on the dimensions you enter in the Label editor. The page preview also reflects the paper size selected in the Print Setup dialog box. You can also use this area to designate the first label on the page to be printed (this option only affects the first sheet in the case of multi-page printing). This can be useful, for example, when you want to print on a sheet of adhesive labels, part of which has already been used. You can also select the first label on the page to be printed by clicking on it:
 
 ![](../assets/en/Desktop/label-start.png)
