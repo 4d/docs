@@ -484,7 +484,7 @@ End for
 
 :::tip
 
-`While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。 したがって、可能な限り `For...End for` ループの使用が推奨されます。
+`For...End for` ループは、`While...End while` や `Repeat...Until` ループよりも高速です。これは 4D が内部的にカウンター変数のテストおよび増加をおこなうからです。  したがって、可能な限り `For...End for` ループの使用が推奨されます。
 
 :::
 
