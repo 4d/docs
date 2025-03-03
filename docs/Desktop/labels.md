@@ -65,6 +65,7 @@ If you hold down the **Shift** key, they are separated by a carriage return. Thi
 - You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. The **Formula editor** is then displayed:
 ![](../assets/en/Desktop/label-formula1.png)<br/>
 For example, you can apply a format to a field using the [`String`](../commands-legacy/string.md) command:<br/>
+
 ![](../assets/en/Desktop/label-formula2.png)
 <br/>
 
