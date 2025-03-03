@@ -66,8 +66,7 @@ If you hold down the **Shift** key, they are separated by a carriage return. Thi
 ![](../assets/en/Desktop/label-formula1.png)<br/>
 For example, you can apply a format to a field using the [`String`](../commands-legacy/string.md) command:<br/>
 
-![](../assets/en/Desktop/label-formula2.png)
-<br/>
+![](../assets/en/Desktop/label-formula2.png)<br/>
 
 - You can drag and drop picture files as well as label files (".4lbp" files) from the desktop of the OS.
 
