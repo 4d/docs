@@ -25,7 +25,7 @@ Data security is present at every stage of the 4D web server implementations. Se
 * **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
 
 * **Control of exposed contents**: only elements that you expose explicitely can be available from direct web or REST requests. You must declare:
-  * [Project methods](templates.md#allowing-project-methods) exposed through HTTP requests
+  * [Project methods](templates.md#accessing-4d-methods-via-the-web) exposed through HTTP requests
   * [ORDA functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
   * [Tables and fields](REST/configuration.md#exposing-tables-and-fields) that you don't want to be available to REST requests.
 

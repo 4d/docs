@@ -22,7 +22,7 @@ This page provides a comprehensive list of all form properties, sorted by their 
 |[`entryOrder`](formEditor.md#data-entry-order)|The order in which active objects are selected when the **Tab** or the **Carriage return** key is used in an input form |Collection of 4D Form object names |
 |[`events`](Events/overview.md)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].|
 |<a name="f">**f**</a>|||
-|[`formSizeAnchor`](properties_FormSize.md#form-size)|Name of the object whose position determines the size of the form. (minimum length: 1)|Name of a 4D object|
+|[`formSizeAnchor`](./properties_FormSize.md#size-based-on)|Name of the object whose position determines the size of the form. (minimum length: 1)|Name of a 4D object|
 |<a name="h">**h**</a>|||
 |[`height`](properties_FormSize.md#height)|Height of the form|minimum: 0|
 |<a name="i">**i**</a>|||
@@ -32,8 +32,8 @@ This page provides a comprehensive list of all form properties, sorted by their 
 |[`markerBody`](properties_Markers.md#form-detail)|Detail marker position|minimum: 0 |
 |[`markerBreak`](properties_Markers.md#form-break)|Break marker position(s)|minimum: 0 |
 |[`markerFooter`](properties_Markers.md#form-footer)|Footer marker position|minimum: 0 |
-|[`markerHeader`](properties_Markers.md#forrm-header)|Header marker position(s)|integer minimum: 0; integer array minimum: 0 |
-|[`memorizeGeometry`](properties_FormProperties.md#memorize-geometry)|Saves the form parameters when the form window is closed |true, false |
+|[`markerHeader`](properties_Markers.md#form-header)|Header marker position(s)|integer minimum: 0; integer array minimum: 0 |
+|[`memorizeGeometry`](properties_FormProperties.md#save-geometry)|Saves the form parameters when the form window is closed |true, false |
 |[`menuBar`](properties_Menu.md#associated-menu-bar)|Menu bar to associate to the form|Name of a valid menu bar |
 |[`method`](properties_Action.md#method)|A project method name. |The name of an existing project method|
 |<a name="p">**p**</a>|||
@@ -45,10 +45,10 @@ This page provides a comprehensive list of all form properties, sorted by their 
 |[`shared`](properties_FormProperties.md#published-as-subform)|Specifies if a form can be used as a subform|true, false|
 |<a name="w">**w**</a>|||
 |[`width`](properties_FormSize.md#width)|Width of the form|minimum: 0|
-|[`windowMaxHeight`](properties_FormProperties.md#maximum-height)|Form window's largest allowable height|minimum: 0|
-|[`windowMaxWidth`](properties_FormProperties.md#maximum-width)|Form window's largest allowable width|minimum: 0|
-|[`windowMinHeight`](properties_FormProperties.md#minimum-height)|Form window's smallest allowable height|minimum: 0|
-|[`windowMinWidth`](properties_FormProperties.md#minimum-width)|Form window's smallest allowable width|minimum: 0|
+|[`windowMaxHeight`](properties_WindowSize.md#maximum-height-minimum-height)|Form window's largest allowable height|minimum: 0|
+|[`windowMaxWidth`](properties_WindowSize.md#maximum-width-minimum-width)|Form window's largest allowable width|minimum: 0|
+|[`windowMinHeight`](properties_WindowSize.md#maximum-height-minimum-height)|Form window's smallest allowable height|minimum: 0|
+|[`windowMinWidth`](properties_WindowSize.md#maximum-width-minimum-width)|Form window's smallest allowable width|minimum: 0|
 |[`windowSizingX`](properties_WindowSize.md#fixed-width)|Form window's vertical sizing|"fixed", "variable"|
 |[`windowSizingY`](properties_WindowSize.md#fixed-height)|Form window's horizontal sizing|"fixed", "variable"|
 |[`windowTitle`](properties_FormProperties.md#window-title)|Designates a form window's title|A name for the form window|

@@ -155,7 +155,7 @@ MyNumber:=3
 
 creates the variable _MyNumber_ and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
 
-> It is usually not recommended to create variables without [declaring their type](#creating-variables).
+> It is usually not recommended to create variables without [declaring their type](#declaring-variables).
 
 Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
 

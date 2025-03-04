@@ -39,7 +39,7 @@ Functions are called on the corresponding object on the server datastore.
 > `/rest/\{dataClass\}/Function` can be used to call either a dataclass or an entity selection function (`/rest/\{dataClass\}` returns all entities of the DataClass as an entity selection).
 The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
 
 ## Parameters
 
@@ -52,7 +52,7 @@ The following rules apply:
 - All scalar data types supported in JSON collections can be passed as parameters.
 - Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS,__ENTITY, __ENTITIES,__DATASET.
 
-See [this example](#request-receiving-an-entity-as-parameter) and [this example](#request-receiving-an-entity-selection-as-parameter).
+See [this example](#receiving-an-entity-selection-as-parameter).
 
 ### Scalar value parameter
 
@@ -80,7 +80,7 @@ You can also pass values for any attributes of the entity. These values will aut
 - If __KEY is not provided, a new entity is created on the server with the given attributes.
 - If __KEY is provided, the entity corresponding to__KEY is loaded on the server with the given attributes
 
-See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities.
+See examples for creating or updating entities.
 
 #### Related entity parameter
 

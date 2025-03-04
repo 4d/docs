@@ -11,7 +11,7 @@ Forms provide the interface through which information is entered, modified, and 
 Forms can also contain other forms through the following features:
 
 - [subform objects](FormObjects/subform_overview.md)
-- [inherited forms](properties_FormProperties.md#inherited-forms)
+- [inherited forms](./properties_FormProperties.md#inherited-form-name)
 
 ## Creating forms
 

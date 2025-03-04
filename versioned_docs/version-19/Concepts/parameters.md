@@ -469,7 +469,7 @@ ALERT("Time is over") //1 parameter
 
 4D project methods also accept such optional parameters, starting from the right. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. A good practice is to assign default values to unused parameters.
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.  
+> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-object-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.  
 
 Using the `Count parameters` command from within the called method, you can detect the actual number of parameters and perform different operations depending on what you have received.
 
@@ -546,7 +546,7 @@ Here the parameter is not the field, but a pointer to it. Therefore, within the 
  ALERT($0)
 ```
 
-This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Returning values](#returning-values) paragraph.
+This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Returning values](#returned-value) paragraph.
 
 
 ### Particular cases: objects and collections

@@ -151,7 +151,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 |Property| Type| Description|
 |---|---|---|
-|context|Text|Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization).|
+|context|Text|Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](../ORDA/entities.md#clientserver-optimization).|
 
 #### Example
 
@@ -355,7 +355,7 @@ In this example, the first entity will be created and saved but the second will 
 
 #### See also
 
-[**.toCollection()**](EntitySelectionClass.md#tocollection)
+[**.toCollection()**](./EntitySelectionClass.md#tocollection)
 
 <!-- END REF -->
 
@@ -619,7 +619,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 
 The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
 
-> For information on non-shareable entity selections, please refer to [this section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+> For information on non-shareable entity selections, please refer to [this section](../ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 If you want to create an ordered entity selection, pass the `dk keep ordered` selector in the *keepOrder* parameter. By default if you omit this parameter, or if you pass the `dk non ordered` selector, the method creates an unordered entity selection. Unordered entity selections are faster but you cannot rely on entity positions. For more information, please see [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 

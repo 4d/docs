@@ -475,7 +475,7 @@ APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document
 APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
 ```
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.  
+> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-object-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.  
 
 
 
@@ -523,7 +523,7 @@ Here the parameter is not the field, but a pointer to it. Therefore, within the 
  ALERT($0)
 ```
 
-This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Returning values](#returning-values) paragraph.
+This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Returning values](#returned-value) paragraph.
 
 
 ### Particular cases: objects and collections

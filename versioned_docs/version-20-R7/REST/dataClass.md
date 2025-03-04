@@ -9,7 +9,7 @@ Dataclass names can be used directly in the REST requests to work with entities 
 
 |Syntax|Example|Description|
 |---|---|---|
-|[**\{dataClass\}**](#dataClass)|`/Employee`|Returns all the data (by default the first 100 entities) for the dataclass|
+|[**\{dataClass\}**](#dataclass)|`/Employee`|Returns all the data (by default the first 100 entities) for the dataclass|
 |[**\{dataClass\}[{key}]**](#dataclasskey)|`/Employee[22]`|Returns the data for the specific entity defined by the dataclass's primary key|
 |[**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)|`/Employee:firstName(John)`|Returns the data for one entity in which the attribute's value is defined|
 |[**\{dataClass\}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)|`/City/getCity`|Executes a dataclass class function |

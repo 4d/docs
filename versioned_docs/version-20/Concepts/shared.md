@@ -31,7 +31,7 @@ Modifications can be applied to shared objects and shared collections:
 - adding or removing object properties,
 - adding or editing values (provided they are supported in shared objects), including other shared objects or collections (which creates a shared group, see below).
 
-All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#use-end-use) block, otherwise an error is generated. 
+All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#useend-use) block, otherwise an error is generated. 
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")

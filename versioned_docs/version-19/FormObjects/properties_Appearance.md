@@ -92,7 +92,7 @@ Available values:
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Hierarchical List](list_overview.md) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
 #### See also
 
@@ -214,7 +214,7 @@ showHorizontalRuler|boolean|true (default), false|
 
 ---
 
-## Show HTML WYSYWIG
+## Show HTML WYSIWYG
 
 Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attributes which are not compliant with all browsers are removed.
 
@@ -351,7 +351,7 @@ Available values:
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Hierarchical List](list_overview.md) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
 #### See also
 
