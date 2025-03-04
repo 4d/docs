@@ -41,7 +41,7 @@ Se quiser carregar uma imagem dependendo do esquema atual do formulário:
 
 #### Ver também 
 
-[Get application color scheme](get-application-color-scheme.md)  
+[Get Application color scheme](get-application-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
 
 #### Propriedades

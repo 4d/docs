@@ -112,7 +112,7 @@ The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-S
 |`WEB CLOSE SESSION`|Web server that received the request|
 |`WEB GET BODY PART`|Web server that received the request|
 |`WEB Get body part count`|Web server that received the request|
-|`WEB Get Current Session ID`|Web server that received the request|
+|`WEB Get current session ID`|Web server that received the request|
 |`WEB GET HTTP BODY`|Web server that received the request|
 |`WEB GET HTTP HEADER`|Web server that received the request|
 |`WEB GET OPTION`|Host application web server|

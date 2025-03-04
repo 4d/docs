@@ -32,7 +32,7 @@ If the command is executed correctly, the OK system variable is set to 1; otherw
 
 #### See also 
 
-[Get last update log path](get-last-update-log-path.md)  
+[Last update log path](get-last-update-log-path.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
 
 #### Properties

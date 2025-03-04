@@ -1,12 +1,12 @@
 ---
 id: get-last-update-log-path
-title: Get last update log path
+title: Last update log path
 slug: /commands/get-last-update-log-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get last update log path.Syntax-->**Get last update log path** : Text<!-- END REF-->
-<!--REF #_command_.Get last update log path.Params-->
+<!--REF #_command_.Last update log path.Syntax-->**Last update log path** : Text<!-- END REF-->
+<!--REF #_command_.Last update log path.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | 直近のアップデートログへのパス名 |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get last update log path.Summary-->**Get last update log path**コマンドは、呼び出されたマシン内の最近のアップデートログファイルへの完全なパスを返します。<!-- END REF-->
+<!--REF #_command_.Last update log path.Summary-->**Last update log path**コマンドは、呼び出されたマシン内の最近のアップデートログファイルへの完全なパスを返します。<!-- END REF-->
 
 アップデートログは自動アップデートプロセスの際に4Dによって生成されます。ログには実行されたアップデートについての情報のほか、起きたエラーの情報も記録されます。
 
