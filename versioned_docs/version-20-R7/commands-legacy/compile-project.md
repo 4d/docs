@@ -172,7 +172,8 @@ Disable warnings 518.1 and 518.2 when compiling your project:
 
 ```4d
 var $options:={}
-$options.warnings:=[]$options.warnings.push({major: 518; minor: 1; enabled: False})
+$options.warnings:=[]
+$options.warnings.push({major: 518; minor: 1; enabled: False})
 $options.warnings.push({major: 518; minor: 2; enabled: False})
 var $result:=Compile project($options)
 ```
