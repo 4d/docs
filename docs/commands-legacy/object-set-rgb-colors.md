@@ -102,7 +102,7 @@ Changing to transparent background with a light font color:
 #### See also 
 
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
-[Select RGB Color](select-rgb-color.md)  
+[Select RGB color](select-rgb-color.md)  
 
 #### Properties
 

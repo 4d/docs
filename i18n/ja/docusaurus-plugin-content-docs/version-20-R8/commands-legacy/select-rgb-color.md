@@ -1,11 +1,11 @@
 ---
 id: select-rgb-color
-title: Select RGB Color
+title: Select RGB color
 slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB color.Syntax-->**Select RGB Color** {( *defaultColor* {; *message*} )} : Integer<!-- END REF-->
+<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** {( *defaultColor* {; *message*} )} : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB color.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Select RGB color.Summary-->**Select RGB Color**コマンドはシステムカラー選択ウィンドウを表示し、ユーザによって選択された色のRGB値を返します。<!-- END REF-->
+<!--REF #_command_.Select RGB color.Summary-->**Select RGB color**コマンドはシステムカラー選択ウィンドウを表示し、ユーザによって選択された色のRGB値を返します。<!-- END REF-->
 
 システムカラー選択ウィンドウは以下のように表示されます。
 

@@ -1,11 +1,11 @@
 ---
 id: select-rgb-color
-title: Select RGB Color
+title: Select RGB color
 slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB color.Syntax-->**Select RGB Color** {( *corDefeito* {; *mensagem*} )} : Integer<!-- END REF-->
+<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** {( *corDefeito* {; *mensagem*} )} : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB color.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Select RGB color.Summary-->O comando Select RGB Color mostra a janela sistema de seleção de cor e devolve o valor RGB da cor selecionada pelo usuário.<!-- END REF--> 
+<!--REF #_command_.Select RGB color.Summary-->O comando Select RGB color mostra a janela sistema de seleção de cor e devolve o valor RGB da cor selecionada pelo usuário.<!-- END REF--> 
 
 A janela sistema de seleção de cor é vista desta maneira:
 

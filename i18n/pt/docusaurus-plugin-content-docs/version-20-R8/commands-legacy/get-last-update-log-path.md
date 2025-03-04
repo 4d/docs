@@ -1,12 +1,12 @@
 ---
 id: get-last-update-log-path
-title: Get last update log path
+title: Last update log path
 slug: /commands/get-last-update-log-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get last update log path.Syntax-->**Get last update log path** : Text<!-- END REF-->
-<!--REF #_command_.Get last update log path.Params-->
+<!--REF #_command_.Last update log path.Syntax-->**Last update log path** : Text<!-- END REF-->
+<!--REF #_command_.Last update log path.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Via de acesso do histórico de atualização mais recente |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get last update log path.Summary-->O comando Get last update log path devolve a via de acesso completa do arquivo de histórico de atualização mais recente na máquina onde se chama.<!-- END REF-->  
+<!--REF #_command_.Last update log path.Summary-->O comando Last update log path devolve a via de acesso completa do arquivo de histórico de atualização mais recente na máquina onde se chama.<!-- END REF-->  
   
 O histórico de atualização é gerado por 4D durante o processo de atualização automática. Contém informação sobre as mudanças realizadas, assim como os erros que se produziram.  
   

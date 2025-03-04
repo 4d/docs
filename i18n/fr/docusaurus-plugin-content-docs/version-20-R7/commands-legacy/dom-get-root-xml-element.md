@@ -1,11 +1,11 @@
 ---
 id: dom-get-root-xml-element
-title: DOM Get Root XML element
+title: DOM Get root XML element
 slug: /commands/dom-get-root-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get root XML element.Syntax-->**DOM Get Root XML element** ( *refElément* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get root XML element.Syntax-->**DOM Get root XML element** ( *refElément* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get root XML element.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.DOM Get root XML element.Summary-->La commande **DOM Get Root XML element** retourne une référence vers l’élément racine du document auquel appartient l’élément XML passé dans le paramètre *refElément*.<!-- END REF--> Cette référence pourra être utilisée avec les autres commandes d'analyse XML.
+<!--REF #_command_.DOM Get root XML element.Summary-->La commande **DOM Get root XML element** retourne une référence vers l’élément racine du document auquel appartient l’élément XML passé dans le paramètre *refElément*.<!-- END REF--> Cette référence pourra être utilisée avec les autres commandes d'analyse XML.
 
 #### Voir aussi 
 

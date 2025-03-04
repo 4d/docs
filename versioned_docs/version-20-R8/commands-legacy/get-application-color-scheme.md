@@ -1,11 +1,11 @@
 ---
 id: get-application-color-scheme
-title: Get application color scheme
+title: Get Application color scheme
 slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get Application color scheme.Syntax-->**Get application color scheme** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** {( * )} : Text<!-- END REF-->
 <!--REF #_command_.Get Application color scheme.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get Application color scheme.Summary-->The **Get application color scheme** command returns the name of the actual color scheme in use at the application level.<!-- END REF--> 
+<!--REF #_command_.Get Application color scheme.Summary-->The **Get Application color scheme** command returns the name of the actual color scheme in use at the application level.<!-- END REF--> 
 
 **Note:** On Windows, this command always returns "light".
 
@@ -36,7 +36,7 @@ Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.
  var $colorScheme : Text
  
   // Retrieve the colorScheme of the host database
- $colorScheme:=Get application color scheme(*)
+ $colorScheme:=Get Application color scheme(*)
 ```
 
 #### See also 

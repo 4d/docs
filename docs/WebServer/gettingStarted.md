@@ -282,5 +282,5 @@ Wrong credentials would be rejected:
 
 ![](../assets/en/WebServer/login2.png)
 
-Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. See the [User sessions](sessions.md) page. 
+Once a user is logged, you can handle the associated session using the `WEB Get current session ID` method. See the [User sessions](sessions.md) page. 
 

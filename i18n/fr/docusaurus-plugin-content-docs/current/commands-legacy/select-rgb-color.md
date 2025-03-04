@@ -1,11 +1,11 @@
 ---
 id: select-rgb-color
-title: Select RGB Color
+title: Select RGB color
 slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB color.Syntax-->**Select RGB Color** {( *coulDefaut* {; *message*} )} : Integer<!-- END REF-->
+<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** {( *coulDefaut* {; *message*} )} : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB color.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Select RGB color.Summary-->La commande **Select RGB Color** affiche la fenêtre système de sélection de couleur et retourne la valeur RVB de la couleur sélectionnée par l’utilisateur.<!-- END REF-->
+<!--REF #_command_.Select RGB color.Summary-->La commande **Select RGB color** affiche la fenêtre système de sélection de couleur et retourne la valeur RVB de la couleur sélectionnée par l’utilisateur.<!-- END REF-->
 
 La fenêtre système de sélection de couleur a l’apparence suivante :   
 

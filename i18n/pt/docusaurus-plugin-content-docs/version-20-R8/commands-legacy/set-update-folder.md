@@ -33,7 +33,7 @@ Pode passar uma cadeia vazia ("" ) no parâmetro *viaPasta* para reinicializar a
 O parâmetro opcional *errosDiscretos* especifica como se reportam os erros pela ferramenta "updater":  
 * Se passar **False** ou se omitir este parâmetro, os erros se registram no histórico de atualização e se mostram em uma caixa de diálogo de alerta.
 * Se passar **True**, os erros só se registram no histórico de atualização.
-Exceção: Se a ferramenta "updater" não pode criar o arquivo de histórico, se mostra uma caixa de diálogo de alerta, independentemente do valor do parâmetro *errosDiscretos*. Para mais informação, consulte a descrição do comando [Get last update log path](get-last-update-log-path.md).  
+Exceção: Se a ferramenta "updater" não pode criar o arquivo de histórico, se mostra uma caixa de diálogo de alerta, independentemente do valor do parâmetro *errosDiscretos*. Para mais informação, consulte a descrição do comando [Last update log path](get-last-update-log-path.md).  
   
 Se o comando se executa corretamente, a variável sistema OK toma o valor 1, caso contrário, toma o valor 0\. Pode interceptar os erros gerados pelo comando utilizando um método instalado utilizando o comando [ON ERR CALL](on-err-call.md).
 
@@ -51,7 +51,7 @@ Você criou uma pasta "MyUpdates" em seu disco, na qual localizou uma nova vers�
 
 #### Ver também 
 
-[Get last update log path](get-last-update-log-path.md)  
+[Last update log path](get-last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
 
 #### Propriedades
