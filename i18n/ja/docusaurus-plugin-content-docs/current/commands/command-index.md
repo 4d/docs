@@ -382,7 +382,7 @@ title: インデックス
 [`GET HIGHLIGHT`](../commands-legacy/get-highlight.md)<br/>
 [`GET HIGHLIGHTED RECORDS`](../commands-legacy/get-highlighted-records.md)<br/>
 [`Get indexed string`](../commands-legacy/get-indexed-string.md)<br/>
-[`Get last update log path`](../commands-legacy/get-last-update-log-path.md)<br/>
+[`Get last update log path`](../commands-legacy/last-update-log-path.md)<br/>
 [`GET LIST ITEM`](../commands-legacy/get-list-item.md)<br/>
 [`Get list item font`](../commands-legacy/get-list-item-font.md)<br/>
 [`GET LIST ITEM ICON`](../commands-legacy/get-list-item-icon.md)<br/>

@@ -1,7 +1,7 @@
 ---
-id: get-last-update-log-path
+id: last-update-log-path
 title: Last update log path
-slug: /commands/get-last-update-log-path
+slug: /commands/last-update-log-path
 displayed_sidebar: docs
 ---
 

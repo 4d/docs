@@ -33,7 +33,7 @@ Puede pasar una cadena vacía ("" ) en el parámetro *rutaCarpeta* para reinicia
 El parámetro opcional *erroresDiscretos* especifica cómo se reportan los errores por la herramienta "updater":  
 * si pasa **False** o si se omite este parámetro, los errores se registran en el historial de actualización y se muestran en una caja de diálogo de alerta.
 * si pasa **True**, los errores sólo se registran en el historial de actualización.
-Excepción: si la herramienta "updater" no puede crear el archivo de historial, se muestra una caja de diálogo de alerta, independientemente del valor del parámetro *erroresDiscretos*. Para más información, consulte la descripción del comando [Last update log path](get-last-update-log-path.md).  
+Excepción: si la herramienta "updater" no puede crear el archivo de historial, se muestra una caja de diálogo de alerta, independientemente del valor del parámetro *erroresDiscretos*. Para más información, consulte la descripción del comando [Last update log path](last-update-log-path.md).  
   
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1, de lo contrario, toma el valor 0\. Puede interceptar los errores generados por el comando utilizando un método instalado utilizando el comando [ON ERR CALL](on-err-call.md).
 
@@ -51,7 +51,7 @@ Usted creó una carpeta "MyUpdates" en su disco, en la cual ubicó una nueva ver
 
 #### Ver también 
 
-[Last update log path](get-last-update-log-path.md)  
+[Last update log path](last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
 
 #### Propiedades

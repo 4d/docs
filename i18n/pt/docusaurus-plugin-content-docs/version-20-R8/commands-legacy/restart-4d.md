@@ -32,7 +32,7 @@ Se o comando se executa corretamente, a variável sistema OK toma o valor 1, cas
 
 #### Ver também 
 
-[Last update log path](get-last-update-log-path.md)  
+[Last update log path](last-update-log-path.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
 
 #### Propriedades

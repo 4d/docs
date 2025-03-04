@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Get last update log path](get-last-update-log-path.md)  
+[Get last update log path](last-update-log-path.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
 
 #### プロパティ

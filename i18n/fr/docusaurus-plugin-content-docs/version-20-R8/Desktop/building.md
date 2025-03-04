@@ -781,7 +781,7 @@ Vous pouvez choisir d'afficher ou non la boîte de dialogue standard de sélecti
 
 En principe, la mise à jour des applications serveur ou des applications mono-utilisateur fusionnées nécessite l'intervention de l'utilisateur (ou la programmation de routines système personnalisées) : chaque fois qu'une nouvelle version de l'application fusionnée est disponible, vous devez quitter l'application en production et remplacer manuellement les anciens fichiers par les nouveaux ; puis redémarrer l'application et sélectionner le fichier de données courant.
 
-You can automate this procedure to a large extent using the following language commands: [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md), [`RESTART 4D`](../commands-legacy/restart-4d.md), and also [`Get last update log path`](../commands-legacy/get-last-update-log-path.md) for monitoring operations. L'idée est d'implémenter une fonction dans votre application 4D déclenchant la séquence de mise à jour automatique décrite ci-dessous. Il peut s'agir d'une commande de menu ou d'un process s'exécutant en arrière-plan et vérifiant à intervalles réguliers la présence d'une archive sur un serveur.
+You can automate this procedure to a large extent using the following language commands: [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md), [`RESTART 4D`](../commands-legacy/restart-4d.md), and also [`Get last update log path`](../commands-legacy/last-update-log-path.md) for monitoring operations. L'idée est d'implémenter une fonction dans votre application 4D déclenchant la séquence de mise à jour automatique décrite ci-dessous. Il peut s'agir d'une commande de menu ou d'un process s'exécutant en arrière-plan et vérifiant à intervalles réguliers la présence d'une archive sur un serveur.
 
 > You also have XML keys to elevate installation privileges so that you can use protected files under Windows (see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual).
 
@@ -799,4 +799,4 @@ La procédure d'installation produit un fichier journal détaillant les opérati
 
 Le journal de mise à jour est nommé `YYYY-MM-DD_HH-MM-SS_log_X.txt`, par exemple, `2021-08-25_14-23-00_log_1.txt` pour un fichier créé le 25 août 2021 à 14h23.
 
-Ce fichier est créé dans le dossier de l'application "Updater", dans le dossier de l'utilisateur du système. You can find out the location of this file at any time using the [`Get last update log path`](../commands-legacy/get-last-update-log-path.md) command.
+Ce fichier est créé dans le dossier de l'application "Updater", dans le dossier de l'utilisateur du système. You can find out the location of this file at any time using the [`Get last update log path`](../commands-legacy/last-update-log-path.md) command.

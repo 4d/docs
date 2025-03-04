@@ -35,7 +35,7 @@ Le paramètre optionnel *erreursDiscrètes* permet de définir le mode de report
 * si vous passez **Faux** ou si ce paramètre est omis, les erreurs sont inscrites dans le journal des mises à jour et affichées dans une boîte de dialogue d’alerte.
 * si vous passez **Vrai**, les erreurs sont uniquement inscrites dans le journal des mises à jour.
 
-Exception : s'il n'est pas possible de créer un fichier journal, une boîte de dialogue d’alerte est affichée, quelle que soit la valeur du paramètre *erreursDiscrètes*. Pour plus d'informations, reportez-vous à la description de la commande [Get last update log path](get-last-update-log-path.md).
+Exception : s'il n'est pas possible de créer un fichier journal, une boîte de dialogue d’alerte est affichée, quelle que soit la valeur du paramètre *erreursDiscrètes*. Pour plus d'informations, reportez-vous à la description de la commande [Get last update log path](last-update-log-path.md).
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Vous pouvez intercepter les erreurs éventuellement générées par la commande à l’aide d’une méthode installée via la commande [ON ERR CALL](on-err-call.md). 
 
@@ -53,7 +53,7 @@ Vous avez créé un dossier "MesMisesAJour" sur votre disque, dans lequel vous a
 
 #### Voir aussi 
 
-[Get last update log path](get-last-update-log-path.md)  
+[Get last update log path](last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
 
 #### Propriétés

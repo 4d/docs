@@ -227,7 +227,7 @@ module.exports =
 						"commands-legacy/get-4d-folder",
 						"commands-legacy/get-database-localization",
 						"commands-legacy/get-database-parameter",
-						"commands-legacy/get-last-update-log-path",
+						"commands-legacy/last-update-log-path",
 						"commands-legacy/is-compiled-mode",
 						"commands-legacy/is-data-file-locked",
 						"commands-legacy/notify-resources-folder-modification",

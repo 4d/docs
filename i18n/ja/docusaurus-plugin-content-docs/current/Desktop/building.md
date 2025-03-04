@@ -777,7 +777,7 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 原則的に、サーバーアプリケーションや組み込みのシングルユーザーアプリケーションを更新するには、ユーザーの介入 (またはカスタムのシステムルーチンのプログラミング) が必要です。 組み込みアプリケーションの新しいバージョンが利用可能になるたびに、運用中のアプリケーションを終了して、古いファイルを新しいファイルに手動で置き換え、その後アプリケーションを再起動してカレントのデータファイルを選択しなければなりません。
 
-You can automate this procedure to a large extent using the following language commands: [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md), [`RESTART 4D`](../commands-legacy/restart-4d.md), and also [`Get last update log path`](../commands-legacy/get-last-update-log-path.md) for monitoring operations. これらのコマンドを使い、4Dアプリケーションに、以下に説明する自動更新手順をトリガーする機能を実装します。 具体的には、メニューコマンドや、バックグラウンドで動作するプロセスなどを実装し、サーバーにアーカイブがあるかどうかを定期的にチェックします。
+You can automate this procedure to a large extent using the following language commands: [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md), [`RESTART 4D`](../commands-legacy/restart-4d.md), and also [`Get last update log path`](../commands-legacy/last-update-log-path.md) for monitoring operations. これらのコマンドを使い、4Dアプリケーションに、以下に説明する自動更新手順をトリガーする機能を実装します。 具体的には、メニューコマンドや、バックグラウンドで動作するプロセスなどを実装し、サーバーにアーカイブがあるかどうかを定期的にチェックします。
 
 > You also have XML keys to elevate installation privileges so that you can use protected files under Windows (see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual).
 
@@ -795,4 +795,4 @@ You can automate this procedure to a large extent using the following language c
 
 アップデートログは、`YYYY-MM-DD_HH-MM-SS_log_X.txt` という名前で、たとえば、2021年 8月 25日の 14:23 に作成されたファイルに対しては `2021-08-25_14-23-00_log_1.txt` という名前になります。
 
-このファイルは、システムユーザーフォルダー内の "Updater" アプリケーションフォルダー内に作成されます。 このファイルは、システムユーザーフォルダー内の "Updater" アプリケーションフォルダー内に作成されます。 You can find out the location of this file at any time using the [`Get last update log path`](../commands-legacy/get-last-update-log-path.md) command.
+このファイルは、システムユーザーフォルダー内の "Updater" アプリケーションフォルダー内に作成されます。 このファイルは、システムユーザーフォルダー内の "Updater" アプリケーションフォルダー内に作成されます。 You can find out the location of this file at any time using the [`Get last update log path`](../commands-legacy/last-update-log-path.md) command.
