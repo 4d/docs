@@ -5,8 +5,8 @@ slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get application color scheme.Syntax-->**Get application color scheme** {( * )} : Text<!-- END REF-->
-<!--REF #_command_.Get application color scheme.Params-->
+<!--REF #_command_.Get Application color scheme.Syntax-->**Get application color scheme** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Retorna o esquema de cores do banco de dados host/anfitrião |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get application color scheme.Summary-->O comando **Get application color scheme** retorna o nome do esquema de cor atual para uso ao nível da aplicação.<!-- END REF--> 
+<!--REF #_command_.Get Application color scheme.Summary-->O comando **Get application color scheme** retorna o nome do esquema de cor atual para uso ao nível da aplicação.<!-- END REF--> 
 
 **Nota:** Em Windows, esse comando sempre retorna "light"/claro.
 

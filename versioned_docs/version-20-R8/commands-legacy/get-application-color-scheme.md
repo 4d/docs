@@ -5,8 +5,8 @@ slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get application color scheme.Syntax-->**Get application color scheme** {( * )} : Text<!-- END REF-->
-<!--REF #_command_.Get application color scheme.Params-->
+<!--REF #_command_.Get Application color scheme.Syntax-->**Get application color scheme** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Returns color scheme of host database |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get application color scheme.Summary-->The **Get application color scheme** command returns the name of the actual color scheme in use at the application level.<!-- END REF--> 
+<!--REF #_command_.Get Application color scheme.Summary-->The **Get application color scheme** command returns the name of the actual color scheme in use at the application level.<!-- END REF--> 
 
 **Note:** On Windows, this command always returns "light".
 
