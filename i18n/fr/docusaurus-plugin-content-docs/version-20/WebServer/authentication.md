@@ -25,7 +25,7 @@ Le schéma suivant résume le système d'accès au serveur web 4D :
 
 ### Authentification personnalisée (par défaut)
 
-Dans ce mode, c'est au développeur de définir comment authentifier les utilisateurs. 4D évalue uniquement les requêtes HTTP [qui nécessitent une authentification](#method-calls).
+Dans ce mode, c'est au développeur de définir comment authentifier les utilisateurs. 4D only evaluates HTTP requests [that require an authentication](#database-method-calls).
 
 Ce mode d'authentification est le plus flexible car il permet de :
 
@@ -125,7 +125,7 @@ Alternativement, vous pouvez utiliser la syntaxe [paramètres nommés](Concepts/
   -> $RequestAccepted : Boolean
 
 ```
-> Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. Les informations reçues par la méthode base dépendent du \[mode d'authentification\](#mode-d-authentification) sélectionné.
+> Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
 
 
 #### $1 - URL
