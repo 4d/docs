@@ -159,7 +159,7 @@ WEB SEND BLOB($BLOB;"image/png")
 
 > この場合、Webサーバーがポストされたフォームを受信すると、`On Web Authentication` データベースメソッドが (あれば) 呼び出されます。
 
-サーバーに投稿された HTMLページに含まれるすべてのフィールドの [名前と値を取得](#httpリクエストから値を取得する) するには、このメソッド内で `WEB GET VARIABLES` コマンドを呼び出す必要があります。
+In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-http-requests) of all the fields included in an HTML page submitted to the server.
 
 フォームのアクションを定義する例:
 
