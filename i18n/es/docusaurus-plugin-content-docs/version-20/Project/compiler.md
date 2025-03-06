@@ -112,7 +112,7 @@ Sólo se pueden desactivar los avisos con números. Los números de advertencia 
 
 ## Parámetros del compilador
 
-La página "Compilador" de la caja de diálogo de Propiedades le permite definir los parámetros relacionados con la compilación del proyecto. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window) haciendo clic en el botón **Parámetros del compilador**:
+La página "Compilador" de la caja de diálogo de Propiedades le permite definir los parámetros relacionados con la compilación del proyecto. You can directly open this page from the [compiler window](#compiler-window-features) by clicking on the **Compiler Settings** button:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -123,11 +123,11 @@ Esta área agrupa las opciones genéricas utilizadas durante el proceso de compi
 
 #### Generar el archivo de símbolos
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. Used to generate the symbol file (see [symbol file](#symbol-file)).
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_symbols.txt`.
 
 #### Generar archivo de errores
 
-Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. El archivo de error se crea en la [carpeta Logs](Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
+Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. The error file is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_errors.xml`.
 
 
 #### Ruta de compilación
@@ -188,7 +188,7 @@ Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero 
 
 ### Archivo Symbol
 
-Si selecciona la opción [**Generar el archivo de simbolos**](#generate-the-symbol-file) en las propiedades del compilador, un archivo de símbolos llamado `ProjectName_symbols.txt` se crea en la [carpeta Logs](Project/architecture.md#logs) del proyecto durante la compilación. Está dividido en varias partes:
+Si selecciona la opción [**Generar el archivo de simbolos**](#symbol-file) en las propiedades del compilador, un archivo de símbolos llamado `ProjectName_symbols.txt` se crea en la [carpeta Logs](../Project/architecture.md#logs-folder) del proyecto durante la compilación. Está dividido en varias partes:
 
 #### Lista de las variables proceso e interproceso
 
@@ -235,7 +235,7 @@ tipo resultado, número de llamadas, Thread Safe o Thread Unsafe
 
 ### Archivo de errores
 
-Puede elegir si generar o no un archivo de errores durante la compilación utilizando la opción [**Generar archivo de errores**](#generate-error-file) en las propiedades del compilador. El archivo de errores se llama automáticamente `projectName_errors.xml` y se coloca en la carpeta [Logs](Project/architecture.md#logs) del proyecto.
+Puede elegir si generar o no un archivo de errores durante la compilación utilizando la opción [**Generar archivo de errores**](#generate-error-file) en las propiedades del compilador. El archivo de errores se llama automáticamente `projectName_errors.xml` y se coloca en la carpeta [Logs](../Project/architecture.md#logs-folder) del proyecto.
 
 Aunque se puede acceder a los errores directamente a través de la [ventana de compilación](#compile), puede ser útil disponer de un archivo de errores que se pueda transmitir de una máquina a otra. El archivo de errores se genera en formato XML para facilitar el análisis automático de su contenido. También permite la creación de interfaces personalizadas de visualización de errores.
 
@@ -306,14 +306,14 @@ Ambos compiladores están integrados en 4D. El compilador adecuado se selecciona
 
 El compilador clásico genera código compilado nativo para procesadores Intel/AMD en cualquier máquina. No requiere ninguna configuración específica.
 
-El código compilado resultante se almacena en la carpeta [DerivedData](architecture.md#deriveddata) del proyecto.
+Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata-folder) folder of the project.
 
 
 ### Compilador Silicon
 
 El compilador Silicon genera código compilado nativo para los procesadores Apple Silicon, como *Apple M1*.
 
-El código compilado resultante se almacena en la carpeta [Libraries](architecture.md#libraries) del proyecto.
+El código compilado resultante se almacena en la carpeta [Libraries](architecture.md#libraries-folder) del proyecto.
 
 
 #### Requisitos
