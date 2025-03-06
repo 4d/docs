@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Fichiers journaux
 ---
 
-Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les journaux sont généralement démarrés ou arrêtés en utilisant des sélecteurs des commandes [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/fr/page642.html), [`WEB SET OPTION`](https://doc.4d.com/4dv20/help/command/fr/page1210.html) ou [`HTTP SET OPTION`](https://doc.4d.com/4dv20/help/command/fr/page1160.html) et sont stockés dans le dossier [Logs](Project/architecture.md#logs) du projet.
+Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](../Project/architecture.md#logs-folder) of the project.
 
 Les informations stockées dans les journaux doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
 
