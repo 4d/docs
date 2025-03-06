@@ -44,14 +44,14 @@ title: 管理
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-このコマンドで Webサーバーの動作や、ホームページの表示などを検証できます。 ページは、Webブラウザーが実行されているマシンの IPアドレスを指定する標準のショートカットである、*ローカルホスト* の URL を使用して呼び出されます。 コマンドはストラクチャー設定で指定された [TCP 公開ポート](webServerConfig.md#http-ポート) 番号を考慮に入れます。
+このコマンドで Webサーバーの動作や、ホームページの表示などを検証できます。 ページは、Webブラウザーが実行されているマシンの IPアドレスを指定する標準のショートカットである、*ローカルホスト* の URL を使用して呼び出されます。 The command takes into account the [TCP publication port](./webServerConfig.md#http-port) number specified in the settings.
 
 ## キャッシュクリア
 
 いつでもページやイメージをキャッシュからクリアできます (たとえば、スタティックページを更新し、キャッシュにそれをリロードさせたい場合)。
 
 これをおこなうには、Web / オプション (I) ページの **キャッシュクリア** ボタンをクリックします。 キャッシュは即座にクリアされます。
-> 特殊なURL [/4DCACHECLEAR](#4dcacheclear) を使用することもできます。
+> You can also use the [/4DCACHECLEAR](#4dcacheclear) URL.
 
 ## ランタイムエクスプローラー
 
