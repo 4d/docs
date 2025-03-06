@@ -49,7 +49,7 @@ Quando seleciona este comando, a página de início do site web publicado pela a
 ![](../assets/en/WebServer/defaultHomePage.png)
 
 
-Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. A página se chama utilizando o URL *Localhost*, o atalho padrão que designa o endereço IP da máquina onde se executa o navegador. O comando considera o número da [porta de publicação TCP](#http-port) especificado nos parâmetros.
+Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. A página se chama utilizando o URL *Localhost*, o atalho padrão que designa o endereço IP da máquina onde se executa o navegador. The command takes into account the [TCP publication port](./webServerConfig.md#http-port) number specified in the settings.
 
 
 
@@ -63,7 +63,7 @@ Para o fazer, pode:
 -   4D Server: clique no botão **Limpar Cache** na página HTTP da janela de administração do 4D Server.
 
 A cache é então imediatamente limpa.
-> Você também pode usar o URL [/4DCACHECLEAR](#cacheclear).
+> You can also use the [/4DCACHECLEAR](#4dcacheclear) URL.
 
 
 
