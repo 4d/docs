@@ -30,7 +30,8 @@ Si la base funciona con un archivo historial, la variable sistema OK toma el val
 
 #### Ver también 
 
-[SELECT LOG FILE](select-log-file.md)  
+[SELECT LOG FILE](../commands/select-log-file.md)  
+
 
 #### Propiedades
 
@@ -39,5 +40,3 @@ Si la base funciona con un archivo historial, la variable sistema OK toma el val
 | Número de comando | 928 |
 | Hilo seguro | &check; |
 | Modifica variables | OK |
-
-
