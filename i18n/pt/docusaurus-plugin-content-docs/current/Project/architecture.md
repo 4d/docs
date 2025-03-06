@@ -124,7 +124,7 @@ A pasta Trash contém métodos e formulários eliminados do projeto (se existire
 - `Formulários`
 - `TableForms`
 
-Dentro destas pastas, os nomes dos elementos eliminados estão entre parênteses, por exemplo, "(myMethod).4dm". La organización de las carpetas es idéntica a la carpeta [Sources](#sources).
+Dentro destas pastas, os nomes dos elementos eliminados estão entre parênteses, por exemplo, "(myMethod).4dm". The folder organization is identical to the [Sources](#sources-folder) folder.
 
 ### `DerivedData`
 
