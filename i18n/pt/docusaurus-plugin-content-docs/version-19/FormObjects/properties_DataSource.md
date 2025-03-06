@@ -47,7 +47,7 @@ Você também pode associar listas de opções a objetos usando os comandos [OBJ
 
 #### Objectos suportados
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -82,7 +82,7 @@ Especifica uma variável ou expressão a que será atribuído o elemento/entidad
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -167,7 +167,7 @@ O uso da opção **Referência de item selecionado** exige a conformidade com os
 
 Lista de valores usados como valores padrão para a coluna do list box (somente tipo array). Esses valores estão automaticamente disponíveis na [variable array](properties_Object.md#variable-or-expression) associada a essa coluna quando o formulário é executado. Usando a linguagem, você pode gerenciar o objeto referir-se a esse array.
 
-> Não faça confusão entre esta propriedade e a propriedade "[valor padrão](properties_RangeOfValues.md#default-list-of-values)" que permite definir um valor de campo em novos registros.
+> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-value)" property that allows to define a field value in new records.
 
 É necessário introduzir uma lista de valores. No editor de formulários, uma caixa de diálogo específica permite que você insira valores separados por retornos de carro:
 
@@ -246,7 +246,7 @@ Todas as tabelas do banco de dados podem ser usadas, independentemente de o form
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -299,7 +299,7 @@ Especifica uma variável ou expressão à qual serão atribuídos os elementos o
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -319,4 +319,4 @@ Especifica a seleção temporária a ser utilizada. Você deve inserir o nome de
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
