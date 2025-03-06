@@ -3,7 +3,7 @@ id: debugLogFiles
 title: ログファイル
 ---
 
-4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 ログは通常 [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md),、[WEB SET OPTION](../commands-legacy/web-set-option.md)、あるいは [HTTP SET OPTION](../commands-legacy/http-set-option.md) コマンドのセレクターを使用して開始・停止され、プロジェクトの [Logsフォルダー](Project/architecture.md#logs) 内に保存されます。
+4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](../Project/architecture.md#logs-folder) of the project.
 
 記録された情報は、問題の検知と修正のためには分析する必要があります。 この章では、以下のログファイルの詳細を説明します:
 
@@ -489,8 +489,8 @@ This log file records events related to TCP connections. Events include data tra
 | protocol    | Text      | Indicates whether the event is related to `TCP`                                            |
 | event       | Text      | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
 | size        | Number    | The amount of data sent or received (in bytes), 0 if not applicable     |
-| excerpt     | Number    | First 10 bytes of data in hexadecimal format                                               |
-| textExcerpt | Text      | First 10 bytes of data in text format                                                      |
+| 抜粋          | Number    | 最初の10 バイトのデータは16進数形式です。                                                                    |
+| textExcerpt | Text      | 最初の10 バイトのデータはテキスト形式です。                                                                    |
 | comment     | Text      | Additional information about the event, such as error details or encryption status         |
 
 ## ログ設定ファイルを使用する
