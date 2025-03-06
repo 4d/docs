@@ -3341,7 +3341,6 @@ The returned collection contains the element specified by *startFrom* and all su
 <!-- REF #collection.some().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-
 |startFrom |Integer |->|Index to start the test at|
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
