@@ -18,7 +18,7 @@ title: スプリッター
 * フォーム上で移動されたオブジェクトが完全に表示されたままになるように、また別のスプリッターを超えないように、スプリッターの停止位置が計算されます。 [以降のオブジェクトを移動する](properties_ResizingOptions.md#以降のオブジェクトを移動する) (プッシャー) プロパティをスプリッターに割り当てると、スプリッターを右方向または下方向へ動かしても停止することはありません。
 * スプリッターを使用するフォームのサイズを変更すると、フォームが表示されている間だけ、フォームの新しいサイズが保存されます。 フォームを閉じると、最初の大きさに戻ります。
 
-スプリッターは挿入されると線として表示されます。 その [線のスタイル](properties_BackgroundAndBorder.md#点線タイプ) を変更してさらに細い線に設定したり、線の種類によっては [線の色](properties_BackgroundAndBorder.md#線カラー) を設定したりすることができます。
+スプリッターは挿入されると線として表示されます。 You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md#line-color).
 
 #### JSON 例
 
