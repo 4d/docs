@@ -677,7 +677,7 @@ $sel2:=$sel.clean()
 
 `.distinct()` 関数は、<!-- REF #EntitySelectionClass.distinct().Summary -->*attributePath* に指定した、エンティティセレクション内の重複しない (異なる) 値のみを格納したコレクションを返します<!-- END REF -->。
 
-返されたコレクションは自動的に並べ替えられています。 返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。 **Null** 値は返されません。
+返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。
 
 *attributePath* 引数として、固有の値を取得したいエンティティ属性を渡します。 スカラー値 (テキスト、数値、ブール、あるいは日付) のみが可能です。 *attributePath* のパスが異なる型の値を格納しているオブジェクトプロパティ であった場合、まず最初に型ごとにグループ分けされ、そのあとで並べ替えされます。 型は以下の順番で返されます:
 
@@ -2022,10 +2022,10 @@ $result2:=$invoices.selected($creditSel)
 
 戻り値のエンティティセレクションには、*startFrom* 引数で指定したエンティティ (含まれる) から、*end* 引数で指定したエンティティまで (含まれない) の全エンティティが格納されます。 *startFrom* 引数のみを渡した場合には、*startFrom* 引数で指定したエンティティから最後のエンティティまでが戻り値のエンティティセレクションに格納されます。
 
-- *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (エンティティセレクションの終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
+- *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (エンティティセレクションの終端からのオフセットであるとみなされます)。 If the calculated value < 0, *startFrom* is set to 0.
 - *startFrom >= length* の場合、関数は空のエンティティセレクションを返します。
 - *end* < 0 の場合、それは *end:=end+length* として再計算されます。
-- 渡された値、あるいは再計算された値が *end* < *startFrom* の場合、関数はなにもしません。
+- If *end < startFrom* (passed or calculated values), the method does nothing.
 
 エンティティセレクションにドロップされたエンティティが含まれる場合、それらも返されます。
 
