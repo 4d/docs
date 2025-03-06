@@ -117,7 +117,7 @@ En el parámetro *folderConstant*, pase una carpeta 4D interna o sistema, utiliz
 
 Si el comando se llama desde un componente, pase el *parámetro opcional para obtener la ruta de la base local. En caso contrario, si se omite el* parámetro, siempre se devuelve un objeto null.
 
-> En Windows, en los clientes fusionados, la ubicación de las carpetas integradas se modifica si se utiliza la [BuildApp key](../Desktop/building.md#buildapp4dsettings) `ShareLocalResourcesOnWindowsClient`.
+> On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#build-application-settings) is used.
 
 ## 4D.Folder.new()
 
