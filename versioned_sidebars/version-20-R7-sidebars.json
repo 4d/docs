@@ -197,20 +197,20 @@
             "type": "generated-index",
             "title": "Commands",
             "slug": "/category/commands",
-            "keywords": ["commands"],
+            "keywords": [
+              "commands"
+            ],
             "image": "/img/docusaurus.png"
-            },
+          },
           "items": [
-              "commands/command-index",
-              {
+            "commands/command-index",
+            {
               "type": "category",
               "label": "4D Environment",
               "link": {
-                "type": "generated-index",
-                "title": "4D Environment",
-                "keywords": ["4D Environment"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/4D_Environment"
+              },
               "items": [
                 "commands-legacy/application-file",
                 "commands-legacy/application-info",
@@ -256,17 +256,15 @@
                 "commands-legacy/verify-current-data-file",
                 "commands-legacy/verify-data-file",
                 "commands-legacy/version-type"
-                ]
-              },
-              {
+              ]
+            },
+            {
               "type": "category",
               "label": "Arrays",
               "link": {
-                "type": "generated-index",
-                "title": "Arrays",
-                "keywords": ["Arrays"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Arrays"
+              },
               "items": [
                 "commands-legacy/append-to-array",
                 "commands-legacy/array-blob",
@@ -301,16 +299,14 @@
                 "commands-legacy/sort-array",
                 "commands-legacy/text-to-array"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Backup",
               "link": {
-                "type": "generated-index",
-                "title": "Backup",
-                "keywords": ["Backup"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Backup"
+              },
               "items": [
                 "commands-legacy/backup",
                 "commands-legacy/backup-info",
@@ -322,17 +318,15 @@
                 "commands-legacy/restore",
                 "commands-legacy/restore-info",
                 "commands-legacy/select-log-file"
-                ]
-              },
-              {
+              ]
+            },
+            {
               "type": "category",
               "label": "BLOB",
               "link": {
-                "type": "generated-index",
-                "title": "BLOB",
-                "keywords": ["BLOB"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/BLOB"
+              },
               "items": [
                 "commands-legacy/blob-properties",
                 "commands-legacy/blob-size",
@@ -358,33 +352,29 @@
                 "commands-legacy/set-blob-size",
                 "commands-legacy/text-to-blob",
                 "commands-legacy/variable-to-blob"
-                ]
-              },
-              {
+              ]
+            },
+            {
               "type": "category",
               "label": "Boolean",
               "link": {
-                "type": "generated-index",
-                "title": "Boolean",
-                "keywords": ["Boolean"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Boolean"
+              },
               "items": [
                 "commands-legacy/bool",
                 "commands-legacy/false",
                 "commands-legacy/not",
                 "commands-legacy/true"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Cache Management",
               "link": {
-                "type": "generated-index",
-                "title": "Cache Management",
-                "keywords": ["Cache Management"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Cache_Management"
+              },
               "items": [
                 "commands-legacy/adjust-blobs-cache-priority",
                 "commands-legacy/adjust-index-cache-priority",
@@ -401,32 +391,28 @@
                 "commands-legacy/set-index-cache-priority",
                 "commands-legacy/set-table-cache-priority"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Collections",
               "link": {
-                "type": "generated-index",
-                "title": "Collections",
-                "keywords": ["Collections"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Collections"
+              },
               "items": [
                 "commands-legacy/array-to-collection",
                 "commands-legacy/collection-to-array",
                 "commands/new-collection",
                 "commands/new-shared-collection"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Communications",
               "link": {
-                "type": "generated-index",
-                "title": "Communications",
-                "keywords": ["Communications"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Communications"
+              },
               "items": [
                 "commands-legacy/get-serial-port-mapping",
                 "commands-legacy/receive-buffer",
@@ -440,30 +426,26 @@
                 "commands-legacy/set-timeout",
                 "commands-legacy/use-character-set"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Compiler",
               "link": {
-                "type": "generated-index",
-                "title": "Compiler",
-                "keywords": ["Compiler"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Compiler"
+              },
               "items": [
                 "commands-legacy/compile-project",
                 "commands-legacy/idle"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Data Entry",
               "link": {
-                "type": "generated-index",
-                "title": "Data Entry",
-                "keywords": ["Data Entry"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Data_Entry"
+              },
               "items": [
                 "commands-legacy/accept",
                 "commands-legacy/add-record",
@@ -474,16 +456,14 @@
                 "commands-legacy/old",
                 "commands-legacy/reject"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Data Security",
               "link": {
-                "type": "generated-index",
-                "title": "Data Security",
-                "keywords": ["Data Security"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Data_Security"
+              },
               "items": [
                 "commands-legacy/data-file-encryption-status",
                 "commands-legacy/decrypt-data-blob",
@@ -493,16 +473,14 @@
                 "commands-legacy/new-data-key",
                 "commands-legacy/register-data-key"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Database Methods",
               "link": {
-                "type": "generated-index",
-                "title": "Database Methods",
-                "keywords": ["Database Methods"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Database_Methods"
+              },
               "items": [
                 "commands-legacy/on-backup-shutdown-database-method",
                 "commands-legacy/on-backup-startup-database-method",
@@ -523,16 +501,14 @@
                 "commands-legacy/on-web-connection-database-method",
                 "commands-legacy/on-web-legacy-close-session-database-method"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Date and Time",
               "link": {
-                "type": "generated-index",
-                "title": "Date and Time",
-                "keywords": ["Date and Time"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Date_and_Time"
+              },
               "items": [
                 "commands-legacy/add-to-date",
                 "commands-legacy/current-date",
@@ -549,16 +525,14 @@
                 "commands-legacy/timestamp",
                 "commands-legacy/year-of"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Design Object Access",
               "link": {
-                "type": "generated-index",
-                "title": "Design Object Access",
-                "keywords": ["Design Object Access"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Design_Object_Access"
+              },
               "items": [
                 "commands-legacy/current-method-path",
                 "commands-legacy/form-edit",
@@ -581,30 +555,26 @@
                 "commands-legacy/method-set-code",
                 "commands-legacy/method-set-comments"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Drag and Drop",
               "link": {
-                "type": "generated-index",
-                "title": "Drag and Drop",
-                "keywords": ["Drag and Drop"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Drag_and_Drop"
+              },
               "items": [
                 "commands-legacy/drop-position",
                 "commands-legacy/set-drag-icon"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Entry Control",
               "link": {
-                "type": "generated-index",
-                "title": "Entry Control",
-                "keywords": ["Entry Control"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Entry_Control"
+              },
               "items": [
                 "commands-legacy/edit-item",
                 "commands-legacy/filter-keystroke",
@@ -615,32 +585,28 @@
                 "commands-legacy/is-editing-text",
                 "commands-legacy/keystroke"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "File and Folder",
               "link": {
-                "type": "generated-index",
-                "title": "File and Folder",
-                "keywords": ["File and Folder"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/File_and_Folder"
+              },
               "items": [
                 "commands/file",
                 "commands/folder",
                 "commands/zip-create-archive",
                 "commands/zip-read-archive"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Form Events",
               "link": {
-                "type": "generated-index",
-                "title": "Form Events",
-                "keywords": ["Form Events"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Form_Events"
+              },
               "items": [
                 "commands-legacy/activated",
                 "commands-legacy/after",
@@ -662,16 +628,14 @@
                 "commands-legacy/right-click",
                 "commands-legacy/set-timer"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Forms",
               "link": {
-                "type": "generated-index",
-                "title": "Forms",
-                "keywords": ["Forms"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Forms"
+              },
               "items": [
                 "commands-legacy/current-form-name",
                 "commands-legacy/form",
@@ -698,16 +662,14 @@
                 "commands-legacy/form-set-vertical-resizing",
                 "commands-legacy/form-unload"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Formulas",
               "link": {
-                "type": "generated-index",
-                "title": "Formulas",
-                "keywords": ["Formulas"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Formulas"
+              },
               "items": [
                 "commands-legacy/edit-formula",
                 "commands-legacy/execute-formula",
@@ -717,30 +679,26 @@
                 "commands-legacy/parse-formula",
                 "commands/set-allowed-methods"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Graphs",
               "link": {
-                "type": "generated-index",
-                "title": "Graphs",
-                "keywords": ["Graphs"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Graphs"
+              },
               "items": [
                 "commands-legacy/graph",
                 "commands-legacy/graph-settings"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "HTTP",
               "link": {
-                "type": "generated-index",
-                "title": "HTTP",
-                "keywords": ["HTTP"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/HTTP"
+              },
               "items": [
                 "commands-legacy/http-authenticate",
                 "commands-legacy/http-get",
@@ -751,16 +709,14 @@
                 "commands-legacy/http-set-certificates-folder",
                 "commands-legacy/http-set-option"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Hierarchical Lists",
               "link": {
-                "type": "generated-index",
-                "title": "Hierarchical Lists",
-                "keywords": ["Hierarchical Lists"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Hierarchical_Lists"
+              },
               "items": [
                 "commands-legacy/append-to-list",
                 "commands-legacy/clear-list",
@@ -794,16 +750,14 @@
                 "commands-legacy/set-list-properties",
                 "commands-legacy/sort-list"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Import and Export",
               "link": {
-                "type": "generated-index",
-                "title": "Import and Export",
-                "keywords": ["Import and Export"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Import_and_Export"
+              },
               "items": [
                 "commands-legacy/export-data",
                 "commands-legacy/export-dif",
@@ -814,16 +768,14 @@
                 "commands-legacy/import-sylk",
                 "commands-legacy/import-text"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Interruptions",
               "link": {
-                "type": "generated-index",
-                "title": "Interruptions",
-                "keywords": ["Interruptions"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Interruptions"
+              },
               "items": [
                 "commands-legacy/abort",
                 "commands-legacy/assert",
@@ -838,16 +790,14 @@
                 "commands-legacy/set-assert-enabled",
                 "commands-legacy/throw"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "JSON",
               "link": {
-                "type": "generated-index",
-                "title": "JSON",
-                "keywords": ["JSON"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/JSON"
+              },
               "items": [
                 "commands-legacy/json-parse",
                 "commands-legacy/json-parse-array",
@@ -858,32 +808,28 @@
                 "commands-legacy/json-validate",
                 "commands-legacy/selection-to-json"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "LDAP",
               "link": {
-                "type": "generated-index",
-                "title": "LDAP",
-                "keywords": ["LDAP"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/LDAP"
+              },
               "items": [
                 "commands-legacy/ldap-login",
                 "commands-legacy/ldap-logout",
                 "commands-legacy/ldap-search",
                 "commands-legacy/ldap-search-all"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Language",
               "link": {
-                "type": "generated-index",
-                "title": "Language",
-                "keywords": ["Language"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Language"
+              },
               "items": [
                 "commands/4d",
                 "commands-legacy/action-info",
@@ -908,16 +854,14 @@
                 "commands-legacy/undefined",
                 "commands-legacy/value-type"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Licenses",
               "link": {
-                "type": "generated-index",
-                "title": "Licenses",
-                "keywords": ["Licenses"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Licenses"
+              },
               "items": [
                 "commands-legacy/change-licenses",
                 "commands-legacy/create-deployment-license",
@@ -926,16 +870,14 @@
                 "commands-legacy/license-usage",
                 "commands-legacy/refresh-license"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "List Box",
               "link": {
-                "type": "generated-index",
-                "title": "List Box",
-                "keywords": ["List Box"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/List_Box"
+              },
               "items": [
                 "commands-legacy/listbox-collapse",
                 "commands-legacy/listbox-delete-column",
@@ -997,16 +939,14 @@
                 "commands-legacy/listbox-set-table-source",
                 "commands-legacy/listbox-sort-columns"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Mail",
               "link": {
-                "type": "generated-index",
-                "title": "Mail",
-                "keywords": ["Mail"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Mail"
+              },
               "items": [
                 "commands/imap-new-transporter",
                 "commands/mail-convert-from-mime",
@@ -1015,16 +955,14 @@
                 "commands/pop3-new-transporter",
                 "commands/smtp-new-transporter"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Math",
               "link": {
-                "type": "generated-index",
-                "title": "Math",
-                "keywords": ["Math"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Math"
+              },
               "items": [
                 "commands-legacy/abs",
                 "commands-legacy/arctan",
@@ -1043,16 +981,14 @@
                 "commands-legacy/tan",
                 "commands-legacy/trunc"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Menus",
               "link": {
-                "type": "generated-index",
-                "title": "Menus",
-                "keywords": ["Menus"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Menus"
+              },
               "items": [
                 "commands-legacy/append-menu-item",
                 "commands-legacy/count-menu-items",
@@ -1089,16 +1025,14 @@
                 "commands-legacy/set-menu-item-shortcut",
                 "commands-legacy/set-menu-item-style"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Messages",
               "link": {
-                "type": "generated-index",
-                "title": "Messages",
-                "keywords": ["Messages"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Messages"
+              },
               "items": [
                 "commands-legacy/alert",
                 "commands-legacy/confirm",
@@ -1109,32 +1043,28 @@
                 "commands-legacy/messages-on",
                 "commands-legacy/request"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Named Selections",
               "link": {
-                "type": "generated-index",
-                "title": "Named Selections",
-                "keywords": ["Named Selections"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Named_Selections"
+              },
               "items": [
                 "commands-legacy/clear-named-selection",
                 "commands-legacy/copy-named-selection",
                 "commands-legacy/cut-named-selection",
                 "commands-legacy/use-named-selection"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Objects (Forms)",
               "link": {
-                "type": "generated-index",
-                "title": "Objects (Forms)",
-                "keywords": ["Objects (Forms)"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Objects_Forms"
+              },
               "items": [
                 "commands-legacy/get-style-sheet-info",
                 "commands-legacy/list-of-style-sheets",
@@ -1231,16 +1161,14 @@
                 "commands-legacy/object-set-vertical-alignment",
                 "commands-legacy/object-set-visible"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Objects (Language)",
               "link": {
-                "type": "generated-index",
-                "title": "Objects (Language)",
-                "keywords": ["Objects (Language)"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Objects_Language"
+              },
               "items": [
                 "commands-legacy/new-object",
                 "commands-legacy/new-shared-object",
@@ -1263,16 +1191,14 @@
                 "commands-legacy/ob-values",
                 "commands-legacy/storage"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "On a Series",
               "link": {
-                "type": "generated-index",
-                "title": "On a Series",
-                "keywords": ["On a Series"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/On_a_Series"
+              },
               "items": [
                 "commands-legacy/average",
                 "commands-legacy/max",
@@ -1282,32 +1208,28 @@
                 "commands-legacy/sum-squares",
                 "commands-legacy/variance"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "PHP",
               "link": {
-                "type": "generated-index",
-                "title": "PHP",
-                "keywords": ["PHP"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/PHP"
+              },
               "items": [
                 "commands-legacy/php-execute",
                 "commands-legacy/php-get-full-response",
                 "commands-legacy/php-get-option",
                 "commands-legacy/php-set-option"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Pasteboard",
               "link": {
-                "type": "generated-index",
-                "title": "Pasteboard",
-                "keywords": ["Pasteboard"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Pasteboard"
+              },
               "items": [
                 "commands-legacy/append-data-to-pasteboard",
                 "commands-legacy/clear-pasteboard",
@@ -1321,16 +1243,14 @@
                 "commands-legacy/set-picture-to-pasteboard",
                 "commands-legacy/set-text-to-pasteboard"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Pictures",
               "link": {
-                "type": "generated-index",
-                "title": "Pictures",
-                "keywords": ["Pictures"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Pictures"
+              },
               "items": [
                 "commands-legacy/blob-to-picture",
                 "commands-legacy/combine-pictures",
@@ -1356,16 +1276,14 @@
                 "commands-legacy/transform-picture",
                 "commands-legacy/write-picture-file"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Printing",
               "link": {
-                "type": "generated-index",
-                "title": "Printing",
-                "keywords": ["Printing"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Printing"
+              },
               "items": [
                 "commands-legacy/accumulate",
                 "commands-legacy/blob-to-print-settings",
@@ -1399,17 +1317,14 @@
                 "commands-legacy/set-printable-margin",
                 "commands-legacy/subtotal"
               ]
-              },
-    
-              {
+            },
+            {
               "type": "category",
               "label": "Process (Communications)",
               "link": {
-                "type": "generated-index",
-                "title": "Process (Communications)",
-                "keywords": ["Process (Communications)"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Process_Communications"
+              },
               "items": [
                 "commands-legacy/call-worker",
                 "commands-legacy/clear-semaphore",
@@ -1421,32 +1336,28 @@
                 "commands-legacy/test-semaphore",
                 "commands-legacy/variable-to-variable"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Process (User Interface)",
               "link": {
-                "type": "generated-index",
-                "title": "Process (User Interface)",
-                "keywords": ["Process (User Interface)"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Process_User_Interface"
+              },
               "items": [
                 "commands-legacy/bring-to-front",
                 "commands-legacy/frontmost-process",
                 "commands-legacy/hide-process",
                 "commands-legacy/show-process"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Processes",
               "link": {
-                "type": "generated-index",
-                "title": "Processes",
-                "keywords": ["Processes"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Processes"
+              },
               "items": [
                 "commands-legacy/abort-process-by-id",
                 "commands-legacy/count-tasks",
@@ -1472,16 +1383,14 @@
                 "commands-legacy/session-storage",
                 "commands-legacy/unregister-client"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Queries",
               "link": {
-                "type": "generated-index",
-                "title": "Queries",
-                "keywords": ["Queries"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Queries"
+              },
               "items": [
                 "commands-legacy/describe-query-execution",
                 "commands-legacy/find-in-field",
@@ -1505,16 +1414,14 @@
                 "commands-legacy/set-query-destination",
                 "commands-legacy/set-query-limit"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Quick Report",
               "link": {
-                "type": "generated-index",
-                "title": "Quick Report",
-                "keywords": ["Quick Report"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Quick_Report"
+              },
               "items": [
                 "commands-legacy/qr-blob-to-report",
                 "commands-legacy/qr-count-columns",
@@ -1563,16 +1470,14 @@
                 "commands-legacy/qr-set-totals-data",
                 "commands-legacy/qr-set-totals-spacing"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Record Locking",
               "link": {
-                "type": "generated-index",
-                "title": "Record Locking",
-                "keywords": ["Record Locking"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Record_Locking"
+              },
               "items": [
                 "commands-legacy/load-record",
                 "commands-legacy/locked",
@@ -1583,16 +1488,14 @@
                 "commands-legacy/read-write",
                 "commands-legacy/unload-record"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Records",
               "link": {
-                "type": "generated-index",
-                "title": "Records",
-                "keywords": ["Records"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Records"
+              },
               "items": [
                 "commands-legacy/create-record",
                 "commands-legacy/delete-record",
@@ -1609,16 +1512,14 @@
                 "commands-legacy/save-record",
                 "commands-legacy/sequence-number"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Relations",
               "link": {
-                "type": "generated-index",
-                "title": "Relations",
-                "keywords": ["Relations"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Relations"
+              },
               "items": [
                 "commands-legacy/create-related-one",
                 "commands-legacy/get-automatic-relations",
@@ -1633,16 +1534,14 @@
                 "commands-legacy/set-automatic-relations",
                 "commands-legacy/set-field-relation"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Resources",
               "link": {
-                "type": "generated-index",
-                "title": "Resources",
-                "keywords": ["Resources"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Resources"
+              },
               "items": [
                 "commands-legacy/close-resource-file",
                 "commands-legacy/get-indexed-string",
@@ -1657,16 +1556,14 @@
                 "commands-legacy/resource-type-list",
                 "commands-legacy/string-list-to-array"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "SQL",
               "link": {
-                "type": "generated-index",
-                "title": "SQL",
-                "keywords": ["SQL"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/SQL"
+              },
               "items": [
                 "commands-legacy/begin-sql",
                 "commands-legacy/end-sql",
@@ -1691,16 +1588,14 @@
                 "commands-legacy/start-sql-server",
                 "commands-legacy/stop-sql-server"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "SVG",
               "link": {
-                "type": "generated-index",
-                "title": "SVG",
-                "keywords": ["SVG"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/SVG"
+              },
               "items": [
                 "commands-legacy/svg-export-to-picture",
                 "commands-legacy/svg-find-element-id-by-coordinates",
@@ -1709,30 +1604,26 @@
                 "commands-legacy/svg-set-attribute",
                 "commands-legacy/svg-show-element"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Secured Protocol",
               "link": {
-                "type": "generated-index",
-                "title": "Secured Protocol",
-                "keywords": ["Secured Protocol"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Secured_Protocol"
+              },
               "items": [
                 "commands-legacy/generate-certificate-request",
                 "commands-legacy/generate-encryption-keypair"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Selection",
               "link": {
-                "type": "generated-index",
-                "title": "Selection",
-                "keywords": ["Selection"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Selection"
+              },
               "items": [
                 "commands-legacy/all-records",
                 "commands-legacy/apply-to-selection",
@@ -1757,16 +1648,14 @@
                 "commands-legacy/selected-record-number",
                 "commands-legacy/truncate-table"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Sets",
               "link": {
-                "type": "generated-index",
-                "title": "Sets",
-                "keywords": ["Sets"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Sets"
+              },
               "items": [
                 "commands-legacy/add-to-set",
                 "commands-legacy/clear-set",
@@ -1784,16 +1673,14 @@
                 "commands-legacy/union",
                 "commands-legacy/use-set"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Spell Checker",
               "link": {
-                "type": "generated-index",
-                "title": "Spell Checker",
-                "keywords": ["Spell Checker"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Spell_Checker"
+              },
               "items": [
                 "commands-legacy/spell-add-to-user-dictionary",
                 "commands-legacy/spell-check-text",
@@ -1802,16 +1689,14 @@
                 "commands-legacy/spell-get-dictionary-list",
                 "commands-legacy/spell-set-current-dictionary"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "String",
               "link": {
-                "type": "generated-index",
-                "title": "String",
-                "keywords": ["String"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/String"
+              },
               "items": [
                 "commands-legacy/change-string",
                 "commands-legacy/char",
@@ -1834,16 +1719,14 @@
                 "commands-legacy/substring",
                 "commands-legacy/uppercase"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Structure Access",
               "link": {
-                "type": "generated-index",
-                "title": "Structure Access",
-                "keywords": ["Structure Access"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Structure_Access"
+              },
               "items": [
                 "commands-legacy/create-index",
                 "commands-legacy/delete-index",
@@ -1870,16 +1753,14 @@
                 "commands-legacy/table",
                 "commands-legacy/table-name"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Styled Text",
               "link": {
-                "type": "generated-index",
-                "title": "Styled Text",
-                "keywords": ["Styled Text"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Styled_Text"
+              },
               "items": [
                 "commands-legacy/st-compute-expressions",
                 "commands-legacy/st-freeze-expressions",
@@ -1897,29 +1778,25 @@
                 "commands-legacy/st-set-plain-text",
                 "commands-legacy/st-set-text"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Subrecords",
               "link": {
-                "type": "generated-index",
-                "title": "Subrecords",
-                "keywords": ["Subrecords"],
-                "image": "/img/docusaurus.png"
-                },
-            "items": [
+                "type": "doc",
+                "id": "commands/theme/Subrecords"
+              },
+              "items": [
                 "commands-legacy/get-subrecord-key"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "System Documents",
               "link": {
-                "type": "generated-index",
-                "title": "System Documents",
-                "keywords": ["System Documents"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/System_Documents"
+              },
               "items": [
                 "commands-legacy/append-document",
                 "commands-legacy/close-document",
@@ -1955,16 +1832,14 @@
                 "commands-legacy/volume-attributes",
                 "commands-legacy/volume-list"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "System Environment",
               "link": {
-                "type": "generated-index",
-                "title": "System Environment",
-                "keywords": ["System Environment"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/System_Environment"
+              },
               "items": [
                 "commands-legacy/count-screens",
                 "commands-legacy/current-client-authentication",
@@ -1991,32 +1866,28 @@
                 "commands-legacy/system-info",
                 "commands-legacy/temporary-folder"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Table",
               "link": {
-                "type": "generated-index",
-                "title": "Table",
-                "keywords": ["Table"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Table"
+              },
               "items": [
                 "commands-legacy/current-default-table",
                 "commands-legacy/current-form-table",
                 "commands-legacy/default-table",
                 "commands-legacy/no-default-table"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Tools",
               "link": {
-                "type": "generated-index",
-                "title": "Tools",
-                "keywords": ["Tools"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Tools"
+              },
               "items": [
                 "commands-legacy/activity-snapshot",
                 "commands-legacy/base64-decode",
@@ -2038,16 +1909,14 @@
                 "commands-legacy/stop-monitoring-activity",
                 "commands-legacy/verify-password-hash"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Transactions",
               "link": {
-                "type": "generated-index",
-                "title": "Transactions",
-                "keywords": ["Transactions"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Transactions"
+              },
               "items": [
                 "commands-legacy/active-transaction",
                 "commands-legacy/cancel-transaction",
@@ -2058,31 +1927,27 @@
                 "commands-legacy/transaction-level",
                 "commands-legacy/validate-transaction"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Triggers",
               "link": {
-                "type": "generated-index",
-                "title": "Triggers",
-                "keywords": ["Triggers"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Triggers"
+              },
               "items": [
                 "commands-legacy/trigger-event",
                 "commands-legacy/trigger-level",
                 "commands-legacy/trigger-properties"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "User Interface",
               "link": {
-                "type": "generated-index",
-                "title": "User Interface",
-                "keywords": ["User Interface"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/User_Interface"
+              },
               "items": [
                 "commands-legacy/beep",
                 "commands-legacy/caps-lock-down",
@@ -2111,16 +1976,14 @@
                 "commands-legacy/windows-alt-down",
                 "commands-legacy/windows-ctrl-down"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Users and Groups",
               "link": {
-                "type": "generated-index",
-                "title": "Users and Groups",
-                "keywords": ["Users and Groups"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Users_and_Groups"
+              },
               "items": [
                 "commands-legacy/blob-to-users",
                 "commands-legacy/change-current-user",
@@ -2145,31 +2008,27 @@
                 "commands-legacy/users-to-blob",
                 "commands-legacy/validate-password"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Variables",
               "link": {
-                "type": "generated-index",
-                "title": "Variables",
-                "keywords": ["Variables"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Variables"
+              },
               "items": [
                 "commands-legacy/clear-variable",
                 "commands-legacy/load-variables",
                 "commands-legacy/save-variables"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Web Area",
               "link": {
-                "type": "generated-index",
-                "title": "Web Area",
-                "keywords": ["Web Area"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Web_Area"
+              },
               "items": [
                 "commands-legacy/wa-back-url-available",
                 "commands-legacy/wa-create-url-history-menu",
@@ -2199,16 +2058,14 @@
                 "commands-legacy/wa-zoom-in",
                 "commands-legacy/wa-zoom-out"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Web Server",
               "link": {
-                "type": "generated-index",
-                "title": "Web Server",
-                "keywords": ["Web Server"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Web_Server"
+              },
               "items": [
                 "commands-legacy/web-get-body-part",
                 "commands-legacy/web-get-body-part-count",
@@ -2238,16 +2095,14 @@
                 "commands-legacy/web-stop-server",
                 "commands-legacy/web-validate-digest"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Web Services (Client)",
               "link": {
-                "type": "generated-index",
-                "title": "Web Services (Client)",
-                "keywords": ["Web Services (Client)"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Web_Services_Client"
+              },
               "items": [
                 "commands-legacy/web-service-authenticate",
                 "commands-legacy/web-service-call",
@@ -2256,16 +2111,14 @@
                 "commands-legacy/web-service-set-option",
                 "commands-legacy/web-service-set-parameter"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Web Services (Server)",
               "link": {
-                "type": "generated-index",
-                "title": "Web Services (Server)",
-                "keywords": ["Web Services (Server)"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Web_Services_Server"
+              },
               "items": [
                 "commands-legacy/soap-declaration",
                 "commands-legacy/soap-get-info",
@@ -2273,16 +2126,14 @@
                 "commands-legacy/soap-request",
                 "commands-legacy/soap-send-fault"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "Windows",
               "link": {
-                "type": "generated-index",
-                "title": "Windows",
-                "keywords": ["Windows"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/Windows"
+              },
               "items": [
                 "commands-legacy/close-window",
                 "commands-legacy/convert-coordinates",
@@ -2315,16 +2166,14 @@
                 "commands-legacy/window-list",
                 "commands-legacy/window-process"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "XML DOM",
               "link": {
-                "type": "generated-index",
-                "title": "XML DOM",
-                "keywords": ["XML DOM"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/XML_DOM"
+              },
               "items": [
                 "commands-legacy/dom-append-xml-child-node",
                 "commands-legacy/dom-append-xml-element",
@@ -2362,16 +2211,14 @@
                 "commands-legacy/dom-set-xml-element-name",
                 "commands-legacy/dom-set-xml-element-value"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "XML SAX",
               "link": {
-                "type": "generated-index",
-                "title": "XML SAX",
-                "keywords": ["XML SAX"],
-                "image": "/img/docusaurus.png"
-                },
+                "type": "doc",
+                "id": "commands/theme/XML_SAX"
+              },
               "items": [
                 "commands-legacy/sax-add-processing-instruction",
                 "commands-legacy/sax-add-xml-cdata",
@@ -2391,17 +2238,15 @@
                 "commands-legacy/sax-open-xml-element-arrays",
                 "commands-legacy/sax-set-xml-declaration"
               ]
-              },
-              {
+            },
+            {
               "type": "category",
               "label": "XML",
               "link": {
-                "type": "generated-index",
-                "title": "XML",
-                "keywords": ["XML"],
-                "image": "/img/docusaurus.png"
-                },
-                  "items": [
+                "type": "doc",
+                "id": "commands/theme/XML"
+              },
+              "items": [
                 "commands-legacy/xml-decode",
                 "commands-legacy/xml-get-error",
                 "commands-legacy/xml-get-options",

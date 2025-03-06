@@ -1,0 +1,23 @@
+---
+id: XML_SAX
+title: XML SAX
+---
+||
+|---|
+|[<!-- INCLUDE #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax -->](../../commands-legacy/sax-add-processing-instruction)<br/><!-- INCLUDE #_command_.SAX ADD PROCESSING INSTRUCTION.Summary -->|
+|[<!-- INCLUDE #_command_.SAX ADD XML CDATA.Syntax -->](../../commands-legacy/sax-add-xml-cdata)<br/><!-- INCLUDE #_command_.SAX ADD XML CDATA.Summary -->|
+|[<!-- INCLUDE #_command_.SAX ADD XML COMMENT.Syntax -->](../../commands-legacy/sax-add-xml-comment)<br/><!-- INCLUDE #_command_.SAX ADD XML COMMENT.Summary -->|
+|[<!-- INCLUDE #_command_.SAX ADD XML DOCTYPE.Syntax -->](../../commands-legacy/sax-add-xml-doctype)<br/><!-- INCLUDE #_command_.SAX ADD XML DOCTYPE.Summary -->|
+|[<!-- INCLUDE #_command_.SAX ADD XML ELEMENT VALUE.Syntax -->](../../commands-legacy/sax-add-xml-element-value)<br/><!-- INCLUDE #_command_.SAX ADD XML ELEMENT VALUE.Summary -->|
+|[<!-- INCLUDE #_command_.SAX CLOSE XML ELEMENT.Syntax -->](../../commands-legacy/sax-close-xml-element)<br/><!-- INCLUDE #_command_.SAX CLOSE XML ELEMENT.Summary -->|
+|[<!-- INCLUDE #_command_.SAX GET XML CDATA.Syntax -->](../../commands-legacy/sax-get-xml-cdata)<br/><!-- INCLUDE #_command_.SAX GET XML CDATA.Summary -->|
+|[<!-- INCLUDE #_command_.SAX GET XML COMMENT.Syntax -->](../../commands-legacy/sax-get-xml-comment)<br/><!-- INCLUDE #_command_.SAX GET XML COMMENT.Summary -->|
+|[<!-- INCLUDE #_command_.SAX GET XML DOCUMENT VALUES.Syntax -->](../../commands-legacy/sax-get-xml-document-values)<br/><!-- INCLUDE #_command_.SAX GET XML DOCUMENT VALUES.Summary -->|
+|[<!-- INCLUDE #_command_.SAX GET XML ELEMENT.Syntax -->](../../commands-legacy/sax-get-xml-element)<br/><!-- INCLUDE #_command_.SAX GET XML ELEMENT.Summary -->|
+|[<!-- INCLUDE #_command_.SAX GET XML ELEMENT VALUE.Syntax -->](../../commands-legacy/sax-get-xml-element-value)<br/><!-- INCLUDE #_command_.SAX GET XML ELEMENT VALUE.Summary -->|
+|[<!-- INCLUDE #_command_.SAX GET XML ENTITY.Syntax -->](../../commands-legacy/sax-get-xml-entity)<br/><!-- INCLUDE #_command_.SAX GET XML ENTITY.Summary -->|
+|[<!-- INCLUDE #_command_.SAX Get XML node.Syntax -->](../../commands-legacy/sax-get-xml-node)<br/><!-- INCLUDE #_command_.SAX Get XML node.Summary -->|
+|[<!-- INCLUDE #_command_.SAX GET XML PROCESSING INSTRUCTION.Syntax -->](../../commands-legacy/sax-get-xml-processing-instruction)<br/><!-- INCLUDE #_command_.SAX GET XML PROCESSING INSTRUCTION.Summary -->|
+|[<!-- INCLUDE #_command_.SAX OPEN XML ELEMENT.Syntax -->](../../commands-legacy/sax-open-xml-element)<br/><!-- INCLUDE #_command_.SAX OPEN XML ELEMENT.Summary -->|
+|[<!-- INCLUDE #_command_.SAX OPEN XML ELEMENT ARRAYS.Syntax -->](../../commands-legacy/sax-open-xml-element-arrays)<br/><!-- INCLUDE #_command_.SAX OPEN XML ELEMENT ARRAYS.Summary -->|
+|[<!-- INCLUDE #_command_.SAX SET XML DECLARATION.Syntax -->](../../commands-legacy/sax-set-xml-declaration)<br/><!-- INCLUDE #_command_.SAX SET XML DECLARATION.Summary -->|
