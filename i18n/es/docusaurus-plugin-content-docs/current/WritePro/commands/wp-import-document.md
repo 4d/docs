@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-The **WP Import document** command<!--REF #_command_.WP Import document.Summary--> converts an existing 4D Write Pro / 4D Write document (.4wp, .4w7 or .4wt) or MS Word document (.docx) to a new 4D Write Pro object.<!-- END REF-->
+El comando **WP Import document**<!--REF #_command_.WP Import document.Summary--> convierte un documento 4D Write Pro / 4D Write (.4wp, .4w7 o .4wt) o documento MS Word (.docx) en un nuevo objeto 4D Write Pro.<!-- END REF-->
 
 You can pass either a *filePath* or *fileObj*:
 
@@ -41,7 +41,7 @@ The optional *option* parameter allows defining import options for:
 
 - **longint**
 
-By default, HTML expressions inserted in legacy 4D Write documents are not imported (no 4D Write Pro support). If you pass the wk import html expressions as text constant, HTML expressions will be imported as raw text within `##htmlBegin##` and `##htmlEnd##` tags -- which will require formatting actions afterward. Por ejemplo:
+By default, HTML expressions inserted in legacy 4D Write documents are not imported (no 4D Write Pro support). Si pasa la constante wk import html expressions as text, Las expresiones HTML se importarán como texto sin formato dentro de las etiquetas `##htmlBegin##` y `##htmlEnd##` -- las cuales requerirán acciones de formato posteriores. Por ejemplo:
 
 ```html
 ##htmlBegin##Imported titlebold##htmlEnd##  
