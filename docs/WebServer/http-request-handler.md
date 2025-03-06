@@ -81,7 +81,7 @@ URL patterns can be given as **prefixes** or using **regular expressions**.
 Ex: `"pattern" : "docs"` or `"pattern" : "docs/invoices"`
 
 - To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly. 
-Ex: `"regexPattern" : "/docs/.*/index\.html"`
+Ex: `"regexPattern" : "/docs/.+/index\.html"`
 
 "Pattern" and "regexPattern" properties cannot be used in the same handler definition (in this case, only the "regexPattern" property is taken into account). 
 
