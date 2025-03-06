@@ -64,7 +64,7 @@ Outre les options standard du système, la boîte de dialogue *Ouvrir* de 4D pro
 
 ### Ouvrir un projet avec un fichier 4DLink
 
-Vous pouvez utiliser un fichier [`.4DLink`](#about-4DLink-files) pour lancer l'application 4D et ouvrir le projet 4D cible. Il existe deux façons de procéder :
+You can use a [`.4DLink` file](#about-4dlink-files) to launch the 4D application and open the target 4D project. Il existe deux façons de procéder :
 
 - double-cliquer ou glisser-déposer le fichier `.4DLink` sur l'application 4D
 - aller sur **Fichier** > **Ouvrir projets récents** et sélectionner un projet
