@@ -62,7 +62,7 @@ No formulário pai, ambos os objetos (área de entrada e contêiner de subformul
 
 :::info
 
-Para exibir uma hora estática, você deve usar o [tipo de dados](properties_DataSource.md#data-type-expression-type) apropriado para a [variável ou expressão](properties_Object.md#variable-or-expression):
+To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-list-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
 
 - Se você usar uma variável (por exemplo, `parisTime`), ela deverá ser do tipo `texto` ou `hora`.
 - Se você usar uma expressão (por exemplo, `Form.myValue`), ela deverá conter um valor `de texto`.
