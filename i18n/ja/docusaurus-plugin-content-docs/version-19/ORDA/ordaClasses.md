@@ -236,10 +236,10 @@ End if
 データモデルクラスを作成・編集する際には次のルールに留意しなくてはなりません:
 
 - 4D のテーブル名は、**cs** [クラスストア](Concepts/classes.md#クラスストア) 内において自動的に DataClass クラス名として使用されるため、**cs** 名前空間において衝突があってはなりません。 特に:
-  - 4D テーブルと [ユーザークラス名](Concepts/classes.md#クラス名) に同じ名前を使用してはいけません。 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
+  - Do not give the same name to a 4D table and to a [user class name](../Concepts/classes.md#class-definition). 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
   - 4D テーブルに予約語を使用してはいけません (例: "DataClass")。
 
-- クラス定義の際、[`Class extends`](Concepts/classes.md#class-extends-classname) ステートメントに使用する親クラスの名前は完全に合致するものでなくてはいけません (文字の大小が区別されます)。 たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。
+- When defining a class, make sure the [`Class extends`](../Concepts/classes.md#class-extends-classname) statement exactly matches the parent class name (remember that they're case sensitive). たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。
 
 - データモデルクラスオブジェクトのインスタンス化に `new()` キーワードは使えません (エラーが返されます)。 上述の ORDA クラステーブルに一覧化されている、通常の [インスタンス化の方法](#アーキテクチャー) を使う必要があります。
 
@@ -392,7 +392,7 @@ End if
 
 ### クラスファイル
 
-ORDA データモデルユーザークラスは、クラスと同じ名称の .4dm ファイルを [通常のクラスファイルと同じ場所](Concepts/classes.md#クラスファイル) (つまり、Project フォルダー内の `/Sources/Classes` フォルダー) に追加することで定義されます。 たとえば、`Utilities` データクラスのエンティティクラスは、`UtilitiesEntity.4dm` ファイルによって定義されます。
+An ORDA data model user class is defined by adding, at the [same location as regular class files](../Concepts/classes.md#class-definition) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. たとえば、`Utilities` データクラスのエンティティクラスは、`UtilitiesEntity.4dm` ファイルによって定義されます。
 
 ### クラスの作成
 
