@@ -39,7 +39,7 @@ O administrador pode:
 - editar o usuário Designer
 - como padrão, acessar as partes protegidas do banco de dados. O Administrador não pode acessar o modo Design se for restringido. In particular, the Administrator cannot access to the Design mode if it is restricted. O administrador é inscrito em todo novo grupo, mas é possível remover o nome do Administrador de qualquer grupo.
 
-Tanto o Designer quanto o Administrador estão disponíveis como padrão em todos os bancos de dados. No diálogo de [gestão de usuários](#users-and-groups-editor), os ícones de Designer e Administrator são exibidos em verde e vermelho, respectivamentes:
+Tanto o Designer quanto o Administrador estão disponíveis como padrão em todos os bancos de dados. In the user management dialog box, the icons of the Designer and Administrator are displayed in red and green respectively:
 
 - Ícone Designer: ![](../assets/en/Users/iconDesigner.png)
 - Ícone de Administrador: ![](../assets/en/Users/iconAdmin.png)
@@ -82,7 +82,7 @@ A lista de usuários exibe todos os usuários, incluindo o[Designer and the Admi
 
 5. Estabeleça os grupos aos quais o usuário vai pertencer com a tabela "Membro de Grupos". Pode adicionar ou remover os usuários selecionados de ou para um grupo marcando a opção correspondente na coluna Membro.
 
-A adesão do usuário aos diferentes grupos também pode ser estabelecida por grupo na página [Grupos](#configuring-access-groups).
+The membership of users to different groups can also be set by group on the [Groups page](#configuring-groupss).
 
 ### Apagar um usuário
 
