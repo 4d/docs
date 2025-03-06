@@ -92,7 +92,7 @@ Valeurs disponibles :
 
 #### Objets pris en charge
 
-[Liste hiérarchique](list_overview.md#overview) - [Sous-formulaire](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
+[Hierarchical List](list_overview.md) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
 #### Voir également
 
@@ -221,7 +221,7 @@ Affiche/masque la règle horizontale lorsque la vue du document est en mode [Pag
 
 ---
 
-## Montrer HTML WYSYWIG
+## Show HTML WYSIWYG
 
 Active/désactive la vue HTML WYSIWYG, dans laquelle tous les attributs avancés de 4D Write Pro qui ne sont pas compatibles avec tous les navigateurs sont supprimés.
 
@@ -363,7 +363,7 @@ Valeurs disponibles :
 
 #### Objets pris en charge
 
-[Liste hiérarchique](list_overview.md#overview) - [Sous-formulaire](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
+[Hierarchical List](list_overview.md) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
 #### Voir également
 
