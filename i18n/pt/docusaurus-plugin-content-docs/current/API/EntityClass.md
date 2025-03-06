@@ -348,7 +348,7 @@ vCompareResultado1 (todas as diferenças são devolvidas):
 
 A função `.drop()` <!-- REF #EntityClass.drop().Summary -->exclui os dados contidos na entidade do armazenamento de dados<!-- END REF -->, da tabela relacionada à sua classe de dados. Note-se que a entidade permanece na memória.
 
-In a multi-user or multi-process application, the `.drop()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
+Em uma aplicação multiusuário ou multiprocesso, a função `.drop()` é executada sob um mecanismo ["optimistic lock"](ORDA/entities.md#entity-locking), onde um carimbo de bloqueio interno é automaticamente incrementado sempre que o registro é salvo.
 
 By default, if the *mode* parameter is omitted, the function will return an error (see below) if the same entity was modified (i.e. the stamp has changed) by another process or user in the meantime.
 
@@ -453,7 +453,7 @@ Example with `dk force drop if stamp changed` option:
 
 #### Descrição
 
-The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
+A função `.first()` <!-- REF #EntityClass.first().Summary -->retorna uma referência à entidade na primeira posição da seleção de entidades à qual a entidade pertence<!-- END REF -->.
 
 Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja, [.getSelection( )](#getselection) retorna Null), a função retorna um valor Null.
 
@@ -500,7 +500,7 @@ A função `.fromObject()` <!-- REF #EntityClass.fromObject().Summary -->preench
 O mapeamento entre o objecto e a entidade é feito sobre os nomes dos atributos:
 
 - Se uma propriedade do objeto não existe nos dados (dataclass), ela é ignorada.
-- Os tipos de dados devem ser equivalentes. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see [`Converting data types`](Concepts/data-types.md#converting-data-types)), otherwise the attribute is left untouched.
+- Os tipos de dados devem ser equivalentes. Se houver uma incompatibilidade de tipo entre o objeto e o dataclass, 4D tenta converter os dados sempre que possível (consulte [`Convertendo tipos de dados`](Concepts/data-types.md#converting-data-types)), caso contrário, o atributo fica intocado.
 - A chave primária pode ser dada como é ou com uma propriedade "__KEY" (preenchida com o valor da chave primária). Se ela ainda não existir na classe de dados, a entidade será criada com o valor fornecido quando [.save()](#save) for chamado. Se a chave primária não for dada, a entidade é criada e o valor da chave primária é atribuído de acordo com as regras da base de dados. O auto-incremento só é calculado se a chave primária for nula.
 
 *filler* pode tratar de uma entidade relacionada sob as seguintes condições:
@@ -670,7 +670,7 @@ As chaves primárias podem ser números (Inteiro) ou strings. You can "force" th
 
 #### Descrição
 
-The `.getRemoteContextAttributes()` function <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity <!-- END REF -->.
+A função `.getRemoteContextAttributes()` <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->retorna informações sobre o contexto de otimização usado pela entidade<!-- END REF -->.
 
 Se não houver [contexto de otimização](../ORDA/remoteDatastores.md#clientserver-optimization) para a entidade, a função retornará um texto vazio.
 
