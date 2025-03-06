@@ -17,7 +17,7 @@ title: メンテナンスページ
 
 データベースのすべてのレコードとすべてのインデックスが検証されます。 検査対象を絞り込んだり、追加のオプションを指定したい場合は、[Maintenance ＆ Security Center](MSC/overview.md) (MSC) を使用します。
 
-検査後、サーバー上の [maintenance Logs](Project/architecture.md#logs) フォルダーに、XML形式でレポートファイルが作成されます。 **レポートを表示** (クライアントマシンから処理が実行された場合は **レポートをダウンロード**) ボタンをクリックすると、ブラウザーにレポートを表示できます。
+After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs-folder) folder. **レポートを表示** (クライアントマシンから処理が実行された場合は **レポートをダウンロード**) ボタンをクリックすると、ブラウザーにレポートを表示できます。
 
 ### データ圧縮
 
@@ -31,7 +31,7 @@ title: メンテナンスページ
 
 > 圧縮リクエストがリモートの 4Dマシンからなされた場合、このマシンは 4D Server により自動で再接続されます。
 
-検査後、サーバー上の [maintenance Logs](Project/architecture.md#logs) フォルダーに、XML形式でレポートファイルが作成されます。 **レポートを表示** (クライアントマシンから処理が実行された場合は **レポートをダウンロード**) ボタンをクリックすると、ブラウザーにレポートを表示できます。
+After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs-folder) folder. **レポートを表示** (クライアントマシンから処理が実行された場合は **レポートをダウンロード**) ボタンをクリックすると、ブラウザーにレポートを表示できます。
 
 ## 動作時間
 
