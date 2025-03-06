@@ -118,7 +118,7 @@ title: プロジェクトのアーキテクチャー
 - Forms
 - TableForms
 
-削除された要素はファイル名に括弧が付いた形でフォルダー内に置かれます (例: "(myMethod).4dm")。 フォルダーの構成は [Sources](#sources) フォルダーと同じです。
+削除された要素はファイル名に括弧が付いた形でフォルダー内に置かれます (例: "(myMethod).4dm")。 The folder organization is identical to the [Sources](#sources-folder) folder.
 
 ### DerivedData フォルダー
 
