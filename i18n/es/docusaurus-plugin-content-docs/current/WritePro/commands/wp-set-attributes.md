@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-The **WP SET ATTRIBUTES** command <!--REF #_command_.WP SET ATTRIBUTES.Summary-->allows you to set the value of any attribute in a range, element, document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
+El comando **WP SET ATTRIBUTES** <!--REF #_command_.WP SET ATTRIBUTES.Summary-->le permite definir el valor de todo atributo en un rango, elemento, documento.<!-- END REF--> Este comando le da acceso a todo de atributo interno 4D Write Pro: carácter, párrafo, documento, tabla o imagen.
 
 In *targetObj*, you can pass :
 
@@ -44,15 +44,15 @@ In this 4D Write Pro area, you selected a word:
 Si ejecuta el siguiente código:
 
 ```4d
- $range:=WP Get selection(*;"WParea") //get the selected range
+ $range:=WP Get selection(*;"WParea") //obtener el rango seleccionado
  
-  // set the shadow offset in pt for the selected text
+  // definir el shadow offset en pt para el texto seleccionado
  WP SET ATTRIBUTES($range;wk text shadow offset;1)
-  //set the paragraph padding
+  //establecer el relleno del párrafo
  WP SET ATTRIBUTES($range;wk padding;1)
-  //define a border of 10 pt
+  //define un borde de 10 pt
  WP SET ATTRIBUTES($range;wk border style;wk solid;wk border width;10)
-  //set the border colors
+  //define los colores del borde
  WP SET ATTRIBUTES($range;wk border color;"blue";wk border color bottom;"#00FA9A";wk border color right;"#00FA9A")
 ```
 
