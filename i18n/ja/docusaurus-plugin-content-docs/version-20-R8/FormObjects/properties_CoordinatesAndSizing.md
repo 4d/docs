@@ -88,7 +88,7 @@ title: 座標とサイズ
 [サブフォーム](subform_overview.md) -
 [タブコントロール](tabControl.md) -
 [テキストエリア](text.md) -
-[Web エリア](webArea_overview.md)
+[Web エリア](webArea_Overview.md)
 
 ---
 
@@ -408,7 +408,7 @@ title: 座標とサイズ
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md#概要)
+[リストボックス](listbox_overview.md)
 
 #### 参照
 
@@ -442,7 +442,7 @@ RowHeights{5}:=3
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md#概要)
+[リストボックス](listbox_overview.md)
 
 #### 参照
 
