@@ -5,7 +5,7 @@ title: メソッドとクラス
 
 プロジェクトで使用される 4D コードは、 [メソッド](../Concepts/methods.md) および [クラス](../Concepts/classes.md) に記述されます。
 
-4D IDE には、コードを作成・編集・エクスポート・削除するためのさまざまな機能があります。 You will usually use the included 4D [code editor](../code-editor/write-class-method.md) to work with your code. You can also use other editors such as **VS Code**, for which the [4D-Analyzer extension](https://github.com/4d/4D-Analyzer-VSCode) is available.
+4D IDE には、コードを作成・編集・エクスポート・削除するためのさまざまな機能があります。 通常は、4D付属 の [コードエディター](../code-editor/write-class-method.md) を使用して、コードを管理します。 他にも**VS Code** などのエディターを使用することもでき、VS Code に対しては[4D-Analyzer 拡張機能](https://github.com/4d/4D-Analyzer-VSCode) がご利用いただけます。
 
 ## メソッドの作成
 
