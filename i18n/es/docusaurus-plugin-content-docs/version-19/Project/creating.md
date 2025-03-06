@@ -64,7 +64,7 @@ Además de las opciones sistema estándar, la caja de diálogo *Abrir* de 4D ofr
 
 ### Abrir un proyecto con un archivo 4DLink
 
-Puede utilizar un archivo [`.4DLink`](#about-4DLink-files) para lanzar la aplicación 4D y abrir el proyecto 4D objetivo. Hay dos maneras de hacer esto:
+You can use a [`.4DLink` file](#about-4dlink-files) to launch the 4D application and open the target 4D project. Hay dos maneras de hacer esto:
 
 - haga doble clic o arrastre y suelte el archivo `.4DLink` en la aplicación 4D
 - vaya a **Archivo** > **Abrir los proyectos recientes** y seleccione un proyecto
