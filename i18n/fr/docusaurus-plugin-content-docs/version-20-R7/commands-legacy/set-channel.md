@@ -171,3 +171,13 @@ Reportez-vous aux exemples des commandes [RECEIVE BUFFER](receive-buffer.md), [S
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
 [SET TIMEOUT](set-timeout.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 77 |
+| Thread safe | &check; |
+| Modifie les variables | OK, Document |
+
+

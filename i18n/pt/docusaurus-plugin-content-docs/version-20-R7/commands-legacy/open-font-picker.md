@@ -12,14 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->O comando **OPEN FONT PICKER** mostra a caixa de diálogo de seleção de fonte do sistema .<!-- END REF-->  
   
-**Nota**: Esta caixa de diálogo é modal em Windows mas não em OS X.  
+**Nota**: Esta caixa de diálogo é modal em Windows mas não em macOS.  
   
 Se o usuário seleciona uma fonte e/ou um estilo e valida a caixa de diálogo, as mudanças se aplicam a seleção atual de texto no objeto com o foco, se a propriedade "Aceitar seletor cor/fonte" está selecionada para este objeto (ver o manual de *Desenho*). Senão o comando não faz nada.  
   
@@ -45,3 +42,12 @@ Abaixo o código do botão:
 #### Ver também 
 
 [OPEN COLOR PICKER](open-color-picker.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1303 |
+| Thread-seguro | &cross; |
+
+

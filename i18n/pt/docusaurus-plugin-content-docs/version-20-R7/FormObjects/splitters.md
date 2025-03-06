@@ -3,7 +3,7 @@ id: splitters
 title: Separador
 ---
 
-A splitter divides a form into two areas, allowing the user to enlarge and reduce the areas by moving the splitter one way or the other. Um repartidor pode ser horizontal ou vertical. O divisor leva em consideração as propriedades de redimensionamento de cada objeto, o que significa que pode personalizar completamente a interface de seu banco de dados. Um separador pode ou não ser um "empurrador."
+Um divisor divide um formulário em duas áreas, permitindo que o usuário amplie e reduza as áreas movendo o divisor para um lado ou para o outro. Um repartidor pode ser horizontal ou vertical. O divisor leva em consideração as propriedades de redimensionamento de cada objeto, o que significa que pode personalizar completamente a interface de seu banco de dados. Um separador pode ou não ser um "empurrador."
 
 O divisor é usado, por exemplo, em formulários de saída para que as colunas possam ser redimensionadas:
 
@@ -11,14 +11,14 @@ O divisor é usado, por exemplo, em formulários de saída para que as colunas p
 
 Algumas das características gerais do repartidor:
 
-- You can place as many splitters as you want in any type of form and use a mixture of horizontal and vertical splitters in the same form.
+- Você pode colocar quantos divisores quiser em qualquer formulário e usar uma mistura de divisores horizontais e verticais no mesmo formulário.
 - Um separador pode passar por um objeto. Este objeto será redimensionado quando o divisor for movido.
-- Splitter stops are calculated so that the objects moved remain entirely visible in the form or do not pass under/next to another splitter. Cuando la propiedad [Empujador](properties_ResizingOptions.md#pusher) está asociada a un separador, su movimiento hacia la derecha o hacia abajo no encuentra ningún tope.
-- If you resize a form using a splitter, the new dimensions of the form are saved only while the form is being displayed. Quando um formulário é fechado, as dimensões iniciais são restauradas.
+- As paradas do divisor são calculadas de modo que os objetos movidos permaneçam totalmente visíveis no formulário ou não passem sob/próximo a outro divisor. Cuando la propiedad [Empujador](properties_ResizingOptions.md#pusher) está asociada a un separador, su movimiento hacia la derecha o hacia abajo no encuentra ningún tope.
+- Se você redimensionar um formulário usando um divisor, as novas dimensões do formulário serão salvas somente enquanto o formulário estiver sendo exibido. Quando um formulário é fechado, as dimensões iniciais são restauradas.
 
 Uma vez inserido, o separador aparece como uma linha. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md#line-color).
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```4d
 "mySplitter": {
@@ -53,10 +53,10 @@ Num formulário, os separadores interagem com os objetos que estão à sua volta
 
 Puede asociar un método objeto a un separador y será llamado con el evento `On Clicked` durante todo el movimiento.
 
-A cada separador se le asocia una [variable](properties_Object.md#variable-or-expression) de tipo *Longint*. Esta variável pode ser utilizada nos seus métodos objeto e/ou formulário. Its value indicates the splitter’s current position, in pixels, in relation to its initial position.
+A cada separador se le asocia una [variable](properties_Object.md#variable-or-expression) de tipo *Longint*. Esta variável pode ser utilizada nos seus métodos objeto e/ou formulário. Seu valor indica a posição atual do divisor, em píxeis, em relação à sua posição inicial.
 
-- If the value is negative: the splitter was moved toward the top or toward the left,
-- If the value is positive: the splitter was moved toward the bottom or toward the right,
+- Se o valor for negativo: o divisor foi movido para cima ou para a esquerda,
+- Se o valor for positivo: o divisor foi movido para a parte inferior ou para a direita,
 - Se o valor for 0: o divisor foi movido para a sua posição original.
 
-You can also move the splitter programmatically: you just have to set the value of the associated variable. Por ejemplo, si un separador vertical está asociado a una variable llamada `split1`, y si se ejecuta la siguiente sentencia:`split1:=-10`, el separador se moverá 10 píxeles a la izquierda - como si el usuario lo hiciera manualmente. The move is actually performed at the end of the execution of the form or object method containing the statement.
+Você também pode mover o divisor de forma programática: basta definir o valor da variável associada. Você também pode mover o divisor de forma programática: basta definir o valor da variável associada. A movimentação é de fato realizada no final da execução do formulário ou método objeto que contém a declaração.

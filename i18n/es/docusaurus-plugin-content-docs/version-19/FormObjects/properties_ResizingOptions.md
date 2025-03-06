@@ -44,11 +44,11 @@ Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL P
 
 ## Dimensionamiento horizontal
 
-Esta propiedad indica si el tamaño horizontal de un objeto debe ser movido o redimensionado cuando un usuario cambia el tamaño del formulario. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
+This property specifies if an object should be horizontally moved or resized when a user resizes the form. También puede definirse dinámicamente por el comando de lenguaje `OBJECT SET RESIZING OPTIONS`.
 
 Hay tres opciones disponibles:
 
-| Option   | Valor JSON | Result                                                                                                                                                |
+| Option   | Valor JSON | Resultado                                                                                                                                             |
 | -------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Agrandar | "grow"     | El mismo porcentaje se aplica al ancho del objeto cuando el usuario redimensiona el ancho de la ventana,                                              |
 | Mover    | "move"     | El objeto se desplaza la misma cantidad a la izquierda o a la derecha que el aumento del ancho cuando el usuario redimensiona el ancho de la ventana, |
@@ -69,11 +69,11 @@ Hay tres opciones disponibles:
 
 ## Dimensionamiento vertical
 
-Esta propiedad indica si el tamaño vertical de un objeto debe ser movido o redimensionado cuando un usuario cambia el tamaño del formulario. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
+Esta propiedad especifica si un objeto debe ser movido verticalmente o redimensionado cuando un usuario redimensiona el formulario.También puede definirse dinámicamente por el comando de lenguaje `OBJECT SET RESIZING OPTIONS`.
 
 Hay tres opciones disponibles:
 
-| Option   | Valor JSON | Result                                                                                                                                                |
+| Option   | Valor JSON | Resultado                                                                                                                                             |
 | -------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Agrandar | "grow"     | El mismo porcentaje se aplica a la altura del objeto cuando el usuario redimensiona el ancho de la ventana,                                           |
 | Mover    | "move"     | El objeto se desplaza la misma cantidad hacia arriba o hacia abajo que el aumento de la altura cuando el usuario redimensiona el ancho de la ventana, |
@@ -112,7 +112,7 @@ Cuando esta propiedad no se aplica al splitter, el resultado es el siguiente:
 
 #### Objetos soportados
 
-[Separador](splitterTabControlOverview#splitters)
+[Separador](splitters.md)
 
 ---
 

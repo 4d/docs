@@ -1,6 +1,6 @@
 ---
 id: classes
-title: Classes
+title: クラス
 ---
 
 4D View Pro では、以下のクラスを使用することができます。
@@ -149,7 +149,7 @@ title: Classes
 
 **.backColor** : Text<!-- END REF -->
 
-`.backColor` プロパティは、 <!-- REF #TableStyle.backColor.Summary -->[表の背景色](configuring.md/#背景色と文字色) を指定します<!-- END REF -->。
+The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md#background--foreground) of the table<!-- END REF -->.
 
 ### .forecolor
 
@@ -157,7 +157,7 @@ title: Classes
 
 **.forecolor** : Text<!-- END REF -->
 
-`.forecolor` プロパティは、 <!-- REF #TableStyle.forecolor.Summary -->[表の文字色](configuring.md/#背景色と文字色) を指定します<!-- END REF -->。
+The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->.
 
 ### .font
 
@@ -165,7 +165,7 @@ title: Classes
 
 **.font** : Text<!-- END REF -->
 
-`.font` プロパティは、 <!-- REF #TableStyle.font.Summary -->表のフォント名 ([**フォントとテキスト**](configuring.md/#フォントとテキスト) 参照) を指定します<!-- END REF -->。
+The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md#fonts-and-text)) of the table<!-- END REF -->.
 
 ### .textDecoration
 
@@ -173,7 +173,7 @@ title: Classes
 
 **.textDecoration** : Integer<!-- END REF -->
 
-`.textDecoration` プロパティは、 <!-- REF #TableStyle.textDecoration.Summary -->表のテキスト装飾 ( [**フォントとテキスト**](configuring.md/#fonts-and-text)を参照) を指定します<!-- END REF -->。
+The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md#fonts-and-text))<!-- END REF -->.
 
 ### .borderLeft
 
@@ -403,3 +403,7 @@ title: Classes
 **.wholeTableStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
 `.wholeTableStyle` プロパティは、 <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->データエリアのデフォルトスタイルを指定します<!-- END REF -->。
+
+
+
+

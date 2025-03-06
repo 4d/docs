@@ -18,9 +18,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.COPY DOCUMENT.Summary-->O comando **COPY DOCUMENT** copia o documento especificado por *nomFonte* na localização especificada por *nomDest*.<!-- END REF-->
-
-* **Cópia de arquivos**  
+<!--REF #_command_.COPY DOCUMENT.Summary-->O comando **COPY DOCUMENT** copia o documento especificado por *nomFonte* na localização especificada por *nomDest*.<!-- END REF--> 
 Este caso, o parâmetro *nomFonte* deve conter um caminho de arquivo completo, expressa em relação à raiz do volume.  
 O parâmetro *nomDest* pode conter vários tipos de locais:  
    * um caminho de arquivo completo expressa com relação à raiz do volume: o arquivo é copiado para este local  
@@ -120,3 +118,13 @@ Os seguintes exemplos criam diferentes arquivos e pastas na pasta da base (exemp
 
 *Documentos de Sistema*  
 [MOVE DOCUMENT](move-document.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 541 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+
+

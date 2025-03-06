@@ -32,18 +32,18 @@ De plus, 4D [crée préalablement et automatiquement](#creating-classes) les cla
 
 ## Architecture
 
-ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\`
+ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\`
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
 Toutes les classes de modèle de données ORDA sont exposées en tant que propriétés du class store **`cs`**. Les classes ORDA suivantes sont disponibles :
 
-| Class                                       | Nom de l'exemple                     | Instanciée par                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cs.DataStore                | cs.DataStore         | [`ds`](commands/ds.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| cs.*DataClassName*          | cs.Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| cs.*DataClassName*Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
-| cs.*DataClassName*Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
+| Class                                                                                 | Nom de l'exemple                     | Instanciée par                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| cs.DataStore                                                          | cs.DataStore         | [`ds`](commands/ds.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| cs.*DataClassName*                                                    | cs.Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| cs._DataClassName_Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
+| cs._DataClassName_Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
 
 > Les classes utilisateur ORDA sont stockées sous forme de fichiers de classe standard (.4dm) dans le sous-dossier Classes du projet [(voir ci-dessous)](#class-files).
 
@@ -174,7 +174,7 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 Chaque table exposée avec ORDA affiche une classe EntitySelection dans le class store `cs`.
 
 - **Etend** : 4D.EntitySelection
-- **Nom de classe** : *DataClassName*Selection (où *DataClassName* est le nom de la table)
+- **Nom de classe** : _DataClassName_Selection (où *DataClassName* est le nom de la table)
 - **Exemple** : cs.EmployeeSelection
 
 #### Exemple
@@ -209,7 +209,7 @@ Les [filtres des entity selection restreintes](entities.md#restricting-entity-se
 Chaque table exposée avec ORDA affiche une classe Entity dans le class store `cs`.
 
 - **Etend** : 4D.Entity
-- **Nom de classe** : *DataClassName*Entity (où *DataClassName* est le nom de la table)
+- **Nom de classe** : _DataClassName_Entity (où *DataClassName* est le nom de la table)
 - **Exemple** : cs.CityEntity
 
 #### Attributs calculés
@@ -265,8 +265,8 @@ End if
 Lors de la création ou de la modification de classes de modèles de données, vous devez veiller aux règles décrites ci-dessous :
 
 - Puisqu'ils sont utilisés pour définir des noms de classe DataClass automatiques dans le [class store](Concepts/classes.md#class-stores) **cs**, les tables 4D doivent être nommées afin d'éviter tout conflit dans l'espace de nommage **cs**. En particulier :
-  - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](Concepts/classes.md#class-names) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
-  - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
+ - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](Concepts/classes.md#class-names) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
+ - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
 
 - Lors de la définition d'une classe, assurez-vous que l'instruction [`Class extends`](Concepts/classes.md#class-extends-classnameclass) correspond exactement au nom de la classe parente (rappelez-vous qu'ils sont sensibles à la casse). Par exemple, `Class extends EntitySelection` pour une classe de sélection d'entité.
 
@@ -427,15 +427,15 @@ Cette fonction prend en charge trois syntaxes :
 - Avec la première syntaxe, vous traitez l'ensemble de la requête via la propriété de l'objet objet `$event.result`.
 - Avec les deuxième et troisième syntaxes, la fonction retourne une valeur dans *$result* :
 
-  - Si *$result* est Text, il doit s'agir d'une chaîne de requête valide
-  - Si *$result* est Object, il doit contenir deux propriétés :
+ - Si *$result* est Text, il doit s'agir d'une chaîne de requête valide
+ - Si *$result* est Object, il doit contenir deux propriétés :
 
-  | Propriété                          | Type       | Description                                                                                                                  |
-  | ---------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------- |
-  | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
-  | $result.parameters | Collection | valeurs pour placeholders                                                                                                    |
+ | Propriété                          | Type       | Description                                                                                                                  |
+ | ---------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------- |
+ | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
+ | $result.parameters | Collection | valeurs pour placeholders                                                                                                    |
 
-La fonction `query` s'exécute à chaque fois qu'une requête utilisant l'attribut calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Lorsque la fonction `query` n'est pas implémentée pour un attribut calculé, la recherche est toujours séquentielle (basée sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
+La fonction `query` s'exécute à chaque fois qu'une requête utilisant l'attribut calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés.
 
 > Les fonctionnalités suivantes ne sont pas prises en charge :
 >
@@ -685,7 +685,7 @@ L'attribut d'alias [`kind`](../API/DataClassClass.md#attributename) est "alias".
 Un attribut alias hérite de son [`type`](../API/DataClassClass.md#attributename) de données de l'attribut cible :
 
 - si le [`kind`](../API/DataClassClass.md#attributename) de l'attribut cible est "storage", le type de données de l'alias est du même type,
-- si le [`kind`](../API/DataClassClass.md#attributename) de l'attribut cible est "relatedEntity" ou "relatedEntities", le type de données de l'alias est de type `4D.Entity` ou `4D.EntitySelection` ("*nomDeClasse*Entity" ou "*nomDeClasse*Selection").
+- si le [`kind`](../API/DataClassClass.md#attributename) de l'attribut cible est "relatedEntity" ou "relatedEntities", le type de données de l'alias est de type `4D.Entity` ou `4D.EntitySelection` ("_nomDeClasse_Entity" ou "_nomDeClasse_Selection").
 
 Les attributs alias basés sur des relations ont une propriété spécifique [`path`](../API/DataClassClass.md#attributename), contenant le chemin de leurs attributs cibles. Les attributs alias basés sur les attributs de la même dataclass ont les mêmes propriétés que leurs attributs cibles (et pas de propriété `path`).
 
@@ -977,7 +977,7 @@ Code d'appel :
 ```4d
 var $status : Object
 
-//Form.student est chargé avec tous ses a attributs et mis à jour sur un Form
+//Form.student est chargé avec tous ses attributs et mis à jour
 $status:=Form.student.checkData()
 If ($status.success)
     $status:=Form.student.save() // appelle le serveur
@@ -1003,7 +1003,7 @@ Les classes utilisateurs ORDA ont une icône différente des autres classes. Les
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-Pour créer un fichier de classe ORDA, il vous suffit de double-cliquer sur la classe prédéfinie correspondante dans l'Explorateur. 4D crée le fichier de classe et ajoute le code `extends`. Par exemple, pour une classe Entity :
+Pour créer un fichier de classe ORDA, il vous suffit de double-cliquer sur la classe prédéfinie correspondante dans l'Explorateur. Pour créer un fichier de classe ORDA, il vous suffit de double-cliquer sur la classe prédéfinie correspondante dans l'Explorateur. Par exemple, pour une classe Entity :
 
 ```
 Class extends Entity

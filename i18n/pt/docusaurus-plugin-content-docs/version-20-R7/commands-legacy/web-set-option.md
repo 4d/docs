@@ -83,3 +83,12 @@ Uma entrada registrada se vê dessa maneira:
 
 [WEB GET OPTION](web-get-option.md)  
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 5 |
+| Thread-seguro | &check; |
+
+

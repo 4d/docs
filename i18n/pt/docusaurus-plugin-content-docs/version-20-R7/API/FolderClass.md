@@ -3,7 +3,7 @@ id: FolderClass
 title: Folder
 ---
 
-`Folder` objects are created with the [`Folder`](../commands/folder.md) command. Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando ’Folder`para criar uma pasta, é criado um objeto válido`Folder` mas nada é realmente armazenado no disco até chamar a função [`folder.create()\`](#create).
+Os objetos `Folder` são criados com o comando [`Folder`](../commands/folder.md). Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando ’Folder`para criar uma pasta, é criado um objeto válido`Folder` mas nada é realmente armazenado no disco até chamar a função [`folder.create()\\\`](#create).
 
 ### Exemplo
 
@@ -67,9 +67,9 @@ Os objetos `Folder` suportam vários pathnames, incluindo a sintaxe `filesystems
 
 #### Descrição
 
-A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e retorna um novo objeto do tipo `4D.Folder`<!-- END REF -->. It is identical to the [`Folder`](../commands/folder.md) command (shortcut).
+A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e retorna um novo objeto do tipo `4D.Folder`<!-- END REF -->. É idêntico ao comando [`Folder`](../commands/folder.md) (atalho).
 
-> It is recommended to use the [`Folder`](../commands/folder.md) shortcut command instead of `4D.Folder.new()`.
+> Recomenda-se usar o comando de atalho [`Folder`](../commands/folder.md) em vez de `4D.Folder.new()`.
 
 <!-- INCLUDE directory.copyTo().Desc -->
 
@@ -230,10 +230,10 @@ Quando `Delete only if empty` for passado ou se você omitir o parâmetro de op�
 Quando `Delete with contents` é passado:
 
 - A pasta, juntamente com todo o seu conteúdo, é apagada.
-  **Aviso**: mesmo quando esta pasta e/ou o seu conteúdo estiver bloqueado ou definido para apenas leitura, se o usuário atual tiver direitos de acesso adequados, a pasta (e conteúdo) continua a ser eliminada.
+ **Aviso**: mesmo quando esta pasta e/ou o seu conteúdo estiver bloqueado ou definido para apenas leitura, se o usuário atual tiver direitos de acesso adequados, a pasta (e conteúdo) continua a ser eliminada.
 - Se esta pasta, ou qualquer dos arquivos que conter, não puder ser apagada, a eliminação é abortada assim que o primeiro elemento inacessível for detectado, e um erro(\*) é devolvido. Neste caso, a pasta pode ser apenas parcialmente apagada. When deletion is aborted, you can use the `Last errors` command to retrieve the name and path of the offending file.
 - Se a pasta não existir, o comando não faz nada e nenhum erro é devolvido.
-  (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
+ (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
 
 <!-- END REF -->
 
@@ -297,7 +297,7 @@ A função `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->move ou renome
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
-Por padrão, a pasta mantém o seu nome quando movida. Se quiser renomear a pasta movida, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Por padrão, a pasta mantém o seu nome quando movida. Por padrão, a pasta mantém o seu nome quando movida. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 **Objeto devolvido**
 

@@ -50,3 +50,12 @@ The following example creates a BLOB of 16K filled of 0xFF:
 #### See also 
 
 [BLOB size](blob-size.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 606 |
+| Thread safe | &check; |
+
+

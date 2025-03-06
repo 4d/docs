@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | docRef | Time | &#8594;  | Document reference number, or Current channel (serial port or document) |
 | receiveVar | Text, Blob | &#8592; | Variable to receive data |
-| stopChar &#124; numBytes | String, Longint | &#8594;  | Character(s) at which to stop receiving, or Number of bytes to receive |
+| stopChar &#124; numBytes | Text, Integer | &#8594;  | Character(s) at which to stop receiving, or Number of bytes to receive |
 
 <!-- END REF-->
 
@@ -113,3 +113,13 @@ After a call to **RECEIVE PACKET**, the OK system variable is set to 1 if the pa
 [SET DOCUMENT POSITION](set-document-position.md)  
 [SET TIMEOUT](set-timeout.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 104 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

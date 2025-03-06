@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM Get color scheme.Summary-->**FORM Get color scheme** コマンドは、現在表示されているフォームの実際のカラースキームの名前を返します。<!-- END REF-->カレントのフォームがない場合には、このコマンドは空の文字列を返します。
@@ -44,5 +41,14 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Get application color scheme](get-application-color-scheme.md)  
+[Get Application color scheme](get-application-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1761 |
+| スレッドセーフである | &cross; |
+
+

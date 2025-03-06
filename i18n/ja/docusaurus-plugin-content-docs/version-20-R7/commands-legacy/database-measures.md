@@ -328,3 +328,13 @@ displayed_sidebar: docs
  OB SET($oParams;"historyLength";2*60)
  $measures:=Database measures($oParams)
 ```
+
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1314 |
+| スレッドセーフである | &check; |
+
+

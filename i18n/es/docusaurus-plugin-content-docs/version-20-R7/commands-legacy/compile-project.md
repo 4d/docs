@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Compile project.Summary-->**Compile project** permite compilar el proyecto local actual o el proyecto especificado en el parámetro *archivoProyecto*.<!-- END REF--> Para más información sobre la compilación, consulte la *página de compilación en developer.4d.com*.
@@ -56,7 +53,7 @@ El parámetro *opciones* es un objeto. Estas son las opciones de compilación di
 | generateSymbols        | Booleano             | True para generar información de símbolos en el objeto devuelto .symbols                                                                                                                                                                                                             |
 | generateSyntaxFile     | Booleano             | True para generar un *archivo de sintaxis para completar código* en la carpeta \\Resources\\en.lproj del proyecto                                                                                                                                                                    |
 | generateTypingMethods  | Cadena               | "reset" o "append" para generar métodos de digitación. Si el valor es "append", las declaraciones de variables existentes no se modificarán (comportamiento de la ventana del compilador). Si el valor es "reset" las declaraciones de variables existentes se eliminan de antemano. |
-| plugins                | objeto 4D.Folder     | Carpeta plug-ins a utilizar en lugar de la [carpeta Plugins del proyecto actual](https://developer.4d.com/docs/Project/architecture#plugins). Esta propiedad sólo está disponible con la sintaxis *projectFile*.                                                                     |
+| plugins                | objeto 4D.Folder     | Carpeta plug-ins a utilizar en lugar de la [carpeta Plugins del proyecto actual](../Project/architecture.md#plugins). Esta propiedad sólo está disponible con la sintaxis *projectFile*.                                                                     |
 | targets                | Colección de cadenas | Valores posibles: "x86\_64\_generic", "arm64\_macOS\_lib". Pase una colección vacía para ejecutar sólo la comprobación de sintaxis                                                                                                                                                   |
 | typeInference          | Cadena               | "all": digita todas las variables, "locals": se digitan las variables de proceso e interproceso, "none": se digitan todas las variables                                                                                                                                              |
 | warnings               | Colección de objetos | Define el estado de las warnings                                                                                                                                                                                                                                                     |
@@ -187,3 +184,12 @@ var $result:=Compile project($options)
 #### Ver también 
 
 [BUILD APPLICATION](build-application.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1760 |
+| Hilo seguro | &cross; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.BLOB to print settings.Summary-->**BLOB to print settings** コマンドは、4Dの現プリンタ設定を *printSettings* BLOBに格納された内容で置き換えます。<!-- END REF-->このBLOBは [Print settings to BLOB](print-settings-to-blob.md) または  4D Pack コマンドで生成されていなければなりません (後述参照)。
@@ -27,7 +24,7 @@ displayed_sidebar: docs
 * 0 または省略: BLOB に保存されている値が採用されます
 * 1: これらの値をデフォルト値にリセットします (部数: 1; 印刷範囲: すべて)
 
-新しいプリント設定はカレントプリンターに対して適用され、*\>* 引数なしで呼び出された *\_o\_PAGE SETUP* や [SET PRINT OPTION](set-print-option.md)、[PRINT SELECTION](print-selection.md) などのコマンドが設定を変更するまで、[カレントの 4D 印刷設定](https://developer.4d.com/docs/settings/compatibility/) に対して適用されます。具体的には [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), [PRINT RECORD](print-record.md), [Print form](print-form.md) と [QR REPORT](qr-report.md) コマンドのほか、4Dのメニューコマンド (デザインモード含む) で、この印刷設定使用されます。
+新しいプリント設定はカレントプリンターに対して適用され、*\>* 引数なしで呼び出された *\_o\_PAGE SETUP* や [SET PRINT OPTION](set-print-option.md)、[PRINT SELECTION](print-selection.md) などのコマンドが設定を変更するまで、[カレントの 4D 印刷設定](../settings/compatibility.md) に対して適用されます。具体的には [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), [PRINT RECORD](print-record.md), [Print form](print-form.md) と [QR REPORT](qr-report.md) コマンドのほか、4Dのメニューコマンド (デザインモード含む) で、この印刷設定使用されます。
 
 **BLOB to print settings**で定義した設定を保持するためには、[PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), および [PRINT RECORD](print-record.md) コマンドは *\>* 引数付きで呼び出さなければなりません。
 
@@ -41,7 +38,7 @@ displayed_sidebar: docs
 
 (\*) プリント設定は BLOB 生成時に選択されていたカレントプリンターに依存します。この印刷設定を、同じモデルの異なるプリンターに対して適用することができます。違うプリンターの場合には、共通の設定のみがロードされます。
 
-##### Windows / OS X 
+##### Windows / macOS 
 
 *printSettings* BLOB はどちらのプラットフォームでも保存およびロードすることが可能ですが、印刷設定には共有されているものと、ドライバーやシステムバージョンに依存する特有のものがあります。そのため、同じ *printSettings* BLOB を異なるプラットフォームに流用した場合には、ロードされる情報が不完全の場合があります。異なるプラットフォームを併用する環境において印刷設定の復元を最適化するには、それぞれのプラットフォーム用に (つまり二つの) *printSettings* BLOB を管理することが推奨されます。
 
@@ -78,3 +75,12 @@ The **BLOB to print settings** コマンドは、コマンドに比べてより�
 #### 参照 
 
 [Print settings to BLOB](print-settings-to-blob.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1434 |
+| スレッドセーフである | &cross; |
+
+

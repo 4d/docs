@@ -100,9 +100,17 @@ Voici un exemple de pointeur vers un tableau 2D :
 
 #### Voir aussi 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 [Field](field.md)  
 [Get pointer](get-pointer.md)  
 [Is a variable](is-a-variable.md)  
 [Is nil pointer](is-nil-pointer.md)  
 [Table](table.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 394 |
+| Thread safe | &check; |
+
+

@@ -51,3 +51,12 @@ You can express any numerical value as a time:
 [String](string.md)  
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 179 |
+| Thread safe | &check; |
+
+

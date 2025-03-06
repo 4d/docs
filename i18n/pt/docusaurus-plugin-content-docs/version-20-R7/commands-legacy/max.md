@@ -70,3 +70,13 @@ Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descri
 #### Ver também 
 
 [Min](min.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 3 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

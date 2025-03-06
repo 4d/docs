@@ -46,3 +46,13 @@ El siguiente ejemplo archiva los registros que tienen más de 30 días. Esta ope
 [ADD RECORD](add-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 68 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+
+

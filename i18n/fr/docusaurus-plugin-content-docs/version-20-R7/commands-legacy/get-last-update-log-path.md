@@ -25,3 +25,12 @@ Cette commande est destinée à être utilisée dans un processus de mise à jou
 
 [RESTART 4D](restart-4d.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1301 |
+| Thread safe | &check; |
+
+

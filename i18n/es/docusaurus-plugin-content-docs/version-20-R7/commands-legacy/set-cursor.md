@@ -13,14 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET CURSOR.Summary-->El comando SET CURSOR cambia el puntero (gráfico) del ratón por el del sistema cuyo número de identificación se pasa en *cursor*.<!-- END REF-->
 
-Este comando debe llamarse en el contexto del [Form event code](form-event-code.md) On Mouse Move. 
+Este comando debe llamarse en el contexto del [Form event code](../commands/form-event-code.md) On Mouse Move. 
 
 Para restablecer el cursor de ratón estándar, llame el comando sin parámetro.
 
@@ -62,3 +59,13 @@ Usted quiere que se muestre el cursor ![](../assets/en/commands/pict2478692.en.p
     SET CURSOR(9019)
  End if
 ```
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 469 |
+| Hilo seguro | &cross; |
+
+

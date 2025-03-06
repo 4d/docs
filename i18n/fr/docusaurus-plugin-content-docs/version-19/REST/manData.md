@@ -20,7 +20,7 @@ Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souh
 
 Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($method.md#methodupdate). Si vous souhaitez supprimer une ou plusieurs entités, vous pouvez utiliser [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Outre la récupération d'une seule entité dans une dataclass à l'aide de [\{dataClass\}](%7BdataClass%7D_%7Bkey%7D.html), vous pouvez également écrire une [fonction de classe](ClassFunctions.md#function-calls) qui renvoie une entity selection (ou une collection).
 
 Avant de retourner la sélection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) un ou plusieurs attributs (même les attributs de relation).
 
@@ -37,7 +37,7 @@ Un entity set (également appelé *entity selection*) est une collection d'entit
 
 Pour créer un entity set, appelez [`$method=entityset`]($method.md#methodentityset) dans votre requête REST. Par mesure de sécurité, vous pouvez également utiliser [`$savedfilter`]($savedfilter.md) et/ou [`$savedorderby`]($savedorderby.md) lorsque vous appelez [`$filter`]($filter.md) et/ou [`$orderby`]($orderby.md) afin que l'entité définie puisse être rapidement récupérée avec le même ID que précédemment, dans le cas où elle expireait ou serait supprimée du serveur.
 
-To access the entity set, you must use `$entityset/\{entitySetID\}`, for example:
+Pour accéder à l'entity set, vous devez utiliser `$entityset\/{entitySetID\}`, par exemple :
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
@@ -50,7 +50,7 @@ Si vous modifiez l'un des attributs de l'entité dans l'entity set, les valeurs 
 
 Si l'entity set ne se trouve plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. L'ensemble d'entités sera actualisé (certaines entités peuvent être incluses tandis que d'autres peuvent être supprimées) depuis la dernière fois qu'il a été créé, s'il n'existait plus avant de le recréer.
 
-Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. Vous pouvez combiner les résultats dans les deux, retourner uniquement ce qui est commun aux deux, ou renvoyer ce qui n'est pas commun aux deux.
+En utilisant [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), vous pouvez combiner deux entity sets que vous avez précédemment créés. Vous pouvez combiner les résultats dans les deux, retourner uniquement ce qui est commun aux deux, ou renvoyer ce qui n'est pas commun aux deux.
 
 Une nouvelle entity selection est renvoyée; vous pouvez néanmoins créer un nouvel entity set en appelant [`$method=entityset`]($method.md#methodentityset) à la fin de la requête REST.
 
@@ -81,7 +81,7 @@ avec des données contenues dans le corps de la requête : `["Paris"]`
 > Les appels aux méthodes projet 4D exposées en tant que service REST sont toujours pris en charge mais sont obsolètes.
 
 
-## Selecting Attributes to get
+## Sélectionner les attributs à obtenir
 
 Vous pouvez toujours définir les attributs à retourner dans la réponse REST après une requête initiale en passant leur chemin d'accès dans la requête (par exemple, `Company(1)/name,revenues/`)
 
@@ -220,7 +220,7 @@ La requête suivante retourne uniquement les attributs de prénom et nom à part
 
 #### Exemple d'ensemble d'entités
 
-Once you have [created an entity set](#creating-and-managing-entity-set), you can filter the information in it by defining which attributes to return:
+Une fois que vous avez [créé un ensemble d'entités](#creating-and-managing-entity-set), vous pouvez filtrer les informations qu'il contient en définissant les attributs à renvoyer :
 
  `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer`
 
@@ -242,7 +242,7 @@ Si vous souhaitez enregistrer un BLOB stocké dans votre dataclass, vous pouvez 
 
 ## Récupérer une seule entité
 
-You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. C'est particulièrement utile lorsque vous souhaitez lancer une recherche associée qui n'est pas créée sur la clé primaire de la dataclass. Par exemple, vous pouvez écrire :
+C'est particulièrement utile lorsque vous souhaitez lancer une recherche associée qui n'est pas créée sur la clé primaire de la dataclass. Vous pouvez utiliser la syntaxe[`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) lorsque vous souhaitez récupérer une seule entité. Par exemple, vous pouvez écrire :
 
  `GET  /rest/Company:companyCode("Acme001")`
  

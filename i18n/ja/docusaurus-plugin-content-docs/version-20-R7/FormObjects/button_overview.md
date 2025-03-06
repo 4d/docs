@@ -273,7 +273,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
                 }
 ```
 
-> The Help style does not support [Number of States](properties_TextAndPicture.md#number-of-states), [Picture pathname](properties_TextAndPicture.md#picture-pathname), and [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) basic properties.
+> ヘルプスタイルは、[状態の数](properties_TextAndPicture.md#number-of-states)、[ピクチャーパス名](properties_TextAndPicture.md#picture-pathname)、および [タイトル/ピクチャー位置](properties_TextAndPicture.md#titlepicture-position) などの基本的なプロパティをサポートしません。
 
 ### サークル
 
@@ -332,5 +332,8 @@ Windows の場合、サークルは表示されません。
 
 [ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
 
-- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- カスタム: [背景パス名](properties_TextAndPicture.md#背景パス名) -
+ [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) -
+ [横方向マージン](properties_TextAndPicture.md#横方向マージン) -
+ [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
 - 通常、フラット: [デフォルトボタン](properties_Appearance.md#デフォルトボタン)

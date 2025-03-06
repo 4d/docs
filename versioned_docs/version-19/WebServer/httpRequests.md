@@ -109,8 +109,8 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ## /4DACTION
 
-**/4DACTION/***MethodName*<br/>
-**/4DACTION/***MethodName/Param*
+*/4DACTION/MethodName*<br/>
+*/4DACTION/MethodName/Param*
 
 |Parameters|Type||Description|
 |---|---|:---:|---|
@@ -168,7 +168,7 @@ A form can be submitted through two methods (both can be used with 4D):
 
 > When the Web server receives a posted form, it calls the `On Web Authentication` database method (if it exists).
 
-In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-the-requests) of all the fields included in an HTML page submitted to the server.
+In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-http-requests) of all the fields included in an HTML page submitted to the server.
 
 Example to define the action of a form:
 

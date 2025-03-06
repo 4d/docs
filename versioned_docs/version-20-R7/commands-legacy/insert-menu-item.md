@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.INSERT MENU ITEM.Summary-->The **INSERT MENU ITEM** command inserts new menu items into the menu whose number or reference is passed in *menu* after the existing menu item whose number is passed in *afterItem*.<!-- END REF-->
@@ -57,3 +54,13 @@ The following example creates a menu consisting of two commands to which it assi
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 412 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

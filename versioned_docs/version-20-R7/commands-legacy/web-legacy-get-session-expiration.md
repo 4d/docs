@@ -35,6 +35,15 @@ The *expDate* parameter receives the expiration date and the *expTime* parameter
 
 #### See also 
 
-[WEB Get Current Session ID](web-get-current-session-id.md)  
+[WEB Get current session ID](web-get-current-session-id.md)  
 *Web Sessions Management (Legacy)*  
 [WEB SET OPTION](web-set-option.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1207 |
+| Thread safe | &check; |
+
+

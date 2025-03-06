@@ -11,7 +11,7 @@ title: Glossary
 
 ## Action
 
-Every action that can be done on a [resource](#resource). Available actions are: create, read, update, drop, execute, promote, and describe.
+Every action that can be done on a [resource](#resource). Available actions are: create, read, update, drop, execute, and promote.
 
 ## Attribute
 
@@ -95,7 +95,7 @@ An entity is an object that corresponds to a dataclass model. An entity contains
 
 An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. The purpose of the entity is to manage data (create, update, delete).
 
-For more information, see Entities.
+For more information, see [entities](entities.md).
 
 ## Entity selection  
 

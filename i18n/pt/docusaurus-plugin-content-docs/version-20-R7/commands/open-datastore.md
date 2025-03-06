@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open datastore.Params-->
 
-| Parâmetro      | Tipo                          |   | Descrição                                                                                       |
-| -------------- | ----------------------------- | - | ----------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                        | → | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto                      |
-| localID        | Text                          | → | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
-| Resultado      | cs. DataStore | ← | Objeto do armazém de dados                                                                      |
+| Parâmetro      | Tipo                          |                             | Descrição                                                                                       |
+| -------------- | ----------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                        | &#8594; | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto                      |
+| localID        | Text                          | &#8594; | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
+| Resultado      | cs. DataStore | &#8592; | Objeto do armazém de dados                                                                      |
 
 <!-- END REF-->
 
@@ -32,10 +32,10 @@ The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->conne
 
 Os seguintes datastores remotos são compatíveis com o comando:
 
-| tipo de datastore                                                      | Descrição                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Aplicação 4D remoto                                                    | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
-| [Qodly application](https://developer.qodly.com/docs/cloud/getStarted) | Um aplicativo Qodly Server que forneceu a você um **api endpoint** e uma **api key** válida associada a um cargo definido. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.                                    |
+| tipo de datastore                                                    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                   |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Aplicação 4D remoto                                                  | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
+| [Aplicação Qodly](https://developer.qodly.com/docs/cloud/getStarted) | Um aplicativo Qodly Server que forneceu a você um **api endpoint** e uma **api key** válida associada a um cargo definido. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.                                    |
 
 :::note
 
@@ -43,7 +43,7 @@ Os seguintes datastores remotos são compatíveis com o comando:
 
 :::
 
-Passe em connectionInfo um objeto que desceva o armazém de dados remoto ao que quiser se conectar. It can contain the following properties (all properties are optional except *hostname*):
+Passe em connectionInfo um objeto que desceva o armazém de dados remoto ao que quiser se conectar. Pode conter as propriedades abaixo (todas as propriedades são opcionais menos *hostname*):
 
 | Propriedade | Tipo       | Aplicação 4D remoto                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Aplicação Qodly                                                              |
 | ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -71,7 +71,7 @@ Quando abrir a sessão, as sentenças abaixo são equivalentes e devolvem uma re
   //$myds e $myds2 são equivalentes
 ```
 
-Objects available in the `cs.Datastore` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Objetos disponíveis no `cs.Datastore` são mapeados em relação às [regras gerais ORDA](ORDA/dsMapping.md#general-rules).
 
 Se não for encontrado um datastore correspondente, `Open datastore` retornará **Null**.
 
@@ -143,3 +143,13 @@ Em caso de erro, o comando retorna **Null**. Se não for possível acessar o arm
 #### Veja também
 
 [ds](ds.md)
+
+#### Propriedades
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Command number     | 1452                            |
+| Thread safe        | &amp;check; |
+| Modifies variables | error                           |
+
+

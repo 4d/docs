@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->The **OBJECT GET SUBFORM CONTAINER SIZE** command returns the *width* and *height* (in pixels) of a "current" subform object, displayed in the parent form.<!-- END REF-->
@@ -34,3 +31,12 @@ The On Resize event is generated in the subform form method if the subform objec
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1148 |
+| Thread safe | &cross; |
+
+

@@ -51,7 +51,16 @@ displayed_sidebar: docs
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
-[File](file.md)  
-[Folder](folder.md)  
+[File](../commands/file.md)    
+[Folder](../commands/folder.md)    
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1548 |
+| スレッドセーフである | &check; |
+
+

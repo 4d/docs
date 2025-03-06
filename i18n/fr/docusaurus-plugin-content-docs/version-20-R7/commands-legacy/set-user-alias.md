@@ -40,3 +40,13 @@ Vos utilisateurs sont gérés via une table personnalisée et utilisent le même
 [CHANGE CURRENT USER](change-current-user.md)  
 [Current user](current-user.md)  
 [SET GROUP ACCESS](set-group-access.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1666 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

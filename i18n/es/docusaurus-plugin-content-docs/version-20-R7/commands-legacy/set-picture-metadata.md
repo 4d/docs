@@ -42,7 +42,7 @@ Bajo Windows, si ocurre un error durante la ejecución del comando, la variable 
 **Notas:**
 
 * Sólo ciertos formatos de imágenes (específicamente JPEG y TIFF) soportan los metadatos. Por el contrario, los formatos tales como GIF o BMP no aceptan los metadatos. Cuando convierte una imagen con metadatos a un formato que no los soporta, se pierde la información.
-* Bajo OS X versión 10.7 (Lion), un bug del framework nativo utilizado para la codificación y decodificación de los metadatos puede causar errores de precisión en las coordenadas de GPS. En este caso, se recomienda una actualización a OS X 10.8 (Mountain Lion) o 10.9 (Maverick).
+* Bajo macOS versión 10.7 (Lion), un bug del framework nativo utilizado para la codificación y decodificación de los metadatos puede causar errores de precisión en las coordenadas de GPS. En este caso, se recomienda una actualización a macOS 10.8 (Mountain Lion) o 10.9 (Maverick).
 
 #### Ejemplo 1 
 
@@ -82,3 +82,13 @@ Cuanto todos los metadatos se manipulan vía una referencia de elementos DOM, la
 [GET PICTURE METADATA](get-picture-metadata.md)  
 *Nombres de metadatos imágenes*  
 *Picture Metadata Values*  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1121 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

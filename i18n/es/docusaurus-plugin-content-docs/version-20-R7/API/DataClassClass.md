@@ -40,7 +40,7 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece un objeto de interfaz a una 
 
 #### Descripción
 
-Los atributos de las clases de datos son<!-- REF ClaseDeDatos.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
+Los atributos de las clases de datos son<!-- REF DataClassClass.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
 
 Los objetos devueltos tienen propiedades que puede leer para obtener información sobre los atributos de su clase de datos.
 
@@ -140,7 +140,7 @@ Considerando las propiedades de tabla siguientes:
 | Parámetros | Tipo                               |                             | Descripción                                                              |
 | ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------------------------ |
 | settings   | Object                             |              ->             | Opciones de construcción: context                        |
-| Result     | 4D.EntitySelection | <- | Referencias sobre todas las entidades relacionadas con la clase de datos |
+| Resultado  | 4D.EntitySelection | <- | Referencias sobre todas las entidades relacionadas con la clase de datos |
 
 <!-- END REF -->
 
@@ -250,7 +250,7 @@ $ds.Persons.clearRemoteCache()
 | ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------- |
 | objectCol  | Collection                         |              ->             | Colección de objetos a mapear con entidades       |
 | settings   | Object                             |              ->             | Opciones de construcción: context |
-| Result     | 4D.EntitySelection | <- | Selección de entidades llenadas de la colección   |
+| Resultado  | 4D.EntitySelection | <- | Selección de entidades llenadas de la colección   |
 
 <!-- END REF -->
 
@@ -267,13 +267,13 @@ El mapeo entre los objetos de la colección y las entidades se realiza sobre los
 Para cada objeto de *objectCol*:
 
 - Si el objeto contiene una propiedad booleana "\__NEW" establecida en false (o no contiene una propiedad booleana "\__NEW"), la entidad se actualiza o se crea con los valores correspondientes de las propiedades del objeto. No se realiza ninguna comprobación con respecto a la llave primaria:
-  - Si la llave primaria se da y existe, la entidad se actualiza. En este caso, la llave primaria puede darse tal cual o con una propiedad "\_\_KEY" (llenada con el valor de la llave primaria).
-  - If the primary key is given (as is) and does not exist, the entity is created
-  - Si no se da la llave primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
+ - Si la llave primaria se da y existe, la entidad se actualiza. En este caso, la llave primaria puede darse tal cual o con una propiedad "\_\_KEY" (llenada con el valor de la llave primaria).
+ - If the primary key is given (as is) and does not exist, the entity is created
+ - Si no se da la llave primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
 - Si el objeto contiene una propiedad booleana "\_\_NEW" definida como **true**, la entidad se crea con los valores correspondientes de los atributos del objeto. Se realiza una verificación con respecto a la llave primaria:
-  - Si se da la llave primaria (tal cual) y existe, se envía un error
-  - If the primary key is given (as is) and does not exist, the entity is created
-  - Si no se da la primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
+ - Si se da la llave primaria (tal cual) y existe, se envía un error
+ - If the primary key is given (as is) and does not exist, the entity is created
+ - Si no se da la primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
 
 > La propiedad "\__KEY" que contiene un valor sólo se tiene en cuenta cuando la propiedad "\__NEW" tiene el valor **false** (o se omite) y existe una entidad correspondiente. The use of a \_\_KEY property allows independence from the primary key attribute name.
 
@@ -451,7 +451,7 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 | ---------- | ------------------------- | :-------------------------: | ---------------------------------------------------- |
 | primaryKey | Integer OR Text           |              ->             | Valor de la llave primaria de la entidad a recuperar |
 | settings   | Object                    |              ->             | Opciones de construcción: context    |
-| Result     | 4D.Entity | <- | Entidad que coincide con la llave primaria designada |
+| Resultado  | 4D.Entity | <- | Entidad que coincide con la llave primaria designada |
 
 <!-- END REF -->
 
@@ -459,7 +459,7 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 
 La función `.get()` <!-- REF #DataClassClass.get().Summary -->consulta la clase de datos para recuperar la entidad que coincide con el parámetro *primaryKey*<!-- END REF -->.
 
-En *primaryKey*, pase el valor de la llave primaria de la entidad a recuperar. El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto). También puedes asegurarse de que el valor de la llave primaria siempre se devuelva como Texto utilizando la función [`.getKey()`](EntityClass.md#getkey) con el parámetro `dk key as string`.
+En *primaryKey*, pase el valor de la llave primaria de la entidad a recuperar. El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto). El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto).
 
 Si no se encuentra ninguna entidad con *primaryKey*, se devuelve una entidad **Null**.
 
@@ -573,13 +573,13 @@ $number:=$ds.Persons.getCount()
 
 | Parámetros | Tipo                         |                             | Descripción               |
 | ---------- | ---------------------------- | :-------------------------: | ------------------------- |
-| Result     | cs.DataStore | <- | Datastore de la dataclass |
+| Resultado  | cs.DataStore | <- | Datastore de la dataclass |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `.getDataStore()` <!-- REF #DataClass.getDataStore().Summary -->devuelve el datastore para la clase de datos especificada<!-- END REF -->.
+La función `.getDataStore()` <!-- REF #DataClassClass.getDataStore().Summary -->devuelve el datastore para la clase de datos especificada<!-- END REF -->.
 
 El almacén de datos puede ser:
 
@@ -629,7 +629,7 @@ El método proyecto ***SearchDuplicate*** busca valores duplicados en cualquier 
 
 | Parámetros | Tipo   |                             | Descripción                         |
 | ---------- | ------ | --------------------------- | ----------------------------------- |
-| Result     | Object | <- | Información sobre la clase de datos |
+| Resultado  | Object | <- | Información sobre la clase de datos |
 
 <!-- END REF -->
 
@@ -792,7 +792,7 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 | Parámetros | Tipo                      |                             | Descripción                                      |
 | ---------- | ------------------------- | --------------------------- | ------------------------------------------------ |
-| Result     | 4D.Entity | <- | Nueva entidad que coincide con la clase de datos |
+| Resultado  | 4D.Entity | <- | Nueva entidad que coincide con la clase de datos |
 
 <!-- END REF -->
 
@@ -840,17 +840,17 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 | Parámetros | Tipo                               |                             | Descripción                                                                                                                                                                                     |
 | ---------- | ---------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | keepOrder  | Integer                            | ->                          | `dk keep ordered`: crea una entity selection ordenada,<br/>`dk non ordered`: crea una entity selection no ordenada (por defecto si se omite) |
-| Result     | 4D.EntitySelection | <- | Nueva selección de entidades en blanco relacionadas con la clase de datos                                                                                                                       |
+| Resultado  | 4D.EntitySelection | <- | Nueva selección de entidades en blanco relacionadas con la clase de datos                                                                                                                       |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `.newSelection()` <!-- REF #DataClassClass.newSelection(). Summary -->crea una nueva selección de entidades en blanco, no compartible, relacionada con la clase de datos, en memoria<!-- END REF -->.
+La función `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->crea una nueva selección de entidades en blanco, no compartible, relacionada con la clase de datos, en memoria<!-- END REF -->.
 
 > Para obtener información sobre las selecciones de entidades no compartibles, consulte [esta sección](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
-Si desea crear una selección de entidades ordenada, pase el selector `dk keep ordered` en el parámetro *keepOrder*. Por defecto, si se omite este parámetro, o si se pasa el selector `dk non ordered`, el método crea una selección de entidades no ordenada. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades. Para más información, por favor vea [Selección de entidades ordenadas vs no ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+Si desea crear una selección de entidades ordenada, pase el selector `dk keep ordered` en el parámetro *keepOrder*. Por defecto, si se omite este parámetro, o si se pasa el selector `dk non ordered`, el método crea una selección de entidades no ordenada. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades.
 
 Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelection.length` devuelve 0). Este método permite construir gradualmente selecciones de entidades haciendo llamadas posteriores a la función [`add()`](EntitySelectionClass.md#add).
 
@@ -888,7 +888,7 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 | formula       | Object                             | ->                          | Criterios de búsqueda como objeto fórmula                                                                                                                    |
 | value         | any                                | ->                          | Valor(es) a utilizar para los marcadores de posición indexados                                                                            |
 | querySettings | Object                             | ->                          | Opciones de búsqueda: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                             |
-| Result        | 4D.EntitySelection | <- | Nueva selección de entidades formada por las entidades de la clase de datos que cumplen los criterios de búsqueda especificados en *queryString* o *formula* |
+| Resultado     | 4D.EntitySelection | <- | Nueva selección de entidades formada por las entidades de la clase de datos que cumplen los criterios de búsqueda especificados en *queryString* o *formula* |
 
 <!-- END REF -->
 
@@ -910,14 +910,14 @@ attributePath|formula comparator value
 
 donde:
 
-- **attributePath**: ruta del atributo sobre el que se quiere ejecutar la búsqueda. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre".) En el caso de una ruta de atributos de tipo <code>Collection</code>, se utiliza la notación \[ ] para manejar todas las ocurrencias (por ejemplo "niños[ ].edad"). En el caso de una ruta de atributo cuyo tipo es `Collection`, se utiliza la notación `[]` para manejar todas las ocurrencias (por ejemplo `children[].age`).
+- **attributePath**: ruta del atributo sobre el que se quiere ejecutar la búsqueda. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre"). En el caso de una ruta de atributo cuyo tipo es `Collection`, se utiliza la notación `[]` para manejar todas las ocurrencias (por ejemplo `children[].age`).
 
 > \*No puede utilizar directamente atributos cuyo nombre contenga caracteres especiales como ".", "\[ ]", o "=", ">", "#"..., porque se evaluarán incorrectamente en la cadena de consulta. Si necesita consultar dichos atributos, debe considerar el uso de marcadores, que permiten un rango ampliado de caracteres en las rutas de los atributos (ver **Uso de marcadores de posición** *a continuación*)
 
 - **formula**: una fórmula válida pasada como `Text` u `Object`. La fórmula se evaluará para cada entidad procesada y debe devolver un valor booleano. Dentro de la fórmula, la entidad está disponible a través del objeto `This`.
 
-  - **Text**: la cadena de fórmulas debe ir precedida de la declaración `eval()`, para que el analizador de consultas evalúe la expresión correctamente. Por ejemplo: *"eval(length(This.lastname) >=30) "*
-  - **Objeto**: el [objeto fórmula](FunctionClass.md) se pasa como **placeholder** (ver más abajo). La fórmula debe haber sido creada utilizando el comando [`Formula`](FunctionClass.md#formula) o [`Formula from string`](FunctionClass.md#formula-from-string).
+ - **Text**: la cadena de fórmulas debe ir precedida de la declaración `eval()`, para que el analizador de consultas evalúe la expresión correctamente. Por ejemplo: *"eval(length(This.lastname) >=30) "*
+ - **Objeto**: el [objeto fórmula](FunctionClass.md) se pasa como **placeholder** (ver más abajo). La fórmula debe haber sido creada utilizando el comando [`Formula`](FunctionClass.md#formula) o [`Formula from string`](FunctionClass.md#formula-from-string).
 
 > * Tenga en cuenta que las fórmulas 4D sólo admiten los símbolos `&` y `|` como operadores lógicos.
 > * Si la fórmula no es el único criterio de búsqueda, el optimizador del motor de búsquedas podría procesar previamente otros criterios (por ejemplo, los atributos indexados) y, por tanto, la fórmula podría evaluarse sólo para un subconjunto de entidades.
@@ -943,20 +943,20 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
 | Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |
 | Contiene palabra clave                | %                             | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                                                                                                                                   |
 
-- **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos.
-  Al utilizar un valor constante, deben respetarse las siguientes reglas:
-  - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
-  - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
-  - Valores constantes de **tipo numérico**: los decimales se separan con un '.' (punto).
-  - Constantes de tipo **date**: formato "YYYY-MM-DD"
-  - Constantes **null**: utilizando la palabra clave "null" se encontrarán las propiedades **null** y **undefined**.
-  - en el caso de una búsqueda con un comparador IN, *value* debe ser una colección, o los valores que coincidan con el tipo de la ruta del atributo entre \[ ] separados por comas (para las cadenas, los caracteres `"` deben escaparse con `\`).
+- Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Tenga en cuenta que, en caso de no coincidencia de tipo con tipos escalares (texto, fecha, número...), 4D intentará convertir el tipo **value** al tipo de datos del atributo siempre que sea posible, para un manejo más fácil de los valores procedentes de Internet. Por ejemplo, si se introduce la cadena "v20" como **value** para comparar con un atributo entero, se convertirá a 20.
+ For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
+ - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
+ - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
+ - Valores constantes de **tipo numérico**: los decimales se separan con un '.' (punto).
+ - Constantes de tipo **date**: formato "YYYY-MM-DD"
+ - Constantes **null**: utilizando la palabra clave "null" se encontrarán las propiedades **null** y **undefined**.
+ - en el caso de una búsqueda con un comparador IN, *value* debe ser una colección, o los valores que coincidan con el tipo de la ruta del atributo entre \[ ] separados por comas (para las cadenas, los caracteres `"` deben escaparse con `\`).
 - **logicalOperator**: utilizado para unir condiciones múltiples en la búsqueda (opcional). Puede utilizar uno de los siguientes operadores lógicos (se puede utilizar el nombre o el símbolo):
 
-| Conjunción | Símbolo(s)                                          |
-| ---------- | ---------------------------------------------------------------------- |
-| AND        | &, &&, and |
-| O          | \|,\|\|, or                                                            |
+| Conjunción | Símbolo(s)                                                       |
+| ---------- | ----------------------------------------------------------------------------------- |
+| AND        | &, &&, and              |
+| O          | &#124;,&#124;&#124;, or |
 
 - **order by attributePath**: puede incluir una declaración order by *attributePath* en la consulta para que los datos resultantes se ordenen según esa declaración. Puede utilizar varias sentencias order by, separadas por comas (por ejemplo, order by *attributePath1* desc, *attributePath2* asc). Por defecto, el orden es ascendente. Pase 'desc' para definir un orden descendente y 'asc' para definir un orden ascendente.
 
@@ -1038,13 +1038,27 @@ No obtendrá el resultado esperado porque el valor null será evaluado por 4D co
  $vSingles:=ds.Person.query("spouse = null") // Sintaxis correcta
 ```
 
+#### Not equal to null or undefined values
+
+El comparador "no igual a *value*" (`#` o `!=`) no devuelve atributos cuyo valor es null o indefinido. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true") //encuentra personas con valor de atributo false
+```
+
+If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //encuentra atributos false, null e undefined
+```
+
 #### No igual a en colecciones
 
 Al buscar dentro de atributos de objetos de dataclass que contengan las colecciones, el comparador "not equal to *value*" (`#` o `!=`) encontrará los elementos en los que TODAS las propiedades sean diferentes de *value* (y no aquellos en los que AL MENOS una propiedad sea diferente de *value*, que es como funcionan otros comparadores). Básicamente, equivale a buscar "Not(buscar elementos de la colección cuya propiedad sea igual a *value*"). Por ejemplo, con las siguientes entidades:
 
 ```
 Entity 1:
-ds.Class.name: "A"
+ds. Class.name: "A"
 ds.Class.info:
     { "coll" : [ {
                 "val":1,
@@ -1052,7 +1066,7 @@ ds.Class.info:
             } ] }
 
 Entity 2:
-ds.Class.name: "B"
+ds. Class.name: "B"
 ds.Class.info:
     { "coll" : [ {
                 "val":1,
@@ -1060,7 +1074,7 @@ ds.Class.info:
             } ] }
 
 Entity 3:
-ds.Class.name: "C"
+ds. Class.name: "C"
 ds.Class.info:
     { "coll" : [ {
                 "val":0,
@@ -1094,7 +1108,7 @@ Puede utilizar cualquier letra del alfabeto como notación `[a]`.
 
 #### Vinculación de los argumentos de búsqueda y los atributos de colección
 
-Al buscar dentro de los atributos de objetos de clases de datos que contengan colecciones utilizando varios argumentos de consulta unidos por el operador AND, es posible que desee asegurarse de que sólo se devuelvan entidades que contengan elementos que coincidan con todos los argumentos, y no entidades en las que los argumentos puedan encontrarse en elementos diferentes. Para ello, es necesario vincular los argumentos de la búsqueda a los elementos de colección, de modo que sólo se encuentren los elementos únicos que contengan argumentos vinculados.
+Para ello, es necesario vincular los argumentos de la búsqueda a los elementos de colección, de modo que sólo se encuentren los elementos únicos que contengan argumentos vinculados. Al buscar dentro de los atributos de objetos de clases de datos que contengan colecciones utilizando varios argumentos de consulta unidos por el operador AND, es posible que desee asegurarse de que sólo se devuelvan entidades que contengan elementos que coincidan con todos los argumentos, y no entidades en las que los argumentos puedan encontrarse en elementos diferentes.
 
 Por ejemplo, con las dos entidades siguientes:
 
@@ -1218,7 +1232,7 @@ En el parámetro *querySettings* se puede pasar un objeto que contenga opciones 
 
 #### Sobre queryPlan y queryPath
 
-La información registrada en `queryPlan`/`queryPath` incluye el tipo de búsqueda (indexada y secuencial) y cada subconsulta necesaria junto con los operadores de conjunción. Las rutas de acceso de las peticiones también contienen el número de entidades encontradas y el tiempo necesario para ejecutar cada criterio de búsqueda. Puede resultarle útil analizar esta información mientras desarrolla sus aplicaciones. Generalmente, la descripción del plan de consulta y su ruta de acceso son idénticas, pero pueden diferir porque 4D puede implementar optimizaciones dinámicas cuando se ejecuta una consulta para mejorar el rendimiento. Por ejemplo, el motor 4D puede convertir dinámicamente una consulta indexada en una secuencial si estima que es más rápida. Este caso concreto puede darse cuando el número de entidades que se buscan es bajo.
+La información registrada en `queryPlan`/`queryPath` incluye el tipo de búsqueda (indexada y secuencial) y cada subconsulta necesaria junto con los operadores de conjunción. Las rutas de acceso de las peticiones también contienen el número de entidades encontradas y el tiempo necesario para ejecutar cada criterio de búsqueda. Las rutas de acceso de las peticiones también contienen el número de entidades encontradas y el tiempo necesario para ejecutar cada criterio de búsqueda. Generalmente, la descripción del plan de consulta y su ruta de acceso son idénticas, pero pueden diferir porque 4D puede implementar optimizaciones dinámicas cuando se ejecuta una consulta para mejorar el rendimiento. Por ejemplo, el motor 4D puede convertir dinámicamente una consulta indexada en una secuencial si estima que es más rápida. Este caso concreto puede darse cuando el número de entidades que se buscan es bajo.
 
 Por ejemplo, si ejecuta la siguiente búsqueda:
 

@@ -1,12 +1,12 @@
 ---
 id: get-application-color-scheme
-title: Get application color scheme
+title: Get Application color scheme
 slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get application color scheme.Syntax-->**Get application color scheme** {( * )} : Text<!-- END REF-->
-<!--REF #_command_.Get application color scheme.Params-->
+<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Returns color scheme of host database |
@@ -14,12 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
-<!--REF #_command_.Get application color scheme.Summary-->The **Get application color scheme** command returns the name of the actual color scheme in use at the application level.<!-- END REF--> 
+<!--REF #_command_.Get Application color scheme.Summary-->The **Get Application color scheme** command returns the name of the actual color scheme in use at the application level.<!-- END REF--> 
 
 **Note:** On Windows, this command always returns "light".
 
@@ -39,10 +36,19 @@ Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.
  var $colorScheme : Text
  
   // Retrieve the colorScheme of the host database
- $colorScheme:=Get application color scheme(*)
+ $colorScheme:=Get Application color scheme(*)
 ```
 
 #### See also 
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1763 |
+| Thread safe | &cross; |
+
+

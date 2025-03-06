@@ -34,3 +34,12 @@ displayed_sidebar: docs
 
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
 [Last query path](last-query-path.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1046 |
+| スレッドセーフである | &check; |
+
+

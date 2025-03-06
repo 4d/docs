@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->La commande **Dynamic pop up menu** fait apparaître un pop up menu hiérarchique à l’emplacement courant de la souris ou à l’emplacement défini par les paramètres facultatifs *coordX* et *coordY*.<!-- END REF-->  
@@ -39,7 +36,7 @@ Si vous souhaitez afficher un pop up associé à un bouton 3D, il suffit de ne p
 
 Si une ligne de menu a été sélectionnée, la commande retourne sa chaîne de caractères personnalisée associée (telle que définie à l’aide de la commande [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)). Sinon, la commande retourne une chaîne vide.
 
-**A partir de 4D v16 R3** : si une action standard est associée à une ligne de menu, elle est prise en compte par la commande **Dynamic pop up menu** à différents niveaux :
+Si une action standard est associée à une ligne de menu, elle est prise en compte par la commande **Dynamic pop up menu** à différents niveaux :
 
 * Si une action standard n'est pas activée (c'est-à-dire ne peut pas être appelée) dans le contexte du pop-up menu, le libellé est automatiquement caché. Vous pouvez savoir si une action est disponible en utilisant la commande [Action info](action-info.md).
 * Les propriétés liées à une action associée sont automatiquement "checked", "unchecked" ou "mixed" selon la sélection.
@@ -52,38 +49,38 @@ Ce code permet de créer un pop up menu dynamique hiérarchique, construit sur l
 
 ```4d
  var $refMainContextMenu;$refMenuEdit : Text
- $refMainContextMenu:=Créer menu
- APPEND MENU ITEM($refMainContextMenu;"-")
- APPEND MENU ITEM($refMainContextMenu;ak standard action title)
- SET MENU ITEM PROPERTY($refMainContextMenu;-1;Action standard associée;ak select all)
- APPEND MENU ITEM($refMainContextMenu;ak standard action title)
- SET MENU ITEM PROPERTY($refMainContextMenu;-1;Action standard associée;ak clear)
- APPEND MENU ITEM($refMainContextMenu;ak standard action title)
- SET MENU ITEM PROPERTY($refMainContextMenu;-1;Action standard associée;ak copy)
- APPEND MENU ITEM($refMainContextMenu;ak standard action title)
- SET MENU ITEM PROPERTY($refMainContextMenu;-1;Action standard associée;ak cut)
- APPEND MENU ITEM($refMainContextMenu;ak standard action title)
- SET MENU ITEM PROPERTY($refMainContextMenu;-1;Action standard associée;ak paste)
- APPEND MENU ITEM($refMainContextMenu;"-")
-   //Sous-menu Edition
- $refMenuEdit:=Créer menu
- APPEND MENU ITEM($refMenuEdit;ak standard action title)
- SET MENU ITEM PROPERTY($refMenuEdit;-1;Action standard associée;ak font bold)
- SET MENU ITEM SHORTCUT($refMenuEdit;-1;Code de caractère("B"))
- APPEND MENU ITEM($refMenuEdit;ak standard action title)
- SET MENU ITEM PROPERTY($refMenuEdit;-1;Action standard associée;ak font italic)
- SET MENU ITEM SHORTCUT($refMenuEdit;-1;Code de caractère("I"))
- APPEND MENU ITEM($refMenuEdit;ak standard action title)
- SET MENU ITEM PROPERTY($refMenuEdit;-1;Action standard associée;ak font linethrough)
- SET MENU ITEM SHORTCUT($refMenuEdit;-1;Code de caractère("L"))
- APPEND MENU ITEM($refMenuEdit;ak standard action title)
- SET MENU ITEM PROPERTY($refMenuEdit;-1;Action standard associée;ak font underline)
- SET MENU ITEM SHORTCUT($refMenuEdit;-1;Code de caractère("U"))
- APPEND MENU ITEM($refMenuEdit;ak standard action title)
- SET MENU ITEM PROPERTY($refMenuEdit;-1;Action standard associée;ak font show dialog)
- APPEND MENU ITEM($refMainContextMenu;"Edition";$refMenuEdit)
- 
- paramRef:=Dynamic pop up menu($refMainContextMenu)
+$refMainContextMenu:=Create menu
+APPEND MENU ITEM($refMainContextMenu; "-")
+APPEND MENU ITEM($refMainContextMenu; ak standard action title)
+SET MENU ITEM PROPERTY($refMainContextMenu; -1; Associated standard action; ak select all)
+APPEND MENU ITEM($refMainContextMenu; ak standard action title)
+SET MENU ITEM PROPERTY($refMainContextMenu; -1; Associated standard action; ak clear)
+APPEND MENU ITEM($refMainContextMenu; ak standard action title)
+SET MENU ITEM PROPERTY($refMainContextMenu; -1; Associated standard action; ak copy)
+APPEND MENU ITEM($refMainContextMenu; ak standard action title)
+SET MENU ITEM PROPERTY($refMainContextMenu; -1; Associated standard action; ak cut)
+APPEND MENU ITEM($refMainContextMenu; ak standard action title)
+SET MENU ITEM PROPERTY($refMainContextMenu; -1; Associated standard action; ak paste)
+APPEND MENU ITEM($refMainContextMenu; "-")
+//Sous-menu Edition
+$refMenuEdit:=Create menu
+APPEND MENU ITEM($refMenuEdit; ak standard action title)
+SET MENU ITEM PROPERTY($refMenuEdit; -1; Associated standard action; ak font bold)
+SET MENU ITEM SHORTCUT($refMenuEdit; -1; Character code("B"))
+APPEND MENU ITEM($refMenuEdit; ak standard action title)
+SET MENU ITEM PROPERTY($refMenuEdit; -1; Associated standard action; ak font italic)
+SET MENU ITEM SHORTCUT($refMenuEdit; -1; Character code("I"))
+APPEND MENU ITEM($refMenuEdit; ak standard action title)
+SET MENU ITEM PROPERTY($refMenuEdit; -1; Associated standard action; ak font linethrough)
+SET MENU ITEM SHORTCUT($refMenuEdit; -1; Character code("L"))
+APPEND MENU ITEM($refMenuEdit; ak standard action title)
+SET MENU ITEM PROPERTY($refMenuEdit; -1; Associated standard action; ak font underline)
+SET MENU ITEM SHORTCUT($refMenuEdit; -1; Character code("U"))
+APPEND MENU ITEM($refMenuEdit; ak standard action title)
+SET MENU ITEM PROPERTY($refMenuEdit; -1; Associated standard action; ak font show dialog)
+APPEND MENU ITEM($refMainContextMenu; "Edition"; $refMenuEdit)
+
+paramRef:=Dynamic pop up menu($refMainContextMenu)
 ```
 
 #### Voir aussi 
@@ -93,3 +90,12 @@ Ce code permet de créer un pop up menu dynamique hiérarchique, construit sur l
 [Pop up menu](pop-up-menu.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1006 |
+| Thread safe | &cross; |
+
+

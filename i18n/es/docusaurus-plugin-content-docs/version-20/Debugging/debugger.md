@@ -14,7 +14,7 @@ Hay varias formas de conseguir que el depurador se muestre:
 * Haciendo clic en el botón **Trace** en [la ventana de errores de sintaxis](basics.md#syntax-error-window)
 * Utilizando el comando [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html)
 * Haciendo clic en el botón **Debug** en la ventana de ejecución del método o seleccionando **Run and debug...** en el Code Editor
-* Utilizando **Alt+Shift+Clic derecho** (Windows) o **Ctrl+Option+Cmd+Clic** (macOS) mientras se ejecuta un método, seleccionando entonces el proceso a rastrear en el menú emergente:
+* Utilizando **Alt+Mayús+Clic derecho** (Windows) o **Ctrl+Option+Cmd+Clic** (macOS) mientras se ejecuta un método, seleccionando entonces el proceso a rastrear en el menú emergente:
 
 ![open-debugger](../assets/en/Debugging/openDebugger.png)
 
@@ -47,7 +47,7 @@ La barra de herramientas del depurador incluye varios botones, asociados a acces
 
 Detener el modo Seguimiento y reanudar el curso normal de la ejecución del método.
 
-> **Shift** + **F5** o **Shift** + clic en el botón **No Trace** retoma la ejecución. También desactiva todas las llamadas a TRACE posteriores en el proceso actual.
+> **Mayús** + **F5** o **Mayús** + haciendo clic en el botón **No Trace** reanudará la ejecución. También desactiva todas las llamadas a TRACE posteriores en el proceso actual.
 
 #### Pasar por encima
 

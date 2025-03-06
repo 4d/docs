@@ -24,7 +24,7 @@ Les coordonnées horizontale et verticale sont retournées dans les paramètres 
 
 Le paramètre *boutonSouris* retourne l'état du ou des bouton(s) de la souris, comme décrit ci-dessus dans le tableau des paramètres.
 
-**Note :** Les valeurs 2 et 3 peuvent être retournées sous Mac OS X à compter de la version 10.2.5 uniquement.
+**Note :** Les valeurs 2 et 3 peuvent être retournées sous macOS à compter de la version 10.2.5 uniquement.
 
 #### Exemple 
 
@@ -40,3 +40,12 @@ Reportez-vous à l'exemple de la commande [Pop up menu](pop-up-menu.md).
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 468 |
+| Thread safe | &cross; |
+
+

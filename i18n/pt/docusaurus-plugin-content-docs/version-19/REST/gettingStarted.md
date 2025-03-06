@@ -32,11 +32,11 @@ Para simplificar o exemplo, vamos usar uma aplicação 4D e um navegador que sã
 
 ![](../assets/en/REST/getstarted2.png)
 
-4. Display the **Web/REST resource** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. Exibe a página **recursos Web/REST** na caixa de diálogo Configurações e [marque a opção Expor como servidor REST](configuration.md#starting-the-rest-server).
 
-5. In the **Run** menu, select **Start Web Server**.
+5. No menu **Executar**, selecione **Iniciar Web Server** (se necessário), e então selecione **Teste Web Server**.
 
-The default home page is displayed:
+4D exibe a página home padrão do servidor Web 4D.
 
 ## Acessar dados 4D através do navegador
 

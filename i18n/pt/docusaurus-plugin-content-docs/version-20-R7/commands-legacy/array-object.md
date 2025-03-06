@@ -66,6 +66,15 @@ Criação e cheio de um array local de objetos:
 
 #### Ver também 
 
-[C\_OBJECT](c-object.md)  
+*C\_OBJECT*  
 *Criando arrays*  
 *Objetos (Linguagem)*  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1221 |
+| Thread-seguro | &check; |
+
+

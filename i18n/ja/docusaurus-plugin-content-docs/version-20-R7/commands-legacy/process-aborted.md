@@ -22,3 +22,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [On Exitデータベースメソッド](on-exit-database-method.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 672 |
+| スレッドセーフである | &check; |
+
+

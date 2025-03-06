@@ -40,9 +40,9 @@ Each representation of the list has its own specific characteristics and shares 
 - O estado expandido/recolhido dos seus itens,
 - A posição do cursor de rolagem.
 
-The other characteristics (font, font size, style, entry control, color, list contents, icons, etc.) are common to all the representations and cannot be modified separately. Consequently, when you use commands based on the expanded/collapsed configuration or the current item, for example `Count list items` (when the final `*` parameter is not passed), it is important to be able to specify the representation to be used without any ambiguity.
+The other characteristics (font, font size, style, entry control, color, list contents, icons, etc.) are common to all the representations and cannot be modified separately. Consequentemente, quando você usa comandos com base na configuração expandida/colapsada ou no item atual, por exemplo, `Count list items` (quando o parâmetro final `*` não é passado), é importante poder especificar a representação a ser usada sem nenhuma ambiguidade.
 
-You must use the `ListRef` ID with language commands when you want to specify the hierarchical list found in memory. On the other hand, if you want to specify the representation of a hierarchical list object at the form level, you must use the object name (string type) in the command, via the standard syntax (*;"ListName", etc.).
+You must use the `ListRef` ID with language commands when you want to specify the hierarchical list found in memory. Por outro lado, se você quiser especificar a representação de um objeto lista hierárquica no nível do formulário, deverá usar o nome do objeto (tipo string) no comando, por meio da sintaxe padrão (*; "ListName", etc.).
 
 > In the case of commands that set properties, the syntax based on the object name does not mean that only the form object specified will be modified by the command, but rather that the action of the command will be based on the state of this object. The common characteristics of hierarchical lists are always modified in all of their representations. Por exemplo, se executa:
 
@@ -79,7 +79,7 @@ As with other object property management commands, it is possible to use the “
 
 ## Comandos genéricos utilizáveis com listas hierárquicas
 
-It is possible to modify the appearance of a hierarchical list form objects using several generic 4D commands. You can pass to these commands either the object name of the hierarchical list (using the * parameter), or its variable name (containing the ListRef value):
+It is possible to modify the appearance of a hierarchical list form objects using several generic 4D commands. Você pode passar para esses comandos o nome do objeto da lista hierárquica (usando o parâmetro *) ou o nome da variável (contendo o valor ListRef):
 
 - `OBJECT SET FONT`
 - `OBJECT SET FONT STYLE`

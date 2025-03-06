@@ -7,7 +7,7 @@ Todos [los atributos, dataclasses expuestos](configuration.md#exposing-tables-an
 
 ## Pesquisas de dados
 
-To query data directly, you can do so using the [`$filter`]($filter.md) function. Por exemplo, para encontrar a pessoa chamada "smith" poderia escrever:
+Para consultar os dados diretamente, você pode fazer isso usando a função [`$filter`]($filter.md). Por exemplo, para encontrar a pessoa chamada "smith" poderia escrever:
 
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=Smith"`
 
@@ -15,11 +15,11 @@ To query data directly, you can do so using the [`$filter`]($filter.md) function
 
 Com o REST API, pode realizar todas as manipulações de dados que quiser em 4D.
 
-To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). Se quiser excluir uma ou mais entidades, você pode usar [`$method=delete`]($method.md#methoddelete).
+Para adicionar e modificar entidades, você pode chamar [`$method=update`]($method.md#methodupdate). Sintaxe
 
 Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 
-Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+Antes de devolver a coleção, também pode ordená-la utilizando [`$orderby`]($orderby.md) um ou vários atributos (mesmo os atributos de relação).
 
 ## Navegando dados
 
@@ -35,7 +35,7 @@ To access the entity set, you must use `$entityset/\{entitySetID\}`, for example
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
-By default, an entity set is stored for two hours; however, you can change the timeout by passing a new value to [`$timeout`]($timeout.md). O timeout é continuamente resetado ao valor definido (seja o valor padrão ou um definido por você) a cada vez que for usado.
+Por padrão, um conjunto de entidades é armazenado por duas horas; no entanto, você pode alterar o tempo limite passando um novo valor para [`$timeout`]($timeout.md). O timeout é continuamente resetado ao valor definido (seja o valor padrão ou um definido por você) a cada vez que for usado.
 
 Se quiser remover um conjunto de entidades do cache de 4D Server, você pode usar [`$method=release`]($method.md#methodrelease).
 
@@ -63,7 +63,7 @@ Para computar todos os valores e retornar um objeto JSON:
 
 ## Chamar as funções de classe do modelo de dados
 
-Puede llamar las [funciones de clase usuarios](ClassFunctions.md) ORDA del modelo de datos vía las peticiones POST, para poder beneficiarse del API de la aplicación objetivo. Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podría llamarla utilizando la siguiente petición:
+Puede llamar las [funciones de clase usuarios](ClassFunctions.md) ORDA del modelo de datos vía las peticiones POST, para poder beneficiarse del API de la aplicación objetivo. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
 `/rest/City/getCity`
 
@@ -226,6 +226,6 @@ Se quiser salvar um BLOB armazenado na dataclass, pode escrever:
 
 ## Recuperar apenas uma entidade
 
-You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. É particularmente útil quando quiser fazer uma pesquisa relacionada que não seja criada com a mesma chave primária que a dataclass. Por exemplo, pode escrever:
+Pode usar a sintaxe [`\{dataClass\}:\{attribute\}(valor)`](%7BdataClass%7D.html#dataclassattributevalue) quando quiser recuperar apenas uma entidade. Pode usar a sintaxe <a href="%7BdataClass%7D.html#dataclassattributevalue"><code>\{dataClass\}:\{attribute\}(value)</code></a> quando quiser recuperar apenas uma entidade. Por exemplo, pode escrever:
 
 `GET  /rest/Company:companyCode("Acme001")`

@@ -38,3 +38,13 @@ Si especifica una ruta de acceso invalida, se generará un error del administrad
 
 [Get 4D folder](get-4d-folder.md)  
 [ON ERR CALL](on-err-call.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 634 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET MENU BAR.Summary-->**SET MENU BAR** replaces the current menu bar with the one specified by *menuBar* for the current process only.<!-- END REF--> In the *menuBar* parameter, you can pass either the number or name of the new menu bar. You can also pass a menu ID ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu") type, 16-character string). When you work with references, the menus can be used as menu bars and vice versa (see the *Managing Menus* section).
@@ -121,3 +118,12 @@ In this comprehensive example, we will create, by programming, a menu bar includ
 #### See also 
 
 *Managing Menus*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 67 |
+| Thread safe | &cross; |
+
+

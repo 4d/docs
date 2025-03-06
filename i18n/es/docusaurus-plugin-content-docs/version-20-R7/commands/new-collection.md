@@ -8,16 +8,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New collection.Params-->
 
-| Parámetros | Tipo                                                                    |   | Descripción                                |
-| ---------- | ----------------------------------------------------------------------- | - | ------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | → | Valor(es) de collection |
-| Resultado  | Collection                                                              | ← | Nueva colección                            |
+| Parámetros | Tipo                                                                    |                             | Descripción                                |
+| ---------- | ----------------------------------------------------------------------- | --------------------------- | ------------------------------------------ |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594; | Valor(es) de collection |
+| Resultado  | Collection                                                              | &#8592; | Nueva colección                            |
 
 <!-- END REF-->
 
 #### Descripción
 
-The `New collection` command <!--REF #_command_.New collection.Summary-->creates a new empty or prefilled collection and returns its reference.<!-- END REF--> Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md).
+El comando `New collection` <!--REF #_command_.New collection.Summary-->crea una nueva colección vacía o prellenada y devuelve su referencia.<!-- END REF--> Las colecciones pueden manejarse utilizando propiedades y funciones de la [API de la clase Collection](../API/CollectionClass.md).
 
 Si no se pasa ningún parámetro, `New collection` crea una colección vacía y devuelve su referencia.
 
@@ -80,3 +80,12 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 [New shared collection](new-shared-collection.md)\
 [Type](../commands-legacy/type.md)
+
+#### Propiedades
+
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1472                            |
+| Hilo seguro       | &amp;check; |
+
+

@@ -86,3 +86,12 @@ Title="4  Stabat mater"/>
 
 [BASE64 DECODE](base64-decode.md)  
 [BASE64 ENCODE](base64-encode.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1091 |
+| スレッドセーフである | &check; |
+
+

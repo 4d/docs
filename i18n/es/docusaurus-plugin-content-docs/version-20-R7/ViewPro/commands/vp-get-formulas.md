@@ -12,7 +12,7 @@ title: VP Get formulas
 | Parámetros | Tipo       |                             | Descripción                         |                  |
 | ---------- | ---------- | --------------------------- | ----------------------------------- | ---------------- |
 | rangeObj   | Object     | ->                          | Objeto rango                        |                  |
-| Result     | Collection | <- | Colección de valores de una fórmula | <!-- END REF --> |
+| Resultado  | Collection | <- | Colección de valores de una fórmula | <!-- END REF --> |
 
 #### Descripción
 

@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.FORM GET PROPERTIES.Summary-->El comando \[#current\_title devuelve las propiedades del formulario *nomForm*.<!-- END REF-->
@@ -44,3 +41,12 @@ El parámetro *título* devuelve el título de la ventana del formulario, tal co
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
 [Open form window](open-form-window.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 674 |
+| Hilo seguro | &cross; |
+
+

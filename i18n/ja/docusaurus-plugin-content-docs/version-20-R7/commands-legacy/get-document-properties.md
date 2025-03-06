@@ -203,6 +203,14 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_Document creator*  
-*\_o\_Document type*  
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 477 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+
+

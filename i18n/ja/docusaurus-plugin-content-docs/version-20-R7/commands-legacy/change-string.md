@@ -38,3 +38,12 @@ Change stringの使用例を次に示します。結果を変数*vtResult*に代
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 234 |
+| スレッドセーフである | &check; |
+
+

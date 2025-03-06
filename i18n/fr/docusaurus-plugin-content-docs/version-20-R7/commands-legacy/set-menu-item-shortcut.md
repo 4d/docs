@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->La commande **SET MENU ITEM SHORTCUT** remplace la touche du raccourci clavier associé à la ligne de menu désignée par *menu* et *ligneMenu*, par le caractère dont vous avez passé le code de caractère ou le texte dans *touche*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*. La touche définie sera combinée à la touche **Ctrl** (Windows) ou **Commande** (Macintosh) pour définir le nouveau raccourci clavier.
@@ -74,11 +71,21 @@ Définition du raccourci Ctrl+R (Windows) et Cmd+R (Mac OS) pour la ligne "Recom
 Définition du raccourci F4 pour l'élément de menu "Fermer" : 
 
 ```4d
- INSERER ELEMENT MENU(FileMenu;-1;"Fermer")
- FIXER RACCOURCI ELEMENT MENU(FileMenu;-1;"[F4]";0)
+ INSERT MENU ITEM(FileMenu;-1;"Fermer")
+ SET MENU ITEM SHORTCUT(FileMenu;-1;"[F4]";0)
 ```
 
 #### Voir aussi 
 
 [Get menu item key](get-menu-item-key.md)  
 [Get menu item modifiers](get-menu-item-modifiers.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 423 |
+| Thread safe | &cross; |
+| Interdite sur le serveur ||
+
+

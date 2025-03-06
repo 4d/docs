@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET HIERARCHY.Summary-->The **LISTBOX SET HIERARCHY** command lets you configure the list box object designated by the *object* and *\** parameters in hierarchical or non-hierarchical mode.<!-- END REF--> 
@@ -55,3 +52,12 @@ Definition of the aCountry, aRegion and aCity arrays as the hierarchy of a list 
 #### See also 
 
 [LISTBOX GET HIERARCHY](listbox-get-hierarchy.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1098 |
+| Thread safe | &cross; |
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Level.Summary-->La fonction **Level** sert à déterminer le niveau de rupture ou d'en-tête courant.<!-- END REF--> Elle retourne le numéro du niveau de rupture pendant les événements On Header et On Printing Break.
@@ -67,5 +64,14 @@ Cet exemple est une maquette de méthode formulaire. Il traite chaque événemen
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 101 |
+| Thread safe | &cross; |
+
+

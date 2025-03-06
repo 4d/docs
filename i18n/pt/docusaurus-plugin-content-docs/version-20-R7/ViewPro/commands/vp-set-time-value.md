@@ -23,7 +23,7 @@ Em *rangeObj*, passe um intervalo de células (criado, por exemplo, com [`VP Cel
 
 The *timeValue* parameter specifies a time expressed in seconds to be assigned to the *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](../configuring.md#cell-format) for the *timeValue* parameter.
+O *formatPattern* opcional define um [padrão](../configuring.md#cell-format) para o parâmetro *timeValue*.
 
 #### Exemplo
 
@@ -40,3 +40,4 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 [Cell Format](../configuring.md#cell-format)<br/>
 [VP SET DATE TIME VALUE](vp-set-date-time-value.md)<br/>
 [VP SET VALUE](vp-set-value.md)
+

@@ -208,7 +208,7 @@ Esta propiedad es de **solo lectura**.
 
 | Parámetros | Tipo |                             | Descripción                   |
 | ---------- | ---- | --------------------------- | ----------------------------- |
-| Result     | Real | <- | Tamaño del documento en bytes |
+| Resultado  | Real | <- | Tamaño del documento en bytes |
 
 <!-- END REF -->
 
@@ -275,7 +275,7 @@ Esta propiedad es **lectura-escritura**.
 
 :::caution
 
-Cuando se crea un file handle, el valor `.offset` es un número de bytes. Sin embargo, la unidad de medida del offset difiere según la función de lectura: con [`readBlob()`](#readblob), `.offset` es un número de bytes, mientras que con [`readText()`](#readtext)/[`readLine()`](#readline) es un número de caracteres. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Por lo tanto, si comienza a leer con `readBlob()` y luego llama a `readText()`, la lectura de texto comenzará en una posición inconsistente. Por lo tanto, es esencial que establezca usted mismo la propiedad `.offset` si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:
+Cuando se crea un file handle, el valor `.offset` es un número de bytes. Sin embargo, la unidad de medida del offset difiere según la función de lectura: con [`readBlob()`](#readblob), `.offset` es un número de bytes, mientras que con [`readText()`](#readtext)/[`readLine()`](#readline) es un número de caracteres. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Por ejemplo:
 
 ```4d
   // Abrir un fichero de texto europeo con codificación utf-16 (dos bytes por caracter)
@@ -306,14 +306,14 @@ $s:=$fh.readText()
 
 </details>
 
-<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
+<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : 4D.Blob <!-- END REF -->
 
 <!--REF #FileHandleClass.readBlob().Params -->
 
 | Parámetros | Tipo                                 |                             | Descripción              |
 | ---------- | ------------------------------------ | --------------------------- | ------------------------ |
 | *bytes*    | Real                                 | ->                          | Número de bytes a leer   |
-| Result     | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo |
+| Resultado  | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo |
 
 <!-- END REF -->
 
@@ -347,7 +347,7 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 | Parámetros | Tipo |                             | Descripción    |
 | ---------- | ---- | --------------------------- | -------------- |
-| Result     | Text | <- | Línea de texto |
+| Resultado  | Text | <- | Línea de texto |
 
 <!-- END REF -->
 
@@ -390,7 +390,7 @@ Esta función asume que la propiedad [`.offset`](#offset) es un número de carac
 | Parámetros | Tipo |                             | Descripción                                              |
 | ---------- | ---- | --------------------------- | -------------------------------------------------------- |
 | *stopChar* | Text | ->                          | Caracter(es) en los que dejar de leer |
-| Result     | Text | <- | Texto del archivo                                        |
+| Resultado  | Text | <- | Texto del archivo                                        |
 
 <!-- END REF -->
 

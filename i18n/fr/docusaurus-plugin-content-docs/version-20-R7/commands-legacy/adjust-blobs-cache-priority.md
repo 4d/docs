@@ -52,3 +52,12 @@ Vous souhaitez modifier temporairement la priorité des champs Texte de la table
 
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1431 |
+| Thread safe | &check; |
+
+

@@ -112,3 +112,12 @@ Les enregistrements sont dans l'ordre suivant :
 #### Voir aussi 
 
   
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1407 |
+| Thread safe | &check; |
+
+

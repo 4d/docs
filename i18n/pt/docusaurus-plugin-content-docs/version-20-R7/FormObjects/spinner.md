@@ -7,7 +7,7 @@ El spinner es un indicador circular que muestra una animación continua, como la
 
 ![](../assets/en/FormObjects/spinner.gif)
 
-You use this type of object to indicate that an operation such as establishing a network connection or a performing a calculation is underway. Cuando se selecciona este indicador, [las propiedades "Graduaciones"](properties_Scale.md) no están disponibles.
+Esse tipo de objeto é usado para indicar que uma operação, como o estabelecimento de uma conexão de rede ou a realização de um cálculo, está em andamento. Cuando se selecciona este indicador, [las propiedades "Graduaciones"](properties_Scale.md) no están disponibles.
 
 Quando o formulário é executado, o objeto não é animado. La animación se gestiona pasando un valor a su [variable o expresión asociada](properties_Object.md#variable-or-expression):
 

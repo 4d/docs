@@ -18,10 +18,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Formula.Params -->
 
-| Parámetros | Tipo                        |     | Descripción                             |
-| ---------- | --------------------------- | :-: | --------------------------------------- |
-| formulaExp | Expression                  |  →  | Fórmula a devolver como objeto          |
-| Result     | 4D.Function |  ←  | Función nativa que encapsula la fórmula |
+| Parámetros | Tipo                        |                             | Descripción                             |
+| ---------- | --------------------------- | :-------------------------: | --------------------------------------- |
+| formulaExp | Expression                  | &#8594; | Fórmula a devolver como objeto          |
+| Resultado  | 4D.Function | &#8592; | Función nativa que encapsula la fórmula |
 
 <!-- END REF -->
 
@@ -139,3 +139,12 @@ Llamar a una fórmula utilizando la notación de objetos:
 [4D Blog - Formula: Think outside the box](https://blog.4d.com/new-formula-think-outside-the-box/)\
 [4D Blog - Write your own methods for objects](https://blog.4d.com/write-your-own-methods-for-objects/)\
 [Formula from string](formula-from-string.md)
+
+#### Propiedades
+
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1597                            |
+| Hilo seguro       | &amp;check; |
+
+

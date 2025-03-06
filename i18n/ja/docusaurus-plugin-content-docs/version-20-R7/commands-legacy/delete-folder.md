@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.DELETE FOLDER.Summary-->DELETE FOLDER コマンドは*folder* に渡したフルパスまたは名前を持つフォルダーを削除します。<!-- END REF-->
-
-*deleteOption* パラメーターを省略した場合のデフォルトでは、安全のため **DELETE FOLDER** は空のフォルダーのみ削除します。空でないフォルダーを削除するには *deleteOption* を使います。*deleteOption* には "*System Documents*" テーマの次の定数を受け渡すことができます:
+<!--REF #_command_.DELETE FOLDER.Summary-->DELETE FOLDER コマンドは*folder* に渡したフルパスまたは名前を持つフォルダーを削除します。<!-- END REF-->パラメーターを省略した場合のデフォルトでは、安全のため **DELETE FOLDER** は空のフォルダーのみ削除します。空でないフォルダーを削除するには *deleteOption* を使います。*deleteOption* には "*System Documents*" テーマの次の定数を受け渡すことができます:
 
 | 定数                   | 型    | 値 | コメント               |
 | -------------------- | ---- | - | ------------------ |
@@ -34,7 +32,7 @@ displayed_sidebar: docs
    * フォルダーや格納要素を削除できない場合、最初の削除不能な要素を検知した時点で処理は中断され、エラー**\*** が返されます。この場合、フォルダーは一部削除済みの可能性があります。処理が中断された場合には、[Last errors](last-errors.md)  を使って、問題となったファイルの名称とパスを取得できます。  
    * *folder* パラメーターに指定したフォルダーがが存在しない場合、このコマンドは処理を行わず、エラーも発生しません。  
    (\*) Windows: -54 (ロックされたファイルを書き込みのために開こうとしました。)  
-   OS X: -45 (ファイルがロックされている、あるいはパス名が不正です。)
+   macOS: -45 (ファイルがロックされている、あるいはパス名が不正です。)
 
 これらのエラーは [ON ERR CALL](on-err-call.md) コマンドによって実装したメソッドでインターセプトすることができます。
 
@@ -42,3 +40,13 @@ displayed_sidebar: docs
 
   
 [DELETE DOCUMENT](delete-document.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 693 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

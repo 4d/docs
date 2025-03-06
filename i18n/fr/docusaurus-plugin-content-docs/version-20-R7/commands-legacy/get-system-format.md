@@ -42,3 +42,12 @@ Passez dans le paramètre *format* le type de paramètre dont vous souhaitez con
 #### Voir aussi 
 
 [OBJECT SET FORMAT](object-set-format.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 994 |
+| Thread safe | &check; |
+
+

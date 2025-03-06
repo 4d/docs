@@ -10,7 +10,7 @@ Vous pouvez obtenir plusieurs informations du serveur REST :
 
 ## Catalogue
 
-Use the [`$catalog`]($catalog.md), [`$catalog/\{dataClass\}`]($catalog.md#catalogdataclass), or [`$catalog/$all`]($catalog.md#catalogall) parameters to get the list of [exposed dataclasses and their attributes](configuration.md#exposing-tables-and-fields).
+Utilisez les paramètres [`$catalog`]($catalog.md), [`$catalog/\{dataClass\}`]($catalog.md#catalogdataclass)ou [`$catalog/$all`]($catalog.md#catalogall) pour obtenir la liste des [dataclass exposées et de leurs attributs](configuration.md#exposing-tables-and-fields).
 
 Pour obtenir la collection de toutes les dataclass exposées avec leurs attributs :
 
@@ -19,11 +19,11 @@ Pour obtenir la collection de toutes les dataclass exposées avec leurs attribut
 
 ## Informations sur le cache
 
-Utilisez le paramètre [`$info`]($info.md) pour obtenir des informations sur les sélections d'entités stockées dans le cache du 4D Server et sur l'exécution des sessions utilisateur.
+Utilisez le paramètre [`$info`]($info.md) pour obtenir des informations sur les entity selections stockées dans le cache du 4D Server et sur l'exécution des sessions utilisateur.
 
 ## queryPath et queryPlan
 
-Les sélections d'entité générées par les requêtes peuvent avoir les deux propriétés suivantes : `queryPlan` et `queryPath`. Pour calculer et retourner ces propriétés, il vous suffit d'ajouter [`$queryPlan`]($queryplan.md) et/ou [`$queryPath`]($querypath.md) dans la demande REST.
+Les entity selections générées par via des requêtes peuvent avoir les deux propriétés suivantes : `queryPlan` et `queryPath`. Pour calculer et retourner ces propriétés, il vous suffit d'ajouter [`$queryPlan`]($queryplan.md) et/ou [`$queryPath`]($querypath.md) dans la requête REST.
 
 Par exemple :
 

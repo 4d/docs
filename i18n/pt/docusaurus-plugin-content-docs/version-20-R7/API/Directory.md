@@ -139,7 +139,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+A propriedade `.hidden` retorna <!-- REF #directory.hidden.Summary -->true se o arquivo estiver definido como "hidden" no nível do sistema<!-- END REF -->, e false caso contrário.
 
 Essa propriedade é **somente leitura**.
 
@@ -235,7 +235,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. .
+A propriedade `.isPackage` retorna <!-- REF #directory.isPackage.Summary -->true se a pasta é um pacote no macOS (e existe no disco)<!-- END REF -->. .
 
 Em Windows, `.isPackage` sempre devolve **false**.
 
@@ -261,7 +261,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
+A propriedade `.modificationDate` retorna <!-- REF #directory.modificationDate.Summary --> a data da última modificação da pasta<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -285,7 +285,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.modificationTime` property returns <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+A propriedade `.modificationTime` retorna <!-- REF #directory.modificationTime.Summary -->a hora da última modificação da pasta<!-- END REF --> (expressa como um número de segundos a partir de 00:00).
 
 Essa propriedade é **somente leitura**.
 
@@ -309,7 +309,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
+A propriedade `.name` retorna <!-- REF #directory.name.Summary --> o nome da pasta, sem extensão (se houver)<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -333,7 +333,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
+A propriedade `.original` retorna <!-- REF #directory.original.Summary -->o mesmo objeto Pasta da pasta<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -359,7 +359,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->. .
+A propriedade `.parent` retorna <!-- REF #directory.parent.Summary --> o objeto pasta pai da pasta<!-- END REF -->. .
 
 Se a pasta não tiver um pai (raiz), é devolvido o valor nulo.
 
@@ -385,7 +385,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. .
+A propriedade `.path` retorna <!-- REF #directory.path.Summary --> o caminho POSIX da pasta<!-- END REF -->. .
 
 Essa propriedade é **somente leitura**.
 
@@ -409,7 +409,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
+A propriedade `.platformPath` retorna <!-- REF #directory.platformPath.Summary -->o caminho da pasta expresso com a sintaxe da plataforma atual<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -444,7 +444,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
+A função `.copyTo()` <!-- REF #directory.copyTo().Summary -->copia o objeto `Folder` para a *destinationFolder* especificada<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
@@ -499,7 +499,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 #### Descrição
 
-The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
+A função `.file()` cria <!-- REF #directory.file().Summary -->um objeto `File` dentro do objeto `Folder` e retorna sua referência<!-- END REF -->.
 
 In *path*, pass a relative POSIX path to designate the file to return. A rota se avaliará a partir da pasta pai como raíz.
 
@@ -543,7 +543,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 #### Descrição
 
-The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
+A função `.files()` retorna <!-- REF #directory.files().Summary -->uma coleção de objetos `File` contidos na pasta<!-- END REF -->.
 
 > Os apelidos ou links simbolicos não são resolvidos.
 
@@ -609,7 +609,7 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 #### Descrição
 
-The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
+A função `.folder()` <!-- REF #directory.folder().Summary -->cria um objeto `Folder` dentro do objeto `Folder` pai e retorna sua referência<!-- END REF -->.
 
 Em *path*, passe uma rota relativa POSIX para designar a pasta a devolver. A rota se avaliará a partir da pasta pai como raíz.
 
@@ -653,7 +653,7 @@ Um objeto `Folder` ou null se *path* for inválido.
 
 #### Descrição
 
-The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
+A função `.folders()` <!-- REF #directory.folders().Summary -->retorna uma coleção de objetos `Folder` contidos na pasta principal<!-- END REF -->.
 
 By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
@@ -704,7 +704,7 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 
 #### Descrição
 
-The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
+A função `.getIcon()` <!-- REF #directory.getIcon().Summary -->retorna o ícone da pasta <!-- END REF -->.
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 

@@ -10,8 +10,8 @@ Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-
 
 ## Definições
 
-- **Projeto Matrix**: Projeto 4D usado para desenvolver o componente. O projeto matriz é um projeto standard sem atributos específicos. Um projeto matricial forma um componente único.
-- **Projeto host**: Projeto de aplicativo no qual um componente é instalado e usado.
+- **Projeto Matrix**: projeto 4D usado para desenvolver o componente. O projeto matriz é um projeto standard sem atributos específicos. Um projeto matricial forma um componente único.
+- **Projeto host**: projeto no qual um componente é instalado e usado.
 - **Componente**: Projeto de matriz que pode ser compilado ou [construído](Desktop/building.md#build-component), copiado para o diretório [`Componentes`](Project/architecture.md) do aplicativo host e cujo conteúdo é usado no aplicativo host.
 
 ## Básicos
@@ -69,11 +69,11 @@ Os comandos abaixo não são compatíveis para seu uso dentro de um componente p
 
 
 
-## Partilhar os métodos de projeto
+## Partilhar os métodos projeto
 
 Todos os métodos de projeto de um projeto de matriz são, por definição, incluídos no componente (o projeto é o componente), o que significa que eles podem ser chamados e executados dentro do componente.
 
-Por outro lado, por padrão, esses métodos de projeto não estarão visíveis e não poderão ser chamados no projeto host. No projeto de matriz, você deve designar explicitamente os métodos que deseja compartilhar com o projeto host, marcando a caixa **Compartilhado por componentes e projeto host** na caixa de diálogo de propriedades do método:
+Por outro lado, por padrão, esses métodos projeto não estarão visíveis e não poderão ser chamados no projeto host. No projeto de matriz, você deve designar explicitamente os métodos que deseja compartilhar com o projeto host, marcando a caixa **Compartilhado por componentes e projeto host** na caixa de diálogo de propriedades do método:
 
 ![](../assets/en/Concepts/shared-methods.png)
 
@@ -117,8 +117,8 @@ Ao inserir um valor, você declara que as classes e funções do componente esta
 
 ```4d
 //no projeto host
-var $rect: cs.eGeometry.Rectangle
-$rect:=cs.eGeometry.Rectangle.new(10;20)
+var $rect: cs.eGeometry. Rectangle
+$rect:=cs.eGeometry. Rectangle.new(10;20)
 $area:=$rect.getArea()
 ```
 
@@ -132,7 +132,7 @@ O namespace de um componente [compilado](#protection-of-components-compilation) 
 
 Obviamente, é recomendável usar um nome distinto para evitar qualquer conflito. Se uma classe de usuário com o mesmo nome de um componente já existir no projeto, a classe de usuário será levada em consideração e as classes de componentes serão ignoradas.
 
-As classes ORDA de um componente não estão disponíveis no seu projeto host. Por exemplo, se houver uma classe de dados chamada Employees em seu componente, você não poderá usar uma classe "cs.Mycomponent.Employee" no projeto host.
+As classes ORDA de um componente não estão disponíveis no seu projeto host. Por exemplo, se houver uma classe de dados chamada Employees em seu componente, você não poderá usar uma classe "cs. Mycomponent. Employee" no projeto host.
 
 ### Classes ocultas
 
@@ -353,7 +353,7 @@ Um componente pode executar o código 4D automaticamente ao abrir ou fechar o ba
 
 A execução do código de inicialização ou de fechamento é feita por meio do método de banco de dados `On Host Database Event`.
 
-> Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo. Para fazer isso, você deve marcar a [opção**Executar o método "On Host Database Event" dos componentes**](../settings/security.md#options) na página Segurança das Configurações.
+> Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo. Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo.
 
 
 ## Proteção dos componentes: compilação

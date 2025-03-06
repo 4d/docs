@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.APPEND MENU ITEM.Summary-->The **APPEND MENU ITEM** command appends new menu items to the menu whose number or reference is passed in *menu*.<!-- END REF-->
@@ -82,3 +79,13 @@ Then, in any form or project method, you can write:
 [DELETE MENU ITEM](delete-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 411 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

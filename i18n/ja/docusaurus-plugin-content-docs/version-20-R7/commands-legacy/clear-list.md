@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.CLEAR LIST.Summary-->CLEAR LIST コマンドは、*list*に渡したリスト参照番号を持つ階層リストを廃棄します。<!-- END REF-->
@@ -55,3 +52,12 @@ displayed_sidebar: docs
 [BLOB to list](blob-to-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 377 |
+| スレッドセーフである | &cross; |
+
+

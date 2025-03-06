@@ -21,3 +21,12 @@ Si el servidor web no se ha iniciado, el comando no hace nada.
 #### Ver también 
 
 [WEB START SERVER](web-start-server.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 618 |
+| Hilo seguro | &check; |
+
+

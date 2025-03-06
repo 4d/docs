@@ -58,3 +58,12 @@ Se quiser exportar a estrutura atual do banco de dados em formato html:
 #### Ver também 
 
 [IMPORT STRUCTURE](import-structure.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1311 |
+| Thread-seguro | &check; |
+
+

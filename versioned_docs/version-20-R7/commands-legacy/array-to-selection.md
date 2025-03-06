@@ -80,3 +80,13 @@ You want to copy a selection of records to an archive table by selecting the fie
 
 [SELECTION TO ARRAY](selection-to-array.md)  
 *System Variables*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 261 |
+| Thread safe | &check; |
+| Changes current selection ||
+
+

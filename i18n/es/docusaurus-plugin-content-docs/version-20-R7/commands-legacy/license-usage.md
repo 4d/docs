@@ -71,3 +71,13 @@ Esta tabla detalla el contenido del objeto de sesión para las sesiones REST:
 | sessionID                  | Texto    | ID de la sesión REST                               |
 | IPAddress                  | Texto    | ID del cliente que inició la sesión REST           |
 | isDatastore                | Boolean  | True si la solicitud REST proviene de un datastore |
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1782 |
+| Hilo seguro | &cross; |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM SET INPUT.Summary-->The **FORM SET INPUT** command sets the current input form for *aTable* to *form*, or *userForm*.<!-- END REF--> The form must belong to *aTable*.
@@ -98,7 +95,6 @@ which displays:
 
 #### See also 
 
-*\_o\_CREATE USER FORM*  
 [ADD RECORD](add-record.md)  
 [DISPLAY RECORD](display-record.md)  
 [DISPLAY SELECTION](display-selection.md)  
@@ -110,3 +106,12 @@ which displays:
 [MODIFY SELECTION](modify-selection.md)  
 [Open window](open-window.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 55 |
+| Thread safe | &cross; |
+
+

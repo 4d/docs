@@ -28,3 +28,12 @@ El valor devuelto por este comando sólo tiene sentido si la opción "*Mapear va
 
 [Null](null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 964 |
+| Hilo seguro | &check; |
+
+

@@ -65,3 +65,12 @@ Se a linguagem atuarl for, por exemplo, francês canadense (fr-ca), o comando de
 #### Ver também 
 
 [Get database localization](get-database-localization.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1105 |
+| Thread-seguro | &check; |
+
+

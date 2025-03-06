@@ -72,3 +72,12 @@ This example generates a text using data of the arrays:
 #### See also 
 
 *4D Transformation Tags*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 816 |
+| Thread safe | &check; |
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SQL End selection.Summary-->SQL End selectionコマンドは、結果セットの境界に達したかどうかを判定するために使用します。<!-- END REF-->
@@ -40,3 +37,13 @@ displayed_sidebar: docs
 ```
 
 このコードは4D変数*vName* にempテーブルの ename を返します。
+
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 821 |
+| スレッドセーフである | &cross; |
+
+

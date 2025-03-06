@@ -61,7 +61,7 @@ For security reasons, the private key should always be kept secret. Actually, it
 To fill in a certificate request, you might need to contact the certification authority. The certification authority checks that the information transmitted are correct. The certificate request is generated in a BLOB using the PKCS format encoded in base64 (PEM format). This principle allows you to copy and paste the keys as text and to send them via E-mail without modifying the key content. For example, you can save the BLOB containing the certificate request in a text document (using the `BLOB TO DOCUMENT` command), then open and copy and paste its content in a mail or a Web form to be sent to the certification authority.
 
 4. Once you get your certificate, create a text file named “cert.pem” and paste the contents of the certificate into it.
-You can receive a certificate in different ways (usually by email or HTML form). 4D accepts all platform-related text formats for certificates (OS X, PC, Linux, etc.). However, the certificate must be in PEM format, *i.e.*, PKCS encoded in base64.
+You can receive a certificate in different ways (usually by email or HTML form). 4D accepts all platform-related text formats for certificates (macOS, PC, Linux, etc.). However, the certificate must be in PEM format, *i.e.*, PKCS encoded in base64.
 
  >CR line-ending characters are not supported on their own; you must use CRLF or LF.
 

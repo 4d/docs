@@ -71,7 +71,7 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Chemins d'accès Windows et séquences d'échappement
 
-Le langage 4D permet l'utilisation de [séquences d'échappement](quick-tour.md#sequences-dechappement). Les séquences d'échappement commencent par une barre oblique inverse `\`, suivie d'un caractère. Par exemple, `\t` est la séquence d'échappement pour le caractère `Tab`.
+Le langage 4D permet l'utilisation de [séquences d'échappement](quick-tour.md#sequences-dechappement). Chemins d'accès Par exemple, `\t` est la séquence d'échappement pour le caractère `Tab`.
 
 Étant donné que le caractère `\` est également utilisé comme séparateur dans les noms de chemins sous Windows, vous devez saisir un double `\\` dans ces noms de chemins.
 

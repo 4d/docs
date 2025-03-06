@@ -194,3 +194,12 @@ Este exemplo illustra os resultados dos diferentes tipos de declarações:
 [Is data file locked](is-data-file-locked.md)  
 [SOAP get info](soap-get-info.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 782 |
+| Thread-seguro | &check; |
+
+

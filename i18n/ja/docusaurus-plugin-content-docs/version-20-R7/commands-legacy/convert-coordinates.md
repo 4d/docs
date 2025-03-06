@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->**CONVERT COORDINATES**コマンドは、ある点の(x;y)座標を一つの座標系から別の座標系へと変換します。<!-- END REF-->サポートされる入力・出力座標系はフォーム(およびサブフォーム)、ウィンド、そしてスクリーンです。例えば、このコマンドを使用して、メインフォーム内にある、サブフォームに属しているオブジェクトの座標を取得する事ができます。これにより、どんなカスタムオプションに対してもコンテキストメニューを作成する事が容易になります。
@@ -33,7 +30,7 @@ displayed_sidebar: docs
 | ----------------- | ---- | - | ------------------------------------------------------------------- |
 | XY Current form   | 倍長整数 | 1 | 原点はカレントフォームの左上端                                                     |
 | XY Current window | 倍長整数 | 2 | 原点はカレントウィンドウの左上端                                                    |
-| XY Main window    | 倍長整数 | 4 | Windows:原点はメインウィンドウの左上端 OS X:XY Screenと同じ                           |
+| XY Main window    | 倍長整数 | 4 | Windows:原点はメインウィンドウの左上端 macOS:XY Screenと同じ                           |
 | XY Screen         | 倍長整数 | 3 | 原点はメインスクリーンの左上端([SCREEN COORDINATES](screen-coordinates.md)コマンドと同じ) |
 
 このコマンドがサブフォームまたはサブフォームのオブジェクトから呼び出され、セレクターのどれか一つがXY Current formであった場合、座標系はサブフォーム自身に対して相対的であり、親フォームに対して相対的ではありません。
@@ -87,3 +84,12 @@ displayed_sidebar: docs
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1365 |
+| スレッドセーフである | &cross; |
+
+

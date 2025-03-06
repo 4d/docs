@@ -87,3 +87,12 @@ Création d’un index composite sur les champs “CodePostal” et “Ville” 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 [SET INDEX](set-index.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 966 |
+| Thread safe | &check; |
+
+

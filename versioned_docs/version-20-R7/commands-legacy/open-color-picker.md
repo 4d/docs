@@ -13,14 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->The **OPEN COLOR PICKER** command displays the system color picker dialog box.<!-- END REF--> 
 
-**Note:** This is a modal dialog box under Windows but not under OS X.
+**Note:** This is a modal dialog box under Windows but not under macOS.
 
 When the user selects a color and validates the dialog box, this color is applied to the current text selection in the object with the focus, if the "Allow Font/Color Picker" property is checked for this object (see the *Design Reference* manual).
 
@@ -31,3 +28,12 @@ If the color was changed, the On After Edit form event is generated for the obje
 #### See also 
 
 [OPEN FONT PICKER](open-font-picker.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1304 |
+| Thread safe | &cross; |
+
+

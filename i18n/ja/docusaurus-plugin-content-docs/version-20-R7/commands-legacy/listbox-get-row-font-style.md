@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get row font style.Summary-->**注:** このコマンドは配列型のリストボックスに対してのみ有効です。<!-- END REF-->
@@ -52,3 +49,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1269 |
+| スレッドセーフである | &cross; |
+
+

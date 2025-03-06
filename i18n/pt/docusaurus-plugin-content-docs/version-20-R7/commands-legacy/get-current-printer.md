@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Get current printer.Summary-->O comando Get current printer devolve o nome da impressora atual definida na aplicação 4D.<!-- END REF--> Como padrão, ao iniciar 4D, a impressora atual é a impressora definida no sistema.
@@ -34,3 +31,12 @@ Se não tiver uma impressora instalada, um erro é gerado
 
 [PRINTERS LIST](printers-list.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 788 |
+| Thread-seguro | &cross; |
+
+

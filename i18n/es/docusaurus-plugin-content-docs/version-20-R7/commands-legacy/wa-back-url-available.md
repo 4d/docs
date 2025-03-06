@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.WA Back URL available.Summary-->El comando WA Back URL available se utiliza para saber si existe un URL precedente disponible en la secuencia de URLs abiertos en el área web designada por los parámetros *\** y *objeto*.<!-- END REF-->
@@ -28,3 +25,12 @@ El comando devuelve [True](true.md "True") si existe un URL y de lo contrario [F
 
 [WA Forward URL available](wa-forward-url-available.md)  
 [WA OPEN BACK URL](wa-open-back-url.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1026 |
+| Hilo seguro | &cross; |
+
+

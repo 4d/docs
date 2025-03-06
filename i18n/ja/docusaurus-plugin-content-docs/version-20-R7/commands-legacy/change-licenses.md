@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->CHANGE LICENSES コマンドは、4Dライセンス管理ダイアログボックスを表示します。<!-- END REF-->
@@ -40,5 +37,15 @@ CHANGE LICENSES は、顧客に配付されたコンパイル済みのシング�
 
 #### 参照 
 
-[License info](license-info.md)  
+[License info](../commands/license-info.md)  
 [Is license available](is-license-available.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 637 |
+| スレッドセーフである | &cross; |
+| サーバー上での使用は不可 ||
+
+

@@ -27,7 +27,7 @@ Function sayHello()->$welcome : Text
  $welcome:="Hello "+This.fullName
 ```
 
-Dans une méthode, créons une "Personne" :
+Dans une méthode, créons une "Person" :
 
 ```4d
 var $person : cs.Person //objet de classe Person
@@ -143,7 +143,7 @@ Vous souhaitez créer une nouvelle clé dans la classe `CryptoKey` :
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-## L'objet classe
+## L'objet class
 
 Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
@@ -180,7 +180,13 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont des objets de la classe [4D.Function](API/FunctionClass.md).
+:::note
+
+Il n'y a pas de mot-clé de fin pour le code d'une fonction. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
+
+:::
+
+Les fonctions de classe sont des propriétés spécifiques de la classe. Les fonctions de classe sont des propriétés spécifiques de la classe.
 
 Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function`, et le nom de la fonction. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
@@ -297,7 +303,16 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 // Class: MyClass
 Class Constructor({$parameterName : type; ...})
 // code
+// code
+// code
 ```
+
+:::note
+
+Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
+
+:::
+
 
 Une fonction class constructor accepte des [paramètres](#parameters) facultatifs et peut être utilisée pour créer et initialiser des objets de la classe utilisateur.
 
@@ -358,8 +373,8 @@ Le type de propriété peut être l'un des suivants :
 | `Collection`                             | Valeur collection                                              |
 | `Variant`                                | Valeur variant                                                 |
 | `Object`                                 | Objet de classe par défaut (4D.Object)                         |
-| `4D.<className>`                   | Object de la classe 4D className                               |
-| `cs.<className>`                   | Object de la classe utilisateur className                      |
+| `4D.<className>`                   | Objet de la classe 4D className                                |
+| `cs.<className>`                   | Objet de la classe utilisateur className                       |
 | `cs.<namespace>.<className>` | Object de la classe className du composant `<namespace>` |
 
 :::info
@@ -562,6 +577,16 @@ Class constructor($width : Integer; $height : Integer)
 
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+ $0:=(This.height)*(This.width)
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+ $0:=(This.height)*(This.width)
 
 // Function definition
 Function getArea()

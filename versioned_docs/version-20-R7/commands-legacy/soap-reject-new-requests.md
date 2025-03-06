@@ -36,3 +36,12 @@ You want to deny any new requests to your Web Services server:
 
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [WEB Get server info](web-get-server-info.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1636 |
+| Thread safe | &check; |
+
+

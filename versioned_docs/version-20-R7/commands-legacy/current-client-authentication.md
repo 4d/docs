@@ -72,3 +72,13 @@ With this setting, no password dialog will be displayed for a remote 4D that con
 * replicate the Active directory names in the 4D user and group names, for an automatic mapping,
 * map returned information to a custom \[users\] table,
 * use LDAP features to get user credentials.
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1355 |
+| Thread safe | &check; |
+
+

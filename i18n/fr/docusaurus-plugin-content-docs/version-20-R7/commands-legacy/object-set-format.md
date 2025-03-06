@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** remplace le format d'affichage du ou des objet(s) spécifié(s) par *objet* avec le format que vous avez passé dans *formatAffich*.<!-- END REF--> Le nouveau format est utilisé uniquement pour l'affichage courant, il n'est pas stocké avec le formulaire.
@@ -71,7 +68,7 @@ Heures :
 | System time long             | 11     | 1:02:03 AM HNEC (Mac uniquement)                                                                                                                                                                                                               |  
 | System time long abbreviated | 10     | 1•02•03 AM (Mac uniquement)                                                                                                                                                                                                                    |  
 | System time short            | 9      | 01:02:03                                                                                                                                                                                                                                       |
-* ou un [format personnalisé basé sur un modèle](https://developer.4d.com/docs/Project/date-time-formats.md) (valeur de chaîne). Par exemple :  
+* ou un [format personnalisé basé sur un modèle](../Project/date-time-formats.md) (valeur de chaîne). Par exemple :  
     
 ```4d  
  OBJECT SET FORMAT(*;"myDate";"dd/MM/yyyy")  
@@ -283,7 +280,7 @@ La ligne de code suivante formate le champ *\[Employés\]Date embauche* au cinqu
 
 #### Exemple 2 
 
-Cet exemple formate une variable de date et une variable d'heure en utilisant des [formats personnalisés](https://developer.4d.com/docs/Project/date-time-formats.md) :
+Cet exemple formate une variable de date et une variable d'heure en utilisant des [formats personnalisés](../Project/date-time-formats.md) :
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12
@@ -361,3 +358,12 @@ Passage d'un thermomètre en mode "Barber shop" :
 [GET SYSTEM FORMAT](get-system-format.md)  
 [OBJECT Get format](object-get-format.md)  
 [OBJECT SET FILTER](object-set-filter.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 236 |
+| Thread safe | &cross; |
+
+

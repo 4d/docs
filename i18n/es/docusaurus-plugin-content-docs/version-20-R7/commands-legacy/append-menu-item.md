@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.APPEND MENU ITEM.Summary-->El comando **APPEND MENU ITEM** añade nueva líneas de menú al menú cuyo número o referencia se pasa en *menu*.<!-- END REF-->
@@ -83,3 +80,13 @@ Entonces, en todo método de formulario o de proyecto, puede escribir:
 [DELETE MENU ITEM](delete-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 411 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

@@ -33,3 +33,12 @@ For more information about 4D components, please refer to the Design Reference m
 #### See also 
 
 [PLUGIN LIST](plugin-list.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1001 |
+| Thread safe | &check; |
+
+

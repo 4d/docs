@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LDAP Search.Summary-->O comando **LDAP Search** encontra a primeira ocorrência que corresponde aos critérios definidos no servidor LDAP alvo.<!-- END REF--> Este comando deve ser executado em uma conexão com um servidor LDAP aberta com [LDAP LOGIN](ldap-login.md); caso contrário, é devolvido um erro 1003.  
@@ -86,3 +83,12 @@ Queremos obter um array de todas as entradas que se encontram no atributo "membe
 
 *LDAP*  
 [LDAP SEARCH ALL](ldap-search-all.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1328 |
+| Thread-seguro | &cross; |
+
+

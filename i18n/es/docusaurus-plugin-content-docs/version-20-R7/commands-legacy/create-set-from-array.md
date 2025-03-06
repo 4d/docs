@@ -38,3 +38,13 @@ En un array de enteros largos, si un número de registro no es válido (registro
 
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 641 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+
+

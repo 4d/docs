@@ -35,3 +35,12 @@ By default, if you do not pass the *\** parameter, the command returns only the 
 
 [Is picture file](is-picture-file.md)  
 *Pictures*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 992 |
+| Thread safe | &check; |
+
+

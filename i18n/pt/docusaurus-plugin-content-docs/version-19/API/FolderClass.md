@@ -112,7 +112,7 @@ No parâmetro *folderConstant* , passe uma pasta 4D incorporada ou de sistema, u
 | fk remote database folder  | 3     | Pasta de base de dados 4D criada em cada máquina 4D remota                                                                  |
 | fk resources folder        | 6     | Sistema de arquivos associado: "/DATA"                                                                                      |
 | fk system folder           | 100   |                                                                                                                             |
-| fk user preferences folder | 0     | 4D folder that stores user preference files within the `\<userName>` directory.                                      |
+| fk user preferences folder | 0     | Pasta 4D que armazena arquivos de preferência dos usuários no diretório `\<userName>`.                               |
 | fk web root folder         | 8     | Pasta raiz atual da Web da base de dados: se estiver dentro do pacote "/PACKAGE/percurso", caso contrário, caminho completo |
 
 Se o comando for chamado a partir de um componente, passe o parâmetro opcional *para obter o caminho da base de dados anfitriã. Caso contrário, se omitir o parâmetro* , um objeto nulo é sempre devolvido.
@@ -154,9 +154,9 @@ A função `4D. Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolv
 
 
 <!--REF #FolderClass.create().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                    |
-| ---------- | ---------- | -- | -------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | Verdadeiro se a pasta foi criada com sucesso, falso caso contrário<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                              |
+| ---------- | ---------- | -- | -------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | True se a pasta foi criada com sucesso, false caso contrário<!-- END REF -->
 
 
 |

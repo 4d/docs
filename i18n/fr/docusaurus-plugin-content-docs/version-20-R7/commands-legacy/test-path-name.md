@@ -49,3 +49,12 @@ L'exemple suivant teste la présence du document “Journal” dans le dossier d
 [CREATE FOLDER](create-folder.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 476 |
+| Thread safe | &check; |
+
+

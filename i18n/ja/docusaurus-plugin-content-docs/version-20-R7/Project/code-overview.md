@@ -5,7 +5,7 @@ title: メソッドとクラス
 
 プロジェクトで使用される 4D コードは、 [メソッド](../Concepts/methods.md) および [クラス](../Concepts/classes.md) に記述されます。
 
-4D IDE には、コードを作成・編集・エクスポート・削除するためのさまざまな機能があります。 通常は、4D の [コードエディター](../code-editor/write-class-method.md) を使用して、コードを管理します。
+4D IDE には、コードを作成・編集・エクスポート・削除するためのさまざまな機能があります。 You will usually use the included 4D [code editor](../code-editor/write-class-method.md) to work with your code. You can also use other editors such as **VS Code**, for which the [4D-Analyzer extension](https://github.com/4d/4D-Analyzer-VSCode) is available.
 
 ## メソッドの作成
 
@@ -160,7 +160,7 @@ title: メソッドとクラス
 1. エクスプローラーの [メソッドページ](https://doc.4d.com/4Dv19R5/4D/19-R5/Methods-Page.300-5851337.ja.html) からオプションメニューを展開し、**属性の一括設定...** コマンドを選択します。 "メソッド属性" ダイアログボックスが表示されます:
 
 2. "一致するメソッド名" エリアに属性を一括設定するメソッドを指定するための名前条件を入力します。
-   入力した文字列を使用してメソッド名が検索されます。
+  入力した文字列を使用してメソッド名が検索されます。
 
 "@" をワイルドカード文字として使用し、メソッドグループを選択できます:
 
@@ -179,3 +179,4 @@ title: メソッドとクラス
 **注:** "WSDL で公開する" 属性を True に設定した場合、"Webサービスとして公開" 属性が True に設定されたメソッドにのみ適用されます。
 
 4. **適用** をクリックします。 検索条件に合致するプロジェクトメソッドに対し、属性の変更は即座に反映されます。
+

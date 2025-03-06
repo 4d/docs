@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| Parâmetro       | Tipo                       |     | Descrição                                                           |
-| --------------- | -------------------------- | :-: | ------------------------------------------------------------------- |
-| fileToZip       | 4D. File   |  →  | Objeto File ou Folder a comprimir                                   |
-| folderToZip     | 4D. Folder |  →  | Objeto File ou Folder a comprimir                                   |
-| zipStructure    | Object                     |  →  | Objeto File ou Folder a comprimir                                   |
-| destinationFile | 4D. File   |  →  | Arquivo destino para o arquivo                                      |
-| options         | Integer                    |  →  | Opção *folderToZip*: `ZIP Without enclosing folder` |
-| Resultados      | Object                     |  ←  | Objeto de estado                                                    |
+| Parâmetro       | Tipo                       |                             | Descrição                                                           |
+| --------------- | -------------------------- | :-------------------------: | ------------------------------------------------------------------- |
+| fileToZip       | 4D. File   | &#8594; | Objeto File ou Folder a comprimir                                   |
+| folderToZip     | 4D. Folder | &#8594; | Objeto File ou Folder a comprimir                                   |
+| zipStructure    | Object                     | &#8594; | Objeto File ou Folder a comprimir                                   |
+| destinationFile | 4D. File   | &#8594; | Arquivo destino para o arquivo                                      |
+| options         | Integer                    | &#8594; | Opção *folderToZip*: `ZIP Without enclosing folder` |
+| Resultados      | Object                     | &#8592; | Objeto de estado                                                    |
 
 <!-- END REF -->
 
@@ -51,7 +51,7 @@ You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parame
 
 In the *destinationFile* parameter, pass a `4D.File` object describing the ZIP archive to create (name, location, etc.). É recomendado usar a extensão ".zip" se quiser que o arquivo ZIP seja processado automaticamente por um software.
 
-Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive) command to access it.
+Depois que um arquivo é criado, você pode usar o comando [ZIP Read archive](#zip-read-archive) para acessá-lo.
 
 **Status object**
 
@@ -163,3 +163,12 @@ $err:=ZIP Create archive($zip; $destination)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Read archive`](zip-read-archive.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1640                            |
+| Thread safe    | &amp;check; |
+
+

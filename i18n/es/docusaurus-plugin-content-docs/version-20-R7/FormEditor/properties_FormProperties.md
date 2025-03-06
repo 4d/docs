@@ -9,11 +9,11 @@ title: Propiedades de los formularios
 
 > La propiedad de esquema de color sólo se aplica en macOS.
 
-Esta propiedad define el esquema de colores para el formulario. This property defines the color scheme for the form. Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
+Esta propiedad define el esquema de colores para el formulario. Esta propiedad define el esquema de colores para el formulario. Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
 
 - dark -- texto claro sobre fondo oscuro
 - light - dark text on a light background
-  \> A defined color scheme can not be overridden by a CSS.
+  &#062; A defined color scheme can not be overridden by a CSS.
 
 > El número de caracteres para el título de una ventana está limitado a 31.
 
@@ -33,9 +33,9 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                                                  |
-| ------ | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \\| "win"} objects </li> |
+| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                             |
+| ------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \\ |
 
 ---
 
@@ -180,3 +180,5 @@ Puede utilizar referencias dinámicas para definir los nombres de ventana de los
 | Nombre      | Tipos de datos | Valores posibles                                         |
 | ----------- | -------------- | -------------------------------------------------------- |
 | windowTitle | string         | El nombre de la ventana como texto plano o de referencia |
+
+

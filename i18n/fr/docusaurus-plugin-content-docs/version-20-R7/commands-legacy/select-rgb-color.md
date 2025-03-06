@@ -1,12 +1,12 @@
 ---
 id: select-rgb-color
-title: Select RGB Color
+title: Select RGB color
 slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB Color.Syntax-->**Select RGB Color** {( *coulDefaut* {; *message*} )} : Integer<!-- END REF-->
-<!--REF #_command_.Select RGB Color.Params-->
+<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** {( *coulDefaut* {; *message*} )} : Integer<!-- END REF-->
+<!--REF #_command_.Select RGB color.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | coulDefaut | Integer | &#8594;  | Couleur RVB présélectionnée |
@@ -15,12 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
-<!--REF #_command_.Select RGB Color.Summary-->La commande **Select RGB Color** affiche la fenêtre système de sélection de couleur et retourne la valeur RVB de la couleur sélectionnée par l’utilisateur.<!-- END REF-->
+<!--REF #_command_.Select RGB color.Summary-->La commande **Select RGB color** affiche la fenêtre système de sélection de couleur et retourne la valeur RVB de la couleur sélectionnée par l’utilisateur.<!-- END REF-->
 
 La fenêtre système de sélection de couleur a l’apparence suivante :   
 
@@ -42,3 +39,14 @@ La prise en compte de la validation de la boîte de dialogue diffère selon la p
 #### Voir aussi 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 956 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

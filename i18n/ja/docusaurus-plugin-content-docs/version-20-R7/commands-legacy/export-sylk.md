@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.EXPORT SYLK.Summary-->EXPORT SYLK コマンドは、カレントプロセスにおける*aTable*のカレントセレクションのレコードをディスクに書き出します。<!-- END REF-->このデータは*document*に書き込まれます。*document*は、WindowsまたはMacintoshの標準的なSYLK形式のドキュメントです。 
@@ -52,3 +49,13 @@ EXPORT SYLKを使用する際、デフォルトのフィールド区切り文字
 [EXPORT TEXT](export-text.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 85 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

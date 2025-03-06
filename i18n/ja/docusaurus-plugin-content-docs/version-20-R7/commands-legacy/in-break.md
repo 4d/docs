@@ -13,19 +13,24 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.In break.Summary-->**In break** はIn break 実行サイクルでTrueを返します。<!-- END REF-->
 
 **In break** 実行サイクルを生成させるには、デザインモードでそのフォームやオブジェクトでOn Printing Breakイベントプロパティを必ず選択してください。
 
-**注:** このコマンドは、[Form event code](form-event-code.md) コマンドを用いてOn Printing Break イベントを返すかどうかをテストするのと同等と言えます。
+**注:** このコマンドは、[Form event code](../commands/form-event-code.md) コマンドを用いてOn Printing Break イベントを返すかどうかをテストするのと同等と言えます。
 
 #### 参照 
 
-*\_o\_During*  
 [In footer](in-footer.md)  
 [In header](in-header.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 113 |
+| スレッドセーフである | &cross; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get enterable.Summary-->La commande **OBJECT Get enterable** retourne Vrai si l'objet ou le groupe d'objets désigné par *objet* dispose de l’attribut **saisissable** et Faux sinon.<!-- END REF--> 
@@ -27,3 +24,12 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 #### Voir aussi 
 
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1067 |
+| Thread safe | &cross; |
+
+

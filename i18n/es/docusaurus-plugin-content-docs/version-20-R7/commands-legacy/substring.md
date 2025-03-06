@@ -65,3 +65,12 @@ El siguiente método de proyecto añade los párrafos que se encuentran en el te
 #### Ver también 
 
 [Position](position.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 12 |
+| Hilo seguro | &check; |
+
+

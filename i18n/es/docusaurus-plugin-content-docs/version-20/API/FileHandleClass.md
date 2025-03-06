@@ -213,7 +213,7 @@ Esta propiedad es **de sólo lectura**.
 <!--REF #FileHandleClass.getSize().Params -->
 | Parámetros | Tipo |    | Descripción                                              |
 | ---------- | ---- | -- | -------------------------------------------------------- |
-| Result     | Real | <- | Tamaño del documento en bytes|<!-- END REF -->
+| Resultado  | Real | <- | Tamaño del documento en bytes|<!-- END REF -->
 
 |
 
@@ -312,14 +312,14 @@ $s:=$fh.readText()
 | 19 R7       | Añadidos       |
 </details>
 
-<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
+<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : 4D.Blob <!-- END REF -->
 
 
 <!--REF #FileHandleClass.readBlob().Params -->
 | Parámetros | Tipo                 |    | Descripción                                         |
 | ---------- | -------------------- | -- | --------------------------------------------------- |
 | *bytes*    | Real                 | -> | Número de bytes a leer                              |
-| Result     | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo|<!-- END REF -->
+| Resultado  | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo|<!-- END REF -->
 
 
 
@@ -358,7 +358,7 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 <!--REF #FileHandleClass.readLine().Params -->
 | Parámetros | Tipo |    | Descripción                               |
 | ---------- | ---- | -- | ----------------------------------------- |
-| Result     | Text | <- | Línea de texto|<!-- END REF -->
+| Resultado  | Text | <- | Línea de texto|<!-- END REF -->
 
 
 
@@ -405,7 +405,7 @@ Esta función asume que la propiedad [`.offset`](#offset) es un número de carac
 | Parámetros | Tipo |    | Descripción                                  |
 | ---------- | ---- | -- | -------------------------------------------- |
 | *stopChar* | Text | -> | Caracter(es) en los que dejar de leer        |
-| Result     | Text | <- | Texto del archivo|<!-- END REF -->
+| Resultado  | Text | <- | Texto del archivo|<!-- END REF -->
 
 
 |

@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Summary-->O comando **GET LIST ITEM PROPERTIES** retorna o nome da fonte do caractere atual do elemento especificado pelo parâmetro *refElem* da lista cujo número de referência o nome de objeto se passa em *lista*.<!-- END REF-->
@@ -54,3 +51,12 @@ Para maior informação sobre estas propriedades, consulte a descrição do coma
 [GET LIST ITEM ICON](get-list-item-icon.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 631 |
+| Thread-seguro | &cross; |
+
+

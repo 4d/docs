@@ -13,7 +13,7 @@ Além disso, as entradas podem ser [inserível ou não inserível](properties_En
 
 Você pode gerenciar os dados com os [métodos](Concepts/methods.md) objeto ou formulário.
 
-### JSON Exemplo
+### Exemplo JSON:
 
 ```4d
 	"myText": {

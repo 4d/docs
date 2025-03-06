@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SPELL CHECK TEXT.Summary-->The **SPELL CHECK TEXT** command checks the contents of the *text* parameter beginning from the *checkPos* character and returns the position of the first unknown word it finds (if any).<!-- END REF-->
@@ -28,7 +25,7 @@ This command returns the position of the first character of this unknown word in
 
 If the check starts without error and an unknown word is found, the OK system variable is set to 0\. If an initialization error occurs during the check, or if no unknown words are found, OK is set to 1.
 
-**Note OS X:** Under OS X, when the native spell checker is enabled, this command does not support grammar correction. 
+**Note macOS:** Under macOS, when the native spell checker is enabled, this command does not support grammar correction. 
 
 #### Example 
 
@@ -55,3 +52,13 @@ We want to count the number of possible errors in a text:
 
 [SPELL ADD TO USER DICTIONARY](spell-add-to-user-dictionary.md)  
 [SPELL CHECKING](spell-checking.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1215 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

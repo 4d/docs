@@ -11,7 +11,7 @@ Cria um conjunto de entidades a partir de um conjunto de entidades existente, ma
 
 By default, when an entity is [deleted]($method.md#methoddelete), its reference(s) in existing entity set(s) become *undefined* but are not removed. They are also still included in the "count" property of the entity set. Chamar `$clean` no conjunto de entidades retorna um novo conjunto de entidades atualizado, sem referências de entidades *undefined*.
 
-`$clean` can be followed by [`$method=entityset`]($method.md#methodentityset) to create the new entity set on the server:
+`$clean` pode ser seguido por [`$method=entityset`]($method.md#methodentityset) para criar a nova entidade definida no servidor:
 
 `/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$clean=true&$method=entityset`
 

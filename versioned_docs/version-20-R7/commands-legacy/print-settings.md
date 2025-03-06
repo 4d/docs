@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** displays a printing dialog box.<!-- END REF--> This command must be called before a series of [Print form](print-form.md) commands or the [OPEN PRINTING JOB](open-printing-job.md) command.
@@ -43,3 +40,13 @@ If the user clicks OK in both dialog boxes, the OK system variable is set to 1\.
 [PAGE BREAK](page-break.md)  
 [Print form](print-form.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 106 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

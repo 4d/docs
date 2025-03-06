@@ -31,7 +31,7 @@ title: ピクチャーボタン
 
 1. まず初めに 1つの画像を用意し、一連のピクチャーを横、縦、または縦横の格子状に並べてその中に納めておきます。
 
-   ![](../assets/en/FormObjects/pictureButton_grid.png)
+  ![](../assets/en/FormObjects/pictureButton_grid.png)
 
 ピクチャーは、縦、横、または縦横格子状に整理することができます (上図を参照)。 ピクチャーを格子状に並べた場合、各ピクチャーには上の行から順に左から右へと、0から始まる番号が振られます。 たとえば、4行と 3列で構成される格子において、2行目の 2番目の画像の番号は 4 になります (上の例では英国旗)。
 
@@ -49,12 +49,12 @@ title: ピクチャーボタン
 
 次のモードを選択することができます:
 
-- [Loop back to first frame](properties_Animation.md#loop-back-to-first-frame)
+- [先頭フレームに戻る](properties_Animation.md#先頭フレームに戻る)
 - [マウスアップで戻る](properties_Animation.md#マウスアップで戻る)
 - [ロールオーバー効果](properties_Animation.md#ロールオーバー効果)
 - [マウス押下中は自動更新](properties_Animation.md#マウス押下中は自動更新)
 - [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用)
-- [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用)
+- [アニメーション間隔 (tick)](./properties_Animation.md#アニメーション間隔-tick)
 
 > ピクチャーボタンに [関連付けた変数](properties_Object.md#変数あるいは式) は、ピクチャーのサムネールテーブルで現在表示されているピクチャーのインデックス番号を返します。  このテーブル内のピクチャー番号は 0 から始まります。
 

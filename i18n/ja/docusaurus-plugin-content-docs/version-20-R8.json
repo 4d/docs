@@ -1,0 +1,1042 @@
+{
+  "version.label": {
+    "message": "20 R8 BETA",
+    "description": "The label for version 20-R8"
+  },
+  "sidebar.docs.category.Getting Started": {
+    "message": "はじめに",
+    "description": "The label for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.Getting Started.link.generated-index.title": {
+    "message": "はじめに",
+    "description": "The generated-index page title for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.Core Development": {
+    "message": "コア開発",
+    "description": "The label for category Core Development in sidebar docs"
+  },
+  "sidebar.docs.category.Core Development.link.generated-index.title": {
+    "message": "コア開発",
+    "description": "The generated-index page title for category Core Development in sidebar docs"
+  },
+  "sidebar.docs.category.Project Management": {
+    "message": "プロジェクト管理",
+    "description": "The label for category Project Management in sidebar docs"
+  },
+  "sidebar.docs.category.Settings": {
+    "message": "Settings",
+    "description": "The label for category Settings in sidebar docs"
+  },
+  "sidebar.docs.category.Development Environment": {
+    "message": "開発環境",
+    "description": "The label for category Development Environment in sidebar docs"
+  },
+  "sidebar.docs.category.Debugging": {
+    "message": "デバッガー",
+    "description": "The label for category Debugging in sidebar docs"
+  },
+  "sidebar.docs.category.ORDA": {
+    "message": "ORDA",
+    "description": "The label for category ORDA in sidebar docs"
+  },
+  "sidebar.docs.category.Processes": {
+    "message": "プロセス",
+    "description": "The label for category Processes in sidebar docs"
+  },
+  "sidebar.docs.category.Preferences": {
+    "message": "環境設定",
+    "description": "The label for category Preferences in sidebar docs"
+  },
+  "sidebar.docs.category.4D Language": {
+    "message": "4Dランゲージ",
+    "description": "The label for category 4D Language in sidebar docs"
+  },
+  "sidebar.docs.category.4D Language.link.generated-index.title": {
+    "message": "4Dランゲージ",
+    "description": "The generated-index page title for category 4D Language in sidebar docs"
+  },
+  "sidebar.docs.category.Concepts": {
+    "message": "コンセプト",
+    "description": "The label for category Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.Data Types": {
+    "message": "データタイプ",
+    "description": "The label for category Data Types in sidebar docs"
+  },
+  "sidebar.docs.category.Commands": {
+    "message": "コマンド",
+    "description": "The label for category Commands in sidebar docs"
+  },
+  "sidebar.docs.category.Commands.link.generated-index.title": {
+    "message": "コマンド",
+    "description": "The generated-index page title for category Commands in sidebar docs"
+  },
+  "sidebar.docs.category.4D Environment": {
+    "message": "4D環境",
+    "description": "The label for category 4D Environment in sidebar docs"
+  },
+  "sidebar.docs.category.4D Environment.link.generated-index.title": {
+    "message": "4D環境",
+    "description": "The generated-index page title for category 4D Environment in sidebar docs"
+  },
+  "sidebar.docs.category.Arrays": {
+    "message": "配列",
+    "description": "The label for category Arrays in sidebar docs"
+  },
+  "sidebar.docs.category.Arrays.link.generated-index.title": {
+    "message": "配列",
+    "description": "The generated-index page title for category Arrays in sidebar docs"
+  },
+  "sidebar.docs.category.Backup": {
+    "message": "バックアップ",
+    "description": "The label for category Backup in sidebar docs"
+  },
+  "sidebar.docs.category.Backup.link.generated-index.title": {
+    "message": "バックアップ",
+    "description": "The generated-index page title for category Backup in sidebar docs"
+  },
+  "sidebar.docs.category.BLOB": {
+    "message": "BLOB",
+    "description": "The label for category BLOB in sidebar docs"
+  },
+  "sidebar.docs.category.BLOB.link.generated-index.title": {
+    "message": "BLOB",
+    "description": "The generated-index page title for category BLOB in sidebar docs"
+  },
+  "sidebar.docs.category.Boolean": {
+    "message": "Boolean",
+    "description": "The label for category Boolean in sidebar docs"
+  },
+  "sidebar.docs.category.Boolean.link.generated-index.title": {
+    "message": "Boolean",
+    "description": "The generated-index page title for category Boolean in sidebar docs"
+  },
+  "sidebar.docs.category.Cache Management": {
+    "message": "キャッシュ管理",
+    "description": "The label for category Cache Management in sidebar docs"
+  },
+  "sidebar.docs.category.Cache Management.link.generated-index.title": {
+    "message": "キャッシュ管理",
+    "description": "The generated-index page title for category Cache Management in sidebar docs"
+  },
+  "sidebar.docs.category.Collections": {
+    "message": "コレクション",
+    "description": "The label for category Collections in sidebar docs"
+  },
+  "sidebar.docs.category.Collections.link.generated-index.title": {
+    "message": "コレクション",
+    "description": "The generated-index page title for category Collections in sidebar docs"
+  },
+  "sidebar.docs.category.Communications": {
+    "message": "通信",
+    "description": "The label for category Communications in sidebar docs"
+  },
+  "sidebar.docs.category.Communications.link.generated-index.title": {
+    "message": "通信",
+    "description": "The generated-index page title for category Communications in sidebar docs"
+  },
+  "sidebar.docs.category.Compiler": {
+    "message": "コンパイラー",
+    "description": "The label for category Compiler in sidebar docs"
+  },
+  "sidebar.docs.category.Compiler.link.generated-index.title": {
+    "message": "コンパイラー",
+    "description": "The generated-index page title for category Compiler in sidebar docs"
+  },
+  "sidebar.docs.category.Data Entry": {
+    "message": "データ入力",
+    "description": "The label for category Data Entry in sidebar docs"
+  },
+  "sidebar.docs.category.Data Entry.link.generated-index.title": {
+    "message": "データ入力",
+    "description": "The generated-index page title for category Data Entry in sidebar docs"
+  },
+  "sidebar.docs.category.Data Security": {
+    "message": "データセキュリティ",
+    "description": "The label for category Data Security in sidebar docs"
+  },
+  "sidebar.docs.category.Data Security.link.generated-index.title": {
+    "message": "データセキュリティ",
+    "description": "The generated-index page title for category Data Security in sidebar docs"
+  },
+  "sidebar.docs.category.Database Methods": {
+    "message": "データベースメソッド",
+    "description": "The label for category Database Methods in sidebar docs"
+  },
+  "sidebar.docs.category.Database Methods.link.generated-index.title": {
+    "message": "データベースメソッド",
+    "description": "The generated-index page title for category Database Methods in sidebar docs"
+  },
+  "sidebar.docs.category.Date and Time": {
+    "message": "日付と時間",
+    "description": "The label for category Date and Time in sidebar docs"
+  },
+  "sidebar.docs.category.Date and Time.link.generated-index.title": {
+    "message": "日付と時間",
+    "description": "The generated-index page title for category Date and Time in sidebar docs"
+  },
+  "sidebar.docs.category.Design Object Access": {
+    "message": "デザインオブジェクトアクセス",
+    "description": "The label for category Design Object Access in sidebar docs"
+  },
+  "sidebar.docs.category.Design Object Access.link.generated-index.title": {
+    "message": "デザインオブジェクトアクセス",
+    "description": "The generated-index page title for category Design Object Access in sidebar docs"
+  },
+  "sidebar.docs.category.Drag and Drop": {
+    "message": "ドラッグ＆ドロップ",
+    "description": "The label for category Drag and Drop in sidebar docs"
+  },
+  "sidebar.docs.category.Drag and Drop.link.generated-index.title": {
+    "message": "ドラッグ＆ドロップ",
+    "description": "The generated-index page title for category Drag and Drop in sidebar docs"
+  },
+  "sidebar.docs.category.Entry Control": {
+    "message": "入力制御",
+    "description": "The label for category Entry Control in sidebar docs"
+  },
+  "sidebar.docs.category.Entry Control.link.generated-index.title": {
+    "message": "入力制御",
+    "description": "The generated-index page title for category Entry Control in sidebar docs"
+  },
+  "sidebar.docs.category.File and Folder": {
+    "message": "ファイルとフォルダ",
+    "description": "The label for category File and Folder in sidebar docs"
+  },
+  "sidebar.docs.category.File and Folder.link.generated-index.title": {
+    "message": "ファイルとフォルダ",
+    "description": "The generated-index page title for category File and Folder in sidebar docs"
+  },
+  "sidebar.docs.category.Form Events": {
+    "message": "フォームイベント",
+    "description": "The label for category Form Events in sidebar docs"
+  },
+  "sidebar.docs.category.Form Events.link.generated-index.title": {
+    "message": "フォームイベント",
+    "description": "The generated-index page title for category Form Events in sidebar docs"
+  },
+  "sidebar.docs.category.Forms": {
+    "message": "Forms",
+    "description": "The label for category Forms in sidebar docs"
+  },
+  "sidebar.docs.category.Forms.link.generated-index.title": {
+    "message": "Forms",
+    "description": "The generated-index page title for category Forms in sidebar docs"
+  },
+  "sidebar.docs.category.Formulas": {
+    "message": "フォーミュラ",
+    "description": "The label for category Formulas in sidebar docs"
+  },
+  "sidebar.docs.category.Formulas.link.generated-index.title": {
+    "message": "フォーミュラ",
+    "description": "The generated-index page title for category Formulas in sidebar docs"
+  },
+  "sidebar.docs.category.Graphs": {
+    "message": "グラフ",
+    "description": "The label for category Graphs in sidebar docs"
+  },
+  "sidebar.docs.category.Graphs.link.generated-index.title": {
+    "message": "グラフ",
+    "description": "The generated-index page title for category Graphs in sidebar docs"
+  },
+  "sidebar.docs.category.HTTP": {
+    "message": "HTTPクライアント",
+    "description": "The label for category HTTP in sidebar docs"
+  },
+  "sidebar.docs.category.HTTP.link.generated-index.title": {
+    "message": "HTTPクライアント",
+    "description": "The generated-index page title for category HTTP in sidebar docs"
+  },
+  "sidebar.docs.category.Hierarchical Lists": {
+    "message": "階層リスト",
+    "description": "The label for category Hierarchical Lists in sidebar docs"
+  },
+  "sidebar.docs.category.Hierarchical Lists.link.generated-index.title": {
+    "message": "階層リスト",
+    "description": "The generated-index page title for category Hierarchical Lists in sidebar docs"
+  },
+  "sidebar.docs.category.Import and Export": {
+    "message": "インポート＆エクスポート",
+    "description": "The label for category Import and Export in sidebar docs"
+  },
+  "sidebar.docs.category.Import and Export.link.generated-index.title": {
+    "message": "インポート＆エクスポート",
+    "description": "The generated-index page title for category Import and Export in sidebar docs"
+  },
+  "sidebar.docs.category.Interruptions": {
+    "message": "割り込み",
+    "description": "The label for category Interruptions in sidebar docs"
+  },
+  "sidebar.docs.category.Interruptions.link.generated-index.title": {
+    "message": "割り込み",
+    "description": "The generated-index page title for category Interruptions in sidebar docs"
+  },
+  "sidebar.docs.category.JSON": {
+    "message": "JSON",
+    "description": "The label for category JSON in sidebar docs"
+  },
+  "sidebar.docs.category.JSON.link.generated-index.title": {
+    "message": "JSON",
+    "description": "The generated-index page title for category JSON in sidebar docs"
+  },
+  "sidebar.docs.category.LDAP": {
+    "message": "LDAP",
+    "description": "The label for category LDAP in sidebar docs"
+  },
+  "sidebar.docs.category.LDAP.link.generated-index.title": {
+    "message": "LDAP",
+    "description": "The generated-index page title for category LDAP in sidebar docs"
+  },
+  "sidebar.docs.category.Language": {
+    "message": "ランゲージ",
+    "description": "The label for category Language in sidebar docs"
+  },
+  "sidebar.docs.category.Language.link.generated-index.title": {
+    "message": "ランゲージ",
+    "description": "The generated-index page title for category Language in sidebar docs"
+  },
+  "sidebar.docs.category.Licenses": {
+    "message": "ライセンスリスト",
+    "description": "The label for category Licenses in sidebar docs"
+  },
+  "sidebar.docs.category.Licenses.link.generated-index.title": {
+    "message": "ライセンスリスト",
+    "description": "The generated-index page title for category Licenses in sidebar docs"
+  },
+  "sidebar.docs.category.List Box": {
+    "message": "リストボックス",
+    "description": "The label for category List Box in sidebar docs"
+  },
+  "sidebar.docs.category.List Box.link.generated-index.title": {
+    "message": "リストボックス",
+    "description": "The generated-index page title for category List Box in sidebar docs"
+  },
+  "sidebar.docs.category.Mail": {
+    "message": "メール",
+    "description": "The label for category Mail in sidebar docs"
+  },
+  "sidebar.docs.category.Mail.link.generated-index.title": {
+    "message": "メール",
+    "description": "The generated-index page title for category Mail in sidebar docs"
+  },
+  "sidebar.docs.category.Math": {
+    "message": "算術関数",
+    "description": "The label for category Math in sidebar docs"
+  },
+  "sidebar.docs.category.Math.link.generated-index.title": {
+    "message": "算術関数",
+    "description": "The generated-index page title for category Math in sidebar docs"
+  },
+  "sidebar.docs.category.Menus": {
+    "message": "メニュー",
+    "description": "The label for category Menus in sidebar docs"
+  },
+  "sidebar.docs.category.Menus.link.generated-index.title": {
+    "message": "メニュー",
+    "description": "The generated-index page title for category Menus in sidebar docs"
+  },
+  "sidebar.docs.category.Messages": {
+    "message": "メッセージ",
+    "description": "The label for category Messages in sidebar docs"
+  },
+  "sidebar.docs.category.Messages.link.generated-index.title": {
+    "message": "メッセージ",
+    "description": "The generated-index page title for category Messages in sidebar docs"
+  },
+  "sidebar.docs.category.Named Selections": {
+    "message": "命名セレクション",
+    "description": "The label for category Named Selections in sidebar docs"
+  },
+  "sidebar.docs.category.Named Selections.link.generated-index.title": {
+    "message": "命名セレクション",
+    "description": "The generated-index page title for category Named Selections in sidebar docs"
+  },
+  "sidebar.docs.category.Objects (Forms)": {
+    "message": "オブジェクト (フォーム)",
+    "description": "The label for category Objects (Forms) in sidebar docs"
+  },
+  "sidebar.docs.category.Objects (Forms).link.generated-index.title": {
+    "message": "オブジェクト (フォーム)",
+    "description": "The generated-index page title for category Objects (Forms) in sidebar docs"
+  },
+  "sidebar.docs.category.Objects (Language)": {
+    "message": "オブジェクト (ランゲージ)",
+    "description": "The label for category Objects (Language) in sidebar docs"
+  },
+  "sidebar.docs.category.Objects (Language).link.generated-index.title": {
+    "message": "オブジェクト (ランゲージ)",
+    "description": "The generated-index page title for category Objects (Language) in sidebar docs"
+  },
+  "sidebar.docs.category.On a Series": {
+    "message": "統計関数",
+    "description": "The label for category On a Series in sidebar docs"
+  },
+  "sidebar.docs.category.On a Series.link.generated-index.title": {
+    "message": "統計関数",
+    "description": "The generated-index page title for category On a Series in sidebar docs"
+  },
+  "sidebar.docs.category.PHP": {
+    "message": "PHP",
+    "description": "The label for category PHP in sidebar docs"
+  },
+  "sidebar.docs.category.PHP.link.generated-index.title": {
+    "message": "PHP",
+    "description": "The generated-index page title for category PHP in sidebar docs"
+  },
+  "sidebar.docs.category.Pasteboard": {
+    "message": "ペーストボード",
+    "description": "The label for category Pasteboard in sidebar docs"
+  },
+  "sidebar.docs.category.Pasteboard.link.generated-index.title": {
+    "message": "ペーストボード",
+    "description": "The generated-index page title for category Pasteboard in sidebar docs"
+  },
+  "sidebar.docs.category.Pictures": {
+    "message": "ピクチャー",
+    "description": "The label for category Pictures in sidebar docs"
+  },
+  "sidebar.docs.category.Pictures.link.generated-index.title": {
+    "message": "ピクチャー",
+    "description": "The generated-index page title for category Pictures in sidebar docs"
+  },
+  "sidebar.docs.category.Printing": {
+    "message": "印刷",
+    "description": "The label for category Printing in sidebar docs"
+  },
+  "sidebar.docs.category.Printing.link.generated-index.title": {
+    "message": "印刷",
+    "description": "The generated-index page title for category Printing in sidebar docs"
+  },
+  "sidebar.docs.category.Process (Communications)": {
+    "message": "プロセス (通信)",
+    "description": "The label for category Process (Communications) in sidebar docs"
+  },
+  "sidebar.docs.category.Process (Communications).link.generated-index.title": {
+    "message": "プロセス (通信)",
+    "description": "The generated-index page title for category Process (Communications) in sidebar docs"
+  },
+  "sidebar.docs.category.Process (User Interface)": {
+    "message": "プロセス (ユーザーインターフェース)",
+    "description": "The label for category Process (User Interface) in sidebar docs"
+  },
+  "sidebar.docs.category.Process (User Interface).link.generated-index.title": {
+    "message": "プロセス (ユーザーインターフェース)",
+    "description": "The generated-index page title for category Process (User Interface) in sidebar docs"
+  },
+  "sidebar.docs.category.Processes.link.generated-index.title": {
+    "message": "プロセス",
+    "description": "The generated-index page title for category Processes in sidebar docs"
+  },
+  "sidebar.docs.category.Queries": {
+    "message": "クエリ",
+    "description": "The label for category Queries in sidebar docs"
+  },
+  "sidebar.docs.category.Queries.link.generated-index.title": {
+    "message": "クエリ",
+    "description": "The generated-index page title for category Queries in sidebar docs"
+  },
+  "sidebar.docs.category.Quick Report": {
+    "message": "クイックレポート",
+    "description": "The label for category Quick Report in sidebar docs"
+  },
+  "sidebar.docs.category.Quick Report.link.generated-index.title": {
+    "message": "クイックレポート",
+    "description": "The generated-index page title for category Quick Report in sidebar docs"
+  },
+  "sidebar.docs.category.Record Locking": {
+    "message": "レコードロック",
+    "description": "The label for category Record Locking in sidebar docs"
+  },
+  "sidebar.docs.category.Record Locking.link.generated-index.title": {
+    "message": "レコードロック",
+    "description": "The generated-index page title for category Record Locking in sidebar docs"
+  },
+  "sidebar.docs.category.Records": {
+    "message": "レコード",
+    "description": "The label for category Records in sidebar docs"
+  },
+  "sidebar.docs.category.Records.link.generated-index.title": {
+    "message": "レコード",
+    "description": "The generated-index page title for category Records in sidebar docs"
+  },
+  "sidebar.docs.category.Relations": {
+    "message": "リレーション",
+    "description": "The label for category Relations in sidebar docs"
+  },
+  "sidebar.docs.category.Relations.link.generated-index.title": {
+    "message": "リレーション",
+    "description": "The generated-index page title for category Relations in sidebar docs"
+  },
+  "sidebar.docs.category.Resources": {
+    "message": "Resources",
+    "description": "The label for category Resources in sidebar docs"
+  },
+  "sidebar.docs.category.Resources.link.generated-index.title": {
+    "message": "Resources",
+    "description": "The generated-index page title for category Resources in sidebar docs"
+  },
+  "sidebar.docs.category.SQL": {
+    "message": "SQL",
+    "description": "The label for category SQL in sidebar docs"
+  },
+  "sidebar.docs.category.SQL.link.generated-index.title": {
+    "message": "SQL",
+    "description": "The generated-index page title for category SQL in sidebar docs"
+  },
+  "sidebar.docs.category.SVG": {
+    "message": "SVG",
+    "description": "The label for category SVG in sidebar docs"
+  },
+  "sidebar.docs.category.SVG.link.generated-index.title": {
+    "message": "SVG",
+    "description": "The generated-index page title for category SVG in sidebar docs"
+  },
+  "sidebar.docs.category.Secured Protocol": {
+    "message": "暗号化プロトコル",
+    "description": "The label for category Secured Protocol in sidebar docs"
+  },
+  "sidebar.docs.category.Secured Protocol.link.generated-index.title": {
+    "message": "暗号化プロトコル",
+    "description": "The generated-index page title for category Secured Protocol in sidebar docs"
+  },
+  "sidebar.docs.category.Selection": {
+    "message": "セレクション",
+    "description": "The label for category Selection in sidebar docs"
+  },
+  "sidebar.docs.category.Selection.link.generated-index.title": {
+    "message": "セレクション",
+    "description": "The generated-index page title for category Selection in sidebar docs"
+  },
+  "sidebar.docs.category.Sets": {
+    "message": "セット",
+    "description": "The label for category Sets in sidebar docs"
+  },
+  "sidebar.docs.category.Sets.link.generated-index.title": {
+    "message": "セット",
+    "description": "The generated-index page title for category Sets in sidebar docs"
+  },
+  "sidebar.docs.category.Spell Checker": {
+    "message": "スペルチェッカー",
+    "description": "The label for category Spell Checker in sidebar docs"
+  },
+  "sidebar.docs.category.Spell Checker.link.generated-index.title": {
+    "message": "スペルチェッカー",
+    "description": "The generated-index page title for category Spell Checker in sidebar docs"
+  },
+  "sidebar.docs.category.String": {
+    "message": "文字列",
+    "description": "The label for category String in sidebar docs"
+  },
+  "sidebar.docs.category.String.link.generated-index.title": {
+    "message": "文字列",
+    "description": "The generated-index page title for category String in sidebar docs"
+  },
+  "sidebar.docs.category.Structure Access": {
+    "message": "ストラクチャーアクセス",
+    "description": "The label for category Structure Access in sidebar docs"
+  },
+  "sidebar.docs.category.Structure Access.link.generated-index.title": {
+    "message": "ストラクチャーアクセス",
+    "description": "The generated-index page title for category Structure Access in sidebar docs"
+  },
+  "sidebar.docs.category.Styled Text": {
+    "message": "スタイル付きテキスト",
+    "description": "The label for category Styled Text in sidebar docs"
+  },
+  "sidebar.docs.category.Styled Text.link.generated-index.title": {
+    "message": "スタイル付きテキスト",
+    "description": "The generated-index page title for category Styled Text in sidebar docs"
+  },
+  "sidebar.docs.category.Subrecords": {
+    "message": "サブレコード",
+    "description": "The label for category Subrecords in sidebar docs"
+  },
+  "sidebar.docs.category.Subrecords.link.generated-index.title": {
+    "message": "サブレコード",
+    "description": "The generated-index page title for category Subrecords in sidebar docs"
+  },
+  "sidebar.docs.category.System Documents": {
+    "message": "システムドキュメント",
+    "description": "The label for category System Documents in sidebar docs"
+  },
+  "sidebar.docs.category.System Documents.link.generated-index.title": {
+    "message": "システムドキュメント",
+    "description": "The generated-index page title for category System Documents in sidebar docs"
+  },
+  "sidebar.docs.category.System Environment": {
+    "message": "システム環境",
+    "description": "The label for category System Environment in sidebar docs"
+  },
+  "sidebar.docs.category.System Environment.link.generated-index.title": {
+    "message": "システム環境",
+    "description": "The generated-index page title for category System Environment in sidebar docs"
+  },
+  "sidebar.docs.category.Table": {
+    "message": "Table",
+    "description": "The label for category Table in sidebar docs"
+  },
+  "sidebar.docs.category.Table.link.generated-index.title": {
+    "message": "Table",
+    "description": "The generated-index page title for category Table in sidebar docs"
+  },
+  "sidebar.docs.category.Tools": {
+    "message": "ツール",
+    "description": "The label for category Tools in sidebar docs"
+  },
+  "sidebar.docs.category.Tools.link.generated-index.title": {
+    "message": "ツール",
+    "description": "The generated-index page title for category Tools in sidebar docs"
+  },
+  "sidebar.docs.category.Transactions": {
+    "message": "トランザクション",
+    "description": "The label for category Transactions in sidebar docs"
+  },
+  "sidebar.docs.category.Transactions.link.generated-index.title": {
+    "message": "トランザクション",
+    "description": "The generated-index page title for category Transactions in sidebar docs"
+  },
+  "sidebar.docs.category.Triggers": {
+    "message": "Triggers",
+    "description": "The label for category Triggers in sidebar docs"
+  },
+  "sidebar.docs.category.Triggers.link.generated-index.title": {
+    "message": "Triggers",
+    "description": "The generated-index page title for category Triggers in sidebar docs"
+  },
+  "sidebar.docs.category.User Interface": {
+    "message": "ユーザーインターフェース",
+    "description": "The label for category User Interface in sidebar docs"
+  },
+  "sidebar.docs.category.User Interface.link.generated-index.title": {
+    "message": "ユーザーインターフェース",
+    "description": "The generated-index page title for category User Interface in sidebar docs"
+  },
+  "sidebar.docs.category.Users and Groups": {
+    "message": "ユーザー＆グループ",
+    "description": "The label for category Users and Groups in sidebar docs"
+  },
+  "sidebar.docs.category.Users and Groups.link.generated-index.title": {
+    "message": "ユーザー＆グループ",
+    "description": "The generated-index page title for category Users and Groups in sidebar docs"
+  },
+  "sidebar.docs.category.Variables": {
+    "message": "変数",
+    "description": "The label for category Variables in sidebar docs"
+  },
+  "sidebar.docs.category.Variables.link.generated-index.title": {
+    "message": "変数",
+    "description": "The generated-index page title for category Variables in sidebar docs"
+  },
+  "sidebar.docs.category.Web Area": {
+    "message": "Webエリア",
+    "description": "The label for category Web Area in sidebar docs"
+  },
+  "sidebar.docs.category.Web Area.link.generated-index.title": {
+    "message": "Webエリア",
+    "description": "The generated-index page title for category Web Area in sidebar docs"
+  },
+  "sidebar.docs.category.Web Server": {
+    "message": "Web サーバー",
+    "description": "The label for category Web Server in sidebar docs"
+  },
+  "sidebar.docs.category.Web Server.link.generated-index.title": {
+    "message": "Web サーバー",
+    "description": "The generated-index page title for category Web Server in sidebar docs"
+  },
+  "sidebar.docs.category.Web Services (Client)": {
+    "message": "Webサービス (クライアント)",
+    "description": "The label for category Web Services (Client) in sidebar docs"
+  },
+  "sidebar.docs.category.Web Services (Client).link.generated-index.title": {
+    "message": "Webサービス (クライアント)",
+    "description": "The generated-index page title for category Web Services (Client) in sidebar docs"
+  },
+  "sidebar.docs.category.Web Services (Server)": {
+    "message": "Webサービス (サーバー)",
+    "description": "The label for category Web Services (Server) in sidebar docs"
+  },
+  "sidebar.docs.category.Web Services (Server).link.generated-index.title": {
+    "message": "Webサービス (サーバー)",
+    "description": "The generated-index page title for category Web Services (Server) in sidebar docs"
+  },
+  "sidebar.docs.category.Windows": {
+    "message": "Windows",
+    "description": "The label for category Windows in sidebar docs"
+  },
+  "sidebar.docs.category.Windows.link.generated-index.title": {
+    "message": "Windows",
+    "description": "The generated-index page title for category Windows in sidebar docs"
+  },
+  "sidebar.docs.category.XML DOM": {
+    "message": "XML DOM",
+    "description": "The label for category XML DOM in sidebar docs"
+  },
+  "sidebar.docs.category.XML DOM.link.generated-index.title": {
+    "message": "XML DOM",
+    "description": "The generated-index page title for category XML DOM in sidebar docs"
+  },
+  "sidebar.docs.category.XML SAX": {
+    "message": "XML SAX",
+    "description": "The label for category XML SAX in sidebar docs"
+  },
+  "sidebar.docs.category.XML SAX.link.generated-index.title": {
+    "message": "XML SAX",
+    "description": "The generated-index page title for category XML SAX in sidebar docs"
+  },
+  "sidebar.docs.category.XML": {
+    "message": "XML",
+    "description": "The label for category XML in sidebar docs"
+  },
+  "sidebar.docs.category.XML.link.generated-index.title": {
+    "message": "XML",
+    "description": "The generated-index page title for category XML in sidebar docs"
+  },
+  "sidebar.docs.category.Classes": {
+    "message": "クラス",
+    "description": "The label for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Classes.link.generated-index.title": {
+    "message": "クラス関数",
+    "description": "The generated-index page title for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Classes.link.generated-index.description": {
+    "message": "ビルトイン 4Dクラスの一覧",
+    "description": "The generated-index page description for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Administration": {
+    "message": "管理",
+    "description": "The label for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Administration.link.generated-index.title": {
+    "message": "管理",
+    "description": "The generated-index page title for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Administration.link.generated-index.description": {
+    "message": "4Dアプリケーションの管理",
+    "description": "The generated-index page description for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.4D Server Administration Window": {
+    "message": "4D Server 管理ウィンドウ",
+    "description": "The label for category 4D Server Administration Window in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration": {
+    "message": "Web 管理",
+    "description": "The label for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration.link.generated-index.title": {
+    "message": "Web 管理",
+    "description": "The generated-index page title for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration.link.generated-index.description": {
+    "message": "アプリケーション管理・監視用の 4D Web ツール",
+    "description": "The generated-index page description for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.MSC": {
+    "message": "メンテナンス＆セキュリティセンター",
+    "description": "The label for category MSC in sidebar docs"
+  },
+  "sidebar.docs.category.Backup and Restore": {
+    "message": "バックアップと復元",
+    "description": "The label for category Backup and Restore in sidebar docs"
+  },
+  "sidebar.docs.category.Extensions": {
+    "message": "拡張機能",
+    "description": "The label for category Extensions in sidebar docs"
+  },
+  "sidebar.docs.category.4D View Pro": {
+    "message": "4D View Pro",
+    "description": "The label for category 4D View Pro in sidebar docs"
+  },
+  "sidebar.docs.category.4D View Pro.link.generated-index.title": {
+    "message": "4D View Pro",
+    "description": "The generated-index page title for category 4D View Pro in sidebar docs"
+  },
+  "sidebar.docs.category.A": {
+    "message": "A",
+    "description": "The label for category A in sidebar docs"
+  },
+  "sidebar.docs.category.A.link.generated-index.title": {
+    "message": "A",
+    "description": "The generated-index page title for category A in sidebar docs"
+  },
+  "sidebar.docs.category.C": {
+    "message": "C",
+    "description": "The label for category C in sidebar docs"
+  },
+  "sidebar.docs.category.C.link.generated-index.title": {
+    "message": "C",
+    "description": "The generated-index page title for category C in sidebar docs"
+  },
+  "sidebar.docs.category.D": {
+    "message": "D",
+    "description": "The label for category D in sidebar docs"
+  },
+  "sidebar.docs.category.D.link.generated-index.title": {
+    "message": "D",
+    "description": "The generated-index page title for category D in sidebar docs"
+  },
+  "sidebar.docs.category.E": {
+    "message": "E",
+    "description": "The label for category E in sidebar docs"
+  },
+  "sidebar.docs.category.E.link.generated-index.title": {
+    "message": "E",
+    "description": "The generated-index page title for category E in sidebar docs"
+  },
+  "sidebar.docs.category.F": {
+    "message": "F",
+    "description": "The label for category F in sidebar docs"
+  },
+  "sidebar.docs.category.F.link.generated-index.title": {
+    "message": "F",
+    "description": "The generated-index page title for category F in sidebar docs"
+  },
+  "sidebar.docs.category.G": {
+    "message": "G",
+    "description": "The label for category G in sidebar docs"
+  },
+  "sidebar.docs.category.G.link.generated-index.title": {
+    "message": "G",
+    "description": "The generated-index page title for category G in sidebar docs"
+  },
+  "sidebar.docs.category.I": {
+    "message": "I",
+    "description": "The label for category I in sidebar docs"
+  },
+  "sidebar.docs.category.I.link.generated-index.title": {
+    "message": "I",
+    "description": "The generated-index page title for category I in sidebar docs"
+  },
+  "sidebar.docs.category.M": {
+    "message": "M",
+    "description": "The label for category M in sidebar docs"
+  },
+  "sidebar.docs.category.M.link.generated-index.title": {
+    "message": "M",
+    "description": "The generated-index page title for category M in sidebar docs"
+  },
+  "sidebar.docs.category.N": {
+    "message": "N",
+    "description": "The label for category N in sidebar docs"
+  },
+  "sidebar.docs.category.N.link.generated-index.title": {
+    "message": "N",
+    "description": "The generated-index page title for category N in sidebar docs"
+  },
+  "sidebar.docs.category.O": {
+    "message": "O",
+    "description": "The label for category O in sidebar docs"
+  },
+  "sidebar.docs.category.O.link.generated-index.title": {
+    "message": "O",
+    "description": "The generated-index page title for category O in sidebar docs"
+  },
+  "sidebar.docs.category.P": {
+    "message": "P",
+    "description": "The label for category P in sidebar docs"
+  },
+  "sidebar.docs.category.P.link.generated-index.title": {
+    "message": "P",
+    "description": "The generated-index page title for category P in sidebar docs"
+  },
+  "sidebar.docs.category.R": {
+    "message": "R",
+    "description": "The label for category R in sidebar docs"
+  },
+  "sidebar.docs.category.R.link.generated-index.title": {
+    "message": "R",
+    "description": "The generated-index page title for category R in sidebar docs"
+  },
+  "sidebar.docs.category.S": {
+    "message": "S",
+    "description": "The label for category S in sidebar docs"
+  },
+  "sidebar.docs.category.S.link.generated-index.title": {
+    "message": "S",
+    "description": "The generated-index page title for category S in sidebar docs"
+  },
+  "sidebar.docs.category.4D Write Pro": {
+    "message": "4D Write Pro",
+    "description": "The label for category 4D Write Pro in sidebar docs"
+  },
+  "sidebar.docs.category.4D Write Pro.link.generated-index.title": {
+    "message": "4D Write Pro",
+    "description": "The generated-index page title for category 4D Write Pro in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications": {
+    "message": "Web アプリ",
+    "description": "The label for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications.link.generated-index.title": {
+    "message": "Web アプリ",
+    "description": "The generated-index page title for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications.link.generated-index.description": {
+    "message": "4D での Webアプリケーション開発ガイド",
+    "description": "The generated-index page description for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Web Development": {
+    "message": "Web 開発",
+    "description": "The label for category Web Development in sidebar docs"
+  },
+  "sidebar.docs.category.Qodly Studio": {
+    "message": "Qodly Studio",
+    "description": "The label for category Qodly Studio in sidebar docs"
+  },
+  "sidebar.docs.category.Qodly Studio.link.generated-index.title": {
+    "message": "Qodly Studio",
+    "description": "The generated-index page title for category Qodly Studio in sidebar docs"
+  },
+  "sidebar.docs.category.Qodly Studio.link.generated-index.description": {
+    "message": "Qodly Studio を使用して強力な Webインターフェースを構築する。",
+    "description": "The generated-index page description for category Qodly Studio in sidebar docs"
+  },
+  "sidebar.docs.category.REST API": {
+    "message": "REST API",
+    "description": "The label for category REST API in sidebar docs"
+  },
+  "sidebar.docs.category.REST API.link.generated-index.title": {
+    "message": "REST API",
+    "description": "The generated-index page title for category REST API in sidebar docs"
+  },
+  "sidebar.docs.category.REST API.link.generated-index.description": {
+    "message": "データストアを REST に公開し、REST API を使用する。",
+    "description": "The generated-index page description for category REST API in sidebar docs"
+  },
+  "sidebar.docs.category.Exposing your datastore in REST": {
+    "message": "データストアを REST に公開する",
+    "description": "The label for category Exposing your datastore in REST in sidebar docs"
+  },
+  "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.title": {
+    "message": "データストアを REST に公開する",
+    "description": "The generated-index page title for category Exposing your datastore in REST in sidebar docs"
+  },
+  "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.description": {
+    "message": "RESTアクセスのためにデータストアを設定する",
+    "description": "The generated-index page description for category Exposing your datastore in REST in sidebar docs"
+  },
+  "sidebar.docs.category.API (general)": {
+    "message": "API (一般)",
+    "description": "The label for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (general).link.generated-index.title": {
+    "message": "API (一般)",
+    "description": "The generated-index page title for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (general).link.generated-index.description": {
+    "message": "グローバル情報用の REST API",
+    "description": "The generated-index page description for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass)": {
+    "message": "API (dataClass)",
+    "description": "The label for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass).link.generated-index.title": {
+    "message": "API (dataClass)",
+    "description": "The generated-index page title for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass).link.generated-index.description": {
+    "message": "データクラス用の REST API",
+    "description": "The generated-index page description for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications": {
+    "message": "デスクトップアプリ",
+    "description": "The label for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications.link.generated-index.title": {
+    "message": "デスクトップアプリ",
+    "description": "The generated-index page title for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications.link.generated-index.description": {
+    "message": "4D でのデスクトップアプリケーション開発ガイド",
+    "description": "The generated-index page description for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights": {
+    "message": "アクセス権限",
+    "description": "The label for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights.link.generated-index.title": {
+    "message": "アクセス権限",
+    "description": "The generated-index page title for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights.link.generated-index.description": {
+    "message": "デスクトップアプリケーションのアクセス管理とユーザー権限",
+    "description": "The generated-index page description for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.category.Form Editor": {
+    "message": "フォームエディター",
+    "description": "The label for category Form Editor in sidebar docs"
+  },
+  "sidebar.docs.category.Form Properties": {
+    "message": "フォームプロパティ",
+    "description": "The label for category Form Properties in sidebar docs"
+  },
+  "sidebar.docs.category.Form Objects": {
+    "message": "フォームオブジェクト",
+    "description": "The label for category Form Objects in sidebar docs"
+  },
+  "sidebar.docs.category.Form Object Properties": {
+    "message": "フォームオブジェクトプロパティ",
+    "description": "The label for category Form Object Properties in sidebar docs"
+  },
+  "sidebar.docs.category.Mobile Applications": {
+    "message": "モバイルアプリ",
+    "description": "The label for category Mobile Applications in sidebar docs"
+  },
+  "sidebar.docs.link.4D Mobile App Server": {
+    "message": "4D Mobile App Server",
+    "description": "The label for link 4D Mobile App Server in sidebar docs, linking to https://github.com/4d-go-mobile/4D-Mobile-App-Server"
+  },
+  "sidebar.docs.link.4D NetKit": {
+    "message": "4D NetKit",
+    "description": "The label for link 4D NetKit in sidebar docs, linking to https://developer.4d.com/4D-NetKit"
+  },
+  "sidebar.docs.link.4D Progress": {
+    "message": "4D Progress",
+    "description": "The label for link 4D Progress in sidebar docs, linking to https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Progress.100-7476284.en.html"
+  },
+  "sidebar.docs.link.4D SVG": {
+    "message": "4D SVG",
+    "description": "The label for link 4D SVG in sidebar docs, linking to https://doc.4d.com/4Dv20R8/4D/20-R8/4D-SVG-Component.100-7477155.en.html"
+  },
+  "sidebar.docs.link.4D Widgets": {
+    "message": "4D Widgets",
+    "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Widgets.100-7477804.en.html"
+  },
+  "sidebar.docs.link.Go Mobile": {
+    "message": "Go Mobile",
+    "description": "The label for link Go Mobile in sidebar docs, linking to https://developer.4d.com/go-mobile/"
+  },
+  "sidebar.docs.link.4D for iOS (archive)": {
+    "message": "4D for iOS (アーカイブ)",
+    "description": "The label for link 4D for iOS (archive) in sidebar docs, linking to https://developer.4d.com/4d-for-ios"
+  },
+  "sidebar.docs.doc.Command Line Interface": {
+    "message": "コマンドライン・インターフェース",
+    "description": "The label for the doc item Command Line Interface in sidebar docs, linking to the doc Admin/cli"
+  },
+  "sidebar.docs.doc.TLS Protocol": {
+    "message": "TLSプロトコル",
+    "description": "The label for the doc item TLS Protocol in sidebar docs, linking to the doc Admin/tls"
+  },
+  "sidebar.docs.doc.Managing 4D Licenses": {
+    "message": "4D ライセンスの管理",
+    "description": "The label for the doc item Managing 4D Licenses in sidebar docs, linking to the doc Admin/licenses"
+  },
+  "sidebar.docs.doc.Data Collection": {
+    "message": "データ収集",
+    "description": "The label for the doc item Data Collection in sidebar docs, linking to the doc Admin/data-collect"
+  },
+  "sidebar.docs.doc.Client/Server": {
+    "message": "クライアント/サーバー",
+    "description": "The label for the doc item Client/Server in sidebar docs, linking to the doc Desktop/clientServer"
+  },
+  "sidebar.docs.doc.User Settings": {
+    "message": "ユーザー設定",
+    "description": "The label for the doc item User Settings in sidebar docs, linking to the doc Desktop/user-settings"
+  },
+  "sidebar.docs.doc.Build Application": {
+    "message": "アプリケーションビルド",
+    "description": "The label for the doc item Build Application in sidebar docs, linking to the doc Desktop/building"
+  }
+}

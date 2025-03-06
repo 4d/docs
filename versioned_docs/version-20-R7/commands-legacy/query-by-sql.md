@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->The QUERY BY SQL command can be used to take advantage of the SQL kernel integrated into 4D.<!-- END REF--> It can execute a simple SELECT query that can be written as follows:
@@ -159,3 +156,15 @@ If the format of the search condition is correct, the system variable OK is set 
 #### See also 
 
 [QUERY BY FORMULA](query-by-formula.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 942 |
+| Thread safe | &cross; |
+| Modifies variables | OK, error |
+| Changes current record ||
+| Changes current selection ||
+
+

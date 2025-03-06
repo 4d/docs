@@ -13,18 +13,24 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Deactivated.Summary-->**Deactivated**コマンドはプロセスの最前面のウインドウが後ろに移動すると、そのフォームメソッドでTrue を返します。<!-- END REF--> 
 
 **Deactivated**実行サイクルを生成させるには、デザインモードでそのフォームやオブジェクトのOn Deactivateイベントプロパティを必ず選択してください。
 
-**注:** このコマンドは、[Form event code](form-event-code.md) コマンドを用いてOn Deactivate イベントを返すかどうかをテストするのと同等と言えます。
+**注:** このコマンドは、[Form event code](../commands/form-event-code.md) コマンドを用いてOn Deactivate イベントを返すかどうかをテストするのと同等と言えます。
 
 #### 参照 
 
 [Activated](activated.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 347 |
+| スレッドセーフである | &cross; |
+
+

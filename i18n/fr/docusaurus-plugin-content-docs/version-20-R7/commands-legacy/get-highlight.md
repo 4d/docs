@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET HIGHLIGHT.Summary-->La commande **GET HIGHLIGHT** vous permet de déterminer précisément le texte actuellement sélectionné dans *objet*.<!-- END REF-->
@@ -41,8 +38,10 @@ Si l'objet désigné par le paramètre *objet* n'est pas trouvé dans le formula
 L'exemple suivant récupère le texte sélectionné dans le champ *\[Produits\]Notes* : 
 
 ```4d
- GET HIGHLIGHT([Produits]Notes;vPremier;vDernier)
- If(vPremier<vdernier)     alert("le="" texte="" sélectionné="" est="" :="" "+substring([produits]notes;vpremier;vdernier-vpremier))=""  end="" if<="" pre=""></vdernier)>
+GET HIGHLIGHT([Products]Comments;vFirst;vLast)
+If(vFirst < vlast)
+    ALERT("The selected text is:"+Substring([Products]Comments;vFirst;vLast-vFirst))
+End if
 ```
 
 #### Exemple 2 
@@ -63,3 +62,12 @@ Modification du style du texte sélectionné :
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 209 |
+| Thread safe | &cross; |
+
+

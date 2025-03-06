@@ -50,3 +50,12 @@ The current language of the database determines the .lproj folder where the prog
 
 [Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1009 |
+| Thread safe | &check; |
+
+

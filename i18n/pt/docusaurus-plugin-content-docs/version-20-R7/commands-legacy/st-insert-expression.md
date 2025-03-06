@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.ST INSERT EXPRESSION.Summary-->O comando **ST INSERT EXPRESSION** insere uma referência a expressão no campo ou a variável de texto multi estilo designada pelo parâmetro *objeto*.<!-- END REF-->
@@ -91,3 +88,13 @@ Deseja substituir o texto selecionado com o resultado de um método projeto:
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST Get expression](st-get-expression.md)  
 [ST INSERT URL](st-insert-url.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1281 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

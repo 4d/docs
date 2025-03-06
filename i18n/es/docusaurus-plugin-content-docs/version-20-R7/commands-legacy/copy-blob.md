@@ -29,3 +29,12 @@ La copia comienza en la posición (expresada con relación al comienzo del BLOB 
 
 [DELETE FROM BLOB](delete-from-blob.md)  
 [INSERT IN BLOB](insert-in-blob.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 558 |
+| Hilo seguro | &check; |
+
+

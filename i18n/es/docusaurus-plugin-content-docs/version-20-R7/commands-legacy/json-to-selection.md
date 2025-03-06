@@ -68,3 +68,12 @@ Uso del comando **JSON TO SELECTION** para añadir los registros a la tabla \[Co
 #### Ver también 
 
 [Selection to JSON](selection-to-json.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1235 |
+| Hilo seguro | &check; |
+
+

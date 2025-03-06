@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->The **CONVERT COORDINATES** command converts the (x;y) coordinates of a point from one coordinate system to another.<!-- END REF--> The input and output coordinate systems supported are forms (and subforms), windows, and the screen. For example, you can use this command to get the coordinates in the main form of an object belonging to a subform. This makes it easy to create a context menu at any custom position. 
@@ -33,12 +30,12 @@ In the *from* parameter, pass the initial coordinate system the input point is u
 | ----------------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------- |
 | XY Current form   | Integer | 1     | Origin is top left corner of current form                                                                   |
 | XY Current window | Integer | 2     | Origin is top left corner of current window                                                                 |
-| XY Main window    | Integer | 4     | On Windows: origin is top left corner of main window; on OS X: same as XY Screen                            |
+| XY Main window    | Integer | 4     | On Windows: origin is top left corner of main window; on macOS: same as XY Screen                            |
 | XY Screen         | Integer | 3     | Origin is top left corner of main screen (same as for [SCREEN COORDINATES](screen-coordinates.md) command). |
 
 When this command is called from the method of a subform or a subform's object, and if one of the selectors is XY Current form, then the coordinates are relative to the subform itself, not to its parent form.
 
-When converting from/to the position of a form window (for example when converting from the results of [GET WINDOW RECT](get-window-rect.md), or to values passed to [Open form window](open-form-window.md)), XY Main window must be used since it is the coordinate system used by window commands on Windows. It can also be used for this purpose on OS X, where it is equivalent to XY Screen.
+When converting from/to the position of a form window (for example when converting from the results of [GET WINDOW RECT](get-window-rect.md), or to values passed to [Open form window](open-form-window.md)), XY Main window must be used since it is the coordinate system used by window commands on Windows. It can also be used for this purpose on macOS, where it is equivalent to XY Screen.
 
 When *from* is XY Current form and the point is in the body section of a list form, the result depends on the calling context of the command:
 
@@ -87,3 +84,12 @@ You want to open a pop-up window at the position of the mouse cursor. On Windows
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1365 |
+| Thread safe | &cross; |
+
+

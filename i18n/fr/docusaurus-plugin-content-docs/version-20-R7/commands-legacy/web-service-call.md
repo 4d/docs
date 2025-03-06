@@ -153,3 +153,13 @@ Si la requête est correctement acheminée et que le Web Service l’a acceptée
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 778 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

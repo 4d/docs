@@ -5,7 +5,7 @@ title: Componentes
 
 Um componente 4D é um conjunto de código 4D e/ou formulários que representam uma ou mais funcionalidades que pode adicionar e usar nos seus projetos. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\&type=Repositories).
+You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that can be found on GitHub.
 
 When developing in 4D, the component files can be transparently stored in your computer or on a Github repository.
 
@@ -13,7 +13,7 @@ When developing in 4D, the component files can be transparently stored in your c
 
 Components can be interpreted or [compiled](../Desktop/building.md). A pasta do pacote de um componente pode conter:
 
-- either a Project folder (interpreted component)
+- either a [Project folder](../Project/architecture.md) named with a **.4dbase** suffix (interpreted component)
 - ou um arquivo .4DZ (componente compilado)
 
 A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
@@ -25,7 +25,7 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D Server**. In other environments, components are managed differently:
 
 - in [4D in remote mode](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application.
-- in merged applications, components are [included at the build step](../Desktop/building.md#plugins--components-page).
+- em aplicações mescladas, componentes são [incluídos na etapa de compilação](../Desktop/building.md#plugins--components-page).
 
 :::
 
@@ -42,7 +42,7 @@ Os componentes declarados no arquivo **dependencies.json** podem ser armazenados
 - em qualquer lugar de sua máquina: o caminho do componente deve ser declarado no arquivo **environment4d.json**
 - em um repositório GitHub: o caminho do componente pode ser declarado no arquivo **dependencies.json** ou no arquivo **environment4d.json**, ou em ambos os arquivos.
 
-If the same component is installed at different locations, a [priority order](#priority) is applied.
+Se o mesmo componente for instalado em locais diferentes, uma [ordem de prioridade](#prioridade) é aplicada.
 
 ### dependencies.json e environment4d.json
 
@@ -56,7 +56,7 @@ O arquivo **dependencies.json** faz referência a todos os componentes necessár
 
 Pode conter:
 
-- names of components [stored locally](#declaring-local-components) (default path or path defined in an **environment4d.json** file),
+- nomes de componentes [armazenado localmente](#declaring-local-components) (caminho ou caminho padrão definido em um arquivo **environment4d.json**),
 - names of components [stored on GitHub repositories](#declaring-components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
 
 #### environment4d.json
@@ -144,23 +144,23 @@ Exemplos:
 
 :::note
 
-If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the *Not found* [status](dependency-status), even if a version of the component exists next to the project's package folder.
+If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the *Not found* [status](#dependency-status), even if a version of the component exists next to the project's package folder.
 
 :::
 
 #### Caminhos relativos versus caminhos absolutos
 
-Paths are expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax).
+Os caminhos são expressos na sintaxe POSIX, conforme descrito em [este parágrafo](../Concepts/paths#posix-syntax).
 
-Relative paths are relative to the [`environment4d.json`](#environment4djson) file. Absolute paths are linked to the user's machine.
+Os caminhos relativos são relativos ao arquivo [`environment4d.json`](#environment4djson). Absolute paths are linked to the user's machine.
 
 Using relative paths is **recommended** in most cases, since they provide flexibility and portability of the components architecture, especially if the project is hosted in a source control tool.
 
 Absolute paths should only be used for components that are specific to one machine and one user.
 
-### Components stored on GitHub
+### Componentes armazenados no GitHub
 
-4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
+Componentes 4D disponíveis como lançamentos do GitHub podem ser referenciados e carregados automaticamente nos seus projetos 4D.
 
 :::note
 
@@ -211,7 +211,7 @@ Você declara um componente armazenado no GitHub no arquivo [**dependencies.json
 
 Ao criar uma versão no GitHub, você especifica uma **etiqueta** e uma **versão**.
 
-- **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
+- **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
 
 ```json
 {
@@ -224,7 +224,7 @@ Ao criar uma versão no GitHub, você especifica uma **etiqueta** e uma **versã
 }
 ```
 
-- Uma versão também é identificada por uma **versão**. The versioning system used is based on the *Semantic Versioning* concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- Uma versão também é identificada por uma **versão**. O sistema de versionamento usado é baseado no conceito de *Semantic Versioning*, que é o mais usado. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
 
 ```json
 {
@@ -237,7 +237,7 @@ Ao criar uma versão no GitHub, você especifica uma **etiqueta** e uma **versã
 }
 ```
 
-The version is used to define which versions can be used. É usada uma [versão semântica padrão] (https://regex101.com/r/Ly7O1x/3/). A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. O `*` pode ser usado como um espaço reservado para todas as versões. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
+A versão é usada para definir quais versões podem ser usadas. É usada uma [versão semântica padrão] (https://regex101.com/r/Ly7O1x/3/). A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. O `*` pode ser usado como um espaço reservado para todas as versões. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
 
 Eis alguns exemplos:
 
@@ -263,7 +263,7 @@ Para fazer isso, em sua conta GitHub, crie um token **classic** com direitos de 
 
 :::note
 
-For more information, please refer to the [GitHub token interface](https://github.com/settings/tokens).
+Para mais informações, consulte a [interface de token do GitHub](https://github.com/settings/tokens).
 
 :::
 
@@ -294,7 +294,7 @@ Referenced GitHub components are downloaded in a local cache folder then loaded 
 
 #### dependency-lock.json
 
-A `dependency-lock.json` file is created in the [`userPreferences` folder](architecture.md#userpreferencesusername) of your project.
+Um arquivo `dependency-lock.json` foi criado na pasta [`userPreferences`](architecture.md#userpreferencesusername) do seu projeto.
 
 This file logs information such as the state of dependencies, paths, urls, loading errors, as well as other information. It could be useful for component loading management or troubleshooting.
 
@@ -305,10 +305,10 @@ In an opened project, you can add, remove, and get information about dependencie
 Para exibir o painel Dependências:
 
 - with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
-  ![dependency-menu](../assets/en/Project/dependency-menu.png)
+ ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
-  ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
+ ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 The Dependencies panel is then displayed. Dependencies are sorted by name in alphabetical order:
 
@@ -322,7 +322,7 @@ To add a local dependency, click on the **+** button in the footer area of the p
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-Certifique-se de que a aba **Local** esteja selecionada e clique no botão **...**. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md##applicationname4dproject-file) file.
+Certifique-se de que a aba **Local** esteja selecionada e clique no botão **...**. A standard Open file dialog box is displayed, allowing you to select the component to add. Você pode selecionar um arquivo [**.4DZ**](../Desktop/building.md#build-component) ou um arquivo [**.4DProject**](architecture.md##applicationname4dproject-file).
 
 If the selected item is valid, its name and location are displayed in the dialog box.
 
@@ -333,7 +333,7 @@ If the selected item is not valid, an error message is displayed.
 Clique em **Adicionar** para adicionar a dependência ao projeto.
 
 - If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
-- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).
+- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). O painel Dependências pergunta se você deseja salvar um [caminho relativo ou absoluto](#relative-paths-vs-absolute-paths).
 
 :::note
 
@@ -341,7 +341,7 @@ If no [**environment4d.json**](#environmen4djson) file is already defined for th
 
 :::
 
-The dependency is added to the [inactive dependency list](#dependency-status) with the **Available after restart** status. It will be loaded once the application restarts.
+A dependência é adicionada à [lista de dependências inativas](#dependency-status) com o estado **Disponível após reiniciar**. It will be loaded once the application restarts.
 
 ### Adding a GitHub dependency
 
@@ -361,14 +361,14 @@ If the component is stored on a [private GitHub repository](#private-repositorie
 
 :::
 
-You can then define the [tag or version](#tags-and-versions) option for the dependency:
+Em seguida, você pode definir a opção [tag ou versão](#tags-and-versions) para a dependência:
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
 - **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version.
-- **Up to Next Major Version**: Define a [semantic version range](#tags-and-versions) to restrict updates to the next major version.
+- **Até a próxima versão major**: defina um [intervalo de versão semântica](#tags-and-versions) para restringir as atualizações para a próxima versão principal.
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
-- **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
+- **Versão exata (etiqueta)**: selecione ou insira manualmente uma [etiqueta específica](#tags-and-versions) na lista disponível.
 
 Clique no botão **Adicionar** para adicionar a dependência ao projeto.
 
@@ -403,7 +403,7 @@ Somente as dependências declaradas no arquivo [**dependencies.json**](#dependen
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-If you confirm the dialog box, the removed dependency [status](#dependency-status) is automatically flagged "Unload after restart". It will be unloaded once the application restarts.
+Se você confirmar a caixa de diálogo, a dependência [estado](#dependency-status) removida é automaticamente sinalizada "Unload after restart". It will be unloaded once the application restarts.
 
 ### Origem da dependência
 
@@ -413,7 +413,7 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 As seguintes origens são possíveis:
 
-| Origin tag                        | Descrição                                                                    |
+| Etiqueta de origem                | Descrição                                                                    |
 | --------------------------------- | ---------------------------------------------------------------------------- |
 | Componente 4D                     | Componente 4D incorporado, armazenado na pasta `Components` da aplicação 4D  |
 | dependencies.json | Component declared in the [`dependencies.json`](#dependenciesjson) file      |
@@ -439,7 +439,7 @@ Component icon and location logo provide additional information:
 
 ### Filtragem de dependências
 
-By default, all dependencies identified by the Dependency manager are listed, whatever their [status](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
+Por padrão, todas as dependências identificadas pelo gerenciador de dependências são listadas, independentemente de seu [estado](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 

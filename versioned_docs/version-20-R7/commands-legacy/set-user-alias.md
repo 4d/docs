@@ -40,3 +40,13 @@ Your users are managed through a custom table and use the same 4D user account. 
 [CHANGE CURRENT USER](change-current-user.md)  
 [Current user](current-user.md)  
 [SET GROUP ACCESS](set-group-access.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1666 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -30,3 +30,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Current system user](current-system-user.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 483 |
+| スレッドセーフである | &check; |
+
+

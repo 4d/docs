@@ -29,3 +29,12 @@ A linha de código adiciona 100 bytes ao BLOB *meuBlob*:
 #### Ver também 
 
 [SET BLOB SIZE](set-blob-size.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 605 |
+| Thread-seguro | &check; |
+
+

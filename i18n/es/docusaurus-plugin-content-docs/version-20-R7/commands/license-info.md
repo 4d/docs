@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Params-->
 
-| Parámetros | Tipo   |   | Descripción                          |
-| ---------- | ------ | - | ------------------------------------ |
-| Resultado  | Object | ← | Information about the active licence |
+| Parámetros | Tipo   |                             | Descripción                          |
+| ---------- | ------ | --------------------------- | ------------------------------------ |
+| Resultado  | Object | &#8592; | Information about the active licence |
 
 <!-- END REF-->
 
@@ -56,7 +56,7 @@ El objeto devuelto contiene las siguientes propiedades:
 }
 ```
 
-| **Property**        | **Type**              | **Description**                                                                                                                                                                                                                                                             | **Ejemplo**                                                                       |
+| **Propiedad**       | **Type**              | **Description**                                                                                                                                                                                                                                                             | **Ejemplo**                                                                       |
 | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | name                | string                | Commercial name                                                                                                                                                                                                                                                             | "4D Developer Professional vXX"                                                   |
 | key                 | number                | ID of the installed product. A unique number is associated to a 4D application (such as 4D Server, 4D in local mode, 4D Desktop, etc.) installed on a machine. This number is encrypted. | 12356789                                                                          |
@@ -73,15 +73,15 @@ El objeto devuelto contiene las siguientes propiedades:
 
 Each object of the `products` collection can have the following properties:
 
-| **Property** |                                                                                            | **Type**              | **Description**                                                             | **Ejemplo**                                                                                              |
-| ------------ | ------------------------------------------------------------------------------------------ | --------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| id           |                                                                                            | number                | License number                                                              | For available values, see the [Is license available](../commands-legacy/is-license-available.md) command |
-| name         |                                                                                            | string                | License name                                                                | "4D Write - 4D Write Pro"                                                                                |
-| usedCount    |                                                                                            | number                | Number of consumed connections                                              | 8                                                                                                        |
-| allowedCount |                                                                                            | number                | Total connections allowed for the product against the expiry dates          | 15                                                                                                       |
-| rights       |                                                                                            | collection of objects | Rights for the product (one element per expiration date) |                                                                                                          |
-|              | \[ \].count          | number                | Number of allowed connections                                               | 15 (32767 means unlimited)                                                            |
-|              | \[ \].expirationDate | object                | Date of expiration (optional, same format as above)      | {"day":1, "month":11, "year":2017}                       |
+| **Propiedad** |                                                                                            | **Type**              | **Description**                                                             | **Ejemplo**                                                                                              |
+| ------------- | ------------------------------------------------------------------------------------------ | --------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| id            |                                                                                            | number                | License number                                                              | For available values, see the [Is license available](../commands-legacy/is-license-available.md) command |
+| name          |                                                                                            | string                | Nombre de la licencia                                                       | "4D Write - 4D Write Pro"                                                                                |
+| usedCount     |                                                                                            | number                | Number of consumed connections                                              | 8                                                                                                        |
+| allowedCount  |                                                                                            | number                | Total connections allowed for the product against the expiry dates          | 15                                                                                                       |
+| rights        |                                                                                            | collection of objects | Rights for the product (one element per expiration date) |                                                                                                          |
+|               | \[ \].count          | number                | Number of allowed connections                                               | 15 (32767 means unlimited)                                                            |
+|               | \[ \].expirationDate | object                | Date of expiration (optional, same format as above)      | {"day":1, "month":11, "year":2017}                       |
 
 #### Ejemplo
 
@@ -134,3 +134,12 @@ You want to get information on your current 4D Server license:
 [CHANGE LICENSES](../commands-legacy/change-licenses.md)\
 [Is license available](../commands-legacy/is-license-available.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)
+
+#### Propiedades
+
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1489                            |
+| Hilo seguro       | &amp;check; |
+
+

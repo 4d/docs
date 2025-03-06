@@ -3,7 +3,7 @@ id: overview
 title: Settings
 ---
 
-Os parâmetros configuram o funcionamento do projeto atual. Esses parâmetros podem diferir para cada projeto. They include the listening ports, backup configurations, security options, Web parameters, etc.
+Os parâmetros configuram o funcionamento do projeto atual. Esses parâmetros podem diferir para cada projeto. Eles incluem as portas de escuta, configurações de backup, opções de segurança, parâmetros Web, etc.
 
 ![](../assets/en/settings/main.png)
 
@@ -27,9 +27,9 @@ When [**User settings** mode is enabled](../Desktop/user-settings.md), **Setting
 O bloqueio pode ocorrer nos modos Projeto e Cliente/servidor quando:
 
 - El archivo *settings.4DSettings* es de "sólo lectura" (sólo Proyectos). A modificação de uma configuração exibirá um alerta para desbloqueá-la, se possível.
-- Dois ou mais usuários tentam modificar as mesmas configurações ao mesmo tempo. The settings cannot be used until the first user frees it by closing the window. (Apenas cliente/servidor)
+- Dois ou mais usuários tentam modificar as mesmas configurações ao mesmo tempo. Os parâmetros não podem ser usadas até que o primeiro usuário a libere fechando a janela. (Apenas cliente/servidor)
 
-In both cases, the settings can be opened in 'Read-only', but cannot be used until the lock is removed.
+Em ambos os casos, os parâmetros podem ser abertos em 'Somente leitura', mas não podem ser usados até que o bloqueio seja removido.
 
 ## Personalização de parâmetros
 
@@ -37,11 +37,11 @@ En las cajas de diálogo de las Propiedades, los parámetros cuyos valores se ha
 
 ![](../assets/en/settings/customize-settings.png)
 
-Parameters indicated as customized may have been modified directly in the dialog box, or may have been modified previously in the case of a converted project.
+Os parâmetros indicados como personalizados podem ter sido modificados diretamente na caixa de diálogo, ou pode ter sido modificado anteriormente no caso de um projeto convertido.
 
 Um parâmetro continua a aparecer a negrito mesmo quando o seu valor é substituído manualmente pelos seus valores por defeito. Desta forma, é sempre possível identificar visualmente quaisquer parâmetros que tenham sido personalizados.
 
-A maioria dos parâmetros é aplicada imediatamente. However, a few of them (such as the Startup environment setting) only take effect when the database is restarted. In this case, a dialog box appears to inform you that the change will take effect at the next startup.
+A maioria dos parâmetros é aplicada imediatamente. No entanto, alguns deles (como parâmetro de inicialização) só têm efeito quando o banco de dados é reiniciado. Neste caso, uma caixa de diálogo parece informar que a alteração terá efeito na próxima inicialização.
 
 ## Repor os parâmetros
 

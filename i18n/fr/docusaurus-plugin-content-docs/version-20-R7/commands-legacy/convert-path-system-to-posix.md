@@ -27,7 +27,7 @@ Le paramètre optionnel *\** permet de définir l’encodage du chemin POSIX. Pa
 
 #### Exemple 1 
 
-Exemples sous OS X
+Exemples sous macOS
 
 ```4d
  $chemin:=Convert path system to POSIX("machd:file 2.txt")
@@ -61,3 +61,12 @@ Exemple sous Windows
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1106 |
+| Thread safe | &check; |
+
+

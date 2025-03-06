@@ -29,3 +29,12 @@ Les paramètres *hOffset*, *vOffset* et *mode* reçoivent la position et le mode
 #### Voir aussi 
 
 [Picture size](picture-size.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 457 |
+| Thread safe | &check; |
+
+

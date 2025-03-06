@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Subtotal.Summary-->**Subtotal** returns the subtotal for *data* for the current or last break level.<!-- END REF--> **Subtotal** works only when a sorted selection is being printed with [PRINT SELECTION](print-selection.md) or when printing using Print in the Design environment. The *data* parameter must be of type real, integer, or long integer. Assign the result of the **Subtotal** function to a variable placed in the Break area of the form.
@@ -26,7 +23,7 @@ displayed_sidebar: docs
 
 The second, optional, argument to **Subtotal** is used to cause page breaks during printing. If *pageBreak* is 0, **Subtotal** does not issue a page break. If *pageBreak* equals 1, **Subtotal** issues a page break for each level 1 break. If *pageBreak* equals 2, **Subtotal** issues a page break for each level 1 and level 2 break, and so on.
 
-**Tip:** If you execute **Subtotal** from within an output form displayed at the screen, an error will be generated, triggering an infinite loop of updates between the form and the error window. To get out of this loop, press Alt+Shift (Windows) or Option-Shift (Macintosh) when you click on the Abort button in the Error window (you may have to do so several times). This temporarily stops the updates for the form’s window. Select another form as the output form so the error will occur again. Go back to the Design Environment and isolate the call to **Subtotal** into a test [Form event code](form-event-code.md)\= On Printing Break if you use the form both for display and printing.
+**Tip:** If you execute **Subtotal** from within an output form displayed at the screen, an error will be generated, triggering an infinite loop of updates between the form and the error window. To get out of this loop, press Alt+Shift (Windows) or Option-Shift (Macintosh) when you click on the Abort button in the Error window (you may have to do so several times). This temporarily stops the updates for the form’s window. Select another form as the output form so the error will occur again. Go back to the Design Environment and isolate the call to **Subtotal** into a test [Form event code](../commands/form-event-code.md)\= On Printing Break if you use the form both for display and printing.
 
 #### Example 
 
@@ -62,3 +59,12 @@ The **Subtotal** function is necessary in order to display values on a form.
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 97 |
+| Thread safe | &cross; |
+
+

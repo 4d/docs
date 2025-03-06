@@ -68,3 +68,13 @@ Si l’opération de compactage s’est déroulée correctement, la variable sys
 
 [Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 937 |
+| Thread safe | &check; |
+| Modifie les variables | OK, Document |
+
+

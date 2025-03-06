@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SET MENU ITEM MARK.Summary-->O comando SET MENU ITEM MARK modifica a marca do elemento de menu cujo número ou referência de menu é passado em *menu* e cujo número de linha se passa em *menuItem* ao primeiro caractere da cadeia passada em *marcar*.<!-- END REF--> Pode passar -1 em *menuItem* para designar a última linha adicionada ao menu.
@@ -39,3 +36,13 @@ Ver exemplo para o comando [Get menu item mark](get-menu-item-mark.md "Get menu 
 #### Ver também 
 
 [Get menu item mark](get-menu-item-mark.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 208 |
+| Thread-seguro | &cross; |
+| Proibido no servidor ||
+
+

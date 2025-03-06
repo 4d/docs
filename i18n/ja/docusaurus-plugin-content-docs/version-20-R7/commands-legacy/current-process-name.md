@@ -32,3 +32,12 @@ displayed_sidebar: docs
 [CALL WORKER](call-worker.md)  
 [KILL WORKER](kill-worker.md)  
 *ワーカーについて*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1392 |
+| スレッドセーフである | &check; |
+
+

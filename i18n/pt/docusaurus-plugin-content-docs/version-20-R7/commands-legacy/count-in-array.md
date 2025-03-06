@@ -57,3 +57,12 @@ Para contar referências de objeto em um array de objeto:
 
 [Find in array](find-in-array.md)  
 [Find in sorted array](find-in-sorted-array.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 907 |
+| Thread-seguro | &check; |
+
+

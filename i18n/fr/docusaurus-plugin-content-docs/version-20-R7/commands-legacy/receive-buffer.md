@@ -21,7 +21,7 @@ displayed_sidebar: docs
 Le buffer du port série sous Windows a une capacité limitée à 10 Ko. Cela signifie que le buffer peut être saturé. Lorsqu'il est plein et que de nouveaux caractères sont reçus, ils remplacent les plus anciens caractères. Les anciens caractères sont perdus ; par conséquent, il est important que le buffer soit lu rapidement lorsque des nouvelles données sont reçues.
 
 **Sous Mac OS**  
-Le buffer du port série sous Mac OS X a une capacité en principe illimitée (elle dépend de la mémoire disponible). Si le buffer est saturé et que de nouveaux caractères sont reçus, ils remplacent les plus anciens caractères. Les anciens caractères sont perdus ; par conséquent, il est important que le buffer soit lu rapidement lorsque des nouvelles données sont reçues.
+Le buffer du port série sous macOS a une capacité en principe illimitée (elle dépend de la mémoire disponible). Si le buffer est saturé et que de nouveaux caractères sont reçus, ils remplacent les plus anciens caractères. Les anciens caractères sont perdus ; par conséquent, il est important que le buffer soit lu rapidement lorsque des nouvelles données sont reçues.
 
 La commande **RECEIVE BUFFER** est différente de [RECEIVE PACKET](receive-packet.md) dans la mesure où elle récupère tout ce qui se trouve dans le buffer et le retourne immédiatement. [RECEIVE PACKET](receive-packet.md), pour sa part, attend de récupérer un caractère spécifique ou un certain nombre de caractères.
 
@@ -64,3 +64,13 @@ Notez que l'accès à la variable interprocess *◊vtBuffer* doit être protég�
 [Semaphore](semaphore.md)  
 [SET CHANNEL](set-channel.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 172 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+
+

@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET LIST ITEM.Summary-->El comando SET LIST ITEM modifica el elemento designado por el parámetro *refElem* en la lista cuyo número de referencia o nombre de objeto se pasa en *lista*.<!-- END REF--> 
@@ -80,3 +77,12 @@ Ver ejemplo del comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST").
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 385 |
+| Hilo seguro | &cross; |
+
+

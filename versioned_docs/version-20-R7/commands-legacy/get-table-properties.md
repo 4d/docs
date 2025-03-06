@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tablePtr&#124;tableNum | Pointer, Longint | &#8594;  | Table pointer or Table number |
+| tablePtr&#124;tableNum | Pointer, Integer | &#8594;  | Table pointer or Table number |
 | invisible | Boolean | &#8592; | True = Invisible, False = Visible |
 | trigSaveNew | Boolean | &#8592; | True = Trigger “On saving new record” activated; otherwise, False |
 | trigSaveRec | Boolean | &#8592; | True = Trigger “On saving an existing record” activated; otherwise, False |
@@ -34,3 +34,12 @@ Once the command has been executed:
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 687 |
+| Thread safe | &check; |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.EXPORT TEXT.Summary-->El comando EXPORT TEXT escribe datos de los registros de la selección actual de la *tabla* en el proceso actual.<!-- END REF--> Los datos se escriben en *documento*, un documento de texto Windows o Macintosh en el disco.
@@ -31,7 +28,7 @@ Un termómetro de progreso aparece durante la exportación. El usuario puede can
 
 El comando utiliza por defecto el conjunto de caracteres UTF-8\. Puede utilizar el comando [USE CHARACTER SET](use-character-set.md) para modificar este conjunto de caracteres.
 
-Durante la utilización de EXPORT TEXT, el delimitador de campos por defecto es el carácter de tabulación (code 9). El delimitador de registros por defecto es el retorno de carro (code 13) bajo OS X y el retorno de carro+retorno a la línea (código 13+código 10) bajo Windows. Puede cambiar estos valores por defecto asignando nuevos valores a las *Variables sistema*: **FldDelimit** y **RecDelimit**. El usuario puede cambiar los valores por defecto en la caja de diálogo de exportación del entorno Aplicación. Tenga en cuenta que si los campos exportados contienen caracteres definidos como delimitadores de campo o de registro, estos caracteres se reemplazan automáticamente con espacios en el archivo exportado, con el fin de no perturbar el proceso de importación.
+Durante la utilización de EXPORT TEXT, el delimitador de campos por defecto es el carácter de tabulación (code 9). El delimitador de registros por defecto es el retorno de carro (code 13) bajo macOS y el retorno de carro+retorno a la línea (código 13+código 10) bajo Windows. Puede cambiar estos valores por defecto asignando nuevos valores a las *Variables sistema*: **FldDelimit** y **RecDelimit**. El usuario puede cambiar los valores por defecto en la caja de diálogo de exportación del entorno Aplicación. Tenga en cuenta que si los campos exportados contienen caracteres definidos como delimitadores de campo o de registro, estos caracteres se reemplazan automáticamente con espacios en el archivo exportado, con el fin de no perturbar el proceso de importación.
 
 #### Ejemplo 
 
@@ -54,3 +51,13 @@ OK toma el valor 1 si la exportación termina con éxito; de lo contrario, toma 
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 167 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

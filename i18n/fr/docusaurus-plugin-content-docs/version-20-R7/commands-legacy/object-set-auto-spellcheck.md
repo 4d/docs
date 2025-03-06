@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->La commande **OBJECT SET AUTO SPELLCHECK** permet de définir ou de modifier dynamiquement le statut de l’option **Correction orthographique** du ou des objet(s) désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> Cette option permet d’activer ou non la correction orthographique automatique lors de la saisie pour l’objet (objets de type texte uniquement).
@@ -29,3 +26,12 @@ Passez **Vrai** dans *correctionAuto* pour activer la correction automatique pou
 #### Voir aussi 
 
 [OBJECT Get auto spellcheck](object-get-auto-spellcheck.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1173 |
+| Thread safe | &cross; |
+
+

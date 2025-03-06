@@ -29,3 +29,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Records in selection](records-in-selection.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 83 |
+| スレッドセーフである | &check; |
+
+

@@ -177,7 +177,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 | プロパティ | 型    | 説明                                                                     |
 | ----- | ---- | ---------------------------------------------------------------------- |
 | .data | blob | 取得データ。 *onData* コールバック以外の場合は常に `undefined` です。                         |
-| .type | text | イベントの種類。 取り得る値: "response", "error", "headers", "data", または "terminate |
+| .type | テキスト | イベントの種類。 取り得る値: "response", "error", "headers", "data", または "terminate |
 
 #### authentication オブジェクト
 
@@ -365,7 +365,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 <!-- REF #HTTPRequestClass.wait().Desc -->
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : HTTPRequestClass<!-- END REF -->
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->
 
 
 <!-- REF #HTTPRequestClass.wait().Params -->

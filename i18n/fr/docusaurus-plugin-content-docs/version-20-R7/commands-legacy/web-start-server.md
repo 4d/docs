@@ -25,3 +25,13 @@ Si le serveur Web est correctement démarré, OK prend la valeur 1, sinon OK pre
 #### Voir aussi 
 
 [WEB STOP SERVER](web-stop-server.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 617 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->El comando **METHOD GET MODIFICATION DATE** devuelve en los parámetros *fechaMod* y *horaMod* las fechas y horas de la última modificación de los métodos designados por el parámetro *ruta*.<!-- END REF-->
@@ -70,3 +67,13 @@ Quiere obtener las fechas de modificación de los métodos de un módulo con el 
 ```
 
   
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1170 |
+| Hilo seguro | &cross; |
+
+

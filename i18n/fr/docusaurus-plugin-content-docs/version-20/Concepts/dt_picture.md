@@ -3,7 +3,7 @@ id: picture
 title: Picture
 ---
 
-Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. En règle générale, n'importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l'aide des commandes 4D telles que `READ PICTURE FILE`.
+Un champ, une variable ou expression de type Picture peut être toute image Windows ou Macintosh. En règle générale, cela inclut n'importe quelle image qui peut être copiée dans le Presse-papiers ou lue à partir du disque à l'aide des commandes 4D telles que `READ PICTURE FILE`.
 
 4D utilise des API natives pour encoder (écrire) et décoder (lire) les champs et les variables des images sous Windows et macOS. Ces implémentations donnent accès à de nombreux formats natifs, dont le format RAW, couramment utilisé par les appareils photo numériques.
 
@@ -40,7 +40,7 @@ La plupart des [commandes 4D de gestion d'images](https://doc.4d.com/4Dv18/4D/18
 | Redimensionnement         | Image * Nombre       | Picture  | Redimensionne l'image au pourcentage Nombre                                                                                                                                         |
 | Extension horizontale     | Image *+ Nombre      | Picture  | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                                         |
 | Extension verticale       | Image *&#124; Nombre | Picture  | Image    | Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                |
-| Contient mot-clé          | Image % Chaîne       | Boolean  | Renvoie vrai si la chaîne est associée à l'image stockée dans l'expression image. See `GET PICTURE KEYWORDS`                                                                        |
+| Contient mot-clé          | Image % Chaîne       | Boolean  | Renvoie vrai si la chaîne est associée à l'image stockée dans l'expression image. Voir `GET PICTURE KEYWORDS`                                                                     |
 
 
 **Notes :**
@@ -48,7 +48,7 @@ La plupart des [commandes 4D de gestion d'images](https://doc.4d.com/4Dv18/4D/18
 - A noter que pour que l'opérateur | puisse être utilisé, Image1 et Image2 doivent être strictement de la même dimension. Si les deux images sont de taille différente, l’opération Image1 | Image2 produit une image vide.
 - La commande `COMBINE PICTURES` permet d'effectuer des superpositions en conservant les caractéristiques de chaque image source dans l'image résultante.
 - Des opération supplémentaires peuvent être réalisées sur des images à l'aide de la commande `TRANSFORM PICTURE`.
-- Il n'existe pas d'opérateurs de comparaison pour les images; en revanche 4D propose d'utiliser la commande `Images egales` pour comparer deux images.
+- Il n'existe pas d'opérateurs de comparaison pour les images; cependant 4D propose la commande `Equal picture` pour comparer deux images.
 
 
 ### Exemples

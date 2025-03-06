@@ -5,9 +5,9 @@ title: クラス
 
 ## 概要
 
-4D ランゲージでは **クラス** の概念がサポートされています。 プログラミング言語では、クラスを利用することによって、属性やメソッドなどを持つ特定のオブジェクト種を定義することができます。
+4D ランゲージでは **クラス** の概念がサポートされています 。  プログラミング言語では、クラスを利用することによって、属性やメソッドなどを持つ特定のオブジェクト種を定義することができます。
 
-ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。 各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを [継承](#class-extends-classname) することで、その [関数](#function) と、([宣言された](#property) および [計算された](#function-get-と-function-set)) プロパティを受け継ぐことができます。
+ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。  各オブジェクトは、それ自身が属するクラスのインスタンスです。 ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。 各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを [継承](#class-extends-classname) することで、その [関数](#function) と、([宣言された](#property) および [計算された](#function-get-と-function-set)) プロパティを受け継ぐことができます。
 
 > 4D におけるクラスモデルは JavaScript のクラスに類似しており、プロトタイプチェーンに基づきます。
 
@@ -41,7 +41,7 @@ $hello:=$person.sayHello() // "Hello John Doe"
 
 ### クラス定義
 
-4D においてユーザークラスとは、`/Project/Sources/Classes/` フォルダーに保存された専用の [メソッド](methods.md) ファイル (.4dm) によって定義されます。 ファイル名がクラス名になります。
+4D においてユーザークラスとは、`/Project/Sources/Classes/` フォルダーに保存された専用の [メソッド](methods.md) ファイル (.4dm) によって定義されます。  ファイル名がクラス名になります。
 
 クラスを命名する際には、次のルールに留意してください:
 
@@ -80,7 +80,7 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 - **クラス** カテゴリを選択し、![](../assets/en/Users/PlussNew.png) ボタンをクリックします。
 - エクスプローラーウィンドウの下部にあるアクションメニュー、またはクラスグループのコンテキストメニューから **新規クラス...** を選択します。
-  ![](../assets/en/Concepts/newClass.png)
+ ![](../assets/en/Concepts/newClass.png)
 - エクスプローラーのホームページのコンテキストメニューより **新規** > **クラス...** を選択します。
 
 #### クラスのコードサポート
@@ -88,10 +88,10 @@ Project フォルダー Project Sources Classes Polygon.4dm
 各種 4Dウィンドウ (コードエディター、コンパイラー、デバッガー、ランタイムエクスプローラー) において、クラスコードは "特殊なプロジェクトメソッド" のように扱われます:
 
 - コードエディター:
-  - クラスは実行できません
-  - クラスメソッドはコードのブロックです
-  - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
-  - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
+ - クラスは実行できません
+ - クラスメソッドはコードのブロックです
+ - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
+ - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
 - ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `<ClassName>` コンストラクターまたは `<ClassName>.<FunctionName>` 形式で表示されます。
 
 ## クラスストア
@@ -107,11 +107,11 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 <!-- REF #_command_.cs.Params -->
 
-| 引数         | 型      |                                | 説明                          |                  |
-| ---------- | ------ | ------------------------------ | --------------------------- | ---------------- |
-| classStore | Object | &amp;larr; | プロジェクトまたはコンポーネントのユーザークラスストア | <!-- END REF --> |
+| 引数         | 型      |                             | 説明                          |                  |
+| ---------- | ------ | --------------------------- | --------------------------- | ---------------- |
+| classStore | Object | &#8592; | プロジェクトまたはコンポーネントのユーザークラスストア | <!-- END REF --> |
 
-`cs` コマンドは、<!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。 これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
+`cs` コマンドは、<!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。   これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
 
 #### 例題
 
@@ -127,11 +127,11 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| 引数         | 型      |                                | 説明       |                  |
-| ---------- | ------ | ------------------------------ | -------- | ---------------- |
-| classStore | Object | &amp;larr; | 4Dクラスストア | <!-- END REF --> |
+| 引数         | 型      |                             | 説明       |                  |
+| ---------- | ------ | --------------------------- | -------- | ---------------- |
+| classStore | Object | &#8592; | 4Dクラスストア | <!-- END REF --> |
 
-`4D` コマンドは、<!-- REF #_command_.4D.Summary -->ビルトイン 4Dクラスのクラスストアを返します<!-- END REF -->。 [CryptoKey](API/CryptoKeyClass.md) などの専用 API へのアクセスを提供します。
+`4D` コマンドは、<!-- REF #_command_.4D.Summary -->ビルトイン 4Dクラスのクラスストアを返します<!-- END REF -->。  [CryptoKey](API/CryptoKeyClass.md) などの専用 API へのアクセスを提供します。
 
 #### 例題
 
@@ -151,7 +151,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## Class オブジェクト
 
-プロジェクトにおいてクラスが [定義](#クラス定義) されていれば、それは 4Dランゲージ環境に読み込まれます。 クラスとは、それ自身が ["Class" クラス](API/ClassClass.md) のオブジェクトです。 Class オブジェクトは次のプロパティや関数を持ちます:
+プロジェクトにおいてクラスが [定義](#クラス定義) されていれば、それは 4Dランゲージ環境に読み込まれます 。  クラスとは、それ自身が ["Class" クラス](API/ClassClass.md) のオブジェクトです。 Class オブジェクトは次のプロパティや関数を持ちます:
 
 - [`name`](API/ClassClass.md#name) 文字列
 - [`superclass`](API/ClassClass.md#superclass) オブジェクト (無い場合は null)
@@ -180,7 +180,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 - `property`: オブジェクトのスタティックプロパティを型定義します。
 - `Function get <Name>` と `Function set <Name>`: オブジェクトの計算プロパティを定義します。
 - `Class extends <ClassName>`: 継承を定義します。
-- `This` and `Super` are commands that have special
+- `This` および `Super` はクラス内において特別な機能を持つコマンドです。
 
 ### `Function`
 
@@ -191,9 +191,15 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 // コード
 ```
 
-クラス関数とは、当該クラスのプロパティです。 クラス関数は [`4D.Function`](API/FunctionClass.md) クラスのオブジェクトです。 クラス定義ファイルでは、`Function` キーワードに続けて関数名を指定して宣言をおこないます。
+:::note
 
-[共有クラス](#共有クラス) 内で関数が宣言されている場合は、`shared` キーワードを使用することによって、[`Use...End use` structure](shared.md#useend-use) 構文なしで関数を呼び出せるようにできます。 詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
+関数コードにおいては、終了キーワードはありません。  4D ランゲージは、次の`Function` キーワードまたはクラスファイルの終了を持って、自動的に関数のコードの終わりを検知します。
+
+:::
+
+クラス関数とは、当該クラスのプロパティです。 クラス関数は [`4D.Function`](API/FunctionClass.md) クラスのオブジェクトです 。  クラス関数とは、当該クラスのプロパティです。 クラス関数とは、当該クラスのプロパティです。 クラス関数は [`4D.Function`](API/FunctionClass.md) クラスのオブジェクトです。 クラス定義ファイルでは、`Function` キーワードに続けて関数名を指定して宣言をおこないます。 クラス定義ファイルでは、`Function` キーワードに続けて関数名を指定して宣言をおこないます。
+
+[共有クラス](#共有クラス) 内で関数が宣言されている場合は、`shared` キーワードを使用することによって、[`Use...End use` 構文](shared.md#useend-use)なしで関数を呼び出せるようにできます。 詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
 
 関数名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
@@ -209,13 +215,13 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 
 :::
 
-関数名のすぐ後に、名前とデータ型を指定して [引数](#引数) を宣言します (戻り値の宣言も可)。 例:
+関数名のすぐ後に、名前とデータ型を指定して [引数](#引数) を宣言します (戻り値の宣言も可)。  例:
 
 ```4d
 Function computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
 
-クラスメソッド内でオブジェクトインスタンスを参照するには `This` コマンドを使います。 例:
+クラスメソッド内でオブジェクトインスタンスを参照するには `This` コマンドを使います。  例:
 
 ```4d
 Function setFullname($firstname : Text; $lastname : Text)
@@ -228,12 +234,12 @@ Function getFullname()->$fullname : Text
 
 クラス関数の場合には、`Current method name` コマンドは次を返します: `<ClassName>.<FunctionName>` (例: "MyClass.myFunction")。
 
-アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、[引数](#引数) を受け取ることができます。 以下のシンタックスがサポートされています:
+アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、[引数](#引数) を受け取ることができます。  以下のシンタックスがサポートされています:
 
-- `()` 演算子の使用。 例: `myObject.methodName("hello")`
+- `()` 演算子の使用 。 例: `myObject.methodName("hello") `
 - "4D.Function" クラスメンバーメソッドの使用:
-  - [`apply()`](API/FunctionClass.md#apply)
-  - [`call()`](API/FunctionClass.md#call)
+ - [`apply()`](API/FunctionClass.md#apply)
+ - [`call()`](API/FunctionClass.md#call)
 
 :::warning スレッドセーフに関する警告
 
@@ -260,14 +266,14 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 
 #### 戻り値
 
-関数の戻り値を宣言するには (任意)、入力パラメーターリストに矢印 (`->`) と戻り値の定義を追加します。 例:
+関数の戻り値を宣言するには (任意)、入力パラメーターリストに矢印 (`->`) と戻り値の定義を追加します。または、コロン(`:`) と戻り値の型のみを定義します。 例:
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
  $result:=$x+$y
 ```
 
-コロン (`:`) 記号の後に戻り値のデータ型だけを指定し、そのうえで [`return 文`](parameters.md#return-expression) を使って戻り値を返すこともできます (これは関数の実行を終了します)。 例:
+コロン (`:`) 記号の後に戻り値のデータ型だけを指定し、そのうえで [`return 文`](parameters.md#return-expression) を使って戻り値を返すこともできます (これは関数の実行を終了します)。  例:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -312,7 +318,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
   return $width * $height
  Else
   return 0
- End if
+ End if 
 ```
 
 ### `Class Constructor`
@@ -325,17 +331,23 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 // コード
 ```
 
+:::note
+
+クラスコンストラクター関数コードにおいては、終了キーワードはありません。  4D ランゲージは、次の`Function` キーワードまたはクラスファイルの終了を持って、自動的に関数のコードの終わりを検知します。
+
+:::
+
 クラスコンストラクター関数を使って、ユーザークラスのオブジェクトを生成・初期化することができます。 このコンストラクターは任意の [引数](#引数) を受け取ることができます。
 
 クラスコンストラクターが定義されていると、[`new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (コンストラクターで引数を指定している場合は `new()` 関数に渡します)。
 
-コンストラクター関数は、1つのクラスに 1つしか存在できません (そうでない場合はエラーが返されます)。 [`Super`](#super) キーワードを使用することで、コンストラクターはスーパークラス (親クラス) のコンストラクターを呼び出すことができます。
+コンストラクター関数は、1つのクラスに 1つしか存在できません (そうでない場合はエラーが返されます)。 [`Super`](../commands/super.md) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼ぶことができます。
 
-コンストラクター内でインスタンスのプロパティを作成し、型宣言することができます (例題参照)。 また、インスタンスプロパティの値が、コンストラクターに渡される引数に依存しない場合は、[`property`](#property) キーワードを使用して定義することができます。
+コンストラクター内でインスタンスのプロパティを作成し、型宣言することができます (例題参照)。 また、インスタンスプロパティの値が、コンストラクターに渡される引数に依存しない場合は、 [`property`](#property) キーワードを使用して定義することができます。
 
-`shared` キーワードを使うと **共有クラス** が作成されます。共有クラスは、共有オブジェクトのインスタンス化にのみ使われます。 詳細については、後述の [共有クラス](#共有クラス) の項目を参照ください。
+`shared` キーワードを使うと**共有クラス** が作成されます。共有クラスは、共有オブジェクトのインスタンス化にのみ使われます。  詳細については、後述の [共有クラス](#共有クラス) の項目を参照ください。
 
-`singleton` キーワードを使うと **シングルトン** が作成されます。シングルトンクラスは、クラスインスタンスを一つに限定する場合に使われます。 `session singleton` キーワードを使うと、セッションごとに 1つのインスタンスを作成します。 詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
+`singleton` キーワードを使うと **シングルトン** が作成されます。シングルトンクラスは、クラスインスタンスを一つに限定する場合に使われます。   `session singleton` キーワードを使うと、セッションごとに 1つのインスタンスを作成します。  詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
 
 #### 例題
 
@@ -361,7 +373,7 @@ $o:=cs.MyClass.new("John";42)
 
 `property <propertyName>{; <propertyName2>;...}{ : <propertyType>}`
 
-`property` キーワードを使用して、ユーザークラス内のプロパティを宣言することができます。 クラスプロパティには、名前と型があります。
+`property` キーワードを使用して、ユーザークラス内のプロパティを宣言することができます。  クラスプロパティには、名前と型があります。
 
 クラスプロパティを宣言することで、コードエディターの自動補完機能とエラー検出機能を強化します。
 
@@ -421,7 +433,7 @@ $o:=cs.MyClass.new("John";42)
 
 :::
 
-宣言の際には型を省略することができます。その場合、可能な限り型は推論されます。 例:
+宣言の際には型を省略することができます。その場合、可能な限り型は推論されます。   例:
 
 ```4d
 // クラス: MyClass
@@ -484,7 +496,7 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 // コード
 ```
 
-`Function get` と `Function set` は、クラスの **計算プロパティ** を定義するアクセサーです。 計算プロパティとは、計算をマスクするデータ型を持つ命名プロパティです。 計算プロパティの値にアクセスすると、4D は対応するアクセサーのコードを実行します:
+`Function get` と `Function set` は、クラスの **計算プロパティ** を定義するアクセサーです 。  計算プロパティとは、計算をマスクするデータ型を持つ命名プロパティです。 計算プロパティの値にアクセスすると、4D は対応するアクセサーのコードを実行します:
 
 - プロパティを読み取るときには `Function get` が実行されます。
 - プロパティに書き込むときには `Function set` が実行されます。
@@ -495,15 +507,15 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 
 クラス定義ファイルでは、計算プロパティの宣言には、`Function get` (*ゲッター*) と `Function set` (*セッター*) のキーワードを使い、その後にプロパティ名を記述します。 名称は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
-`Function get` はプロパティの型の値を返し、`Function set` はプロパティの型の引数を受け取ります。 どちらも、標準的な [関数の引数](#引数) のルールに準拠する必要があります。
+`Function get` はプロパティの型の値を返し、`Function set` はプロパティの型の引数を受け取ります 。  どちらも、標準的な [関数の引数](#引数) のルールに準拠する必要があります。
 
-両方の関数が定義されている場合、計算プロパティは **read-write** となります。 `Function get` のみが定義されている場合、計算プロパティは **read-only** です。 この場合、コードがプロパティを変更しようとするとエラーが返されます。 `Function set` のみが定義されている場合、4D はプロパティの読み取り時に *undefined* を返します。
+両方の関数が定義されている場合、計算プロパティは **read-write** となります。   両方の関数が定義されている場合、計算プロパティは **read-write** となります。  `Function get` のみが定義されている場合、計算プロパティは**read-only** です。 この場合、コードがプロパティを変更しようとするとエラーが返されます。 `Function set` のみが定義されている場合、4D はプロパティの読み取り時に *undefined* を返します。 この場合、コードがプロパティを変更しようとするとエラーが返されます。 `Function set` のみが定義されている場合、4D はプロパティの読み取り時に *undefined* を返します。
 
-[共有クラス](#共有クラス) 内で関数が宣言されている場合は、`shared` キーワードを使用することによって、[`Use...End use` 構文](shared.md#useend-use)なしで関数を呼び出せるようにできます。 詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
+[共有クラス](#共有クラス) 内で関数が宣言されている場合は、`shared` キーワードを使用することによって、[`Use...End use` 構文](shared.md#useend-use)なしで関数を呼び出せるようにできます。  詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
 
-計算プロパティの型は、*ゲッター* の `$return` の型宣言によって定義されます。 [有効なプロパティタイプ](dt_object.md) であれば、いずれも使用可能です。
+計算プロパティの型は、*ゲッター* の `$return` の型宣言によって定義されます。  [有効なプロパティタイプ](dt_object.md) であれば、いずれも使用可能です。 [有効なプロパティタイプ](dt_object.md) であれば、いずれも使用可能です。
 
-> オブジェクトプロパティに *undefined* を代入すると、型を保持したまま値がクリアされます。 このためには、まず `Function get` を呼び出して値の型を取得し、次にその型の空の値で `Function set` を呼び出します。
+> オブジェクトプロパティに *undefined* を代入すると、型を保持したまま値がクリアされます。 このためには、まず `Function get` を呼び出して値の型を取得し、 次にその型の空の値で `Function set` を呼び出します。
 
 #### 例題 1
 
@@ -554,7 +566,7 @@ Function get fullAddress()->$result : Object
 Class extends <ParentClass>
 ```
 
-クラス宣言において `Class extends` キーワードを使うと、別のユーザークラスの子ユーザークラスを作成することができます。 この子クラスは、親クラスのすべての機能を継承します。
+クラス宣言において `Class extends` キーワードを使うと、別のユーザークラスの子ユーザークラスを作成することができます 。 この子クラスは、親クラスのすべての機能を継承します。
 
 クラス継承は次のルールに沿っている必要があります:
 
@@ -595,19 +607,19 @@ Class constructor ($side : Integer)
   $area:=This.height*This.width
 ```
 
-## Class function commands
+## クラス関数コマンド
 
-The following commands have specific features when they are used within class functions:
+以下のコマンドは、クラス関数内で使用された場合には特定の機能を持っています:
 
 ### `Super`
 
-The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. It can be called in the [class constructor](#class-constructor) or in a class function code.
+[`Super`](../commands/super.md) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。
 
-For more details, see the [`Super`](../commands/super.md) command description.
+詳細な情報については、[`Super`](../commands/super.md) コマンドの説明を参照してください。
 
 ### `This`
 
-The [`This`](../commands/this.md) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
+[`This`](../commands/this.md) コマンドは現在処理されているオブジェクトへの参照を返します。  多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。 多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。
 
 例:
 
@@ -618,7 +630,7 @@ Function f() : Integer
  return This.a+This.b
 ```
 
-Then you can write in a method:
+メソッド内において、以下のように書くことができます:
 
 ```4d
 $o:=cs.ob.new()
@@ -627,7 +639,7 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-For more details, see the [`This`](../commands/this.md) command description.
+詳細な情報については、[`This`](../commands/this.md) コマンドの説明を参照してください。
 
 ## クラスコマンド
 
@@ -647,7 +659,7 @@ For more details, see the [`This`](../commands/this.md) command description.
 
 ## 共有クラス
 
-**共有クラス** を作成することができます。 共有クラスとは、クラスの [`new()`](../API/ClassClass.md#new) 関数が呼び出されたときに、[共有オブジェクト](shared.md) をインスタンス化するユーザークラスのことを指します。 共有クラスは共有オブジェクトしか作れません。
+**共有クラス** を作成することができます。 共有クラスとは、クラスの [`new()`](../API/ClassClass.md#new) 関数が呼び出されたときに、[共有オブジェクト](shared.md) をインスタンス化するユーザークラスのことを指します。    共有クラスは共有オブジェクトしか作れません。
 
 共有クラスは **共有関数** をサポートしています。共有関数は、[`Use...End use`](shared.md#useend-use) 構文なしで呼び出すことができます。
 
@@ -662,7 +674,7 @@ For more details, see the [`This`](../commands/this.md) command description.
 
 ### 共有クラスの作成
 
-共有クラスを作成するには、[Class Constructor](#class-constructor) の前に `shared` キーワードを追加します。 例:
+共有クラスを作成するには、[Class Constructor](#class-constructor) の前に `shared` キーワードを追加します。 例: 例: 例: 例: 例: 例: 例: 例: 例: 例: 例: 例: 例: 例:
 
 ```4d
 // 共有クラス: Person
@@ -681,9 +693,9 @@ cs.Person.isShared // true
 
 ### 共有関数
 
-共有クラス内で定義された関数が、そのクラスのオブジェクトを変更する場合には、共有オブジェクトへのアクセスを保護するために、[`Use...End use`](shared.md#useend-use) 構文を呼び出す必要があります。 しかし、**shared** として関数を定義することで、実行時には内部的な `Use...End use` を自動でトリガーするようにし、コードを簡略化することができます。
+共有クラス内で定義された関数が、そのクラスのオブジェクトを変更する場合には、共有オブジェクトへのアクセスを保護するために、[`Use...End use`](shared.md#useend-use) 構文を呼び出す必要があります。   しかし、**shared** として関数を定義することで、実行時には内部的な `Use...End use` を自動でトリガーするようにし、コードを簡略化することができます。
 
-共有クラス内で共有関数を作成するには、[Function](#function) キーワードの前に `shared` キーワードを追加します。 例:
+共有クラス内で共有関数を作成するには、[Function](#function) キーワードの前に `shared` キーワードを追加します 。  例:
 
 ```4d
 // 共有クラス Foo
@@ -702,7 +714,7 @@ shared Function Bar($value : Integer)
 
 ## シングルトンクラス
 
-**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。 シングルトンのコンセプトに関する詳細については、[シングルトンに関する Wikipedia のページ](https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) を参照ください。
+**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。   **シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。  シングルトンのコンセプトに関する詳細については、[シングルトンに関する Wikipedia のページ](https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) を参照ください。
 
 ### シングルトンの種類
 
@@ -710,7 +722,7 @@ shared Function Bar($value : Integer)
 
 - **プロセスシングルトン** は、自身がインスタンス化されたプロセス内において、インスタンスを一つのみ持つことができます。
 - **共有シングルトン** は、マシン上のすべてのプロセスにおいて、共通のインスタンスを一つのみ持つことができます。
-- **セッションシングルトン** も共有シングルトンですが、特定の [セッション](../API/SessionClass.md) 内のすべてのプロセスにおいて、共通のインスタンスを一つのみ持つことができます。 セッションシングルトンは、セッション内で全体的に共有されますが、セッションごとに異なります。 クライアントサーバーまたは Webアプリケーションのコンテキストで セッションシングルトンを使用すると、各セッションごと (つまり各ユーザーごと) に異なるインスタンスを作成して使用することができます。
+- **セッションシングルトン** も共有シングルトンですが、特定の [セッション](../API/SessionClass.md) 内のすべてのプロセスにおいて、共通のインスタンスを一つのみ持つことができます。  セッションシングルトンは、セッション内で全体的に共有されますが、セッションごとに異なります。 クライアントサーバーまたは Webアプリケーションのコンテキストで セッションシングルトンを使用すると、各セッションごと (つまり各ユーザーごと) に異なるインスタンスを作成して使用することができます。
 
 アプリケーションやセッション、プロセス内のどこからでも利用可能な値を定義するのにシングルトンは便利です。
 
@@ -740,14 +752,14 @@ shared Function Bar($value : Integer)
 
 :::note
 
-- Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
-- Singleton shared functions support [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
+- セッションシングルトンは、自動的に共有シングルトンとなります(クラスコンストラクターにおいて`shared` キーワードを使用する必要はありません)。
+- シングルトンの共有関数は、[`onHttpGet` キーワード](../ORDA/ordaClasses.md#onhttpget-keyword) をサポートします。
 
 :::
 
-クラスのシングルトンは、初回の [`cs.<class>.me`](../API/ClassClass.md#me) プロパティの呼び出し時にインスタンス化されます。 インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。
+クラスのシングルトンは、初回の [`cs.<class>.me`](../API/ClassClass.md#me) プロパティの呼び出し時にインスタンス化されます。   インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。
 
-シングルトンを引数付きでインスタンス化する必要がある場合には、[`new()`](../API/ClassClass.md#new) 関数を呼び出すこともできます。 この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。
+シングルトンを引数付きでインスタンス化する必要がある場合には、[`new()`](../API/ClassClass.md#new) 関数を呼び出すこともできます。   この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。
 
 クラスがシングルトンクラスかどうかは、Classオブジェクトの .[`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
 
@@ -834,7 +846,7 @@ shared function addItem($item:object)
     This.itemList.push($item)
 ```
 
-ItemInventorクラスをセッションシングルトンとして定義することで、各セッションと各ユーザーが独自の在庫を持つことができます。 ユーザー在庫へのアクセスは以下のように簡単です:
+ItemInventory クラスをセッションシングルトンとして定義することで、各セッションと各ユーザーが独自の在庫を持つことができます。   ユーザー在庫へのアクセスは以下のように簡単です:
 
 ```4d
 // ユーザーセッションにおいて

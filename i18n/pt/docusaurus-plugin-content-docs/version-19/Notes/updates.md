@@ -5,7 +5,7 @@ title: Notas de lançamento
 
 :::tip
 
-Read [**What’s new in 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), the blog post that lists all new features and enhancements in 4D 19 LTS.
+Leia [**O que há de novo no 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), a postagem do blog que lista todos os novos recursos e aprimoramentos no 4D 19 LTS.
 
 :::
 
@@ -15,7 +15,7 @@ Read [**What’s new in 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), t
 
 #### Destaques
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.8): list of all bugs that have been fixed in 4D 19.8.
+- [**Fixa lista de erros**](https://bugs.4d.fr/fixedbugslist?version=19.8): lista de todos os bugs corrigidos em 4D 19.8.
 
 
 ## 4D 19.7 LTS
@@ -24,18 +24,18 @@ Read [**What’s new in 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), t
 
 :::warning Nota de segurança
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D 19.7 LTS build 288986 or higher. Para obter mais informações, consulte este [boletim de segurança](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a atualização para a versão 4D 19.7 LTS build 288986 ou superior. Para obter mais informações, consulte este [boletim de segurança](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.7): list of all bugs that have been fixed in 4D 19.7.
+- [**Fixa lista de erros**](https://bugs.4d.fr/fixedbugslist?version=19.7): lista de todos os bugs corrigidos em 4D 19.7.
 
 
 ## 4D 19.6 LTS
 
 #### Destaques
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.6): list of all bugs that have been fixed in 4D 19.6.
+- [**Fixa lista de erros**](https://bugs.4d.fr/fixedbugslist?version=19.6): lista de todos os bugs corrigidos em 4D 19.6.
 
 
 ## 4D 19.5 LTS
@@ -45,33 +45,33 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - 4D 19.5 é certificado em Windows 11 22H2
 - 4D 19.5 é certificado em macOS Ventura (macOS 13)
 - A versão SpreadJS foi actualizada (14.1.6).
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.5): list of all bugs that have been fixed in 4D 19.5.
+- [**Fixa lista de erros**](https://bugs.4d.fr/fixedbugslist?version=19.5): lista de todos os bugs corrigidos em 4D 19.5.
 
 
 ## 4D 19.x LTS
 
 #### Destaques
 
-- [IMAPTransporter Class](../API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
-- [File Class](../API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
-- New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
-- Web Server: new [SameSite session cookie](../WebServer/webServerConfig.md#session-cookie-samesite) setting.
-- Dark and light color scheme support for [forms](../FormEditor/properties_FormProperties.md#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
-- New default dark and light themes in [Code Editor preferences](../Preferences/methods.md#theme-list).
-- [Native compilation](../Project/compiler.md#compiler-methods-for) for Silicon processors.
+- [Classe IMAPTransporter](../API/IMAPTransporterClass.md): novas funções `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()` e `.unsubscribe()`.
+- [Classe File](../API/FileClass.md): novas funções `setAppInfo()` e `getAppInfo()`.
+- Nova tag de transformação [4DEACH](../Tags/tags.md#4deach-and-4dendeach).
+- Servidor Web: nova configuração [SameSite para as cookies de sessão](../WebServer/webServerConfig.md#session-cookie-samesite).
+- Suporte ao esquema de cores escura e clara para [formulários](../FormEditor/properties_FormProperties.md#color-scheme) e [folhas de estilo](../FormEditor/stylesheets#media-queries)
+- Novos temas padrão escuro e claro nas [preferências do editor de código](../Preferences/methods.md#theme-list).
+- [Compilação nativa](../Project/compiler.md#compiler-methods-for) para processadores Silicon.
 - [Cálculo de variável](../FormObjects/properties_Object.md#variable-calculation) agora é suportado pelas colunas list box da entity selection selecionada.
-- New, comprehensive [CLI](../Admin/cli.md) page.
+- Nova página [CLI](../Admin/cli.md) completa.
 
 
 
 ### 4D 18 R6
 
-- [Entity Selection Class](../API/EntitySelectionClass.md): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
-- [IMAP Mail](../API/IMAPTransporterClass.md), [POP3 Mail](../API/POP3TransporterClass.md) and [SMTP Mail](../API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
-- [IMAP Mail](../API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
+- [Classe Entity Selection](../API/EntitySelectionClass.md): as funções `.average()`, `.max()` e `.min()` agora retornam *undefined* se a seleção da entidade estiver vazia.
+- [IMAP Mail](../API/IMAPTransporterClass.md), [POP3 Mail](../API/POP3TransporterClass.md) e [SMTP Mail](../API/SMTPTransporterClass.md): a propriedade `authenticationMode` habilita OAuth 2.0
+- [IMAP Mail](../API/IMAPTransporterClass.md): novas funções `.expunge()` e `.append()`
 - Novo componente de servidor web [WebAdmin](../Admin/webAdmin.md)
 - Nova interface [DataExplorer](../Admin/dataExplorer.md)
-- New web [user sessions](../WebServer/sessions.md) and [their API](../API/SessionClass.md).
+- Novas [sessões de usuário](../WebServer/sessions.md) web e [sua API](../API/SessionClass.md).
 
 
 ## Lançamentos anteriores

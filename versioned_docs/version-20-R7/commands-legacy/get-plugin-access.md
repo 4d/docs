@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Get plugin access.Summary-->The Get plugin access command returns the name of the user group authorized to use the plug-in whose number was passed in the *plugIn* parameter.<!-- END REF--> If there is no group associated with the plug-in, the command returns an empty string (""). 
@@ -36,3 +33,12 @@ Pass the number of the plug-in for which you want to find out the associated gro
 
 [SET GROUP ACCESS](set-group-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 846 |
+| Thread safe | &cross; |
+
+

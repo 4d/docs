@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR SET TOTALS DATA.Summary-->**Note :** Cette commande ne crée pas de sous-total.<!-- END REF-->
@@ -98,3 +95,13 @@ Si le paramètre *numRupture* est incorrect, l’erreur -9853 est générée.
 #### Voir aussi 
 
 [QR GET TOTALS DATA](qr-get-totals-data.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 767 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

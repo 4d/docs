@@ -143,12 +143,12 @@ Especifique el atributo entre corchetes y, a continuación, entre llaves, declar
 
 #### Sintaxis soportadas
 
-| Sintaxis                                                                                 | Descripción                                                                                                                      |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [attribute]                          | coincide con objetos con el `attribute`                                                                                          |
-| [attribute="value"]                  | coincide con objetos cuyo valor del `attribute` contenga exactamente el "valor" especificado                                     |
-| [attribute~="value"] | coincide con los objetos con el valor del `attribute` que contiene el "valor" entre una lista de palabras separadas por espacios |
-| [attribute\|="value"]                | coincide con objetos con un `attribute` cuyo valor empieza por "valor"                                                           |
+| Sintaxis                                                                                          | Descripción                                                                                                                      |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [attribute]                                   | coincide con objetos con el `attribute`                                                                                          |
+| [attribute="value"]                           | coincide con objetos cuyo valor del `attribute` contenga exactamente el "valor" especificado                                     |
+| [attribute~="value"]          | coincide con los objetos con el valor del `attribute` que contiene el "valor" entre una lista de palabras separadas por espacios |
+| [attribute&#124;="value"] | coincide con objetos con un `attribute` cuyo valor empieza por "valor"                                                           |
 
 #### Ejemplos
 
@@ -272,13 +272,13 @@ icon: url("edit.png"); /* ruta relativa al archivo del formulario */
 
 - Para `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` y `verticalLineStroke`, se soportan tres sintaxis:
 
-  - Nombre del color CSS: `fill: red;`
-  - Valor hexadécimal: `fill: #FF0000;`
-  - función `rgb()`: `fill:rgb(255,0,0)`
+ - Nombre del color CSS: `fill: red;`
+ - Valor hexadécimal: `fill: #FF0000;`
+ - función `rgb()`: `fill:rgb(255,0,0)`
 
 - Si una cadena utiliza caracteres prohibidos en CSS, puede rodear la cadena con comillas simples o dobles. Por ejemplo:
-  - una referencia xliff: `tooltip: ":xliff:CommonMenuFile";`
-  - un datasource con la expresión de campo: `dataSource: "[Table_1:1]ID:1";`
+ - una referencia xliff: `tooltip: ":xliff:CommonMenuFile";`
+ - un datasource con la expresión de campo: `dataSource: "[Table_1:1]ID:1";`
 
 ## Orden de prioridad
 

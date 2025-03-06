@@ -45,3 +45,12 @@ L'exemple suivant ajoute un élément à un tableau :
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [Size of array](size-of-array.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 227 |
+| Thread safe | &check; |
+
+

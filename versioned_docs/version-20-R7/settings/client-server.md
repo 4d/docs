@@ -24,7 +24,7 @@ If you modify this parameter, you must restart the server database in order for 
 
 #### Publication name  
 
-This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer/md#opening-a-remote-project) paragraph). By default, 4D Server uses the name of the project file. You can enter any custom name you want.
+This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer.md#opening-a-remote-project) paragraph). By default, 4D Server uses the name of the project file. You can enter any custom name you want.
 
 :::note
 

@@ -3,12 +3,12 @@ id: authentication
 title: Autenticação
 ---
 
-Authenticating users is necessary when you want to provide specific access rights to web users. Authentication designates the way the information concerning the user credentials (usually name and password) are collected and processed.
+A autenticação de usuários é necessária quando se deseja fornecer direitos de acesso específicos aos usuários Web. A autenticação determina como as informações referentes às credenciais do usuário (geralmente nome e senha) são coletadas e processadas.
 
 
 ## Modos de autenticação
 
-The 4D web server proposes three authentication modes, that you can select in the **Web**/**Options (I)** page of the Settings dialog box:
+O servidor web 4D propõe três modos de autenticação, que podem ser selecionados na página **Web**/**Options (I)** da caixa de diálogo Configurações:
 
 ![](../assets/en/WebServer/authentication.png)
 
@@ -25,7 +25,7 @@ O funcionamento do sistema de acesso do servidor web 4D está resumido no diagra
 
 ### Personalizado (padrão)
 
-Basically in this mode, it's up to the developer to define how to authenticate users. 4D só avalia solicitações HTTP [que requerem uma autenticação](#method-calls).
+Basicamente, nesse modo, cabe ao desenvolvedor definir como autenticar os usuários. 4D só avalia solicitações HTTP [que requerem uma autenticação](#method-calls).
 
 Este modo de autenticação é o mais flexível porque permite que você:
 
@@ -38,16 +38,16 @@ ds.webUser.password:=Generate password hash($password)
 ds.webUser.save()
 ```
 
-See also [this example](gettingStarted.md#authenticating-users) from the "Getting started" chapter.
+Veja também [este exemplo](gettingStarted.md#authenticating-users) do capítulo "Introdução".
 
-If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $1 and $2, only the IP addresses of the browser and the server ($3 and $4) are provided, the user name and password ($5 and $6) are empty. The method must return **True** in $0 if the user is successfully authenticated, then the resquested resource is served, or **False** in $0 if the authentication failed.
+Se nenhuma autenticação personalizada for fornecida, 4D chama a função [`On Web Authentication`](#on-web-authentication) do banco de dados (se existir). Além de $1 e $2, apenas os endereços IP do navegador e do servidor ($3 e $4) são fornecidos, o nome de usuário e a senha ($5 e $6) estão vazios. O método deve retornar **True** em $0 se o usuário for autenticado com êxito e, em seguida, o recurso solicitado novamente é fornecido, ou **False** em $0 se a autenticação falhar.
 
-> **Aviso:** Se o método de banco de dados `On Web Authentication` não existir, as conexões serão aceitas automaticamente (modo de teste).
+> **Aviso:** se o método de banco de dados `On Web Authentication` não existir, as conexões serão aceitas automaticamente (modo de teste).
 
 
 ### Protocolo Basic
 
-When a user connects to the server, a standard dialog box appears on their browser in order for them to enter their user name and password.
+Quando um usuário se conecta ao servidor, uma caixa de diálogo padrão é exibida no navegador para que ele digite o nome de usuário e a senha.
 
 > O nome e a palavra-passe introduzidos pelo utilizador são enviados sem encriptação no cabeçalho do pedido HTTP. Este modo requer normalmente HTTPS para garantir a confidencialidade.
 
@@ -62,22 +62,22 @@ Os valores introduzidos são então avaliados:
 
 ### Protocolo DIGEST
 
-This mode provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher.
+Esse modo oferece um nível maior de segurança, pois as informações de autenticação são processadas por um processo unidirecional chamado hashing, que impossibilita decifrar seu conteúdo.
 
-Como no modo BASIC, os usuários devem digitar seu nome e senha ao se conectarem. The [`On Web Authentication`](#on-web-authentication) database method is then called. When the DIGEST mode is activated, the $6 parameter (password) is always returned empty. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). It is therefore imperative in this case to evaluate connection requests using the `WEB Validate digest` command.
+Como no modo BASIC, os usuários devem digitar seu nome e senha ao se conectarem. O método banco de dados [`On Web Authentication`](#on-web-authentication) é chamado. Quando o modo DIGEST é ativado, o parâmetro $6 (senha) é sempre retornado vazio. De fato, ao usar esse modo, essas informações não passam pela rede como texto claro (não criptografado). Portanto, é imperativo, nesse caso, avaliar as solicitações de conexão usando o comando `WEB Validate digest`.
 > Você deve reiniciar o servidor Web para que as alterações feitas nesses parâmetros sejam levadas em conta.
 
 
 
 ## On Web Authentication
 
-The `On Web Authentication` database method is in charge of managing web server engine access. É chamado por 4D ou 4D Server quando uma solicitação HTTP dinâmica é recebida.
+O método de banco de dados `On Web Authentication` é responsável pelo gerenciamento do acesso ao mecanismo do servidor Web. É chamado por 4D ou 4D Server quando uma solicitação HTTP dinâmica é recebida.
 
-### Chamadas métodos de base
+### Chamadas dos métodos banco
 
-The `On Web Authentication` database method is automatically called when a request or processing requires the execution of some 4D code (except for REST calls). It is also called when the web server receives an invalid static URL (for example, if the static page requested does not exist).
+O método banco de dados `On Web Authentication` é chamado automaticamente quando uma solicitação ou processamento exige a execução de algum código 4D (exceto para chamadas REST). Ele também é chamado quando o servidor Web recebe um URL estático inválido (por exemplo, se a página estática solicitada não existir).
 
-The `On Web Authentication` database method is therefore called:
+O método banco de dados `On Web Authentication` é, portanto chamado:
 
 - quando o servidor da Web recebe um URL solicitando um recurso que não existe
 - quando o servidor da Web receber uma URL que começa com `4DACTION/`, `4DCGI/`...
@@ -87,7 +87,7 @@ The `On Web Authentication` database method is therefore called:
 O método banco de dados `On Web Authentication` NÃO é chamado:
 
 - quando o servidor Web recebe um URL solicitando uma página estática válida.
-- quando o servidor da Web receber uma URL que começa com `rest/` e o servidor REST for iniciado (nesse caso, a autenticação é tratada por meio do [método de banco de dados`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) ou das [configurações Structure](REST/configuration.md#using-the-structure-settings)).
+- quando o servidor da Web receber uma URL que começa com `rest/` e o servidor REST for iniciado (nesse caso, a autenticação é tratada por meio do [método de banco de dados `On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) ou das [configurações de estrutura](REST/configuration.md#using-the-structure-settings)).
 
 
 ### Sintaxe
@@ -115,7 +115,7 @@ Estes parâmetros devem ser declarados da seguinte forma:
 //Código do método
 ```
 
-Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
+Como alternativa, você pode usar a sintaxe de [parâmetros nomeados](Concepts/parameters.md#named-parameters):
 
 ```4d
 // Método de banco de dados de autenticação na Web
@@ -132,7 +132,7 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 O primeiro parâmetro (`$1`) é o URL recebido pelo servidor, do qual o endereço do host foi removido.
 
-Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu Web Server 4D é 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
+Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu Web Server 4D é 123.45.67.89. A tabela a seguir mostra os valores de $1 dependendo do URL inserido no navegador Web:
 
 | URL introduzido no navegador Web     | Valor do parâmetro $1    |
 | ------------------------------------ | ------------------------ |
@@ -144,43 +144,43 @@ Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu W
 
 #### $2 - Cabeçalho e corpo do pedido HTTP
 
-O segundo parâmetro (`$2`) é o cabeçalho e o corpo da solicitação HTTP enviada pelo navegador Web. Note that this information is passed to your `On Web Authentication` database method as it is. Its contents will vary depending on the nature of the web browser which is attempting the connection.
+O segundo parâmetro (`$2`) é o cabeçalho e o corpo da solicitação HTTP enviada pelo navegador Web. Observe que essas informações são passadas para o método de banco de dados `On Web Authentication` como estão. Seu conteúdo varia conforme a natureza do navegador Web que está tentando se conectar.
 
-If your application uses this information, it is up to you to parse the header and the body. Você pode usar os comandos `WEB GET HTTP HEADER` e `WEB GET HTTP BODY`.
-> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
+Se o seu aplicativo usar essas informações, caberá a você analisar o cabeçalho e o corpo. Você pode usar os comandos `WEB GET HTTP HEADER` e `WEB GET HTTP BODY`.
+> Por motivos de desempenho, o tamanho dos dados que passam pelo parâmetro $2 não deve exceder 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
 #### $3 - Endereço IP do cliente Web
 
-The `$3` parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
-> 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
+O parâmetro `$3` recebe o endereço IP da máquina do navegador. Essas informações permitem distinguir entre conexões de intranet e de Internet.
+> 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. Para obter mais informações, consulte a seção [Suporte IPv6](webServerConfig.md#about-ipv6-support).
 
 
 #### $4 - Endereço IP do servidor
 
-O parâmetro `$4` recebe o endereço IP usado para chamar o servidor web. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.md#ip-address-to-listen).
+O parâmetro `$4` recebe o endereço IP usado para chamar o servidor web. 4D permite multi-home que você explore máquinas com mais de um endereço IP. Para obter mais informações, consulte a [página Configuração](webServerConfig.md#ip-address-to-listen).
 
 
 #### $5 e $6 - Nome de usuário e palavra-passe
 
-The `$5` and `$6` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if [basic](#basic-protocol) or [digest](#digest-protocol) authentication is selected.
-> If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+Os parâmetros `$5` e `$6` recebem o nome de usuário e a senha inseridos pelo usuário na caixa de diálogo de identificação padrão exibida pelo navegador. Esta caixa de diálogo aparece para cada conexão, se a autenticação [basic](#basic-protocol) ou [digest](#digest-protocol) for selecionada.
+> Se o nome de usuário enviado pelo navegador existir em 4D, o parâmetro $6 (a senha do usuário) não é retornado por razões de segurança.
 
 #### Parâmetro $0
 
-The `On Web Authentication` database method returns a boolean in $0:
+O método banco de dados `On Web Autenticação` retorna um booliano em $0:
 
 *   Se $0 é True, a ligação é aceite.
 
 *   Se $0 é False, a ligação é recusada.
 
-The `On Web Connection` database method is only executed if the connection has been accepted by `On Web Authentication`.
-> **WARNING**<br/>If no value is set to $0 or if $0 is not defined in the `On Web Authentication` database method, the connection is considered as accepted and the `On Web Connection` database method is executed.
-> * - * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. O mesmo acontecerá se ocorrer um erro durante seu processamento.
+O método banco de dados `On Web Connection` só é executado se a conexão tiver sido aceite pelo `On Web Authentication`.
+> **AVISO**<br/>Se nenhum valor estiver definido como $0 ou se $0 não estiver definido no método banco de dados `On Web Authentication`, a conexão é considerada aceita e o método banco de dados `On Web Connection` é executado.
+> * - Não chamar nenhum elemento de interface no método banco de dados `On Web Authentication` (`ALERT`, `DIALOG`, etc.) porque, caso contrário, a sua execução será interrompida e a ligação recusada. O mesmo acontecerá se ocorrer um erro durante seu processamento.
 
 
 ### Exemplo
 
-Example of the `On Web Authentication` database method in [DIGEST mode](#digest-protocol):
+Exemplo de método de banco de dados `On Web Authentication` em [Modo DIGEST](#digest-protocol):
 
 ```4d
  // On Web Authentication Database Method

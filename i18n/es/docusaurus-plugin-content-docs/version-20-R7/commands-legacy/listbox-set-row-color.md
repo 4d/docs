@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET ROW COLOR.Summary-->**Nota:** este comando sólo funciona con listboxes de tipo array.<!-- END REF-->
@@ -66,3 +63,12 @@ En un array de tipo list box, queremos establecer los colores de una fila y para
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX Get row color as number](listbox-get-row-color-as-number.md)  
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1270 |
+| Hilo seguro | &cross; |
+
+

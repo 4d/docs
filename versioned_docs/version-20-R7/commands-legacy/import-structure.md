@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.IMPORT STRUCTURE.Summary-->The **IMPORT STRUCTURE** command imports, into the current database, the XML definition of the 4D database structure passed in the *xmlStructure* parameter.<!-- END REF--> 
@@ -50,3 +47,12 @@ You want to import a saved structure definition into the current database:
 #### See also 
 
 [EXPORT STRUCTURE](export-structure.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1310 |
+| Thread safe | &cross; |
+
+

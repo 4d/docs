@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 引数 *mouseButton* は、上記のようにボタンの状態を返します。
 
-**Note:**バージョン10.2.5 以降の Mac OS X のみ、値2と3が返されます。
+**Note:**バージョン10.2.5 以降の macOS のみ、値2と3が返されます。
 
 #### 例題 
 
@@ -40,3 +40,12 @@ displayed_sidebar: docs
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 468 |
+| スレッドセーフである | &cross; |
+
+

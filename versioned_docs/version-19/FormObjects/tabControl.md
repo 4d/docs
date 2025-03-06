@@ -48,7 +48,7 @@ To supply the labels for a tab control, you can use:
 
 ### Using an object
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
+You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
 
 |Property|Type|Description|
 |---|---|---|

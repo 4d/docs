@@ -32,3 +32,13 @@ L'exemple suivant désigne le dernier enregistrement de la table \[Contacts\] co
 [FIRST RECORD](first-record.md)  
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 200 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+
+

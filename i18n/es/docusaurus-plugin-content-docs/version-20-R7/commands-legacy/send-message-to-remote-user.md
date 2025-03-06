@@ -52,3 +52,12 @@ Desea enviar un mensaje a todos los usuarios y luego enviar un mensaje a un usua
 #### Ver también 
 
 [DROP REMOTE USER](drop-remote-user.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1632 |
+| Hilo seguro | &check; |
+
+

@@ -27,7 +27,7 @@ El administrador no puede:
 - modificar el usuario Diseñador
 - por defecto, acceder a las partes protegidas de la base. En particular, el administrador no puede acceder al modo Diseño si está restringido. El Administrador debe formar parte de uno o varios grupos para tener privilegios de acceso en la base de datos. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.
 
-Tanto el Diseñador como el Administrador están disponibles por defecto en todas las bases. In the [user management dialog box](#users-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
+Tanto el Diseñador como el Administrador están disponibles por defecto en todas las bases. En la [caja de diálogo de gestión de usuarios](#users-editor), los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:
 
 - Icono Diseñador: ![](../assets/en/Users/iconDesigner.png)
 - Icono del Administrador: ![](../assets/en/Users/iconAdmin.png)
@@ -66,7 +66,7 @@ La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el 
 
 5. Defina el grupo o los grupos a los que pertenece el usuario mediante la tabla "Miembro de los grupos". Puede añadir o eliminar el usuario seleccionado a un grupo marcando la opción correspondiente en la columna Miembro.
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-groups).
+La pertenencia de los usuarios a los distintos grupos también puede definirse por grupos en la página [Grupos](#configuring-groups).
 
 ### Eliminar un usuario
 

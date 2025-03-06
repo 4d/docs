@@ -21,3 +21,13 @@ displayed_sidebar: docs
 #### Voir aussi 
 
 [REMOVE FROM SET](remove-from-set.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 119 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+
+

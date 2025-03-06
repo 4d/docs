@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.DISPLAY SELECTION.Summary-->**DISPLAY SELECTION** affiche, pour le process en cours, la sélection courante de *laTable* dans le formulaire sortie courant.<!-- END REF--> Les enregistrements sont affichés sous la forme d'une liste que l'on peut faire défiler, semblable à celle du mode Développement. Lorsque l'utilisateur double-clique sur un enregistrement, par défaut celui-ci s'affiche dans le formulaire entrée courant. La liste est placée dans la fenêtre de premier plan.
@@ -62,7 +59,7 @@ L'exemple suivant sélectionne tous les enregistrements de la table \[Personnes\
 
 #### Exemple 2 
 
-Reportez-vous à l'exemple n°6 de la commande [Form event code](form-event-code.md) ; il indique tous les tests que vous pourrez avoir besoin d'effectuer pour surveiller la totalité des événements intervenant pendant l'exécution de la commande **DISPLAY SELECTION**. 
+Reportez-vous à l'exemple n°6 de la commande [Form event code](../commands/form-event-code.md) ; il indique tous les tests que vous pourrez avoir besoin d'effectuer pour surveiller la totalité des événements intervenant pendant l'exécution de la commande **DISPLAY SELECTION**. 
 
 #### Exemple 3 
 
@@ -92,6 +89,16 @@ Vous pouvez aussi utiliser d'autres commandes telles que [PRINT SELECTION](print
 
 #### Voir aussi 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
 *Présentation des ensembles*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 59 |
+| Thread safe | &cross; |
+| Interdite sur le serveur ||
+
+

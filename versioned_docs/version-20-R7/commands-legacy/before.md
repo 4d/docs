@@ -13,17 +13,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Before.Summary-->**Before** returns True for the Before execution cycle.<!-- END REF-->
 
 In order for the **Before** execution cycle to be generated, make sure that the On Load event property for the form and/or the objects has been selected in the Design environment.
 
-**Note:** This command is equivalent to using [Form event code](form-event-code.md) and testing whether it returns the On Load event.
+**Note:** This command is equivalent to using [Form event code](../commands/form-event-code.md) and testing whether it returns the On Load event.
 
 #### See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 29 |
+| Thread safe | &cross; |
+
+

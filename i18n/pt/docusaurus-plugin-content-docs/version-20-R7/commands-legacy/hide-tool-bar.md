@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.HIDE TOOL BAR.Summary-->O comando HIDE TOOL BAR  gerencia a visualização das barras de ferramentas personalizadas criadas pelo comando [Open form window](open-form-window.md) para o processo atual.<!-- END REF-->
@@ -23,7 +20,7 @@ Se uma janela barra de ferramentas foi criada pelo comando [Open form window](op
 
 #### Exemplo 
 
-Em OS X, foi definido uma barra de ferramentas personalizada e uma janela estandarte que tem a opção Has full screen mode Mac. Quando uma janela estandarte é maximizada por um usuário enquanto é mostrada a janela da barra de ferramentas, você não deseja que a barra de ferramentas sobrepõe a janela maximizada.
+Em macOS, foi definido uma barra de ferramentas personalizada e uma janela estandarte que tem a opção Has full screen mode Mac. Quando uma janela estandarte é maximizada por um usuário enquanto é mostrada a janela da barra de ferramentas, você não deseja que a barra de ferramentas sobrepõe a janela maximizada.
 
 Para evitar isto, no evento formulário On Resize da janela estandarte, é necessário detectar quando a janela passa a modo tela completa e logo chamar **HIDE TOOL BAR**:
 
@@ -42,3 +39,12 @@ Para evitar isto, no evento formulário On Resize da janela estandarte, é neces
 #### Ver também 
 
 [SHOW TOOL BAR](show-tool-bar.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 434 |
+| Thread-seguro | &cross; |
+
+

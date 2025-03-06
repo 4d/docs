@@ -3,7 +3,7 @@ id: FolderClass
 title: Folder
 ---
 
-`Folder` objects are created with the [`Folder`](../commands/folder.md) command. Contienen referencias a carpetas que pueden o no existir realmente en el disco. Por ejemplo, cuando ejecuta el comando `Folder` para crear una nueva carpeta, se crea un objeto `Folder` válido, pero en realidad no se almacena nada en el disco hasta que llame a la función [`folder.create()`](#create).
+Los objetos `Folder` son creados con el comando [`Folder`](../commands/folder.md). Contienen referencias a carpetas que pueden o no existir realmente en el disco. Por ejemplo, cuando ejecuta el comando `Folder` para crear una nueva carpeta, se crea un objeto `Folder` válido, pero en realidad no se almacena nada en el disco hasta que llame a la función [`folder.create()`](#create).
 
 ### Ejemplo
 
@@ -67,9 +67,9 @@ Los objetos `Folder` admiten varios nombres de ruta, incluida la sintaxis `files
 
 #### Descripción
 
-La función `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crea y devuelve un nuevo objeto del tipo `4D.Folder`<!-- END REF -->. It is identical to the [`Folder`](../commands/folder.md) command (shortcut).
+La función `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crea y devuelve un nuevo objeto del tipo `4D.Folder`<!-- END REF -->. Es idéntico al comando [`Folder`](../commands/folder.md) (atajo).
 
-> It is recommended to use the [`Folder`](../commands/folder.md) shortcut command instead of `4D.Folder.new()`.
+> Se recomienda utilizar el comando de acceso directo [`Folder`](../commands/folder.md) en lugar de `4D.Folder.new()`.
 
 <!-- INCLUDE directory.copyTo().Desc -->
 
@@ -91,7 +91,7 @@ La función `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crea y devuel
 
 | Parámetros | Tipo    |                             | Descripción                                                        |
 | ---------- | ------- | --------------------------- | ------------------------------------------------------------------ |
-| Result     | Boolean | <- | True si la carpeta se ha creado con éxito, false en caso contrario |
+| Resultado  | Boolean | <- | True si la carpeta se ha creado con éxito, false en caso contrario |
 
 <!-- END REF -->
 
@@ -151,7 +151,7 @@ End if
 | destinationFolder | 4D.Folder | ->                          | Carpeta de destino para el alias o el acceso directo |
 | aliasName         | Text                      | ->                          | Nombre del alias o del atajo                         |
 | aliasType         | Integer                   | ->                          | Tipo de enlace del alias                             |
-| Result            | 4D.File   | <- | Referencia de alias o de acceso directo              |
+| Resultado         | 4D.File   | <- | Referencia de alias o de acceso directo              |
 
 <!-- END REF -->
 
@@ -230,10 +230,10 @@ Cuando se pasa `Delete only if empty` o si se omite el parámetro de opción:
 Cuando se pasa `Delete with contents`:
 
 - La carpeta, junto con todo su contenido, se elimina.
-  **Advertencia**: incluso esta carpeta y/o su contenido estén bloqueados o definidos como de sólo lectura, si el usuario actual tiene los derechos de acceso adecuados, la carpeta (y su contenido) aún se elimina.
+ **Advertencia**: incluso esta carpeta y/o su contenido estén bloqueados o definidos como de sólo lectura, si el usuario actual tiene los derechos de acceso adecuados, la carpeta (y su contenido) aún se elimina.
 - Si esta carpeta, o cualquiera de los archivos que contiene, no puede ser eliminada, la eliminación se interrumpe tan pronto como se detecta el primer elemento inaccesible y se devuelve un error(\*). En este caso, la carpeta puede ser eliminada sólo parcialmente. When deletion is aborted, you can use the `Last errors` command to retrieve the name and path of the offending file.
 - Si la carpeta no existe, el comando no hace nada y no devuelve ningún error.
-  (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
+ (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
 
 <!-- END REF -->
 
@@ -287,7 +287,7 @@ Cuando se pasa `Delete with contents`:
 | ----------------- | ------------------------- | --------------------------- | ---------------------------------------- |
 | destinationFolder | 4D.Folder | ->                          | Carpeta de destino                       |
 | newName           | Text                      | ->                          | Nombre completo de la carpeta trasladada |
-| Result            | 4D.Folder | <- | Carpeta movida                           |
+| Resultado         | 4D.Folder | <- | Carpeta movida                           |
 
 <!-- END REF -->
 
@@ -297,7 +297,7 @@ La función `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->mueve o renom
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-Por defecto, la carpeta conserva su nombre cuando se mueve. Si desea cambiar renombrar la carpeta desplazada, pase el nombre completo en el parámetro *newName*. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+Por defecto, la carpeta conserva su nombre cuando se mueve. Por defecto, la carpeta conserva su nombre cuando se mueve. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
 **Objeto devuelto**
 
@@ -345,7 +345,7 @@ Quiere mover y renombrar una carpeta:
 | Parámetros | Tipo                      |                             | Descripción                           |
 | ---------- | ------------------------- | --------------------------- | ------------------------------------- |
 | newName    | Text                      | ->                          | Nuevo nombre completo para la carpeta |
-| Result     | 4D.Folder | <- | Carpeta renombrada                    |
+| Resultado  | 4D.Folder | <- | Carpeta renombrada                    |
 
 <!-- END REF -->
 

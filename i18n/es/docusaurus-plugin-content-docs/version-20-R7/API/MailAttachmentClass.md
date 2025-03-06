@@ -44,7 +44,7 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 | cid         | Text                              |              ->             | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid     |
 | type        | Text                              |              ->             | Valor del encabezado content-type                                                                  |
 | disposition | Text                              |              ->             | Valor del encabezado content-disposition: "inline" o "attachment". |
-| Result      | 4D.MailAttachment | <- | Objeto adjunto                                                                                     |
+| Resultado   | 4D.MailAttachment | <- | Objeto adjunto                                                                                     |
 
 <!-- END REF -->
 
@@ -52,7 +52,7 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 
 La función `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.MailAttachment`<!-- END REF -->. Es idéntico al comando [`MAIL New attachment`](../commands/mail-new-attachment.md) (acceso directo).
 
-## .cid<!-- REF #MailAttachmentClass.cid.Syntax --><strong x-id="1">.cid</strong> : Text<!-- END REF -->#### Descripción
+## .cid
 
 <!-- REF #MailAttachmentClass.cid.Syntax -->**.cid** : Text<!-- END REF -->
 
@@ -79,7 +79,7 @@ La propiedad `.disposition` contiene <!-- REF #MailAttachmentClass.disposition.S
 
 | Parámetros | Tipo                    |                             | Descripción         |
 | ---------- | ----------------------- | :-------------------------: | ------------------- |
-| Result     | 4D.Blob | <- | Contenido del anexo |
+| Resultado  | 4D.Blob | <- | Contenido del anexo |
 
 <!-- END REF -->
 

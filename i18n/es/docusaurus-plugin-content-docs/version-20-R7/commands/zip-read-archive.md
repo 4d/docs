@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-| Parámetros | Tipo                          |     | Descripción                           |
-| ---------- | ----------------------------- | :-: | ------------------------------------- |
-| zIPFile    | 4D.File       |  →  | Archivos Zip                          |
-| contraseña | Text                          |  →  | Contraseña del archivo ZIP, si la hay |
-| Result     | 4D.ZipArchive |  ←  | Objeto archivo                        |
+| Parámetros | Tipo                          |                             | Descripción                           |
+| ---------- | ----------------------------- | :-------------------------: | ------------------------------------- |
+| zIPFile    | 4D.File       | &#8594; | Archivos Zip                          |
+| contraseña | Text                          | &#8594; | Contraseña del archivo ZIP, si la hay |
+| Resultado  | 4D.ZipArchive | &#8592; | Objeto archivo                        |
 
 <!-- END REF -->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 El comando `ZIP Read archive` <!-- REF #_command_.ZIP Read archive.Summary -->recupera el contenido de *zipFile* y lo devuelve como un objeto `4D.ZipArchive`<!-- END REF -->.
 
-> Este comando no descomprime el archivo ZIP, sólo ofrece una vista de su contenido. To extract the contents of an archive, you need to use methods such as [file.copyTo()](../API/Document.md#copyto) or [folder.copyTo()](../API/Directory.md#copyto).
+> Este comando no descomprime el archivo ZIP, sólo ofrece una vista de su contenido. Para extraer el contenido de un archivo, es necesario utilizar métodos como [file.copyTo()](../API/Document.md#copyto) o [folder.copyTo()](../API/Directory.md#copyto).
 
 Pase un objeto `4D.File` que haga referencia al archivo ZIP comprimido en el parámetro *zipFile*. El archivo de destino se abrirá hasta que el `ZIP Read archive` haya terminado de ejecutarse y todos los contenidos/referencias hayan sido extraídos/liberados, entonces se cerrará automáticamente.
 
@@ -84,3 +84,12 @@ Para extraer desde la carpeta root:
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
+
+#### Propiedades
+
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1637                            |
+| Hilo seguro       | &amp;check; |
+
+

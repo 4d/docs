@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Count list items.Summary-->**Count list items** コマンドは、*list*に渡した参照番号またはオブジェクト名のリスト上で現在表示中または項目総数を返します。<!-- END REF-->
@@ -62,3 +59,12 @@ displayed_sidebar: docs
 
 [List item position](list-item-position.md)  
 [Selected list items](selected-list-items.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 380 |
+| スレッドセーフである | &cross; |
+
+

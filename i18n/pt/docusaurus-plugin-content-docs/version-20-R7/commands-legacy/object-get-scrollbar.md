@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT GET SCROLLBAR.Summary-->O comando OBJECT GET SCROLLBAR se utiliza para mostrar ou ocultar as barras de deslocamento horizontal e/ou vertical no objeto designado pelos parâmetros *objeto* e *\**.<!-- END REF-->   
@@ -46,3 +43,12 @@ Para obter mais informação, consulte a descrição do comando [OBJECT SET SCRO
 #### Ver também 
 
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1076 |
+| Thread-seguro | &cross; |
+
+

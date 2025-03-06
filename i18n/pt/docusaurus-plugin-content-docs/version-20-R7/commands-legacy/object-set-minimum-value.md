@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET MINIMUM VALUE.Summary-->O comando **OBJECT SET MINIMUM VALUE** modifica o valor mínimo do objeto ou dos objetos designado(s) pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->  
@@ -32,3 +29,12 @@ Em *valorMinimo*, passe o novo valor mínimo a atribuir ao objeto para o process
 
 [OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
 [OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1242 |
+| Thread-seguro | &cross; |
+
+

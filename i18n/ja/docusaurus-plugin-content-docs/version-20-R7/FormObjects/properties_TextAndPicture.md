@@ -5,7 +5,7 @@ title: テキスト、ピクチャー
 
 ## 背景パス名
 
-オブジェクトの背景として使用するピクチャーのパスを指定します。 [複数の状態](#状態の数) を持つ [アイコン](#ピクチャーパス名) を持つオブジェクトの場合、背景ピクチャーにも同じ状態の数が適用されます。
+オブジェクトの背景として使用するピクチャーのパスを指定します。 オブジェクトの背景として使用するピクチャーのパスを指定します。 [複数の状態](#状態の数) を持つ [アイコン](#ピクチャーパス名) を持つオブジェクトの場合、背景ピクチャーにも同じ状態の数が適用されます。
 
 パス名は、[スタティックピクチャーのパス名プロパティ](properties_Picture.md#パス名) と同じように指定します。
 
@@ -29,7 +29,7 @@ title: テキスト、ピクチャー
 
 |   名称  | データタイプ | とりうる値                                                                                                                                                              |
 | :---: | :----: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |  text  | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| style |  テキスト  | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 #### 対象オブジェクト
 
@@ -183,7 +183,7 @@ title: テキスト、ピクチャー
 
 ボタン内に、タイトルのみ (関連ピクチャーなし)、またはピクチャーのみ (タイトルなし) が含まれている場合、このプロパティは効果ありません。
 
-ボタンがタイトルと画像を持つ場合、デフォルトでは、それらは隣接して表示されます。 次の図は、様々な配置における `imageHugsTitle` プロパティ (有効な場合は true) の効果を示したものです:
+ボタンがタイトルと画像を持つ場合、デフォルトでは、それらは隣接して表示されます。 ボタンがタイトルと画像を持つ場合、デフォルトでは、それらは隣接して表示されます。 ボタンがタイトルと画像を持つ場合、デフォルトでは、それらは隣接して表示されます。 次の図は、様々な配置における `imageHugsTitle` プロパティ (有効な場合は true) の効果を示したものです:
 
 ![](../assets/en/FormObjects/hugs.png)
 
@@ -250,7 +250,7 @@ title: テキスト、ピクチャー
 
 ### ポップアップメニューの管理
 
-"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 ポップアップメニューとその値の表示は、すべて開発者が処理しなくてはなりません。具体的にはフォームイベントや [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/ja/page1006.html)、[`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/ja/page542.html) コマンドを使用してこれを処理します。
+"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 "ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 "ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu.md) and [`Pop up menu`](../commands-legacy/pop-up-menu.md) commands.
 
 #### JSON 文法
 

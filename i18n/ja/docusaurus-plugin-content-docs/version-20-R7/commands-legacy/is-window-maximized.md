@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Is window maximized.Summary-->**Is window maximized** コマンドは*window* 引数に参照を渡したウィンドウが現在最大化されていれば **True** を、それ以外の場合には**False** を返します。<!-- END REF-->
@@ -37,3 +34,12 @@ displayed_sidebar: docs
 
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1830 |
+| スレッドセーフである | &cross; |
+
+

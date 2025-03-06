@@ -11,13 +11,10 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
 | object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
-| tableNum &#124; selName | Longint, String | &#8594;  | Number of table whose current selection is to be used or Named selection to be used |
+| tableNum &#124; selName | Integer, Text | &#8594;  | Number of table whose current selection is to be used or Named selection to be used |
 | highlightName | Text | &#8594;  | Name of highlight set |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -40,3 +37,12 @@ If the listbox already contains columns, their contents will be updated after th
 #### See also 
 
 [LISTBOX GET TABLE SOURCE](listbox-get-table-source.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1013 |
+| Thread safe | &cross; |
+
+

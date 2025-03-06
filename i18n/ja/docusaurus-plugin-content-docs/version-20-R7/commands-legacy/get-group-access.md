@@ -35,3 +35,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET GROUP ACCESS](set-group-access.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1738 |
+| スレッドセーフである | &check; |
+
+

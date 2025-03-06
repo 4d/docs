@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR SET SORTS.Summary-->El comando QR SET SORTS permite definir el sentido de ordenación de cada columna del informe rápido cuya referencia se pasa en *area*.<!-- END REF-->
@@ -48,3 +45,13 @@ Si pasa un número de *area* inválido, se genera el error -9850.
 #### Ver también 
 
 [QR GET SORTS](qr-get-sorts.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 752 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

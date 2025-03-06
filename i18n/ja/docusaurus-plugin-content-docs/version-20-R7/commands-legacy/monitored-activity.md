@@ -66,7 +66,7 @@ displayed_sidebar: docs
 
 ****注:** 
 
-* デバッグログが4D Server の[GRAPH SETTINGS](graph-settings.md)にて停止されている場合、**Monitored activity** は何も返しません。ログがサーバー上で、あるいは[START MONITORING ACTIVITY](start-monitoring-activity.md) コマンドとActivity network を使用して再開されていた場合、**Monitored activity** コマンドはネットワークアクティビティ情報を返すのを再開します。
+* デバッグログが4D Server の[Administration window](../ServerWindow/overview.md)にて停止されている場合、**Monitored activity** は何も返しません。ログがサーバー上で、あるいは[START MONITORING ACTIVITY](start-monitoring-activity.md) コマンドとActivity network を使用して再開されていた場合、**Monitored activity** コマンドはネットワークアクティビティ情報を返すのを再開します。
 * *activityData* オブジェクトは*4DRequestsLog.txt* においては[SET DATABASE PARAMETER](set-database-parameter.md) コマンドで定義された情報を(あれは)使用しますが、それ以外の場合にはデフォルトモードを使用します。そのため、**Monitored activity** コマンドの実行中にログ記録を開始した場合には、返される戻り値に影響します。
 
 *activityData* オブジェクト:
@@ -139,3 +139,12 @@ displayed_sidebar: docs
 
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1713 |
+| スレッドセーフである | &check; |
+
+

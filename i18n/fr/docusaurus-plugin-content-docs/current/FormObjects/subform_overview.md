@@ -52,7 +52,7 @@ Binding the same variable or expression to your subform container and other obje
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-Dans le formulaire parent, les deux objets (zone de saisie et conteneur de sous-formulaire) **ont la même valeur que _Variable ou expression_**. It can be a variable (e.g. `parisTime`), or an expression (e.g. `Form.parisTime`).
+Dans le formulaire parent, les deux objets (zone de saisie et conteneur de sous-formulaire) **ont la même valeur que *Variable ou expression***. It can be a variable (e.g. `parisTime`), or an expression (e.g. `Form.parisTime`).
 
 :::info
 

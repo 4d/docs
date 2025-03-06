@@ -3,11 +3,11 @@ id: OutgoingMessageClass
 title: OutgoingMessage
 ---
 
-The `4D.OutgoingMessage` class allows you to build messages to be returned by your application functions in response to [REST requests](../REST/REST_requests.md). If the response is of type `4D.OutgoingMessage`, the REST server does not return an object but the object instance of the `OutgoingMessage` class.
+La classe `4D.OutgoingMessage` vous permet de construire des messages qui seront renvoyés par les fonctions de votre application en réponse aux [requêtes REST](../REST/REST_requests.md). Lorsque la réponse est de type `4D.OutgoingMessage`, le serveur REST ne renvoie pas un objet mais une instance d'objet de la classe `OutgoingMessage`.
 
-Typically, this class can be used in functions declared with the [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword and designed to handle HTTP GET requests. Such requests are used, for example, to implement features such as download file, generate and download picture as well as receiving any content-type via a browser.
+Typiquement, cette classe peut être utilisée dans les fonctions déclarées avec le mot-clé [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) et conçues pour gérer les requêtes HTTP GET. Ces requêtes sont utilisées, par exemple, pour implémenter des fonctionnalités telles que le téléchargement de fichier, la génération et le téléchargement d'images ainsi que la réception de tout content-type via un navigateur.
 
-An instance of this class is built on 4D Server and can be sent to the browser by the [4D REST Server](../REST/gettingStarted.md) only. This class allows to use other technologies than HTTP (e.g. mobile).
+Une instance de cette classe est construite sur 4D Server et peut être envoyée au navigateur via le [serveur REST 4D](../REST/gettingStarted.md) uniquement. Cette classe permet d'utiliser d'autres technologies que HTTP (par exemple, mobile).
 
 <details><summary>Historique</summary>
 
@@ -19,7 +19,7 @@ An instance of this class is built on 4D Server and can be sent to the browser b
 
 ### Exemple
 
-In this example, a `getFile()` function is implemented in the [Datastore class](../ORDA/ordaClasses.md#datastore-class) and [can be called](../ORDA/ordaClasses.md#onhttpget-keyword) by a REST request. The purpose is to return a **testFile.pdf** file as a response to the request:
+Dans cet exemple, une fonction `getFile()` est implémentée dans la [Datastore class](../ORDA/ordaClasses.md#datastore-class) et peut être [appelée](../ORDA/ordaClasses.md#onhttpget-keyword) par une requête REST. Le but est de retourner un fichier **testFile.pdf** en réponse à la requête :
 
 ```4d
 Class extends DataStoreImplementation
@@ -29,14 +29,14 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 	var $result:=4D.OutgoingMessage.new()
 	var $file:=File("/RESOURCES/testFile.pdf")
 	
-	$result.setBody($file.getContent())  // This is binary content
+	$result.setBody($file.getContent())  // contenu binaire
 	$result.setHeader("Content-Type"; "application/pdf")
 	return $result
 ```
 
-### OutgoingMessage Object
+### Objet OutgoingMessage
 
-4D.OutgoingMessage objects provide the following properties and functions:
+Les objets 4D.OutgoingMessage fournissent les propriétés et fonctions suivantes :
 
 |                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,7 +49,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 :::note
 
-A 4D.OutgoingMessage object is a [non-sharable](../Concepts/shared.md) object.
+Un objet 4D.OutgoingMessage est [non partageable](../Concepts/shared.md).
 
 :::
 
@@ -61,16 +61,16 @@ A 4D.OutgoingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 #### Description
 
-The `.body` property contains <!-- REF #OutgoingMessageClass.body.Summary -->the outgoing message body<!-- END REF -->. The following data types are supported in the `.body` property:
+La propriété `.body` contient <!-- REF #OutgoingMessageClass.body.Summary -->le body du message sortant<!-- END REF -->. Les types de données suivants sont pris en charge dans la propriété `.body` :
 
 - text
 - blob
 - object
 - image
 
-The `.body` property is read-write.
+La propriété `.body` est en lecture-écriture.
 
-You can also set the `.body` property using the [`setBody()`](#setbody) function, in which case the `content-type` header is automatically set.
+Vous pouvez également définir la propriété `.body` en utilisant la fonction [`setBody()`](#setbody), auquel cas l'en-tête `content-type` est automatiquement défini.
 
 <!-- END REF -->
 
@@ -82,9 +82,9 @@ You can also set the `.body` property using the [`setBody()`](#setbody) function
 
 #### Description
 
-The `.headers` property contains <!-- REF #OutgoingMessageClass.headers.Summary -->the current headers of the outgoing message as key/value pairs<!-- END REF -->.
+La propriété `.headers` contient <!-- REF #OutgoingMessageClass.headers.Summary -->les headers courants du message sortant sous forme de paires clé/valeur<!-- END REF -->.
 
-The `.headers` property is read-only. To set a header, use the [`setHeader()`](#setheader) function.
+La propriété `.headers` est en lecture seule. Pour définir un header, utilisez la fonction [`setHeader()`](#setheader).
 
 <!-- END REF -->
 
@@ -96,31 +96,31 @@ The `.headers` property is read-only. To set a header, use the [`setHeader()`](#
 
 <!-- REF #OutgoingMessageClass.setBody().Params -->
 
-| Paramètres | Type |    | Description                  |
-| ---------- | ---- | -- | ---------------------------- |
-| body       | any  | -> | Body of the outgoing message |
+| Paramètres | Type |    | Description             |
+| ---------- | ---- | -- | ----------------------- |
+| body       | any  | -> | Body du message sortant |
 
 <!-- END REF -->
 
 #### Description
 
-The `.setBody()` function <!-- REF #OutgoingMessageClass.setBody().Summary -->sets the outgoing message *body*<!-- END REF -->.
+La fonction `.setBody()` <!-- REF #OutgoingMessageClass.setBody().Summary -->définit le *body* du message sortant<!-- END REF -->.
 
-The following data types are supported in the *body*:
+Les types de données suivants sont pris en charge dans la propriété *body* :
 
 - Text
 - Blob
 - Object
 - Image
 
-When this function is used, the content-type header is automatically set depending on the *body* type:
+Lorsque cette fonction est utilisée, le header content-type est automatiquement défini en fonction du type de *body* :
 
-- Content-Type:text/plain if the body is a Text
-- Content-Type:application/octet-stream if body is a Blob
-- Content-Type:application/json if body is an Object
-- Content-Type:image/jpeg, image/gif... if body is an Image
+- Content-Type:text/plain si le body est un texte
+- Content-Type:application/octet-stream si le body est un Blob
+- Content-Type:application/json si le body est un objet
+- Content-Type:image/jpeg, image/gif... si le body est une image
 
-If *body* is not of a supported value type, an error is returned.
+Si *body* n'est pas un type de valeur pris en charge, une erreur est renvoyée.
 
 <!-- END REF -->
 
@@ -132,22 +132,22 @@ If *body* is not of a supported value type, an error is returned.
 
 <!-- REF #OutgoingMessageClass.setHeader().Params -->
 
-| Paramètres | Type |    | Description                  |
-| ---------- | ---- | -- | ---------------------------- |
-| key        | Text | -> | Header property to set       |
-| value      | Text | -> | Value of the header property |
+| Paramètres | Type |    | Description                      |
+| ---------- | ---- | -- | -------------------------------- |
+| key        | Text | -> | Propriété de header à définir    |
+| value      | Text | -> | Valeur de la propriété de header |
 
 <!-- END REF -->
 
 #### Description
 
-The `.setHeader()` function <!-- REF #OutgoingMessageClass.setHeader().Summary -->sets the outgoing message header *key* with the provided *value*<!-- END REF -->. If both parameters are not Text values, an error is raised.
+La fonction `.setHeader()` <!-- REF #OutgoingMessageClass.setHeader().Summary -->fixe la clé *key* du header du message sortant avec la *value* fournie<!-- END REF -->. Si les deux paramètres ne sont pas des valeurs texte, une erreur est générée.
 
-When returning a 4D.OutgoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `WASID4D=...` and `4DSID__ProjectName_=....`).
+Lorsqu'il renvoie une instance d'objet 4D.OutgoingMessage, 4D définit automatiquement certains headers (par exemple `Set-Cookie` avec `WASID4D=...` et `4DSID__ProjectName_=....`).
 
 :::note
 
-If you set a *value* for the "Content-Type" header *key*, make sure you call this function after the call to [`setBody()`](#setbody), because `setBody()` automatically fills this header. For a list of "Content-Type" header values, please refer to the [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) documentation.
+Si vous définissez une *value* pour la *key* du header "Content-Type", assurez-vous d'appeler cette fonction après l'appel à [`setBody()`](#setbody), car `setBody()` remplit automatiquement ce header. Pour une liste des valeurs du header "Content-Type", veuillez vous référer à la documentation de [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md).
 
 :::
 
@@ -161,19 +161,19 @@ If you set a *value* for the "Content-Type" header *key*, make sure you call thi
 
 <!-- REF #OutgoingMessageClass.setStatus().Params -->
 
-| Paramètres | Type    |    | Description   |
-| ---------- | ------- | -- | ------------- |
-| status     | Integer | -> | Status to set |
+| Paramètres | Type    |    | Description      |
+| ---------- | ------- | -- | ---------------- |
+| status     | Integer | -> | Statut à définir |
 
 <!-- END REF -->
 
 #### Description
 
-The `.setStatus()` function <!-- REF #OutgoingMessageClass.setStatus().Summary -->sets the `status` property with the given *status*<!-- END REF -->.
+La fonction `.setStatus()` <!-- REF #OutgoingMessageClass.setStatus().Summary -->définit la propriété `status` à la valeur *status* passée<!-- END REF -->.
 
-If *status* is not an integer value, an error is raised.
+Si *status* n'est pas un nombre entier, une erreur est générée.
 
-For a list of HTTP status codes, please refer the [HTTP status code list on Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+Pour une liste des codes de statut HTTP, veuillez consulter la [liste des codes de statut HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) sur Wikipedia.
 
 <!-- END REF -->
 
@@ -185,6 +185,6 @@ For a list of HTTP status codes, please refer the [HTTP status code list on Wiki
 
 #### Description
 
-The `.status` property contains <!-- REF #OutgoingMessageClass.status.Summary -->the current status of the outgoing message<!-- END REF -->. This property can be set using the [`setStatus()`](setstatus) function.
+La propriété `.status` contient <!-- REF #OutgoingMessageClass.status.Summary -->le statut courant du message sortant<!-- END REF -->. Cette propriété peut être définie à l'aide de la fonction [`setStatus()`](setstatus).
 
 <!-- END REF -->

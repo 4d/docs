@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Open window.Summary-->**Open window** abre una nueva ventana cuyas dimensiones son definidas por los cuatro primeros parámetros: 
@@ -50,7 +47,7 @@ Si pasa una cadena vacía ("") en *titulo,* le indica a 4D que utilice los valor
 
 * El parámetro *casillaCerrar* es opcional y designa el método para cerrar la ventana. Si se especifica este parámetro, la casilla del menú Control (Windows) o la casilla Cerrar (Macintosh) se añade a la ventana. Cuando el usuario hace doble clic en la casilla de menú Control (Windows) o clic en la Casilla cerrar (Macintosh), se llama al método pasado en *casillaCerrar*.
 
-**Nota:** también puede administrar el cierre de la ventana desde el método del formulario mostrado en la ventana cuando ocurre un evento On Close Box. Para mayor información, consulte el comando [Form event code](form-event-code.md).
+**Nota:** también puede administrar el cierre de la ventana desde el método del formulario mostrado en la ventana cuando ocurre un evento On Close Box. Para mayor información, consulte el comando [Form event code](../commands/form-event-code.md).
 
 Si se abre más de una ventana para un proceso, la última ventana abierta es la ventana activa (del primer plano) para ese proceso. Sólo puede modificarse la información dentro de la ventana activa. Todas las demás ventanas pueden ser visualizadas. Cuando el usuario digita, la ventana activa siempre pasará al primer plano, si aún no está ahí.
 
@@ -126,7 +123,7 @@ El siguiente ejemplo abre una ventana cuyo tamaño y título provienen de las pr
 
 #### Ejemplo 4 
 
-Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo Mac OS X:
+Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo macOS:
 
 ```4d
  $miVentana:=Open window(10;10;400;400;Sheet window)
@@ -140,3 +137,12 @@ Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo Mac 
 [CLOSE WINDOW](close-window.md)  
 *Crear ventana*  
 [Open form window](open-form-window.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 153 |
+| Hilo seguro | &cross; |
+
+

@@ -3,57 +3,57 @@ id: sessions
 title: Sessões usuário
 ---
 
-The 4D web server provides built-in features for managing **user sessions**. Creating and maintaining user sessions allows you to control and improve the user experience on your web application. When user sessions are enabled, web clients can reuse the same server context from one request to another.
+O servidor web 4D oferece recursos integrados para gerenciar **sessões usuário**. A criação e manutenção de sessões de usuários permite que você controle e melhore a experiência do usuário em sua aplicação web. Quando as sessões de usuários são ativadas, os clientes web podem reutilizar o mesmo contexto de servidor de uma requisição para outra.
 
 As sessões de usuário do servidor Web permitem:
 
-- handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are **scalable**),
+- manipular várias solicitações simultaneamente do mesmo cliente web através de um número ilimitado de processos preventivos (sessões servidor web são **escaláveis**),
 - partilhar dados entre os processos de um cliente Web,
 - associar privilégios a sessões de usuário,
-- handle access through a `Session` object and the [Session API](API/SessionClass.md).
+- manipula o acesso através de um objeto `Session` e a [Session API](API/SessionClass.md).
 
-> **Note:** The current implementation is only the first step of an upcoming comprehensive feature allowing developers to manage hierarchical user permissions through sessions in the whole web application.
+> **Nota:** a implementação atual é apenas o primeiro passo de uma funcionalidade abrangente futura, permitindo aos desenvolvedores gerenciar permissões usuário hierárquicos através de sessões em todo da aplicação web.
 
 ## Activação de sessões
 
-The session management feature can be enabled and disabled on your 4D web server. Existem diferentes formas de ativar a gestão de sessões:
+A funcionalidade de gerenciamento de sessão pode ser ativado e desativado no seu servidor web 4D. Existem diferentes formas de ativar a gestão de sessões:
 
-- Using the **Scalable sessions** option on the "Web/Options (I)" page of the Settings (permanent setting): ![alt-text](../assets/en/WebServer/settingsSession.png)
+- Usando a opção **sessões escalonáveis** na página "Web/Opções (I)" das Configurações (parâmetro permanente): ![alt-text](../assets/en/WebServer/settingsSession.png)
 
-Esta opção é selecionada por defeito nos novos projetos. It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
+Esta opção é selecionada por defeito nos novos projetos. No entanto, ele pode ser desativado selecionando a opção **Não sessões**, onde os recursos da sessão web estão desativados (nenhum objeto `Session` está disponível).
 
-- Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
+- Usando a propriedade [`.chamableSession`](API/WebServerClass.md#scalablesession) do objeto Web Server (para passar no parâmetro *settings* da função [`.start()`](API/WebServerClass.md#start)). Neste caso, este parâmetro substitui a opção definida na caixa de diálogo Propriedades para o objeto Web Server (não é armazenado em disco).
 
 > O comando `WEB SET OPTION` também pode definir o modo de sessão para o servidor Web principal.
 
-In any cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
+Em qualquer caso, o parâmetro é local para a máquina; para poder diferir no servidor Web 4D Server e os servidores Web de máquinas 4D remotas.
 
-> **Compatibility**: A **Legacy sessions** option is available in projects created with a 4D version prior to 4D v18 R6 (for more information, please refer to the [doc.4d.com](https://doc.4d.com) web site).
+> **Compatibilidade**: uma opção **Sessões herdadas** está disponível em projetos criados com uma versão 4D anterior a 4D v18 R6 (para mais informações, por favor, consulte a documentação do site web [doc.4d.com](https://doc.4d.com)).
 
 ## Session implementation
 
 Quando [as sessões são ativadas](#enabling-sessions), mecanismos automáticos são implementados, com base em um cookie privado definido pelo próprio 4D: "*4DSID_AppName*", onde *AppName* é o nome do projeto da aplicação. Este cookie faz referência à sessão web atual da aplicação.
 
-> The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) property.
+> O nome do cookie pode ser usado pela propriedade [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename).
 
-1. In each web client request, the Web server checks for the presence and the value of the private "4DSID_*AppName*" cookie.
+1. Em cada solicitação de cliente web, o servidor web verifica a presença e o valor do cookie privado "4DSID_*AppName*".
 
-2. If the cookie has a value, 4D looks for the session that created this cookie among the existing sessions; if this session is found, it is reused for the call.
+2. Se o cookie tiver um valor, 4D procura pela sessão que criou este cookie entre as sessões existentes; Se esta sessão for encontrada, ela será reutilizada para a chamada.
 
 2. Se a solicitação do cliente não corresponder a uma sessão já aberta:
 
-- a new session with a private "4DSID_*AppName*" cookie is created on the web server
-- a new Guest `Session` object is created and is dedicated to the scalable web session.
+- uma nova sessão com um cookie "4DSID_*AppName*" é criado no servidor da web
+- um novo objeto `Session` foi criado sendo dedicado à sessão web escalável.
 
-The current `Session` object can then be accessed through the [`Session`](API/SessionClass.md#session) command in the code of any web processes.
+O objeto `Session` atual pode ser acessado através do comando [`Session`](API/SessionClass.md#session) no código de qualquer processo web.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
-> Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
+> Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. Quando um processo termina de executar uma solicitação, ele é colocado de novo no pool e disponibilizado para a próxima solicitação. Dado que um processo web pode ser reutilizado por qualquer sessão, [variáveis processo](Concepts/variables.md#process-variables) devem ser limpas pelo seu código no final de sua execução (usando [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html), por exemplo). Esta limpeza é necessária para todas as informações relacionadas ao processo, como uma referência a um arquivo aberto. Esta é a razão porque **é recomendado** usar o objeto [Session](API/SessionClass.md) quando você deseja manter informações relacionadas à sessão.
 
 ## Partilhar informações
 
-Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). This property allows you to share information between all processes handled by the session.
+Cada objeto `Session` fornece uma propriedade [`.storage`](API/SessionClass.md#storage) que é um [objeto compartilhado](Concepts/shared.md). Essa propriedade permite que você compartilhe informações entre todos os processos manipulados pela sessão.
 
 ## Duração da sessão
 
@@ -62,41 +62,41 @@ Uma sessão Web escalável é encerrada quando:
 - o servidor web está parado,
 - o tempo limite do cookie de sessão foi atingido.
 
-The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.
+O tempo de vida de um cookie inativo é 60 minutos por padrão, o que significa que o servidor irá automaticamente fechar as sessões inativas após 60 minutos.
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes).
+Este tempo limite pode ser definido usando a propriedade [`.idleTimeout`](API/SessionClass.md#idletimeout) do objeto `Session` (o tempo limite não pode ser inferior a 60 minutos).
 
-When a scalable web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
+Quando uma sessão web escalável é fechada, se o comando [`Session`](API/SessionClass.md#session) for chamado depois:
 
-- the `Session` object does not contain privileges (it is a Guest session)
-- the [`.storage`](API/SessionClass.md#storage) property is empty
+- o objeto `Sessão` não contém privilégios (é uma sessão de convidado)
+- a propriedade [`.storage`](API/SessionClass.md#storage) está vazia
 - um novo cookie de sessão é associado à sessão
 
 ## Privilégios
 
-Os privilégios podem ser associados a sessões. On the web server, you can provide specific access or features depending on the privileges of the session.
+Os privilégios podem ser associados a sessões. No servidor web, você pode fornecer acesso ou recursos específicos, dependendo dos privilégios da sessão.
 
-You can assign privileges usign the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
+Você pode atribuir privilégios usando a função [`.setPrivileges()`](API/SessionClass.md#setprivileges). Em seu código, você pode verificar os privilégios da sessão para permitir ou negar acesso usando a função [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). Por padrão, as novas sessões não têm nenhum privilégio: elas são sessões **guest** (a função [`.isGuest()`](API/SessionClass.md#isguest) retorna true).
 
-> In the current implementation (v18 R6), only the "WebAdmin" privilege is available.
+> Na implementação atual (v18 R6), apenas o privilégio "WebAdmin" está disponível.
 
 Exemplo:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
- //Access is granted, do nothing
+ //O acesso é concedido, não faça nada
 Else
- //Display an authentication page
+ //Exibir uma página de autenticação
 End if
 ```
 
 ## Exemplo
 
-Em uma aplicação CRM, cada vendedor gerencia seu próprio portefólio de clientes. The datastore contains at least two linked dataclasses: Customers and SalesPersons (a salesperson has several customers).
+Em uma aplicação CRM, cada vendedor gerencia seu próprio portefólio de clientes. A datastore contém pelo menos dois dataclasses ligados: Customers e SalesPersons (um vendedor tem vários clientes).
 
 ![alt-text](../assets/en/WebServer/exampleSession.png)
 
-We want a salesperson to authenticate, open a session on the web server, and have the top 3 customers be loaded in the session.
+Queremos que um vendedor autentique, abra uma sessão no servidor web e que os 3 primeiros clientes sejam carregados na sessão.
 
 1. Executamos este URL para abrir uma sessão:
 
@@ -104,9 +104,9 @@ We want a salesperson to authenticate, open a session on the web server, and hav
 http://localhost:8044/authenticate.shtml
 ```
 
-> In a production environment, it it necessary to use a [HTTPS connection](API/WebServerClass.md#httpsenabled) to avoid any uncrypted information to circulate on the network.
+> Em um ambiente de produção, é necessário usar uma [conexão HTTPS](API/WebServerClass.md#httpsenabled) para evitar qualquer informação não criptografada que circule na rede.
 
-2. The `authenticate.shtml` page is a form containing *userId* et *password* input fields and sending a 4DACTION POST action:
+2. A página `authenticate.shtml` é um formulário que contém os campos de entrada *userId* et *password* e enviando uma ação 4DACTION POST:
 
 ```html
 <!DOCTYPE html>
@@ -123,7 +123,7 @@ http://localhost:8044/authenticate.shtml
 
 ![alt-text](../assets/en/WebServer/authenticate.png)
 
-3. The authenticate project method looks for the *userID* person and validates the password against the hashed value already stored in the *SalesPersons* table:
+3. O método projeto de autenticação procura para a pessoa *userID* e valida a senha contra o valor de hash já armazenado na tabela *SalesPersons*:
 
 ```4d
 var $indexUserId; $indexPassword; $userId : Integer

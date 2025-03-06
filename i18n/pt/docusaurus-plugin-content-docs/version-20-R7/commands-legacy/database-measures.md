@@ -328,3 +328,13 @@ Queremos obter as medidas de bytes de cachê nos últimos dois minutos:
  OB SET($oParams;"historyLength";2*60)
  $measures:=Database measures($oParams)
 ```
+
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1314 |
+| Thread-seguro | &check; |
+
+

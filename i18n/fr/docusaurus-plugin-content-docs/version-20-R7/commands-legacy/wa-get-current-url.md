@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.WA Get current URL.Summary-->La commande **WA Get current URL** retourne l’adresse URL de la page affichée dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 
@@ -38,3 +35,12 @@ La page affichée est l’URL "www.apple.com" et la page "www.4d.com" est en cou
 #### Voir aussi 
 
 [WA OPEN URL](wa-open-url.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1025 |
+| Thread safe | &cross; |
+
+

@@ -78,7 +78,7 @@ Los objetos WebSocket ofrecen las siguientes propiedades y funciones:
 | ------------------------------------------------- | ---------------------------- | :-------------------------: | ---------------------------------------------- |
 | url                                               | Text                         |              ->             | URL a la que conectarse                        |
 | [connectionHandler](#connectionHandler-parameter) | Object                       |              ->             | Objeto que declara las retrollamadas WebSocket |
-| Result                                            | 4D.WebSocket | <- | Nuevo [objeto WebSocket](#websocket-object)    |
+| Resultado                                         | 4D.WebSocket | <- | Nuevo [objeto WebSocket](#websocket-object)    |
 
 <!-- END REF -->
 
@@ -112,7 +112,7 @@ Esta es la secuencia de llamadas de retorno:
 1. `onOpen` se ejecuta una vez
 2. Cero o varios `onMessage` son ejecutados
 3. Cero o un `onError` es ejecutado (detiene el procesamiento)
-4. `onTerminate` se ejecuta siempre una vez
+4. `onTerminate` is always executed
 
 #### Ejemplo
 

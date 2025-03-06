@@ -45,3 +45,12 @@ Este comando es particularmente útil en el contexto de componentes porque le pe
 
 *Gestión de errores*  
 [ON ERR CALL](on-err-call.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 704 |
+| Hilo seguro | &check; |
+
+

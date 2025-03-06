@@ -9,13 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminDossier | Text | &#8594;  | Chemin d’accès du dossier (package sous OS X) contenant l’application mise à jour |
+| cheminDossier | Text | &#8594;  | Chemin d’accès du dossier (package sous macOS) contenant l’application mise à jour |
 | erreursDiscrètes | Boolean | &#8594;  | Faux (défaut) = afficher des messages d’erreur, Vrai = ne pas afficher de messages (uniquement enregistrer les erreurs) |
 
 <!-- END REF-->
-
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
 
 #### Description 
 
@@ -25,7 +22,7 @@ Cette commande est destinée à être utilisée dans un processus de mise à jou
 
 **Note :** La commande fonctionne uniquement avec 4D Server ou une application monoposte fusionnée avec 4D Volume Desktop. 
 
-Passez dans le paramètre *cheminDossier* le chemin d’accès complet du dossier de la nouvelle version de l’application fusionnée (dossier contenant l’application *monApp4D.exe* sous Windows et package *monApp4D.app* sous OS X), créée par le générateur d’applications de 4D. 
+Passez dans le paramètre *cheminDossier* le chemin d’accès complet du dossier de la nouvelle version de l’application fusionnée (dossier contenant l’application *monApp4D.exe* sous Windows et package *monApp4D.app* sous macOS), créée par le générateur d’applications de 4D. 
 
 **Note :** Il est fortement conseillé d’utiliser pour les fichiers des nouvelles versions des applications le même nom que ceux des applications elles-mêmes, car le processus de mise à jour remplace le dossier de l’application. Si vous utilisez des noms différents, les raccourcis et chemins mémorisés ne fonctionneront plus. 
 
@@ -38,7 +35,7 @@ Le paramètre optionnel *erreursDiscrètes* permet de définir le mode de report
 * si vous passez **Faux** ou si ce paramètre est omis, les erreurs sont inscrites dans le journal des mises à jour et affichées dans une boîte de dialogue d’alerte.
 * si vous passez **Vrai**, les erreurs sont uniquement inscrites dans le journal des mises à jour.
 
-Exception : s'il n'est pas possible de créer un fichier journal, une boîte de dialogue d’alerte est affichée, quelle que soit la valeur du paramètre *erreursDiscrètes*. Pour plus d'informations, reportez-vous à la description de la commande [Get last update log path](get-last-update-log-path.md).
+Exception : s'il n'est pas possible de créer un fichier journal, une boîte de dialogue d’alerte est affichée, quelle que soit la valeur du paramètre *erreursDiscrètes*. Pour plus d'informations, reportez-vous à la description de la commande [Get last update log path](last-update-log-path.md).
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Vous pouvez intercepter les erreurs éventuellement générées par la commande à l’aide d’une méthode installée via la commande [ON ERR CALL](on-err-call.md). 
 
@@ -50,11 +47,21 @@ Vous avez créé un dossier "MesMisesAJour" sur votre disque, dans lequel vous a
      // Syntaxe Windows
  SET UPDATE FOLDER("C:\\MesMisesAJour"+Folder separator+"MonAppli"+Folder separator;True)
  
-     // Syntaxe OS X
+     // Syntaxe macOS
  SET UPDATE FOLDER("MacHD:MesMisesAJour"+Folder separator+"MonAppli.app"+Folder separator;True)
 ```
 
 #### Voir aussi 
 
-[Get last update log path](get-last-update-log-path.md)  
+[Get last update log path](last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1291 |
+| Thread safe | &cross; |
+| Modifie les variables | OK, error |
+
+

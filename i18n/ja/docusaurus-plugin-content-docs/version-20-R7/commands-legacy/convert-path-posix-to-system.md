@@ -54,3 +54,12 @@ Windowsでの例題:
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1107 |
+| スレッドセーフである | &check; |
+
+

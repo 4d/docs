@@ -12,3 +12,4 @@ title: On Outside Call
 このイベントは、`POST OUTSIDE CALL` コマンドによって他のプロセスからフォームが呼び出されたときに生成されます。
 
 > `On Outside Call` イベントは、受信した入力フォームの入力コンテキストを変更します。 特に、フィールドが編集されていた場合には、[`On Data Change`](onDataChange.md) イベントが生成されます。
+

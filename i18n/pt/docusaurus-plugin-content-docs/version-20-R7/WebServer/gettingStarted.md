@@ -3,7 +3,7 @@ id: gettingStarted
 title: Desenvolvimento Web
 ---
 
-This "Getting started" section is geared at first-time users who want an overall overview on how to go from zero to a 4D website that handles data from the database. Vamos começar!
+Esta seção "Começando" é orientada aos usuários da primeira vez que querem uma visão geral sobre como ir de zero a 4D site que lida com dados do banco de dados. Vamos começar!
 
 ## Exemplo Hello World
 
@@ -51,7 +51,7 @@ The [`On Web Connection`](httpRequests.md#on-web-connection) database method is 
 http://localhost/hello
 ```
 
-O servidor Web processa o pedido e devolve-o:
+O servidor da Web processa o pedido e devolve-o:
 
 ![](../assets/en/WebServer/hello.png)
 
@@ -59,7 +59,7 @@ O servidor Web processa o pedido e devolve-o:
 
 Agora vamos ver como é simples obter dados do banco de dados. Primeiro, vamos criar uma tabela e preenchê-la com alguns dados.
 
-Create a basic database with, for example, a single table containing some records:
+Criar um banco de dados básico com, por exemplo, uma tabela única contendo alguns registros:
 
 ![](../assets/en/WebServer/hello2.png)
 ![](../assets/en/WebServer/hello3.png)
@@ -121,7 +121,7 @@ O servidor Web devolve os resultados em JSON:
 }
 ```
 
-You get the catalog, i.e. the list of exposed dataclasses and attributes in the datastore.
+Você tem acesso ao catálogo, ou seja, a lista de dados e atributos expostos no datastore.
 
 Você também pode obter qualquer dado.
 
@@ -131,7 +131,7 @@ Você também pode obter qualquer dado.
 http://localhost/rest/Friends
 ```
 
-The server returns the entities, i.e. the data, from the Friends dataclass:
+O servidor retorna as entidades, ou seja, os dados, da dataclass Friends:
 
 ```json
 {
@@ -178,15 +178,15 @@ The server returns the entities, i.e. the data, from the Friends dataclass:
 }
 ```
 
-Este ejemplo muy sencillo muestra cómo el servidor web interactúa de forma transparente con el servidor [REST](REST/gettingStarted.md) para devolver cualquier dato solicitado, siempre que esté expuesto. In your web interfaces, you can easily bind the javascript or html code with returned data. Vea el [Explorador de datos web](Admin/dataExplorer.md) integrado para tener un ejemplo de interfaz web sofisticada vinculada a las clases de datos.
+Este ejemplo muy sencillo muestra cómo el servidor web interactúa de forma transparente con el servidor [REST](REST/gettingStarted.md) para devolver cualquier dato solicitado, siempre que esté expuesto. Nas suas interfaces da web, você pode facilmente vincular o código javascript ou html com dados retornados. Vea el [Explorador de datos web](Admin/dataExplorer.md) integrado para tener un ejemplo de interfaz web sofisticada vinculada a las clases de datos.
 
-## Início de sessão e sessão
+## Login e sessão
 
-In the above sections, we get free access to the application from web requests. However, in the world of web applications, data access security is the first priority. When connecting to the 4D web server, users must be authentified and their navigation controlled.
+Nas seções acima, nós temos acesso gratuito à aplicação através de solicitações web. No entanto, no mundo de aplicações web, a segurança do acesso aos dados é a prioridade. Ao se conectar ao servidor da web 4D, os usuários devem possuir autenticação e controlar sua navegação.
 
 ### Criação de uma tabela de usuários
 
-The most simple and secured way to log a user on the 4D web server is based upon the following scenario:
+A maneira mais simples e segura para registrar um usuário no servidor da Web 4D é baseada no seguinte cenário:
 
 - Los usuarios se almacenan en una tabla dedicada y no expuesta (llamada *WebUsers* por ejemplo)
 - La tabla *WebUsers* podría estar [encriptada](MSC/encrypt.md) y almacena el login del usuario y un hash de su contraseña.
@@ -198,9 +198,9 @@ The most simple and secured way to log a user on the 4D web server is based upon
 2. Escreva e execute o seguinte código para criar um usuário:
 
 ```4d
-var $webUser : cs.WebUsersEntity
+var $webUser : cs. WebUsersEntity
 
-$webUser:=ds.WebUsers.new()
+$webUser:=ds. WebUsers.new()
 $webUser.firstName:="John"
 $webUser.lastName:="Doe"
 // a senha seria inserida pelo usuário
@@ -263,7 +263,7 @@ End if
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 ```
 
-> Using such URLs is not recommended, it is only presented here to keep the example simple. A more realistic login request must be handled through a web form and a POST request. Consulte [esta página](sessions.md#example) para ver un ejemplo de formulario POST.
+> Usar tais URLs não é recomendado, só é apresentado aqui para manter o exemplo simples. Uma solicitação de login mais realista deve ser tratada através de um formulário web e uma solicitação POST. Consulte [esta página](sessions.md#example) para ver un ejemplo de formulario POST.
 
 Em seguida, será registado para a sessão:
 
@@ -274,3 +274,4 @@ As credenciais incorretas serão rejeitadas:
 ![](../assets/en/WebServer/login2.png)
 
 Una vez que un usuario se registra, puede manejar la sesión asociada utilizando el método `WEB Get Current Session ID`. Ver la página [Sesiones de usuario](sessions.md).
+

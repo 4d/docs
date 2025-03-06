@@ -48,3 +48,12 @@ L'exemple suivant affiche une boîte de dialogue d'alerte. Nous passons à cette
 [Field](field.md)  
 [Last field number](last-field-number.md)  
 [Table name](table-name.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 257 |
+| Thread safe | &check; |
+
+

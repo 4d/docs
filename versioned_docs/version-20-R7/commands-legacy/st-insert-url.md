@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.ST INSERT URL.Summary-->The **ST INSERT URL** command inserts a URL link in the styled text field or variable designated by the *object* parameter.<!-- END REF--> 
@@ -50,7 +47,7 @@ The optional *startSel* and *endSel* parameters designate a selection of text in
 
 **Note:** If *startSel* is greater than *endSel* (except when *endSel* is 0), the command does nothing and the *OK* variable is set to 0.
 
-Once the link is inserted, it is active: using **Ctrl+click** (Windows) or **Command+click** (OS X) on its label opens a page of the default browser at the address specified in the *urlAddress* parameter.
+Once the link is inserted, it is active: using **Ctrl+click** (Windows) or **Command+click** (macOS) on its label opens a page of the default browser at the address specified in the *urlAddress* parameter.
 
 #### Example 
 
@@ -66,3 +63,13 @@ You want to insert a link to the 4D Web site to replace the text selected in the
 
 [ST GET URL](st-get-url.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1280 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

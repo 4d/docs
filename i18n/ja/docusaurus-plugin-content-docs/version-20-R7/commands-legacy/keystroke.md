@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Keystroke.Summary-->Keystroke はユーザがフィールドや入力可能エリアに入力した文字を返します。<!-- END REF-->
@@ -169,5 +166,14 @@ $2->:=$vtNewValue
 #### 参照 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 390 |
+| スレッドセーフである | &cross; |
+
+

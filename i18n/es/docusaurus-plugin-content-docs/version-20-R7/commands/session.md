@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session.Params-->
 
-| Parámetros | Tipo                       |   | Descripción    |
-| ---------- | -------------------------- | - | -------------- |
-| Resultado  | 4D.Session | ← | Objeto Session |
+| Parámetros | Tipo                       |                             | Descripción    |
+| ---------- | -------------------------- | --------------------------- | -------------- |
+| Resultado  | 4D.Session | &#8592; | Objeto Session |
 
 <!-- END REF-->
 
@@ -66,7 +66,7 @@ Todos los procesos de procedimientos almacenados comparten la misma sesión virt
 - methods called with the [`Execute on server`](../commands-legacy/execute-on-server.md) command,
 - Los métodos base `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown` y `On System event`
 
-Para obtener información sobre la sesión de usuario virtual de los procedimientos almacenados, consulte la página [4D Server y lenguaje 4D](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
+For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html) page.
 
 #### Ejemplo
 
@@ -95,3 +95,12 @@ IP:port/4DACTION/action_Session
 [Session storage](../commands-legacy/session-storage.md)\
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)
+
+#### Propiedades
+
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1714                            |
+| Hilo seguro       | &amp;check; |
+
+

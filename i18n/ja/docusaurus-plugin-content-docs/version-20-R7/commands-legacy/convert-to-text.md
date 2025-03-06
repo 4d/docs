@@ -30,3 +30,13 @@ Convert to textはByte Order Marks (BOM) をサポートします。指定され
 #### 参照 
 
 [CONVERT FROM TEXT](convert-from-text.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1012 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

@@ -89,3 +89,13 @@ Puede hacer los siguientes cálculos:
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 [Sum](sum.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 2 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

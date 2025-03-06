@@ -3,7 +3,7 @@ id: listboxOverview
 title: List Box
 ---
 
-List boxes são objetos ativos complexos que permitem exibir e ingressar dados como colunas sincronizadas. Podem ser conectadas aos conteúdos de banco de dados como seleções de entidade e seleções de registro, ou para conteúdos de linguagem como coleções e arrays. Incluem características avançadas relativas à entrada de dados, classificação de colunas, gestão de eventos, aspecto personalizado, movimentação de colunas, etc.
+List boxes são objetos ativos complexos que permitem exibir e ingressar dados como colunas sincronizadas. Podem ser conectadas aos conteúdos de banco de dados como seleções de entidade e seleções de registro, ou para conteúdos de linguagem como coleções e arrays. Incluem as funcionalidades avançadas relativas à entrada de dados, classificação de colunas, gerenciamento de eventos, aspecto personalizado, movimentação de colunas, etc.
 
 ![](../assets/en/FormObjects/listbox.png)
 
@@ -47,13 +47,13 @@ O método objeto de coluna obtém os eventos que ocorrem em seu [cabeçalho](#li
 
 ### Tipos de List box
 
-Há vários tipos de list boxes com seus próprios comportamentos e propriedades específicos. O tipo de list box depende de sua propriedade [Data Source](properties_Object.md#data-source):
+Há vários tipos de list boxes com seus próprios comportamentos e propriedades específicos. Há vários tipos de list boxes com seus próprios comportamentos e propriedades específicos.
 
 - **Arrays**: cada coluna é vinculada a um array 4D. Os list boxes baseados em arrays podem ser exibidas como [list boxes hierárquicos](listbox_overview.md#hierarchical-list-boxes).
 - **Seleção** (**Seleção atual** ou **Seleção temporária**): cada coluna é vinculada a uma expressão (por exemplo, um campo) avaliada para cada registro da seleção.
 - **Coleção ou seleção de entidade**: cada coluna é conectada a uma expressão avaliada para todo elemento da coleção ou toda entidade da seleção de entidade.
 
-> It is not possible to combine different list box types in the same list box object. A fonte de dados é estabelecida quando a list box é criada. Não é mais possível modificar por programação.
+> Não é possível combinar diferentes tipos de list box no mesmo objeto list box. A fonte de dados é estabelecida quando a list box é criada. Não é mais possível modificar por programação.
 
 ### Gerenciando list boxes
 
@@ -88,17 +88,17 @@ LIST TO ARRAY("ListName";varCol)
 
 ### List box de tipo seleção
 
-Nesse tipo de list box, cada coluna pode ser associada com um campo (por exemplo, `[Employees]LastName)` ou uma expressão. A expressão pode ser baseada em um ou mais campos (por exemplo, `[Employees]FirstName+" "[Employees]LastName`) ou pode ser simplesmente uma fórmula (por exemplo, `String(Milliseconds)`). A expressão também pode ser um método de proejeto, uma variável ou um item array. Você pode usar os comandos `LISTBOX SET COLUMN FORMULA` e `LISTBOX INSERT COLUMN FORMULA` para modificar colunas programaticamente.
+Nesse tipo de list box, cada coluna pode ser associada com um campo (por exemplo, `[Employees]LastName)` ou uma expressão. A expressão pode ser baseada em um ou mais campos (por exemplo, `[Employees]FirstName+" "[Employees]LastName`) ou pode ser simplesmente uma fórmula (por exemplo, `String(Milliseconds)`). A expressão também pode ser um método de proejeto, uma variável ou um item array. A expressão também pode ser um método de proejeto, uma variável ou um item array.
 
 O conteúdo de cada linha é então avaliado de acordo com uma seleção de registros: a **seleção atual** de uma tabela ou uma **seleção nomeada**.
 
 No caso de uma list box baseada na seleção atual de uma tablea, qualquer modificação feita do lado da database é refletida automaticamente na list box e vice versa. A seleção atual é portanto sempre a mesma em ambos os lugares.
 
-### List boxes de coleção ou de seleção de entidade
+### List boxes Collection ou Entity selection
 
 Nesse tipo de list box, cada coluna deve ser associada a uma expressão. Os conteúdos de cada linha são então avaliados por elemento de coleção ou por entidade da seleção de entidade.
 
-Cada elemento da coleção ou cada entidade está disponível como um objeto que pode ser acessado por meio da palavra-chave [This](../Concepts/classes.md#this). Uma expressão de coluna pode ser um caminho de propriedade, um método projeto, uma variável ou qualquer fórmula, acessando cada entidade ou objeto de elemento de coleção por `This`, por exemplo, `This.<propertyPath>` (ou `This.value` no caso de uma coleção de valores escalares). Você pode usar os comandos `LISTBOX SET COLUMN FORMULA` e `LISTBOX INSERT COLUMN FORMULA` para modificar colunas programaticamente.
+Cada elemento da coleção ou cada entidade está disponível como um objeto que pode ser acessado por meio da palavra-chave [This](../Concepts/classes.md#this). Uma expressão de coluna pode ser um caminho de propriedade, um método projeto, uma variável ou qualquer fórmula, acessando cada entidade ou objeto de elemento de coleção por `This`, por exemplo, `This.<propertyPath>` (ou `This.value` no caso de uma coleção de valores escalares). A expressão também pode ser um método de proejeto, uma variável ou um item array.
 
 Quando a fonte de dados for uma seleção de entidades, qualquer modificação feita no lado da list box são salvas automaticamente na database. Do outro lado, modificações feitas na database são visíveis na list box depois que as entidades tocadas foram recarregadas.
 
@@ -108,7 +108,7 @@ When entities are deleted, their references remain in the entity selection with 
 
 :::
 
-Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. Por outro lado, se forem feitas modificações na coleção usando, por exemplo, as várias funções da [classe Collection] (.../API/CollectionClass.md), você precisará notificar explicitamente o 4D reatribuindo a variável da coleção a ela mesma, para que o conteúdo do list box seja atualizado. Por exemplo:
+Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. Por exemplo:
 
 ```4d
 myCol:=myCol.push("new value") //exibir novo valor na list box
@@ -121,7 +121,7 @@ Propriedades compatíveis dependem do tipo de list box.
 | Propriedade                                                                                                                                                                                               | List box array | List box seleção | List box coleção ou entity selection |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ---------------- | ------------------------------------ |
 | [Cor de fundo alternativa](properties_BackgroundAndBorder.md#alternate-background-color)                                                                                                                  | X              | X                | X                                    |
-| [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color)                                                                                                                        | X              | X                | X                                    |
+| [Cor de Fundo](properties_BackgroundAndBorder.md#background-color--fill-color)                                                                                                                            | X              | X                | X                                    |
 | [Negrito](properties_Text.md#bold)                                                                                                                                                                        | X              | X                | X                                    |
 | [Expressão de cor de fundo](properties_BackgroundAndBorder.md#background-color-expression)                                                                                                                |                | X                | X                                    |
 | [Estilo da linha de borda](properties_BackgroundAndBorder.md#border-line-style)                                                                                                                           | X              | X                | X                                    |
@@ -149,7 +149,7 @@ Propriedades compatíveis dependem do tipo de list box.
 | [Ocultar linhas em branco extras](properties_BackgroundAndBorder.md#hide-extra-blank-rows)                                                                                                                | X              | X                | X                                    |
 | [Ocultar retângulo de foco](properties_Appearance.md#hide-focus-rectangle)                                                                                                                                | X              | X                | X                                    |
 | [Ocultar destaque de seleção](properties_Appearance.md#hide-selection-highlight)                                                                                                                          | X              | X                | X                                    |
-| [Hierarchical List Box](properties_Object.md#array-list-box)                                                                                                                                              | X              |                  |                                      |
+| [List Box hierárquico](properties_Object.md#array-list-box)                                                                                                                                               | X              |                  |                                      |
 | [Highlight Set](properties_ListBox.md#highlight-set)                                                                                                                                                      |                | X                |                                      |
 | [Alinhamento Horizontal](properties_Text.md#horizontal-alignment)                                                                                                                                         | X              | X                | X                                    |
 | [Horizontal Line Color](properties_Gridlines.md#horizontal-line-color)                                                                                                                                    | X              | X                | X                                    |
@@ -162,7 +162,7 @@ Propriedades compatíveis dependem do tipo de list box.
 | [Meta info expression](properties_Text.md#meta-info-expression)                                                                                                                                           |                |                  | X                                    |
 | [Método](properties_Action.md#method)                                                                                                                                                                     | X              | X                | X                                    |
 | [Movable Rows](properties_Action.md#movable-rows)                                                                                                                                                         | X              |                  |                                      |
-| [Named Selection](properties_DataSource.md#selection-name)                                                                                                                                                |                | X                |                                      |
+| [Seleção temporária](properties_DataSource.md#selection-name)                                                                                                                                             |                | X                |                                      |
 | [Number of Columns](properties_ListBox.md#number-of-columns)                                                                                                                                              | X              | X                | X                                    |
 | [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)                                                                                                                                | X              | X                | X                                    |
 | [Number of Static Columns](properties_ListBox.md#number-of-static-columns)                                                                                                                                | X              | X                | X                                    |
@@ -176,20 +176,20 @@ Propriedades compatíveis dependem do tipo de list box.
 | [Row Style Array](properties_Text.md#row-style-array)                                                                                                                                                     | X              |                  |                                      |
 | [Selected Items](properties_DataSource.md#selected-items)                                                                                                                                                 |                |                  | X                                    |
 | [Selection Mode](properties_ListBox.md#selection-mode)                                                                                                                                                    | X              | X                | X                                    |
-| [Single-Click Edit](properties_Entry.md#single-click-edit)                                                                                                                                                | X              | X                | X                                    |
+| [Edição com um único clique](properties_Entry.md#single-click-edit)                                                                                                                                       | X              | X                | X                                    |
 | [Ordenável](properties_Action.md#sortable)                                                                                                                                                                | X              | X                | X                                    |
 | [Ação padrão](properties_Action.md#standard-action)                                                                                                                                                       | X              |                  |                                      |
 | [Expressão de estilo](properties_Text.md#style-expression)                                                                                                                                                |                | X                | X                                    |
 | [Top](properties_CoordinatesAndSizing.md#top)                                                                                                                                                             | X              | X                | X                                    |
-| [Transparent](properties_BackgroundAndBorder.md#transparent)                                                                                                                                              | X              | X                | X                                    |
+| [Transparente](properties_BackgroundAndBorder.md#transparent)                                                                                                                                             | X              | X                | X                                    |
 | [Tipo](properties_Object.md#type)                                                                                                                                                                         | X              | X                | X                                    |
 | [Sublinhado](properties_Text.md#underline)                                                                                                                                                                | X              | X                | X                                    |
-| [Variable or Expression](properties_Object.md#variable-or-expression)                                                                                                                                     | X              | X                |                                      |
+| [Variável ou Expressão](properties_Object.md#variable-or-expression)                                                                                                                                      | X              | X                |                                      |
 | [Alinhamento vertical](properties_Text.md#vertical-alignment)                                                                                                                                             | X              | X                | X                                    |
-| [Vertical Line Color](properties_Gridlines.md#vertical-line-color)                                                                                                                                        | X              | X                | X                                    |
+| [Cor da linha vertical](properties_Gridlines.md#vertical-line-color)                                                                                                                                      | X              | X                | X                                    |
 | [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding)                                                                                                                                   | X              | X                | X                                    |
-| [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar)                                                                                                                                       | X              | X                | X                                    |
-| [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing)                                                                                                                                          | X              | X                | X                                    |
+| [Barra de rolagem vertical](properties_Appearance.md#vertical-scroll-bar)                                                                                                                                 | X              | X                | X                                    |
+| [Tamanho Vertical](properties_ResizingOptions.md#vertical-sizing)                                                                                                                                         | X              | X                | X                                    |
 | [Visibilidade](properties_Display.md#visibility)                                                                                                                                                          | X              | X                | X                                    |
 | [Largura](properties_CoordinatesAndSizing.md#width)                                                                                                                                                       | X              | X                | X                                    |
 
@@ -234,7 +234,7 @@ Propriedades compatíveis dependem do tipo de list box.
 
 #### Propriedades adicionais
 
-Form events on list box or list box column objects may return the following additional properties:
+Os eventos formulário nos list box ou colunas de list box podem retornar as seguintes propriedades adicionais:
 
 | Propriedade          | Tipo          | Descrição                                                                    |
 | -------------------- | ------------- | ---------------------------------------------------------------------------- |
@@ -253,7 +253,7 @@ Form events on list box or list box column objects may return the following addi
 | row                  | inteiro longo | Número da linha                                                              |
 | Alinhamento vertical | inteiro longo | Positivo se a deslocação for para baixo, negativo se for para cima           |
 
-> If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
+> Se um evento ocorrer em uma coluna ou linha "falsa" que não exista, é normalmente retornada uma cadeia de caracteres vazia.
 
 ## Colunas List box {#list-box-columns}
 
@@ -400,15 +400,18 @@ Seleções são gerenciadas diretamente, dependendo de se a list box é a basead
 - **Caixa de listagem de seleção**: As seleções são gerenciadas por um conjunto, que pode ser modificado se necessário, chamado `$ListboxSetX` por padrão (em que X começa em 0 e é incrementado com base no número de caixas de listagem no formulário). Esse conjunto é [definido nas propriedades](properties_ListBox.md#highlight-set) da caixa de listagem. É mantido automaticamente por 4D: se o usuário selecionar uma ou mais linhas na list box, o conjunto se atualiza imediatamente. Por outro lado, é também possível usar comandos do tema "Conjuntos" para modificar a seleção na list box via programação.
 
 - **Caixa de listagem de seleção de coleção/entidade**: As seleções são gerenciadas por meio de propriedades dedicadas da caixa de listagem:
-  - [Current item](properties_DataSource.md#current-item) é um objeto que receberá o elemento/entidade selecionado
-  - [Selected Items](properties_DataSource.md#selected-items) is a collection/entity selection object of selected items
-  - [Current item position](properties_DataSource.md#current-item-position) retorna a posição do elemento ou da entidade selecionada.
+ - [Current item](properties_DataSource.md#current-item) é um objeto que receberá o elemento/entidade selecionado
+ - [Itens selecionados](properties_DataSource.md#selected-items) é um objeto de seleção de coleção/entidade dos itens selecionados
+ - [Current item position](properties_DataSource.md#current-item-position) retorna a posição do elemento ou da entidade selecionada.
 
 - **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.
-  A [variável vinculada ao objeto da caixa de listagem] (properties_Object.md#variable-or-expression) é usada para obter, definir ou armazenar seleções de linhas do objeto. Esta variável corresponde a um array de booleanos que é criado e mantido automaticamente por 4D. O tamanho deste array vem determinado pelo tamanho do list box: contém o mesmo número de elementos que o menor array associado às colunas.
-  Cada elemento dessa matriz contém `True` se a linha correspondente for selecionada e `False` caso contrário. 4D atualiza o conteúdo deste array em função das ações de usuário. Do lado contrário, pode mduar o valor dos elementos array para mudar a seleção na list box.
-  Mas não se pode inserir nem apagar linhas nesse array; nem se pode reescrever as linhas. O comando `Count in array` pode ser usado para descobrir o número de linhas selecionadas.
-  Por exemplo, este método permite inverter a seleção da primeira línha de list box (tipo array):
+ **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.
+ A [variável vinculada ao objeto da caixa de listagem] (properties_Object.md#variable-or-expression) é usada para obter, definir ou armazenar seleções de linhas do objeto.
+ **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.
+ A [variável vinculada ao objeto da caixa de listagem] (properties_Object.md#variable-or-expression) é usada para obter, definir ou armazenar seleções de linhas do objeto. Esta variável corresponde a um array de booleanos que é criado e mantido automaticamente por 4D. O tamanho deste array vem determinado pelo tamanho do list box: contém o mesmo número de elementos que o menor array associado às colunas.
+ Cada elemento dessa matriz contém `True` se a linha correspondente for selecionada e `False` caso contrário. 4D atualiza o conteúdo deste array em função das ações de usuário. Do lado contrário, pode mduar o valor dos elementos array para mudar a seleção na list box.
+ Mas não se pode inserir nem apagar linhas nesse array; nem se pode reescrever as linhas. O comando `Count in array` pode ser usado para descobrir o número de linhas selecionadas.
+ Por exemplo, este método permite inverter a seleção da primeira línha de list box (tipo array):
 
 ```4d
  BOOLEANY ARRAY (tBListBox; 0)
@@ -520,14 +523,14 @@ Você pode ativar ou desativar a classificação padrão do usuário desativando
 
 O suporte de ordenação padrão depende do tipo de list box:
 
-| Tipo de list box              | Suporte de ordenação padrão | Comentários                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ----------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Uma coleção de objetos        | Sim                         | <ul><li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Colecção de valores escalares | Não                         | Use a classificação personalizada com a função [`orderBy()`](../API/CollectionClass.md#orderby)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Seleção de entidades          | Sim                         | <li>A [propriedade de origem da caixa de listagem](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Suportado: classifica propriedades de atributos de objetos (por exemplo,</li> "This.data<li>.</li>city" quando "data" é um<li>atributo de objeto</0>)<li>Suportado: classifica propriedades de atributos</0> relacionados<li>(por exemplo</0>, "This.company<li>.</li>name"<li>)</li>Suportado: classifica propriedades de atributos de objetos (por exemplo,<li>"This.data.city" quando "data" é um atributo de objeto)Suportado</li>: classifica<li>atributos relacionados (por exemplo, "This.company.name")</li><li>Não suportado: classifica propriedades de atributos de objetos por meio de atributos relacionados (por exemplo, "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
-| Selecção actual               | Sim                         | Somente expressões simples podem ser classificadas (por exemplo, `[Table_1]Field_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Seleção temporal              | Não                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Arrays                        | Sim                         | As colunas ligadas a arrays de imagens e ponteiros não podem ser ordenadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Tipo de list box              | Suporte de ordenação padrão | Comentários                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Uma coleção de objetos        | Sim                         | <ul><li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Colecção de valores escalares | Não                         | Use a classificação personalizada com a função [`orderBy()`](../API/CollectionClass.md#orderby)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Seleção de entidades          | Sim                         | <li>A [propriedade de origem da caixa de listagem](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Suportado: classifica propriedades de atributos de objetos (por exemplo,</li> "This.data<li>.</li>city" quando "data" é um<li>atributo de objeto</0>)<li>Suportado: classifica propriedades de atributos</0> relacionados<li>(por exemplo</0>, "This.company<li>.</li>name"<li>)</li>Suportado: classifica propriedades de atributos de objetos (por exemplo,<li>"This.data.city" quando "data" é um atributo de objeto)Suportado</li>: classifica<li>atributos relacionados (por exemplo, "This.company.name")</li><li>Não suportado: classifica propriedades de atributos de objetos por meio de atributos relacionados (por exemplo, "This.company.data.city"). Para isso, você precisa usar a classificação personalizada com a função [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (veja o exemplo abaixo)</li> |
+| Selecção actual               | Sim                         | Somente expressões simples podem ser classificadas (por exemplo, `[Table_1]Field_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Seleção temporal              | Não                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Arrays                        | Sim                         | As colunas ligadas a arrays de imagens e ponteiros não podem ser ordenadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ### Ordenação personalizada
 
@@ -540,7 +543,7 @@ As ordenações personalizadas permitem-lhe:
 
 #### Exemplo
 
-You want to sort a list box using values of a property stored in a related object attribute. Tem a seguinte estrutura:
+Você deseja classificar um list box usando valores de uma propriedade armazenada em um atributo de objeto relacionado. Tem a seguinte estrutura:
 
 ![](../assets/en/FormObjects/relationLB.png)
 
@@ -565,13 +568,13 @@ End if
 O valor da [variável de cabeçalho de coluna] (properties_Object.md#variable-or-expression) permite que você gerencie informações adicionais: a classificação atual da coluna (leitura) e a exibição da seta de classificação.
 
 - Se a variável for estabelecida como 0, a coluna não é ordenada e a flecha de ordenação não é exibida;\
-  ![](../assets/en/FormObjects/sorticon0.png)
-
-- Se a variável for definida como 1, a coluna será classificada em ordem crescente e a seta de classificação será exibida.
-  ![](../assets/en/FormObjects/sorticon1.png)
+ ![](../assets/en/FormObjects/sorticon0.png)
 
 - If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
-  ![](../assets/en/FormObjects/sorticon2.png)
+ ![](../assets/en/FormObjects/sorticon2.png)
+
+- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
+ ![](../assets/en/FormObjects/sorticon1.png)
 
 > Somente [variáveis] declaradas ou dinâmicas (Concepts/variables.md) podem ser usadas como variáveis de coluna de cabeçalho. Outros tipos de [expressions](Aceitações/quick-tour.md#expressions) como `Form.sortValue` não são suportados.
 
@@ -655,7 +658,7 @@ Nesse modo:
 
 - A altura do objeto list box é reduzida automaticamente quando o número de linhas a ser impresso for menor que a altura original do objeto (não há linhas "em branco" impressas). Por outro lado a altura não aumenta automaticamente de acordo com os conteúdos do objeto. O tamanho do objeto realmente impresso pode ser obtido por meio do comando `LISTBOX GET PRINT INFORMATION`.
 - The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the <code>OBJECT SET SCROLL POSITION</code> command before launching the printing, the first row printed in the list box will be the one designated by the command.
-  Esses parâmetros também incluem a primeira linha a ser impressa: se você chamar o comando `OBJECT SET SCROLL POSITION` antes de iniciar a impressão, a primeira linha impressa na caixa de listagem será a designada pelo comando.
+ These parameters also include the first row to be printed: if you call the <code>OBJECT SET SCROLL POSITION</code> command before launching the printing, the first row printed in the list box will be the one designated by the command.
 - Um mecanismo automático facilita a impressão de caixas de listagem que contêm mais linhas do que é possível exibir: chamadas sucessivas para `Print object` podem ser usadas para imprimir um novo conjunto de linhas a cada vez. O comando `LISTBOX GET PRINT INFORMATION` pode ser usado para verificar o status da impressão enquanto ela estiver em andamento.
 
 ## List box hierárquicos.
@@ -847,10 +850,10 @@ Usando os formulários `On Expand` e `On Collapse`, os eventos podem ultrapassar
 Neste caso, é necessário preencher e esvaziar os arrays através do código. Os princípios a serem implementados são os seguintes:
 
 - Quando a list box é exibido, somente o primeiro array deve ser preenchido. No entanto, você deve criar um segundo array com valores vazios para que o list box exiba os botões expandir/colapsar:
-  ![](../assets/en/FormObjects/hierarch15.png)
+ ![](../assets/en/FormObjects/hierarch15.png)
 
 - Quando um usuário clicar num botão de expansão, pode processar o evento `On Expand`. O comando `LISTBOX GET CELL POSITION` devolve a célula em questão e permite-lhe construir a hierarquia apropriada: preenche o primeiro array com os valores repetidos e a segunda com os valores enviados do comando `SELECTION TO ARRAY` e insere tantas linhas quantas forem necessárias na caixa de listagem usando o comando `LISTBOX INSERT ROWS`.
-  ![](../assets/en/FormObjects/hierarch16.png)
+ ![](../assets/en/FormObjects/hierarch16.png)
 
 - Quando um usuário clicar num botão de colapso, pode processar o evento `On Collapse`. O comando `LISTBOX GET CELL POSITION` devolve a célula em questão: retira-se tantas filas quantas forem necessárias da caixa de listagem usando o comando `LISTBOX DELETE ROWS`.
 
@@ -981,9 +984,9 @@ Os valores das células são armazenados no atributo "value". Este atributo é u
 
 #### mín. e máx
 
-When the "valueType" is "real" or "integer", the object also accepts min and max attributes with appropriate values (values must be of the same type as the valueType).
+Quando o "valueType" é "real" ou "integer", o objeto também aceita os atributos min e max com os valores apropriados (os valores devem ser do mesmo tipo que o valueType).
 
-Estes atributos podem ser utilizados para controlar a gama de valores de entrada. When a cell is validated (when it loses the focus), if the input value is lower than the min value or greater than the max value, then it is rejected. In this case, the previous value is maintained and a tip displays an explanation.
+Esses atributos podem ser usados para controlar o intervalo de valores de entrada. Quando uma célula é validada (quando perde o foco), se o valor de entrada for menor que o valor mínimo ou maior que o valor máximo, ela será rejeitada. Nesse caso, o valor anterior é mantido e uma dica exibe uma explicação.
 
 ```4d
  C_OBJECT($ob3)
@@ -998,11 +1001,11 @@ Estes atributos podem ser utilizados para controlar a gama de valores de entrada
 
 #### behavior
 
-The behavior attribute provides variations to the regular representation of values. Em 4D v15, uma única variação é proposta:
+O atributo behavior fornece variações para a representação regular de valores. Em 4D v15, uma única variação é proposta:
 
-| Atributo | Valor(es) disponível(eis) | valueType(s) | Descrição                                                                                                                                                                                               |
-| -------- | --------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| behavior | threeStates                                                     | integer                         | Represents a numeric value as a three-states check box.<br/> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
+| Atributo | Valor(es) disponível(eis) | valueType(s) | Descrição                                                                                                                                                                                                                             |
+| -------- | --------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| behavior | threeStates                                                     | integer                         | Representa um valor numérico como uma caixa de seleção de três estados.<br/> 2=semi-marcado, 1=marcado, 0=desmarcado, -1=invisível, -2=desmarcado desabilitado, -3=marcado desabilitado, -4=semi-marcado desabilitado |
 
 ```4d
  C_OBJECT($ob3)
@@ -1021,18 +1024,18 @@ The behavior attribute provides variations to the regular representation of valu
 
 #### requiredList e choiceList
 
-When a "choiceList" or a "requiredList" attribute is present inside the object, the text input is replaced by a drop-down list or a combo box, depending of the attribute:
+Quando um atributo "choiceList" ou "requiredList" está presente no objeto, a entrada de texto é substituída por uma lista suspensa ou uma combo box, dependendo do atributo:
 
 - Se o atributo é "choiceList", a célula é apresentada como um combo box. Isto significa que o usuário pode selecionar ou escrever um valor.
-- If the attribute is "requiredList" then the cell is displayed as a drop-down list and the user can only select one of the values provided in the list.
+- Se o atributo for "requiredList", então a célula é exibida como uma lista suspensa e o usuário só pode selecionar um dos valores fornecidos na lista.
 
-In both cases, a "value" attribute can be used to preselect a value in the widget.
+Em ambos os casos, um atributo "valor" pode ser usado para pré-selecionar um valor no widget.
 
-> Os valores do widget são definidos através de um array. If you want to assign an existing 4D list to the widget, you need to use the "requiredListReference", "requiredListName", "choiceListReference", or "choiceListName" attributes.
+> Os valores do widget são definidos através de um array. Se quiser atribuir uma lista 4D existente ao widget, você precisará usar os atributos "requiredListReference", "requiredListName", "choiceListReference" ou "choiceListName".
 
 Exemplos:
 
-- You want to display a drop-down list with only two options: "Open" or "Closed". "Closed" deve ser pré-selecionada:
+- Se quiser exibir uma lista suspensa com apenas duas opções: "Open" ou "Closed". "Closed" deve ser pré-selecionada:
 
 ```4d
 	ARRAY TEXT($RequiredList;0)
@@ -1046,7 +1049,7 @@ Exemplos:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_openClosed.png)
 
-- You want to accept any integer value, but display a combo box to suggest the most common values:
+- Se quiser aceitar qualquer valor inteiro, mas exibir uma caixa de combinação para sugerir os valores mais comuns:
 
 ```4d
 	ARRAY LONGINT($ChoiceList;0)
@@ -1065,16 +1068,16 @@ Exemplos:
 
 #### requiredListName e requiredListReference
 
-The "requiredListName" and "requiredListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Lists editor of the Tool box) or by programming (using the New list command). A célula será então apresentada como uma lista pendente. This means that the user can only select one of the values provided in the list.
+Os atributos "requiredListName" e "requiredListReference" permitem que você use, em uma célula do list box, uma lista definida no 4D no modo Desenho (no editor de Listas da caixa de ferramentas) ou por programação (usando o comando New list). A célula será então apresentada como uma lista pendente. Isso significa que o usuário só pode selecionar um dos valores fornecidos na lista.
 
-Use "requiredListName" or "requiredListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. In both cases, a "value" attribute can be used to preselect a value in the widget.
+Use "requiredListName" ou "requiredListReference" dependendo da origem da lista: se a lista vier da Caixa de ferramentas, você passará um nome; caso contrário, se a lista tiver sido definida por programação, você passará uma referência. Em ambos os casos, um atributo "valor" pode ser usado para pré-selecionar um valor no widget.
 
-> - If you want to define these values through a simple array, you need to use the "requiredList" attribute.
-> - If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
+> - Se quiser definir esses valores através de uma matriz simples, você precisará usar o atributo "requiredList".
+> - Se a lista contiver itens de texto que representem valores reais, o separador decimal deverá ser um ponto ("."), independentemente das configurações locais, por exemplo: "17.6" "1234.456".
 
 Exemplos:
 
-- You want to display a drop-down list based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green"), save it as a value and display "blue" by default:
+- Você deseja exibir uma lista suspensa com base em uma lista de "cores" definida na caixa de ferramentas (contendo os valores "azul", "amarelo" e "verde"), salvá-la como um valor e exibir "azul" por padrão:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
@@ -1088,7 +1091,7 @@ Exemplos:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
-- You want to display a drop-down list based on a list defined by programming and save it as a reference:
+- Você quer exibir uma lista suspensa baseada em uma lista definida por programação e salvá-la como uma referência:
 
 ```4d
 	<>List:=New list
@@ -1109,16 +1112,16 @@ Exemplos:
 
 #### choiceListName e choiceListReference
 
-The "choiceListName" and "choiceListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Tool box) or by programming (using the New list command). The cell is then displayed as a combo box, which means that the user can select or type a value.
+Os atributos "choiceListName" e "choiceListReference" permitem que você use, em uma célula de list box, uma lista definida no 4D no modo Desenho (na caixa de ferramentas) ou por programação (usando o comando New list). A célula é então exibida como uma combo box, o que significa que o usuário pode selecionar ou digitar um valor.
 
-Use "choiceListName" or "choiceListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. In both cases, a "value" attribute can be used to preselect a value in the widget.
+Use "choiceListName" ou "choiceListReference" dependendo da origem da lista: se a lista vier da Caixa de ferramentas, você passará um nome; caso contrário, se a lista tiver sido definida por programação, você passará uma referência. Em ambos os casos, um atributo "valor" pode ser usado para pré-selecionar um valor no widget.
 
-> - If you want to define these values through a simple array, you need to use the "choiceList" attribute.
-> - If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
+> - Se quiser definir esses valores através de um array simples, você precisará usar o atributo "choiceList".
+> - Se a lista contiver itens de texto que representem valores reais, o separador decimal deverá ser um ponto ("."), independentemente das configurações locais, por exemplo: "17.6" "1234.456".
 
 Exemplo:
 
-You want to display a combo box based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green") and display "green" by default:
+Você deseja exibir uma caixa de combinação com base em uma lista de "cores" definida na caixa de ferramentas (contendo os valores "azul", "amarelo" e "verde") e exibir "verde" por padrão:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
@@ -1136,19 +1139,19 @@ You want to display a combo box based on a "colors" list defined in the Tool box
 
 Você pode usar atributos específicos para adicionar unidades associadas aos valores das células (por exemplo: "10 cm", "20 pixels" etc.). Para definir a lista de unidades, pode utilizar um dos seguintes atributos:
 
-- "unitsList": an array containing the x elements used to define the available units (e.g.: "cm", "inches", "km", "miles", etc.). Utilize este atributo para definir unidades no interior do objeto.
-- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use esse atributo para definir unidades com uma lista 4D criada com o comando [New list] (https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html).
-- "unitsListName": a name of a design-based 4D list that contains available units. Utilize este atributo para definir unidades com uma lista 4D criada na caixa de ferramentas.
+- "unitsList": um array que contém os elementos x usados para definir as unidades disponíveis (por exemplo: "cm", "polegadas", "km", "milhas" etc.). Utilize este atributo para definir unidades no interior do objeto.
+- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis.
+- "unitsListName": um nome de uma lista 4D baseada em design que contém unidades disponíveis. Utilize este atributo para definir unidades com uma lista 4D criada na caixa de ferramentas.
 
-Regardless of the way the unit list is defined, it can be associated with the following attribute:
+Independentemente da forma como a lista de unidades é definida, ela pode ser associada ao seguinte atributo:
 
-- "unitReference": a single value that contains the index (from 1 to x) of the selected item in the "unitList", "unitsListReference" or "unitsListName" values list.
+- "unitReference": um valor único que contenha o índice (de 1 a x) do item selecionado na lista de valores "unitsListReference" ou "unitsListName".
 
 A unidade atual é exibida como um botão que percorre os valores "unitList", "unitsListReference" ou "unitsListName" sempre que é clicado (por exemplo, "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
 
 Exemplo:
 
-We want to set up a numeric input followed by two possible units: "rows" or "pixels". O valor atual é "2" + "linhas". Utilizamos valores definidos diretamente no objeto (atributo "unitsList"):
+Queremos configurar uma entrada numérica seguida de duas unidades possíveis: "linhas" ou "píxeis". O valor atual é "2" + "linhas". Utilizamos valores definidos diretamente no objeto (atributo "unitsList"):
 
 ```4d
 ARRAY TEXT($_units;0)
@@ -1185,11 +1188,11 @@ O valueType "color" permite-lhe apresentar uma cor ou um texto.
 
 - Se o valor for um número, é desenhado um retângulo colorido no interior da célula. Exemplo:
 
-  ```4d
-  C_OBJECT($ob4)
-  OB SET($ob4;"valueType";"color")
-  OB SET($ob4;"value";0x00FF0000)
-  ```
+ ```4d
+ C_OBJECT($ob4)
+ OB SET($ob4;"valueType";"color")
+ OB SET($ob4;"value";0x00FF0000)
+ ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
@@ -1216,10 +1219,10 @@ OB SET($ob;"label";"Edit...")
 Vários eventos podem ser tratados durante o uso de um list box array de objetos:
 
 - **On Data Change**: um evento `On Data Change` é acionado quando qualquer valor é modificado:
-  - numa zona de introdução de texto
-  - numa lista pendente
-  - numa área combo box
-  - num botão de unidade (mudar do valor x para o valor x+1)
-  - numa caixa de verificação (alternar entre verificado/não verificado)
+ - numa zona de introdução de texto
+ - numa lista pendente
+ - numa área combo box
+ - num botão de unidade (mudar do valor x para o valor x+1)
+ - numa caixa de verificação (alternar entre verificado/não verificado)
 - **On Clicked**: quando o usuário clicar em um botão instalado usando o atributo "event" *valueType*, será gerado um evento `On Clicked`. Este evento é gerido pelo programador.
 - **On Alternative Click**: quando o usuário clicar em um botão de reticências (atributo "alternateButton"), será gerado um evento `On Alternative Click`. Este evento é gerido pelo programador.

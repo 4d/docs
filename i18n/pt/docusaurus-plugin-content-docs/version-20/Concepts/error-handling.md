@@ -90,7 +90,7 @@ Within the custom error method, you have access to several pieces of information
 
 :::info
 
-4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs.
+4D mantém automaticamente uma série de variáveis chamadas [**variáveis sistema**](variables.md#system-variables), que respondem a diferentes necessidades.
 :::
 
 - o comando [`últimos erros`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que devolve uma coleção da pilha actual de erros que ocorreram na aplicação 4D. Também pode usar o comando [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/en/page1015.html) que devolve a mesma informação que os arrays.

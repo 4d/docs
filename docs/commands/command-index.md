@@ -91,7 +91,7 @@ title: Index
 
 [`Cache info`](../commands-legacy/cache-info.md)<br/>
 [`Call chain`](../commands-legacy/call-chain.md)<br/>
-[`CALL FORM`](call-form.md)<br/>
+[`CALL FORM`](../commands-legacy/call-form.md)<br/>
 [`CALL SUBFORM CONTAINER`](../commands-legacy/call-subform-container.md)<br/>
 [`CALL WORKER`](../commands-legacy/call-worker.md)<br/>
 [`CANCEL`](../commands-legacy/cancel.md)<br/>
@@ -238,7 +238,7 @@ title: Index
 [`DOM Get next sibling XML element`](../commands-legacy/dom-get-next-sibling-xml-element.md)<br/>
 [`DOM Get parent XML element`](../commands-legacy/dom-get-parent-xml-element.md)<br/>
 [`DOM Get previous sibling XML element`](../commands-legacy/dom-get-previous-sibling-xml-element.md)<br/>
-[`DOM Get Root XML element`](../commands-legacy/dom-get-root-xml-element.md)<br/>
+[`DOM Get root XML element`](../commands-legacy/dom-get-root-xml-element.md)<br/>
 [`DOM GET XML ATTRIBUTE BY INDEX`](../commands-legacy/dom-get-xml-attribute-by-index.md)<br/>
 [`DOM GET XML ATTRIBUTE BY NAME`](../commands-legacy/dom-get-xml-attribute-by-name.md)<br/>
 [`DOM GET XML CHILD NODES`](../commands-legacy/dom-get-xml-child-nodes.md)<br/>
@@ -280,7 +280,7 @@ title: Index
 [`Euro converter`](../commands-legacy/euro-converter.md)<br/>
 [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md)<br/>
 [`EXECUTE METHOD`](../commands-legacy/execute-method.md)<br/>
-[`EXECUTE METHOD IN SUBFORM`](execute-method-in-subform.md)<br/>
+[`EXECUTE METHOD IN SUBFORM`](../commands-legacy/execute-method-in-subform.md)<br/>
 [`EXECUTE ON CLIENT`](../commands-legacy/execute-on-client.md)<br/>
 [`Execute on server`](../commands-legacy/execute-on-server.md)<br/>
 [`Exp`](../commands-legacy/exp.md)<br/>
@@ -358,7 +358,7 @@ title: Index
 [`Get adjusted index cache priority`](../commands-legacy/get-adjusted-index-cache-priority.md)<br/>
 [`Get adjusted table cache priority`](../commands-legacy/get-adjusted-table-cache-priority.md)<br/>
 [`GET ALLOWED METHODS`](../commands-legacy/get-allowed-methods.md)<br/>
-[`Get application color scheme`](../commands-legacy/get-application-color-scheme.md)<br/>
+[`Get Application color scheme`](../commands-legacy/get-application-color-scheme.md)<br/>
 [`Get assert enabled`](../commands-legacy/get-assert-enabled.md)<br/>
 [`GET AUTOMATIC RELATIONS`](../commands-legacy/get-automatic-relations.md)<br/>
 [`Get cache size`](../commands-legacy/get-cache-size.md)<br/>
@@ -383,7 +383,7 @@ title: Index
 [`GET HIGHLIGHT`](../commands-legacy/get-highlight.md)<br/>
 [`GET HIGHLIGHTED RECORDS`](../commands-legacy/get-highlighted-records.md)<br/>
 [`Get indexed string`](../commands-legacy/get-indexed-string.md)<br/>
-[`Get last update log path`](../commands-legacy/get-last-update-log-path.md)<br/>
+[`Last update log path`](../commands-legacy/last-update-log-path.md)<br/>
 [`GET LIST ITEM`](../commands-legacy/get-list-item.md)<br/>
 [`Get list item font`](../commands-legacy/get-list-item-font.md)<br/>
 [`GET LIST ITEM ICON`](../commands-legacy/get-list-item-icon.md)<br/>
@@ -464,7 +464,7 @@ title: Index
 [`HTTP Get`](../commands-legacy/http-get.md)<br/>
 [`HTTP Get certificates folder`](../commands-legacy/http-get-certificates-folder.md)<br/>
 [`HTTP GET OPTION`](../commands-legacy/http-get-option.md)<br/>
-[`HTTP Parse message`](../commands-legacy/http-parse-message.md)<br/>
+[`HTTP Parse message`](http-parse-message.md)<br/>
 [`HTTP Request`](../commands-legacy/http-request.md)<br/>
 [`HTTP SET CERTIFICATES FOLDER`](../commands-legacy/http-set-certificates-folder.md)<br/>
 [`HTTP SET OPTION`](../commands-legacy/http-set-option.md)<br/>
@@ -658,7 +658,7 @@ title: Index
 [`METHOD GET NAMES`](../commands-legacy/method-get-names.md)<br/>
 [`METHOD Get path`](../commands-legacy/method-get-path.md)<br/>
 [`METHOD GET PATHS`](../commands-legacy/method-get-paths.md)<br/>
-[`METHOD GET PATHS FORM`](method-get-paths-form.md)<br/>
+[`METHOD GET PATHS FORM`](../commands-legacy/method-get-paths-form.md)<br/>
 [`METHOD OPEN PATH`](../commands-legacy/method-open-path.md)<br/>
 [`METHOD RESOLVE PATH`](../commands-legacy/method-resolve-path.md)<br/>
 [`METHOD SET ACCESS MODE`](../commands-legacy/method-set-access-mode.md)<br/>
@@ -758,7 +758,7 @@ title: Index
 [`OBJECT GET SCROLLBAR`](../commands-legacy/object-get-scrollbar.md)<br/>
 [`OBJECT GET SHORTCUT`](../commands-legacy/object-get-shortcut.md)<br/>
 [`OBJECT Get style sheet`](../commands-legacy/object-get-style-sheet.md)<br/>
-[`OBJECT GET SUBFORM`](object-get-subform.md)<br/>
+[`OBJECT GET SUBFORM`](../commands-legacy/object-get-subform.md)<br/>
 [`OBJECT GET SUBFORM CONTAINER SIZE`](../commands-legacy/object-get-subform-container-size.md)<br/>
 [`OBJECT Get subform container value`](../commands-legacy/object-get-subform-container-value.md)<br/>
 [`OBJECT Get text orientation`](../commands-legacy/object-get-text-orientation.md)<br/>
@@ -804,7 +804,7 @@ title: Index
 [`OBJECT SET SCROLLBAR`](../commands-legacy/object-set-scrollbar.md)<br/>
 [`OBJECT SET SHORTCUT`](../commands-legacy/object-set-shortcut.md)<br/>
 [`OBJECT SET STYLE SHEET`](../commands-legacy/object-set-style-sheet.md)<br/>
-[`OBJECT SET SUBFORM`](object-set-subform.md)<br/>
+[`OBJECT SET SUBFORM`](../commands-legacy/object-set-subform.md)<br/>
 [`OBJECT SET SUBFORM CONTAINER VALUE`](../commands-legacy/object-set-subform-container-value.md)<br/>
 [`OBJECT SET TEXT ORIENTATION`](../commands-legacy/object-set-text-orientation.md)<br/>
 [`OBJECT SET THREE STATES CHECKBOX`](../commands-legacy/object-set-three-states-checkbox.md)<br/>
@@ -1304,7 +1304,7 @@ title: Index
 [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md)<br/>
 [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md)<br/>
 [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md)<br/>
-[`WEB Get Current Session ID`](../commands-legacy/web-get-current-session-id.md)<br/>
+[`WEB Get current session ID`](../commands-legacy/web-get-current-session-id.md)<br/>
 [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md)<br/>
 [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md)<br/>
 [`WEB GET OPTION`](../commands-legacy/web-get-option.md)<br/>

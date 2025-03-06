@@ -68,7 +68,7 @@ Para adicionar um usuário da Barra de Ferramentas:
 
 A lista de usuários exibe todos os usuários, incluindo o[Designer and the Administrator](#designer-and-administrator).
 
-2. Clique no botão ![](../assets/en/Users/PlussNew.png) que está abaixo da lista de usuários. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
+2. Clique no botão ![](../assets/en/Users/PlussNew.png) que está abaixo da lista de usuários. OU Clique com o botão direito do mouse na lista de usuários e escolha **Adicionar** ou **Duplicar** no menu de contexto.
 
 > O comando **Duplicate** pode ser usado para criar rapidamente vários usuários com as mesmas características.
 
@@ -93,9 +93,9 @@ Usuários deletados não aparecem mais no editor de Usuários. Note que as IDs d
 
 ### Propriedades de usuário
 
-- **Tipo de usuário**: O campo Tipo de usuário/User Kind contém "Designer", "Administrador", ou (Para todos os outros usuários) "Usuário".
+- **Tipo de usuário**: o campo Tipo de usuário contém "Designer", "Administrador", ou (para todos os outros usuários) "Usuário".
 
-- **Método de início Method**: Nome do método associado que será executado automaticamente quando o usuário abrir o banco de dados (opcional). Esse método pode ser usado por exemplo para carregar as preferências de usuário.
+- **Método de inicialização**: nome do método associado que será executado automaticamente quando o usuário abrir a aplicação (opcional). Esse método pode ser usado por exemplo para carregar as preferências de usuário.
 
 
 ## Editor de usuários
@@ -110,17 +110,17 @@ Lembre que se um grupo for criado não pode ser apagado. Se quiser desativar um 
 
 Para criar um gurpo:
 
-1. Selecione **Tool Box > Grupos** no menu **Design** ou clique no botão **Tool Box** da barra 4D e depois no botão **Grupos**. 4D exibe a janela de editor de grupos. A lista de grupos exibe todos os grupos do banco de dados.
+1. Selecione **Caixa de Ferramentas > Grupos** no menu **Design** ou clique no botão **Caixa de Ferramentas** da barra de ferramentas de 4D e depois no botão **Grupos**. 4D exibe a janela de editor de grupos. A lista de grupos exibe todos os grupos do banco de dados.
 
-2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.  
-   OR  
-   Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
+2. Clique no botão ![](../assets/en/Users/PlussNew.png) abaixo da lista de grupos  
+   . OU  
+   Clique com o botão direito do mouse na lista de grupos e escolha o comando **Adicionar** ou **Duplicar** no menu de contexto.
 
-> O comando Dupplicate/Duplicar pode ser usado para criar vários grupos tendo as mesmas características.
+> O comando Duplicar pode ser usado para criar vários grupos tendo as mesmas características.
 
 4D adiciona um novo grupo para a lista, chamado "Novo grupoX".
 
-3. Digite o nome do novo grupo. O nome de grupo pode ter até 15 caracteres. The group name can be up to 15 characters long. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. Digite o nome do novo grupo. O nome de grupo pode ter até 15 caracteres. Pode renomear um grupo a qualquer momento usando o comando **Renomear** do menu contextual ou usando os atalhos Alt+clique (Windows) ou Opção+clique (macOS), ou ainda clicando duas vezes no nome que quiser mudar.
 
 
 ### Colocar usuários ou grupos dentro de grupos
@@ -132,49 +132,49 @@ Para colocar um usuário ou grupo em um grupo, precisa marcar a opção "Membro"
 
 ![](../assets/en/Users/groups.png)
 
-Se marcar o nome de usuário, esse usuário é adicionado ao grupo. Se marcar o nome de um grupo, todos os usuários do grupo serão adicionados ao novo grupo. The affiliated user or group will then have the same access privileges as those assigned to the new group.
+Se marcar o nome de usuário, esse usuário é adicionado ao grupo. Se marcar o nome de um grupo, todos os usuários do grupo serão adicionados ao novo grupo. O usuário ou grupo afiliado terá então os mesmos privilégios de acesso que os que foram atribuídos ao novo grupo.
 
-A colocação de grupos noutros grupos permite-lhe criar uma hierarquia de usuários. The users of a group placed in another group will have the access privileges of both groups. See "[An access hierarchy scheme](#an-access-hierarchy-scheme)" below.
+A colocação de grupos noutros grupos permite-lhe criar uma hierarquia de usuários. Os usuários de um grupo colocado em outro grupo terão privilégios de acesso de ambos os grupos. Veja "[Um esquema de hierarquia de acesso](#an-access-hierarchy-scheme)" abaixo.
 
-To remove a user or group from another group, you just need to deselect the corresponding option in the member attribution area.
+Para remover um usuário ou grupo de outro grupo, você só precisa desmarcar a opção correspondente na área de atribuição de membros.
 
 ### Atribuição de um grupo a um plug-in ou a um servidor
 
-You can assign a group privileges to any plug-ins installed in the database. Isto inclui todos os plug-ins 4D e de terceiros.
+Você pode atribuir privilégios de grupo a qualquer plug-in instalado no projeto. Isto inclui todos os plug-ins 4D e de terceiros.
 
-Distributing access to the plug-ins lets you control the use of the licenses you possess for these plug-ins. Any users that do not belong to the access group of a plug-in cannot load this plug-in.
+A distribuição de acesso ao plug-ins permite que você controle o uso das licenças que você possui para esses plug-ins. Qualquer usuário que não pertence ao grupo de acesso de um plug-in não pode carregar este plug-in.
 
-> Used licenses remain attached to 4D user accounts in the group for the whole 4D session.
+> Licenças utilizadas permanecem anexadas a contas de usuário 4D no grupo para toda a sessão 4D.
 
-The “Plug-in” area on the Groups page of the tool box lists all the plug-ins loaded by the 4D application. To give a group access to a plug-in, you simply need to check the corresponding option.
+A área "Plug-in" na página de grupos da caixa de ferramentas lista todos os plug-ins carregados pela aplicação 4D. Para dar acesso a um grupo a um plug-in, você precisa simplesmente marcar a opção correspondente.
 
 ![](../assets/en/Users/plugins.png)
 
-The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. Essas licenças são consideradas como licenças de plug-in por 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
+As linhas **4D Client Web Server** e **4D Client SOAP Server** controlam a capacidade de publicação Web e SOAP (Web Services) de cada 4D no modo remoto. Essas licenças são consideradas como licenças de plug-in por 4D Server. Portanto, da mesma forma que para plug-ins, você pode restringir o direito de utilizar essas licenças para um grupo específico de usuários.
 
 
 ### Um esquema de acesso hierárquico
 
-The best way to ensure the security of your database and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. Esta secção discute várias abordagens a esse esquema.
+A melhor maneira de garantir a segurança da sua aplicação e fornecer aos usuários diferentes níveis de acesso é usar um esquema de hierarquia de acesso. Os usuários podem ser atribuídos a grupos e grupos apropriados podem ser aninhados para criar uma hierarquia de direitos de acesso. Esta secção discute várias abordagens a esse esquema.
 
-In this example, a user is assigned to one of three groups depending on their level of responsibility. Usuários atribuídos ao grupo Accounting são responsáveis pela entrada de dados. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
+Neste exemplo, um usuário é atribuído a um dos três grupos consoante o seu nível de responsabilidade. Usuários atribuídos ao grupo Accounting são responsáveis pela entrada de dados. Os usuários designados ao grupo Finanças são responsáveis por manter os dados, incluindo atualizações de registros e exclusão de registros desatualizados. Os usuários designados ao grupo geral de gerenciamento são responsáveis por analisar os dados, incluindo a realização de pesquisas e a impressão de relatórios analíticos.
 
-The groups are then nested so that privileges are correctly distributed to the users of each group.
+Os grupos são então aninhados para que os privilégios sejam distribuídos corretamente para os usuários de cada grupo.
 
-- The General Management group contains only “high-level” users. ![](../assets/en/Users/schema1.png)
+- O grupo geral de gerenciamento contém apenas usuários de "alto nível". ![](../assets/en/Users/schema1.png)
 
-- The Finances group contains data maintenance users as well as General Management users, thus the users in General Management have the privileges of the Finances group as well. ![](../assets/en/Users/schema2.png)
+- O grupo Finanças contém usuários de atualização de dados, bem como usuários da Administração geral, de modo que os usuários da Administração geral também têm os privilégios do grupo Finanças. ![](../assets/en/Users/schema2.png)
 
-- The Accounting group contains data entry users as well as Finances group users, so the users who belong to the Finances group and the General Management group enjoy the privileges of the Accounting group as well. ![](../assets/en/Users/schema3.png)
+- O grupo Contabilidade contém usuários de entrada de dados, bem como usuários do grupo Finanças, de modo que os usuários pertencentes ao grupo Finanças e ao grupo Administração geral também desfrutam dos privilégios do grupo Contabilidade. ![](../assets/en/Users/schema3.png)
 
-You can decide which access privileges to assign to each group based on the level of responsibility of the users it includes.
+Você pode decidir quais privilégios de acesso atribuir a cada grupo com base no nível de responsabilidade dos usuários que ele inclui.
 
-Such a hierarchical system makes it easy to remember to which group a new user should be assigned. You only have to assign each user to one group and use the hierarchy of groups to determine access.
+Tal sistema hierárquico facilita lembrar para qual grupo um novo usuário deve ser atribuído. Você só tem que atribuir cada usuário para um grupo e usar a hierarquia de grupos para determinar o acesso.
 
 
 ## Atribuir grupos de acesso
 
-Groups are assigned access privileges to specific parts or features of the application:
+Os grupos recebem privilégios de acesso a partes ou recursos específicos da aplicação:
 
 - Acesso ao ambiente Desenho e ao Explorador de execução,
 - Servidor HTTP,
@@ -185,16 +185,16 @@ Estes acessos são definidos no diálogo Parâmetros. O exemplo abaixo mostra di
 
 ![](../assets/en/Users/Access1.png)
 
-You also use groups to [distribute available licenses](#assigning-a-group-to-a-plug-in-or-to-a-server). Esta distribuição é definida no editor Grupos.
+Você também usa grupos para [distribuir licenças disponíveis](#assigning-a-group-to-a-plug-in-or-to-a-server). Esta distribuição é definida no editor Grupos.
 
 ## Ficheiro Directory.json
 
-Users, groups, as well as their access rights are stored in a specific project file named **directory.json**.
+Os usuários, grupos, bem como seus direitos de acesso são armazenados em um arquivo específico do projeto chamado **directory.json**.
 
-This file can be stored at the following locations, depending on your needs:
+Esse arquivo pode ser armazenado nos seguintes locais, dependendo de suas necessidades:
 
 - Se você quiser usar o mesmo diretório para todos os arquivos de dados (ou se você usar um arquivo de dados único), armazene o arquivo **directory.json** na pasta de configurações do usuário, ou seja, na pasta "Configurações" no [mesmo nível que a pasta "Projeto"](Project/architecture.md#project-folder) (local padrão).
-- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](Project/architecture.md#settings). If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This custom/local Users and Groups configuration will left untouched by an application upgrade.
+- Se você quiser usar um arquivo de diretório específico por arquivo de dados, armazene o diretório **directory.json** na pasta dos parâmetros de dados, ou seja, na pasta ["Settings" da pasta "Data"](Project/architecture.md#settings). Se um arquivo **directory.json** estiver presente neste local, ele terá prioridade sobre o arquivo na pasta Settings usuário. Essa configuração personalizada/local de usuários e grupos não será afetada por uma atualização da aplicação.
 
-> To allow for safe changes of passwords and group memberships in a deployed environment, you can include your **directory.json** file in the server application during the build, using the [corresponding build application option](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
+> Para permitir alterações seguras de senhas e associações de grupos em um ambiente implantado, você pode incluir o arquivo **directory.json** na aplicação do servidor durante a compilação, usando a opção [correspondente da aplicação de compilação](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
 

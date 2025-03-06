@@ -25,3 +25,12 @@ displayed_sidebar: docs
 [Arctan](arctan.md)  
 [Cos](cos.md)  
 [Tan](tan.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 17 |
+| スレッドセーフである | &check; |
+
+

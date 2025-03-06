@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New signal.Params-->
 
-| Parámetros  | Tipo                      |   | Descripción                          |
-| ----------- | ------------------------- | - | ------------------------------------ |
-| description | Text                      | → | Descripción para la señal            |
-| Resultado   | 4D.Signal | ← | Objeto nativo que encapsula la señal |
+| Parámetros  | Tipo                      |                             | Descripción                          |
+| ----------- | ------------------------- | --------------------------- | ------------------------------------ |
+| description | Text                      | &#8594; | Descripción para la señal            |
+| Resultado   | 4D.Signal | &#8592; | Objeto nativo que encapsula la señal |
 
 <!-- END REF-->
 
@@ -69,3 +69,12 @@ El método ***doSomething*** puede ser como:
  End use
  $signal.trigger() // El trabajo ha terminado
 ```
+
+#### Propiedades
+
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1641                            |
+| Hilo seguro       | &amp;check; |
+
+

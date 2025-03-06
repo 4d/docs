@@ -27,7 +27,7 @@ title: VP Get table range
 
 #### Descrição
 
-The `VP Get table range` command <!-- REF #_method_.VP Get table range.Summary -->returns the range of *tableName*<!-- END REF -->.
+O comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->retorna o intervalo de *tableName*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 

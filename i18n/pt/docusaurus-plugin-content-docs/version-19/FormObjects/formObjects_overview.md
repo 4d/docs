@@ -3,24 +3,26 @@ id: formObjectsOverview
 title: Sobre objetos formulário 4D
 ---
 
-O usuário constrói e personaliza os seus formulários de aplicação manipulando os objetos neles contidos. You can add objects, reposition objects, set object properties, enforce business rules by specifying data entry constraints, or write object methods that run automatically when the object is used.
+O usuário constrói e personaliza os seus formulários de aplicação manipulando os objetos neles contidos. Você pode adicionar objetos, reposicionar objetos, definir propriedades de objetos, aplicar regras comerciais especificando restrições de entrada de dados ou escrever métodos objeto executados automaticamente quando o objeto é usado.
 
-## Active and static objects
+## Objectos activos e estáticos
 
-4D forms support a large number of built-in **active** and **static** objects:
+Os formulários 4D suportam um grande número de objetos **ativos** e **estáticos** incorporados:
 
-- **active objects** perform a database task or an interface function. Os campos são objetos ativos. Other active objects — enterable objects (variables), combo boxes, drop-down lists, picture buttons, and so on — store data temporarily in memory or perform some action such as opening a dialog box, printing a report, or starting a background process.
-- **static objects** are generally used for setting the appearance of the form and its labels as well as for the graphic interface. Os objetos estáticos não têm variáveis associadas como os objetos ativos. No entanto, é possível inserir objetos dinâmicos em objetos estáticos.
+- Os **objetos ativos** executam uma tarefa de banco de dados ou uma função de interface. Os campos são objetos ativos. Outros objetos ativos - objetos digitáveis (variáveis), combo box, listas suspensas, botões imagem, etc. - armazenam dados temporariamente na memória ou executam alguma ação, como abrir uma caixa de diálogo, imprimir um relatório ou iniciar um processo em segundo plano.
+- Os **objetos estáticos** são geralmente usados para definir a aparência do formulário e de seus rótulos, bem como para a interface gráfica. Os objetos estáticos não têm variáveis associadas como os objetos ativos. No entanto, é possível inserir objetos dinâmicos em objetos estáticos.
 
 
 ## Manipulação de objectos de formulário
 
 Pode adicionar ou modificar objetos de formulários 4D das seguintes formas:
 
-*   **[Form Editor](FormEditor/formEditor.md):** Drag an object from the Form Editor toolbar onto the form. Then use the Property List to specify the object's properties.   
-  See the [Building Forms](https://doc.4d.com/4Dv17R6/4D/17-R6/Building-forms.200-4354618.en.html) chapter for more information.
+*   **[Editor de formulários](FormEditor/formEditor.md):** arraste um objeto da barra de ferramentas do editor de formulário para o formulário. Em seguida, use a Lista de Propriedades para especificar as propriedades do objeto.   
+  Veja o capítulo [Construção de Formulários](https://doc.4d.com/4Dv17R6/4D/17-R6/Building-forms.200-4354618.en.html) para mais informações.
 
-* **4D language**: Commands from the [Objects (Forms)](https://doc.4d.com/4Dv17R5/4D/17-R5/Objects-Forms.201-4127128.en.html) theme such as `OBJECT DUPLICATE` or `OBJECT SET FONT STYLE` allow to create and define form objects.
+* **Linguagem 4D**: os comandos do tema [Objetos (Formulários)](https://doc.4d.com/4Dv17R5/4D/17-R5/Objects-Forms.201-4127128.en.html), como `OBJECT DUPLICATE` ou `OBJECT SET FONT STYLE`, permitem criar e definir objetos de formulário.
 
-*   **Editor de formulários:** arraste um objeto da barra de ferramentas do editor de formulários ao formulário. Then use the Property List to specify the object's properties.   
-  See the [Dynamic Forms](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-Forms.300-4163740.en.html#3692292) page for information.
+*   **Editor de formulários:** arraste um objeto da barra de ferramentas do editor de formulários ao formulário. Use a propriedade [type](properties_Object.md#type) para definir o tipo de objeto e, em seguida, defina suas propriedades disponíveis.  Veja a página [Formulários Dinâmicos](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-Forms.300-4163740.en.html#3692292) para informações.  
+  Exemplo de um objeto botão:  
+  ``` ```
+  { "type": "button", "style": "bevel", "text": "OK", "action": "Cancel", "left": 60, "top": 160, "width": 100, "height": 20 }

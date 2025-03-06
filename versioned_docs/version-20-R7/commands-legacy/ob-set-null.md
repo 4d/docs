@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB SET NULL.Summary-->The **OB SET NULL** command stores the **null** value in the language object designated by the *object* parameter.<!-- END REF-->
-
-*object* can be an object varialble or a 4D object field.
+<!--REF #_command_.OB SET NULL.Summary-->The **OB SET NULL** command stores the **null** value in the language object designated by the *object* parameter.<!-- END REF-->can be an object varialble or a 4D object field.
 
 In the *property* parameter, pass the label of the property where you want to store the **null** value. If the property already exists in *object*, its value is updated. If it does not exist, it is created.   
 Note that the *property* parameter is case sensitive.
@@ -41,3 +39,12 @@ We want to put the null value in the "age" property for Lea:
 [Null](null.md)  
 [OB GET PROPERTY NAMES](ob-get-property-names.md)  
 [OB SET](ob-set.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1233 |
+| Thread safe | &check; |
+
+

@@ -69,3 +69,13 @@ Se o comando não é chamado no contexto de uma transação, um erro é gerado.
 #### Ver também 
 
 [QUERY](query.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 661 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+
+

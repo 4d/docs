@@ -145,3 +145,12 @@ returns an object that contains, for example, the following information:
 [Application info](application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1571 |
+| Thread safe | &check; |
+
+

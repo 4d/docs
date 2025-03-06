@@ -20,20 +20,20 @@ ORDA client/server architectures that support the optimization are:
 O contexto de otimização é baseado nas seguintes implementações:
 
 - Quando um cliente solicita uma seleção de entidade do servidor, 4D "aprende" automaticamente quais atributos da seleção de entidade são realmente usados no lado do cliente durante a execução do código e constrói um "contexto de otimização" correspondente. Esse contexto é anexado à seleção da entidade e armazena os atributos usados. Será atualizado dinamicamente se outros atributos forem usados depois. Os seguintes métodos e funções accionam a fase de aprendizagem:
-  - [`Create entity selection`](../commands/create-entity-selection.md)
-  - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
-  - [`dataClass.all()`](../API/DataClassClass.md#all)
-  - [`dataClass.get()`](../API/DataClassClass.md#get)
-  - [`dataClass.query()`](../API/DataClassClass.md#query)
-  - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
+ - [`Create entity selection`](../commands/create-entity-selection.md)
+ - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
+ - [`dataClass.all()`](../API/DataClassClass.md#all)
+ - [`dataClass.get()`](../API/DataClassClass.md#get)
+ - [`dataClass.query()`](../API/DataClassClass.md#query)
+ - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
 
 - As solicitações subsequentes enviadas ao servidor sobre a mesma seleção de entidade reutilizam automaticamente o contexto de otimização e obtêm apenas os atributos necessários do servidor, o que acelera o processamento. For example, in an [entity selection-based list box](#entity-selection-based-list-box), the learning phase takes place during the display of the first row. a visualização das linhas seguintes é optimizada. As funções a seguir associam automaticamente o contexto de otimização da seleção da entidade de origem à seleção da entidade retornada:
-  - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
-  - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
-  - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
-  - [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderBy)
-  - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
-  - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
+ - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
+ - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
+ - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
+ - [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderBy)
+ - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
+ - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 
 - An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Reusing the context property](#reusing-the-context-property) below).
 
@@ -64,7 +64,7 @@ Thanks to the optimization, this request will only get data from used attributes
 
 Você pode aumentar os benefícios da otimização usando a propriedade **context**. Essa propriedade faz referência a um contexto de otimização "aprendido" para uma seleção de entidade. Ele pode ser passado como parâmetro para funções ORDA que retornam novas seleções de entidades, de modo que as seleções de entidades solicitem diretamente os atributos usados ao servidor e ignorem a fase de aprendizado.
 
-> You can also create contexts using the [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function.
+> Você também pode criar contextos usando a função [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo).
 
 A mesma propriedade de contexto de otimização pode ser passada para um número ilimitado de seleções de entidades na mesma classe de dados. All ORDA functions that handle entity selections support the **context** property (for example [`dataClass.query()`](../API/DataClassClass.md#query) or [`dataClass.all()`](../API/DataClassClass.md#all)). No entanto, lembre-se de que um contexto é atualizado automaticamente quando novos atributos são usados em outras partes do código. A reutilização do mesmo contexto em códigos diferentes pode resultar em sobrecarga do contexto e, portanto, reduzir sua eficiência.
 
@@ -133,7 +133,7 @@ Por motivos de otimização, os dados solicitados do servidor por meio do ORDA s
 
 Os dados contidos no cache são considerados expirados quando o tempo limite é atingido. Qualquer acesso a dados expirados enviará um pedido ao servidor. Os dados expirados permanecem na cache até que seja necessário espaço.
 
-You can force entity selection data in the ORDA cache to expire at any moment by using the [`refresh()`](../API/EntitySelectionClass.md#refresh) function.
+Você pode forçar os dados de seleção de entidades no cache ORDA a expirar a qualquer momento usando a função [`refresh()`](../API/EntitySelectionClass.md#refresh).
 
 Por padrão, o cache ORDA é tratado de forma transparente pelo 4D. No entanto, você pode controlar seu conteúdo usando as seguintes funções da classe ORDA:
 

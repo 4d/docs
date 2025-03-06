@@ -3,7 +3,7 @@ id: radiobuttonOverview
 title: Botão rádio
 ---
 
-Radio buttons are objects that allow the user to select one of a group of buttons.
+Os botões rádio são objetos que permitem que o usuário selecione um de um grupo de botões.
 
 Um botão radio aparece na forma de um texto seguido de um círculo. Sin embargo, los botones radio pueden tener [diferentes apariencias](#button-styles).
 
@@ -16,21 +16,21 @@ Um botão radio aparece na forma de um texto seguido de um círculo. Sin embargo
 
 ## Configuração de botões radio
 
-Radio buttons are used in coordinated sets: only one button at a time can be selected in the set. Para funcionar de forma coordinada, un conjunto de botones radio debe compartir la misma propiedad [Grupo radio](properties_Object.md#radio-group).
+Os botões rádio são usados em conjuntos coordenados: somente um botão de cada vez pode ser selecionado no conjunto. A seleção de um botão de rádio em um grupo define esse botão como 1 e todos os outros no grupo como 0.
 
-Os botões rádio são controlados com métodos. Como todos os botões, um botão de rádio é definido como 0 quando o formulário é aberto pela primeira vez. Um método associado a um botão de rádio é executado quando o botão é selecionado. The following is an example of a group of radio buttons used in a video collection database to enter the speed of the recording (SP, LP, or EP):
+Os botões rádio são controlados com métodos. Como todos os botões, um botão de rádio é definido como 0 quando o formulário é aberto pela primeira vez. Um método associado a um botão de rádio é executado quando o botão é selecionado. A seguir, um exemplo de um grupo de botões de rádio usados em um banco de dados de coleção de vídeos para inserir a velocidade da gravação (SP, LP ou EP):
 
 ![](../assets/en/FormObjects/radio2.png)
 
-Selecting one radio button in a group sets that button to 1 and all of the others in the group to 0. Só pode ser selecionado um botão rádio de cada vez.
+A seleção de um botão de rádio em um grupo define esse botão como 1 e todos os outros no grupo como 0. Só pode ser selecionado um botão rádio de cada vez.
 
-> Puede asociar [expresiones de tipo booleano](properties_Object.md#variable-or-expression) a botones radio. In this case, when a radio button in a group is selected, its variable is True and the variables for the group's other radio buttons are False.
+> Puede asociar [expresiones de tipo booleano](properties_Object.md#variable-or-expression) a botones radio. Nesse caso, quando um botão de opção em um grupo é selecionado, sua variável é True e as variáveis dos outros botões de opção do grupo são False.
 
-The value contained in a radio button object is not saved automatically (except if it is the representation of a Boolean field); radio button values must be stored in their variables and managed with methods.
+O valor contido em um objeto de botão de opção não é salvo automaticamente (exceto se for a representação de um campo booliano); os valores dos botões de opção devem ser armazenados em suas variáveis e gerenciados com métodos.
 
 ## Estilos de botões
 
-[Los estilos de botón](properties_TextAndPicture.md#button-style) controlan la apariencia general del botón de radio y sus propiedades disponibles. É possível aplicar diferentes estilos predefinidos aos botões rádio. However, the same button style must be applied to all radio buttons in a group so that they work as expected.
+[Los estilos de botón](properties_TextAndPicture.md#button-style) controlan la apariencia general del botón de radio y sus propiedades disponibles. É possível aplicar diferentes estilos predefinidos aos botões rádio. No entanto, o mesmo estilo de botão deve ser aplicado a todos os botões rádio em um grupo para que eles funcionem como esperado.
 
 4D fornece botões rádio nos seguintes estilos predefinidos:
 
@@ -40,7 +40,7 @@ El estilo de botón radio Clásico es un botón sistema estándar (\*es decir, \
 
 ![](../assets/en/FormObjects/radio_regular.png)
 
-In addition to initiating code execution, the Regular radio button style changes bullsey color when being hovered.
+Além de iniciar a execução do código, o estilo do botão de opção Regular muda a cor do bullsey ao passar o mouse.
 
 ### Plano
 
@@ -48,13 +48,13 @@ El estilo de botón radio Plano es un botón sistema estándar (\*es decir, \*, 
 
 ![](../assets/en/FormObjects/radio_flat.png)
 
-Por padrão, o estilo Plano tem um aspeto minimalista. The Flat button style's graphic nature is particularly useful for forms that will be printed.
+Por padrão, o estilo Plano tem um aspeto minimalista. A natureza gráfica do estilo Plano é especialmente útil para os formulários que vão ser impressos.
 
 ### Barra de ferramentas
 
 O estilo de botão rádio está pensado principalmente para sua integração em uma barra de ferramentas.
 
-By default, the Toolbar style has a transparent background with a label in the center. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
+Por padrão, o estilo da barra de ferramentas tem um fundo transparente com um rótulo no centro. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
 - *Windows* - o botão é destacado.
 
@@ -79,7 +79,7 @@ O estilo de botão Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel
 - *Windows* - el botón es idéntico al estilo [Bevel](#bevel).
 
 - *macOS* - las esquinas del botón están redondeadas.
-  ![](../assets/en/FormObjects/roundedBevel.png)
+ ![](../assets/en/FormObjects/roundedBevel.png)
 
 ### OS X Gradient
 
@@ -127,7 +127,7 @@ O estilo Recolher/Expandir é denominado "disclosure" na [gramática JSON de est
 
 ### Botão disclosure
 
-The disclosure radio button style displays the radio button as a standard disclosure button, usually used to show/hide additional information. O símbolo do botão aponta para baixo com o valor 0 e para cima com o valor 1.
+O estilo do botão divulgação exibe o botão rádio como um botão de divulgação padrão, normalmente usado para mostrar/ocultar informações adicionais. O símbolo do botão aponta para baixo com o valor 0 e para cima com o valor 1.
 
 ![](../assets/en/FormObjects/checkbox_disclosure.png)
 

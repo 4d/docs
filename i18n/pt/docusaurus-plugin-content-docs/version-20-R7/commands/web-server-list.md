@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server list.Params-->
 
-| Parâmetro | Tipo       |   | Descrição                                      |
-| --------- | ---------- | - | ---------------------------------------------- |
-| Resultado | Collection | ← | Collection of the available Web Server objects |
+| Parâmetro | Tipo       |                             | Descrição                                      |
+| --------- | ---------- | --------------------------- | ---------------------------------------------- |
+| Resultado | Collection | &#8592; | Collection of the available Web Server objects |
 
 <!-- END REF-->
 
@@ -54,3 +54,12 @@ Queremos saber quantos servidores rodando estão disponíveis:
 
 [WEB Server](web-server.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1716                            |
+| Thread safe    | &amp;check; |
+
+

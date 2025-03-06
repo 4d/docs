@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->**CHECK LOG FILE** コマンドは、データベースのカレントログファイルの内容をブラウズできるダイアログを表示します。<!-- END REF-->このダイアログにはMaintenance & Security Centerからもアクセスできます:
@@ -37,3 +34,13 @@ displayed_sidebar: docs
 
 [RESTORE](restore.md)  
 *バックアップマネージャエラー (1401 -> 1421)*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 799 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | error |
+
+

@@ -41,3 +41,12 @@ This maintenance method lets you request the compacting of the data file in the 
 #### See also 
 
 [Compact data file](compact-data-file.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1127 |
+| Thread safe | &check; |
+
+

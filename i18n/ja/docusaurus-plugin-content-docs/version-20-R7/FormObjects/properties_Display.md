@@ -423,7 +423,7 @@ Customized time formats can be built using several patterns described in the [**
 
 ブール式および数値 (数値または整数) 式の列はチェックボックスとして表示することができます。 表示タイプにチェックボックスを選択すると、[タイトル](#タイトル)プロパティが表示され、チェックボックスのタイトルを設定できます。
 
-ブール式の列はポップアップメニューとしても表示することができます。 In this case, the [Text when False and Text when True](#text-when-falsetext-when-true) properties must be defined.
+ブール式の列はポップアップメニューとしても表示することができます。 この場合には、[テキスト (True時) とテキスト (False時)](#テキスト-true時-テキスト-false時) プロパティが表示され、ポップアップメニューの対応するタイトルを設定する必要があります。
 
 #### JSON 文法
 

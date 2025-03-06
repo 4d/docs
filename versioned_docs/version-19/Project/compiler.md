@@ -35,7 +35,7 @@ Double-click on each error detected to open the method or class concerned direct
 
 Use the **Previous Error** / **Next Error** commands of the **Method** menu to navigate from one error to the next.
 
-The number of errors found during your first compilations may be daunting, but do not let this put you off. You will soon discover that they often spring from the same source, i.e., non-compliance with certain project conventions. The compiler always provides a [precise diagnosis](#error-files) of the errors in order to help you correct them.
+The number of errors found during your first compilations may be daunting, but do not let this put you off. You will soon discover that they often spring from the same source, i.e., non-compliance with certain project conventions. The compiler always provides a [precise diagnosis](#error-file) of the errors in order to help you correct them.
 
 > Compilation requires an appropriate license. Without this license, it is not possible to carry out a compilation (buttons are disabled). Nevertheless, it is still possible to check the syntax and generate Typing methods.
 
@@ -107,7 +107,7 @@ Only warnings with numbers can be disabled. Warning numbers are specified at the
 
 ## Compiler Settings
 
-The "Compiler" page of the Settings dialog box lets you set parameters related to project compilation. You can directly open this page from the [compiler window](#compiler-window) by clicking on the **Compiler Settings** button:
+The "Compiler" page of the Settings dialog box lets you set parameters related to project compilation. You can directly open this page from the [compiler window](#compiler-window-features) by clicking on the **Compiler Settings** button:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -117,11 +117,11 @@ This area groups the generic options used during the compilation process.
 
 #### Generate symbol file
 
-Used to generate the symbol file (see [symbol file](#symbol-file)). The symbol file is created in the in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
+Used to generate the symbol file (see [symbol file](#symbol-file)). The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_symbols.txt`.
 
 #### Generate error file
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The error file is created in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The error file is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_errors.xml`.
 
 #### Compilation Path
 
@@ -181,7 +181,7 @@ You can rename each of these methods in the corresponding areas, but they will a
 
 ### Symbol file
 
-If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. It is divided into several parts:
+If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project during compilation. It is divided into several parts:
 
 #### List of process and interprocess variables
 
@@ -229,7 +229,7 @@ result data type, number of calls, Thread Safe or Thread Unsafe
 
 ### Error file
 
-You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](Project/architecture.md#logs) of the project.
+You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs-folder) of the project.
 
 Although the errors can be accessed directly via the [compiler window](#compile), it can be useful to have an error file that can be transmitted from one machine to another. The error file is generated in XML format in order to facilitate automatic parsing of its contents. It also allows the creation of customized error display interfaces.
 
@@ -292,13 +292,13 @@ Both compilers are integrated into 4D. The appropriate compiler is automatically
 
 The classic compiler generates native compiled code for Intel/AMD processors on any machines. It does not require any specific configuration.
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.  
+Resulting compiled code is stored in the [DerivedData](./architecture.md#deriveddata-folder) folder of the project.  
 
 ### Silicon Compiler
 
 The Silicon compiler generates native compiled code for Apple Silicon processors, such as *Apple M1*.
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
+Resulting compiled code is stored in the [Libraries](architecture.md#libraries-folder) folder of the project.
 
 #### Requirements
 

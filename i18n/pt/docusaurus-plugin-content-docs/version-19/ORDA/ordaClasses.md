@@ -5,7 +5,7 @@ title: Classes de modelo de dados
 
 
 
-O ORDA permite-lhe criar funções de classe de alto nível acima do modelo de dados. Isto permite-lhe escrever código orientado para o negócio e "publicá-lo" tal como uma API. Datastore, classes de dados, seleções de entidades e entidades estão todos disponíveis como objetos de classe que podem conter funções.
+ORDA permite-lhe criar funções de classe de alto nível acima do modelo de dados. Isto permite-lhe escrever código orientado para o negócio e "publicá-lo" tal como uma API. Datastore, classes de dados, seleções de entidades e entidades estão todos disponíveis como objetos de classe que podem conter funções.
 
 Por exemplo, pode criar uma função `getNextWithHigherSalary()` na classe `EmployeeEntity` para devolver os empregados com um salário superior ao selecionado. Seria tão simples como chamar:
 
@@ -16,8 +16,7 @@ $nextHigh:=ds. Employee.get(1).getNextWithHigherSalary()
 Os desenvolvedores podem não só utilizar estas funções em datastores locais, mas também em arquiteturas cliente/servidor e remotas:
 
 ```4d
- //$cityManager é a referência de um datastore remoto
-Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
+ //$cityManager é a referência de um datastore remoto Form.comp.city:=$cityManager. City.getCityName(Form.comp.zipcode)
 ```
 
 Graças a esta caraterística, toda a lógica comercial da sua aplicação 4D pode ser armazenada como uma camada independente para que possa ser facilmente mantida e reutilizada com um alto nível de segurança:
@@ -26,7 +25,7 @@ Graças a esta caraterística, toda a lógica comercial da sua aplicação 4D po
 
 - Se a estrutura física evoluir, pode simplesmente adaptar o código da função e as aplicações cliente continuarão a chamá-las de forma transparente.
 
-- By default, all of your data model class functions are **not exposed** to remote applications and cannot be called from REST requests. You must explicitly declare each public function with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
+- Por padrão, todas as funções da classe modelo de dados são **não expostas** a aplicações remotas e não podem ser chamadas de solicitações REST. Você deve declarar explicitamente cada função pública com a palavra-chave [`exposed`](#exposed-vs-non-exposed-functions).
 
 ![](../assets/en/ORDA/api.png)
 
@@ -34,7 +33,7 @@ Além disso, 4D [pré-criou automaticamente](#creating-classes) as classes para 
 
 ## Arquitetura
 
-A ORDA fornece **classes genéricas** expostas através da loja de classes **`4D`** [](Concepts/classes.md#class-stores), bem como **classes de utilizador** (que estendem as classes genéricas) expostas na loja de classes **`cs`** [](Concepts/classes.md#class-stores):
+ORDA fornece **classes genéricas** expostas através da [class store](Concepts/classes.md#class-stores) **`4D`**, bem como **user classes** (que estendem as classes genéricas) expostas na [class store](Concepts/classes.md#class-stores) **`cs`**:
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
@@ -99,15 +98,10 @@ Cada tabela exposta com ORDA oferece uma classe DataClass no armazenamento de cl
 #### Exemplo
 
 ```4D
-// cs.Company class
+// cs. Classe company Class extends DataClass
 
-
-Class extends DataClass
-
-// Returns companies whose revenue is over the average
-// Returns an entity selection related to the Company DataClass
-
-Function GetBestOnes()
+// Retorna empresas cuja receita é acima da média
+// Retorna uma seleção de entidade relacionada com a dataClass Company Function GetBestOnes()
  $sel:=This.query("revenues >= :1";This.all().average("revenues"));
  $0:=$sel
 ```
@@ -115,8 +109,8 @@ Function GetBestOnes()
 Em seguida, pode obter uma seleção de entidades das "melhores" empresas através da execução:
 
 ```4d
- var $best : cs.CompanySelection
- $best:=ds.Company.GetBestOnes()
+ var $best : cs. CompanySelection
+ $best:=ds. Company. GetBestOnes()
 ```
 
 #### Exemplo com um datastore remoto
@@ -128,17 +122,13 @@ O seguinte catálogo *City* está exposto num datastore remoto (vista parcial):
 A classe `City` fornece uma API:
 
 ```4d  
-// cs.City class
-
-Class extends DataClass
-
-Function getCityName()
+// cs. City class Class extends DataClass Function getCityName()
  var $1; $zipcode : Integer
- var $zip : 4D.Entity
+ var $zip : 4D. Entity
  var $0 : Text
 
  $zipcode:=$1
- $zip:=ds.ZipCode.get($zipcode)
+ $zip:=ds. ZipCode.get($zipcode)
  $0:="" 
 
  If ($zip#Null)
@@ -165,19 +155,14 @@ Cada tabela exposta com ORDA oferece uma classe EntitySelection no repositório 
 
 - **Extends**: 4D. EntitySelection
 - **Nome da classe**: *DataClassName*Seleção (em que *DataClassName* é o nome da tabela)
-- **Exemplo de nome**: cs.EmployeeSelection
+- **Exemplo de nome**: cs. EmployeeSelection
 
 #### Exemplo
 
 ```4d
-// Class cs.EmployeeSelection 
+// Class cs. EmployeeSelection Class extends EntitySelection
 
-
-Class extends EntitySelection
-
-//Extrair os empregados com um salário superior à média desta seleção de entidades 
-
-Function withSalaryGreaterThanAverage
+//Extrair os empregados com um salário superior à média desta seleção de entidades Function withSalaryGreaterThanAverage
  C_OBJECT($0)
  $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
 
@@ -200,17 +185,9 @@ Cada tabela exposta com ORDA oferece uma classe de Entidade no armazenamento de 
 #### Exemplo
 
 ```4d
-// cs.CityEntity class
-
-Class extends Entity
-
-Function getPopulation()
-    $0:=This.zips.sum("population")
-
-
-Function isBigCity
-C_BOOLEAN($0)
-// The getPopulation() function is usable inside the class
+// cs. CityEntity class Class extends Entity Function getPopulation()
+    $0:=This.zips.sum("population") Function isBigCity C_BOOLEAN($0)
+// A função getPopulation() pode ser usada dentro da classe
 $0:=This.getPopulation()>50000
 ```
 
@@ -220,9 +197,7 @@ Em seguida, pode chamar este código:
 var $cityManager; $city : Object
 
 $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
-$city:=$cityManager.City.getCity("Caguas")
-
-If ($city.isBigCity())
+$city:=$cityManager. City.getCity("Caguas") If ($city.isBigCity())
  ALERT($city.name + " is a big city")
 End if
 ```
@@ -243,7 +218,7 @@ Ao criar ou editar classes de modelo de dados, é necessário preste atenção �
 
 ## Funções expostas vs não expostas
 
-For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default to remote requests.
+Por razões de segurança, todas as funções de classe de modelo de dados são **não expostas** (ou seja, privadas) por padrão para solicitações remotas.
 
 Os pedidos remotos incluem:
 
@@ -257,8 +232,7 @@ Uma função que não esteja exposta não está disponível em aplicações remo
 Para permitir que uma função de classe de modelo de dados seja chamada por um pedido remoto, é necessário declará-la explicitamente utilizando a palavra-chave `exposed` . A sintaxe formal é:
 
 ```4d  
-// declarar uma função exposta
-Função exposta <functionName>   
+// declarar uma função exposta Função exposta <functionName>   
 ```
 
 > A palavra-chave `exposed` só pode ser utilizada com funções de classe de modelo de dados. Se for utilizada com uma função [da classe de usuário regular](Concepts/classes.md) , é ignorada e o compilador devolve um erro.
@@ -318,8 +292,8 @@ Com esta palavra-chave, a função será sempre executada no lado do cliente.
 Note-se que a função funcionará mesmo que eventualmente seja necessário aceder ao servidor (por exemplo, se a cache ORDA tiver expirado). No entanto, é altamente recomendável certificar-se de que a função local não acede a dados no servidor, caso contrário a execução local não poderá trazer qualquer benefício em termos de desempenho. Uma função local que gera muitos pedidos ao servidor é menos eficiente do que uma função executada no servidor que apenas devolveria os valores resultantes. Por exemplo, considere a seguinte função na classe de entidade Escolas:
 
 ```4d
-// Get the youngest students  
-// Inappropriate use of local keyword
+// Obter os alunos mais novos  
+// Uso inapropriado da palavra-chave local
 local Function getYoungest
  var $0 : Object
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
@@ -340,6 +314,26 @@ Na classe *StudentsEntity*:
 Class extends Entity
 
 local Function age() -> $age: Variant
+    If (This.birthDate#!00-00-00!)
+    If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null End if
+    If (This.birthDate#!00-00-00!)
+    If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null End if
+    If (This.birthDate#!00-00-00!)
+    If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null End if
+    If (This.birthDate#!00-00-00!)
+    If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null End if
     If (This.birthDate#!00-00-00!)
     If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)
@@ -409,7 +403,7 @@ Quando uma classe for definida, o seu nome deixa de estar obscurecido no Explora
 
 ### Edição de classes
 
-To open a defined ORDA class in the 4D method editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
+Para abrir uma classe ORDA definida no editor de métodos 4D, selecione ou clique duas vezes no nome de uma classe ORDA e use **Editar...** no menu contextual/menu de opções da janela do Explorer:
 
 ![](../assets/en/ORDA/classORDA4.png)
 
@@ -419,6 +413,6 @@ Para as classes ORDA baseadas no armazenamento de dados local (`ds`), pode acede
 
 ### Editor de método
 
-In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Exemplo com uma variável de classe Entity:
+No editor de métodos 4D, as variáveis digitadas como uma classe ORDA se beneficiam automaticamente dos recursos de autocompletar. Exemplo com uma variável de classe Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)

@@ -15,3 +15,13 @@ displayed_sidebar: docs
 #### Description 
 
 <!--REF #_command_.OPEN RUNTIME EXPLORER.Summary-->La commande OPEN RUNTIME EXPLORER affiche l'Explorateur d'exécution dans une fenêtre flottante.<!-- END REF-->
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1781 |
+| Thread safe | &check; |
+
+

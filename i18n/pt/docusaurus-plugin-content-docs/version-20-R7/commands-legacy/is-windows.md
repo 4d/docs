@@ -33,3 +33,12 @@ Se quiser determinar se o sistema operativo atual é Windows:
 
 [System info](system-info.md)  
 [Is macOS](is-macos.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1573 |
+| Thread-seguro | &check; |
+
+

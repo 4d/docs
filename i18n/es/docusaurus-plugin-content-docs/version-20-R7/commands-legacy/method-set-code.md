@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.METHOD SET CODE.Summary-->El comando **METHOD SET CODE** modifica el código de los métodos designados por el parámetro *ruta* con el contenido pasado en el parámetro *codigo*.<!-- END REF-->
@@ -100,3 +97,12 @@ Este ejemplo exporta e importa la totalidad de los métodos proyecto de una apli
 #### Ver también 
 
 [METHOD GET CODE](method-get-code.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1194 |
+| Hilo seguro | &cross; |
+
+

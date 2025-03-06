@@ -13,19 +13,24 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.In footer.Summary-->**In footer** はIn footer 実行サイクルに対してTrueを返します。<!-- END REF-->  
 
 **In footer** 実行サイクルを生成させるには、デザインモードでそのフォームやオブジェクトでOn Printing footerイベントプロパティを必ず選択してください。
 
-**注:** このコマンドは、[Form event code](form-event-code.md) コマンドを用いてOn Printing footerイベントを返すかどうかをテストするのと同等と言えます。
+**注:** このコマンドは、[Form event code](../commands/form-event-code.md) コマンドを用いてOn Printing footerイベントを返すかどうかをテストするのと同等と言えます。
 
 #### 参照 
 
-*\_o\_During*  
 [In break](in-break.md)  
 [In header](in-header.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 191 |
+| スレッドセーフである | &cross; |
+
+

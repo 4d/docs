@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET ENABLED.Summary-->La commande **OBJECT SET ENABLED** permet d’activer ou d’inactiver l’objet ou le groupe d’objets désigné par *objet* dans le formulaire courant.<!-- END REF--> 
@@ -41,3 +38,12 @@ Cette commande peut être appliquée aux types d'objets suivants :
 #### Voir aussi 
 
 [OBJECT Get enabled](object-get-enabled.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1123 |
+| Thread safe | &cross; |
+
+

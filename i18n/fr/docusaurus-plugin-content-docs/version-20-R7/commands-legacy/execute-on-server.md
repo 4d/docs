@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Execute on server.Summary-->La commande **Execute on server** lance un nouveau process sur la machine serveur (lorsqu'elle est appelée en environnement client/serveur) et retourne le numéro de ce process.<!-- END REF-->
@@ -58,7 +55,7 @@ Vous pouvez passer des paramètres à la méthode process. Vous pouvez le faire 
 
 **Note** **:** Si vous passez des paramètres à la méthode process, vous devez passer le paramètre *nom*, il ne peut être omis dans ce cas. 
 
-Si vous passez un objet 4D ([C\_OBJECT](c-object.md)) ou une collection ([C\_COLLECTION](c-collection.md)) comme *param*, une copie est envoyée (et non une référence) et la forme JSON est utilisée en utf-8 pour le serveur. Si l’objet ou la collection contient des pointeurs, leur valeurs dépointées sont envoyées, pas les pointeurs eux-mêmes.
+Si vous passez un objet 4D (*C\_OBJECT*) ou une collection (*C\_COLLECTION*) comme *param*, une copie est envoyée (et non une référence) et la forme JSON est utilisée en utf-8 pour le serveur. Si l’objet ou la collection contient des pointeurs, leur valeurs dépointées sont envoyées, pas les pointeurs eux-mêmes.
 
 ##### Paramètre optionnel \* 
 
@@ -191,3 +188,12 @@ Reportez-vous à la section *Services basés sur les procédures stockées (exem
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [New process](new-process.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 373 |
+| Thread safe | &cross; |
+
+

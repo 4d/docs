@@ -200,7 +200,7 @@ Cuando [HTTPS está activado](#enable-https), recuerde que si [HTTP está tambi�
 
 HSTS permite al servidor web 4D declarar que los navegadores sólo deben interactuar con él a través de conexiones HTTPS seguras. Una vez activado, el servidor web 4D añadirá automáticamente información relacionada con HSTS a todos los encabezadoss de las respuestas. Los navegadores registrarán la información HSTS la primera vez que reciban una respuesta del servidor web 4D, luego cualquier solicitud HTTP futura se transformará automáticamente en solicitudes HTTPS. El tiempo que esta información es almacenada por el navegador se especifica con el parámetro web **HSTS max age**.
 
-> HSTS requiere que HTTPS esté [activado](enable-https) en el servidor. [El HTTP](enable-http) también debe estar activado para permitir las conexiones iniciales del cliente.
+> HSTS requiere que HTTPS esté [activado](#enable-https) en el servidor. [El HTTP](#enable-http) también debe estar activado para permitir las conexiones iniciales del cliente.
 
 > Puede obtener el modo de conexión actual utilizando el comando `WEB Is secured connection`.
 
@@ -386,7 +386,7 @@ Por defecto, el valor es 100. Puede definir el número entre 10 y 32000.
 
 Tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web está autorizado a procesar. Por defecto, el valor es de 2 000 000, es decir, algo menos de 2 MB. Pasar el valor máximo (2 147 483 648) significa que, en la práctica, no se define ningún límite.
 
-Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. When a request reaches this limit, the 4D web server rejects it.
+Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Cuando una petición alcanza este límite, el servidor web 4D la rechaza.
 
 Valores posibles: 500 000 a 2 147 483 648.
 
@@ -448,7 +448,7 @@ Verdadero si PFS está disponible en el servidor web (ver la sección [TLS](Admi
 
 Algunos robots (motores de búsqueda, arañas...) recorren los servidores web y las páginas estáticas. Si no quiere que los robots puedan acceder a todo su sitio, puede definir las URLs a las que no pueden acceder.
 
-Para ello, ponga el archivo ROBOTS.TXT en la raíz del servidor. Este archivo debe estar estructurado de la siguiente manera:
+Para ello, ponga el archivo ROBOTS. TXT en la raíz del servidor. Este archivo debe estar estructurado de la siguiente manera:
 
 ```4d
    User-Agent: <name>

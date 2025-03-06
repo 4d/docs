@@ -71,7 +71,7 @@ Los objetos `File` soportan varios nombres de ruta, incluyendo la sintaxis `file
 
 #### Descripción
 
-La función `4D.File.new()` <!-- REF #4D.File.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.File`<!-- END REF -->. Es idéntico al comando [`File`](../commands/file.md) (atajo).
+Lanzamiento Es idéntico al comando [`File`](../commands/file.md) (atajo).
 
 > Se recomienda utilizar el comando de acceso directo [`File`](../commands/file.md) en lugar de `4D.File.new()`.
 
@@ -99,7 +99,7 @@ La función `4D.File.new()` <!-- REF #4D.File.new().Summary -->crea y devuelve u
 
 | Parámetros | Tipo    |                             | Descripción                                                        |
 | ---------- | ------- | --------------------------- | ------------------------------------------------------------------ |
-| Result     | Boolean | <- | True si el archivo se ha creado con éxito, false en caso contrario |
+| Resultado  | Boolean | <- | True si el archivo se ha creado con éxito, false en caso contrario |
 
 <!-- END REF -->
 
@@ -146,7 +146,7 @@ Creación de un archivo de preferencias en la carpeta principal:
 | destinationFolder | 4D.Folder | ->                          | Carpeta de destino para el alias o el acceso directo |
 | aliasName         | Text                      | ->                          | Nombre del alias o del atajo                         |
 | aliasType         | Integer                   | ->                          | Tipo de enlace del alias                             |
-| Result            | 4D.File   | <- | Referencia del archivo del alias o de atajo          |
+| Resultado         | 4D.File   | <- | Referencia del archivo del alias o de atajo          |
 
 <!-- END REF -->
 
@@ -261,7 +261,7 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 | Parámetros | Tipo   |                             | Descripción                                                                                                 |
 | ---------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Result     | Object | <- | Contenido del archivo de recurso versión .exe/.dll o .plist |
+| Resultado  | Object | <- | Contenido del archivo de recurso versión .exe/.dll o .plist |
 
 <!-- END REF -->
 
@@ -358,7 +358,7 @@ ALERT($info.Copyright)
 | ----------------- | ------------------------- | --------------------------- | -------------------------------------- |
 | destinationFolder | 4D.Folder | ->                          | Carpeta de destino                     |
 | newName           | Text                      | ->                          | Nombre completo del archivo trasladado |
-| Result            | 4D.File   | <- | Archivo movido                         |
+| Resultado         | 4D.File   | <- | Archivo movido                         |
 
 <!-- END REF -->
 
@@ -406,7 +406,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | ---------- | ------------------------------------------------ | --------------------------- | ----------------------------------------------------------- |
 | mode       | Text                                             | ->                          | Modo de apertura: "read", "write", "append" |
 | options    | Object                                           | ->                          | Opciones de apertura                                        |
-| Result     | [4D.FileHandle](FileHandleClass) | <- | Nuevo objeto File handle                                    |
+| Resultado  | [4D.FileHandle](FileHandleClass) | <- | Nuevo objeto File handle                                    |
 
 <!-- END REF -->
 
@@ -426,7 +426,7 @@ Si utiliza el parámetro *mode* (texto), pase el modo de apertura para el file h
 
 Si utiliza el parámetro *options* (object), puede pasar más opciones para el file handle a través de las siguientes propiedades (estas propiedades se pueden leer después desde el objeto [file handle](FileHandleClass) abierto):
 
-| *opciones*        | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
+| *options*         | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | `.mode`           | Text           | Modo de apertura (ver *mode* arriba)                                                                                                                             | "read"       |
 | `.charset`        | Text           | Conjunto de caracteres utilizado al leer o escribir en el archivo. Utilice el nombre estándar del conjunto (por ejemplo, "ISO-8859-1" o "UTF-8") | "UTF-8"      |
@@ -486,7 +486,7 @@ $fhandle:=$f.open("read")
 | Parámetros | Tipo                    |                             | Descripción                       |
 | ---------- | ----------------------- | --------------------------- | --------------------------------- |
 | newName    | Text                    | ->                          | Nuevo nombre completo del archivo |
-| Result     | 4D.File | <- | Archivo renombrado                |
+| Resultado  | 4D.File | <- | Archivo renombrado                |
 
 <!-- END REF -->
 
@@ -671,7 +671,7 @@ La función `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescri
 
 La función `.setText()` <!-- REF #FileClass.setText().Summary --> escribe *text* como el nuevo contenido del archivo<!-- END REF -->.
 
-Si el archivo referenciado en el objeto `File` no existe en el disco, la función lo crea. Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
+Comentario Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
 
 En *text*, pase el texto a escribir en el archivo. Puede ser un texto literal ("my text"), o un campo / variable texto 4D.
 

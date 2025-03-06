@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->El comando **CHECK LOG FILE** muestra la caja de diálogo de visulización del archivo de historial actual de la base (accesible también vía la ventana del Centro de seguridad y mantenimiento):
@@ -37,3 +34,13 @@ Puede interceptar estos errores utilizando un método de manejo de errores insta
 
 *Errores de gestión de backup*  
 [RESTORE](restore.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 799 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

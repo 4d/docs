@@ -3,18 +3,18 @@ id: spinner
 title: Spinner
 ---
 
-The spinner is a circular indicator that displays a continuous animation, like the [Barber shop](progressIndicator.md#barber-shop).
+O spinner é um indicador circular que exibe uma animação contínua, como [Barber shop](progressIndicator.md#barber-shop).
 
 ![](../assets/en/FormObjects/spinner.gif)
 
-You use this type of object to indicate that an operation such as establishing a network connection or a performing a calculation is underway. When this indicator is selected, [graphical Scale properties](properties_Scale.md) are not available.
+Esse tipo de objeto é usado para indicar que uma operação, como o estabelecimento de uma conexão de rede ou a realização de um cálculo, está em andamento. Quando esse indicador é selecionado, [as propriedades gráficas Escala](properties_Scale.md) não estão disponíveis.
 
-Quando o formulário é executado, o objeto não é animado. You manage the animation by passing a value to its [associated variable or expression](properties_Object.md#variable-or-expression):
+Quando o formulário é executado, o objeto não é animado. Você gerencia a animação passando um valor para sua [variável ou expressão associada](properties_Object.md#variable-or-expression):
 
 * 1 (ou qualquer valor diferente de 0) = Iniciar a animação,
 * 0 = Parar a animação
 
 ### Propriedades compatíveis
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Height](properties_CoordinatesAndSizing.md#height) -[Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
+[Estilo da linha de borda](properties_BackgroundAndBorder.md#border-line-style) - [Parte inferior](properties_CoordinatesAndSizing.md#bottom) - [Classe](properties_Object.md#css-class) - [Tipo de expressão](properties_Object.md#expression-type) - [Altura](properties_CoordinatesAndSizing.md#height)[-Dica de ajuda](properties_Help.md#help-tip) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Nome do objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - [Parte superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Dimensionamento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)  
  

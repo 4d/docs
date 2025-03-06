@@ -29,7 +29,7 @@ Em 4D v14, agora é possível utilizar vários certificados clientes.
   
 Em *pastaCertificados*, passe a rota de acesso da pasta personalizada que contém os certificados clientes. Pode passar uma rota de acesso relativa ao arquivo de estrutura da aplicação, ou uma rota de acesso absoluta. A rota deve ser expressada com a sintaxe do sistema, por exemplo:
 
-* (OS X): Disk:Applications:myserv:folder
+* (macOS): Disk:Applications:myserv:folder
 * (Windows): C:\\Applications\\myserv\\folder
 
 Uma vez executado este comando, a nova rota é levada em conta imediatamente (não é necessário reiniciar a aplicação). Se utiliza em todos os processos da base.
@@ -38,7 +38,7 @@ Se a pasta especificada não existe na localização definida, ou se a rota de a
 
 #### Sobre certificados SSL 
 
-[Como descrito nesta página](https://developer.4d.com/docs/pt/Admin/tls/), certificados SSL gerenciado por 4D deve ser no **PEM format**. Se seu provedor de certificado (por exemplo, [startssl](https://www.startssl.com/)) enviar para você um certificado que esteja no formato binário, como .crt, .pfx ou .p12 (o formato também depende de seu navegador), você terá que converter o formato para o PEM format antes de poder utilizã-lo. Há web sites como *sslshopper* onde se pode fazer essa conversão on-line.
+[Como descrito nesta página](../Admin/tls.md), certificados SSL gerenciado por 4D deve ser no **PEM format**. Se seu provedor de certificado (por exemplo, [startssl](https://www.startssl.com/)) enviar para você um certificado que esteja no formato binário, como .crt, .pfx ou .p12 (o formato também depende de seu navegador), você terá que converter o formato para o PEM format antes de poder utilizã-lo. Há web sites como *sslshopper* onde se pode fazer essa conversão on-line.
 
 #### Exemplo 
 
@@ -56,3 +56,12 @@ Você quer mudar temporalmente a pasta de certificados:
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 [HTTP Get certificates folder](http-get-certificates-folder.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1306 |
+| Thread-seguro | &check; |
+
+

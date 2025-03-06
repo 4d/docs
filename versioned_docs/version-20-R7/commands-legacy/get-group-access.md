@@ -35,3 +35,12 @@ You want to check if the current user belongs to the "plugins" group:
 #### See also 
 
 [SET GROUP ACCESS](set-group-access.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1738 |
+| Thread safe | &check; |
+
+

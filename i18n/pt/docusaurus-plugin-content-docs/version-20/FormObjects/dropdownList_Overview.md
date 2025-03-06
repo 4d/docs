@@ -20,7 +20,7 @@ Pode criar diferentes tipos de listas pendentes com diferentes funcionalidades. 
 | Lista de opções guardada como valor | Construído com base numa lista de opções (“padrão”)                  | Lista             | Valor do item seleccionado            | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
 | Salvar como                         | Construído sobre numa lista de escolha. A posição do item é guardada | Lista             | Referência do item seleccionado       | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
 | Lista de seleção hierárquica        | Pode apresentar conteúdos hierárquicos                               | Lista             | Referência da lista                   | `dataSourceTypeHint: integer`                                                                                                                                 |
-| Ação padrão                         | Criado automaticamente pela ação                                     | *any*             | *qualquer exceto referência de lista* | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
+| Ação padrão                         | Criado automaticamente pela ação                                     | *any*             | *qualquer exceto referência de lista* | qualquer definição + `action:<action>` (+ `focusable: false` para ações que se aplicam a outras áreas)                                                  |
 
 ## Manuseamento de listas pendentes
 
@@ -28,21 +28,21 @@ Pode criar diferentes tipos de listas pendentes com diferentes funcionalidades. 
 
 > Esta funcionalidade só está disponível em projectos 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. O objeto deve conter as seguintes propriedades:
+Um [objeto](Concepts/dt_object.md) que encapsula uma [coleção](Concepts/dt_collection.md) pode ser usado como a fonte de dados de uma lista suspensa. O objeto deve conter as seguintes propriedades:
 
 | Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                                    |
 | -------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `values`       | Collection       | Obrigatório - Coleção de valores escalares. Todos os valores devem ser do mesmo tipo. Tipos suportados:<li>strings</li><li>números</li><li>datas</li><li>horas</li>Se estiver vazia ou não for definida, a lista pendente está vazia |
-| `index`        | number           | Index of the currently selected item (value between 0 and `collection.length-1`). Se -1 for definido, `currentValue` será exibido como uma cadeia de caracteres de marcador de posição                                                                                       |
+| `index`        | number           | Índice do item selecionado no momento (valor entre 0 e `collection.length-1`). Se -1 for definido, `currentValue` será exibido como uma cadeia de caracteres de marcador de posição                                                                                          |
 | `currentValue` | igual a Colecção | Item atualmente selecionado (utilizado como valor de marcador de posição se definido por código)                                                                                                                                                                             |
 
 Se o objeto contiver outras propriedades, estas são ignoradas.
 
 Objetos lista drop down são iniciados ao carregar uma lista de valores em um array. Pode fazer isso de várias maneiras:
 
-* Enter a list of default values in the object properties by selecting `\&#060;Static List&#062;` in the [Data Source](properties_DataSource.md) theme of the Property List. Os valores por defeito são carregados automaticamente para um objeto.
+* Insira uma lista de valores padrão nas propriedades do objeto selecionando `\&#060;Static List&#062;` no tema [Fonte de dados](properties_DataSource.md) da Lista de propriedades. Os valores por defeito são carregados automaticamente para um objeto.
 
-* Executar código que cria o objeto e as suas propriedades. For example, if "myList" is the [variable](properties_Object.md#variable-or-expression) associated to the drop-down list, you can write in the [On Load](Events/onLoad.md) form event:
+* Executar código que cria o objeto e as suas propriedades. Por exemplo, se "myList" for a [variable](properties_Object.md#variable-or-expression) associada à lista suspensa, você poderá escrever no evento de formulário [On Load](Events/onLoad.md):
 
 ```4d
 // Form.myDrop é a datasource do objeto do formulário
@@ -72,7 +72,7 @@ Um [array](Concepts/arrays.md) é uma lista de valores na memória que são refe
 
 Para inicializar o array associado à lista pendente, pode:
 
-* Enter a list of default values in the object properties by selecting `\&#060;Static List&#062;` in the [Data Source](properties_DataSource.md) theme of the Property List. Os valores padrão são carregados em um array automático. Pode fazer uma referência ao array usando o nome da variável associado com o objeto.
+* Insira uma lista de valores padrão nas propriedades do objeto selecionando `\&#060;Static List&#062;` no tema [Fonte de dados](properties_DataSource.md) da Lista de propriedades. Os valores padrão são carregados em um array automático. Pode fazer uma referência ao array usando o nome da variável associado com o objeto.
 
 * Antes que o objeto seja exibido, execute um código que atribua valores aos elementos do array. Por exemplo:
 
@@ -138,28 +138,28 @@ Quando associar um menu pop up/lista drop down com uma lista de escolhas e com u
 
 ### Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
 
-A hierarchical drop-down list has a sublist associated with each item in the list. Eis um exemplo de uma lista pendente hierárquica:
+Uma lista suspensa hierárquica tem uma sub-lista associada a cada item da lista. Eis um exemplo de uma lista pendente hierárquica:
 
 ![](../assets/en/FormObjects/popupDropdown_hierar.png)
 
 > Nos formulários, as listas pendentes hierárquicas estão limitadas a dois níveis.
 
-You can assign the hierarchical choice list to the drop-down list object using the [Choice List](properties_DataSource.md#choice-list) field of the Property List.
+Você pode atribuir a lista de opções hierárquicas para o objeto da lista suspensa usando o campo [Lista de opções](properties_DataSource.md#choice-list) da Lista de Propriedades.
 
-You manage hierarchical drop-down lists using the **Hierarchical Lists** commands of the 4D Language. Todos os comandos que suportam a sintaxe `(*; "name")` podem ser utilizados com listas pendentes hierárquicas, por exemplo, [`List item parent`](https://doc.4d.com/4dv19/help/command/en/page633.html).
+Pode gerenciar as listas suspensas hierárquicas usando os comandos **listas hierárquicas** da linguagem 4D. Todos os comandos que suportam a sintaxe `(*; "name")` podem ser utilizados com listas pendentes hierárquicas, por exemplo, [`List item parent`](https://doc.4d.com/4dv19/help/command/en/page633.html).
 
 ### Usar uma ação padrão
 
 Pode atribuir uma ação padrão a menu pop up ou lista drop down ([Action](properties_Action.md#standard-action) tema da Lista de Propriedades). Esta funcionalidade é suportada nos seguintes contextos:
 
-* Utilização da ação padrão `gotoPage`. In this case, 4D will automatically display the [page of the form](FormEditor/forms.md#form-pages) that corresponds to the number of the item that is selected. For example, if the user selects the 3rd item, 4D will display the third page of the current form (if it exists). At runtime, by default the drop-down list displays the page numbers (1, 2...).
+* Utilização da ação padrão `gotoPage`. Nesse caso, 4D exibirá automaticamente a [página do formulário](FormEditor/forms.md#form-pages) que corresponde ao número do item selecionado. Por exemplo, se o usuário selecionar o terceiro item, 4D exibirá a terceira página do formulário atual (se existir). No tempo de execução, por padrão a lista suspensa exibe os números de página (1, 2...).
 
 * Por exemplo, se selecionar a ação padrão `backgroundColor`, no tempo de execução o objeto mostrará uma lista automática de cores de fundo. Essa funcionalidade exige que:
-  * a styled text area ([4D Write Pro area](writeProArea_overview.md) or [input](input_overview.md) with [multistyle](properties_Text.md#multi-style) property) is present in the form as the standard action target.
-  * the [focusable](properties_Entry.md#focusable) property is not set to the drop-down list. At runtime the drop-down list will display an automatic list of values, e.g. background colors. Pode substituir esta lista automática atribuindo além disso uma lista de seleção na qual cada elemento tenha atribuída uma ação padrão personalizada.
+  * uma área de texto com estilo ([area 4D Write Pro](writeProArea_overview.md) ou [entrada](input_overview.md) com a propriedade [multistyle](properties_Text.md#multi-style)) está presente no formulário como o alvo da ação padrão.
+  * a propriedade [focusable](properties_Entry.md#focusable) não esteja definida para a lista suspensa. Em tempo de execução, a lista suspensa exibirá uma lista automática de valores, por exemplo, cores de fundo. Pode substituir esta lista automática atribuindo além disso uma lista de seleção na qual cada elemento tenha atribuída uma ação padrão personalizada.
 
 > Esta funcionalidade não pode ser utilizada com uma lista pendente hierárquica.
 
 ## Propriedades compatíveis
 
-[Formato Alfa](properties_Display.md#alpha-format) - [Negrita](properties_Text.md#bold) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - \[Estilo del botón\](properties_TextAndPicture. md#button-style) - [Lista de opciones](properties_DataSource.md#choice-list) - [Clase](properties_Object.md#css-class) - [Formato de fecha](properties_Display.md#date-format) - \[Tipo de expresión\](properties_Object. md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Color de la fuente](properties_Text.md#font-color) - \[Tamaño de la fuente\](properties_Text. md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Consejo de ayuda](properties_Help.md#help-tip) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - \[Italic\](properties_Text. md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [No renderizado](properties_Display.md#not-rendered) - \[Nombre del objeto\](properties_Object. md#object-name) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Acción estándar](properties_Action.md#standard-action) - [Guardar como](properties_DataSource.md#save-as) - \[Formato de tiempo\](properties_Display. md#time-format) - [Superior](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Subrayado](properties_Text.md#underline) - \[Variable o expresión\](properties_Object. md#variable-or-expression) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)  
+[Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (expression type)](properties_DataSource.md#data-type-expression-type) - [Data Type (list)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save value](properties_Object.md#save-value) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  

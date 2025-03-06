@@ -49,5 +49,5 @@ Vous souhaitez obtenir la couleur de fond de la zone sélectionnée :
 
 *Attributs 4D Write Pro*  
 *Constantes 4D Write Pro*  
-[WP RESET ATTRIBUTES](wp-reset-attributes.md)  
+[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)  
 [WP SET ATTRIBUTES](wp-set-attributes.md)  

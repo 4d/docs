@@ -32,3 +32,12 @@ Vous voulez appeler un process worker et lui passer comme paramètre le nom du p
 *A propos des workers*  
 [CALL WORKER](call-worker.md)  
 [KILL WORKER](kill-worker.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1392 |
+| Thread safe | &check; |
+
+

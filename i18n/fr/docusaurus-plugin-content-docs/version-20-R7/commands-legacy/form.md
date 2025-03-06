@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Form.Summary-->La commande **Form** retourne l'objet associé au formulaire courant, s'il existe.<!-- END REF--> 4D associe automatiquement un objet au formulaire courant dans les cas suivants :
@@ -32,7 +29,7 @@ Si le formulaire courant est affiché suite à un appel à la commande [DIALOG](
 
 Si le formulaire courant est un sous-formulaire, l'objet retourné par **Form** dépend de la variable du conteneur parent :
 
-* Si la variable associée au conteneur parent a été typée en objet ([C\_OBJECT](c-object.md)), **Form** retourne la valeur de cette variable.  
+* Si la variable associée au conteneur parent a été typée en objet (*C\_OBJECT*), **Form** retourne la valeur de cette variable.  
 Dans ce cas, l'objet retourné par **Form** est identique à celui retourné par l'expression suivante :  
 ```4d  
  (OBJECT Get pointer(Object subform container))->  
@@ -100,3 +97,12 @@ Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le 
 #### Voir aussi 
 
 [DIALOG](dialog.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1466 |
+| Thread safe | &cross; |
+
+

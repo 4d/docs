@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Print settings to BLOB.Summary-->La commande **Print settings to BLOB** sauvegarde les paramètres d'impression courants de 4D dans le BLOB *paramImpression*.<!-- END REF--> Le paramètre *paramImpression* stocke tous les paramètres utilisés pour l'impression :
@@ -30,7 +27,7 @@ Le BLOB généré ne doit pas être modifié par programmation : il ne peut êtr
 
 La commande retourne 1 si le BLOB a été correctement généré et 0 si aucune imprimante courante n'est sélectionnée.
 
-##### Windows / OS X 
+##### Windows / macOS 
 
 Le BLOB *paramImpression* peut être sauvegardé et lu sur les deux plateformes. Toutefois, même si certains paramètres d'impression sont communs, d'autres sont spécifiques à la plateforme et dépendent du pilote d'impression et des versions de l'OS. Si le même BLOB *paramImpression* est partagé entre les deux plateformes, vous pouvez perdre des informations.  
   
@@ -57,3 +54,12 @@ Vous voulez sauvegarder les paramètres d'impression courants sur disque :
 
   
 [BLOB to print settings](blob-to-print-settings.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1433 |
+| Thread safe | &cross; |
+
+

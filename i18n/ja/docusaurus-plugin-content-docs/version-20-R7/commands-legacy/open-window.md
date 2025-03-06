@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Open window.Summary-->**Open window** は最初の4つの引数で指定された寸法を使用して新しいウィンドウを開きます。<!-- END REF-->
@@ -48,7 +45,7 @@ displayed_sidebar: docs
 
 * *controlMenuBox* 引数はオプションで、ウィンドウのコントロールボックスメソッドを指定します。この引数が指定されると、コントロールメニューボックス (Windows) やクローズボックス (Macintosh) がウィンドウに追加されます。ユーザがコントロールメニューボックスをダブルクリック (Windows) またはクローズボックスをクリック (Macintosh) すると、*controlMenuBox* に渡したメソッドが呼び出されます。
 
-**Note:** On Close Boxイベントを使用して、フォームメソッドでウィンドウを閉じる際のコントロールを行うこともできます。詳細は[Form event code](form-event-code.md)コマンドを参照してください。
+**Note:** On Close Boxイベントを使用して、フォームメソッドでウィンドウを閉じる際のコントロールを行うこともできます。詳細は[Form event code](../commands/form-event-code.md)コマンドを参照してください。
 
 プロセス内で複数のウィンドウが開かれている場合、最後に開かれたウィンドウがそのプロセス内でアクティブ (最前面) です。アクティブウィンドウ内の情報のみが更新可能です。他のウィンドウは見ることはできます。
 
@@ -137,3 +134,12 @@ CloseColorPalette メソッドは[CANCEL](cancel.md)コマンドを呼び出し�
 [CLOSE WINDOW](close-window.md)  
 [Open form window](open-form-window.md)  
 *Open Window*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 153 |
+| スレッドセーフである | &cross; |
+
+

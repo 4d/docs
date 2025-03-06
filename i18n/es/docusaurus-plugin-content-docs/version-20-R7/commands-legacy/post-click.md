@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.POST CLICK.Summary-->El comando POST CLICK simula un clic del ratón.<!-- END REF--> Tiene el mismo efecto que cuando el usuario hace clic en el botón del ratón. 
@@ -31,3 +28,12 @@ Si especifica el parámetro proceso *proceso*, el clic se envía al proceso cuyo
 
 [POST EVENT](post-event.md)  
 [POST KEY](post-key.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 466 |
+| Hilo seguro | &cross; |
+
+

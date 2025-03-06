@@ -22,3 +22,12 @@ Este status acontece muito raramente. Processos são geralmente parados antes do
 #### Ver também 
 
 [Método banco de dados On Exit](metodo-banco-de-dados-on-exit.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 672 |
+| Thread-seguro | &check; |
+
+

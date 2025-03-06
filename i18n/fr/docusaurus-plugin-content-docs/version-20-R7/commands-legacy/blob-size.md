@@ -29,3 +29,12 @@ La ligne de code suivante ajoute 100 octets au BLOB *monBlob* :
 #### Voir aussi 
 
 [SET BLOB SIZE](set-blob-size.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 605 |
+| Thread safe | &check; |
+
+

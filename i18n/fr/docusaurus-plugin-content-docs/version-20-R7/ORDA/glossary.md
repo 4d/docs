@@ -9,7 +9,7 @@ title: Glossaire
 
 ## Action
 
-Chaque action qui peut être effectuée sur une [ressource](#resource). Les actions disponibles sont : create, read, update, drop, execute, promote, et describe.
+Chaque action qui peut être effectuée sur une [ressource](#resource). Available actions are: create, read, update, drop, execute, and promote.
 
 ## Attribut
 
@@ -18,7 +18,7 @@ Un attribut est la plus petite cellule de stockage dans une base de données rel
 - Dans un objet dataclass, chaque propriété est un attribut de dataclass qui correspond à un champ dans la table correspondante (même nom et même type).
 - Dans un objet entity, les attributs d'entités sont des propriétés qui contiennent les valeurs pour les attributs du datastore correspondants.
 
-> Les *attributs* et les *propriétés* sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+> \> Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## AttributePath
 
@@ -89,7 +89,7 @@ Une entité est un objet qui correspond à un modèle de dataclass. Une entité 
 
 Une entité peut être vue comme une instance de la dataclass, comme un enregistrement de la table correspondante à la dataclass dans son datastore associé. Cependant, une entité contient également des données connexes. Le but de l'entité est de gérer les données (créer, mettre à jour, supprimer).
 
-Pour plus d'informations, voir le chapitre Entités.
+For more information, see [entities](entities.md).
 
 ## Entity selection
 
@@ -156,7 +156,7 @@ La possibilité de lancer une ou plusieurs [actions](#actions) sur des [ressourc
 
 Voir [Attribut](#attribute).
 
-> \> Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+> Les attributs et les propriétés sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## PropertyPath
 

@@ -36,3 +36,13 @@ The following method empties the current selection of a table *\[Customers\]*:
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 334 |
+| Thread safe | &check; |
+| Changes current selection ||
+
+

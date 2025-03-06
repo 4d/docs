@@ -23,7 +23,7 @@ The operation of the 4D web server's access system is summarized in the followin
 
 ### Custom (default)
 
-Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests [that require an authentication](#method-calls).
+Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests [that require an authentication](#database-method-calls).
 
 This authentication mode is the most flexible because it allows you to:
 
@@ -122,7 +122,7 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 ```
 
->All the `On Web Authentication` database method's parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-mode)).
+>All the `On Web Authentication` database method's parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
 
 #### $1 - URL
 

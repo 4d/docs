@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Compatibility Note 
 
 <!--REF #_command_.Self.Summary-->This command is kept only for compatibility reasons.<!-- END REF--> Starting with version 12 of 4D, it is recommended to use the [OBJECT Get pointer](object-get-pointer.md) command.
@@ -41,3 +38,12 @@ See the example for the [RESOLVE POINTER](resolve-pointer.md) command.
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 [This](../commands/this.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 308 |
+| Thread safe | &cross; |
+
+

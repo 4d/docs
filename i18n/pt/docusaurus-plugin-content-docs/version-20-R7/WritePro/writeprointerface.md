@@ -72,7 +72,7 @@ O ficheiro modelo permite-lhe definir o seguinte:
 - os atributos dataclass que podem ser usados como colunas da tabela,
 - the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
 
-The template file must be stored in a "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" folder within your project.
+O arquivo modelo deve ser armazenado em uma pasta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" em seu projeto.
 
 O arquivo de modelo no formato JSON contém os seguintes atributos:
 
@@ -153,7 +153,7 @@ Eis um breve exemplo do aspeto do seu ficheiro JSON:
 
 #### Arquivos de tradução
 
-Translation files translate the names of templates, themes, tables, fields, and formulas. These files are added to the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" folder in your project.
+Translation files translate the names of templates, themes, tables, fields, and formulas. Estes arquivos são adicionados à pasta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" em seu projeto.
 
 Each translation file must be named with the corresponding language code (for example "en" for English or "fr" for French).
 
@@ -294,4 +294,4 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 #### Veja também
 
-[4D Write Pro - Table Wizard (tutorial video)](https://www.youtube.com/watch?v=2ChlTju-mtM)
+[4D Write Pro - Table Wizard (vídeo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)

@@ -30,3 +30,12 @@ La ligne de code suivante inscrit le nom de la table courante par défaut dans l
 [DEFAULT TABLE](default-table.md)  
 [Table](table.md)  
 [Table name](table-name.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 363 |
+| Thread safe | &check; |
+
+

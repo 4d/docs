@@ -13,7 +13,7 @@ title: VP Get names
 | ---------- | ---------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
 | scope      | Integer    | ->                          | Alcance objetivo (por defecto= hoja actual) |                  |
-| Result     | Collection | <- | Nombres existentes en el alcance definido                      | <!-- END REF --> |
+| Resultado  | Collection | <- | Nombres existentes en el alcance definido                      | <!-- END REF --> |
 
 #### Descripción
 

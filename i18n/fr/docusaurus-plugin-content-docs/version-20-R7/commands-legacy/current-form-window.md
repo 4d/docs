@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Current form window.Summary-->La commande **Current form window** retourne la référence de la fenêtre du formulaire courant.<!-- END REF--> S’il n’y a pas de fenêtre définie pour le formulaire courant, la commande retourne 0.
@@ -27,3 +24,12 @@ La fenêtre du formulaire courant peut avoir été générée automatiquement pa
 [Open form window](open-form-window.md)  
 [Open window](open-window.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 827 |
+| Thread safe | &cross; |
+
+

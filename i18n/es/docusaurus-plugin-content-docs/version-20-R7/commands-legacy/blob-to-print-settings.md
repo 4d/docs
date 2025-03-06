@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.BLOB to print settings.Summary-->El comando **BLOB to print settings** reemplaza los parámetros de impresión actuales de 4D por los parámetros almacenados en el BLOB *confImpr*.<!-- END REF--> Este BLOB debe haber sido generado por el comando [Print settings to BLOB](print-settings-to-blob.md) o por el comando 4D Pack  4D Pack (ver abajo).
@@ -27,7 +24,7 @@ El parámetro *params* le permite definir cómo manejar los parámetros básicos
 * Si pasa 0 u omite este parámetro, los valores almacenados en el BLOB se utilizan para la impresión.
 * Si pasa 1, los valores se restablecen a los valores predeterminados: el número de copias se establece en 1 y el intervalo de páginas se establece en "todas las páginas".
 
-Los parámetros se aplican a los [parámetros actuales de impresión 4D](https://developer.4d.com/docs/settings/compatibility/) siempre y cuando ningún comando como *\_o\_PAGE SETUP*, [SET PRINT OPTION](set-print-option.md) o [PRINT SELECTION](print-selection.md) sin el parámetro > los modifique. Los parámetros definidos se utiliza particularmente para los comandos [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), [PRINT RECORD](print-record.md), [Print form](print-form.md) y [QR REPORT](qr-report.md), así como también para los comandos de impresión en los menú de 4D, incluyendo los del entorno Diseño.
+Los parámetros se aplican a los [parámetros actuales de impresión 4D](../settings/compatibility.md) siempre y cuando ningún comando como *\_o\_PAGE SETUP*, [SET PRINT OPTION](set-print-option.md) o [PRINT SELECTION](print-selection.md) sin el parámetro > los modifique. Los parámetros definidos se utiliza particularmente para los comandos [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), [PRINT RECORD](print-record.md), [Print form](print-form.md) y [QR REPORT](qr-report.md), así como también para los comandos de impresión en los menú de 4D, incluyendo los del entorno Diseño.
 
 Los comandos [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md) y [PRINT RECORD](print-record.md) deben ser llamados con el parámetro *\>* (si aplica) para que los parámetros definidos por **BLOB to print settings** se mantengan.
 
@@ -41,7 +38,7 @@ El comando devuelve uno de los siguientes códigos de estado:
 
 (\*) Los parámetros dependen de la impresora actual seleccionada en el momento en que el BLOB se guardó. La aplicación de estos valores en otra impresora es soportada si ambas impresoras son del mismo modelo. Si las impresoras son diferentes, se restaurarán sólo los parámetros comunes.
 
-##### Windows / OS X 
+##### Windows / macOS 
 
 El BLOB *confImp* se puede guardar y leer en ambas plataformas. Sin embargo, incluso si ciertos parámetros de impresión son comunes, algunos otros son específicos de la plataforma y dependen de los controladores de impresión y de las versiones del sistema operativo. Si el mismo BLOB *confImp* se comparte entre ambas plataformas, es posible que pierda partes de información.
 
@@ -78,3 +75,12 @@ Usted desea aplicar la configuración de impresión guardada en el disco para el
 #### Ver también 
 
 [Print settings to BLOB](print-settings-to-blob.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1434 |
+| Hilo seguro | &cross; |
+
+

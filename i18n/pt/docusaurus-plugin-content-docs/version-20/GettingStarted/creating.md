@@ -18,9 +18,9 @@ Para criar um novo projeto de banco de dados:
     * Selecionar **Novo > Projeto...** do menu **Arquivo**: ![](../assets/en/getStart/projectCreate1.png)
     * (apenas 4D) Selecione **Projeto...** do botão da barra de ferramentas **Novo**:<p>![](../assets/en/getStart/projectCreate2.png)</p>Um diálogo padrão **Salvar** aparece para que você possa escolher o nome e local da pasta principal do projeto 4D.
 
-3. Coloque o nome de sua pasta de projeto e clique **Save**. Este nome será utilizado:
+3. Coloque o nome de sua pasta de projeto e clique **Guardar**. Este nome será utilizado:
 
-    * as the name of the .4DProject file at the first level of the "Project" folder.
+    * como nome de toda a pasta do projeto,
     * as the name of the .4DProject file at the first level of the "Project" folder.
 
  Pode escolher qualquer nome permitido pelo seu sistema operacional. *Atenção:* se seu banco projeto estiver destinado a funcionar em outros sistemas ou a ser guardada através de uma ferramenta de controle de código fonte, deve levar em consideração suas recomendações específicas de denominação.
@@ -92,7 +92,7 @@ Arquivos`.4DLink` podem salvar o endereço de um projeto 4D assim como seus iden
 4D gera automaticamente um `.4DLink` arquivo quando um projeto local é aberto pela primeira vez ou quando se conecta a um servidor pela primeira vez. O arquivo é armazenado na pasta de preferências locais no seguinte local:
 
 * Windows 7 e superior: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-* OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
+* macOS: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX representa o número da versão da aplicação. Por exemplo, "Favorites v19" para 4D v19.
 
@@ -107,7 +107,7 @@ Os arquivos `.4DLink` podem também ser criados com um editor XML.
 
 ## Guardar arquivos
 
-Ao trabalhar em um projeto em 4D, você pode usar editores 4D integrados para criar, modificar ou salvar itens de estrutura, métodos, formulários, etc. Modificações são salvas no disco quando selecionar um item de menu **Salvar** ou quando a janela do editor perder ou ficar com o foco.
+Ao trabalhar em um projeto em 4D, você pode usar editores 4D integrados para criar, modificar ou salvar itens de estrutura, métodos, formulários, etc. Modificações são salvas no disco quando selecionar um item de menu **Salvar** ou quando a janela do editor perder ou ficar com o foco. Modificações são salvas no disco quando selecionar um item de menu **Salvar** ou quando a janela do editor perder ou ficar com o foco.
 
 Jà que os editores usam arquivos no disco, podem ocorrer conflitos potenciais se o mesmo arquivo for modificado ou até mesmo excluído de locais diferentes. Por exemplo, se o mesmo método for editado em uma janela do Editor de Código *e* em um editor de texto, salvar ambas as modificações resultará num conflito.
 

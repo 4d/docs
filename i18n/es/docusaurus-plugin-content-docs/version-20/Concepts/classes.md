@@ -180,7 +180,13 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Las funciones de clase son propiedades específicas de la clase. Son objetos de la clase [4D.Function](API/FunctionClass.md).
+:::note
+
+No hay palabra clave final para el código de una función. There is no ending keyword for function code.
+
+:::
+
+Las funciones de clase son propiedades específicas de la clase. Las funciones de clase son propiedades específicas de la clase.
 
 En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function`, y el nombre de la función. El nombre de la función debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 
@@ -298,7 +304,18 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 Class Constructor({$parameterName : type; ...})
 // code
 // code
+// Class:
+// Class:
+// Class:
+// Class:
 ```
+
+:::note
+
+No hay palabra clave final para el código de función class constructor. There is no ending keyword for function code.
+
+:::
+
 
 Una función constructora de clase acepta [parámetros](#parameters) opcionales y puede ser utilizada para crear e inicializar objetos de la clase del usuario.
 
@@ -527,7 +544,7 @@ Class constructor ($side : Integer)
 | Parámetros | Tipo   |    | Descripción                                           |
 | ---------- | ------ | -- | ----------------------------------------------------- |
 | param      | any    | -> | Parámetro(s) a pasar al constructor de la clase padre |
-| Result     | Object | <- | Padre del objeto|<!-- END REF -->
+| Resultado  | Object | <- | Padre del objeto|<!-- END REF -->
 
 |
 
@@ -560,27 +577,31 @@ Super.doSomething(42) //llama a la función "doSomething"
 Este ejemplo ilustra el uso de `Super` en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases `Rectangle` y `Square`.
 
 ```4d
-// Class: Rectangle
-Class constructor($width : Integer; $height : Integer)
- This.name:="Rectangle"
- This.height:=$height
- This.width:=$width
+//Class: Square
 
+Class extends Rectangle
 
-Function sayName()
- ALERT("Hi, I am a "+This.name+".")
+Class constructor ($side : Integer)
 
-// Function definition
-Function getArea()
- var $0 : Integer
+ // Llama al class constructor de la clase padre con longitudes
+ // proporcionadas para el ancho y alto del rectángulo
+ Super($side;$side)
+ // En las clases derivadas, Super debe ser llamado antes de que 
+ // pueda utilizar 'This'
+ This.
 
- $0:=(This.height)*(This.width)
+//Class: Square
 
-// Function definition
-Function getArea()
- var $0 : Integer
+Class extends Rectangle
 
- $0:=(This.height)*(This.width)
+Class constructor ($side : Integer)
+
+ // Llama al class constructor de la clase padre con longitudes
+ // proporcionadas para el ancho y alto del rectángulo
+ Super($side;$side)
+ // En las clases derivadas, Super debe ser llamado antes de que 
+ // pueda utilizar 'This'
+ This.
 ```
 
 ```4d
@@ -642,7 +663,7 @@ $message:=$square.description() //tengo 4 lados iguales
 <!-- REF #_command_.This.Params -->
 | Parámetros | Tipo   |    | Descripción                              |
 | ---------- | ------ | -- | ---------------------------------------- |
-| Result     | Object | <- | Objeto actual|<!-- END REF -->
+| Resultado  | Object | <- | Objeto actual|<!-- END REF -->
 
 |
 

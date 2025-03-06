@@ -29,7 +29,7 @@ O parâmetro opcional *fonte* define o tipo de atividade a monitorar. Valores po
 | Activity network    | 2     | Operações de petição de network              |
 | Activity operations | 4     | Operações de dados 4D                        |
 
-**Nota**: se os históricos de depuração tiverem sido parados no servidor 4D [GRAPH SETTINGS](graph-settings.md), **START MONITORING ACTIVITY** com Activity network reiniciará os históricos.
+**Nota**: se os históricos de depuração tiverem sido parados no servidor 4D [Administration window](../ServerWindow/overview.md), **START MONITORING ACTIVITY** com Activity network reiniciará os históricos.
 
 #### Exemplo 
 
@@ -92,3 +92,12 @@ Se quiser iniciar/parar o monitoramento e revisão de dados 4D e atividades de d
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1712 |
+| Thread-seguro | &check; |
+
+

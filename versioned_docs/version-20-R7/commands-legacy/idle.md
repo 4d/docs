@@ -51,3 +51,12 @@ with:
 
 *Compiler Commands*  
 [ON EVENT CALL](on-event-call.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 311 |
+| Thread safe | &check; |
+
+

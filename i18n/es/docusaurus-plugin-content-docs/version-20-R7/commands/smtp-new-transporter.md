@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SMTP New transporter.Params-->
 
-| Parámetros | Tipo                               |   | Descripción                                                                       |
-| ---------- | ---------------------------------- | - | --------------------------------------------------------------------------------- |
-| server     | Object                             | → | Información del servidor de correo                                                |
-| Resultado  | 4D.SMTPTransporter | ← | [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) |
+| Parámetros | Tipo                               |                             | Descripción                                                                       |
+| ---------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
+| server     | Object                             | &#8594; | Información del servidor de correo                                                |
+| Resultado  | 4D.SMTPTransporter | &#8592; | [Objeto SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
 <!-- END REF-->
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) object. El objeto transportador devuelto se utilizará normalmente para el envío de correos electrónicos.
 
-> Este comando no abre ninguna conexión con el servidor SMTP. The SMTP connection is actually opened when the [`.send()`](../API/SMTPTransporterClass.md#send) function is executed.
+> Este comando no abre ninguna conexión con el servidor SMTP. Este comando no abre ninguna conexión con el servidor SMTP.
 >
 > La conexión SMTP se cierra automáticamente:
 >
@@ -54,9 +54,9 @@ En el parámetro *server*, pase un objeto que contenga las siguientes propiedade
 | [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](../API/SMTPTransporterClass.md#sendtimeout)<br/><!-- INCLUDE #transporter.sendTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                    | 100                                                                                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](../API/SMTPTransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                         | ninguno                                                                                          |
 
-#### Result
+#### Resultado
 
-The function returns a [**SMTP transporter object**](../API/SMTPTransporterClass.md#smtp-transporter-object). Todas las propiedades devueltas son de sólo lectura\*\*.
+La función devuelve un [**objeto SMTP transporter**](../API/SMTPTransporterClass.md#smtp-transporter-object). Todas las propiedades devueltas son de sólo lectura\*\*.
 
 #### Ejemplo
 
@@ -84,3 +84,12 @@ The function returns a [**SMTP transporter object**](../API/SMTPTransporterClass
     ALERT("An error occurred sending the mail: "+$status.message)
  End if
 ```
+
+#### Propiedades
+
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1608                            |
+| Hilo seguro       | &amp;check; |
+
+

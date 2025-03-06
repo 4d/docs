@@ -37,21 +37,21 @@ Con barra de fórmula visible:
 
 Tanto la interfaz de la cinta de opciones como la de la barra de herramientas agrupan funciones relacionadas en pestañas:
 
-| Pestaña  | Acciones                        | Interfaz Cinta | Interfaz Barra de herramientas |
-| -------- | ------------------------------- | :------------: | :----------------------------: |
-| File     | Gestión de archivos             |        X       |                                |
-| Inicio   | Apariencia del texto            |        X       |                X               |
-| Insertar | Añadir elementos                |        X       |                X               |
-| Fórmulas | Cálculos de fórmulas y librería |        X       |                X               |
-| Datos    | Gestión de los datos            |        X       |                X               |
-| Mostrar  | Presentación visual             |        X       |                X               |
-| Settings | Presentación de la hoja         |        X       |                                |
+| Pestaña     | Acciones                        | Interfaz Cinta | Interfaz Barra de herramientas |
+| ----------- | ------------------------------- | :------------: | :----------------------------: |
+| File        | Gestión de archivos             |        X       |                                |
+| Inicio      | Apariencia del texto            |        X       |                X               |
+| Insertar    | Añadir elementos                |        X       |                X               |
+| Fórmulas    | Cálculos de fórmulas y librería |        X       |                X               |
+| Datos       | Gestión de los datos            |        X       |                X               |
+| Mostrar     | Presentación visual             |        X       |                X               |
+| Propiedades | Presentación de la hoja         |        X       |                                |
 
 ## Eventos formulario
 
 Los siguientes eventos formulario están disponibles en la Lista de propiedades de las áreas 4D View Pro.
 
-Algunos de los eventos son eventos formulario estándar (disponibles para todos los objetos activos) y otros son eventos formulario específicos de 4D View Pro. Algunos eventos de formulario estándar ofrecen información ampliada en el objeto devuelto por el comando [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) cuando se generan para áreas 4D View Pro. La siguiente tabla indica los eventos estándar y los eventos específicos o los que ofrecen información adicional a las áreas 4D View Pro:
+Algunos de los eventos son eventos formulario estándar (disponibles para todos los objetos activos) y otros son eventos formulario específicos de 4D View Pro. Algunos de los eventos son eventos formulario estándar (disponibles para todos los objetos activos) y otros son eventos formulario específicos de 4D View Pro. La siguiente tabla indica los eventos estándar y los eventos específicos o los que ofrecen información adicional a las áreas 4D View Pro:
 
 | Evento 4D estándar                              | Eventos 4D View Pro específicos y extendidos          |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -126,7 +126,7 @@ La definición de un modelo de formato garantiza que el contenido de sus documen
 
 4D View Pro tiene formatos integrados para números, fechas, horas y texto, pero también puede crear sus propios modelos para dar formato al contenido de las celdas utilizando caracteres y códigos especiales.
 
-For example, when using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) alinearse independientemente del espacio requerido por el número (es decir, si el importe es de 5,00 $ o de 5.000,00 $). Podría utilizar caracteres de formato y espectificar el patrón *($\* #,##0.00*) que mostraría los importes como se muestra:
+Por ejemplo, al usar los comandos [VP SET VALUE](commands/vp-set-value.md) o [VP SET NUM VALUE](commands/vp-set-num-value.md) para introducir cantidades en una factura, puede que desee utilizar los símbolos de moneda ($, €, ¥, etc.) alinearse independientemente del espacio requerido por el número (es decir, si el importe es de 5,00 $ o de 5.000,00 $). Podría utilizar caracteres de formato y espectificar el patrón *($\* #,##0.00*) que mostraría los importes como se muestra:
 
 ![](../assets/en/ViewPro/apx_vpCellFormat1.PNG)
 
@@ -147,8 +147,8 @@ Los formatos numéricos se aplican a todos los tipos de números (por ejemplo, p
 | " "                                                           | Muestra el texto entre comillas sin interpretarlo.                                                                                                                                                                                                                                                   | "8%" será mostrado como: 8%                                                                                                                                                                                                                                                                                          |
 | %                                                             | Muestra los números como un porcentaje de 100.                                                                                                                                                                                                                                                       | 8% se mostrará como 0,08                                                                                                                                                                                                                                                                                                             |
 | \#                                                           | Marcador de posición de dígitos que no muestra ceros adicionales. Si un número tiene más dígitos a la derecha del decimal que marcadores de posición, el número se redondea.                                                                                                         | #.# mostrará 1.54 como 1.5                                                                                                                                                                                                                                                           |
-| ?                                                             | Marcador de posición de dígitos que deja espacio para ceros adicionales, pero no los muestra. Normalmente se utiliza para alinear números por punto decimal.                                                                                                                         | $?? $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                                                                                                                                                                                                                     |
-| \                                                            | Muestra el caracter que lo sigue.                                                                                                                                                                                                                                                                    | #.00\? #.00\? will display 123 as 123.00?                                                                                                                                                                                                                                          |
+| ?                                                             | Marcador de posición de dígitos que deja espacio para ceros adicionales, pero no los muestra. Normalmente se utiliza para alinear números por punto decimal.                                                                                                                         | $?? $?? $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                                                                                                                                                                                                                 |
+| \                                                            | Muestra el caracter que lo sigue.                                                                                                                                                                                                                                                                    | #.00\? #.00\? #.00\? will display 123 as 123.00?                                                                                                                                                                                                                  |
 | /                                                             | Cuando se utiliza con números, los muestra como fracciones. Cuando se utiliza con códigos de texto, fecha u hora, se muestra "tal cual".                                                                                                                                             | #/# mostrará .75 como 3/4                                                                                                                                                                                                                                                                                            |
 | \[ ]     | Crea formatos condicionales.                                                                                                                                                                                                                                                                         | \[>100]\[GREEN]#,##0;\[`<=-100`]\[YELLOW]#,##0;\[BLUE]#,##0 |
 | E                                                             | Formato notación científica.                                                                                                                                                                                                                                                                         | #E+# - mostrará 2E+6 en lugar de 1,500,500                                                                                                                                                                                                                                                                                           |
@@ -227,7 +227,7 @@ Además de los caracteres y códigos especiales descritos en las secciones anter
 | ^                      | Circunflejo                                                                                                                 | #\^#                                        |
 | '                      | Apostrofe                                                                                                                   | '######                                      |
 | { }                    | Paréntesis curvos                                                                                                           | {###,###,###}                                |
-| `< >`                  | Signos menor que y mayor que                                                                                                | ## >#\#                                      |
+| `< >`                  | Signos menor que y mayor que                                                                                                | `## >##`                                     |
 | =                      | Signo igual                                                                                                                 | #+#=##                                       |
 | /                      | Barra inclinada hacia adelante. Cuando se utiliza con números, los muestra como fracciones. | mm/dd/yyyy                                   |
 | !                      | Signo de exclamación                                                                                                        | $###.00!                     |
@@ -266,20 +266,20 @@ Los atributos de columna y línea se utilizan para especificar el inicio, el fin
 
 Los atributos de encabezado y pie de página se utilizan para especificar texto o imágenes en las secciones de encabezado/pie de página izquierda, derecha y central.
 
-| Propiedad         | Tipo              | Descripción                                                                                |
-| ----------------- | ----------------- | ------------------------------------------------------------------------------------------ |
-| footerCenter      | text              | El texto y el formato del pie de página central en las páginas impresas.   |
-| footerCenterImage | picture \| text\* | La imagen para la sección central del pie de página.                       |
-| footerLeft        | text              | El texto y el formato del pie de página izquierdo en las páginas impresas. |
-| footerLeftImage   | picture \| text\* | La imagen de la parte izquierda del pie de página.                         |
-| footerRight       | text              | El texto y el formato del pie de página derecho en las páginas impresas.   |
-| footerRightImage  | picture \| text\* | La imagen de la parte derecha del pie de página.                           |
-| headerCenter      | text              | El texto y el formato del encabezado central en las páginas impresas.      |
-| headerCenterImage | picture \| text\* | La imagen para la sección central del encabezado.                          |
-| headerLeft        | text              | El texto y el formato del encabezado izquierdo en las páginas impresas.    |
-| headerLeftImage   | picture \| text\* | La imagen de la sección izquierda del encabezado.                          |
-| headerRight       | text              | El texto y el formato del encabezado derecho en las páginas impresas.      |
-| headerRightImage  | picture \| text\* | La imagen de la sección derecha del encabezado.                            |
+| Propiedad         | Tipo                                      | Descripción                                                                                |
+| ----------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------ |
+| footerCenter      | text                                      | El texto y el formato del pie de página central en las páginas impresas.   |
+| footerCenterImage | picture &#124; text\* | La imagen para la sección central del pie de página.                       |
+| footerLeft        | text                                      | El texto y el formato del pie de página izquierdo en las páginas impresas. |
+| footerLeftImage   | picture &#124; text\* | La imagen de la parte izquierda del pie de página.                         |
+| footerRight       | text                                      | El texto y el formato del pie de página derecho en las páginas impresas.   |
+| footerRightImage  | picture &#124; text\* | La imagen de la parte derecha del pie de página.                           |
+| headerCenter      | text                                      | El texto y el formato del encabezado central en las páginas impresas.      |
+| headerCenterImage | picture &#124; text\* | La imagen para la sección central del encabezado.                          |
+| headerLeft        | text                                      | El texto y el formato del encabezado izquierdo en las páginas impresas.    |
+| headerLeftImage   | picture &#124; text\* | La imagen de la sección izquierda del encabezado.                          |
+| headerRight       | text                                      | El texto y el formato del encabezado derecho en las páginas impresas.      |
+| headerRightImage  | picture &#124; text\* | La imagen de la sección derecha del encabezado.                            |
 
 \* Si utiliza el tipo texto, pase la ruta de archivo (absoluta o relativa) de la imagen. Si pasa una ruta relativa, el archivo debe estar situado junto al archivo de estructura de la base de datos. En Windows, la extensión del archivo debe ser indicada. No importa el tipo utilizado para establecer una imagen, la imagen en sí (no una referencia) se almacena en el área de 4D View Pro y es devuelta por [VP Get print info](commands/vp-get-print-info.md).
 
@@ -287,7 +287,7 @@ Los atributos de encabezado y pie de página se utilizan para especificar texto 
 
 Los siguientes caracteres especiales permiten añadir o dar formato automáticamente a la información del encabezado y pie de página cuando se imprime el área de 4D View Pro.
 
-| Caracter              | Descripción                                          | Ejemplo                                                                                                                                               | Result                                                        |   |
+| Caracter              | Descripción                                          | Ejemplo                                                                                                                                               | Resultado                                                     |   |
 | --------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | - |
 | & | Caracter de escape                                   | (ver ejemplos más abajo)                                                                                                           |                                                               |   |
 | P                     | Página actual                                        | printInfo.headerLeft:="Esta es la página &P."                                     | Esta es la página 5.                          |   |
@@ -295,7 +295,7 @@ Los siguientes caracteres especiales permiten añadir o dar formato automáticam
 | D                     | Fecha actual (formato yyyy/mm/dd) | printInfo.headerLeft:="Es &D."                                                    | Es 2015/6/19.                                 |   |
 | T                     | Hora actual                                          | printInfo.headerLeft:="Es &T."                                                    | Es 16:30:36.  |   |
 | G                     | Imagen                                               | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G"  | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG)          |   |
-| S                     | Tachado                                              | printInfo.headerLeft:="&SEsto es texto."                                          | ~~Esto es texto.~~                            |   |
+| S                     | Disposición                                          | printInfo.headerLeft:="&SEsto es texto."                                          | ~~Esto es texto.~~                            |   |
 | U                     | Subrayado                                            | printInfo.headerLeft:="&UEsto es texto."                                          | Esto es texto. (Subrayado) |   |
 | B                     | Negrita                                              | printInfo.headerLeft:="&BEsto es texto."                                          | **Esto es texto.**                            |   |
 | I                     | Itálica                                              | printInfo.headerLeft:="&IEsto es texto."                                          | *Esto es texto.*                              |   |
@@ -360,9 +360,9 @@ Los atributos de tamaño de papel se utilizan para especificar las dimensiones o
 - Si el tamaño del papel se especifica utilizando las propiedades `height` y `width`, [`VP Get print info`](./commands/vp-get-print-info.md) devuelve un tamaño de papel con `custom` como valor para `kind`.
 
 - Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
-  - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - uno de los formatos devueltos por el comando [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html).
-    En ese caso, [`VP Get print info`](./commands/vp-get-print-info.md) devuelve el formato correspondiente con la altura y el ancho.
+ - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
+ - uno de los formatos devueltos por el comando [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html).
+  En ese caso, [`VP Get print info`](./commands/vp-get-print-info.md) devuelve el formato correspondiente con la altura y el ancho.
 
 ### Escala
 
@@ -372,8 +372,8 @@ El atributo de escala se utiliza para la optimización y el ajuste de la impresi
 | -------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | bestFitColumns | boolean      | El ancho de la columna se ajusta para adaptarse al ancho del texto más grande para la impresión. Valor por defecto: "false" |
 | bestFitRows    | boolean      | La altura de la línea se ajusta a la altura del texto más alto para la impresión. Valor por defecto: "false"                |
-| fitPagesTall   | entero largo | El número de páginas verticales (orientación vertical) que hay que comprobar al optimizar la impresión. Por defecto = -1 |
-| fitPagesWide   | entero largo | El número de páginas horizontales (orientación horizontal) a comprobar cuando se optimiza la impresión. Por defecto = -1 |
+| fitPagesTall   | entero largo | El número de páginas horizontales (orientación horizontal) a comprobar cuando se optimiza la impresión. Por defecto = -1 |
+| fitPagesWide   | entero largo | El número de páginas verticales (orientación vertical) que hay que comprobar al optimizar la impresión. Por defecto = -1 |
 
 ### Mostrar / Ocultar
 
@@ -381,24 +381,24 @@ Los atributos Mostrar / Ocultar se utilizan para especificar la visibilidad (imp
 
 | Propiedad        | Tipo         | Descripción                                                                                                                                                                                                                                                        |
 | ---------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| showBorder       | boolean      | Prints the outline border. Default value = "true"                                                                                                                                                                                                  |
+| showBorder       | boolean      | Imprime las líneas de la cuadrícula. Valor por defecto: "false"                                                                                                                                                                    |
 | showColumnHeader | entero largo | Parámetros de impresión del encabezado de la columna. Valores disponibles: `vk print visibility hide`, `vk print visibility inherit` (por defecto), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean      | Imprime las líneas de la cuadrícula. Valor por defecto: "false"                                                                                                                                                                    |
+| showGridLine     | boolean      | Prints the outline border. Valor por defecto: "false"                                                                                                                                                                              |
 | showRowHeader    | entero largo | Parámetros de impresión de los encabezados de línea. Valores disponibles: `vk print visibility hide`, `vk print visibility inherit` (por defecto), `vk print visibility show`, `vk print visibility show once`  |
 
 ### Marca de agua
 
 Los atributos de marca de agua se utilizan para superponer texto o una imagen en el área de 4D View Pro.
 
-| Propiedad     |                                                                                    | Tipo              | Descripción                                                                                                                                                                                                                                                                                                                                  |
-| ------------- | ---------------------------------------------------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| marca de agua |                                                                                    | collection        | Colección de parámetros de marcas de agua.  Valor por defecto: indefinido                                                                                                                                                                                                                                    |
-|               | \[ ].height   | entero largo      | La altura del texto/imagen de la marca de agua.                                                                                                                                                                                                                                                                              |
-|               | \[ ].imageSrc | picture \| text\* | El texto/imagen de la marca de agua.                                                                                                                                                                                                                                                                                         |
-|               | \[ ].page     | text              | La(s) página(s) donde se imprime la marca de agua. Para todas las páginas: "all". Para páginas específicas: números de página o rangos de páginas separados por comas. Ej.: "1,3,5-12" |
-|               | \[ ].width    | entero largo      | El ancho del texto/imagen marca de agua.                                                                                                                                                                                                                                                                                     |
-|               | \[ ].x        | entero largo      | La coordenada horizontal del punto superior izquierdo del texto / imagen de la marca de agua.                                                                                                                                                                                                                                |
-|               | \[ ].y        | entero largo      | La coordenada vertical del punto superior izquierdo del texto/imagen de la marca de agua.                                                                                                                                                                                                                                    |
+| Propiedad     |                                                                                    | Tipo                                      | Descripción                                                                                                                                                                                                                                                                                                                                  |
+| ------------- | ---------------------------------------------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| marca de agua |                                                                                    | collection                                | Colección de parámetros de marcas de agua.  Valor por defecto: indefinido                                                                                                                                                                                                                                    |
+|               | \[ ].height   | entero largo                              | La altura del texto/imagen de la marca de agua.                                                                                                                                                                                                                                                                              |
+|               | \[ ].imageSrc | picture &#124; text\* | El texto/imagen de la marca de agua.                                                                                                                                                                                                                                                                                         |
+|               | \[ ].page     | text                                      | La(s) página(s) donde se imprime la marca de agua. Para todas las páginas: "all". Para páginas específicas: números de página o rangos de páginas separados por comas. Ej.: "1,3,5-12" |
+|               | \[ ].width    | entero largo                              | El ancho del texto/imagen marca de agua.                                                                                                                                                                                                                                                                                     |
+|               | \[ ].x        | entero largo                              | La coordenada horizontal del punto superior izquierdo del texto / imagen de la marca de agua.                                                                                                                                                                                                                                |
+|               | \[ ].y        | entero largo                              | La coordenada vertical del punto superior izquierdo del texto/imagen de la marca de agua.                                                                                                                                                                                                                                    |
 
 \* Si utiliza el tipo texto, pase la ruta de archivo (absoluta o relativa) de la imagen. Si pasa una ruta relativa, el archivo debe estar situado junto al archivo de estructura de la base de datos. En Windows, la extensión del archivo debe ser indicada. No importa el tipo utilizado para establecer una imagen, la imagen en sí (no una referencia) se almacena en el área de 4D View Pro y es devuelta por [VP Get print info](commands/vp-get-print-info.md).
 

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Frontmost window.Summary-->La commande **Frontmost window** retourne le numéro de référence de la fenêtre actuellement située au premier plan.<!-- END REF-->
@@ -25,3 +22,12 @@ displayed_sidebar: docs
 
 [Frontmost process](frontmost-process.md)  
 [Next window](next-window.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 447 |
+| Thread safe | &cross; |
+
+

@@ -25,7 +25,7 @@ Ao escrever uma fórmula, pode utilizar diferentes atalhos:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. To do so, enter these formulas using the [VP ADD FORMULA NAME](commands/vp-add-formula-name.md) command.
+Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. Para fazer isso, insira essas fórmulas usando o comando [VP ADD FORMULA NAME](commands/vp-add-formula-name.md).
 
 ### Operadores e Operandos
 
@@ -33,10 +33,10 @@ Todas as fórmulas têm operandos e operadores:
 
 - **Operadores**: consulte [Valores e operadores](#valores-e-operadores) abaixo.
 - Os **Operandos** inclui várias categorias:
-  - [valores](#values-and-operators) (há suporte para 5 tipos de dados)
-  - [referências a outras células](#cell-referências) (relativas, absolutas, mistas ou por nome)
-  - [funções de planilha padrão](#using-functions)
-  - [funções 4D](#4d-functions) com base em fórmulas 4D e fornecendo acesso a variáveis, campos, métodos, comandos ou expressões.
+ - [valores](#values-and-operators) (há suporte para 5 tipos de dados)
+ - [referências a outras células](#cell-referências) (relativas, absolutas, mistas ou por nome)
+ - [funções de planilha padrão](#using-functions)
+ - [funções 4D](#4d-functions) com base em fórmulas 4D e fornecendo acesso a variáveis, campos, métodos, comandos ou expressões.
 
 ## Valores e operadores
 
@@ -135,7 +135,7 @@ O 4D View Pro permite que você defina e chame **funções personalizadas 4D**, 
 
 As funções personalizadas 4D podem receber [parâmetros](#parameters) da área 4D View Pro e retornar valores.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions) command. Exemplos:
+Você declara todas as suas funções usando o comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions). Exemplos:
 
 ```4d
 $o:=New object
@@ -191,11 +191,11 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
 
 3. Editar o conteúdo de uma célula numa área 4D View Pro e digitar:
 
-   ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+ ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
-   "myMethod" é então chamado por 4D e a célula aparece:
+ "myMethod" é então chamado por 4D e a célula aparece:
 
-   ![](../assets/en/ViewPro/vpProjMeth2.PNG)
+ ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### Parâmetros
 
@@ -221,14 +221,14 @@ If you do not declare parameters, values can be sequentially passed to methods (
 
 Os parâmetros Date e Object são tratados da seguinte maneira:
 
-- Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:
+- As datas em *jstype* serão passadas como [objeto](Concepts/dt_object.md) no código 4D com duas propriedades:
 
 | Propriedade | Tipo | Descrição         |
 | ----------- | ---- | ----------------- |
 | value       | Date | Valor data        |
 | time        | Real | Tempo em segundos |
 
-- Objects will be passed as [object](Concepts/dt_object.md) with a  `.value` property containing the parameter:
+- Os objetos serão passados como [object](Concepts/dt_object.md) com uma propriedade `.value` contendo o parâmetro:
 
 | Propriedade | Tipo   | Descrição        |
 | ----------- | ------ | ---------------- |
@@ -239,17 +239,17 @@ Os parâmetros Date e Object são tratados da seguinte maneira:
 4D project methods can also return values in the 4D View Pro cell formula via $0. São suportados os seguintes tipos de dados para os parâmetros devolvidos:
 
 - [text](Aceitar/dt_string.md) (convertido em string em 4D View Pro)
-- [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converted to number in 4D View Pro)
-- [date](Concepts/dt_date.md) (converted to JS Date type in 4D View Pro - hour, minute, sec = 0)
+- [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (convertido em número no 4D View Pro)
+- [date](Concepts/dt_date.md) (convertido para o tipo JS Date no 4D View Pro - hora, minuto, segundo = 0)
 - [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
 - [boolean](Concepts/dt_boolean.md) (convertido em bool no 4D View Pro)
 - [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
-- [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
+- [object](Concepts/dt_object.md) com as duas propriedades a seguir (permitindo a passagem de uma data e hora):
 
-  | Propriedade | Tipo | Descrição         |
-  | ----------- | ---- | ----------------- |
-  | value       | Date | Valor data        |
-  | time        | Real | Tempo em segundos |
+ | Propriedade | Tipo | Descrição         |
+ | ----------- | ---- | ----------------- |
+ | value       | Date | Valor data        |
+ | time        | Real | Tempo em segundos |
 
 If the 4D method returns nothing, an empty string is automatically returned.
 
@@ -276,7 +276,7 @@ $o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information
 
 ## Compatibidade
 
-Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. However, using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md) command is recommended.
+Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. No entanto, é recomendável usar o comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md).
 
 ### Referência a campos utilizando a estrutura virtual
 
@@ -287,7 +287,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 #### Requisitos
 
 - The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter (see example),
-- Table and field names must be ECMA compliant (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
+- Os nomes da tabela e dos campos devem estar em conformidade com ECMA (consulte [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 - O tipo de campo deve ser compatível com 4D View Pro (veja acima).
 
 An error is returned in the 4D View Pro cell if the formula calls a field which is not compliant.
@@ -319,19 +319,19 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 
 2. Execute o seguinte código para inicializar uma estrutura virtual:
 
-   ```4d
-   ARRAY TEXT($tableTitles;1)
-   ARRAY LONGINT($tableNum;1)
-   $tableTitles{1}:="Emp"
-   $tableNum{1}:=2
-   SET TABLE TITLES($tableTitles;$tableNum;*)
-    
-   ARRAY TEXT($fieldTitles;1)
-   ARRAY LONGINT($fieldNum;1)
-   $fieldTitles{1}:="Name"
-   $fieldNum{1}:=2 //last name
-   SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
-   ```
+ ```4d
+ ARRAY TEXT($tableTitles;1)
+ ARRAY LONGINT($tableNum;1)
+ $tableTitles{1}:="Emp"
+ $tableNum{1}:=2
+ SET TABLE TITLES($tableTitles;$tableNum;*)
+  
+ ARRAY TEXT($fieldTitles;1)
+ ARRAY LONGINT($fieldNum;1)
+ $fieldTitles{1}:="Name"
+ $fieldNum{1}:=2 //last name
+ SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+ ```
 
 3. Edite o conteúdo de uma célula na área do 4D View Pro e digite "=e":
 
@@ -360,3 +360,4 @@ Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 - **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
 
 > If neither the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) nor the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
+

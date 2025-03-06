@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Session info.Params -->
 
-| Parâmetro  | Tipo    |     | Descrição                     |
-| ---------- | ------- | :-: | ----------------------------- |
-| sessionID  | Integer |  →  | Session ID                    |
-| Resultados | Object  |  ←  | Information about the session |
+| Parâmetro  | Tipo    |                             | Descrição                     |
+| ---------- | ------- | :-------------------------: | ----------------------------- |
+| sessionID  | Integer | &#8594; | ID da sessão                  |
+| Resultados | Object  | &#8592; | Information about the session |
 
 <!-- END REF -->
 
@@ -36,7 +36,7 @@ O objeto retornado contém as propriedades abaixo:
 | machineName         | Text                                    | Name of the remote machine                                                                         |
 | systemUserName      | Text                                    | Name of the system session opened on the remote machine                                            |
 | IPAddress           | Text                                    | Endereço IP da máquina remota                                                                      |
-| hostType            | Text (enum)          | Host type. Possible values: "windows", "mac", "browser"            |
+| hostType            | Text (enum)          | Tipo de host. Possible values: "windows", "mac", "browser"         |
 | creationDateTime    | Text (Date ISO 8601) | Date and time of connection of the remote machine                                                  |
 | state               | Text (enum)          | Session state. Possible values: "active", "postponed", "sleeping"  |
 | ID                  | Text                                    | Session UUID                                                                                       |
@@ -44,7 +44,7 @@ O objeto retornado contém as propriedades abaixo:
 
 :::note
 
-This command returns the [`.info`](../API/SessionClass.md#info) property of the *sessionID* session. To get information about the current session, you can directly call `Session.info`.
+Este comando retorna a propriedade [`.info`](../API/SessionClass.md#info) da sessão *sessionID*. To get information about the current session, you can directly call `Session.info`.
 
 :::
 

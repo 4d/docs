@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->The **OPEN SETTINGS WINDOW** command opens the Preferences dialog box of 4D or the Database Settings of the current 4D application and displays the parameters or the page corresponding to the key passed in *selector*.<!-- END REF-->
@@ -141,3 +138,14 @@ Access to the Interface page of the Database settings in "User settings" mode:
 #### System variables and sets 
 
 If the Preferences/Settings dialog box is validated, the system variable OK returns 1\. Otherwise, it returns 0.
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 903 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

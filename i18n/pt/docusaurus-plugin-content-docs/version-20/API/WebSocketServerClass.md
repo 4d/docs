@@ -190,19 +190,19 @@ Evento emitido quando ocorre um erro no servidor WebSocket.
 Este exemplo de um recurso básico de bate-papo ilustra como lidar com conexões de servidor WebSocket em uma classe *WSSHandler* .
 
 ```4d
-//myWSServerHandler class
+//Classe myWSServerHandler 
 
 Function onConnection($wss : Object; $event : Object) : Object
 
     If (VerifyAddress($event.request.remoteAddress))
-        // The VerifyAddress method validates the client address
-        // The returned WSConnectionHandler object will be used
-        // by 4D to instantiate the 4D.WebSocketConnection object
-        // related to this connection
+        // O método VerifyAddress valida o endereço do cliente
+        // O objeto WSConnectionHandler retornado será usado
+        // por 4D para instanciar o objeto 4D.WebSocketConnection
+        // relacionado a essa conexão
         return cs.myConnectionHandler.new()   
-        // See connectionHandler object
+        // Veja o objeto connectionHandler
     Else
-        // The connection is cancelled      
+        // A conexão é cancelada      
         return Null
     End if
 
@@ -301,18 +301,18 @@ Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
 Function onOpen($ws : 4D.WebSocketConnection; $message : Object)
     // Send a message to new connected users
     $ws.send("Welcome on the chat!")
-    // Send "New client connected" message to all other chat clients
-    This.broadcast($ws;"New client connected")
+    // Enviar a mensagem "Novo cliente ligado" a todos os outros clientes de chat
+    This.broadcast($ws; "Novo cliente ligado")
 
 Function onTerminate($ws : 4D.WebSocketConnection; $message : Object)
-    // Send "Client disconnected" message to all other chat clients
-    This.broadcast($ws;"Client disconnected")
+    // Enviar a mensagem "Cliente desligado" a todos os outros clientes de chat
+    This.broadcast($ws; "Cliente desligado")
 
 Function broadcast($ws : 4D.WebSocketConnection; $message:text)
     var $client:4D.WebSocketConnection
-    // Resend the message to all chat clients
+    // Reenviar a mensagem a todos os clientes de conversação
     For each ($client; $ws.wss.connections)
-        // Check that the id is not the current connection
+        // Verificar se o id não é a ligação actual
         If ($client.id#$ws.id)
             $client.send($message)
         End if

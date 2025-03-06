@@ -8,94 +8,92 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Params-->
 
-| 引数  | 型      |   | 説明                            |
-| --- | ------ | - | ----------------------------- |
-| 戻り値 | Object | ← | Form data of the current form |
+| 引数  | 型      |                             | 説明                |
+| --- | ------ | --------------------------- | ----------------- |
+| 戻り値 | Object | &#8592; | カレントのフォームのフォームデータ |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 <details><summary>履歴</summary>
 
-| リリース  | 内容                 |
-| ----- | ------------------ |
-| 20 R8 | Form class support |
+| リリース  | 内容           |
+| ----- | ------------ |
+| 20 R8 | フォームクラスのサポート |
 
 </details>
 
 #### 説明
 
-<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor). 4D automatically associates an object to the current form in the following cases:
+<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->**Form** コマンドはカレントフォームに割り当てられている(*formData* 引数、またはフォームエディターで割り当てられたユーザークラスによってインスタンス化された) オブジェクトを返します。 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます:
 
-- the current form has been loaded by one of the [`DIALOG`](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands,
-- the current form is a subform,
-- a table form is currently displayed on screen.
+- カレントフォームが、[`DIALOG`](dialog.md)、[`Print form`](print-form.md) あるいは [`FORM LOAD`](form-load.md) コマンドのいずれか一つによってロードされた場合。
+- カレントフォームがサブフォームである場合。
+- テーブルフォームが現在画面上に表示されている場合。
 
-##### Commands (DIALOG...)
+##### コマンド(DIALOGなど)
 
-If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
+カレントのフォームが[DIALOG](dialog.md)、[`Print form`](print-form.md) あるいは [`FORM LOAD`](form-load.md) コマンドによって表示あるいはロードされていた場合、は以下のいずれかのものを返します:
 
-- the *formData* object passed as parameter to this command, if any,
-- or, an instantiated object of the [user class associated to the form](../FormEditor/properties_FormProperties.md#form-class), if any,
-- or, an empty object.
+- コマンドに引数として渡された*formData* オブジェクト(あれば)。
+- [フォームに割り当てられているユーザークラス](../FormEditor/properties_FormProperties.md#form-class) のインスタンス化されたオブジェクト(あれば)。
+- または、空のオブジェクト。
 
 ##### サブフォーム
 
-If the current form is a subform, the returned object depends on the parent container variable:
+カレントフォームがサブフォームの場合、返されるオブジェクトは親コンテナ変数に依存します:
 
-- If the variable associated to the parent container has been typed as an object, **Form** returns the value of this variable.\
-  In this case, the object returned by **Form** is the same as the one returned by the following expression:
+- 親コンテナに割り当てられている変数がオブジェクト型であった場合、**Form** はその変数の値を返します。\
+ この場合、**Form** から返されるオブジェクトは、以下の式から返されるものと同じになります :
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  
 ```
 
-- If the variable associated to the parent container has not been typed as an object, **Form** returns an empty object, maintained by 4D in the subform context.
+- 親コンテナに割り当てられている変数がオブジェクト型として型指定されていない場合、**Form** は、サブフォームのコンテキストで4D によって維持される、空のオブジェクトを返します。
 
-For more information, please refer to the *Page subforms* section.
+より詳細な情報については、*サブフォームページ* の章を参照してください。
 
-##### Table form
+##### テーブルフォーム
 
-**Form** returns the object associated with the table form displayed on screen. In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
+**Form** は画面に表示されているテーブルフォームに割り当てられているオブジェクトを返します。  出力フォームから表示された入力フォームのコンテキスト(つまりレコードをダブルクリックした後)の場合、返されるオブジェクトには以下のプロパティが格納されています :
 
-| **プロパティ**  | **型**  | **Description**                           |
-| ---------- | ------ | ----------------------------------------- |
-| parentForm | object | **Form** object of the parent output form |
+| **プロパティ**  | **型**  | **説明**                  |
+| ---------- | ------ | ----------------------- |
+| parentForm | object | 親出力フォームの**Form** オブジェクト |
 
 #### 例題
 
-In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
+人物のレコードを表示しているフォームにおいて、"Check children" ボタンを押すとその人物の子供の名前と年齢を検証あるいは変更するダイアログが開く場合を考えます:
 
 ![](../assets/en/commands/pict3542015.en.png)
 
-**Note:** The "Children" object field is represented only to show its structure for this example.
+**注:** "Children" オブジェクトフィールドはこの例題においての構造を示すために表示されているだけです。
 
-In the verification form, you have assigned some Form object properties to inputs:
+検証フォームでは、入力に対していくつかのフォームオブジェクトプロパティを割り当てているものとします:
 
 ![](../assets/en/commands/pict3541682.en.png)
 
-Here is the code for the "Check children" button:
+"Check children" ボタンの中身のコードは以下のようになります:
 
 ```4d
  var $win;$n;$i : Integer
  var $save : Boolean
  ARRAY OBJECT($children;0)
- OB GET ARRAY([Person]Children;"children";$children) //get the children collection
- $save:=False //initialize the save variable
+ OB GET ARRAY([Person]Children;"children";$children) //children コレクションを取得
+ $save:=False //save 変数を初期化
  
  $n:=Size of array($children)
  If($n>0)
     $win:=Open form window("Edit_Children";Movable form dialog box)
     SET WINDOW TITLE("Check children for "+[Person]Name)
-    For($i;1;$n) //for each child
-       DIALOG("Edit_Children";$children{$i}) //displays dialog filled with values
-       If(OK=1) //the user clicked OK
+    For($i;1;$n) // それぞれの子供に対して
+       DIALOG("Edit_Children";$children{$i}) //値が入ったダイアログを表示
+       If(OK=1) // ユーザーがOK をクリックした
           $save:=True
        End if
     End for
     If($save=True)
-       [Person]Children:=[Person]Children //forces object field update
+       [Person]Children:=[Person]Children // 強制的にオブジェクトフィールドを更新
     End if
     CLOSE WINDOW($win)
  Else
@@ -103,12 +101,21 @@ Here is the code for the "Check children" button:
  End if
 ```
 
-The form displays information for each child:
+フォームはそれぞれの子供についての情報を表示します:
 
 ![](../assets/en/commands/pict3515152.en.png)
 
-If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards).
+値が変更されてOKボタンがクリックされた場合、フィールドは更新されます(その後、親のレコードも保存される必要があります)。
 
 #### 参照
 
 [DIALOG](dialog.md)
+
+#### プロパティ
+
+|         |                                 |
+| ------- | ------------------------------- |
+| コマンド番号  | 1466                            |
+| スレッドセーフ | &amp;cross; |
+
+

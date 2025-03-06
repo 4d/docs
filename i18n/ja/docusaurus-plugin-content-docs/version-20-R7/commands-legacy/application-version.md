@@ -119,3 +119,12 @@ displayed_sidebar: docs
 
 [Application type](application-type.md)  
 [Version type](version-type.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 493 |
+| スレッドセーフである | &check; |
+
+

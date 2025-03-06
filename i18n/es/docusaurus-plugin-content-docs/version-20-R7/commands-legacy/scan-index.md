@@ -49,3 +49,14 @@ El siguiente ejemplo envía cartas a los 50 peores clientes y 50 a los mejores c
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [REDUCE SELECTION](reduce-selection.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 350 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+
+

@@ -47,3 +47,12 @@ Selecciona un valor dependiendo del contenido de un atributo de campo de objeto,
 [Num](num.md)  
 [String](string.md)  
 [Time](time.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1537 |
+| Hilo seguro | &check; |
+
+

@@ -54,3 +54,13 @@ Si el comando se ejecuta correctamente, la variable OK toma el valor 1\. Si *res
 #### Ver también 
 
 [Get database localization](get-database-localization.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 991 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

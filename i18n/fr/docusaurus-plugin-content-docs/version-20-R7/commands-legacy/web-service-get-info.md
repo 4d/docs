@@ -28,3 +28,13 @@ Le paramètre *typeInfo* vous permet d’indiquer le type d’information que vo
 | Web Service HTTP status code | Entier long | 2      | Code de statut HTTP (à utiliser en cas d’erreur principale 9912).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 Une chaîne vide est retournée lorsqu’aucune information n’est disponible, en particulier si la dernière requête SOAP n'a pas généré d'erreur.
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 780 |
+| Thread safe | &check; |
+
+

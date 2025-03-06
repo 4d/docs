@@ -51,7 +51,7 @@ Les interfaces de Ruban et de Barre d'outils regroupent les fonctionnalités qui
 
 Les événements formulaire suivants sont disponibles dans la Liste de propriétés des zones 4D View Pro.
 
-Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Certains événements formulaire standard fournissent des informations étendues dans l'objet retourné par la commande [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) lorsqu'ils sont générés pour les zones 4D View Pro. Le tableau suivant indique les événements standard et les événements spécifiques ou ceux qui fournissent des informations supplémentaires aux zones 4D View Pro :
+Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Le tableau suivant indique les événements standard et les événements spécifiques ou ceux qui fournissent des informations supplémentaires aux zones 4D View Pro :
 
 | Événements 4D standard                          | Événements 4D View Pro spécifiques et étendus         |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -138,7 +138,7 @@ Les formats numériques s'appliquent à tous les types de chiffres (ex : nombres
 
 | Caractère                                                     | Description                                                                                                                                                                                                                                                                | Exemple                                                                                                                                                                                                                                                                                                                              |
 | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 0                                                             | Placeholder that displays zeros.                                                                                                                                                                                                                           | #.00 affichera 1.10 au lieu de 1.1                                                                                                                                                                                                                                                   |
+| 0                                                             | Placeholder qui affiche des zéros.                                                                                                                                                                                                                         | #.00 affichera 1.10 au lieu de 1.1                                                                                                                                                                                                                                                   |
 | .                                             | Displays a decimal point                                                                                                                                                                                                                                                   | 0.00 affichera 1999.00 au lieu de 1999                                                                                                                                                                                                                                                               |
 | ,                                                             | Displays the thousands separator in a number. Thousands are separated by commas if the format contains a comma enclosed by number signs "#" or by zeros. A comma following a digit placeholder scales the number by 1,000. | #,0 affichera 12200000 au lieu de 12,200,000                                                                                                                                                                                                                                                                                         |
 | \_                                      | Skips the width of the next character.                                                                                                                                                                                                                     | Usually used in combination with parentheses to add left and right indents, \_( and _) respectively.                                                                                                                                                   |
@@ -188,30 +188,30 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 To create your own date and time patterns, in your current localization, you can use combinations of the following codes:
 
-|      | Code<br/>(non sensible à la casse)      | Description                                                                                                         | Exemple                                                         |
-| ---- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| Date |                                                            |                                                                                                                     | (January 1, 2019)                            |
-|      | m                                                          | Numéro du mois sans le premier zéro                                                                                 | 1                                                               |
-|      | mm                                                         | Numéro du mois avec le zéro en préfixe                                                                              | 01                                                              |
-|      | mmm                                                        | Nom du mois, court                                                                                                  | Jan                                                             |
-|      | mmmm                                                       | Nom du mois, long                                                                                                   | January                                                         |
-|      | d                                                          | Numéro du jour sans le zéro en préfixe                                                                              | 1                                                               |
-|      | dd                                                         | Numéro du jour avec le zéro en préfixe                                                                              | 01                                                              |
-|      | ddd                                                        | Jour de la semaine, court                                                                                           | Tue                                                             |
-|      | dddd                                                       | Jour de la semaine, long                                                                                            | Tuesday                                                         |
-|      | yy                                                         | Année, format court                                                                                                 | 19                                                              |
-|      | yyyy                                                       | Année, long format                                                                                                  | 2019                                                            |
-| Time |                                                            |                                                                                                                     | (2:03:05 PM) |
-|      | h                                                          | Heure sans le zéro en préfixe. 0-23                                                                 | 2                                                               |
-|      | hh                                                         | Heure avec le zéro en préfixe. 00-23                                                                | 02                                                              |
-|      | m                                                          | Minutes sans le zéro en préfixe. 0-59                                                               | 3                                                               |
-|      | mm                                                         | Minutes avec le zéro en préfixe. 00-59                                                              | 03                                                              |
-|      | s                                                          | Secondes sans le zéro en préfixe. 0-59                                                              | 5                                                               |
-|      | ss                                                         | Secondes avec le zéro en préfixe. 00-59                                                             | 05                                                              |
-|      | \[h]  | Temps écoulé en heures                                                                                              | 14 (peut aller au delà de 24)                |
-|      | \[mm] | Temps écoulé en minutes                                                                                             | 843                                                             |
-|      | \[ss] | Temps écoulé en secondes                                                                                            | 50585                                                           |
-|      | AM/PM                                                      | Périodes de la journée. S'il est omis, c'est le fomat de 24 heures qui est utilisé. | PM                                                              |
+|      | Code<br/>(non sensible à la casse)      | Description                                                                                                          | Exemple                                                         |
+| ---- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Date |                                                            |                                                                                                                      | (January 1, 2019)                            |
+|      | m                                                          | Numéro du mois sans le premier zéro                                                                                  | 1                                                               |
+|      | mm                                                         | Numéro du mois avec le zéro en préfixe                                                                               | 01                                                              |
+|      | mmm                                                        | Nom du mois, court                                                                                                   | Jan                                                             |
+|      | mmmm                                                       | Nom du mois, long                                                                                                    | January                                                         |
+|      | d                                                          | Numéro du jour sans le zéro en préfixe                                                                               | 1                                                               |
+|      | dd                                                         | Numéro du jour avec le zéro en préfixe                                                                               | 01                                                              |
+|      | ddd                                                        | Jour de la semaine, court                                                                                            | Tue                                                             |
+|      | dddd                                                       | Jour de la semaine, long                                                                                             | Tuesday                                                         |
+|      | yy                                                         | Année, format court                                                                                                  | 19                                                              |
+|      | yyyy                                                       | Année, long format                                                                                                   | 2019                                                            |
+| Time |                                                            |                                                                                                                      | (2:03:05 PM) |
+|      | h                                                          | Heure sans le zéro en préfixe. 0-23                                                                  | 2                                                               |
+|      | hh                                                         | Heure avec le zéro en préfixe. 00-23                                                                 | 02                                                              |
+|      | m                                                          | Minutes sans le zéro en préfixe. 0-59                                                                | 3                                                               |
+|      | mm                                                         | Minutes avec le zéro en préfixe. 00-59                                                               | 03                                                              |
+|      | s                                                          | Secondes sans le zéro en préfixe. 0-59                                                               | 5                                                               |
+|      | ss                                                         | Secondes avec le zéro en préfixe. 00-59                                                              | 05                                                              |
+|      | \[h]  | Temps écoulé en heures                                                                                               | 14 (peut aller au delà de 24)                |
+|      | \[mm] | Temps écoulé en minutes                                                                                              | 843                                                             |
+|      | \[ss] | Temps écoulé en secondes                                                                                             | 50585                                                           |
+|      | AM/PM                                                      | Périodes de la journée. S'il est omis, c'est le format de 24 heures qui est utilisé. | PM                                                              |
 
 > The code 'm' is interpreted depending on its position in the pattern. If it's immediately after 'h' or 'hh' or immediately before 's' or 'ss', it will be interpreted as minutes, otherwise it will be interpreted as months.
 
@@ -227,7 +227,7 @@ In addition to the special characters and codes described in the previous sectio
 | ^                      | Caret                                                                                              | #\^#                                        |
 | '                      | Apostrophe                                                                                         | '######                                      |
 | { }                    | Curly brackets                                                                                     | {###,###,###}                                |
-| `< >`                  | Less-than and greater than signs                                                                   | ## >#\#                                      |
+| `< >`                  | Less-than and greater than signs                                                                   | `## >##`                                     |
 | =                      | Equal sign                                                                                         | #+#=##                                       |
 | /                      | Forward slash. When used with numbers, displays them as fractions. | mm/dd/yyyy                                   |
 | !                      | Exclamation point                                                                                  | $###.00!                     |
@@ -266,20 +266,20 @@ Les attributs de ligne et de colonne sont utilisés pour identifier le début, l
 
 Header and footer attributes are used to specify text or images in the left, right, and center header/footer sections.
 
-| Propriété         | Type              | Description                                                                |
-| ----------------- | ----------------- | -------------------------------------------------------------------------- |
-| footerCenter      | text              | The text and format of the center footer on printed pages. |
-| footerCenterImage | picture \| text\* | The image for the center section of the footer.            |
-| footerLeft        | text              | The text and format of the left footer on printed pages.   |
-| footerLeftImage   | picture \| text\* | The image for the left section of the footer.              |
-| footerRight       | text              | The text and format of the right footer on printed pages.  |
-| footerRightImage  | picture \| text\* | The image for the right section of the footer.             |
-| headerCenter      | text              | The text and format of the center header on printed pages. |
-| headerCenterImage | picture \| text\* | The image for the center section of the header.            |
-| headerLeft        | text              | The text and format of the left header on printed pages.   |
-| headerLeftImage   | picture \| text\* | The image for the left section of the header.              |
-| headerRight       | text              | The text and format of the right header on printed pages.  |
-| headerRightImage  | picture \| text\* | The image for the right section of the header.             |
+| Propriété         | Type                                      | Description                                                                |
+| ----------------- | ----------------------------------------- | -------------------------------------------------------------------------- |
+| footerCenter      | text                                      | The text and format of the center footer on printed pages. |
+| footerCenterImage | picture &#124; text\* | The image for the center section of the footer.            |
+| footerLeft        | text                                      | The text and format of the left footer on printed pages.   |
+| footerLeftImage   | picture &#124; text\* | The image for the left section of the footer.              |
+| footerRight       | text                                      | The text and format of the right footer on printed pages.  |
+| footerRightImage  | picture &#124; text\* | The image for the right section of the footer.             |
+| headerCenter      | text                                      | The text and format of the center header on printed pages. |
+| headerCenterImage | picture &#124; text\* | The image for the center section of the header.            |
+| headerLeft        | text                                      | The text and format of the left header on printed pages.   |
+| headerLeftImage   | picture &#124; text\* | The image for the left section of the header.              |
+| headerRight       | text                                      | The text and format of the right header on printed pages.  |
+| headerRightImage  | picture &#124; text\* | The image for the right section of the header.             |
 
 \* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. Peu importe le type utilisé pour définir une image, l'image elle-même (pas une référence) est stockée dans la zone 4D View Pro et est retournée par [VP Get print info](commands/vp-get-print-info.md).
 
@@ -293,7 +293,7 @@ The following special characters allow the automatic addition or formatting of i
 | P                     | Current page                                        | printInfo.headerLeft:="This is page &P."                                          | This is page 5.                                 |   |
 | N                     | Page count                                          | printInfo.headerLeft:="There are &N pages."                                       | There are 10 pages.                             |   |
 | D                     | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                                 | It is 2015/6/19.                                |   |
-| T                     | Current time                                        | printInfo.headerLeft:="It is &T."                                                 | It is 16:30:36. |   |
+| T                     | Heure courante                                      | printInfo.headerLeft:="It is &T."                                                 | It is 16:30:36. |   |
 | G                     | Image                                               | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G"  | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG)            |   |
 | S                     | Strikethrough                                       | printInfo.headerLeft:="&SThis is text."                                           | ~~This is text.~~                               |   |
 | U                     | Souligné                                            | printInfo.headerLeft:="&UThis is text."                                           | This is text. (Underlined)   |   |
@@ -360,11 +360,11 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 - Si le format du papier est spécifié en utilisant les propriétés `height` et `width`, [`VP Get print info`](./commands/vp-get-print-info.md) retourne un format de papier avec `custom` comme valeur pour `kind`.
 
 - Si vous définissez le format du papier à l'aide de la propriété `kind`, vous pouvez utiliser l'une ou l'autre :
-  - un des formats dans la [liste des formats SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - un des formats retournés par la commande [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/fr/page785.html).
-    Dans ce cas, [`VP Get print info`](./commands/vp-get-print-info.md) retourne le format correspondant avec la hauteur et la largeur.
+ - un des formats dans la [liste des formats SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
+ - un des formats retournés par la commande [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/fr/page785.html).
+  Dans ce cas, [`VP Get print info`](./commands/vp-get-print-info.md) retourne le format correspondant avec la hauteur et la largeur.
 
-### Echelle
+### Graduation
 
 Scale attributes are used to specify printing optimization and adjustments.
 
@@ -390,15 +390,15 @@ Show / Hide attributes are used to specify the visibility (printing) of 4D View 
 
 Watermark attributes are used to superimpose text or an image onto the 4D View Pro area.
 
-| Propriété |                                                                                    | Type              | Description                                                                                                                                                                                                                                                                               |
-| --------- | ---------------------------------------------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| watermark |                                                                                    | collection        | Collection of watermark settings.  Default value: undefined                                                                                                                                                                                               |
-|           | \[ ].height   | entier long       | The height of the watermark text / image.                                                                                                                                                                                                                                 |
-|           | \[ ].imageSrc | picture \| text\* | The watermark text / image.                                                                                                                                                                                                                                               |
-|           | \[ ].page     | text              | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
-|           | \[ ].width    | entier long       | The width of the watermark text / image.                                                                                                                                                                                                                                  |
-|           | \[ ].x        | entier long       | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                                                                                                            |
-|           | \[ ].y        | entier long       | The vertical coordinate of the top left point of the watermark text / image.                                                                                                                                                                                              |
+| Propriété |                                                                                    | Type                                      | Description                                                                                                                                                                                                                                                                               |
+| --------- | ---------------------------------------------------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| watermark |                                                                                    | collection                                | Collection of watermark settings.  Default value: undefined                                                                                                                                                                                               |
+|           | \[ ].height   | entier long                               | The height of the watermark text / image.                                                                                                                                                                                                                                 |
+|           | \[ ].imageSrc | picture &#124; text\* | The watermark text / image.                                                                                                                                                                                                                                               |
+|           | \[ ].page     | text                                      | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
+|           | \[ ].width    | entier long                               | The width of the watermark text / image.                                                                                                                                                                                                                                  |
+|           | \[ ].x        | entier long                               | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                                                                                                            |
+|           | \[ ].y        | entier long                               | The vertical coordinate of the top left point of the watermark text / image.                                                                                                                                                                                              |
 
 \* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. Peu importe le type utilisé pour définir une image, l'image elle-même (pas une référence) est stockée dans la zone 4D View Pro et est retournée par [VP Get print info](commands/vp-get-print-info.md).
 

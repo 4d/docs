@@ -75,7 +75,7 @@ Los objetos de tipo `File` soportan varios nombres de ruta, incluida las sintaxi
 | fileConstant | Integer | -> | Constante del archivo 4D                           |
 | pathType     | Integer | -> | `fk posix path` (por defecto) o `fk platform path` |
 | *            |         | -> | * para devolver el archivo de la base local        |
-| Result       | 4D.File | <- | Nuevo objeto de archivo|<!-- END REF -->
+| Resultado    | 4D.File | <- | Nuevo objeto de archivo|<!-- END REF -->
 
 |
 
@@ -168,7 +168,7 @@ La función `4D.File.new()` <!-- REF #4D.File.new().Summary -->crea y devuelve u
 <!--REF #FileClass.create().Params -->
 | Parámetros | Tipo    |    | Descripción                                                                                   |
 | ---------- | ------- | -- | --------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si el archivo se ha creado con éxito, false en caso contrario|<!-- END REF -->
+| Resultado  | Boolean | <- | True si el archivo se ha creado con éxito, false en caso contrario|<!-- END REF -->
 
 |
 
@@ -212,7 +212,7 @@ Creación de un archivo de preferencias en la carpeta principal:
 | destinationFolder | 4D.Folder | -> | Carpeta de destino para el alias o el acceso directo                   |
 | aliasName         | Text      | -> | Nombre del alias o del atajo                                           |
 | aliasType         | Integer   | -> | Tipo de enlace del alias                                               |
-| Result            | 4D.File   | <- | Referencia del archivo del alias o de atajo|<!-- END REF -->
+| Resultado         | 4D.File   | <- | Referencia del archivo del alias o de atajo|<!-- END REF -->
 
 |
 
@@ -323,7 +323,7 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 <!--REF #FileClass.getAppInfo().Params -->
 | Parámetros | Tipo   |    | Descripción                                                                            |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
-| Result     | Object | <- | Contenido del archivo de recurso versión .exe/.dll o .plist|<!-- END REF -->
+| Resultado  | Object | <- | Contenido del archivo de recurso versión .exe/.dll o .plist|<!-- END REF -->
 
 |
 
@@ -413,7 +413,7 @@ ALERT($info.Copyright)
 | ----------------- | --------- | -- | ----------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Carpeta de destino                        |
 | newName           | Text      | -> | Nombre completo del archivo trasladado    |
-| Result            | 4D.File   | <- | Archivo movido|<!-- END REF -->
+| Resultado         | 4D.File   | <- | Archivo movido|<!-- END REF -->
 
 
 |
@@ -467,7 +467,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | Parámetros | Tipo    |    | Descripción                                   |
 | ---------- | ------- | -- | --------------------------------------------- |
 | newName    | Text    | -> | Nuevo nombre completo del archivo             |
-| Result     | 4D.File | <- | Archivo renombrado|<!-- END REF -->
+| Resultado  | 4D.File | <- | Archivo renombrado|<!-- END REF -->
 
 |
 

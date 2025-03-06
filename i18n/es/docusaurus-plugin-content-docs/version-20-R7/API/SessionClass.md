@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Session objects are returned by the [`Session`](../commands/session.md) command. Estos objetos ofrecen al desarrollador una interfaz que permite gestionar la sesión de usuario actual y ejecutar acciones como almacenar datos contextuales, compartir información entre procesos de sesión, lanzar procesos preferentes relacionados con la sesión o (sólo web) gestionar [privilegios](../ORDA/privileges.md).
+Los objetos de sesión son devueltos por el comando [`Session`](../commands/session.md). Estos objetos ofrecen al desarrollador una interfaz que permite gestionar la sesión de usuario actual y ejecutar acciones como almacenar datos contextuales, compartir información entre procesos de sesión, lanzar procesos preferentes relacionados con la sesión o (sólo web) gestionar [privilegios](../ORDA/privileges.md).
 
 ### Tipos de sesiones
 
@@ -11,7 +11,7 @@ Esta clase admite tres tipos de sesiones:
 
 - [**Sesiones usuario web**](WebServer/sessions.md): las sesiones usuario web están disponibles cuando [las sesiones escalables están activas en su proyecto](WebServer/sessions.md#enabling-sessions). Se utilizan para conexiones Web y REST, y se les pueden asignar privilegios.
 - [Sesiones usuario cliente remoto\*\*](../Desktop/clientServer.md#remote-user-sessions): en las aplicaciones cliente/servidor, los usuarios remotos tienen sus propias sesiones gestionadas en el servidor.
-- [**Sesión de procedimientos almacenados**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html): todos los procedimientos almacenados ejecutados en el servidor comparten la misma sesión usuario virtual.
+- [**Stored procedures session**](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html): All stored procedures executed on the server share the same virtual user session.
 
 :::note
 
@@ -53,7 +53,7 @@ La disponibilidad de las propiedades y funciones del objeto `Session` depende de
 
 | Parámetros | Tipo    |                             | Descripción                                        |
 | ---------- | ------- | :-------------------------: | -------------------------------------------------- |
-| Result     | Boolean | <- | True si la ejecución se ha realizado correctamente |
+| Resultado  | Boolean | <- | True si la ejecución se ha realizado correctamente |
 
 <!-- END REF -->
 
@@ -133,7 +133,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 | Parámetros | Tipo       |                             | Descripción                                                      |
 | ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------- |
-| Result     | Collection | <- | Colección de nombres de privilegios (cadenas) |
+| Resultado  | Collection | <- | Colección de nombres de privilegios (cadenas) |
 
 <!-- END REF -->
 
@@ -229,7 +229,7 @@ $privileges := Session.getPrivileges()
 | Parámetros | Tipo    |                             | Descripción                                                  |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------ |
 | privilege  | Text    |              ->             | Nombre del privilegio a verificar                            |
-| Result     | Boolean | <- | True si la sesión tiene *privilege*, False en caso contrario |
+| Resultado  | Boolean | <- | True si la sesión tiene *privilege*, False en caso contrario |
 
 <!-- END REF -->
 
@@ -274,7 +274,7 @@ La propiedad `.id` contiene <!-- REF #SessionClass.id.Summary -->el identificado
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands-legacy/session-storage.md) command.
+Puede utilizar esta propiedad para obtener el objeto [`.storage`](#storage) de una sesión gracias al comando [`Session storage`](../commands-legacy/session-storage.md).
 
 :::
 
@@ -395,7 +395,7 @@ Dado que `.info` es una propiedad calculada, se recomienda llamarla una vez y lu
 
 | Parámetros | Tipo    |                             | Descripción                                                    |
 | ---------- | ------- | :-------------------------: | -------------------------------------------------------------- |
-| Result     | Boolean | <- | True si la sesión es una sesión Guest, False en caso contrario |
+| Resultado  | Boolean | <- | True si la sesión es una sesión Guest, False en caso contrario |
 
 <!-- END REF -->
 
@@ -443,7 +443,7 @@ End if
 | privilege  | Text       |              ->             | Nombre del privilegio                                                          |
 | privileges | Collection |              ->             | Colección de nombres de privilegios                                            |
 | settings   | Object     |              ->             | Objeto con una propiedad "privilegios" (cadena o colección) |
-| Result     | Boolean    | <- | True si la ejecución se ha realizado correctamente                             |
+| Resultado  | Boolean    | <- | True si la ejecución se ha realizado correctamente                             |
 
 <!-- END REF -->
 
@@ -580,7 +580,7 @@ End use
 La propiedad `.userName` contiene <!-- REF #SessionClass.userName.Summary -->el nombre de usuario asociado a la sesión<!-- END REF -->. Puede utilizarlo para identificar al usuario dentro de su código.
 
 - Con las sesiones web, esta propiedad es una cadena vacía por defecto. Puede definirse mediante la propiedad `privileges` de la función [`setPrivileges()`](#setprivileges).
-- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
+- Con sesiones remotas y de procedimientos almacenados, esta propiedad devuelve el mismo nombre de usuario que el comando [`Current user`](../commands-legacy/current-user.md).
 
 Esta propiedad es **solo lectura**.
 

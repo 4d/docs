@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Compile project.Summary-->**Compile project** permite compialr o projeto do host atual ou o projeto especificado no parâmetro *projectFile*.<!-- END REF--> Para saber mais sobre compilação, veja *a página de compilação em developer.4d.com*.
@@ -55,7 +52,7 @@ O parâmetro *options*  é um objeto. As opções de compilação disponíveis e
 | generateSymbols        | Boolean               | True para gerar informação de simbolo no objeto retornado .symbol\[#tab/                                                                                                                            |
 | generateSyntaxFile     | Boolean               | True para gerar um arquivo de sintaxe para completar código na pasta \\Resources\\en.lproj do projeto                                                                                               |
 | generateTypingMethods  | Text                | Reseta ou anexa para gerar métodos digitação. Se valor for "append"/anexar, declarações de variável existentes ão são modificadas (comportamento janela de compilador)                              |
-| plugins                | Objeto 4D.Folder      | Pasta Plug-ins a ser usada em vez da [pasta Plugins do projeto atual](https://developer.4d.com/docs/Project/architecture#plugins). Essa propriedade só está disponível com a sintaxe *projectFile*. |
+| plugins                | Objeto 4D.Folder      | Pasta Plug-ins a ser usada em vez da [pasta Plugins do projeto atual](../Project/architecture.md#plugins). Essa propriedade só está disponível com a sintaxe *projectFile*. |
 | targets                | Coleção de strings    | Valores possíveis: "x86\_64\_generic", "arm64\_macOS\_lib". Passe uma coleção vazia para executar apenas checagem de sintaxe                                                                        |
 | typeInference          | Text                | "all": Digita todas as variáveis, "locals": Processo e interprocesso são digitadas, "none": Todas as variáveis são digitadas                                                                        |
 
@@ -172,3 +169,12 @@ Compile um projeto e declare seus componentes:
 #### Ver também 
 
 [BUILD APPLICATION](build-application.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1760 |
+| Thread-seguro | &cross; |
+
+

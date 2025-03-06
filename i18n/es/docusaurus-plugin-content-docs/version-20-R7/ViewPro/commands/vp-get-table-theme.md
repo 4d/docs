@@ -22,7 +22,7 @@ title: VP Get table theme
 | vpAreaName | Text                                                                              | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
 | tableName  | Text                                                                              | ->                          | Nombre de la tabla                                             |                  |
 | sheet      | Integer                                                                           | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | <- | Valores de propiedad del tema de la tabla actual               | <!-- END REF --> |
+| Resultado  | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | <- | Valores de propiedad del tema de la tabla actual               | <!-- END REF --> |
 
 #### Descripción
 

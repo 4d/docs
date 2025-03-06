@@ -3,14 +3,14 @@ id: classFunctions
 title: Llamando a funciones de clase
 ---
 
-You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model and [singleton class functions]($singleton.md) through REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+Puede llamar a [funciones clase modelo de datos](ORDA/ordaClasses.md) definidas para el modelo de datos ORDA y [funciones clase singleton]($singleton.md) a través de peticiones REST, para que pueda beneficiarse de la API expuesta de la aplicación 4D seleccionada.
 
 Functions can be called in two ways:
 
 - using **POST requests**, with data parameters passed in the body of the request.
 - using **GET requests**, with parameters directly passed in the URL.
 
-POST requests provide a better security level because they avoid running sensitive code through an action as simple as clicking on a link. However, GET requests can be more compliant with user experience, allowing to call functions by entering an URL in a browser (note: the developer must ensure no sensitive action is done in such functions).
+POST requests provide a better security level because they avoid running sensitive code through an action as simple as clicking on a link. Sin embargo, las peticiones GET pueden ser más compatibles con la experiencia del usuario, permitiendo llamar a las funciones introduciendo una URL en un navegador (nota: el desarrollador debe asegurarse de que no se hace ninguna acción sensible en dichas funciones).
 
 ## Llamadas de las funciones
 
@@ -19,8 +19,8 @@ The following ORDA and singleton functions can be called in REST:
 | Función de clase                                                   | Sintaxis                                                                                                                |
 | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                                                                 |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                                                          |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                                                                    |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                                                              |
+| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                                                                        |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                             |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                                                                |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                                                               |
@@ -29,11 +29,11 @@ The following ORDA and singleton functions can be called in REST:
 
 :::note
 
-`/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). La función se busca primero en la clase de selección de entidades. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
+`/rest/{dataClass}/Function` puede utilizarse para llamar a una clase de datos o a una función de selección de entidades (`/rest/{dataClass}` devuelve todas las entidades de la DataClass como una selección de entidades). La función se busca primero en la clase de selección de entidades. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
 
 :::
 
-Functions are simply called on the appropriate ORDA interface or singleton class, without (). [Parameters](#parameters) are passed either in the body of the POST request (`POST` calls) or in the `params` collection in the URL (`GET` calls).
+Las funciones se llaman simplemente en la interfaz ORDA o clase singleton apropiada, sin (). [Parámetros](#parameters) se pasan en el cuerpo de la petición POST (llamadas `POST`) o en la colección `params` de la URL (llamadas `GET`).
 
 Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podría llamarla utilizando la siguiente petición:
 
@@ -49,7 +49,7 @@ con los datos en el cuerpo de la petición POST: `["Aguada"]`
 
 :::note
 
-The `getCity()` function must have been declared with the `onHttpGet` keyword (see [Function configuration](#function-configuration) below).
+La función `getCity()` debe haber sido declarada con la palabra clave `onHttpGet` (ver [Configuración de la función](#function-configuration)).
 
 :::
 
@@ -63,7 +63,7 @@ $city:=ds.City.getCity("Aguada")
 
 ### `exposed`
 
-All functions allowed to be called directly from HTTP REST requests (`POST` or `GET`) must be declared with the `exposed` keyword. Por ejemplo:
+Todas las funciones permitidas para ser llamadas directamente desde peticiones HTTP REST (`POST` o `GET`) deben ser declaradas con la palabra clave `exposed`. Por ejemplo:
 
 ```4d
 exposed Function getSomeInfo() : 4D.OutgoingMessage
@@ -73,7 +73,7 @@ Ver la sección [Funciones expuestas vs. no expuestas](../ORDA/ordaClasses.md#ex
 
 ### `onHttpGet`
 
-Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
+Las funciones permitidas para ser llamadas desde solicitudes HTTP `GET` también deben ser declaradas específicamente con la [palabra clave `onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
 
 ```4d
 //allowing GET requests
@@ -137,8 +137,8 @@ También puede pasar valores para todos los atributos de la entidad. Estos valor
 - If `__KEY` is not provided, a new entity is created on the server with the given attributes.
 - If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
 
-See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
-See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
+Ver ejemplos de [creación](#creating-an-entity) o [actualización](#updating-an-entity) entidades con peticiones POST.
+Ver un ejemplo de [descarga de contenidos usando una entidad](#using-an-entity-to-download-contents) con una petición GET.
 
 #### Parámetro de entidad asociado
 
@@ -158,7 +158,7 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 | __DATASET  | Text    | Obligatorio - entitySetID (UUID) de la selección de entidades           |
 | __ENTITIES | Boolean | Obligatorio - True para indicar al servidor que el parámetro es una selección de entidades |
 
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
+Ver ejemplo para [recibir una selección de entidad](#receiving-an-entity-selection-as-parameter) con una petición POST.
 See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
 
 ## POST request examples
@@ -184,7 +184,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8111/rest/$catalog/getName`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -211,7 +211,7 @@ A continuación, puede ejecutar esta petición:
 
 Petición: ["Aguada"]
 
-#### Result
+#### Resultado
 
 El resultado es una entidad:
 
@@ -256,7 +256,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8111/rest/City(2)/getPopulation`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -281,7 +281,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8111/rest/City/getPopulation/?$filter="ID<3"`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -313,7 +313,7 @@ Una vez que haya creado un conjunto de entidades, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -342,7 +342,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter="lastname=b@"&$orderby="lastname"`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -392,7 +392,7 @@ Cuerpo de la petición:
 
 Como ninguna `__KEY` es dada, una nueva entidad Students está cargada en el servidor **con los atributos del cliente**. Como la función `pushData()` ejecuta una acción `save()`, la nueva entidad es creada.
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -430,7 +430,7 @@ Cuerpo de la petición:
 
 Como `__KEY` es dada, la entidad Students está cargada con llave primaria 55 **con el valor lastname recibido por el cliente**. Como la función ejecuta una acción `save()`, la nueva entidad es actualizada.
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -467,7 +467,7 @@ Cuerpo de la petición:
 }]
 ```
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -521,7 +521,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 }]
 ```
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -588,7 +588,7 @@ Cuerpo de la petición:
 
 ```
 
-#### Result
+#### Resultado
 
 Se han actualizado las entidades con llaves primarias 1 y 2.
 

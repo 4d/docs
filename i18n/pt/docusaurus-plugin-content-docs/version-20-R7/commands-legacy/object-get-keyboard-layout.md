@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get keyboard layout.Summary-->O comando **OBJECT Get keyboard layout** devolve a configuração do teclado atual associada aos objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->  
@@ -29,3 +26,12 @@ O comando devolve uma cadeia indicando o código da linguagem utilizada, baseado
 #### Ver também 
 
 [OBJECT SET KEYBOARD LAYOUT](object-set-keyboard-layout.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1180 |
+| Thread-seguro | &cross; |
+
+

@@ -51,3 +51,12 @@ La méthode objet du bouton *bUnBouton* effectue des actions différentes en fon
 [Macintosh option down](macintosh-option-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 543 |
+| Thread safe | &check; |
+
+

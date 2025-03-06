@@ -26,36 +26,36 @@ Les fonctions doivent toujours être appelées à l'aide des requêtes **POST** 
 
 Les fonctions sont appelées sur l'objet correspondant au datastore du serveur.
 
-| Fonction de classe                                                 | Syntaxe                                                                         |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                         |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                  |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                            |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                    |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                   |
-| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                               |
+| Fonction de classe                                                 | Syntaxe                                                                     |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
+| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
+| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                           |
 
-> `/rest/\{dataClass\}/Function` can be used to call either a dataclass or an entity selection function (`/rest/\{dataClass\}` returns all entities of the DataClass as an entity selection). The function is searched in the entity selection class first. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
+> `/rest/{dataClass}/Function` peut être utilisé pour appeler une fonction de dataclass ou d'entity selection (`/rest/{dataClass}` renvoie toutes les entités de la dataclass en tant qu'entity selection). La fonction est d'abord recherchée dans la classe Entity selection. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
 
 > Tout le code 4D appelé à partir de requêtes REST **doit être thread-safe** si le projet fonctionne en mode compilé, car le serveur REST utilise toujours des process préemptifs dans ce cas (la valeur du paramètre [*Utiliser un process préemptif*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) est ignorée par le serveur REST).
 
 ## Paramètres
 
-Vous pouvez envoyer des paramètres aux fonctions définies dans les classes utilisateurs ORDA. Côté serveur, ils seront reçus dans les fonctions de classe dans les paramètres normaux $1, $2, etc.
+Vous pouvez envoyer des paramètres aux fonctions définies dans les classes utilisateurs ORDA. Côté serveur, ils seront reçus dans les fonctions de classe dans les paramètres classiques $1, $2, etc.
 
 Les règles suivantes s'appliquent :
 
-- Les paramètres doivent être passés dans le **corps de la requête POST**
+- Les paramètres doivent être passés dans le **body de la requête POST**
 - Les paramètres doivent être inclus dans une collection (format JSON)
 - Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
-- L'entity selection et l'entité peuvent être passées en tant que paramètres. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS,__ENTITY, __ENTITIES,__DATASET.
+- L'entity selection et l'entité peuvent être passées en tant que paramètres. L'objet JSON doit contenir des attributs spécifiques utilisés par le serveur REST pour affecter des données aux objets ORDA correspondants : __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
 Voir [cet exemple](#request-receiving-an-entity-as-parameter) et [cet exemple](#request-receiving-an-entity-selection-as-parameter).
 
 ### Paramètre de valeur scalaire
 
-Le(s) paramètre(s) doivent simplement être incluse dans une collection définie dans le corps. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
+Le(s) paramètre(s) doivent simplement être incluse dans une collection définie dans le corps. Par exemple, avec une fonction de dataclass `getCities()` qui reçoit des paramètres de type texte : `/rest/City/getCities`
 
 **Paramètres dans le body :** ["Aguada","Paris"]
 
@@ -75,7 +75,7 @@ Les entités passées en paramètres sont référencées sur le serveur via leur
 | __KEY                 | mixte (type identique à celui de la clé primaire) | Optionnel - clé primaire de l'entité                                        |
 
 - Si __KEY n'est pas fourni, une nouvelle entité est créée sur le serveur avec les attributs donnés.
-- If __KEY is provided, the entity corresponding to__KEY is loaded on the server with the given attributes
+- Si __KEY est fourni, l'entité correspondant à _KEY est chargée sur le serveur avec les attributs passés
 
 Voir les exemple de [création](#creating-an-entity) ou de [mise à jour](#updating-an-entity) des entités.
 
@@ -94,7 +94,7 @@ L'entity selection doit avoir été définie au préalable à l'aide de [$method
 | Propriétés            | Type    | Description                                                                             |
 | --------------------- | ------- | --------------------------------------------------------------------------------------- |
 | Attributs de l'entité | mixte   | Optionnelle - Valeurs à modifier                                                        |
-| __DATASET             | Text    | Obligatoire - entitySetID (UUID) de la sélection d'entité                               |
+| __DATASET             | Text    | Obligatoire - entitySetID (UUID) de l'entity selection                                  |
 | __ENTITIES            | Boolean | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une sélection d'entité |
 
 Reportez-vous aux exemples de [réception d'une sélection d'entité](#receiving-an-entity-selection-as-parameter).
@@ -306,7 +306,7 @@ exposed Function pushData
 
  $entity:=$1
 
- $status:=checkData($entity) // $status is an object with a success boolean property
+ $status:=checkData($entity) // $status est un objet avec une propriété booléenne success
 
  $0:=$status
 
@@ -447,7 +447,7 @@ exposed Function putToSchool()
 
   //$1 is a Schools entity
  $school:=$1
-  //Associate the related entity school to the current Students entity
+  //associe l'entité liée school à l'entité Students courante
  This.school:=$school
 
  $status:=This.save()
@@ -455,7 +455,7 @@ exposed Function putToSchool()
  $0:=$status
 ```
 
-You run this request, called on a Students entity : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body of the request:
+Vous exécutez cette requête, appelée sur une entité Students : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body de la requête :
 
 ```
 [{

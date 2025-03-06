@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Is record loaded.Summary-->La commande **Is record loaded** retourne Vrai si l’enregistrement courant de *laTable* est chargé dans le process en cours.<!-- END REF-->
-
-**4D Server** : En principe, lorsque des tables sont liées par des liens automatiques, les enregistrements courants des tables liées sont automatiquement chargés (cf. *Présentation des liens*). Toutefois, pour des raisons d'optimisation, 4D Server ne charge ces enregistrements qu'au moment où c'est nécessaire, par exemple lors de la lecture ou de l'affectation d'un champ de l'enregistrement lié. Par conséquent, dans ce contexte la commande **Is record loaded** retournera Faux en mode distant (elle retourne Vrai en mode local). 
+<!--REF #_command_.Is record loaded.Summary-->La commande **Is record loaded** retourne Vrai si l’enregistrement courant de *laTable* est chargé dans le process en cours.<!-- END REF-->: En principe, lorsque des tables sont liées par des liens automatiques, les enregistrements courants des tables liées sont automatiquement chargés (cf. *Présentation des liens*). Toutefois, pour des raisons d'optimisation, 4D Server ne charge ces enregistrements qu'au moment où c'est nécessaire, par exemple lors de la lecture ou de l'affectation d'un champ de l'enregistrement lié. Par conséquent, dans ce contexte la commande **Is record loaded** retournera Faux en mode distant (elle retourne Vrai en mode local). 
 
 #### Exemple 
 
@@ -42,3 +40,13 @@ Au lieu d’utiliser les actions automatiques “Enregistrement suivant” ou �
     End if
  End if
 ```
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 669 |
+| Thread safe | &check; |
+
+

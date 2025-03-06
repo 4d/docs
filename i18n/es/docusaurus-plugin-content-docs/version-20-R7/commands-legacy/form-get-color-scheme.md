@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.FORM Get color scheme.Summary-->El comando **FORM Get color scheme** devuelve el nombre de la combinación de colores actual del formulario mostrado actualmente.<!-- END REF--> Si no hay un formulario actual, el comando devuelve una cadena vacía.
@@ -44,5 +41,14 @@ Desea cargar una imagen según el esquema actual del formulario:
 
 #### Ver también 
 
-[Get application color scheme](get-application-color-scheme.md)  
+[Get Application color scheme](get-application-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1761 |
+| Hilo seguro | &cross; |
+
+

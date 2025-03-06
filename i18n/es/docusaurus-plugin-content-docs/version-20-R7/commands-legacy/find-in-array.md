@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Find in array puede utilizarse con arrays de tipo Texto, Alfa, Numérico, Fecha, Puntero, y Booleano. Los parámetros *array* y *valor* deben ser del mismo tipo.
 
-*valor* debe coincidir exactamente con el elemento a encontrar (se aplican las mismas reglas que para el operador de igualdad, ver [Operadores básicos](https://developer.4d.com/docs/Concepts/operators#basic-operators)). Si no se encuentra ningún elemento, **Find in array** devuelve –1.
+*valor* debe coincidir exactamente con el elemento a encontrar (se aplican las mismas reglas que para el operador de igualdad, ver [Operadores básicos](../Concepts/operators.md#basic-operators)). Si no se encuentra ningún elemento, **Find in array** devuelve –1.
 
 **Nota:** con arrays objeto, sólo se pueden utilizar referencias a objetos en el parámetro *valor*.
 
@@ -109,3 +109,12 @@ Desea encontrar una referencia a un objeto:
 [Find in sorted array](find-in-sorted-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 230 |
+| Hilo seguro | &check; |
+
+

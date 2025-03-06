@@ -45,3 +45,13 @@ Se ou comando tiver sido executado corretamente, a variável sistema Ok assume o
 #### Ver também 
 
 [SAX GET XML PROCESSING INSTRUCTION](sax-get-xml-processing-instruction.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 857 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

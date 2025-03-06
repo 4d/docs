@@ -17,13 +17,13 @@ Na linguagem 4D e para os atributos dos campos dos objetos, os valores nulos sã
 
 ## Indefinido
 
-Indefinido não é realmente um tipo de dados. Denota uma variável que ainda não foi definida. Evaluating an object property can also produce an undefined value. Reading a property of an undefined value returns **undefined**.
+Indefinido não é realmente um tipo de dados. Denota uma variável que ainda não foi definida. A avaliação de uma propriedade de objeto também pode produzir um valor indefinido. Lendo uma propriedade de um valor indefinido retorna **undefined**.
 
-A variant variable has **undefined** as [default value](data-types.md#default-values).
+Uma variável variant tem **undefined** como [valor padrão](data-types.md#default-values).
 
 Um campo não pode ser indefinido (o comando `Undefined` sempre devolve False para um campo).
 
-Typically when trying to read or assign undefined expressions, 4D will generate errors, except in the following cases:
+Normalmente, ao tentar ler ou atribuir expressões indefinidas, 4D gerará erros, exceto nos seguintes casos:
 
 - Atribuir um valor indefinido a variáveis (exceto arrays) tem o mesmo efeito que chamar [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) com elas:
 
@@ -136,7 +136,7 @@ Comparações com os operadores Maior que (`>`), Menor que (`<`), Maior ou igual
 
 :::info
 
-Comparisons of Undefined values with Pointer, Picture, Boolean, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
+Comparações de valores Indefinidos com Pontos, Imagem, Boolean, Blob, Objecto, Colecção, Valores Indefinidos ou Nulos utilizando valores Maiores que (`>`), Menos que (`<`), Maiores ou iguais a (`>=`), e Menos ou iguais a (`<=`) os operadores não são suportados e devolvem um erro.
 
 :::
 

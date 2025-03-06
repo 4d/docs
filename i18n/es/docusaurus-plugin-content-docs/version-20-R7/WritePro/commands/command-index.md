@@ -23,9 +23,9 @@ title: Comandos 4D Write Pro
 [`WP DELETE FOOTER`](../commands-legacy/wp-delete-footer.md)<br/>
 [`WP DELETE HEADER`](../commands-legacy/wp-delete-header.md)<br/>
 [`WP DELETE PICTURE`](../commands-legacy/wp-delete-picture.md)<br/>
-[`WP DELETE SECTION`](wp-delete-section.md) ***New 4D 20 R7***<br/>
+[`WP DELETE SECTION`](wp-delete-section.md) ***Nuevo 4D 20 R7***<br/>
 [`WP DELETE STYLE SHEET`](../commands-legacy/wp-delete-style-sheet.md)<br/>
-[`WP DELETE SUBSECTION`](wp-delete-subsection.md) ***Modified 4D 20 R7***<br/>
+[`WP DELETE SUBSECTION`](wp-delete-subsection.md) ***Modificado 4D 20 R7***<br/>
 [`WP DELETE TEXT BOX`](../commands-legacy/wp-delete-text-box.md)
 
 <a id="E"><b>E</b></a>
@@ -93,7 +93,7 @@ title: Comandos 4D Write Pro
 
 <a id="R"><b>R</b></a>
 
-[`WP RESET ATTRIBUTES`](wp-reset-attributes.md) ***Modified 4D 20 R7***
+[`WP RESET ATTRIBUTES`](wp-reset-attributes.md) ***Modificado 4D 20 R7***
 
 <a id="S"><b>S</b></a>
 

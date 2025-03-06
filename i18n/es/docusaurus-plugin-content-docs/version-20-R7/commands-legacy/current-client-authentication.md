@@ -68,3 +68,13 @@ Con esta configuración, no se muestra un diálogo de contraseña para un 4D rem
 ```
 
 **Nota:** este escenario básico requiere que los nombres de usuario 4D repliquen los nombres del directorio Active, para un mapeo automático. En una aplicación más sofisticada, la información devuelta por el comando se asigna a una tabla \[usuarios\] para crear o seleccionar los usuarios con base en la información del directorio Active.
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1355 |
+| Hilo seguro | &check; |
+
+

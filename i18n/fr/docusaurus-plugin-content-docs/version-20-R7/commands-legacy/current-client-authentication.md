@@ -72,3 +72,13 @@ Avec ce paramétrage, aucune boîte de dialogue d'identification n'est affichée
 * réplication de l'Active Directory dans les noms d'utilisateurs et groupes de 4D, permettant une correspondance automatique,
 * utilisation d'une table \[Utilisateurs\] personnalisée,
 * utilisation des fonctions LDAP afin de récupérer les droits d'accès de l'utilisateur.
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1355 |
+| Thread safe | &check; |
+
+

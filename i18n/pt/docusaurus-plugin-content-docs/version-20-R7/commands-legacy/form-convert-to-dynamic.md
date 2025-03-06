@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->O comando **FORM Convert to dynamic** converte o *nomeFormulario* (formulário clássico) a um formulário dinâmico e o devolve em um objeto.<!-- END REF-->
@@ -62,3 +59,12 @@ Se executar o código:
 
 [DIALOG](dialog.md)  
 [Export structure file](export-structure-file.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1570 |
+| Thread-seguro | &cross; |
+
+

@@ -8,15 +8,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| Parâmetro | Tipo   |   | Descrição                 |
-| --------- | ------ | - | ------------------------- |
-| Resultado | Object | ← | Current element or object |
+| Parâmetro | Tipo   |                             | Descrição                 |
+| --------- | ------ | --------------------------- | ------------------------- |
+| Resultado | Object | &#8592; | Current element or object |
 
 <!-- END REF-->
 
 #### Descrição
 
-The `This` command <!--REF #_command_.This.Summary-->returns a reference to the currently processed object.<!-- END REF-->
+O comando `This` <!--REF #_command_.This.Summary-->retorna uma referência ao objeto processado atualmente.<!-- END REF-->
 
 Na maioria dos casos, o valor de `Isso` é determinado pela forma como uma função é chamada. Não pode ser definido por atribuição durante a execução e pode ser diferente de cada vez que a função é chamada.
 
@@ -178,3 +178,12 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 [Self](../commands-legacy/self.md)\
 [Super](super.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1470                            |
+| Thread safe    | &amp;check; |
+
+

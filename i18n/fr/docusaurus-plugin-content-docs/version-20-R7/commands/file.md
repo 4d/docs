@@ -17,19 +17,19 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.File.Params -->
 
-| Paramètres   | Type                    |     | Description                                                           |
-| ------------ | ----------------------- | :-: | --------------------------------------------------------------------- |
-| path         | Text                    |  →  | Chemin de fichier                                                     |
-| fileConstant | Integer                 |  →  | Constante de fichier 4D                                               |
-| pathType     | Integer                 |  →  | `fk posix path` (par défaut) ou `fk platform path` |
-| \*           | operator                |  →  | \* pour retourner le fichier de la base hôte                          |
-| Résultat     | 4D.File |  ←  | Nouvel objet fichier                                                  |
+| Paramètres   | Type                                           |                             | Description                                                           |
+| ------------ | ---------------------------------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path         | Text                                           | &#8594; | Chemin de fichier                                                     |
+| fileConstant | Integer                                        | &#8594; | Constante de fichier 4D                                               |
+| pathType     | Integer                                        | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
+| \*           | operator                                       | &#8594; | \* pour retourner le fichier de la base hôte                          |
+| Résultat     | [4D.File](../API/FileClass.md) | &#8592; | Nouvel objet fichier                                                  |
 
 <!-- END REF -->
 
 #### Description
 
-La commande `File` <!-- REF #_command_.File.Summary -->crée et retourne un nouvel objet de type `4D.File`<!-- END REF -->. La commande accepte deux syntaxes :
+The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the [`4D.File`](../API/FileClass.md) type<!-- END REF -->. La commande accepte deux syntaxes :
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -80,7 +80,17 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 #### Voir également
 
-[Folder](folder.md)\
+[`4D.File` class](../API/FileClass.md)
+[Folder](folder.md)
 [Get 4D file](../commands-legacy/get-4d-file.md)\
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
+
+#### Propriétés
+
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1566                        |
+| Thread safe        | &check; |
+
+

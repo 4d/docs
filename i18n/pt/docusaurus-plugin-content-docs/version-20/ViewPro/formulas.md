@@ -25,16 +25,16 @@ Ao escrever uma fórmula, pode utilizar diferentes atalhos:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. To do so, enter these formulas using the [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) command.
+Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. Para fazer isso, insira essas fórmulas usando o comando [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name).
 
 ### Operadores e Operandos
 
 Todas as fórmulas têm operandos e operadores:
 
-*   **Operators**: see [Values and operators](#values-and-operators) below.
+*   **Operadores**: veja [Valores e operadores](#values-and-operators) abaixo.
 *   **Operandos** inclui várias categorias:
     *   Os [valores](#values-and-operators) (5 tipos de dados são suportados)
-    *   [references to other cells](#cell-references) (relative, absolute, mixed or by name)
+    *   As [referências a outras células](#cell-references) (relativo, absoluto, misto ou por nome)
     *   [funções standard de folha de cálculo](#using-functions)
     *   [funções 4D](#4d-functions) baseadas em fórmulas 4D e que fornecem acesso a variáveis, campos, métodos, comandos ou expressões 4D.
 
@@ -45,8 +45,8 @@ Todas as fórmulas têm operandos e operadores:
 | Tipos de dados                       | Valores                                               | Operadores                                                                                                                                                                                                                                      |
 | ------------------------------------ | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Number](Concepts/dt_number.md)      | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (adição)<br/>- (subtração)<br/>* (multiplicação)<br/>/ (divisão)<br/>^ (expoente, o número de vezes para multiplicar um número por ele mesmo)<br/>% (porcentagem -- dividir o número antes do operador por cem) |
-| [Date](Concepts/dt_date.md)          | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                       |
-| [Hora](Concepts/dt_time.md)          | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                  |
+| [Date](Concepts/dt_date.md)          | 10/24/2017                                            | + (data + número de dias -> data)<br/>+ (data + hora -> data + hora do dia)<br/>- (data - número de dias -> data)<br/>- (data - data - data -> número de dias entre os dois)                                                  |
+| [Hora](Concepts/dt_time.md)          | 10:12:10                                              | Operadores de duração:<br/>+ (adição)<br/>- (subtração)<br/>* (duração * número -> duração)<br/>/ (duração / número -> duração)                                                                                       |
 | [String](Concepts/dt_string.md)      | 'Sophie' ou "Sophie"                                  | & (concatenação)                                                                                                                                                                                                                                |
 | [Parâmetros](Concepts/dt_boolean.md) | TRUE ou FALSE                                         | -                                                                                                                                                                                                                                               |
 
@@ -108,17 +108,17 @@ If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the 
 
 You can mix absolute and relative references by inserting a dollar sign in front of the letter or the number alone, for example, `$C5` or `C$5`. A mixed reference allows you to specify either the row or the column as absolute, while allowing the other portion of the address to refer relatively.
 
-A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. Uma referência a uma célula nomeada é sempre absoluta. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name) method.
+A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. Uma referência a uma célula nomeada é sempre absoluta. Você pode criar ou modificar células nomeadas, ou intervalos de células usando o método [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name).
 
 A tabela seguinte mostra o efeito das diferentes notações:
 
-| Exemplo        | Tipo de referência | Descrição                                                                                                                                        |
-| -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                     |
-| $C$5           | Absoluto           | A referência é absoluta. Referir-se-á sempre à célula C5, independentemente do local onde for utilizada.                                         |
-| $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.             |
-| C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used              |
-| Nome da célula | Absoluto           | A referência é absoluta. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
+| Exemplo        | Tipo de referência | Descrição                                                                                                                                                  |
+| -------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                               |
+| $C$5           | Absoluto           | A referência é absoluta. Referir-se-á sempre à célula C5, independentemente do local onde for utilizada.                                                   |
+| $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.                       |
+| C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used                        |
+| Nome da célula | Absoluto           | A referência é absoluta. Sempre irá se referir à [célula ou intervalo nomeado](method-list.md#vp-add-range-name) não importa onde a referência seja usada. |
 
 
 
@@ -145,7 +145,7 @@ Consulte a [**lista ampliada de funções de SpreadJS**](https://www.grapecity.c
 
 As funções personalizadas 4D podem receber [parâmetros](#parameters) da área 4D View Pro e retornar valores.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Exemplos:
+Você declara todas as suas funções usando o método [`VP SET CUSTOM`](method-list.md#vp-set-custom-functions). Exemplos:
 
 ```4d
 o:=New object
@@ -226,9 +226,9 @@ Observe que os ( ) são obrigatórios, mesmo que nenhum parâmetro seja passado:
 =METHODWITHOUTNAME()
 ```
 
-You can declare the name, type, and number of parameters through the *parameters* collection of the function you declared using the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) method. Optionally, you can control the number of parameters passed by the user through *minParams* and *maxParams* properties.
+Você pode declarar o nome, o tipo e o número de parâmetros por meio da coleção de *parâmetros* da função que declarou usando o método [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions). Optionally, you can control the number of parameters passed by the user through *minParams* and *maxParams* properties.
 
-For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) method description.
+Para obter mais informações sobre os parâmetros de entrada compatíveis, consulte a descrição do método [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions).
 
 > If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:   
 > |Property|    Type|   Description| |---|---|---| |value|   Date|   Date value| |time |Real|  Time in seconds|
@@ -274,18 +274,18 @@ $o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information
 
 ## Compatibidade
 
-Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. However, using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method is recommended.
+Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. No entanto, é recomendável usar o método [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions).
 
 ### Referência a campos utilizando a estrutura virtual
 
 
-4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. Essa solução alternativa pode ser útil se o sua aplicação já depender de uma estrutura virtual (caso contrário, recomenda-se [usar `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
+4D View Pro permite que você faça referência a campos 4D usando a estrutura virtual do banco de dados, ou seja, declarada por meio da função [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) e/ou [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) com o parâmetro \*. Essa solução alternativa pode ser útil se o sua aplicação já depender de uma estrutura virtual (caso contrário, recomenda-se [usar `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
 
 > **ATENÇÃO:** não pode utilizar a estrutura virtual e `VP SET CUSTOM FUNCTIONS` simultaneamente. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
 #### Requisitos
 
-*   The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter (see example),
+*   O campo deve pertencer à estrutura virtual do banco de dados, ou seja, deve ser declarado por meio do comando [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) e/ou [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) com o parâmetro \* (consulte o exemplo),
 *   Os nomes das tabelas e dos campos devem estar em conformidade com (consulte [o standard ECMA ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 *   O tipo de campo deve ser compatível com 4D View Pro (veja acima).
 
@@ -329,7 +329,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
     ARRAY TEXT($fieldTitles;1)
     ARRAY LONGINT($fieldNum;1)
     $fieldTitles{1}:="Name"
-    $fieldNum{1}:=2 //last name
+    $fieldNum{1}:=2 //sobrenome
     SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
     ```
 
@@ -351,15 +351,15 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 
 ### Declaração dos métodos permitidos
 
-You can call directly 4D project methods from within your 4D View Pro formulas. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
+You can call directly 4D project methods from within your 4D View Pro formulas. Por motivos de segurança, você deve declarar explicitamente os métodos que podem ser chamados pelo usuário com o método [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
 
 
 #### Requisitos
 
 Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 
-*   **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
-*   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
+*   **Permitido**: ele foi declarado explicitamente usando o método [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
+*   **Executável**: pertence ao projeto host ou a um componente carregado com a opção "Compartilhado por componentes e projeto host" ativada (consulte [Compartilhamento de métodos projeto](../Concepts/components.md#sharing-of-project-methods)).
 *   **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
-> > > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
+> If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. Nesse caso, os nomes dos métodos projeto devem estar em conformidade com a gramática do identificador JavaScript (consulte o [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
 

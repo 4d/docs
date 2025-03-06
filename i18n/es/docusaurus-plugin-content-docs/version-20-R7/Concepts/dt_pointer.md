@@ -33,7 +33,7 @@ $MyVar:="Hello"
 $MyVar es ahora una variable que contiene la cadena “Hello.” Ahora podemos crear un puntero a $MyVar:
 
 ```4d
-C_POINTER($MyPointer)  
+var $MyPointer : Pointer
 $MyPointer:=->$MyVar
 ```
 
@@ -92,6 +92,26 @@ Con:
 | Desigualdad | Puntero # Puntero | Boolean  | vPtrA # vPtrC | True  |
 |             |                   |          | vPtrA # vPtrB | False |
 
+:::warning Punteros Null
+
+Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Por ejemplo:
+
+```4d
+var $p : Pointer // non initialized pointer (Nil value)
+$v:=$p-> // error
+$p->:=$v // error
+```
+
+To prevent such errors, you can write:
+
+```4d
+If ($p#Null)
+  $p->:=$v
+End if
+```
+
+:::
+
 ## Principales usos
 
 ### Punteros a tablas
@@ -138,22 +158,29 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 Cuando se utilizan punteros a variables de proceso o locales, hay que asegurarse de que la variable a la que se apunta ya está definida cuando se utilice el puntero. Tenga en cuenta que las variables locales se borran cuando el método que las creó ha terminado su ejecución y las variables de proceso se borran al final del proceso que las creó. Cuando un puntero llama a una variable que ya no existe, esto provoca un error de sintaxis en modo interpretado (variable no definida) pero puede generar un error más grave en modo compilado.
 
-Los punteros a variables locales permiten guardar las variables del proceso en muchos casos. Los punteros a variables locales sólo pueden utilizarse dentro del mismo proceso. En el depurador, cuando se muestra un puntero a una variable local que ha sido declarada en otro método, el nombre del método original se indica entre paréntesis, después del puntero. Por ejemplo, si se escribe en Method1:
+Los punteros a variables locales permiten guardar las variables del proceso en muchos casos. Los punteros a variables locales sólo pueden utilizarse dentro del mismo proceso. En el depurador, cuando se muestra un puntero a una variable local que ha sido declarada en otro método, el nombre del método original se indica entre paréntesis, después del puntero. For example, if you write in *Method1*:
 
 ```4d
  $MyVar:="Hello world"
  Method2(->$MyVar)
 ```
 
-En Method2, el depurador mostrará $1 de la siguiente manera:
+*Method2*:
 
-| $1 | ->$MyVar (Method1) |
-| -- | ------------------------------------- |
+```4d
+#DECLARE($param : Pointer)
+...
+```
 
-El valor de 1 dólar será:
+The debugger will display $param as follows:
 
-| $MyVar (Method1) | "Hello world" |
-| ----------------------------------- | ------------- |
+| $param | ->$MyVar (Method1) |
+| ------ | ------------------------------------- |
+
+You can expand $param and its value will be:
+
+| $MyVar | "Hello world" |
+| ------ | ------------- |
 
 ### Punteros a elementos del array
 
@@ -196,11 +223,12 @@ Si debe referirse al cuarto elemento del array utilizando el puntero, haga lo si
 Puede pasar un puntero como parámetro de un método. Dentro del método, puede modificar el objeto referenciado por el puntero. Por ejemplo, el siguiente método, `takeTwo`, toma dos parámetros que son punteros. Cambia el objeto referenciado por el primer parámetro a caracteres en mayúsculas, y el objeto referenciado por el segundo parámetro a caracteres en minúsculas. Este es el método del proyecto:
 
 ```4d
-  //Método proyecto takeTwo 
-  //$1 - Puntero a un campo de cadena o variable. Cambie esto a mayúsculas.
-  //$2 – Puntero a un campo de cadena o variable. Cambia esto a minúsculas.
- $1->:=Uppercase($1->)
- $2->:=Lowercase($2->)
+  //método proyecto takeTwo
+  //$changeUp - Puntero a un campo cadena o variable. Cámbielo a mayúsculas.
+  //$changeLow - Puntero a un campo o variable cadena. Cámbielo a minúsculas.
+ #DECLARE($changeUp : Puntero ; $changeLow : Pointer)
+ $changeUp->:=Uppercase($changeUp->)
+ $changeLow->:=Lowercase($changeLow->)
 ```
 
 La siguiente línea utiliza el método `takeTwo` para cambiar un campo a mayúsculas y para cambiar una variable a minúsculas:
@@ -230,15 +258,15 @@ Muestra un cuadro de alerta con la palabra "Goodbye".
 A continuación se explica cada línea del ejemplo:
 
 - $MyVar:="Hello"
-  \--> Esta línea pone la cadena "Hello" en la variable $MyVar.
+ \--> Esta línea pone la cadena "Hello" en la variable $MyVar.
 - $PointerOne:=-$MyVar
-  \--> $PointerOne ahora contiene un puntero a $MyVar.
+ \--> $PointerOne ahora contiene un puntero a $MyVar.
 - $PointerTwo:=->$PointerOne
-  \--> $PointerTwo (una nueva variable) contiene un puntero a $PointerOne, que a su vez apunta a $MyVar.
+ \--> $PointerTwo (una nueva variable) contiene un puntero a $PointerOne, que a su vez apunta a $MyVar.
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> hace referencia al contenido de $PointerOne, que a su vez hace referencia a $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Así que en este caso, a $MyVar se le asigna "Goodbye".
+ \--> $PointerTwo-> hace referencia al contenido de $PointerOne, que a su vez hace referencia a $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Así que en este caso, a $MyVar se le asigna "Goodbye".
 - ALERT (($PointerTwo->)->)
-  \--> Lo mismo que: $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar.
+ \--> Lo mismo que: $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Therefore ($PointerTwo-&#062;)-&#062; references the contents of $MyVar.
 
 La siguiente línea pone "Hello" en $MyVar:
 
@@ -253,3 +281,5 @@ $NewVar:=($PointerTwo->)->
 ```
 
 **Importante:** la desreferenciación múltiple requiere paréntesis.
+
+

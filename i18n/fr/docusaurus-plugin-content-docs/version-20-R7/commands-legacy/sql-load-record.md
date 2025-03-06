@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SQL LOAD RECORD.Summary-->La commande **SQL LOAD RECORD** récupère dans 4D un ou plusieurs enregistrement(s) provenant de la source de données ouverte dans la connexion courante.<!-- END REF-->
@@ -36,3 +33,13 @@ Si la commande a été correctement exécutée, la variable système OK retourne
 
 [SQL CANCEL LOAD](sql-cancel-load.md)  
 [SQL EXECUTE](sql-execute.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 822 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

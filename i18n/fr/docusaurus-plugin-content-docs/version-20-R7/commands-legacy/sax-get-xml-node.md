@@ -55,3 +55,14 @@ Exemple de traitement des événements :
 #### Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 860 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+
+

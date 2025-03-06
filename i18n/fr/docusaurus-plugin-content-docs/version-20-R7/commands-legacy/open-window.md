@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Open window.Summary-->**Open window** ouvre une nouvelle fenêtre dont les dimensions sont définies par les quatre premiers paramètres :
@@ -49,7 +46,7 @@ Si vous passez une chaîne de caractères vide ("") dans *titre*, vous indiquez 
 
 * Le paramètre *caseFermeture*, optionnel, désigne la méthode de gestion de la fermeture de la fenêtre. Si ce paramètre est passé, la case du menu Système (sous Windows) ou une case de fermeture (sous Mac OS) est ajoutée à la fenêtre. Lorsque l'utilisateur Windows double-clique sur la case du menu Système ou que l'utilisateur Mac OS clique sur la case de fermeture, la méthode passée dans *caseFermeture* est exécutée.
 
-**Note :** Vous pouvez aussi gérer la fermeture à partir de la méthode du formulaire affiché dans la fenêtre pendant l'événement On Close Box. Pour plus d'informations sur ce point, reportez-vous à la commande [Form event code](form-event-code.md).
+**Note :** Vous pouvez aussi gérer la fermeture à partir de la méthode du formulaire affiché dans la fenêtre pendant l'événement On Close Box. Pour plus d'informations sur ce point, reportez-vous à la commande [Form event code](../commands/form-event-code.md).
 
 Si plusieurs fenêtres sont ouvertes dans le même process, la dernière fenêtre créée est la fenêtre active (de premier plan) du process. Seules les informations situées dans la fenêtre active peuvent être modifiées. Toutes les autres fenêtres peuvent être visualisées. Lorsque l'utilisateur tape une touche du clavier, la fenêtre active vient toujours se placer au premier plan, si elle n'y est pas déjà. 
 
@@ -123,7 +120,7 @@ L'exemple suivant ouvre une fenêtre dont le titre et la taille proviennent des 
 
 #### Exemple 4 
 
-Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres feuille sous Mac OS X :
+Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres feuille sous macOS :
 
 ```4d
  $maFenêtre:=Open window(10;10;400;400;Sheet window)
@@ -138,3 +135,12 @@ Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres f
 [CLOSE WINDOW](close-window.md)  
 *Creer fenetre*  
 [Open form window](open-form-window.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 153 |
+| Thread safe | &cross; |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->The RESOURCE TYPE LIST command populates the array *resTypes* with the resource types of the resources present in the resource files currently open.<!-- END REF-->
@@ -83,3 +80,12 @@ Once this project method is implemented in a database, you can write:
 #### See also 
 
 [RESOURCE LIST](resource-list.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 499 |
+| Thread safe | &cross; |
+
+

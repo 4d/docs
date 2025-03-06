@@ -12,7 +12,7 @@ Le marqueur de modification global est un nombre, toujours maintenu par 4D, mêm
 Une fois que le [suivi des changements de données est configuré et activé](#configuring-data-change-tracking), les actions suivantes sont automatiquement exécutées par 4D à chaque modification de l'enregistrement (ajout, modification, suppression) :
 
 1. La valeur courante du marqueur de modification globale est stockée dans l'attribut spécial "__GlobalStamp" de l'entité concernée.
-   En cas de suppression, une nouvelle entité est également ajoutée dans la table `__DeletedRecords` avec des informations à propos de l'entité supprimée et la valeur courante du marqueur de modification global est enregistrée dans l'attribut "__Stamp".
+    En cas de suppression, une nouvelle entité est également ajoutée dans la table `__DeletedRecords` avec des informations à propos de l'entité supprimée et la valeur courante du marqueur de modification global est enregistrée dans l'attribut "__Stamp".
 
 2. La valeur du marqueur de modification global est incrémentée.
 
@@ -26,7 +26,7 @@ Ne confondez pas le **marqueur de modification global** avec le **marqueur inter
 
 ## Configuration du suivi des changements de données
 
-Par défaut, le marqueur de modification global n'est pas créé (la fonction [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) retourne 0. Pour activer le suivi des changements de données, vous devez ajouter des champs spéciaux et une table à votre structure. Vous pouvez utiliser le menu contextuel de l'éditeur de structure pour créer automatiquement tous les éléments nécessaires.
+Par défaut, le marqueur de modification global n'est pas créé (la fonction [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) retourne 0. Vue d’ensemble Vue d’ensemble Vous pouvez utiliser le menu contextuel de l'éditeur de structure pour créer automatiquement tous les éléments nécessaires.
 
 ### Configuration de la structure
 

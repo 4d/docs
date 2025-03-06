@@ -22,9 +22,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT DUPLICATE.Summary-->La commande **OBJECT DUPLICATE** permet de créer une copie de l’objet désigné par le paramètre *objet* dans le contexte du formulaire en cours d’exécution (mode Application).<!-- END REF--> Le formulaire d’origine, généré en mode Développement, n’est pas modifié. 
@@ -105,3 +102,13 @@ Création d’un nouveau bouton radio "bRadio6" basé sur le bouton radio exista
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT MOVE](object-move.md)  
 *Objets de formulaire (Accès)*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1111 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

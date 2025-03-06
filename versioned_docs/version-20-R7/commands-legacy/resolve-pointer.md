@@ -103,9 +103,17 @@ Here is an example of a 2D array pointer:
 
 #### See also 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 [Field](field.md)  
 [Get pointer](get-pointer.md)  
 [Is a variable](is-a-variable.md)  
 [Is nil pointer](is-nil-pointer.md)  
 [Table](table.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 394 |
+| Thread safe | &check; |
+
+

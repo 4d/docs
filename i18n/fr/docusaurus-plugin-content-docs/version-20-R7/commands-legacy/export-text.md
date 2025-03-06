@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.EXPORT TEXT.Summary-->La commande **EXPORT TEXT** écrit dans *document* (document texte Windows ou Mac OS) les données des enregistrements de la sélection courante de la table *laTable* du process courant.<!-- END REF-->
@@ -31,7 +28,7 @@ Un thermomètre de progression est affiché pendant l'export. L'utilisateur peut
 
 La commande utilise par défaut le jeu de caractères UTF-8\. Vous pouvez utiliser la commande [USE CHARACTER SET](use-character-set.md) pour modifier ce jeu de caractères. 
 
-Lors de l'utilisation de **EXPORT TEXT**, le délimiteur de champs par défaut est le caractère de tabulation (code 9). Le délimiteur d'enregistrement est par défaut le retour chariot (code 13) sous OS X et le retour chariot+retour à la ligne (code 13 + code 10) sous Windows. Vous pouvez modifier ces valeurs en assignant de nouvelles valeurs aux deux *Variables système* *FldDelimit* et *RecDelimit*. L'utilisateur peut modifier ces valeurs par défaut dans le dialogue d'export du mode Développement. A noter que si des champs exportés contiennent des caractères définis comme délimiteurs de champ ou d'enregistrement, ces caractères sont automatiquement remplacés par des espaces dans le fichier exporté, afin de ne pas perturber le processus d'import. 
+Lors de l'utilisation de **EXPORT TEXT**, le délimiteur de champs par défaut est le caractère de tabulation (code 9). Le délimiteur d'enregistrement est par défaut le retour chariot (code 13) sous macOS et le retour chariot+retour à la ligne (code 13 + code 10) sous Windows. Vous pouvez modifier ces valeurs en assignant de nouvelles valeurs aux deux *Variables système* *FldDelimit* et *RecDelimit*. L'utilisateur peut modifier ces valeurs par défaut dans le dialogue d'export du mode Développement. A noter que si des champs exportés contiennent des caractères définis comme délimiteurs de champ ou d'enregistrement, ces caractères sont automatiquement remplacés par des espaces dans le fichier exporté, afin de ne pas perturber le processus d'import. 
 
 #### Exemple 
 
@@ -54,3 +51,13 @@ OK prend la valeur 1 si l'export s'est correctement déroulé, sinon elle prend 
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 167 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

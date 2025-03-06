@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable (document) |
-| wpArea | String, Object | &#8594;  | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
+| wpArea | Text, Object | &#8594;  | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | startRange | Integer | &#8594;  | Starting offset of text range |
 | endRange | Integer | &#8594;  | Ending offset of text range |

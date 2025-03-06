@@ -44,3 +44,13 @@ displayed_sidebar: docs
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
 [DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1084 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

@@ -11,18 +11,18 @@ title: On Header Click
 
 ### List Box
 
-This event is generated when a click occurs on the header of a column in the list box. Nesse caso, o comando `Self` permite que você descubra o cabeçalho da coluna clicada.
+Esse evento é gerado quando ocorre um clique no cabeçalho de uma coluna de list box. Nesse caso, o comando `Self` permite que você descubra o cabeçalho da coluna clicada.
 
 Se a propriedade [Sortable](FormObjects/properties_Action.md#sortable) tiver sido selecionada para o list box, você poderá decidir se autoriza ou não uma classificação padrão da coluna passando o valor 0, ou -1 na variável `$0`:
 
 - Se `$0` for igual a 0, é efetuada uma ordenação padrão.
-- Se `$0` for igual a -1, uma classificação padrão não será executada e o cabeçalho não exibirá a seta de classificação. The developer can still generate a column sort based on customized sort criteria using the 4D language.
+- Se `$0` for igual a -1, uma classificação padrão não será executada e o cabeçalho não exibirá a seta de classificação. O desenvolvedor ainda pode gerar uma classificação de coluna com base em critérios de classificação personalizados usando a linguagem 4D.
 
 Se a propriedade [Sortable](FormObjects/properties_Action.md#sortable) não estiver selecionada para o list box, a variável `$0` não será usada.
 
 ### 4D View Pro
 
-This event is generated when the user clicks on a column or row header in a 4D View Pro document. Nesse contexto, o [objeto evento] (overview.md#event-object) retornado pelo comando `FORM Event` contém:
+Esse evento é gerado quando o usuário clica em um cabeçalho de coluna ou linha em um documento 4D View Pro. Nesse contexto, o [objeto evento] (overview.md#event-object) retornado pelo comando `FORM Event` contém:
 
 | Propriedade | Tipo          | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

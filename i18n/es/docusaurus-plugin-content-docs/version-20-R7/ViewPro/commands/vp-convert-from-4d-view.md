@@ -12,7 +12,7 @@ title: VP Convert from 4D View
 | Parámetros     | Tipo   |                             | Descripción                        |
 | -------------- | ------ | --------------------------- | ---------------------------------- |
 | 4DViewDocument | Blob   | ->                          | Documento 4D View                  |
-| Result         | Object | <- | Objeto 4D View Pro<!-- END REF --> |
+| Resultado      | Object | <- | Objeto 4D View Pro<!-- END REF --> |
 
 #### Descripción
 
@@ -30,3 +30,4 @@ Quiere obtener un objeto 4D View Pro a partir de un área 4D View almacenada en 
 C_OBJECT($vpObj)
 $vpObj:=VP Convert from 4D View($pvblob)
 ```
+

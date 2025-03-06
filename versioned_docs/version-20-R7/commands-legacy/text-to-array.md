@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.TEXT TO ARRAY.Summary-->The **TEXT TO ARRAY** command transforms a text variable into a text array.<!-- END REF--> The original varText text (styled or not) is divided and each part becomes an element of the *arrText* array that is returned by the command. This command can be used for example to fill pages or columns with text of a set size.
@@ -110,3 +107,12 @@ You need to print in a 400-pixel wide area, a text with a maximum of 80 lines an
 [Split string](split-string.md)  
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1149 |
+| Thread safe | &cross; |
+
+

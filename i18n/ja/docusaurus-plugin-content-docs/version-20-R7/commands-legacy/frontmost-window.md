@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Frontmost window.Summary-->Frontmost window コマンドは最前面のウィンドウの参照番号を返します。<!-- END REF-->
@@ -25,3 +22,12 @@ displayed_sidebar: docs
 
 [Frontmost process](frontmost-process.md)  
 [Next window](next-window.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 447 |
+| スレッドセーフである | &cross; |
+
+

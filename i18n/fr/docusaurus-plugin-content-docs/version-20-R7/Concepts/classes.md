@@ -7,7 +7,7 @@ title: Classes
 
 Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
-Une fois qu'une classe utilisateur est définie, vous pouvez **instancier des objets** de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut [`étendre`](#class-extends-classname) une autre classe, et hérite ensuite de ses [fonctions](#function) et propriétés ([déclarées](#property) et [calculées](#function-get-and-function-set)).
+Une fois qu'une classe utilisateur est définie, vous pouvez **instancier des objets** de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Chaque objet est une instance de sa classe.
 
 > Les modèles de classe 4D et JavaScript sont similaires, et basés sur une chaîne de prototypes.
 
@@ -27,7 +27,7 @@ Function sayHello() -> $welcome : Text
  $welcome:="Hello "+This.fullName
 ```
 
-Dans une méthode, créons une "Personne" :
+Dans une méthode, créons une "Person" :
 
 ```4d
 var $person : cs.Person //objet de classe Person
@@ -80,7 +80,7 @@ Pour créer une nouvelle classe, vous pouvez :
 
 - sélectionner la catégorie **Classes** et cliquez sur le bouton ![](../assets/en/Users/PlussNew.png) .
 - sélectionner **Nouvelle classe...** dans le menu d'actions en bas de la fenêtre de l'Explorateur ou dans le menu contextuel du groupe Classes.
-  ![](../assets/en/Concepts/newClass.png)
+ ![](../assets/en/Concepts/newClass.png)
 - sélectionnez **Nouveau> Classe...** dans le menu contextuel de la page d'accueil de l'Explorateur.
 
 #### Prise en charge du code de classe
@@ -88,18 +88,18 @@ Pour créer une nouvelle classe, vous pouvez :
 Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, explorateur d'exécution), le code de classe est essentiellement géré comme une méthode projet avec quelques spécificités :
 
 - Dans l'éditeur de code :
-  - une classe ne peut pas être exécutée
-  - une fonction de classe est un bloc de code
-  - **Aller à définition...** sur un objet membre permet de rechercher des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Function f".
-  - **Chercher les références...** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Function f" donnera comme résultat "$o.f()".
+ - une classe ne peut pas être exécutée
+ - une fonction de classe est un bloc de code
+ - **Aller à définition...** sur un objet membre permet de rechercher des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Function f".
+ - **Chercher les références...** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Function f" donnera comme résultat "$o.f()".
 - Dans l'explorateur d'exécution et le débogueur, les fonctions de classe sont affichées avec le constructeur `<ClassName>` ou le format `<ClassName>.<FunctionName>`.
 
 ## Class stores
 
 Les classes disponibles sont accessibles depuis leurs class stores. Il existe deux class stores dans 4D :
 
-- [`cs`](../commands/cs.md) for user class store
-- [`4D`](../commands/4d.md) for built-in class store
+- [`cs`](../commands/cs.md) pour le class store utilisateur
+- [`4D`](../commands/4d.md) pour le class store intégré
 
 ### `cs`
 
@@ -107,9 +107,9 @@ Les classes disponibles sont accessibles depuis leurs class stores. Il existe de
 
 <!-- REF #_command_.cs.Params -->
 
-| Paramètres | Type   |                                | Description                                                         |                  |
-| ---------- | ------ | ------------------------------ | ------------------------------------------------------------------- | ---------------- |
-| classStore | Object | &amp;larr; | Class store utilisateur utilisateurs pour le projet ou le composant | <!-- END REF --> |
+| Paramètres | Type   |                             | Description                                                         |                  |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------- | ---------------- |
+| classStore | Object | &#8592; | Class store utilisateur utilisateurs pour le projet ou le composant | <!-- END REF --> |
 
 La commande `cs` <!-- REF #_command_.cs.Summary -->retourne le class store utilisateur pour le projet ou le composant courant<!-- END REF -->. Elle retourne toutes les classes utilisateur [définies](#class-definition) dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
 
@@ -127,9 +127,9 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Paramètres | Type   |                                | Description    |                  |
-| ---------- | ------ | ------------------------------ | -------------- | ---------------- |
-| classStore | Object | &amp;larr; | Class store 4D | <!-- END REF --> |
+| Paramètres | Type   |                             | Description    |                  |
+| ---------- | ------ | --------------------------- | -------------- | ---------------- |
+| classStore | Object | &#8592; | Class store 4D | <!-- END REF --> |
 
 La commande `4D` <!-- REF #_command_.4D.Summary -->retourne le class store des classes 4D intégrées disponibles<!-- END REF -->. Elle donne accès à des API spécifiques telles que [CryptoKey](API/CryptoKeyClass.md).
 
@@ -141,7 +141,7 @@ Vous souhaitez créer une nouvelle clé dans la classe `CryptoKey` :
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-You want to list 4D built-in classes:
+Vous voulez lister les classes 4D intégrées :
 
 ```4d
  var $keys : collection
@@ -149,7 +149,7 @@ You want to list 4D built-in classes:
  ALERT("There are "+String($keys.length)+" built-in classes.")
 ```
 
-## L'objet classe
+## L'objet class
 
 Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
@@ -158,7 +158,7 @@ Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est cha
 - fonction [`new()`](API/ClassClass.md#new), permettant d'instancier les objets de la classe
 - propriété [`isShared`](API/ClassClass.md#isshared), true si la classe est [partagée](#shared-classes)
 - propriété [`isSingleton`](API/ClassClass.md#issingleton), true si la classe définit une [classe singleton](#singleton-classes).
-- [`isSectionSingleton`](API/ClassClass.md#issectionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
+- propriété [`isSectionSingleton`](API/ClassClass.md#issectionsingleton), true si la classe définit une [session singleton](#singleton-classes).
 - propriété [`me`](API/ClassClass.md#me), permettant d'instancier et d'accéder aux [singletons](#singleton-classes).
 
 De plus, un objet classe peut référencer un objet [`constructor`](#class-constructor) (facultatif).
@@ -180,7 +180,7 @@ Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de 
 - `property` pour définir les propriétés statiques des objets d'un type donné.
 - `Function get <Name>` et `Function set <Name>` pour définir les propriétés calculées des objets.
 - `Class extends <ClassName>` pour définir l'héritage.
-- `This` and `Super` are commands that have special
+- `This` et `Super` sont des commandes qui ont des fonctionnalités spéciales dans les classes.
 
 ### `Function`
 
@@ -191,9 +191,15 @@ Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de 
 // code
 ```
 
+:::note
+
+Il n'y a pas de mot-clé de fin pour le code d'une fonction. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de classe.
+
+:::
+
 Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont des objets de la classe [4D.Function](API/FunctionClass.md). Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function` suivi du nom de la fonction.
 
-Si la fonction est déclarée dans une [classe partagée](#shared-classes), vous pouvez utiliser le mot-clé `shared` pour que la fonction puisse être appelée sans [structure `Use. .End use`](shared.md#useend-use). Pour plus d'informations, consultez le paragraphe sur les [fonctions partagées](#shared-functions) ci-dessous.
+Si les fonctions sont déclarées dans une [classe partagée](#constructeur-de-classe-partagee), vous pouvez utiliser le mot-clé `shared` avec elles afin qu'elles puissent être appelées sans la structure [`Use...End use`](shared.md#useend-use). Pour plus d'informations, consultez le paragraphe sur les [fonctions partagées](#shared-functions) ci-dessous.
 
 Le nom de la fonction doit être conforme aux [règles de nommage des objets](Concepts/identifiers.md#object-properties).
 
@@ -232,8 +238,8 @@ Dans le code de l'application, les fonctions de classes sont appelées comme des
 
 - utilisation de l'opérateur `()`. Par exemple, `myObject.methodName("hello")`
 - utilisation d'une méthode membre de la classe "4D.Function" :
-  - [`apply()`](API/FunctionClass.md#apply)
-  - [`call()`](API/FunctionClass.md#call)
+ - [`apply()`](API/FunctionClass.md#apply)
+ - [`call()`](API/FunctionClass.md#call)
 
 :::warning Note importante thread-safety
 
@@ -325,17 +331,23 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 // code
 ```
 
+:::note
+
+Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de classe.
+
+:::
+
 Une fonction class constructor accepte des [paramètres](#parameters) facultatifs et peut être utilisée pour créer et initialiser des objets de la classe utilisateur.
 
 Lorsque vous appelez la fonction [`new()`](API/ClassClass.md#new), le constructeur de classe est appelé avec les paramètres éventuellement passés à la fonction `new()`.
 
-Il ne peut y avoir qu'une seule fonction constructor dans une classe (sinon une erreur est renvoyée). Un constructeur peut utiliser le mot-clé [`Super`](#super) pour appeler le constructeur de la superclass.
+Il ne peut y avoir qu'une seule fonction constructor dans une classe (sinon une erreur est renvoyée). The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function.
 
 Vous pouvez créer et saisir des propriétés d'instance dans le constructeur (voir exemple). Alternativement, si les valeurs de vos propriétés d'instance ne dépendent pas des paramètres passés au constructeur, vous pouvez les définir en utilisant le mot-clé [`property`](#property).
 
 L'utilisation du mot-clé `shared` crée une **classe partagée**, utilisée pour n'instancier que des objets partagés. Pour plus d'informations, reportez-vous au paragraphe [Classes partagées](#shared-classes).
 
-Using the `singleton` keyword creates a **singleton**, used to create a single instance of the class. A `session singleton` creates a single instance per session. Pour plus d'informations, référez-vous au paragraphe [Classes singleton](#singleton-classes).
+Un `singleton session` crée une seule instance par session. Pour plus d'informations, référez-vous au paragraphe [Classes singleton](#singleton-classes). L'utilisation du mot-clé `singleton` crée un **singleton**, utilisé pour créer une seule instance de la classe.
 
 #### Exemple
 
@@ -397,8 +409,8 @@ Le type de propriété peut être l'un des suivants :
 | `Collection`                 | Valeur collection                                                         |
 | `Variant`                    | Valeur variant                                                            |
 | `Object`                     | Objet de classe par défaut (4D.Object) |
-| `4D.<className>`             | Object de la classe 4D className                                          |
-| `cs.<className>`             | Object de la classe utilisateur className                                 |
+| `4D.<className>`             | Objet de la classe 4D className                                           |
+| `cs.<className>`             | Objet de la classe utilisateur className                                  |
 | `cs.<namespace>.<className>` | Object de la classe className du composant `<namespace>`                  |
 
 Si vous omettez le type dans la ligne de déclaration, la propriété est créée en tant que variant.
@@ -497,9 +509,9 @@ Dans le fichier de définition de la classe, les déclarations de propriétés c
 
 `Function get` retourne une valeur du type de la propriété et `Function set` prend un paramètre du type de la propriété. Les deux arguments doivent être conformes aux [paramètres de fonction](#parameters) standard.
 
-Lorsque les deux fonctions sont définies, la propriété calculée est en **lecture-écriture**. Si seule une `Function get` est définie, la propriété calculée est en **lecture seule**. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété. Si seule une `Function set` est définie, 4D retourne *undefined* lorsque la propriété est lue.
+Lorsque les deux fonctions sont définies, la propriété calculée est en **lecture-écriture**. Si seule une `Function get` est définie, la propriété calculée est en **lecture seule**. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété.
 
-Si les fonctions sont déclarées dans une [classe partagée](#constructeur-de-classe-partagee), vous pouvez utiliser le mot-clé `shared` avec elles afin qu'elles puissent être appelées sans la structure [`Use...End use`](shared.md#useend-use). Pour plus d'informations, consultez le paragraphe sur les [fonctions partagées](#shared-functions) ci-dessous.
+Si la fonction est déclarée dans une [classe partagée](#shared-classes), vous pouvez utiliser le mot-clé `shared` pour que la fonction puisse être appelée sans [structure `Use. .End use`](shared.md#useend-use). Pour plus d'informations, consultez le paragraphe sur les [fonctions partagées](#shared-functions) ci-dessous.
 
 Le type de la propriété calculée est défini par la déclaration de type `$return` du *getter*. Il peut s'agir de n'importe quel [type de propriété valide](dt_object.md).
 
@@ -600,7 +612,7 @@ The following commands have specific features when they are used within class fu
 
 ### `Super`
 
-The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. It can be called in the [class constructor](#class-constructor) or in a class function code.
+The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. Il ne peut y avoir qu'une seule fonction constructor dans une classe (sinon une erreur est renvoyée).
 
 For more details, see the [`Super`](../commands/super.md) command description.
 

@@ -3,7 +3,7 @@ id: EntityClass
 title: Entity
 ---
 
-An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. Contém os mesmos atributos que o dataclass assim como os valores de dados e propriedades e funções específicas.
+Uma [entity](ORDA/dsMapping.md#entity) é uma instância de uma [Dataclass](ORDA/dsMapping.md#dataclass), como um registro da tabela que corresponde à dataclass em seu datastore associado. Contém os mesmos atributos que o dataclass assim como os valores de dados e propriedades e funções específicas.
 
 ### Resumo
 
@@ -53,14 +53,14 @@ Any dataclass attribute is available as a property of an entity, which <!-- REF 
 
 > Atributos de Dataclass também podem ser alcançados usando a sintaxe alternativa com \[ ].
 
-The attribute value type depends on the attribute [kind](DataClassClass.md#attributename) (relation or storage):
+O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attributename) (relação ou armazenamento):
 
 - Se o tipo de *attributeName* for **storage**:
-  `.attributeName` retorna um valor do mesmo tipo que *attributeName*.
+ `.attributeName` retorna um valor do mesmo tipo que *attributeName*.
 - Se o tipo *attributeName* está **relatedEntity**:
-  `.attributeName` retorna a entidade relacionada. Valores da entidade relacionada estão diretamente disponíveis através de propriedades em cascata, por exemplo "myEntity.employer.employees\[0].lastname".
+ `.attributeName` retorna a entidade relacionada. Valores da entidade relacionada estão diretamente disponíveis através de propriedades em cascata, por exemplo "myEntity.employer.employees\[0].lastname".
 - Se o tipo *attributeName* for **relatedEntities**:
-  `.attributeName` retorna uma nova seleção de entidades relacionadas. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
+ `.attributeName` retorna uma nova seleção de entidades relacionadas. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
 
 #### Exemplo
 
@@ -98,9 +98,11 @@ The attribute value type depends on the attribute [kind](DataClassClass.md#attri
 
 #### Descrição
 
-The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. .
+A função `.clone()` <!-- REF #EntityClass.clone().Summary -->cria na memória uma nova entidade referenciando o mesmo registro que a entidade original<!-- END REF -->.
 
-> Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save( )`](#save) function is executed.
+This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+
+> Tenha em mente que quaisquer modificações feitas em entidades serão salvas no registro referenciado somente quando a função [`.save()`](#save) for executada.
 
 Esta função só pode ser usada com entidades já salvas no banco de dados. Não pode ser chamado em uma entidade recém-criada (para a qual [`.isNew()`](#isnew) retorna **True**).
 
@@ -143,7 +145,7 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Nã
 
 #### Descrição
 
-The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
+A função `.diff()` <!-- REF #EntityClass.diff().Summary -->compara o conteúdo de duas entidades e retorna suas diferenças<!-- END REF -->.
 
 No *entityToCompare*, passe a entidade a ser comparada à entidade original.
 
@@ -240,7 +242,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResultado1 (todas as diferenças são devolvidas):
+vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 
 ```4d
 [
@@ -289,7 +291,7 @@ vCompareResult2 (apenas diferenças em $attributesToInspect foram retornadas)
 ]
 ```
 
-vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
+vCompareResultado1 (todas as diferenças são devolvidas):
 
 ```4d
 [
@@ -344,7 +346,7 @@ vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 
 #### Descrição
 
-The `.drop()` function <!-- REF #EntityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note-se que a entidade permanece na memória.
+A função `.drop()` <!-- REF #EntityClass.drop().Summary -->exclui os dados contidos na entidade do armazenamento de dados<!-- END REF -->, da tabela relacionada à sua classe de dados. Note-se que a entidade permanece na memória.
 
 In a multi-user or multi-process application, the `.drop()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
 
@@ -453,7 +455,7 @@ Example with `dk force drop if stamp changed` option:
 
 The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
 
-If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
+Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja, [.getSelection( )](#getselection) retorna Null), a função retorna um valor Null.
 
 #### Exemplo
 
@@ -491,7 +493,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 #### Descrição
 
-The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
+A função `.fromObject()` <!-- REF #EntityClass.fromObject().Summary -->preenche uma entidade com o conteúdo *filler*<!-- END REF -->.
 
 > Essa função modifica a entidade original.
 
@@ -499,7 +501,7 @@ O mapeamento entre o objecto e a entidade é feito sobre os nomes dos atributos:
 
 - Se uma propriedade do objeto não existe nos dados (dataclass), ela é ignorada.
 - Os tipos de dados devem ser equivalentes. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see [`Converting data types`](Concepts/data-types.md#converting-data-types)), otherwise the attribute is left untouched.
-- A chave primária pode ser dada como é ou com uma propriedade "__KEY" (preenchida com o valor da chave primária). If it does not already exist in the dataclass, the entity is created with the given value when [.save()](#save) is called. Se a chave primária não for dada, a entidade é criada e o valor da chave primária é atribuído de acordo com as regras da base de dados. O auto-incremento só é calculado se a chave primária for nula.
+- A chave primária pode ser dada como é ou com uma propriedade "__KEY" (preenchida com o valor da chave primária). Se ela ainda não existir na classe de dados, a entidade será criada com o valor fornecido quando [.save()](#save) for chamado. Se a chave primária não for dada, a entidade é criada e o valor da chave primária é atribuído de acordo com as regras da base de dados. O auto-incremento só é calculado se a chave primária for nula.
 
 *filler* pode tratar de uma entidade relacionada sob as seguintes condições:
 
@@ -578,7 +580,7 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
 
 #### Descrição
 
-The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. Esta função é útil para configurar o código genérico.
+A função `.getDataClass()` <!-- REF #EntityClass.getDataClass().Summary -->retorna a dataclass da entidade<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 #### Exemplo
 
@@ -626,7 +628,7 @@ O seguinte código genérico duplica qualquer entidade:
 
 #### Descrição
 
-The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
+A função `.getKey()` <!-- REF #EntityClass.getKey().Summary -->retorna o valor da chave primária da entidade<!-- END REF -->.
 
 As chaves primárias podem ser números (Inteiro) ou strings. You can "force" the returned primary key value to be a string, no matter the actual primary key type, by passing the `dk key as string` option in the *mode* parameter.
 
@@ -670,7 +672,7 @@ As chaves primárias podem ser números (Inteiro) ou strings. You can "force" th
 
 The `.getRemoteContextAttributes()` function <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity <!-- END REF -->.
 
-If there is no [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) for the entity, the function returns an empty Text.
+Se não houver [contexto de otimização](../ORDA/remoteDatastores.md#clientserver-optimization) para a entidade, a função retornará um texto vazio.
 
 #### Exemplo
 
@@ -723,7 +725,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### Descrição
 
-The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->.
+A função `.getSelection()` <!-- REF #EntityClass.getSelection().Summary -->retorna a seleção da entidade à qual a entidade pertence<!-- END REF -->.
 
 Se a entidade não pertence à seleção de uma entidade, a função retorna Null.
 
@@ -767,9 +769,9 @@ Se a entidade não pertence à seleção de uma entidade, a função retorna Nul
 
 #### Descrição
 
-The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
+A função `.getStamp()` <!-- REF #EntityClass.getStamp().Summary --> retorna o valor atual do carimbo da entidade<!-- END REF -->.
 
-O selo interno é automaticamente incrementado por 4D cada vez que a entidade é gravada. It manages concurrent user access and modifications to the same entities (see [**Entity locking**](ORDA/entities.md#entity-locking)).
+O selo interno é automaticamente incrementado por 4D cada vez que a entidade é gravada. Ele gerencia os acessos simultâneos e as modificações de usuários às mesmas entidades (consulte [**bloqueio de uma entidade**](ORDA/entities.md#entity-locking)).
 
 > Para uma nova entidade (nunca salva), a função retorna 0. Para saber se uma entidade acabou de ser criada, recomenda-se a utilização de [.isNew()](#isnew).
 
@@ -816,7 +818,7 @@ O selo interno é automaticamente incrementado por 4D cada vez que a entidade é
 
 #### Descrição
 
-The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
+A função `.indexOf()` <!-- REF #EntityClass.indexOf().Summary -->retorna a posição da entidade em uma entity selection<!-- END REF -->.
 
 By default if the *entitySelection* parameter is omitted, the function returns the entity's position within its own entity selection. Caso contrário, ele retorna a posição da entidade dentro da *entitySelection*.
 
@@ -856,15 +858,15 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 <!-- REF #EntityClass.isNew().Params -->
 
-| Parâmetro  | Tipo       |                             | Descrição                                                                                                                  |
-| ---------- | ---------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | É verdade se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso. |
+| Parâmetro  | Tipo       |                             | Descrição                                                                                                               |
+| ---------- | ---------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | É True se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso. |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. Caso contrário, devolve False.
+A função `.isNew()` <!-- REF #EntityClass.isNew().Summary --> retorna True se a entidade à qual ela é aplicada tiver acabado de ser criada e ainda não tiver sido salva no repositório de dados<!-- END REF -->. Caso contrário, devolve False.
 
 #### Exemplo
 
@@ -904,9 +906,9 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 
 #### Descrição
 
-The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
+A função `.last()` <!-- REF #EntityClass.last().Summary -->retorna uma referência à entidade na última posição da seleção de entidades à qual a entidade pertence<!-- END REF -->.
 
-If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
+Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja, [.getSelection( )](#getselection) retorna Null), a função retorna um valor Null.
 
 #### Exemplo
 
@@ -945,13 +947,13 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 #### Descrição
 
-The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. The [lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
+A função `.lock()` <!-- REF #EntityClass.lock().Summary -->coloca um bloqueio pessimista no registro referenciado pela entidade<!-- END REF -->. O [bloqueio é definido](ORDA/entities.md#entity-locking) para um registro e todas as referências da entidade no processo atual.
 
 Other processes will see this record as locked (the `result.success` property will contain False if they try to lock the same entity using this function). Só as funções executadas na sessão de "bloqueio" são permitidas para editar e guardar os atributos da entidade. A entidade pode ser carregada como apenas leitura por outras sessões, mas não serão capazes de introduzir e guardar valores.
 
 Um registro bloqueado por `.lock()` é desbloqueado:
 
-- when the [`unlock()`](#unlock) function is called on a matching entity in the same process
+- quando a função [`unlock()`](#unlock) é chamada em uma entidade correspondente no mesmo processo
 - automaticamente, quando já não é referenciado por nenhuma entidade em memória. Por exemplo, se a fechadura for colocada apenas numa referência local de uma entidade, a entidade é desbloqueada quando a função termina. Enquanto houver referências à entidade em memória, o registo permanece bloqueado.
 
 > An entity can also be [locked by a REST session](../REST/$lock.md), in which case it can only be unlocked by the session.
@@ -964,34 +966,34 @@ Otherwise, you can pass the `dk reload if stamp changed` option in the *mode* pa
 
 O objeto retornado por `.lock()` contém as seguintes propriedades:
 
-| Propriedade                       |                                     | Tipo                   | Descrição                                                                                                                                                                                                                                                                                                                                                                                    |
-| --------------------------------- | ----------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success                           |                                     | boolean                | true se a ação de bloqueio for bem sucedida (ou se a entidade já estiver bloqueada no processo atual), falso caso contrário.                                                                                                                                                                                                                              |
-|                                   |                                     |                        | ***Disponível somente se a opção `dk reload if stamp changed` for usada:***                                                                                                                                                                                                                                                                                                  |
-| **wasReloaded**                   |                                     | boolean                | verdadeiro se a entidade foi recarregada com sucesso, falso caso contrário.                                                                                                                                                                                                                                                                                                  |
-|                                   |                                     |                        | ***Disponível apenas em caso de erro:***                                                                                                                                                                                                                                                                                                                                     |
-| status(\*)     |                                     | number                 | Código de erro, ver abaixo                                                                                                                                                                                                                                                                                                                                                                   |
-| statusText(\*) |                                     | text                   | Descrição do erro, ver abaixo                                                                                                                                                                                                                                                                                                                                                                |
-|                                   |                                     |                        | ***Disponível apenas em caso de erro de bloqueio pessimista:***                                                                                                                                                                                                                                                                                                              |
-| lockKindText                      |                                     | text                   | "Locked by record" se trancado por um processo 4D, "Locked by session" se trancado por uma sessão REST                                                                                                                                                                                                                                                                                       |
-| lockInfo                          |                                     | object                 | Informações sobre a origem do bloqueio. Retorna propriedades dependendo da origem da trava (processo 4D ou sessão REST)                                                                                                                                                                                                                                   |
-|                                   |                                     |                        | ***Disponível só para um processo trava 4D:***                                                                                                                                                                                                                                                                                                                               |
-|                                   | task_id        | number                 | Process ID                                                                                                                                                                                                                                                                                                                                                                                   |
-|                                   | user_name      | text                   | Nome de usuário de sessão na máquina                                                                                                                                                                                                                                                                                                                                                         |
-|                                   | user4d_alias   | text                   | Nome ou apelido do usuário 4D                                                                                                                                                                                                                                                                                                                                                                |
-|                                   | user4d_id      | number                 | Id do usuário no diretório do banco de dados 4D                                                                                                                                                                                                                                                                                                                                              |
-|                                   | host_name      | text                   | Nome da máquina                                                                                                                                                                                                                                                                                                                                                                              |
-|                                   | task_name      | text                   | Nome de processo                                                                                                                                                                                                                                                                                                                                                                             |
-|                                   | client_version | text                   | Versão do cliente                                                                                                                                                                                                                                                                                                                                                                            |
-|                                   |                                     |                        | ***Disponível só para um processo trava REST:***                                                                                                                                                                                                                                                                                                                             |
-|                                   | host                                | text                   | URL que trava a entidade (por exemplo "www.myserver.com")                                                                                                                                                                                                                                                                                 |
-|                                   | IPAddr                              | text                   | Endereço IP da trava (por exemplo. "127.0.0.1")                                                                                                                                                                                                                                                           |
-|                                   | userAgent                           | text                   | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
-|                                   |                                     |                        | ***Disponível somente em caso de erro grave*** (chave primária já existe, disco cheio...):                                                                                                                                                                                                                |
-| errors                            |                                     | uma coleção de objetos |                                                                                                                                                                                                                                                                                                                                                                                              |
-|                                   | message                             | text                   | Mensagem de erro                                                                                                                                                                                                                                                                                                                                                                             |
-|                                   | assinatura de componentes           | text                   | assinatura interna do componente (ex.: "dmbg" significa componente da base de dados)                                                                                                                                                                                                                                                      |
-|                                   | errCode                             | number                 | Código de erro                                                                                                                                                                                                                                                                                                                                                                               |
+| Propriedade                       |                                     | Tipo                   | Descrição                                                                                                                                                                                                                                                                                                                                                                                                   |
+| --------------------------------- | ----------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success                           |                                     | boolean                | true se a ação de bloqueio for bem sucedida (ou se a entidade já estiver bloqueada no processo atual), falso caso contrário.                                                                                                                                                                                                                                             |
+|                                   |                                     |                        | ***Disponível somente se a opção `dk reload if stamp changed` for usada:***                                                                                                                                                                                                                                                                                                                 |
+| **wasReloaded**                   |                                     | boolean                | verdadeiro se a entidade foi recarregada com sucesso, falso caso contrário.                                                                                                                                                                                                                                                                                                                 |
+|                                   |                                     |                        | ***Disponível apenas em caso de erro:***                                                                                                                                                                                                                                                                                                                                                    |
+| status(\*)     |                                     | number                 | Código de erro, ver abaixo                                                                                                                                                                                                                                                                                                                                                                                  |
+| statusText(\*) |                                     | text                   | Descrição do erro, ver abaixo                                                                                                                                                                                                                                                                                                                                                                               |
+|                                   |                                     |                        | ***Disponível apenas em caso de erro de bloqueio pessimista:***                                                                                                                                                                                                                                                                                                                             |
+| lockKindText                      |                                     | text                   | "Locked by record" se trancado por um processo 4D, "Locked by session" se trancado por uma sessão REST                                                                                                                                                                                                                                                                                                      |
+| lockInfo                          |                                     | object                 | Informações sobre a origem do bloqueio. Retorna propriedades dependendo da origem da trava (processo 4D ou sessão REST)                                                                                                                                                                                                                                                  |
+|                                   |                                     |                        | ***Disponível só para um processo trava 4D:***                                                                                                                                                                                                                                                                                                                                              |
+|                                   | task_id        | number                 | Process ID                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                                   | user_name      | text                   | Nome de usuário de sessão na máquina                                                                                                                                                                                                                                                                                                                                                                        |
+|                                   | user4d_alias   | text                   | Nome ou apelido do usuário 4D                                                                                                                                                                                                                                                                                                                                                                               |
+|                                   | user4d_id      | number                 | Id do usuário no diretório do banco de dados 4D                                                                                                                                                                                                                                                                                                                                                             |
+|                                   | host_name      | text                   | Nome da máquina                                                                                                                                                                                                                                                                                                                                                                                             |
+|                                   | task_name      | text                   | Nome de processo                                                                                                                                                                                                                                                                                                                                                                                            |
+|                                   | client_version | text                   | Versão do cliente                                                                                                                                                                                                                                                                                                                                                                                           |
+|                                   |                                     |                        | ***Disponível só para um processo trava REST:***                                                                                                                                                                                                                                                                                                                                            |
+|                                   | host                                | text                   | \| URL que trava a entidade (por exemplo "www.myserver.com")                                                                                                                                                                                                                                                                                 \\ \\| \| |
+|                                   | IPAddr                              | text                   | Endereço IP da trava (por exemplo. "127.0.0.1")                                                                                                                                                                                                                                                                          |
+|                                   | userAgent                           | text                   | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36")                |
+|                                   |                                     |                        | ***Disponível somente em caso de erro grave*** (chave primária já existe, disco cheio...):                                                                                                                                                                                                                               |
+| errors                            |                                     | uma coleção de objetos |                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                                   | message                             | text                   | Mensagem de erro                                                                                                                                                                                                                                                                                                                                                                                            |
+|                                   | assinatura de componentes           | text                   | assinatura interna do componente (ex.: "dmbg" significa componente da base de dados)                                                                                                                                                                                                                                                                     |
+|                                   | errCode                             | number                 | Código de erro                                                                                                                                                                                                                                                                                                                                                                                              |
 
 (\*) The following values can be returned in the *status* and *statusText* properties of the *Result* object in case of error:
 
@@ -1062,9 +1064,9 @@ Exemplo com a opção `dk reload if stamp changed`:
 
 #### Descrição
 
-The `.next()` function <!-- REF #EntityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
+A função `.next()` <!-- REF #EntityClass.next().Summary -->retorna uma referência à próxima entidade na seleção de entidades à qual a entidade pertence<!-- END REF -->.
 
-If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
+Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja, [.getSelection()](#getselection) retorna Null), a função retorna um valor Null.
 
 Se não houver entidade seguinte válida na selecção da entidade (ou seja, se estiver na última entidade da selecção), a função devolve Null. Se a entidade seguinte tiver sido abandonada, a função devolve a entidade válida seguinte (e eventualmente Nula).
 
@@ -1105,9 +1107,9 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 
 #### Descrição
 
-The `.previous()` function <!-- REF #EntityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
+A função `.previous()` <!-- REF #EntityClass.previous().Summary --> retorna uma referência à entidade anterior na seleção de entidades à qual a entidade pertence<!-- END REF -->.
 
-If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
+Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja, [.getSelection()](#getselection) retorna Null), a função retorna um valor Null.
 
 Se não houver nenhuma entidade anterior válida na seleção da entidade (ou seja, você está na primeira entidade da seleção), a função retorna Null. Se a entidade anterior foi abandonada, a função retorna a entidade válida anterior (e eventualmente Null).
 
@@ -1147,7 +1149,7 @@ Se não houver nenhuma entidade anterior válida na seleção da entidade (ou se
 
 #### Descrição
 
-The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. A recarga só é feita se a entidade ainda existir com a mesma chave primária.
+A função `.reload()` <!-- REF #EntityClass.reload().Summary -->recarrega o conteúdo da entidade na memória<!-- END REF -->, de acordo com as informações armazenadas na tabela relacionada à classe de dados no datacastore. A recarga só é feita se a entidade ainda existir com a mesma chave primária.
 
 **Resultado**
 
@@ -1212,11 +1214,11 @@ The object returned by `.reload( )` contains the following properties:
 
 #### Descrição
 
-The `.save()` function <!-- REF #EntityClass.save().Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. na tabela relacionada para a dataClass Deve salvar este método depois de criar ou modificar uma entidade se quiser salvar as mudanças feitas nela.
+A função `.save()` <!-- REF #EntityClass.save().Summary -->salva as alterações feitas na entidade<!-- END REF --> na tabela relacionada à sua classe de dados. na tabela relacionada para a dataClass Deve salvar este método depois de criar ou modificar uma entidade se quiser salvar as mudanças feitas nela.
 
-The save operation is executed only if at least one entity attribute has been "touched" (see the [`.touched()`](#touched) and [`.touchedAttributes()`](#touchedattributes) functions). Senão a função não faz nada (o trigger não é ativado)
+A operação de salvamento é executada somente se pelo menos um atributo de entidade tiver sido "tocado" (consulte as funções [`.touched()`](#touched) e [`.touchedAttributes()`](#touchedattributes)). Senão a função não faz nada (o trigger não é ativado)
 
-In a multi-user or multi-process application, the `.save()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
+Em uma aplicação multi-usuário ou multi-processo, a função `.save()` é executada sob um mecanismo de ["bloqueio otimista"](ORDA/entities.md#entity-locking), onde um selo de bloqueio interno é automaticamente incrementado cada vez que o registro é salvo.
 
 By default, if the *mode* parameter is omitted, the method will return an error (see below) whenever the same entity has been modified by another process or user in the meantime, no matter the modified attribute(s).
 
@@ -1351,26 +1353,26 @@ Atualização de uma entidade com a opção `dk auto merge`:
 
 #### Descrição
 
-The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Os nomes das propriedades no objecto correspondem aos nomes dos atributos da entidade.
+A função `.toObject()` <!-- REF #EntityClass.toObject().Summary -->retorna um objeto que foi criado a partir da entidade<!-- END REF -->. Os nomes das propriedades no objecto correspondem aos nomes dos atributos da entidade.
 
 If no filter is specified, or if the *filterString* parameter contains an empty string or "\*", the returned object will contain:
 
 - todos os atributos de entidade de armazenagem
-- attributes of the `relatedEntity` [kind](DataClassClass.md#attributename): you get a property with the same name as the related entity (name of the many-to-one link). Atributo é extraido com um formulário simples.
-- attributes of the `relatedEntities` [kind](DataClassClass.md#attributename): attribute is not returned.
+- atributos de [kind](DataClassClass.md#attributename) `relatedEntity`: você obtém uma propriedade com o mesmo nome da entidade relacionada (nome do link de muitos para um). Atributo é extraido com um formulário simples.
+- atributos de `relatedEntities` [kind](DataClassClass.md#attributename): o atributo não é retornado.
 
 No primeiro par|âmetro, passa os atributos entidade a extrair. Pode passar:
 
 - *filterString*: a string with property paths separated with commas: "propertyPath1, propertyPath2, ...", or
 - *filterCol*: a collection of strings: \["propertyPath1","propertyPath2";...]
 
-If a filter is specified for attributes of the relatedEntity [kind](DataClassClass.md#attributename):
+Se um filtro for especificado para os atributos onde [kind](DataClassClass.md#attributename) é relatedEntity:
 
 - propertyPath = "relatedEntity" -> it is extracted with simple form: an object with property \_\_KEY (primary key).
 - propertyPath = "relatedEntity.\*" -> todas as propriedades são extraídas
 - propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> só se extraem essas propriedades
 
-If a filter is specified for attributes of the relatedEntities [kind](DataClassClass.md#attributename):
+Se um filtro for especificado para atributos cujo [kind](DataClassClass.md#attributename) é relatedEntities:
 
 - propertyPath = "relatedEntities.\*" -> all the properties are extracted
 - propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> só se extraem essas propriedades
@@ -1637,11 +1639,11 @@ Retorna:
 
 #### Descrição
 
-The `.touched()` function <!-- REF #EntityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
+A função `.touched()` <!-- REF #EntityClass.touched().Summary -->testa se um atributo de entidade foi ou não modificado desde que a entidade foi carregada na memória ou salva<!-- END REF -->.
 
 Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. Pode usar essa função para determinar se precisar salvar a entidade.
 
-This function returns False for a new entity that has just been created (with [`.new( )`](DataClassClass.md#new)). Note however that if you use a function which calculates an attribute of the entity, the `.touched()` function will then return True. For example, if you call [`.getKey()`](#getkey) to calculate the primary key, `.touched()` returns True.
+Essa função retorna False para uma nova entidade que acabou de ser criada (com [`.new( )`](DataClassClass.md#new)). Note however that if you use a function which calculates an attribute of the entity, the `.touched()` function will then return True. Por exemplo, se você chamar [`.getKey()`](#getkey) para calcular a chave primária, `.touched()` retornará True.
 
 #### Exemplo
 
@@ -1683,7 +1685,7 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 
 #### Descrição
 
-The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
+A função `.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary --> retorna os nomes dos atributos que foram modificados desde que a entidade foi carregada na memória<!-- END REF -->.
 
 Isso se aplica para atributos [kind](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
 
@@ -1758,7 +1760,7 @@ Nesse modo:
 
 #### Descrição
 
-The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF --> in the datastore and table related to its dataclass.
+A função `.unlock()` <!-- REF #EntityClass.unlock().Summary -->remove o bloqueio pessimista do registro correspondente à entidade<!-- END REF --> no armazenamento de dados e na tabela relacionada à sua dataclass.
 
 > Para mais informações, consulte a seção [Bloqueio de entidades](ORDA/entities.md#entity-locking).
 
@@ -1778,9 +1780,9 @@ Um registro é destrancado automaticamente quando não for mais referenciado por
 
 O objeto retornado por `.unlock()` contém a seguinte propriedade:
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                     |
-| ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success     | Parâmetros | Verdadeiro se a ação de destrancar for bem-sucedida, Falso caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
+| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                               |
+| ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success     | Parâmetros | True se a ação de destrancar for bem-sucedida, False caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
 
 #### Exemplo
 

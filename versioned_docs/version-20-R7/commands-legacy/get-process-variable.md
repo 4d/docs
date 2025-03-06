@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GET PROCESS VARIABLE.Summary-->The **GET PROCESS VARIABLE** command reads the *srcVar* process variables (*srvVar2*, etc.) from the source process whose number is passed in *process*, and returns their current values in the *dstVar* variables ( *dstVar2*, etc.) of the current process.<!-- END REF-->
@@ -108,15 +105,19 @@ This example reads the source process instances of the variables *v1*,*v2*,*v3* 
  GET PROCESS VARIABLE($vlProcess;v1;v1;v2;v2;v3;v3)
 ```
 
-#### Example 7 
-
-See the example for the *\_o\_DRAG AND DROP PROPERTIES* command.
-
 #### See also 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 *Drag and Drop*  
 [POST OUTSIDE CALL](post-outside-call.md)  
 *Processes*  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 371 |
+| Thread safe | &cross; |
+
+

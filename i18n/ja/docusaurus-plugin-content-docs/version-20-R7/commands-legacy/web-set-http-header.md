@@ -63,3 +63,12 @@ X-VERSIONとX-STATUSを指定しないと、自動的にHTTP/1.0 200 OKが設定
 #### 参照 
 
 [WEB GET HTTP HEADER](web-get-http-header.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 660 |
+| スレッドセーフである | &check; |
+
+

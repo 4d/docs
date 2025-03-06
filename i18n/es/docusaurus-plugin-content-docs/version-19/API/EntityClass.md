@@ -85,15 +85,17 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 <!-- REF #EntityClass.clone().Params -->
 | Parámetros                 | Tipo      |    | Descripción                                   |
 | -------------------------- | --------- |:--:| --------------------------------------------- |
-| Result                     | 4D.Entity | <- | Nueva entidad que hace referencia al registro |
+| Resultado                  | 4D.Entity | <- | Nueva entidad que hace referencia al registro |
 |<!-- END REF -->
 
 |           |    |                                               |
 
 #### Descripción
 
-La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->. Esta función permite actualizar las entidades por separado.
-> Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado sólo cuando se ejecute la función [`.save( )`](#save).
+La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->.
+
+Esta función permite actualizar las entidades por separado. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+> Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado solo cuando se ejecute la función [`.save()`](#save).
 
 Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que [`.isNew()`](#isnew) devuelve **True**).
 
@@ -129,7 +131,7 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
 | ------------------- | ---------- |:--:| ---------------------------------------------------------- |
 | entityToCompare     | 4D.Entity  | -> | Entidad a comparar con la entidad original                 |
 | attributesToCompare | Collection | -> | Nombre de los atributos a comparar                         |
-| Result              | Collection | <- | Diferencias entre las entidades|<!-- END REF -->
+| Resultado           | Collection | <- | Diferencias entre las entidades|<!-- END REF -->
 
 |
 
@@ -165,7 +167,7 @@ Si una de las entidades comparadas es **Null**, se produce un error.
  employee.lastName:="SOPHIE"
  employee.salary:=500
  $diff1:=$clone.diff(employee) // Se devuelven todas las diferencias
- $diff2:=$clone.diff(employee;New collection"firstName"; "lastName"))
+ $diff2:=$clone.diff(employee;New collection("firstName"; "lastName"))
   // Sólo se devuelven las diferencias en firstName y lastName
 ```
 
@@ -232,7 +234,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResult1 (se devuelven todas las diferencias):
+vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
 
 ```4d
 [
@@ -281,7 +283,7 @@ vCompareResult2 (sólo se devuelven las diferencias en $attributesToInspect)
 ]
 ```
 
-vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
+vCompareResult1 (se devuelven todas las diferencias):
 
 ```4d
 [
@@ -329,7 +331,7 @@ vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
 | Parámetros | Tipo    |    | Descripción                                                                        |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk force drop if stamp changed`: activa el soltar incluso si el sello ha cambiado |
-| Result     | Object  | <- | Resultado de la operación soltar|<!-- END REF -->
+| Resultado  | Object  | <- | Resultado de la operación soltar|<!-- END REF -->
 
 |
 
@@ -343,7 +345,7 @@ Por defecto, si se omite el parámetro *mode*, la función devolverá un error (
 
 De lo contrario, puede pasar la opción `dk force drop if stamp changed` en el parámetro *mode*: en este caso, la entidad se abandona aunque el sello haya cambiado (y la llave primaria siga siendo la misma).
 
-**Result**
+**Resultado**
 
 El objeto devuelto por `.drop( )` contiene las siguientes propiedades:
 
@@ -434,7 +436,7 @@ Ejemplo con la opción `dk force drop if stamp changed`:
 <!-- REF #EntityClass.first().Params -->
 | Parámetros | Tipo      |    | Descripción                                                                                                        |
 | ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
-| Result     | 4D.Entity | <- | Referencia a la primera entidad de una selección de entidades (Null si no se encuentra)|<!-- END REF -->
+| Resultado  | 4D.Entity | <- | Referencia a la primera entidad de una selección de entidades (Null si no se encuentra)|<!-- END REF -->
 
 |
 
@@ -558,13 +560,13 @@ También puede utilizar una entidad relacionada dada como objeto:
 <!-- REF #EntityClass.getDataClass().Params -->
 | Parámetros | Tipo         |    | Descripción                                                             |
 | ---------- | ------------ |:--:| ----------------------------------------------------------------------- |
-| Result     | 4D.DataClass | <- | Objeto DataClass al que pertenece la entidad|<!-- END REF -->
+| Resultado  | 4D.DataClass | <- | Objeto DataClass al que pertenece la entidad|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.getDataClass()` <!-- REF #EntityClass.getDataClass().Summary -->devuelve la clase de datos de la entidad<!-- END REF -->. Esta función es útil al escribir código genérico.
+La función `.isNew()` <!-- REF #EntityClass.getDataClass().Summary -->devuelve True si la entidad a la que se aplica acaba de ser creada y aún no se ha guardado en el almacén de datos<!-- END REF -->. .
 
 #### Ejemplo
 
@@ -604,8 +606,8 @@ El siguiente código genérico duplica cualquier entidad:
 | Parámetros | Tipo    |    | Descripción                                                                                               |
 | ---------- | ------- |:--:| --------------------------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
-| Result     | Text    | <- | Valor de la llave primaria de texto de la entidad                                                         |
-| Result     | Integer | <- | Valor de la llave primaria numérica de la entidad                                                         |
+| Resultado  | Text    | <- | Valor de la llave primaria de texto de la entidad                                                         |
+| Resultado  | Integer | <- | Valor de la llave primaria numérica de la entidad                                                         |
 
 <!-- END REF -->
 
@@ -644,7 +646,7 @@ Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que
 <!-- REF #EntityClass.getSelection().Params -->
 | Parámetros | Tipo               |    | Descripción                                                                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------- |
-| Result     | 4D.EntitySelection | <- | Entity selection a la que pertenece la entidad (nula si no se encuentra)|<!-- END REF -->
+| Resultado  | 4D.EntitySelection | <- | Entity selection a la que pertenece la entidad (nula si no se encuentra)|<!-- END REF -->
 
 |
 
@@ -687,7 +689,7 @@ Si la entidad no pertenece a una selección de entidades, la función devuelve N
 <!-- REF #EntityClass.getStamp().Params -->
 | Parámetros | Tipo    |    | Descripción                                                                          |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
-| Result     | Integer | <- | Sello de la entidad (0 si la entidad acaba de ser creada)|<!-- END REF -->
+| Resultado  | Integer | <- | Sello de la entidad (0 si la entidad acaba de ser creada)|<!-- END REF -->
 
 |
 
@@ -734,7 +736,7 @@ El sello interno se incrementa automáticamente en 4D cada vez que se guarda la 
 | Parámetros      | Tipo               |    | Descripción                                                                     |
 | --------------- | ------------------ |:--:| ------------------------------------------------------------------------------- |
 | entitySelection | 4D.EntitySelection | -> | La posición de la entidad se da en función de esta selección de entidades       |
-| Result          | Integer            | <- | Posición de la entidad en una selección de entidades|<!-- END REF -->
+| Resultado       | Integer            | <- | Posición de la entidad en una selección de entidades|<!-- END REF -->
 
 |
 
@@ -781,7 +783,7 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 <!-- REF #EntityClass.isNew().Params -->
 | Parámetros | Tipo    |    | Descripción                                                                                                          |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False.|<!-- END REF -->
+| Resultado  | Boolean | <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False.|<!-- END REF -->
 
 |
 
@@ -820,7 +822,7 @@ La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True s
 <!-- REF #EntityClass.last().Params -->
 | Parámetros | Tipo      |    | Descripción                                                                                                       |
 | ---------- | --------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Referencia a la última entidad de una selección de entidades (Null si no se encuentra)|<!-- END REF -->
+| Resultado  | 4D.Entity | <- | Referencia a la última entidad de una selección de entidades (Null si no se encuentra)|<!-- END REF -->
 
 |
 
@@ -860,7 +862,7 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 | Parámetros | Tipo    |    | Descripción                                                                      |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk reload if stamp changed`: recargar antes de bloquear si el sello ha cambiado |
-| Result     | Object  | <- | Resultado de la operación de bloqueo|<!-- END REF -->
+| Resultado  | Object  | <- | Resultado de la operación de bloqueo|<!-- END REF -->
 
 |
 
@@ -879,7 +881,7 @@ Por defecto, si se omite el parámetro *mode*, la función devolverá un error (
 
 De lo contrario, puede pasar la opción `dk reload if stamp changed` en el parámetro *mode*: en este caso, no se devuelve error y la entidad se recarga cuando el sello cambia (si la entidad aún existe y la llave primaria sigue siendo la misma).
 
-**Result**
+**Resultado**
 
 El objeto devuelto por `.lock( )` contiene las siguientes propiedades:
 
@@ -907,7 +909,7 @@ El objeto devuelto por `.lock( )` contiene las siguientes propiedades:
 |                  | component signature | text                  | firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                       |
 |                  | errCode             | number                | Código de error                                                                                                             |
 
-(\*) Los siguientes valores pueden ser devueltos en las propiedades *status* y *statusText* del objeto *Result* en caso de error:
+(\*) Los siguientes valores pueden ser devueltos en las propiedadese *status* y *statusText* del objeto *Result* en caso de error:
 
 | Constante                                 | Valor | Comentario                                                                                                                                                                                                                                                     |
 | ----------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -969,7 +971,7 @@ Ejemplo con la opción `dk reload if stamp changed`:
 <!-- REF #EntityClass.next().Params -->
 | Parámetros | Tipo      |    | Descripción                                                                                                         |
 | ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Referencia a la siguiente entidad en la selección de entidades (Null si no se encuentra)|<!-- END REF -->
+| Resultado  | 4D.Entity | <- | Referencia a la siguiente entidad en la selección de entidades (Null si no se encuentra)|<!-- END REF -->
 
 |
 
@@ -1011,7 +1013,7 @@ Si no hay una entidad siguiente válida en la selección de entidades (es decir,
 <!-- REF #EntityClass.previous().Params -->
 | Parámetros | Tipo      |    | Descripción                                                                                                        |
 | ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
-| Result     | 4D.Entity | <- | Referencia a la entidad anterior en la selección de entidades (Null si no se encuentra)|<!-- END REF -->
+| Resultado  | 4D.Entity | <- | Referencia a la entidad anterior en la selección de entidades (Null si no se encuentra)|<!-- END REF -->
 
 |
 
@@ -1052,7 +1054,7 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
 <!-- REF #EntityClass.reload().Params -->
 | Parámetros | Tipo   |    | Descripción                              |
 | ---------- | ------ |:--:| ---------------------------------------- |
-| Result     | Object | <- | Objeto estado|<!-- END REF -->
+| Resultado  | Object | <- | Objeto estado|<!-- END REF -->
 
 |
 
@@ -1060,7 +1062,7 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
 
 La función `.reload()` <!-- REF #EntityClass.reload().Summary -->recarga el contenido de la entidad en la memoria<!-- END REF -->, de acuerdo a la información almacenada en la tabla relacionada con la clase de datos en el almacén de datos. La recarga se realiza sólo si la entidad sigue existiendo con la misma llave primaria.
 
-**Result**
+**Resultado**
 
 El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 
@@ -1116,7 +1118,7 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 | Parámetros | Tipo    |    | Descripción                                                  |
 | ---------- | ------- |:--:| ------------------------------------------------------------ |
 | mode       | Integer | -> | `dk auto merge`: activa el modo de fusión automática         |
-| Result     | Object  | <- | Resultado de la operación guardar|<!-- END REF -->
+| Resultado  | Object  | <- | Resultado de la operación guardar|<!-- END REF -->
 
 |
 
@@ -1133,7 +1135,7 @@ Por defecto, si se omite el parámetro *mode*, el método devolverá un error (v
 En caso contrario, se puede pasar la opción `dk auto merge` en el parámetro *mode*: cuando el modo de fusión automática está activado, una modificación realizada simultáneamente por otro proceso/usuario en la misma entidad pero en un atributo diferente no dará lugar a un error. Los datos resultantes guardados en la entidad serán la combinación (la "fusión") de todas las modificaciones no concurrentes (si se aplicaron modificaciones al mismo atributo, el guardado falla y se devuelve un error, incluso con el modo de fusión automática).
 > El modo de fusión automática no está disponible para los atributos de tipo Imagen, Objeto y Texto cuando se almacenan fuera del registro. Los cambios concurrentes en estos atributos darán lugar a un error `dk status stamp has changed`.
 
-**Result**
+**Resultado**
 
 El objeto devuelto por `.save()` contiene las siguientes propiedades:
 
@@ -1252,7 +1254,7 @@ Actualización de una entidad con la opción `dk auto merge`:
 | filterString | Text       | -> | Atributo(s) a extraer (cadena separada por comas)                                                          |
 | filterCol    | Collection | -> | Colección de atributos a extraer                                                                           |
 | options      | Integer    | -> | `dk with primary key`: añade la propiedad \_KEY;<br/>`dk with stamp`: añade la propiedad \_STAMP |
-| Result       | Object     | <- | Objeto creado a partir de la entidad|<!-- END REF -->
+| Resultado    | Object     | <- | Objeto creado a partir de la entidad|<!-- END REF -->
 
 |
 
@@ -1531,7 +1533,7 @@ Ejemplo con el tipo `relatedEntity` con una forma simple:
 <!-- REF #EntityClass.touched().Params -->
 | Parámetros | Tipo    |    | Descripción                                                                                                                  |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False|<!-- END REF -->
+| Resultado  | Boolean | <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False|<!-- END REF -->
 
 |
 
@@ -1576,7 +1578,7 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 <!-- REF #EntityClass.touchedAttributes().Params -->
 | Parámetros | Tipo       |    | Descripción                                                                |
 | ---------- | ---------- |:--:| -------------------------------------------------------------------------- |
-| Result     | Collection | <- | Nombres de atributos tocados, o colección vacía|<!-- END REF -->
+| Resultado  | Collection | <- | Nombres de atributos tocados, o colección vacía|<!-- END REF -->
 
 |
 
@@ -1650,7 +1652,7 @@ En este caso:
 <!-- REF #EntityClass.unlock().Params -->
 | Parámetros | Tipo   |    | Descripción                              |
 | ---------- | ------ |:--:| ---------------------------------------- |
-| Result     | Object | <- | Objeto estado|<!-- END REF -->
+| Resultado  | Object | <- | Objeto estado|<!-- END REF -->
 
 |
 
@@ -1671,7 +1673,7 @@ Un registro se desbloquea automáticamente cuando ya no es referenciado por ning
  $res:=$e1.unlock() //$res.success=true
 ```
 
-**Result**
+**Resultado**
 
 El objeto devuelto por <`.unlock()<` contiene la siguiente propiedad:
 

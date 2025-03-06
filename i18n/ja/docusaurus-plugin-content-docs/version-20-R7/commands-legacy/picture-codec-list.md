@@ -35,3 +35,12 @@ Codec IDは以下の異なるフォーマットで*codecArray* 配列に返さ�
 
 [Is picture file](is-picture-file.md)  
 *ピクチャ*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 992 |
+| スレッドセーフである | &check; |
+
+

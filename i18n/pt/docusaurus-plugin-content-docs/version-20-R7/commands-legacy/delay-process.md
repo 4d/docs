@@ -32,9 +32,18 @@ Ver os exemplos em *Record Locking*.
 
 #### Exemplo 2 
 
-Ver o exemplo do comando [Process number](process-number.md).
+Ver o exemplo do comando [Process number](../commands/process-number.md).
 
 #### Ver também 
 
 [HIDE PROCESS](hide-process.md)  
 [PAUSE PROCESS](pause-process.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 323 |
+| Thread-seguro | &check; |
+
+

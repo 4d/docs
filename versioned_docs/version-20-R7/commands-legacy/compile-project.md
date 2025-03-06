@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 
 #### Description 
 
@@ -175,7 +172,8 @@ Disable warnings 518.1 and 518.2 when compiling your project:
 
 ```4d
 var $options:={}
-$options.warnings:=[]$options.warnings.push({major: 518; minor: 1; enabled: False})
+$options.warnings:=[]
+$options.warnings.push({major: 518; minor: 1; enabled: False})
 $options.warnings.push({major: 518; minor: 2; enabled: False})
 var $result:=Compile project($options)
 ```
@@ -183,3 +181,12 @@ var $result:=Compile project($options)
 #### See also 
 
 [BUILD APPLICATION](build-application.md)
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1760 |
+| Thread safe | &cross; |
+
+

@@ -43,3 +43,12 @@ El siguiente ejemplo guarda el número del registro actual y luego busca en la t
 [Is new record](is-new-record.md)  
 [Selected record number](selected-record-number.md)  
 [Sequence number](sequence-number.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 243 |
+| Hilo seguro | &check; |
+
+

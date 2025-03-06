@@ -29,3 +29,12 @@ displayed_sidebar: docs
 
 [Not](not.md)  
 [True](true.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 215 |
+| スレッドセーフである | &check; |
+
+

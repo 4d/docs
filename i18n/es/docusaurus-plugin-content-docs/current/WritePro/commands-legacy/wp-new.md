@@ -17,19 +17,19 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.WP New.Summary-->El comando **WP New** crea y devuelve un objeto 4D Write Pro.<!-- END REF--> El objeto devuelto es un documento completo que se puede pasar al comando [WP INSERT DOCUMENT](wp-insert-document.md), por ejemplo.
+<!--REF #_command_.WP New.Summary-->El comando **WP New** crea y devuelve un objeto 4D Write Pro.<!-- END REF--> El objeto devuelto es un documento completo que se puede pasar al comando [WP INSERT DOCUMENT](../commands/wp-insert-document-body.md), por ejemplo.
 
 Por defecto, si se omite el parámetro *fuente*, el comando devuelve un objeto 4D Write Pro vacío.
 
 Si se utiliza el parámetro *fuente*, el nuevo objeto 4D Write Pro se llenará con el contenido del la *fuente*. Puede pasar:
 
-* un parámetro [cadena](# "A character string"): en este caso, pase una fuente HTML 4D, es decir, un texto exportado por [WP EXPORT VARIABLE](wp-export-variable.md) con la opción wk web page html 4D. Este texto puede contener referencias (etiquetas y expresiones 4D e imágenes anidadas).
+* un parámetro [cadena](# "A character string"): en este caso, pase una fuente HTML 4D, es decir, un texto exportado por [WP EXPORT VARIABLE](../commands/wp-export-variable.md) con la opción wk web page html 4D. Este texto puede contener referencias (etiquetas y expresiones 4D e imágenes anidadas).
 * un parámetro [blob](# "A series of bytes (from 0 to 2 GB in length)"): en este caso, pase:  
    * un documento en formato 4D Write Pro (.4wp) almacenado en un BLOB.  
    Para mayor información sobre el formato del documento 4D Write Pro, consulte *Formato del documento .4wp*.  
    * una antigua área 4D Write cargada en un BLOB (los Blobs que contienen documentos .4w7 o .4wt son soportados). En este contexto, puede utilizar el parámetro *opcion* para incluir expresiones HTML como txt en el documento importado (consulte a continuación).  
    Para una lista detallada de las funcionalidades 4D Write que actualmente son soportadas en objetos 4D Write Pro, consulte la sección *Importar documentos 4D Write*.  
-   Si desea importar un documento 4D Write (.4w7 o .4wt) almacenado en el disco, también puede considerar el uso del comando [WP Import document](wp-import-document.md).
+   Si desea importar un documento 4D Write (.4w7 o .4wt) almacenado en el disco, también puede considerar el uso del comando [WP Import document](../commands/wp-import-document.md).
 * un parámetro [objeto](# "Datos estructurados como forma de objeto nativo 4D") que puede ser:  
    * un rango.  
    En este caso **WP New** devolverá un nuevo documento creado desde el rango especificado. Tenga en cuenta que, si el rango no es igual al rango del documento completo, sólo la primera sección se exporta y los marcadores no se exportan, si los hay.  
@@ -117,5 +117,5 @@ Se ha definido un documento de plantilla con diferentes partes con formato previ
 
 #### Ver también 
 
-[WP Import document](wp-import-document.md)  
-[WP INSERT DOCUMENT](wp-insert-document.md)  
+[WP Import document](../commands/wp-import-document.md)  
+[WP INSERT DOCUMENT](../commands/wp-insert-document-body.md)  

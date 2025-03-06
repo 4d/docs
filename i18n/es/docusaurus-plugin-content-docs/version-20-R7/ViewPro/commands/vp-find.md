@@ -15,7 +15,7 @@ title: VP Find
 | searchValue     | Text   | ->                          | Valor de búsqueda                                                                         |                  |
 | searchCondition | Object | ->                          | Objeto que contiene la(s) condición(es) de búsqueda |                  |
 | replaceValue    | Text   | ->                          | Valor de reemplazo                                                                        |                  |
-| Result          | Object | <- | Objeto rango                                                                              | <!-- END REF --> |
+| Resultado       | Object | <- | Objeto rango                                                                              | <!-- END REF --> |
 
 #### Descripción
 
@@ -78,3 +78,5 @@ Else
     ALERT($result.ranges.length+" results found")
 End if
 ```
+
+

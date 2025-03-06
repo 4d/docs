@@ -34,9 +34,9 @@ Para simplificar o exemplo, vamos usar uma aplicação 4D e um navegador que sã
 
 4. We will use the REST server to access data: go the "Settings" dialog box, select the "Web/Rest resource" page, and check the **Expose as REST server** option.
 
-5. In the **Run** menu, select **Start Web Server**.
+5. No menu **Executar**, selecione **Iniciar Web Server** (se necessário), e então selecione **Teste Web Server**.
 
-The default home page is displayed:
+4D exibe a página home padrão do servidor Web 4D.
 
 
 ## Acessar dados 4D através do navegador

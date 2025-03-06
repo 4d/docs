@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Ejemplo 1 
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** define el *valor* de la fuente de datos actual para los objetos de formulario designados por el parámetro *nomObjeto*.<!-- END REF-->
@@ -42,3 +39,12 @@ Desea obtener el valor de la fuente de datos para un objeto de formulario, obten
 #### Ver también 
 
 [OBJECT Get value](object-get-value.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1742 |
+| Hilo seguro | &cross; |
+
+

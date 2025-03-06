@@ -98,6 +98,14 @@ Blobまたはピクチャーの値の場合、その保存場所に応じて異�
 
 #### 参照 
 
-  
-*\_o\_INTEGRATE LOG FILE*  
 [LOG FILE TO JSON](log-file-to-json.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1312 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

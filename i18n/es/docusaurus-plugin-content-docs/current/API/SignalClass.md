@@ -18,15 +18,15 @@ Un objeto `4D.Signal` contiene los siguientes métodos y propiedades integrados:
 - [`.signaled`](#signaled)
 - [`.description`](#description).
 
-Todo worker/proceso que llame al método `.wait()` suspenderá su ejecución hasta que la propiedad `.signaled` sea true. Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. La propiedad `.signaled` se convierte en true cuando cualquier worker/proceso llama al método `.trigger()`.
+Lanzamiento Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. Lanzamiento
 
 Tenga en cuenta que para evitar situaciones de bloqueo, el método `.wait()` también puede regresar después de que se haya alcanzado un tiempo de espera definido.
 
-Signal objects are created with the [`New signal`](../commands/new-signal.md) command.
+Los objetos Signal se crean con el comando [`New signal`](../commands/new-signal.md).
 
 ### Trabajar con señales
 
-In 4D, you create a new signal object by calling the [`New signal`](../commands/new-signal.md) command. Una vez creada, esta señal debe pasarse como parámetro a los comandos `New process` o `CALL WORKER` para que puedan modificarla cuando hayan terminado la tarea que se quiere esperar.
+En 4D, se crea un nuevo objeto señal llamando al comando [`New signal`](../commands/new-signal.md). Una vez creada, esta señal debe pasarse como parámetro a los comandos `New process` o `CALL WORKER` para que puedan modificarla cuando hayan terminado la tarea que se quiere esperar.
 
 - `signal.wait()` debe ser llamado desde el worker/proceso que necesita que otro worker/proceso termine una tarea para poder continuar.
 - `signal.trigger()` debe llamarse desde el worker/proceso que terminó su ejecución para liberar a todos los demás.
@@ -126,7 +126,7 @@ Esta propiedad está en **lectura-escritura**.
 
 #### Descripción
 
-La propiedad `.signaled` <!-- REF #SignalClass.signaled.Summary -->contiene el estado actual del objeto `Signal`<!-- END REF -->. Cuando se crea la señal, `.signaled` es **False**. Se convierte en **True** cuando la función `.trigger( )` se llama en el objeto.
+Lanzamiento Lanzamiento Cuando se crea la señal, `.signaled` es **False**. Se convierte en **True** cuando la función `.trigger( )` se llama en el objeto.
 
 Esta propiedad es de **solo lectura**.
 
@@ -158,7 +158,7 @@ Esta propiedad es de **solo lectura**.
 
 La función `.trigger( )` <!-- REF #SignalClass.trigger().Summary -->define la propiedad `signaled` del objeto signal como **true**<!-- END REF --> y despierta a todos los workers o procesos que esperan esta signal.
 
-Si la señal ya está en el estado de señalización (es decir, la propiedad signaled\` ya es **true**), la función no hace nada.
+Si la señal ya está en el estado de señalización (es decir, la propiedad `signaled` ya es **true**), la función no hace nada.
 
 <!-- END REF -->
 
@@ -178,10 +178,10 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad sig
 
 <!-- REF #SignalClass.wait().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                                     |
-| ---------- | ------- | --------------------------- | ----------------------------------------------- |
-| timeout    | Real    | ->                          | Tiempo máximo de espera de la señal en segundos |
-| Result     | Boolean | <- | Estado de la propiedad `.signaled`              |
+| Parámetros | Tipo    |                             | Descripción                        |
+| ---------- | ------- | --------------------------- | ---------------------------------- |
+| timeout    | Real    | ->                          | Maximum wait time in seconds       |
+| Resultado  | Boolean | <- | Estado de la propiedad `.signaled` |
 
 <!-- END REF -->
 
@@ -189,13 +189,20 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad sig
 
 La función `.wait( )` <!-- REF #SignalClass.wait().Summary -->hace que el proceso actual espere hasta que la propiedad `.signaled` del objeto signal se convierta en **true** o que el *timeout* opcional expire<!-- END REF -->.
 
-Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera en segundos en el parámetro *timeout* (se aceptan decimales).
+Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera en segundos en el parámetro *timeout* (se aceptan decimales). Decimals are accepted.
 
-> **Atención**: la llamada a `.wait( )` sin un *timeout* en el proceso principal de 4D no es recomendable porque podría congelar toda la aplicación 4D.
+If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
-Si la señal ya está en estado de señalización (es decir, la propiedad `.signaled` ya es **true**), la función vuelve inmediatamente, sin esperar.
+La función devuelve el valor de la propiedad `.signaled`.
 
-La función devuelve el valor de la propiedad `.signaled`. Evaluar este valor permite saber si la función retornó porque el `.trigger( )` ha sido llamado (`.signaled` es **true**) o si el *timeout* expiró (`.signaled` es **false**).
+- **true** if the signal was triggered (`.trigger()` was called).
+- **false** if the timeout expired before the signal was triggered.
+
+:::note Atención
+
+**Atención**: la llamada a `.wait( )` sin un *timeout* en el proceso principal de 4D no es recomendable porque podría congelar toda la aplicación 4D.
+
+:::
 
 > El estado de un proceso que espera un signal es `Waiting for internal flag`.
 

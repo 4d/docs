@@ -15,7 +15,7 @@ title: VP Column
 | column      | Integer | ->                          | Índice de la columna                                           |                  |
 | columnCount | Integer | ->                          | Número de columnas                                             |                  |
 | sheet       | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result      | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
+| Resultado   | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
 
 #### Descripción
 
@@ -50,3 +50,4 @@ El código es el siguiente:
 [VP Name](vp-name.md)<br/>
 [VP Row](vp-row.md)<br/>
 [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md)
+

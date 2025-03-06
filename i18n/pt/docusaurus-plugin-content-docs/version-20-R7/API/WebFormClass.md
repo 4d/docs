@@ -112,7 +112,7 @@ Function authenticationError()
 
 #### Descrição
 
-The `.setError()` function <!-- REF #WebFormClass.setError().Summary -->sends *msg* as an error message to the web form<!-- END REF -->.
+A função `.setError()` <!-- REF #WebFormClass.setError().Summary -->envia *msg* como uma mensagem de erro para o formulário web<!-- END REF -->.
 
 For more information, please refer to the [`.setError()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#seterror).
 
@@ -148,7 +148,7 @@ For more information, please refer to the [`.setMessage()` description in the Qo
 
 #### Descrição
 
-The `.setWarning()` function  <!-- REF #WebFormClass.setWarning().Summary -->sends *msg* as a warning message to the web form<!-- END REF -->.
+A função `.setWarning()` <!-- REF #WebFormClass.setWarning().Summary -->envia *msg* como uma mensagem de aviso para o formulário web<!-- END REF -->.
 
 For more information, please refer to the [`.setWarning()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setwarning).
 

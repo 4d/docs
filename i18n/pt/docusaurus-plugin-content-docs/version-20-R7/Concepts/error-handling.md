@@ -17,7 +17,7 @@ Basicamente, há duas maneiras de lidar com erros em 4D. Pode:
 
 :::tip Boas práticas
 
-\> > É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. Quando o servidor 4D não estiver executando [headless](../Admin/cli.md) (ou seja, inicializado com sua [janela de administração](.. ServerWindow/overview.md)), este método evitaria caixas de diálogo inesperadas a serem exibidas na máquina do servidor. No modo headless, erros são registrados no [arquivo 4DDebugLog](../Depuring/debugLogFiles.md#4ddebuglogtxt-standard) para análise posterior.
+&#062; &#062; É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. Quando o servidor 4D não estiver executando [headless](../Admin/cli.md) (ou seja, inicializado com sua [janela de administração](.. ServerWindow/overview.md)), este método evitaria caixas de diálogo inesperadas a serem exibidas na máquina do servidor. No modo headless, erros são registrados no [arquivo 4DDebugLog](../Depuring/debugLogFiles.md#4ddebuglogtxt-standard) para análise posterior.
 
 :::
 
@@ -85,17 +85,17 @@ Within the custom error method, you have access to several pieces of information
 
 - variáveis sistema (\*):
 
-  - `Erro` (inteiro longo): código de erro
-  - `Error line` (entero largo): número de línea del método que ha provocado el error
-  - `Linha de erro` (longin): número de linha no método que desencadeou o erro
-  - `Fórmula de erro` (texto): fórmula do código 4D (texto bruto) que está na origem do erro.
+ - `Erro` (inteiro longo): código de erro
+ - `Error line` (entero largo): número de línea del método que ha provocado el error
+ - `Linha de erro` (longin): número de linha no método que desencadeou o erro
+ - `Fórmula de erro` (texto): fórmula do código 4D (texto bruto) que está na origem do erro.
 
 :::info
 
-4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs.
+4D mantém automaticamente um número de variáveis chamadas [**variáveis sistema**](variables.md#system-variables), indo ao encontro de necessidades diferentes.
 :::
 
-- o comando [`Últimos erros`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D. You can also use the [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1015.html) command that returns the same information as arrays.
+- o comando [`Últimos erros`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D. Você também pode usar o comando [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1015.html) que retorna as mesmas informações que os arrays.
 - the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
 
 #### Exemplo

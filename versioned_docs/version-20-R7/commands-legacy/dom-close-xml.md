@@ -27,3 +27,13 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 
 [DOM Parse XML source](dom-parse-xml-source.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 722 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+
+

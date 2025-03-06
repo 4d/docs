@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->O comando **LISTBOX GET GRID COLORS** devolve a cor das linhas horizontais e verticais que eles compõem a grade do objeto list box designado pelo objeto de parâmetros *objeto* e *\**.<!-- END REF-->
@@ -33,3 +30,12 @@ Em *corH* e *corV*, o comando devolve os valores das cores RGB. O formato de cor
 #### Ver também 
 
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1200 |
+| Thread-seguro | &cross; |
+
+

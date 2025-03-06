@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 *certificatesFolder* 引数には、クライアント証明書を内包しているユーザー定義のフォルダのパス名を渡します。アプリケーションのストラクチャーファイルからの相対パスか、ま たは絶対パスを渡すことができます。パスは以下の例のようにシステムシンタックスに従って書かれている必要があります:
 
-* (OS X): Disk:Applications:myserv:folder
+* (macOS): Disk:Applications:myserv:folder
 * (Windows): C:\\Applications\\myserv\\folder
 
 自動的に作成されます。
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 #### SSL 証明書について 
 
-[このページで説明されているように](https://developer.4d.com/docs/ja/Admin/tls/)、4D によって管理されるSSL 証明書は**PEMフォーマット**でなければなりません。証明書のプロバイダー(例えば[startssl](https://www.startssl.com/) など)が証明書を .crt、 .pfx または .p12(フォーマットはブラウザによっても異なります)などのバイナリフォーマットで送ってきた場合、それを使用するためにはPEMフォーマットへと変換する必要があります。*sslshopper* などのようにこのような変換をオンライン上で行えるWeb サイトも存在します。
+[このページで説明されているように](../Admin/tls.md)、4D によって管理されるSSL 証明書は**PEMフォーマット**でなければなりません。証明書のプロバイダー(例えば[startssl](https://www.startssl.com/) など)が証明書を .crt、 .pfx または .p12(フォーマットはブラウザによっても異なります)などのバイナリフォーマットで送ってきた場合、それを使用するためにはPEMフォーマットへと変換する必要があります。*sslshopper* などのようにこのような変換をオンライン上で行えるWeb サイトも存在します。
 
 #### 例題 
 
@@ -58,3 +58,12 @@ displayed_sidebar: docs
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 [HTTP Get certificates folder](http-get-certificates-folder.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1306 |
+| スレッドセーフである | &check; |
+
+

@@ -9,12 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PAGE BREAK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * &#124; > | &#8594;  | * Annule l'impression lancée par Imprimer ligne ou > Rend l'impression prioritaire |
+| * &#124; > |Operator| &#8594;  | * Annule l'impression lancée par Imprimer ligne ou > Rend l'impression prioritaire |
 
 <!-- END REF-->
-
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
 
 #### Description 
 
@@ -47,3 +44,13 @@ Reportez-vous à l'exemple de la commande [SET PRINT MARKER](set-print-marker.md
 
 [CANCEL](cancel.md)  
 [Print form](print-form.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 6 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

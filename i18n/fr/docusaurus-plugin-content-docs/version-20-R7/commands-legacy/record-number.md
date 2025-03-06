@@ -44,3 +44,12 @@ L'exemple suivant sauvegarde le numéro d'enregistrement courant puis cherche da
 [Is new record](is-new-record.md)  
 [Selected record number](selected-record-number.md)  
 [Sequence number](sequence-number.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 243 |
+| Thread safe | &check; |
+
+

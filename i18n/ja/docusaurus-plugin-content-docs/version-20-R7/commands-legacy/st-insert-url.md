@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ST INSERT URL.Summary-->**ST INSERT URL**コマンドは、*object* 引数で指定したスタイル付テキストフィールドまたはテキスト変数内に、 URL のリンクを挿入します。<!-- END REF-->
@@ -50,7 +47,7 @@ displayed_sidebar: docs
 
 **Note:** もし *startSel* 引数が *endSel* 引数より大きい場合、コマンドは何も行わず、*OK* 変数は0に設定されます(ただし *endSel* が0である場合を除く)。
 
-リンクは挿入されれば既に有効になっています。ラベルを、 Windows では **Ctrl+クリック**、 Mac OS X では**Command+クリック** することによって既定のブラウザで*urlAddress* で指定したページを開くことができます。
+リンクは挿入されれば既に有効になっています。ラベルを、 Windows では **Ctrl+クリック**、 macOS では**Command+クリック** することによって既定のブラウザで*urlAddress* で指定したページを開くことができます。
 
 #### 例題 
 
@@ -66,3 +63,13 @@ displayed_sidebar: docs
 
 [ST GET URL](st-get-url.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1280 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

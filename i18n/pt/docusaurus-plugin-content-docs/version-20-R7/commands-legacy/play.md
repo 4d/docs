@@ -14,16 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.PLAY.Summary-->O comando PLAY permite reproduzir arquivos de som ou multimídia.<!-- END REF--> Passe a rota de acesso completa do arquivo que deseja reproduzir em *nomeObjeto*. Em Mac OS, o comando também pode ser utilizado para reproduzir uma fonte de som ou um som sistema. 
 
 * Para reproduzir um arquivo, passe seu nome e rota de acesso em *nomObjeto*. Pode passar uma rota de acesso completa ou relativa ao arquivo de estrutura do banco.  
 Os principais formatos de arquivos de som e multimídia são compatíveis: .WAV, .MP3, .AVI, .AIFF (Mac OS), etc. Em Mac OS, o comando é compatível particularmente com os formatos Core Audio.
-* (apenas para OS X) Para reproduzir um som de sistema, passe seu nome diretamente no parâmetro objectName.
+* (apenas para macOS) Para reproduzir um som de sistema, passe seu nome diretamente no parâmetro objectName.
 
 Nota: os recursos 'snd', utilizados em Mac OS 9 e superiores, já não são suportados.  
 
@@ -51,7 +48,7 @@ O exemplo abaixo mostra como reproduzir um arquivo WAV em Windows:
   
 #### Exemplo 2 
 
-O código de exemplo abaixo reproduz um som do sistema em OS X:
+O código de exemplo abaixo reproduz um som do sistema em macOS:
 
 ```4d
  PLAY("Submarine.aiff")
@@ -60,3 +57,12 @@ O código de exemplo abaixo reproduz um som do sistema em OS X:
 #### Ver também 
 
 [BEEP](beep.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 290 |
+| Thread-seguro | &cross; |
+
+

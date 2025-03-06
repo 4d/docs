@@ -48,7 +48,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 #### Objects Supported
 
 [Drop-down List](dropdownList_Overview.md) -
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -84,7 +84,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -209,7 +209,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -264,7 +264,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -284,4 +284,4 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)

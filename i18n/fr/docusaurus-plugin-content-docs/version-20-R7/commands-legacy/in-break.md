@@ -13,19 +13,24 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.In break.Summary-->**In break** retourne Vrai pour le cycle d'exécution En rupture.<!-- END REF--> 
 
 Si vous souhaitez que le cycle d'exécution **In break** soit généré, assurez-vous que l'événement formulaire On Printing Break a bien été activé dans la boîte de dialogue des propriétés du formulaire ou du (des) objet(s) sélectionné(s), en mode Développement. 
 
-**Note :** Cette commande équivaut à utiliser la commande [Form event code](form-event-code.md) et tester si elle retourne l'événement On Printing Break.
+**Note :** Cette commande équivaut à utiliser la commande [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Printing Break.
 
 #### Voir aussi 
 
-*\_o\_During*  
 [In footer](in-footer.md)  
 [In header](in-header.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 113 |
+| Thread safe | &cross; |
+
+

@@ -42,3 +42,12 @@ El siguiente ejemplo muestra una utilización típica de Modified record:
 [Modified](modified.md)  
 [Old](old.md)  
 [SAVE RECORD](save-record.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 314 |
+| Hilo seguro | &check; |
+
+

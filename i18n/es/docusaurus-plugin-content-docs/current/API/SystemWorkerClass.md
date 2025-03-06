@@ -112,7 +112,7 @@ Esta es la secuencia de llamadas de retorno:
 1. `onData` y `onDataError` se ejecutan una o varias veces
 2. si se llama, `onError` se ejecuta una vez (detiene el procesamiento del system worker)
 3. si no se ha producido ningún error, `onResponse` se ejecuta una vez
-4. `onTerminate` se ejecuta siempre una vez
+4. `onTerminate` is always executed
 
 :::info
 
@@ -328,9 +328,7 @@ Esta propiedad es de **solo lectura**.
 
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->
-
-**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
 
 #### Descripción
 
@@ -384,7 +382,7 @@ Cada elemento de la colección es un objeto con las siguientes propiedades:
 | [].message             | text   | Descripción del error 4D                              |
 | [ ].componentSignature | text   | Firma del componente interno que ha devuelto el error |
 
-Si no se ha producido ningún error, `.errors` es indefinido.
+If no error occured, `.errors` is undefined.
 
 <!-- END REF -->
 
@@ -396,7 +394,7 @@ Si no se ha producido ningún error, `.errors` es indefinido.
 
 #### Descripción
 
-La propiedad `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contiene el código de salida devuelto por el proceso externo<!-- END REF -->. Si el proceso no terminó normalmente, `exitCode` es *undefined*.
+La propiedad `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contiene el código de salida devuelto por el proceso externo<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
 
 Esta propiedad es de **solo lectura**.
 
@@ -441,15 +439,15 @@ Esta propiedad es de **solo lectura**.
 | Parámetros  | Tipo |     | Descripción                                                                            |
 | ----------- | ---- | :-: | -------------------------------------------------------------------------------------- |
 | message     | Text |  -> | Texto a escribir en el flujo de entrada (stdin) del proceso externo |
-| messageBLOB | Blob |  -> | Bytes escritos en el flujo de entrada                                                  |
+| messageBLOB | Blob |  -> | Bytes write on the input stream                                                        |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite escribir en el flujo de entrada (stdin) del proceso externo<!-- END REF -->. En el parámetro *mensaje*, pase el texto a escribir en *stdin*.
+La función `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite escribir en el flujo de entrada (stdin) del proceso externo<!-- END REF -->. In the *message* parameter, pass the text to write in *stdin*.
 
-La función `.postMessage()` también acepta un valor de tipo Blob en *messageBLOB* para pasar en *stdin*, de forma que se pueden publicar datos binarios.
+The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
 
 Puede utilizar la propiedad `.dataType` del objeto [options](#options-object) para hacer que el cuerpo de la respuesta devuelva valores Blob.
 
@@ -550,24 +548,26 @@ Esta propiedad es de **solo lectura**.
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
-| Parámetros | Tipo                            |                             | Descripción                                       |
-| ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------- |
-| timeout    | Real                            |              ->             | Tiempo de espera (en segundos) |
-| Result     | 4D.SystemWorker | <- | Objeto SystemWorker                               |
+| Parámetros | Tipo                            |                             | Descripción                  |
+| ---------- | ------------------------------- | :-------------------------: | ---------------------------- |
+| timeout    | Real                            |              ->             | Maximum wait time in seconds |
+| Resultado  | 4D.SystemWorker | <- | Objeto SystemWorker          |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->espera hasta el final de la ejecución del `SystemWorker` o el *timeout* especificado<!-- END REF -->.
+La función `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->espera hasta el final de la ejecución de `SystemWorker` o se alcanza el *timeout* especificado<!-- END REF -->.
 
-En *timeout*, pase un valor en segundos. El script `SystemWorker` esperará al proceso externo durante el tiempo definido en el parámetro *timeout*. Si omite el parámetro *timeout*, la ejecución del script esperará indefinidamente.
+The `.wait()` function waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached(If any is defined), or an error has occured. Si se alcanza el *timeout*, no se elimina el `SystemWorker`.
 
-En realidad, `.wait()` espera hasta el final del procesamiento de la fórmula `onTerminate`, excepto si se alcanza el *timeout*. Si se alcanza el *timeout*, no se elimina el `SystemWorker`.
+If you pass a *timeout* value, .wait() waits for the external process for the amount of time defined in the *timeout* parameter.
 
-Durante una ejecución de `.wait()` se ejecutan las funciones de retrollamada, especialmente las retrollamadas provienen de otros eventos o de otras instancias de `SystemWorker`. Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
+:::note
 
-Esta función devuelve el objeto SystemWorker.
+During the `.wait()` execution, callback functions are executed, whether they originate from other `SystemWorker` instances. Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
+
+:::
 
 > Esta función no es necesaria si creó el `SystemWorker` desde un proceso worker 4D.
 

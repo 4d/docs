@@ -58,3 +58,12 @@ La *frasePasar* y la *sal* utilizadas para el descifrado son idénticas a la *fr
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1774 |
+| Hilo seguro | &check; |
+
+

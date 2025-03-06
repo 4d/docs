@@ -44,3 +44,12 @@ displayed_sidebar: docs
 
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 228 |
+| スレッドセーフである | &check; |
+
+

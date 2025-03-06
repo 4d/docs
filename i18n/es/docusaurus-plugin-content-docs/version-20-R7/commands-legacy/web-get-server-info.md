@@ -125,6 +125,15 @@ Después de ejecutar el siguiente código:
 
 #### Ver también 
 
-[License info](license-info.md)  
+[License info](../commands/license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1531 |
+| Hilo seguro | &check; |
+
+

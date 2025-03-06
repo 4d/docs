@@ -16,20 +16,26 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Summary-->La commande **LISTBOX MOVED COLUMN NUMBER** retourne dans les paramètres *ancPosition* et *nouvPosition* des numéros indiquant respectivement la précédente position et la nouvelle position de la colonne déplacée dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-Cette commande doit être utilisée en combinaison avec l’événement formulaire On Column Moved (cf. commande [Form event code](form-event-code.md)). 
+Cette commande doit être utilisée en combinaison avec l’événement formulaire On Column Moved (cf. commande [Form event code](../commands/form-event-code.md)). 
 
 **Note :** Cette commande tient compte des colonnes invisibles.
 
 #### Voir aussi 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [LISTBOX MOVED ROW NUMBER](listbox-moved-row-number.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 844 |
+| Thread safe | &cross; |
+
+

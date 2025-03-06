@@ -9,12 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PAGE BREAK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * &#124; > | &#8594;  | * Cancela la impresión iniciada por Print form, o > Manda un trabajo de impresión |
+| * &#124; > |Operator| &#8594;  | * Cancela la impresión iniciada por Print form, o > Manda un trabajo de impresión |
 
 <!-- END REF-->
-
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
 
 #### Descripción 
 
@@ -46,3 +43,13 @@ Consulte el ejemplo del comando [SET PRINT MARKER](set-print-marker.md "SET PRIN
 
 [CANCEL](cancel.md)  
 [Print form](print-form.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 6 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

@@ -22,3 +22,12 @@ This status will happen very rarely. Processes are usually stopped before the co
 #### See also 
 
 [On Exit database method](on-exit-database-method.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 672 |
+| Thread safe | &check; |
+
+

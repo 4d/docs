@@ -7,25 +7,25 @@ title: データタイプの概要
 
 この2つはおおよそ同じものですが、データベースレベルで提供されているいくつかのデータタイプはランゲージにおいては直接利用可能ではなく、自動的に適宜変換されます。 同様に、いくつかのデータタイプはランゲージでしか利用できません。 各場所で利用可能なデータタイプと、ランゲージでの宣言の仕方の一覧です:
 
-| データタイプ                                                | データベース                     | ランゲージ   | [`var` 宣言](variables.md#var-キーワードによる宣言) | [`ARRAY` 宣言](arrays.md) |
-| ----------------------------------------------------- | -------------------------- | ------- | --------------------------------------- | ----------------------- |
-| [文字列](dt_string.md)                                   | ◯                          | テキストに変換 | -                                       | -                       |
-| [テキスト](Concepts/dt_string.md)                         | ◯                          | ◯       | `Text`                                  | `ARRAY TEXT`            |
-| [日付](Concepts/dt_date.md)                             | ◯                          | ◯       | `Date`                                  | `ARRAY DATE`            |
-| [時間](Concepts/dt_time.md)                             | ◯                          | ◯       | `Time`                                  | `ARRAY TIME`            |
-| [ブール](Concepts/dt_boolean.md)                         | ◯                          | ◯       | `Boolean`                               | `ARRAY BOOLEAN`         |
-| [整数](Concepts/dt_number.md)                           | ◯                          | 倍長整数に変換 | `Integer`                               | `ARRAY INTEGER`         |
-| [倍長整数](Concepts/dt_number.md)                         | ◯                          | ◯       | `Integer`                               | `ARRAY LONGINT`         |
-| [64ビット整数](Concepts/dt_number.md)                      | ◯ (SQL) | 実数に変換   | -                                       | -                       |
-| [実数](Concepts/dt_number.md)                           | ◯                          | ◯       | `Real`                                  | `ARRAY REAL`            |
-| [未定義](Concepts/dt_null_undefined.md)                  | -                          | ◯       | -                                       | -                       |
-| [Null](Concepts/dt_null_undefined.md)                 | -                          | ◯       | -                                       | -                       |
-| [ポインター](Concepts/dt_pointer.md)                       | -                          | ◯       | `Pointer`                               | `ARRAY POINTER`         |
-| [ピクチャー](Concepts/dt_picture.md)                       | ◯                          | ◯       | `Picture`                               | `ARRAY PICTURE`         |
-| [BLOB](Concepts/dt_blob.md)                           | ◯                          | ◯       | `Blob`, `4D.Blob`                       | `ARRAY BLOB`            |
-| [オブジェクト](Concepts/dt_object.md)                       | ◯                          | ◯       | `Object`                                | `ARRAY OBJECT`          |
-| [コレクション](Concepts/dt_collection.md)                   | -                          | ◯       | `Collection`                            |                         |
-| [バリアント](Concepts/dt_variant.md)(2) | -                          | ◯       | `Variant`                               |                         |
+| データタイプ                                                | データベース                     | ランゲージ    | [`var` 宣言](variables.md#var-キーワードによる宣言) | [`ARRAY` 宣言](arrays.md) |
+| ----------------------------------------------------- | -------------------------- | -------- | --------------------------------------- | ----------------------- |
+| [文字列](dt_string.md)                                   | ◯                          | テキストに変換  | -                                       | -                       |
+| [テキスト](Concepts/dt_string.md)                         | ◯                          | ◯        | `Text`                                  | `ARRAY TEXT`            |
+| [日付](Concepts/dt_date.md)                             | ◯                          | ◯        | `Date`                                  | `ARRAY DATE`            |
+| [時間](Concepts/dt_time.md)                             | ◯                          | ◯        | `Time`                                  | `ARRAY TIME`            |
+| [ブール](Concepts/dt_boolean.md)                         | ◯                          | ◯        | `Boolean`                               | `ARRAY BOOLEAN`         |
+| [整数](Concepts/dt_number.md)                           | ◯                          | 倍長整数 に変換 | `Integer`                               | `ARRAY INTEGER`         |
+| [倍長整数](Concepts/dt_number.md)                         | ◯                          | ◯        | `Integer`                               | `ARRAY LONGINT`         |
+| [64ビット整数](Concepts/dt_number.md)                      | ◯ (SQL) | 実数に変換    | -                                       | -                       |
+| [実数](Concepts/dt_number.md)                           | ◯                          | ◯        | `Real`                                  | `ARRAY REAL`            |
+| [未定義](Concepts/dt_null_undefined.md)                  | -                          | ◯        | -                                       | -                       |
+| [Null](Concepts/dt_null_undefined.md)                 | -                          | ◯        | -                                       | -                       |
+| [ポインター](Concepts/dt_pointer.md)                       | -                          | ◯        | `Pointer`                               | `ARRAY POINTER`         |
+| [ピクチャー](Concepts/dt_picture.md)                       | ◯                          | ◯        | `Picture`                               | `ARRAY PICTURE`         |
+| [BLOB](Concepts/dt_blob.md)                           | ◯                          | ◯        | `Blob`, `4D.Blob`                       | `ARRAY BLOB`            |
+| [オブジェクト](Concepts/dt_object.md)                       | ◯                          | ◯        | `Object`                                | `ARRAY OBJECT`          |
+| [コレクション](Concepts/dt_collection.md)                   | -                          | ◯        | `Collection`                            |                         |
+| [バリアント](Concepts/dt_variant.md)(2) | -                          | ◯        | `Variant`                               |                         |
 
 (1) ORDA では、オブジェクト (エンティティ) を介してデータベースフィールドを扱うため、オブジェクトにおいて利用可能なデータタイプのみがサポートされます。 詳細については [オブジェクト](Concepts/dt_object.md) のデータタイプの説明を参照ください。
 
@@ -37,24 +37,24 @@ title: データタイプの概要
 
 デフォルト値は変数の型に依存します:
 
-| 型       | デフォルト値                                   |
-| ------- | ---------------------------------------- |
-| ブール     | false                                    |
-| 日付      | 00-00-00                                 |
-| Integer | 0                                        |
-| Time    | 00:00:00 |
-| ピクチャー   | ピクチャーサイズ=0                               |
-| 実数      | 0                                        |
-| ポインター   | Nil=true                                 |
-| テキスト    | ""                                       |
-| BLOB    | BLOB サイズ=0                               |
-| オブジェクト  | null                                     |
-| コレクション  | null                                     |
-| バリアント   | undefined                                |
+| 型          | デフォルト値                                   |
+| ---------- | ---------------------------------------- |
+| ブール        | false                                    |
+| Date       | 00-00-00                                 |
+| Integer    | 0                                        |
+| Time       | 00:00:00 |
+| Picture    | ピクチャーサイズ=0                               |
+| Real       | 0                                        |
+| Pointer    | Nil=true                                 |
+| Text       | ""                                       |
+| BLOB       | BLOB サイズ=0                               |
+| Object     | null                                     |
+| Collection | null                                     |
+| Variant    | undefined                                |
 
 ### デフォルト値としての Null
 
-Object型、Collection型、Pointer型、Picture型の変数は、デフォルト値として **null** を持ちますが、実際には宣言後で割り当て前の場合には中間的な状態になります。 これらは **null** 値の *ように振る舞います* が、コードがそれらにアクセスしようとしたときに発生するエラーが少なくなるなど、多少の違いがあります。
+Object型、Collection型、Pointer型、Picture型の変数は、デフォルト値として **null** を持ちますが、実際には宣言後で割り当て前の場合には中間的な状態になります。 これらは **null** 値の *ように振る舞います* が、コードがそれらにアクセスしようとしたときに発生するエラーが少なくなるなど、多少の違いがあります。 これらは **null** 値の *ように振る舞います* が、コードがそれらにアクセスしようとしたときに発生するエラーが少なくなるなど、多少の違いがあります。 これらは **null** 値の *ように振る舞います* が、コードがそれらにアクセスしようとしたときに発生するエラーが少なくなるなど、多少の違いがあります。 これらは **null** 値の *ように振る舞います* が、コードがそれらにアクセスしようとしたときに発生するエラーが少なくなるなど、多少の違いがあります。
 
 ## データタイプの変換
 
@@ -66,9 +66,9 @@ Object型、Collection型、Pointer型、Picture型の変数は、デフォル�
 | -------------------------- | -------- | ----- | ------ | ------ | ------ |
 | 文字列 (1) |          | `Num` | `Date` | `Time` | `Bool` |
 | 数値 (2)  | `String` |       |        |        | `Bool` |
-| 日付                         | `String` |       |        |        | `Bool` |
+| Date                       | `String` |       |        |        | `Bool` |
 | Time                       | `String` |       |        |        | `Bool` |
-| ブール                        |          | `Num` |        |        |        |
+| Boolean                    |          | `Num` |        |        |        |
 
 (1) JSON形式の文字列は `JSON Parse` コマンドを使ってスカラーデータ、オブジェクト、あるいはコレクションに変換することができます。
 

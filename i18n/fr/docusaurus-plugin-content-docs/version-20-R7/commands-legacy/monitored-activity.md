@@ -66,7 +66,7 @@ Les propriétés supplémentaires suivantes sont retournées dans l'objet *activ
 
 **Notes :**
 
-* Si le journal de débogage a été stoppé sur la [GRAPH SETTINGS](graph-settings.md) de 4D Server, la commande **Monitored activity** ne retourne rien. Si le journal est relancé sur le serveur ou à l'aide de la commande [START MONITORING ACTIVITY](start-monitoring-activity.md) avec Activity network, **Monitored activity** reprendra la génération des informations de l'activité réseau.
+* Si le journal de débogage a été stoppé sur la [Administration window](../ServerWindow/overview.md) de 4D Server, la commande **Monitored activity** ne retourne rien. Si le journal est relancé sur le serveur ou à l'aide de la commande [START MONITORING ACTIVITY](start-monitoring-activity.md) avec Activity network, **Monitored activity** reprendra la génération des informations de l'activité réseau.
 * L'objet *activityData* utilise les informations définies par la commande [SET DATABASE PARAMETER](set-database-parameter.md) pour *4DRequestsLog.txt* (le cas échéant), sinon, elle utilise un mode par défaut. Le lancement de l'enregistrement des requêtes durant l'exécution de la commande **Monitored activity** aura une incidence sur les résultats retournés.
 
 L'objet *activityData* :
@@ -139,3 +139,12 @@ Voir l'exemple de **[START MONITORING ACTIVITY](start-monitoring-activity.md).**
 
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1713 |
+| Thread safe | &check; |
+
+

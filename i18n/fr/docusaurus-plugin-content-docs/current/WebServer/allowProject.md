@@ -3,7 +3,7 @@ id: allowProject
 title: Méthodes projet
 ---
 
-Les balises 4D telles que `4DEVAL`, `4DTEXT`, `4DHTML`... ainsi que l'URL [`/4DACTION`](httpRequests.md#/4daction) vous permettent de déclencher l'exécution de toute méthode projet d'un projet 4D publié sur le Web. Par exemple, la requête _http://www.server.com/4DACTION/login_ entraîne l'exécution de la méthode projet _**login**_, si elle existe.
+Les balises 4D telles que `4DEVAL`, `4DTEXT`, `4DHTML`... ainsi que l'URL [`/4DACTION`](httpRequests.md#/4daction) vous permettent de déclencher l'exécution de toute méthode projet d'un projet 4D publié sur le Web. Par exemple, la requête *http://www.server.com/4DACTION/login* entraîne l'exécution de la méthode projet ***login***, si elle existe.
 
 Ce mécanisme présente donc un risque de sécurité pour l'application, notamment si un internaute déclenche intentionnellement (ou non) une méthode non destinée à être exécutée via le web. Vous pouvez éviter ce risque comme suit :
 

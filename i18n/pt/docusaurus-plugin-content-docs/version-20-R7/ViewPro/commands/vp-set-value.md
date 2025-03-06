@@ -24,11 +24,11 @@ In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`]
 
 The parameter *valueObj* is an object that includes properties for the value and the [format](../configuring.md#cell-format) to assign to *rangeObj*. Pode incluir as seguintes propriedades:
 
-| Propriedade | Tipo                                     | Descrição                                                                                                                                                                                               |
-| ----------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value       | Integer, Real, Boolean, Text, Date, Null | Valor a atribuir a *rangeObj* (exceto - hora). Passar null para apagar o conteúdo da célula.                                                         |
-| time        | Real                                     | Valor hora (em segundos) a atribuir a *rangeObj*                                                                                                                                     |
-| format      | Text                                     | Padrão para propriedade valor/tempo. For information on patterns and formatting characters, please refer to the [Cell Format](../configuring.md#cell-format) paragraph. |
+| Propriedade | Tipo                                     | Descrição                                                                                                                                                                                                |
+| ----------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value       | Integer, Real, Boolean, Text, Date, Null | Valor a atribuir a *rangeObj* (exceto - hora). Passar null para apagar o conteúdo da célula.                                                          |
+| time        | Real                                     | Valor hora (em segundos) a atribuir a *rangeObj*                                                                                                                                      |
+| format      | Text                                     | Padrão para propriedade valor/tempo. Para informações sobre padrões e caracteres de formatação, consulte o parágrafo [formato de célula](../configuring.md#cell-format). |
 
 #### Exemplo
 
@@ -70,3 +70,5 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 [VP SET NUM VALUE](vp-set-num-value.md)<br/>
 [VP SET TEXT VALUE](vp-set-text-value.md)<br/>
 [VP SET TIME VALUE](vp-set-time-value.md)
+
+

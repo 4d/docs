@@ -29,3 +29,13 @@ En Macintosh, si no pasa el parámetro opcional *\**, se devuelve el tamaño del
 [Get document position](get-document-position.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 [SET DOCUMENT SIZE](set-document-size.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 479 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+
+

@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Day number.Summary-->Day number コマンドは、*aDate*に対応するの曜日を数値で返します。<!-- END REF-->  
-
-**Note:** Day number は日付がヌルの時、*2* を返します。 
+<!--REF #_command_.Day number.Summary-->Day number コマンドは、*aDate*に対応するの曜日を数値で返します。<!-- END REF-->Day number は日付がヌルの時、*2* を返します。 
 
 4Dは "" テーマで以下の定義済み定数を提供します:
 
@@ -61,3 +59,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Day of](day-of.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 114 |
+| スレッドセーフである | &check; |
+
+

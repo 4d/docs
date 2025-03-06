@@ -16,16 +16,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->La commande **WA SET URL FILTERS** permet de mettre en place un ou plusieurs filtre(s) pour la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->
 
 Avant le chargement de toute page, 4D consulte la liste des filtres afin de vérifier si l’URL cible est autorisé ou non. L’évaluation de l’URL est basée sur le contenu des tableaux *tabFiltres* et *tabAutorisRefus* s'ils ont été définis. 
 
-Si l’URL demandé n’est pas autorisé, il n’est pas chargé et l’événement formulaire On URL Filtering est généré (cf. commande [Form event code](form-event-code.md)). 
+Si l’URL demandé n’est pas autorisé, il n’est pas chargé et l’événement formulaire On URL Filtering est généré (cf. commande [Form event code](../commands/form-event-code.md)). 
 
 Les tableaux *tabFiltres* et *tabAutorisRefus* doivent être synchronisés. 
 
@@ -133,3 +130,12 @@ Vous souhaitez interdire des adresses IP spécifiques :
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1030 |
+| Thread safe | &cross; |
+
+

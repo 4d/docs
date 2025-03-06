@@ -12,12 +12,9 @@ displayed_sidebar: docs
 | area | Integer | &#8594;  | Reference of the area |
 | colNum | Integer | &#8594;  | Column number |
 | breakNum | Integer | &#8594;  | Break number |
-| operator &#124; value | Longint, String | &#8594;  | Operator value for the cell or Cell content |
+| operator &#124; value | Integer, Text | &#8594;  | Operator value for the cell or Cell content |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -98,3 +95,13 @@ If you pass an invalid *breakNum* number, the error -9853 will be generated.
 #### See also 
 
 [QR GET TOTALS DATA](qr-get-totals-data.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 767 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->La commande **OPEN PRINTING JOB** ouvre une tâche d’impression (print job) et y empile tous les ordres d’impression exécutés par la suite, tant que la commande [CLOSE PRINTING JOB](close-printing-job.md) n’est pas appelée.<!-- END REF--> Cette commande vous permet de contrôler les tâches d’impression, et notamment de vous assurer qu’aucune tâche d’impression “parasite” ne puisse s’intercaler dans une séquence d’impressions.
@@ -27,7 +24,7 @@ Vous devez appeler la commande [CLOSE PRINTING JOB](close-printing-job.md) pour 
 
 **OPEN PRINTING JOB** utilise les paramètres d’impression courants (paramètres par défaut ou définis via la commande [SET PRINT OPTION](set-print-option.md)). Les commandes modifiant les paramètres d’impression doivent être appelées avant **OPEN PRINTING JOB**. Dans le cas contraire, une erreur est générée (exception : la constante Orientation option peut être appelée par la commande [SET PRINT OPTION](set-print-option.md) dans une tâche d'impression).
 
-**Note de compatibilité :** À partir de 4D v20 R4, les tâches d'impression sont non-bloquantes dans les nouveaux projets. Pour plus d'informations, veuillez consulter la documentation sur l'[option d'impression non-bloquante](https://developer.4d.com/docs/fr/settings/compatibility/) dans les paramètres de compatibilité.
+**Note de compatibilité :** À partir de 4D v20 R4, les tâches d'impression sont non-bloquantes dans les nouveaux projets. Pour plus d'informations, veuillez consulter la documentation sur l'[option d'impression non-bloquante](../settings/compatibility.md) dans les paramètres de compatibilité.
 
 #### Variables et ensembles système 
 
@@ -39,3 +36,13 @@ La variable système OK est définie sur 1 si la tâche d'impression a été ouv
 #### Voir aussi 
 
 [CLOSE PRINTING JOB](close-printing-job.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 995 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

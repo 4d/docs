@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New collection.Params-->
 
-| Parâmetro | Tipo                                                                    |   | Descrição                                  |
-| --------- | ----------------------------------------------------------------------- | - | ------------------------------------------ |
-| value     | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | → | Valor(es) de collection |
-| Resultado | Collection                                                              | ← | Nova coleção                               |
+| Parâmetro | Tipo                                                                    |                             | Descrição                                  |
+| --------- | ----------------------------------------------------------------------- | --------------------------- | ------------------------------------------ |
+| value     | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594; | Valor(es) de collection |
+| Resultado | Collection                                                              | &#8592; | Nova coleção                               |
 
 <!-- END REF-->
 
@@ -80,3 +80,12 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 [New shared collection](new-shared-collection.md)\
 [Type](../commands-legacy/type.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1472                            |
+| Thread safe    | &amp;check; |
+
+

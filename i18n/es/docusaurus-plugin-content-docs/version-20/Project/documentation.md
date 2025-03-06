@@ -161,6 +161,8 @@ _italic_
 ```4d
     var $txt : Texto
     $txt:="¡Hola mundo!"  
+```  
+```  
 ```
 ````
 - La etiqueta de la tabla es soportada:
@@ -220,7 +222,7 @@ GetLogo (size) -> logo
 
 ## Description
 
-This method returns a logo of a specific size, depending on the value of the *size* parameter.
+Este método devuelve un logo de un tamaño específico, dependiendo del valor del parámetro *size*.
 1 = tamaño más pequeño, 5 = tamaño más grande.
 
 ## Example

@@ -66,7 +66,7 @@ Las siguientes propiedades adicionales se devuelven en el objeto *activityData* 
 
 **Notas:** 
 
-* si los historiales de depuración se han detenido en el servidor 4D [GRAPH SETTINGS](graph-settings.md), **Monitored activity** no devolverá nada. Si los historiales se reinician en el servidor o mediante el comando [START MONITORING ACTIVITY](start-monitoring-activity.md) con Activity network, **Monitored activity** reanudará la información de actividad de red.
+* si los historiales de depuración se han detenido en el servidor 4D [Administration window](../ServerWindow/overview.md), **Monitored activity** no devolverá nada. Si los historiales se reinician en el servidor o mediante el comando [START MONITORING ACTIVITY](start-monitoring-activity.md) con Activity network, **Monitored activity** reanudará la información de actividad de red.
 * el objeto *activityData* utiliza la información definida por el comando [SET DATABASE PARAMETER](set-database-parameter.md) para el *4DRequestsLog.txt* (si corresponde), de lo contrario, utiliza un modo predeterminado . Iniciar la grabación del historial durante la ejecución del comando **Monitored activity** impactará los resultados devueltos.
 
 objeto *activityData*:
@@ -139,3 +139,12 @@ Ver el ejemplo de **[START MONITORING ACTIVITY](start-monitoring-activity.md)**
 
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1713 |
+| Hilo seguro | &check; |
+
+

@@ -100,7 +100,7 @@ Se pueden crear formatos de fecha personalizados utilizando varios patrones desc
 
 :::note blankIfNull
 
-- Por defecto, una fecha null se muestra con ceros, por ejemplo 00/00/00. Con la opción "blankIfNull", una fecha null se muestra como un área vacía. La cadena "blankIfNull" (distingue mayúsculas de minúsculas) debe combinarse con el valor de formato seleccionado. Ej: "systemShort blankIfNull" o "ee dd LL blankIfNull".
+- Por defecto, una fecha null se muestra con ceros, por ejemplo 00/00/00. Con la opción "blankIfNull", una fecha null se muestra como un área vacía. La cadena "blankIfNull" (distingue mayúsculas de minúsculas) debe combinarse con el valor de formato seleccionado. La cadena "blankIfNull" (distingue mayúsculas de minúsculas) debe combinarse con el valor de formato seleccionado.
 - Las [columnas list box](listbox_overview.md#list-box-columns) y los [pies List box](listbox_overview.md#list-box-footers) de tipo fecha utilizan siempre el comportamiento "blank if null" (no se puede desactivar).
 
 :::
@@ -391,7 +391,7 @@ Por defecto, una hora null se muestra con ceros, por ejemplo "00:00:00". Con la 
 Cuando una [expresión booleana](properties_Object.md#expression-type) se muestra como:
 
 - un texto en un [objeto de entrada](input_overview.md)
-- un "popup"  en una [columna del list box](listbox_overview.md#list-box-columns),
+- un "popup" [](properties_Display.md#display-type) en una [columna del list box](listbox_overview.md#list-box-columns),
 
 ... puede seleccionar el texto que se mostrará para cada valor:
 

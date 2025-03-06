@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Summary-->The **SELECT LIST ITEMS BY REFERENCE** command selects the item(s) whose item reference number is passed in *itemRef* and, optionally, in *refArray*, within the list whose reference number is passed in *list*.<!-- END REF-->
@@ -56,3 +53,12 @@ If you work with item reference numbers, be sure to build a list in which the it
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [Selected list items](selected-list-items.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 630 |
+| Thread safe | &cross; |
+
+

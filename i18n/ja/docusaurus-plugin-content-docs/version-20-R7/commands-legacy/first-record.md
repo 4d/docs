@@ -34,3 +34,13 @@ displayed_sidebar: docs
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 50 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+
+

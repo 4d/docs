@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->El comando ARRAY TO LIST crea o reemplaza la lista jerárquica o la *lista* utilizando los elementos del *array* *.<!-- END REF-->*
@@ -63,3 +60,13 @@ El comando ARRAY TO LIST genera el error *\-9957* cuando se aplica a una lista q
 [Load list](load-list.md)  
 [ON ERR CALL](on-err-call.md)  
 [SAVE LIST](save-list.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 287 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

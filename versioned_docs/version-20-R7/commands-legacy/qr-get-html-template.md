@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR Get HTML template.Summary-->The QR Get HTML template command returns the HTML template currently used for the Quick Report *area*.<!-- END REF--> The returned value is a text value and includes all the contents of the HTML template.
@@ -28,3 +25,13 @@ If you pass an invalid area number, the error -9850 will be generated.
 #### See also 
 
 [QR SET HTML TEMPLATE](qr-set-html-template.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 751 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

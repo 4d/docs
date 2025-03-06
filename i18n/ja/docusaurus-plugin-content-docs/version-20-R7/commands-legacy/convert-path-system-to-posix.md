@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 #### 例題 1 
 
-OS X での例題
+macOS での例題
 
 ```4d
  $path:=Convert path system to POSIX("machd:file 2.txt")
@@ -61,3 +61,12 @@ Windowsでの例題
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1106 |
+| スレッドセーフである | &check; |
+
+

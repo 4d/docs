@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET TABLE TITLES.Summary-->La commande **GET TABLE TITLES** remplit les tableaux *titresTables* et *numTables* avec les noms et les numéros des tables de la base définis dans la fenêtre de Structure ou via la commande [SET TABLE TITLES](set-table-titles.md).<!-- END REF--> Le contenu des deux tableaux est synchronisé.
@@ -29,3 +26,12 @@ Dans les deux cas, la commande ne retourne pas les tables déclarées invisibles
 
 [GET FIELD TITLES](get-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 803 |
+| Thread safe | &cross; |
+
+

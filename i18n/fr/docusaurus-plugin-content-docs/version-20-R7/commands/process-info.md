@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| Paramètres    | Type    |     | Description                   |
-| ------------- | ------- | :-: | ----------------------------- |
-| processNumber | Integer |  →  | Process number                |
-| Résultat      | Object  |  ←  | Information about the process |
+| Paramètres    | Type    |                             | Description                   |
+| ------------- | ------- | :-------------------------: | ----------------------------- |
+| processNumber | Integer | &#8594; | Process number                |
+| Résultat      | Object  | &#8592; | Informations sur le processus |
 
 <!-- END REF -->
 
@@ -37,8 +37,8 @@ L'objet retourné contient les propriétés suivantes :
 | ID               | Integer                                 | Process unique ID                                                                |
 | name             | Text                                    | Nom du process                                                                   |
 | number           | Integer                                 | Process number                                                                   |
-| preemptive       | Boolean                                 | True if run preemptive, false otherwise                                          |
-| sessionID        | Text                                    | Session UUID                                                                     |
+| préemptif        | Boolean                                 | True if run preemptive, false otherwise                                          |
+| sessionID        | Text                                    | UUID de la session                                                               |
 | state            | Integer                                 | Current status. Possible values: see below       |
 | systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
 | type             | Integer                                 | Running process type. Possible values: see below |
@@ -122,7 +122,7 @@ L'objet retourné contient les propriétés suivantes :
 
 :::
 
-Here is an example of output object:
+Voici un exemple d'objet de sortie :
 
 ```json
 
@@ -145,7 +145,7 @@ Here is an example of output object:
 
 #### Exemple
 
-You want to know if the process is preemptive:
+Vous voulez savoir si le processus est préventif :
 
 ```4d
 

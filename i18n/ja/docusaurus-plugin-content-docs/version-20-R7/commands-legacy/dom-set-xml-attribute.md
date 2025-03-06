@@ -66,3 +66,13 @@ displayed_sidebar: docs
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 866 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

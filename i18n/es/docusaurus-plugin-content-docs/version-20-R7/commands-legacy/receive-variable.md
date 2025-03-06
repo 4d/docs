@@ -41,3 +41,13 @@ La variable sistema OK toma el valor 1 si se recibe la variable. De lo contrario
 [RECEIVE RECORD](receive-record.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 81 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+
+

@@ -201,7 +201,7 @@ Puede obtener el mismo resultado utilizando los comandos `LISTBOX SET ROW FONT S
 
 ## Transparente
 
-Define el fondo del list box como "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color--fill-color) defined for the column is ignored.
+Define el fondo del list box como "Transparent". Cuando se define, se ignora cualquier [color de fondo alternativo](#alternate-background-color) o [color de fondo](#background-color--fill-color) definido para la columna.
 
 #### Gramática JSON
 

@@ -71,3 +71,13 @@ displayed_sidebar: docs
 | sessionID   | テキスト  | REST セッションID                    |
 | IPAddress   | テキスト  | REST セッションを開始したクライアントのID        |
 | isDatastore | ブール   | REST リクエストがデータストアから来たものであればTrue |
+
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1782 |
+| スレッドセーフである | &cross; |
+
+

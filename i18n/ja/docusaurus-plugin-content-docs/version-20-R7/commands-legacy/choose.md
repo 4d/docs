@@ -78,3 +78,13 @@ displayed_sidebar: docs
        vStatus:="Divorced"
  End case
 ```
+
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 955 |
+| スレッドセーフである | &check; |
+
+

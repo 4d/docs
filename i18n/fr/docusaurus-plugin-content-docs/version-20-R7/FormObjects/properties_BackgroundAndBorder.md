@@ -5,7 +5,7 @@ title: Fond et bordure
 
 ## Couleur de fond alternée
 
-Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Par défaut, *Automatique* est sélectionné : la colonne utilise la couleur de fond alternative définie au niveau de la list box.
+Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box.
 
 You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
 
@@ -21,7 +21,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 ---
 
-## Background Color / Fill Color
+## Couleur de fond
 
 Définit la couleur de fond d'un objet.
 
@@ -31,9 +31,9 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles                          |
-| ------------ | --------------- | ------------------------------------------ |
-| border-style | string          | une valeur css; "transparent"; "automatic" |
+| Nom  | Type de données | Valeurs possibles                          |
+| ---- | --------------- | ------------------------------------------ |
+| fill | string          | une valeur css; "transparent"; "automatic" |
 
 #### Objets pris en charge
 
@@ -121,7 +121,7 @@ Vous pouvez supprimer ces lignes vides en sélectionnant cette option. Le bas de
 
 ---
 
-## Line Color
+## Couleur du trait
 
 Désigne la couleur des lignes de l'objet.
 La couleur peut être spécifiée par :
@@ -146,7 +146,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 ---
 
-## Line Width
+## Epaisseur du trait
 
 Désigne l'épaisseur d'une ligne.
 
@@ -179,7 +179,7 @@ Par exemple, considérons une list box où les lignes ont une couleur alternée 
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Pour ce faire, vous définissez un tableau de couleurs d'arrière-plan pour chaque colonne, par exemple `<>_BgndColor_1`, `<>_BgndColor_2` et `<>_BgndColor_3`. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
+Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
@@ -190,7 +190,7 @@ Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orang
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) and [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html) commands. Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont plutôt créés dynamiquement par les commandes.
+You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) and [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html) commands. Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont créés dynamiquement par les commandes.
 
 #### Grammaire JSON
 
@@ -210,9 +210,9 @@ Définit l'arrière-plan de la list box sur "Transparent". When set, any [altern
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles |
-| ------------ | --------------- | ----------------- |
-| border-style | text            | "transparent"     |
+| Nom  | Type de données | Valeurs possibles |
+| ---- | --------------- | ----------------- |
+| fill | text            | "transparent"     |
 
 #### Objets pris en charge
 

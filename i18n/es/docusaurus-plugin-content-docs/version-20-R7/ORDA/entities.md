@@ -239,7 +239,7 @@ Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) 
 
 - Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
 - Uso de la función dataclass [`.all()`](API/DataClassClass.md#all) para seleccionar todas las entidades de una dataclass;
-- Using the [`Create entity selection`](../commands/create-entity-selection.md) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+- Usando el comando [`Create entity selection`](../commands/create-entity-selection.md) o la función [`.newSelection()`](API/DataClassClass.md#newselection) de la dataclass para crear una selección de entidades en blanco;
 - Utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar una entity selection existente;
 - Utilizando una de las diversas funciones de la [clase Entity selection](API/EntitySelectionClass.md) que devuelve una nueva selección de entidades, como [`.or()`](API/EntitySelectionClass.md#or);
 - Utilizando un atributo de relación de tipo "related entities" (ver abajo).
@@ -266,7 +266,7 @@ Una entity selection puede ser **compartible** (legible por múltiples procesos,
 
 Una entity selection **compartible** tiene las siguientes características:
 
-- puede almacenarse en un objeto compartido o en una colección compartida, y puede pasarse como parámetro entre varios procesos o trabajadores;
+- puede almacenarse en un objeto compartido o en una colección compartida, y puede pasarse como parámetro entre varios procesos o workers;
 - puede almacenarse en varios objetos o colecciones compartidos, o en un objeto o colección compartido que ya pertenezca a un grupo;
 - no permite la adición de nuevas entidades. Al intentar añadir una entidad a una entity selection compartibles se producirá un error (1637 - Esta entity selection no puede modificarse). Para añadir una entidad a unaentity selection compartible, primero debe transformarla en una entity selection no compartible utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy), antes de llamar a [`.add()`](API/EntitySelectionClass.md#add).
 
@@ -312,9 +312,9 @@ Una nueva entity selection **hereda** de la naturaleza de la entity selection or
 
 - la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - la nueva entity selection se basa en una relación:
-  - [entity.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado uno a muchos y la entidad pertenece a una entity selection (misma naturaleza que [.getSelection()](API/EntityClass.md#getselection)),
-  - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (por ejemplo, "employees.employer") cuando *attributeName* es un atributo relacionado (misma naturaleza que la entity selection),
-  - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
+ - [entity.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado uno a muchos y la entidad pertenece a una entity selection (misma naturaleza que [.getSelection()](API/EntityClass.md#getselection)),
+ - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (por ejemplo, "employees.employer") cuando *attributeName* es un atributo relacionado (misma naturaleza que la entity selection),
+ - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
 
 Ejemplos:
 
@@ -553,9 +553,9 @@ Este mecanismo automático se basa en el concepto de "bloqueo optimista", especi
 - Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" *a priori* de las entidades.
 - Cada entidad tiene un sello de bloqueo interno que se incrementa cada vez que se guarda.
 - Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
-  - Cuando los valores coinciden, se guarda la entidad y se incrementa el valor del marcador interno.
+ - Cuando los valores coinciden, se guarda la entidad y se incrementa el valor del marcador interno.
 
-  - Cuando los valores no coinciden, significa que otro usuario ha modificado esta entidad mientras tanto. No se guarda y se devuelve un error.
+ - Cuando los valores no coinciden, significa que otro usuario ha modificado esta entidad mientras tanto. No se guarda y se devuelve un error.
 
 El siguiente diagrama ilustra el bloqueo optimista:
 

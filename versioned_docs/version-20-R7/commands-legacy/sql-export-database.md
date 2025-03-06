@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SQL EXPORT DATABASE.Summary-->The SQL EXPORT DATABASE command exports in SQL format all the records of all the tables in the database.<!-- END REF--> In SQL, this global export operation is called "Dump".
@@ -58,3 +55,13 @@ If the export has been carried out correctly, the OK variable is set to 1\. Othe
 #### See also 
 
 [SQL EXPORT SELECTION](sql-export-selection.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1065 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

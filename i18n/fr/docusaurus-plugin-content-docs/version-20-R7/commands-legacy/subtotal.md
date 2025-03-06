@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Subtotal.Summary-->**Subtotal** retourne le sous-total de *valeurs* pour le niveau de rupture courant ou précédent.<!-- END REF--> **Subtotal** ne fonctionne que dans le cadre d'une sélection triée imprimée par l'intermédiaire de la commande [PRINT SELECTION](print-selection.md) ou de la commande de menu **Imprimer** du mode Développement. Le paramètre *valeurs* doit être de type numérique, entier ou entier long. Vous devez assigner le résultat de la fonction **Subtotal** à une variable placée dans la zone de rupture du formulaire.
@@ -26,7 +23,7 @@ displayed_sidebar: docs
 
 Le second paramètre (optionnel) de la fonction **Subtotal** est utilisé pour provoquer des sauts de page lors de l'impression. Si *sautPage* vaut 0, **Subtotal** ne génère aucun saut de page. Si *sautPage* vaut 1, **Subtotal** génère un saut de page pour chaque niveau de rupture 1\. Si *sautPage* vaut 2, **Subtotal** génère un saut de page pour chaque niveau de rupture 1 et 2, etc.
 
-**Conseil :** Si vous faites appel à la fonction **Subtotal** dans le formulaire sortie affiché à l'écran, 4D va afficher un message d'erreur. La fermeture du dialogue d'erreur va provoquer un rafraîchissement de l'écran, donc de nouveau l'exécution de la méthode qui fait appel à **Subtotal**, donc de nouveau un message d'erreur, etc. Pour sortir de ce cercle vicieux, appuyez sur les touche **Alt** + **Maj** (Windows) ou **Option**+**Maj** (Macintosh) et cliquez sur le bouton **Arrêter** dans la fenêtre d'erreur : cela met provisoirement fin aux rafraîchissements d'écran. Choisissez un autre formulaire de sortie pour éviter que le problème ne se répète. Passez en mode Structure pour isoler l'appel à la fonction **Subtotal** par un test ([Form event code](form-event-code.md) \= On Printing Break) si vous avez l'intention d'utiliser le même formulaire de sortie pour l'écran et l'imprimante.
+**Conseil :** Si vous faites appel à la fonction **Subtotal** dans le formulaire sortie affiché à l'écran, 4D va afficher un message d'erreur. La fermeture du dialogue d'erreur va provoquer un rafraîchissement de l'écran, donc de nouveau l'exécution de la méthode qui fait appel à **Subtotal**, donc de nouveau un message d'erreur, etc. Pour sortir de ce cercle vicieux, appuyez sur les touche **Alt** + **Maj** (Windows) ou **Option**+**Maj** (Macintosh) et cliquez sur le bouton **Arrêter** dans la fenêtre d'erreur : cela met provisoirement fin aux rafraîchissements d'écran. Choisissez un autre formulaire de sortie pour éviter que le problème ne se répète. Passez en mode Structure pour isoler l'appel à la fonction **Subtotal** par un test ([Form event code](../commands/form-event-code.md) \= On Printing Break) si vous avez l'intention d'utiliser le même formulaire de sortie pour l'écran et l'imprimante.
 
 #### Exemple 
 
@@ -59,3 +56,12 @@ La commande **Subtotal** permet d'afficher des calculs de sous-totaux dans des f
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 97 |
+| Thread safe | &cross; |
+
+

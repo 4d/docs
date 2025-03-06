@@ -29,3 +29,14 @@ This command was useful to “return” a record that had been pushed and popped
 *Named Selections*  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 189 |
+| Thread safe | &check; |
+| Changes current record ||
+| Changes current selection ||
+
+

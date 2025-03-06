@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.REJECT.Summary-->**REJECT**には2つの形式があります。<!-- END REF-->第1の形式は、引数がありません。これは、データ入力全体を取り消し、ユーザは強制的にフォーム上にとどまります。第2の形式は、*aField* だけを取り消し、ユーザは強制的にそのフィールド上にとどまります。 
@@ -65,3 +62,12 @@ displayed_sidebar: docs
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
 [GOTO OBJECT](goto-object.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 38 |
+| スレッドセーフである | &cross; |
+
+

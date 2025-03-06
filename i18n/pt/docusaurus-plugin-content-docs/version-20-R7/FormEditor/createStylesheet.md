@@ -143,12 +143,12 @@ Especifique o tipo de atributo entre colchetes, depois entre chaves, declare os 
 
 #### Sintaxes compatíveis
 
-| Sintaxe                                                                                  | Descrição                                                                                                                        |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [attribute]                          | coincide con objetos con el `attribute`                                                                                          |
-| [attribute="value"]                  | coincide con objetos cuyo valor del `attribute` contenga exactamente el "valor" especificado                                     |
-| [attribute~="value"] | coincide con los objetos con el valor del `attribute` que contiene el "valor" entre una lista de palabras separadas por espacios |
-| [attribute\|="value"]                | coincide con objetos con un `attribute` cuyo valor empieza por "valor"                                                           |
+| Sintaxe                                                                                           | Descrição                                                                                                                        |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [attribute]                                   | coincide con objetos con el `attribute`                                                                                          |
+| [attribute="value"]                           | coincide con objetos cuyo valor del `attribute` contenga exactamente el "valor" especificado                                     |
+| [attribute~="value"]          | coincide con los objetos con el valor del `attribute` que contiene el "valor" entre una lista de palabras separadas por espacios |
+| [attribute&#124;="value"] | coincide con objetos con un `attribute` cuyo valor empieza por "valor"                                                           |
 
 #### Exemplos
 
@@ -193,7 +193,7 @@ text[text|=Hello]
 
 ### Media Queries
 
-Media queries are used to apply color schemes to an application.
+As consultas de mídia são usadas para aplicar esquemas de cores as aplicações.
 
 Una consulta de medios está formada por características y valores de medios (por ejemplo, `\<media feature>:\<value>` ).
 
@@ -210,7 +210,7 @@ Expressões de funcionalidades multimédia disponíveis:
 
 ##### Exemplo
 
-This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
+Esse CSS define uma combinação de cores para o texto e o fundo do texto no esquema claro (padrão) e outra combinação quando o esquema escuro é selecionado:
 
 ```
 @media (prefers-color-scheme: light) {
@@ -270,13 +270,13 @@ icon: url("edit.png"); /* rota relativa ao arquivo de formulário */
 
 - Para `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` y `verticalLineStroke`, se soportan tres sintaxis:
 
-  - Nombre del color CSS: `fill: red;`
-  - Valor hexadécimal: `fill: #FF0000;`
-  - función `rgb()`: `fill:rgb(255,0,0)`
+ - Nombre del color CSS: `fill: red;`
+ - Valor hexadécimal: `fill: #FF0000;`
+ - función `rgb()`: `fill:rgb(255,0,0)`
 
 - Se uma string utilizar caracteres proibidos em CSS, pode rodear a string com aspas simples ou duplas. Por exemplo:
-  - una referencia xliff: `tooltip: ":xliff:CommonMenuFile";`
-  - un datasource con la expresión de campo: `dataSource: "[Table_1:1]ID:1";`
+ - una referencia xliff: `tooltip: ":xliff:CommonMenuFile";`
+ - un datasource con la expresión de campo: `dataSource: "[Table_1:1]ID:1";`
 
 ## Ordem de prioridade
 

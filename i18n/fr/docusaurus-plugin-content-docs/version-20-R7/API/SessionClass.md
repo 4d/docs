@@ -11,7 +11,7 @@ Trois types de sessions sont pris en charge par cette classe :
 
 - [**Session utilisateur Web**](WebServer/sessions.md) : Les sessions utilisateur Web sont disponibles lorsque [les sessions évolutives (scalable sessions) sont activées dans votre projet](WebServer/sessions.md#enabling-sessions). Elles sont utilisées pour les connexions Web et REST, et peuvent se voir attribuer des privilèges.
 - [**Session utilisateur client distant**](../Desktop/clientServer.md#remote-user-sessions) : Dans les applications client/serveur, les utilisateurs distants ont leurs propres sessions gérées sur le serveur.
-- [**Session des procédures stockées**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html) : Toutes les procédures stockées exécutées sur le serveur partagent la même session utilisateur virtuelle.
+- [**Stored procedures session**](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html): All stored procedures executed on the server share the same virtual user session.
 
 :::note
 
@@ -274,7 +274,7 @@ La propriété `.id` contient <!-- REF #SessionClass.id.Summary -->l'identifiant
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands-legacy/session-storage.md) command.
+Vous pouvez utiliser cette propriété pour obtenir l'objet [`.storage`](#storage) d'une session grâce à la commande [`Session storage`](../commands-legacy/session-storage.md).
 
 :::
 
@@ -309,7 +309,7 @@ Si cette propriété n'est pas définie, sa valeur par défaut est 60 (1h).
 
 Lorsque cette propriété est définie, la propriété [`.expirationDate`](#expirationdate) est mise à jour en conséquence.
 
-> La valeur ne peut pas être < 60 ; si une valeur inférieure est définie, le timeout est élevé à 60.
+> La valeur ne peut pas être &#060; 60 ; si une valeur inférieure est définie, le timeout est élevé à 60.
 
 Cette propriété est en **lecture-écriture**.
 
@@ -352,7 +352,7 @@ Cette propriété est uniquement disponible avec les sessions des procédures st
 
 La propriété `.info` <!-- REF #SessionClass.info.Summary -->décrit la session du client distant ou de la procédure stockée sur le serveur<!-- END REF -->.
 
-The `.info` object is the same object as the one returned by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
+L'objet `.info` est le même objet que celui retourné dans la propriété "session" par la commande [`Process activity`](../commands/process-activity.md) pour les sessions de clients distants et des procédures stockées.
 
 L'objet `.info` contient les propriétés suivantes:
 
@@ -367,7 +367,7 @@ L'objet `.info` contient les propriétés suivantes:
 | creationDateTime | Date ISO 8601 | Date et heure de création de la session                                                                                                                      |
 | state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                       |
 | ID               | Text          | UUID de session (même valeur que [`.id`](#id))                                                                                            |
-| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                     |
+| persistentID     | Text          | Sessions distantes : ID persistant de la session                                                                                             |
 
 :::note
 
@@ -532,7 +532,7 @@ Cette propriété est elle-même en **lecture seulement** mais elle retourne un 
 
 :::tip
 
-You can get the `.storage` property of a session using the [`Session storage`](../commands-legacy/session-storage.md) command.
+Vous pouvez obtenir la propriété `.storage` d'une session en utilisant la commande [`Session storage`](../commands-legacy/session-storage.md).
 
 :::
 
@@ -580,7 +580,7 @@ End use
 La propriété `.userName` contient <!-- REF #SessionClass.userName.Summary -->le nom d'utilisateur associé à la session<!-- END REF -->. Vous pouvez vous en servir pour identifier l'utilisateur dans votre code.
 
 - Avec les sessions web, cette propriété est une chaîne vide par défaut. Elle peut être définie via la propriété `privileges` de la fonction [`setPrivileges()`](#setprivileges).
-- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
+- Avec les sessions clients distants et procédures stockées, cette propriété retourne le même nom d'utilisateur que la commande [`Current user`](../commands-legacy/current-user.md).
 
 Cette propriété est en **lecture seule**.
 

@@ -52,13 +52,13 @@ Email オブジェクトは次のプロパティを提供します:
 
 メールアドレスを格納するプロパティ ([`from`](#from), [`cc`](#cc), [`bcc`](#bcc), [`to`](#to), [`sender`](#sender), [`replyTo`](#replyto)) はすべて、テキスト・オブジェクト・コレクション型の値を受け付けます。
 
-#### テキスト
+#### Text
 
 - 単一のメールアドレス: "somebody@domain.com"
 - 単一の表示名+メールアドレス: "Somebody <somebody@domain.com>"
 - 複数のメールアドレス: "Somebody <somebody@domain.com>,me@home.org"
 
-#### オブジェクト
+#### Object
 
 2つのプロパティを持つオブジェクト:
 
@@ -67,7 +67,7 @@ Email オブジェクトは次のプロパティを提供します:
 | name  | Text | 表示名 (null も可能) |
 | email | Text | メールアドレス                           |
 
-#### コレクション
+#### Collection
 
 アドレスオブジェクトのコレクション
 
@@ -156,7 +156,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 | プロパティ                                      | 型       | 値                                                                                                         |
 | ------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | text    | 本文パートの値                                                                                                   |
+| *partID*.value             | テキスト    | 本文パートの値                                                                                                   |
 | *partID*.isEncodingProblem | boolean | 文字セットをデコーディング中に、不正なフォーマットのセクション、未知の文字セット、あるいは未知の content-transfer-encoding が見つかった場合には true。 デフォルトは false。 |
 
 ## .cc
@@ -208,8 +208,8 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 | プロパティ                                                                        | 型    | 値                                                                                                                                          |
 | ---------------------------------------------------------------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| [].name  | text | (必須) [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド名。 null または未定義の場合には、ヘッダーフィールドは MIME ヘッダーに追加されません。 |
-| [].value | text | [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド値。                                                                        |
+| [].name  | テキスト | (必須) [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド名。 null または未定義の場合には、ヘッダーフィールドは MIME ヘッダーに追加されません。 |
+| [].value | テキスト | [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド値。                                                                        |
 
 ## .htmlBody
 
@@ -362,3 +362,5 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 #### 説明
 
 `.to` プロパティは、<!-- REF #EmailObjectClass.to.Summary -->メールのメインの受信者 [アドレス](#メールアドレス)<!-- END REF --> を格納します。
+
+

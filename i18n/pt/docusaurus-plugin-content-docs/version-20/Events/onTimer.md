@@ -10,6 +10,6 @@ title: On Timer
 
 ## Descrição
 
-This event is generated only if the form method contains a previous call to the `SET TIMER` command.
+Este evento é gerado somente se o método do formulário contém uma chamada anterior para o comando `SET TIMER`.
 
-When the `On Timer` form event property is selected, only the form method will receive the event, no object method will be called.
+Quando a propriedade do evento formulário `On Timer` é selecionada, apenas o método formulário receberá o evento, nenhum método objeto será chamado.

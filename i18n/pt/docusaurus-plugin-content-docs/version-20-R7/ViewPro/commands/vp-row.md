@@ -19,7 +19,7 @@ title: VP Row
 
 #### Descrição
 
-The `VP Row` command <!-- REF #_method_.VP Row.Summary -->returns a new range object referencing a specific row or rows<!-- END REF -->.
+O comando `VP Row` <!-- REF #_method_.VP Row.Summary -->retorna um novo objeto de intervalo referenciando uma linha ou linhas<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -51,3 +51,4 @@ $row:=VP Row("ViewProArea";9) // linha 10
 [VP Column](vp-column.md)<br/>
 [VP Combine ranges](vp-combine-ranges.md)<br/>
 [VP Name](vp-name.md)
+

@@ -83,7 +83,7 @@ title: プロジェクトを開発する
 ローカルプロジェクトを初めて開くとき、またはサーバーに初めて接続するとき、4D は `.4DLink` ファイルを自動生成します。 このファイルは、次の場所にあるローカル環境設定フォルダーに置かれます:
 
 - Windows 7 以上: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-- OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
+- macOS: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX はアプリケーションのバージョン番号を意味します。 たとえば、4D v19 なら "Favorites v19" となります。
 

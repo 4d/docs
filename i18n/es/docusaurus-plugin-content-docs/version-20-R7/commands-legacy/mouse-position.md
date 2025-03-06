@@ -24,7 +24,7 @@ Las coordenadas horizontal y vertical se devuelven en *ratonX* y *ratonY*. Si pa
 
 El parámetro *botonRaton* devuelve el estado de los botones, como se describió anteriormente.
 
-**Nota:** los valores 2 y 3 pueden devolverse bajo Mac OS X a partir de la versión 10.2.5 únicamente.
+**Nota:** los valores 2 y 3 pueden devolverse bajo macOS a partir de la versión 10.2.5 únicamente.
 
 #### Ejemplo 
 
@@ -40,3 +40,12 @@ Ver el ejemplo del comando [Pop up menu](pop-up-menu.md "Pop up menu").
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 468 |
+| Hilo seguro | &cross; |
+
+

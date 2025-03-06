@@ -24,7 +24,7 @@ Function sayHello()->$welcome : Text
  $welcome:="Hello "+This.firstName+" "+This.lastName
 ```
 
-Dans une méthode, créons une "Personne" :
+Dans une méthode, créons une "Person" :
 
 ```
 var $person : cs.Person //object of Person class  
@@ -135,7 +135,7 @@ Vous souhaitez créer une nouvelle clé dans la classe `CryptoKey` :
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-## L'objet classe
+## L'objet class
 
 Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
@@ -169,6 +169,13 @@ Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de 
 Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
+
+:::note
+
+Il n'y a pas de mot-clé de fin pour le code d'une fonction. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
+
+:::
+
 
 Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont des objets de la classe [4D.Function](API/FunctionClass.md#about-4dfunction-objects).
 
@@ -271,7 +278,16 @@ $area:=$rect.getArea() //5000
 // Class: MyClass
 Class Constructor({$parameterName : type; ...})
 // code
+// code
+// code
 ```
+
+:::note
+
+Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
+
+:::
+
 
 Une fonction class constructor, qui accepte des [paramètres](#parameters), peut être utilisée pour définir une classe utilisateur.
 
@@ -395,6 +411,16 @@ Class constructor($width : Integer; $height : Integer)
 
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+ $0:=(This.height)*(This.width)
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+ $0:=(This.height)*(This.width)
 
 // Function definition
 Function getArea()

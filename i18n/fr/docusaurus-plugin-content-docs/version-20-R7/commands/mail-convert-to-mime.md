@@ -17,17 +17,17 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
 
-| Paramètres | Type   |     | Description                              |
-| ---------- | ------ | :-: | ---------------------------------------- |
-| mail       | Object |  →  | Objet email                              |
-| options    | Object |  →  | Options d'encodage et de charset du mail |
-| Résultat   | Text   |  ←  | Objet email converti en MIME             |
+| Paramètres | Type   |                             | Description                              |
+| ---------- | ------ | :-------------------------: | ---------------------------------------- |
+| mail       | Object | &#8594; | Objet email                              |
+| options    | Object | &#8594; | Options d'encodage et de charset du mail |
+| Résultat   | Text   | &#8592; | Objet email converti en MIME             |
 
 <!-- END REF -->
 
 #### Description
 
-La commande `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convertit un objet email en texte MIME<!-- END REF -->. This command is called internally by [SMTP_transporter.send()](../API/SMTPTransporterClass.md#send) to format the email object before sending it. Elle peut être utilisée pour analyser le format MIME de l'objet.
+La commande `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convertit un objet email en texte MIME<!-- END REF -->. Cette commande est appelée en interne par [SMTP_transporter.send()](../API/SMTPTransporterClass.md#send) pour formater l'objet email avant de l'envoyer. Elle peut être utilisée pour analyser le format MIME de l'objet.
 
 Dans *mail*, passez les éléments du contenu et de la structure de l'email à convertir. Cela inclut des informations telles que les adresses e-mail (expéditeur et destinataire(s)), le contenu de l'e-mail lui-même et son type d'affichage.
 
@@ -84,3 +84,12 @@ $mime:=MAIL Convert to MIME($mail)
 // <html><body>HTML format email</body></html>
 // --E0AE5773D5E95245BBBD80DD0687E218--
 ```
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1604                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+
+

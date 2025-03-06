@@ -33,3 +33,12 @@ displayed_sidebar: docs
 
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 195 |
+| スレッドセーフである | &check; |
+
+

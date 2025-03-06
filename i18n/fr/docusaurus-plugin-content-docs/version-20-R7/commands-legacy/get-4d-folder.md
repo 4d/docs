@@ -52,8 +52,9 @@ Les applications de l'environnement 4D utilisent un dossier spécifique pour sto
 
 Le dossier 4D actif se trouve par défaut à l'emplacement suivant :
 
-* Sous Windows : *{Disque}:\\Users\\<nomUtilisateur>* *\\AppData\\Roaming\\* *<applicationName>*
-* Sous macOS : *{Disque}:Users:* *<nomUtilisateur>:Library:Application Support:* *<applicationName>*
+* Sous Windows: *{Disk}:\\Users\\{userName}\\AppData\\Roaming\\{applicationName}*
+* Sous macOS: *{Disk}:Users:{userName}:Library:Application Support:{applicationName}*
+
 
 ##### Dossier Licenses 
 
@@ -108,7 +109,7 @@ Avec l'application 4D Client, cette constante équivaut strictement à la consta
 
 ##### Dossier base syntaxe Unix 
 
-Dossier contenant le fichier de structure de la base. Cette constante désigne le même dossier que la précédente, mais le chemin d’accès retourné est exprimé avec la syntaxe Unix (Posix), du type /Users/... Cette syntaxe est principalement utile lorsque vous utilisez la commande [LAUNCH EXTERNAL PROCESS](launch-external-process.md) sous OS X. 
+Dossier contenant le fichier de structure de la base. Cette constante désigne le même dossier que la précédente, mais le chemin d’accès retourné est exprimé avec la syntaxe Unix (Posix), du type /Users/... Cette syntaxe est principalement utile lorsque vous utilisez la commande [LAUNCH EXTERNAL PROCESS](launch-external-process.md) sous macOS. 
 
 ##### Dossier Resources courant 
 
@@ -206,3 +207,13 @@ Si le paramètre *dossier* est invalide ou si le chemin d'accès retourné est v
 [Temporary folder](temporary-folder.md)  
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 485 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

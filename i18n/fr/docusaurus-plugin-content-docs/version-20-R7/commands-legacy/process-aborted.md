@@ -22,3 +22,12 @@ Ce statut se produira très rarement. Les process sont généralement arrêtés 
 #### Voir aussi 
 
 [On Exit database method](on-exit-database-method.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 672 |
+| Thread safe | &check; |
+
+

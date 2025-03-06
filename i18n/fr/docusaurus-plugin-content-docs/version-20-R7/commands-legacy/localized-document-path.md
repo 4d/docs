@@ -66,3 +66,12 @@ Si la langue courante est, par exemple, le français canadien (fr-ca), la comman
 #### Voir aussi 
 
 [Get database localization](get-database-localization.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1105 |
+| Thread safe | &check; |
+
+

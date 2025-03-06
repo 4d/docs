@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.UNREGISTER CLIENT.Summary-->La commande **UNREGISTER CLIENT** “désinscrit” le client 4D de 4D Server.<!-- END REF--> Il doit avoir été préalablement inscrit à l’aide de la commande [REGISTER CLIENT](register-client.md). 
@@ -36,3 +33,13 @@ Si le client est correctement désinscrit, la variable système OK prend la vale
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 649 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

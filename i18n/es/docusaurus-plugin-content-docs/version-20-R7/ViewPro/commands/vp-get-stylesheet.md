@@ -14,7 +14,7 @@ title: VP Get stylesheet
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
 | styleName  | Text    | ->                          | Nombre del estilo                                              |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | Object  | <- | Objeto hoja de estilo                                          | <!-- END REF --> |
+| Resultado  | Object  | <- | Objeto hoja de estilo                                          | <!-- END REF --> |
 
 #### Descripción
 

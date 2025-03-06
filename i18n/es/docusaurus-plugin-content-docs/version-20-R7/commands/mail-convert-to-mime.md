@@ -17,17 +17,17 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
 
-| Parámetros | Tipo   |     | Descripción                                    |
-| ---------- | ------ | :-: | ---------------------------------------------- |
-| mail       | Object |  →  | Objeto Email                                   |
-| options    | Object |  →  | Opciones de codificación y de charset del mail |
-| Result     | Text   |  ←  | Objeto email convertido en MIME                |
+| Parámetros | Tipo   |                             | Descripción                                    |
+| ---------- | ------ | :-------------------------: | ---------------------------------------------- |
+| mail       | Object | &#8594; | Objeto Email                                   |
+| options    | Object | &#8594; | Opciones de codificación y de charset del mail |
+| Resultado  | Text   | &#8592; | Objeto email convertido en MIME                |
 
 <!-- END REF -->
 
 #### Descripción
 
-El comando `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convierte un objeto email en texto MIME<!-- END REF -->. This command is called internally by [SMTP_transporter.send()](../API/SMTPTransporterClass.md#send) to format the email object before sending it. Se puede utilizar para analizar el formato MIME del objeto.
+El comando `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convierte un objeto email en texto MIME<!-- END REF -->. Este comando es llamado internamente por [SMTP_transporter.send()](API/SMTPTransporterClass.md#send) para formatear el objeto email antes de enviarlo. Se puede utilizar para analizar el formato MIME del objeto.
 
 En *mail*, pase el contenido y los detalles de la estructura del correo electrónico a convertir. Esto incluye información como las direcciones de correo electrónico (remitente y destinatario(s)), el propio mensaje y el tipo de visualización del mensaje.
 
@@ -84,3 +84,12 @@ $mime:=MAIL Convert to MIME($mail)
 // <html><body>HTML format email</body></html>
 // --E0AE5773D5E95245BBBD80DD0687E218--
 ```
+
+#### Propiedades
+
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1604                            |
+| Hilo seguro       | &amp;check; |
+
+

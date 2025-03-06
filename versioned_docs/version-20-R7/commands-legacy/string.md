@@ -187,3 +187,12 @@ If *expression* is evaluated to Null, the command returns the "null" string. Thi
 [Num](num.md)  
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 10 |
+| Thread safe | &check; |
+
+

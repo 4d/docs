@@ -1,0 +1,74 @@
+---
+id: wp-set-view-properties
+title: WP SET VIEW PROPERTIES
+slug: /WritePro/commands/wp-set-view-properties
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.WP SET VIEW PROPERTIES.Syntax-->**WP SET VIEW PROPERTIES** ( {* ;} *zoneWP* ; *attributsVueWP* )<!-- END REF-->
+<!--REF #_command_.WP SET VIEW PROPERTIES.Params-->
+| Paramètre | Type |  | Description |
+| --- | --- | --- | --- |
+| * | Opérateur | &#8594;  | Si spécifié, zoneWP est un nom d'objet de formulaire (chaîne). Si omis, zoneWP est un champ ou une variable objet |
+| zoneWP | Text, Object | &#8594;  | Nom d'objet de formulaire (si * spécifié) ou champ ou variable objet 4D Write Pro (si * omis) |
+| attributsVueWP | Object | &#8594;  | Attributs vue à modifier |
+
+<!-- END REF-->
+
+#### Description 
+
+<!--REF #_command_.WP SET VIEW PROPERTIES.Summary-->La commande **WP SET VIEW PROPERTIES** vous permet de fixer dynamiquement une ou plusieurs propriétés de vue pour la zone 4D Write Pro *zoneWP*.<!-- END REF--> 
+
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *zoneWP* est un nom d’objet de formulaire (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *zoneWP* est un document 4D Write Pro (champ ou variable objet). Cette commande ne peut être utilisée que si *zoneWP* est associée à un objet de formulaire (i.e. elle est affichée dans le formulaire/la page courant(e)), sur n'importe quelle page de formulaire. Si le document 4D Write Pro est affiché dans plusieurs objets de formulaire, il est nécessaire d'utiliser le paramètre *\** pour indiquer la vue que vous souhaitez fixer. 
+
+Dans le paramètre *propsVueWP*, passez un objet dans lequel chaque attribut est une propriété de vue que vous souhaitez modifier dans la zone 4D Write Pro. Les propriétés de vue qui ne sont pas incluses dans l'objet propsVueWP conserveront leurs valeurs précédentes. Vous pouvez utiliser les constantes suivantes : 
+
+| Constante                                   | Valeur                 | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| wk display formula as symbol                | displayFormulaAsSymbol | Affiche les références de formules sous la forme d'un symbole ![](../../assets/en/WritePro/commands/pict6013182.en.png). Ne fonctionne que si les formules sont affichées en tant que références (voir wk visible references). Valeurs possibles : Vrai/Faux                                                                                                                                                                                                                                                                                     |
+| wk formula highlight                        | formulaHighlight       | Mode d'affichage de la surbrillance de la formule. Valeurs possibles : wk references (par défaut) : les formules affichées en tant que références sont mises en surbrillance wk values : les formules affichées sous forme de valeurs sont mises en surbrillance wk always : Les formules sont toujours surlignées, quel que soit leur mode d'affichage wk never : Les formules ne sont jamais mises en évidence, quel que soit leur mode d'affichage La couleur de la formule en surbrillance peut être définie par wk formula highlight color. |
+| wk formula highlight color                  | formulaHighlightColor  | Couleur des formules en surbrillance (voir wk formula highlight). Valeurs possibles : une chaîne de couleur CSS ("#010101" ou "#FFFFFF" ou "red"). une valeur d'entier long de couleur 4D                                                                                                                                                                                                                                                                                                                                                        |
+| wk page view mode                           | pageMode               | Mode d'affichage du document 4D Write Pro dans la zone formulaire à l'écran. Valeurs possibles (chaîne) : "draft" : Mode brouillon avec propriétés basiques du document "page" : Mode d'affichage le plus complet, qui inclut le contour de la page, l'orientation, les marges, les sauts de page, les en-têtes et les pieds de page, etc. "embedded" : Mode d'affichage adapté aux zones incluses                                                                                                                                               |
+| wk resolution                               | dpi                    | Résolution d'écran pour le contenu de la zone 4D Write Pro. Valeurs possibles : wk auto (0) Nombre supérieur à 1                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| wk spell enable                             | spellEnabled           | Active la correction orthographique. Valeurs possibles : True/False                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| wk visible background and anchored elements | visibleBackground      | Affiche ou exporte les images de fond, la couleur de fond, les images ancrées et les zones de texte (pour l'affichage, effet visible uniquement en mode d'affichage Page ou Inclus). Valeurs possibles : True/False                                                                                                                                                                                                                                                                                                                              |
+| wk visible empty images                     | visibleEmptyImages     | Affiche ou exporte un rectangle noir par défaut pour les images qui ne peuvent pas être chargées ou calculées (images vides ou images sous un format non pris en charge). Valeurs possibles : True/False. Valeur par défaut : True Si la valeur est False, les éléments d'image manquants ne seront pas affichés du tout, même s'ils ont des bordures, une largeur, une hauteur ou un arrière-plan ; cela peut avoir une incidence sur la mise en page des images en ligne.                                                                      |
+| wk visible footers                          | visibleFooters         | Affiche ou exporte les pieds de page (pour l'affichage, effet visible uniquement en mode d'affichage Page). Valeurs possibles : True/False                                                                                                                                                                                                                                                                                                                                                                                                       |
+| wk visible headers                          | visibleHeaders         | Affiche ou exporte les en-têtes (pour l'affichage, effet visible uniquement en mode d'affichage Page). Valeurs possibles : True/False                                                                                                                                                                                                                                                                                                                                                                                                            |
+| wk visible hidden characters                | visibleHiddenChars     | Affiche les caractères cachés. Valeurs possibles : True/False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| wk visible horizontal ruler                 | visibleHorizontalRuler | Affiche la règle horizontale. Valeurs possibles : True/False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| wk visible HTML WYSIWYG                     | htmlWYSIWIGEnabled     | Active la vue HTML WYSIWYG. Valeurs possibles : True/False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| wk visible page frames                      | visiblePageFrames      | Affiche les cadres de la page (effet visible uniquement en mode d'affichage Page). Valeurs possibles : True/False                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| wk visible references                       | visibleReferences      | Affiche ou exporte toutes les expressions 4D insérées dans le document en tant que références. Valeurs possibles : True/False                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| wk visible vertical ruler                   | visibleVerticalRuler   | Affiche la règle verticale (effet visible uniquement en mode d'affichage Page). Valeurs possibles : True/False                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| wk zoom                                     | zoom                   | Pourcentage de zoom pour l'affichage du contenu de la zone 4D Write Pro. Valeur possible : Nombre supérieur à 1                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+
+Des modifications peuvent être apportées à toutes les propriétés à tout moment, mais certaines ne sont prises en compte que si un mode d'affichage compatible avec 4D Write Pro est utilisé. Ainsi, même si une propriété de vue est modifié, la modification n'est pas nécessairement visible dans le mode d'affichage courant. 
+
+**Note :** Pour plus d'informations sur les propriétés de vue, veuillez consulter la page *Définir une zone 4D Write Pro*. 
+
+Une fois fixés pour *zoneWP* à l'aide de cette commande, les propriétés de vue sont appliquées et la zone de formulaire est utilisée tant qu'ils ne sont pas modifiés par un autre appel. Les modifications apportées aux propriétés ne sont pas sauvegardées avec le document ou le formulaire. 
+
+#### Exemple 
+
+Vous souhaitez fixer certaines propriétés de vue pour une zone 4D Write Pro :
+
+```4d
+ var $viewProps : Object
+ $viewProps:=New object
+ 
+ $viewProps[wk page view mode]:="page"
+  // ou $viewProps.pageMode="page"
+ 
+ $viewProps[wk visible horizontal ruler]:=True
+  // ou $viewProps.visibleHorizontalRuler:=Vrai
+ 
+ $viewProps[wk visible vertical ruler]:=True
+  // ou $viewProps.visibleVerticalRuler:=Vrai
+ 
+ WP SET VIEW PROPERTIES(*;"4DWPArea";$viewProps)
+```
+
+#### Voir aussi 
+
+[WP Get view properties](wp-get-view-properties.md)  

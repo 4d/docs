@@ -41,3 +41,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Compact data file](compact-data-file.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1127 |
+| スレッドセーフである | &check; |
+
+

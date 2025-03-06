@@ -148,7 +148,7 @@ Esta propiedad es de **solo lectura**.
 | Parámetros | Tipo                     |                             | Descripción                                                      |
 | ---------- | ------------------------ | :-------------------------: | ---------------------------------------------------------------- |
 | param      | any                      |              ->             | Parámetro(s) a pasar a la función constructor |
-| Result     | 4D.Class | <- | Nuevo objeto de la clase                                         |
+| Resultado  | 4D.Class | <- | Nuevo objeto de la clase                                         |
 
 <!-- END REF -->
 

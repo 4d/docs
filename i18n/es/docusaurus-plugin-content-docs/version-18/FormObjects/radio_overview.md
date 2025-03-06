@@ -127,7 +127,7 @@ El estilo de botón radio de divulgación muestra el botón radio como un botón
 
 ### Personalizado
 
-The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
+El estilo de botón de opción Personalizado acepta una imagen de fondo personalizada y permite gestionar parámetros adicionales como el [desplazamiento](properties_TextAndPicture.md#icon-offset) y los [márgenes](properties_TextAndPicture.md#horizontal-margin) del icono.
 
 ## Propiedades soportadas
 
@@ -137,5 +137,5 @@ Todos los botones radio comparten el mismo conjunto de propiedades básicas:
 
 Propiedades específicas adicionales están disponibles en función del [estilo de botón](#button-styles):
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
+- [Nombre de la ruta de fondo](properties_TextAndPicture.md#background-pathname) - [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) - [Desplazamiento del icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#vertical-margin) (personalizado)
 - [Número de estados](properties_TextAndPicture.md#number-of-states) - [Nombre de ruta de la imagen](properties_TextAndPicture.md#picture-pathname) - [Título/Posición de la imagen](properties_TextAndPicture.md#titlepicture-position) (Botón de la barra de herramientas, Bisel, Bisel redondeado, OS X Degradado, OS X Texturizado, Office XP, Personalizado)

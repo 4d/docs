@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** reemplaza el formato de salida para los objetos especificados por *objeto* por el formato que pasa en *formatSalida*.<!-- END REF--> El nuevo formato se utiliza únicamente para la visualización actual, no se guarda con el formulario.
@@ -73,7 +70,7 @@ Horas:
 | System time long             | 11    | 1:02:03 AM HNEC (Mac únicamente)                                                                                                                                                                                                    |  
 | System time long abbreviated | 10    | 1•02•03 AM (Mac únicamente)                                                                                                                                                                                                         |  
 | System time short            | 9     |                                                                                                                                                                                                                                     |
-* o un [formato personalizado basado en un modelo](https://developer.4d.com/docs/Project/date-time-formats.md) (valor string). Por ejemplo:  
+* o un [formato personalizado basado en un modelo](../Project/date-time-formats.md) (valor string). Por ejemplo:  
     
 ```4d  
  OBJECT SET FORMAT(*;"myDate";"dd/MM/yyyy")  
@@ -283,7 +280,7 @@ La siguiente línea de código da formato al campo *\[Empleados\]Fecha Contratad
 
 #### Ejemplo 2 
 
-Este ejemplo formatea una variable fecha y una variable hora utilizando [formatos personalizados](https://developer.4d.com/docs/Project/date-time-formats.md): 
+Este ejemplo formatea una variable fecha y una variable hora utilizando [formatos personalizados](../Project/date-time-formats.md): 
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12
@@ -361,3 +358,12 @@ Pase un termómetro a modo "Barber shop"
 [GET SYSTEM FORMAT](get-system-format.md)  
 [OBJECT Get format](object-get-format.md)  
 [OBJECT SET FILTER](object-set-filter.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 236 |
+| Hilo seguro | &cross; |
+
+

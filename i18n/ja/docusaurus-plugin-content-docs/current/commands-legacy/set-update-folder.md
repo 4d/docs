@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET UPDATE FOLDER.Summary-->**SET UPDATE FOLDER**コマンドは、カレントの組み込まれた4Dアプリケーションのアップデート情報を含んだフォルダの場所を指定します。<!-- END REF-->この情報は [RESTART 4D](restart-4d.md)メソッドが呼ばれるまで4Dセッション中は保存されます。アプリケーションが手動で終了した場合、この情報は保存されません。
@@ -40,7 +37,7 @@ displayed_sidebar: docs
 * **False** を渡すかこの引数を省略した場合、エラーはアップデートジャーナルに記録され、警告ダイアログボックス内にその旨が表示されます。
 * **True** を渡した場合、エラーはアップデートジャーナルに記録され、表示はされません。
 
-例外: ジャーナルファイルが作成できないときには、 *silentErrors* 引数の値に関わらず警告ダイアログボックスが表示されます。詳細な情報に関しては、 [Get last update log path](get-last-update-log-path.md) コマンドの詳細を参照して下さい。
+例外: ジャーナルファイルが作成できないときには、 *silentErrors* 引数の値に関わらず警告ダイアログボックスが表示されます。詳細な情報に関しては、 [Get last update log path](last-update-log-path.md) コマンドの詳細を参照して下さい。
 
 コマンドが正常に実行された場合には、OKシステム変数は1に設定されます。それ以外の場合は0に設定されます。このコマンドによって生成されたエラーはどれも [ON ERR CALL](on-err-call.md)コマンドを使用して実装されたメソッドによって割り込み可能です。
 
@@ -52,11 +49,21 @@ displayed_sidebar: docs
   // Windows シンタックス
  SET UPDATE FOLDER("C:\\MyUpdates"+Folder separator+"MyApp"+Folder separator;True)
  
-  // OS X シンタックス
+  // macOS シンタックス
  SET UPDATE FOLDER("MacHD:MyUpdates"+Folder separator+"MyApp.app"+Folder separator;True)
 ```
 
 #### 参照 
 
-[Get last update log path](get-last-update-log-path.md)  
+[Get last update log path](last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1291 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK、error |
+
+

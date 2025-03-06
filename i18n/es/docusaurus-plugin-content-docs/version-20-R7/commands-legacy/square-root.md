@@ -41,3 +41,13 @@ El siguiente método devuelve la hipotenusa del triángulo cuyos dos lados son p
 ```
 
 Por ejemplo, Hipotenusa (4;3) devuelve 5.
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 539 |
+| Hilo seguro | &check; |
+
+

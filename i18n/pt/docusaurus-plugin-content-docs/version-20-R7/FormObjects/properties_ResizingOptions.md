@@ -17,15 +17,15 @@ Cuando esta propiedad está desactivada (valor `legacy` en JSON), sólo se redim
 
 - Las columnas se redimensionan sólo cuando la barra de desplazamiento horizontal no está "activa"; *es decir,*, todas las columnas son totalmente visibles en el list box en su tamaño actual. **Nota**: si la barra de desplazamiento horizontal está oculta, esto no altera su estado: una barra de desplazamiento puede seguir estando activa, aunque no sea visible.
 
-- After all columns reach their maximum size, they are no longer enlarged and instead a blank (fake) column is added on the right to fill the extra space. If a fake (blank) column is present, when the list box width decreases, this is the first area to be reduced.
+- Depois que todas as colunas atingem seu tamanho máximo, elas não são mais ampliadas e, em vez disso, uma coluna em branco (falsa) é adicionada à direita para preencher o espaço extra. Se uma coluna falsa (em branco) estiver presente, quando a largura do list box diminuir, essa será a primeira área a ser reduzida.
 
 ![](../assets/en/FormObjects/property_columnAutoResizing.png)
 
 #### Sobre a coluna falsa (em branco)
 
-The appearance of the fake column matches that of the existing columns; it will have a fake header and/or footer if these elements are present in the existing list box columns and it will have the same background color(s) applied.
+A aparência da coluna falsa corresponde à das colunas existentes; ela terá um cabeçalho e/ou rodapé falso se esses elementos estiverem presentes nas colunas do list box existentes e terá a(s) mesma(s) cor(es) de fundo aplicada(s).
 
-Se puede hacer clic en el encabezado y/o en el pie de página falsos, pero esto no tiene ningún efecto sobre las otras columnas (por ejemplo: no se realiza ninguna ordenación); no obstante, los eventos se generan en consecuencia `On Clicked`, \`On Header Cl
+Se puede hacer clic en el encabezado y/o en el pie de página falsos, pero esto no tiene ningún efecto sobre las otras columnas (por ejemplo: no se realiza ninguna ordenación); no obstante, los eventos se generan en consecuencia `On Clicked`, \\\\\\\`On Header Cl
 
 Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) devuelve "X+1" para su número de columna (donde X es el número de columnas existent
 
@@ -43,15 +43,15 @@ Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL P
 
 ## Dimensionamento horizontal
 
-This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
+Esta propriedade específica se o tamanho horizontal de um objeto deve ser movido ou redimensionado quando um usuário redimensiona o formulário. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
 
 Estão disponíveis três opções:
 
-| Opção    | Valor JSON | Resultados                                                                                                             |
-| -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Agrandar | "grow"     | A mesma percentagem é aplicada à largura do objeto quando o usuário redimensiona a largura da janela,                  |
-| Mover    | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
-| Nenhum   | "fixed"    | O objeto permanece estacionário quando o formulário é redimensionado                                                   |
+| Opção    | Valor JSON | Resultados                                                                                                                                       |
+| -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Agrandar | "grow"     | A mesma percentagem é aplicada à largura do objeto quando o usuário redimensiona a largura da janela,                                            |
+| Mover    | "move"     | O objeto é movido para a esquerda ou para a direita na mesma quantidade que a largura aumenta quando o usuário redimensiona a largura da janela, |
+| Nenhum   | "fixed"    | O objeto permanece estacionário quando o formulário é redimensionado                                                                             |
 
 > Esta propiedad funciona junto con la propiedad [Dimensionamiento vertical](#tamaño-vertical).
 
@@ -69,15 +69,15 @@ Estão disponíveis três opções:
 
 ## Alinhamento vertical
 
-This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
+Esta propriedade específica se o tamanho vertical de um objeto deve ser movido ou redimensionado quando um usuário redimensiona o formulário. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
 
 Estão disponíveis três opções:
 
-| Opção    | Valor JSON | Resultados                                                                                                           |
-| -------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
-| Agrandar | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
-| Mover    | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
-| Nenhum   | "fixed"    | O objeto permanece estacionário quando o formulário é redimensionado                                                 |
+| Opção    | Valor JSON | Resultados                                                                                                                               |
+| -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Agrandar | "grow"     | A mesma porcentagem é aplicada à altura do objeto quando o usuário redimensiona a largura da janela,                                     |
+| Mover    | "move"     | O objeto é movido na mesma quantidade para cima ou para baixo que o aumento da altura quando o usuário redimensiona a largura da janela, |
+| Nenhum   | "fixed"    | O objeto permanece estacionário quando o formulário é redimensionado                                                                     |
 
 > Esta propiedad funciona junto con la propiedad [Dimensionamiento horizontal](#horizontal-sizing).
 
@@ -95,9 +95,9 @@ Estão disponíveis três opções:
 
 ## Pusher
 
-When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.
+Quando um objeto splitter tem essa propriedade, os outros objetos à sua direita (splitter vertical) ou abaixo dele (splitter horizontal) são empurrados ao mesmo tempo que o divisor, sem parada.
 
-Here is the result of a “pusher” splitter being moved:
+Aqui está o resultado de um divisor "pusher" sendo movido:
 ![](../assets/en/FormObjects/splitter_pusher1.png)
 
 ![](../assets/en/FormObjects/splitter_pusher3.png)

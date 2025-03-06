@@ -34,6 +34,14 @@ The dates and times of creation and last modification are managed by the file ma
 
 #### See also 
 
-*\_o\_SET DOCUMENT CREATOR*  
-*\_o\_SET DOCUMENT TYPE*  
 [GET DOCUMENT PROPERTIES](get-document-properties.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 478 |
+| Thread safe | &check; |
+| Modifies variables | error |
+
+

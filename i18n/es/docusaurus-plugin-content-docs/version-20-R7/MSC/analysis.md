@@ -17,18 +17,18 @@ Esta información permite identificar la fuente y el contexto de cada operación
 - **Operación**: número de secuencia de la operación en el archivo de historial.
 
 - **Acción**: tipo de operación realizada sobre los datos. Esta columna puede contener una de las siguientes operaciones:
-  - Apertura del archivo de datos: apertura de un archivo de datos.
-  - Cierre del archivo de datos: cierre de un archivo de datos abierto.
-  - Creación de un contexto: creación de un proceso que especifica un contexto de ejecución.
-  - Cierre de un contexto: cierre de un proceso.
-  - Adición: creación y almacenamiento de un registro.
-  - Añadir un BLOB: almacenamiento de un BLOB en un campo BLOB.
-  - Eliminación: eliminación de un registro.
-  - Modificación: modificación de un registro.
-  - Inicio de la transacción: transacción iniciada.
-  - Validación de transacción: transacción validada.
-  - Cancelación de transacción: transacción cancelada.
-  - Contexto de actualización: cambio de datos adicionales (por ejemplo, una llamada a `CHANGE CURRENT USER` o `SET USER ALIAS`).
+    - Apertura del archivo de datos: apertura de un archivo de datos.
+    - Cierre del archivo de datos: cierre de un archivo de datos abierto.
+    - Creación de un contexto: creación de un proceso que especifica un contexto de ejecución.
+    - Cierre de un contexto: cierre de un proceso.
+    - Adición: creación y almacenamiento de un registro.
+    - Añadir un BLOB: almacenamiento de un BLOB en un campo BLOB.
+    - Eliminación: eliminación de un registro.
+    - Modificación: modificación de un registro.
+    - Inicio de la transacción: transacción iniciada.
+    - Validación de transacción: transacción validada.
+    - Cancelación de transacción: transacción cancelada.
+    - Contexto de actualización: cambio de datos adicionales (por ejemplo, una llamada a `CHANGE CURRENT USER` o `SET USER ALIAS`).
 
 - **Tabla**: tabla a la que pertenece el registro añadido/borrado/modificado o el BLOB.
 
@@ -45,8 +45,9 @@ Esta información permite identificar la fuente y el contexto de cada operación
 - **Usuario 4D**: nombre de usuario 4D del usuario que ha realizado la operación. Si se define un alias para el usuario, el alias se muestra en lugar del nombre de usuario 4D.
 
 - **Valores**: valores de los campos del registro en caso de adición o de modificación. Los valores están separados por ";". Solo se muestran los valores representados en forma alfanumérica.\
-  ***Nota:** si la base de datos está encriptada y no se ha proporcionado una llave de datos válida correspondiente al archivo de historial abierto, los valores encriptados no se muestran en esta columna.*
+    ***Nota:** si la base de datos está encriptada y no se ha proporcionado una llave de datos válida correspondiente al archivo de historial abierto, los valores encriptados no se muestran en esta columna.*
 
 - **Registros**: número del registro.
 
 Haga clic en **Analizar** para actualizar el contenido del archivo de historial actual de la aplicación seleccionada (llamado por defecto nomdatos.journal). El botón Navegar puede utilizarse para seleccionar y abrir otro archivo de historial para la aplicación. El botón **Exportar...** puede utilizarse para exportar el contenido del archivo como texto.
+

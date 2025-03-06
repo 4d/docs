@@ -106,3 +106,12 @@ In the Menu Bar editor, you replace the method ADD CUSTOMERS with the method STA
 [Execute on server](execute-on-server.md)  
 *Preemptive 4D processes*  
 *Processes*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 317 |
+| Thread safe | &check; |
+
+

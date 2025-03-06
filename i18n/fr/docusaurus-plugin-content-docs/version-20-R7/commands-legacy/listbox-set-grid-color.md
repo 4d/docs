@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->La commande **LISTBOX SET GRID COLOR** permet de modifier la couleur de la grille de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
@@ -38,3 +35,12 @@ Les paramètres *horizontal* et *vertical* vous permettent de spécifier les tra
 [LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 842 |
+| Thread safe | &cross; |
+
+

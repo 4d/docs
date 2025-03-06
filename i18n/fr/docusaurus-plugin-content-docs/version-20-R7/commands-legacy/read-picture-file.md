@@ -40,3 +40,13 @@ Si l’exécution de la commande est correcte, la variable système Document con
 *Introduction aux images*  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 678 |
+| Thread safe | &check; |
+| Modifie les variables | OK, Document |
+
+

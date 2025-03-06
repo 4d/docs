@@ -43,8 +43,8 @@ Com esta sintaxe:
 Na sintaxe POSIX, utiliza-se geralmente `filesystem` pathnames com os comandos [`File`](../API/FileClass.md#file) e [`Folder`](../API/FolderClass.md#folder) , por exemplo:
 
 ```4d
-var $pathFile : 4D.File
-var $pathFolder : 4D.Folder
+var $pathFile : 4D. File
+var $pathFolder : 4D. Folder
 
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
@@ -62,7 +62,7 @@ A sintaxe específica da plataforma depende do sistema operativo em que o comand
 São suportados os seguintes padrões:
 
 - os separadores de pasta são "\"
-- the text contains ':' and '\' as the second and third character,
+- o texto contém ":" e "\" como o segundo e terceiro caractere,
 - o texto começa por "\\".
 
 Exemplos com [`Folder`](../API/FolderClass.md#folder):
@@ -72,7 +72,7 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Entering Windows pathnames and escape sequences
+#### Caminhos de acesso Windows e sequências de escape
 
 A linguagem 4D permite a utilização das sequências de escape [](quick-tour.md#escape-sequences). As sequências de fuga começam com uma barra invertida `\`, seguida de um carácter. Por exemplo, `\t` é a sequência de escape para o carácter `Tab` .
 
@@ -110,17 +110,17 @@ $okFolder:=Folder("/PACKAGE/myFolder").create() //pasta criada ao nível da estr
 $okFile:=File("/DATA/Prefs/tempo.txt").create() //ficheiro criado na pasta de dados
 ```
 
-### `.file()` and `.folder()` folder methods
+### Funções de pasta `.file()` e `.folder()`
 
 As funções dos objetos pasta, tais como [`folder.file()`](../API/FolderClass.md#file) e [`folder.folder()`](../API/FolderClass.md#folder-1) esperam nomes de caminho POSIX relativos. Por exemplo:
 
 ```4d
-var $userImages : 4D.Folder
+var $userImages : 4D. Folder
 var $ok : Boolean
 
-  //to reference a "Picture" folder within the user documents folder
+//para referenciar uma pasta "Picture" dentro da pasta de documentos do utilizador
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  //para criar uma pasta no ambiente de trabalho
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Summary-->SET PICTURE TO PASTEBOARD limpia el portapapeles y coloca una copia de la imagen que usted pasó en *imagen* en el portapapeles.<!-- END REF--> 
@@ -51,3 +48,13 @@ Si no hay suficiente memoria para colocar una copia de la imagen en el portapape
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 521 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

@@ -47,3 +47,12 @@ displayed_sidebar: docs
 
 [WEB GET BODY PART](web-get-body-part.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 814 |
+| スレッドセーフである | &check; |
+
+

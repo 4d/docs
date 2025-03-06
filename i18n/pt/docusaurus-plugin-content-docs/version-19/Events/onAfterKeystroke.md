@@ -3,15 +3,15 @@ id: onAfterKeystroke
 title: On After Keystroke
 ---
 
-| Code | Pode ser chamado por                                                                                                                                                                                                                                                       | Definição                                                                                                                                       |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 28   | [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | Um carácter está prestes a ser introduzido no objecto que tem o foco. `Get edited text` devolve o texto do objecto **incluindo** este carácter. |
+| Code | Pode ser chamado por                                                                                                                                                                                                                                                                   | Definição                                                                                                                                       |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| 28   | [Área 4D Write Pro ](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Formulário - [Entrada](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Coluna List box](FormObjects/listbox_overview.md#list-box-columns) | Um carácter está prestes a ser introduzido no objecto que tem o foco. `Get edited text` devolve o texto do objecto **incluindo** este carácter. |
 
 <details><summary>Histórico</summary>
 
 | Release | Mudanças                                                                               |
 | ------- | -------------------------------------------------------------------------------------- |
-| 18 R5   | - Support in non-enterable list boxes- The event is now triggered after IME validation |
+| 18 R5   | - Suporte em list boxes não entráveis - O evento agora é acionado após a validação IME |
 </details>
 
 ## Descrição
@@ -32,7 +32,7 @@ O evento `No Depois da tecla` não é gerado:
 Quando uma entrada exigir uma sequência de pressionamentos de teclas, os eventos [`On Before Keystroke`](onBeforeKeystroke.md) e [`On After Keystroke event`] são gerados somente quando a entrada for totalmente validada pelo usuário. O comando `Keystroke` retorna o caractere validado. Este caso ocorre principalmente:
 
 - ao usar teclas "mortas", como ^ ou ~: eventos são gerados somente quando o caractere ampliado for inserido depois (por exemplo, "e├" ou n^\\),
-- when an IME (Input method editor) displays an intermediary dialog box where the user can enter a combination of characters: events are generated only when the IME dialog is validated.
+- quando um IME (Input method editor) exibir uma caixa de diálogo intermediária onde o usuário pode inserir uma combinação de caracteres: os eventos são gerados somente quando a caixa de diálogo do IME for validada.
 
 ### Veja também
 

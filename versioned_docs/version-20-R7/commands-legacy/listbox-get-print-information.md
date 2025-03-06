@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->The **LISTBOX GET PRINT INFORMATION** command returns the current information relative to the printing of the list box object designated by the *object* and *\** parameters.<!-- END REF--> This command can be used to control the printing of the list box contents.
@@ -69,3 +66,13 @@ Printing at least 500 rows of the list box, knowing that certain rows are hidden
     PAGE BREAK
  Until($GlobalPrinted>=500)
 ```
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1110 |
+| Thread safe | &cross; |
+
+

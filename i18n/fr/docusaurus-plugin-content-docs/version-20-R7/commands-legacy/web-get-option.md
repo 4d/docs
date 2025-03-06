@@ -63,3 +63,12 @@ Lorsque vous utilisez le *sélecteur* Web debug log, vous pouvez récupérer une
 #### Voir aussi 
 
 [WEB SET OPTION](web-set-option.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1209 |
+| Thread safe | &check; |
+
+

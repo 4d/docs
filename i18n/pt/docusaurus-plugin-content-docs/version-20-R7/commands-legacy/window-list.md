@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.WINDOW LIST.Summary-->O comando WINDOW LIST preenche o array *janelas* com os números de referência das janelas abertas atualmente em todos os processos (processos kernel ou usuário).<!-- END REF--> Apenas janelas "visíveis" (ou seja, não ocultadas) são retornadas. 
@@ -53,3 +50,12 @@ O método de projeto abaixo coloca em mosaico todas as janelas abertas atualment
 
 [Window kind](window-kind.md)  
 [Window process](window-process.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 442 |
+| Thread-seguro | &cross; |
+
+

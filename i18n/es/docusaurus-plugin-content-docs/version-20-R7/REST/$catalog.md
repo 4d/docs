@@ -16,7 +16,7 @@ El catálogo describe todas las clases de datos, atributos y [singletoneos inter
 
 ## $catalog
 
-Returns [shared singletons](#singletons) (if any) and a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
+Devuelve [shared singletons](#singletons) (si existe) y una lista de las clases de datos de su proyecto junto con dos URIs: una para acceder a la información sobre su estructura y otra para recuperar los datos de la clase de datos
 
 ### Descripción
 

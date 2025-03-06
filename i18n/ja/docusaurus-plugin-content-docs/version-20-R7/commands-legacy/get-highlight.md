@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET HIGHLIGHT.Summary-->**GET HIGHLIGHT**コマンドは、*object*中で現在反転表示されているテキストを検出するために使用します。<!-- END REF--> 
@@ -41,8 +38,10 @@ displayed_sidebar: docs
 以下の例題を使用して、フィールド \[Products\]Comments から反転表示された部分を検出します。 
 
 ```4d
- GET HIGHLIGHT([Products]Comments;vFirst;vLast)
- If(vFirst<vlast)     alert("the="" selected="" text="" is:="" "+substring([products]comments;vfirst;vlast-vfirst))=""  end="" if<="" pre=""></vlast)>
+GET HIGHLIGHT([Products]Comments;vFirst;vLast)
+If(vFirst < vlast)
+    ALERT("The selected text is:"+Substring([Products]Comments;vFirst;vLast-vFirst))
+End if
 ```
 
 #### 例題 2 
@@ -63,3 +62,12 @@ displayed_sidebar: docs
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 209 |
+| スレッドセーフである | &cross; |
+
+

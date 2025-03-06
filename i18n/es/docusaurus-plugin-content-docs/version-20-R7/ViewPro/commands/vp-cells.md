@@ -25,7 +25,7 @@ title: VP Cells
 | columnCount | Integer | ->                          | Número de columnas                                             |                  |
 | rowCount    | Integer | ->                          | Número de líneas                                               |                  |
 | sheet       | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result      | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
+| Resultado   | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
 
 #### Descripción
 
@@ -63,3 +63,4 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // de C5 a D7
 [VP Combine ranges](vp-combine-ranges.md)<br/>
 [VP Name](vp-name.md)<br/>
 [VP Row](vp-row.md)
+

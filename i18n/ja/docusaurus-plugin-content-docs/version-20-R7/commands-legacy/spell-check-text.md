@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SPELL CHECK TEXT.Summary-->**SPELL CHECK TEXT**コマンドは*text*引数の内容を、*checkPos*の位置からチェックし、最初に見つかった未知の単語の位置を返します。<!-- END REF-->
@@ -28,7 +25,7 @@ displayed_sidebar: docs
 
 スペルチェックがエラーなしで開始され未知の単語が見つかった場合、OKシステム変数に0が設定されます。チェック中に初期化エラーが発生するか未知の単語が見つからなかった場合、OKは1に設定されます。
 
-**Note OS X:** OS X 環境下でシステムチェッカーが使用されているときには、このコマンドは文法チェックをサポートしません。
+**Note macOS:** macOS 環境下でシステムチェッカーが使用されているときには、このコマンドは文法チェックをサポートしません。
 
 #### 例題 
 
@@ -55,3 +52,13 @@ displayed_sidebar: docs
 
 [SPELL ADD TO USER DICTIONARY](spell-add-to-user-dictionary.md)  
 [SPELL CHECKING](spell-checking.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1215 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

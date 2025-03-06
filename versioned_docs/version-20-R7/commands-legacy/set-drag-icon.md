@@ -15,14 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET DRAG ICON.Summary-->The **SET DRAG ICON** command associates the icon picture with the cursor during drag and drop operations that are managed by programming.<!-- END REF-->
 
-This command can only be called in the context of the On Begin Drag Over form event (see the [Form event code](form-event-code.md) command).
+This command can only be called in the context of the On Begin Drag Over form event (see the [Form event code](../commands/form-event-code.md) command).
 
 In the *icon* parameter, pass the picture to use. Its maximum size is 256x256 pixels. If one of its dimensions exceeds 256 pixels, it is automatically resized. 
 
@@ -59,4 +56,13 @@ Note that you can modify the position of the cursor with respect to the picture:
 
 #### See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1272 |
+| Thread safe | &cross; |
+
+

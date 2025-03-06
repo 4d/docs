@@ -48,3 +48,12 @@ Em , se quiser definir uma prioridade alta para a tabela \[Customer\]:
 
 [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1425 |
+| Thread-seguro | &check; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Summary-->SELECT LIST ITEMS BY REFERENCE コマンドは、*list*に渡された参照番号のリストにおいて、*itemRef*ならびにオプションとして*refArray*に渡された項目参照番号を持つ項目を選択します。<!-- END REF-->
@@ -53,3 +50,12 @@ displayed_sidebar: docs
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [Selected list items](selected-list-items.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 630 |
+| スレッドセーフである | &cross; |
+
+

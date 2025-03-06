@@ -185,3 +185,12 @@ Una empresa quiere utilizar el Internet para intercambiar información. Cada fil
 [DECRYPT BLOB](decrypt-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 689 |
+| Hilo seguro | &check; |
+
+

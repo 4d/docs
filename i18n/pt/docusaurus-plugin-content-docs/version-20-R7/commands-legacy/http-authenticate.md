@@ -58,3 +58,12 @@ Exemplos de petições com autenticação:
 #### Ver também 
 
 [HTTP SET OPTION](http-set-option.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1161 |
+| Thread-seguro | &check; |
+
+

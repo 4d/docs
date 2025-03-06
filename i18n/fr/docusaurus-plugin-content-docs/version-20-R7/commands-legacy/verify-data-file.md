@@ -21,9 +21,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.VERIFY DATA FILE.Summary-->La commande **VERIFY DATA FILE** effectue une vérification structurelle des objets contenus dans le fichier de données 4D désigné par *cheminStructure* et *cheminDonnées*.<!-- END REF-->
-
-**Note :** Pour plus d’informations sur le processus de vérification des données, reportez-vous au manuel Mode Développement.
+<!--REF #_command_.VERIFY DATA FILE.Summary-->La commande **VERIFY DATA FILE** effectue une vérification structurelle des objets contenus dans le fichier de données 4D désigné par *cheminStructure* et *cheminDonnées*.<!-- END REF-->Pour plus d’informations sur le processus de vérification des données, reportez-vous au manuel Mode Développement.
 
 *cheminStructure* désigne le fichier de structure (compilé ou non) associé au fichier de données à vérifier. Il peut s’agir du fichier de structure ouvert ou de tout autre fichier de structure. Vous devez passer un chemin d’accès complet, exprimé avec la syntaxe du système d’exploitation. Vous pouvez également passer une chaîne vide, dans ce cas une boîte de dialogue standard d’ouverture de fichiers apparaît, permettant à l’utilisateur de désigner le fichier de structure à utiliser.   
   
@@ -172,3 +170,13 @@ Si la méthode de rétro-appel passée n’existe pas, la vérification n’est 
 #### Voir aussi 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 939 |
+| Thread safe | &check; |
+| Modifie les variables | OK, Document, error |
+
+

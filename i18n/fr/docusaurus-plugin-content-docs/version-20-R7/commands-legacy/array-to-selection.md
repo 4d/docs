@@ -78,3 +78,13 @@ Vous souhaitez recopier la sélection d'enregistrements vers une table d'archive
 
 [SELECTION TO ARRAY](selection-to-array.md)  
 *Variables système*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 261 |
+| Thread safe | &check; |
+| Change la sélection courante ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR Get document property.Summary-->O comando QR Get document property permite recuperar o estado mostrado para a caixa de diálogo de impressão ou a unidade utilizada para o documento presente na *area*.<!-- END REF-->  
@@ -49,3 +46,12 @@ Se passa um valor incorreto do parâmetro *propriedade*, se gera o erro -9852.
 #### Ver também 
 
 [QR SET DOCUMENT PROPERTY](qr-set-document-property.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 773 |
+| Thread-seguro | &cross; |
+
+

@@ -7,11 +7,11 @@ Un projet 4D contient l'intégralité du code source d'une application 4D, quel 
 
 ## Fichiers du projet
 
-Les fichiers de projet 4D sont ouverts et édités à l'aide d'applications standard de la plate-forme 4D (4D ou 4D Server). Avec 4D, des éditeurs complets sont disponibles pour gérer les fichiers, y compris un éditeur de structure, un éditeur de code, un éditeur de formulaire, un éditeur de menu, etc...
+Les fichiers de projet 4D sont ouverts et édités à l'aide d'applications standard de la plate-forme 4D (4D ou 4D Server). Un projet 4D contient l'intégralité du code source d'une application 4D, quel que soit son type de déploiement (web, mobile ou desktop), de la structure de la base de données à l'interface utilisateur, en passant par le code, les formulaires, les menus, les paramètres utilisateur ou n'importe quelle ressource requise.
 
 Les projets étant des fichiers lisibles, en texte brut (JSON, XML, etc.), ils peuvent être lus ou édités manuellement par les développeurs, à l’aide de n’importe quel éditeur de code.
 
-De plus, les fichiers de projet 4D facilitent la programmation générique, la création de modèles d'application et le partage de code. Les projets sont organisés en interne dans des [fichiers et dossiers](Project/architecture.md).
+De plus, les fichiers de projet 4D facilitent la programmation générique, la création de modèles d'application et le partage de code. Les fichiers du projet peuvent être [compilés](compiler.md) et facilement déployés.
 
 ## Développement
 

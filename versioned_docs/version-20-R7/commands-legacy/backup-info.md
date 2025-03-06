@@ -31,3 +31,12 @@ Pass the type of information to get in *selector*. The type and content of the *
 #### See also 
 
 [RESTORE](restore.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 888 |
+| Thread safe | &cross; |
+
+

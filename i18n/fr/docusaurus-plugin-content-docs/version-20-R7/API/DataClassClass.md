@@ -267,15 +267,15 @@ La correspondance entre les objets de la collection et les entités est effectu�
 Pour chaque objet de *objectCol* :
 
 - Si l'objet contient une propriété booléenne "\_\*NEW" fixée à faux (ou ne contient pas de propriété booléenne "\*\_NEW"), l'entité est modifiée ou créée avec les valeurs correspondantes des propriétés de l'objet. Aucune vérification spécifique n'est effectuée concernant la clé primaire :
-  - Si la clé primaire est fournie et existe, l'entité est modifiée. Dans ce cas, la clé primaire peut être fournie telle quelle ou via la propriété "\_\_KEY" (contenant la valeur de la propriété primaire).
-  - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
-  - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
+ - Si la clé primaire est fournie et existe, l'entité est modifiée. Dans ce cas, la clé primaire peut être fournie telle quelle ou via la propriété "\_\_KEY" (contenant la valeur de la propriété primaire).
+ - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
+ - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
 - si l'objet contient une propriété booléenne "\_\_NEW" fixée à **vrai**, l'entité est créée avec les valeurs correspondantes des propriétés de l'objet. Une vérification est effectuée sur la clé primaire :
-  - Si la clé primaire est fournie (telle quelle) et existe, une erreur est générée
-  - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
-  - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
+ - Si la clé primaire est fournie (telle quelle) et existe, une erreur est générée
+ - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
+ - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
 
-> La propriété "\*\*KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\*\*NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\*\_KEY" est ignorée, la valeur de la clé primaire doit être passée "telle quelle".
+> La propriété "\*\*KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\*\*NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\_\_KEY" est ignorée, la valeur de la clé primaire doit être passée "telle quelle".
 
 **Entités liées**
 
@@ -910,8 +910,8 @@ où :
 
 - **formula** : Une formule valide passée en `Text` ou en `Object`. La formule sera évaluée pour chaque entité traitée et doit retourner une valeur booléenne. Dans la formule, l'entité est disponible via l'objet `This`.
 
-  - **Text** : la chaîne de la formule doit être précédée de l'instruction `eval()`, afin que l'analyseur de la requête évalue correctement l'expression. Par exemple : *"eval(length(This.lastname) >=30)"*
-  - **Object**: l'[objet formule](FunctionClass.md) est passé en tant que **placeholder** (voir ci-dessous). La formule doit avoir été créée à l'aide de la commande [`Formula`](FunctionClass.md#formula) ou [`Formula from string`](FunctionClass.md#formula-from-string).
+ - **Text** : la chaîne de la formule doit être précédée de l'instruction `eval()`, afin que l'analyseur de la requête évalue correctement l'expression. Par exemple : *"eval(length(This.lastname) >=30)"*
+ - **Object**: l'[objet formule](FunctionClass.md) est passé en tant que **placeholder** (voir ci-dessous). La formule doit avoir été créée à l'aide de la commande [`Formula`](FunctionClass.md#formula) ou [`Formula from string`](FunctionClass.md#formula-from-string).
 
 > * N'oubliez pas que les formules de 4D prennent uniquement en charge les symboles `&` et `|` comme opérateurs logiques.
 > * Si la formule n'est pas le seul critère de recherche, le système d'optimisation des requêtes pourra prioriser le traitement d'autres critères (ex : attributs indexés) et ainsi, la formule sera évaluée uniquement pour un sous-ensemble d'entités.
@@ -937,20 +937,20 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 | Inclus parmi                            | IN                            | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)                                                                    |
 | Contient mot-clé                        | %                             | Les mots-clés peuvent être utilisés avec les attributs de type texte ou image                                                                                                                                                                     |
 
-- Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. **value** : valeur à comparer à la valeur courante de la propriété pour chaque entité de l'entity selection.
-  Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
-  - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
-  - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
-  - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
-  - Constantes de type **date** : "YYYY-MM-DD" format
-  - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
-  - Dans le cas d'une recherche avec un comparateur IN, *value*doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
+- Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. **value** : valeur à comparer à la valeur courante de la propriété pour chaque entité de l'entity selection. Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de **value** dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet. Par exemple, si la chaîne "v20" est entrée en tant que **value** pour la comparer avec un attribut Integer, elle sera convertie en nombre 20.
+ Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
+ - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
+ - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
+ - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
+ - Constantes de type **date** : "YYYY-MM-DD" format
+ - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
+ - Dans le cas d'une recherche avec un comparateur IN, *value*doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
 - **logicalOperator** : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
 
-| Conjonction | Symbole(s)                                          |
-| ----------- | ---------------------------------------------------------------------- |
-| AND         | &, &&, and |
-| OU          | \|,\|\|, or                                                            |
+| Conjonction | Symbole(s)                                                       |
+| ----------- | ----------------------------------------------------------------------------------- |
+| AND         | &, &&, and              |
+| OR          | &#124;,&#124;&#124;, or |
 
 - **order by attributePath** : vous pouvez inclure une déclaration order by *attributePath* dans la requête afin que les données résultantes soient triées selon cette déclaration. Vous pouvez utiliser plusieurs tris par déclaration, en les séparant par des virgules (e.g., order by *attributePath1* desc, *attributePath2* asc). Par défaut, le tri est par ordre croissant. Passez 'desc' pour définir un tri par ordre décroissant et 'asc' pour définir un tri par ordre croissant.
 
@@ -1030,6 +1030,20 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
 
 ```4d
  $vSingles:=ds.Person.query("spouse = null") //syntaxe valide
+```
+
+#### Différent des valeurs null ou undefined
+
+The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true") //trouve des personnes dont la valeur d'attribut est false
+```
+
+If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //trouve les attributs false, null et undefined
 ```
 
 #### Not equal to et les collections
@@ -1136,7 +1150,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 #### Recherches dans les relations N vers N
 
-ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur `AND` MAIS dans le même attribut. Par exemple, considérez la structure suivante :
+ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur `AND` MAIS dans le même attribut. Par exemple, considérez la structure suivante :
 
 ![alt-text](../assets/en/API/manytomany.png)
 

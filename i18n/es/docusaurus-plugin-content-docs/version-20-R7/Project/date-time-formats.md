@@ -151,7 +151,7 @@ Por ejemplo:
 
 ## Ejemplos
 
-| Fecha u hora                             | Modelo                       | Result                           | Comentarios        |
+| Fecha u hora                             | Modelo                       | Resultado                        | Comentarios        |
 | ---------------------------------------- | ---------------------------- | -------------------------------- | ------------------ |
 | 15/06/2000                               | "QQQQ"                       | "2do trimestre"                  | localizado         |
 | 17/03/2001                               | "D"                          | "76"                             | 76º día del año    |

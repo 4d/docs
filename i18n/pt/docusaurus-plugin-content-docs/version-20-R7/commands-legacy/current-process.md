@@ -23,6 +23,15 @@ Ver os exemplos de [DELAY PROCESS](delay-process.md "DELAY PROCESS") e [PROCESS 
 
 #### Ver também 
 
-[Process number](process-number.md)  
+[Process number](../commands/process-number.md)  
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 322 |
+| Thread-seguro | &check; |
+
+

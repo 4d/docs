@@ -51,8 +51,8 @@ The 4D environment uses a specific folder to store the following information:
 
 The active 4D folder is created by default at the following location:
 
-* On Windows: *{Disk}:\\Users\\* *<userName>\\AppData\\Roaming\\<applicationName>*
-* On macOS: *{Disk}:Users:* *<userName>:Library:Application Support:<applicationName>*
+* On Windows: *{Disk}:\\Users\\{userName}\\AppData\\Roaming\\{applicationName}*
+* On macOS: *{Disk}:Users:{userName}:Library:Application Support:{applicationName}*
 
 ##### Licenses Folder 
 
@@ -107,7 +107,7 @@ With the 4D Client application, this constant is strictly equivalent to the prev
 
 ##### Database Folder Unix Syntax 
 
-Folder containing the database structure file. This constant designates the same folder as the previous one but the pathname returned is expressed using the Unix syntax (Posix), of the type /Users/... This syntax is mainly used when you use the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command under OS X.
+Folder containing the database structure file. This constant designates the same folder as the previous one but the pathname returned is expressed using the Unix syntax (Posix), of the type /Users/... This syntax is mainly used when you use the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command under macOS.
 
 ##### Current Resources folder 
 
@@ -207,3 +207,13 @@ If the *folder* parameter is invalid or if the pathname returned is empty, the O
 [Temporary folder](temporary-folder.md)  
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 485 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

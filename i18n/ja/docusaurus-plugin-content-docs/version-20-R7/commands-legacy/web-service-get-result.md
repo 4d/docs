@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.WEB SERVICE GET RESULT.Summary-->**WEB SERVICE GET RESULT**コマンドは、行われた処理の結果としてWebサービスから返された結果を取得するために使用します。<!-- END REF--> 
-
-**注:** このコマンドは[WEB SERVICE CALL](web-service-call.md)コマンドの後に使用しなければなりません。 
+<!--REF #_command_.WEB SERVICE GET RESULT.Summary-->**WEB SERVICE GET RESULT**コマンドは、行われた処理の結果としてWebサービスから返された結果を取得するために使用します。<!-- END REF-->このコマンドは[WEB SERVICE CALL](web-service-call.md)コマンドの後に使用しなければなりません。 
 
 *returnValue* 引数はWebサービスから送り返された値を受け取ります。この引数には4D変数を渡します。この変数は通常、プロクシメソッドから返される値に対応する$0です。しかし中間変数を使用することもできます (プロセス変数のみ)。 
 
@@ -52,3 +50,12 @@ Webサービスがある都市の時間を返すとします。Webサービス�
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 779 |
+| スレッドセーフである | &check; |
+
+

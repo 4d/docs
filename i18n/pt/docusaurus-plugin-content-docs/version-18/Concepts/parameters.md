@@ -312,7 +312,7 @@ Utilizando o comando `Count parameters` desde dentro do método chamado, pode de
 O exemplo abaixo mostra uma mensagem de texto e pode inserir o texto em um documento no disco ou em uma área de 4D Write Pro:
 
 ```4d
-// APPEND TEXT Project Method
+// Método projeto APPEND TEXT
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
 
@@ -342,7 +342,7 @@ APPEND TEXT(vtSomeText) //Will only display the  message APPEND TEXT(vtSomeText;
 In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
 
 ```4d
-  //SEND PACKETS Project Method
+  //Método projeto SEND PACKETS
   //SEND PACKETS ( Time ; Text { ; Text2... ; TextN } )
   //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
 
@@ -393,6 +393,6 @@ Da mesma forma que com outras variáveis locais, não é obrigatório declarar o
  C_LONGINT(${4})
 ```
 
-This command means that starting with the fourth  parameter (included), the method can receive a variable number of parameters of longint type. $1, $2 e $3 podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. Thus, it will be of the data type Longint, even if for you it was, for instance, of the data type Real.
+Esse comando significa que a partir do quarto parâmetro (incluído), o método pode receber um número variável de parâmetros de tipo longint. $1, $2 e $3 podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. Thus, it will be of the data type Longint, even if for you it was, for instance, of the data type Real.
 
 **Note:** The number in the declaration has to be a constant and not a variable.

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET MENU BAR.Summary-->MENU BAR reemplaza la barra de menús actual con la especificada por *barra* en el proceso actual únicamente.<!-- END REF--> En el parámetro *barra*, puede pasar el número o nombre de la nueva barra. Igualmente puede pasar una referencia única de menú (tipo [MenuRef](# "Unique ID (16-character alphanumeric) of a menu"), cadena de 16 caracteres). Cuando trabaja con referencias, los menús pueden ser utilizados como barras de menú y viceversa (ver la sección *Gestión de menús*). 
@@ -121,3 +118,12 @@ En este ejemplo, crearemos por programación, una barra de menús incluyendo los
 #### Ver también 
 
 *Gestión de menús*  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 67 |
+| Hilo seguro | &cross; |
+
+

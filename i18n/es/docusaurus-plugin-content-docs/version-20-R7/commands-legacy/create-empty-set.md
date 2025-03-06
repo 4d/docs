@@ -28,3 +28,12 @@ Consulte el ejemplo de la sección *Conjuntos*.
 
 [CLEAR SET](clear-set.md)  
 [CREATE SET](create-set.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 140 |
+| Hilo seguro | &check; |
+
+

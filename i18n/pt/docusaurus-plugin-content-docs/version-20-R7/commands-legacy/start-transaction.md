@@ -25,3 +25,12 @@ A partir da versão 11 de 4D, pode aninhar várias transações (subtransações
 [Transaction level](transaction-level.md)  
 *Usar Transações*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 239 |
+| Thread-seguro | &check; |
+
+

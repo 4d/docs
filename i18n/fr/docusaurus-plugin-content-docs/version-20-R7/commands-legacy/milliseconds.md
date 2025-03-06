@@ -47,3 +47,12 @@ Le code suivant attend jusqu'à 5 secondes qu'un enregistrement soit déverrouil
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
 [Timestamp](timestamp.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 459 |
+| Thread safe | &check; |
+
+

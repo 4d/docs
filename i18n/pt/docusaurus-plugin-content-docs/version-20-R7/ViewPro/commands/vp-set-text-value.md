@@ -23,7 +23,7 @@ Em *rangeObj*, passe um intervalo de células (criado, por exemplo, com [`VP Cel
 
 The *textValue* parameter specifies a text value to be assigned to the *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](../configuring.md#cell-format) for the *textValue* parameter.
+O *formatPattern* opcional define um [padrão](../configuring.md#cell-format) para o parâmetro *textValue*.
 
 #### Exemplo
 

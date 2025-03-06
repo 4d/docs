@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Summary-->La commande **GET PASTEBOARD DATA TYPE** permet d’obtenir la liste des types de données présents dans le conteneur.<!-- END REF--> Cette commande doit généralement être utilisée dans le contexte d'un glisser-déposer, dans le cadre des événements formulaire On Drop ou On Drag Over de l’objet de destination. Elle permet notamment de vérifier la présence d’un type de données spécifique dans le conteneur.
@@ -36,3 +33,12 @@ Pour plus d’informations sur les types de données pris en charge, reportez-vo
 #### Voir aussi 
 
 *Gestion du conteneur de données*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 958 |
+| Thread safe | &cross; |
+
+

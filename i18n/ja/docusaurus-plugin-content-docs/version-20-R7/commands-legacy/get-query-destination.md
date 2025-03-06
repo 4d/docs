@@ -56,3 +56,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET QUERY DESTINATION](set-query-destination.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1155 |
+| スレッドセーフである | &check; |
+
+

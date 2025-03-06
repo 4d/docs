@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Summary-->El comando **OBJECT GET SHORTCUT** devuelve el atajo de teclado asociado al objeto o a los objetos designados por los parámetros *objeto* y *\** en el proceso actual.<!-- END REF-->  
@@ -31,10 +28,10 @@ El parámetro *modificadores* devuelve un valor que indica la(s) tecla(s) modifi
 
 | Constante        | Tipo         | Valor | Comentario                                             |
 | ---------------- | ------------ | ----- | ------------------------------------------------------ |
-| Command key mask | Entero largo | 256   | Tecla Ctrl en Windows, Tecla Comando en OS X           |
-| Control key mask | Entero largo | 4096  | Tecla Ctrl bajo OS X, o clic derecho en Windows y OS X |
-| Option key mask  | Entero largo | 2048  | Tecla Alt (también llamada Opción en OS X)             |
-| Shift key mask   | Entero largo | 512   | Windows y OS X                                         |
+| Command key mask | Entero largo | 256   | Tecla Ctrl en Windows, Tecla Comando en macOS           |
+| Control key mask | Entero largo | 4096  | Tecla Ctrl bajo macOS, o clic derecho en Windows y macOS |
+| Option key mask  | Entero largo | 2048  | Tecla Alt (también llamada Opción en macOS)             |
+| Shift key mask   | Entero largo | 512   | Windows y macOS                                         |
   
   
 Si ninguna tecla de modificación se ha definido para el atajo, modificadores devuelve 0.  
@@ -44,3 +41,12 @@ Si ninguna tecla de modificación se ha definido para el atajo, modificadores de
 #### Ver también 
 
 [OBJECT SET SHORTCUT](object-set-shortcut.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1186 |
+| Hilo seguro | &cross; |
+
+

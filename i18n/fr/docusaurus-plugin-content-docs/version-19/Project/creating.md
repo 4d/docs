@@ -14,7 +14,7 @@ Les nouveaux projets d'application 4D peuvent être créés à partir de **4D** 
 Pour créer un nouveau projet :
 
 1. Lancez 4D ou 4D Server.
-2. Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)OR(4D only) Select **Project...** from the **New** toolbar button:![](../assets/en/getStart/projectCreate2.png)A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+2. Sélectionnez **Nouveau > Projet...** dans le menu **Fichier**: ![](../assets/en/getStart/projectCreate1.png)OU (4D uniquement) Sélectionnez **Projet...** dans le bouton **Nouveau** de la barre d'outils :![](../assets/en/getStart/projectCreate2.png)Une boîte de dialogue standard **Save** apparaît pour vous permettre de choisir le nom et l'emplacement du dossier principal du projet 4D.
 
 3. Saisissez le nom du dossier de projet et cliquez sur **Sauvegarder**. Ce nom sera utilisé :
 
@@ -31,7 +31,7 @@ Vous pouvez alors commencer à développer votre projet.
 
 Pour ouvrir un projet existant depuis 4D :
 
-1. Select **Open a local application project** in the Welcome Wizard dialog, OR Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button. La boîte de dialogue standard Ouvrir apparaît.
+1. Sélectionnez **Ouvrir un projet d'application local** dans la boîte de dialogue de l'Assistant de bienvenue, OU Sélectionnez **Ouvrir/Projet local...** dans le menu **Fichier** ou le bouton **Ouvrir** de la barre d'outils. La boîte de dialogue standard Ouvrir apparaît.
 
 2. Sélectionnez le fichier `.4dproject` du projet et cliquez sur **Ouvrir**. Par défaut, le projet est ouvert avec son fichier de données courant. D'autres types de fichiers sont suggérés :
 
@@ -83,7 +83,7 @@ Les fichiers `.4DLink` peuvent enregistrer l'adresse d'un projet 4D ainsi que se
 4D génère automatiquement un fichier `.4DLink` lors de la première ouverture d'un projet local ou lors de la première connexion à un serveur. Le fichier est stocké dans le dossier des préférences locales à l'emplacement suivant :
 
 - Windows 7 et ultérieur : C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-- OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
+- macOS : Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX représente le numéro de version de l'application. Par exemple, "Favoris v19" pour 4D v19.
 
@@ -100,7 +100,7 @@ Les fichiers `.4DLink` peuvent également être créés à l'aide d'un éditeur 
 
 Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeurs 4D intégrés pour créer, modifier ou enregistrer des éléments de structure, des méthodes, des formulaires, etc. Les modifications sont enregistrées sur le disque lorsque vous sélectionnez une commande **Enregistrer**, ou lorsque la fenêtre de l'éditeur perd ou récupère le focus.
 
-Étant donné que les éditeurs utilisent des fichiers sur le disque, des conflits potentiels peuvent se produire si le même fichier est modifié ou même supprimé à différents endroits. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations.
+Étant donné que les éditeurs utilisent des fichiers sur le disque, des conflits potentiels peuvent se produire si le même fichier est modifié ou même supprimé à différents endroits. Par exemple, si la même méthode est modifiée dans une fenêtre d'éditeur de méthode *et* dans un éditeur de texte, la sauvegarde des deux modifications entraînera un conflit.
 
 Le framework de développement 4D comprend un gestionnaire d'accès aux fichiers pour contrôler l'accès simultané :
 

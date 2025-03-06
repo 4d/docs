@@ -25,14 +25,14 @@ Un objet `WebSocketConnection` est automatiquement créé lorsque la fonction de
 
 Les objets WebSocketConnection offrent les propriétés et fonctions suivantes :
 
-|                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebSocketConnectionClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketConnectionClass.handler.Summary -->               |
-| [<!-- INCLUDE #WebSocketConnectionClass.id.Syntax -->](#id)<br/><!-- INCLUDE #WebSocketConnectionClass.id.Summary -->                              |
-| [<!-- INCLUDE #WebSocketConnectionClass.send().Syntax -->](#send\(\))<br/><!-- INCLUDE #WebSocketConnectionClass.send().Summary -->                |
-| [<!-- INCLUDE #WebSocketConnectionClass.status.Syntax -->](#status)<br/><!-- INCLUDE #WebSocketConnectionClass.status.Summary -->                  |
-| [<!-- INCLUDE #WebSocketConnectionClass.terminate().Syntax -->](#terminate\(\))<br/><!-- INCLUDE #WebSocketConnectionClass.terminate().Summary --> |
-| [<!-- INCLUDE #WebSocketConnectionClass.wss.Syntax -->](#wss)<br/><!-- INCLUDE #WebSocketConnectionClass.wss.Summary -->                           |
+|                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #WebSocketConnectionClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketConnectionClass.handler.Summary -->                   |
+| [<!-- INCLUDE #WebSocketConnectionClass.id.Syntax -->](#id)<br/><!-- INCLUDE #WebSocketConnectionClass.id.Summary -->                                  |
+| [<!-- INCLUDE #WebSocketConnectionClass.send().Syntax -->](#send\\(\\))<br/><!-- INCLUDE #WebSocketConnectionClass.send().Summary -->                |
+| [<!-- INCLUDE #WebSocketConnectionClass.status.Syntax -->](#status)<br/><!-- INCLUDE #WebSocketConnectionClass.status.Summary -->                      |
+| [<!-- INCLUDE #WebSocketConnectionClass.terminate().Syntax -->](#terminate\\(\\))<br/><!-- INCLUDE #WebSocketConnectionClass.terminate().Summary --> |
+| [<!-- INCLUDE #WebSocketConnectionClass.wss.Syntax -->](#wss)<br/><!-- INCLUDE #WebSocketConnectionClass.wss.Summary -->                               |
 
 <!-- REF #WebSocketConnectionClass.handler.Desc -->
 
@@ -138,3 +138,4 @@ La propriété `.wss` contient <!-- REF #WebSocketConnectionClass.wss.Summary --
 Cette propriété est en lecture seule.
 
 <!-- END REF -->
+

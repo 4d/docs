@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET WINDOW RECT.Summary-->**GET WINDOW RECT** コマンドは*window*に渡された参照番号を持つウィンドウの座標を返します。<!-- END REF-->ウィンドウが存在しない場合、変数引数は変更されません。
@@ -38,3 +35,12 @@ displayed_sidebar: docs
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 443 |
+| スレッドセーフである | &cross; |
+
+

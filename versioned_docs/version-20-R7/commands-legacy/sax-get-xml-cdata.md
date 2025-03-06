@@ -49,3 +49,13 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 
 [SAX ADD XML CDATA](sax-add-xml-cdata.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 878 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

@@ -21,7 +21,7 @@ title: VP Get data context
 | ---------- | ------- | --------------------------- | --------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro        |                  |
 | sheet      | Integer | ->                          | Índice de la hoja para obtener el contexto de datos |                  |
-| Result     | Variant | <- | Data context. Object or Collection  | <!-- END REF --> |
+| Resultado  | Variant | <- | Data context. Object or Collection  | <!-- END REF --> |
 
 #### Descripción
 

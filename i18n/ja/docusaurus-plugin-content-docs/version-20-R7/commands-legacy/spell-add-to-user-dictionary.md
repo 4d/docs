@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->**SPELL ADD TO USER DICTIONARY**コマンドはカレントのユーザー辞書に単語を追加します。<!-- END REF-->
@@ -39,3 +36,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SPELL CHECK TEXT](spell-check-text.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1214 |
+| スレッドセーフである | &cross; |
+
+

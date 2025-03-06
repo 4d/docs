@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Execute on server.Summary-->El comando Execute on server inicia un nuevo proceso en el equipo servidor (cuando se llama en Cliente/Servidor) o en el mismo equipo (si se llama en monousuario) y devuelve el número de este proceso.<!-- END REF-->
@@ -58,7 +55,7 @@ Puede omitir este parámetro; si lo hace, el nombre del proceso será una cadena
 
 **Nota:** si pasa parámetros al método de proceso, debe pasar el parámetro *nombre*; en este caso no se puede omitir. 
 
-Si pasa un objeto ([C\_OBJECT](c-object.md)) o una colección ([C\_COLLECTION](c-collection.md)) como *param*, se envía una copia (y no una referencia) y el formulario JSON se utiliza en UTF-8 para el servidor. Si el objeto o colección contiene punteros, se envían sus valores desreferenciados y no los punteros mismos.
+Si pasa un objeto (*C\_OBJECT*) o una colección (*C\_COLLECTION*) como *param*, se envía una copia (y no una referencia) y el formulario JSON se utiliza en UTF-8 para el servidor. Si el objeto o colección contiene punteros, se envían sus valores desreferenciados y no los punteros mismos.
 
 ##### Parámetro opcional \* 
 
@@ -191,3 +188,12 @@ Consulte la sección *Servicios basados en los procedimientos almacenados (ejemp
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [New process](new-process.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 373 |
+| Hilo seguro | &cross; |
+
+

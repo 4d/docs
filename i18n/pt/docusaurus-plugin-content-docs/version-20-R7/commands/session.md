@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session.Params-->
 
-| Parâmetro | Tipo                        |   | Descrição       |
-| --------- | --------------------------- | - | --------------- |
-| Resultado | 4D. Session | ← | Objecto Session |
+| Parâmetro | Tipo                        |                             | Descrição       |
+| --------- | --------------------------- | --------------------------- | --------------- |
+| Resultado | 4D. Session | &#8592; | Objecto Session |
 
 <!-- END REF-->
 
@@ -63,10 +63,10 @@ Para mais informações em sessões usuários remotos, consulte o parágrafo [**
 
 Todos os processos de procedimento armazenado compartilham a mesma sessão de usuário virtual. O objeto `Session` de procedimentos armazenados está disponível em:
 
-- methods called with the [`Execute on server`](../commands-legacy/execute-on-server.md) command,
+- métodos chamados com o comando [`Execute on server`](../commands-legacy/execute-on-server.md),
 - `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
-For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html) page.
+For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html) page.
 
 #### Exemplo
 
@@ -95,3 +95,12 @@ IP:port/4DACTION/action_Session
 [Session storage](../commands-legacy/session-storage.md)\
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1714                            |
+| Thread safe    | &amp;check; |
+
+

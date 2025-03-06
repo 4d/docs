@@ -109,7 +109,7 @@ Para un list box array, la propiedad **Variable o Expresión** normalmente conti
 
 ## Tipo de expresión
 
-> This property is called **Data Type** in the Property List for Selection and collection type list box columns.
+> Esta propiedad se denomina **Tipo de datos** en la Lista de propiedades de las columnas del list box de tipo Selección y colección.
 
 Especifique el tipo de datos para la expresión o variable asociada al objeto. Tenga en cuenta que el objetivo principal de este ajuste es configurar las opciones (como los formatos de visualización) disponibles para el tipo de datos. En realidad, no escribe la variable en sí. En vista de la compilación de una base de datos, debe utilizar los comandos del lenguaje 4D del tema `Compilador`.
 

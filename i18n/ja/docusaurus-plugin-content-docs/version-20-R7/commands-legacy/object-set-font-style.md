@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT SET FONT STYLE.Summary-->OBJECT SET FONT STYLE は*object* で指定したフォームオブジェクトが、*styles*に渡したフォントスタイルを使用して表示されるよう設定します。<!-- END REF-->
@@ -57,3 +54,12 @@ displayed_sidebar: docs
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 *プログラミングに関する注意*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 166 |
+| スレッドセーフである | &cross; |
+
+

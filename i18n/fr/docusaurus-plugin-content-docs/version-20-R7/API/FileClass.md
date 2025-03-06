@@ -73,7 +73,7 @@ Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris
 
 La fonction `4D.File.new()` <!-- REF #4D.File.new().Summary -->crée et retourne un nouvel objet de type `4D.File`<!-- END REF -->. Elle est identique à la commande [`File`](../commands/file.md) (raccourci).
 
-> Il est recommandé d'utiliser la commande [`File`](../commande/file.md) au lieu de `4D.File.new()`.
+> Il est recommandé d'utiliser la commande [`File`](../commands/file.md) au lieu de `4D.File.new()`.
 
 <!-- INCLUDE document.copyTo().Desc -->
 
@@ -412,7 +412,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Description
 
-La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un nouvel objet [4D.FileHandle](FileHandleClass) sur le fichier, dans le *mode* spécifié ou avec les *options* spécifiées<!-- END REF -->. Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter du contenu au fichier.
+La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un nouvel objet [4D.FileHandle](FileHandleClass) sur le fichier, dans le *mode* spécifié ou avec les *options* spécifiées<!-- END REF -->. Chemins d'accès Chemins d'accès Chemins d'accès Chemins d'accès Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter du contenu au fichier.
 
 Si vous utilisez le paramètre *mode* (texte), passez le mode d'ouverture pour le file handle :
 

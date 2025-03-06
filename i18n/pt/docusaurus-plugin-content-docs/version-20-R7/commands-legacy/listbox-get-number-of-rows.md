@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX Get number of rows.Summary-->O comando LISTBOX Get number of rows devolve o número de filas do list box designado pelos parâmetros objeto e \*.<!-- END REF-->
@@ -32,3 +29,12 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 915 |
+| Thread-seguro | &cross; |
+
+

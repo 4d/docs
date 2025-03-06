@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Pop up menu.Summary-->**Pop up menu** コマンドは、現在マウスが置かれている場所でポップアップメニューを表示します。<!-- END REF-->
@@ -63,12 +60,25 @@ displayed_sidebar: docs
 ```4d
   // MY SPEED MENU プロジェクトメソッド
  MOUSE POSITION($vlMouseX;$vlMouseY;$vlButton)
- If(Macintosh control down|($vlButton=2))
-    $vtItems:="About this database...<i;(-;!-other options;(-"=""     for($vltable;1;get="" last="" table="" number)=""        if(is="" number="" valid($vltable))=""           $vtitems:="$vtItems+";"+Table" name($vltable)=""        end="" if=""     end="" for=""     $vluserchoice:="Pop" up="" menu($vtitems)=""     case="" of=""        :($vluserchoice="1)"   //="" display="" information=""   `オプションを表示する=""        else=""           if($vluserchoice="">0)
-  //番号が $vlUserChoice-4 のテーブルに移動する
-          End if
-    End case
- End if</i;(-;!-other>
+ If(Macintosh control down|($vlButton=2))
+    $vtItems:="About this database...<I;(-;!-Other Options;(-"
+    For($vlTable;1;Get last table number)
+       If(Is table number valid($vlTable))
+          $vtItems:=$vtItems+";"+Table name($vlTable)
+       End if
+    End for
+    $vlUserChoice:=Pop up menu($vtItems)
+    Case of
+       :($vlUserChoice=1)
+  ` Display Information
+       :($vlUserChoice=2)
+  `オプションを表示する
+       Else
+          If($vlUserChoice>0)
+  `番号が $vlUserChoice-4 のテーブルに移動する
+          End if
+    End case
+ End if
 ```
 
 このプロジェクトメソッドは、以下から呼び出せます。
@@ -89,3 +99,12 @@ Windows上 (左) とMacintosh上 (右)で表示されるポップアップメニ
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [MOUSE POSITION](mouse-position.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 542 |
+| スレッドセーフである | &cross; |
+
+

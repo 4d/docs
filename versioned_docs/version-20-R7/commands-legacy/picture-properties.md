@@ -29,3 +29,12 @@ The *hOffset*, *vOffset*, and *mode* parameters return the horizontal and vertic
 #### See also 
 
 [Picture size](picture-size.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 457 |
+| Thread safe | &check; |
+
+

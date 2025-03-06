@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Open window.Summary-->**Open window** opens a new window with the dimensions given by the first four parameters:
@@ -50,7 +47,7 @@ If you pass an empty string ("") in *title,* you instruct 4D to use the Window T
 
 * The *controlMenuBox* parameter is the optional Control-menu box method for the window. If this parameter is specified, a Control-menu box (Windows) or a Close Box (Macintosh) is added to the window. When the user double-clicks the Control-menu box (Windows) or clicks on the Close Box (Macintosh), the method passed in *controlMenuBox* is called.
 
-**Note:** You can also manage the closing of the window from within the form method of the form displayed in the window when an On Close Box event occurs. For more information, see the command [Form event code](form-event-code.md).
+**Note:** You can also manage the closing of the window from within the form method of the form displayed in the window when an On Close Box event occurs. For more information, see the command [Form event code](../commands/form-event-code.md).
 
 If more than one window is open for a process, the last window opened is the active (frontmost) window for that process. Only information within the active window can be modified. Any other windows can be viewed. When the user types, the active window will always come to the front, if it is not already there.
 
@@ -124,7 +121,7 @@ The following example opens a window whose size and title come from the properti
 
 #### Example 4 
 
-This example illustrates the “delay” mechanism for displaying sheet windows under Mac OS X:
+This example illustrates the “delay” mechanism for displaying sheet windows under macOS:
 
 ```4d
  $myWindow:=Open window(10;10;400;400;Sheet window)
@@ -139,3 +136,12 @@ This example illustrates the “delay” mechanism for displaying sheet windows 
 [CLOSE WINDOW](close-window.md)  
 [Open form window](open-form-window.md)  
 *Open Window*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 153 |
+| Thread safe | &cross; |
+
+

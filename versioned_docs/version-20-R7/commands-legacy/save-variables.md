@@ -48,3 +48,13 @@ If the variables are saved properly, the **OK** system variable is set to 1; oth
 [LOAD VARIABLES](load-variables.md)  
 *System Variables*  
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 75 |
+| Thread safe | &check; |
+| Modifies variables | OK, Document |
+
+

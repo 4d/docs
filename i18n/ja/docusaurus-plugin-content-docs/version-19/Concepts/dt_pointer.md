@@ -15,15 +15,15 @@ title: Pointer
 
 | 型      | 参照時                     | 使用時                      | 代入時                      |
 | ------ | ----------------------- | ------------------------ | ------------------------ |
-| テーブル   | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
+| Table  | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
 | フィールド  | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
 | 変数     | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | 配列     | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | 配列要素   | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| オブジェクト | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| Object | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
-## ポインターの基本
+## ポインターの使用例
 
 ポインターの使用方法について例題を用いて説明します。 以下の例は、ポインターを通して変数にアクセスする方法を示します。 まず、変数を作成します:
 
@@ -54,13 +54,13 @@ $MyPointer を使用して $MyVar の値を変更することもできます。 
 ```4d
 $MyPointer->:="Goodbye"
 ```
-この2つの $MyPointer-> を使用した例のとおり、$MyVar を使用するのとまったく同じ動作が実行されます。 以下の2つのステートメントも、同一の動作を実行します。両方とも、変数 $MyVar の現在の値をアラートボックスに表示します:
+この2つの $MyPointer-> を使用した例のとおり、$MyVar を使用するのとまったく同じ動作が実行されます。 以下の2つのステートメントも、同一の動作を実行します。 両方とも、変数 $MyVar の現在の値をアラートボックスに表示します:
 
 ```4d
 ALERT($MyPointer->)
 ALERT($MyVar)
 ```
-以下の2つのステートメントも、同一の動作を実行します。両方とも $MyVar に、文字列 "Goodbye" を代入します:
+以下の2つのステートメントも、同一の動作を実行します。 両方とも $MyVar に、文字列 "Goodbye" を代入します:
 ```4d
 $MyPointer->:="Goodbye"
 $MyVar:="Goodbye"
@@ -83,6 +83,27 @@ $MyVar:="Goodbye"
 |     |                   |         | vPtrA = vPtrC | false |
 | 異なる | Pointer # Pointer | Boolean | vPtrA # vPtrC | true  |
 |     |                   |         | vPtrA # vPtrB | false |
+
+
+:::warning Null Pointers
+
+null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。 例: 例: 例: 例: 例: 例: 例:
+
+```4d
+var $p : Pointer // non initialized pointer (Nil value)
+$v:=$p-> // error
+$p->:=$v // error
+```
+
+このようなエラーを防ぐためには、以下のような書き方をすることができます:
+
+```4d
+If ($p#Null)
+  $p->:=$v
+End if
+```
+
+:::
 
 ## ポインターの使用例
 ### テーブルへのポインター
@@ -168,7 +189,11 @@ SORT ARRAY($ArrPtr->;>) // 配列の並べ替え
   //takeTwo プロジェクトメソッド
   //$1 – 文字列フィールドまたは変数へのポインター。 これを大文字に変換します。
   //$2 – 文字列フィールドまたは変数へのポインター。 これを小文字に変換します。
- $1->:=Uppercase($1->)
+ これを小文字に変換します。
+ これを小文字に変換します。
+ これを小文字に変換します。
+ これを小文字に変換します。
+  $1->:=Uppercase($1->)
  $2->:=Lowercase($2->)
 ```
 

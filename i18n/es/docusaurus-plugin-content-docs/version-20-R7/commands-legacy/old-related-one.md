@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OLD RELATED ONE.Summary-->OLD RELATED ONE funciona de la misma forma que [RELATE ONE](relate-one.md "RELATE ONE"), con la diferencia de que OLD RELATED ONE utiliza el valor anterior de *campo* para establecer la relación.<!-- END REF--> 
@@ -34,3 +31,13 @@ Si el comando se ejecuta correctamente y si los registros relacionados se han ca
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
 [SAVE RELATED ONE](save-related-one.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 44 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

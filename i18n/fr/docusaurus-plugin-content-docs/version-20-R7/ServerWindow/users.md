@@ -24,7 +24,7 @@ Pour chaque utilisateur connecté à la base, la liste fournit les informations 
 - **Adresse IP** : Adresse IP de la machine distante.
 - **Connexion** : Date et heure de la connexion de la machine distante.
 - **Temps CPU** : Temps processeur consommé par cet utilisateur depuis la connexion.
-- **Activité** : Ratio du temps que 4D Server consacre à cet utilisateur (affichage dynamique). "Endormi" si la machine du poste client est passée en veille (cf. ci-dessous).
+- Déconnecter "Endormi" si la machine du poste client est passée en veille (cf. ci-dessous).
 
 ### Gestion des utilisateurs endormis
 
@@ -67,3 +67,4 @@ Ce bouton permet de visualiser directement les process du ou des utilisateur(s) 
 Ce bouton permet de forcer la déconnexion du ou des utilisateur(s) sélectionné(s). When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
 
 > Vous pouvez effectuer la même action pour les utilisateurs distants avec la commande [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html).
+

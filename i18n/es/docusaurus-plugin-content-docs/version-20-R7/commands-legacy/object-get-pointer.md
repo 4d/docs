@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get pointer.Summary-->El comando **OBJECT Get pointer** devuelve un puntero a la variable de un objeto de formulario.<!-- END REF-->   
@@ -59,3 +56,12 @@ Dado un formulario "SF" utilizado dos veces como subformulario en el mismo formu
 *Objetos (Formularios)*  
 *Objetos de formulario (Acceso)*  
 [Self](self.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1124 |
+| Hilo seguro | &cross; |
+
+

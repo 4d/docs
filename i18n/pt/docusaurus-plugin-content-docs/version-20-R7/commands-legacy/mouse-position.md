@@ -25,7 +25,7 @@ As coordenadas horizontal e vertical são retornadas em *mouseX* e *mouseY*. Se 
 O parâmetro *botaoMouse* retorna o estado dos botões, como foi descrito anteriormente.  
 
   
-**Nota**: os valores 2 e 3 podem ser retornados em Mac OS X a partir da versão 10.2.5 apenas.
+**Nota**: os valores 2 e 3 podem ser retornados em macOS a partir da versão 10.2.5 apenas.
 
 #### Exemplo 
 
@@ -41,3 +41,12 @@ Ver o exemplo do comando [Pop up menu](pop-up-menu.md).
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 468 |
+| Thread-seguro | &cross; |
+
+

@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 :::info Compatibilidad
 
 **PHP es obsoleto en 4D**. Se recomienda utilizar la clase [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
@@ -51,7 +48,7 @@ El parámetro *resultPHP* puede ser de tipo texto, entero largo, real, booleano 
 
 **Nota:** por razones técnicas, el tamaño de los parámetros pasados vía el protocolo FastCGI no debe pasar los 64 KB. Debe tener en cuenta esta limitación si utiliza parámetros de tipo Texto.
 
-El comando devuelve True si la ejecución se ha efectuado correctamente del lado de 4D, en otras palabras, si el lanzamiento del entorno de ejecución, la apertura del script y el establecimiento de la comunicación con el intérprete PHP fueron exitosos. De lo contrario, se genera un error, que puede interceptar con el comando [ON ERR CALL](on-err-call.md "ON ERR CALL") y analizar con [Last errors](get-last-error-stack.md "Last errors").   
+El comando devuelve True si la ejecución se ha efectuado correctamente del lado de 4D, en otras palabras, si el lanzamiento del entorno de ejecución, la apertura del script y el establecimiento de la comunicación con el intérprete PHP fueron exitosos. De lo contrario, se genera un error, que puede interceptar con el comando [ON ERR CALL](on-err-call.md) y analizar con [Last errors](last-errors.md).   
 Además, el script mismo puede generar errores PHP. En este caso, debe utilizar el comando [PHP GET FULL RESPONSE](php-get-full-response.md "PHP GET FULL RESPONSE") para analizar la fuente del error (ver ejemplo 4). 
 
 **Nota:** PHP permite configurar la gestión de errores. Para mayor información, consulte por ejemplo la página: <http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting>.
@@ -280,3 +277,12 @@ Para obtener más información acerca de la función trim, por favor, consulte l
 *Ejecutar scripts PHP en 4D*  
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1058 |
+| Hilo seguro | &cross; |
+
+

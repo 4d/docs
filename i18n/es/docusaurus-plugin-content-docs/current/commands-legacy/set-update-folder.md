@@ -9,13 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaCarpeta | Text | &#8594;  | Ruta de acceso de la carpeta (paquete bajo OS X) que contiene la aplicación actualizada |
+| rutaCarpeta | Text | &#8594;  | Ruta de acceso de la carpeta (paquete bajo macOS) que contiene la aplicación actualizada |
 | erroresDiscretos | Boolean | &#8594;  | False (por defecto) = mostrar mensajes de error, <br/>True = no reportarlos |
 
 <!-- END REF-->
-
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
 
 #### Descripción 
 
@@ -25,7 +22,7 @@ Este comando está destinado a ser utilizado en un proceso de actualización aut
   
 **Nota**: este comando sólo funciona con 4D Server o con una aplicación monopuesto fusionada con 4D Volume Desktop.
 
-En el parámetro *rutaCarpeta*, pase la ruta de acceso completa de la carpeta de la nueva versión de la aplicación fusionada (carpeta que contiene la aplicación *my4DApp.exe* bajo Windows o el paquete *my4DApp.app* bajo OS X), creado por el generador de aplicaciones de 4D. La nueva versión debe haber sido generada por el generador de aplicaciones de 4D v14\. En particular, debe contener una versión actualizada de la herramienta "updater" incluida en 4D y que se utiliza para administrar las actualizaciones remotas.  
+En el parámetro *rutaCarpeta*, pase la ruta de acceso completa de la carpeta de la nueva versión de la aplicación fusionada (carpeta que contiene la aplicación *my4DApp.exe* bajo Windows o el paquete *my4DApp.app* bajo macOS), creado por el generador de aplicaciones de 4D. La nueva versión debe haber sido generada por el generador de aplicaciones de 4D v14\. En particular, debe contener una versión actualizada de la herramienta "updater" incluida en 4D y que se utiliza para administrar las actualizaciones remotas.  
   
 **Nota**: le recomendamos que utilice los mismos nombres de la versión original para los archivos de la nueva versión de la aplicación, ya que la carpeta de la aplicación se sustituye durante la actualización. Si utiliza nombres diferentes para estos archivos, los atajos y/o rutas almacenados ya no funcionarán más.  
   
@@ -36,7 +33,7 @@ Puede pasar una cadena vacía ("" ) en el parámetro *rutaCarpeta* para reinicia
 El parámetro opcional *erroresDiscretos* especifica cómo se reportan los errores por la herramienta "updater":  
 * si pasa **False** o si se omite este parámetro, los errores se registran en el historial de actualización y se muestran en una caja de diálogo de alerta.
 * si pasa **True**, los errores sólo se registran en el historial de actualización.
-Excepción: si la herramienta "updater" no puede crear el archivo de historial, se muestra una caja de diálogo de alerta, independientemente del valor del parámetro *erroresDiscretos*. Para más información, consulte la descripción del comando [Get last update log path](get-last-update-log-path.md).  
+Excepción: si la herramienta "updater" no puede crear el archivo de historial, se muestra una caja de diálogo de alerta, independientemente del valor del parámetro *erroresDiscretos*. Para más información, consulte la descripción del comando [Get last update log path](last-update-log-path.md).  
   
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1, de lo contrario, toma el valor 0\. Puede interceptar los errores generados por el comando utilizando un método instalado utilizando el comando [ON ERR CALL](on-err-call.md).
 
@@ -48,11 +45,21 @@ Usted creó una carpeta "MyUpdates" en su disco, en la cual ubicó una nueva ver
   // Sintaxis Windows
  SET UPDATE FOLDER("C:\\MyUpdates"+Folder separator+"MyApp"+Folder separator;True)
  
-  // Sintaxis OS X
+  // Sintaxis macOS
  SET UPDATE FOLDER("MacHD:MyUpdates"+Folder separator+"MyApp.app"+Folder separator;True)
 ```
 
 #### Ver también 
 
-[Get last update log path](get-last-update-log-path.md)  
+[Get last update log path](last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1291 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK, error |
+
+

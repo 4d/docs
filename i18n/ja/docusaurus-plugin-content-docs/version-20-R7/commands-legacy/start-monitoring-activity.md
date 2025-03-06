@@ -29,7 +29,7 @@ displayed_sidebar: docs
 | Activity network    | 2   | ネットワークリクエストオペレーション       |
 | Activity operations | 4   | 4D データオペレーション            |
 
-**注**: デバッグログが4D Server の[GRAPH SETTINGS](graph-settings.md)にて停止された場合、**START MONITORING ACTIVITY** とActivity network 定数を使用するとログが再開されます。
+**注**: デバッグログが4D Server の[Administration window](../ServerWindow/overview.md)にて停止された場合、**START MONITORING ACTIVITY** とActivity network 定数を使用するとログが再開されます。
 
 #### 例題 
 
@@ -92,3 +92,12 @@ displayed_sidebar: docs
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1712 |
+| スレッドセーフである | &check; |
+
+

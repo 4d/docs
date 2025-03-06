@@ -30,11 +30,11 @@ Para uma imagem do tipo [entrada](input_overview.md), além dos comandos de edi�
 For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
 
 - **Fuentes...**: muestra el diálogo del sistema de fuentes
-- **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). Por defeito, esta lista está vazia e a opção não é apresentada. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
+- **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. A lista pode armazenar até 10 fontes (além disso, a última fonte usada substitui a mais antiga). Por defeito, esta lista está vazia e a opção não é apresentada. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
 - comandos para as modificações de estilo suportadas: tipo de letra, tamanho, estilo, cor e cor de fundo.
-  Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
+ Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
 
-Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
+Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 
 #### Gramática JSON
 
@@ -50,11 +50,11 @@ Para un [Área Web](webArea_overview.md), el contenido del menú depende del mot
 
 ## Enterable
 
-The Enterable attribute indicates whether users can enter values into the object.
+O atributo Enterable indica se os usuários podem inserir valores no objeto.
 
-Os objectos são inseríveis por defeito. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Um objeto não inserível apenas exibe dados. Você controla os dados por meio de métodos que usam o nome do campo ou da variável. Puede seguir utilizando los eventos de formulario `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` y `On Losing Focus` con objetos no editables. Isto facilita a gerenciamento de menus de contexto personalizados e permite-lhe conceber interfaces onde pode arrastar e largar e selecionar variáveis não introduzíveis.
+Os objectos são inseríveis por defeito. Se você quiser tornar um campo ou um objeto não digitável para esse formulário, poderá desativar a propriedade Enterable do objeto. Um objeto não inserível apenas exibe dados. Você controla os dados por meio de métodos que usam o nome do campo ou da variável. Puede seguir utilizando los eventos de formulario `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` y `On Losing Focus` con objetos no editables. Isto facilita a gerenciamento de menus de contexto personalizados e permite-lhe conceber interfaces onde pode arrastar e largar e selecionar variáveis não introduzíveis.
 
-When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
+Quando essa propriedade está desativada, todos os menus pop-up associados a uma coluna de list box por uma lista são desativados.
 
 #### Gramática JSON
 
@@ -70,26 +70,26 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 ## Filtro de entrada
 
-Um filtro de entrada controla exatamente o que o usuário pode digitar durante a entrada de dados. A diferencia de las [listas obligatorias ](properties_RangeOfValues.md#required-list), por ejemplo, los filtros de entrada funcionan caracter por caracter. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. Pode até controlar as letras e os números específicos.
+Um filtro de entrada controla exatamente o que o usuário pode digitar durante a entrada de dados. Um filtro de entrada controla exatamente o que o usuário pode digitar durante a entrada de dados. Por exemplo, se um número de parte sempre consiste em duas letras seguidas por três dígitos, você pode usar um filtro de postagens para restringir o usuário a esse padrão. Pode até controlar as letras e os números específicos.
 
-Um filtro de entrada funciona apenas durante a introdução de dados. Não tem nenhum efeito na apresentação de dados após o usuário ter anulado a seleção do objeto. En general, se utilizan conjuntamente los filtros de entrada con los [formatos de visualización](properties_Display.md). The filter constrains data entry and the format ensures proper display of the value after data entry.
+Um filtro de entrada funciona apenas durante a introdução de dados. Não tem nenhum efeito na apresentação de dados após o usuário ter anulado a seleção do objeto. En general, se utilizan conjuntamente los filtros de entrada con los [formatos de visualización](properties_Display.md). O filtro restringe a entrada de dados e o formato garante a exibição adequada do valor após a entrada de dados.
 
-Durante a entrada de dados, um filtro de entrada avalia cada caractere conforme é digitado. If the user attempts to type an invalid character (a number instead of a letter, for example), 4D simply does not accept it. The null character remains unchanged until the user types a valid character.
+Durante a entrada de dados, um filtro de entrada avalia cada caractere conforme é digitado. Se o usuário tentar digitar um caractere inválido (um número ao invés de uma carta, por exemplo), 4D simplesmente não aceita. O caractere null permanece inalterado até que o usuário digite um caractere válido.
 
-Entry filters can also be used to display required formatting characters so that the user need not enter them. For example, an American telephone number consists of a three-digit area code, followed by a seven-digit number that is broken up into two groups of three and four digits, respectively. A display format can be used to enclose the area code in parentheses and display a dash after the third digit of the telephone number. When such a format is used, the user does not need to enter the parentheses or the dashes.
+Filtros de entrada também podem ser usados para exibir os caracteres de formatação necessários para que o usuário não precise inseri-los. Por exemplo, um número de telefone americano consiste em um código de área de três dígitos, seguido por um número de sete algarismos que se divide em dois grupos de três e quatro dígitos, respectivamente. Um formato de exibição pode ser usado para incluir o código de área entre parênteses e exibir um traço após o terceiro dígito do número de telefone. Quando esse formato é usado, o usuário não precisa digitar os parênteses ou os traços.
 
 ### Definição de um filtro de entrada
 
 La mayoría de las veces, puede utilizar uno de los [filtros integrados](#default-entry-filters) de 4D para lo que necesite; sin embargo, también puede crear y utilizar filtros personalizados:
 
 - pode introduzir diretamente uma cadeia de definição de filtro
-- or you can enter the name of an entry filter created in the Filters editor in the Toolbox. Os nomes dos filtros personalizados que criar começam com uma barra vertical (|).
+- ou você pode digitar o nome de um filtro de entrada criado no editor de filtros na caixa de ferramentas. Os nomes dos filtros personalizados que criar começam com uma barra vertical (|).
 
 Para obtener información sobre la creación de filtros de entrada, consulte [Códigos de filtro y formato](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
 
 ### Filtros de entrada predefinidos
 
-Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
+Aqui está uma tabela que explica cada uma das opções de filtro de entrada na lista suspensa Filtro de entrada:
 
 | Filtro de entrada                                                                                          | Descrição                                                                                                                                                                                                                             |
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -100,7 +100,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | &@                                                                        | Permitir apenas caracteres alfanuméricos. Sem caracteres especiais.                                                                                                                                   |
 | ~a##                                                                                       | Abreviatura do nome do estado (por exemplo, CA). Permite duas letras quaisquer, mas converte-as em maiúsculas.                                                                     |
 | !0&9##/##/##                                                                           | Formato de entrada de data standard. Apresentar zeros nos espaços de entrada. Permitir quaisquer números.                                                                             |
-| !0&9 Día: ## Mes: ## Año: ##           | Time entry format. Apresentar zeros nos espaços de entrada. Permitir quaisquer números. Limited to hours and minutes.                                                 |
+| !0&9 Día: ## Mes: ## Año: ##           | Formato do registo de horas. Apresentar zeros nos espaços de entrada. Permitir quaisquer números. Limitado a horas e minutos.                                         |
 | !0&9##:##                                                              | Formato do registo de horas. Limitado a horas e minutos. Apresentar zeros nos espaços de entrada. São permitidos quatro números quaisquer, separados por dois pontos. |
 | !0&9## Horas ## Minutos ## Segundos                                                    | Formato do registo de horas. Apresentar zeros nos espaços de entrada. Permitir dois números antes de cada palavra.                                                                    |
 | !0&9Horas: ## Minutas: ## Segundos: ## | Formato do registo de horas. Apresentar zeros nos espaços de entrada. Permitir dois números quaisquer depois de cada palavra.                                                         |
@@ -114,9 +114,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                                                                          |
-| ----------- | ------------- | ------------------------------------------------------------------------------------------ |
-| entryFilter | string        | <li>Entry filter code</li> or <li>Entry filter name (filter names start with &#124; )</li> |
+| Nome        | Tipo de dados | Valores possíveis                                                                                                       |
+| ----------- | ------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| entryFilter | string        | <li>Código de filtro de entrada</li> ou <li>Nome de filtro de entrada (os nomes de filtro iniciam com &#124; )</li> |
 
 #### Objectos suportados
 
@@ -150,7 +150,7 @@ Cuando se selecciona la propiedad **Enfocable** para un objeto no editable, el u
 
 ## Layout do teclado
 
-Esta propiedad asocia una distribución de teclado específica a un [objeto de entrada](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.
+Esta propiedad asocia una distribución de teclado específica a un [objeto de entrada](input_overview.md). Por exemplo, em uma aplicação internacional, se um formulário contém um campo cujo conteúdo deve ser inserido em caracteres gregos, você pode associar o layout de teclado "grego" a este campo. Desta forma, durante a entrada de dados, a configuração do teclado é automaticamente alterada quando este campo tem o foco.
 
 Por padrão, o objeto utiliza a disposição atual do teclado.
 
@@ -174,15 +174,15 @@ Esta propiedad está disponible para [objetos de entrada](input_overview.md) que
 
 #### Automático
 
-- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
+- Nas entradas de linha única, as palavras localizadas no final das linhas são truncadas e não há retornos de linha.
 - In multiline inputs, 4D carries out automatic line returns:\
-  ![](../assets/en/FormObjects/multilineAuto.png)
+ ![](../assets/en/FormObjects/multilineAuto.png)
 
 #### Não
 
-- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
+- Nas entradas de linha única, as palavras localizadas no final das linhas são truncadas e não há retornos de linha.
 - Nunca há retornos de linha: o texto é sempre exibido em uma única linha. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:\
-  ![](../assets/en/FormObjects/multilineNo.png)
+ ![](../assets/en/FormObjects/multilineNo.png)
 
 #### Sim
 
@@ -204,7 +204,7 @@ Cuando se selecciona este valor, la propiedad es gestionada por la opción [Reto
 
 4D pode exibir texto com marcador de posição nos campos de seus formulários.
 
-Placeholder text appears as watermark text in a field, supplying a help tip, indication or example for the data to be entered. This text disappears as soon as the user enters a character in the area:
+O texto do espaço reservado aparece como texto de marca d'água em um campo, fornecendo uma dica de ajuda, indicação ou exemplo para os dados a serem inseridos. Esse texto desaparece assim que o usuário digita um caractere na área:
 
 ![](../assets/en/FormObjects/property_placeholder.png)
 
@@ -215,19 +215,19 @@ Pode ser apresentado um marcador de posição para os seguintes tipos de dados:
 - string (text ou alpha)
 - fecha y hora en que se activa la propiedad **Blank if null**.
 
-You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, for example:
+Você pode usar uma referência XLIFF no formulário ":xliff:resname" como um espaço reservado, por exemplo:
 
 :xliff:PH_Lastname
 
-You only pass the reference in the "Placeholder" field; it is not possible to combine a reference with static text.
+Você só passa a referência no campo "Placeholder"; não é possível combinar uma referência com um texto estático.
 
-> You can also set and get the placeholder text by programming using the [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) and [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html) commands.
+> You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) and [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) commands.
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                                                                               |
-| ----------- | ------------- | ----------------------------------------------------------------------------------------------- |
-| placeholder | string        | Text to be displayed (grayed out) when the object does not contain any value |
+| Nome        | Tipo de dados | Valores possíveis                                                                              |
+| ----------- | ------------- | ---------------------------------------------------------------------------------------------- |
+| placeholder | string        | Texto a ser exibido (acinzentado) quando o objeto não contiver nenhum valor |
 
 #### Objectos suportados
 
@@ -241,7 +241,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 ## Selecção sempre visível
 
-This property keeps the selection visible within the object after it has lost the focus. Esto facilita la implementación de interfaces que permiten modificar el estilo del texto (ver [Multi estilo](properties_Text.md#multi-style)).
+Essa propriedade mantém a seleção visível no objeto depois que ele perde o foco. Esto facilita la implementación de interfaces que permiten modificar el estilo del texto (ver [Multi estilo](properties_Text.md#multi-style)).
 
 #### Gramática JSON
 
@@ -257,15 +257,15 @@ This property keeps the selection visible within the object after it has lost th
 
 ## Atalho
 
-Esta propriedade permite a configuração de chaves especiais (atalhos de teclado) para [botões](button_overview.md), [botões rádio](radio_overview.md), e [caixas de seleção](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
+Esta propriedade permite a configuração de chaves especiais (atalhos de teclado) para [botões](button_overview.md), [botões rádio](radio_overview.md), e [caixas de seleção](checkbox_overview.md). Ele permite que o usuário use o controle usando o teclado em vez de ter que usar o mouse.
 
 You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
 
-> Também é possível atribuir um atalho a um comando de menu personalizado. Se houver um conflito entre dois atalhos, o objeto ativo terá prioridade. Para más información sobre cómo asociar accesos directos a los menús, consulte [Configuración de las propiedades de los menús](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+> Também é possível atribuir um atalho a um comando de menu personalizado. Se houver um conflito entre dois atalhos, o objeto ativo terá prioridade. For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
 
-Para ver una lista de todos los métodos abreviados utilizados en el entorno Diseño de 4D, consulte la página [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) en la caja de diálogo Preferencias.
+To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](../Preferences/shortcuts.md) in the Preferences dialog box.
 
 #### Gramática JSON
 
@@ -273,7 +273,6 @@ Para ver una lista de todos los métodos abreviados utilizados en el entorno Dis
 | --------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | shortcutAccel   | boolean       | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                             |
 | shortcutAlt     | boolean       | true, false                                                                                                                                                                                                                                               |
-| shortcutCommand | boolean       | true, false                                                                                                                                                                                                                                               |
 | shortcutControl | boolean       | true, false (macOS: Control)                                                                                                                                                                                           |
 | shortcutShift   | boolean       | true, false                                                                                                                                                                                                                                               |
 |                 |               |                                                                                                                                                                                                                                                           |
@@ -289,9 +288,9 @@ Para ver una lista de todos los métodos abreviados utilizados en el entorno Dis
 
 Permite a passagem direta para o modo de edição em list boxes.
 
-When this option is enabled, list box cells switch to edit mode after a single user click, regardless of whether or not this area of the list box was selected beforehand. Tenga en cuenta que esta opción permite editar celdas incluso cuando el list box [modo selección](properties_ListBox.md#selection-mode) está en "Ninguno".
+Quando essa opção está ativada, as células da caixa de listagem mudam para o modo de edição após um único clique do usuário, independentemente de essa área da caixa de listagem ter sido selecionada anteriormente. Quando essa opção está ativada, as células da caixa de listagem mudam para o modo de edição após um único clique do usuário, independentemente de essa área da caixa de listagem ter sido selecionada anteriormente.
 
-When this option is not enabled, users must first select the cell row and then click on a cell in order to edit its contents.
+Quando esta opção não está habilitada, os usuários devem primeiro selecionar a linha da célula e, em seguida, clicar em uma célula para editar seu conteúdo.
 
 #### Gramática JSON
 

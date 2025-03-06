@@ -361,5 +361,5 @@ Todos los botones comparten el mismo conjunto de propiedades básicas:
 
 Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
 
-- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- Personalizar: [Ruta de fondo](properties_TextAndPicture.md#background-pathname) - [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) - [Desplazamiento del icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#vertical-margin)
 - Plano, Regular: [Botón por defecto](properties_Appearance.md#default-button)

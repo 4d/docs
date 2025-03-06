@@ -62,3 +62,12 @@ El siguiente ejemplo suprime los termómetros de progreso antes de efectuar una 
 #### Ver también 
 
 [MESSAGES ON](messages-on.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 175 |
+| Hilo seguro | &check; |
+
+

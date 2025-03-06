@@ -9,13 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picRef &#124; picName | Longint, String | &#8594;  | Reference number of Picture Library graphic or Name of Picture Library graphic |
+| picRef &#124; picName | Integer, Text | &#8594;  | Reference number of Picture Library graphic or Name of Picture Library graphic |
 | picture | Picture | &#8592; | Picture from the Picture Library |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -56,3 +53,13 @@ If there is not enough memory to return the picture, an error -108 is generated.
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 565 |
+| Thread safe | &cross; |
+| Modifies variables | OK, error |
+
+

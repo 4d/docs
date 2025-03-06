@@ -31,7 +31,7 @@ You want to trace the execution of the commands and empty the command buffer:
  VP SET TEXT VALUE(VP Cell("ViewProArea1";10;2);"Invoice date: ")
  VP SET TEXT VALUE(VP Cell("ViewProArea1";10;3);"Due date: ")
  
- VP FLUSH COMMANDS(("ViewProArea1")
+ VP FLUSH COMMANDS("ViewProArea1")
  TRACE
 ```
 

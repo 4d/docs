@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SVG SHOW ELEMENT.Summary-->The SVG SHOW ELEMENT command moves the *pictureObject* SVG document in order to show the element whose "id" attribute is specified by the *id* parameter.<!-- END REF--> 
@@ -30,3 +27,14 @@ The command moves the SVG document so that all of the object, whose limits are d
 This command only takes effect in "top left" display mode (with scrollbars). 
 
 If this command is not executed in the context of a form or if an invalid *pictureObject* is passed, the *OK* variable is set to 0\. If the command is executed correctly, it is set to 1\. 
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1108 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

@@ -62,3 +62,13 @@ Voici un exemple permettant de vérifier l'existence d'une valeur :
 ```
 
 Remarquez le >= qui permet de couvrir tous les cas. En effet, la fonction retourne un numéro d'enregistrement et le premier enregistrement porte le numéro 0.
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 653 |
+| Thread safe | &check; |
+
+

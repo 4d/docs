@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->The **OBJECT Get indicator type** command returns the current indicator type assigned to the thermometer(s) designated by the *object* and *\** parameters.<!-- END REF-->
@@ -37,3 +34,12 @@ You can compare the value returned by the command with the following constants, 
 #### See also 
 
 [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1247 |
+| Thread safe | &cross; |
+
+

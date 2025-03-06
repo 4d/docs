@@ -43,3 +43,12 @@ En una base que contiene un formulario de proyecto llamado “ElFormulario” y 
 #### Ver también 
 
 [DEFAULT TABLE](default-table.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 993 |
+| Hilo seguro | &check; |
+
+

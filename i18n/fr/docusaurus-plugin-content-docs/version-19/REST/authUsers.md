@@ -3,33 +3,33 @@ id: authUsers
 title: Sessions et utilisateurs
 ---
 
-REST requests can benefit from [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between the web client processes, and user privileges.
+Les requêtes REST peuvent bénéficier des [sessions utilisateurs web](WebServer/sessions.md), offrant des fonctionnalités supplémentaires telles que la gestion de requêtes multiples, le partage de données entre les process du client web, et les privilèges utilisateur.
 
 La première étape à suivre pour ouvrir une session REST sur le serveur 4D, consiste à authentifier l'utilisateur qui envoie la requête.
 
 ## Authentification des utilisateurs
 
-You log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below).
+Vous connectez un utilisateur à votre application en appelant [`$directory/login`]($directory.md#directorylogin) dans une requête POST incluant le nom et le mot de passe de l'utilisateur dans l'en-tête. Cette requête appelle la méthode base `On REST Authentication` (si elle existe), où vous pouvez vérifier les informations d'identification de l'utilisateur (voir l'exemple ci-dessous).
 
 ## Ouverture des sessions
 
-Lorsque les [sessions évolutives sont activées](WebServer/sessions.md#enabling-sessions) (recommandé), si la méthode base `On REST Authentication` retourne `true`, une session utilisateur est alors automatiquement ouverte et vous pouvez la gérer via l'objet `Session` et [l'API Session](API/SessionClass.md). Subsequent REST requests will reuse the same session cookie.
+Lorsque les [sessions évolutives sont activées](WebServer/sessions.md#enabling-sessions) (recommandé), si la méthode base `On REST Authentication` retourne `true`, une session utilisateur est alors automatiquement ouverte et vous pouvez la gérer via l'objet `Session` et [l'API Session](API/SessionClass.md). Les requêtes REST ultérieures réutilisent le même cookie de session.
 
-If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
+Si la méthode base `On REST Authentication` n'a pas été définie, une session `guest` est ouverte.
 
 
 ## Mode préemptif
 
-On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+Sur 4D Server, les requêtes REST sont automatiquement traitées par des process préemptifs, **même en mode interprété**. Vous devez vous assurer que votre code est [conforme à l'exécution préemptive](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
 Avec 4D monoposte, le code interprété s'exécute toujours en mode coopératif.
 
 
 ## Exemple
 
-In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). The `On REST Authentication` database method is called to validate the credentials and to set the session.
+Dans cet exemple, l'utilisateur saisit son adresse email et son mot de passe dans une page html qui requête [`$directory/login`]($directory.md#directorylogin) dans un POST (il est recommandé d'utiliser une connexion HTTPS pour envoyer la page html). La méthode base `On REST Authentication` est appelée afin de vous permettre d’évaluer ces identifiants et de définir la session.
 
-The HTML login page:
+La page de connexion HTML :
 
 ![alt-text](../assets/en/REST/login.png)
 
@@ -77,7 +77,7 @@ sendData({userId:document.forms['myForm'].elements['userId'].value , password:do
 
 ```
 
-When the login page is sent to the server, the `On REST Authentication` database method is called:
+Lorsque la page de connexion est envoyée au serveur, la méthode base `On REST Authentication` est appelée :
 
 ```4d
  //On REST Authentication
@@ -87,7 +87,7 @@ var $sales : cs.SalesPersonsEntity
 
 $Accepted:=False
 
- //A '/rest' URL has been called with headers username-4D and password-4D
+ //Un url '/rest' a été appelé avec les en-têtes username-4D et password-4D
 If ($userId#"")
     $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
     If ($sales#Null)
@@ -99,9 +99,9 @@ If ($userId#"")
 End if 
 ```
 
-> As soon as it has been called and returned `True`, the `On REST Authentication` database method is no longer called in the session.
+> Dès qu'elle a été appelée et qu'elle a renvoyé `True`, la méthode base `On REST Authentication` n'est plus appelée dans la session.
 
-The `fillSession` project method initializes the user session, for example:
+La méthode projet `fillSession` initialise la session utilisateur, par exemple :
 
 ```4d
 #DECLARE($sales : cs.SalesPersonsEntity)

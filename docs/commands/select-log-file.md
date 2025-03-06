@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->The **SELECT LOG FILE** command creates, or closes the log file according to the value you pass in parameter<!-- END REF-->.
@@ -37,3 +34,13 @@ OK is set to 1 if the log file is correctly created, or closed.
 #### See also 
 
 [New log file](new-log-file.md)  
+[ON ERR CALL](on-err-call.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 345 |
+| Thread safe | &cross; |
+| Modifies variables | OK, error |
+

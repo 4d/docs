@@ -26,3 +26,13 @@ displayed_sidebar: docs
 
 [DOM Create XML element](dom-create-xml-element.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 869 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

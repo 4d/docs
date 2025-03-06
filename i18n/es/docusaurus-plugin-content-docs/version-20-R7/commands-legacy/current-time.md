@@ -49,3 +49,12 @@ El siguiente ejemplo extrae las horas, minutos y segundos de la hora actual:
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Tickcount](tickcount.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 178 |
+| Hilo seguro | &check; |
+
+

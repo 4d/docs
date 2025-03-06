@@ -154,7 +154,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 *index* pode ser qualquer número entre 0 e `.length`-1.
 
 *   Se *index* está fora do intervalo, se devolve um erro.
-*   Se *index* corresponder a uma entidade descartada, um valor Null será retornado.
+*   If *attributeName* kind is `storage`: `.attributeName` returns a collection of values of the same type as *attributeName*.
 
 :::caution
 
@@ -209,7 +209,7 @@ Quaalquer atributo de dataclass pode ser usado como um apropriedade de uma sele�
 
 *   Se o "kind" de *attributeName* é `storage`: `.attributeName` devolve uma coleção de valores do mesmo tipo que *attributeName*.
 *   If *attributeName* kind is `relatedEntity`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
-*   Se *attributeName* type é `relatedEntities`: `.attributeName` retorna uma nova seleção de entidade de valores relacionados do mesmo tipo como *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
+*   If *attributeName* kind is `relatedEntities`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
 
 
 Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned.
@@ -508,7 +508,7 @@ Passe no parâmetro *attributePath* a rota de atributo a avaliar.
 Só são levados em consideração os valores numéricos para o cálculo. Lembre entretanto que se o *attributePath* da seleção de entidades conter tipos de valores mistos, `.average()` considera todos os elementos escalares para calcular o valor médio.
 > Os valores de tipo Date são convertidos em valores numéricos (segundos) e são usados para calcular a média.
 
-`.average()` returns **undefined**se a entity selection estiver vazia ou *attributePath* não conter valores numéricos.
+`.average()` retorna **undefined** se a seleção da entidade está vazia ou *attributePath* não contém valores numéricos.
 
 Um erro é retornado se:
 
@@ -1885,7 +1885,7 @@ A maioria dos exemplos de pesquisa podem ser encontrados na página DataClass [`
 
 A propriedade `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contém uma descrição detalhada da pesquisa como foi realizada em 4D<!-- END REF -->. Esta propriedade está disponível para objectos `EntitySelection` gerados através de consultas se a propriedade `"queryPath":true` tiver sido passada no parâmetro *querySettings* da função [`.query()`](#query).
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.md#query) page.
+Para obter mais informações, consulte o parágrafo do **parâmetro querySettings** na página classe Dataclass [`.query()`](DataClassClass.md#query).
 
 <!-- END REF -->
 

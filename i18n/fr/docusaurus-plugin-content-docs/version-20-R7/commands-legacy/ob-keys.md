@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OB Keys.Summary-->La commande **OB Keys** retourne une collection de chaînes contenant tous les noms des propriétés énumérables de l'*objet*.<!-- END REF--> 
@@ -47,3 +44,12 @@ Vous souhaitez une collection avec tous les noms de propriétés de premier nive
 
 [OB Entries](ob-entries.md)  
 [OB Values](ob-values.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1719 |
+| Thread safe | &cross; |
+
+

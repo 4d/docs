@@ -52,3 +52,12 @@ Se quiser mudar temporariamente a prioridade de cache para o índice de campo \[
 
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1430 |
+| Thread-seguro | &check; |
+
+

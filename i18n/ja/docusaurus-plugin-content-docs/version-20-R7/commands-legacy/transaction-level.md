@@ -22,3 +22,12 @@ displayed_sidebar: docs
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 *トランザクションを使用する*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 961 |
+| スレッドセーフである | &check; |
+
+

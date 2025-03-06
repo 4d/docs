@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.BACKUP.Summary-->O comando BACKUP inicia o backup do banco de dados utilizando os parâmetros de cópia de segurança atuais.<!-- END REF--> Não aparece uma caixa de diálogo de confirmação; no entanto, aparece uma barra de progresso na tela.
@@ -41,3 +38,13 @@ Em caso de que ocorram incidentes durante o backup, a informação relativa ao i
 [BACKUP INFO](backup-info.md)  
 *Método de Banco de Dados On Backup Startup*  
 [RESTORE](restore.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 887 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

@@ -3,18 +3,18 @@ id: shared
 title: 共有オブジェクトと共有コレクション
 ---
 
-**共有オブジェクト** および **共有コレクション** はプロセス間でコンテンツを共有することができる、特殊な [オブジェクト](Concepts/dt_object.md) と [コレクション](Concepts/dt_collection.md) です。 [インタープロセス変数](Concepts/variables.md#インタープロセス変数) に比べると、共有オブジェクトと共有コレクションは **プリエンプティブ4Dプロセス** と互換性があるという点で利点があります。つまり、[`New process`](https://doc.4d.com/4dv20/help/command/ja/page317.html) や [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/ja/page1389.html) といったコマンドの引数として、参照の形で渡すことができるということです。
+**共有オブジェクト** および **共有コレクション** はプロセス間でコンテンツを共有することができる、特殊な [オブジェクト](./dt_object.md) と [コレクション](./dt_collection.md) です。 [インタープロセス変数](./variables.md#インタープロセス変数) に比べると、共有オブジェクトと共有コレクションは **プリエンプティブ4Dプロセス** と互換性があるという点で利点があります。つまり、[`New process`](../commands-legacy/new-process.md) や [`CALL WORKER`](../commands-legacy/call-worker.md) といったコマンドの引数として、参照の形で渡すことができるということです。
 
-共有オブジェクトと共有コレクションは、標準の [`Object`](dt_object.md) および [`Collection`](dt_collection.md) 型の変数に保存されますが、専用のコマンドを使用してインスタンス化されている必要があります:
+共有オブジェクトと共有コレクションは、標準の [`Object`](./dt_object.md) および [`Collection`](./dt_collection.md) 型の変数に保存されますが、以下のように専用のコマンドを使用してインスタンス化されている必要があります:
 
-- 共有オブジェクトを作成するには、[`New shared object`](https://doc.4d.com/4dv20/help/command/ja/page1471.html) コマンドを使用するか、[共有クラス](classes.md#共有クラス) の [`new()`](../API/ClassClass.md#new) 関数を呼び出します。
-- to create a shared collection, use the [`New shared collection`](../commands/new-shared-collection.md) command.
+- 共有オブジェクトを作成するには、[`New shared object`](../commands-legacy/new-shared-object.md) コマンドを使用するか、[共有クラス](./classes.md#共有クラス) の [`new()`](../API/ClassClass.md#new) 関数を呼び出します。
+- 共有コレクションを作成するには、[`New shared collection`](../commands/new-shared-collection.md) コマンドを使用します。
 
 共有オブジェクトと共有コレクションには、スカラー値または他の共有オブジェクトや共有コレクションのみを含めることができます。 ただし、共有オブジェクトや共有コレクションは、標準の (非共有の) オブジェクトおよびコレクションのプロパティとして設定することができます。
 
 共有オブジェクト/コレクションを編集するには、**Use...End use** 構文を使う必要があります。 共有オブジェクト/コレクションの値を読むにあたっては、**Use...End use** は必要ありません。
 
-[`Storage`](https://doc.4d.com/4dv20/help/command/ja/page1525.html) コマンドが返す、データベースにおいて固有かつグローバルなカタログは、そのアプリケーション内あるいはコンポーネントからいつでも利用することができ、すべての共有オブジェクトおよびコレクションを保存するのに使用することができます。
+[`Storage`](../commands-legacy/storage.md) コマンドが返す、データベースにおいて固有かつグローバルなカタログは、そのアプリケーション内あるいはコンポーネントからいつでも利用することができ、すべての共有オブジェクトおよびコレクションを保存するのに使用することができます。
 
 ## 共有オブジェクト/共有コレクションの使用
 
@@ -82,11 +82,11 @@ End Use
 
 ### ストレージ
 
-**ストレージ** は固有の共有オブジェクトで、各アプリケーションおよびマシン上で利用可能です。 この共有オブジェクトは、[`Storage`](https://doc.4d.com/4dv20/help/command/ja/page1525.html) コマンドによって返されます。 このオブジェクトは、他のプリエンティブあるいは標準プロセスからでも利用出来るように、セッション中に定義されたすべての共有オブジェクト/コレクションを参照するためのものです。
+**ストレージ** は固有の共有オブジェクトで、各アプリケーションおよびマシン上で利用可能です。 この共有オブジェクトは[`Storage`](../commands-legacy/storage.md) コマンドによって返されます。 このオブジェクトは、他のプリエンティブあるいは標準プロセスからでも利用出来るように、セッション中に定義されたすべての共有オブジェクト/コレクションを参照するためのものです。
 
 `ストレージ` オブジェクトは標準の共有オブジェクトとは異なり、共有オブジェクト/コレクションがプロパティとして追加されたときでも共有グループを作成しないという点に注意してください。 この例外的な振る舞いにより、**ストレージ** オブジェクトを使用するたびに、リンクされている共有オブジェクト/コレクションをすべてロックせずに済みます。
 
-詳細な情報については、[`Storage`](https://doc.4d.com/4dv20/help/command/ja/page1525.html) コマンドの詳細を参照してください。
+詳細については、[`Storage`](../commands-legacy/storage.md) コマンドの説明を参照してください。
 
 ## Use...End use
 
@@ -109,14 +109,14 @@ End Use
 - **End use** は、*Shared_object_or_Shared_collection* プロパティおよび、同じグループのすべてのオブジェクトのロックを解除します。
 - 4D コード内では、複数の **Use...End use** 構文を入れ子にすることができます。 グループの場合、**Use** を使用するごとにグループのロックカウンターが 1 増加し、 **End use** ごとに 1 減少します。最後の **End use** によってロックカウンターが 0 になった場合にのみ、すべてのプロパティ/要素のロックが解除されます。
 
-:::note
+### 自動的な Use...End use 呼び出し
 
-以下の関数は、内部的な **Use/End use** を自動でトリガーするため、この構文を実行時に明示的に呼び出す必要はありません:
+The following features automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when it is executed:
 
-- 共有コレクションを変更する [コレクション関数](../API/CollectionClass.md)
+- [collection functions](../API/CollectionClass.md) that modify shared collections,
+- [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md) command,
+- [`OB REMOVE`](../commands-legacy/ob-remove.md) command,
 - [共有クラス](classes.md#共有クラス) 内で定義された [共有関数](classes.md#共有関数)
-
-:::
 
 ## 例題 1
 

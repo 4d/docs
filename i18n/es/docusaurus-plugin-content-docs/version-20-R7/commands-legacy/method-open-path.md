@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.METHOD OPEN PATH.Summary-->El comando **METHOD OPEN PATH** abre, en el editor de métodos de 4D, el método cuya ruta de acceso interna se pasa en el parámetro *ruta*.<!-- END REF-->
@@ -32,3 +29,12 @@ Puede ejecutar este comando desde un componente, pero en este caso, debe pasar e
 
 *Comandos del tema Acceso objetos diseño*  
 [METHOD Get path](method-get-path.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1213 |
+| Hilo seguro | &cross; |
+
+

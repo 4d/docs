@@ -227,7 +227,7 @@ module.exports =
 						"commands-legacy/get-4d-folder",
 						"commands-legacy/get-database-localization",
 						"commands-legacy/get-database-parameter",
-						"commands-legacy/get-last-update-log-path",
+						"commands-legacy/last-update-log-path",
 						"commands-legacy/is-compiled-mode",
 						"commands-legacy/is-data-file-locked",
 						"commands-legacy/notify-resources-folder-modification",
@@ -743,7 +743,7 @@ module.exports =
 						"commands-legacy/http-get",
 						"commands-legacy/http-get-certificates-folder",
 						"commands-legacy/http-get-option",
-						"commands-legacy/http-parse-message",
+						"commands/http-parse-message",
 						"commands-legacy/http-request",
 						"commands-legacy/http-set-certificates-folder",
 						"commands-legacy/http-set-option"
@@ -2432,11 +2432,13 @@ module.exports =
 				"API/IncomingMessageClass",
 				"API/MailAttachmentClass",
 				"API/OutgoingMessageClass",
-       			"API/POP3TransporterClass",
+				"API/POP3TransporterClass",
 				"API/SessionClass",
 				"API/SignalClass",
 				"API/SMTPTransporterClass",
 				"API/SystemWorkerClass",
+				"API/TCPConnectionClass",
+				"API/TCPEventClass",
 				"API/WebFormClass",
 				"API/WebFormItemClass",
 				"API/WebServerClass",
@@ -2874,6 +2876,8 @@ module.exports =
 									},
 								items: [
 									"WritePro/writeprointerface",
+									"WritePro/managing-formulas",
+									"WritePro/commands-legacy/4d-write-pro-attributes",
 									{
 										type: "category",
 										label: "Commands",
@@ -2882,7 +2886,7 @@ module.exports =
 											id: 'WritePro/commands/command-index'
 											},
 										items: [
-											"WritePro/commands-legacy/wp-add-picture",
+											"WritePro/commands/wp-add-picture",
 											"WritePro/commands-legacy/wp-bookmark-range",
 											"WritePro/commands-legacy/wp-compute-formulas",
 											"WritePro/commands-legacy/wp-delete-bookmark",
@@ -2893,13 +2897,13 @@ module.exports =
 											"WritePro/commands-legacy/wp-delete-style-sheet",
 											"WritePro/commands/wp-delete-subsection",
 											"WritePro/commands-legacy/wp-delete-text-box",
-											"WritePro/commands-legacy/wp-export-document",
-											"WritePro/commands-legacy/wp-export-variable",
+											"WritePro/commands/wp-export-document",
+											"WritePro/commands/wp-export-variable",
 											"WritePro/commands-legacy/wp-find-all",
 											"WritePro/commands-legacy/wp-find-next",
 											"WritePro/commands-legacy/wp-find-previous",
 											"WritePro/commands-legacy/wp-freeze-formulas",
-											"WritePro/commands-legacy/wp-get-attributes",
+											"WritePro/commands/wp-get-attributes",
 											"WritePro/commands-legacy/wp-get-body",
 											"WritePro/commands-legacy/wp-get-bookmarks",
 											"WritePro/commands-legacy/wp-get-breaks",
@@ -2920,12 +2924,12 @@ module.exports =
 											"WritePro/commands-legacy/wp-get-subsection",
 											"WritePro/commands-legacy/wp-get-text",
 											"WritePro/commands-legacy/wp-get-view-properties",
-											"WritePro/commands-legacy/wp-import-document",
+											"WritePro/commands/wp-import-document",
 											"WritePro/commands-legacy/wp-import-style-sheets",
-											"WritePro/commands-legacy/wp-insert-break",
-											"WritePro/commands-legacy/wp-insert-document",
-											"WritePro/commands-legacy/wp-insert-formula",
-											"WritePro/commands-legacy/wp-insert-picture",
+											"WritePro/commands/wp-insert-break",
+											"WritePro/commands/wp-insert-document-body",
+											"WritePro/commands/wp-insert-formula",
+											"WritePro/commands/wp-insert-picture",
 											"WritePro/commands-legacy/wp-insert-table",
 											"WritePro/commands-legacy/wp-is-font-style-supported",
 											"WritePro/commands-legacy/wp-new",
@@ -2941,13 +2945,13 @@ module.exports =
 											"WritePro/commands/wp-reset-attributes",
 											"WritePro/commands-legacy/wp-select",
 											"WritePro/commands-legacy/wp-selection-range",
-											"WritePro/commands-legacy/wp-set-attributes",
+											"WritePro/commands/wp-set-attributes",
 											"WritePro/commands-legacy/wp-set-data-context",
 											"WritePro/commands-legacy/wp-set-frame",
 											"WritePro/commands-legacy/wp-set-link",
 											"WritePro/commands-legacy/wp-set-text",
 											"WritePro/commands-legacy/wp-set-view-properties",
-											"WritePro/commands-legacy/wp-table-append-row",
+											"WritePro/commands/wp-table-append-row",
 											"WritePro/commands-legacy/wp-table-delete-columns",
 											"WritePro/commands-legacy/wp-table-delete-rows",
 											"WritePro/commands-legacy/wp-table-get-cells",
@@ -2972,22 +2976,22 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D NetKit', // The link label
-						  href: 'https://developer.4d.com/4D-NetKit/',
+						  href: 'https://developer.4d.com/4D-NetKit',
 						},
 						{
 						  type: 'link',
 						  label: '4D Progress', // The link label
-						  href: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-Progress.100-7455831.en.html',
+						  href: 'https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Progress.100-7476284.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D SVG', // The link label
-						  href: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-SVG-Component.100-7456702.en.html',
+						  href: 'https://doc.4d.com/4Dv20R8/4D/20-R8/4D-SVG-Component.100-7477155.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D Widgets', // The link label
-						  href: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-Widgets.100-7457351.en.html',
+						  href: 'https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Widgets.100-7477804.en.html',
 						},
 						"Extensions/develop-components",
 						"Extensions/develop-plug-ins",
@@ -3387,6 +3391,11 @@ module.exports =
 							type: "doc",
 							label: "Build Application",
 							id: "Desktop/building"
+						},
+						{
+							type: "doc",
+							label: "Labels",
+							id: "Desktop/labels"
 						}
 					]
 				},

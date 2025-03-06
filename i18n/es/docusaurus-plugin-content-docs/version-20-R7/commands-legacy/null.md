@@ -23,11 +23,11 @@ Esta función permite afectar o comparar el valor **null** de los siguientes ele
 | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Valores de propiedades de objetos                              | La comparación de **Null** con una propiedad de objeto devuelve True si el valor de la propiedad es null o False de lo contrario. Para simplificar código, comparar **Null** también devuelve true si la propiedad no existe en el objeto (es decir [Undefined](undefined.md)), ver ejemplo 4\. |
 | Elementos de colecciones                                       | Cuando una colección se expande añadiendo elementos no adyacentes, todos los elementos intermediarios obtienen automáticamente el valor **null**.                                                                                                                                               |
-| Variables de tipo objeto ([C\_OBJECT](c-object.md))            | Ver (\*) abajo                                                                                                                                                                                                                                                                                  |
-| Variables de tipo colección ([C\_COLLECTION](c-collection.md)) | Ver (\*) abajo                                                                                                                                                                                                                                                                                  |
-| Variables de tipo puntero ([C\_POINTER](c-pointer.md))         | Ver (\*) abajo                                                                                                                                                                                                                                                                                  |
-| Variables de tipo imagen ([C\_PICTURE](c-picture.md))          | (\*) Asignar el valor null a una variable de este tipo borra su contenido. En este caso, tiene el mismo efecto que llamar al comando [CLEAR VARIABLE](clear-variable.md)                                                                                                                        |
-| Variables de tipo variant ([C\_VARIANT](c-variant.md))         |                                                                                                                                                                                                                                                                                                 |
+| Variables de tipo objeto (*C\_OBJECT*)            | Ver (\*) abajo                                                                                                                                                                                                                                                                                  |
+| Variables de tipo colección (*C\_COLLECTION*) | Ver (\*) abajo                                                                                                                                                                                                                                                                                  |
+| Variables de tipo puntero (*C\_POINTER*)         | Ver (\*) abajo                                                                                                                                                                                                                                                                                  |
+| Variables de tipo imagen (*C\_PICTURE*)          | (\*) Asignar el valor null a una variable de este tipo borra su contenido. En este caso, tiene el mismo efecto que llamar al comando [CLEAR VARIABLE](clear-variable.md)                                                                                                                        |
+| Variables de tipo variant (*C\_VARIANT*)         |                                                                                                                                                                                                                                                                                                 |
 
 El valor **Null** no se puede pasar como un parámetro a un método o se devuelve como un resultado de función.
 
@@ -132,3 +132,12 @@ Aquí están los diferentes resultados del comando [Undefined](undefined.md) as�
 [Is field value Null](is-field-value-null.md)  
 [OB SET NULL](ob-set-null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1517 |
+| Hilo seguro | &check; |
+
+

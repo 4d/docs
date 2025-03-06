@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Contextual click.Summary-->La commande **Contextual click** retourne Vrai si un clic de type contextuel a été effectué :
@@ -41,5 +38,14 @@ Cette méthode, associée à une zone de défilement, permet de changer la valeu
 
 #### Voir aussi 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Right click](right-click.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 713 |
+| Thread safe | &cross; |
+
+

@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Undefined.Summary-->La commande **Undefined** retourne Vrai si le résultat de l'évaluation d'*expression* n'est pas une valeur définie, sinon elle retourne Faux si *expression* a été définie.<!-- END REF-->
-
-* Une variable est définie si elle a été créée via une directive de compilation ou si une valeur lui a été assignée. Elle est indéfinie dans tous les autres cas. Si la base de données a été compilée, la fonction **Undefined** retourne Faux pour toutes les variables.
+<!--REF #_command_.Undefined.Summary-->La commande **Undefined** retourne Vrai si le résultat de l'évaluation d'*expression* n'est pas une valeur définie, sinon elle retourne Faux si *expression* a été définie.<!-- END REF-->retourne Faux pour toutes les variables.
 * Une propriété d'objet est indéfinie si elle n'existe pas dans l'objet.
 * La commande **Undefined** retourne toujours Faux pour les champs.
 
@@ -60,3 +58,12 @@ Cet exemple compare les différents résultats de la commande [Undefined](undefi
 #### Voir aussi 
 
 [CLEAR VARIABLE](clear-variable.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 82 |
+| Thread safe | &check; |
+
+

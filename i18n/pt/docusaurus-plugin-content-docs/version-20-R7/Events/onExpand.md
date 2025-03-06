@@ -3,9 +3,9 @@ id: onExpand
 title: On Expand
 ---
 
-| Code | Pode ser chamado por                                                                                    | Definição                                                                                                   |
-| ---- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| 44   | [Lista jerárquica](FormObjects/list_overview.md#overview) - [List Box](FormObjects/listbox_overview.md) | An element of the hierarchical list or hierarchical list box has been expanded using a click or a keystroke |
+| Code | Pode ser chamado por                                                                                    | Definição                                                                                                                 |
+| ---- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| 44   | [Lista jerárquica](FormObjects/list_overview.md#overview) - [List Box](FormObjects/listbox_overview.md) | Um elemento da lista hierárquica ou do list box hierárquico foi expandido usando um clique, ou um pressionamento de tecla |
 
 ## Descrição
 

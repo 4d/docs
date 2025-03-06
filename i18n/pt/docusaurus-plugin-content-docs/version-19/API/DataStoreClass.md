@@ -58,9 +58,9 @@ Também pode obter uma referencia em um datastore remoto aberto passando seu id 
 
 Se não encontrar nenhum armazém de dados *localID*, o comando devolve **Null**.
 
-Using `ds` requires that the target database is compliant with ORDA, as specified in the **ORDA prerequisites** section. São aplicadas as seguintes regras:
+Para utilizar `ds` deve o banco de dados de destino seja compatível com ORDA, conforme especificado na seção dos **pré-requisitos ORDA**. São aplicadas as seguintes regras:
 
-* Uma datastore só referencia as tabelas com uma única chave primária. Tables without a primary key or with composite primary keys are not referenced.
+* Uma datastore só referencia as tabelas com uma única chave primária. Tabelas sem uma chave primária ou com chaves primárias compostas não são referenciadas.
 * Os atributos de tipo BLOB não são gerenciados no datastore.
 
 #### Exemplo 1
@@ -325,7 +325,7 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 
  $status:=dataStore.encryptionStatus()
 
- If($status.isEncrypted) //the database is encrypted
+ If($status. sEncrypted) //o banco de dados está criptografado
     C_LONGINT($vcount)
     C_TEXT($tabName)
     For each($tabName;$status.tables)
@@ -682,7 +682,7 @@ Para uma descrição do formato do registro de petições de ORDA, consulte a se
 
 #### Exemplo 1
 
-Se quiser registras as petições dos clientes ORDA em um arquivo e usar o número de sequencia do registro:
+Se quiser registras as petições dos clientes ORDA em um arquivo e usar o número de sequência do registro:
 
 ```4d
  var $file : 4D. File

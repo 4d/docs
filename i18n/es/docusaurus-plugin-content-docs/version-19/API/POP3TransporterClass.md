@@ -46,7 +46,7 @@ Los objetos POP3 Transporter se instancian con el comando [POP3 New transporter]
 | Parámetros | Tipo               |    | Descripción                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server     | object             | -> | Información del servidor de correo                                             |
-| Result     | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
+| Resultado  | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
 
 
 |
@@ -61,16 +61,16 @@ En el parámetro *server*, pase un objeto que contenga las siguientes propiedade
 | *server*                                                                                                                                                                                                                                                                                                                                                                  | Valor por defecto (si se omite)                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                                    |
-| .**accessTokenOAuth2**: cadena Text que representa las credenciales de autorización OAuth 2. Sólo se utiliza con OAUTH2 `authenticationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). Cadena de texto u objeto token que representan las credenciales de autorización OAuth 2. | ninguno                                                                  |
+| .**accessTokenOAuth2**: Text Cadena que representa las credenciales de autorización OAuth 2. Sólo se utiliza con OAUTH2 `authenticationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). Cadena de texto u objeto token que representan las credenciales de autorización OAuth 2. | ninguno                                                                  |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| se utiliza el modo de autenticación más seguro soportado por el servidor |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                       |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                              |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                                  |
-| **.password**: contraseña Text de usuario para la autenticación en el servidor. Cadena de texto u objeto token que representan las credenciales de autorización OAuth 2.                                                                                                                                                                                                  | ninguno                                                                  |
+| **.password**: Text contraseña de usuario para la autenticación en el servidor. Cadena de texto u objeto token que representan las credenciales de autorización OAuth 2.                                                                                                                                                                                                  | ninguno                                                                  |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                      |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                                  |
 
-#### Result
+#### Resultado
 
 La función devuelve un [**objeto POP3 transporter**](#pop3-transporter-object). Todas las propiedades devueltas son **de sólo lectura**.
 > La conexión POP3 se cierra automáticamente cuando se destruye el objeto transportador.
@@ -106,7 +106,7 @@ La función devuelve un [**objeto POP3 transporter**](#pop3-transporter-object).
 | Parámetros | Tipo               |    | Descripción                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server     | Object             | -> | Información del servidor de correo                                             |
-| Result     | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
+| Resultado  | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
 
 |
 
@@ -213,7 +213,7 @@ La ejecución de este método no elimina realmente ningún correo electrónico. 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 | Parámetros | Tipo   |    | Descripción                               |
 | ---------- | ------ |:--:| ----------------------------------------- |
-| Result     | Object | <- | objeto boxInfo|<!-- END REF -->
+| Resultado  | Object | <- | objeto boxInfo|<!-- END REF -->
 
 |
 
@@ -263,7 +263,7 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 | Parámetros | Tipo    |    | Descripción                                                                 |
 | ---------- | ------- |:--:| --------------------------------------------------------------------------- |
 | msgNumber  | Integer | -> | Número del mensaje en la lista                                              |
-| Result     | Object  | <- | [Objeto Email](EmailObjectClass.md#email-object)|<!-- END REF -->
+| Resultado  | Object  | <- | [Objeto Email](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
 
@@ -320,7 +320,7 @@ Quiere saber el remitente del primer correo del buzón:
 | Parámetros | Tipo    |    | Descripción                                |
 | ---------- | ------- |:--:| ------------------------------------------ |
 | msgNumber  | Integer | -> | Número del mensaje en la lista             |
-| Result     | Object  | <- | objeto mailInfo|<!-- END REF -->
+| Resultado  | Object  | <- | objeto mailInfo|<!-- END REF -->
 
 |
 
@@ -380,7 +380,7 @@ El método devuelve **Null** si:
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 | Parámetros | Tipo       |    | Descripción                                                |
 | ---------- | ---------- |:--:| ---------------------------------------------------------- |
-| Result     | Collection | <- | Colección de objetos `mailInfo`|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de objetos `mailInfo`|<!-- END REF -->
 
 |
 
@@ -446,7 +446,7 @@ Quiere saber el número total y el tamaño de los correos electrónicos en el bu
 | Parámetros | Tipo    |    | Descripción                                                                          |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
 | msgNumber  | Integer | -> | Número del mensaje en la lista                                                       |
-| Result     | Blob    | <- | Blob de la cadena MIME devuelta por el servidor de correo|<!-- END REF -->
+| Resultado  | Blob    | <- | Blob de la cadena MIME devuelta por el servidor de correo|<!-- END REF -->
 
 |
 

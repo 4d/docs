@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->The **GET STYLE SHEET INFO** command returns the current configuration of the style sheet designated in the *styleSheetName* parameter.<!-- END REF--> 
@@ -67,3 +64,13 @@ You want to find out the current configuration of the "Automatic" style sheet:
 
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1256 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

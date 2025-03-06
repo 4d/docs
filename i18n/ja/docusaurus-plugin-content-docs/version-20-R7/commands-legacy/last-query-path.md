@@ -33,3 +33,12 @@ displayed_sidebar: docs
 
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
 [Last query plan](last-query-plan.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1045 |
+| スレッドセーフである | &check; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get visible.Summary-->The OBJECT Get visible command returns True if the object or group of objects designated by *object* has the visible attribute and False otherwise.<!-- END REF-->
@@ -27,3 +24,12 @@ displayed_sidebar: docs
 #### See also 
 
 [OBJECT SET VISIBLE](object-set-visible.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1075 |
+| Thread safe | &cross; |
+
+

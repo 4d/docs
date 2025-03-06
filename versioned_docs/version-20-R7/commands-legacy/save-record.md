@@ -50,3 +50,12 @@ The following example is part of a method that reads records from a document. Th
 [CREATE RECORD](create-record.md)  
 [Locked](locked.md)  
 *Triggers*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 53 |
+| Thread safe | &check; |
+
+

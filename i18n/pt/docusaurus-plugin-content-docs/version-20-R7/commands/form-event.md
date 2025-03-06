@@ -9,25 +9,25 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Event.Params-->
 
-| Parâmetro | Tipo   |   | Descrição      |
-| --------- | ------ | - | -------------- |
-| Resultado | Object | ← | Objecto evento |
+| Parâmetro | Tipo   |                             | Descrição      |
+| --------- | ------ | --------------------------- | -------------- |
+| Resultado | Object | &#8592; | Objecto evento |
 
 <!-- END REF-->
 
 #### Descrição
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred. Usually, you will use **FORM Event** from within a form or object method.
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred. Usually, you will use **FORM Event** from within a form or object method.
 
 **Objeto devolvido**
 
 Each returned object includes the following main properties:
 
-| **Property** | **Type** | **Description**                                                                                                                                                                               |
-| ------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName   | text     | Name of the object triggering the event - Not included if the event is triggered by the form                                                                                                  |
-| code         | integer  | Valor numérico do evento de formulário.                                                                                                                                       |
-| description  | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section. |
+| **Propriedade** | **Tipo** | **Description**                                                                                                                                                                                   |
+| --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectName      | text     | Name of the object triggering the event - Not included if the event is triggered by the form                                                                                                      |
+| code            | integer  | Valor numérico do evento de formulário.                                                                                                                                           |
+| description     | text     | Name of the form event (*e.g.* "On After Edit"). Veja a seção [**Eventos Formulário**](../Events/overview.md). |
 
 For example, in the case of a click on a button, the object contains the following properties:
 
@@ -98,5 +98,14 @@ The resulting list box when rows are selected:
 
 #### Veja também
 
-[Form Events](../Events/overview.md)
-[Form event code](form-event-code.md)
+[Eventos de formulário](../Events/overview.md)
+[Código de evento do formulário](../commands/form-event-code.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1606                            |
+| Thread safe    | &amp;check; |
+
+

@@ -31,7 +31,7 @@ The Administrator cannot:
 - edit the Designer user
 - by default, access to protected parts of the application. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the application. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
 
-Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
+Both the Designer and Administrator are available by default in all applications. In the user management dialog box, the icons of the Designer and Administrator are displayed in red and green respectively:
 
 - Designer icon: ![](../assets/en/Users/iconDesigner.png)
 - Administrator icon: ![](../assets/en/Users/iconAdmin.png)
@@ -76,7 +76,7 @@ You can use up to 15 alphanumeric characters for a password. The password editor
 5. Set the group(s) to which the user belongs using the "Member of Groups" table.
 You can add or remove the selected user to/from a group by checking the corresponding option in the Member column.
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-access-groups).
+The membership of users to different groups can also be set by group on the [Groups page](#configuring-groups).
 
 ### Deleting a user
 

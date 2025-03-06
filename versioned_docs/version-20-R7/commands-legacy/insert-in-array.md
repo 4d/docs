@@ -45,3 +45,12 @@ The following example appends an element to an array:
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [Size of array](size-of-array.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 227 |
+| Thread safe | &check; |
+
+

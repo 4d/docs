@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Find in list.Summary-->O comando Find in list retorna a posição ou referência do primeiro elemento da *lista* que é equivalente à cadeia passada em *valor*.<!-- END REF--> Se são encontrados vários elementos, a função também pode preencher um array *arrayElem* com a posição ou a referência de cada elemento. 
@@ -64,3 +61,13 @@ Dada a seguinte lista hierárquica:
  $vlItemPos:=Find in list(hList;"Fecha";0;*)
   //$vlItemPos igual a 0
 ```
+
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 952 |
+| Thread-seguro | &cross; |
+
+

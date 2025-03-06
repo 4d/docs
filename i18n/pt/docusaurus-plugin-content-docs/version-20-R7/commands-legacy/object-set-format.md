@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->OBJECT SET FORMAT substitui o formato de saída para os objetos especificados por *objeto* pelo formato que passa em *formatSaída*.<!-- END REF--> O novo formato é utilizado unicamente para a visualização atual, não se guarda com o formulário.
@@ -73,7 +70,7 @@ Times:
 | System time long             | 11    |                                                                                                                                                                                                                        |  
 | System time long abbreviated | 10    |                                                                                                                                                                                                                        |  
 | System time short            | 9     |                                                                                                                                                                                                                        |
-* ou um [formato personalizado construido sobre um padrão](https://developer.4d.com/docs/Project/date-time-formats.md) (valor de string). Por exemplo:  
+* ou um [formato personalizado construido sobre um padrão](../Project/date-time-formats.md) (valor de string). Por exemplo:  
     
 ```4d  
  OBJECT SET FORMAT(*;"myDate";"dd/MM/yyyy")  
@@ -237,7 +234,7 @@ Para dar formato a botões 3D, passe no parâmetro *formatSaída* uma string de 
 \- *estilo* \= 9: Bevel arredondado  
 \- *estilo* \= 10: Colapsar/expandir  
 \- *estilo* \= 11: Ajuda  
-\- *estilo* \= 12: OS X Textura  
+\- *estilo* \= 12: macOS Textura  
 \- *estilo* \= 13: OS X Gradiente
 * *horMargem* \= Margem horizontal. Número de píxels delimitando as margens internas a direita e a esquerda do botão (áreas que o ícone e o texto não devem invadir).
 * *vertMargem* \= Margem vertical. Número de píxels delimitando as margens superior e inferior do botão (áreas que o ícone e o texto não devem invadir).
@@ -291,7 +288,7 @@ A linha de código a seguir dá formato ao campo *\[Empregados\]Data Contratado*
 
 #### Exemplo 2 
 
-Este exemplo formata uma variável data e uma variável hora utilizando [formatos personalizados](https://developer.4d.com/docs/Project/date-time-formats.md): 
+Este exemplo formata uma variável data e uma variável hora utilizando [formatos personalizados](../Project/date-time-formats.md): 
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12
@@ -370,3 +367,12 @@ Passe um termômetro ao modo "Barber shop"
 [GET SYSTEM FORMAT](get-system-format.md)  
 [OBJECT Get format](object-get-format.md)  
 [OBJECT SET FILTER](object-set-filter.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 236 |
+| Thread-seguro | &cross; |
+
+

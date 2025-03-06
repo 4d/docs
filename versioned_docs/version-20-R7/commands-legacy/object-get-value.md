@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get value.Summary-->The **OBJECT Get value** command returns the current value of the data source for the form object(s) designated by the *objectName* parameter.<!-- END REF-->
@@ -41,3 +38,12 @@ See the example for the [OBJECT SET VALUE](object-set-value.md) command.
 #### See also 
 
 [OBJECT SET VALUE](object-set-value.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1743 |
+| Thread safe | &cross; |
+
+

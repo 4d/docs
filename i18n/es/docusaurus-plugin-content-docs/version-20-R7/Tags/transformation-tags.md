@@ -69,7 +69,7 @@ Para asegurar la correcta evaluación de las expresiones procesadas a través de
 
 La etiqueta `<!--#4DBASE -->` designa el directorio de trabajo que utilizará la etiqueta `<!--#4DINCLUDE-->`.
 
-Cuando se llama en una página Web, la etiqueta `<!--#4DBASE -->` modifica todas las llamadas posteriores a `<!--#4DINCLUDE-->` en esta página, hasta la siguiente `<!--........-->`, si la hay. Si la carpeta`<!--#4DBASE -->` se modifica desde dentro de un archivo incluido, recupera su valor original del archivo padre.
+Cuando se llama en una página Web, la etiqueta `<!--#4DBASE -->` modifica todas las llamadas posteriores a `<!--#4DINCLUDE-->` en esta página, hasta la siguiente `<!--#4DBASE -->`, si la hay. Si la carpeta`<!--#4DBASE -->` se modifica desde dentro de un archivo incluido, recupera su valor original del archivo padre.
 
 El parámetro *folderPath* debe contener un nombre de ruta relativo a la página actual y debe terminar con una barra (`/`). La carpeta designada debe estar ubicada dentro de la carpeta Web.
 
@@ -330,10 +330,10 @@ Al igual que la etiqueta `4DTEXT`, esta etiqueta le permite evaluar una variable
 
 Por ejemplo, aquí están los resultados del procesamiento de la variable de texto 4D myvar con las etiquetas disponibles:
 
-| Valor myvar    | Etiquetas              | Result                      |
-| -------------- | ---------------------- | --------------------------- |
-| `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&amp;lt;B&amp;gt;` |
-| `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`                       |
+| Valor myvar    | Etiquetas              | Resultado                           |
+| -------------- | ---------------------- | ----------------------------------- |
+| `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&amp;amp;lt;B&amp;amp;gt;` |
+| `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`                               |
 
 En caso de error de interpretación, el texto insertado será `<!--#4DHTML myvar-->: ## error # código de error`.
 
@@ -422,7 +422,7 @@ Este ejemplo inserta diferentes páginas dependiendo del usuario que esté conec
 
 Esta etiqueta está diseñada principalmente para incluir una página HTML (indicada por el parámetro *path*) en otra página HTML. Por defecto, sólo se incluye el cuerpo de la página HTML especificada, es decir, el contenido que se encuentra dentro de las etiquetas `<body> </body>` (las etiquetas en sí no se incluyen). Esto le permite evitar conflictos relacionados con las metaetiquetas presentes en los encabezados.
 
-Sin embargo, si la página HTML especificada no contiene etiquetas `<body>` y `</body>`, se incluye toda la página. Depende de usted verificar la consistencia de las meta-etiquetas.
+However, if the HTML page specified does not contain `<body>` and `</body>` tags, the entire page is included. Depende de usted verificar la consistencia de las meta-etiquetas.
 
 El comentario `<!--#4DINCLUDE -->` es muy útil para pruebas (`<!--#4DIF-->`) o bucles (`<!--#4DLOOP-->`). Es muy conveniente incluir banners de acuerdo a un criterio o de forma aleatoria.
 Al incluir, independientemente de la extensión del nombre del archivo, 4D analiza la página llamada y luego inserta el contenido (modificado o no) en la página que origina la llamada `4DINCLUDE`.
@@ -569,7 +569,6 @@ Por ejemplo, el siguiente código:
 ```
 
 0
-
 1
 2
 3

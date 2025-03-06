@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET MACRO PARAMETER.Summary-->The **SET MACRO PARAMETER** command inserts the *paramText* text into the method from which it has been called.<!-- END REF-->
@@ -59,3 +56,12 @@ This macro builds a new text that will be returned to the calling method:
 #### See also 
 
 [GET MACRO PARAMETER](get-macro-parameter.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 998 |
+| Thread safe | &cross; |
+
+

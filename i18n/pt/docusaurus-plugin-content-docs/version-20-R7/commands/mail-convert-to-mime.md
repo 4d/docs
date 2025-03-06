@@ -17,21 +17,21 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
 
-| Parâmetro  | Tipo   |     | Descrição                       |
-| ---------- | ------ | :-: | ------------------------------- |
-| mail       | Object |  →  | Objeto Email                    |
-| options    | Object |  →  | Opções de codificação e Charset |
-| Resultados | Text   |  ←  | Email objeto convertido em MIME |
+| Parâmetro  | Tipo   |                             | Descrição                       |
+| ---------- | ------ | :-------------------------: | ------------------------------- |
+| mail       | Object | &#8594; | Objeto Email                    |
+| options    | Object | &#8594; | Opções de codificação e Charset |
+| Resultados | Text   | &#8592; | Email objeto convertido em MIME |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `MAIL Convert to MIME` command <!-- REF #_command_.MAIL Convert to MIME.Summary -->converts an email object into MIME text<!-- END REF -->. This command is called internally by [SMTP_transporter.send()](../API/SMTPTransporterClass.md#send) to format the email object before sending it. Ele pode ser usado para analisar o formato MIME do objeto.
+O comando `MAIL Convert to MIME` <!-- REF #_command_.MAIL Converter to MIME.Summary --> converte um objeto e-mail em texto MIME<!-- END REF -->. This command is called internally by [SMTP_transporter.send()](../API/SMTPTransporterClass.md#send) to format the email object before sending it. Ele pode ser usado para analisar o formato MIME do objeto.
 
 In *mail*, pass the content and the structure details of the email to convert. Isso inclui informações como os endereços de e-mail (remetente e destinatário(s)), a própria mensagem e o tipo de exibição para a mensagem.
 
-> 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the email object.
+> 4D segue a [especificação JMAP](https://jmap.io/spec-mail.html) para formatar o objeto e-mail.
 
 In *options*, you can set a specific charset and encoding configuration for the mail. As seguintes propriedades estão disponíveis:
 
@@ -84,3 +84,12 @@ $mime:=MAIL Convert to MIME($mail)
 // <html><body>HTML format email</body></html>
 // --E0AE5773D5E95245BBBD80DD0687E218--
 ```
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1604                            |
+| Thread safe    | &amp;check; |
+
+

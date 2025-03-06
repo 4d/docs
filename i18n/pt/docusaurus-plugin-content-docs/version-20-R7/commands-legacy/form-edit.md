@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.FORM EDIT.Summary-->**O comando FORM EDIT** abre o *formulário* associado a *Tabela* no editor 4D Form.<!-- END REF--> Note que deve ter acesso ao ambiente Design, senão ocorre o erro-9804 ("Cannot open form").
@@ -44,3 +41,12 @@ Para abrir o formulário projeto *ContactList*:
 #### Ver também 
 
 *Design Object Access Commands*  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1749 |
+| Thread-seguro | &cross; |
+
+

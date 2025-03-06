@@ -39,3 +39,12 @@ L'exemple suivant, en client/serveur, copie l'ensemble process "*SetA*", conserv
 #### Voir aussi 
 
 *Présentation des ensembles*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 600 |
+| Thread safe | &check; |
+
+

@@ -27,3 +27,12 @@ Les types de données scalaires incluent les types date/heure, numériques et al
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 *Gestion des priorités dans le cache de la base*  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1426 |
+| Thread safe | &check; |
+
+

@@ -277,3 +277,12 @@ SVGグラフ中で見つけられる要素には自動で特定のIDが割り当
 *Graph Parameters*  
 [GRAPH SETTINGS](graph-settings.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 169 |
+| スレッドセーフである | &check; |
+
+

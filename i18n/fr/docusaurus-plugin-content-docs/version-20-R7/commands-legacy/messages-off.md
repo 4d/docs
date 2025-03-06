@@ -62,3 +62,12 @@ L'exemple suivant supprime les thermomètres de progression avant d'effectuer un
 #### Voir aussi 
 
 [MESSAGES ON](messages-on.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 175 |
+| Thread safe | &check; |
+
+

@@ -46,7 +46,16 @@ Vous voulez convertir une image depuis un format propriétaire vers le format GI
 
 #### Voir aussi 
 
-*\_o\_PICTURE TO GIF*  
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 692 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

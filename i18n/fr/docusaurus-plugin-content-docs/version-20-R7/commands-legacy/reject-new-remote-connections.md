@@ -39,3 +39,12 @@ Vous souhaitez rejeter puis accepter les nouvelles connexions distantes :
 [DROP REMOTE USER](drop-remote-user.md)  
 [Application info](application-info.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1635 |
+| Thread safe | &check; |
+
+

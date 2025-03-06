@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT GET SCROLLBAR.Summary-->La commande **OBJECT GET SCROLLBAR** permet de connaître le statut affiché/masqué des barres de défilement horizontale et verticale de l'objet ou du groupe d'objets désigné par *objet*.<!-- END REF--> 
@@ -48,3 +45,12 @@ Pour plus d'informations, reportez-vous à la description de la commande [OBJECT
 #### Voir aussi 
 
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1076 |
+| Thread safe | &cross; |
+
+

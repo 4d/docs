@@ -30,6 +30,14 @@ Si, par exemple, vous travaillez avec la base MesCDs qui se trouve dans le dossi
 
 #### Voir aussi 
 
-*\_o\_DATA SEGMENT LIST*  
 [Application file](application-file.md)  
 [Structure file](structure-file.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 490 |
+| Thread safe | &check; |
+
+

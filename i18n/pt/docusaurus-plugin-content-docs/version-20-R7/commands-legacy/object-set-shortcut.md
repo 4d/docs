@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET SHORTCUT.Summary-->O comando **OBJECT SET SHORTCUT** permite definir ou modificar dinamicamente o atalho de teclado associado ao objeto ou aos objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->  
@@ -68,7 +65,7 @@ No parâmetro *modificadores*, passe uma ou mais teclas de modificação à asso
 | Constante        | Tipo          | Valor | Comentário                                              |
 | ---------------- | ------------- | ----- | ------------------------------------------------------- |
 | Command key mask | Inteiro longo | 256   | Windows = tecla Ctrl, Mac OS = tecla Comando            |
-| Control key mask | Inteiro longo | 4096  | Tecla Ctrl em OS X, ou clique direito em Windows e OS X |
+| Control key mask | Inteiro longo | 4096  | Tecla Ctrl em macOS, ou clique direito em Windows e macOS |
 | Option key mask  | Inteiro longo | 2048  | Windows = tecla Alt, Mac OS = tecla Opção               |
 | Shift key mask   | Inteiro longo | 512   | Windows e Mac Os                                        |
 
@@ -91,3 +88,12 @@ Você quer associar um atalho de teclado diferente em função da linguagem atua
 #### Ver também 
 
 [OBJECT GET SHORTCUT](object-get-shortcut.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1185 |
+| Thread-seguro | &cross; |
+
+

@@ -48,3 +48,12 @@ Dans la , vous souhaitez définir une priorité très haute pour les index du ch
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1401 |
+| Thread safe | &check; |
+
+

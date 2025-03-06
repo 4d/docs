@@ -45,3 +45,12 @@ Note que o *Depurador* 4D avaliará o código SQL linha por linha. Em alguns cas
 [End SQL](end-sql.md)  
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 948 |
+| Thread-seguro | &check; |
+
+

@@ -23,7 +23,7 @@ title: VP Get table range
 | tableName  | Text    | ->                          | Nombre de la tabla                                                             |                  |
 | onlyData   | Integer | ->                          | `vk table full range` (por defecto) o `vk table data range` |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite)                 |                  |
-| Result     | Object  | <- | Rango que contiene la tabla                                                    | <!-- END REF --> |
+| Resultado  | Object  | <- | Rango que contiene la tabla                                                    | <!-- END REF --> |
 
 #### Descripción
 

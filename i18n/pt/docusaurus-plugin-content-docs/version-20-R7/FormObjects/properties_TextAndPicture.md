@@ -74,7 +74,7 @@ Designa a colocação de um ícone em relação ao objeto formulário.
 
 #### Objectos suportados
 
-[List Box Header](listbox_overview.md#list-box-headers)
+[Cabeçalho do list box](listbox_overview.md#list-box-headers)
 
 ---
 
@@ -110,8 +110,8 @@ A imagem pode conter de 2 a 6 estados.
 
 :::note
 
-- button not clicked / check box unchecked (variable value=0)
-- button clicked / check box checked (variable value=1)
+- "false" significa que o botão não foi clicado/não foi selecionado ou que a caixa de seleção não foi marcada (valor da variável=0)
+- "true" significa botão clicado/selecionado ou caixa de seleção verificada (variável valor=1)
 
 :::
 
@@ -183,7 +183,7 @@ Esta propiedad permite definir si el título y la imagen del botón deben estar 
 
 Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título).
 
-By default, when a button contains a title and a picture, the elements are joined. El siguiente gráfico muestra el efecto de la propiedad `imageHugsTitle` (true cuando la propiedad está activada) con diferentes alineaciones de los botones:
+Por padrão, quando um botão contém um título e uma imagem, os elementos são unidos. El siguiente gráfico muestra el efecto de la propiedad `imageHugsTitle` (true cuando la propiedad está activada) con diferentes alineaciones de los botones:
 
 ![](../assets/en/FormObjects/hugs.png)
 
@@ -201,7 +201,7 @@ By default, when a button contains a title and a picture, the elements are joine
 
 ## Margem vertical
 
-This property allows setting the size (in pixels) of the vertical margins of the button. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
+Esta propriedade permite definir o tamanho (em píxeis) das margens verticais do botão. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
 Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contornos.
 
@@ -221,26 +221,26 @@ Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contorno
 
 ## Com menu pop-up
 
-This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:
+Esta propriedade permite exibir um símbolo que aparece como um triângulo no botão para indicar a presença de um menu pop-up anexado:
 
 ![](../assets/en/FormObjects/property_popup.png)
 
-The appearance and location of this symbol depends on the button style and the current platform.
+A aparência e o local desse símbolo dependem do estilo do botão e da plataforma atual.
 
 ### Ligados e Separados
 
-To attach a pop-up menu symbol to a button, there are two display options available:
+Para anexar um símbolo de menu pop-up a um botão, há duas opções de exibição disponíveis:
 
 |                          Linked                         |                          Separado                          |
 | :-----------------------------------------------------: | :--------------------------------------------------------: |
 | ![](../assets/en/FormObjects/property_popup_linked.png) | ![](../assets/en/FormObjects/property_popup_separated.png) |
 
-> The actual availability of a "separated" mode depends on the style of the button and the platform.
+> A disponibilidade real de um modo "separado" depende do estilo do botão e da plataforma.
 
-Each option specifies the relation between the button and the attached pop-up menu:
+Cada opção especifica a relação entre o botão e o menu pop-up anexado:
 
-- When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.
-- Quando o menu pop-up está **vinculado**, um simples clique no botão exibe apenas o menu pop-up. Only the selection of the action in the pop-up menu causes its execution.
+- Quando o menu pop-up é **separado**, clicar na parte esquerda do botão executa diretamente a ação atual do botão; essa ação pode ser modificada usando o menu pop-up acessível na parte direita do botão.
+- Quando o menu pop-up está **vinculado**, um simples clique no botão exibe apenas o menu pop-up. Somente a seleção da ação no menu pop-up causa sua execução.
 
 :::info
 
@@ -250,7 +250,7 @@ Refer to the [`On Alternative Click` event description](../Events/onAlternativeC
 
 ### Gerir o menu pop-up
 
-It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) and [`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) commands.
+É importante notar que a propriedade "Com o Menu Popup" apenas gerencia o aspecto gráfico do botão. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu.md) and [`Pop up menu`](../commands-legacy/pop-up-menu.md) commands.
 
 #### Gramática JSON
 

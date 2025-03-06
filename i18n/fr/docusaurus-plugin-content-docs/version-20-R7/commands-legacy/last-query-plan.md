@@ -32,3 +32,12 @@ La description du plan de la dernière recherche peut être comparée à la desc
 
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
 [Last query path](last-query-path.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1046 |
+| Thread safe | &check; |
+
+

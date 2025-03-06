@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Application file.Summary-->La fonction **Application file** retourne le nom long (c'est-à-dire le chemin d'accès complet au fichier, y compris son nom) du fichier exécutable ou de l'application 4D que vous utilisez.<!-- END REF-->
-
-*Sous Windows*  
+<!--REF #_command_.Application file.Summary-->La fonction **Application file** retourne le nom long (c'est-à-dire le chemin d'accès complet au fichier, y compris son nom) du fichier exécutable ou de l'application 4D que vous utilisez.<!-- END REF--> 
 Si, par exemple, vous utilisez 4D qui se trouve dans le répertoire \\PROGRAMMES\\4D sur le volume E, **Application file** renvoie E:\\PROGRAMMES\\4D\\4D.EXE.
 
 *Sous Mac OS*  
@@ -41,3 +39,12 @@ Lorsque vous démarrez votre base sous Windows, vous souhaitez vérifier qu'une 
 
 [Data file](data-file.md)  
 [Structure file](structure-file.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 491 |
+| Thread safe | &check; |
+
+

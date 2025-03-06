@@ -57,3 +57,13 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 #### Ver também 
 
 [SAX Get XML node](sax-get-xml-node.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 876 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

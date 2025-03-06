@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ENABLE MENU ITEM.Summary-->ENABLE MENU ITEM コマンドは、*menu*引数にメニュー番号またはメニュー参照で指定したメニュー中、*menuItem*引数にメニュー項目番号で指定したメニュー項目を選択可にします。<!-- END REF-->*menuItem*に-1を渡すと、*menu*に最後に追加された項目を指定します。
@@ -33,3 +30,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [DISABLE MENU ITEM](disable-menu-item.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 149 |
+| スレッドセーフである | &cross; |
+| サーバー上での使用は不可 ||
+
+

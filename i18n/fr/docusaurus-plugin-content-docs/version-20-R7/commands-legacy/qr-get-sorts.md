@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR GET SORTS.Summary-->La commande **QR GET SORTS** remplit deux tableaux réels :
@@ -38,3 +35,13 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 #### Voir aussi 
 
 [QR SET SORTS](qr-set-sorts.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 753 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

@@ -13,7 +13,7 @@ Estas áreas indican la fecha, la hora y el estado de la última [verificación 
 
 ### Verificar registos e índices
 
-This button can be used to launch the verification operation directly, without interrupting the server. Observe que o servidor pode ficar visivelmente mais lento durante a operação.
+Este botão pode ser usado para iniciar a operação de verificação diretamente, sem interromper o servidor. Observe que o servidor pode ficar visivelmente mais lento durante a operação.
 
 Todos os registros e todos os índices do banco de dados são verificados. Si desea poder orientar la verificación o disponer de opciones adicionales, deberá utilizar el [Centro de mantenimiento y seguridad](MSC/overview.md) (CSM).
 
@@ -21,27 +21,27 @@ Tras la verificación, se genera un archivo de informe en formato XML en el serv
 
 ### Compactar dados...
 
-Thus button can be used to launch a data compacting operation directly. This operation requires stopping the server: when you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation:
+Assim, o botão pode ser usado para executar uma operação de compactação de dados diretamente. Esta operação requer parar o servidor: quando você clicar neste botão, a caixa de diálogo de desligamento do Servidor 4D aparece para que você possa escolher como interromper a operação:
 
 ![](../assets/en/Admin/server-shut.png)
 
-After the actual interruption of the application service, 4D Server carries out a standard compacting operation on the database data. Si desea disponer de opciones adicionales, deberá utilizar el [Centro de seguridad y de mantenimiento (CSM)](MSC/overview.md).
+Após a interrupção real do serviço de aplicação, 4D Server realiza uma operação padrão de compactação nos dados da base de dados. Si desea disponer de opciones adicionales, deberá utilizar el [Centro de seguridad y de mantenimiento (CSM)](MSC/overview.md).
 
-Once the compacting is finished, 4D Server automatically restarts the application. Os usuários 4D podem então ser reconectados.
+Quando a compactação terminar, o servidor 4D reinicia automaticamente o aplicativo. Os usuários 4D podem então ser reconectados.
 
-> If the request for compacting was carried out from a remote 4D remote machine, this machine is automatically reconnected by 4D Server.
+> Se o pedido de compactação foi realizado a partir de uma máquina remota 4D remota, esta máquina é automaticamente reconectada pelo Servidor 4D.
 
 Tras la verificación, se genera un archivo de informe en formato XML en el servidor, en la carpeta [maintenance Logs](Project/architecture.md#logs). El botón **Ver informe** (llamado **Descargar informe** si la operación se ha realizado desde una máquina remota) le permite visualizar el archivo en su navegador.
 
 ## Tempo de funcionamento
 
-This area indicates the duration of the 4D Server application execution since the last time it was started (days, hours and minutes).
+Esta área indica a duração da execução do aplicativo 4D Server desde a última vez que foi iniciado (dias, horas e minutos).
 
 ### Reiniciar o servidor...
 
-Este botão pode ser usado para fechar e reiniciar imediatamente o projeto. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. Após a validação, 4D Server fecha e reabre automaticamente o projeto. Os usuários 4D podem então ser reconectados.
+Este botão pode ser usado para fechar e reiniciar imediatamente o projeto. Quando você clica neste botão, a caixa de diálogo de desligamento do Servidor 4D aparece para que você possa escolher como interromper a operação. Após a validação, 4D Server fecha e reabre automaticamente o projeto. Os usuários 4D podem então ser reconectados.
 
-> If the request for restarting was carried out from a remote 4D machine, this machine is automatically reconnected by 4D Server.
+> Se o pedido de reinicialização foi feito a partir de uma máquina 4D remota, esta máquina é automaticamente reconectada pelo Servidor 4D.
 
 ## Última cópia de segurança
 
@@ -52,33 +52,33 @@ Esta área indica la fecha y la hora de la [última copia de seguridad](MSC/back
 - **Espacio necesario**: espacio estimado necesario para la copia de seguridad. The actual size of the backup file may vary according to the settings (compression, etc.) e de acordo com as variações do arquivo de dados.
 - **Espacio disponible**: espacio disponible en el volumen de copia de seguridad.
 
-El botón **Iniciar copia de seguridad** permite realizar una copia de seguridad inmediata de la base utilizando los parámetros de copia de seguridad actuales (archivos de copia de seguridad, ubicación de los archivos, opciones, etc.). Puede ver estos parámetros haciendo clic en el botón **Propiedades...**. During a backup on the server, the client machines are "blocked" (but not disconnected) and it is not possible for any new clients to connect.
+El botón **Iniciar copia de seguridad** permite realizar una copia de seguridad inmediata de la base utilizando los parámetros de copia de seguridad actuales (archivos de copia de seguridad, ubicación de los archivos, opciones, etc.). Puede ver estos parámetros haciendo clic en el botón **Propiedades...**. Durante um backup no servidor, as máquinas do cliente são "bloqueadas" (mas não desconectadas) e não é possível que qualquer novo cliente se conecte.
 
 ## Histórico de solicitações e depuração
 
-This area indicates the server log files recording duration (when log files are activated) and allows you to control their activation.
+Esta área indica a duração da gravação dos arquivos de log do servidor (quando os arquivos de log são ativados) e permite a você controlar a ativação deles.
 
-Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section for details on log files.
+Consulte a seção [**Descrição dos arquivos de log**](Debugging/debugLogFiles.md) para obter detalhes sobre os arquivos de log.
 
-### Start/Stop Request and Debug Logs
+### Iniciar/Parar Logs de Solicitação e Depuração
 
-El botón **Iniciar los registros de peticiones y de depuración** inicia los archivos de registro. Since this may noticeably deteriorate server performance, it is to be reserved for the development phase of the application.
+El botón **Iniciar los registros de peticiones y de depuración** inicia los archivos de registro. Uma vez que isto pode deteriorar significativamente o desempenho do servidor, deve ser reservado para a fase de desenvolvimento da aplicação.
 
 > Este botão registra apenas operações executadas no servidor.
 
-Una vez activados los registros, el título del botón cambia a **Detener los registros de peticiones y depurar**, para que pueda detener el registro de peticiones en cualquier momento. Pay attention to the fact that restarting the log after stopping it "erases" the previous file.
+Una vez activados los registros, el título del botón cambia a **Detener los registros de peticiones y depurar**, para que pueda detener el registro de peticiones en cualquier momento. Preste atenção ao fato de que reiniciar o log após parar "erva" o arquivo anterior.
 
 ### Ver relatório
 
 El botón **Ver informe** (llamado **Descargar el informe** si la operación se ha realizado desde un cliente de escritorio remoto) permite abrir una ventana sistema en la que se muestra el archivo de registro de peticiones.
 
-### Carregar ficheiro de configuração dos registos
+### Carregar arquivo e configuração dos registos
 
-Este botón le permite cargar un [archivo de configuración de log](Debugging/debugLogFiles.md#using-a-log-configuration-file)(archivo`.json`) para un servidor específico. Such a file can be provided by 4D technical services to monitor and study specific cases.
+Este botón le permite cargar un [archivo de configuración de log](Debugging/debugLogFiles.md#using-a-log-configuration-file)(archivo`.json`) para un servidor específico. Este arquivo pode ser fornecido por serviços técnicos 4D para acompanhar e estudar casos específicos.
 
 ### Pausar no registo
 
-This button suspends all currently logging operations started on the server. Esta funcionalidade pode ser útil para aligeirar temporariamente as tarefas do servidor.
+Este botão suspende todas as operações de registro atualmente iniciadas no servidor. Esta funcionalidade pode ser útil para aligeirar temporariamente as tarefas do servidor.
 
 Cuando los registros se han puesto en pausa, el título del botón cambia a **Reanudar registro**, para que pueda reanudar las operaciones de registro.
 

@@ -71,3 +71,13 @@ Ce tableau détaille le contenu de l'objet session des sessions REST :
 | sessionID               | Texte    | ID sessions REST                                |
 | IPAddress               | Texte    | ID du client ayant initié la session REST       |
 | isDatastore             | Booléen  | Vrai si la requête REST provient d'un datastore |
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1782 |
+| Thread safe | &cross; |
+
+

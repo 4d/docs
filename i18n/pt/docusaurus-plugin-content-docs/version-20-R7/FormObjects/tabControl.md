@@ -13,19 +13,19 @@ Para passar de uma tela para outra, o usuário simplesmente clica na guia corres
 
 As telas podem representar páginas em um formulário de várias páginas ou um objeto que muda quando o usuário clica em uma guia. Se o controle de guias é usado como uma ferramenta de navegação de página, então o [`FORM GOTO PAGE`](https://doc.4d.comando/4dv19/help/command/en/page247.html) ou a ação padrão `gotoPage` seria usada quando um usuário clica em uma aba.
 
-Outra utilização do controlo de separadores consiste em controlar os dados apresentados num subformulário. Por exemplo, um Rolodex pode ser implementado utilizando um controlo de pestanas. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
+Outra utilização do controlo de separadores consiste em controlar os dados apresentados num subformulário. Por exemplo, um Rolodex pode ser implementado utilizando um controlo de pestanas. As guias mostrariam as letras do alfabeto e a ação do controle do guia seria carregar os dados correspondentes à letra que o usuário clicou.
 
 Cada pestana pode apresentar etiquetas ou etiquetas e um pequeno ícone. Se incluir ícones, estes aparecem à esquerda de cada etiqueta. Aqui está um exemplo de um controlo de pestanas que utiliza ícones:
 
 ![](../assets/en/FormObjects/tabControl2.png)
 
-When you create a tab control, 4D manages the spacing and placement of the tabs. You only need to supply the labels in the form of an array, or the icons and labels in the form of a hierarchical list.
+Quando você cria um controle de abas, 4D gerencia o espaçamento e posicionamento das abas. Você só precisa fornecer as etiquetas na forma de um array, ou os ícones e etiquetas na forma de uma lista hierárquica.
 
-If the tab control is wide enough to display all the tabs with both the labels and icons, it displays both. If the tab control is not wide enough to display both the labels and icons, 4D displays the icons only. If it can’t fit all the icons, it places scroll arrows to the right of the last visible tab. As setas de deslocamento permitem ao usuário deslocar os ícones para a esquerda ou para a direita.
+Se o controle de tabulações é largo o suficiente para exibir todas as abas com rótulos e ícones, isso exibe ambos. Se o controle de guias não for suficientemente amplo para exibir ambos os rótulos e ícones, 4D exibe apenas os ícones. Se ele não serve todos os ícones, coloca as setas de rolagem à direita da última aba visível. As setas de deslocamento permitem ao usuário deslocar os ícones para a esquerda ou para a direita.
 
-Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
+No macOS, além da posição padrão (superior), os controles de aba também podem ser alinhados ao fundo.
 
-### JSON Exemplo
+### Exemplo JSON:
 
 ```4d
 	"myTab": {
@@ -40,7 +40,7 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 
 ## Adicionando etiquetas a um controle de tabulação
 
-To supply the labels for a tab control, you can use:
+Para fornecer as etiquetas para o controle de abas, você pode usar:
 
 - um objeto
 - uma lista de escolha
@@ -56,7 +56,7 @@ Você pode atribuir um [objeto](Concepts/dt_object.md) encapsulando uma [collect
 | `index`        | number     | Índice da página de controle de guia atualmente (valor entre 0 e `collection.length-1`)                                                                                 |
 | `currentValue` | Text       | Valor atual selecionado                                                                                                                                                                    |
 
-The initialization code must be executed before the form is presented to the user.
+O código de inicialização deve ser executado antes que o formulário seja apresentado ao usuário.
 
 En el siguiente ejemplo, `Form.tabControl` se ha definido como [expresión](properties_Object.md#variable-or-expression) del control de pestañas. Você pode associar a [ação padrão `gotoPage`](#goto-page-action) ao objeto do formulário:
 

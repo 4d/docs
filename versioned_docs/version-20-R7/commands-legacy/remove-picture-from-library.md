@@ -9,12 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picRef &#124; picName | Longint, String | &#8594;  | Reference number of Picture Library graphic or Name of Picture Library graphic |
+| picRef &#124; picName | Integer, Text | &#8594;  | Reference number of Picture Library graphic or Name of Picture Library graphic |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -52,3 +49,13 @@ The following example deletes from the Picture Library any pictures whose names 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 567 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

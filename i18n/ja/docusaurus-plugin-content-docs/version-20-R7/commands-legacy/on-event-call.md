@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->**ON EVENT CALL** コマンドは、イベントを検知するメソッドである*eventMethod*をインストールします。<!-- END REF-->このメソッドは、**イベント処理メソッド**または**イベントキャッチメソッド**と呼ばれます。
@@ -117,3 +114,13 @@ Ctrl+ピリオドが押されると、イベント処理メソッド内で*<>vbW
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 190 |
+| スレッドセーフである | &cross; |
+| サーバー上での使用は不可 ||
+
+

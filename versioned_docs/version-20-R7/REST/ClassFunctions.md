@@ -24,8 +24,8 @@ The following ORDA and singleton functions can be called in REST:
 |Class function|Syntax|
 |---|----|
 |[datastore class](ORDA/ordaClasses.md#datastore-class)|`/rest/$catalog/DataStoreClassFunction`|
-|[dataclass class](ORDA/ordaClasses.md#dataclass-class)|`/rest/\{dataClass\}/DataClassClassFunction`|
-|[entitySelection class](ORDA/ordaClasses.md#entityselection-class)|`/rest/\{dataClass\}/EntitySelectionClassFunction`|
+|[dataclass class](ORDA/ordaClasses.md#dataclass-class)|`/rest/{dataClass}/DataClassClassFunction`|
+|[entitySelection class](ORDA/ordaClasses.md#entityselection-class)|`/rest/{dataClass}/EntitySelectionClassFunction`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$filter`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$orderby`|
@@ -92,7 +92,7 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 ### Thread-safe
 
-All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
 
 
 

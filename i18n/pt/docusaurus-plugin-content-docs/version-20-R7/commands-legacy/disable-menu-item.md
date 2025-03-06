@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.DISABLE MENU ITEM.Summary-->O comando DISABLE MENU ITEM desativa o comando de menu cujo número ou referência de menu e número de elemento você passou em *menu* e *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu*.
@@ -33,3 +30,13 @@ Se o parâmetro *menuItem* designa um submenu hierárquico, todos os elementos d
 #### Ver também 
 
 [ENABLE MENU ITEM](enable-menu-item.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 150 |
+| Thread-seguro | &cross; |
+| Proibido no servidor ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.ENABLE MENU ITEM.Summary-->O comando ENABLE MENU ITEM ativa o comando de menu cujo número ou referência de menu e número de elemento que passou em *menu* e *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu*.
@@ -31,3 +28,13 @@ Se omite o parâmetro *processo*, ENABLE MENU ITEM é aplicado a barra de menus 
 #### Ver também 
 
 [DISABLE MENU ITEM](disable-menu-item.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 149 |
+| Thread-seguro | &cross; |
+| Proibido no servidor ||
+
+

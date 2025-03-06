@@ -317,7 +317,7 @@ creará y aplicará el siguiente objeto estilo llamado *GreenDashDotStyle*:
 | ---------- | ------- | -- | ----------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                 |
-| Result     | Object  | <- | Objeto rango de todas las celdas|<!-- END REF -->
+| Resultado  | Object  | <- | Objeto rango de todas las celdas|<!-- END REF -->
 
 |
 
@@ -356,7 +356,7 @@ $all:=VP All("ViewProArea") // todas las celdas de la hoja actual
 | column     | Integer | -> | Índice de la columna                         |
 | row        | Integer | -> | Índice de la línea                           |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
-| Result     | Object  | <- | Objeto rango de una sola celda               |
+| Resultado  | Object  | <- | Objeto rango de una sola celda               |
 <!-- END REF -->
 
 #### Descripción
@@ -413,7 +413,7 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 | columnCount | Integer | -> | Número de columnas                                |
 | rowCount    | Integer | -> | Número de líneas                                  |
 | sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite)       |
-| Result      | Object  | <- | Objeto rango de celdas|<!-- END REF -->
+| Resultado   | Object  | <- | Objeto rango de celdas|<!-- END REF -->
 
 |
 
@@ -462,7 +462,7 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // de C5 a D7
 | column      | Integer | -> | Índice de la columna                              |
 | columnCount | Integer | -> | Número de columnas                                |
 | sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite)       |
-| Result      | Object  | <- | Objeto rango de celdas|<!-- END REF -->
+| Resultado   | Object  | <- | Objeto rango de celdas|<!-- END REF -->
 
 |
 
@@ -544,7 +544,7 @@ La selección de las columnas y la ejecución de este código:
 | ------------- | ------ | -- | ----------------------------------------------------------------- |
 | rangeObj      | Object | -> | Objeto rango                                                      |
 | otherRangeObj | Object | -> | Objeto rango                                                      |
-| Result        | Object | <- | Objeto que contiene un rango combinado|<!-- END REF -->
+| Resultado     | Object | <- | Objeto que contiene un rango combinado|<!-- END REF -->
 
 |
 
@@ -583,7 +583,7 @@ Quiere combinar los rangos de tipo celda, columna y línea en un nuevo rango dis
 | Parámetros     | Tipo   |    | Descripción                                  |
 | -------------- | ------ | -- | -------------------------------------------- |
 | 4DViewDocument | Blob   | -> | Documento 4D View                            |
-| Result         | Object | <- | Objeto 4D View Pro<!-- END REF -->
+| Resultado      | Object | <- | Objeto 4D View Pro<!-- END REF -->
 
 |
 
@@ -614,7 +614,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 | ---------- | ------- | -- | --------------------------------------------------- |
 | vpObject   | Object  | -> | Objeto 4D View Pro que contiene el área a convertir |
 | rangeObj   | Object  | -> | Objeto rango                                        |
-| Result     | Picture | <- | Imagen SVG del área|<!-- END REF -->
+| Resultado  | Picture | <- | Imagen SVG del área|<!-- END REF -->
 
 |
 
@@ -681,7 +681,7 @@ $vPict:=VP Convert to picture($vpAreaObj) //exportar toda el área
 | ---------- | ------ | -- | ----------------------------------------------------------------------- |
 | rangeObj   | Object | -> | Objeto rango                                                            |
 | options    | Object | -> | Opciones adicionales                                                    |
-| Result     | Object | <- | Objeto devuelto. Contiene los datos copiados|<!-- END REF -->
+| Resultado  | Object | <- | Objeto devuelto. Contiene los datos copiados|<!-- END REF -->
 
 
 |
@@ -804,7 +804,7 @@ Aquí los títulos de las columnas serían `LastName` y `FirstName`.
 Para crear una tabla utilizando un contexto de datos:
 
 ```4d
-// Define un contexto de datos
+// Set a data context
 var $data : Object
 
 $data:=New object()
@@ -815,16 +815,16 @@ $data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"
 
 VP SET DATA CONTEXT("ViewProArea"; $data)
 
-// Define las columnas de la tabla
+// Define the columns for the table
 var $options : cs.ViewPro.TableOptions
 
 $options:=cs.ViewPro.TableOptions.new()
 $options.tableColumns:=New collection()
-$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "First name"; "dataField"; "firstName"))
-$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Last name"; "dataField"; "lastName"))
-$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Email"; "dataField"; "email"))
+$options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "First name"; "dataField"; "firstName"))
+$options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "Last name"; "dataField"; "lastName"))
+$options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "Email"; "dataField"; "email"))
 
-// Crea una tabla de la colección "people"
+// Create a table from the "people" collection
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
 ```
 
@@ -1088,7 +1088,7 @@ Aquí está el resultado:
 | ---------- | ------ | -- | --------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro  |
 | options    | Object | -> | Opciones de exportación                       |
-| Result     | Object | <- | Objeto 4D View Pro|<!-- END REF -->
+| Resultado  | Object | <- | Objeto 4D View Pro|<!-- END REF -->
 
 |
 
@@ -1147,7 +1147,7 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 | searchValue     | Text   | -> | Valor de búsqueda                                   |
 | searchCondition | Object | -> | Objeto que contiene la(s) condición(es) de búsqueda |
 | replaceValue    | Text   | -> | Valor de reemplazo                                  |
-| Result          | Object | <- | Objeto rango|<!-- END REF -->
+| Resultado       | Object | <- | Objeto rango|<!-- END REF -->
 
 |
 
@@ -1231,7 +1231,7 @@ End if
 | Parámetros | Tipo   |    | Descripción                                   |
 | ---------- | ------ | -- | --------------------------------------------- |
 | rangeObj   | Object | -> | Rango de celdas                               |
-| Result     | Text   | <- | Nombre de la tabla|<!-- END REF -->
+| Resultado  | Text   | <- | Nombre de la tabla|<!-- END REF -->
 
 |
 
@@ -1293,7 +1293,7 @@ Quiere rastrear la ejecución de los comandos y vaciar el buffer:
  VP SET TEXT VALUE(VP Cell("ViewProArea1";10;2);"Invoice date: ")
  VP SET TEXT VALUE(VP Cell("ViewProArea1";10;3);"Due date: ")
 
- VP FLUSH COMMANDS(("ViewProArea1")
+ VP FLUSH COMMANDS("ViewProArea1")
  TRACE
 ```
 
@@ -1308,7 +1308,7 @@ Quiere rastrear la ejecución de los comandos y vaciar el buffer:
 | Parámetros | Tipo   |    | Descripción                     |
 | ---------- | ------ | -- | ------------------------------- |
 | font       | Text   | -> | Cadena abreviada para la fuente |
-| Result     | Object | <- | Objeto fuente                   |
+| Resultado  | Object | <- | Objeto fuente                   |
 <!-- END REF -->
 
 
@@ -1359,7 +1359,7 @@ Ver el ejemplo de [`VP Object to font`](#vp-object-to-font).
 | ---------- | ------- | -- | --------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro              |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)               |
-| Result     | Object  | <- | Objeto rango de una sola celda|<!-- END REF -->
+| Resultado  | Object  | <- | Objeto rango de una sola celda|<!-- END REF -->
 
 |
 
@@ -1408,7 +1408,7 @@ $activeCell:=VP Get active cell("myVPArea")
 | Parámetros | Tipo   |    | Descripción                                                          |
 | ---------- | ------ | -- | -------------------------------------------------------------------- |
 | rangeObj   | Object | -> | Objeto rango                                                         |
-| Result     | Text   | <- | Nombre del atributo vinculado a la celda |<!-- END REF -->
+| Resultado  | Text   | <- | Nombre del atributo vinculado a la celda |<!-- END REF -->
 
 |
 
@@ -1454,7 +1454,7 @@ $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 | Parámetros | Tipo   |    | Descripción                             |
 | ---------- | ------ | -- | --------------------------------------- |
 | rangeObj   | Object | -> | Objeto rango                            |
-| Result     | Object | <- | Objeto style|<!-- END REF -->
+| Resultado  | Object | <- | Objeto style|<!-- END REF -->
 
 |
 
@@ -1512,7 +1512,7 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 | Parámetros | Tipo       |    | Descripción                                                     |
 | ---------- | ---------- | -- | --------------------------------------------------------------- |
 | rangeObj   | Object     | -> | Objeto rango                                                    |
-| Result     | Collection | <- | Colección de propiedades de columnas|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de propiedades de columnas|<!-- END REF -->
 
 |
 
@@ -1555,7 +1555,7 @@ $attr:=VP Get column attributes($range)
 | ---------- | ------- | -- | ---------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario         |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)          |
-| Result     | Integer | <- | Número total de columnas |<!-- END REF -->
+| Resultado  | Integer | <- | Número total de columnas |<!-- END REF -->
 
 |
 
@@ -1637,7 +1637,7 @@ $index:=VP Get current sheet("ViewProArea")
 | ---------- | ------------------------ | -- | --------------------------------------------------- |
 | vpAreaName | Text                     | -> | Nombre de objeto formulario área 4D View Pro        |
 | sheet      | Integer                  | -> | Índice de la hoja para obtener el contexto de datos |
-| Result     | Object &#124; Collection | <- | Contexto de los datos|<!-- END REF -->
+| Resultado  | Object &#124; Collection | <- | Contexto de los datos|<!-- END REF -->
 
 |
 
@@ -1676,13 +1676,13 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 | ---------- | ------- | -- | ------------------------------------------------------------ |
 | vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario                 |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                  |
-| Result     | Object  | <- | Parámetros de estilo por defecto |<!-- END REF -->
+| Resultado  | Object  | <- | Parámetros de estilo por defecto |<!-- END REF -->
 
 |
 
 #### Descripción
 
-El comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->devuelve un objeto style por defecto para una hoja<!-- END REF -->. El objeto devuelto contiene las propiedades básicas de renderización del documento, así como la configuración de estilo por defecto (si la hay) definida previamente por el método [VP SET DEFAULT STYLE](#vp-set-default-style). The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the [VP SET DEFAULT STYLE](#vp-set-default-style) method.
+El comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->devuelve un objeto style por defecto para una hoja<!-- END REF -->. El objeto devuelto contiene las propiedades básicas de renderización del documento, así como la configuración de estilo por defecto (si la hay) definida previamente por el método [VP SET DEFAULT STYLE](#vp-set-default-style). Para obtener más información sobre las propiedades de estilo, consulte [Objetos estilo y hojas de estilo](configuring.md#style-objects--style-sheets).
 
 En *vpAreaName*, pase el nombre de la propiedad del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -1725,7 +1725,7 @@ devolverá esta información en el objeto *$defaultStyle*:
 | Parámetros | Tipo   |    | Descripción                        |
 | ---------- | ------ | -- | ---------------------------------- |
 | rangeObj   | Object | -> | Objeto rango                       |
-| Result     | Text   | <- | Formula|<!-- END REF -->
+| Resultado  | Text   | <- | Formula|<!-- END REF -->
 
 |
 
@@ -1760,7 +1760,7 @@ En *rangeObj*, pase un rango cuya fórmula desea recuperar. Si *rangeObj* design
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                           |
 | name       | Text   | -> | Nombre del rango nombrado                                              |
 | scope      | Number | -> | Alcance objetivo (por defecto=hoja actual)                             |
-| Result     | Object | <- | Definición de la fórmula o rango con nombre|<!-- END REF -->
+| Resultado  | Object | <- | Definición de la fórmula o rango con nombre|<!-- END REF -->
 
 |
 
@@ -1813,7 +1813,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 | Parámetros | Tipo       |    | Descripción                                                    |
 | ---------- | ---------- | -- | -------------------------------------------------------------- |
 | rangeObj   | Object     | -> | Objeto rango                                                   |
-| Result     | Collection | <- | Colección de valores de una fórmula|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de valores de una fórmula|<!-- END REF -->
 
 |
 
@@ -1858,7 +1858,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 | ---------- | ------- | -- | ------------------------------------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                                                      |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                                                       |
-| Result     | Object  | <- | Objeto que contiene la información de las columnas y líneas congeladas|<!-- END REF -->
+| Resultado  | Object  | <- | Objeto que contiene la información de las columnas y líneas congeladas|<!-- END REF -->
 
 |
 
@@ -1910,7 +1910,7 @@ El objeto devuelto contiene, por ejemplo:
 | ---------- | ---------- | -- | -------------------------------------------------------------------- |
 | vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro                         |
 | scope      | Number     | -> | Alcance objetivo (por defecto= hoja actual)                          |
-| Result     | Collection | <- | Nombres existentes en el alcance definido|<!-- END REF -->
+| Resultado  | Collection | <- | Nombres existentes en el alcance definido|<!-- END REF -->
 
 |
 
@@ -1961,7 +1961,7 @@ $list:=VP Get names("ViewProArea";2) //nombres en la 3a hoja
 | ---------- | ------- | -- | -------------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                               |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                                |
-| Result     | Object  | <- | Objeto que contiene la información de impresión|<!-- END REF -->
+| Resultado  | Object  | <- | Objeto que contiene la información de impresión|<!-- END REF -->
 
 |
 
@@ -2042,7 +2042,7 @@ zoomFactor:1
 | Parámetros | Tipo       |    | Descripción                                                     |
 | ---------- | ---------- | -- | --------------------------------------------------------------- |
 | rangeObj   | Object     | -> | Objeto rango                                                    |
-| Result     | Collection | <- | Colección de propiedades de la línea|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de propiedades de la línea|<!-- END REF -->
 
 |
 
@@ -2083,7 +2083,7 @@ $attr:=VP Get row attributes($range)
 | ---------- | ------- | -- | ------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario      |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)       |
-| Result     | Integer | <- | Número total de líneas|<!-- END REF -->
+| Resultado  | Integer | <- | Número total de líneas|<!-- END REF -->
 
 |
 
@@ -2119,7 +2119,7 @@ $rowCount:=VP Get row count("ViewProarea")
 | ---------- | ------- | -- | ------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario      |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)       |
-| Result     | Object  | <- | Objeto rango de celdas|<!-- END REF -->
+| Resultado  | Object  | <- | Objeto rango de celdas|<!-- END REF -->
 
 |
 
@@ -2285,7 +2285,7 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 | ---------- | ------- | -- | ----------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario          |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)           |
-| Result     | Object  | <- | Objeto opciones de la hoja|<!-- END REF -->
+| Resultado  | Object  | <- | Objeto opciones de la hoja|<!-- END REF -->
 
 |
 
@@ -2364,7 +2364,7 @@ El siguiente código comprueba si las líneas de vista previa se muestran u ocul
 | Parámetros | Tipo   |    | Descripción                                                                 |
 | ---------- | ------ | -- | --------------------------------------------------------------------------- |
 | rangeObj   | Object | -> | Objeto rango                                                                |
-| Result     | Object | <- | Objeto de celdas fusionadas en el rango definido|<!-- END REF -->
+| Resultado  | Object | <- | Objeto de celdas fusionadas en el rango definido|<!-- END REF -->
 
 |
 
@@ -2406,7 +2406,7 @@ VP SET CELL STYLE($range;$style)
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro     |
 | styleName  | Text    | -> | Nombre del estilo                                |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)      |
-| Result     | Object  | <- | Objeto hoja de estilo|<!-- END REF -->
+| Resultado  | Object  | <- | Objeto hoja de estilo|<!-- END REF -->
 
 |
 
@@ -2458,7 +2458,7 @@ borderTop:{color:green,style:10}
 | ---------- | ---------- | -- | ------------------------------------------------------------------ |
 | vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro                       |
 | sheet      | Integer    | -> | Alcance objetivo (por defecto = hoja actual)                       |
-| Result     | Collection | <- | Colección de objetos de hojas de estilo|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de objetos de hojas de estilo|<!-- END REF -->
 
 |
 
@@ -2526,7 +2526,7 @@ En este caso, la hoja actual utiliza dos objetos estilo:
 | tableName  | Text    | -> | Nombre de la tabla                                   |
 | column     | Integer | -> | Índice de la columna en la tabla                     |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)          |
-| Result     | Object  | <- | Atributos de la *columna*|<!-- END REF -->
+| Resultado  | Object  | <- | Atributos de la *columna*|<!-- END REF -->
 
 
 |
@@ -2588,7 +2588,7 @@ End if
 | tableName  | Text    | -> | Nombre de la tabla                                |
 | columnName | Text    | -> | Nombre de la columna de la tabla                  |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)       |
-| Result     | Integer | <- | Índice de *columnName*|<!-- END REF -->
+| Resultado  | Integer | <- | Índice de *columnName*|<!-- END REF -->
 
 
 |
@@ -2644,7 +2644,7 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 | tableName  | Text       | -> | Nombre de la tabla                                                                                           |
 | reset      | Boolean    | -> | True para borrar el estado sucio de la tabla actual, False para mantenerlo intacto. Por defecto=True         |
 | sheet      | Integer    | -> | Índice de la hoja (hoja actual si se omite)                                                                  |
-| Result     | Collection | <- | Colección de objetos con todos los elementos modificados desde el último reinicio|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de objetos con todos los elementos modificados desde el último reinicio|<!-- END REF -->
 
 
 |
@@ -2711,7 +2711,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 | tableName  | Text    | -> | Nombre de la tabla                                          |
 | onlyData   | Integer | -> | `vk table full range` (por defecto) o `vk table data range` |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                 |
-| Result     | Object  | <- | Rango que contiene la tabla|<!-- END REF -->
+| Resultado  | Object  | <- | Rango que contiene la tabla|<!-- END REF -->
 
 |
 
@@ -2757,7 +2757,7 @@ Si no se encuentra *tableName*, el comando devuelve **null**.
 | ---------- | ---------------------------------------------- | -- | --------------------------------------------------------------------------- |
 | vpAreaName | Text                                           | -> | Nombre de objeto formulario área 4D View Pro                                |
 | tableName  | Text                                           | -> | Nombre de la tabla                                                          |
-| Result     | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Valores de propiedad del tema de la tabla actual|<!-- END REF -->
+| Resultado  | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Valores de propiedad del tema de la tabla actual|<!-- END REF -->
 
 
 |
@@ -2811,7 +2811,7 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 | ---------- | ---------- | -- | ---------------------------------------------------------------------------------- |
 | vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro                                       |
 | sheet      | Integer    | -> | Índice de la hoja (hoja actual si se omite)                                        |
-| Result     | Collection | <- | Colección de textos con todos los nombres de las tablas|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de textos con todos los nombres de las tablas|<!-- END REF -->
 
 |
 
@@ -2855,7 +2855,7 @@ $tables:=VP Get tables("ViewProArea")
 | Parámetros | Tipo   |    | Descripción                                                      |
 | ---------- | ------ | -- | ---------------------------------------------------------------- |
 | rangeObj   | Object | -> | Objeto rango                                                     |
-| Result     | Object | <- | Objeto que contiene un valor de celda|<!-- END REF -->
+| Resultado  | Object | <- | Objeto que contiene un valor de celda|<!-- END REF -->
 
 |
 
@@ -2910,7 +2910,7 @@ End if
 | Parámetros | Tipo       |    | Descripción                                     |
 | ---------- | ---------- | -- | ----------------------------------------------- |
 | rangeObj   | Object     | -> | Objeto rango                                    |
-| Result     | Collection | <- | Colección de valores|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de valores|<!-- END REF -->
 
 |
 
@@ -2963,7 +2963,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 | Parámetros | Tipo   |    | Descripción                                                                      |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                                     |
-| Result     | Object | <- | Objeto que contiene las opciones del libro de trabajo|<!-- END REF -->
+| Resultado  | Object | <- | Objeto que contiene las opciones del libro de trabajo|<!-- END REF -->
 
 |
 
@@ -3421,7 +3421,7 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro  |
 | rangeName  | Text    | -> | Nombre del rango existente                    |
 | sheet      | Integer | -> | Ubicación del rango (hoja actual si se omite) |
-| Result     | Object  | <- | Rango de nombre|<!-- END REF -->
+| Resultado  | Object  | <- | Rango de nombre|<!-- END REF -->
 
 |
 
@@ -3498,7 +3498,7 @@ VP NEW DOCUMENT("myVPArea")
 | Parámetros  | Tipo   |    | Descripción                                                   |
 | ----------- | ------ | -- | ------------------------------------------------------------- |
 | font object | Object | -> | Objeto fuente                                                 |
-| Result      | Text   | <- | Cadena de texto corto de la fuente|<!-- END REF -->
+| Resultado   | Text   | <- | Cadena de texto corto de la fuente|<!-- END REF -->
 
 |
 
@@ -4227,7 +4227,7 @@ Resultado:
 | Parámetros | Tipo   |    | Descripción                                                                                              |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------------------------------- |
 | parameters | Object | -> | Objeto que contiene los atributos del área fuera de pantalla                                             |
-| Result     | Mixed  | <- | Propiedad `.result` del objeto `.onEvent`, o Null si no devuelve ningún valor|<!-- END REF -->
+| Resultado  | Mixed  | <- | Propiedad `.result` del objeto `.onEvent`, o Null si no devuelve ningún valor|<!-- END REF -->
 
 |
 

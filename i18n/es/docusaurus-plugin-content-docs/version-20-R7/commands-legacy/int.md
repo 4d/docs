@@ -30,3 +30,12 @@ El siguiente ejemplo ilustra el funcionamiento de Int para números positivos y 
 #### Ver también 
 
 [Dec](dec.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 8 |
+| Hilo seguro | &check; |
+
+

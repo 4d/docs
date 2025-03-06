@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->The EXECUTE METHOD IN SUBFORM command can be used to execute the code designated by *formula* in the context of the *subformObject* subform object.<!-- END REF--> 
@@ -75,3 +72,14 @@ If this method was used directly in the Calendar form method, you could call it 
 #### System variables and sets 
 
 If this command is executed correctly, the system variable OK is set to 1; otherwise, it is set to 0.
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1085 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

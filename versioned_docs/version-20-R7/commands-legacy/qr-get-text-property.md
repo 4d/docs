@@ -13,12 +13,9 @@ displayed_sidebar: docs
 | colNum | Integer | &#8594;  | Column number |
 | rowNum | Integer | &#8594;  | Row number |
 | property | Integer | &#8594;  | Property number |
-| Function result | Longint, String | &#8592; | Value for the selected property |
+| Function result | Integer, Text | &#8592; | Value for the selected property |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -31,8 +28,8 @@ displayed_sidebar: docs
 *rowNum* is the reference of the cell row. You can either pass:
 
 * a positive value designating the corresponding subtotal (break) level,
-* one of the constants of the *QR Rows for Properties* theme:  
-
+* one of the constants of the *QR Rows for Properties* theme:
+  
 | Constant       | Type    | Value | Comment               |  
 | -------------- | ------- | ----- | --------------------- |  
 | qr detail      | Integer | \-2   | Detail area of report |  
@@ -71,3 +68,13 @@ If you pass an invalid *property* number, the error -9854 will be generated.
 #### See also 
 
 [QR SET TEXT PROPERTY](qr-set-text-property.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 760 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

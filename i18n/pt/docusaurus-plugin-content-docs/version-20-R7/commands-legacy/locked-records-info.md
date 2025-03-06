@@ -90,3 +90,12 @@ Se o código é executado em um 4D Server e o bloqueio é causado por uma máqui
 #### Ver também 
 
 [Locked](locked.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1316 |
+| Thread-seguro | &check; |
+
+

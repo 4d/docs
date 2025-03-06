@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB REMOVE.Summary-->La commande **OB REMOVE** permet de supprimer la *propriété* de l’objet de langage désigné par le paramètre *objet*.<!-- END REF--> Cette commande supprime la *propriété* ainsi que sa valeur courante.
 
-*objet* doit avoir été défini via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D.
+*objet* doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
 Passez dans le paramètre *propriété* le libellé de la propriété à lire. Attention, le paramètre *propriété* tient compte des majuscules/minuscules. 
 
@@ -37,3 +37,12 @@ Vous souhaitez supprimer la propriété "age" d’un objet :
 #### Voir aussi 
 
 [OB SET](ob-set.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1226 |
+| Thread safe | &check; |
+
+

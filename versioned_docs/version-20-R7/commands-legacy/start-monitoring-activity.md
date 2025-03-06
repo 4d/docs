@@ -29,7 +29,7 @@ The optional *source* parameter defines the kind of activity to monitor. Possibl
 | Activity network    | 2     | Network request operations                |
 | Activity operations | 4     | 4D data operations                        |
 
-**Note**: If the debug logs have been stopped on the 4D Server [GRAPH SETTINGS](graph-settings.md), **START MONITORING ACTIVITY** with Activity network will restart the logs.
+**Note**: If the debug logs have been stopped on the 4D Server [Administration window](../ServerWindow/overview.md), **START MONITORING ACTIVITY** with Activity network will restart the logs.
 
 #### Example 
 
@@ -92,3 +92,12 @@ You want to start/stop monitoring and review 4D data and debug activities lastin
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1712 |
+| Thread safe | &check; |
+
+

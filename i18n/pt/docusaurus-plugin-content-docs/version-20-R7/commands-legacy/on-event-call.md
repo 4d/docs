@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->O comando **ON EVENT CALL** instala o método, cujo nome se passa em *metodoEvento*, como método de gestão de eventos.<!-- END REF--> 
@@ -50,10 +47,10 @@ As teclas modificadoras não geram um evento; também deve pressionar outra tecl
 | ---------------------------------- | -------------------------------------- |
 | Maiúscula                          | Shift key bit / Shift key mask         |
 | Bloqueio de maiúsculas             | Caps lock key bit / Caps lock key mask |
-| Alt (também chamado Opção em OS X) | Option key bit / Option key mask       |
+| Alt (também chamado Opção em macOS) | Option key bit / Option key mask       |
 | Ctrl em Windows                    | Command key bit / Command key mask     |
-| Ctrl em OS X                       | Control key bit / Control key mask     |
-| Comando em OS X                    | Command key bit / Command key mask     |
+| Ctrl em macOS                       | Control key bit / Control key mask     |
+| Comando em macOS                    | Command key bit / Command key mask     |
 | Clic direito                       | Control key bit / Control key mask     |
 
   
@@ -109,3 +106,13 @@ Se um relatório for impresso utilizando [PRINT SELECTION](print-selection.md "P
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 190 |
+| Thread-seguro | &cross; |
+| Proibido no servidor ||
+
+

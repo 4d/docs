@@ -40,9 +40,9 @@ Vous devez déclarer ces paramètres de la manière suivante :
 
 ```4d
 //On Web Connection
- 
+
  C_TEXT($1;$2;$3;$4;$5;$6)
- 
+
 //Code de la méthode base
 ```
 
@@ -90,7 +90,7 @@ Le paramètre $3 reçoit l'adresse IP de la machine du navigateur. Cette informa
 
 ### $4 - Adresse IP du serveur
 
-Le paramètre `$4` reçoit l'adresse IP utilisée pour appeler le serveur web 4D. 4D prend en charge le multi-homing, ce qui vous permet d'exploiter des machines avec plus d'une adresse IP. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.html#ip-address-to-listen).
+Le paramètre <code>$4</code> reçoit l'adresse IP utilisée pour appeler le serveur web 4D. 4D prend en charge le multi-homing, ce qui vous permet d'exploiter des machines avec plus d'une adresse IP. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.html#ip-address-to-listen).
 
 ### $5 et $6 - Nom d'utilisateur et mot de passe
 
@@ -279,7 +279,7 @@ Les principales caractéristiques de cette page sont les suivantes :
 - Elle comprend trois boutons **Submit** : `vsbLogOn`, `vsbRegister` et `vsbInformation`.
 - Lorsque vous cliquez sur **Log On**, la soumission du formulaire est d'abord traitée par la fonction JavaScript `LogOn`. Si aucun nom n'est saisi, le formulaire n'est même pas envoyé à 4D et une alerte JavaScript est affichée.
 - Le formulaire a une méthode 4D POST ainsi qu'un script Submit (*GetBrowserInformation*) qui copie les propriétés du navigateur dans les quatre objets cachés dont les noms commencent par *vtNav_App*.
-  Il inclut également l'objet `vtUserName`.
+ Il inclut également l'objet `vtUserName`.
 
 Examinons la méthode 4D `WWW_STD_FORM_POST` qui est appelée lorsque l'utilisateur clique sur l'un des boutons du formulaire HTML.
 
@@ -339,6 +339,6 @@ Le serveur web 4D prend en charge les fichiers envoyés en encodage de transfert
 
 ## Méthode projet COMPILER_WEB
 
-La méthode COMPILER\_WEB, si elle existe, est systématiquement appelée lorsque le serveur HTTP reçoit une requête dynamique et appelle le moteur 4D. C'est le cas, par exemple, lorsque le serveur Web 4D reçoit un formulaire envoyé ou une URL à traiter dans [`On Web Connection`](#on-web-connection). Cette méthode est destinée à contenir des directives de typage et/ou d'initialisation de variables utilisées lors des échanges Web. Elle est utilisée par le compilateur lorsque l'application est compilée. La méthode COMPILER\_WEB est commune à tous les formulaires Web. Par défaut, la méthode COMPILER_WEB n'existe pas. Vous devez la créer explicitement.
+La méthode COMPILER\_WEB, si elle existe, est systématiquement appelée lorsque le serveur HTTP reçoit une requête dynamique et appelle le moteur 4D. La méthode COMPILER\_WEB, si elle existe, est systématiquement appelée lorsque le serveur HTTP reçoit une requête dynamique et appelle le moteur 4D. Cette méthode est destinée à contenir des directives de typage et/ou d'initialisation de variables utilisées lors des échanges Web. Elle est utilisée par le compilateur lorsque l'application est compilée. La méthode COMPILER\_WEB est commune à tous les formulaires Web. Par défaut, la méthode COMPILER_WEB n'existe pas. Vous devez la créer explicitement.
 
 > La méthode projet COMPILER_WEB est également appelée, si elle existe, pour chaque requête SOAP acceptée.

@@ -35,25 +35,25 @@ Todos los archivos de documentación se almacenan en la carpeta `Documentación`
 La arquitectura de la carpeta `Documentation` es la siguiente:
 
 - `Documentation`
-  - `Clases`
-    - myClass.md
-  - `DatabaseMethods`
-    - onStartup.md
-    - ...
-  - `Formularios`
-    - loginDial.md
-    - ...
-  - `Métodos`
-    - myMethod.md
-    - ...
-  - `TableForms`
-    - **1**
-      - input.md
-      - ...
-    - ...
-  - `Triggers`
-    - table1.md
-    - ...
+    - `Clases`
+        - myClass.md
+    - `DatabaseMethods`
+        - onStartup.md
+        - ...
+    - `Formularios`
+        - loginDial.md
+        - ...
+    - `Métodos`
+        - myMethod.md
+        - ...
+    - `TableForms`
+        - **1**
+            - input.md
+            - ...
+        - ...
+    - `Triggers`
+        - table1.md
+        - ...
 
 - Un formulario proyecto y su método de formulario proyecto comparten el mismo archivo de documentación para el formulario y el método.
 
@@ -103,7 +103,7 @@ Si existe un archivo llamado `\<MethodName>.md` en la carpeta `\<package>/docume
 - Todo texto introducido en una etiqueta de comentario HTML (`<!-- command documentation -->`) en la parte superior del archivo markdown.
 
 - O, si no se usa ninguna etiqueta de comentario html, la primera frase después de una etiqueta `# Description` del archivo markdown.\
-  En este caso, la primera línea contiene el **prototipo** del método, generado automáticamente por el analizador de código de 4D.
+    En este caso, la primera línea contiene el **prototipo** del método, generado automáticamente por el analizador de código de 4D.
 
 :::note
 
@@ -196,30 +196,30 @@ The [documentation](https://doc.4d.com) of the command ....
 En el archivo `WP SwitchToolbar.md`, puede escribir:
 
 ````md
-<!-- This method returns a different logo depending on the size parameter -->
+<!-- Este método devuelve un logo diferente dependiendo del parámetro size -->
 
 
 GetLogo (size) -> logo
 
 
-| Parameter | Type   | in/out | Description |
-| --------- | ------ | ------ | ----------- |
-| size      | Integer | in | Logo style selector (1 to 5)  |
-| logo      | Picture | out | Selected logo |
+| Parámetro | Tipo   | Entrada/Salida | Descripción |
+| --------- | ------ | -------------- | ----------- |
+| size      | Integer  | Entrada | Selector de estilo de logo (1 a 5)  |
+| logo      | Picture | Salida | Logo seleccionado |
 
 
-## Description
+## Descripción
 
-This method returns a logo of a specific size, depending on the value of the *size* parameter.
-1 = smallest size, 5 = largest size.
+Este método devuelve un logo de un tamaño específico, dependiendo del valor del parámetro *size*.
+1 = tamaño más pequeño, 5 = tamaño más grande.
 
-## Example
+## Ejemplo
 
 ```4d
 C_PICTURE($logo)
 C_LONGINT($size)
 
-//Get the largest logo
+//Obtener el logo más grande
 $logo:=GetLogo(5)
 ```
 ````

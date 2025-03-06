@@ -1,12 +1,12 @@
 ---
 id: select-rgb-color
-title: Select RGB Color
+title: Select RGB color
 slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB Color.Syntax-->**Select RGB Color** {( *colorDefecto* {; *mensaje*} )} : Integer<!-- END REF-->
-<!--REF #_command_.Select RGB Color.Params-->
+<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** {( *colorDefecto* {; *mensaje*} )} : Integer<!-- END REF-->
+<!--REF #_command_.Select RGB color.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | colorDefecto | Integer | &#8594;  | Color RGB preseleccionado |
@@ -15,12 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
-<!--REF #_command_.Select RGB Color.Summary-->El comando Select RGB Color muestra la ventana sistema de selección de color y devuelve el valor RGB del color seleccionado por el usuario.<!-- END REF--> 
+<!--REF #_command_.Select RGB color.Summary-->El comando Select RGB color muestra la ventana sistema de selección de color y devuelve el valor RGB del color seleccionado por el usuario.<!-- END REF--> 
 
 La ventana sistema de selección de color se ve de esta manera:  
 
@@ -42,3 +39,14 @@ El efecto de la validación de esta caja de diálogo difiere dependiendo de la p
 #### Ver también 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 956 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

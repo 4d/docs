@@ -52,3 +52,12 @@ You want to temporarily change the cache priority for the \[Docs\] table text fi
 
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1431 |
+| Thread safe | &check; |
+
+

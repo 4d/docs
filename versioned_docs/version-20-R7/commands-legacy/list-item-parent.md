@@ -11,13 +11,10 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number  (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item in the list |
+| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item in the list |
 | Function result | Integer | &#8592; | Item reference number of parent item or 0 if none |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -73,3 +70,12 @@ The item reference numbers are set as follows:
 [List item position](list-item-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [SET LIST ITEM](set-list-item.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 633 |
+| Thread safe | &cross; |
+
+

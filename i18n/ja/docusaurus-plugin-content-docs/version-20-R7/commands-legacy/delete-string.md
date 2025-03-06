@@ -44,3 +44,12 @@ Delete stringの使用例を次に示します。結果を変数*vtResult*に代
 [Change string](change-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 232 |
+| スレッドセーフである | &check; |
+
+

@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->The **OPEN PRINTING JOB** command opens a print job and stacks all the subsequent printing orders there until the [CLOSE PRINTING JOB](close-printing-job.md) command is called.<!-- END REF--> This command lets you control the print jobs and, more particularly, ensure that no other unexpected print job can be inserted into a printing sequence.
@@ -27,7 +24,7 @@ You must call the [CLOSE PRINTING JOB](close-printing-job.md) command to termina
 
 **OPEN PRINTING JOB** uses the current print settings (default settings or set using the [SET PRINT OPTION](set-print-option.md) command). The commands that modify the print settings must be called before **OPEN PRINTING JOB**, otherwise an error is generated (exception: the Orientation option can be called by the [SET PRINT OPTION](set-print-option.md) command within a print job).
 
-**Compatibility Note:** Starting with 4D v20 R4, printing jobs are non-blocking in new projects. For more information, please refer to the [Non-blocking printing option](https://developer.4d.com/docs/settings/compatibility/) documentation in the Compatibility settings.
+**Compatibility Note:** Starting with 4D v20 R4, printing jobs are non-blocking in new projects. For more information, please refer to the [Non-blocking printing option](../settings/compatibility.md) documentation in the Compatibility settings.
 
 #### System variables and sets 
 
@@ -39,3 +36,13 @@ The OK system variable is set to 1 if the print job has been successfully open. 
 #### See also 
 
 [CLOSE PRINTING JOB](close-printing-job.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 995 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

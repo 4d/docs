@@ -45,7 +45,7 @@ Les objets Transporter POP3 sont instanciés avec la commande [POP3 New transpor
 <!-- REF #_command_.POP3 New transporter.Params -->
 | Paramètres | Type               |    | Description                                                                   |
 | ---------- | ------------------ |:--:| ----------------------------------------------------------------------------- |
-| server     | object             | -> | Informations sur le serveur IMAP                                              |
+| server     | object             | -> | Informations sur le serveur de messagerie                                     |
 | Résultat   | 4D.POP3Transporter | <- | [objet POP3 transporter](#pop3-transporter-object)|<!-- END REF -->
 
 
@@ -58,15 +58,15 @@ La commande `POP3 New transporter` <!-- REF #_command_.POP3 New transporter.Summ
 
 Dans le paramètre *server*, passez un objet contenant les propriétés suivantes :
 
-| *server*                                                                                                                                                                                                                                                                                                                                                     | Valeur par défaut (si omise)                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                                                          | Valeur par défaut (si omise)                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                                            |
-| .**accessTokenOAuth2**: TextText string representing OAuth 2 authorization credentials. Utilisé uniquement avec OAUTH2 `authenticationMode`. Si `accessTokenOAuth2` est utilisé mais que `authenticationMode` est omis, le protocole OAuth 2 est utilisé (si le serveur l'autorise). Non retourné dans l'objet *[SMTP transporter](#smtptransporterobject)*. | aucun                                                                            |
+| .**accessTokenOAuth2**: Texte   Chaine représentant les identifiants d'autorisation OAuth 2. Utilisé uniquement avec OAUTH2 `authenticationMode`. Si `accessTokenOAuth2` est utilisé mais que `authenticationMode` est omis, le protocole OAuth 2 est utilisé (si le serveur l'autorise). Non retourné dans l'objet *[SMTP transporter](#smtptransporterobject)*. | aucun                                                                            |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| le mode d'authentification le plus sûr pris en charge par le serveur est utilisé |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                               |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *obligatoire*                                                                    |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| aucun                                                                            |
-| **.password** : TextUser password for authentication on the server. Non retourné dans l'objet *[SMTP transporter](#smtptransporterobject)*.                                                                                                                                                                                                                  | aucun                                                                            |
+| **.password** : Text  Mot de passe utilisateur pour l'authentification sur le serveur. Non retourné dans l'objet *[SMTP transporter](#smtptransporterobject)*.                                                                                                                                                                                                    | aucun                                                                            |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| aucun                                                                            |
 
@@ -105,7 +105,7 @@ La fonction retourne un [**objet POP3 transporter**](#pop3-transporter-object). 
 <!-- REF #4D.POP3Transporter.new().Params -->
 | Paramètres | Type               |    | Description                                                                   |
 | ---------- | ------------------ |:--:| ----------------------------------------------------------------------------- |
-| server     | Object             | -> | Informations sur le serveur IMAP                                              |
+| server     | Object             | -> | Informations sur le serveur de messagerie                                     |
 | Résultat   | 4D.POP3Transporter | <- | [objet POP3 transporter](#pop3-transporter-object)|<!-- END REF -->
 
 |
@@ -207,9 +207,9 @@ L'exécution de cette méthode ne supprime pas réellement l'email. L'email marq
 
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
-| Paramètres | Type   |    | Description                              |
-| ---------- | ------ |:--:| ---------------------------------------- |
-| Résultat   | Object | <- | Objet boxInfo|<!-- END REF -->
+| Paramètres | Type   |    | Description                                            |
+| ---------- | ------ |:--:| ------------------------------------------------------ |
+| Résultat   | Object | <- | Collection d'objets mailbox|<!-- END REF -->
 
 |
 
@@ -356,6 +356,7 @@ La fonction retourne **Null** si :
  $mailInfo:=$transporter.getMailInfo(1) //get the first mail
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
+ End if
  End if
 ```
 

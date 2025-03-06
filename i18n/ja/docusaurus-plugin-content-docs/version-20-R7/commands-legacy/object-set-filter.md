@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT SET FILTER.Summary-->OBJECT SET FILTER は、*object*で指定されたオブジェクトの入力フィルタを*entryFilter*に設定します。<!-- END REF-->
@@ -58,3 +55,12 @@ OBJECT SET FILTER は、入力フォームおよびダイアログ用フォー�
 
 [OBJECT Get filter](object-get-filter.md)  
 [OBJECT SET FORMAT](object-set-format.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 235 |
+| スレッドセーフである | &cross; |
+
+

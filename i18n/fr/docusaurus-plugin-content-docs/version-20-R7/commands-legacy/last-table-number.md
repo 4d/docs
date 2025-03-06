@@ -40,3 +40,12 @@ L’exemple suivant initialise les éléments du tableau tabTables. Ce tableau p
 [Last field number](last-field-number.md)  
 [Is table number valid](is-table-number-valid.md)  
 [Table name](table-name.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 254 |
+| Thread safe | &check; |
+
+

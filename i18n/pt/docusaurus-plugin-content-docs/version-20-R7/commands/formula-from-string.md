@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Formula from string.Params -->
 
-| Parâmetro     | Tipo                         |     | Descrição                                                                                         |
-| ------------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------- |
-| formulaString | Text                         |  →  | Fórmula texto a ser retornada como objeto                                                         |
-| context       | Number                       |  →  | `sk execute in current database` (por padrão) ou `sk execute in host database` |
-| Resultados    | 4D. Function |  ←  | Objeto nativo encapsulando a fórmula                                                              |
+| Parâmetro     | Tipo                         |                             | Descrição                                                                                         |
+| ------------- | ---------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
+| formulaString | Text                         | &#8594; | Fórmula texto a ser retornada como objeto                                                         |
+| context       | Number                       | &#8594; | `sk execute in current database` (por padrão) ou `sk execute in host database` |
+| Resultados    | 4D. Function | &#8592; | Objeto nativo encapsulando a fórmula                                                              |
 
 <!-- END REF -->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a `4D.Function` object based upon the *formulaString* and, optionnally, a *context*<!-- END REF -->.  *formulaString* can be as simple as a single value or complex, such as a project method with parameters.
 
-This command is similar to [`Formula`](formula.md), except that it handles a text-based formula and allows to define an execution context. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. É altamente recomendável usar a sintaxe com tokens com esse comando.
+Esse comando é como [`Formula`](formula.md), exceto pelo fato de que ele lida com uma fórmula baseada em texto e permite definir um contexto de execução. Esse comando é como [`Formula`](#formula), exceto pelo fato de que ele lida com uma fórmula baseada em texto e permite definir um contexto de execução. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. É altamente recomendável usar a sintaxe com tokens com esse comando.
 
 > Because local variable contents can not be accessed by name in compiled mode, they can not be used in *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
 
@@ -65,3 +65,12 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 
 [Formula](formula.md)\
 [Parse formula](../commands-legacy/parse-formula.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1601                            |
+| Thread safe    | &amp;check; |
+
+

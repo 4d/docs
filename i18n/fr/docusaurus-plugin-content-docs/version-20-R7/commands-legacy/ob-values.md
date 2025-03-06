@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OB Values.Summary-->La commande **OB Values** retourne une collection de variants contenant toutes les valeurs des propriétés énumérables de l'*objet*.<!-- END REF--> 
@@ -47,3 +44,12 @@ Vous souhaitez une collection avec toutes les valeurs des propriétés d'un obje
 
 [OB Entries](ob-entries.md)  
 [OB Keys](ob-keys.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1718 |
+| Thread safe | &cross; |
+
+

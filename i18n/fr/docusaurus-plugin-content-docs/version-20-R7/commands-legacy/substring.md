@@ -65,3 +65,12 @@ La méthode projet suivante ajoute au tableau de type texte ou alpha, dont le po
 #### Voir aussi 
 
 [Position](position.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 12 |
+| Thread safe | &check; |
+
+

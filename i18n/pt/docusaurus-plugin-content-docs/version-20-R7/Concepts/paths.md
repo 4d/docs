@@ -59,17 +59,17 @@ A sintaxe específica da plataforma depende do sistema operativo em que o comand
 São suportados os seguintes padrões:
 
 - os separadores de pasta são "\"
-- the text contains ':' and '\' as the second and third character,
+- o texto contém ":" e "\" como o segundo e terceiro caractere,
 - o texto começa por "\\".
 
-Examples with [`Folder`](../commands/folder.md):
+Exemplos com [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Entering Windows pathnames and escape sequences
+#### Caminhos de acesso Windows e sequências de escape
 
 A linguagem 4D permite o uso de [sequências de escape] (quick-tour.md#escape-sequences). As sequências de fuga começam com uma barra invertida `\`, seguida de um carácter. Por exemplo, `\t` é a sequência de escape para o carácter `Tab`.
 
@@ -82,7 +82,7 @@ São suportados os seguintes padrões (sintaxe HFS+):
 - os separadores de pasta são ":"
 - o caminho não deve começar com um ":"
 
-Examples with [`Folder`](../commands/folder.md):
+Exemplos com [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -93,7 +93,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume deve ser cham
 
 ### Constructores `File` y `Folder`
 
-[`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands only accept **absolute pathnames**. Os nomes de caminho relativos não são suportados e devolverão erros. Por exemplo, o seguinte código não é permitido:
+Os comandos [`File`](../commands/file.md) e [`Folder`](../commands/folder.md) aceitam apenas **nomes de caminho absolutos**. Os nomes de caminho relativos não são suportados e devolverão erros. Por exemplo, o seguinte código não é permitido:
 
 ```4d
 	//ERROR

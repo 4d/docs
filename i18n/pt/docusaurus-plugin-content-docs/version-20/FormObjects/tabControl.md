@@ -1,6 +1,6 @@
 ---
 id: tabControl
-title: Abas
+title: Controles Abas
 ---
 
 Uma guia cria um objeto que permite que o usuário escolha entre várias telas virtuais exibidas nos limites da guia. O usuário acessa cada tela clicando na guia correspondente.
@@ -11,22 +11,22 @@ O seguinte formulário de várias páginas utiliza um objeto de controlo de pest
 
 Para passar de uma tela para outra, o usuário simplesmente clica na guia correspondente.
 
-As telas podem representar páginas em um formulário de várias páginas ou um objeto que muda quando o usuário clica em uma guia. If the tab control is used as a page navigation tool, then the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
+As telas podem representar páginas em um formulário de várias páginas ou um objeto que muda quando o usuário clica em uma guia. Se o controle de tabulação for usado como uma ferramenta de navegação de página, o comando [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) ou a ação padrão `gotoPage` será usada quando um usuário clicar em uma tabulação.
 
-Outra utilização do controlo de separadores consiste em controlar os dados apresentados num subformulário. Por exemplo, um Rolodex pode ser implementado utilizando um controlo de pestanas. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
+Outra utilização do controlo de separadores consiste em controlar os dados apresentados num subformulário. Por exemplo, um Rolodex pode ser implementado utilizando um controlo de pestanas. As guias mostrariam as letras do alfabeto e a ação do controle do guia seria carregar os dados correspondentes à letra que o usuário clicou.
 
 Cada pestana pode apresentar etiquetas ou etiquetas e um pequeno ícone. Se incluir ícones, estes aparecem à esquerda de cada etiqueta. Aqui está um exemplo de um controlo de pestanas que utiliza ícones:
 
 ![](../assets/en/FormObjects/tabControl2.png)
 
-When you create a tab control, 4D manages the spacing and placement of the tabs. You only need to supply the labels in the form of an array, or the icons and labels in the form of a hierarchical list.
+Quando você cria um controle de abas, 4D gerencia o espaçamento e posicionamento das abas. Você só precisa fornecer as etiquetas na forma de um array, ou os ícones e etiquetas na forma de uma lista hierárquica.
 
-If the tab control is wide enough to display all the tabs with both the labels and icons, it displays both. If the tab control is not wide enough to display both the labels and icons, 4D displays the icons only. If it can’t fit all the icons, it places scroll arrows to the right of the last visible tab. As setas de deslocamento permitem ao usuário deslocar os ícones para a esquerda ou para a direita.
+Se o controle de tabulações é largo o suficiente para exibir todas as abas com rótulos e ícones, isso exibe ambos. Se o controle de guias não for suficientemente amplo para exibir ambos os rótulos e ícones, 4D exibe apenas os ícones. Se ele não serve todos os ícones, coloca as setas de rolagem à direita da última aba visível. As setas de deslocamento permitem ao usuário deslocar os ícones para a esquerda ou para a direita.
 
-Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
+No macOS, além da posição padrão (superior), os controles de aba também podem ser alinhados ao fundo.
 
 
-### JSON Exemplo
+### Exemplo JSON:
 
 ```4d
     "myTab": {
@@ -43,7 +43,7 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 
 ## Adicionando etiquetas a um controle de tabulação
 
-To supply the labels for a tab control, you can use:
+Para fornecer as etiquetas para o controle de abas, você pode usar:
 
 - um objeto
 - uma lista de escolha
@@ -56,12 +56,12 @@ You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](C
 | Propriedade    | Tipo       | Descrição                                                                                                                                                  |
 | -------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `values`       | Collection | Obrigatório - Coleção de valores escalares. Só são suportados valores cadeia. Se for inválido, vazio ou não definido, o controle de tabulação estará vazio |
-| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                                        |
+| `index`        | number     | Índice da página de controle de guia atualmente (valor entre 0 e `collection.length-1`)                                                                    |
 | `currentValue` | Text       | Valor atual selecionado                                                                                                                                    |
 
-The initialization code must be executed before the form is presented to the user.
+O código de inicialização deve ser executado antes que o formulário seja apresentado ao usuário.
 
-In the following example, `Form.tabControl` has been defined as tab control [expression](properties_Object.md#variable-or-expression). You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
+No exemplo a seguir, `Form.tabControl` foi definido como [expressão](properties_Object.md#variable-or-expression) de controle de tabulação. Você pode associar a ação padrão [`gotoPage`](#goto-page-action) ao objeto formulário:
 
 ```4d
 Form.tabControl:=New object Form.tabControl.values:=New collection("Page 1"; "Page 2"; "Page 3")
@@ -71,7 +71,7 @@ Form.tabControl.index:=2 //start on page 3
 
 ### Utilizar uma lista de seleção
 
-You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Icons associated with list items in the Lists editor will be displayed in the tob control.
+Você pode atribuir uma [lista de valores](properties_DataSource.md#choice-list-static-list) ao controle de abas através de uma coleção (lista estática) ou um ponteiro JSON ("$ref") para uma lista de json"). Icons associated with list items in the Lists editor will be displayed in the tob control.
 
 ### Utilizar um array texto
 
@@ -83,20 +83,20 @@ Você pode criar um array Text que contenha os nomes de cada página do formulá
  arrPages{2}:="Address"
  arrPages{3}:="Notes"  
 ```
-> You can also store the names of the pages in a hierarchical list and use the `Load list` command to load the values into the array.
+> Você também pode armazenar os nomes das páginas em uma lista hierárquica e usar o comando [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) para carregar os valores no array.
 
 
 ## Funcionalidades do Goto page
 
 ### Comando FORM GOTO PAGE
 
-You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command in the tab control’s method:
+Você pode usar o [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) no método do controle de tabulação:
 
 ```4d
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the `On Clicked` event occurs. You should then clear the array when the `On Unload` event occurs.
+O comando é executado quando o botão [`On Clicked`](Events/onClicked.md) ocorre. Em seguida, você deve excluir o array quando ocorrer o evento [`On Unload`](Events/onUnload.md).
 
 Eis um exemplo de método objeto:
 

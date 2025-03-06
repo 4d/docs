@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET PICTURE RESOURCE.Summary-->El comando GET PICTURE RESOURCE devuelve en el campo o en la variable *resDatos* la imagen guardada en el recurso imagen (“PICT”) cuyo número se pasa en *resNum*.<!-- END REF--> 
@@ -44,3 +41,13 @@ Si no hay suficiente memoria para cargar la imagen, se genera un error. Puede in
 #### Ver también 
 
 [ON ERR CALL](on-err-call.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 502 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK, error |
+
+

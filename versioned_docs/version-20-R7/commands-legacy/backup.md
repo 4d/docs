@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.BACKUP.Summary-->The BACKUP command starts the backup of the database using the current backup settings.<!-- END REF--> No confirmation dialog is displayed; however, a progress bar appears on screen.
@@ -40,3 +37,13 @@ If an incident occurs during backup, information about the incident is written i
 [BACKUP INFO](backup-info.md)  
 *On Backup Startup Database Method*  
 [RESTORE](restore.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 887 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

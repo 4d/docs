@@ -19,9 +19,9 @@ Para simplificar o exemplo, vamos usar uma aplicação 4D e um navegador que sã
 1. Lançar sua aplicação 4D ou 4D server e criar um novo banco de dados. Pode chamar de "Emp4D", por exemplo.
 
 2. Create a table with some fields, for example:
-   - Lastname (Alpha)
-   - Firstname (Alpha)
-   - Salary (Longint)
+    - Lastname (Alpha)
+    - Firstname (Alpha)
+    - Salary (Longint)
 
 ![](../assets/en/REST/getstarted1.png)
 
@@ -35,7 +35,7 @@ Para simplificar o exemplo, vamos usar uma aplicação 4D e um navegador que sã
 
 5. En el menú **Ejecutar**, seleccione **Iniciar el servidor Web** (si es necesario), luego seleccione **Probar el servidor Web**.
 
-The default home page is displayed:
+4D exibe a página home padrão do servidor Web 4D.
 
 ## Acessar dados 4D através do navegador
 

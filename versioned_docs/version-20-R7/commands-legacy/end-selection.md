@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.End selection.Summary-->**End selection** returns TRUE when the current record pointer is beyond the last record of the current selection of *aTable*.<!-- END REF--> **End selection** is commonly used to check whether or not [NEXT RECORD](next-record.md) has moved the current record pointer past the last record. If the current selection is empty, **End selection** returns TRUE.
+<!--REF #_command_.End selection.Summary-->**End selection** returns TRUE when the current record pointer is beyond the last record of the current selection of *aTable*.<!-- END REF-->is commonly used to check whether or not [NEXT RECORD](next-record.md) has moved the current record pointer past the last record. If the current selection is empty, **End selection** returns TRUE.
 
 To move the current record pointer back into the selection, use [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) or [GOTO SELECTED RECORD](goto-selected-record.md). [PREVIOUS RECORD](previous-record.md) does not move the pointer back into the selection.
 
@@ -57,7 +57,16 @@ This form method is used during the printing of a report. It sets the variable *
 #### See also 
 
 [Before selection](before-selection.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 36 |
+| Thread safe | &check; |
+
+

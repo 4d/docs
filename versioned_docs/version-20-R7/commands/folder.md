@@ -23,12 +23,12 @@ displayed_sidebar: docs
 |folderConstant|Integer|&#8594; |4D folder constant|
 |pathType|Integer|&#8594; |`fk posix path` (default) or `fk platform path`|
 |*|operator|&#8594; |* to return folder of host database|
-|Result|4D.Folder|&#8592;|New folder object|
+|Result|[4D.Folder](../API/FolderClass.md)|&#8592;|New folder object|
 <!-- END REF -->
 
 #### Description
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
+The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. The command accepts two syntaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -71,6 +71,17 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 #### See also 
 
+[`4D.Folder` class](../API/FolderClass.md)
 [File](file.md)  
 [Object to path](../commands-legacy/object-to-path.md)  
 [Path to object](../commands-legacy/path-to-object.md)  
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1567 |
+| Thread safe | &check; |
+
+

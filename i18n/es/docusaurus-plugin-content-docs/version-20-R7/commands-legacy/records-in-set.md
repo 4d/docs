@@ -33,3 +33,12 @@ El siguiente ejemplo muestra una alerta indicando el porcentaje de clientes que 
 
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 195 |
+| Hilo seguro | &check; |
+
+

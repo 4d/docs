@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SPELL CHECK TEXT.Summary-->El comando **SPELL CHECK TEXT** verifica el contenido del parámetro *texto* a partir del carácter *posVerif* y devuelve la posición de la primera palabra desconocida encontrada (si la hay).<!-- END REF-->
@@ -28,7 +25,7 @@ Este comando devuelve la posición del primer carácter de esta palabra desconoc
 
 Si la verificación inicia sin error y se encuentra una palabra desconocida, la variable sistema OK toma el valor 0\. Si un error de inicialización ocurre durante la verificación o si no se encuentran palabras desconocidas, OK toma el valor 1.
 
-**Note OS X:** bajo OS X, cuando el corrector nativo se activa, este comando no soporta la corrección gramatical. 
+**Note macOS:** bajo macOS, cuando el corrector nativo se activa, este comando no soporta la corrección gramatical. 
 
 #### Ejemplo 
 
@@ -55,3 +52,13 @@ Queremos contar el número posible de errores en un texto:
 
 [SPELL ADD TO USER DICTIONARY](spell-add-to-user-dictionary.md)  
 [SPELL CHECKING](spell-checking.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1215 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

@@ -3,15 +3,15 @@ id: progressIndicator
 title: Indicador de progresso
 ---
 
-A progress indicator (also called "thermometer") is designed to display or set numeric or date/time values graphically.
+Um indicador de progresso (também chamado "termômetro") foi projetado para exibir ou definir graficamente valores numéricos, ou de data/hora.
 
 ![](../assets/en/FormObjects/progress1.png)
 
 ## Utilizar os indicadores
 
-Os indicadores podem ser utilizados para visualizar ou definir valores. Por exemplo, se um indicador de progresso recebe um valor por um método, ele exibe o valor. Se o usuário arrastar o ponto indicador, o valor muda. The value can be used in another object such as a field or an enterable or non-enterable object.
+Os indicadores podem ser utilizados para visualizar ou definir valores. Por exemplo, se um indicador de progresso recebe um valor por um método, ele exibe o valor. Se o usuário arrastar o ponto indicador, o valor muda. O valor pode ser usado em outro objeto, como um campo ou um objeto digitável, ou não digitável.
 
-A variável associada ao indicador controla a visualização. O usuário coloca valores no código ou utiliza valores do código através de métodos. For example, a method for a field or enterable object could be used to control a progress indicator:
+A variável associada ao indicador controla a visualização. O usuário coloca valores no código ou utiliza valores do código através de métodos. Por exemplo, um método para um campo ou objeto digitável poderia ser usado para controlar um indicador de progresso:
 
 ```4d
  $vTherm:=[Employees]Salary
@@ -47,9 +47,9 @@ Estão disponíveis várias opções gráficas: valores mínimos/máximos, gradu
 
 **Barber shop** é uma variante do termômetro predefinido. Para activar esta variante, es necesario definir la propiedad [Barber shop](properties_Scale.md#barber-shop).
 
-> In JSON code, just remove "max" property from a default thermometer object to enable the Barber shop variant.
+> No código JSON, basta remover a propriedade "max" de um objeto termômetro padrão para ativar a variante Barber shop.
 
-La Barber shop muestra una animación continua, como la [spinner](spinner.md). These thermometers are generally used to indicate to the user that the program is in the process of carrying out a long operation. Cuando se selecciona esta variante termómetro, [las propiedades de la escala gráfica](properties_Scale.md) no están disponibles.
+La Barber shop muestra una animación continua, como la [spinner](spinner.md). Esses termômetros são geralmente usados para indicar ao usuário que o programa está em processo de execução de uma operação longa. Cuando se selecciona esta variante termómetro, [las propiedades de la escala gráfica](properties_Scale.md) no están disponibles.
 
 Quando o formulário é executado, o objeto não é animado. La animación se gestiona pasando un valor a su [variable o expresión asociada](properties_Object.md#variable-or-expression):
 

@@ -4,31 +4,21 @@ title: Área Plug-in
 ---
 
 
-A plug-in area is an area on the form that is completely controlled by a plug-in. The ability to incorporate plug-ins into forms gives you unlimited possibilities when creating custom applications. A plug-in can perform a simple task such as displaying a digital clock on a form, or a complex task such as providing full-featured word processing, spreadsheet, or graphics capabilities.
+Uma área de plug-in é uma área no formulário que é totalmente controlada por um [plug-in](../Extensions/develop-plug-ins.md). A capacidade de incorporar plug-ins aos formulários oferece possibilidades ilimitadas para a criação de aplicativos personalizados.
 
-Quando abrir um banco de dados, 4D cria uma lista interna de plug-ins [instalado em seu banco de dados](#installing-plug-ins). Quando tiver inserido uma área Plug-in em um formulário, pode atribuir um plug-in para a área diretamente na lista de tipos da Lista de Propriedades:
+Quando abrir um banco de dados, 4D cria uma lista interna de plug-ins [instalado em seu banco de dados](../Concepts/plug-ins.md#installing-plug-ins). Quando tiver inserido uma área Plug-in em um formulário, pode atribuir um plug-in para a área diretamente na lista de tipos da Lista de Propriedades:
 
 ![](../assets/en/FormObjects/pluginArea.png)
 
-> Some plug-ins, such as 4D Internet Commands, cannot be used in forms or external windows. When a plug-in cannot be used in a form, it does not appear in the plug-in list of the Property List.
+> Alguns plug-ins, como 4D Internet Commands, não podem ser usados em formulários ou janelas externas. Quando um plug-in não pode ser usado em um formulário, ele não aparece na lista de plug-ins da Lista de propriedades.
 
-If you draw a plug-in area that is too small, 4D will display it as a button whose title is the name of the variable associated with the area. During execution, the user can click on this button in order to open a specific window displaying the plug-in.
-
-
-## Advanced properties
-
-If advanced options are provided by the author of the plug-in, a **Plug-in** theme containing an [**Advanced Properties**](properties_Plugins.md) button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
+Se você desenhar uma área de plug-in muito pequena, 4D irá exibi-lo como um botão cujo título é o nome da variável associada à área. Durante a execução, o usuário pode clicar nesse botão para abrir uma janela específica que exiba o plug-in.
 
 
-## Instalação de plug-ins
+## Propriedades avançadas
 
-Para adicionar um plug-in no seu ambiente 4D, primeiro precisa de sair do 4D. Os plug-ins são carregados quando se inicia 4D. Para obter mais informações sobre a instalação de plug-ins, consulte [Instalação de plug-ins ou componentes](https://doc.4d.com/4Dv17R6/4D/17-R6/Installing-plugins-or-components.300-4354866.en.html).
-
-
-## Criação de plug-ins
-
-If you are interested in designing your own plug-ins, you can receive extensive information about writing and implementing plug-ins. 4D fornece um kit completo [(no github)](https://github.com/4d/4D-Plugin-SDK) para ajudá-lo a escrever plug-ins personalizados.
+Se as opções avançadas forem fornecidas pelo autor do plug-in, um tema **de plug-in** que contenha uma seção [**Propriedades avançadas**](properties_Plugins.md) pode ser ativado na lista de propriedades. Nesse caso, você pode clicar nesse botão para definir essas opções, geralmente por uma caixa de diálogo personalizada.
 
 
 ## Propriedades compatíveis
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Advanced Properties](properties_Plugins.md) - [Class](properties_Object.md#css-class) - [Draggable](properties_Action.md#draggable) - [Droppable](properties_Action.md#droppable) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Plug-in Kind](properties_Object.md#plug-in-kind) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[Estilo da linha de borda](properties_BackgroundAndBorder.md#border-line-style) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Propriedades avançadas](properties_Plugins.md) - [Classe](properties_Object.md#css-class) - [Arrastável](properties_Action.md#draggable) - [Droppable](properties_Action.md#droppable) - [Tipo de expressão](properties_Object.md#expression-type) - [Focalizável](properties_Entry.md#focusable) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Método](properties_Action.md#method) - [Nome do objeto](properties_Object.md#object-name) - [Tipo de plug-in](properties_Object.md#plug-in-kind) - [Direita](properties_CoordinatesAndSizing.md#right) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Dimensionamento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width) 

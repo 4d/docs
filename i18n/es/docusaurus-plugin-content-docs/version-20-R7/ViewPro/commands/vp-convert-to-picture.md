@@ -13,7 +13,7 @@ title: VP Convert to picture
 | ---------- | ------- | --------------------------- | --------------------------------------------------- | ---------------- |
 | vpObject   | Object  | ->                          | Objeto 4D View Pro que contiene el área a convertir |                  |
 | rangeObj   | Object  | ->                          | Objeto rango                                        |                  |
-| Result     | Picture | <- | Imagen SVG del área                                 | <!-- END REF --> |
+| Resultado  | Picture | <- | Imagen SVG del área                                 | <!-- END REF --> |
 
 #### Descripción
 
@@ -63,3 +63,4 @@ $vPict:=VP Convert to picture($vpAreaObj) //exportar toda el área
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
 [VP Export to object](vp-export-to-object.md)<br/>
 [VP SET PRINT INFO](vp-set-print-info.md)
+

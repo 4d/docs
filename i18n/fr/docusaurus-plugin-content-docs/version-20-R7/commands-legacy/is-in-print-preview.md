@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Is in print preview.Summary-->La commande **Is in print preview** retourne Vrai si l’option **Aperçu avant impression** est cochée dans la boîte de dialogue d’impression, et Faux sinon.<!-- END REF--> Ce paramétrage est local au process. 
@@ -47,3 +44,12 @@ Cet exemple permet de prendre en compte tous les types d’impressions :
 
 [Get print preview](get-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1198 |
+| Thread safe | &cross; |
+
+

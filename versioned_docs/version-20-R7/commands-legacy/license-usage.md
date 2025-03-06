@@ -71,3 +71,13 @@ This table details the contents of the session object for REST sessions:
 | sessionID         | Text     | REST session ID                                  |
 | IPAddress         | Text     | ID of the client that initiated the REST session |
 | isDatastore       | Boolean  | True if the REST request comes from a datastore  |
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1782 |
+| Thread safe | &cross; |
+
+

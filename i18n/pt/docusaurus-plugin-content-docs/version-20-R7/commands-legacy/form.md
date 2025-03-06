@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Form.Summary-->O comando **Form** devolve o objeto associado com o formulário atual, se houver.<!-- END REF--> 4D associa automaticamente um objeto ao formulário atual nos casos abaixo:
@@ -32,7 +29,7 @@ Se o formulário atual for mostrado mediante uma chamada ao comando [DIALOG](dia
 
 Se o formulàrio atual for um subformulário, o objeto devolvido depende da variável container pai:
 
-* Se a variável associada ao container principal tiver sido escrita como um objeto ([C\_OBJECT](c-object.md)), **Form** devolve o valor desta variável.  
+* Se a variável associada ao container principal tiver sido escrita como um objeto (*C\_OBJECT*), **Form** devolve o valor desta variável.  
 Neste caso, o objeto devolvido por **Form** é o mesmo que o devolvido pela expressão abaixo:  
 ```4d  
  (OBJECT Get pointer(Object subform container))->  
@@ -100,3 +97,12 @@ Se os valores forem editados e o botão OK button for clicaod, o campo é atuali
 #### Ver também 
 
 [DIALOG](dialog.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1466 |
+| Thread-seguro | &cross; |
+
+

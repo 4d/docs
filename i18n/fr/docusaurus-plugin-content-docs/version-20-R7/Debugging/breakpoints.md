@@ -19,7 +19,7 @@ Dans l'exemple suivant, un point d'arrêt (la puce rouge) a été défini dans l
 
 ![break-point](../assets/en/Debugging/break.png)
 
-Dans l'exemple ci-dessus, en cliquant sur le bouton [**No Trace**](./debugger.md/#no-trace), l'exécution normale reprend jusqu'à la ligne marquée avec le point d'arrêt. Cette ligne n'est pas exécutée - vous retournez en mode trace. Le fait de définir un point d'arrêt au-delà du compteur du programme et de cliquer sur le bouton **No Trace** vous permet de sauter des parties de la méthode tracée.
+In the above example, clicking the [**No Trace**](./debugger.md#no-trace) button resumes normal execution up to the line marked with the break point. Cette ligne n'est pas exécutée - vous retournez en mode trace. Le fait de définir un point d'arrêt au-delà du compteur du programme et de cliquer sur le bouton **No Trace** vous permet de sauter des parties de la méthode tracée.
 
 Pour supprimer un point d'arrêt, cliquez sur la puce correspondante.
 
@@ -74,7 +74,7 @@ Vous ne pouvez pas ajouter de nouveaux points d'arrêt à partir de cette fenêt
 
 L'onglet **Catch** de l'Explorateur d'exécution vous permet d'ajouter des points d'arrêt supplémentaires à votre code via des appels aux commandes 4D. Contrairement à un point d'arrêt, qui est situé dans une méthode de projet particulière (et qui déclenche donc une exception de traçage uniquement lorsqu'il est atteint), la portée de la capture d'une commande inclut tous les process qui exécutent le code 4D et appellent cette commande.
 
-Les points d'arrêt sur une commande sont un moyen pratique de tracer de grandes portions de code sans avoir à définir des points d'arrêt à des endroits arbitraires. Par exemple, si un enregistrement qui ne devrait pas être supprimé l'est malgré tout après avoir exécuté un ou plusieurs process, vous pouvez essayer de réduire le champ de votre investigation via des points d'arrêt sur des commandes telles que \`DELETE RE Chaque fois que ces commandes sont appelées, vous pouvez vérifier si l'enregistrement en question a été supprimé, et ainsi isoler la partie défectueuse du code.
+Les points d'arrêt sur une commande sont un moyen pratique de tracer de grandes portions de code sans avoir à définir des points d'arrêt à des endroits arbitraires. Par exemple, si un enregistrement qui ne devrait pas être supprimé l'est malgré tout après avoir exécuté un ou plusieurs process, vous pouvez essayer de réduire le champ de votre investigation via des points d'arrêt sur des commandes telles que \\\\`DELETE RE Chaque fois que ces commandes sont appelées, vous pouvez vérifier si l'enregistrement en question a été supprimé, et ainsi isoler la partie défectueuse du code. Chaque fois que ces commandes sont appelées, vous pouvez vérifier si l'enregistrement en question a été supprimé, et ainsi isoler la partie défectueuse du code.
 
 N'hésitez pas à combiner les points d'arrêt et les points d'arrêt sur commandes.
 
@@ -116,3 +116,4 @@ Pour supprimer un point d'arrêt sur commande :
 L'ajout de conditions vous permet d'arrêter l'exécution lorsque la commande est invoquée uniquement si la condition est remplie. Par exemple, si vous associez la condition `Records in selection(\[Emp]>10)` au point d'arrêt de la commande `DELETE SELECTION`, le code ne sera pas arrêté pendant l'exécution de la commande `DELETE SELECTION` si la sélection courante de la table \[Emp] ne contient que 9 enregistrements (ou moins).
 
 L'ajout de conditions aux points d'arrêt sur commandes ralentit l'exécution, car la condition doit être évaluée chaque fois qu'une exception est rencontrée. En revanche, l'ajout de conditions accélère le processus de débogage, car 4D ignore automatiquement les occurrences qui ne correspondent pas aux conditions.
+

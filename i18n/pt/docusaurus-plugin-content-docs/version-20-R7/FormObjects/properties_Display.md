@@ -100,7 +100,7 @@ Customized date formats can be built using several patterns described in the [**
 
 :::note blankIfNull
 
-- Por padrão, uma data nula é exibida com zeros, por exemplo, 00/00/00. Com a opção "blankIfNull", uma data nula é exibida como uma área vazia. A cadeia de caracteres "blankIfNull" (sensível a maiúsculas e minúsculas) deve ser combinada com o valor de formato selecionado. Por exemplo: "systemShort blankIfNull" ou "ee dd LL blankIfNull".
+- Por padrão, uma data nula é exibida com zeros, por exemplo, 00/00/00. Com a opção "blankIfNull", uma data nula é exibida como uma área vazia. A cadeia de caracteres "blankIfNull" (sensível a maiúsculas e minúsculas) deve ser combinada com o valor de formato selecionado. A cadeia de caracteres "blankIfNull" (sensível a maiúsculas e minúsculas) deve ser combinada com o valor de formato selecionado.
 - [List box columns](listbox_overview.md#list-box-columns) and [list box footers](listbox_overview.md#list-box-footers) of type date always use the "blank if null" behavior (it cannot be disengaged).
 
 :::
@@ -132,7 +132,7 @@ Em cada um dos formatos de exibição de números, o sinal de número (#), o zer
 
 (1) O acento circunflexo (^) gera um caractere de espaço que ocupa a mesma largura de um dígito na maioria das fontes.
 
-Por exemplo, se quiser exibir números de três dígitos, pode usar o formato ####. Si el usuario introduce más dígitos de los que permite el formato, 4D muestra <<< en el campo para indicar que se han introducido más dígitos de los especificados en el formato de visualización.
+Por exemplo, se quiser exibir números de três dígitos, pode usar o formato ####. Se o usuário inserir mais caracteres do que o formato permitir, 4D exibe os últimos caracteres.
 
 Se o usuário digitar um número negativo, o caractere mais à esquerda será exibido como um sinal de menos (a menos que um formato de exibição negativo tenha sido especificado). Si ##0 es el formato, menos 26 se muestra como -26 y menos 260 se muestra como <<< porque el signo menos ocupa un marcador de posición y sólo hay tres marcadores de posición.
 
@@ -290,7 +290,7 @@ O formato **Scaled to fit** faz com que o 4D redimensione a imagem para se ajust
 
 `Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
-El formato **Truncado (centrado)** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D crops equally from each edge and from the top and bottom.
+El formato **Truncado (centrado)** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D corta igualmente de cada borda e da parte superior e inferior.
 
 O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior esquerdo da imagem no canto superior esquerdo da área e recorte qualquer parte que não caiba na área. 4D corta da direita e de baixo para cima.
 
@@ -391,7 +391,7 @@ Por padrão, uma hora nula é exibida com zeros, por exemplo, "00:00:00". Com a 
 Cuando una [expresión booleana](properties_Object.md#expression-type) se muestra como:
 
 - un texto en un [objeto de entrada](input_overview.md)
-- un "popup"  en una [columna del list box](listbox_overview.md#list-box-columns),
+- un "popup" [](properties_Display.md#display-type) en una [columna del list box](listbox_overview.md#list-box-columns),
 
 ... pode selecionar o texto a apresentar para cada valor:
 
@@ -416,7 +416,7 @@ Utilizado para associar um formato de visualização aos dados da coluna. Os for
 
 As colunas booleanas e numéricas (numéricas ou inteiras) podem ser exibidas como caixas de seleção. En este caso, se puede definir la propiedad [Título](#title).
 
-As colunas booleanas também podem ser apresentadas como menus pop-up. In this case, the [Text when False and Text when True](#text-when-falsetext-when-true) properties must be defined.
+As colunas booleanas também podem ser apresentadas como menus pop-up. Nesse caso, as propriedades [Text when False e Text when True](#text-when-falsetext-when-true) devem ser definidas.
 
 #### Gramática JSON
 
@@ -532,7 +532,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Columna List Box](listbox_overview.md#list-box-columns) - [Rodapé List Box](listbox_overview.md#list-box-footers)
 
 ---
 

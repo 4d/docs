@@ -40,3 +40,12 @@ To restore the original value of a field, assign it the value returned by **Old*
 #### See also 
 
 [Modified](modified.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 35 |
+| Thread safe | &check; |
+
+

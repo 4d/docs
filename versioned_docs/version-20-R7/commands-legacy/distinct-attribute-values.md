@@ -93,3 +93,12 @@ The *aLChildNum* array receives the following elements:
 
   
 [DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1397 |
+| Thread safe | &check; |
+
+

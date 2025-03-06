@@ -117,7 +117,7 @@ Available classes are accessible from their class stores. Two class stores are a
 <!-- REF #_command_.cs.Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|&larr;|User class store for the project or component|<!-- END REF -->
+|classStore|Object|&#8592;|User class store for the project or component|<!-- END REF -->
 
 The `cs` command <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
 
@@ -136,7 +136,7 @@ $instance:=cs.myClass.new()
 <!-- REF #_command_.4D.Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|&larr;|4D class store|<!-- END REF -->
+|classStore|Object|&#8592;|4D class store|<!-- END REF -->
 
 The `4D` command <!-- REF #_command_.4D.Summary -->returns the class store for available built-in 4D classes<!-- END REF -->. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
 
@@ -166,7 +166,7 @@ When a class is [defined](#class-definition) in the project, it is loaded in the
 - [`new()`](API/ClassClass.md#new) function, allowing to instantiate class objects
 - [`isShared`](API/ClassClass.md#isshared) property, true if the class is [shared](#shared-classes)
 - [`isSingleton`](API/ClassClass.md#issingleton) property, true if the class defines a [singleton](#singleton-classes).
-- [`isSectionSingleton`](API/ClassClass.md#issectionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
+- [`isSessionSingleton`](API/ClassClass.md#issessionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
 - [`me`](API/ClassClass.md#me) property, allowing to instantiate and access [singletons](#singleton-classes).
 
 In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
@@ -188,7 +188,7 @@ Specific 4D keywords can be used in class definitions:
 - `property` to define static properties of the objects with a type.
 - `Function get <Name>` and `Function set <Name>` to define computed properties of the objects.
 - `Class extends <ClassName>` to define inheritance.
-- `This` and `Super` are commands that have special 
+- `This` and `Super` are commands that have special features within classes.
 
 ### `Function`
 
@@ -198,6 +198,12 @@ Specific 4D keywords can be used in class definitions:
 {shared} Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
+
+:::note
+
+There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file. 
+
+:::
 
 Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md) class. In the class definition file, function declarations use the `Function` keyword followed by the function name.
 
@@ -335,6 +341,13 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 {shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
 // code
 ```
+
+:::note
+
+There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file. 
+
+:::
+
 
 A class constructor function accepts optional [parameters](#parameters) and can be used to create and initialize objects of the user class.  
 

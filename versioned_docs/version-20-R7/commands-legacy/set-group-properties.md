@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Set group properties.Summary-->Set group properties enables you to change and update the properties of an existing group whose unique group ID number you pass in *groupID*, or to add a new group.<!-- END REF--> 
@@ -59,3 +56,13 @@ If you do not have the proper access privileges for calling Set group properties
 [GET GROUP LIST](get-group-list.md)  
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 614 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

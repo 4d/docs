@@ -3,27 +3,19 @@ id: pluginAreaOverview
 title: Área Plug-in
 ---
 
-A plug-in area is an area on the form that is completely controlled by a plug-in. The ability to incorporate plug-ins into forms gives you unlimited possibilities when creating custom applications. A plug-in can perform a simple task such as displaying a digital clock on a form, or a complex task such as providing full-featured word processing, spreadsheet, or graphics capabilities.
+A plug-in area is an area on the form that is completely controlled by a [plug-in](../Extensions/develop-plug-ins.md). A capacidade de incorporar plug-ins aos formulários oferece possibilidades ilimitadas para a criação de aplicativos personalizados.
 
-Ao abrir uma aplicação, 4D cria uma lista interna dos plug-ins [instalados em sua aplicação](#installing-plug-ins). Quando tiver inserido uma área Plug-in em um formulário, pode atribuir um plug-in para a área diretamente na lista **Tipo** na Lista de propriedades:
+Ao abrir uma aplicação, 4D cria uma lista interna dos plug-ins [instalados em sua aplicação](../Concepts/plug-ins.md#installing-plug-ins). Quando tiver inserido uma área Plug-in em um formulário, pode atribuir um plug-in para a área diretamente na lista **Tipo** na Lista de propriedades:
 
 ![](../assets/en/FormObjects/pluginArea.png)
 
-> Some plug-ins, such as 4D Internet Commands, cannot be used in forms or external windows. When a plug-in cannot be used in a form, it does not appear in the plug-in list of the Property List.
+> Alguns plug-ins, como 4D Internet Commands, não podem ser usados em formulários ou janelas externas. Quando um plug-in não pode ser usado em um formulário, ele não aparece na lista de plug-ins da Lista de propriedades.
 
-If you draw a plug-in area that is too small, 4D will display it as a button whose title is the name of the variable associated with the area. During execution, the user can click on this button in order to open a specific window displaying the plug-in.
+Se você desenhar uma área de plug-in muito pequena, 4D irá exibi-lo como um botão cujo título é o nome da variável associada à área. Durante a execução, o usuário pode clicar nesse botão para abrir uma janela específica que exiba o plug-in.
 
-## Advanced properties
+## Propriedades avançadas
 
-Se opções avançadas são fornecidas pelo autor do plug-in, um tema **Plug-in** contendo uma [**Propriedades Avançadas**](properties_Plugins.md) botão pode ser ativado na lista de propriedades. In this case, you can click this button to set these options, usually through a custom dialog box.
-
-## Instalação de plug-ins
-
-Para adicionar um plug-in no seu ambiente 4D, primeiro precisa de sair do 4D. Os plug-ins são carregados quando se inicia 4D. Para obter mais informações sobre a instalação de plug-ins, consulte [Instalando plugins ou componentes](https://doc.4d.com/4Dv17R6/4D/17-R6/Installing-plugins-or-components.300-4354866.en.html).
-
-## Criação de plug-ins
-
-If you are interested in designing your own plug-ins, you can receive extensive information about writing and implementing plug-ins. 4D fornece um [kit completo (no github)](https://github.com/4d/4D-Plugin-SDK) para ajudá-lo a escrever plugins personalizados.
+Se opções avançadas são fornecidas pelo autor do plug-in, um tema **Plug-in** contendo uma [**Propriedades Avançadas**](properties_Plugins.md) botão pode ser ativado na lista de propriedades. Nesse caso, você pode clicar nesse botão para definir essas opções, geralmente por uma caixa de diálogo personalizada.
 
 ## Propriedades compatíveis
 

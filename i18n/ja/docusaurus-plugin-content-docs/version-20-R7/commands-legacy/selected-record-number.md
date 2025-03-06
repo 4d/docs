@@ -35,3 +35,12 @@ displayed_sidebar: docs
 [GOTO SELECTED RECORD](goto-selected-record.md)  
 [Records in selection](records-in-selection.md)  
 *レコード番号について*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 246 |
+| スレッドセーフである | &check; |
+
+

@@ -43,3 +43,12 @@ Pour reprendre l’exemple du Web Service “Racine\_carree” fourni dans la de
 
 [SOAP DECLARATION](soap-declaration.md)  
 [SOAP Get info](soap-get-info.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 781 |
+| Thread safe | &check; |
+
+

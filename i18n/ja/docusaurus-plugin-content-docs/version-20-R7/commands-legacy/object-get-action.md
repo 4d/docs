@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT Get action.Summary-->**OBJECT Get action** コマンドは*object* 引数と*\** 引数によって指定されたオブジェクトに割り当てられた標準アクションの名前と引数(あれば)を返します。<!-- END REF-->
@@ -46,3 +43,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET ACTION](object-set-action.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1457 |
+| スレッドセーフである | &cross; |
+
+

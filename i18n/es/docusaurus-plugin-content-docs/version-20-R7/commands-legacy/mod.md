@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Mod.Summary-->El comando Mod devuelve el resto de la división entera de *número1* entre *número2*.<!-- END REF-->
-
-**Notas:**   
+<!--REF #_command_.Mod.Summary-->El comando Mod devuelve el resto de la división entera de *número1* entre *número2*.<!-- END REF-->  
 • Mod acepta expresiones de tipo Entero, Entero largo y Reales. Sin embargo, si *número1* o *número2* son números reales, los números primeros son redondeados y luego se calcula Mod.   
 • Sea cuidadoso cuando utilice Mod con números reales de gran tamaño (sobre 2^31), ya que en este caso, su operación podría alcanzar los límites de las capacidades de cálculo de los procesadores estándar.
 
@@ -36,3 +34,13 @@ El siguiente ejemplo ilustra el funcionamiento de Mod con diferentes argumentos.
  vlResult:=Mod(4;2) // vlResult vale 0
  vlResult:=Mod(3.5;2) // vlResult vale 0
 ```
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 98 |
+| Hilo seguro | &check; |
+
+

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SUBSECTION.Params-->
 
-| Parámetros     | Tipo    |   | Descripción                                                                        |
-| -------------- | ------- | - | ---------------------------------------------------------------------------------- |
-| wpSection      | Object  | → | 4D Write Pro section                                                               |
-| subSectionType | Integer | → | Subsection type (wk first page, wk left page, or wk right page) |
-| subSection     | Object  | → | 4D Write Pro subsection                                                            |
+| Parámetros     | Tipo    |                             | Descripción                                                                        |
+| -------------- | ------- | --------------------------- | ---------------------------------------------------------------------------------- |
+| wpSection      | Object  | &#8594; | 4D Write Pro section                                                               |
+| subSectionType | Integer | &#8594; | Subsection type (wk first page, wk left page, or wk right page) |
+| subSection     | Object  | &#8594; | 4D Write Pro subsection                                                            |
 
 <!-- END REF-->
 
@@ -51,9 +51,9 @@ You want to delete the first page subsection of the first section:
 
 ```4d
  var $section;$subsection : Object
-  // get first section
+  // obtener la primera sección
  $section:=WP Get section(wpDoc;1)
-  // Delete the subsection
+  // Eliminar la subsección
  WP DELETE SUBSECTION($section;wk first page)
 ```
 

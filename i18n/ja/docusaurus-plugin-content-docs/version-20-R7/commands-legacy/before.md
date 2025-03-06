@@ -13,17 +13,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Before.Summary-->**Before** はBefore 実行サイクルでTrue を返します。<!-- END REF-->
 
 **Before** 実行サイクルを生成させるには、デザインモードでそのフォームやオブジェクトのOn Loadイベントプロパティを必ず選択してください。
 
-**注:** このコマンドは、[Form event code](form-event-code.md) コマンドを用いてOn Load イベントを返すかどうかをテストするのと同等と言えます。
+**注:** このコマンドは、[Form event code](../commands/form-event-code.md) コマンドを用いてOn Load イベントを返すかどうかをテストするのと同等と言えます。
 
 #### 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 29 |
+| スレッドセーフである | &cross; |
+
+

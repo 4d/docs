@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.DELETE USER.Summary-->La commande **DELETE USER** supprime l'utilisateur dont le numéro est passé dans *réfUtilisateur*.<!-- END REF--> Vous devez passer un numéro valide d'utilisateur, retourné par la commande [GET USER LIST](get-user-list.md). 
@@ -36,3 +33,13 @@ Si vous n'avez pas les privilèges d'accès pour appeler **DELETE USER** ou si u
 [GET USER PROPERTIES](get-user-properties.md)  
 [Is user deleted](is-user-deleted.md)  
 [Set user properties](set-user-properties.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 615 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

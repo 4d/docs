@@ -40,8 +40,6 @@ La variable système OK prend la valeur 1 si le filtre est correctement chargé,
 
 #### Voir aussi 
 
-*\_o\_Mac to Win*  
-*\_o\_Win to Mac*  
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
@@ -51,3 +49,13 @@ La variable système OK prend la valeur 1 si le filtre est correctement chargé,
 [RECEIVE BUFFER](receive-buffer.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 205 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

@@ -41,7 +41,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |**b**|||
 |[`booleanFormat`](properties_Display.md#text-when-falsetext-when-true)|Specifies only two possible values.|true, false|
 |[`borderRadius`](properties_CoordinatesAndSizing.md#corner-radius)|The radius value for round rectangles. |minimum: 0|
-|[`borderStyle`](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type)|Allows setting a standard style for the object border. |"system", "none", "solid", "dotted", "raised", "sunken", "double"|
+|[`borderStyle`](properties_BackgroundAndBorder.md#border-line-style)|Allows setting a standard style for the object border. |"system", "none", "solid", "dotted", "raised", "sunken", "double"|
 |[`bottom`](properties_CoordinatesAndSizing.md#bottom)|Positions an object at the bottom (centered).|minimum: 0<a id="c"></a>|
 |**c**|||
 |[`choiceList`](properties_DataSource.md#choice-list)|A list of choices associated with an object|A list of choices|
@@ -60,7 +60,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`customProperties`](properties_Plugins.md#advanced-properties)|Advanced properties (if any) |JSON string or base64 encoded string<a id="d"></a>|
 |**d**|||
 |[`dataSource`](properties_Object.md#variable-or-expression) (objects)<br/>[`dataSource`](properties_Subform.md#source) (subforms)<br/>[`dataSource`](properties_Object.md#data-source) (array list box) <br/> [`dataSource`](properties_Object.md#collection-or-entity-selection) (Collection or entity selection list box)<br/> [`dataSource`](properties_DataSource.md#expression) (list box column) <br/> [`dataSource`](properties_Hierarchy.md#hierarchical-list-box) (hierarchical list box)|Specifies the source of the data.|A 4D variable, field name, or an arbitrary complex language expression.|
-|[`dataSourceTypeHint`](properties_Object.md#expression-type) (objects) <br/> [`dataSourceTypeHint`](properties_DataSource.md#data-type-expression-type) (list box column, drop-down list)|Indicates the variable type.|"integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"|
+|[`dataSourceTypeHint`](properties_Object.md#expression-type) (objects) <br/> [`dataSourceTypeHint`](properties_DataSource.md#data-type-list-expression-type) (list box column, drop-down list)|Indicates the variable type.|"integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"|
 |[`dateFormat`](properties_Display.md#date-format)|Controls the way dates appear when displayed or printed. Must only be selected among the 4D built-in formats.|"systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values)|
 |[`defaultButton`](properties_Appearance.md#default-button)|Modifies a button's appearance in order to indicate the recommended choice to the user.|true, false|
 |[`defaultValue`](properties_RangeOfValues.md#default-value)|Defines a value or a stamp to be entered by default in an input object|String or "#D", "#H", "#N"|
@@ -91,20 +91,20 @@ You will find in this page a comprehensive list of all object properties sorted 
 |**g**|||
 |[`graduationStep`](properties_Scale.md#graduation-step)| Scale display measurement.|minimum: 0<a id="h"></a>|
 |**h**|||
-|[`header`](properties_Headers.md#headers)|Defines the header of a list box column|Object with properties "text", "name", "icon", "dataSource", "fontWeight", "fontStyle", "tooltip" |
+|[`header`](./listbox_overview.md#list-box-headers)|Defines the header of a list box column|Object with properties "text", "name", "icon", "dataSource", "fontWeight", "fontStyle", "tooltip" |
 |[`headerHeight`](properties_Headers.md#height)|Used to set the row height |positive decimal + px &#124; em |
 |[`height`](properties_CoordinatesAndSizing.md#height)|Designates an object's vertical size|minimum: 0|
 |[`hideExtraBlankRows`](properties_BackgroundAndBorder.md#hide-extra-blank-rows)|Deactivates the visibility of extra, empty rows.	|true, false|
 |[`hideFocusRing`](properties_Appearance.md#hide-focus-rectangle)|Hides the selection rectangle when the object has the focus.|true, false|
 |[`hideSystemHighlight`](properties_Appearance.md#hide-selection-highlight)|Used to specify hiding highlighted records in the list box.|true, false|
-|[`highlightSet`](properties_ListBox.md#highlight-set)| string| Name of the set.|
-|[`horizontalLineStroke`](properties_Gridlines.md#horizontal-line-color)|Defines the color of the horizontal lines in a list box (gray by default).|Any CSS value, "'transparent", "automatic"<a id="i"></a>|
+|[`highlightSet`](properties_ListBox.md#highlight-set)|Name of the set.|  string| 
+|[`horizontalLineStroke`](properties_Gridlines.md#horizontal-line-color)|Defines the color of the horizontal lines in a list box (gray by default).|Any CSS value, "transparent", "automatic"<a id="i"></a>|
 |**i**|||
 |[`icon`](properties_TextAndPicture.md#picture-pathname)|The pathname of the picture used for buttons, check boxes, radio buttons, list box headers.|Relative or filesystem path in POSIX syntax.|
 |[`iconFrames`](properties_TextAndPicture.md#number-of-states)|Sets the exact number of states present in the picture. |minimum: 1|
 |[`iconPlacement`](properties_TextAndPicture.md#icon-location)|Designates the placement of an icon in relation to the form object.|"none", "left", "right"<a id="k"></a>|
 |**k**|||
-|[`keyboardDialect`](properties_Entry.md#keyboardDialect)|To associate a specific keyboard layout to an input.|A keyboard code string, e.g. "ar-ma"<a id="l"></a>|
+|[`keyboardDialect`](properties_Entry.md#keyboard-layout)|To associate a specific keyboard layout to an input.|A keyboard code string, e.g. "ar-ma"<a id="l"></a>|
 |**l**|||
 |[`labels`](properties_DataSource.md#choice-list-static-list)|A list of values to be used as tab control labels|ex: "a", "b, "c", ...|  
 |[`labelsPlacement`](properties_Scale.md#label-location) (objects)<br/>[`labelsPlacement`](properties_Appearance.md#tab-control-direction) (tab control)| Specifies the location of an object's displayed text.|"none", "top", "bottom", "left", "right"|
@@ -145,7 +145,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`rowControlSource`](properties_ListBox.md#row-control-array) |A 4D array defining the list box rows. |Array|
 |[`rowCount`](properties_Crop.md#rows)|Sets the number of rows.|minimum: 1|
 |[`rowFillSource`](properties_BackgroundAndBorder.md#row-background-color-array) (array list box)<br/>[`rowFillSource`](properties_BackgroundAndBorder.md#background-color-expression) (selection or collection list box)|The name of an array or expression to apply a custom background color to each row of a list box. |The name of an array or expression.|
-|[`rowHeight`](properties_CoordinatesAndSizing.md#row-height)|Sets the height of list box rows. |CSS value unit "em" or "px" (default)|
+|[`rowHeight`](properties_CoordinatesAndSizing.md#row-height)|Sets the height of list box rows. |CSS value unit "em" or "px" (default).|
 |[`rowHeightAuto`](properties_CoordinatesAndSizing.md#automatic-row-height)|boolean |"true", "false"|
 |[`rowHeightAutoMax`](properties_CoordinatesAndSizing.md#maximum-width)|Designates the largest height allowed for list box rows. |CSS value unit "em" or "px" (default). minimum: 0|
 |[`rowHeightAutoMin`](properties_CoordinatesAndSizing.md#minimum-width)|Designates the smallest height allowed for list box rows. |CSS value unit "em" or "px" (default). minimum: 0|
@@ -153,16 +153,15 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`rowStrokeSource`](properties_Text.md#row-font-color-array) (array list box)<br/>[`rowStrokeSource`](properties_Text.md#font-color-expression) (selection or collection/entity selection list box)|An array or expression for managing row colors.|Name of array or expression.|
 |[`rowStyleSource`](properties_Text.md#row-style-array) (array list box) <br/> [`rowStyleSource`](properties_Text.md#style-expression) (selection or collection/entity selection list box)|An array or expression for managing row styles.|Name of array or expression.<a id="s"></a>|
 |**s**|||
-|[`saveAs`](properties_DataSource.md#save-as) (list box column)<br/>[`saveAs`](properties_DataSource.md#data-type-list) (drop-down list)|The type of contents to save in the field or variable associated to the form object|"value", "reference"|
+|[`saveAs`](properties_DataSource.md#save-as) (list box column)<br/>[`saveAs`](properties_DataSource.md#data-type-list-list) (drop-down list)|The type of contents to save in the field or variable associated to the form object|"value", "reference"|
 |[`scrollbarHorizontal`](properties_Appearance.md#horizontal-scroll-bar) | A tool allowing the user to move the viewing area to the left or right.|"visible", "hidden", "automatic"|
 |[`scrollbarVertical`](properties_Appearance.md#vertical-scroll-bar) | A tool allowing the user to move the viewing area up or down.|"visible", "hidden", "automatic"|
 |[`selectedItemsSource`](properties_DataSource.md#selected-items)|Collection of the selected items in a list box.|Collection expression	|
 |[`selectionMode`](properties_Action.md#multi-selectable) (hierarchical list)<br/> [`selectionMode`](properties_ListBox.md#selection-mode) (list box)<br/> [`selectionMode`](properties_Subform.md#selection-mode) (subform)|Allows the selection of multiple records/rows.|"multiple", "single", "none"
-|[`shortcutAccel`](properties_Entry.md#shortcut)|Specifies the system to use, Windows or Mac.|true, false|
+|[`shortcutAccel`](properties_Entry.md#shortcut)|Designates the accelerator key (Ctrl Windows/Command macOS).|true, false|
 |[`shortcutAlt`](properties_Entry.md#shortcut)|Designates the Alt key|true, false|
-|[`shortcutCommand`](properties_Entry.md#shortcut)|Designates the Command key (macOS)|true, false|
 |[`shortcutControl`](properties_Entry.md#shortcut)|Designates the Control key (Windows)|true, false|
-|[`shortcutKey`](properties_Entry.md#shortcut)|The letter or name of a special meaning key.|"[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
+|[`shortcutKey`](properties_Entry.md#shortcut)|The letter or name of a special meaning key.|"a", "b",... or "[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
 |[`shortcutShift`](properties_Entry.md#shortcut)	|Designates the Shift key	|true, false|
 |[`showFooters`](properties_Footers.md#display-footers)|Displays or hides column footers. |true, false|
 |[`showGraduations`](properties_Scale.md#display-graduation)|Displays/Hides the graduations next to the labels. |true, false|
@@ -187,8 +186,8 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`stroke`](properties_Text.md#font-color) (text)<br/> [`stroke`](properties_BackgroundAndBorder.md#line-color) (lines)<br/>[`stroke`](properties_Text.md#font-color) (list box)|Specifies the color of the font or line used in the object. |Any CSS value, "transparent", "automatic"|
 |[`strokeDashArray`](properties_BackgroundAndBorder.md#dotted-line-type)|Describes dotted line type as a sequence of black and white points|Number array or string|
 |[`strokeWidth`](properties_BackgroundAndBorder.md#line-width) |Designates the thickness of a line.|An integer or 0 for smallest width on a printed form|
-|[`style`](properties_TextAndPicture.md#multi-style)|Allows setting the general appearance of the button. See Button Style for more information.|"regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom"|
-|[`styledText`](properties_Text.md#style)|Enables the possibility of using specific styles in the selected area.|true, false|
+|[`style`](properties_TextAndPicture.md#button-style)|Allows setting the general appearance of the button. See Button Style for more information.|"regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom"|
+|[`styledText`](properties_Text.md#multi-style)|Enables the possibility of using specific styles in the selected area.|true, false|
 |[`switchBackWhenReleased`](properties_Animation.md#switch-back-when-released)|Displays the first picture all the time except when the user clicks the button. Displays the second picture until the mouse button is released.|true, false|
 |[`switchContinuously`](properties_Animation.md#switch-continuously-on-clicks)|Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation).|true, false|
 |[`switchWhenRollover`](properties_Animation.md#switch-when-roll-over)|Modifies the contents of the picture button when the mouse cursor passes over it. The initial picture is displayed when the cursor leaves the button’s area.|true, false<a id="t"></a>|
@@ -214,7 +213,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`values`](properties_DataSource.md#default-list-of-values)|List of default values for an array listbox column|ex: "A","B","42"...|
 |[`variableCalculation`](properties_Object.md#variable-calculation)|Allows mathematical calculations to be performed.|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare"|
 |[`verticalAlign`](properties_Text.md#vertical-alignment)|Vertical location of text within the area that contains it. |"automatic", "top", "middle", "bottom"|
-|[`verticalLineStroke`](properties_Gridlines.md#vertical-line-color)|Defines the color of the vertical lines in a list box (gray by default).|Any CSS value, "'transparent", "automatic"|
+|[`verticalLineStroke`](properties_Gridlines.md#vertical-line-color)|Defines the color of the vertical lines in a list box (gray by default).|Any CSS value, "transparent", "automatic"|
 |[`visibility`](properties_Display.md#visibility)|Allows hiding the object in the Application environment.|"visible", "hidden", "selectedRows", "unselectedRows"<a id="w"></a>|
 |**w**|||
 |[`webEngine`](properties_WebArea.md#use-embedded-web-rendering-engine)| Used to choose between two rendering engines for the Web area, depending on the specifics of the application.|"embedded", "system"|

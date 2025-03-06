@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.PRINTERS LIST.Summary-->El comando **PRINTERS LIST** llena el (los) array(s) pasados como parámetro(s) con los nombres y opcionalmente con la ubicación o nombres personalizados y los modelos de impresión disponibles para el equipo.<!-- END REF-->
@@ -47,3 +44,13 @@ La variable sistema OK toma el valor 1 si el comando ha sido ejecutado correctam
 
 [Get current printer](get-current-printer.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 789 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

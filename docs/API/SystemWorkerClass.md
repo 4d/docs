@@ -324,8 +324,7 @@ This property is **read-only**.
 <!-- REF SystemWorkerClass.currentDirectory.Desc -->
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->
-**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
 
 #### Description
 
@@ -532,21 +531,23 @@ This property is **read-only**.
 <!-- REF #SystemWorkerClass.wait().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|timeout|Real|->|Waiting time (in seconds)|
+|timeout|Real|->|Maximum wait time in seconds|
 |Result|4D.SystemWorker|<-|SystemWorker object|
 <!-- END REF -->
 
 #### Description
 
-The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
+The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout* is reached<!-- END REF -->.
 
-In *timeout*, pass a value in seconds. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
+The `.wait()` function waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached(If any is defined), or an error has occured. If *timeout* is reached, the `SystemWorker` is not killed.
 
-Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached. If *timeout* is reached, the `SystemWorker` is not killed.
+If you pass a *timeout* value, .wait() waits for the external process for the amount of time defined in the *timeout* parameter.
 
-During a `.wait()` execution, callback functions are executed, especially callbacks from other events or from other `SystemWorker` instances. You can exit from a `.wait()` by calling [`terminate()`](#terminate) from a callback.
+:::note 
 
-This function returns the SystemWorker object.
+During the `.wait()` execution, callback functions are executed, whether they originate from other `SystemWorker` instances. You can exit from a `.wait()` by calling [`terminate()`](#terminate) from a callback.
+
+:::
 
 > This function is not necessary if you created the `SystemWorker` from a 4D worker process.
 

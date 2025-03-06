@@ -58,7 +58,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[customProperties](properties_Plugins.md#advanced-properties)|Advanced properties (if any) |JSON string or base64 encoded string<a id="d"></a>|
 |**d**|||
 |[dataSource](properties_Object.md#variable-or-expression) (objects)<br/>[dataSource](properties_Subform.md#source) (subforms)<br/>[dataSource](properties_Object.md#data-source) (array list box) <br/> [dataSource](properties_Object.md#collection-or-entity-selection) (Collection or entity selection list box)<br/> [dataSource](properties_DataSource.md#expression) (list box column) <br/> [dataSource](properties_Hierarchy.md#hierarchical-list-box) (hierarchical list box)|Specifies the source of the data.|A 4D variable, field name, or an arbitrary complex language expression.|
-|[dataSourceTypeHint](properties_Object.md#expression-type) (objects) <br/> [dataSourceTypeHint](properties_DataSource.md#data-type) (list box column)|Indicates the variable type.|"integer", "number", "boolean", "picture", "text", date", "time", "arrayText", "collection", "object", "undefined"|
+|[dataSourceTypeHint](properties_Object.md#expression-type) (objects) <br/> [dataSourceTypeHint](properties_DataSource.md#data-type-list) (list box column)|Indicates the variable type.|"integer", "number", "boolean", "picture", "text", date", "time", "arrayText", "collection", "object", "undefined"|
 |[dateFormat](properties_Display.md#date-format)|Controls the way dates appear when displayed or printed. Must only be selected among the 4D built-in formats.|"systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values)|
 |[defaultButton](properties_Appearance.md#default-button)|Modifies a button's appearance in order to indicate the recommended choice to the user.|true, false|
 |[defaultValue](properties_RangeOfValues.md#default-value)|Defines a value or a stamp to be entered by default in an input object|String or "#D", "#H", "#N"|
@@ -96,8 +96,8 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[hideExtraBlankRows](properties_BackgroundAndBorder.md#hide-extra-blank-rows)|Deactivates the visibility of extra, empty rows. |true, false|
 |[hideFocusRing](properties_Appearance.md#hide-focus-rectangle)|Hides the selection rectangle when the object has the focus.|true, false|
 |[hideSystemHighlight](properties_Appearance.md#hide-selection-highlight)|Used to specify hiding highlighted records in the list box.|true, false|
-|[highlightSet](properties_ListBox.md#highlight-set)| string| Name of the set.|
-|[horizontalLineStroke](properties_Gridlines.md#horizontal-line-color)|Defines the color of the horizontal lines in a list box (gray by default).|Any CSS value, "'transparent", "automatic"<a id="i"></a>|
+|[highlightSet](properties_ListBox.md#highlight-set)|Name of the set.|  string| 
+|[horizontalLineStroke](properties_Gridlines.md#horizontal-line-color)|Defines the color of the horizontal lines in a list box (gray by default).|Any CSS value, "transparent", "automatic"<a id="i"></a>|
 |**i**|||
 |[icon](properties_TextAndPicture.md#picture-pathname)|The pathname of the picture used for buttons, check boxes, radio buttons, list box headers.|Relative or filesystem path in POSIX syntax.|
 |[iconFrames](properties_TextAndPicture.md#number-of-states)|Sets the exact number of states present in the picture. |minimum: 1|
@@ -144,7 +144,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[rowControlSource](properties_ListBox.md#row-control-array) |A 4D array defining the list box rows. |Array|
 |[rowCount](properties_Crop.md#rows)|Sets the number of rows.|minimum: 1|
 |[rowFillSource](properties_BackgroundAndBorder.md#row-background-color-array) (array list box)<br/>[rowFillSource](properties_BackgroundAndBorder.md#background-color-expression) (selection or collection list box)|The name of an array or expression to apply a custom background color to each row of a list box. |The name of an array or expression.|
-|[rowHeight](properties_CoordinatesAndSizing.md#row-height)|Sets the height of list box rows. |CSS value unit "em" or "px" (default)|
+|[rowHeight](properties_CoordinatesAndSizing.md#row-height)|Sets the height of list box rows. |CSS value unit "em" or "px" (default).|
 |[rowHeightAuto](properties_CoordinatesAndSizing.md#automatic-row-height)|boolean |"true", "false"|
 |[rowHeightAutoMax](properties_CoordinatesAndSizing.md#maximum-width)|Designates the largest height allowed for list box rows. |CSS value unit "em" or "px" (default). minimum: 0|
 |[rowHeightAutoMin](properties_CoordinatesAndSizing.md#minimum-width)|Designates the smallest height allowed for list box rows. |CSS value unit "em" or "px" (default). minimum: 0|
@@ -156,11 +156,11 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[scrollbarVertical](properties_Appearance.md#vertical-scroll-bar) | A tool allowing the user to move the viewing area up or down.|"visible", "hidden", "automatic"|
 |[selectedItemsSource](properties_DataSource.md#selected-items)|Collection of the selected items in a list box.|Collection expression |
 |[selectionMode](properties_Action.md#multi-selectable) (hierarchical list)<br/> [selectionMode](properties_ListBox.md#selection-mode) (list box)<br/> [selectionMode](properties_Subform.md#selection-mode) (subform)|Allows the selection of multiple records/rows.|"multiple", "single", "none"
-|[shortcutAccel](properties_Entry.md#shortcut)|Specifies the system to use, Windows or Mac.|true, false|
+|[shortcutAccel](properties_Entry.md#shortcut)|Designates the accelerator key (Ctrl Windows/Command macOS).|true, false|
 |[shortcutAlt](properties_Entry.md#shortcut)|Designates the Alt key|true, false|
 |[shortcutCommand](properties_Entry.md#shortcut)|Designates the Command key (macOS)|true, false|
 |[shortcutControl](properties_Entry.md#shortcut)|Designates the Control key (Windows)|true, false|
-|[shortcutKey](properties_Entry.md#shortcut)|The letter or name of a special meaning key.|"[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
+|[shortcutKey](properties_Entry.md#shortcut)|The letter or name of a special meaning key.|"a", "b",... or "[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
 |[shortcutShift](properties_Entry.md#shortcut) |Designates the Shift key |true, false|
 |[showFooters](properties_Footers.md#display-footers)|Displays or hides column footers. |true, false|
 |[showGraduations](properties_Scale.md#display-graduation)|Displays/Hides the graduations next to the labels. |true, false|
@@ -212,7 +212,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[values](properties_DataSource.md#default-list-of-values)|List of default values for an array listbox column|ex: "A","B","42"...|
 |[variableCalculation](properties_Object.md#variable-calculation)|Allows mathematical calculations to be performed.|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare"|
 |[verticalAlign](properties_Text.md#vertical-alignment)|Vertical location of text within the area that contains it. |"automatic", "top", "middle", "bottom"|
-|[verticalLineStroke](properties_Gridlines.md#vertical-line-color)|Defines the color of the vertical lines in a list box (gray by default).|Any CSS value, "'transparent", "automatic"|
+|[verticalLineStroke](properties_Gridlines.md#vertical-line-color)|Defines the color of the vertical lines in a list box (gray by default).|Any CSS value, "transparent", "automatic"|
 |[visibility](properties_Display.md#visibility)|Allows hiding the object in the Application environment.|"visible", "hidden", "selectedRows", "unselectedRows"<a id="w"></a>|
 |**w**|||
 |[webEngine](properties_WebArea.md#use-embedded-web-rendering-engine)| Used to choose between two rendering engines for the Web area, depending on the specifics of the application.|"embedded", "system"|

@@ -213,7 +213,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 
 #### Descrição
 
-The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. O cabeçalho inclui as seguintes partes do e-mail:
+A propriedade `.headerCharset` contém <!-- REF #transporter.headerCharset.Summary --> o conjunto de caracteres e a codificação usados para o cabeçalho de e-mail<!-- END REF -->. O cabeçalho inclui as seguintes partes do e-mail:
 
 - assunto,
 - nome(s) de arquivo anexo,
@@ -248,7 +248,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 #### Descrição
 
-The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Utilizado para transacções postais (SMTP, POP3, IMAP).
+A propriedade `.host` contém <!-- REF #transporter.host.Summary --> o nome ou o endereço IP do servidor host<!-- END REF -->. Utilizado para transacções postais (SMTP, POP3, IMAP).
 
 <!-- END REF -->
 
@@ -298,7 +298,7 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 
 #### Descrição
 
-The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
+A propriedade `.port` contém <!-- REF #transporter.port.Summary --> o número da porta utilizada para transações de email<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
 
 - **SMTP** - 587
 - **POP3** - 995
@@ -346,7 +346,7 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 
 #### Descrição
 
-The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->.
+A propriedade `.user` contém <!-- REF #transporter.user.Summary --> o nome de usuário usado para autenticação no servidor de email <!-- END REF -->.
 
 <!-- END REF -->
 

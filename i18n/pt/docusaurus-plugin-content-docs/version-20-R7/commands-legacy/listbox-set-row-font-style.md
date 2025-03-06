@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Summary-->**Nota:** Este comando só funciona com os list boxes de tipo array.<!-- END REF-->  
@@ -81,3 +78,12 @@ Depois da segunda declaração, todas as células da terceira fila mudam de fila
 
 [LISTBOX Get row font style](listbox-get-row-font-style.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1268 |
+| Thread-seguro | &cross; |
+
+

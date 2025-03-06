@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.ARRAY TIME.Summary-->O comando **ARRAY TIME** cria ou redimensiona um array de tipo tempo em memória.<!-- END REF-->
-
-**Lembrete:** em 4D, as horas podem ser processadas ​​como valores numéricos. Nas versões de 4D anteriores a v14, tinham que combinar um array inteiro longo com um formato de visualização para gerenciar um array de horas.  
+<!--REF #_command_.ARRAY TIME.Summary-->O comando **ARRAY TIME** cria ou redimensiona um array de tipo tempo em memória.<!-- END REF-->em 4D, as horas podem ser processadas ​​como valores numéricos. Nas versões de 4D anteriores a v14, tinham que combinar um array inteiro longo com um formato de visualização para gerenciar um array de horas.  
   
 O parâmetro *nomArray* é o nome do array.  
   
@@ -65,3 +63,12 @@ Como os arrays de horas aceitam valores numéricos, o seguinte código é válid
 
 *Criando arrays*  
 [Time](time.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1223 |
+| Thread-seguro | &check; |
+
+

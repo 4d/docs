@@ -3,7 +3,7 @@ id: buttonOverview
 title: Botón
 ---
 
-Un botón es un objeto activo al que se le puede asignar una acción (_por ejemplo_, una tarea de base de datos o una función de interfaz) para que la realice cuando un usuario haga clic en él.
+Un botón es un objeto activo al que se le puede asignar una acción (*por ejemplo*, una tarea de base de datos o una función de interfaz) para que la realice cuando un usuario haga clic en él.
 
 ![](../assets/en/FormObjects/button_regular.png)
 
@@ -26,13 +26,13 @@ La [variable](properties_Object.md#variable-or-expression) asociada a un botón 
 
 Los estilos de botón controlan la apariencia general de un botón, así como sus propiedades disponibles. Es posible aplicar diferentes estilos predefinidos a los botones o asociarles menús emergentes. Se puede obtener un gran número de variaciones combinando estas propiedades/comportamientos.
 
-Con la excepción de las [propiedades-disponibles](#supported-properties), muchos objetos botón son _estructuralmente_ idénticos. La diferencia está en el tratamiento de sus variables asociadas.
+Con la excepción de las [propiedades-disponibles](#supported-properties), muchos objetos botón son *estructuralmente* idénticos. La diferencia está en el tratamiento de sus variables asociadas.
 
 4D ofrece botones en los siguientes estilos predefinidos:
 
 ### Clásico
 
-El estilo de botón Clásico es un botón sistema estándar (_es decir,_, un rectángulo con una etiqueta descriptiva) que ejecuta el código cuando el usuario hace clic en él.
+El estilo de botón Clásico es un botón sistema estándar (*es decir,*, un rectángulo con una etiqueta descriptiva) que ejecuta el código cuando el usuario hace clic en él.
 
 ![](../assets/en/FormObjects/button_regular.png)
 
@@ -90,11 +90,11 @@ El estilo de botón de la barra de herramientas está destinado principalmente a
 
 Por defecto, el estilo Barra de herramientas tiene un fondo transparente con una etiqueta en el centro. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
-- _Windows_ - el botón se resalta cuando utiliza la propiedad "Con menú emergente", se muestra un triángulo a la derecha y en el centro del botón.
+- *Windows* - el botón se resalta cuando utiliza la propiedad "Con menú emergente", se muestra un triángulo a la derecha y en el centro del botón.
 
 ![](../assets/en/FormObjects/button_toolbar.png)
 
-- _macOS_ - el resalte del botón nunca aparece. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en la parte inferior del botón.
+- *macOS* - el resalte del botón nunca aparece. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en la parte inferior del botón.
 
 #### Ejemplo JSON:
 
@@ -114,15 +114,15 @@ Por defecto, el estilo Barra de herramientas tiene un fondo transparente con una
 
 ### Bevel
 
-El estilo de botón Bisel combina la apariencia del estilo [Clásico](#regular) (_es decir_, un rectángulo con una etiqueta descriptiva) con la opción de propiedad del menú emergente del estilo [Barra de herramientas](#toolbar).
+El estilo de botón Bisel combina la apariencia del estilo [Clásico](#regular) (*es decir*, un rectángulo con una etiqueta descriptiva) con la opción de propiedad del menú emergente del estilo [Barra de herramientas](#toolbar).
 
 Por defecto, el estilo Bevel tiene un fondo gris claro con una etiqueta en el centro. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
-- _Windows_ - el botón está resaltado. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en el centro del botón.
+- *Windows* - el botón está resaltado. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en el centro del botón.
 
 ![](../assets/en/FormObjects/button_bevel.png)
 
-- _macOS_ - el resalte del botón nunca aparece. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en la parte inferior del botón.
+- *macOS* - el resalte del botón nunca aparece. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en la parte inferior del botón.
 
 #### Ejemplo JSON:
 
@@ -146,11 +146,11 @@ El estilo de botón Bevel redondeado es casi idéntico al estilo [Bevel](#bevel)
 
 Por defecto, el estilo Bevel Redondeado tiene un fondo gris claro con una etiqueta en el centro. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
-- _Windows_ - el botón es idéntico al estilo Bevel. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en el centro del botón.
+- *Windows* - el botón es idéntico al estilo Bevel. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en el centro del botón.
 
 ![](../assets/en/FormObjects/button_roundedbevel.png)
 
-- _macOS_ - las esquinas del botón están redondeadas. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en la parte inferior del botón.
+- *macOS* - las esquinas del botón están redondeadas. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en la parte inferior del botón.
 
 #### Ejemplo JSON:
 
@@ -174,11 +174,11 @@ El estilo del botón OS X Gradient es casi idéntico al estilo [Bevel](#bevel). 
 
 Por defecto, el estilo OS X Gradient tiene un fondo gris claro con una etiqueta en el centro. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
-- _Windows_ - el botón es idéntico al estilo Bevel. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha del botón.
+- *Windows* - el botón es idéntico al estilo Bevel. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha del botón.
 
 ![](../assets/en/FormObjects/button_osxgradient.png)
 
-- _macOS_ - el botón se muestra como un botón de dos tonos. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en la parte inferior del botón.
+- *macOS* - el botón se muestra como un botón de dos tonos. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en la parte inferior del botón.
 
 #### Ejemplo JSON:
 
@@ -202,11 +202,11 @@ El estilo de botón OS X Textured es casi idéntico al estilo [Bevel](#bevel) pe
 
 Por defecto, el estilo OS X Textured aparece como:
 
-- _Windows_ - un botón sistema estándar con un fondo gris claro con una etiqueta en el centro. Tiene la particularidad de ser transparente en Vista.
+- *Windows* - un botón sistema estándar con un fondo gris claro con una etiqueta en el centro. Tiene la particularidad de ser transparente en Vista.
 
 ![](../assets/en/FormObjects/button_osxtextured.png)
 
-- _macOS_ - - un botón sistema estándar que muestra un cambio de color de gris claro a gris oscuro. Su altura está predefinida: no es posible ampliarla o reducirla.
+- *macOS* - - un botón sistema estándar que muestra un cambio de color de gris claro a gris oscuro. Su altura está predefinida: no es posible ampliarla o reducirla.
 
 #### Ejemplo JSON:
 
@@ -230,11 +230,11 @@ El estilo de botón Office XP combina la apariencia del estilo [Clásico](#regul
 
 Los colores (resaltado y fondo) de un botón con el estilo Office XP se basan en los colores del sistema. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
-- _Windows_ - su fondo sólo aparece cuando el ratón pasa por encima.
+- *Windows* - su fondo sólo aparece cuando el ratón pasa por encima.
 
 ![](../assets/en/FormObjects/button_officexp.png)
 
-- _macOS_ - su fondo se muestra siempre.
+- *macOS* - su fondo se muestra siempre.
 
 #### Ejemplo JSON:
 

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->O comando WA SET URL FILTERS permite colocar um ou mais filtros para a área Web designada pelos parâmetros *\** e *objeto*.<!-- END REF-->  
@@ -142,3 +139,12 @@ Imagine que deseja negar o acesso a endereços IP específicos:
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1030 |
+| Thread-seguro | &cross; |
+
+

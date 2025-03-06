@@ -48,3 +48,13 @@ Si une méthode formulaire est exécutée, la chaîne d'appel peut contenir (par
 ```json
 [   {    "type":"formObjectMethod",    "name":"detailForm.Button",    "line":1,    "database":"myDatabase"   },   {    "type":"formMethod",    "name”:"detailForm",    "line":2,    "database":"myDatabase"   },   {    "type":"projectMethod",    "name”:"showDetailForm",    "line":2,    "database":"myDatabase”   }]
 ```
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1662 |
+| Thread safe | &check; |
+
+

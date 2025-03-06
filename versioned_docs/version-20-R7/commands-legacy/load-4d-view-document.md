@@ -194,3 +194,13 @@ You will get the following result (stringified object):
 ```
 
 **Note:** For more information about the format of the returned [object](# "Data structured as a native 4D object"), please contact the 4D technical services. 
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1528 |
+| Thread safe | &check; |
+
+

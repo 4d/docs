@@ -13,14 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->El comando **OPEN COLOR PICKER** muestra la caja de diálogo de selección de color del sistema.<!-- END REF-->  
   
-**Nota**: esta caja de diálogo es modal en Windows pero no en OS X.  
+**Nota**: esta caja de diálogo es modal en Windows pero no en macOS.  
   
 Si el usuario selecciona un color y valida la caja de diálogo, este color se aplica a la selección actual de texto en el objeto con el foco, si la propiedad "Aceptar selector color/fuente" está seleccionada para este objeto (ver el manual de *Diseño*).  
   
@@ -31,3 +28,12 @@ Si el color se ha cambiado, el evento formulario On After Edit se genera para el
 #### Ver también 
 
 [OPEN FONT PICKER](open-font-picker.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1304 |
+| Hilo seguro | &cross; |
+
+

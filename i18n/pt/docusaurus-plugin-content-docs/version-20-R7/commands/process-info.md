@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| Parâmetro     | Tipo    |     | Descrição                     |
-| ------------- | ------- | :-: | ----------------------------- |
-| processNumber | Integer |  →  | Process number                |
-| Resultados    | Object  |  ←  | Information about the process |
+| Parâmetro     | Tipo    |                             | Descrição                     |
+| ------------- | ------- | :-------------------------: | ----------------------------- |
+| processNumber | Integer | &#8594; | Process number                |
+| Resultados    | Object  | &#8592; | Information about the process |
 
 <!-- END REF -->
 
@@ -57,7 +57,7 @@ O objeto retornado contém as propriedades abaixo:
 | Waiting for internal flag | 4     |
 | Paused                    | 5     |
 
-- Possible values for "type":
+- Valores possíveis para "type":
 
 | Parâmetros                    | Valor |
 | ----------------------------- | ----- |

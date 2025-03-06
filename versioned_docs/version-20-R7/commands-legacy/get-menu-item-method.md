@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Get menu item method.Summary-->The Get menu item method command returns the name of the 4D project method associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
@@ -32,3 +29,12 @@ The command returns the name of the 4D method as a character string (expression)
 #### See also 
 
 [SET MENU ITEM METHOD](set-menu-item-method.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 981 |
+| Thread safe | &cross; |
+
+

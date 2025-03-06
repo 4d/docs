@@ -13,11 +13,11 @@ title: On After Edit
 
 このイベントは、キーボード入力可能なオブジェクトへのデータ入力を最も低レベルでフィルターするために使用できます。
 
-このイベントは、変更がおこなわれた方法に関係なく、入力可能オブジェクトの内容が変更されるたびに生成されます。*つまり*:
+このイベントは、変更がおこなわれた方法に関係なく、入力可能オブジェクトの内容が変更されるたびに生成されます。 *つまり*:
 
 - ペーストやカット、削除、キャンセルなどの標準の編集アクション
 - 値のドロップ (ペーストと同様のアクション)
-- ユーザーがおこなったキーボードからの入力。この場合、`On After Edit` イベントは [`On Before Keystroke`](onBeforeKeystroke.md) と [`On After Keystroke`](onAfterKeystroke.md) イベントの後に生成されます。
+- ユーザーがおこなったキーボードからの入力。 この場合、`On After Edit` イベントは [`On Before Keystroke`](onBeforeKeystroke.md) と [`On After Keystroke`](onAfterKeystroke.md) イベントの後に生成されます。
 - ユーザーアクションをシミュレートするランゲージコマンドによる変更 (例: `POST KEY`)。
 
 `On After Edit` イベント内において、入力テキストは [`Get edited text`](https://doc.4d.com/4dv19/help/command/ja/page655.html) コマンドによって返されます。
@@ -29,10 +29,10 @@ title: On After Edit
 | プロパティ       | 型       | 説明                                                                                                  |
 | ----------- | ------- | --------------------------------------------------------------------------------------------------- |
 | code        | longint | On After Edit                                                                                       |
-| description | text    | "On After Edit"                                                                                     |
-| objectName  | text    | 4D View Pro エリア名                                                                                    |
-| sheetName   | text    | イベントが発生したシート名                                                                                       |
-| action      | text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
+| description | テキスト    | "On After Edit"                                                                                     |
+| objectName  | テキスト    | 4D View Pro エリア名                                                                                    |
+| sheetName   | テキスト    | イベントが発生したシート名                                                                                       |
+| action      | テキスト    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 `action` プロパティの値に応じて、[イベントオブジェクト](overview.md#イベントオブジェクト) には追加のプロパティが含まれます。
 
@@ -72,7 +72,7 @@ title: On After Edit
 | プロパティ   | 型      | 説明          |
 | ------- | ------ | ----------- |
 | range   | object | セルのレンジ      |
-| formula | text   | 入力されたフォーミュラ |
+| formula | テキスト   | 入力されたフォーミュラ |
 
 #### action = clipboardPasted
 

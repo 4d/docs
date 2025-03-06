@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR Get document property.Summary-->The **QR Get document property** command retrieves the display status for the print dialog box or the unit used for the document that are present in *area*.<!-- END REF-->
@@ -37,3 +34,12 @@ If you pass an invalid *property* value, the error -9852 will be generated.
 #### See also 
 
 [QR SET DOCUMENT PROPERTY](qr-set-document-property.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 773 |
+| Thread safe | &cross; |
+
+

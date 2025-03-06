@@ -33,7 +33,7 @@ If the document contains a Byte Order Mark (BOM), 4D uses the character set that
 If the document does not contain a BOM and if the *charSet* parameter is omitted, by default 4D uses the following character sets:
 
 * under Windows: ANSI
-* under OS X: MacRoman
+* under macOS: MacRoman
 
 In *breakMode*, you can pass a longint indicating the processing to apply to end-of-line characters in the document. You can pass one of the following constants, found in the "*System Documents*" theme:
 
@@ -77,3 +77,12 @@ When you execute this code:
 
 *System Documents*  
 [TEXT TO DOCUMENT](text-to-document.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1236 |
+| Thread safe | &check; |
+
+

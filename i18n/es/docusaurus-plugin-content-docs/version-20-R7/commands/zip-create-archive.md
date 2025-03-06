@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| Parámetros      | Tipo                      |     | Descripción                                                          |
-| --------------- | ------------------------- | :-: | -------------------------------------------------------------------- |
-| fileToZip       | 4D.File   |  →  | Objeto archivo o carpeta a comprimir                                 |
-| folderToZip     | 4D.Folder |  →  | Objeto archivo o carpeta a comprimir                                 |
-| zipStructure    | Object                    |  →  | Objeto archivo o carpeta a comprimir                                 |
-| destinationFile | 4D.File   |  →  | Archivo de destino del archivo                                       |
-| options         | Integer                   |  →  | Opción *folderToZip*: `ZIP Without enclosing folder` |
-| Result          | Object                    |  ←  | Objeto estado                                                        |
+| Parámetros      | Tipo                      |                             | Descripción                                                          |
+| --------------- | ------------------------- | :-------------------------: | -------------------------------------------------------------------- |
+| fileToZip       | 4D.File   | &#8594; | Objeto archivo o carpeta a comprimir                                 |
+| folderToZip     | 4D.Folder | &#8594; | Objeto archivo o carpeta a comprimir                                 |
+| zipStructure    | Object                    | &#8594; | Objeto archivo o carpeta a comprimir                                 |
+| destinationFile | 4D.File   | &#8594; | Archivo de destino del archivo                                       |
+| options         | Integer                   | &#8594; | Opción *folderToZip*: `ZIP Without enclosing folder` |
+| Resultado       | Object                    | &#8592; | Objeto estado                                                        |
 
 <!-- END REF -->
 
@@ -163,3 +163,12 @@ $err:=ZIP Create archive($zip; $destination)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Read archive`](zip-read-archive.md)
+
+#### Propiedades
+
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1640                            |
+| Hilo seguro       | &amp;check; |
+
+

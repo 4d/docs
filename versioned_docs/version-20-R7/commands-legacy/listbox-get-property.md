@@ -12,12 +12,9 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | If specified, object is an object name (string). If omitted, object is a variable |
 | object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
 | property | Integer | &#8594;  | Property whose value you want to get |
-| Function result | Longint, String | &#8592; | Current value |
+| Function result | Integer, Text | &#8592; | Current value |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -102,3 +99,12 @@ Given a list box "MyListbox", if you execute the following statement:
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 917 |
+| Thread safe | &cross; |
+
+

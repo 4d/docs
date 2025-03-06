@@ -11,12 +11,9 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla a imprimir, o Tabla por defecto, si se omite |
 | doc | Text | &#8594;  | Nombre del documento de etiquetas del disco |
-| * &#124; > | &#8594;  | * para suprimir las cajas de diálogo de impresión, o > para no reiniciar los parámetros de impresión |
+| * &#124; > |Operator| &#8594;  | * para suprimir las cajas de diálogo de impresión, o > para no reiniciar los parámetros de impresión |
 
 <!-- END REF-->
-
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
 
 #### Descripción 
 
@@ -109,3 +106,13 @@ El siguiente ejemplo le permite al usuario efectuar una búsqueda en la tabla \[
 
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 39 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

@@ -92,8 +92,10 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 #### Descrição
 
-A função `.isNew()` <!-- REF #EntityClass.clone().Summary -->retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore.<!-- END REF -->. .
-> Tenha em mente que quaisquer modificações feitas a entidades serão salvas no registro referenciado somente quando o [`. ave( )`](#save) função for executada.
+A função `.touched()` <!-- REF #EntityClass.clone().Summary -->comprova se um atributo da entidade tiver sido modificado ou não desde que se carregou a entidade na memória ou se salvou<!-- END REF -->.
+
+This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+> Tenha em mente que quaisquer modificações feitas a entidades serão salvas no registro referenciado somente quando a função [`.save()`](#save) for executada.
 
 Esta função só pode ser usada com entidades já salvas no banco de dados. Ele não pode ser chamado em uma entidade recém-criada (para a qual [`.isNew()`](#isnew) retorna **Verdadeiro**).
 
@@ -121,7 +123,7 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Ele
 
 </details>
 
-<!-- REF #EntityClass.diff().Syntax -->Parâmetros<!-- END REF -->
+<!-- REF #EntityClass.diff().Syntax -->|            |    |                                        |<!-- END REF -->
 
 
 <!-- REF #EntityClass.diff().Params -->
@@ -159,15 +161,14 @@ Se uma das entidades comparadas for **Null**, um erro é gerado.
 
 ```4d
  var $diff1; $diff2 : Collection
- employee:=ds.Employee.query("ID=1001").first()
+ employee:=ds. Employee.query("ID=1001").first()
  $clone:=employee.clone()
-
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
- $diff1:=$clone.diff(employee) // All differences are returned
- $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
-  // Only differences on firstName and lastName are returned
+ $diff1:=$clone.diff(employee) // Todas as diferenças são devolvidas
+ $diff2:=$clone.diff(employee;New collection("firstName";"lastName"))
+  // Apenas as diferenças em firstName e lastName são devolvidas
 ```
 
 $diff1:
@@ -233,7 +234,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResultado1 (todas as diferenças são devolvidas):
+vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 
 ```4d
 [
@@ -282,7 +283,7 @@ vCompareResult2 (apenas diferenças em $attributesToInspect foram retornadas)
 ]
 ```
 
-vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
+vCompareResultado1 (todas as diferenças são devolvidas):
 
 ```4d
 [
@@ -374,7 +375,7 @@ O objecto devolvido por `.drop( )` contém as seguintes propriedades:
 | Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                     |
 | ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao utilizar entity.drop( ), este erro pode ser devolvido quando usar a opção dk force drop if stamp changed. Ao usar entity.lock( ), este erro pode ser retornado quando usar a opção dk if stamp changed</li>**statusText asociado**: "A entidade já não existe"                              |
-| `dk status locked`                        | 3     | A entidade está bloqueada por um bloqueio pessimista.<br/>**statusText associado **: "Already locked"                                                                                                                    |
+| `dk status locked`                        | 3     | A entidade está bloqueada por um bloqueio pessimista.<br/>**statusText associado **: "Already locked"                                                                                                                |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.<br/>**Associado statusText**: "Outro erro"                                                            |
 | `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<br/><li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><li>**Associated statusText***: "O carimbo mudou"</li> |
 
@@ -780,9 +781,9 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 
 <!-- REF #EntityClass.isNew().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                                             |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | É verdade se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso.|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                                                          |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
+| Resultados | Parâmetros | <- | É True se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, False.|<!-- END REF -->
 
 |
 
@@ -1167,7 +1168,7 @@ Os valores abaixo podem ser retornado nas propriedades `status` e `statusText` d
 
 | Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                                                            |
 | ----------------------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status automerge failed`              | 6     | Parâmetros                                                                                                                                                                                                                                                            |
+| `dk status automerge failed`              | 6     | |                                                                                                                                                                                                                                                                     |
 | `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>**statusText asociado**: "A entidade já não existe"                                                        |
 | `dk status locked`                        | 3     | Informações sobre a origem do bloqueio                                                                                                                                                                                                                                |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.****Texto status associado: "Outro erro"                                                                                                            |
@@ -1248,11 +1249,11 @@ Atualizar uma entidade com a opção `dk auto merge` :
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| Parâmetro    | Tipo       |    | Descrição                                                                                                |
-| ------------ | ---------- |:--:| -------------------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | Atributos a extrair (string separada por vírgulas)                                                       |
-| filterCol    | Collection | -> | Coleção de atributos a extrair                                                                           |
-| options      | Integer    | -> | `dk with primary key`: adds the \_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
+| Parâmetro    | Tipo       |    | Descrição                                                                                                          |
+| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
+| filterString | Text       | -> | Atributos a extrair (string separada por vírgulas)                                                                 |
+| filterCol    | Collection | -> | Coleção de atributos a extrair                                                                                     |
+| options      | Integer    | -> | `dk with primary key`: adiciona a propriedade \_KEY;<br/>`dk with stamp`: adiciona a propriedade \_STAMP |
 | Resultados   | Object     | <- | Objeto criado a partir da entidade|<!-- END REF -->
 
 |
@@ -1538,7 +1539,7 @@ Retorna:
 
 #### Descrição
 
-A função `.touched()` <!-- REF #EntityClass.touched().Summary -->comprova se um atributo da entidade tiver sido modificado ou não desde que se carregou a entidade na memória ou se salvou<!-- END REF -->.
+A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore.<!-- END REF -->.
 
 Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. Pode usar essa função para determinar se precisar salvar a entidade.
 
@@ -1676,9 +1677,9 @@ Um registro é destrancado automaticamente quando não for mais referenciado por
 
 O objeto retornado por `.unlock()` contém a propriedade abaixo:
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                     |
-| ----------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success     | Parâmetros | Verdadeiro se a ação de destrancar for bem-sucedida, Falso caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
+| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                               |
+| ----------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success     | Parâmetros | True se a ação de destrancar for bem-sucedida, False caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
 
 #### Exemplo
 

@@ -9,7 +9,7 @@ title: Glossary
 
 ## Ação
 
-Todas las acciones que pueden realizarse en un [recurso](#resource). As ações disponíveis são: criar, ler, atualizar, largar, executar, promover e descrever.
+Todas las acciones que pueden realizarse en un [recurso](#resource). Available actions are: create, read, update, drop, execute, and promote.
 
 ## Atributo
 
@@ -18,7 +18,7 @@ Un atributo es la celda de almacenamiento más pequeña de una base de datos rel
 - Num objeto dataclass, cada propriedade é um atributo de dataclass que corresponde a um campo na tabela correspondente (mesmo nome e tipo).
 - Num objeto entity, os atributos de entidades são propriedades que contêm os valores para os atributos do datastore correspondentes.
 
-> Attributes and properties are similar concepts. "Atributo" é utilizado para designar as propriedades da dataclass que armazenam os dados, enquanto "propriedade" é mais genérico e define um dado armazenado num objeto.
+> &#062; Attributes and properties are similar concepts. "Atributo" é utilizado para designar as propriedades da dataclass que armazenam os dados, enquanto "propriedade" é mais genérico e define um dado armazenado num objeto.
 
 ## AttributePath
 
@@ -89,7 +89,7 @@ Uma entidade é um objeto que corresponde a um modelo de dataclass. Uma entidade
 
 Uma entidade pode ser vista como uma instância da dataclass, como um registo da tabela que corresponde à dataclass no seu datastore associado. No entanto, uma entidade também contém dados relacionados. O objetivo da entidade é gerir dados (criar, atualizar, apagar).
 
-Para mais informações, consulte Entidades.
+For more information, see [entities](entities.md).
 
 ## Seleção de entidades
 
@@ -156,7 +156,7 @@ La capacidad de ejecutar una o varias [acciones](#actions) en [recursos](#resour
 
 Ver [Atributo](#attribute).
 
-> \> Attributes and properties are similar concepts. "Atributo" é utilizado para designar as propriedades da dataclass que armazenam os dados, enquanto "propriedade" é mais genérico e define um dado armazenado num objeto.
+> &#062; Attributes and properties are similar concepts. "Atributo" é utilizado para designar as propriedades da dataclass que armazenam os dados, enquanto "propriedade" é mais genérico e define um dado armazenado num objeto.
 
 ## PropertyPath
 

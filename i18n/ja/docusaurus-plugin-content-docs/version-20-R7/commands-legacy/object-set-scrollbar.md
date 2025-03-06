@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->OBJECT SET SCROLLBARコマンドは、引数*object* と *\** で指定したオブジェクトの水平/垂直スクロールバーの表示/非表示を設定します。<!-- END REF--> 
@@ -47,3 +44,12 @@ displayed_sidebar: docs
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT GET SCROLLBAR](object-get-scrollbar.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 843 |
+| スレッドセーフである | &cross; |
+
+

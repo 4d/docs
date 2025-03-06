@@ -66,7 +66,7 @@ The following additional properties are returned in the *activityData* object ac
 
 **Notes:** 
 
-* If the debug logs have been stopped on the 4D Server [GRAPH SETTINGS](graph-settings.md), **Monitored activity** will return nothing. If the logs are restarted on the server or via the [START MONITORING ACTIVITY](start-monitoring-activity.md) command with Activity network, **Monitored activity** will resume returning network activity information.
+* If the debug logs have been stopped on the 4D Server [Administration window](../ServerWindow/overview.md), **Monitored activity** will return nothing. If the logs are restarted on the server or via the [START MONITORING ACTIVITY](start-monitoring-activity.md) command with Activity network, **Monitored activity** will resume returning network activity information.
 * The *activityData* object uses the information defined by the [SET DATABASE PARAMETER](set-database-parameter.md) command for the *4DRequestsLog.txt* (if any), otherwise it uses a default mode. Starting log recording during execution of the **Monitored activity** command will thus impact the returned results.
 
 *activityData* object:
@@ -139,3 +139,12 @@ See example for **[START MONITORING ACTIVITY](start-monitoring-activity.md)**
 
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1713 |
+| Thread safe | &check; |
+
+

@@ -33,12 +33,13 @@ $MyVar:="Hello"
 $MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar:
 
 ```4d
-C_POINTER($MyPointer)  
+var $MyPointer : Pointer
 $MyPointer:=->$MyVar
 ```
 The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. In this case, it gets the pointer that references or “points to” $MyVar. This pointer is assigned to MyPointer with the assignment operator.
 
 $MyPointer is now a variable that contains a pointer to $MyVar. $MyPointer does not contain “Hello”, which is the value in $MyVar, but you can use $MyPointer to get this value. The following expression returns the value in $MyVar:
+
 ```4d
 $MyPointer->
 ```
@@ -80,12 +81,39 @@ With:
 |Operation	|Syntax	|Returns	|Expression	|Value|
 |---|---|---|---|---|
 |Equality	|Pointer = Pointer	|Boolean	|vPtrA = vPtrB	|True|
-		|	|||vPtrA = vPtrC	|False|
+||||vPtrA = vPtrC	|False|
 |Inequality	|Pointer # Pointer	|Boolean	|vPtrA # vPtrC	|True|
-||||			vPtrA # vPtrB	|False|
+||||vPtrA # vPtrB|False|
+
+
+:::warning Null Pointers
+
+Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. For example:
+
+```4d
+var $p : Pointer // non initialized pointer (Nil value)
+$v:=$p-> // error
+$p->:=$v // error
+```
+
+To prevent such errors, you can write:
+
+```4d
+If ($p#Null)
+  $p->:=$v
+End if
+```
+
+:::
+
+
+
 
 ## Main usages
+
+
 ### Pointers to tables
+
 Anywhere that the language expects to see a table, you can use a dereferenced pointer to the table. You create a pointer to a table by using a line like this:
 ```4d
 $TablePtr:=->[anyTable]
@@ -118,19 +146,26 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 When you use pointers to process or local variables, you must be sure that the variable pointed to is already set when the pointer is used. Keep in mind that local variables are deleted when the method that created them has completed its execution and process variables are deleted at the end of the process that created them. When a pointer calls a variable that no longer exists, this causes a syntax error in interpreted mode (variable not defined) but it can generate a more serious error in compiled mode.
 
-Pointers to local variables allow you to save process variables in many cases. Pointers to local variables can only be used within the same process. In the debugger, when you display a pointer to a local variable that has been declared in another method, the original method name is indicated in parentheses, after the pointer. For example, if you write in Method1:
+Pointers to local variables allow you to save process variables in many cases. Pointers to local variables can only be used within the same process. In the debugger, when you display a pointer to a local variable that has been declared in another method, the original method name is indicated in parentheses, after the pointer. For example, if you write in *Method1*:
+
 ```4d
  $MyVar:="Hello world"
  Method2(->$MyVar)
 ```
-In Method2, the debugger will display $1 as follows:
+*Method2*:
 
-|$1|->$MyVar (Method1)
-|---|---
+```4d
+#DECLARE($param : Pointer)
+...
+```
+The debugger will display $param as follows:
 
-The value of $1 will be:
+|$param|->$MyVar (Method1)|
+|---|---|
 
-|$MyVar (Method1)|"Hello world"|
+You can expand $param and its value will be:
+
+|$MyVar|"Hello world"|
 |---|---|
 
 ### Pointers to array elements
@@ -162,12 +197,14 @@ If you need to refer to the fourth element in the array by using the pointer, yo
 
 ### Pointers as parameters to methods
 You can pass a pointer as a parameter to a method. Inside the method, you can modify the object referenced by the pointer. For example, the following method, `takeTwo`, takes two parameters that are pointers. It changes the object referenced by the first parameter to uppercase characters, and the object referenced by the second parameter to lowercase characters. Here is the project method:
+
 ```4d
   //takeTwo project method
-  //$1 – Pointer to a string field or variable. Change this to uppercase.
-  //$2 – Pointer to a string field or variable. Change this to lowercase.
- $1->:=Uppercase($1->)
- $2->:=Lowercase($2->)
+  //$changeUp – Pointer to a string field or variable. Change this to uppercase.
+  //$changeLow – Pointer to a string field or variable. Change this to lowercase.
+ #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
+ $changeUp->:=Uppercase($changeUp->)
+ $changeLow->:=Lowercase($changeLow->)
 ```
 
 The following line uses the `takeTwo` method to change a field to uppercase characters and to change a variable to lowercase characters:
@@ -180,6 +217,7 @@ If the field [myTable]myField contained the string "jones", it would be changed 
 In the takeTwo method, and in fact, whenever you use pointers, it is important that the data type of the object being referenced is correct. In the previous example, the pointers must point to something that contains a string or text.
 
 ### Pointers to pointers
+
 If you really like to complicate things, you can use pointers to reference other pointers. Consider this example:
 ```4d
  $MyVar:="Hello"
@@ -214,3 +252,5 @@ $NewVar:=($PointerTwo->)->
 ```
 
 **Important:** Multiple dereferencing requires parentheses.
+
+

@@ -113,3 +113,12 @@ Vous souhaitez obtenir la somme de toutes les valeurs numériques dans une colle
 
 [OB Get type](ob-get-type.md)  
 [Type](type.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1509 |
+| Thread safe | &check; |
+
+

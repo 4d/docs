@@ -29,11 +29,11 @@ Functions are called on the corresponding object on the server datastore.
 |Class function|Syntax|
 |---|----|
 |[datastore class](ORDA/ordaClasses.md#datastore-class)|`/rest/$catalog/DataStoreClassFunction`|
-|[dataclass class](ORDA/ordaClasses.md#dataclass-class)|`/rest/\{dataClass\}/DataClassClassFunction`|
-|[entitySelection class](ORDA/ordaClasses.md#entityselection-class)|`/rest/\{dataClass\}/EntitySelectionClassFunction`|
-||`/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber`|
-||`/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`|
-||`/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`|
+|[dataclass class](ORDA/ordaClasses.md#dataclass-class)|`/rest/{dataClass}/DataClassClassFunction`|
+|[entitySelection class](ORDA/ordaClasses.md#entityselection-class)|`/rest/{dataClass}/EntitySelectionClassFunction`|
+||`/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`|
+||`/rest/{dataClass}/EntitySelectionClassFunction/$filter`|
+||`/rest/{dataClass}/EntitySelectionClassFunction/$orderby`|
 |[entity class](ORDA/ordaClasses.md#entity-class)|`/rest/\{dataClass\}(key)/EntityClassFunction/`|
 
 
@@ -42,7 +42,7 @@ Functions are called on the corresponding object on the server datastore.
 The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
 
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server). 
+> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server). 
 
 
 ## Parameters
@@ -58,7 +58,7 @@ The following rules apply:
 - All scalar data types supported in JSON collections can be passed as parameters. 
 - Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
-See [this example](#request-receiving-an-entity-as-parameter) and [this example](#request-receiving-an-entity-selection-as-parameter).
+See [this example](#request-receiving-an-entity-selection-as-parameter).
 
 
 ### Scalar value parameter

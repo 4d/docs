@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ST Get expression.Summary-->**ST Get expression**コマンドは、*object* 引数で指定されたスタイル付テキストフィールドまたはテキスト変数内のカレントセレクションの中で、最初に見つけた 4D 式を返します。<!-- END REF-->
@@ -94,3 +91,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1287 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

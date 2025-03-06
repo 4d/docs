@@ -19,8 +19,6 @@ displayed_sidebar: docs
 #### 説明 
 
 <!--REF #_command_.COPY DOCUMENT.Summary-->**COPY DOCUMENT**コマンドを使用して、*sourceName*によって指定されたファイルやフォルダーを*destinationName*によって指定された場所にコピーします。<!-- END REF--> 
-
-* **ファイルのコピー**  
 この場合*sourceName*引数には以下のどちらかを渡す事ができます。  
    * ボリュームのルートから始まる完全なファイルパス名  
    * データベースフォルダーから相対的なパス名  
@@ -122,3 +120,13 @@ displayed_sidebar: docs
 
 [MOVE DOCUMENT](move-document.md)  
 *システムドキュメント*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 541 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

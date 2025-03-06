@@ -54,7 +54,7 @@ The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summ
 
 #### Descrição
 
-The `.id` property contains <!-- REF #WebSocketConnectionClass.id.Summary -->the unique identifier of the connection<!-- END REF -->.
+A propriedade `.id` contém <!-- REF #WebSocketConnectionClass.id.Summary --> o identificador único da conexão<!-- END REF -->.
 
 Esta propriedade é só de leitura.
 
@@ -76,15 +76,15 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.send()` function <!-- REF #WebSocketConnectionClass.send().Summary -->sends a *message* to the client<!-- END REF -->.
+A função `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->envia uma *message* para o cliente<!-- END REF -->.
 
 Os conteúdos seguintes são enviados em função do tipo de *message*:
 
-| Tipo   | Conteúdo                                                                                                                                |
-| ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Text   | Texto em UTF-8                                                                                                                          |
-| Blob   | Dados binários                                                                                                                          |
-| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
+| Tipo   | Conteúdo                                                                                                                                       |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Text   | Texto em UTF-8                                                                                                                                 |
+| Blob   | Dados binários                                                                                                                                 |
+| Object | Texto em JSON UTF-8 (o mesmo resultado que com [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
 
 <!-- END REF -->
 
@@ -119,7 +119,7 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.terminate()` function <!-- REF #WebSocketConnectionClass.terminate().Summary -->forces the connection to close<!-- END REF -->.
+A função `.terminate()` <!-- REF #WebSocketConnectionClass.terminate().Summary -->força a conexão a fechar<!-- END REF -->.
 
 A *code* and *message* can be sent to the client during the closure to indicate the reason of the termination.
 
@@ -138,3 +138,4 @@ The `.wss` property contains <!-- REF #WebSocketConnectionClass.wss.Summary -->t
 Esta propriedade é só de leitura.
 
 <!-- END REF -->
+

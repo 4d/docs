@@ -1,7 +1,6 @@
 ---
 id: form-event-code
 title: Form event code
-slug: /commands/form-event-code
 displayed_sidebar: docs
 ---
 
@@ -12,9 +11,6 @@ displayed_sidebar: docs
 | Function result | Integer | &#8592; | Form event number |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 
 #### Description 
@@ -103,7 +99,7 @@ This example is a template for a form method. It shows each of the possible even
 
 #### Example 4 
 
-This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
+This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](../commands-legacy/display-selection.md) or [MODIFY SELECTION](../commands-legacy/modify-selection.md) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
 
 ```4d
   //A form method
@@ -142,7 +138,7 @@ This example shows the template of a form method that handles the events that ca
 
 #### Example 5 
 
-For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](get-edited-text.md), [Keystroke](keystroke.md) and [FILTER KEYSTROKE](filter-keystroke.md) commands.
+For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](../commands-legacy/get-edited-text.md), [Keystroke](../commands-legacy/keystroke.md) and [FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md) commands.
 
 #### Example 6 
 
@@ -344,11 +340,20 @@ As a result, the red rectangle follows the scrolling of the list box:
 #### See also 
 
 [Form Events](../Events/overview.md)
-[CALL SUBFORM CONTAINER](call-subform-container.md)  
-[Current form table](current-form-table.md)  
-[FILTER KEYSTROKE](filter-keystroke.md)  
+[CALL SUBFORM CONTAINER](../commands-legacy/call-subform-container.md)  
+[Current form table](../commands-legacy/current-form-table.md)  
+[FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md)  
 [FORM Event](form-event.md)  
-[Get edited text](get-edited-text.md)  
-[Keystroke](keystroke.md)  
-[POST OUTSIDE CALL](post-outside-call.md)  
-[SET TIMER](set-timer.md)  
+[Get edited text](../commands-legacy/get-edited-text.md)  
+[Keystroke](../commands-legacy/keystroke.md)  
+[POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)  
+[SET TIMER](../commands-legacy/set-timer.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 388 |
+| Thread safe | &cross; |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Process state.Summary-->**Process state** コマンドは、*process*に指定したプロセス番号を持つプロセスの状態を返します。<!-- END REF--> 
@@ -62,3 +59,12 @@ displayed_sidebar: docs
 
 [Count tasks](count-tasks.md)  
 [Process info](../commands/process-info.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 330 |
+| スレッドセーフである | &cross; |
+
+

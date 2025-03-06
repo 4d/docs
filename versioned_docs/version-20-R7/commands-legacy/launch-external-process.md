@@ -124,7 +124,7 @@ The following examples use the macOS Terminal available in the Application/Utili
  $docname:=Select document("";"*.*";"Choose the file to open";0)
  If(OK=1)
     SET ENVIRONMENT VARIABLE("_4D_OPTION_HIDE_CONSOLE";"true")
-    LAUNCH EXTERNAL PROCESS("cmd.exe /C start \"\" \""+$docname+"\"")
+    LAUNCH EXTERNAL PROCESS("cmd.exe /C start \"\" \""+document+"\"")
  End if
 ```
 
@@ -146,3 +146,13 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 
 [OPEN URL](open-url.md)  
 [SET ENVIRONMENT VARIABLE](set-environment-variable.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 811 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

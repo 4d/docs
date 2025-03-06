@@ -28,3 +28,12 @@ displayed_sidebar: docs
 [Get plugin access](get-plugin-access.md)  
 [Is license available](is-license-available.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 847 |
+| Thread safe | &check; |
+
+

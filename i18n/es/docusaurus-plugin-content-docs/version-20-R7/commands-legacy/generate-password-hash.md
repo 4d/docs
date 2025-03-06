@@ -67,3 +67,12 @@ Este ejemplo genera un hash de contraseña utilizando bcrypt con un factor de co
   
 [Generate digest](generate-digest.md)  
 [Verify password hash ](verify-password-hash.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1533 |
+| Hilo seguro | &check; |
+
+

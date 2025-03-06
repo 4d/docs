@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Summary-->El comando WA EXECUTE JAVASCRIPT FUNCTION ejecuta en el área Web designada por los parámetros *\** y *objeto*, la función JavaScript *funcionJS* y devuelve opcionalmente su resultado en el parámetro *resultado*.<!-- END REF-->
@@ -60,3 +57,12 @@ La función JavaScript "getCustomerInfo" recibe un número ID como parámetro y 
 #### Ver también 
 
 [WA Evaluate JavaScript](wa-evaluate-javascript.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1043 |
+| Hilo seguro | &cross; |
+
+

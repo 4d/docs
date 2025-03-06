@@ -269,8 +269,9 @@ Vous serez alors connecté pour la session :
 
 ![](../assets/en/WebServer/login1.png)
 
-Les informations d'identification erronées seraient rejetées :
+Les informations d'identification erronées seront rejetées :
 
 ![](../assets/en/WebServer/login2.png)
 
 Une fois qu'un utilisateur est connecté, vous pouvez gérer la session associée en utilisant la commande `WEB Get Current Session ID`. Voir la page [Sessions Web](sessions.md) .
+

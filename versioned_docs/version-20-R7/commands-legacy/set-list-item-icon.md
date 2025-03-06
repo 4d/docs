@@ -11,13 +11,10 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Longint, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
+| itemRef &#124; * | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
 | icon | Picture | &#8594;  | Icon to be associated with item |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -49,3 +46,12 @@ We want to assign the same picture to two different items. The following code is
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 950 |
+| Thread safe | &cross; |
+
+

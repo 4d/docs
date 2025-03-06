@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 :::info Compatibilidad
 
 **PHP es obsoleto en 4D**. Se recomienda utilizar la clase [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
@@ -40,3 +37,12 @@ Por defecto, **PHP SET OPTION** define la opción para todas las llamadas poster
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1059 |
+| Hilo seguro | &cross; |
+
+

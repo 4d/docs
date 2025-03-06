@@ -14,7 +14,7 @@ La página contiene botones de acción que dan acceso directo a las funciones de
 - **Verificar los registros y los índices:** inicia el procedimiento de verificación total de los datos.
 - **Verificar sólo los registros**: inicia el procedimiento de verificación sólo para los registros (los índices no se verifican).
 - **Verificar sólo los índices**: inicia el procedimiento de verificación sólo para los índices(los registros no se verifican).
-> > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
+> > > > > > La verificación de registros e índices también puede realizarse en modo detallado, tabla por tabla (ver la sección Detalles más abajo).
 
 ## Abrir archivo de historial
 

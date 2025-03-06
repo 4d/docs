@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.BUILD APPLICATION.Summary-->El comando BUILD APPLICATION lanza el proceso de generación de la aplicación teniendo en cuenta los parámetros definidos en el proyecto de aplicación actual o en el proyecto de aplicación designado por el parámetro *nomProyecto*.<!-- END REF-->
@@ -54,3 +51,14 @@ Si el comando falla, se genera un error que puede interceptar con la ayuda del c
 #### Ver también 
 
 [Compile project ](compile-project.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 871 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK, Document, error |
+| Prohibido en el servidor ||
+
+

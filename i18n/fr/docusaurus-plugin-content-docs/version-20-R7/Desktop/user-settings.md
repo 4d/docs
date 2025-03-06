@@ -5,9 +5,9 @@ title: Propriétés utilisateur
 
 4D propose deux modes de fonctionnement pour les Propriétés des projets :
 
-- Mode **Standard** : tous les [paramètres](../settings/overview.md) sont stockés dans le fichier [*settings.4DSettings* au niveau du projet](../Project/architecture.md#sources) et sont appliqués dans tous les cas. C'est le mode par défaut, adapté à la phase de développement (toutes les applications).
+- Identique aux Propriétés structure C'est le mode par défaut, adapté à la phase de développement (toutes les applications).
 
-- **Mode propriétés utilisateur** : une partie des paramètres personnalisés sont stockés dans un fichier *settings.4DSettings* [dans le dossier Settings](../Project/architecture.md#settings-user) (pour tous les fichiers de données) ou [dans le dossier Data](../Project/architecture.md#settings-user-data) (pour ce fichier de données) et sont utilisés à la place des paramètres de structure. Ce mode convient à la phase de déploiement pour les applications Desktop. Activez ce mode à l'aide d'une option située sur la [page Sécurité](../settings/security.md) des Propriétés.
+- Identique aux Propriétés structure Ce mode convient à la phase de déploiement pour les applications Desktop. Identique aux Propriétés structure
 
 En définissant des propriétés utilisateur, vous pouvez conserver des paramètres personnalisés entre les mises à jour de vos applications 4D, ou gérer des paramètres différents pour une même application 4D déployée sur plusieurs sites différents. Cela permet également d'utiliser la programmation pour gérer les fichiers de paramètres à l'aide de XML.
 
@@ -108,7 +108,7 @@ Le fichier de propriétés utilisateur lié au fichier de données est automatiq
 
 ... où *Data* est le nom du dossier contenant le fichier de données courant de l'application.
 
-> Lorsque le fichier de données est situé au même niveau que le fichier de structure du projet, les fichiers de propriétés utilisateur basés sur la structure et sur les données partagent le même emplacement et le même fichier. La commande de menu **Propriétés utilisateur pour le fichier de données...** n'est pas proposée.
+> Lorsque le fichier de données est situé au même niveau que le fichier de structure du projet, les fichiers de propriétés utilisateur basés sur la structure et sur les données partagent le même emplacement et le même fichier. Propriétés utilisateur
 
 :::note
 

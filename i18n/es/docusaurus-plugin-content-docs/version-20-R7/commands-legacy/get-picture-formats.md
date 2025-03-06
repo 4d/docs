@@ -48,3 +48,12 @@ Usted quiere saber los formatos de imagen almacenados en un campo para el regist
 #### Ver también 
 
   
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1406 |
+| Hilo seguro | &check; |
+
+

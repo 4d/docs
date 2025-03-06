@@ -330,3 +330,13 @@ We want to request measures for cache bytes read within the last two minutes:
  OB SET($oParams;"historyLength";2*60)
  $measures:=Database measures($oParams)
 ```
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1314 |
+| Thread safe | &check; |
+
+

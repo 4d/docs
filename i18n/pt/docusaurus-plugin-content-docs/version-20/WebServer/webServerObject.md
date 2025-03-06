@@ -4,38 +4,38 @@ title: Objeto Web Server
 ---
 
 
-A 4D project can start and monitor a web server for the main (host) application as well as each hosted component.
+Um projeto 4D pode iniciar e monitorar um servidor web para a aplicação (host) principal, bem como para cada componente hospedado.
 
-For example, if you installed two components in your main application, you can start and monitor up to three independant web servers from your application:
+Por exemplo, se você instalou dois componentes em sua aplicação principal, você pode iniciar e monitorar até três servidores web independentes em sua aplicação:
 
 - um servidor web para a aplicação local,
 - um servidor Web para o componente #1,
 - um servidor Web para o componente #2.
 
-Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.
+Além da memória, não há limite para o número de componentes e, assim, de servidores web, que podem ser anexados a um único projeto de aplicação 4D.
 
-Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D. WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
+Cada servidor web 4D, incluindo o servidor web da aplicação principal, é exposto como um **objeto** específico da classe `4D. WebServer`. Uma vez instanciado, um objeto de servidor da Web pode ser gerenciado a partir da aplicação atual ou de qualquer componente usando um [grande número de propriedades e funções](API/WebServerClass.md).
 
 > Os [comandos WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) herdados da linguagem 4D são compatíveis, mas não é possível selecionar o servidor Web ao qual eles se aplicam (veja abaixo).
 
-Each web server (host application or component) can be used in its own separate context, including:
-- `On Web Authentication` and `On Web Connection` database method calls
+Cada servidor web (aplicação host ou componente) pode ser usado em seu próprio contexto separado, incluindo:
+- as chamadas os métodos banco de dados `On Web Authentication` e `On Web Connection`
 - o processamento das etiquetas 4D e das chamadas de métodos,
 - sessões Web e gestão do protocolo TLS.
 
-This allows you to develop independant components and features that come with their own web interfaces.
+Isso permite que você desenvolva componentes e recursos independentes que vêm com suas próprias interfaces web.
 
 
 ## Instanciar um objeto servidor Web
 
-The web server object of the host application (default web server) is automatically loaded by 4D at startup. Assim, se escrever num projeto recém-criado:
+O objeto servidor web da aplicação host (servidor web padrão) é carregado automaticamente pelo 4D ao iniciar. Assim, se escrever num projeto recém-criado:
 
 ```4d
 $nbSrv:=WEB Server list.length   
 //$nbSrv valor é 1
 ```
 
-To instantiate a web server object, call the [`WEB Server`](API/WebServerClass.md#web-server) command:
+Para instanciar um objeto servidor web, chame o comando [`WEB Server`](API/WebServerClass.md#web-server):
 
 ```4d
     //create an object variable of the 4D. WebServer class
@@ -64,47 +64,47 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Funções do servidor Web
 
-A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions:
+Um [objeto de classe web server](API/WebServerClass.md#web-server-object) contém as seguintes funções:
 
 | Funções                                  | Parâmetro        | Valor retornado  | Descrição             |
 | ---------------------------------------- | ---------------- | ---------------- | --------------------- |
 | [`start()`](API/WebServerClass.md#start) | settings (objet) | status (objecto) | Inicia o servidor web |
 | [`stop()`](API/WebServerClass.md#start)  | -                | -                | Pára o servidor Web   |
 
-To start and stop a web server, just call the [`start()`](API/WebServerClass.md#start) and [`stop()`](API/WebServerClass.md#stop) functions of the web server object:
+Para iniciar e interromper um servidor web, apenas chame as funções [`start()`](API/WebServerClass.md#start) e [`stop()`](API/WebServerClass.md#stop) do objeto servidor web:
 
 ```4d
 var $status : Object
-    //to start a web server with default settings
+    //para iniciar um servidor web com os parâmetros padrão
 $status:=webServer.start()
-    //to start the web server with custom settings  
-    //$settings object contains web server properties
+    //para iniciar o servidor web com configurações personalizadas  
+    // O objeto$settings contém propriedades do servidor Web
 webServer.start($settings)
 
-    //to stop the web server
+    //para parar o servidor da web
 $status:=webServer.stop()
 ```
 
 
 ## Propriedades do servidor web
 
-A web server object contains [various properties](API/WebServerClass.md#web-server-object) which configure the web server.
+Um objeto de servidor web contém [várias propriedades](API/WebServerClass.md#web-server-object) que configuram o servidor web.
 
 Estas propriedades são definidas:
 
-1. using the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function (except for read-only properties, see below),
-2. if not used, using the `WEB SET OPTION` command (host applications only),
+1. usando o parâmetro `settings` da função [`.start()`](API/WebServerClass.md#start) (exceto as propriedades somente leitura, veja abaixo),
+2. se não for usado, usando o comando `WEB SET OPTION` (apenas aplicações host),
 3. se não for usado, nos parâmetros da aplicação host ou do componente.
 
-- If the web server is not started, the properties contain the values that will be used at the next web server startup.
-- If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
+- Se o servidor web não for iniciado, as propriedades contêm os valores que serão usados na próxima inicialização do servidor web.
+- Se o servidor web for iniciado, as propriedades contêm os valores reais usados pelo servidor web (configurações padrão poderiam ter sido substituídas pelo parâmetro `settings` da função [`.start()`](API/WebServerClass.md#start).
 
-> *isRunning*, *name*, *openSSLVersion*, and *perfectForwardSecrecy* are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
+> *isRunning*, *name*, *openSSLVersion* e *perfectForwardSecrecy* são propriedades somente de leitura que não podem ser predefinidas no parâmetro objeto`settings` para a função [`start()`](API/WebServerClass.md#start).
 
 
 ## Âmbito dos comandos 4D Web
 
-A linguagem 4D contém [vários comandos](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) que podem ser usados para controlar o servidor Web. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
+A linguagem 4D contém [vários comandos](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) que podem ser usados para controlar o servidor Web. No entanto, esses comandos são projetados para funcionar com um único servidor web (padrão). Ao usar esses comandos no contexto de objetos do servidor web, certifique-se de que seu escopo é apropriado.
 
 | Comando                         | Âmbito                            |
 | ------------------------------- | --------------------------------- |

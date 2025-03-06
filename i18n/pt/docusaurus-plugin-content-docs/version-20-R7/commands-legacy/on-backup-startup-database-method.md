@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Método de base de dados On Backup Startup 
 
 <!--REF #_command_.On Backup Startup database method.Summary-->O *Método de banco de dados On Backup Startup* é chamado cada vez que um backup está a ponto de ser iniciado (backup manual, backup automático programado, ou utilizando o comando [BACKUP](backup.md "BACKUP")).<!-- END REF--> 

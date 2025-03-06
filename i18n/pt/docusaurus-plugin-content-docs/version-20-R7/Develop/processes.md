@@ -46,7 +46,7 @@ Cada processo contém elementos específicos que podem ser tratados independente
 - Variáveis: Cada processo tem suas próprias [variáveis de processo](../Concepts/variables#process-variables). Variáveis de processo são reconhecidas apenas dentro do domínio de seu processo nativo.
 - Conjuntos de processo: cada processo tem seus próprios conjuntos de processos. `LockedSet` é um conjunto de processos. Os conjuntos processo são apagados assim que o método processo termina.
 - [Método de tratamento de erros](../Concepts/error-handling#installing-an-error-handling-method): Cada processo pode ter seu próprio método de tratamento de erros.
-- [Janela do Depurador](../Depuring/debugger#calling-the-debugger): Cada processo pode ter sua própria janela do Depurador.
+- [Janela do Depurador](../Debugging/debugger#calling-the-debugger): Cada processo pode ter sua própria janela do Depurador.
 
 ### Elementos da interface
 

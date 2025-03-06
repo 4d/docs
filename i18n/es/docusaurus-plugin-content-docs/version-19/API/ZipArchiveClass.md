@@ -56,7 +56,7 @@ End if
 | zipStructure    | Object    | -> | Objeto archivo o carpeta a comprimir                 |
 | destinationFile | 4D.File   | -> | Archivo de destino del archivo                       |
 | options         | Integer   | -> | Opción *folderToZip*: `ZIP Without enclosing folder` |
-| Result          | Object    | <- | Objeto estado|<!-- END REF -->
+| Resultado       | Object    | <- | Objeto estado|<!-- END REF -->
 
 |
 
@@ -190,7 +190,7 @@ Quiere pasar una colección de carpetas y archivos para comprimir al objeto *zip
 | ---------- | ------------- |:--:| ----------------------------------------- |
 | zIPFile    | 4D.File       | -> | Archivos Zip                              |
 | contraseña | Text          | -> | Contraseña del archivo ZIP, si la hay     |
-| Result     | 4D.ZipArchive | <- | Objeto archivo|<!-- END REF -->
+| Resultado  | 4D.ZipArchive | <- | Objeto archivo|<!-- END REF -->
 
 |
 

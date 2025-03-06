@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Execute on server.Summary-->O comando Execute on server inicia um novo processo na máquina servidor (quando se chama em Cliente/Servidor) ou na mesma máquina (se é chamado em monousuário) e devolve o número deste processo.<!-- END REF-->
@@ -58,7 +55,7 @@ Você pode omitir este parâmetro; se isso acontecer, o nome do processo é uma 
 
 **Nota:** Se passar parâmetros ao método de processo, deve passar o parâmetro *nome*; neste caso não se pode omitir. 
 
-Se passar um objeto 4D ([C\_OBJECT](c-object.md)) ou uma coleção ([C\_COLLECTION](c-collection.md)) como param, uma cópia é enviada (e não uma referência) e a forma JSON se utiliza em UTF-8 para o servidor. Se o objeto ou coleção contiver ponteiros, se enviam seus valores não referenciados, e não os ponteiros mesmos.
+Se passar um objeto 4D (*C\_OBJECT*) ou uma coleção (*C\_COLLECTION*) como param, uma cópia é enviada (e não uma referência) e a forma JSON se utiliza em UTF-8 para o servidor. Se o objeto ou coleção contiver ponteiros, se enviam seus valores não referenciados, e não os ponteiros mesmos.
 
 ##### Parâmetro opcional \* 
 
@@ -199,3 +196,12 @@ Consulte a seção *Serviços baseados nos procedimentos armazenados (exemplo)* 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [New process](new-process.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 373 |
+| Thread-seguro | &cross; |
+
+

@@ -3,6 +3,6 @@ id: overview
 title: Janela de administração de 4D Server
 ---
 
-When 4D Server is launched with interface under Windows or macOS, a graphical administration window is available, providing many analysis and control tools for the published 4D application. To display the 4D Server Administration window for the opened project, select the **Window > Administration** menu item, or press **Ctrl+U**.
+Quando o 4D Server é iniciado com interface no Windows ou macOS, uma janela de administração gráfica está disponível, fornecendo muitas ferramentas de análise e controle para a aplicação 4D publicada. Para exibir a janela de administração do 4D Server para o projeto aberto, selecione o item de menu **Window > Administration** ou pressione **Ctrl+U**.
 
-> A janela de administração de 4D Server pode ser acessada a partir de um 4D remoto. For more information about this point, please refer to the [Administration from Remote Machines](remote-admin.md) page.
+> A janela de administração de 4D Server pode ser acessada a partir de um 4D remoto. Para mais informações sobre este ponto, consulte a página [Administração desde máquinas remotas](remote-admin.md).

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Get menu item method.Summary-->Get menu item method コマンドは、*menu*と*menuItem*引数で指定されたメニュー項目に関連付けられた4Dプロジェクトメソッド名を返します。<!-- END REF-->  
@@ -31,3 +28,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET MENU ITEM METHOD](set-menu-item-method.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 981 |
+| スレッドセーフである | &cross; |
+
+

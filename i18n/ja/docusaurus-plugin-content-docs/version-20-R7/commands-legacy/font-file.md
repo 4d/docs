@@ -48,3 +48,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET FONT](object-set-font.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1700 |
+| スレッドセーフである | &check; |
+
+

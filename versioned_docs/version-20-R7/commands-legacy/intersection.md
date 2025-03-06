@@ -49,3 +49,12 @@ The following example finds the customers who are served by two sales representa
 
 [DIFFERENCE](difference.md)  
 [UNION](union.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 121 |
+| Thread safe | &check; |
+
+

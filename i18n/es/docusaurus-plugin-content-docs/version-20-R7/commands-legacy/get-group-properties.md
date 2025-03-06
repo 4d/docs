@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES devuelve las propiedades del grupo cuyo número de referencia se pasa en *refGrupo*.<!-- END REF--> Pase el número de referencia del grupo devuelto por el comando [GET GROUP LIST](get-group-list.md). 
@@ -42,3 +39,13 @@ Si no tiene privilegios de acceso para llamar al comando GET GROUP PROPERTIES o 
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 613 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

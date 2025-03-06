@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Summary-->El comando **LIST OF STYLE SHEETS** devuelve la lista de hojas de estilo de la aplicación en el array *arrHojasEstilo*.<!-- END REF-->  
@@ -52,3 +49,12 @@ Si ejecuta el siguiente código:
 
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1255 |
+| Hilo seguro | &cross; |
+
+

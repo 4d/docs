@@ -37,3 +37,12 @@ The following example illustrates how Round works with different arguments. Each
 #### See also 
 
 [Trunc](trunc.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 94 |
+| Thread safe | &check; |
+
+

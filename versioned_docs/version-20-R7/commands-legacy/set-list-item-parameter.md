@@ -11,14 +11,11 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
+| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
 | selector | Text | &#8594;  | Parameter constant |
 | value | Text, Boolean, Real | &#8594;  | Value of the parameter |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 
 #### Description 
 
@@ -32,8 +29,8 @@ Lastly, you can pass *\** in *itemRef*: in this case, the command is applied to 
 
 In *selector*, you can pass either:
 
-* one of the following constants (found in the “*Hierarchical Lists*” theme):  
-
+* one of the following constants (found in the “*Hierarchical Lists*” theme):
+  
 | Constant                   | Type   | Value                      | Comment                                                                                                                                                                                                                                                                                 |  
 | -------------------------- | ------ | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Additional text            | Text | 4D\_additional\_text       | This constant is used to add text to the right of the *itemRef* item. This additional title will always be displayed in the right part of the list, even when the user moves the horizontal scrolling cursor. When you use this constant, pass the text to be displayed in *value*.     |  
@@ -64,3 +61,12 @@ You want to set as choice list of a hierarchical pop up menu a custom list of fo
 [GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 986 |
+| Thread safe | &cross; |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.EXPORT TEXT.Summary-->The EXPORT TEXT command writes data from the records of the current selection of *aTable* in the current process.<!-- END REF--> The data is written to *document*, a Windows or Macintosh text document on the disk.
@@ -31,7 +28,7 @@ A progress thermometer is displayed during export. The user can cancel the opera
 
 By default, the command uses by default the UTF-8 character set. You can use the [USE CHARACTER SET](use-character-set.md) command to change this character set. 
 
-Using EXPORT TEXT, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return character (code 13) under OS X and the carraige return+line feed (code 13 + code 10) under Windows. You can change these defaults by assigning values to the two delimiter *System Variables*: **FldDelimit** and **RecDelimit**. The user can change the default values in the Design environment Export Data dialog box. Note that if exported fields contain characters defined as field or record delimiters, these characters are automatically replaced with spaces in the exported file, in order to avoid disrupting the importing process.
+Using EXPORT TEXT, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return character (code 13) under macOS and the carraige return+line feed (code 13 + code 10) under Windows. You can change these defaults by assigning values to the two delimiter *System Variables*: **FldDelimit** and **RecDelimit**. The user can change the default values in the Design environment Export Data dialog box. Note that if exported fields contain characters defined as field or record delimiters, these characters are automatically replaced with spaces in the exported file, in order to avoid disrupting the importing process.
 
 #### Example 
 
@@ -54,3 +51,13 @@ OK is set to 1 if the export is successfully completed; otherwise, it is set to 
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 167 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

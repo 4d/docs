@@ -107,3 +107,14 @@ Add a star to the end of one of the two previous syntaxes.
 #### Error management 
 
 In the event of an error, the command generates an error that you can intercept via a method installed by the [ON ERR CALL](on-err-call.md) command.
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1019 |
+| Thread safe | &check; |
+| Modifies variables | error |
+
+

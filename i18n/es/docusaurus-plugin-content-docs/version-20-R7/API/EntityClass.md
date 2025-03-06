@@ -56,11 +56,11 @@ Todo atributo de la dataclass está disponible como una propiedad de una entidad
 El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attributename) (relation o storage):
 
 - Si el tipo de *attributeName* es **storage**:
-  `.attributeName` devuelve un valor del mismo tipo que *attributeName*.
+ `.attributeName` devuelve un valor del mismo tipo que *attributeName*.
 - Si el tipo de *attributeName* es **relatedEntity**:
-  `.attributeName` devuelve la entidad relacionada. Los valores de la entidad relacionada están disponibles directamente a través de las propiedades en cascada, por ejemplo "myEntity.employer.employees\[0].lastname".
+ `.attributeName` devuelve la entidad relacionada. Los valores de la entidad relacionada están disponibles directamente a través de las propiedades en cascada, por ejemplo "myEntity.employer.employees\[0].lastname".
 - Si el tipo *attributeName* es **relatedEnties**:
-  `.attributeName` devuelve una nueva selección de entidades relacionadas. Se eliminan los duplicados (se devuelve una entity selection desordenada).
+ `.attributeName` devuelve una nueva selección de entidades relacionadas. Se eliminan los duplicados (se devuelve una entity selection desordenada).
 
 #### Ejemplo
 
@@ -92,15 +92,17 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 
 | Parámetros | Tipo                      |                             | Descripción                                   |
 | ---------- | ------------------------- | :-------------------------: | --------------------------------------------- |
-| Result     | 4D.Entity | <- | Nueva entidad que hace referencia al registro |
+| Resultado  | 4D.Entity | <- | Nueva entidad que hace referencia al registro |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en la memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->. Esta función permite actualizar las entidades por separado.
+La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en la memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->.
 
-> Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado sólo cuando se ejecute la función [`.save( )`](#save).
+Esta función permite actualizar las entidades por separado. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+
+> Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado sólo cuando se ejecute la función [`.save()`](#save).
 
 Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que [`isNew()`](#isnew) devuelve **True**).
 
@@ -137,7 +139,7 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
 | ------------------- | ------------------------- | :-------------------------: | ------------------------------------------ |
 | entityToCompare     | 4D.Entity |              ->             | Entidad a comparar con la entidad original |
 | attributesToCompare | Collection                |              ->             | Nombre de los atributos a comparar         |
-| Result              | Collection                | <- | Diferencias entre las entidades            |
+| Resultado           | Collection                | <- | Diferencias entre las entidades            |
 
 <!-- END REF -->
 
@@ -240,7 +242,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResult1 (se devuelven todas las diferencias):
+vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
 
 ```4d
 [
@@ -289,7 +291,7 @@ vCompareResult2 (sólo se devuelven las diferencias en $attributesToInspect)
 ]
 ```
 
-vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
+vCompareResult1 (se devuelven todas las diferencias):
 
 ```4d
 [
@@ -338,7 +340,7 @@ vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
 | Parámetros | Tipo    |                             | Descripción                                                                                        |
 | ---------- | ------- | :-------------------------: | -------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk force drop if stamp changed`: activa el soltar incluso si el sello ha cambiado |
-| Result     | Object  | <- | Resultado de la operación soltar                                                                   |
+| Resultado  | Object  | <- | Resultado de la operación soltar                                                                   |
 
 <!-- END REF -->
 
@@ -445,7 +447,7 @@ Ejemplo con la opción `dk force drop if stamp changed`:
 
 | Parámetros | Tipo                      |                             | Descripción                                                                                                |
 | ---------- | ------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Referencia a la primera entidad de una selección de entidades (Null si no se encuentra) |
+| Resultado  | 4D.Entity | <- | Referencia a la primera entidad de una selección de entidades (Null si no se encuentra) |
 
 <!-- END REF -->
 
@@ -499,7 +501,7 @@ El mapeo entre el objeto y la entidad se realiza sobre los nombres de los atribu
 
 - Si una propiedad del objeto no existe en la dataclass, se ignora.
 - Los tipos de datos deben ser equivalentes. Si hay una diferencia de tipo entre el objeto y la dataclass, 4D intenta convertir los datos siempre que sea posible (ver [`Convertir tipos de datos`](Concepts/data-types.md#converting-data-types)), de lo contrario el atributo se deja sin tocar.
-- La llave primaria puede darse tal cual o con una propiedad "__KEY" (llenada con el valor de la llave primaria). Si no existe ya en la dataclass, la entidad se crea con el valor dado cuando [**.save()**](#save) es llamado. Si no se da la llave primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas de la base de datos. El autoincremento sólo se calcula si la llave primaria es nula.
+- La llave primaria puede darse tal cual o con una propiedad "__KEY" (llenada con el valor de la llave primaria). La llave primaria puede darse tal cual o con una propiedad "__KEY" (llenada con el valor de la llave primaria). Si no se da la llave primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas de la base de datos. El autoincremento sólo se calcula si la llave primaria es nula.
 
 *filler* puede manejar una entidad relacionada bajo las siguientes condiciones:
 
@@ -572,13 +574,13 @@ También puede utilizar una entidad relacionada dada como objeto:
 
 | Parámetros | Tipo                         |                             | Descripción                                  |
 | ---------- | ---------------------------- | :-------------------------: | -------------------------------------------- |
-| Result     | 4D.DataClass | <- | Objeto DataClass al que pertenece la entidad |
+| Resultado  | 4D.DataClass | <- | Objeto DataClass al que pertenece la entidad |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `.getDataClass()` <!-- REF #EntityClass.getDataClass().Summary -->devuelve la dataclass de la entidad<!-- END REF -->. Esta función es útil al escribir código genérico.
+La función `.getDataClass()` <!-- REF #EntityClass.getDataClass().Summary -->devuelve la dataclass de la entidad<!-- END REF -->. .
 
 #### Ejemplo
 
@@ -619,8 +621,8 @@ El siguiente código genérico duplica cualquier entidad:
 | Parámetros | Tipo    |                             | Descripción                                                                                                               |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
-| Result     | Text    | <- | Valor de la llave primaria de texto de la entidad                                                                         |
-| Result     | Integer | <- | Valor de la llave primaria numérica de la entidad                                                                         |
+| Resultado  | Text    | <- | Valor de la llave primaria de texto de la entidad                                                                         |
+| Resultado  | Integer | <- | Valor de la llave primaria numérica de la entidad                                                                         |
 
 <!-- END REF -->
 
@@ -719,7 +721,7 @@ $info:=$address.getRemoteContextAttributes()
 
 | Parámetros | Tipo                               |                             | Descripción                                                                                 |
 | ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------- |
-| Result     | 4D.EntitySelection | <- | Entity selection a la que pertenece la entidad (nula si no se encuentra) |
+| Resultado  | 4D.EntitySelection | <- | Entity selection a la que pertenece la entidad (nula si no se encuentra) |
 
 <!-- END REF -->
 
@@ -763,7 +765,7 @@ Si la entidad no pertenece a una selección de entidades, la función devuelve N
 
 | Parámetros | Tipo    |                             | Descripción                                                                  |
 | ---------- | ------- | :-------------------------: | ---------------------------------------------------------------------------- |
-| Result     | Integer | <- | Sello de la entidad (0 si la entidad acaba de ser creada) |
+| Resultado  | Integer | <- | Sello de la entidad (0 si la entidad acaba de ser creada) |
 
 <!-- END REF -->
 
@@ -812,7 +814,7 @@ El sello interno se incrementa automáticamente en 4D cada vez que se guarda la 
 | Parámetros      | Tipo                               |                             | Descripción                                                               |
 | --------------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------------------------- |
 | entitySelection | 4D.EntitySelection |              ->             | La posición de la entidad se da en función de esta selección de entidades |
-| Result          | Integer                            | <- | Posición de la entidad en una selección de entidades                      |
+| Resultado       | Integer                            | <- | Posición de la entidad en una selección de entidades                      |
 
 <!-- END REF -->
 
@@ -860,7 +862,7 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 
 | Parámetros | Tipo    |                             | Descripción                                                                                                               |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False. |
+| Resultado  | Boolean | <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False. |
 
 <!-- END REF -->
 
@@ -900,7 +902,7 @@ La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True s
 
 | Parámetros | Tipo                      |                             | Descripción                                                                                               |
 | ---------- | ------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Referencia a la última entidad de una selección de entidades (Null si no se encuentra) |
+| Resultado  | 4D.Entity | <- | Referencia a la última entidad de una selección de entidades (Null si no se encuentra) |
 
 <!-- END REF -->
 
@@ -941,7 +943,7 @@ Si la entidad no pertenece a ninguna entity selection (es decir, [.getSelection(
 | Parámetros | Tipo    |                             | Descripción                                                                                         |
 | ---------- | ------- | :-------------------------: | --------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk reload if stamp changed`: recargar antes de bloquear si el marcador ha cambiado |
-| Result     | Object  | <- | Resultado de la operación de bloqueo                                                                |
+| Resultado  | Object  | <- | Resultado de la operación de bloqueo                                                                |
 
 <!-- END REF -->
 
@@ -966,43 +968,43 @@ De lo contrario, puede pasar la opción `dk reload if stamp changed` en el pará
 
 El objeto devuelto por `.lock()` contiene las siguientes propiedades:
 
-| Propiedad                         |                                     | Tipo                  | Descripción                                                                                                                                                                                                                                                                                                                                                                           |
-| --------------------------------- | ----------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success                           |                                     | boolean               | true si la acción de bloqueo tiene éxito (o si la entidad ya está bloqueada en el proceso actual), false en caso contrario.                                                                                                                                                                                                                        |
-|                                   |                                     |                       | ***Disponible sólo si se utiliza la opción `dk reload if stamp changed`:***                                                                                                                                                                                                                                                                                           |
-| **wasReloaded**                   |                                     | boolean               | true si la entidad fue recargada con éxito, false en caso contrario.                                                                                                                                                                                                                                                                                                  |
-|                                   |                                     |                       | ***Disponible sólo en caso de error:***                                                                                                                                                                                                                                                                                                                               |
-| status(\*)     |                                     | number                | Código de error, ver abajo                                                                                                                                                                                                                                                                                                                                                            |
-| statusText(\*) |                                     | text                  | Descripción del error, ver abajo                                                                                                                                                                                                                                                                                                                                                      |
-|                                   |                                     |                       | ***Disponible sólo en caso de error de bloqueo pesimista:***                                                                                                                                                                                                                                                                                                          |
-| lockKindText                      |                                     | text                  | "Locked by record" si está bloqueado por un proceso 4D, "Locked by session" si está bloqueado por una sesión REST                                                                                                                                                                                                                                                                     |
-| lockInfo                          |                                     | object                | Información sobre el origen del bloqueo. Las propiedades devueltas dependen del origen del bloqueo (proceso 4D o sesión REST).                                                                                                                                                                                                     |
-|                                   |                                     |                       | ***Disponible sólo para un bloqueo por proceso 4D:***                                                                                                                                                                                                                                                                                                                 |
-|                                   | task_id        | number                | ID del Proceso                                                                                                                                                                                                                                                                                                                                                                        |
-|                                   | user_name      | text                  | Nombre de usuario de la sesión en la máquina                                                                                                                                                                                                                                                                                                                                          |
-|                                   | user4d_alias   | text                  | Nombre o alias del usuario 4D                                                                                                                                                                                                                                                                                                                                                         |
-|                                   | user4d_id      | number                | ID del usuario en el directorio de la base de datos 4D                                                                                                                                                                                                                                                                                                                                |
-|                                   | host_name      | text                  | Nombre de la máquina                                                                                                                                                                                                                                                                                                                                                                  |
-|                                   | task_name      | text                  | Nombre del proceso                                                                                                                                                                                                                                                                                                                                                                    |
-|                                   | client_version | text                  | Versión del cliente                                                                                                                                                                                                                                                                                                                                                                   |
-|                                   |                                     |                       | ***Disponible sólo para un bloqueo por sesión REST:***                                                                                                                                                                                                                                                                                                                |
-|                                   | host                                | text                  | URL que bloqueó la entidad (por ejemplo, "www.myserver.com")                                                                                                                                                                                                                                                                       |
-|                                   | IPAddr                              | text                  | Dirección IP del bloqueo (por ejemplo: "127.0.0.1")                                                                                                                                                                                                                                                |
-|                                   | userAgent                           | text                  | userAgent del origin del bloqueo (ej: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
-|                                   |                                     |                       | ***Disponible sólo en caso de error crítico*** (llave primaria duplicada, disco lleno...):                                                                                                                                                                                                         |
-| errors                            |                                     | collection of objects |                                                                                                                                                                                                                                                                                                                                                                                       |
-|                                   | message                             | text                  | Mensaje de error                                                                                                                                                                                                                                                                                                                                                                      |
-|                                   | component signature                 | text                  | firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                                                                                                                                                                                                                                                              |
-|                                   | errCode                             | number                | Código de error                                                                                                                                                                                                                                                                                                                                                                       |
+| Propiedad                         |                                     | Tipo                  | Descripción                                                                                                                                                                                                                                                                                                                                                                                   |
+| --------------------------------- | ----------------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success                           |                                     | boolean               | true si la acción de bloqueo tiene éxito (o si la entidad ya está bloqueada en el proceso actual), false en caso contrario.                                                                                                                                                                                                                                |
+|                                   |                                     |                       | ***Disponible sólo si se utiliza la opción `dk reload if stamp changed`:***                                                                                                                                                                                                                                                                                                   |
+| **wasReloaded**                   |                                     | boolean               | true si la entidad fue recargada con éxito, false en caso contrario.                                                                                                                                                                                                                                                                                                          |
+|                                   |                                     |                       | ***Disponible sólo en caso de error:***                                                                                                                                                                                                                                                                                                                                       |
+| status(\*)     |                                     | number                | Código de error, ver abajo                                                                                                                                                                                                                                                                                                                                                                    |
+| statusText(\*) |                                     | text                  | Descripción del error, ver abajo                                                                                                                                                                                                                                                                                                                                                              |
+|                                   |                                     |                       | ***Disponible sólo en caso de error de bloqueo pesimista:***                                                                                                                                                                                                                                                                                                                  |
+| lockKindText                      |                                     | text                  | "Locked by record" si está bloqueado por un proceso 4D, "Locked by session" si está bloqueado por una sesión REST                                                                                                                                                                                                                                                                             |
+| lockInfo                          |                                     | object                | Información sobre el origen del bloqueo. Las propiedades devueltas dependen del origen del bloqueo (proceso 4D o sesión REST).                                                                                                                                                                                                             |
+|                                   |                                     |                       | ***Disponible sólo para un bloqueo por proceso 4D:***                                                                                                                                                                                                                                                                                                                         |
+|                                   | task_id        | number                | ID del Proceso                                                                                                                                                                                                                                                                                                                                                                                |
+|                                   | user_name      | text                  | Nombre de usuario de la sesión en la máquina                                                                                                                                                                                                                                                                                                                                                  |
+|                                   | user4d_alias   | text                  | Nombre o alias del usuario 4D                                                                                                                                                                                                                                                                                                                                                                 |
+|                                   | user4d_id      | number                | ID del usuario en el directorio de la base de datos 4D                                                                                                                                                                                                                                                                                                                                        |
+|                                   | host_name      | text                  | Nombre de la máquina                                                                                                                                                                                                                                                                                                                                                                          |
+|                                   | task_name      | text                  | Nombre del proceso                                                                                                                                                                                                                                                                                                                                                                            |
+|                                   | client_version | text                  | Versión del cliente                                                                                                                                                                                                                                                                                                                                                                           |
+|                                   |                                     |                       | ***Disponible sólo para un bloqueo por sesión REST:***                                                                                                                                                                                                                                                                                                                        |
+|                                   | host                                | text                  | \| URL que bloqueó la entidad (por ejemplo, "www.myserver.com")                                                                                                                                                                                                                                                                       \\ |
+|                                   | IPAddr                              | text                  | Dirección IP del bloqueo (por ejemplo: "127.0.0.1")                                                                                                                                                                                                                                                        |
+|                                   | userAgent                           | text                  | userAgent del origin del bloqueo (ej: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36")         |
+|                                   |                                     |                       | ***Disponible sólo en caso de error crítico*** (llave primaria duplicada, disco lleno...):                                                                                                                                                                                                                 |
+| errors                            |                                     | collection of objects |                                                                                                                                                                                                                                                                                                                                                                                               |
+|                                   | message                             | text                  | Mensaje de error                                                                                                                                                                                                                                                                                                                                                                              |
+|                                   | component signature                 | text                  | firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                                                                                                                                                                                                                                                                      |
+|                                   | errCode                             | number                | Código de error                                                                                                                                                                                                                                                                                                                                                                               |
 
 (\*) Los siguientes valores pueden ser devueltos en las propiedades *status* y *statusText* del objeto *Result* en caso de error:
 
-| Constante                                 | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5     | La entidad ya no existe en los datos. Este error puede ocurrir en los siguientes casos:<li>la entidad ha sido eliminada (el marcador ha cambiado y ahora el espacio de memoria está libre)</li><li>la entidad ha sido eliminada y reemplazada por otra con otra clave primaria (el marcador ha cambiado y una nueva entidad ahora utiliza el espacio memoria). Cuando se utiliza `.drop( )`, este error puede devolverse cuando se utiliza la opción `dk force drop if stamp changed`. Cuando se utiliza `.lock()`, este error puede ser devuelto cuando se utiliza la opción `dk reload if stamp changed`</li><br/>**statusText asociado**: "Entity does not exist anymore" |
-| `dk status locked`                        | 3     | La entidad está bloqueada por un bloqueo pesimista. **statusText asociado**: "Already locked"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `dk status serious error`                 | 4     | Un error grave es un error de base de datos de bajo nivel (por ejemplo, una llave duplicada), un error de hardware, etc.<br/>**statusText asociado**: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `dk status stamp has changed`             | 2     | El valor del marcador interno de la entidad no coincide con el de la entidad almacenada en los datos (bloqueo optimista).<li>con `.save()`: error solo si no se utiliza la opción `dk auto merge`</li><li>con `.drop()`: error solo si no se utiliza la opción `dk force drop if stamp changed`</li><li>con `.lock()`: error solo si no se utiliza la opción `dk reload if stamp changed`</li><br/>**Estado asociado**: "Stamp has changed"                                                                                                                                                                                                                                                     |
+| Constante                                 | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk status entity does not exist anymore` | 5     | La entidad ya no existe en los datos. Este error puede ocurrir en los siguientes casos:<br/><li>la entidad ha sido eliminada (el marcador ha cambiado y ahora el espacio de memoria está libre)</li><li>la entidad ha sido eliminada y reemplazada por otra con otra clave primaria (el marcador ha cambiado y una nueva entidad ahora utiliza el espacio memoria). Cuando se utiliza `.drop( )`, este error puede devolverse cuando se utiliza la opción `dk force drop if stamp changed`. Cuando se utiliza `.lock()`, este error puede ser devuelto cuando se utiliza la opción `dk reload if stamp changed`</li><br/>**statusText asociado**: "Entity does not exist anymore" |
+| `dk status locked`                        | 3     | La entidad está bloqueada por un bloqueo pesimista. **statusText asociado**: "Already locked"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `dk status serious error`                 | 4     | Un error grave es un error de base de datos de bajo nivel (por ejemplo, una llave duplicada), un error de hardware, etc.<br/>**statusText asociado**: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `dk status stamp has changed`             | 2     | El valor del marcador interno de la entidad no coincide con el de la entidad almacenada en los datos (bloqueo optimista).<li>con `.save()`: error solo si no se utiliza la opción `dk auto merge`</li><li>con `.drop()`: error solo si no se utiliza la opción `dk force drop if stamp changed`</li><li>con `.lock()`: error solo si no se utiliza la opción `dk reload if stamp changed`</li><br/>**Estado asociado**: "Stamp has changed"                                                                                                                                                                                                                                                          |
 
 #### Ejemplo 1
 
@@ -1058,7 +1060,7 @@ Ejemplo con la opción `dk reload if stamp changed`:
 
 | Parámetros | Tipo                      |                             | Descripción                                                                                                 |
 | ---------- | ------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Referencia a la siguiente entidad en la selección de entidades (Null si no se encuentra) |
+| Resultado  | 4D.Entity | <- | Referencia a la siguiente entidad en la selección de entidades (Null si no se encuentra) |
 
 <!-- END REF -->
 
@@ -1102,7 +1104,7 @@ selection $employees
 
 | Parámetros | Tipo                      |                             | Descripción                                                                                                |
 | ---------- | ------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Referencia a la entidad anterior en la selección de entidades (Null si no se encuentra) |
+| Resultado  | 4D.Entity | <- | Referencia a la entidad anterior en la selección de entidades (Null si no se encuentra) |
 
 <!-- END REF -->
 
@@ -1144,7 +1146,7 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
 
 | Parámetros | Tipo   |                             | Descripción   |
 | ---------- | ------ | :-------------------------: | ------------- |
-| Result     | Object | <- | Objeto estado |
+| Resultado  | Object | <- | Objeto estado |
 
 <!-- END REF -->
 
@@ -1209,7 +1211,7 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 | Parámetros | Tipo    |                             | Descripción                                                       |
 | ---------- | ------- | :-------------------------: | ----------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk auto merge`: activa el modo "automatic merge" |
-| Result     | Object  | <- | Resultado de la operación guardar                                 |
+| Resultado  | Object  | <- | Resultado de la operación guardar                                 |
 
 <!-- END REF -->
 
@@ -1348,7 +1350,7 @@ Actualización de una entidad con la opción `dk auto merge`:
 | filterString | Text       |              ->             | Atributo(s) a extraer (cadena separada por comas)                                                                                                            |
 | filterCol    | Collection |              ->             | Colección de atributos a extraer                                                                                                                                                                   |
 | options      | Integer    |              ->             | `dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
-| Result       | Object     | <- | Objeto creado a partir de la entidad                                                                                                                                                               |
+| Resultado    | Object     | <- | Objeto creado a partir de la entidad                                                                                                                                                               |
 
 <!-- END REF -->
 
@@ -1382,7 +1384,7 @@ En el parámetro *options*, puedes pasar el selector `dk with primary key` y/o `
 
 :::caution Atención
 
-Si utiliza otro atributo distinto de la llave primaria como atributo Uno en una relación, el valor de este atributo se escribirá en la propiedad "__KEY". Tenga en cuenta que se recomienda utilizar la llave primaria como atributo Uno en sus relaciones, especialmente cuando utilice las funciones `.toObject()` y `.fromObject()`.
+Si utiliza otro atributo distinto de la llave primaria como atributo Uno en una relación, el valor de este atributo se escribirá en la propiedad "__KEY". Si utiliza otro atributo distinto de la llave primaria como atributo Uno en una relación, el valor de este atributo se escribirá en la propiedad "__KEY".
 
 :::
 
@@ -1634,7 +1636,7 @@ Ejemplo con el tipo <code>relatedEntity</code> con una forma simple:
 
 | Parámetros | Tipo    |                             | Descripción                                                                                       |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False |
+| Resultado  | Boolean | <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False |
 
 <!-- END REF -->
 
@@ -1680,7 +1682,7 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 
 | Parámetros | Tipo       |                             | Descripción                                     |
 | ---------- | ---------- | :-------------------------: | ----------------------------------------------- |
-| Result     | Collection | <- | Nombres de atributos tocados, o colección vacía |
+| Resultado  | Collection | <- | Nombres de atributos tocados, o colección vacía |
 
 <!-- END REF -->
 
@@ -1755,7 +1757,7 @@ En este caso:
 
 | Parámetros | Tipo   |                             | Descripción   |
 | ---------- | ------ | :-------------------------: | ------------- |
-| Result     | Object | <- | Objeto estado |
+| Resultado  | Object | <- | Objeto estado |
 
 <!-- END REF -->
 

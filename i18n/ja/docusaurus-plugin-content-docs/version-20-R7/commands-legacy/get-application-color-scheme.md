@@ -1,12 +1,12 @@
 ---
 id: get-application-color-scheme
-title: Get application color scheme
+title: Get Application color scheme
 slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get application color scheme.Syntax-->**Get application color scheme** {( * )} : Text<!-- END REF-->
-<!--REF #_command_.Get application color scheme.Params-->
+<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | ホストデータベースのカラースキームを返す |
@@ -14,12 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
-<!--REF #_command_.Get application color scheme.Summary-->**Get application color scheme** コマンドは、アプリケーションレベルで使用されている実際のカラースキームの名前を返します。<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Summary-->**Get Application color scheme** コマンドは、アプリケーションレベルで使用されている実際のカラースキームの名前を返します。<!-- END REF-->
 
 **注:** Windows では、このコマンドは常に"light" を返します。
 
@@ -39,10 +36,19 @@ displayed_sidebar: docs
  var $colorScheme : Text
  
   // ホストデータベースのカラースキームを取得する
- $colorScheme:=Get application color scheme(*)
+ $colorScheme:=Get Application color scheme(*)
 ```
 
 #### 参照 
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1763 |
+| スレッドセーフである | &cross; |
+
+

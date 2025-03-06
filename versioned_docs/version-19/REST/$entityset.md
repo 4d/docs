@@ -9,7 +9,7 @@ After [creating an entity set]($method.md#methodentityset) by using `$method=ent
 
 |Syntax|Example|Description|
 |---|---|---|
-|[**$entityset/\{entitySetID\}**](#entitysetentitySetID)|`/People/$entityset/0ANUMBER`|Retrieves an existing entity set|
+|[**$entityset/\{entitySetID\}**](#entitysetentitysetid)|`/People/$entityset/0ANUMBER`|Retrieves an existing entity set|
 |[**$entityset/\{entitySetID\}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection)|`/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER`|Creates a new entity set from comparing existing entity sets|
 
 ## $entityset/\{entitySetID\}
@@ -22,7 +22,7 @@ This syntax allows you to execute any operation on a defined entity set.
 
 Because entity sets have a time limit on them (either by default or after calling `$timeout` with your own limit), you can call `$savedfilter` and `$savedorderby` to save the filter and order by statements when you create an entity set.
 
-When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$expand`]($expand.md), [`$filter`]($filter), [`$orderby`]($orderby), [`$skip`]($skip.md), and [`$top/$limit`]($top_$limit.md).
+When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), and [`$top/$limit`]($top_$limit.md).
 
 ### Example  
 

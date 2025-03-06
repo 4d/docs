@@ -54,3 +54,12 @@ displayed_sidebar: docs
 [Trigger level](trigger-level.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 *トリガ*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 369 |
+| スレッドセーフである | &check; |
+
+

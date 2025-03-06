@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->La commande **PRINT OPTION VALUES** retourne dans le tableau *tabNoms* la liste des noms de valeurs disponibles pour l’*option* d’impression définie.<!-- END REF--> Facultativement, vous pouvez récupérer des informations sur chaque valeur dans les tableaux *tabInfo1* et *tabInfo2*. 
@@ -27,7 +24,7 @@ Le paramètre *option* vous permet de désigner l’option à lire. Vous devez p
 
 | Constante           | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Paper option        | Entier long | 1      | Si vous passez uniquement *valeur1*, il contient le nom du papier. Si vous passez les deux paramètres, *valeur1* contient la largeur du papier et *valeur2* contient la hauteur du papier. La largeur et la hauteur sont exprimées en pixels écran. Utilisez la commande [PRINT OPTION VALUES](print-option-values.md) pour connaître le nom, la hauteur et la largeur de tous les formats de papier proposés par l’imprimante. |
+| Paper option        | Entier long | 1      | Si vous passez uniquement *valeur1*, il contient le nom du papier. Si vous passez les deux paramètres, *valeur1* contient la largeur du papier et *valeur2* contient la hauteur du papier. La largeur et la hauteur sont exprimées en points. Utilisez la commande [PRINT OPTION VALUES](print-option-values.md) pour connaître le nom, la hauteur et la largeur de tous les formats de papier proposés par l’imprimante. |
 | Paper source option | Entier long | 5      | (Windows uniqument) *valeur1* uniquement : numéro correspondant à l’indice, dans le tableau des bacs retourné par la commande [PRINT OPTION VALUES](print-option-values.md), du bac papier à utiliser. Cette option est utilisable sous Windows uniquement.                                                                                                                                                                     |
 
 Après exécution de la commande, le tableau *tabNoms* ainsi que, le cas échéant, les tableaux *tabInfo1* et *tabInfo2* seront remplis par la commande avec les noms et informations des valeurs disponibles. 
@@ -57,3 +54,12 @@ Toutes les informations retournées par ces commandes sont fournies par le syst�
 
 [GET PRINT OPTION](get-print-option.md)  
 [SET PRINT OPTION](set-print-option.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 785 |
+| Thread safe | &cross; |
+
+

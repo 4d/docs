@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->**PRINT SELECTION** は、*aTable*のカレントセレクションを印刷します。<!-- END REF-->レコードは、カレントプロセスのテーブルのカレント出力フォームを使用して印刷されます。**PRINT SELECTION**は、デザインモードの**プリント...**メニューと同じ動作を実行します。セレクションが空の場合、**PRINT SELECTION** は何も行いません。
@@ -34,7 +31,7 @@ displayed_sidebar: docs
 * On Printing Breakイベントはブレークエリアを印刷する直前に生成されます。
 * On Printing Footerイベントははフッタを印刷する直前に生成されます。
 
-**PRINT SELECTION** が最初のヘッダーを印刷しているかどうかは、On Headerイベントで [Before selection](before-selection.md) を判定することによって調べることができます。またOn Printing Footerイベントで [End selection](end-selection.md) を判定することによって、最後のフッターかどうかをチェックすることができます。これら関数の詳細は、それぞれのコマンドや [Form event code](form-event-code.md)、[Level](level.md) の説明を参照してください。
+**PRINT SELECTION** が最初のヘッダーを印刷しているかどうかは、On Headerイベントで [Before selection](before-selection.md) を判定することによって調べることができます。またOn Printing Footerイベントで [End selection](end-selection.md) を判定することによって、最後のフッターかどうかをチェックすることができます。これら関数の詳細は、それぞれのコマンドや [Form event code](../commands/form-event-code.md)、[Level](level.md) の説明を参照してください。
 
 **PRINT SELECTION** を使用し、小計やブレーク付きでセレクションを印刷するには、まずそのセレクションをソートしなければなりません。次に、レポートの各ブレークエリアに、小計を変数に代入するオブジェクトメソッドを持つ変数を配置します。変数に値を代入する、[Sum](sum.md) や [Average](average.md) のような統計関数と算術関数を使用することもできます。詳細は[Subtotal](subtotal.md)、[BREAK LEVEL](break-level.md)、[ACCUMULATE](accumulate.md) コマンドの説明を参照してください。
 
@@ -60,8 +57,17 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_PAGE SETUP*  
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [Subtotal](subtotal.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 60 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

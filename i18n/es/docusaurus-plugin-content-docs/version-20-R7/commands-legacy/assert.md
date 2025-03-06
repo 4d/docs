@@ -57,3 +57,13 @@ Una aserción permite probar los parámetros pasados a un método de proyecto pa
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1129 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+
+

@@ -13,6 +13,12 @@ Você pode rolar através do conteúdo de métodos, classes e funções, que pod
 
 O Editor de código 4D fornece verificação básica de erros de sintaxe. É efetuada uma verificação de erros adicional quando o código é executado. Para obter mais informações sobre como lidar com erros, consulte [Depuração](../Debugging/basics.md).
 
+:::note
+
+If you are used to coding with **VS Code**, you can also use this editor with 4D code after installing the [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode) extension.
+
+:::
+
 ## Interface
 
 ### Barra de ferramentas
@@ -36,13 +42,13 @@ Cada janela do Editor de Código possui uma barra de ferramentas que fornece ace
 
 É possível personalizar a apresentação da área de edição. Qualquer personalização é automaticamente passada para todas as janelas do editor de código:
 
-| Opção                                     | Descrição                                                                                                                                                                                                                                                                                                 | Definido em...                                                                                                                                                                                                                                                                                               |
-| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **fuente** y **tamaño de la fuente**      | Define o tipo de letra e o tamanho dos caracteres a utilizar na área de edição                                                                                                                                                                                                                            | **Preferências** > [**Métodos**](../Preferences/methods.md) ou **Método > Visualização** > **Fonte Maior** ou **Fonte Menor**                                                                                                                                                                                                                                |
-| **estilo e cor dos elementos de sintaxe** | atribui uma cor e/ou estilo específicos a cada tipo de elemento da linguagem 4D.  Você também pode alterar as diferentes cores usadas na interface da área de edição (destaque, fundo, etc.).                                          | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > <strong x-id="1">Style</strong> submenu. > Submenú **Estilo**. Ou **Preferences** > [**Methods**](../Preferences/methods.md) |
-| **espaços**                               | Você pode exibir os espaços entre as palavras usando pontos (.) em vez de espaços em branco. Esta opção se aplica a todos os elementos de código (nomes de comandos, variáveis, comentários, etc.). | **Método > Ver > Espaços em branco**                                                                                                                                                                                                                                                                                                                         |
-| **temas**                                 | Pode selecionar o tema Escuro ou Claro, ou definir um tema personalizado                                                                                                                                                                                                                                  | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                                                                                                                                                  |
-| **largura das indentações de código**     | Definir a largura das indentações do código                                                                                                                                                                                                                                                               | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                                                                                                                                                  |
+| Opção                                     | Descrição                                                                                                                                                                                                                                                                                                 | Definido em...                                                                                                                                                                         |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **fuente** y **tamaño de la fuente**      | Define o tipo de letra e o tamanho dos caracteres a utilizar na área de edição                                                                                                                                                                                                                            | **Preferências** > [**Métodos**](../Preferences/methods.md) ou **Método > Visualização** > **Fonte Maior** ou **Fonte Menor**                                                                                                          |
+| **estilo e cor dos elementos de sintaxe** | atribui uma cor e/ou estilo específicos a cada tipo de elemento da linguagem 4D.  Você também pode alterar as diferentes cores usadas na interface da área de edição (destaque, fundo, etc.).                                          | Clique com o botão direito do mouse em um elemento de linguagem (variável, palavra-chave, etc.) > Submenú **Estilo**. Ou **Preferences** > [**Methods**](../Preferences/methods.md) |
+| **espaços**                               | Você pode exibir os espaços entre as palavras usando pontos (.) em vez de espaços em branco. Esta opção se aplica a todos os elementos de código (nomes de comandos, variáveis, comentários, etc.). | **Método > Ver > Espaços em branco**                                                                                                                                                                                                   |
+| **temas**                                 | Pode selecionar o tema Escuro ou Claro, ou definir um tema personalizado                                                                                                                                                                                                                                  | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                            |
+| **largura das indentações de código**     | Definir a largura das indentações do código                                                                                                                                                                                                                                                               | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                            |
 
 #### Mudar barras
 
@@ -110,7 +116,7 @@ Os seguintes parâmetros são armazenados no modelo:
 - Localização e conteúdo de cada lista
 - Largura relativa de cada lista
 
-Para salvar uma janela do Editor de Código como um modelo, escolha **Método** > **Salvar como Modelo**. O modelo é guardado imediatamente (não aparece nenhuma caixa de diálogo). Está armazenado nas **Preferências** do aplicativo 4D. Se já existir um modelo anterior, ele será substituído.
+Para salvar uma janela do Editor de Código como um modelo, escolha **Método** > **Salvar como Modelo**. O modelo é guardado imediatamente (não aparece nenhuma caixa de diálogo). O modelo é guardado imediatamente (não aparece nenhuma caixa de diálogo). Se já existir um modelo anterior, ele será substituído.
 
 ### Área de pontos de paragem
 
@@ -268,7 +274,7 @@ A maioria desses atalhos pode ser personalizada na caixa de diálogo [4D Prefere
 
 O 4D utiliza técnicas padrão de edição de texto para digitar e editar no Editor de código.
 
-O Editor de código usa convenções de exibição (estilo, cor) para os elementos de sintaxe. Você pode [personalizar estas convenções](#customizing-the-editing-area). Conforme você digita, ao validar sua entrada, o 4D avalia o texto da linha e aplica o formato de exibição apropriado. 4D também recua cada linha para seu nível adequado em relação à linha anterior quando você usa estruturas de programação (If, End if...).
+O Editor de código usa convenções de exibição (estilo, cor) para os elementos de sintaxe. O Editor de código usa convenções de exibição (estilo, cor) para os elementos de sintaxe. Conforme você digita, ao validar sua entrada, o 4D avalia o texto da linha e aplica o formato de exibição apropriado. 4D também recua cada linha para seu nível adequado em relação à linha anterior quando você usa estruturas de programação (If, End if...).
 
 Pode utilizar as teclas de setas para se deslocar rapidamente de uma linha para outra. Usar as teclas de seta para mover-se por várias linhas é mais rápido do que clicar, pois o editor atrasa a avaliação da linha em busca de erros.
 
@@ -285,7 +291,7 @@ O caractere de barra invertida (`\`) tem um suporte específico na linguagem 4D:
 
 :::caution
 
-O caractere de barra invertida (`\`) é usado como separador em [nomes de caminho no Windows](../Concepts/paths.md#windows). Em geral, o 4D interpretará corretamente os nomes de caminho do Windows inseridos no Code Editor substituindo a barra invertida simples por uma barra invertida dupla. Por exemplo, `C:\MyDocuments` se tornará `C:\\MyDocuments`. No entanto, se escrever C:\MyDocuments\New, 4D mostrará C:\MyDocuments\New"`. Nesse caso, a segunda barra invertida é interpretada incorretamente como `\N`(uma [sequência de escape] existente(../Concepts/quick-tour.md#escape-sequences)). Você deve então digitar um duplo`\\\` quando quiser inserir uma barra invertida antes de um caractere usado em uma das sequências de escape reconhecidas por 4D.
+O caractere de barra invertida (`\`) é usado como separador em [nomes de caminho no Windows](../Concepts/paths.md#windows). Em geral, o 4D interpretará corretamente os nomes de caminho do Windows inseridos no Code Editor substituindo a barra invertida simples por uma barra invertida dupla. Por exemplo, `C:\MyDocuments` se tornará `C:\\MyDocuments`. No entanto, se escrever C:\MyDocuments\New, 4D mostrará C:\MyDocuments\New"`. Nesse caso, a segunda barra invertida é interpretada incorretamente como `\N`(uma [sequência de escape] existente(../Concepts/quick-tour.md#escape-sequences)). Você deve então digitar um duplo`\\\\\\\\` quando quiser inserir uma barra invertida antes de um caractere usado em uma das sequências de escape reconhecidas por 4D.
 
 :::
 
@@ -295,7 +301,7 @@ Do explorer, você pode arrastar e soltar tabelas, campos, formulários, método
 
 Quando você insere um comando arrastando-o da página **Comandos** do Explorer, ele aparece com sua sintaxe (que consiste em todos os seus parâmetros) no Editor de código. Essa funcionalidade simplesmente lembra você dos parâmetros que o comando espera. Assim, você pode usar uma sintaxe mais adequada ao seu uso.
 
-In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected. You can also drag-and-drop within a method, class, function or between two different ones.
+Você também pode arrastar e soltar dentro de um método, classe, função ou entre dois métodos diferentes. You can also drag-and-drop within a method, class, function or between two different ones.
 Por padrão, o mecanismo de arrastar e soltar **move** o texto selecionado. Para **copiá-lo**, mantenha pressionada a tecla **Ctrl** (Windows) ou a tecla **Option** (macOS) durante a operação.
 
 ### Alternância entre letras maiúsculas e minúsculas
@@ -428,7 +434,7 @@ Selecione **Find > Find...** no menu **Edit** ou digite **Ctrl+F** (Windows)/**C
 
 A pesquisa definida nessa área será executada no código localizado na janela.
 
-A área de entrada **find** permite que você insira a string a ser pesquisada. Esta área é uma caixa de combinação que armazena as últimas 10 sequências de caracteres que foram pesquisadas ou substituídas durante a sessão. Se você destacar o texto antes de escolher o comando **Find...**, ele aparecerá nessa área. Pode então utilizar este texto ou substituí-lo por outro.
+A área de entrada **find** permite que você insira a string a ser pesquisada. Esta área é uma caixa de combinação que armazena as últimas 10 sequências de caracteres que foram pesquisadas ou substituídas durante a sessão. Esta área é uma caixa de combinação que armazena as últimas 10 sequências de caracteres que foram pesquisadas ou substituídas durante a sessão. Pode então utilizar este texto ou substituí-lo por outro.
 
 Depois que uma cadeia é inserida ou selecionada, todas as ocorrências encontradas na janela aberta são destacadas e o lado direito da área exibe o número total de ocorrências encontradas. Também indica a posição atual do cursor entre todos os resultados.
 
@@ -544,7 +550,7 @@ Os comentários podem ser criados digitando caracteres `/`. Ou o comando **Comme
 
 ![](../assets/en/code-editor/comment-uncomment-1.png) --> ![](../assets/en/code-editor/comment-uncomment-2.png)
 
-Quando a seleção contém apenas código ativo, o comando **Comentário** é aplicado. Or, the <strong x-id="1">Comment/Uncomment</strong> command, found in the <strong x-id="1">Method</strong> menu as well as in the Code Editor context menu is used to mark a group of selected lines of code as single line comments, or, on the contrary, to remove the single line comment characters from a selection. Quando a seleção contém apenas linhas comentadas, o comando **Uncomment** é aplicado.
+Quando a seleção contém apenas código ativo, o comando **Comentário** é aplicado. Quando a seleção inclui tanto código ativo quanto linhas comentadas, é adicionado um par adicional de caracteres de comentário ( // ) a estas últimas; dessa forma, elas manterão seu estado inicial de comentário se a linha for posteriormente "descomentada." Or, the <strong x-id="1">Comment/Uncomment</strong> command, found in the <strong x-id="1">Method</strong> menu as well as in the Code Editor context menu is used to mark a group of selected lines of code as single line comments, or, on the contrary, to remove the single line comment characters from a selection.
 
 > O comando **Comentar/Descomentar** opera apenas com linhas completas --- não pode ser usado para comentar apenas parte de uma linha.
 
@@ -713,7 +719,7 @@ As macros vazias ou incorretas não são mostradas.
 
 #### Verificando a sintaxe das macros personalizadas
 
-Os arquivos de macro-comandos de 4D devem estar em conformidade com o padrão XML. Isso significa, mais especificamente, que a declaração XML `<?xml version="1.0" ...?>` e a declaração de documento `<!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd">` são obrigatórias no início de um arquivo de macro para que ele seja carregado. São suportados os diferentes tipos de codificação XML. No entanto, recomenda-se a utilização de uma codificação compatível com Mac/PC (UTF-8). 4D fornece uma DTD que pode ser usada para validar os ficheiros macro. Este ficheiro encontra-se na seguinte localização:
+Os arquivos de macro-comandos de 4D devem estar em conformidade com o padrão XML. Os arquivos de macro-comandos de 4D devem estar em conformidade com o padrão XML. São suportados os diferentes tipos de codificação XML. No entanto, recomenda-se a utilização de uma codificação compatível com Mac/PC (UTF-8). 4D fornece uma DTD que pode ser usada para validar os ficheiros macro. Este ficheiro encontra-se na seguinte localização:
 
 - Windows: \Resources\DTD\macros.dtd
 - Mac OS: :Contents:Resources:DTD:macros.dtd

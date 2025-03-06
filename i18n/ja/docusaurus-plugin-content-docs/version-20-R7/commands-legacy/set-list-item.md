@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET LIST ITEM.Summary-->SET LIST ITEM コマンドは、*list*引数に渡した参照番号またはオブジェクト名のリストにおいて、*itemRef*で指定した項目を変更します。<!-- END REF-->
@@ -79,3 +76,12 @@ displayed_sidebar: docs
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 385 |
+| スレッドセーフである | &cross; |
+
+

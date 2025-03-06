@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.ST Get content type.Summary-->El comando **ST Get content type** devuelve el tipo de contenido encontrado en el campo o la variable de texto multiestilo designada por el parámetro *objeto* .<!-- END REF--> 
@@ -102,3 +99,14 @@ Usted desea mostrar los comandos de un menú contextual basado en el tipo de con
        ...
     End if
 ```
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1286 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

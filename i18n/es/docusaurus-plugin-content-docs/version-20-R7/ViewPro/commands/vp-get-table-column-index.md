@@ -23,7 +23,7 @@ title: VP Get table column index
 | tableName  | Text    | ->                          | Nombre de la tabla                                             |                  |
 | columnName | Text    | ->                          | Nombre de la columna de la tabla                               |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | Integer | <- | Índice de *columnName*                                         | <!-- END REF --> |
+| Resultado  | Integer | <- | Índice de *columnName*                                         | <!-- END REF --> |
 
 #### Descripción
 

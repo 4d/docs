@@ -38,3 +38,12 @@ El siguiente ejemplo ilustra el uso de Change string. Los resultados se asignan 
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 234 |
+| Hilo seguro | &check; |
+
+

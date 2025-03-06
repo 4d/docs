@@ -24,3 +24,12 @@ By default, assertions are enabled but they may have been disabled using the [SE
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1130 |
+| Thread safe | &check; |
+
+

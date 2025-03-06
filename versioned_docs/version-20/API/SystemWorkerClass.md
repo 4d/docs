@@ -318,8 +318,7 @@ This property is **read-only**.
 <!-- REF SystemWorkerClass.currentDirectory.Desc -->
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->
-**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
 
 #### Description
 

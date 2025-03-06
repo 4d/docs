@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.START SQL SERVER.Summary-->El comando START SQL SERVER lanza el servidor SQL integrado de la aplicación 4D en la que se ejecuta.<!-- END REF--> Una vez lanzado, el servidor SQL puede responder a las búsquedas SQL externas. 
@@ -28,3 +25,13 @@ Si el servidor SQL ha sido lanzado correctamente, la variable sistema OK toma el
 #### Ver también 
 
 [STOP SQL SERVER](stop-sql-server.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 962 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

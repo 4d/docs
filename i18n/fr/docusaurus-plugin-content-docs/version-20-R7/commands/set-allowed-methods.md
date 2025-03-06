@@ -9,13 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 
-| Paramètres   | Type       |   | Description           |
-| ------------ | ---------- | - | --------------------- |
-| methodsArray | Text array | → | Array of method names |
+| Paramètres   | Type       |                             | Description           |
+| ------------ | ---------- | --------------------------- | --------------------- |
+| methodsArray | Text array | &#8594; | Array of method names |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
 
 #### Description
 
@@ -59,3 +57,12 @@ This example authorizes all methods starting with “formula” and the “Total
 
 [EDIT FORMULA](../commands-legacy/edit-formula.md)\
 [GET ALLOWED METHODS](../commands-legacy/get-allowed-methods.md)
+
+#### Propriétés
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Numéro de commande | 805                             |
+| Thread safe        | &amp;cross; |
+
+

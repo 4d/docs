@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.INSERT MENU ITEM.Summary-->O comandoINSERT MENU ITEM insere novas linhas no menu cujo número ou referência é passada em *menu* e as localiza depois da linha de menu cujo número se passa em *depoisItem*.<!-- END REF-->
@@ -57,3 +54,13 @@ O exemplo a seguir cria um menu que consiste em dois comandos os quais atribuem 
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 412 |
+| Thread-seguro | &cross; |
+| Proibido no servidor ||
+
+

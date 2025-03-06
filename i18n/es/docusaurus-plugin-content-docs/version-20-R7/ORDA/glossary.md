@@ -9,7 +9,7 @@ title: Glosario
 
 ## Acción
 
-Todas las acciones que pueden realizarse en un [recurso](#resource). Las acciones disponibles son: crear, leer, actualizar, eliminar, ejecutar, promover y describir.
+Todas las acciones que pueden realizarse en un [recurso](#resource). Available actions are: create, read, update, drop, execute, and promote.
 
 ## Atributo
 
@@ -89,7 +89,7 @@ Una entidad es un objeto que corresponde a un modelo de dataclass. Una entidad c
 
 Una entidad puede verse como una instancia de la dataclass, como un registro de la tabla correspondiente a la dataclass en su datastore asociado. Sin embargo, una entidad también contiene los datos relacionados. La finalidad de la entidad es gestionar los datos (crear, actualizar, eliminar).
 
-Para más información, consulte Entidades.
+For more information, see [entities](entities.md).
 
 ## Entity selection
 
@@ -156,7 +156,7 @@ La capacidad de ejecutar una o varias [acciones](#actions) en [recursos](#resour
 
 Ver [Atributo](#attribute).
 
-> \> <em x-id="3">Attributes</em> and <em x-id="3">properties</em> are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
+> &#062; Attributes and properties are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
 
 ## PropertyPath
 

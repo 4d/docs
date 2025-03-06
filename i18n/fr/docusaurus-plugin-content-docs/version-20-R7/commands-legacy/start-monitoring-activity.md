@@ -29,7 +29,7 @@ Le paramètre optionnel *source* définit le type d'activité à suivre. Valeurs
 | Activity network    | 2      | Opérations de requêtes réseau.                      |
 | Activity operations | 4      | Opération de données 4D.                            |
 
-**Note** : Si le journal de débogage a été stoppé sur la [GRAPH SETTINGS](graph-settings.md) de 4D Server, la commande **START MONITORING ACTIVITY** relancera le journal avec Activity network.
+**Note** : Si le journal de débogage a été stoppé sur la [Administration window](../ServerWindow/overview.md) de 4D Server, la commande **START MONITORING ACTIVITY** relancera le journal avec Activity network.
 
 #### Exemple 
 
@@ -92,3 +92,12 @@ Vous souhaitez lancer/arrêter le suivi et revoir les activités de données 4D 
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1712 |
+| Thread safe | &check; |
+
+

@@ -23,12 +23,12 @@ displayed_sidebar: docs
 |fileConstant|Integer|&#8594;|4D file constant|
 |pathType|Integer|&#8594; |`fk posix path` (default) or `fk platform path`|
 |*|operator|&#8594; |* to return file of host database|
-|Result|4D.File|&#8592;|New file object|
+|Result|[4D.File](../API/FileClass.md)|&#8592;|New file object|
 <!-- END REF -->
 
 #### Description
 
-The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
+The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the [`4D.File`](../API/FileClass.md) type<!-- END REF -->. The command accepts two syntaxes:
 
 **File ( path { ; pathType } { ; * })**
 
@@ -79,8 +79,19 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 #### See also 
 
-[Folder](folder.md)  
+[`4D.File` class](../API/FileClass.md)
+[Folder](folder.md)
 [Get 4D file](../commands-legacy/get-4d-file.md)  
 [Object to path](../commands-legacy/object-to-path.md)  
-[Path to object](../commands-legacy/path-to-object.md)  
+[Path to object](../commands-legacy/path-to-object.md)
+
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1566 |
+| Thread safe | &check; |
+
 

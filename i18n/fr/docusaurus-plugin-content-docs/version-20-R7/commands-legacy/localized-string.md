@@ -54,3 +54,13 @@ Si la commande a été exécutée correctement, la variable OK prend la valeur 1
 #### Voir aussi 
 
 [Get database localization](get-database-localization.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 991 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

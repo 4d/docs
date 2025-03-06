@@ -125,16 +125,16 @@ Dado que cada bit puede ser igual a 0 o 1, también se puede pensar en un valor 
 
 An expression that uses a bitwise operator returns a Long value, except for the Bit Test operator, where the expression returns a Boolean value. La siguiente tabla lista los operadores a nivel de bits y su sintaxis:
 
-| Operación                        | Operador                                             | Sintaxis                                                       | Devuelve                                |
-| -------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------- |
-| Y                                | &                                | Long & Long                                | Long                                    |
-| O (inclusive) | &#124                            | Long \| Long                                                   | Long                                    |
-| O (exclusivo) | ^ &#124                          | Long ^ \| Long                                                 | Long                                    |
-| Left Bit Shift                   | << | Long << Long | Long (ver nota 1)    |
-| Right Bit Shift                  | > >                                                  | Long >> Long                                                   | Long (ver nota 1)    |
-| Bit Set                          | ?+                                                   | Long ?+ Long                                                   | Long (ver nota 2)    |
-| Poner el bit en 0                | ?-                                                   | Long ?- Long                                                   | Long (ver nota 2)    |
-| Probar bit                       | ??                                                   | Long ?? Long Long                                              | Boolean (ver nota 2) |
+| Operación                        | Operador                                             | Sintaxis                                                        | Devuelve                                |
+| -------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------- |
+| Y                                | &                                | Long & Long                                 | Long                                    |
+| O (inclusive) | &#124                            | Long &#124; Long                            | Long                                    |
+| O (exclusivo) | ^ &#124                          | Long &#094; &#124; Long | Long                                    |
+| Left Bit Shift                   | << | Long << Long  | Long (ver nota 1)    |
+| Right Bit Shift                  | > >                                                  | Long >> Long                                                    | Long (ver nota 1)    |
+| Bit Set                          | ?+                                                   | Long ?+ Long                                                    | Long (ver nota 2)    |
+| Poner el bit en 0                | ?-                                                   | Long ?- Long                                                    | Long (ver nota 2)    |
+| Probar bit                       | ??                                                   | Long ?? Long Long                                               | Boolean (ver nota 2) |
 
 #### Notas
 
@@ -146,8 +146,8 @@ La siguiente tabla lista los operadores a nivel de bits y sus efectos:
 | Operación                        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Y                                | Cada bit resultante es el resultado de la operación AND lógica aplicada a los bits de los dos operandos. Cada bit resultante es el resultado de la operación AND lógica aplicada a los bits de los dos operandos.                                                                                                                                                                                                     |
-| O (inclusive) | Each resulting bit is the logical OR of the bits in the two operands.Here is the logical OR table:<li>1 \\| 1 --> 1</li><li>0 \\| 1 --> 1</li><li>1 \\| 0 --> 1</li><li>0 \\| 0 --> 0</li>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.                                                                                  |
-| O (exclusivo) | Each resulting bit is the logical XOR of the bits in the two operands.Here is the logical XOR table:<li>1 ^ \\| 1 --> 0</li><li>0 ^ \\| 1 --> 1</li><li>1 ^ \\| 0 --> 1</li><li>0 ^ \\| 0 --> 0</li>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0.                                                                            |
+| O (inclusive) | Each resulting bit is the logical OR of the bits in the two operands.Here is the logical OR table:<li>1 \\                                                                                                                                                                                                                                                                                                          |
+| O (exclusivo) | Each resulting bit is the logical XOR of the bits in the two operands.Here is the logical XOR table:<li>1 ^ \\                                                                                                                                                                                                                                                                                                      |
 | Left Bit Shift                   | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la izquierda el número de posiciones indicado por el segundo operando. Los bits de la izquierda se pierden y los nuevos bits de la derecha se ponen en 0. **Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N. |
 | Right Bit Shift                  | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la derecha el número de posición indicado por el segundo operando. The bits on the right are lost and the new bits on the left are set to 0.**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                 |
 | Bit Set                          | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 1. Los demás bits no se modifican.                                                                                                                                                                                                                           |
@@ -156,13 +156,13 @@ La siguiente tabla lista los operadores a nivel de bits y sus efectos:
 
 ### Ejemplos
 
-| Operación                        | Ejemplo                                                           | Result     |
-| -------------------------------- | ----------------------------------------------------------------- | ---------- |
-| Y                                | 0x0000FFFF & 0xFF00FF00                       | 0x0000FF00 |
-| O (inclusive) | 0x0000FFFF \| 0xFF00FF00                                          | 0xFF00FFFF |
-| O (exclusivo) | 0x0000FFFF ^ \| 0xFF00FF00                                        | 0xFF0000FF |
-| Left Bit Shift                   | 0x0000FFFF << 8 | 0x00FFFF00 |
-| Right Bit Shift                  | 0x0000FFFF >> 8                                                   | 0x000000FF |
-| Bit Set                          | 0x00000000 ?+ 16                                                  | 0x00010000 |
-| Poner el bit en 0                | 0x00010000 ?- 16                                                  | 0x00000000 |
-| Probar bit                       | 0x00010000 ?? 16 16                                               | True       |
+| Operación                        | Ejemplo                                                                     | Resultado  |
+| -------------------------------- | --------------------------------------------------------------------------- | ---------- |
+| Y                                | 0x0000FFFF & 0xFF00FF00                                 | 0x0000FF00 |
+| O (inclusive) | 0x0000FFFF &#124; 0xFF00FF00                            | 0xFF00FFFF |
+| O (exclusivo) | 0x0000FFFF &#094; &#124; 0xFF00FF00 | 0xFF0000FF |
+| Left Bit Shift                   | 0x0000FFFF << 8           | 0x00FFFF00 |
+| Right Bit Shift                  | 0x0000FFFF >> 8                                                             | 0x000000FF |
+| Bit Set                          | 0x00000000 ?+ 16                                                            | 0x00010000 |
+| Poner el bit en 0                | 0x00010000 ?- 16                                                            | 0x00000000 |
+| Probar bit                       | 0x00010000 ?? 16 16                                                         | True       |

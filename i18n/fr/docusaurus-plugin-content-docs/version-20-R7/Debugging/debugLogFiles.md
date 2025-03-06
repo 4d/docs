@@ -59,21 +59,21 @@ Ce fichier commence avec les en-têtes suivants :
 
 Pour chaque requête, les champs suivants sont enregistrés :
 
-| Noms des champs                                                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sequence_number                                           | Numéro d'opération séquentiel et unique dans la session de log                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| time                                                                           | Date et heure au format ISO 8601 : 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                                                                                                                                                                                                                                                                |
-| systemid                                                                       | ID système                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| component                                                                      | Signature du composant (par exemple '4SQLS' ou 'dbmg')                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| process\_info\_index               | Correspond au champ "index" du journal 4DRequestsLog_ProcessInfo.txt, et permet de relier une demande à un process.                                                                                                                                                                                                                                                                                                                                                    |
-| request                                                                        | [ID de la requête C/S ou ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) ou message pour les requêtes SQL ou messages `LOG EVENT`                                                                                                                                                                                                                                                                                                                                                           |
-| bytes_in                                                  | Nombre d'octets reçus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| bytes_out                                                 | Nombre d'octets envoyés                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| server\_duration \| exec\_duration | Dépend de l'endroit où le journal est généré :<li>*server\_duration* lorsqu'il est généré sur le client --Temps en microsecondes pris par le serveur pour traiter la requête et retourner une réponse. B à F dans l'image ci-dessous, OU</li><li>*exec\_duration* lors de sa génération sur le serveur --Temps pris en microsecondes pour que le serveur traite la requête. B à E dans l'image ci-dessous.</li> |
-| write\_duration                                          | Temps pris en microsecondes pour l'envoi de la :<li>Requête (lorsqu'elle est exécutée sur le client). A à B dans l'image ci-dessous.</li><li>Réponse (lorsqu'elle est exécutée sur le serveur). E à F dans l'image ci-dessous.</li>                                                                                                                                                                   |
-| task_kind                                                 | Préemptif ou coopératif (respectivement 'p' ou 'c')                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| rtt                                                                            | Temps en microsecondes pris par le client pour envoyer la requête et pour qu'elle soit reçue par le serveur. De A à D et de E à H dans l'image ci-dessous.<li>Seulement mesuré lors de l'utilisation de la couche réseau ServerNet, renvoie 0 lorsqu'il est utilisé avec l'ancienne couche réseau.</li><li>Pour les versions de Windows antérieures à Windows 10 ou Windows Server 2016, l'appel renverra 0.</li>                                           |
-| extra                                                                          | Informations supplémentaires relatives au contexte, par exemple le nom de la dataclass et/ou le nom de l'attribut dans le cas d'une requête ORDA                                                                                                                                                                                                                                                                                                                                                                            |
+| Noms des champs                                                                                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sequence_number                                                                   | Numéro d'opération séquentiel et unique dans la session de log                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| time                                                                                                   | Date et heure au format ISO 8601 : 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                                                                                                                                                                                                                                                                |
+| systemid                                                                                               | ID système                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| component                                                                                              | Signature du composant (par exemple '4SQLS' ou 'dbmg')                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| process\_info\_index                                       | Correspond au champ "index" du journal 4DRequestsLog_ProcessInfo.txt, et permet de relier une demande à un process.                                                                                                                                                                                                                                                                                                                                                    |
+| request                                                                                                | [ID de la requête C/S ou ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) ou message pour les requêtes SQL ou messages `LOG EVENT`                                                                                                                                                                                                                                                                                                                                                           |
+| bytes_in                                                                          | Nombre d'octets reçus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| bytes_out                                                                         | Nombre d'octets envoyés                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| server\_duration &#124; exec\_duration | Dépend de l'endroit où le journal est généré :<li>_server\*duration\* lorsqu'il est généré sur le client --Temps en microsecondes pris par le serveur pour traiter la requête et retourner une réponse. B à F dans l'image ci-dessous, OU</li><li>_exec\*duration\* lors de sa génération sur le serveur --Temps pris en microsecondes pour que le serveur traite la requête. B à E dans l'image ci-dessous.</li> |
+| write\_duration                                                                  | Temps pris en microsecondes pour l'envoi de la :<li>Requête (lorsqu'elle est exécutée sur le client). A à B dans l'image ci-dessous.</li><li>Réponse (lorsqu'elle est exécutée sur le serveur). E à F dans l'image ci-dessous.</li>                                                                                                                                                                   |
+| task_kind                                                                         | Préemptif ou coopératif (respectivement 'p' ou 'c')                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| rtt                                                                                                    | Temps en microsecondes pris par le client pour envoyer la requête et pour qu'elle soit reçue par le serveur. De A à D et de E à H dans l'image ci-dessous.<li>Seulement mesuré lors de l'utilisation de la couche réseau ServerNet, renvoie 0 lorsqu'il est utilisé avec l'ancienne couche réseau.</li><li>Pour les versions de Windows antérieures à Windows 10 ou Windows Server 2016, l'appel renverra 0.</li>                                           |
+| extra                                                                                                  | Informations supplémentaires relatives au contexte, par exemple le nom de la dataclass et/ou le nom de l'attribut dans le cas d'une requête ORDA                                                                                                                                                                                                                                                                                                                                                                            |
 
 Acheminement de la requête :
 
@@ -285,15 +285,15 @@ Ces fichiers journaux enregistrent chaque échange entre l'application 4D et le 
 
 - SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
 - POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
+- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.md)
 
 Les fichiers peuvent être générés en deux versions :
 
 - une version classique :
-  - fichiers nommés 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
-  - sans pièces jointes
-  - avec un recyclage automatique tous les 10 MB
-  - conçue pour des fonctions de débogage habituelles
+ - fichiers nommés 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
+ - sans pièces jointes
+ - avec un recyclage automatique tous les 10 MB
+ - conçue pour des fonctions de débogage habituelles
 
 Pour démarrer ce journal :
 
@@ -308,10 +308,10 @@ SET DATABASE PARAMETER(IMAP Log;1) //démarrer le journal IMAP
 Ce chemin d'accès au journal est retourné par la commande `Get 4D file`.
 
 - une version étendue :
-  - pièce(s) jointe(s) inclue(s)
-    pas de recyclage automatique
-  - nom personnalisé
-  - réservée à des fins spécifiques
+ - pièce(s) jointe(s) inclue(s)
+  pas de recyclage automatique
+ - nom personnalisé
+ - réservée à des fins spécifiques
 
 Pour démarrer ce journal :
 
@@ -467,14 +467,14 @@ Il existe plusieurs façons d'activer le fichier de configuration du journal, en
 - **4D Server avec interface** : vous pouvez ouvrir la page Maintenance et cliquer sur le bouton [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file), puis sélectionner le fichier. Dans ce cas, vous pouvez utiliser n'importe quel nom pour le fichier de configuration. Il est immédiatement activé sur le serveur.
 - **un projet interprété ou compilé** : le fichier doit être nommé `logConfig.json` et copié dans le [dossier Settings](../Project/architecture.md#settings-1) du projet (situé au même niveau que le dossier [`Project`](../Project/architecture.md#project-folder)). Il est activé au démarrage du projet (uniquement sur le serveur en client/serveur).
 - **une application générée** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
-  - Windows : `Users\[userName]\AppData\Roaming\[application]`
-  - macOS : `/Users/[userName]/Library/ApplicationSupport/[application]`
+ - Windows : `Users\[userName]\AppData\Roaming\[application]`
+ - macOS : `/Users/[userName]/Library/ApplicationSupport/[application]`
 - **tous projets avec un 4D monoposte ou distant** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
-  - Windows: `Users\[userName]\AppData\Roaming\4D`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+ - Windows: `Users\[userName]\AppData\Roaming\4D`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **tous projets avec 4D Server** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
-  - Windows: `Users\[userName]\AppData\Roaming\4D Server`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+ - Windows: `Users\[userName]\AppData\Roaming\4D Server`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
@@ -484,7 +484,7 @@ Si un fichier `logConfig.json` est installé à la fois dans les dossiers Settin
 
 ### Description du fichier JSON
 
-Le fichier de configuration du journal est un fichier `.json` qui doit respecter le schéma json suivant :
+Voici un exemple de fichier de configuration de log :
 
 ```json
 {
@@ -633,7 +633,7 @@ Le fichier de configuration du journal est un fichier `.json` qui doit respecter
 
 :::note
 
-- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\`,...).
+- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\`,...).
 - For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
 

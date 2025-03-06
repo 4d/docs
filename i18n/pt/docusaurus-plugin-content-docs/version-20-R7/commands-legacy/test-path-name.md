@@ -50,3 +50,12 @@ O seguinte exemplo prova a presença do documento “Diário” na pasta da base
 [CREATE FOLDER](create-folder.md)  
 [Object to path](object-to-path.md)  
 [Path to object ](path-to-object.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 476 |
+| Thread-seguro | &check; |
+
+

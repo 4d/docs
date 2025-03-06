@@ -46,7 +46,7 @@ Pour fournir les étiquettes d'un onglet, vous pouvez utiliser :
 - une liste déroulante
 - un tableau
 
-### Utilisation d'un objet
+### Utiliser un objet
 
 Vous pouvez affecter un [objet](Concepts/dt_object.md) encapsulant une [collection](../Concepts/dt_collection.md) comme [source de données](properties_Object.md#variable-or-expression) de l'onglet. Cet objet doit avoir les propriétés suivantes :
 

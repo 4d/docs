@@ -61,3 +61,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [DOM Create XML element](dom-create-xml-element.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1097 |
+| スレッドセーフである | &check; |
+
+

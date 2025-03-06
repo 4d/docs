@@ -3,18 +3,18 @@ id: shared
 title: Objets et collections partagés
 ---
 
-**Les objets partagés** et **les collections partagées** sont des [objets](Concepts/dt_object.md) et des [collections](Concepts/dt_collection.md) spécifiques dont le contenu est partagé entre les process. Contrairement aux [variables interprocess](Concepts/variables.md#variables-interprocess), les objets partagés et les collections partagées ont l'avantage d'être compatibles avec les **process 4D préemptifs** : ils peuvent être passés par référence comme paramètres à des commandes telles que [`New process`](https://doc.4d.com/4dv20/help/command/fr/page317.html) ou [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/fr/page1389.html).
+**Shared objects** and **shared collections** are specific [objects](./dt_object.md) and [collections](./dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
 
-Les objets partagés et les collections partagées sont stockés dans des variables standard de type [`Object`](dt_object.md) et [`Collection`](dt_collection.md), mais doivent être instanciés à l'aide de commandes spécifiques :
+Shared objects and shared collections are stored in standard [`Object`](./dt_object.md) and [`Collection`](./dt_collection.md) type variables, but must be instantiated using specific commands:
 
-- pour créer un objet partagé, utilisez la commande [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) ou appelez la fonction [`new()`](../API/ClassClass.md#new) d'une [classe partagée](classes.md#classes-partagées),
+- to create a shared object, use the [`New shared object`](../commands-legacy/new-shared-object.md) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](./classes.md#shared-classes),
 - to create a shared collection, use the [`New shared collection`](../commands/new-shared-collection.md) command.
 
 Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
 
 Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**. La lecture d'une valeur d'objet/collection ne nécessite pas de structure **Use...End use**.
 
-Un catalogue unique et global, retourné par la commande [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html), est toujours disponible dans l'application et ses composants, et peut être utilisé pour stocker tous les objets partagés et collections.
+A unique, global catalog returned by the [`Storage`](../commands-legacy/storage.md) command is always available throughout the application and its components, and can be used to store all shared objects and collections.
 
 ## Utilisation des objets et collections partagés
 
@@ -81,11 +81,11 @@ Appeler `OB Copy` avec un objet partagé (ou avec un objet dont des propriétés
 
 ### Storage
 
-**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Cet objet partagé est renvoyé par la commande [`Storage`](https://doc.4d.com/4dv20/help/command/fr/page1525.html). Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
+**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
 
 A noter que, à la différence de objets partagés standard, l'objet `Storage` ne crée par de groupe partagé lorsque des objets/collection lui sont assigné(e)s en tant que propriétés. Cette exception permet à l'objet **Storage** d'être utilisé sans verrouiller les objets/collections partagé(e)s connecté(e)s.
 
-Pour plus d'informations, veuillez vous reporter à la description de la commande [`Storage`](https://doc.4d.com/4dv20/help/command/fr/page1525.html).
+For more information, refer to the [`Storage`](../commands-legacy/storage.md) command description.
 
 ## Use...End use
 
@@ -108,14 +108,14 @@ Les objets partagés et les collections partagées permettent d'établir des com
 - La ligne **End use** déverrouille les propriétés de *Shared_object_or_Shared_collection* et tous les objets du même groupe.
 - Plusieurs structures **Use...End use** peuvent être imbriquées dans le code 4D. Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**.
 
-:::note
+### Automatic Use...End use calls
 
-Les fonctions suivantes déclenchent automatiquement un **Use/End use** interne, rendant un appel explicite à la structure inutile lors de l'exécution de la fonction :
+The following features automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when it is executed:
 
-- [fonctions de collection](../API/CollectionClass.md) qui modifient les collections partagées
+- [collection functions](../API/CollectionClass.md) that modify shared collections,
+- [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md) command,
+- [`OB REMOVE`](../commands-legacy/ob-remove.md) command,
 - [fonctions partagées](classes.md#fonctions-partagees) (définies dans les [classes partagées](classes.md#classes-partagees)).
-
-:::
 
 ## Exemple 1
 

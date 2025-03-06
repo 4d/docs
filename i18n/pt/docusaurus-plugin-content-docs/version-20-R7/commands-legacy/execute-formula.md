@@ -31,7 +31,7 @@ A instrução pode estar em:
 **Notas:** 
 
 * Se l *instrução* for um método projeto, se recomenda utilizar [EXECUTE METHOD](execute-method.md) que lhe permite passar parâmetros.
-* Não se recomenda chamar a nenhum comando de declaração de variável como [C\_DATE](c-date.md) em *instrução* já que pode gerar conflitos no código.
+* Não se recomenda chamar a nenhum comando de declaração de variável como *C\_DATE* em *instrução* já que pode gerar conflitos no código.
 
 A fórmula pode incluir variáveis de processo e variáveis entre processos. Entretanto, a declaração não pode conter o controle das instruções de fluxo (If, While, etc.), já que deve estar em uma linha de código.
 
@@ -63,3 +63,12 @@ Se quiser executar instruções usando chamadas para comandos 4D e tabelas. Já 
 [Command name](command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 63 |
+| Thread-seguro | &check; |
+
+

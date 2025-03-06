@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-| Parâmetro  | Tipo                     |     | Descrição                       |
-| ---------- | ------------------------ | :-: | ------------------------------- |
-| zipFile    | 4D. File |  →  | Arquivos Zip                    |
-| senha      | Text                     |  →  | Senha do arquivo ZIP, se houver |
-| Resultados | Parâmetros               |  ←  | Objeto arquivo                  |
+| Parâmetro  | Tipo                     |                             | Descrição                       |
+| ---------- | ------------------------ | :-------------------------: | ------------------------------- |
+| zipFile    | 4D. File | &#8594; | Arquivos Zip                    |
+| senha      | Text                     | &#8594; | Senha do arquivo ZIP, se houver |
+| Resultados | Parâmetros               | &#8592; | Objeto arquivo                  |
 
 <!-- END REF -->
 
@@ -36,7 +36,7 @@ If the *zipFile* is password protected, you need to use the optional *password* 
 
 **Objeto arquivo**
 
-The returned `4D.ZipArchive` object contains a single [`root`](../API/ZipArchiveClass.md#root) property whose value is a `4D.ZipFolder` object. Esta pasta descreve todo o conteúdo do ficheiro ZIP.
+O objeto `4D.ZipArchive` retornado contém uma única propriedade [`root`](../API/ZipArchiveClass.md#root) cujo valor é um objeto `4D.ZipFolder`. Esta pasta descreve todo o conteúdo do ficheiro ZIP.
 
 #### Exemplo
 
@@ -84,3 +84,12 @@ Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1637                            |
+| Thread safe    | &amp;check; |
+
+

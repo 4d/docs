@@ -55,3 +55,12 @@ At the bottom of the list of records is a button with an object method. The obje
 
 [INTERSECTION](intersection.md)  
 [UNION](union.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 122 |
+| Thread safe | &check; |
+
+

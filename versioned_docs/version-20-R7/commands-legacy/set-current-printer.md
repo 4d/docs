@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->The **SET CURRENT PRINTER** command designates the printer to be used for printing with the current 4D application.<!-- END REF-->
@@ -55,3 +52,13 @@ Creation of a PDF document under Windows:
 
 [Get current printer](get-current-printer.md)  
 [PRINTERS LIST](printers-list.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 787 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

@@ -97,3 +97,13 @@ Se passa o valor 3 em *modo*, a função retorna ?00:00:00? (sem referência de 
 
 [Append document](append-document.md)  
 [Create document](create-document.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 264 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, Document, error |
+
+

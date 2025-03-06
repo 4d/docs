@@ -52,7 +52,7 @@ title: オブジェクト
 
 「値」を保存できるオブジェクトは以下のとおりです:
 
-| オブジェクト                                 | 保存される値                                       |
+| Object                                 | 保存される値                                       |
 | -------------------------------------- | -------------------------------------------- |
 | [チェックボックス](checkbox_overview.md)       | 関連付けられた変数の値 (0, 1, 2)                        |
 | [ドロップダウンリスト](dropdownList_Overview.md) | 選択されている項目の番号                                 |
@@ -78,7 +78,7 @@ title: オブジェクト
 このプロパティは、データのソースを指定します。 各アクティブフォームオブジェクトにはオブジェクト名と変数名が関連付けられています。 変数名とオブジェクト名は違っていてもかまいません。 同じフォーム内で複数のアクティブオブジェクトに同じ変数名を割り当てることができますが、[オブジェクト名](#オブジェクト名) はそれぞれユニークでなければなりません。
 > 変数名の上限は 31バイトです。 命名規則については [識別子](Concepts/identifiers.md) の章を参照してください。
 
-フォームオブジェクト変数を使って、オブジェクトを監視・コントロールすることができます。 たとえば、ボタンがクリックされると、その変数の値は 1 に設定されます。それ以外の場合は 0 です。 進捗インジケーターに関連づけられた式は、現設定の取得・変更を可能にします。
+フォームオブジェクト変数を使って、オブジェクトを監視・コントロールすることができます。 たとえば、ボタンがクリックされると、その変数の値は 1 に設定されます。 それ以外の場合は 0 です。 進捗インジケーターに関連づけられた式は、現設定の取得・変更を可能にします。
 
 代入可・代入不可の変数および式が使用でき、取得できるデータ型はテキスト、整数、数値、日付、時間、ピクチャー、ブール、そしてオブジェクトです。
 
@@ -130,7 +130,7 @@ title: オブジェクト
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [ステッパー](stepper.md) - [タブコントロール](tabControl.md) - [サブフォーム](subform_overview.md) - [ラジオボタン](radio_overview.md) - [Web エリア](webArea_overview.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Tab control](tabControl.md) - [Subform](subform_overview.md#overview) - [Radio Button](radio_overview.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -182,8 +182,8 @@ title: オブジェクト
 
 コレクションおよびエンティティセレクションは、フォームロード時にフォームから利用可能でなければなりません。 コレクションの各要素、あるいはエンティティセレクションの各エンティティは、リストボックスの行へと割り当てられ、[`This`](../Concepts/classes.md#this) キーワードを通してオブジェクトとして利用可能です:
 
-- オブジェクトのコレクションを使用した場合、データソース式内で **This** コマンドを呼び出すことで、各プロパティ値にアクセスすることが可能です。例: `This.<propertyPath>`。
-- エンティティセレクションを使用した場合、データソース式内で **This** コマンドを呼び出すことで、各属性値へとアクセスすることが可能です。例: `This.<attributePath>`。
+- オブジェクトのコレクションを使用した場合、データソース式内で **This** コマンドを呼び出すことで、各プロパティ値にアクセスすることが可能です。 例: `This.<propertyPath>`。
+- エンティティセレクションを使用した場合、データソース式内で **This** コマンドを呼び出すことで、各属性値へとアクセスすることが可能です。
 > (オブジェクトでない) スカラー値のコレクションを使用した場合、データソース式内で **This.value** を呼び出すことで、各値にアクセスすることが可能です。 ただしこの場合、値の変更や現在のオブジェクトへのアクセスはできません。
 
 #### JSON 文法
@@ -239,7 +239,7 @@ title: オブジェクト
 
 ## ラジオグループ
 
-複数のラジオボタンを連動させるためのプロパティです。同じラジオグループに属している複数のラジオボタンは、一度にその内の一つのみを選択することができます。
+同じラジオグループに属している複数のラジオボタンは、一度にその内の一つのみを選択することができます。
 
 #### JSON 文法
 
@@ -271,7 +271,7 @@ title: オブジェクト
 
 | 名称   | データタイプ | とりうる値     |
 | ---- | ------ | --------- |
-| text | string | なんらかのテキスト |
+| テキスト | string | なんらかのテキスト |
 
 #### 対象オブジェクト
 
@@ -286,17 +286,17 @@ title: オブジェクト
 
 様々な自動計算が利用可能です。 以下の表は、列のデータ型に応じて使用することのできる計算と、(コードで明示的に宣言されていないとき) 4D によってフッター変数に自動で割り当てられる型を示しています:
 
-| 計算タイプ                 | 数値 | テキスト | Date | Time | ブール | ピクチャー | フッター変数の型 |
-| --------------------- | -- | ---- | ---- | ---- | --- | ----- | -------- |
-| 最小                    | ○  | ○    | ○    | ○    | ○   |       | 列の型と同じ   |
-| 最大                    | ○  | ○    | ○    | ○    | ○   |       | 列の型と同じ   |
-| 合計                    | ○  |      |      | ○    | ○   |       | 列の型と同じ   |
-| カウント                  | ○  | ○    | ○    | ○    | ○   | ○     | Integer  |
-| 平均                    | ○  |      |      | ○    |     |       | Real     |
-| 標準偏差(*)               | ○  |      |      | ○    |     |       | Real     |
-| 分散(*)                 | ○  |      |      | ○    |     |       | Real     |
-| 平方和(*)                | ○  |      |      | ○    |     |       | Real     |
-| カスタム (JSON では "none") | ○  | ○    | ○    | ○    | ○   | ○     | 制限なし     |
+| 計算タイプ                 | Num | Text | Date | Time | Bool | ピクチャー | フッター変数の型 |
+| --------------------- | --- | ---- | ---- | ---- | ---- | ----- | -------- |
+| 最小                    | X   | X    | X    | X    | X    |       | 列の型と同じ   |
+| 最大                    | X   | X    | X    | X    | X    |       | 列の型と同じ   |
+| 合計                    | X   |      |      | X    | X    |       | 列の型と同じ   |
+| カウント                  | X   | X    | X    | X    | X    | X     | Integer  |
+| 平均                    | X   |      |      | X    |      |       | Real     |
+| 標準偏差(*)               | X   |      |      | X    |      |       | Real     |
+| 分散(*)                 | X   |      |      | X    |      |       | Real     |
+| 平方和(*)                | X   |      |      | X    |      |       | Real     |
+| カスタム (JSON では "none") | X   | X    | X    | X    | X    | X     | 制限なし     |
 
 (*) 配列型のリストボックスのみ
 
@@ -317,7 +317,7 @@ title: オブジェクト
 - 式が "複雑" (つまり、`this.attribute` 以外) で、かつリストボックスの行数が多い場合には、コレクション/エンティティセレクションリストボックスにおいて **サポートはされるものの**、パフォーマンス上の理由により **推奨されません**。
 - 式が "複雑" な場合には、カレントセレクション/命名セレクションリストボックスにおいて **サポートされません**。 これらの場合には、カスタム計算を使用する必要があります。
 
-**カスタム** (JSON では "none") を選択した場合、4D は自動計算をおこないません。プログラムを使用して表示する値をエリアの変数に代入しなければなりません。
+**カスタム** (JSON では "none") を選択した場合、4D は自動計算をおこないません。 プログラムを使用して表示する値をエリアの変数に代入しなければなりません。
 
 #### JSON 文法
 

@@ -61,7 +61,7 @@ Define o tamanho da cache. Consulte [Cache](../WebServer/webServerConfig.md#cach
 
 #### Limpar cache
 
-At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache).
+A qualquer momento, você pode limpar o cache das páginas e imagens que ele contém (se, por exemplo, você tiver modificado uma página estática e quiser recarregá-la no cache).
 Para fazer isso, você só precisa clicar no botão **Limpar Cache**. A cache é então imediatamente limpa.
 
 > Você também pode usar a URL especial [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
@@ -167,13 +167,13 @@ O menu de formato do histórico oferece as seguintes opções:
 - **Sem arquivo de registro**: Quando esta opção for selecionada, o 4D não irá gerar um arquivo de registro de requisições.
 
 - **CLF (Formato de Log Comum)**: Quando esta opção for selecionada, o log de pedidos é gerado no formato CLF Com o formato CLF, cada linha do arquivo representa uma solicitação, como:\
-  host rfc931 usuário [DD/MMM/AAAA:HH:MM:SS] "solicitação" estado tamanho\
-  Cada campo é separado por um espaço e cada linha termina com a sequência CR/LF (caractere 13, caractere 10).
+    host rfc931 usuário [DD/MMM/AAAA:HH:MM:SS] "solicitação" estado tamanho\
+    Cada campo é separado por um espaço e cada linha termina com a sequência CR/LF (caractere 13, caractere 10).
 
-  - host: endereço IP do cliente (ex. 192.100.100.10)
-  - rfc931: informação não é gerada por 4D, é sempre - (um sinal de menos)
-  - usuário: nome de usuário como ele está autenticado, ou então é - (um sinal menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).
-  - DD: dia, MMM: uma abreviação de 3 letras para o nome do mês (Jan, Feb,...), YYYY: ano, HH: hora, MM: minutos, SS: segundos
+    - host: endereço IP do cliente (ex. 192.100.100.10)
+    - rfc931: informação não é gerada por 4D, é sempre - (um sinal de menos)
+    - usuário: nome de usuário como ele está autenticado, ou então é - (um sinal menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).
+    - DD: dia, MMM: uma abreviação de 3 letras para o nome do mês (Jan, Feb,...), YYYY: ano, HH: hora, MM: minutos, SS: segundos
 
 > A data e a hora são locais para o servidor.
 
@@ -195,21 +195,21 @@ O menu de formato do histórico oferece as seguintes opções:
 
 - **DLF (Combined Log Format)**: Quando esta opção é selecionada, o registro de solicitações é gerado no formato DLF. O formato DLF é semelhante ao formato CLF e usa a mesma estrutura. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent.
 
-  - Referer: contém o URL da página que aponta para o documento solicitado.
-  - User-agent: contém o nome e a versão do navegador ou software cliente que origina a solicitação.
+    - Referer: contém o URL da página que aponta para o documento solicitado.
+    - User-agent: contém o nome e a versão do navegador ou software cliente que origina a solicitação.
 
 > O formato DLF não pode ser personalizado.
 
-- **ELF (Extended Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato ELF. O formato ELF está muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
+- **ELF (Extended Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato ELF. O formato ELF está muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. Por esse motivo, o formato ELF pode ser personalizado: é possível escolher os campos a serem registrados, bem como sua ordem de inserção no arquivo.
 
 - **WLF (WebStar Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato WLF. O formato WLF foi desenvolvido especificamente para o servidor 4D WebSTAR. Ele é semelhante ao formato ELF, com apenas alguns campos adicionais. Tal como o formato ELF, pode ser personalizado.
 
 **Configuração dos campos**
-Quando você escolhe o formato ELF (Extended Log Format) ou WLF (WebStar Log Format), a área "Weg Log Token Selection" exibe os campos disponíveis para o formato escolhido. You will need to select each field to be included in the log. To do so, check the desired fields. You will need to select each field to be included in the log. To do so, check the desired fields.
+Quando você escolhe o formato ELF (Extended Log Format) ou WLF (WebStar Log Format), a área "Weg Log Token Selection" exibe os campos disponíveis para o formato escolhido. Você precisará selecionar cada campo a ser incluído no registro. You will need to select each field to be included in the log. To do so, check the desired fields.
 
 **Nota**: Não é possível selecionar o mesmo campo duas vezes.
 
-The following table lists the fields available for each format (in alphabetical order) and describes its contents:
+A tabela a seguir lista os campos disponíveis para cada formato (em ordem alfabética) e descreve seu conteúdo:
 
 | Campo                                                  | ELF | WLF | Valor                                                                                                                                                        |
 | ------------------------------------------------------ | --- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -245,11 +245,11 @@ Configure the automatic backup parameters for the request log. Configure the aut
 - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
 - **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Pode digitar um valor entre 1 e 24.
 
-  - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
-- **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduza 1 se pretender efetuar uma cópia de segurança diária. When this option is checked, you must indicate the time when the backup must be started.
-- **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started.
-- **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Digite 1 se quiser realizar uma cópia de segurança mensal. Digite 1 se quiser realizar uma cópia de segurança mensal.
-- **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Um backup é acionado automaticamente quando o arquivo atinge o tamanho definido. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
+    - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
+- **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduza 1 se pretender efetuar uma cópia de segurança diária. Quando essa opção estiver marcada, você deve indicar a hora em que o backup deve ser iniciado.
+- **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar.
+- **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Digite 1 se quiser realizar uma cópia de segurança mensal. Quando essa opção estiver marcada, você deve indicar o dia do mês e a hora em que o backup deve ser iniciado.
+- **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Um backup é automaticamente acionado quando o arquivo atinge o tamanho definido. Você pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
 
 > No caso de backups programados, se o servidor Web não foi iniciado quando o backup estava programado para ocorrer, na próxima inicialização o 4D considera o backup como falho e aplica as configurações apropriadas, definidas nas Propriedades.
 

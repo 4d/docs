@@ -104,3 +104,12 @@ Usted desea validar un objeto JSON con un esquema y obtener la lista de errores 
   
   
 [JSON Parse](json-parse.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1456 |
+| Hilo seguro | &check; |
+
+

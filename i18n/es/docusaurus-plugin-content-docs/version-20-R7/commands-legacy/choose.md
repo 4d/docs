@@ -78,3 +78,13 @@ Este código es estrictamente equivalente a:
        vEstado:="Separado"
  End case
 ```
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 955 |
+| Hilo seguro | &check; |
+
+

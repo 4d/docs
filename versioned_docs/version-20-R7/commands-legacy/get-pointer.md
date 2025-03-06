@@ -50,3 +50,12 @@ Using pointers to elements of two-dimensional arrays:
 
 [Field](field.md)  
 [Table](table.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 304 |
+| Thread safe | &check; |
+
+

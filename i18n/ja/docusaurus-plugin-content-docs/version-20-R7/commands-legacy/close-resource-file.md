@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Summary-->**CLOSE RESOURCE FILE**コマンドは、引数*resFile*に渡された参照番号を持つリソースファイルを閉じます。<!-- END REF-->
@@ -31,3 +28,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Open resource file](open-resource-file.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 498 |
+| スレッドセーフである | &cross; |
+
+

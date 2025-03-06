@@ -80,3 +80,12 @@ SEND PACKETコマンドを使用する前に、 [SET CHANNEL](set-channel.md) �
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 103 |
+| スレッドセーフである | &check; |
+
+

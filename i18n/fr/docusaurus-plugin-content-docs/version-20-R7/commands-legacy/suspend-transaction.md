@@ -23,3 +23,12 @@ Pour plus d'informations, veuillez vous référer à la section *Suspendre des t
 [Active transaction](active-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
 *Suspendre des transactions*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1385 |
+| Thread safe | &check; |
+
+

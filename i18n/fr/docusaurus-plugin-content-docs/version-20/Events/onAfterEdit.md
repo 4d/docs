@@ -65,7 +65,7 @@ En fonction de la valeur de la propriété `action`, l'[objet event](overview.md
 | Propriété | Type   | Description                        |
 | --------- | ------ | ---------------------------------- |
 | fillRange | object | Plage utilisée pour le remplissage |
- autoFillType|longint|Valeur utilisée pour le remplissage.<li>0 : les cellules contiennent toutes les données (valeurs, formatage et formules)</li><li>1 : les cellules contiennent des données automatiquement séquentielles</li><li>2 : les cellules contiennent uniquement le formatage</li><li>3 : les cellules contiennent des valeurs mais pas de formatage</li><li>4 : les valeurs des cellules sont supprimées</li><li>5: Cells are filled automatically</li>| |fillDirection|longint|Direction of the fill.<li>0 : les cellules à gauche sont remplies</li><li>1 : les cellules à droite sont remplies</li><li>2 : Les cellules ci-dessus sont remplies</li><li>3 : Les cellules ci-dessous sont remplies</li>|
+ autoFillType|longint|Valeur utilisée pour le remplissage.<li>0 : les cellules contiennent toutes les données (valeurs, formatage et formules)</li><li>1 : les cellules contiennent des données automatiquement séquentielles</li><li>2 : les cellules contiennent uniquement le formatage</li><li>3 : les cellules contiennent des valeurs mais pas de formatage</li><li>4 : les valeurs des cellules sont supprimées</li><li>5 : Les cellules sont remplies automatiquement</li>| |fillDirection|longint|Direction du remplissage.<li>0 : les cellules à gauche sont remplies</li><li>1 : les cellules à droite sont remplies</li><li>2 : Les cellules ci-dessus sont remplies</li><li>3 : Les cellules ci-dessous sont remplies</li>|
 
 #### action = formulaChanged
 

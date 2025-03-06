@@ -5,7 +5,7 @@ title: Fonte de dados
 
 ## Inserção automática
 
-When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory.
+Quando esta opção é selecionada, se usuário insere um valor que não é encontrado na lista associada ao objeto, este valor é automaticamente adicionado à lista armazenada na memória.
 
 Quando a opção **inserção automática** não está definida (padrão), o valor inserido é armazenado no objeto formulário, mas não na lista na memória.
 
@@ -18,7 +18,7 @@ Por exemplo, dada uma lista de opções contendo "França, Alemanha, Itália" qu
 
 ![](../assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
-> If the choice list was created from a list defined in Design mode, the original list is not modified.
+> Se a lista de opções tiver sido criada a partir de uma lista definida no modo Desenho, a lista original não será modificada.
 
 #### Gramática JSON
 
@@ -34,7 +34,7 @@ Por exemplo, dada uma lista de opções contendo "França, Alemanha, Itália" qu
 
 ## Lista de escolha
 
-Associa uma lista de opções a um objeto. It can be a choice list name (a list reference) or a collection of default values.
+Associa uma lista de opções a um objeto. Pode ser um nome da lista de opções (uma referência da lista) ou uma coleção de valores padrão.
 
 Você também pode associar listas de escolha a objetos usando os comandos [OBJECT SET LIST SET BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) ou [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html).
 
@@ -63,7 +63,7 @@ Lista de valores estáticos a serem usados como etiquetas para o objeto de contr
 
 #### Objectos suportados
 
-[Tab Control](tabControl.md)
+[Controle de guias](tabControl.md)
 
 ---
 
@@ -71,9 +71,9 @@ Lista de valores estáticos a serem usados como etiquetas para o objeto de contr
 
 `List box de tipo collection ou entity selection`
 
-Specifies a variable or expression that will be assigned the collection element/entity selected by the user. You must use an object variable or an assignable expression that accepts objects. If the user does not select anything or if you used a collection of scalar values, the Null value is assigned.
+Especifica uma variável ou expressão a que será atribuído o elemento/entidade da coleção selecionada pelo usuário. Você deve usar uma variável objeto ou uma expressão atribuível que aceita objetos. Se o usuário não selecionar nada ou se você usou uma coleção de valores escalares, o valor Null é atribuído.
 
-> This property is "read-only", it is automatically updated according to user actions in the list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
+> Esta propriedade é "somente leitura", é atualizada automaticamente conforme as ações do usuário list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
 
 #### Gramática JSON
 
@@ -91,13 +91,13 @@ Specifies a variable or expression that will be assigned the collection element/
 
 `List box de tipo collection ou entity selection`
 
-Specifies a variable or expression that will be assigned a longint indicating the position of the collection element/entity selected by the user.
+Especifica uma variável ou expressão a que será atribuída uma longa indicando a posição do elemento/entidade da coleção selecionada pelo usuário.
 
 - se nenhum elemento/entidade for selecionado, a variável ou expressão recebe zero,
-- if a single element/entity is selected, the variable or expression receives its location,
-- if multiple elements/entities are selected, the variable or expression receives the position of element/entity that was last selected.
+- se um único elemento/entidade for selecionado, a variável ou expressão recebe seu local,
+- se vários elementos/entidades forem selecionados, a variável ou expressão recebe a posição do elemento/entidade que foi selecionado pela última vez.
 
-> This property is "read-only", it is automatically updated according to user actions in the list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
+> Esta propriedade é "somente leitura", é atualizada automaticamente conforme as ações do usuário list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
 
 #### Gramática JSON
 
@@ -142,12 +142,12 @@ Define o tipo de dados a serem salvos no campo ou na variável associada à [lis
 Estão disponíveis três opções:
 
 - **Referência de lista**: declara que a lista suspensa é hierárquica. Isso significa que a lista suspensa pode exibir até dois níveis hierárquicos e seu conteúdo pode ser gerenciado pelos comandos de linguagem 4D do tema **Listas hierárquicas**.
-- **Valor do item selecionado** (padrão): a lista suspensa não é hierárquica e o valor do item escolhido na lista pelo usuário é salvo diretamente. For example, if the user chooses the value "Blue", then this value is saved in the field.
-- **Referência do item selecionado**: a lista suspensa não é hierárquica e a referência do item da lista de opções é salva no objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) ou [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html), ou no editor de listas. This option lets you optimize memory usage: storing numeric values in fields uses less space than storing strings. It also makes it easier to translate applications: you just create multiple lists in different languages but with the same item references, then load the list based on the language of the application.
+- **Valor do item selecionado** (padrão): a lista suspensa não é hierárquica e o valor do item escolhido na lista pelo usuário é salvo diretamente. Por exemplo, se o usuário escolher o valor "Azul", esse valor será salvo no campo.
+- **Referência do item selecionado**: a lista suspensa não é hierárquica e a referência do item da lista de opções é salva no objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) ou [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html), ou no editor de listas. Esta opção permite otimizar o uso de memória: armazenar valores numéricos em campos usa menos espaço do que armazenar frases. Também facilita traduzir aplicações: você apenas cria listas múltiplas em diferentes línguas, mas com referências do mesmo item, depois carregar a lista com base no idioma da aplicação.
 
 O uso da opção **Referência de item selecionado** exige a conformidade com os seguintes princípios:
 
-- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). A propriedade [expressão](properties_Object.md#expression-type) é definida automaticamente.
+- Para poder armazenar a referência, a fonte de dados do campo ou da variável deve ser do tipo Número (independentemente do tipo de valor exibido na lista). A propriedade [expressão](properties_Object.md#expression-type) é definida automaticamente.
 - Devem ser associadas referências válidas e únicas aos itens da lista.
 - A lista pendente deve estar associada a um campo ou a uma variável.
 
@@ -167,15 +167,15 @@ O uso da opção **Referência de item selecionado** exige a conformidade com os
 
 ## Valores padrão (lista de)
 
-List of values that will be used as default values for the list box column (array type only). Esses valores estão automaticamente disponíveis na [variable array](properties_Object.md#variable-or-expression) associada a essa coluna quando o formulário é executado. Usando a linguagem, você pode gerenciar o objeto referir-se a esse array.
+Lista de valores usados como valores padrão para a coluna do list box (somente tipo array). Lista de valores usados como valores padrão para a coluna do list box (somente tipo array). Usando a linguagem, você pode gerenciar o objeto referir-se a esse array.
 
 > Não faça confusão entre esta propriedade e a propriedade "[valor padrão](properties_RangeOfValues.md#default-list-of-values)" que permite definir um valor de campo em novos registros.
 
-É necessário introduzir uma lista de valores. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
+É necessário introduzir uma lista de valores. No editor de formulários, uma caixa de diálogo específica permite que você insira valores separados por retornos de carro:
 
 ![](../assets/en/FormObjects/defaultValues.png)
 
-> Você também pode definir uma [lista de opções](properties_DataSource.md#choice-list) com a coluna de list box. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
+> Você também pode definir uma [lista de opções](properties_DataSource.md#choice-list) com a coluna de list box. No entanto, uma lista de opções será usada como lista de valores selecionáveis para cada linha da coluna, enquanto a lista padrão preenche todas as linhas da coluna.
 
 #### Gramática JSON
 
@@ -199,27 +199,28 @@ Uma expressão 4D a associar a uma coluna. Você pode entrar:
 - Uma **variável simple** (nesse caso, ela deve ser declarada explicitamente para compilação). Pode utilizar qualquer tipo de variável, exceto BLOBs e arrays. El valor de la variable se calculará generalmente en el evento `On Display Detail`.
 
 - Um **campo** usando a sintaxe padrão [Tabela]Campo (solo [selection type list box](listbox_overview.md#selection-list-boxes)), por exemplo: `[Employees]LastName`. Podem ser utilizados os seguintes tipos de campos:
-  - String
-  - Numeric
-  - Date
-  - Hora
-  - Imagem
-  - Booliano\
-    Você pode usar campos da tabela mestre ou de outras tabelas.
+ - String
+ - Numeric
+ - Date
+ - Hora
+ - Imagem
+ - Booliano\
+  Você pode usar campos da tabela mestre ou de outras tabelas.
 
-- Uma **expressão 4D** (expressão simples, fórmula ou método 4D). A expressão deve devolver um valor. O valor será avaliado nos eventos `On Display Detail` e `On Data Change`. O resultado da expressão será automaticamente apresentado quando mudar para o modo Aplicação. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). Se estiver vazia, a coluna não apresentará nenhum resultado.
-  São suportados os seguintes tipos de expressão:
-  - String
-  - Numeric
-  - Date
-  - Imagem
-  - Parâmetros
+- Uma **expressão 4D** (expressão simples, fórmula ou método 4D). A expressão deve devolver um valor. A expressão deve devolver um valor. O resultado da expressão será automaticamente apresentado quando mudar para o modo Aplicação. A expressão será avaliada para cada registro da seleção (atual ou nomeada) da Tabela mestre (para os list box de tipo de seleção), cada elemento da coleção (para as list box de tipo coleção) ou cada entidade da seleção (para os list box de tipo entity selection). Se estiver vazia, a coluna não apresentará nenhum resultado.
+ São suportados os seguintes tipos de expressão:
+ - String
+ - Numeric
+ - Date
+ - Imagem
+ - Parâmetros
 
 Nos list boxes coleção/entity selection, Null ou tipos sem suporte são exibidos como cadeias vazias.\
+Nos list boxes coleção/entity selection, Null ou tipos sem suporte são exibidos como cadeias vazias.\
 Ao usar coleções ou seleções de entidades, você geralmente declara a propriedade do elemento ou o atributo da entidade associado a uma coluna em uma expressão contendo [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` es un comando 4D dedicado que devuelve una referencia al elemento actualmente procesado. Por ejemplo, puede utilizar `This.\<propertyPath>` donde `\<propertyPath>` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad.
-If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. Nesse caso, você usará `This.value` como expressão.
+Se você usar uma coleção de valores escalares, o 4D criará um objeto para cada elemento da coleção com uma única propriedade (denominada "value"), preenchida com o valor do elemento. Nesse caso, você usará `This.value` como expressão.
 
-Si se utiliza una expresión no asignable  (por ejemplo, `[Person]FirstName+" "+[Person]LastName`), la columna nunca se podrá introducir aunque la propiedad [Editable](properties_Entry.md#enterable) esté activada.
+Si se utiliza una expresión no asignable [](Concepts/quick-tour.md#expressions) (por ejemplo, `[Person]FirstName+" "+[Person]LastName`), la columna nunca se podrá introducir aunque la propiedad [Editable](properties_Entry.md#enterable) esté activada.
 
 Si se utiliza un campo, una variable o una expresión asignable (*por ejemplo Person.lastName*), la columna puede ser editable o no dependiendo de la propiedad [Editable](properties_Entry.md#enterable).
 
@@ -239,9 +240,9 @@ Si se utiliza un campo, una variable o una expresión asignable (*por ejemplo Pe
 
 `Current selection list boxes`
 
-Especifica a tabela cuja seleção atual será utilizada. This table and its current selection will form the reference for the fields associated with the columns of the list box (field references or expressions containing fields). Even if some columns contain fields from other tables, the number of rows displayed will be defined by the master table.
+Especifica a tabela cuja seleção atual será utilizada. Essa tabela e sua seleção atual formará a referência para os campos associados às colunas do list box (referências de campo ou expressões que contêm campos). Mesmo que algumas colunas contenham campos de outras tabelas, o número de linhas exibidas será definido pela tabela mestre.
 
-All database tables can be used, regardless of whether the form is related to a table (table form) or not (project form).
+Todas as tabelas do banco de dados podem ser usadas, independentemente de o formulário estar relacionado a uma tabela (formulário tabela) ou não (formulário projeto).
 
 #### Gramática JSON
 
@@ -262,16 +263,16 @@ Esta propriedade está disponível nas seguintes condições:
 - una [lista de selección](#choice-list) está asociada al objeto
 - for [inputs](input_overview.md) and [list box columns](listbox_overview.md#list-box-columns), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
 
-This property specifies, in the context of a field or variable associated with a list of values, the type of contents to save:
+Essa propriedade específica, no contexto de um campo ou variável associado a uma lista de valores, o tipo de conteúdo a ser salvo:
 
-- **Guardar como valor** (opción por defecto): el valor del elemento elegido en la lista por el usuario se guarda directamente. For example, if the user chooses the value "Blue", then this value is saved in the field.
+- **Guardar como valor** (opción por defecto): el valor del elemento elegido en la lista por el usuario se guarda directamente. Por exemplo, se o usuário escolher o valor "Azul", esse valor será salvo no campo.
 - **Guardar como referencia**: la referencia del elemento de la lista de opciones se guarda en el objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) ou [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html), ou no editor de listas.
 
-This option lets you optimize memory usage: storing numeric values in fields uses less space than storing strings. It also makes it easier to translate applications: you just create multiple lists in different languages but with the same item references, then load the list based on the language of the application.
+Esta opção permite otimizar o uso de memória: armazenar valores numéricos em campos usa menos espaço do que armazenar frases. Também facilita traduzir aplicações: você apenas cria listas múltiplas em diferentes línguas, mas com referências do mesmo item, depois carregar a lista com base no idioma da aplicação.
 
 A utilização deste bem exige o cumprimento dos seguintes princípios:
 
-- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). A propriedade [expressão](properties_Object.md#expression-type) é definida automaticamente.
+- Para poder armazenar a referência, a fonte de dados do campo ou da variável deve ser do tipo Número (independentemente do tipo de valor exibido na lista). A propriedade [expressão](properties_Object.md#expression-type) é definida automaticamente.
 - Devem ser associadas referências válidas e únicas aos itens da lista.
 
 #### Gramática JSON
@@ -290,12 +291,12 @@ A utilização deste bem exige o cumprimento dos seguintes princípios:
 
 `List box de tipo collection ou entity selection`
 
-Specifies a variable or expression that will be assigned the elements or entities selected by the user.
+Especifica uma variável ou expressão à qual serão atribuídos os elementos ou entidades selecionados pelo usuário.
 
-- for a collection list box, you must use a collection variable or an assignable expression that accepts collections,
-- para um list box seleção de entidades, é criado um objeto de seleção de entidades. You must use an object variable or an assignable expression that accepts objects.
+- para um list box coleção, você deve usar uma variável de coleção ou uma expressão atribuível que aceite coleções,
+- para um list box seleção de entidades, é criado um objeto de seleção de entidades. Você deve usar uma variável objeto ou uma expressão atribuível que aceita objetos.
 
-> This property is "read-only", it is automatically updated according to user actions in the list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
+> Esta propriedade é "somente leitura", é atualizada automaticamente conforme as ações do usuário list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
 
 #### Gramática JSON
 
@@ -309,13 +310,13 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 ---
 
-## Nome da seleção
+## Seleção temporária
 
 `List boxes de tipo seleção nomeada`
 
-Especifica a seleção nomeada a ser utilizada. Você deve inserir o nome de uma seleção nomeada válida. It can be a process or interprocess named selection. O conteúdo do list box será baseado nesta seleção. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
+Especifica a seleção temporária a ser utilizada. Você deve inserir o nome de uma seleção temporária válida. Isso pode ser de uma seleção temporária processo ou interprocesso. O conteúdo do list box será baseado nesta seleção. A seleção temporária escolhida deve existir e ser válida no momento em que o list box for exibido; caso contrário, list box será exibido em branco.
 
-> As selecções nomeadas são listas ordenadas de registos. They are used to keep the order and current record of a selection in memory. Para obter mais informações, consulte a seção **Seleções nomeadas** no *manual de Linguagem 4D*.
+> As selecções temporárias são listas ordenadas de registos. Eles são usados para manter a ordem e o registro atual de uma seleção na memória. Para obter mais informações, consulte a seção **Seleções nomeadas** no *manual de Linguagem 4D*.
 
 #### Gramática JSON
 

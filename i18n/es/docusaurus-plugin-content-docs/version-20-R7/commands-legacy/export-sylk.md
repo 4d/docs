@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.EXPORT SYLK.Summary-->El comando **EXPORT SYLK** escribe los datos de los registros de la selección actual de *tabla* en el proceso actual.<!-- END REF--> Los datos se escriben en *documento*, un documento Sylk Windows o Macintosh, en el disco.
@@ -31,7 +28,7 @@ Un termómetro de progreso aparece durante la exportación. El usuario puede can
 
 El comando utiliza por defecto el conjunto de caracteres UTF-8\. Los documentos en formato SYLK utilizan por lo general el conjunto de caracteres ISO-8859-1, puede utilizar el comando [USE CHARACTER SET](use-character-set.md) para especificar el conjunto de caracteres apropiado.
 
-Durante la utilización de **EXPORT SYLK**, el delimitador de campos por defecto es el carácter de tabulación (código 9). El delimitador del registro por defecto es el retorno de carro (código 13) en OS X y el retorno de carro+retorno a la línea (código 13 + código 10) bajo Windows. Puede modificar estos valores asignando nuevos valores a las dos *Variables sistema* *FldDelimit* y *RecDelimit*. El usuario puede cambiar estos valores en la caja de diálogo de exportación del entorno Diseño. Tenga en cuenta que si los campos exportados contienen caracteres definidos como delimitadores de campos o de registros, estos caracteres se reemplazan automáticamente con espacios en el archivo exportado, con el fin de no perturbar el proceso de importación.
+Durante la utilización de **EXPORT SYLK**, el delimitador de campos por defecto es el carácter de tabulación (código 9). El delimitador del registro por defecto es el retorno de carro (código 13) en macOS y el retorno de carro+retorno a la línea (código 13 + código 10) bajo Windows. Puede modificar estos valores asignando nuevos valores a las dos *Variables sistema* *FldDelimit* y *RecDelimit*. El usuario puede cambiar estos valores en la caja de diálogo de exportación del entorno Diseño. Tenga en cuenta que si los campos exportados contienen caracteres definidos como delimitadores de campos o de registros, estos caracteres se reemplazan automáticamente con espacios en el archivo exportado, con el fin de no perturbar el proceso de importación.
 
 #### Ejemplo 
 
@@ -52,3 +49,13 @@ OK toma el valor 1 si la exportación termina con éxito; de lo contrario, toma 
 [EXPORT TEXT](export-text.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 85 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+
