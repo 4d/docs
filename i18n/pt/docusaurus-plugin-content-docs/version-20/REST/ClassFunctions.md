@@ -42,7 +42,7 @@ As funções são chamadas no objeto correspondente no datastore do servidor.
 > A função é pesquisada primeiro na classe de seleção de entidades. Se não for encontrado, é procurado na dataclass. Por outras palavras, se uma função com o mesmo nome for definida tanto na classe DataClass como na classe EntitySelection, a função da classe de dataClass nunca será executada.
 
 
-> Todo o código 4D chamado a partir de pedidos REST **deve ser thread-safe** se o projeto correr em modo compilado, porque o Servidor REST usa sempre processos preemptivos neste caso (o valor da definição [*Use preemptive process*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) é ignorado pelo Servidor REST).
+> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
 
 
 ## Parâmetros
@@ -58,7 +58,7 @@ As regras abaixo são válidas:
 - Todos os tipos de dados escalares suportados nas coleções JSON podem ser passados como parâmetros.
 - A entidade e a seleção de entidades podem ser passadas como parâmetros. O objeto JSON deve conter atributos específicos utilizados pelo servidor REST para atribuir dados aos objectos ORDA correspondentes: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
-Ver [este exemplo](#request-receiving-an-entity-as-parameter) e [este exemplo](#request-receiving-an-entity-selection-as-parameter).
+See [this example](#request-receiving-an-entity-selection-as-parameter).
 
 
 ### Parâmetro de valor escalar
