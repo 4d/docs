@@ -182,7 +182,8 @@ Désactivez les avertissements 518.1 et 518.2 lors de la compilation de votre pr
 
 ```4d
 var $options:={}
-$options.warnings:=[]$options.warnings.push({major: 518; minor: 1; enabled: False})
+$options.warnings:=[]
+$options.warnings.push({major: 518; minor: 1; enabled: False})
 $options.warnings.push({major: 518; minor: 2; enabled: False})
 var $result:=Compile project($options)
 ```
@@ -193,9 +194,9 @@ var $result:=Compile project($options)
 
 #### Propriétés
 
-|                    |                                 |
-| ------------------ | ------------------------------- |
-| Numéro de commande | 1760                            |
-| Thread safe        | &amp;cross; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1760                        |
+| Thread safe        | &cross; |
 
 
