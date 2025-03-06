@@ -88,7 +88,7 @@ title: アプリケーションビルド
 
 .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルは4D Server、4D Volume Desktop(組み込みアプリ)、および4D において使用できます。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
-> .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
+> .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 この標準形式を使用したくない場合は、値を `False` に設定した `UseStandardZipFormat` XMLキーを [`buildApp.4DSettings`](#アプリケーションビルド設定) ファイルに追加します (詳細については、[アプリケーションビルド設定ファイル](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.ja.html) マニュアルを参照ください)。
 
 #### 関連するフォルダーを含む
 
@@ -120,14 +120,14 @@ title: アプリケーションビルド
 
 **スタンドアロンアプリケーションをビルド** オプションを選択して **ビルド** ボタンをクリックすると、スタンドアロンの (つまり、ダブルクリックで起動可能な) アプリケーションがアプリケーションプロジェクトをもとに作成されます。 Windows においては、.exe 拡張子のついた実行ファイルが作成されます。 macOS においては、ソフトウェアパッケージが作成されます。
 
-The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine). 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 この点についての詳細な情報は、4D の [オンラインストア](https://store.4d.com/jp/) と、セールスドキュメンテーションを参照してください。
+この処理はコンパイル済みストラクチャーファイルと**4D Volume Desktop** (4D データベースエンジン)を統合します。 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 この点についての詳細な情報は、4D の [オンラインストア](https://store.4d.com/jp/) と、セールスドキュメンテーションを参照してください。
 
-- You can define a default data file or allow users to [create and use their own data file](#management-of-data-files).
-- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**About licenses**](#about-licenses) paragraph).
+- デフォルトのデータファイルを定義することも、ユーザーに [独自のデータファイルを作成して使用](#データファイルの管理) してもらうこともできます。
+- 運用ライセンスを埋め込むか、初回起動時にエンドユーザー自身にライセンスを入力させるかを選択することができます([**ライセンスについて**](#ライセンスについて) の段落を参照して下さい)。
 
 :::note
 
-It is possible to [automate the update of merged single-user applications](#automatic-updating-of-server-or-single-user-applications) by means of a sequence of language commands.
+いくつかのランゲージコマンドを特定の順番で使用することによって、[シングルユーザー向け組み込みアプリケーションのアップデートを自動化](#サーバーまたはシングルユーザーアプリケーションの自動更新) することが可能です。
 
 :::
 
@@ -165,13 +165,13 @@ It is possible to [automate the update of merged single-user applications](#auto
   * 4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル
   * Databaseフォルダー: Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはプロジェクトのコンパイル済みストラクチャーおよびプロジェクトの Resources フォルダーです。 **注**: このフォルダーには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#データファイルの管理)を参照してください)。
   * (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。
-  * (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. この点に関する詳細は [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。
+  * (オプション) Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが(あれば)含まれます。 この点に関する詳細は [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。
   * 4D Volume Desktop フォルダーに追加されたその他の項目 (あれば) ([4D Volume Desktop フォルダーのカスタマイズ](#4d-volume-desktop-フォルダーのカスタマイズ) 参照)
 
  実行ファイルの動作には、これらすべての項目が同じフォルダー内に必要です。
 
 * *macOS*
-  * MyProject.app という名称のソフトウェアパッケージに、プラグインやコンポーネント、ライセンスなど必要な項目がすべて格納されます。 プラグインやコンポーネントの統合に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。 ライセンスの統合に関しては [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。 **注**: macOSでは、4D ランゲージの [Application file](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) コマンドが返すのは、ソフトウェアパッケージ内の "Contents:macOS" フォルダー内にコピーされる ApplicationName ファイルのパス名です (ソフトウェアパッケージの "Contents:Resources" フォルダー内の .comp ファイルのパスではありません)。
+  * MyProject.app という名称のソフトウェアパッケージに、プラグインやコンポーネント、ライセンスなど必要な項目がすべて格納されます。 プラグインやコンポーネントの統合に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照ください。 ライセンスの統合に関しては [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。 **注**: macOSでは、4D ランゲージの [Application file](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) コマンドが返すのは、ソフトウェアパッケージ内の "Contents:macOS" フォルダー内にコピーされる ApplicationName ファイルのパス名です (ソフトウェアパッケージの "Contents:Resources" フォルダー内の .comp ファイルのパスではありません)。
 
 #### 4D Volume Desktop フォルダーのカスタマイズ
 
@@ -184,7 +184,7 @@ It is possible to [automate the update of merged single-user applications](#auto
 
 #### Webファイルの場所
 
-ダブルクリックで起動可能なアプリケーションを Webサーバーとして使用する場合、Web フォルダーやファイルは特定の場所にインストールする必要があります :
+ダブルクリックで起動可能なアプリケーションを Webサーバーとして使用する場合、Web フォルダーやファイルは以下の特定の場所にインストールする必要があります :
 
 * *cert.pem* と *key.pem* ファイル (オプション): これらのファイルはTLS接続とデータ暗号化コマンドに使用されます。
 * デフォルト Web ルートフォルダー
@@ -195,15 +195,15 @@ It is possible to [automate the update of merged single-user applications](#auto
 * **macOS**: *MyProject.app* ソフトウェアパッケージと同階層
 
 
-#### About licenses
+#### ライセンスについて
 
-A stand-alone application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+スタンドアロンアプリケーションには運用ライセンスが必要となります。 これは開発者によってビルドの段階で埋め込むか、以下の表で説明されているように、初回起動時にエンドユーザーによって入力される必要があります:
 
-| Deployment license     | 説明                                                                 | Where to enter it                                                                          |
-| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | [Licenses page](#licenses) of the Build application dialog                                 |
-| *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                         | [Licenses page](#licenses) of the Build application dialog                                 |
-| *4D Desktop*           | Per-user license, allowing them to use stand-alone 4D applications | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
+| 運用ライセンス                | 説明                                            | 入力する場所                                                                                     |
+| ---------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| *4D OEM Desktop*       | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。        | アプリケーションビルドダイアログの[ライセンスページ](#ライセンス)                                                        |
+| *4D Unlimited Desktop* | **販売終了** - 埋め込まれたカスタムのライセンス                   | アプリケーションビルドダイアログの[ライセンスページ](#ライセンス)                                                        |
+| *4D Desktop*           | ユーザーごとのライセンスで、スタンドアロンの4D アプリケーションを使用するのに必要です。 | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
 
 
 
@@ -232,7 +232,7 @@ A stand-alone application requires a deployment license. It can be embedded at b
 * サーバーを起動するには、サーバーアプリケーションをダブルクリックします。 プロジェクトファイルを選択する必要はありません。
 * クライアントを起動するにも、同様にクライアントアプリケーションをダブルクリックします。すると、サーバーアプリケーションへの接続が直接おこなわれるため、 接続ダイアログでサーバーを選択する必要はありません。 クライアントは接続対象のサーバーを名称 (サーバーが同じサブネットワーク上にある場合)、あるいはIPアドレスによって認識します。IPアドレスの指定は buildapp.4DSettings ファイル内の `IPAddress` XMLキーを使用して設定されます。 接続が失敗した場合のために、代替機構を実装することができます。これについては [クライアント接続の管理](#クライアント接続の管理) の章で説明されています。 また、**Option** (macOS) や **Alt** (Windows) キーを押しながらクライアントアプリケーション起動すると、標準の接続ダイアログを強制的に表示させることもできます。 サーバーアプリケーションには、対応するクライアントアプリケーションのみが接続できます。 標準の 4Dアプリケーションを使用してサーバーアプリケーションに接続を試みると、接続は拒否されエラーが返されます。
 * クライアント側を [ネットワーク越しに自動更新](#サーバーアプリケーション内部のクライアントアプリケーションのコピー) するようにクライアント/サーバーアプリケーションを設定することも可能です。 クライアントアプリケーションは最初のバージョンのみビルドして配布する必要があります。以降のアップデートは、自動アップデート機構を利用することで管理します。
-* It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4dv20/help/command/en/page1291.html) and [RESTART 4D](https://doc.4d.com/4dv20/help/command/en/page1292.html).
+* また、ランゲージコマンド ([SET UPDATE FOLDER](https://doc.4d.com/4dv20/help/command/ja/page1291.html)、および [RESTART 4D](https://doc.4d.com/4dv20/help/command/ja/page1292.html)) を使用して、サーバーアプリケーションの更新を自動化することも可能です。
 
 ### サーバーアプリケーションをビルド
 
@@ -387,7 +387,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 #### Webファイルの場所
 
-サーバーやクライアントを Webサーバーとして使用する場合、Webサーバーが使用するファイルを特定の場所に配置しなければなりません :
+サーバーやクライアントを Webサーバーとして使用する場合、Webサーバーが使用するファイルを以下の特定の場所に配置しなければなりません :
 
 * *cert.pem* と *key.pem* ファイル (オプション): これらのファイルはTLS接続とデータ暗号化コマンドに使用されます。
 * デフォルト Web ルートフォルダー (WebFolder)
@@ -503,28 +503,28 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 ライセンス&証明書のページでは、次のようなことができます:
 
-* designate the license number(s) that you want to integrate into your single-user [stand-alone application](#application-page),
+* シングルユーザーの[スタンドアロンアプリケーション](#アプリケーションページ)に統合するライセンス番号を指定します。
 * macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### ライセンスリスト
 
-This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. デフォルトでリストは空です。
+アプリケーションに[埋め込みに使用できる配布ライセンス](#ライセンスについて)の一覧を表示します。 デフォルトでリストは空です。
 
 :::info
 
-If you keep the list empty, you build a stand-alone application without embedded deployment license. In this case, the end-user will have to purchase and enter a per-user *4D Desktop* license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. For more information, see the [**About licenses**](#about-licenses) paragraph.
+このリストを空のままにしていた場合、埋め込み配布ライセンスのないスタンドアロンアプリケーションをビルドすることになります。 この場合、エンドユーザーは *4D Desktop* ライセンスを、ユーザーごとに購入して入力する必要があります。 配布ライセンスを統合した場合、エンドユーザーは自身のライセンス番号をアプリケーション起動時に入力したり使用する必要はありません。 詳細については、[**ライセンスについて**](#ライセンスについて) の段落を参照ください。
 
 :::
 
-Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
+カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
 
 ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。
 
-\[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 For more information about the location of this folder, refer to the [Get 4D folder](https://doc.4d.com/4Dv20/4D/20/Get-4D-folder.301-4311294.en.html) command.
+\[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 このフォルダーの場所については [Get 4D folder](https://doc.4d.com/4dv20/help/command/ja/page 485.html) コマンドの説明を参照してください。
 
-開発ライセンスとそれに対応した配布ライセンスを選択します。 これらのファイルは *4D Developer Professional* ライセンスや *4D Desktop Volume* ライセンスをアクティベーションした際、この場所にコピーされます。
+開発ライセンスとそれに対応した配布ライセンスを格納したファイルを選択します。 これらのファイルは *4D Developer Professional* ライセンスや *4D Desktop Volume* ライセンスをアクティベーションした際、この場所にコピーされます。
 
 ファイルを選択すると、リストに選択内容が反映されます:
 
@@ -536,15 +536,15 @@ Your current *4D Developer Professional* license is automatically associated wit
 ライセンスが有効でない場合、警告が表示されます。
 
 必要なだけ有効なファイルを選択することができます。 実行可能アプリケーションをビルドする際に、4D は最も適切なライセンスを使用します。
-> "R-リリース" バージョンのアプリケーションをビルドするには、専用の "R" ライセンスが必要です ("R" 製品用のライセンス番号は "R-" から始まる番号です)。
+> "R-リリース" バージョンのアプリケーションをビルドするには、専用の "R" ライセンスが必要です ("R" 製品用のライセンス番号は "R-4DDP" から始まる番号です)。
 
 アプリケーションビルド後、配布ライセンスファイルは実行可能ファイルと同階層 (Windows) やパッケージ内 (macOS) に自動でコピーされます。
 
-### macOS signing certificate
+### macOS 署名に使用する証明書
 
 アプリケーションビルダーは、macOS 環境下において組み込み4Dアプリに署名をする機能を備えています (macOS のシングルユーザーアプリ、コンポーネント、サーバーおよびクライアントアプリ)。 アプリケーションを署名することにより、 macOS において「Mac App Store と確認済みの開発元からのアプリケーションを許可」のオプションが選択されているときに Gatekeeper の機能を使用してアプリケーションを実行することが可能になります (後述の "Gatekeeper について" を参照ください)。
 
-* Check the **Sign application** option to include certification in the application builder procedure for macOS. 4D will check the availability of elements required for certification when the build occurs:
+* macOS でのアプリケーションビルド手順に証明書を含めるには、**アプリケーションを署名** オプションをチェックしてください。 4D は、署名に必要な要素の可用性をビルド時にチェックします:
 
 ![](../assets/en/Admin/buildapposxcertProj.png)
 
@@ -563,7 +563,7 @@ Apple からデベロッパー認証を取得するためには、キーチェ�
 
 #### Gatekeeper について
 
-Gatekeeper is a security feature of macOS that controls the execution of applications downloaded from the Internet. もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
+Gatekeeper とは macOS のセキュリティ機能で、インターネットからダウンロードしてきたアプリケーションの実行を管理するものです。 もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
 
 > Apple Silicon マシンでは、4D [コンポーネント](components.md) は実際に署名されている必要があります。 署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...")
 
@@ -573,7 +573,7 @@ Gatekeeper is a security feature of macOS that controls the execution of applica
 
 macOS 10.14.5 (Mojave) および 10.15 (Catalina) において、アプリケーションのノータリゼーション (公証) が Apple より強く推奨されています。公証を得ていないアプリケーションをインターネットからダウンロードした場合、デフォルトでブロックされます。
 
-Apple の公証サービスを利用するのに必要な条件を満たすため、4D の [ビルトインの署名機能](#os-x-署名に使用する証明書) が適合されました。 公証自体はデベロッパーによっておこなわなくてはいけないもので、4D とは直接関係ありません。なお、Xcode のインストールが必須である点に注意してください。 公証についての詳細は [4D ブログ記事 (英語)](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) や関連の [テクニカルノート (日本語)](https://4d-jp.github.io/tech_notes/20-02-25-notarization/) を参照ください。
+The 4D [built-in signing features](#macos-signing-certificate) have been adapted to meet all of Apple's requirements to allow using the Apple notary service. 公証自体はデベロッパーによっておこなわなくてはいけないもので、4D とは直接関係ありません。なお、Xcode のインストールが必須である点に注意してください。 公証についての詳細は [4D ブログ記事 (英語)](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) や関連の [テクニカルノート (日本語)](https://4d-jp.github.io/tech_notes/20-02-25-notarization/) を参照ください。
 
 公証についての詳細は、[Apple のデベロッパー Web サイト](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow) を参照ください。
 
@@ -648,7 +648,7 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 このデータリンクモードはアプリケーションビルドの際に選択することができます。 これには、次の二つの方法があります:
 
-* アプリケーションビルダーの [アプリケーションページ](#アプリケーションページ) または [クライアント/サーバーページ](#クライアント-サーバーページ) を使用する。
+* アプリケーションビルダダイアログの [アプリケーションページ](#アプリケーションページ) または [クライアント/サーバーページ](#クライアントサーバーページ) を使用する。
 * シングルユーザーまたはサーバーアプリケーションの **LastDataPathLookup** XMLキーを使用する。
 
 ### デフォルトのデータフォルダーを定義する
