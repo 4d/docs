@@ -677,7 +677,7 @@ La fonction renvoie également `True` si le datastore a été verrouillé par un
 
 La fonction `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->définit toutes les entity selections comme modifiables par défaut dans les datastores de l'application courante<!-- END REF --> (y compris les [datastores distants](ORDA/remoteDatastores.md)). Elle est destinée à être appelée une fois, par exemple dans la méthode base `On Startup`.
 
-Lorsque cette méthode n'est pas appelée, les nouvelles sélections d'entités peuvent être partageables, selon la nature de leur "parent" ou la façon dont elles sont créées (voir la section [Entity selections partageables et non partageables](ORDA/entities.
+When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 > Cette fonction ne modifie pas les entity selections créées par [`.copy()`](#copy) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
 
