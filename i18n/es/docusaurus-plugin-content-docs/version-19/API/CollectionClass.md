@@ -1085,7 +1085,7 @@ En *methodName*, pase el nombre del método a utilizar para evaluar los elemento
 
 *methodName* define el(los) siguiente(s) parámetro(s):
 
-* *>$1.result* (boolean): **true** si el valor del elemento coincide con la condición de búsqueda.
+* *$1.result* (boolean): **true** si el valor del elemento coincide con la condición de búsqueda.
 * *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 Por defecto, `.find()` busca en toda la colección. Opcionalmente, se puede pasar en *startFrom* el índice del elemento desde el que iniciar la búsqueda.
@@ -1179,7 +1179,7 @@ En *methodName*, pase el nombre del método a utilizar para evaluar los elemento
 
 *methodName* define el(los) siguiente(s) parámetro(s):
 
-* *>$1.result* (boolean): **true** si el valor del elemento coincide con la condición de búsqueda.
+* *$1.result* (boolean): **true** si el valor del elemento coincide con la condición de búsqueda.
 * *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 Por defecto, `.findIndex()` busca en toda la colección. Opcionalmente, se puede pasar en *startFrom* el índice del elemento desde el que iniciar la búsqueda.
