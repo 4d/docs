@@ -439,7 +439,7 @@ APPEND TEXT(vtSomeText) //Will only display the  message APPEND TEXT(vtSomeText;
 
 :::tip
 
-Quando parâmetros opcionais são necessários em seus métodos, você também pode considerar o uso de [propriedades do objeto como parâmetros com nome](#using-objects-properties-as-named-parameters), que fornecem uma maneira flexível de lidar com um número variável de parâmetros.
+When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-object-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
 
 :::
 
@@ -490,7 +490,7 @@ Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Therefore, 
  ALERT($result)
 ```
 
-This second technique of returning a value by a subroutine is called "using a function". Isso é descrito no parágrafo [Returning values](#returning-values).
+This second technique of returning a value by a subroutine is called "using a function". This is described in the [Returning values](#returned-value) paragraph.
 
 ### Casos particulares: objetos e coleções
 
