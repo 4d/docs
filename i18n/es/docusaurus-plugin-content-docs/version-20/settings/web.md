@@ -122,7 +122,7 @@ No disponible con las [sesiones extensibles](../WebServer/sessions.md).
 
 Activa los procesos web apropiativos en sus aplicaciones compiladas. Cuando se selecciona **Utilizar los procesos apropiativos**, la elegibilidad de su código relacionado con la web (incluyendo las etiquetas 4D y los métodos base Web) para la ejecución apropiativa será evaluada durante la compilación. Para más información, consulte [Utilizar los procesos web apropiativos](../WebServer/preemptiveWeb.md).
 
-> Esta opción no se aplica a las sesiones extensibles, a los procesos REST (modo compilado) ni a los procesos de servicios web (servidor o cliente).  Ver [Activar el modo apropiativo para el servidor web](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
+> Esta opción no se aplica a las sesiones extensibles, a los procesos REST (modo compilado) ni a los procesos de servicios web (servidor o cliente).  See [Enabling the preemptive mode for the web server](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 
 #### Tiempo de espera del proceso inactivo
