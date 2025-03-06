@@ -16,7 +16,7 @@ Permet de définir une couleur d'arrière-plan différente pour les lignes / col
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -59,7 +59,7 @@ Vous pouvez également définir cette propriété en utilisant la commande [`LIS
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -75,7 +75,7 @@ Permet de définir un style standard pour la bordure de l'objet.
 
 #### Objets pris en charge
 
-[Zone 4D View Pro](viewProArea_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md) - [Boutons](button_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Case à cocher](list_overview.md#overview) - [Zone de saisie](input_overview.md) - [List Box](listbox_overview.md#overview) - [Bouton image](pictureButton_overview.md) - [Pop up menu image](picturePopupMenu_overview.md) - [Zone de plug-in](pluginArea_overview.md#overview) - [Indicateur de progression](progressIndicator.md) - [Règle](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Sous-formulaire](subform_overview.md#overview) - [Onglet](text.md) - [Zone Web](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_Overview.md)
 
 ---
 
@@ -113,7 +113,7 @@ Vous pouvez supprimer ces lignes vides en sélectionnant cette option. Le bas de
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -211,7 +211,7 @@ Définit l'arrière-plan de la list box sur "Transparent". Lorsque cette propri�
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 #### Voir également
 
