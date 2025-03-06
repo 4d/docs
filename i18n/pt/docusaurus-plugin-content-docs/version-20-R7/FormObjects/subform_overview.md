@@ -56,7 +56,7 @@ No formulário pai, ambos os objetos (área de entrada e contêiner de subformul
 
 :::info
 
-To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
+To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-list-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
 
 - Si utiliza una variable (por ejemplo, `parisTime`), debe ser del tipo `texto` o `tiempo`.
 - Si utiliza una expresión (por ejemplo, `Form.myValue`), debe contener un valor `texto`.
