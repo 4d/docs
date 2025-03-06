@@ -27,7 +27,7 @@ A tabela a seguir indica se o modo preventivo está utilizado ou está disponív
 - Servidor web: maneja las [plantillas web](templates.md), [4DACTION y los métodos base](httpRequests.md)
 - Servidor de serviços Web: trata dos pedidos SOAP
 - ***web setting*** significa que el modo apropiativo depende de un valor de configuración:
-    - quando a opção [**Sessões escalonáveis**](sessions.md#enabling-sessions) estiver selecionada, o [modo preventivo é usado automaticamente](sessions.md#preemptive-mode) para processos web.
+    - when [**Scalable sessions**](sessions.md#enabling-sessions) option is selected, the preemptive mode is automatically used for web processes.
     - caso contrário, a opção [**Usar processos preventivos**](webServerConfig.md#use-preemptive-processes) é tida em conta.
     - sobre processos de serviço Web (servidor ou cliente), modo preventivo é suportado no nível do método. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) and make sure they are confirmed thread-safe by the compiler.
 
