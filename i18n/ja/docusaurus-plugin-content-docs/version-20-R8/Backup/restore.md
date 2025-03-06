@@ -52,7 +52,7 @@ Maintenance and Security Center (MSC) の [復元](MSC/restore.md)ページか�
 
 ## 手動でログを統合する
 
-MSC の復元ページでログファイルの自動統合を選択していない場合 ([複数のログファイルを連続して統合する](MSC/restore.md#複数のログファイルを連続して統合する) 参照)、データファイルに保存されていない処理がログファイル中に見つかると、4D はアプリケーションを開く際に警告ダイアログボックスを表示します。
+If you have not checked the option for the automatic integration of the log file on the Restore page of the MSC (see [Successive integration of several log files](MSC/restore.md#successive-integration-of-several-data-log-files)), a warning dialog box appears during the opening of the application when 4D notices that the log file contains more operations than have been carried out in the data file.
 
 ![](../assets/en/Backup/backup08.png)
 
