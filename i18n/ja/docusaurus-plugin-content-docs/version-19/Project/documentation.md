@@ -190,21 +190,30 @@ $txt:="Hello world!"
 `WP SwitchToolbar.md` ファイルに、次のように書くことができます:
 
 ```4d
-<!-- This method returns a different logo depending on the size parameter -->
+<!-- size 引数に応じて、異なるロゴを返します -->
 
 
 GetLogo (size) -> logo
 
 
-| Parameter | Type   | in/out | Description |
+| 引数 | 型   | in/out | 説明 |
 | --------- | ------ | ------ | ----------- |
-| size      | Integer | in | Logo style selector (1 to 5)  |
-| logo      | Picture | out | Selected logo |
+| size      | 整数 | in | ロゴスタイルセレクター (1 から 5)  |
+| logo      | ピクチャー | out | 選択されたロゴ |
 
 
 ## Description
 
-This method returns a logo of a specific size, depending on the value of the *size* parameter value.
+このメソッドは、*size* 引数の値に応じて、特定サイズのロゴを返します。
+1 = 最小値, 5 = 最大値
+
+## Example
+
+C_PICTURE($logo)
+C_LONGINT($size)
+
+// 最大ロゴを取得します
+$logo:=GetLogo(5)
 1 = 最小値, 5 = 最大値
 
 1 = 最小値, 5 = 最大値
