@@ -153,7 +153,7 @@ MonNombre:=3
 
 crée la variable _MonNombre_ et lui donne la valeur numérique 3. Si MonNombre existait déjà, elle prend simplement la valeur 3.
 
-> Il n’est généralement pas recommandé de créer des variables sans [déclarer leur type](#creating-variables).
+> Il n'est généralement pas recommandé de créer des variables sans [déclarer leur type](#declaratio-des-variables).
 
 Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. Si vous devez placer la valeur de MonNombre dans un champ nommé [Produits]Taille, il vous suffit de placer _MonNombre_ à droite de l’opérateur d’assignation :
 
