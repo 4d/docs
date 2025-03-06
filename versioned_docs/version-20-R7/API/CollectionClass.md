@@ -2768,10 +2768,13 @@ In the *querySettings* parameter, you can pass an object containing query placeh
 |Property| Type| Description|
 |---|---|---|
 |parameters|Object|**Named placeholders for values** used in the *queryString*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.|
-|attributes|Object|**Named placeholders for attribute paths** used in the *queryString*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate a property in an object of the collection<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query.|
+|attributes|Object|**Named placeholders for attribute paths** used in the *queryString*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate a property in an object of the collection<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en\/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query.|
 
-> Using this parameter is mandatory if you want to query a collection [using a **collection reference** or **object reference**](#object-or-collection-reference-as-value).
+:::note
 
+Using this parameter is mandatory if you want to query a collection [using a **collection reference** or **object reference**](#object-or-collection-reference-as-value).
+
+:::
 
 
 
