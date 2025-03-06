@@ -50,7 +50,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 
 #### Descrição
 
-The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. Ele é idêntico ao comando [`MAIL New attachment`](../commands/mail-new-attachment.md) (atalho).
+A função `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary --> cria e retorna um novo objeto do tipo `4D.MailAttachment`<!-- END REF -->. Ele é idêntico ao comando [`MAIL New attachment`](../commands/mail-new-attachment.md) (atalho).
 
 ## .cid
 
@@ -85,7 +85,7 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 
 #### Descrição
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. Você pode usar esse método com objetos de anexo recebidos pelo comando [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime).
+A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->retorna o conteúdo do objeto anexo em um objeto `4D.Blob`<!-- END REF -->. Você pode usar esse método com objetos de anexo recebidos pelo comando [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime).
 
 ## .name
 
@@ -117,7 +117,7 @@ A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary --> o c
 
 #### Descrição
 
-The `.platformPath` property returns <!-- REF #MailAttachmentClass.platformPath.Summary -->the path of the attachment file expressed with the current platform syntax<!-- END REF -->.
+A propriedade `.platformPath` retorna <!-- REF #MailAttachmentClass.platformPath.Summary --> o caminho do arquivo de anexo expresso com a sintaxe atual da plataforma<!-- END REF -->.
 
 ## .size
 
@@ -125,7 +125,7 @@ The `.platformPath` property returns <!-- REF #MailAttachmentClass.platformPath.
 
 #### Descrição
 
-The `.size` property contains <!-- REF #MailAttachmentClass.size.Summary -->the value of the `size` header of the attachment file<!-- END REF -->. The `.size` property is returned when the MIME message defines a size header in the attachment part.
+A propriedade `.size` contém <!-- REF #MailAttachmentClass.size.Summary --> o valor do cabeçalho `size` do arquivo anexo<!-- END REF -->. The `.size` property is returned when the MIME message defines a size header in the attachment part.
 
 ## .type
 
