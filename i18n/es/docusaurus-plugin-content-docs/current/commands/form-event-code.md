@@ -166,30 +166,30 @@ This example shows how to treat clicks and double clicks in the same way in a sc
 This example shows how to treat clicks and double clicks using a different response. Note the use of the element zero for keeping track of the selected element:
 
 ```4d
-  //asChoices scrollable area object method
- Case of
-    :(Form event code=On Load)
-       ARRAY TEXT(asChoices;...)
-  // ...
-       asChoices:=0
-       asChoices{0}:="0"
-    :(Form event code=On Clicked)
-       If(asChoices#0)
-          If(asChoices#Num(asChoices))
-  //A new item has been clicked, do something here
-  //...
-  //Save the new selected element for the next time
-             asChoices{0}:=String(asChoices)
-          End if
-       Else
-          asChoices:=Num(asChoices{0})
-       End if
-    :(Form event code=On Double Clicked)
-       If(asChoices#0)
-  //An item has been double clicked, do something different here
-       End if
-  // ...
- End case
+//Método objeto área de desplazamiento asChoices
+ Case of
+    :(Form event code=On Load)
+       ARRAY TEXT(asChoices;...)
+  // ...
+       asChoices:=0
+       asChoices{0}:="0"
+    :(Form event code=On Clicked)
+       If(asChoices#0)
+          If(asChoices#Num(asChoices))
+//Un nuevo elemento ha sido presionado, hacer algo aquí
+//...
+//Guardar el nuevo elemento seleccionado para la próxima vez
+asChoices{0}:=String(asChoices)
+End if
+other
+Choices:=Num(asChoices{0})
+End if
+:(Form event code=On Double Clicked)
+Sif(asChoices#0)
+//Se hizo doble clic en un elemento, hacer algo diferente aquí
+       End if
+  // ...
+ End case
 ```
 
 #### Ejemplo 8
@@ -197,27 +197,27 @@ This example shows how to treat clicks and double clicks using a different respo
 This example shows how to maintain a status text information area from within a form method, using the [`On Getting Focus`](../Events/onGettingFocus.md) and [`On Losing Focus`](../Events/onLosingFocus.md) events:
 
 ```4d
-  //[Contacts];"Data Entry" form method
- Case of
-    :(Form event code=On Load)
-       var vtStatusArea : Text
-       vtStatusArea:=""
-    :(Form event code=On Getting Focus)
-       RESOLVE POINTER(Focus object;$vsVarName;$vlTableNum;$vlFieldNum)
-       If(($vlTableNum#0)&($vlFieldNum#0))
-          Case of
-             :($vlFieldNum=1) //Last name field
-                vtStatusArea:="Enter the Last name of the Contact; it will be capitalized automatically"
-  //...
-             :($vlFieldNum=10) //Zip Code field
-                vtStatusArea:="Enter a 5-digit zip code; it will be checked and validated automatically"
-  //...
-          End case
-       End if
-    :(Form event code=On Losing Focus)
-       vtStatusArea:=""
-  //...
- End case
+//Método formulario [Contacts];"Data Entry"
+ Case of
+    :(Form event code=On Load)
+       var vtStatusArea : Text
+       vtStatusArea:=""
+    :(Form event code=On Getting Focus)
+       RESOLVE POINTER(Focus object;$vsVarName;$vlTableNum;$vlFieldNum)
+       If(($vlTableNum#0)&($vlFieldNum#0))
+          Case of
+             :($vlFieldNum=1) //Campo Apellido
+                vtStatusArea:="Enter the Last name of the Contact; it will be capitalized automatically"
+  //...
+             :($vlFieldNum=10) //Campo Código postal
+                vtStatusArea:="Enter a 5-digit zip code; it will be checked and validated automatically"
+  //...
+          End case
+       End if
+    :(Form event code=On Losing Focus)
+       vtStatusArea:=""
+  //...
+ End case
 ```
 
 #### Ejemplo 9
