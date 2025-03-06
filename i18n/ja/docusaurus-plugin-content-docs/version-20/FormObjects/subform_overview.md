@@ -62,7 +62,7 @@ title: サブフォーム
 
 :::info
 
-時間を静的に表示するには、適切な [データ型](properties_DataSource.md#データタイプ-式の型) を [変数または式](properties_Object.md#変数あるいは式) に使用する必要があります。
+To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-list-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
 
 - 変数 (例: `parisTime`) を使用する場合は、`text` または `time` 型である必要があります。
 - 式 (例: `Form.myValue`) を使用する場合は、`text` 値である必要があります。
