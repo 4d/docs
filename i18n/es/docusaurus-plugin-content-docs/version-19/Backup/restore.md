@@ -44,7 +44,7 @@ Puede restaurar manualmente un archivo de la aplicación actual utilizando la p�
 
 ## Integración manual del historial
 
-Si no ha marcado la opción de integración automática del archivo de historial en la página Restaurar del CSM (ver [Integración sucesiva de varios archivos de historial](MSC/restore.md#successive-intergration-of-several-data-log-files)), aparece una caja de diálogo de advertencia durante la apertura de la aplicación cuando 4D advierte que el archivo de historial contiene más operaciones de las que se han realizado en el archivo de datos.
+Si no ha marcado la opción de integración automática del archivo de historial en la página Restaurar del CSM (ver [Integración sucesiva de varios archivos de historial](../MSC/restore.md#successive-integration-of-several-data-log-files)), aparece una caja de diálogo de advertencia durante la apertura de la aplicación cuando 4D advierte que el archivo de historial contiene más operaciones de las que se han realizado en el archivo de datos.
 
 ![](../assets/en/Backup/backup08.png)
 
