@@ -10,7 +10,7 @@ title: Forms
 また、以下の機能により、フォームは他のフォームを含むことができます:
 
 - [サブフォームオブジェクト](FormObjects/subform_overview.md)
-- [継承フォーム](forms.md#継承フォーム)
+- [inherited forms](./properties_FormProperties.md#inherited-form-name)
 
 ## フォームを作成する
 
