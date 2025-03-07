@@ -374,7 +374,7 @@ La representación utf8 de *message*.
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
-Definido sólo para las llaves ECDSA: el <!-- REF #CryptoKey.curve.Summary -->nombre de la curva normalizada de la llave<!-- END REF -->. .
+Definido sólo para llaves RSA: <!-- REF #CryptoKey.size.Summary -->el tamaño de la llave en bits<!-- END REF -->. .
 
 <!-- REF CryptoKey.type -->
 
