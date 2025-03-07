@@ -68,7 +68,7 @@ title: リサイズオプション
 
 ## 縦方向サイズ変更
 
-This property specifies if an object should be vertically moved or resized when a user resizes the form.It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+このプロパティは、ユーザーがフォームをリサイズしたときにオブジェクトが縦方向に移動するかリサイズされるかを指定します。また`OBJECT SET RESIZING OPTIONS` ランゲージコマンドを使用することでも動的に設定することができます。
 
 次の値が提供されています:
 
