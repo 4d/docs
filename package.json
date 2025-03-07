@@ -28,10 +28,10 @@
   "dependencies": {
     "@4dsas/doc_preprocessing": "1.1.11",
     "@docusaurus/core": "3.6",
+    "@docusaurus/faster": "3.6",
     "@docusaurus/plugin-client-redirects": "3.6",
     "@docusaurus/preset-classic": "3.6",
     "@docusaurus/theme-mermaid": "3.6",
-    "@docusaurus/faster": "3.6",
     "clsx": "^2.1.1",
     "esbuild-loader": "^4.2.0",
     "react": "^18.3.1",
