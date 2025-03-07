@@ -2566,7 +2566,7 @@ En el parámetro *querySettings*, puede pasar un objeto que contenga marcadores 
 
 :::note
 
-Using this parameter is mandatory if you want to query a collection [using a **collection reference** or **object reference**](#object-or-collection-reference-as-value).
+El uso de este parámetro es obligatorio si desea consultar en una colección [utilizando una **referencia de colección** o una **referencia de un objeto**](#object-or-collection-reference-as-value).
 
 :::
 
@@ -2673,7 +2673,7 @@ More examples of queries can be found in the `dataClass.query()` page. Note howe
 
 #### Descripción
 
-The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
+La función `.reduce()` <!-- REF #collection.reduce().Summary -->aplica la retrollamada *formula* o *methodName* a un acumulador y cada elemento de la colección (de izquierda a derecha) para reducirlo a un único valor<!-- END REF -->.
 
 > Esta función no modifica la colección original.
 
@@ -2758,7 +2758,7 @@ With the following ***Flatten*** method:
 
 #### Descripción
 
-The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplica la retrollamada *formula* o *methodName* contra un acumulador y cada elemento de la colección (de derecha a izquierda) para reducirlo a un único valor<!-- END REF -->.
 
 > Esta función no modifica la colección original.
 
@@ -2843,7 +2843,7 @@ With the following ***Flatten*** method:
 
 #### Descripción
 
-The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
+La función `.remove()` <!-- REF #collection.remove().Summary -->elimina uno o más elementos a partir de la posición *index* especificada en la colección y devuelve la colección editada<!-- END REF -->.
 
 > Esta función modifica la colección original.
 
@@ -2898,7 +2898,7 @@ Si se intenta eliminar un elemento de una colección vacía, el método no hace 
 
 #### Descripción
 
-The `.resize()` function <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
+La función `.resize()` <!-- REF #collection.resize().Summary -->ajusta la longitud de la colección al nuevo tamaño especificado y devuelve la colección redimensionada<!-- END REF -->.
 
 > Esta función modifica la colección original.
 
@@ -2951,7 +2951,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 #### Descripción
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.reverse()` <!-- REF #collection.reverse().Summary --> devuelve una copia profunda de la colección con todos sus elementos en orden inverso<!-- END REF -->. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
 > Esta función no modifica la colección original.
 
@@ -2989,7 +2989,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 #### Descripción
 
-The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
+La función `.shift()` <!-- REF #collection.shift().Summary --> elimina el primer elemento de la colección y lo devuelve como resultado de la función<!-- END REF -->.
 
 > Esta función modifica la colección original.
 
@@ -3034,7 +3034,7 @@ Si la colección está vacía, este método no hace nada.
 
 #### Descripción
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.slice()` <!-- REF #collection.slice().Summary -->devuelve una parte de una colección en una nueva colección<!-- END REF -->, seleccionada de la posición *startFrom* a la posición *end* (no incluye *end*). This function returns a *shallow copy* of the collection. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
 > Esta función no modifica la colección original.
 
