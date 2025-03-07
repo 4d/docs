@@ -51,7 +51,7 @@ Se aplican las siguientes reglas:
 - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
 - La selección de entidades y la entidad se pueden pasar como parámetros. El objeto JSON debe contener atributos específicos utilizados por el servidor REST para asignar datos a los objetos ORDA correspondientes: __DATACLASS,__ENTITY, __ENTITIES,__DATASET.
 
-See [this example](#receiving-an-entity-selection-as-parameter).
+Ver [este ejemplo](#receiving-an-entity-selection-as-parameter).
 
 ### Parámetro de valor escalar
 
