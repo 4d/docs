@@ -555,13 +555,13 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 埋め込み配布ライセンス抜きのアプリケーションをビルドするには、ライセンスの一覧リストを空にし、"評価版アプリケーションをビルドする"が**チェックされていない**ことを確認して下さい。
 
-In this case, the end-user will have to purchase and enter a per-user *4D Desktop* or *4D Server* license at first application startup (when you embed a deployment license, the user does not have to enter or use their own license number). 詳細については、[**ライセンスについて**](#ライセンスについて) の段落を参照ください。
+この場合、エンドユーザーはアプリケーションの初回起動時に *4D Desktop* または *4D Server* のライセンスを、ユーザーごとに購入・入力する必要があります(ライセンスを埋め込んだ場合には、ユーザーは自分のライセンスを入力したり使用したりする必要はありません)。 詳細については、[**ライセンスについて**](#ライセンスについて) の段落を参照ください。
 
-#### Build a licensed application with embedded license(s)
+#### 埋め込みライセンス付きのアプリケーションをビルドする
 
-This option allows you to build a ready-to-use application, in which necessary licenses are already embedded.
+このオプションを使用すると、必要なライセンスがすでに埋め込まれている、すぐに使用可能なアプリケーションをビルドすることができます。
 
-You must designate the files that contain your deployment licenses. これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
+配布ライセンスを格納しているファイルを指定する必要があります。 これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
 
 ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。 \[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 このフォルダーの場所については [Get 4D folder](../commands-legacy/get-4d-folder.md) コマンドの説明を参照してください。
 
@@ -620,7 +620,7 @@ Apple の公証サービスを利用するのに必要な条件を満たすた�
 
 公証についての詳細は、[Apple のデベロッパー Web サイト](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow) を参照ください。
 
-For more information on the stapling concept, please read [this Apple forum post](https://forums.developer.apple.com/forums/thread/720093).
+ステープルの概念の詳細については、[こちらの Apple フォーラムの記事](https://forums.developer.apple.com/forums/thread/720093) を参照してください。
 
 ## アプリケーションアイコンのカスタマイズ
 
@@ -696,7 +696,7 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 このデータリンクモードはアプリケーションビルドの際に選択することができます。 これには、次の二つの方法があります:
 
-- Use the [Application page](#application-page) or [Client/Server page](#clientserver-page) of the Build Application dialog box.
+- アプリケーションビルダーの[アプリケーションページ](#アプリケーションページ) あるいは [クライアント/サーバーページ](#クライアント-サーバーページ) を使用する。
 - シングルユーザーまたはサーバーアプリケーションの **LastDataPathLookup** XMLキーを使用する。
 
 ### デフォルトのデータフォルダーを定義する
@@ -773,7 +773,7 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 原則的に、サーバーアプリケーションや組み込みのシングルユーザーアプリケーションを更新するには、ユーザーの介入 (またはカスタムのシステムルーチンのプログラミング) が必要です。 組み込みアプリケーションの新しいバージョンが利用可能になるたびに、運用中のアプリケーションを終了して、古いファイルを新しいファイルに手動で置き換え、その後アプリケーションを再起動してカレントのデータファイルを選択しなければなりません。
 
-You can automate this procedure to a large extent using the following language commands: [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md), [`RESTART 4D`](../commands-legacy/restart-4d.md), and also [`Last update log path`](../commands-legacy/last-update-log-path.md) for monitoring operations. これらのコマンドを使い、4Dアプリケーションに、以下に説明する自動更新手順をトリガーする機能を実装します。 具体的には、メニューコマンドや、バックグラウンドで動作するプロセスなどを実装し、サーバーにアーカイブがあるかどうかを定期的にチェックします。
+この手順は、次のランゲージコマンドを使って大部分を自動化することができます: [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md)、[`RESTART 4D`](../commands-legacy/restart-4d.md)、および[`Last update log path`](../commands-legacy/last-update-log-path.md)(モニタリング操作用)。 これらのコマンドを使い、4Dアプリケーションに、以下に説明する自動更新手順をトリガーする機能を実装します。 具体的には、メニューコマンドや、バックグラウンドで動作するプロセスなどを実装し、サーバーにアーカイブがあるかどうかを定期的にチェックします。
 
 > また、Windows で保護されたファイルを使用できるように、インストール権限を昇格させる XMLキーもあります ([アプリケーションビルド設定ファイル](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.ja.html) のマニュアルを参照ください)。
 
