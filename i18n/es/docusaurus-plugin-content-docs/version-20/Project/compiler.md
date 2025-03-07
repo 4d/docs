@@ -306,7 +306,7 @@ Ambos compiladores están integrados en 4D. El compilador adecuado se selecciona
 
 El compilador clásico genera código compilado nativo para procesadores Intel/AMD en cualquier máquina. No requiere ninguna configuración específica.
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata-folder) folder of the project.
+El código compilado resultante se almacena en la carpeta [DerivedData](architecture.md#deriveddata-folder) del proyecto.
 
 
 ### Compilador Silicon
