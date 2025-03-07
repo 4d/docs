@@ -6,7 +6,7 @@ title: EntitySelection
 
 Uma seleção de entidades é um objeto que contém uma ou mais referencias a [entidades](ORDA/dsMapping.md#entity) pertencentes à mesma [Dataclass](ORDA/dsMapping.md#dataclass). Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
 
-As seleções de entidades podem ser criadas a partir de seleções existentes utilizando varias funções da classe [`DataClass` class](DataClassClass.md) tais como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou da classe `EntityClass` mesma, tal como [`.and()`](#and) ou [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create entity selection`](#create-entity-selection) command.
+As seleções de entidades podem ser criadas a partir de seleções existentes utilizando varias funções da classe [`DataClass` class](DataClassClass.md) tais como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou da classe `EntityClass` mesma, tal como [`.and()`](#and) ou [`orderBy()`](#orderby). Você também pode criar seleções em branco das entidades usando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create entity selection`](#create-entity-selection).
 
 ### Resumo
 
