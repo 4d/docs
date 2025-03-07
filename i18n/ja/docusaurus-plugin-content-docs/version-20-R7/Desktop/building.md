@@ -47,7 +47,7 @@ title: アプリケーションビルド
 
 アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じプロジェクト内に他に複数のXML 設定を定義することができ、[`BUILD APPLICATION`](../commands-legacy/build-application.md) コマンドを使用してどれを使用するかを選択することができます。
 
-また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 これらのキーの詳細は[4D XML キーBuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) マニュアルに詳細な説明があります。
+また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 これらのキーの詳細は[4D XML キーBuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.ja.html) マニュアルに詳細な説明があります。
 
 ### ログファイル
 
@@ -654,7 +654,7 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 このデータリンクモードはアプリケーションビルドの際に選択することができます。 これには、次の二つの方法があります:
 
-- Use the [Application page](#application-page) or [Client/Server page](#clientserver-page) of the Build Application dialog box.
+- アプリケーションビルダーの[アプリケーションページ](#アプリケーションページ) あるいは [クライアント/サーバーページ](#クライアント-サーバーページ) を使用する。
 - シングルユーザーまたはサーバーアプリケーションの **LastDataPathLookup** XMLキーを使用する。
 
 ### デフォルトのデータフォルダーを定義する
