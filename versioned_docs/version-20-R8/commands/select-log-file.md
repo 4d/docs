@@ -34,7 +34,7 @@ OK is set to 1 if the log file is correctly created, or closed.
 #### See also 
 
 [New log file](new-log-file.md)  
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands-legacy/on-err-call.md) 
 
 #### Properties
 
