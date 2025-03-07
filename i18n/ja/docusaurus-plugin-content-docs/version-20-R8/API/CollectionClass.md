@@ -2607,14 +2607,14 @@ $col2:=$col.query("c = :v"; {parameters: {v: $c3}})
 
 *querySettings* 引数には、クエリのプレースホルダーをオブジェクトとして格納するオブジェクトを渡すことができます。 以下のプロパティがサポートされています: 以下のプロパティがサポートされています:
 
-| プロパティ      | 型      | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parameters | Object | *queryString* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| attributes | Object | *queryString* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、コレクションのオブジェクト要素のプロパティへの属性パスを指定することができます。<table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>String の Collection</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en\/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
+| プロパティ      | 型      | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters | Object | *queryString* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| attributes | Object | *queryString* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、コレクションのオブジェクト要素のプロパティへの属性パスを指定することができます。<table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>String の Collection</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: ["4Dv17.1","en\/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
 
 :::note
 
-Using this parameter is mandatory if you want to query a collection [using a **collection reference** or **object reference**](#object-or-collection-reference-as-value).
+[**コレクション参照**または**オブジェクト参照**](#オブジェクト参照やコレクション参照で検索する) を使用してコレクションをクエリする場合には、この引数を使用する必要があります。
 
 :::
 
@@ -2663,7 +2663,7 @@ Using this parameter is mandatory if you want to query a collection [using a **c
 以下のクエリは、年齢が不明な (プロパティが null あるいは undefined に設定されている) 人物を返します:
 
 ```4d
- $col:=$c.query("age=null") //placeholders not allowed with "null"
+ $col:=$c.query("age=null") // "null" ではプレースホルダーは使えません
   //$col=[{name:Wesson...},{name:Sterling...},{name:Mark...}]
 ```
 
@@ -2671,7 +2671,7 @@ Using this parameter is mandatory if you want to query a collection [using a **c
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018
+  // 今日が 01/10/2018 であれば $col=[{name:Smith...},{name:Sterling...},{name:Mark...}]
 ```
 
 #### 例題 3
@@ -2686,7 +2686,7 @@ $entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
 
 :::info
 
-More examples of queries can be found in the `dataClass.query()` page. Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
+追加のクエリ例については、[`dataClass.query()`](dataclassClass.md#query) を参照してください。 *queryString* 引数および *formula* オブジェクト引数の使用に関わらず、フォーミュラは `collection.query()` 関数でサポートされていないことに注意が必要です。
 
 :::
 
@@ -2709,19 +2709,19 @@ More examples of queries can be found in the `dataClass.query()` page. Note howe
 
 <!-- REF #collection.reduce().Params -->
 
-| 引数         | 型                                               |                             | 説明                                                                                |
-| ---------- | ----------------------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
-| formula    | 4D.Function                     |              ->             | フォーミュラオブジェクト                                                                      |
-| methodName | Text                                            |              ->             | メソッド名                                                                             |
-| initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | Value to use as the first argument to the first call of *formula* or *methodName* |
-| param      | 式                                               |              ->             | 渡す引数                                                                              |
-| 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                                   |
+| 引数         | 型                                               |                             | 説明                                                |
+| ---------- | ----------------------------------------------- | :-------------------------: | ------------------------------------------------- |
+| formula    | 4D.Function                     |              ->             | フォーミュラオブジェクト                                      |
+| methodName | Text                                            |              ->             | メソッド名                                             |
+| initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | *formula* または *methodName* の最初の呼び出しに最初の引数として使用する値 |
+| param      | 式                                               |              ->             | 渡す引数                                              |
+| 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | アキュムレーター値の結果                                      |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
+`.reduce()` 関数は、<!-- REF #collection.reduce().Summary -->*formula* または *methodName* コールバックをアキュムレーターおよびコレクションの各要素に (左から右へ) 適用して、単一の値にまとめます<!-- END REF -->。
 
 > このコマンドは、元のコレクションを変更しません。
 
@@ -2730,20 +2730,20 @@ The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *f
 - *formula* (推奨シンタックス)、関数やプロジェクトメソッドを含むあらゆる実行可能な式を格納できる [Formula オブジェクト](FunctionClass.md)。
 - または *methodName*、プロジェクトメソッドの名前 (テキスト)。
 
-The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+コールバックはコレクションの各要素を受け取り、任意の処理を実行して、結果を *$1.accumulator* に蓄積します。この値は最終的に *$1.value* に返されます。
 
-You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+*initValue* に引数を渡すことで、アキュムレーターを初期化することができます。 省略された場合は、*$1.accumulator* は *Undefined* から開始されます。
 
 コールバックは以下の引数を受け取ります:
 
-- in *$1.value*: element value to be processed
-- in *$2: param*
-- in *$N...*: *paramN...*
+- *$1.value*: 処理する要素の値
+- *$2*: param
+- *$N...*: paramN...
 
 コールバックは以下のパラメーターを設定します:
 
-- *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
+- *$1.accumulator*: メソッドで変更する値。*initValue* によって初期化します。
+- *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
 #### 例題 1
 
@@ -2767,7 +2767,7 @@ $r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 で�
  $r:=$c.reduce(Formula(Flatten)) //$r=[0,1,2,3,4,5,6,7]
 ```
 
-With the following ***Flatten*** method:
+***Flatten*** メソッドのコードは以下のとおりです:
 
 ```4d
  If($1.accumulator=Null)
@@ -2794,19 +2794,19 @@ With the following ***Flatten*** method:
 
 <!-- REF #collection.reduceRight().Params -->
 
-| 引数         | 型                                               |                             | 説明                                                                                |
-| ---------- | ----------------------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
-| formula    | 4D.Function                     |              ->             | フォーミュラオブジェクト                                                                      |
-| methodName | Text                                            |              ->             | メソッド名                                                                             |
-| initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | Value to use as the first argument to the first call of *formula* or *methodName* |
-| param      | 式                                               |              ->             | 渡す引数                                                                              |
-| 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                                   |
+| 引数         | 型                                               |                             | 説明                                                |
+| ---------- | ----------------------------------------------- | :-------------------------: | ------------------------------------------------- |
+| formula    | 4D.Function                     |              ->             | フォーミュラオブジェクト                                      |
+| methodName | Text                                            |              ->             | メソッド名                                             |
+| initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | *formula* または *methodName* の最初の呼び出しに最初の引数として使用する値 |
+| param      | 式                                               |              ->             | 渡す引数                                              |
+| 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | アキュムレーター値の結果                                      |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+`.reduceRight()` 関数は、<!-- REF #collection.reduceRight().Summary -->*formula* または *methodName* コールバックをアキュムレーターおよびコレクションの各要素に (右から左へ) 適用して、単一の値にまとめます<!-- END REF -->。
 
 > このコマンドは、元のコレクションを変更しません。
 
@@ -2815,27 +2815,27 @@ The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->appl
 - *formula* (推奨シンタックス)、関数やプロジェクトメソッドを含むあらゆる実行可能な式を格納できる [Formula オブジェクト](FunctionClass.md)。
 - または *methodName*、プロジェクトメソッドの名前 (テキスト)。
 
-The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+コールバックはコレクションの各要素を受け取り、任意の処理を実行して、結果を *$1.accumulator* に蓄積します。この値は最終的に *$1.value* に返されます。
 
-You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+*initValue* に引数を渡すことで、アキュムレーターを初期化することができます。 省略された場合は、*$1.accumulator* は *Undefined* から開始されます。
 
 コールバックは以下の引数を受け取ります:
 
-- in *$1.value*: element value to be processed
-- in *$2: param*
-- in *$N...*: *paramN...*
+- *$1.value*: 処理する要素の値
+- *$2*: param
+- *$N...*: paramN...
 
 コールバックは以下のパラメーターを設定します:
 
-- *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
+- *$1.accumulator*: メソッドで変更する値。*initValue* によって初期化します。
+- *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
 #### 例題 1
 
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 です
 
 ```
 
@@ -2853,10 +2853,10 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
  $r:=$c.reduceRight(Formula(Flatten)) //$r=[6,7,4,5,2,3,0,1]
 ```
 
-With the following ***Flatten*** method:
+***Flatten*** メソッドのコードは以下のとおりです:
 
 ```4d
-	//Flatten project method
+	//Flatten プロジェクトメソッド
  If($1.accumulator=Null)
     $1.accumulator:=New collection
  End if
@@ -2881,29 +2881,29 @@ With the following ***Flatten*** method:
 
 <!-- REF #collection.remove().Params -->
 
-| 引数      | 型          |                             | 説明                                                                |
-| ------- | ---------- | :-------------------------: | ----------------------------------------------------------------- |
-| index   | Integer    |              ->             | 削除を開始する要素の位置                                                      |
-| howMany | Integer    |              ->             | 削除する要素の数、省略時は 1要素を削除                                              |
-| 戻り値     | Collection | <- | Modified collection without removed element(s) |
+| 引数      | 型          |                             | 説明                   |
+| ------- | ---------- | :-------------------------: | -------------------- |
+| index   | Integer    |              ->             | 削除を開始する要素の位置         |
+| howMany | Integer    |              ->             | 削除する要素の数、省略時は 1要素を削除 |
+| 戻り値     | Collection | <- | 要素が削除された元のコレクション     |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
+`.remove()` 関数は、<!-- REF #collection.remove().Summary -->*index* で指定した位置から一つまた複数のコレクション要素を削除し、変更されたコレクションを返します<!-- END REF -->。
 
 > このコマンドは、元のコレクションを変更します。
 
-In *index*, pass the position where you want the element to be removed from the collection.
+*index* パラメーターには、削除するコレクション要素の位置を渡します。
 
-> **警告**: コレクション要素は 0 起点である点に注意してください。 If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
+> **警告**: コレクション要素は 0 起点である点に注意してください。 指定した *index* がコレクションの length より大きい場合、実際の開始インデックスはコレクションの length に設定されます。
 
 - *index* < 0 の場合、*index:=index+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。
-- If the calculated value < 0, *index* is set to 0.
-- If the calculated value > the length of the collection, *index* is set to the length.
+- 計算結果も負の値である場合、*index* は 0 に設定されます。
+- 計算結果がコレクションの length より大きい場合には、*index* は length に設定されます。
 
-In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
+*howMany* には、*index* の位置から削除する要素の数を渡します。 *howMany* が省略された場合、1つの要素のみが削除されます。
 
 空のコレクションから要素を削除しようとした場合、関数は何もしません (エラーは生成されません)。
 
@@ -2936,24 +2936,24 @@ In *howMany*, pass the number of elements to remove from *index*. If *howMany* i
 
 <!-- REF #collection.resize().Params -->
 
-| 引数           | 型                                               |                             | 説明                          |
-| ------------ | ----------------------------------------------- | :-------------------------: | --------------------------- |
-| size         | Integer                                         |              ->             | コレクションの新しいサイズ               |
-| defaultValue | Number, Text, Object, Collection, Date, Boolean |              ->             | 新規要素のデフォルト値                 |
-| 戻り値          | Collection                                      | <- | Resized original collection |
+| 引数           | 型                                               |                             | 説明              |
+| ------------ | ----------------------------------------------- | :-------------------------: | --------------- |
+| size         | Integer                                         |              ->             | コレクションの新しいサイズ   |
+| defaultValue | Number, Text, Object, Collection, Date, Boolean |              ->             | 新規要素のデフォルト値     |
+| 戻り値          | Collection                                      | <- | リサイズされた元のコレクション |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.resize()` function <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
+`.resize()` 関数は、<!-- REF #collection.resize().Summary -->コレクションの length を引数で指定されたサイズに設定し、変更された元のコレクションを返します<!-- END REF -->。
 
 > このコマンドは、元のコレクションを変更します。
 
-- If *size* < collection length, exceeding elements are removed from the collection.
-- If *size* > collection length, the collection length is increased to size.
+- *size* < length の場合、余分な要素はコレクションから削除されます。
+- *size* > length の場合、不足分の要素がコレクションに追加されます。
 
-By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the *defaultValue* parameter.
+デフォルトで、新規要素には **null** 値が格納されます。 *defaultValue* に引数を渡すことで、新規要素の値を指定することができます。
 
 #### 例題
 
@@ -2991,15 +2991,15 @@ By default, new elements are filled will **null** values. You can specify the va
 
 <!-- REF #collection.reverse().Params -->
 
-| 引数  | 型          |                             | 説明                              |
-| --- | ---------- | :-------------------------: | ------------------------------- |
-| 戻り値 | Collection | <- | Inverted copy of the collection |
+| 引数  | 型          |                             | 説明                  |
+| --- | ---------- | :-------------------------: | ------------------- |
+| 戻り値 | Collection | <- | 逆順に要素を格納した新しいコレクション |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
+`.reverse()` 関数は、<!-- REF #collection.reverse().Summary -->全要素が逆順になった、コレクションのディープ・コピーを返します<!-- END REF -->。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 
 > このコマンドは、元のコレクションを変更しません。
 
@@ -3037,7 +3037,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 #### 説明
 
-The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
+`.shift()` 関数は、<!-- REF #collection.shift().Summary -->コレクションの先頭要素を取り除き、それを戻り値として返します<!-- END REF -->。
 
 > このコマンドは、元のコレクションを変更します。
 
@@ -3072,26 +3072,26 @@ The `.shift()` function <!-- REF #collection.shift().Summary -->removes the firs
 
 <!-- REF #collection.slice().Params -->
 
-| 引数        | 型          |                             | 説明                                                                          |
-| --------- | ---------- | :-------------------------: | --------------------------------------------------------------------------- |
-| startFrom | Integer    |              ->             | 開始インデックス (含まれる)                                          |
-| end       | Integer    |              ->             | 終了インデックス (含まれない)                                         |
-| 戻り値       | Collection | <- | New collection containing sliced elements (shallow copy) |
+| 引数        | 型          |                             | 説明                                              |
+| --------- | ---------- | :-------------------------: | ----------------------------------------------- |
+| startFrom | Integer    |              ->             | 開始インデックス (含まれる)              |
+| end       | Integer    |              ->             | 終了インデックス (含まれない)             |
+| 戻り値       | Collection | <- | 抜粋要素を格納した新しいコレクション(シャロウ・コピー) |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
+`.slice()` 関数は、*startFrom* の位置 (含まれる) から *end* の位置 (含まれない) までの<!-- REF #collection.slice().Summary -->コレクションの一部を、新しいコレクションの中に返します<!-- END REF -->。 この関数はコレクションの *シャロウ・コピー* を返します。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 
 > このコマンドは、元のコレクションを変更しません。
 
-The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
+戻り値のコレクションには、*startFrom* 引数で指定した要素 (含まれる) から、*end* 引数で指定した要素まで (含まれない) の全要素が格納されます。 *startFrom* 引数のみを渡した場合には、*startFrom* 引数で指定した要素から最後の要素までが戻り値のコレクションに格納されます。
 
 - *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
-- If the calculated value < 0, *startFrom* is set to 0.
+- 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
 - *end* < 0 の場合、それは *end:=end+length* として再計算されます。
-- If *end < startFrom* (passed or calculated values), the method does nothing.
+- 渡された値、あるいは再計算された値が *end* < *startFrom* の場合、関数はなにもしません。
 
 #### 例題
 
@@ -3126,17 +3126,17 @@ The returned collection contains the element specified by *startFrom* and all su
 | 引数 | 型 |     | 説明 |
 | -- | - | :-: | -- |
 
-|startFrom |Integer |->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param |any |->|Parameter(s) to pass|
-|Result|Boolean|<-|True if at least one element successfully passed the test|
+\| startFrom | Integer | -> | テストを開始するインデックス |
+\| formula | 4D.Function | -> | フォーミュラオブジェクト |
+\| methodName | Text | -> | メソッド名 |
+\| param | any | -> | 渡す引数 |
+\| 戻り値 | Boolean | <- | 少なくとも一つの要素がテストをパスすれば true |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test implemented in the provided *formula* or *methodName* code<!-- END REF -->.
+.some() 関数は、<!-- REF #collection.some().Summary -->少なくとも一つのコレクション要素が、*formula* または *methodName* のコードで実装されたテストにパスした場合に **true** を返します<!-- END REF -->。
 
 次のいずれかを使用して、コレクション要素を評価するために実行されるコード (コールバック) を指定します:
 
@@ -3147,28 +3147,28 @@ The `.some()` function <!-- REF #collection.some().Summary -->returns true if at
 
 コールバックは以下の引数を受け取ります:
 
-- in *$1.value*: element value to be processed
-- in *$2: param*
-- in *$N...*: *paramN...*
+- *$1.value*: 処理する要素の値
+- *$2*: param
+- *$N...*: paramN...
 
 また、コールバックは以下のパラメーターを設定できます:
 
-- (mandatory if you used a method) *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
+- (メソッドを使用する場合は必須) *$1.result* (ブール): 要素の値の評価が成功した場合には **true** 、それ以外は **false**
+- *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
-In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
+`.some()` 関数は、true を返す最初のコレクション要素を発見すると、コールバックの呼び出しをやめて **true** を返します。
 
-By default, `.some()` tests the whole collection. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+デフォルトでは、`.some()` はコレクション全体をテストします。 オプションとして、*startFrom* 引数を渡すことで、テストを開始するコレクション要素のインデックスを指定することができます。
 
-- If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
+- *startFrom* がコレクションの length 以上だった場合、**false** が返されます。これはコレクションがテストされていないことを意味します。
 
-- If *startFrom* < 0, it is considered as the offset from the end of the collection.
+- *startFrom* < 0 の場合には、コレクションの終わりからのオフセットであるとみなされます。
 
 - *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 #### 例題
 
-You want to know if at least one collection value is >0.
+コレクション要素のうち、0を超える値が少なくとも 1つあるかどうかを確認します。
 
 ```4d
  var $c : Collection
@@ -3215,11 +3215,11 @@ You want to know if at least one collection value is >0.
 
 #### 説明
 
-The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection and also returns the sorted collection<!-- END REF --> .
+`.sort()` 関数は、 <!-- REF #collection.sort().Summary -->コレクションの要素を並べ替え、並べ替えられた元のコレクションを返します<!-- END REF --> 。
 
 > このコマンドは、元のコレクションを変更します。
 
-If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. デフォルトでは、要素はそれぞれの型に応じて昇順で並べ替えられます。 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
+引数もなしに呼び出された場合、`.sort()` はスカラー値 (数値、テキスト、日付、ブール) のみを並べ替えます。 デフォルトでは、要素はそれぞれの型に応じて昇順で並べ替えられます。 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
 
 1. null
 2. ブール
@@ -3229,7 +3229,7 @@ If `.sort()` is called with no parameters, only scalar values (number, text, dat
 6. コレクション
 7. 日付
 
-If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 必要に応じて、 追加の引数をコールバックに渡せます。
+カスタマイズされた順番や、型に関係なくコレクション要素を並べ替えたい場合には、並べ替え順を定義するコールバックを *formula* ([Formula オブジェクト](FunctionClass.md)) または *methodName* (テキスト) に渡します。 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 必要に応じて、 追加の引数をコールバックに渡せます。
 
 コールバックは以下の引数を受け取ります:
 
@@ -3238,9 +3238,9 @@ If you want to sort the collection elements in some other order or sort any type
  - *$1.value2* (任意の型): 比較する二つ目の要素の値
 - $2...$N (任意の型): 追加の引数
 
-If you used a method, you must set the folllowing parameter:
+メソッドを使用する場合、以下の引数を設定する必要があります:
 
-- *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise.
+- *$1.result* (ブール): *$1.value < $1.value2* の場合は **true**、それ以外は **false**。
 
 #### 例題 1
 
@@ -3264,8 +3264,8 @@ If you used a method, you must set the folllowing parameter:
 ```4d
 var $col; $col2; $col3 : Collection
 $col:=New collection(33;4;66;1111;222)
-$col2:=$col.sort() //numerical sort: [4,33,66,222,1111]
-$col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sort: [1111,222,33,4,66]
+$col2:=$col.sort() // 数値順: [4,33,66,222,1111]
+$col3:=$col.sort(Formula(String($1.value)<String($1.value2))) // アルファベット順: [1111,222,33,4,66]
 ```
 
 <!-- END REF -->
@@ -3286,22 +3286,22 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sor
 
 <!-- REF #collection.sum().Params -->
 
-| 引数           | 型    |                             | 説明                       |
-| ------------ | ---- | :-------------------------: | ------------------------ |
-| propertyPath | Text |              ->             | 計算に使用するオブジェクトプロパティのパス    |
-| 戻り値          | Real | <- | Sum of collection values |
+| 引数           | 型    |                             | 説明                    |
+| ------------ | ---- | :-------------------------: | --------------------- |
+| propertyPath | Text |              ->             | 計算に使用するオブジェクトプロパティのパス |
+| 戻り値          | Real | <- | コレクション要素の値の合計         |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for all values in the collection instance<!-- END REF -->.
+`.sum()` 関数は、<!-- REF #collection.sum().Summary -->コレクションインスタンスの全要素の値を合計して返します<!-- END REF -->。
 
 計算の対象となるのは数値のみです (他の型の要素は無視されます)。
 
 コレクションがオブジェクトを格納している場合には、計算するオブジェクトプロパティのパスを *propertyPath* に渡します。
 
-`.sum()` returns 0 if:
+`.sum()` は以下の場合には 0 を返します:
 
 - コレクションが空の場合
 - コレクションに数値が含まれていない場合
@@ -3356,7 +3356,7 @@ The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for 
 
 #### 説明
 
-The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given *value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
+`.unshift()` 関数は、<!-- REF #collection.unshift().Summary -->一つ以上の *value* 引数をコレクションインスタンスの先頭に挿入し、変更された元のコレクションを返します<!-- END REF -->。
 
 > このコマンドは、元のコレクションを変更します。
 
