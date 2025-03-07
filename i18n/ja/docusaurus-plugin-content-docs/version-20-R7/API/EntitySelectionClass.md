@@ -2022,10 +2022,10 @@ $result2:=$invoices.selected($creditSel)
 
 戻り値のエンティティセレクションには、*startFrom* 引数で指定したエンティティ (含まれる) から、*end* 引数で指定したエンティティまで (含まれない) の全エンティティが格納されます。 *startFrom* 引数のみを渡した場合には、*startFrom* 引数で指定したエンティティから最後のエンティティまでが戻り値のエンティティセレクションに格納されます。
 
-- *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (エンティティセレクションの終端からのオフセットであるとみなされます)。 If the calculated value < 0, *startFrom* is set to 0.
+- *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (エンティティセレクションの終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
 - *startFrom >= length* の場合、関数は空のエンティティセレクションを返します。
 - *end* < 0 の場合、それは *end:=end+length* として再計算されます。
-- If *end < startFrom* (passed or calculated values), the method does nothing.
+- 渡された値、あるいは再計算された値が *end* < *startFrom* の場合、関数はなにもしません。
 
 エンティティセレクションにドロップされたエンティティが含まれる場合、それらも返されます。
 
