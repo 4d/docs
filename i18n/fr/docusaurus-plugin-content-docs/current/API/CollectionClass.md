@@ -2803,7 +2803,7 @@ Avec la méthode ***Flatten*** suivante :
 
 #### Description
 
-La fonction `.reduceRight()` <!-- REF #collection.reduceRight(). ummary -->applique la callback *formula* ou *methodName* à un accumulateur et à chaque élément de la collection (de droite à gauche) pour la réduire à une valeur unique<!-- END REF -->.
+La fonction `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->applique la callback *formula* ou *methodName* à un accumulateur et à chaque élément de la collection (de droite à gauche) pour la réduire à une valeur unique<!-- END REF -->.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
