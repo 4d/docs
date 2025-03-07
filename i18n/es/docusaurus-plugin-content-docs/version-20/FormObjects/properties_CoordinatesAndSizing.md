@@ -291,7 +291,7 @@ Establece un relleno horizontal para las celdas. El valor se establece en píxel
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pies de página](properties_Footers.md) - [Encabezados](properties_Headers.md)
 
 #### Ver también
 
@@ -311,7 +311,7 @@ Establece un relleno vertical para las celdas. El valor se establece en píxeles
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pies de página](properties_Footers.md) - [Encabezados](properties_Headers.md)
 
 #### Ver también
 
