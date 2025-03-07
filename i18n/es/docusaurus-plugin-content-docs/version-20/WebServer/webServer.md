@@ -25,7 +25,7 @@ La seguridad de los datos está presente en todas las etapas de las implementaci
 * **Autenticación**: [funciones de autenticación](authentication.md) flexibles y personalizables basadas en la configuración integrada, así como también métodos base de reserva ([`On Web Authentication`](authentication.md#on-web-authentication) para el servidor web y [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) para el servidor REST),
 
 * **Control de los contenidos expuestos**: sólo los elementos que exponga explícitamente pueden estar disponibles desde peticiones web directas o peticiones REST. Debe declarar:
-  * [Project methods](templates.md#accessing-4d-methods-via-the-web) exposed through HTTP requests
+  * [Métodos proyecto](templates.md#accessing-4d-methods-via-the-web) expuestos a través de peticiones HTTP
   * [Las funciones ORDA](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) expuestas a través de peticiones REST
   * [Tablas y campos](REST/configuration.md#exposing-tables-and-fields) que no quiere que estén disponibles para las peticiones REST.
 
