@@ -47,7 +47,7 @@ title: アプリケーションビルド
 
 アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じプロジェクト内に他に複数のXML 設定を定義することができ、[`BUILD APPLICATION`](../commands-legacy/build-application.md) コマンドを使用してどれを使用するかを選択することができます。
 
-また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 これらのキーの詳細は[4D XML キーBuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) マニュアルに詳細な説明があります。
+また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 これらのキーの詳細は[4D XML キーBuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.ja.html) マニュアルに詳細な説明があります。
 
 ### ログファイル
 
@@ -496,7 +496,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 ライセンス&証明書のページでは、次のようなことができます:
 
-- designate the license(s) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
+- [スタンドアロン](#アプリケーションページ)アプリケーションまたは[クライアントサーバー](#クライアントサーバーページ) アプリケーションに統合したいライセンスを指定します。
 - macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
 
 ![](../assets/en/Admin/buildappCertif.png)
@@ -515,45 +515,45 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 :::note
 
-You can also build an [evaluation application](#build-an-evaluation-application), in which case a limited term deployment license is automatically provided to the user at startup.
+この他に [評価版アプリケーション](#評価版アプリケーションをビルド) をビルドすることもできます。この場合、起動時に期間限定の配布ライセンスが自動的にユーザーに提供されます。
 
 :::
 
 ### ライセンスリスト
 
-This tab displays the [Build an evaluation application](#build-an-evaluation-application) option and the list of available [deployment licenses that you can embed](#about-licenses) into your application (stand-alone or client-server). デフォルトでリストは空です。
+このタブには[評価版アプリケーションをビルドする](#評価版アプリケーションをビルドする) オプションが表示される他、アプリケーション(スタンドアロン版またはクライアントサーバー版)に[埋め込み可能な配布ライセンス](#ライセンスについて) としてい利用可能なライセンス一覧が表示されます。 デフォルトでリストは空です。
 
-You can use this tab to build:
+このタブを使用して以下のようなものをビルドできます:
 
-- an evaluation application,
-- a licensed application without embedded license (the user has to have a per-user license),
-- a licensed application with embedded license(s).
+- 評価版アプリケーション
+- 埋め込みライセンス抜きのアプリケーション(エンドユーザーはユーザーごとのライセンスが必要になります)
+- 埋め込みライセンス付きのアプリケーション
 
 #### 評価版アプリケーションをビルド
 
 アプリケーションの評価版を作成するには、このオプションをチェックして下さい。
 
-An evaluation application allows the end-user to run a full-featured version of your stand-alone or server application on their machine for a limited period of time, starting at first launch. At the end of the evaluation period, the application can no longer be used for a certain period of time on the same machine.
+評価アプリケーションを使用すると、エンドユーザーは自身のマシン上で自身のスタンドアロンまたはサーバーアプリケーションを機能制約なく一定期間実行することができます。 期間のカウントは最初の起動から始まります。 評価期間が終わると、同一マシン上では一定期間アプリケーションを使用できなくなります。
 
 :::info
 
-An internet connection is required on the user machine at the first launch of the evaluation application.
+評価アプリケーションの初回起動時にはそのユーザーマシンにはインターネット接続が必要になります。
 
 :::
 
-As soon as the "Build an evaluation application" option is enabled, deployment licenses are ignored.
+"評価版アプリケーションをビルド"オプションが有効化されると、配布ライセンスは無視されます。
 
 :::note 注記
 
-- The [`License info`](../commands/license-info.md) command allows you to know the application license type (*.attributes* collection) and its expiration date (*.expirationDate* object).
-- The BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) and [`EvaluationName`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationName.300-7542474.en.html) xml keys allow you to handle evaluation versions.
-- The [`CHANGE LICENCES`] command does nothing when called from an evaluation version.
+- [`License info`](../commands/license-info.md) コマンドを使用するとアプリケーションライセンスのタイプ (*.attributes* コレクション) およびそれらの有効期限 (*.expirationDate* オブジェクト) を知ることができます。
+- BuildApplication の[`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) および [`EvaluationName`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationName.300-7542474.en.html) xml キーを使用すると、評価版を管理することができます。
+- [`CHANGE LICENCES`] コマンドは、評価版から呼び出された場合には何もしません。
 
 :::
 
-#### Build a licensed application without embedded license(s)
+#### 埋め込みライセンス抜きのアプリケーションをビルドする
 
-To build an application without embedded deployment license, just keep the license list empty and make sure the "Build an evaluation application" option is **unchecked**.
+埋め込み配布ライセンス抜きのアプリケーションをビルドするには、ライセンスの一覧リストを空にし、"評価版アプリケーションをビルドする"が**チェックされていない**ことを確認して下さい。
 
 In this case, the end-user will have to purchase and enter a per-user *4D Desktop* or *4D Server* license at first application startup (when you embed a deployment license, the user does not have to enter or use their own license number). 詳細については、[**ライセンスについて**](#ライセンスについて) の段落を参照ください。
 
