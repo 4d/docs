@@ -136,7 +136,7 @@ title: オブジェクト
 
 ## 式の型/式タイプ
 
-> This property is called [**Data Type**](properties_DataSource.md#data-type-list-expression-type) in the Property List for [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns and for [Drop-down Lists](dropdownList_Overview.md) associated to an [object](FormObjects/dropdownList_Overview.md#using-an-object) or an [array](FormObjects/dropdownList_Overview.md#using-an-array).
+> このプロパティは[セレクション型](listbox_overview.md#セレクションリストボックス) および [コレクション型](listbox_overview.md#コレクションまたはエンティティセレクションリストボックス) のリストボックスカラム、および[オブジェクト](FormObjects/dropdownList_Overview.md#オブジェクトの使用) または [配列](FormObjects/dropdownList_Overview.md#配列の使用) が割り当てられた[ドロップダウンリスト](dropdownList_Overview.md) のプロパティリストにおいて、[**データタイプ**](properties_DataSource.md#データタイプ-リスト) と呼ばれています。
 
 オブジェクトに関連付けられた式または変数のデータ型を指定します。 この設定の主な目的は、プロパティリスト内で提供されるテーマとオプションが、データの型と対応するようにするためです。 つまり、実際に変数の型そのものを決めるわけではありません。 プロジェクトをコンパイルするには、[変数を宣言](Concepts/variables.md#変数の宣言) する必要があります。
 
