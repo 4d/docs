@@ -181,7 +181,7 @@ Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero 
 
 ### Archivo Symbol
 
-If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project during compilation. Está dividido en varias partes:
+Si selecciona la opción [**Generar el archivo de simbolos**](#symbol-file) en las propiedades del compilador, un archivo de símbolos llamado `ProjectName_symbols.txt` se crea en la [carpeta Logs](../Project/architecture.md#logs-folder) del proyecto durante la compilación. Está dividido en varias partes:
 
 #### Lista de las variables proceso e interproceso
 
@@ -228,7 +228,7 @@ tipo resultado, número de llamadas, Thread Safe o Thread Unsafe
 
 ### Archivo de errores
 
-Puede elegir si generar o no un archivo de errores durante la compilación utilizando la opción [**Generar archivo de errores**](#generate-error-file) en las propiedades del compilador. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs-folder) of the project.
+Puede elegir si generar o no un archivo de errores durante la compilación utilizando la opción [**Generar archivo de errores**](#generate-error-file) en las propiedades del compilador. El archivo de errores se llama automáticamente `projectName_errors.xml` y se coloca en la carpeta [Logs](../Project/architecture.md#logs-folder) del proyecto.
 
 Aunque se puede acceder a los errores directamente a través de la [ventana de compilación](#compile), puede ser útil disponer de un archivo de errores que se pueda transmitir de una máquina a otra. El archivo de errores se genera en formato XML para facilitar el análisis automático de su contenido. También permite la creación de interfaces personalizadas de visualización de errores.
 
@@ -290,13 +290,13 @@ Ambos compiladores están integrados en 4D. El compilador adecuado se selecciona
 
 El compilador clásico genera código compilado nativo para procesadores Intel/AMD en cualquier máquina. No requiere ninguna configuración específica.
 
-Resulting compiled code is stored in the [DerivedData](./architecture.md#deriveddata-folder) folder of the project.
+El código compilado resultante se almacena en la carpeta [DerivedData](./architecture.md#deriveddata-folder) del proyecto.
 
 ### Compilador Silicon
 
 El compilador Silicon genera código compilado nativo para los procesadores Apple Silicon, como *Apple M1*.
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries-folder) folder of the project.
+El código compilado resultante se almacena en la carpeta [Libraries](architecture.md#libraries-folder) del proyecto.
 
 #### Requisitos
 
