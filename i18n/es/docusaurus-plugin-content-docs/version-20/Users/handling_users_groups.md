@@ -82,7 +82,7 @@ La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el 
 
 5. Defina el grupo o los grupos a los que pertenece el usuario mediante la tabla "Miembro de los grupos". Puede añadir o eliminar el usuario seleccionado a un grupo marcando la opción correspondiente en la columna Miembro.
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-groupss).
+La pertenencia de los usuarios a los distintos grupos también puede definirse por grupos en la página [Grupos](#configuring-groupss).
 
 ### Eliminar un usuario
 
