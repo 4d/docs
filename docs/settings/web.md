@@ -83,7 +83,7 @@ This area allows you to configure how the web server will handle user sessions a
 
 #### Scalable sessions (multi-process sessions)  
 
-When you select this option (recommended), a user session is managed through a **Session** object. See the [User sessions page](../WebServer/sessions.md#enabling-sessions).
+When you select this option (recommended), a user session is managed through a **Session** object. See the [User sessions page](../WebServer/sessions.md#enabling-web-sessions).
 
 
 #### No sessions  
@@ -94,7 +94,7 @@ In this mode, you can configure additional web server setttings:
 
 -   [Maximum Concurrent Web Processes](#maximum-concurrent-web-processes)
 -   [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
--   [Use preemptive processes](#use-preemptive-web-processes)
+-   [Use preemptive processes](#use-preemptive-processes)
 
 #### Legacy sessions (single process sessions)
 

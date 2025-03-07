@@ -17,7 +17,7 @@ The name of a class can contain up to 31 characters.
 
 A class name must be compliant with standard [property naming rules](#object-properties) for dot notation.
 
-> Giving the same name to a class and a [database table](#tables) is not recommended, in order to prevent any conflict.
+> Giving the same name to a class and a [database table](#tables-and-fields) is not recommended, in order to prevent any conflict.
 
 ## Functions
 

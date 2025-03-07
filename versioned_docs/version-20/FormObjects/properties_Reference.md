@@ -17,7 +17,6 @@ You will find in this page a comprehensive list of all object properties sorted 
 [g](#g) -
 [h](#h) -
 [i](#i) -
-[j](#j) -
 [k](#k) -
 [l](#l) -
 [m](#m) -
@@ -61,7 +60,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`customProperties`](properties_Plugins.md#advanced-properties)|Advanced properties (if any) |JSON string or base64 encoded string<a id="d"></a>|
 |**d**|||
 |[`dataSource`](properties_Object.md#variable-or-expression) (objects)<br/>[`dataSource`](properties_Subform.md#source) (subforms)<br/>[`dataSource`](properties_Object.md#data-source) (array list box) <br/> [`dataSource`](properties_Object.md#collection-or-entity-selection) (Collection or entity selection list box)<br/> [`dataSource`](properties_DataSource.md#expression) (list box column) <br/> [`dataSource`](properties_Hierarchy.md#hierarchical-list-box) (hierarchical list box)|Specifies the source of the data.|A 4D variable, field name, or an arbitrary complex language expression.|
-|[`dataSourceTypeHint`](properties_Object.md#expression-type) (objects) <br/> [`dataSourceTypeHint`](properties_DataSource.md#data-type-list-expression-type) (list box column, drop-down list)|Indicates the variable type.|"integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"|
+|[`dataSourceTypeHint`](properties_Object.md#expression-type) (objects) <br/> [`dataSourceTypeHint`](properties_DataSource.md#data-type-expression-type) (list box column, drop-down list)|Indicates the variable type.|"integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"|
 |[`dateFormat`](properties_Display.md#date-format)|Controls the way dates appear when displayed or printed.|Built-in formats ("systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull")|
 |[`defaultButton`](properties_Appearance.md#default-button)|Modifies a button's appearance in order to indicate the recommended choice to the user.|true, false|
 |[`defaultValue`](properties_RangeOfValues.md#default-value)|Defines a value or a stamp to be entered by default in an input object|String or "#D", "#H", "#N"|
@@ -155,7 +154,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`rowStrokeSource`](properties_Text.md#row-font-color-array) (array list box)<br/>[`rowStrokeSource`](properties_Text.md#font-color-expression) (selection or collection/entity selection list box)|An array or expression for managing row colors.|Name of array or expression.|
 |[`rowStyleSource`](properties_Text.md#row-style-array) (array list box) <br/> [`rowStyleSource`](properties_Text.md#style-expression) (selection or collection/entity selection list box)|An array or expression for managing row styles.|Name of array or expression.<a id="s"></a>|
 |**s**|||
-|[`saveAs`](properties_DataSource.md#save-as) (list box column)<br/>[`saveAs`](properties_DataSource.md#data-type-list-list) (drop-down list)|The type of contents to save in the field or variable associated to the form object|"value", "reference"|
+|[`saveAs`](properties_DataSource.md#save-as) (list box column)<br/>[`saveAs`](properties_DataSource.md#data-type-list) (drop-down list)|The type of contents to save in the field or variable associated to the form object|"value", "reference"|
 |[`scrollbarHorizontal`](properties_Appearance.md#horizontal-scroll-bar) | A tool allowing the user to move the viewing area to the left or right.|"visible", "hidden", "automatic"|
 |[`scrollbarVertical`](properties_Appearance.md#vertical-scroll-bar) | A tool allowing the user to move the viewing area up or down.|"visible", "hidden", "automatic"|
 |[`selectedItemsSource`](properties_DataSource.md#selected-items)|Collection of the selected items in a list box.|Collection expression	|

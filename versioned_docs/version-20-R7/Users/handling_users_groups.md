@@ -92,7 +92,7 @@ You can use up to 15 alphanumeric characters for a password. The password editor
 5. Set the group(s) to which the user belongs using the "Member of Groups" table.
 You can add or remove the selected user to/from a group by checking the corresponding option in the Member column.
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-groupss).
+The membership of users to different groups can also be set by group on the [Groups page](#configuring-groups).
 
 ### Deleting a user
 

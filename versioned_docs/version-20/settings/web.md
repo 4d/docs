@@ -94,7 +94,7 @@ In this mode, you can configure additional web server setttings:
 
 -   [Maximum Concurrent Web Processes](#maximum-concurrent-web-processes)
 -   [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
--   [Use preemptive processes](#use-preemptive-web-processes)
+-   [Use preemptive processes](#use-preemptive-processes)
 
 #### Legacy sessions (single process sessions)
 

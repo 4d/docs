@@ -160,7 +160,7 @@ A "pessimistic lock" means that an entity is locked prior to its being accessed,
 
 ## Privilege
 
-The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
+The ability to run one or more [actions](#action) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
 
 ## Property  
 

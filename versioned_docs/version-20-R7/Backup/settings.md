@@ -9,7 +9,7 @@ Backup settings are defined through three pages in the [Settings dialog box](../
 - the files to include in every backup
 - the advanced features allowing to execute automatic tasks
 
-> Settings defined in this dialog box are written in the *Backup.4DSettings* file, stored in the [Settings folder](Project/architecture.md#settings-folder).
+> Settings defined in this dialog box are written in the *Backup.4DSettings* file, stored in the [Settings folder](Project/architecture.md#settings-user).
 
 ## Scheduler
 
@@ -50,8 +50,8 @@ This area allows you to set which files and/or folders to copy during the next b
 
 - **Data**: Application data file. When this option is checked, the following elements are automatically backed up at the same time as the data:
 	- the current log file of the application (if it exists),
-	- the full `Settings` folder located [next to the data file](Project/architecture.md#settings-folder) (if it exists), i.e. the *user settings for data*.
-- **Structure**: Application project folders and files. In cases where projects are compiled, this option allows you to backup the .4dz file. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](Project/architecture.md#settings-folder-1), i.e. the *user settings*, is automatically backed up.
+	- the full `Settings` folder located [next to the data file](Project/architecture.md#settings-user-data) (if it exists), i.e. the *user settings for data*.
+- **Structure**: Application project folders and files. In cases where projects are compiled, this option allows you to backup the .4dz file. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](Project/architecture.md#settings-user-1), i.e. the *user settings*, is automatically backed up.
 - **User Structure File (only for binary database)**: *deprecated feature*
 - **Attachments**: This area allows you to specify a set of files and/or folders to be backed up at the same time as the application. These files can be of any type (documents or plug-in templates, labels, reports, pictures, etc.). You can set either individual files or folders whose contents will be fully backed up. Each attached element is listed with its full access path in the “Attachments” area.
 	- **Delete**: Removes the selected file from the list of attached files.

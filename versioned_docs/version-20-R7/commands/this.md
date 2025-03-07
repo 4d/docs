@@ -24,7 +24,7 @@ In any other context, the command returns **Null**.
 
 #### Class function
 
-When a [class constructor](#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
+When a [class constructor](../Concepts/classes.md#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
 
 ```4d
 //Class: ob
@@ -44,7 +44,7 @@ $val:=$o.a //42
 ```
 
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](super.md#example-1).
+> When calling the superclass constructor in a constructor using the [Super](super.md) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](super.md#example-1).
 
 In any cases, `This` refers to the object the method was called on, as if the method were on the object.
 
