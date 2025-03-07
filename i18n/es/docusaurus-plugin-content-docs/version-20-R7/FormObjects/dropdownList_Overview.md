@@ -137,7 +137,7 @@ Cuando se ejecuta el formulario, 4D gestiona automáticamente la lista desplegab
 
 #### Valor del elemento seleccionado o Referencia del elemento seleccionado
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type-list) property to **Selected item value** or **Selected item reference**. Esta opción permite optimizar el tamaño de los datos guardados.
+Cuando haya asociado una lista desplegable con una lista de opciones y con un campo o una variable, puede definir la propiedad [**Tipo de datos**](properties_DataSource.md#data-type-list) en **Valor del elemento seleccionado** o **Referencia del elemento seleccionado**. Esta opción permite optimizar el tamaño de los datos guardados.
 
 ### Uso de una lista de selección jerárquica
 
