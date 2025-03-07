@@ -686,7 +686,7 @@ title: Index
 [`New collection`](new-collection.md)<br/>
 [`New data key`](../commands-legacy/new-data-key.md)<br/>
 [`New list`](../commands-legacy/new-list.md)<br/>
-[`New log file`](../commands-legacy/new-log-file.md)<br/>
+[`New log file`](new-log-file.md)<br/>
 [`New object`](../commands-legacy/new-object.md)<br/>
 [`New process`](../commands-legacy/new-process.md)<br/>
 [`New shared collection`](new-shared-collection.md)<br/>
@@ -1047,7 +1047,7 @@ title: Index
 [`Select folder`](../commands-legacy/select-folder.md)<br/>
 [`SELECT LIST ITEMS BY POSITION`](../commands-legacy/select-list-items-by-position.md)<br/>
 [`SELECT LIST ITEMS BY REFERENCE`](../commands-legacy/select-list-items-by-reference.md)<br/>
-[`SELECT LOG FILE`](../commands-legacy/select-log-file.md)<br/>
+[`SELECT LOG FILE`](select-log-file.md)<br/>
 [`Select RGB Color`](../commands-legacy/select-rgb-color.md)<br/>
 [`Selected list items`](../commands-legacy/selected-list-items.md)<br/>
 [`Selected record number`](../commands-legacy/selected-record-number.md)<br/>
