@@ -319,7 +319,7 @@ Por ejemplo, puede ejecutar:
 
 En caso de que se produzca un error durante la interpretación, el texto insertado será de la forma: `<!--#4DEVAL expr-->: ## error # código del error`.
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> Por razones de seguridad se recomienda utilizar la etiqueta [`4DTEXT`](#4dtext) al procesar datos introducidos desde fuera de la aplicación, para evitar la [inserción de código malicioso](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DHTML
 
@@ -338,7 +338,7 @@ Por ejemplo, aquí están los resultados del procesamiento de la variable de tex
 
 En caso de error de interpretación, el texto insertado será `><!--#4DHTML myvar-->: ## error # código del error`.
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> Por razones de seguridad se recomienda utilizar la etiqueta [`4DTEXT`](#4dtext) al procesar datos introducidos desde fuera de la aplicación, para evitar la [inserción de código malicioso](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DIF, 4DELSE, 4DELSEIF y 4DENDIF
 
@@ -651,7 +651,7 @@ El valor de la variable 4D `vtSiteName` se insertará en la página HTML cuando 
 
 También puede insertar expresiones 4D. Por ejemplo, puede insertar directamente el contenido de un campo (`<! -#4DTEXT [tableName]fieldName-->`), un elemento array (`<! -#4DTEXT tabarr{1}-->`) o un método que devuelve un valor (`<!--#4DTEXT mymethod-->`). La conversión de las expresiones sigue las mismas reglas que las de las variables. Además, la expresión debe cumplir con las reglas de sintaxis 4D.
 
-> For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> Por razones de seguridad, se recomienda utilizar esta etiqueta al procesar datos introducidos desde fuera de la aplicación, con el fin de evitar la [inserción del código malicioso](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 En caso de error de evaluación, el texto insertado aparecerá como `<!--#4DTEXT myvar--> : ## error # código de error`.
 
@@ -706,7 +706,7 @@ Utilizando la sintaxis $, el siguiente código es validado por el analizador:
 
 Tenga en cuenta que `$4dtag` y `<--#4dtag -->` no son estrictamente equivalentes: a diferencia de `<--#4dtag -->`, `$4dtag` el procesamiento no interpreta las etiquetas 4D [de manera recursiva](#recursive-processing). Las etiquetas `$` siempre se evalúan una vez y el resultado se considera texto plano.
 
-La razón de esta diferencia es evitar la inyección de código malicioso. As [explained below](../WebServer/templates.md#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. Sin embargo, como `4DTEXT` no escapa al símbolo `$`, decidimos romper el soporte para la recursividad con el fin de prevenir la inyección maliciosa utilizando la sintaxis `$4dtag (expression)`.
+La razón de esta diferencia es evitar la inyección de código malicioso. Como se [explica a continuación](../WebServer/templates.md#prevention-of-malicious-code-insertion), se recomienda encarecidamente utilizar las etiquetas `4DTEXT` en lugar de las etiquetas `4DHTML` cuando se manipula texto usuario para protegerse de la reinterpretación no deseada de las etiquetas: con `4DTEXT`, los caracteres especiales como "<" no se mencionan, por lo que toda etiqueta 4D que utilice la sintaxis `<!--#4dtag expression -->` perderá su significado particular. Sin embargo, como `4DTEXT` no escapa al símbolo `$`, decidimos romper el soporte para la recursividad con el fin de prevenir la inyección maliciosa utilizando la sintaxis `$4dtag (expression)`.
 
 Los siguientes ejemplos muestran el resultado del procesamiento en función de la sintaxis y la etiqueta utilizada:
 
