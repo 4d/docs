@@ -118,7 +118,7 @@ The method that is executing when you click the **Abort and Edit** button opens 
 - ウィンドウのサイズと位置
 - 分割線の位置
 - [表示モード](#表示モード)
-- カスタムのウォッチエリアに現在表示されている式 デフォルトでは、カレントメソッドと関数に対しては式は保存されています。 [**式を固定**](#pin-an-expression) することで、全てのコンテキストにおいてその式を表示させることができます。
+- カスタムのウォッチエリアに現在表示されている式 デフォルトでは、カレントメソッドと関数に対しては式は保存されています。 You can [**pin an expression**](#pinning-an-expression) to keep it displayed in all contexts.
 
 **デフォルトウィンドウ設定** ボタンを使用するとカレントウィンドウのデフォルトの位置とサイズを復元します(これには分割線とウィンドウ自体を含みます)。
 
