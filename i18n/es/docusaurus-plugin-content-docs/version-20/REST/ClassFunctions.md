@@ -58,7 +58,7 @@ Se aplican las siguientes reglas:
 - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
 - La selección de entidades y la entidad se pueden pasar como parámetros. El objeto JSON debe contener atributos específicos utilizados por el servidor REST para asignar datos a los objetos ORDA correspondientes: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
-Ver [este ejemplo](#request-receiving-an-entity-selection-as-parameter).
+Ver [este ejemplo](#receiving-an-entity-selection-as-parameter).
 
 
 ### Parámetro de valor escalar
@@ -87,7 +87,7 @@ Las entidades pasadas en los parámetros son referenciadas en el servidor a trav
 - Si no se proporciona __KEY, se crea una nueva entidad en el servidor con los atributos dados.
 - Si se proporciona __KEY, la entidad correspondiente a __KEY se carga en el servidor con los atributos dados
 
-Ver los ejemplos de [creación](#creating-an-entity) o de [actualización](#updating-an-entity) de las entidades.
+See examples for creating or updating entities.
 
 #### Parámetro de entidad asociado
 
