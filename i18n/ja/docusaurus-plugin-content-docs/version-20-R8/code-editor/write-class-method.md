@@ -31,9 +31,9 @@ title: コードエディター
 | **メソッド中を検索**         | ![search-icon](../assets/en/code-editor/search.png)                               | [*検索* エリア](#検索と置換) を表示します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | **マクロ**              | ![macros-button](../assets/en/code-editor/macros.png)                             | 選択対象にマクロを挿入します。 ドロップダウンの矢印をクリックすると、利用可能なマクロがすべて表示されます。 マクロの作成とインスタンス化についの詳細は、 [マクロ](#マクロ) を参照ください。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | **すべて折りたたむ / すべて展開** | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | これらのボタンを使用してコードの制御フロー構造を折りたたんだり展開したりできます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **メソッド情報**           | ![method-information-icon](../assets/en/code-editor/method-information.png)       | [メソッドプロパティ](../Concepts/methods.md#プロジェクトメソッドプロパティ) ダイアログボックスを表示します (プロジェクトメソッドのみ)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **メソッド情報**           | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Project/code-overview.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **最新のクリップボードの値**     | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | 直近でクリップボードに保存された値を表示します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| **クリップボード**          | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | コードエディターで利用可能な 9つのクリップボードです。 クリップボードのアイコンをクリックするか、あるいはキーボードショートカットによって、[これらのクリップボードを利用](./write-class-method.md#コピーペースト文字列を複数記憶する) できます。 [環境設定オプション](Preferences/methods.md#options-1) を使用するとそれらを非表示にすることができます。                                                                                                                                                                                                                                                                                                                                                                         |
+| **クリップボード**          | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | コードエディターで利用可能な 9つのクリップボードです。 You can [use these clipboards](#clipboards) by clicking on them directly or by using keyboard shortcuts. [環境設定オプション](Preferences/methods.md#options-1) を使用するとそれらを非表示にすることができます。                                                                                                                                                                                                                                                                                                                                                            |
 | **ナビゲーションドロップダウン**   | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | 自動的にタグ付けされたコンテンツや手動で宣言されたマーカーを使用して、メソッドやクラス内を移動できます。 後述参照。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 ### 編集エリア
@@ -93,7 +93,7 @@ title: コードエディター
 - **メソッド**: データベースに定義されたプロジェクトメソッド名。
 - **すべてのフォルダー**: データベースに定義されたオブジェクトフォルダーおよびサブフォルダー名 (階層リスト形式)。 フォルダーは、カスタマイズされた方法でオブジェクトをグループ化するために使用します。 フォルダーは、エクスプローラーのホームページで管理します。
 - **フォルダー** (サブメニュー): サブメニューを使用して選択されたフォルダーの中身。
-- **マクロ**: データベースに定義されたマクロ名 ([マクロの作成と利用](creating-and-using-macros.md) 参照)。
+- **Macros**: Macro names defined for the database (see [Creating and using macros](#macros)).
 - **コマンド**: 4Dランゲージコマンド (文字順)。
 - **コマンドリスト (テーマ順)**: テーマごとにグループ化された 4Dランゲージコマンド (階層リスト形式)。
 - **メニューバー**: [4Dメニューバーエディターで作成した](../Menus/creating.md) メニューバーの名前と番号。
@@ -274,7 +274,7 @@ macOSでは **Ctrl** の代わりに **Command** を使用してください。
 
 コードエディターへの入力と編集には標準のテキスト編集テクニックを使用します。
 
-コードエディターは、シンタックス要素ごとに、指定されたスタイルやカラーを使用した表示をおこないます。 この設定は[変更できます](#編集エリア)。 入力を確定するごとに、また改行を挿入する際に、4D は行のテキストを評価して適切な表示フォーマットを適用します。 また、If や End if などのプログラム構造が使用された場合、4D は自動でインデントをおこないます。
+コードエディターは、シンタックス要素ごとに、指定されたスタイルやカラーを使用した表示をおこないます。 You can [customize these conventions](#editing-area). 入力を確定するごとに、また改行を挿入する際に、4D は行のテキストを評価して適切な表示フォーマットを適用します。 また、If や End if などのプログラム構造が使用された場合、4D は自動でインデントをおこないます。
 
 行に移動するには矢印キーを使用します。 矢印による移動では行の評価がおこなわれないため、クリックよりもすばやく移動できます。
 
@@ -522,7 +522,7 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 :::
 
-- **エラー**: ブレークポイントエリアにエラーアイコンが表示されているとき、マウスをアイコンに重ねるとエラーの内容が表示されます ([シンタックスエラー](#シンタックスエラー) 参照)。
+- **Errors**: When you mouse over the symbol indicating an error to the left of the editing area, a help tip displays the cause of the error (see [Syntax errors](#warnings-and-errors)).
 
 - **4D コマンドドキュメンテーション**: 4D のコマンドや関数にマウスを重ねると、コマンドシンタックスと簡単な説明がヘルプTip に表示されます。
   ![](../assets/en/code-editor/status-bar-description.png)
