@@ -21,7 +21,7 @@ O construtor de aplicações permite-lhe:
 A cria de um pacote de projetos pode ser efetuada utilizando:
 
 * ou o comando [`BUILD APPLICATION`](https://doc.4d.com/4dv20/help/command/en/page871.html),
-* or the [Build Application window](#application-builder).
+* or the [Build Application dialog](#build-application-dialog).
 
 :::tip
 
@@ -44,7 +44,7 @@ A geração do banco de dados só pode ser realizado quando o banco de dados for
 
 ### buildApp.4DSettings
 
-Cada parâmetro de geração da aplicação é armazenado como uma chave XML no arquivo da aplicação chamada "buildApp.4DSettings", localizado na pasta  Settings do banco de dados.
+Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the [`Settings` folder of the project](../Project/architecture.md#settings-user).
 
 Os parâmetros padrão são utilizados na primeira vez que a caixa de diálogo Criar aplicação é utilizada. O conteúdo do ficheiro é atualizado, se necessário, quando se clica em **Criar** ou **Salvar os parâmetros**. Pode definir vários outros ficheiros de parâmetros XML para o mesmo projeto e utilizá-los utilizando o comando [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
 
@@ -88,7 +88,7 @@ This feature creates a `.4dz`file within a `Compiled Database/<project name>` fo
 
 Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar.
 
-> Ao gerar arquivos .4dz, 4D usa um formato zip padrão **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. Se você não quiser usar esse formato padrão, adicione a chave `UseStandardZipFormat` XML com o valor `False` no arquivo [`buildApp.4DSettings`](#build-application-settings) (para obter mais informações, consulte o manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
+> Ao gerar arquivos .4dz, 4D usa um formato zip padrão **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#buildapp4dsettings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
 
 #### Incluir pastas relacionadas
 
@@ -163,7 +163,7 @@ Se você tiver especificado "MyProject" como o nome do aplicativo, encontrará o
 * *Windows*
   * MyProject.exe - Seu executável e um MyProject.rsr (os recursos da aplicação)
   * Pasta 4D Extensions, pasta Resources, várias bibliotecas (DLL), pasta Native Components, pasta SASL Plugins - Arquivos necessários para a operação do aplicativo
-  * Uma pasta Database - Inclui uma pasta Resources e um arquivo MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file. **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#data-file-management-in-final-applications).
+  * Uma pasta Database - Inclui uma pasta Resources e um arquivo MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file. **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#management-of-data-files).
   * (Opcional) Pasta Components e/ou pasta Plugins - Contém todos os componentes e/ou arquivos de plug-in incluídos no banco de dados. For more information about this, refer to the [Plugins and components](#plugins--components-page) section.
   * (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. For more information about this, refer to the [Licenses & Certificate](#licenses--certificate-page) section.
   * Itens adicionais adicionados à pasta da Área de Trabalho de Volume 4D, se houver (veja [Personalizando a pasta de Volume 4D para Desktop](#customizing-4d-volume-desktop-folder)).
@@ -250,11 +250,11 @@ Utilizado para indicar o número da versão atual da aplicação gerada. Pode en
 
 **Nota Preliminar:** Os seguintes termos são utilizados nesta secção:
 
-| Nome                                | Definição                                                                                                                                                                       |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ficheiro do directório do projecto  | [directório.json](../Users/handling_users_groups.md#directoryjson-file) ficheiro localizado na pasta [Settings ](../Project/architecture.md#settings-1) do projecto             |
-| Ficheiro do directório de aplicação | [directório.json](../Users/handling_users_groups.md#directoryjson-file) ficheiro localizado na pasta [Settings ](../Project/architecture.md#settings-1) do 4D Server construído |
-| Ficheiro obrigatório                | ficheiro [directory.json](../Users/handling_users_groups.md#directoryjson-file) no a pasta [Data > Settings](../Project/architecture.md#settings)                               |
+| Nome                                | Definição                                                                                                                                                                     |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ficheiro do directório do projecto  | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the project         |
+| Ficheiro do directório de aplicação | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the built 4D Server |
+| Ficheiro obrigatório                | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file in the [Data > Settings folder](../Project/architecture.md#settings-user-data)                    |
 
 Quando marca esta opção, o ficheiro do directório do projecto é copiado para o ficheiro do directório da aplicação no momento da construção.
 
@@ -565,7 +565,7 @@ Para obter um certificado de desenvolvedor da Apple, Inc., você pode usar os co
 
 Gatekeeper is a security feature of macOS that controls the execution of applications downloaded from the Internet. Se um aplicativo baixado não vem da Apple Store ou não estiver assinado, será rejeitado e não poderá ser iniciado.
 
-> Nas máquinas do Apple Silicon, 4D [componentes](#components) precisam ser realmente assinados. Um componente não assinado irá gerar um erro ao iniciar o aplicativo ("lib4d-arm64.dylib não pode ser aberto...").
+> On Apple Silicon machines, 4D components need to be actually signed. Um componente não assinado irá gerar um erro ao iniciar o aplicativo ("lib4d-arm64.dylib não pode ser aberto...").
 
 A aplicação **Sinal** opção do construtor de aplicação 4D permite que você gere aplicativos e componentes que são compatíveis com esta opção por padrão.
 
