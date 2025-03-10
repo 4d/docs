@@ -16,6 +16,7 @@ Après avoir [créé un ensemble d'entités]($method.md#methodentityset) à l'ai
 
 Récupère un ensemble d'entités existant (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
+
 ### Description
 
 Cette syntaxe vos permet d'exécuter toute opération sur un entity set défini.
