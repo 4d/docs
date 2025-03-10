@@ -35,7 +35,7 @@ Todas as fórmulas têm operandos e operadores:
 *   **Operandos** inclui várias categorias:
     *   Os [valores](#values-and-operators) (5 tipos de dados são suportados)
     *   As [referências a outras células](#cell-references) (relativo, absoluto, misto ou por nome)
-    *   [funções standard de folha de cálculo](#using-functions)
+    *   [funções standard de folha de cálculo](#built-in-functions)
     *   [funções 4D](#4d-functions) baseadas em fórmulas 4D e que fornecem acesso a variáveis, campos, métodos, comandos ou expressões 4D.
 
 ## Valores e operadores
@@ -359,7 +359,7 @@ You can call directly 4D project methods from within your 4D View Pro formulas. 
 Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 
 *   **Permitido**: ele foi declarado explicitamente usando o método [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
-*   **Executável**: pertence ao projeto host ou a um componente carregado com a opção "Compartilhado por componentes e projeto host" ativada (consulte [Compartilhamento de métodos projeto](../Concepts/components.md#sharing-of-project-methods)).
+*   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Extensions/develop-components.md#sharing-of-project-methods)).
 *   **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
 > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. Nesse caso, os nomes dos métodos projeto devem estar em conformidade com a gramática do identificador JavaScript (consulte o [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
 
