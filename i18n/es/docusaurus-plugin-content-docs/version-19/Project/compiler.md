@@ -296,7 +296,7 @@ El código compilado resultante se almacena en la carpeta [DerivedData](./archit
 
 El compilador Silicon genera código compilado nativo para los procesadores Apple Silicon, como *Apple M1*.
 
-El código compilado resultante se almacena en la carpeta [Libraries](architecture.md#libraries-folder) del proyecto.
+Resulting compiled code is stored in the [Libraries](./architecture.md#libraries-folder) folder of the project.
 
 #### Requisitos
 
