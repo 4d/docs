@@ -96,7 +96,7 @@ Podem ser armazenadas chaves de encriptação sucessivas no mesmo dispositivo.
 
 :::caution
 
-Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore). Quando a seqüência de restauração é acionada, 4D deve ter acesso ao arquivo de chave de encriptação, caso contrário ocorre um erro.
+O armazenamento do arquivo da chave de encriptação de dados no primeiro nível do dispositivo é obrigatório quando se utiliza a funcionalidade  [Restauro automático e integração de registos](../Backup/settings.md#automatic-restore-and-log-integration). Quando a seqüência de restauração é acionada, 4D deve ter acesso ao arquivo de chave de encriptação, caso contrário ocorre um erro.
 
 :::
 
