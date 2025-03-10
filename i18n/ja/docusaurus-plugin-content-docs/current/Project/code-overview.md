@@ -106,7 +106,7 @@ title: メソッドとクラス
 
 ### 実行モード
 
-このオプションを使用すると、メソッドのプリエンプティブ実行が可能であることを宣言できます。 これについては、[プリエンプティブプロセス](../Develop/processes.md#プリエンプティブプロセス) の章で説明されています。
+このオプションを使用すると、メソッドのプリエンプティブ実行が可能であることを宣言できます。 It is described in the [Preemptive processes section](../Develop/preemptive.md).
 
 ### 公開オプション
 
