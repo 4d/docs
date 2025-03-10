@@ -68,7 +68,7 @@ La página contiene varias áreas:
 - En el lado izquierdo se encuentran el **área de las Clases de datos** y el **área de los atributos**, lo que permite seleccionar las clases de datos y los atributos a mostrar. Los atributos se ordenan según el orden de creación de la estructura subyacente. Las llaves primarias y los atributos indexados tienen un icono específico. Puede filtrar la lista de nombres de clases de datos y de atributos propuestos utilizando las áreas de búsqueda respectivas. ![alt-text](../assets/en/Admin/dataExplorer3.png)
 
 - La parte central contiene el **Área de búsqueda** y la **Rejilla de datos** (lista de entidades de la clase de datos seleccionada). Cada columna de la cuadrícula representa un atributo del almacén de datos.
-  - Por defecto, se muestran todas las entidades. Puede filtrar las entidades mostradas utilizando el área de búsqueda. Two query modes are available: [Query on attributes](#query-on-attributes) (selected by default), and the [Advanced queries with expression](#advanced-queries-with-expression). El modo de consulta se selecciona haciendo clic en el botón correspondiente (el botón **X** permite restablecer el área de consulta y, por tanto, dejar de filtrar): ![alt-text](../assets/en/Admin/dataExplorer4b.png)
+  - Por defecto, se muestran todas las entidades. Puede filtrar las entidades mostradas utilizando el área de búsqueda. Hay dos modos de consulta disponibles: [Consulta sobre los atributos](#query-on-attributes) (seleccionada por defecto), y [Consultas avanzadas con la expresión](#advanced-queries-with-expression). El modo de consulta se selecciona haciendo clic en el botón correspondiente (el botón **X** permite restablecer el área de consulta y, por tanto, dejar de filtrar): ![alt-text](../assets/en/Admin/dataExplorer4b.png)
 
   - El nombre de la clase de datos seleccionada se añade como una pestaña encima de la cuadrícula de datos. Utilizando estas pestañas, puede cambiar entre las clases de datos que ya han sido seleccionadas. Puede eliminar una clase de datos referenciada haciendo clic en el icono "eliminar" situado a la derecha del nombre de la clase de datos.
   - Puede reducir el número de columnas desmarcando los atributos en la parte izquierda. También puede cambiar las columnas de la cuadrícula de datos utilizando arrastrar y soltar. Puede hacer clic en el encabezado de una columna para [ordenar entidades](#ordering-entities) de acuerdo a sus valores (cuando sea posible).
@@ -169,7 +169,7 @@ Por ejemplo, con la clase de datos Employee, puede escribir:
 firstname = "Marie Sophie" AND manager.lastname = "@th"
 ```
 
-You can click on the `v` icon to display both [`queryPlan`](../API/EntitySelectionClass.md#queryplan) and [`queryPath`](../API/EntitySelectionClass.md#querypath). En el área, puede pasar sobre los bloques de subconsultas para tener información detallada por subconsulta:
+Puede hacer clic en el ícono `v` para mostrar [`queryPlan`](../API/EntitySelectionClass.md#queryplan) y [`queryPath`](../API/EntitySelectionClass.md#querypath). En el área, puede pasar sobre los bloques de subconsultas para tener información detallada por subconsulta:
 
 ![alt-text](../assets/en/Admin/dataExplorer12.png)
 
