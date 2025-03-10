@@ -12,4 +12,4 @@ title: On Bound Variable Change
 
 Cet événement est généré dans le contexte de la méthode formulaire d'un [sous-formulaire](FormObjects/subform_overview.md) dès qu'une valeur est affectée à la variable liée au sous-formulaire du formulaire parent (même si la même valeur est réaffectée) et si le sous-formulaire appartient à la page formulaire courante ou à la page 0.
 
-Pour plus d'informations, reportez-vous à la section [Gérer la variable liée](FormObjects/subform_overview.md#managing-the-bound-variable).
+Form more information, refer to the [Managing the bound variable](../FormObjects/subform_overview.md#using-the-subform-bound-object) section.
