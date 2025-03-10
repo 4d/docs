@@ -48,7 +48,7 @@ title: HTTPリクエストの処理
 // メソッドのコード
 ```
 
-あるいは、[名前付き引数](Concepts/parameters.md#名前付き引数) シンタックスを利用することもできます:
+Alternatively, you can use the [named parameters](../Concepts/parameters.md) syntax:
 
 ```4d
 // On Web Connection データベースメソッド
