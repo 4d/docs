@@ -10,11 +10,12 @@ After [creating an entity set]($method.md#methodentityset) by using `$method=ent
 |Syntax|Example|Description|
 |---|---|---|
 |[**$entityset/\{entitySetID\}**](#entitysetentitysetid)|`/People/$entityset/0ANUMBER`|Retrieves an existing entity set|
-|[**$entityset/\{entitySetID\}?$operator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection)|`/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER`|Creates a new entity set from comparing existing entity sets|
+|[**$entityset/\{entitySetID\}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection)|`/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER`|Creates a new entity set from comparing existing entity sets|
 
 ## $entityset/\{entitySetID\}
 
 Retrieves an existing entity set (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+
 
 ### Description
 

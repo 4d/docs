@@ -131,7 +131,7 @@ The Trash folder contains methods and forms that were deleted from the project (
 - `Forms`
 - `TableForms`
 
-Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources-folder) folder.
+Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
 
 
 ### `DerivedData`

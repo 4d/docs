@@ -90,7 +90,7 @@ You can display the following lists of items in the lists area of the Code Edito
 - **Methods**: Database project method names.
 - **All folders**: Names of object folders and subfolders set in the database displayed in the form of a hierarchical list. Folders can be used to organize objects in a customized manner. They are managed from the Home Page of the Explorer.
 - **Folders** (submenu): Contents of the folder selected using the submenu.
-- **Macros**: Macro names defined for the database (see [Creating and using macros](#macros)).
+- **Macros**: Macro names defined for the database (see [Creating and using macros](./creating-using-macros.md)).
 - **Commands**: 4D language commands in alphabetical order.
 - **Commands by themes**: 4D language commands classified by theme in the form of a hierarchical list.
 - **Menu bars**: Names and numbers of menu bars [created with the 4D Menu bar editor](../Menus/creating.md).
@@ -523,7 +523,7 @@ The [status bar](#status-bar) also provides contextual information.
 
 :::
 
-- **Errors**: When you mouse over the symbol indicating an error to the left of the editing area, a help tip displays the cause of the error (see [Syntax errors](#warnings-and-errors)).
+- **Errors**: When you mouse over the symbol indicating an error to the left of the editing area, a help tip displays the cause of the error (see [Syntax errors](#syntax-errors)).
 
 - **4D command documentation**: When you move the mouse over a 4D command or function, a help tip provides its syntax along with a brief description of how it works.
     ![](../assets/en/code-editor/status-bar-description.png)

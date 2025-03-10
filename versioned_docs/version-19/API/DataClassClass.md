@@ -151,7 +151,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 |Property| Type| Description|
 |---|---|---|
-|context|Text|Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](../ORDA/entities.md#clientserver-optimization).|
+|context|Text|Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization).|
 
 #### Example
 
@@ -396,7 +396,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 |Property| Type| Description|
 |---|---|---|
-|context| Text| Label for the automatic optimization context applied to the entity. This context will be used by the subsequent code that loads the entity so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization).|
+|context| Text| Label for the automatic optimization context applied to the entity. This context will be used by the subsequent code that loads the entity so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization).|
 
 #### Example 1  
 

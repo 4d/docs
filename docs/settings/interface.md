@@ -30,7 +30,7 @@ Other options configure the display of various windows in the Application mode.
 
 :::note
 
-You can set the [frequency for cache flushing](database.md#memory-page-page) in **Settings** > **Database** > **Memory**.
+You can set the [frequency for cache flushing](database.md#memory-page) in **Settings** > **Database** > **Memory**.
 
 :::
 

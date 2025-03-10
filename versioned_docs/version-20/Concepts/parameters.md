@@ -352,7 +352,7 @@ This case is handled by 4D depending on the context:
 
 - in [compiled projects](interpreted.md), an error is generated at the compilation step whenever possible. Otherwise, an error is generated when the method is called.
 - in interpreted projects:
-	+ if the parameter was declared using the [named syntax](#named-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
+	+ if the parameter was declared using the [standard named syntax](#declaring-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
 	+ if the parameter was declared using (`C_XXX`), no error is generated, the called method receives an empty value of the expected type.
 
 

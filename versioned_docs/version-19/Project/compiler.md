@@ -298,7 +298,7 @@ Resulting compiled code is stored in the [DerivedData](./architecture.md#derived
 
 The Silicon compiler generates native compiled code for Apple Silicon processors, such as *Apple M1*.
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
+Resulting compiled code is stored in the [Libraries](./architecture.md#libraries-folder) folder of the project.
 
 #### Requirements
 

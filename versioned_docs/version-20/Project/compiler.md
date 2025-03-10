@@ -60,7 +60,7 @@ Syntax checking can also be launched directly using the **Check Syntax** command
 
 ### Generate Typing
 
-The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler_methods-method). These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times. 
+The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler-method). These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times. 
 
 The name of these methods must begin with `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-methods-for). The compiler methods that are generated and maintained by 4D automatically have the `Invisible` attribute:
 

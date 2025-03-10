@@ -28,7 +28,7 @@ The [`lockKindText` property](../API/EntityClass.md#lock) is "Locked by session"
 
 ### Description
 
-The locks triggered by the REST API are put at the [session](authUsers.md#sessions) level. 
+The locks triggered by the REST API are put at the [session](authUsers.md#opening-sessions) level. 
 
 A locked entity is seen as *locked* (i.e. lock / unlock / update / delete actions are not possible) by:
 

@@ -12,7 +12,7 @@ title: Restore
 
 - The loss of application file(s). This incident can occur because of defective sectors on the disk containing the application, a virus, manipulation error, etc. The last backup must be restored and then the current log file must be integrated. To find out if an application was damaged following an incident, simply relaunch the application using 4D. The program performs a self-check and details the necessary restore operations to perform. In automatic mode, these operations are performed directly without any intervention on the part of the user. If a regular backup strategy was put into place, the 4D restore tools will allow you to recover (in most cases) the application in the exact state it was in before the incident.
 
-> 4D can launch procedures automatically to recover applications following incidents. These mechanisms are managed using two options available on the **Backup/Backup & Restore** page of the Settings. For more information, refer to the [Automatic Restore](settings.md#automatic-restore) paragraph.  
+> 4D can launch procedures automatically to recover applications following incidents. These mechanisms are managed using two options available on the **Backup/Backup & Restore** page of the Settings. For more information, refer to the [Automatic Restore](./settings.md#automatic-restore-and-log-integration) paragraph.  
 > If the incident is the result of an inappropriate operation performed on the data (deletion of a record, for example), you can attempt to repair the data file using the "rollback" function in the log file. This function is available on the [Rollback](MSC/rollback.md) page of the MSC.
 
 

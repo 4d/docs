@@ -48,7 +48,7 @@ You must declare these parameters as shown below:
 //Code for the method
 ```
 
-Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
+Alternatively, you can use the [named parameters](../Concepts/parameters.md) syntax:
 
 ```4d
 // On Web Connection database method
