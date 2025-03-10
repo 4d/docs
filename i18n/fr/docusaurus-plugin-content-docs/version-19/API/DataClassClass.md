@@ -150,9 +150,9 @@ Le mode lazy loading est appliqué.
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
 
-| Propriété | Type | Description                                                                                                                                                                                                                                                                           |
-| --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. This feature is [designed for ORDA client/server processing](../ORDA/entities.md#clientserver-optimization). |
+| Propriété | Type | Description                                                                                                                                                                                                                                                                                   |
+| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 #### Exemple
 
@@ -224,9 +224,9 @@ Si une propriété \_\_STAMP est fournie, une vérification est effectuée sur l
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
 
-| Propriété | Type | Description                                                                                                                                                                                                                                                                                     |
-| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. Cette fonctionnalité est [conçue pour le traitement client/serveur ORDA](ORDA/entities.md#optimisation-client-server). |
+| Propriété | Type | Description                                                                                                                                                                                                                                                                            |
+| --------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. This feature is [designed for ORDA client/server processing](../ORDA//entities.md#clientserver-optimization). |
 
 #### Exemple 1
 
@@ -397,9 +397,9 @@ Le chargement différé (lazy loading) est appliqué, ce qui signifie que les do
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
 
-| Propriété | Type | Description                                                                                                                                                                                                                                                                 |
-| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Nom du contexte d'optimisation appliqué à l'entité. Ce contexte sera utilisé par le code qui manipule l'entité afin de bénéficier de l'optimisation. Cette fonctionnalité est [conçue pour le traitement client/serveur ORDA](ORDA/entities.md#optimisation-client-server). |
+| Propriété | Type | Description                                                                                                                                                                                                                                                               |
+| --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Nom du contexte d'optimisation appliqué à l'entité. Ce contexte sera utilisé par le code qui manipule l'entité afin de bénéficier de l'optimisation. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 #### Exemple 1
 
