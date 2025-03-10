@@ -82,7 +82,7 @@ title: 4Dユーザー＆グループの管理
 
 5. グループメンバー表を用いて、そのユーザーが所属するグループを設定します。 メンバーカラムの該当するオプションをチェックして、選択したユーザーをグループに対して追加・削除することができます。
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-groupss).
+[グループページ](#グループの設定) を使用して、各グループの所属ユーザーを設定することもできます。
 
 ### ユーザーの削除
 
@@ -194,7 +194,7 @@ The membership of users to different groups can also be set by group on the [Gro
 必要に応じて、このフォルダーは次の場所に保存することができます:
 
 - すべてのデータファイルについて同じディレクトリを使用する場合 (または 1つのデータファイルだけを使用する場合)、ユーザー設定フォルダー (["Project" フォルダーと同じ階層](Project/architecture.md#project-フォルダー) の "Settings" フォルダー) に **directory.json** ファイルをに保存します (デフォルトの場所)。
-- データファイルごとに特定のディレクトリファイルを使用する場合は、**directory.json** ファイルをデータ設定フォルダー、つまり ["Data" フォルダーの "Settings" フォルダー](Project/architecture.md#settings) に格納します。 **directory.json** ファイルがこの場所に保存されている場合、ユーザー設定フォルダーのファイルよりも優先されます。 アプリケーションをアップグレードしても、このカスタム/ローカルなユーザー＆グループ設定はそのままです。
+- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](../Project/architecture.md#settings-user-data). **directory.json** ファイルがこの場所に保存されている場合、ユーザー設定フォルダーのファイルよりも優先されます。 アプリケーションをアップグレードしても、このカスタム/ローカルなユーザー＆グループ設定はそのままです。
 
 > パスワードやグループメンバーシップを運用環境において安全に変更できるようにするには、ビルド時に [対応するビルドアプリケーションオプション](../Desktop/building.md#ビルドしたサーバーアプリケーションにプロジェクトのユーザーとグループを埋め込む) を使用して、サーバーアプリケーションに **directory.json** ファイルを含めることができます。
 
