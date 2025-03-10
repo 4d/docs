@@ -115,7 +115,7 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 // メソッドのコード
 ```
 
-あるいは、[名前付き引数](Concepts/parameters.md#名前付き引数) シンタックスを利用することもできます:
+Alternatively, you can use the [named parameters](Concepts/parameters.md) syntax:
 
 ```4d
 // On Web Authentication データベースメソッド
