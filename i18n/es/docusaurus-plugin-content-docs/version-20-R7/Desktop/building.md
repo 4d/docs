@@ -654,7 +654,7 @@ Este modo le permite duplicar sus aplicaciones fusionadas sin romper el vínculo
 
 Puede seleccionar el modo de vinculación de datos durante el proceso de generación de la aplicación. Puede:
 
-- Use the [Application page](#application-page) or [Client/Server page](#clientserver-page) of the Build Application dialog box.
+- Utilice la [página Aplicación](#application-page) o la [Página cliente/servidor](#clientserver-page) de la caja de diálogo del Generador de aplicaciones.
 - Utilice la llave XML **LastDataPathLookup** (aplicación monopuesto o aplicación servidor).
 
 ### Definir una carpeta de datos por defecto
