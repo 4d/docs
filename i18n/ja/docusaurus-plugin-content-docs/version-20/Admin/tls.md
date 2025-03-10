@@ -107,6 +107,6 @@ TLS は公開鍵暗号化技術を用います。これは、暗号化と復号�
 
 [PFS](https://ja.wikipedia.org/wiki/Forward_secrecy) は通信の中に新たなレイヤーのセキュリティを追加します。 事前準備された交換鍵を使用する代わりに、PFS は Diffie-Hellman (DH) アルゴリズムを用いて通信相手同士で協同的にセッションキーを作成します。 このように協同で鍵を作成することで "共有の秘密" が作成され、外部への漏洩を防ぐことができます。
 
-サーバー上で TLS が有効化されているとき、PFS は自動的に有効されます。 *dhparams.pem* ファイル (サーバーの DH非公開鍵を含むドキュメント) がまだ存在していない場合、4D は 2048 の鍵サイズで自動的にそれを生成します。 このファイルの生成には数分間かかる可能性があります。 このファイルは、[*key.pem* および *cert.pem* ファイル](#key-pem-and-cert-pem-files) と同じ場所に置きます。
+サーバー上で TLS が有効化されているとき、PFS は自動的に有効されます。 *dhparams.pem* ファイル (サーバーの DH非公開鍵を含むドキュメント) がまだ存在していない場合、4D は 2048 の鍵サイズで自動的にそれを生成します。 このファイルの生成には数分間かかる可能性があります。 The file is placed with the [*key.pem* and *cert.pem* files](#installing-keypem-and-certpem-files).
 
-[カスタムの暗号リスト](WebServer/webServerConfig.md##cipher-list) を使用していて、PFS を有効化したい場合、DH あるいは ECDH (Elliptic-curve Diffie–Hellman) アルゴリズムのエントリーがそのリストに含まれている必要があります。
+If you use a [custom cipher list](WebServer/webServerConfig.md#cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
