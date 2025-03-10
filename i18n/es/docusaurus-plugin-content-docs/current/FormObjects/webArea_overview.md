@@ -3,11 +3,11 @@ id: webAreaOverview
 title: Área Web
 ---
 
-Las áreas web pueden mostrar varios tipos de contenido web dentro de sus formularios: páginas HTML con contenidos estáticos o dinámicos, archivos, imágenes, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
+Las áreas web pueden mostrar varios tipos de contenido web dentro de sus formularios: páginas HTML con contenidos estáticos o dinámicos, archivos, imágenes, JavaScript, etc. El motor de renderizado del área web depende de la plataforma de ejecución de la aplicación y de la [opción motor de renderizado](properties_WebArea.md#use-embedded-web-rendering-engine) seleccionada.
 
 Es posible crear varias áreas web en el mismo formulario. Tenga en cuenta, sin embargo, que el uso de las áreas web debe seguir [varias reglas](#web-area-rules).
 
-Several dedicated [standard actions](#standard-actions), numerous [language commands](../category/web-area) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Se pueden utilizar variables específicas para intercambiar información entre el área y el entorno 4D.
+Varias [acciones estándar](#standard-actions) dedicadas, numerosos [comandos de lenguaje](../category/web-area) así como [eventos de formulario](#form-events) genéricos y específicos permiten al desarrollador controlar el funcionamiento de las áreas web. Se pueden utilizar variables específicas para intercambiar información entre el área y el entorno 4D.
 
 ## Propiedades específicas
 
@@ -16,19 +16,19 @@ Several dedicated [standard actions](#standard-actions), numerous [language comm
 Se pueden asociar dos variables específicas a cada área web:
 
 - [`URL`](properties_WebArea.md#url) --para controlar la URL mostrada por el área web
-- [`Progression`](properties_WebArea.md#progression) -- to control the loading percentage of the page displayed in the web area.
+- [`Progression`](properties_WebArea.md#progression) -- para controlar el porcentaje de carga de la página mostrada en el área web.
 
-> As of 4D v19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
+> A partir de 4D v19 R5, la variable Progression ya no se actualiza en las Áreas Web que utilizan el [motor de renderizado del sistema Windows](./webArea_overview.md#web-rendering-engine).
 
 ### Motor de renderización web
 
-You can choose between [two rendering engines](properties_WebArea.md#use-embedded-web-rendering-engine) for the web area, depending on the specifics of your application.
+Puede elegir entre [dos motores de renderizado](properties_WebArea.md#use-embedded-web-rendering-engine) para el área web, dependiendo de las especificaciones de su aplicación.
 
 Seleccionar el motor de renderizado web anidado permite llamar a los métodos de 4D desde el área web y asegurarse de que las funcionalidades en macOS y Windows sean similares. Se recomienda seleccionar el motor de renderizado del sistema cuando el área web está conectada a Internet porque siempre se beneficia de las últimas actualizaciones de seguridad.
 
 ### Acceder a los métodos 4D
 
-When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a web area.
+Cuando la propiedad [Acceso a los métodos 4D](properties_WebArea.md#access-4d-methods) está seleccionada, puede llamar a métodos 4D desde un área web.
 
 :::note Notas
 
@@ -39,7 +39,7 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 
 ### Objeto $4d
 
-The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
+El [motor de renderizado web integrado](properties_WebArea.md#use-embedded-web-rendering-engine) suministra el área con un objeto JavaScript llamado $4d que puede asociar con cualquier método de proyecto 4D usando la notación de objeto ".".
 
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
 
@@ -111,8 +111,8 @@ The 4D project method `calcSum` receives parameters and returns their sum:
 
 ```4d
  #DECLARE (... : Real) -> $sum : Real 
-  // receives n Real type parameters
-  // and returns a Real
+  // recibe n parámetros de tipo Real 
+  // y devuelve un Real
  var $i; $n : Integer
  $n:=Count parameters
  For($i;1;$n)
