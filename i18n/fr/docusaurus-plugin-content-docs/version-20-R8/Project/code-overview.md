@@ -106,7 +106,7 @@ Pour plus d'informations sur cette option, reportez-vous à [Attribut Exécuter 
 
 ### Mode d’exécution
 
-Cette option vous permet de déclarer la méthode éligible à l'exécution en mode préemptif. It is described in the [Preemptive processes section](../Develop/processes.md#preemptive-processes).
+Cette option vous permet de déclarer la méthode éligible à l'exécution en mode préemptif. It is described in the [Preemptive processes section](../Develop/preemptive.md).
 
 ### Disponibilité
 
