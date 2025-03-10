@@ -41,7 +41,7 @@ title: サブフォーム
 
 サブフォームコンテナーオブジェクトには、[変数あるいは式](properties_Object.md#変数あるいは式) をバインドすることができます。 これは、親フォームとサブフォーム間で値を同期するのに便利です。
 
-デフォルトで、4D はサブフォームコンテナーに [オブジェクト型](properties_Object.md#式の型式タイプ) の変数あるいは式をバインドし、`Form` コマンドを使ってサブフォームのコンテキストで値を共有できるようにします。 しかし、単一の値のみを共有したい場合は、任意のスカラー型 (時間、整数など)  の変数や式を使用することもできます。
+By default, 4D creates a variable or expression of [object type](properties_Object.md#expression-type) for a subform container, which allows you to share values in the context of the subform using the `Form` command ([see below](#using-the-bound-variable-or-expression)). しかし、単一の値のみを共有したい場合は、任意のスカラー型 (時間、整数など)  の変数や式を使用することもできます。
 
 - バインドするスカラー型の変数あるいは式を定義し、[On Bound Variable Change](../Events/onBoundVariableChange.md) や [On Data Change](../Events/onDataChange.md) フォームイベントが発生したときに、`OBJECT Get subform container value` や `OBJECT SET SUBFORM CONTAINER VALUE` コマンドを呼び出して値を共有します。 この方法は、単一の値を同期させるのに推奨されます。
 - または、バインドされた **オブジェクト** 型の変数あるいは式を定義し、`Form` コマンドを使用してサブフォームからそのプロパティにアクセスします。 この方法は、複数の値を同期させるのに推奨されます。
@@ -56,7 +56,7 @@ title: サブフォーム
 
 :::info
 
-To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-list-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
+To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
 
 - 変数 (例: `parisTime`) を使用する場合は、`text` または `time` 型である必要があります。
 - 式 (例: `Form.myValue`) を使用する場合は、`text` 値である必要があります。
