@@ -39,7 +39,7 @@ Since the signal object is a shared object, it can also be used to maintain user
 
 **Returned value**
 
-A new [`4D.Signal` object]((../API/SignalClass.md#signal-object)).
+A new [`4D.Signal` object](../API/SignalClass.md#signal-object).
 
 #### Example
 

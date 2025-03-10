@@ -111,7 +111,7 @@ For more information on this option, refer to [Execute on Server attribute](http
 
 ### Execution mode  
 
-This option allows you to declare the method eligible for execution in preemptive mode. It is described in the [Preemptive processes section](../Develop/preemptive-processes.md).
+This option allows you to declare the method eligible for execution in preemptive mode. It is described in the [Preemptive processes section](../Develop/preemptive.md).
 
 ### Available through  
 

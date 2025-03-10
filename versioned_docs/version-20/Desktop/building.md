@@ -574,7 +574,7 @@ To obtain a developer certificate from Apple, Inc., you can use the commands of 
 
 Gatekeeper is a security feature of macOS that controls the execution of applications downloaded from the Internet. If a downloaded application does not come from the Apple Store or is not signed, it is rejected and cannot be launched.
 
-> On Apple Silicon machines, 4D [components](../Project/components.md) need to be actually signed. An unsigned component will generate an error at application startup ("lib4d-arm64.dylib can't be opened...").
+> On Apple Silicon machines, 4D components need to be actually signed. An unsigned component will generate an error at application startup ("lib4d-arm64.dylib can't be opened...").
 
 The **Sign application** option of the 4D application builder lets you generate applications and components that are compatible with this option by default.
 
