@@ -12,7 +12,7 @@ title: Restitution
 
 - La perte de fichier(s) de l'application. Cet incident peut être causé par des secteurs défectueux sur le disque contenant l'application, un virus, une erreur de manipulation, etc. Il est nécessaire de restituer la dernière sauvegarde puis d’intégrer éventuellement l’historique courant. Pour savoir si une application a été endommagée à la suite d’un incident, il suffit de la relancer avec 4D. Le programme effectue un auto-diagnostic et précise les opérations de réparation à effectuer. En mode automatique, ces opérations sont effectuées directement, sans intervention de l’utilisateur. Si une stratégie de sauvegarde régulière a été mise en place, les outils de récupération de 4D vous permettront (dans la plupart des cas) de retrouver l'application dans l’état exact où elle se trouvait avant l’incident.
 
-> 4D peut lancer automatiquement des procédures de récupération des applications après incident. Ces mécanismes sont gérés à l’aide de deux options accessibles dans la Page **Sauvegarde/Sauvegarde & et Restitution** de la fenêtre des Propriétés. Pour plus d'informations, reportez-vous au paragraphe [Restitution automatique](settings.md#restitution-automatique).\
+> 4D peut lancer automatiquement des procédures de récupération des applications après incident. Ces mécanismes sont gérés à l’aide de deux options accessibles dans la Page **Sauvegarde/Sauvegarde & et Restitution** de la fenêtre des Propriétés. For more information, refer to the [Automatic Restore](settings.md#automatic-restore-and-log-integration) paragraph.\
 > Si l'incident résulte d'une opération inappropriée effectuée sur les données (suppression d'un enregistrement par exemple), vous pouvez tenter de réparer le fichier de données à l'aide de la fonction "rollback" du fichier d'historique. Cette fonction est accessible dans la Page [Retour arrière](MSC/rollback.md) du CSM.
 
 ## Restitution manuelle d’une sauvegarde (dialogue standard)
@@ -35,7 +35,7 @@ Pour restituer manuellement une application via une boîte de dialogue standard 
 Vous pouvez également cliquer sur le bouton **[...]** et indiquer un autre emplacement.
 3. Cliquez sur le bouton **Restituer**.
 4D extrait tous les fichiers de la sauvegarde à l’emplacement défini.
-Si le fichier d’historique courant ou un fichier de sauvegarde d’historique ayant le même numéro que le fichier de sauvegarde est stocké dans le même dossier, 4D examine son contenu. S’il contient des opérations non présentes dans le fichier de données, le programme propose de l’intégrer. L’intégration est effectuée automatiquement si l’option **d’intégration automatique de l’historique** est cochée (cf. paragraphe [Restitution automatique](settings.md#automatic-restore)).
+Si le fichier d’historique courant ou un fichier de sauvegarde d’historique ayant le même numéro que le fichier de sauvegarde est stocké dans le même dossier, 4D examine son contenu. S’il contient des opérations non présentes dans le fichier de données, le programme propose de l’intégrer. Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore-and-log-integration)).
 
 (Facultatif) Cliquez sur **OK** pour intégrer le fichier d’historique dans l'application restituée.
 Si la restitution et l’intégration se sont déroulées correctement, 4D affiche une boîte de dialogue indiquant que l’opération a réussi.
