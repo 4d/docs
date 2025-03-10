@@ -115,7 +115,7 @@ Vous devez déclarer ces paramètres de la manière suivante :
 //Code de la méthode base
 ```
 
-Alternativement, vous pouvez utiliser la syntaxe [paramètres nommés](Concepts/parameters.md#named-parameters) :
+Alternatively, you can use the [named parameters](Concepts/parameters.md) syntax:
 
 ```4d
 // On Web Authentication database method
