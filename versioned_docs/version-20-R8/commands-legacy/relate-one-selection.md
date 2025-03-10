@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.RELATE ONE SELECTION.Summary-->The RELATE ONE SELECTION command creates a new selection of records for the table *oneTable*, based on the selection of records in the table *manyTable* and loads the first record of the new selection as the current record.<!-- END REF--> 
+<!--REF #_command_.RELATE ONE SELECTION.Summary-->The **RELATE ONE SELECTION** command creates a new selection of records for the table *oneTable*, based on the selection of records in the table *manyTable* and loads the first record of the new selection as the current record.<!-- END REF--> 
 
-This command can only be used if there is a relation from *manyTable* to *oneTable*. RELATE ONE SELECTION can work across several levels of relations. There can be several related tables between *manyTable* and *oneTable*. The relations can be manual or automatic.
+This command can only be used if there is a relation from *manyTable* to *oneTable*. **RELATE ONE SELECTION** can work across several levels of relations. There can be several related tables between *manyTable* and *oneTable*. 
 
-**RELATE ONE SELECTION** uses the "shortest" path to pass from the starting table to the destination table. If there are existing paths of the same size and you need to control the used path, you may consider using the [SET FIELD RELATION](set-field-relation.md) command. 
+The relations can be manual or automatic. When automatic relations exist, they are always used first by **RELATE ONE SELECTION**. When several paths are possible from the starting table to the destination table, **RELATE ONE SELECTION** takes the shortest one, using automatic relations (if any). If there are existing paths of the same size and you want to control the used path, or if you want to "force" the use of manual relations, you need to use the [`SET FIELD RELATION`](set-field-relation.md) command. 
 
 #### Example 
 
