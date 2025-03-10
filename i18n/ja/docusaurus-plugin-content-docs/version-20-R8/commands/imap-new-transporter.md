@@ -38,7 +38,7 @@ displayed_sidebar: docs
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](../API/IMAPTransporterClass.md#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                           | 30                               |
 | [<!-- INCLUDE #transporter.host.Syntax -->](../API/IMAPTransporterClass.md#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                  | *mandatory*                      |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](../API/IMAPTransporterClass.md#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                         | なし                               |
-| .**password** : Text<br/>サーバー との認証のためのユーザーパスワード。 *[IMAP transporter](#imap-transporter-オブジェクト)* オブジェクトには返されません。                                                                                                                                                                                                                                                                                                  | なし                               |
+| .**password** : Text<br/>サーバー との認証のためのユーザーパスワード。 Not returned in *[IMAP transporter](\(../API/IMAPTransporterClass.md#imap-transporter-object\))* object.                                                                                                                                                                                                                                        | なし                               |
 | [<!-- INCLUDE #transporter.port.Syntax -->](../API/IMAPTransporterClass.md#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                  | 993                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](../API/IMAPTransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                  | なし                               |
 
@@ -71,9 +71,9 @@ End if
 
 #### プロパティ
 
-|         |                                 |
-| ------- | ------------------------------- |
-| コマンド番号  | 1723                            |
-| スレッドセーフ | &amp;check; |
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1723                        |
+| スレッドセーフ | &check; |
 
 
