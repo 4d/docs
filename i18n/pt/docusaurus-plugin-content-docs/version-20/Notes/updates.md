@@ -115,7 +115,7 @@ Por razões internas, a versão de clientes remotos conectando ao 4D Server 20.2
 :::
 
 - Nova propriedade `plugins` no parâmetro *opções* para o comando [`Compilar projeto`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
-- O Servidor 4D integra automaticamente múltiplos journals: [Restauração automática](../Backup/settings.md#automatic-restore).
+- 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore-and-log-integration).
 - [Classe IMAP Transporter](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) retorna *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) retorna *id*, *flags* e *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) e [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) suportam palavras-chave personalizadas.
 - Novo [WebSocketServer](../API/WebSocketServerClass.md) e [WebSocketConnection](../API/WebSocketConnectionClass.md) classes para criar e gerir ligações WebSocket a partir de 4D.
 - Apoio da palavra-chave [`property`](../Concepts/classes.md#property) em definições de classe de utilizador.
@@ -134,7 +134,7 @@ Por razões internas, a versão de clientes remotos conectando ao 4D Server 20.2
 - [Explorador de Dados](../Admin/dataExplorer.md#opening-the-data-explorer): novo botão e será exibido em uma janela 4D.
 - Novas propriedades para botões, caixas de seleção e botões de rádio: [Imagem abraça título](../FormObjects/properties_TextAndPicture.md#image-hugs-title) e [Alinhamento horizontal](../FormObjects/properties_Text.md#horizontal-alignment).
 - Suporte do `WinIcon` na função [`file.setAppInfo()`](../API/FileClass.md#setappinfo).
-- Nova opção `validateTLSCertificate` para [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) que permite controlar a validação automática do certificado.
+- New `validateTLSCertificate` option for [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) allowing you to control the automatic certificate validation.
 - Comandos da linguagem 4D: [página Novidades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) em doc.4d.com.
 - 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) em doc.4d.com.
 - [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20): lista de todos os erros corrigidos no 4D 20 LTS.
@@ -188,7 +188,7 @@ Leia [**O que há de novo em 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-
 - Nova classe [FileHandle](../API/FileHandleClass.md) e nova [`.open()`](../API/FileClass.md#open) função na classe `File`.
 - [Classe de seleção de entidade](../API/EntitySelectionClass.md): [`.add()`](../API/EntitySelectionClass.md#add) suporta um parâmetro *entitySelection*, [`.minus()`](../API/EntitySelectionClass.md#minus) suporta um parâmetro *keepOrder*.
 - Suporte às opções *automaticRedirections* e *decodeData* em [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew).
-- Novo arquivo histórico [4DHTTPClientLog.txt](../Debugging/debugLogFiles.md#4dhttpclientlog).
+- New [4DHTTPClientLog.txt](../Debugging/debugLogFiles.md#4dhttpclientlogtxt) log file.
 - 4D View Pro: novos comandos de tablea [VP Find table](../ViewPro/method-list.md#vp-find-table), [VP Get table column attributes](../ViewPro/method-list.md#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list.md#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list.md#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list.md#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list.md#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list.md#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list.md#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list.md#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list.md#vp-set-table-column-attributes).
 - Os namespaces de componentes agora são [exibidos no Explorer](../Extensions/develop-components.md#declaring-the-component-namespace).
 - Os objetos de área de texto e formulário de entrada agora suportam a propriedade [corner radius](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
@@ -296,7 +296,7 @@ ALERT($param1+" "+$param2)
  $class.concate() // Displays " "
 ```
 Para obter informações pormenorizadas, consulte [esta publicação do blogue](https://blog.4d.com/stop-press-accessing-parameters-not-being-passed-is-possible). Para beneficiar desta simplificação global, é necessário recompilar tanto os métodos chamados como os que são chamados; assim, os componentes devem ser recompilados.
-- A depuração das sessões do servidor web [é mais fácil no 4D Server](../WebServer/sessions.md#preemptive-mode).
+- Debugging web server sessions [is easier on 4D Server](../WebServer/sessions.md).
 - O novo componente [4D NetKit](https://github.com/4d/4D-NetKit) permite que você se conecte a APIs de terceiros, como o Microsoft Graph.
 - Esse novo algoritmo é usado automaticamente quando uma senha é alterada usando a Caixa de ferramentas, o comando `CHANGE PASSWORD` ou o comando `Set user properties` . 4D 19 R3 usa um algoritmo hash mais forte para senhas de usuários 4D: Bcrypt. Depois que a senha for modificada, abrir o banco de dados com uma versão anterior ao 4D 19 R3 causará uma recusa de autenticação para essa conta. Se você usa senhas 4D, é altamente recomendável fazer backup do arquivo .4db (bancos de dados binários) ou do arquivo directory.json (projetos) antes de atualizar para o 4D 19 R3 ou posterior.
 - Para fins de precisão, a constante `4D digest` foi renomeada para `4D REST digest`.
