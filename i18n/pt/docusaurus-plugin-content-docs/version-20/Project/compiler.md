@@ -60,7 +60,7 @@ A verificação de sintaxe também pode ser iniciada diretamente usando o comand
 
 ### Gerar digitação
 
-O botão **Gerar digitação** cria ou atualiza os métodos do compilador de digitação. Os métodos do Compilador são métodos do projeto que agrupam todas as declarações de digitação de variável e matriz (processo e interprocesso), assim como os parâmetros do [método](../Concepts/parameters.md#compiler_methods-method). Esses métodos, quando eles existem, são usados diretamente pelo compilador durante a compilação de código, resultando em tempos de compilação mais rápidos.
+O botão **Gerar digitação** cria ou atualiza os métodos do compilador de digitação. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler-method). Esses métodos, quando eles existem, são usados diretamente pelo compilador durante a compilação de código, resultando em tempos de compilação mais rápidos.
 
 O nome desses métodos deve começar com `Compiler_`. Você pode definir o nome padrão para cada um dos 5 métodos do compilador na [janela de parâmetros do compilador](#compiler-methods-for). Os métodos do compilador que são gerados e mantidos pelo 4D automaticamente têm o atributo `Invisível`:
 
@@ -123,11 +123,11 @@ Essa área agrupa as opções genéricas usadas durante o processo de compilaç�
 
 #### Gerar o arquivo de símbolo
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_symbols.txt`.
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
 
 #### Gerar ficheiro de erros
 
-Usado para gerar o arquivo de erro (consulte \[arquivo de erro\](#error-file)) no momento da verificação de sintaxe. The error file is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_errors.xml`.
+Usado para gerar o arquivo de erro (consulte \[arquivo de erro\](#error-file)) no momento da verificação de sintaxe. The error file is created in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
 
 
 #### Caminho de compilação
@@ -188,7 +188,7 @@ Você pode renomear cada um desses métodos nas áreas correspondentes, mas eles
 
 ### Ficheiro Symbol
 
-If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project during compilation. Está dividido en varias partes:
+If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs) of the project during compilation. Está dividido en varias partes:
 
 #### Lista das variáveis processo e interprocesso
 
@@ -235,7 +235,7 @@ tipo resultado, número de chamadas, Thread Safe ou Thread Unsafe
 
 ### Arquivo de erros
 
-Você pode escolher se deseja ou não gerar um arquivo de erro durante a compilação usando a opção [**Gerar arquivo de erro**](#generate-error-file) nas configurações do compilador. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs-folder) of the project.
+Você pode escolher se deseja ou não gerar um arquivo de erro durante a compilação usando a opção [**Gerar arquivo de erro**](#generate-error-file) nas configurações do compilador. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs) of the project.
 
 Embora os erros possam ser acessados diretamente pela [janela do compilador](#compile), pode ser útil ter um arquivo de erros que possa ser transmitido de uma máquina para outra. O arquivo de erro é gerado no formato XML para facilitar a análise automática de seu conteúdo. Também permite a criação de interfaces customizadas de exibição de erros.
 
@@ -306,14 +306,14 @@ Ambos os compiladores estão integrados em 4D. O compilador apropriado é seleci
 
 O compilador clássico gera código compilado nativo para processadores Intel/AMD em qualquer máquina. Não necessita de qualquer configuração específica.
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata-folder) folder of the project.
+Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
 
 
 ### Compilador Silicon
 
 O compilador Silicon gera código compilado nativo para processadores Apple Silicon, como o *Apple M1*.
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries-folder) folder of the project.
+Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
 
 
 #### Requisitos
