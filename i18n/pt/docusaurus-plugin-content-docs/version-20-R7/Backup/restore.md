@@ -12,14 +12,14 @@ title: Restaurar um backup
 
 - A perda de um ou mais arquivos do banco de dados. This incident can occur because of defective sectors on the disk containing the database, a virus, manipulation error, etc. The last backup must be restored and then the current log file must be integrated. O último backup deve ser restaurado e o arquivo de histórico atual deve ser integrado. Para saber se um banco de dados foi danificado depois de um incidente, basta relançar o banco de dados com 4D. O programa realiza um autodiagnóstico e detalha as operações de restauração necessárias. Em modo automático, essas operações são realizadas diretamente sem precisar de ajuda da parte do usuário. Se usar uma estratégia de backup regulares, as ferramentas de restauração de 4D permite recuperar (na maioria dos casos) o banco de dados na mesma situação que estava antes do incidente.
 
-> 4D pode lançar procedimentos automaticamente para recuperar os bancos de dados depois de um incidente. Esses mecanismos são gerenciados usando duas opções disponíveis na página **Backup/Backup & Restore** das Configurações. Para obter mais informações, consulte o parágrafo [Restaurador automático](settings.md#automatic-restore).\
+> 4D pode lançar procedimentos automaticamente para recuperar os bancos de dados depois de um incidente. Esses mecanismos são gerenciados usando duas opções disponíveis na página **Backup/Backup & Restore** das Configurações. For more information, refer to the [Automatic Restore](./settings.md#automatic-restore-and-log-integration) paragraph.\
 > Se o incidente for resultado de uma operação inadequada realizada nos dados (eliminação de um registro, por exemplo), você pode tentar reparar o arquivo de dados usando a função "rollback" no arquivo de log. Esta função está disponível na página [Rollback](MSC/rollback.md) do MSC.
 
 ## Restaurar manualmente o backup (diálogo padrão)
 
 Pode restaurar manualmente os conteúdos de um arquivo gerado pelo módulo de cópia de segurança. Uma restauração manual pode ser necessária, por exemplo, para restaurar os conteúdos completos de um arquivo (arquivos projetos e arquivos anexos) ou, para o propósito de realizar pesquisas entre os arquivos. A restauração manual pode também ser realizada junto com a integração do arquivo de histórico atual.
 
-A restauração manual de backups pode ser realizada via a caixa de diálogo de Abertura de documento, ou através da página [Restore](../MSC/restore.md) do MSC. A restauração através do MSC oferece mais opções e permite pré-visualizar os conteúdos dos arquivos. Restoring via the MSC provides more options and allows the archive contents to be previewed.
+A restauração manual de backups pode ser realizada via a caixa de diálogo de Abertura de documento, ou através da página [Restore](../MSC/restore.md) do MSC. A restauração através do MSC oferece mais opções e permite pré-visualizar os conteúdos dos arquivos. Por outro lado, só podem ser restaurados os arquivos associados à aplicação aberta.
 
 Para restaurar um banco de dados manualmente via uma caixa de diálogo padrão:
 
