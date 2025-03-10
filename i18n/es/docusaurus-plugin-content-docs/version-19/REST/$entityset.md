@@ -16,6 +16,7 @@ Después de [crear un conjunto de entidades]($method.md#methodentityset) mediant
 
 Recupera un conjunto de entidades existente (*p. ej.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
+
 ### Descripción
 
 Esta sintaxis permite ejecutar cualquier operación sobre un conjunto de entidades definido.
