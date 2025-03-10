@@ -352,7 +352,7 @@ Este caso es tratado por 4D en función del contexto:
 
 - en [proyectos compilados](interpreted.md), se genera un error en el paso de compilación siempre que sea posible. En caso contrario, se genera un error cuando se llama al método.
 - en los proyectos interpretados:
-    + si el parámetro se declaró utilizando la [sintaxis nombrada](#named-parameters) (`#DECLARE` o `Function`), se genera un error cuando se llama al método.
+    + if the parameter was declared using the [standard named syntax](#declaring-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
     + si el parámetro se declaró utilizando (`C_XXX`), no se genera ningún error, el método llamado recibe un valor vacío del tipo esperado.
 
 
