@@ -47,7 +47,7 @@ También se pueden asociar listas de selección a objetos utilizando los comando
 
 #### Objetos soportados
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista jerárquica](list_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -167,7 +167,7 @@ La utilización de la opción **Referencia del elemento seleccionado** requiere 
 
 Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Utilizando el lenguaje, se puede gestionar el objeto haciendo referencia a este array.
 
-> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-value)" property that allows to define a field value in new records.
+> No confunda esta propiedad con la propiedad "[valor por defecto](properties_RangeOfValues.md#default-value)" que permite definir un valor de campo en los nuevos registros.
 
 Debe introducir una lista de valores. En el editor de formularios, un diálogo específico permite introducir valores separados por retornos de carro:
 
