@@ -126,7 +126,7 @@ Puede utilizar los siguientes atajos en la Lista de propiedades:
 
 Puede añadir objetos en los formularios de varias maneras:
 
-- By drawing the object directly in the form after selecting its type in the object bar (see [Using the object bar](#object-bar))
+- Dibujando el objeto directamente en el formulario después de seleccionar su tipo en la barra de objetos (ver [Utilizando la barra de objetos](#object-bar))
 - Arrastrando y soltando el objeto desde la barra de objetos
 - Mediante operaciones de arrastrar y soltar o copiar y pegar sobre un objeto seleccionado de la [librería de objetos](objectLibrary.md) preconfigurada,
 - Arrastrando y soltando un objeto desde otro formulario,
