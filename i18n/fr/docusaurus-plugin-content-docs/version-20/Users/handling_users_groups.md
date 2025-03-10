@@ -82,7 +82,7 @@ La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Uti
 
 5. Définissez le ou les groupe(s) d’appartenance de l’utilisateur à l’aide du tableau “Membre des groupes”. Vous pouvez ajouter l’utilisateur sélectionné à un groupe en cochant l’option correspondante dans la colonne Membre.
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-groupss).
+The membership of users to different groups can also be set by group on the [Groups page](#configuring-groups).
 
 ### Supprimer un utilisateur
 
@@ -194,7 +194,7 @@ Les utilisateurs, les groupes ainsi que leurs droits d'accès sont stockés dans
 Ce fichier peut être stocké aux emplacements suivants, en fonction de vos besoins :
 
 - Si vous souhaitez utiliser le même répertoire pour tous les fichiers de données (ou si vous utilisez un seul fichier de données), stockez le fichier **directory.json** dans le dossier des paramètres utilisateur, c'est-à-dire dans le dossier "Settings" [au même niveau que le dossier "Project"](Project/architecture.md#project-folder) (emplacement par défaut).
-- Si vous souhaitez utiliser un fichier répertoire spécifique par fichier de données, stockez le fichier **directory.json** dans le dossier des paramètres des données, c'est-à-dire dans le dossier ["Settings" du dossier "Data"](Project/architecture.md#settings). Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
+- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](../Project/architecture.md#settings-user-data). Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
 
 > Pour permettre des changements sûrs de mots de passe et d'appartenance à des groupes dans un environnement déployé, vous pouvez inclure votre fichier **directory.json** dans l'application serveur pendant le build, en utilisant [l'option correspondante du build application](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
 
