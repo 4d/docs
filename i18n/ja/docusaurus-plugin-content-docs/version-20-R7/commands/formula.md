@@ -33,8 +33,8 @@ displayed_sidebar: docs
 
 返されたフォーミュラは以下の方法で呼び出すことが可能です:
 
-- [`.call()`](#call) あるいは [`.apply()`](#apply) 関数
-- オブジェクト記法シンタックス ([Formula オブジェクト](#formula-オブジェクト) 参照)
+- [`.call()`](../API/FunctionClass.md#call) or [`.apply()`](../API/FunctionClass.md#apply) methods, or
+- object notation syntax (see [formula object](../commands/formula.md-object)).
 
 ```4d
  var $f : 4D.Function
@@ -47,7 +47,7 @@ displayed_sidebar: docs
  $o.myFormula() // 3 を返します
 ```
 
-`フォーミュラ`には [引数](#引数の受け渡し) を渡すことができます ([例題4](#例題-4) 参照)。
+You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
 
 フォーミュラの実行対象となるオブジェクトを指定することができます ([例題5](#例題-5) 参照)。 このオブジェクトのプロパティは、 `This` コマンドでアクセス可能です。
 
@@ -140,9 +140,9 @@ displayed_sidebar: docs
 
 #### プロパティ
 
-|         |                                 |
-| ------- | ------------------------------- |
-| コマンド番号  | 1597                            |
-| スレッドセーフ | &amp;check; |
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1597                        |
+| スレッドセーフ | &check; |
 
 
