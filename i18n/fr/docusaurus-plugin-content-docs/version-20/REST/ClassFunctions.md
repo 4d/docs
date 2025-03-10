@@ -58,7 +58,7 @@ Les règles suivantes s'appliquent :
 - Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
 - L'entity selection et l'entité peuvent être passées en tant que paramètres. L'objet JSON doit contenir des attributs spécifiques utilisés par le serveur REST pour affecter des données aux objets ORDA correspondants : __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
-See [this example](#request-receiving-an-entity-selection-as-parameter).
+See [this example](#receiving-an-entity-selection-as-parameter).
 
 
 ### Paramètre de valeur scalaire
@@ -87,7 +87,7 @@ Les entités passées en paramètres sont référencées sur le serveur via leur
 - Si __KEY n'est pas fourni, une nouvelle entité est créée sur le serveur avec les attributs donnés.
 - Si __KEY est fourni, l'entité correspondant à _KEY est chargée sur le serveur avec les attributs donnés
 
-Voir les exemple de [création](#creating-an-entity) ou de [mise à jour](#updating-an-entity) des entités.
+See examples for creating or updating entities.
 
 #### Paramètre d'entité associé
 
