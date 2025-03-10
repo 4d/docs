@@ -159,7 +159,7 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 | __ENTITIES | Boolean | Obligatorio - True para indicar al servidor que el parámetro es una selección de entidades |
 
 Ver ejemplo para [recibir una selección de entidad](#receiving-an-entity-selection-as-parameter) con una petición POST.
-See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
+Ver ejemplo para [obtener una lista construida sobre una selección de entidades](#using-an-entity-selection-to-get-a-list) con una petición GET.
 
 ## POST request examples
 
