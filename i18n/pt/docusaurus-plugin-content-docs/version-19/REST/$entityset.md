@@ -16,6 +16,7 @@ Após [criar um conjunto de entidades]($method.md#methodentityset) utilizando `$
 
 Recupera um conjunto de entidades existente (*, por exemplo,*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
+
 ### Descrição
 
 Esta sintaxe permite-lhe executar qualquer operação num conjunto de entidades definido.
