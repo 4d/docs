@@ -35,7 +35,7 @@ Todas as fórmulas têm operandos e operadores:
 - Os **Operandos** inclui várias categorias:
  - [valores](#values-and-operators) (há suporte para 5 tipos de dados)
  - [referências a outras células](#cell-referências) (relativas, absolutas, mistas ou por nome)
- - [funções de planilha padrão](#using-functions)
+ - [standard spreadsheet functions](#built-in-functions)
  - [funções 4D](#4d-functions) com base em fórmulas 4D e fornecendo acesso a variáveis, campos, métodos, comandos ou expressões.
 
 ## Valores e operadores
@@ -356,7 +356,7 @@ You can call directly 4D project methods from within your 4D View Pro formulas. 
 Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 
 - **Permitido**: se declaró explícitamente mediante el comando [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md).
-- **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
+- **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Extensions/develop-components.md#sharing-of-project-methods)).
 - **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
 
 > If neither the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) nor the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
