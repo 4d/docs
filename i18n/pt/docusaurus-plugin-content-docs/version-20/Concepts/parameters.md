@@ -448,7 +448,7 @@ Após adicionar este método projeto a sua aplicação, pode escrever:
 APPEND TEXT(vtSomeText) //Will only display the  message APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document at $path APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
 ```
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-object-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
+> Quando parâmetros opcionais são necessários em seus métodos, você também pode considerar usar propriedades [objeto como parâmetros nomeados](#using-object-properties-as-named-parameters) que fornecem uma maneira flexível de lidar com números de variáveis de parâmetros.
 
 
 
@@ -494,7 +494,7 @@ Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, d
  ALERT($0)
 ```
 
-Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions). This is described in the [Returning values](#returned-value) paragraph.
+Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions). Isto é descrito no parágrafo [valores de retorno](#returned-value).
 
 
 ### Casos particulares: objetos e coleções
