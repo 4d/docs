@@ -38,24 +38,6 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 
 :::
 
-### $4d object
-
-
-The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
-
-For example, to call the `HelloWorld` 4D method, you just execute the following statement:
-
-```js
-$4d.HelloWorld();
-```
-
->JavaScript is case sensitive so it is important to note that the object is named **$4d** (with a lowercase "d").
-
-
-Here’s your **updated and modernized version** of the `$4d` object section, incorporating the **new feature updates** (`WA SET CONTEXT OBJECT` & `WA Get context object`) and improving the **code examples**.
-
----
-
 ## **$4d Object**
 
 The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
@@ -68,32 +50,14 @@ $4d.HelloWorld();
 
 > **Note:** JavaScript is **case-sensitive**, so the object is named **`$4d`** (with a lowercase "d").
 
-### Restricting $4d Access
+### Controlling $4d Access
 
-With [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md), developers can limit `$4d` to only specific methods. Instead of exposing **all** 4D methods, you can **define a context object** that includes only the allowed methods and class instances.
+With [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md), developers can limit `$4d` to only specific methods and user class functions. Using this command you can define a **context object** that includes only the allowed methods through formulas and class instances.
 
-For example, restrict $4d to specific methods:
-```4d
-var $context:={}
-$context.getDate := Formula(getDate)
-$context.calcSum := Formula(calcSum)
+To check the currently defined context, use [`WA Get context object`](../commands/wa-get-context-object.md).
 
-WA SET CONTEXT OBJECT(*; "myWebArea"; $context)
-```
+For more information, please refer to [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md).
 
-Now, in your JS page:
-```js
-$4d.getDate();   // Allowed
-$4d.calcSum(5, 10);  // Allowed
-$4d.someOtherMethod();  // Not accessible
-```
-
-To **check the currently defined context**, use [`WA Get context object`](../commands/wa-get-context-object.md):
-```4d
-var $currentContext := WA Get context object(*; "myWebArea")
-```
-
->If `$currentContext = null`, then **all 4D methods are accessible** (default behavior).
 
 ### Calling 4D Methods from JavaScript
 
@@ -157,10 +121,8 @@ Instead of using a standalone method, we can also define a **class** to handle t
 Define the Class with 4D project method `calcSum` which receives parameters and returns their sum:
 
 ```4d
-// Create a class named SumCalculator
+// SumCalculator user class
 
-
-//4D code of `calcSum`
 Function calcSum(... : Real) -> $sum : Real
    // receives n Real type parameters
    // and returns a Real
@@ -170,9 +132,11 @@ Function calcSum(... : Real) -> $sum : Real
   For ($i; 1; $n)
     $sum += ${$i}
   End for
-  
-//Create an Instance and Assign It to $4d
+```
 
+In another method, we create an instance and assign it to $4d
+
+```4d
 var $myCalculator := cs.SumCalculator.new()
 WA SET CONTEXT OBJECT(*; "myWebArea"; $myCalculator)
 ```
