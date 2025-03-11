@@ -45,7 +45,7 @@ O subformulário de página usa o formulário de entrada indicado pela proprieda
 
 É possível vincular [uma variável ou uma expressão](properties_Object.md#variable-or-expression) a um objeto de contêiner de subformulário. Isso é muito útil para sincronizar valores do formulário principal e de seus subformulários.
 
-By default, 4D creates a variable or expression of [object type](properties_Object.md#expression-type) for a subform container, which allows you to share values in the context of the subform using the `Form` command ([see below](#using-the-bound-variable-or-expression)). For example, imagine a subform representing a dynamic clock, inserted into a parent form containing an enterable variable of the Time type:
+By default, 4D creates a variable or expression of [object type](properties_Object.md#expression-type) for a subform container, which allows you to share values in the context of the subform using the `Form` command. For example, imagine a subform representing a dynamic clock, inserted into a parent form containing an enterable variable of the Time type:
 
 - Defina uma variável ou expressão vinculada de um tipo escalar e chame os comandos `OBJECT Get subform container value` e `OBJECT SET SUBFORM CONTAINER VALUE` para trocar valores quando ocorrerem eventos de formulário [On Bound Variable Change](../Events/onBoundVariableChange.md) ou [On Data Change](../Events/onDataChange.md). Esta solução é recomendada para sincronizar um único valor.
 - Defina uma variável ou expressão vinculada do tipo de **objeto** e use o comando `Form` para acessar suas propriedades no subformulário. Esta solução é recomendada para sincronizar vários valores.
