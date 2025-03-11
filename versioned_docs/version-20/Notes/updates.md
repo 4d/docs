@@ -14,6 +14,12 @@ Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), t
 
 #### Highlights
 
+:::info Evaluation applications
+
+Starting with nightly build **101734**, the Build application dialog box has a new option allowing to build evaluation applications. See [description in the 4D Rx documentation](../../../docs/Desktop/building.md#build-an-evaluation-application).
+
+:::
+
 - 4D 20.6 LTS is certified on Windows Server 2025
 
 :::warning KNOWN ISSUE ON WINDOWS SERVER 2025
