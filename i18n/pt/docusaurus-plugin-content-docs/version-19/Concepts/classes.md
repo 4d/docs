@@ -174,7 +174,7 @@ There is no ending keyword for function code. A linguagem 4D detecta automaticam
 :::
 
 
-As funções de classe são propriedades específicas da classe. They are objects of the [4D.Function](../API/FunctionClass.md#about-function-objects) class.
+As funções de classe são propriedades específicas da classe. São objetos da classe [4D.Function](../API/FunctionClass.md#about-function-objects).
 
 No ficheiro de definição de classe, as declarações de função utilizam a palavra-chave `Função` , e o nome da função. O nome da função deve estar em conformidade com as [regras de nomeação de propriedades](Concepts/identifiers.md#object-properties).
 
