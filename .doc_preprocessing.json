@@ -2,7 +2,43 @@
     "default": 
     {
         "path":"./docs/",
-        "config":"preprocessing.conf"
+        "config":"preprocessing.conf",
+        "syntax_escape_list": [
+            {
+                "from": "&rarr;",
+                "to": "->"
+            },
+            {
+                "from": "&larr;",
+                "to": "<-"
+            },
+            {
+                "from": "&harr;",
+                "to": "<->"
+            },
+            {
+                "from": "&#8594;",
+                "to": "->"
+            },
+            {
+                "from": "&#8592;",
+                "to": "<-"
+            },
+            {
+                "from": "&#8596;",
+                "to": "<->"
+            },
+            {
+                "from": "&#8596;",
+                "to": "<->"
+            }
+        ],
+        "include_escape_list": [
+            {
+                "from": "|",
+                "to": "&#124;"
+            }
+        ]
     },
     "build_versioned_docs": {
         "path":"./versioned_docs/*/"
@@ -47,5 +83,4 @@
         "syntax_only":true,
         "syntax_pretty":true
     }
-
 }

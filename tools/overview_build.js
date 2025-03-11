@@ -11,6 +11,7 @@ async function run(inFolder, sidebarObject) {
     info.set(settings.SETTINGS_KEY.PATH, inFolder + "/")
     info.set(settings.SETTINGS_KEY.CONFIG, "preprocessing.conf")
     info.set(settings.SETTINGS_KEY.EXCLUDE_LIST, ["ViewPro"])
+    info.set(settings.SETTINGS_KEY.VERBOSE, false);
     let processor = new preprocess.Preprocessing(info);
     await processor.collect();
     const syntax = processor.getSyntaxObject();
@@ -45,7 +46,6 @@ async function run(inFolder, sidebarObject) {
         for (const command of category.items) {
             const fileName = command.split("/").at(-1) + ".md";
             const commandName = reverseIndex.get(fileName);
-            //console.log(commandName);
             const infoSyntax = syntax["_command_"][commandName];
             if (infoSyntax === undefined) {
                 console.log(`Command ${commandName} not found`, fileName);
