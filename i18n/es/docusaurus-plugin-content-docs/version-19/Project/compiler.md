@@ -107,7 +107,7 @@ Sólo se pueden desactivar los avisos con números. Los números de advertencia 
 
 ## Parámetros del compilador
 
-La página "Compilador" de la caja de diálogo de Propiedades le permite definir los parámetros relacionados con la compilación del proyecto. You can directly open this page from the [compiler window](#compiler-window-features) by clicking on the **Compiler Settings** button:
+La página "Compilador" de la caja de diálogo de Propiedades le permite definir los parámetros relacionados con la compilación del proyecto. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window-features) haciendo clic en el botón **Parámetros del compilador**:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -117,11 +117,11 @@ Esta área agrupa las opciones genéricas utilizadas durante el proceso de compi
 
 #### Generar archivo Symbol
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_symbols.txt`.
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. El archivo de error se crea en la [carpeta Logs](../Project/architecture.md#logs-folder) del proyecto con el nombre `ProjectName_errors.xml`.
 
 #### Generar archivo de errores
 
-Se utiliza para generar el archivo de errores (ver [archivo de errores](#symbol-file)) en el momento del control sintáctico. The error file is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_errors.xml`.
+Se utiliza para generar el archivo de errores (ver [archivo de errores](#symbol-file)) en el momento del control sintáctico. El archivo de errores se crea en la [carpeta Logs](../Project/architecture.md#logs-folder) del proyecto con el nombre `ProjectName_errors.xml`.
 
 #### Ruta de compilación
 
