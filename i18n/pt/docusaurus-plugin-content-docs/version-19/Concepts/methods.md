@@ -21,7 +21,7 @@ Na Linguagem 4D, existem várias categorias de métodos. A categoria depende da 
 | **Método base**               | Automático, quando ocorre um evento de sessão de trabalho                                                         | Sim (pré-definido) | Existem 16 métodos base em 4D. Ver secção Métodos base de dados                                                                                                                                   |
 
 
-> A linguagem 4D também suporta **Funções de classe**, que pode ser chamadas no contexto de uma instância de objeto. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#function).
+> A linguagem 4D também suporta **Funções de classe**, que pode ser chamadas no contexto de uma instância de objeto. As funções de classe podem ser integradas (*por exemplo*, `collection.orderBy()` ou `entity.save()`), ou [criado pelo desenvolvedor 4D](classes.md#function).
 
 
 ## Métodos projeto recursivos
