@@ -64,7 +64,7 @@ A caixa de diálogo abaixo é mostrada:
 
 #### Inicio automático da administração de servidor web
 
-Check this option if you want the `WebAdmin` web server to be automatically launched when the 4D or 4D Server application starts ([see above](#launch-at-startup)). Como padrão essa opção não é marcada.
+Marque esta opção para lançar o servidor web `WebAdmin` automaticamente quando iniciar a aplicação 4D ou 4D Server ([ver acima](#launch-at-startup)). Como padrão essa opção não é marcada.
 
 #### Conexões HTTP em localhost aceitas
 
