@@ -3,7 +3,7 @@ id: comboBoxOverview
 title: Combo Box
 ---
 
-A combo box is similar to a [drop-down list](dropdownList_Overview.md), except that it accepts text entered from the keyboard and has additional options.
+Um combo box é parecido com uma lista [drop-down](dropdownList_Overview.md), exceto que aceita texto digitado do teclado e tem opções adicionais.
 
 ![](../assets/en/FormObjects/combo_box.png)
 
@@ -13,7 +13,7 @@ Em outros aspectos, você deve tratar uma combo box como uma área editável que
 
 Use o evento `On Data Change` para gerenciar entradas em uma área editável, como faria em qualquer objeto área editável.
 
-You initialize a combo box in exactly the same way as a [drop-down list](dropdownList_Overview.md): using an object, an array, or a choice list.
+Você inicializa uma caixa de combo exatamente da mesma forma que uma lista drop-down [](dropdownList_Overview.md): usando um objeto, uma matriz, ou uma lista de opções.
 
 ### Utilização de um objecto
 
@@ -54,7 +54,7 @@ Objetos do tipo combo box aceitam duas opções específicas referentes a listas
 
 - [Inserção automática](properties_DataSource.md#automatic-insertion): permite adicionar um valor automaticamente a uma lista armazenada na memória quando um usuário digitar um valor que não é encontraddo na lista de escolhas associadas com uma combo box.
 - [Excluded List](properties_RangeOfValues.md#excluded-list) (lista de valores excluídos): permite estabelecer uma lista cujos valores não podem ser digitados na combo box. Se um valor excluído for digitado, não será aceito e uma mensagem de erro é exibido.
-> > > Associating a [list of required values](properties_RangeOfValues.md#required-list) is not available for combo boxes. In an interface, if an object must propose a finite list of required values, then you must use a [drop-down list](dropdownList_Overview.md) object.
+> Associar uma lista [dos valores necessários](properties_RangeOfValues.md#required-list) não está disponível para caixas de combo. Em uma interface, se um objeto precisar propor uma lista finita de valores necessários, você deverá usar um objeto \[drop-down list\] ().
 
 ## Propriedades compatíveis
 [Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
