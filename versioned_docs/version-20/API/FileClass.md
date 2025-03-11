@@ -86,7 +86,7 @@ The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new
 
 **File ( path { ; pathType } { ; \* })**
 
-In the *path* parameter, pass a file path string. You can use a custom string or a [filesystem](../Concepts/paths.md##filesystem-pathnames) (e.g., "/DATA/myfile.txt").
+In the *path* parameter, pass a file path string. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA/myfile.txt").
 
 > Only absolute pathnames are supported with the `File` command.
 

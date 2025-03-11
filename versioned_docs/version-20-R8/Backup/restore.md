@@ -37,7 +37,7 @@ A dialog box appears, which allows you to specify the location where files will 
 You can also click on the **[...]** button to specify a different location.
 3. Click on the **Restore** button. 
 4D extracts all backup files from the specified location. 
-If the current log file or a log backup file with the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not present in the data file, the program asks you if you want to integrate these operations. Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore)).
+If the current log file or a log backup file with the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not present in the data file, the program asks you if you want to integrate these operations. Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore-and-log-integration)).
 
 4.(Optional) Click **OK** to integrate the log file into the restored application. 
 If the restore and integration were carried out correctly, 4D displays a dialog box indicating that the operation was successful.

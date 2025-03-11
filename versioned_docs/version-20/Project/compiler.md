@@ -179,7 +179,7 @@ Up to 5 compiler methods may be generated; a compiler method is only generated i
 - **Interprocess Variables**: Groups together interprocess variable declarations;
 - **Arrays**: Groups together process array declarations;
 - **Interprocess Arrays**: Groups together interprocess array declarations;
-- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler-method).
 
 You can rename each of these methods in the corresponding areas, but they will always be preceded by the label `Compiler_` (non-modifiable). The name of each method (prefix included) must be no longer than 31 characters. It must also be unique and comply with [4D rules for naming methods](Concepts/identifiers.md#project-methods). 
 
