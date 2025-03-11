@@ -10,23 +10,28 @@ title: WA SET CONTEXT OBJECT
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, *object* is an object name (string). If omitted, *object* is a variable. |
 | object | Form object | &#8594;  | Object name (if * is specified) or Variable (if * is omitted). |
-| contextObj | Object | &#8594;  | Object containing the functions and attributes that can be called with `$4d`. Functions or attributes starting with `_` are hidden from `$4d`. |
+| contextObj | Object | &#8594;  | Object containing the functions that can be called with `$4d`. |
 
 <!-- END REF-->
 
-#### Description 
+### Description 
 
-The `WA SET CONTEXT OBJECT` command <!--REF #_command_.WA SET CONTEXT OBJECT.Summary--> defines a context object for `$4d` in a specific embedded web area. When this command is used, `$4d` can only access the attributes and functions within the provided `contextObj`. If no context object is set, `$4d` has access to all 4D methods.<!-- END REF-->
+The `WA SET CONTEXT OBJECT` command <!--REF #_command_.WA SET CONTEXT OBJECT.Summary--> defines a context object *contextObj* for `$4d` in the Web area designated by the * and *object* parameters. When this command is used, `$4d` can only access contents declared within the provided *contextObj*. When no context object is set, `$4d` has access to all 4D methods and can not access user classes.<!-- END REF-->
 
-The command is **only usable with an embedded web area** where the **"Use embedded web rendering engine"** parameter is set to `true`.
+:::note
 
-- If `contextObj = null`, `$4d` has access to all 4D methods.
-- If `contextObj = {}`, `$4d` cannot access any method.
-- Attributes or functions that begin with `_` are hidden from `$4d`.
+The command is only usable with an embedded web area where the [**Use embedded web rendering engine**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) and **Access 4D methods** parameters are set to `true`.
 
-#### Example 1: 
+:::
 
-Restrict `$4d` to Specific Methods
+Pass in *contextObj* user class instances or formulas to be allowed in `$4d` as objects. Class functions that begin with `_` are considered hidden and cannot be used with `$4d`.
+
+- If *contextObj* is null, `$4d` has access to all 4D methods.
+- If *contextObj* is empty, `$4d` has no access.
+
+### Example 1
+
+Restrict `$4d` to specific methods
 
 ```4d
  var $context:={}
@@ -36,14 +41,14 @@ Restrict `$4d` to Specific Methods
  WA SET CONTEXT OBJECT(*; "myWebArea"; $context)
 ```
 
-**In HTML:**
-```html
+**In JavaScript:**
+```js
 $4d.myMethod(); // Allowed
 $4d.myMethod2(); // Allowed
 $4d.someOtherMethod(); // Not accessible
 ```
 
-#### Example 2: 
+### Example 2
 
 Using a Class Object
 
@@ -53,13 +58,19 @@ Using a Class Object
  WA SET CONTEXT OBJECT(*; "MyWA"; $myWAObject)
 ```
 
-#### See also 
+**In JavaScript:**
+```js
+$4d.myWAFunction(); // Allowed
+$4d.myotherWAFunction(); // Not accessible
+```
+
+### See also 
 
 [WA Get context object](wa-get-context-object.md)
 
-#### Properties
+### Properties
 
 |  |  |
 | --- | --- |
-| Command number | TBD |
+| Command number | 1848 |
 | Thread safe | &cross; |

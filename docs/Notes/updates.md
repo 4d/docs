@@ -12,7 +12,7 @@ Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 - Support of [session tokens](../WebServer/sessions.md#session-token-otp) handled with [`Session.createOTP()`](../API/SessionClass.md#createotp) and [`Session.restore()`](../API/SessionClass.md#restore) new functions.  
 - The Label wizard now uses the Formula editor for adding or editing formulas in the [label design area](../Desktop/labels.md#label-preview).  
-
+- New commands [WA SET CONTEXT OBJECT](../commands/wa-set-context-object.md) and [WA Get context object](../commands/wa-get-context-object.md) to control method and function access through [$4d](../FormObjects/webArea_overview.md#4d-object) in web areas.
 
 ## 4D 20 R8
 

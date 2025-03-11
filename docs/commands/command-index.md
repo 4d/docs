@@ -1280,6 +1280,7 @@ title: Index
 [`WA Evaluate JavaScript`](../commands-legacy/wa-evaluate-javascript.md)<br/>
 [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md)<br/>
 [`WA Forward URL available`](../commands-legacy/wa-forward-url-available.md)<br/>
+[`WA Get context object`](../commands/wa-get-context-object.md) **new 4D 20 R9**<br/> 
 [`WA Get current URL`](../commands-legacy/wa-get-current-url.md)<br/>
 [`WA GET EXTERNAL LINKS FILTERS`](../commands-legacy/wa-get-external-links-filters.md)<br/>
 [`WA Get last filtered URL`](../commands-legacy/wa-get-last-filtered-url.md)<br/>
@@ -1295,6 +1296,7 @@ title: Index
 [`WA OPEN WEB INSPECTOR`](../commands-legacy/wa-open-web-inspector.md)<br/>
 [`WA REFRESH CURRENT URL`](../commands-legacy/wa-refresh-current-url.md)<br/>
 [`WA Run offscreen area`](../commands-legacy/wa-run-offscreen-area.md)<br/>
+[`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md)  **new 4D 20 R9**<br/>
 [`WA SET EXTERNAL LINKS FILTERS`](../commands-legacy/wa-set-external-links-filters.md)<br/>
 [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md)<br/>
 [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)<br/>

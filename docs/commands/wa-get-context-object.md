@@ -9,19 +9,23 @@ title: WA Get context object
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, *object* is an object name (string). If omitted, *object* is a variable. |
 | object | Form object | &#8594;  | Object name (if * is specified) or Variable (if * is omitted). |
-| contextObj | Object | &#8592;  | Returns the context object if previously defined. Otherwise, returns `null`. |
+| contextObj | Object | &#8592;  | Context object if previously defined, otherwise `null`. |
 
 <!-- END REF-->
 
-#### Description 
+### Description 
 
-The `WA Get context object` command<!--REF #_command_.WA Get context object.Summary--> retrieves the context object defined for `$4d` in a specific embedded web area. If no context object was set using `WA SET CONTEXT OBJECT`, the command returns `null`.<!-- END REF-->
+The `WA Get context object` command<!--REF #_command_.WA Get context object.Summary--> retrieves the context object defined for `$4d` in the Web area designated by the * and *object* parameters using [`WA SET CONTEXT OBJECT`](./wa-set-context-object.md).<!-- END REF--> If `WA SET CONTEXT OBJECT` was not called for the web area the command returns `null`.
 
-This command is **only applicable to embedded web areas** where the **"Use embedded web rendering engine"** parameter is set to `true`.
+:::note
 
-#### Example 1: 
+The command is only usable with an embedded web area where the [**Use embedded web rendering engine**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) and **Access 4D methods** parameters are set to `true`.
 
-Retrieve a Previously Defined Context Object
+:::
+
+### Example 1
+
+Retrieve a previously defined context object:
 
 ```4d
  var $context:={}
@@ -34,9 +38,9 @@ Retrieve a Previously Defined Context Object
  var $retrievedContext:=WA Get context object(*; "myWebArea")
 ```
 
-#### Example 2: 
+### Example 2
 
-Checking If a Context Exists
+Checking if a context exists:
 
 ```4d
  var $contextObj:=WA Get context object(*; "myWebArea")
@@ -48,13 +52,13 @@ Checking If a Context Exists
  End if
 ```
 
-#### See also 
+### See also 
 
 [WA SET CONTEXT OBJECT](wa-set-context-object.md)  
 
-#### Properties
+### Properties
 
 |  |  |
 | --- | --- |
-| Command number | TBD |
+| Command number | 1849 |
 | Thread safe | &cross; |
