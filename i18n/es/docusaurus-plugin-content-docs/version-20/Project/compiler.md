@@ -112,7 +112,7 @@ Sólo se pueden desactivar los avisos con números. Los números de advertencia 
 
 ## Parámetros del compilador
 
-La página "Compilador" de la caja de diálogo de Propiedades le permite definir los parámetros relacionados con la compilación del proyecto. You can directly open this page from the [compiler window](#compiler-window-features) by clicking on the **Compiler Settings** button:
+La página "Compilador" de la caja de diálogo de Propiedades le permite definir los parámetros relacionados con la compilación del proyecto. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window-features) haciendo clic en el botón **Parámetros del compilador**:
 
 ![](../assets/en/Project/compilerWin6.png)
 
