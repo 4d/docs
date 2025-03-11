@@ -46,7 +46,7 @@ A sintaxe formal da estrutura de fluxo de controle `Repeat... Until` é:
     statement(s)
  Until(Boolean_Expression)
 ```
-A `Repeat...Until` loop is similar to a [While...End while](#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. A outra diferença com um loop `Repeat...</p>
+Um ciclo `Repeat...Until` é como um ciclo [While...End while](#whileend-while), exceto que testa a expressão booleana depois do ciclo e não antes. A outra diferença com um loop `Repeat...</p>
 
 <p spaces-before="0">A outra diferença com um loop <code>Repeat...Until` é que o loop continua até que a expressão booleana seja TRUE.
 
