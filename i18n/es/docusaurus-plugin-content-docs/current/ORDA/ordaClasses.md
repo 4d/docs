@@ -988,7 +988,7 @@ End if
 
 ### Archivos de clase (class files)
 
-An ORDA data model user class is defined by adding, at the [same location as regular class files](../Concepts/classes.md#class-definition) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá a través de un archivo `UtilitiesEntity.4dm`.
+Una clase de usuario modelo de datos ORDA se define agregando, en la [misma ubicación que los archivos de clase normales](../Concepts/classes.md#class-definition) (*es decir* en la carpeta `/Sources/Classes` de la carpeta del proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá a través de un archivo `UtilitiesEntity.4dm`.
 
 ### Crear las clases
 
