@@ -90,7 +90,7 @@ La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el 
 5. Defina el grupo o los grupos a los que pertenece el usuario mediante la tabla "Miembro de los grupos".
   Puede añadir o eliminar el usuario seleccionado a un grupo marcando la opción correspondiente en la columna Miembro.
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-groups).
+La pertenencia de los usuarios a los distintos grupos también puede definirse por grupos en la página [Grupos](#configuring-groups).
 
 ### Eliminar un usuario
 
@@ -204,7 +204,7 @@ Los usuarios, grupos, así como sus derechos de acceso se almacenan en un archiv
 Este archivo puede ser almacenado en las siguientes ubicaciones, dependiendo de sus necesidades:
 
 - Si desea utilizar el mismo directorio para todos los archivos de datos (o si utiliza un único archivo de datos), almacene el archivo **directory.json** en la carpeta de configuración del usuario, es decir, en la carpeta "Settings" [en el mismo nivel que la carpeta "Project"](Project/architecture.md#project-folder) (ubicación predeterminada).
-- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](../Project/architecture.md#settings-user-data). Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. Esta configuración personalizada/local de los usuarios y de los grupos no se verá afectada por una actualización de la aplicación.
+- Si desea utilizar un archivo directorio específico para archivar datos, almacene el archivo **directory.json** en la carpeta ["Settings" de la carpeta "Data"](../Project/architecture.md#settings-user-data). Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. Esta configuración personalizada/local de los usuarios y de los grupos no se verá afectada por una actualización de la aplicación.
 
 > Para permitir cambios seguros de contraseñas y pertenencias a grupos en un entorno desplegado, puede incluir su archivo **directory.json** en la aplicación del servidor durante la creación, utilizando la [opción correspondiente a la aplicación de creación](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
 
