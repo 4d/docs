@@ -134,7 +134,7 @@ Quando o formulário for executado, 4D automaticamente gerencia o menu pop up ou
 
 #### Valor do item selecionado ou Referência do item selecionado
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type-list) property to **Selected item value** or **Selected item reference**. Essa opção permite otimizar o tamanho dos dados salvos.
+Quando você tiver associado uma lista suspensa com uma lista de escolha e com um campo ou uma variável, você pode definir a propriedade [**Data Type**](properties_DataSource.md#data-type-list) para **Valor do item selecionado** ou **Item selecionado para referência**. Essa opção permite otimizar o tamanho dos dados salvos.
 
 ### Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
 
