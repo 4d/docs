@@ -44,7 +44,7 @@ Pode restaurar manualmente um arquivo do banco de dados atual utilizando a pági
 
 ## Integração manual do histórico
 
-If you have not checked the option for the automatic integration of the log file on the Restore page of the MSC (see [Successive integration of several log files](../MSC/restore.md#successive-integration-of-several-data-log-files)), a warning dialog box appears during the opening of the application when 4D notices that the log file contains more operations than have been carried out in the data file.
+Se você não marcou a opção para a integração automática do arquivo de log na página de restauração do MSC (veja [integração completa de vários arquivos de log](../MSC/restore.md#successive-integration-of-several-data-log-files)), uma caixa de diálogo de aviso aparece durante a abertura do aplicativo quando 4D avisa que o arquivo de log contém mais operações do que as que foram realizadas no arquivo de dados.
 
 ![](../assets/en/Backup/backup08.png)
 
