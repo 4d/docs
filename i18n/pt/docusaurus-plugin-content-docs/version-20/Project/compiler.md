@@ -179,7 +179,7 @@ Podem ser gerados até 5 métodos de compilação; um método de compilação s�
 - **Variáveis de interprocessos**: agrupa as declarações de variáveis interprocessuais;
 - **Arrays**: agrupa as declarações de arrays de processos;
 - **Arrays de interprocessos**: agrupa declarações de arrays interprocessos;
-- **Métodos**: agrupa as declarações de parâmetro do método (por exemplo, `C_LONGINT(mymethod;$1;$2)`). Para obter mais informações, consulte [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+- **Métodos**: agrupa as declarações de parâmetro do método (por exemplo, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler-method).
 
 Você pode renomear cada um desses métodos nas áreas correspondentes, mas eles sempre serão precedidos pela etiqueta `Compiler_` (não modificável). O nome de cada método (prefixo incluído) não deve ter mais de 31 caracteres. Ele também deve ser único e cumprir as [regras 4D para nomear métodos](Concepts/identifiers.md#project-methods).
 
