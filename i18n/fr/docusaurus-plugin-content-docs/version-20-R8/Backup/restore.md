@@ -35,7 +35,7 @@ Pour restituer manuellement une application via une boîte de dialogue standard 
 Vous pouvez également cliquer sur le bouton **[...]** et indiquer un autre emplacement.
 3. Cliquez sur le bouton **Restituer**.
 4D extrait tous les fichiers de la sauvegarde à l’emplacement défini.
-Si le fichier d’historique courant ou un fichier de sauvegarde d’historique ayant le même numéro que le fichier de sauvegarde est stocké dans le même dossier, 4D examine son contenu. S’il contient des opérations non présentes dans le fichier de données, le programme propose de l’intégrer. L’intégration est effectuée automatiquement si l’option **d’intégration automatique de l’historique** est cochée (cf. paragraphe [Restitution automatique](settings.md#automatic-restore)).
+Si le fichier d’historique courant ou un fichier de sauvegarde d’historique ayant le même numéro que le fichier de sauvegarde est stocké dans le même dossier, 4D examine son contenu. S’il contient des opérations non présentes dans le fichier de données, le programme propose de l’intégrer. Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore-and-log-integration)).
 
 (Facultatif) Cliquez sur **OK** pour intégrer le fichier d’historique dans l'application restituée.
 Si la restitution et l’intégration se sont déroulées correctement, 4D affiche une boîte de dialogue indiquant que l’opération a réussi.
