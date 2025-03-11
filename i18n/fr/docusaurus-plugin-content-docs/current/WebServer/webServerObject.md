@@ -109,7 +109,7 @@ Portée Cependant, ces commandes sont destinées à fonctionner avec un seul ser
 | `WEB CLOSE SESSION`             | Serveur Web ayant reçu la requête |
 | `WEB GET BODY PART`             | Serveur Web ayant reçu la requête |
 | `WEB Get body part count`       | Serveur Web ayant reçu la requête |
-| `WEB Get Current Session ID`    | Serveur Web ayant reçu la requête |
+| `WEB Get current session ID`    | Serveur Web ayant reçu la requête |
 | `WEB GET HTTP BODY`             | Serveur Web ayant reçu la requête |
 | `WEB GET HTTP HEADER`           | Serveur Web ayant reçu la requête |
 | `WEB GET OPTION`                | Application hôte du serveur web   |

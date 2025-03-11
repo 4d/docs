@@ -628,7 +628,7 @@
     "description": "The title of the page for a blog author"
   },
   "theme.blog.authorsList.pageTitle": {
-    "message": "Authors",
+    "message": "作成者",
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {

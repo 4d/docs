@@ -3,7 +3,7 @@ id: comboBoxOverview
 title: Combo Box
 ---
 
-Uma caixa de combinação é semelhante a uma [lista suspensa] (dropdownList_Overview.md#overview), exceto pelo fato de que ela aceita texto digitado pelo teclado e tem opções adicionais.
+A combo box is similar to a [drop-down list](dropdownList_Overview.md), except that it accepts text entered from the keyboard and has additional options.
 
 ![](../assets/en/FormObjects/combo_box.png)
 
@@ -13,7 +13,7 @@ Em outros aspectos, você deve tratar uma combo box como uma área editável que
 
 Use o evento [`On Data Change`] (Events/onDataChange.md) para gerenciar as entradas na área de entrada, como faria com qualquer objeto de formulário de entrada.
 
-Você inicializa uma caixa de combinação exatamente da mesma forma que uma [lista suspensa] (dropdownList_Overview.md#overview): usando um objeto, uma matriz ou uma lista de opções.
+You initialize a combo box in exactly the same way as a [drop-down list](dropdownList_Overview.md): using an object, an array, or a choice list.
 
 ### Utilização de um objecto
 
@@ -55,7 +55,7 @@ Objetos do tipo combo box aceitam duas opções específicas referentes a listas
 - [Inserção automática](properties_DataSource.md#automatic-insertion): permite adicionar automaticamente um valor à fonte de dados quando um usuário insere um valor que não é encontrado na lista associada à caixa de combinação.
 - [Excluded List](properties_RangeOfValues.md#excluded-list) (lista de valores excluídos): permite definir uma lista cujos valores não podem ser inseridos na caixa de combinação. Se um valor excluído for digitado, não será aceito e uma mensagem de erro é exibido.
 
-> A associação de uma [lista de valores obrigatórios] (properties_RangeOfValues.md#required-list) não está disponível para caixas de combinação. Em uma interface, se um objeto precisar propor uma lista finita de valores necessários, você deverá usar um objeto [drop-down list] (dropdownList_Overview.md#overview).
+> A associação de uma [lista de valores obrigatórios] (properties_RangeOfValues.md#required-list) não está disponível para caixas de combinação. In an interface, if an object must propose a finite list of required values, then you must use a [drop-down list](dropdownList_Overview.md) object.
 
 ## Propriedades compatíveis
 

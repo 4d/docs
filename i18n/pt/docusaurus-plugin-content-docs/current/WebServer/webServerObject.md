@@ -109,7 +109,7 @@ El lenguaje 4D contiene [varios comandos](https://doc.4d.com/4Dv18/4D/18/Web-Ser
 | `WEB CLOSE SESSION`             | Servidor Web que recebeu o pedido |
 | `WEB GET BODY PART`             | Servidor Web que recebeu o pedido |
 | `WEB Get body part count`       | Servidor Web que recebeu o pedido |
-| `WEB Get Current Session ID`    | Servidor Web que recebeu o pedido |
+| `WEB Get current session ID`    | Servidor Web que recebeu o pedido |
 | `WEB GET HTTP BODY`             | Servidor Web que recebeu o pedido |
 | `WEB GET HTTP HEADER`           | Servidor Web que recebeu o pedido |
 | `WEB GET OPTION`                | Aplicação local de servidor Web   |

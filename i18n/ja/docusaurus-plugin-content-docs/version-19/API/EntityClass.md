@@ -95,7 +95,7 @@ title: Entity
 `.clone()` 関数は、 <!-- REF #EntityClass.clone().Summary -->対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します<!-- END REF -->。
 
 この関数を使用するとエンティティを個別に更新することができます。 ただし、パフォーマンス上の理由から、新しいエンティティはクローンされたエンティティのオブジェクト属性と同じ参照を共有すると言う点に注意して下さい。
-> Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save()`](#save) function is executed.
+> エンティティに対して何らかの変更をおこなった場合、それらは [`.save()`](#save) 関数が実行されたときのみ、参照先のレコードに保存されるという点に注意してください。
 
 この関数は、すでにデータベースに保存されているエンティティに対してのみ使用可能です。 新規に作成されたエンティティ([`.isNew()`](#isnew) が **true** を返すもの) に対して呼び出すことはできません。
 
@@ -167,9 +167,9 @@ title: Entity
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
- $diff1:=$clone.diff(employee) // All differences are returned
+ $diff1:=$clone.diff(employee) // すべての差異が返されます
  $diff2:=$clone.diff(employee;New collection("firstName";"lastName"))
-  // Only differences on firstName and lastName are returned
+  // firstName と lastName についての差異のみが返されます
 ```
 
 $diff1:
@@ -1518,7 +1518,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 <!-- END REF -->
 
 <!-- REF EntityClass.touched().Desc -->
-## .touched( )
+## .touched()
 
 <details><summary>履歴</summary>
 
@@ -1563,7 +1563,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 <!-- END REF -->
 
 <!-- REF EntityClass.touchedAttributes().Desc -->
-## .touchedAttributes( )
+## .touchedAttributes()
 
 <details><summary>履歴</summary>
 

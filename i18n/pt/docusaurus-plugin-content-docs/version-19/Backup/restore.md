@@ -19,7 +19,7 @@ title: Restaurar um backup
 
 Pode restaurar manualmente os conteúdos de um arquivo gerado pelo módulo de cópia de segurança. Uma restauração manual pode ser necessária, por exemplo, para restaurar os conteúdos completos de um arquivo (arquivos projetos e arquivos anexos) ou, para o propósito de realizar pesquisas entre os arquivos. A restauração manual pode também ser realizada junto com a integração do arquivo de histórico atual.
 
-A restauração manual de backups pode ser realizada via a caixa de diálogo de Abertura de documento ou através da página [Restaurar](MSC/restore) do CSM. A restauração através do MSC oferece mais opções e permite pré-visualizar os conteúdos dos arquivos. Restoring via the MSC provides more options and allows the archive contents to be previewed.
+A restauração manual de backups pode ser realizada via a caixa de diálogo de Abertura de documento ou através da página [Restaurar](MSC/restore) do CSM. A restauração através do MSC oferece mais opções e permite pré-visualizar os conteúdos dos arquivos. Por outro lado, só podem ser restaurados os arquivos associados à aplicação aberta.
 
 Para restaurar um banco de dados manualmente via uma caixa de diálogo padrão:
 
@@ -28,8 +28,8 @@ Para restaurar um banco de dados manualmente via uma caixa de diálogo padrão:
 
 ![](../assets/en/Backup/backup07.png)
 
-You can also click on the **Browse...** button found just under the area in order to open any other archive file from a different location.
-3. The **Restore** button launches the manual restoration of the selected element(s). 4D extrai todos os arquivos de backup do local especificado. Se o arquivo de histórico atual ou um arquivo de histórico de backup com o mesmo número que o arquivo de cópia de segurança for armazenado na mesma pasta, 4D examina seus conteúdos. Se conter operações não presentes no arquivo de dados, o programa vai perguntar se deseja integrar essas operações. A integração é feita automaticamente se a opção **Integrar último arquivo de histórico...** for marcada (ver [Restauração automática](settings.md#automatic-restore)).
+Também pode clicar no botão **[...]** para especificar um local diferente.
+3. Clique no botão **Restaurar**. 4D extrai todos os arquivos de backup do local especificado. Se o arquivo de histórico atual ou um arquivo de histórico de backup com o mesmo número que o arquivo de cópia de segurança for armazenado na mesma pasta, 4D examina seus conteúdos. Se conter operações não presentes no arquivo de dados, o programa vai perguntar se deseja integrar essas operações. A integração é feita automaticamente se a opção **Integrar último arquivo de histórico...** for marcada (ver [Restauração automática](settings.md#automatic-restore)).
 
 The **Integrate one or more log file(s) after restore** option allows you to integrate several data log files successively into an application. Se a restauração e integração forem realizadas corretamente, 4D exibe uma caixa de diálogo indicando que a operação foi feita com sucesso.
 5. **Date and Time**: Date and time of backup.
@@ -44,7 +44,7 @@ Pode restaurar manualmente um arquivo do banco de dados atual utilizando a pági
 
 ## Integração manual do histórico
 
-Se não tiver marcado a opção de integração automática de arquivo de histórico na página Restaurar do CSM (ver [Integração sucessiva de vários arquivos de histórico](MSC/restore.md#successive-intergration-of-several-data-log-files)), aparece uma caixa de diálogo de advertência durante a abertura do banco quando 4D advertir que o arquivo de histórico conter mais operações do que as que foram realizadas no banco de dados.
+Se você não marcou a opção para a integração automática do arquivo de log na página de restauração do MSC (veja [integração completa de vários arquivos de log](../MSC/restore.md#successive-integration-of-several-data-log-files)), uma caixa de diálogo de aviso aparece durante a abertura do aplicativo quando 4D avisa que o arquivo de log contém mais operações do que as que foram realizadas no arquivo de dados.
 
 ![](../assets/en/Backup/backup08.png)
 

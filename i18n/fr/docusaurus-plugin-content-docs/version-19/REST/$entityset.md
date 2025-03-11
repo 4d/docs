@@ -9,12 +9,13 @@ Après avoir [créé un ensemble d'entités]($method.md#methodentityset) à l'ai
 
 | Syntaxe                                                                                                        | Exemple                                                                            | Description                                                                  |
 | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [**$entityset/\{entitySetID\}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Récupère un entity set existant                                              |
+| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                      | `/People/$entityset/0ANUMBER`                                                      | Récupère un entity set existant                                              |
 | [**$entityset/\{entitySetID\}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Crée un nouvel entity set à partir de la comparaison d'entity sets existants |
 
 ## $entityset/\{entitySetID\}
 
 Récupère un ensemble d'entités existant (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+
 
 ### Description
 

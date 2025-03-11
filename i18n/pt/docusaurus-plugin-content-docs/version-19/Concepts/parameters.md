@@ -446,7 +446,7 @@ ALERT("Are you sure?";"Yes I am") //2 parameters ALERT("Time is over") //1 param
 
 Os métodos projeto 4D também aceitam tais parâmetros opcionais, começando pela direita. A questão com parâmetros opcionais é como lidar com o caso em que alguns deles estão faltando no método chamado - isso nunca deve produzir um erro. Uma boa prática é atribuir valores padrão a parâmetros não utilizados.
 
-> Quando os parâmetros opcionais forem necessários em seus métodos, também pode considerar o uso de [parâmetros com nome](#named-parameters) que oferecem uma forma flexível de manejar um número variável de parâmetros.
+> Quando parâmetros opcionais são necessários em seus métodos, você também pode considerar usar propriedades [objeto como parâmetros nomeados](#using-object-properties-as-named-parameters) que fornecem uma maneira flexível de lidar com números de variáveis de parâmetros.
 
 Utilizando o comando `Count parameters` desde dentro do método chamado, pode detectar o número real de parâmetros e realizar diferentes operações dependendo do que tenha recebido.
 
@@ -519,7 +519,7 @@ Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, d
  ALERT($0)
 ```
 
-Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions). É descrita no parágrafo [Funções](#functions).
+Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions). Isto é descrito no parágrafo [valores de retorno](#returned-value).
 
 
 ### Casos particulares: objetos e coleções

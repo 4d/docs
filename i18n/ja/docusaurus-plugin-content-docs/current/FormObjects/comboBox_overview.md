@@ -3,7 +3,7 @@ id: comboBoxOverview
 title: コンボボックス
 ---
 
-コンボボックスは [ドロップダウンリスト](dropdownList_Overview.md#概要) と似ていますが、キーボードから入力されたテキストを受けいれる点と、二つの追加オプションがついている点が異なります。
+A combo box is similar to a [drop-down list](dropdownList_Overview.md), except that it accepts text entered from the keyboard and has additional options.
 
 ![](../assets/en/FormObjects/combo_box.png)
 
@@ -13,7 +13,7 @@ title: コンボボックス
 
 入力エリアへの入力内容は、その他の入力フォームオブジェクトと同様に [`On Data Change`](Events/onDataChange.md) イベントを使用して管理します。
 
-コンボボックスの初期化方法は、[ドロップダウンリスト](dropdownList_Overview.md#overview) とまったく同じで、オブジェクト、配列、または選択リストを使用できます。
+コンボボックスの初期化方法は、[ドロップダウンリスト](dropdownList_Overview.md) とまったく同じで、オブジェクト、配列、または選択リストを使用できます。
 
 ### オブジェクトの使用
 
@@ -55,7 +55,7 @@ title: コンボボックス
 - [自動挿入](properties_DataSource.md#自動挿入): このオプションがチェックされていると、オブジェクトに関連付けられたリストにない値をユーザーが入力した場合に、その値が自動的にデータソースに追加されます。
 - [除外リスト](properties_RangeOfValues.md#除外リスト) (除外される値のリスト): 除外される値のリストを関連付けることができます。 ユーザーがこのリストに含まれる値を入力したとき、その入力は自動的に却下され、エラーメッセージが表示されます。 ユーザーがこのリストに含まれる値を入力したとき、その入力は自動的に却下され、エラーメッセージが表示されます。
 
-> [指定リスト](properties_RangeOfValues.md#指定リスト) は、コンボボックスに割り当てることができません。  ユーザーインターフェースにおいて、オブジェクト内にいくつかの指定された値を表示したいときには、[ドロップダウンリスト](dropdownList_Overview.md#概要) のオブジェクトを使用して下さい。
+> [指定リスト](properties_RangeOfValues.md#指定リスト) は、コンボボックスに割り当てることができません。  ユーザーインターフェースにおいて、オブジェクト内にいくつかの指定された値を表示したいときには、[ドロップダウンリスト](dropdownList_Overview.md) のオブジェクトを使用して下さい。
 
 ## プロパティ一覧
 

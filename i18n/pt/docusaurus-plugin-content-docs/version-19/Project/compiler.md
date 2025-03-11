@@ -35,7 +35,7 @@ Clique duas vezes em cada erro detectado para abrir o método ou a classe em que
 
 Use os comandos **Erro Anterior** / **Próximo Erro** do menu **Método** para navegar de um erro para o próximo.
 
-O número de erros encontrados durante as suas primeiras compilações podem ser um desafio, mas não deixe isso te avisar. Logo você descobrirá que eles muitas vezes nascem da mesma fonte, ou seja, não conformidade com certas convenções do projeto. O compilador sempre fornece um [diagnóstico preciso](#error-files) dos erros para ajudá-lo a corrigi-los.
+O número de erros encontrados durante as suas primeiras compilações podem ser um desafio, mas não deixe isso te avisar. Logo você descobrirá que eles muitas vezes nascem da mesma fonte, ou seja, não conformidade com certas convenções do projeto. O compilador sempre fornece um [diagnóstico preciso](#error-file) dos erros para ajudá-lo a corrigi-los.
 
 > A compilação requer uma licença adequada. Sem esta licença, não é possível realizar uma compilação (os botões estão desativados). No entanto, ainda é possível verificar a sintaxe e gerar métodos de digitação.
 
@@ -107,7 +107,7 @@ Apenas os avisos com números podem ser desactivados. Os números de aviso são 
 
 ## Parâmetros do compilador
 
-A página "Compilador" da caixa de diálogo de Propriedades permite que você defina parâmetros relacionados à compilação do projeto. Você pode abrir diretamente esta página a partir da janela do compilador [](#compiler-window) clicando no botão **Parâmetros do Compilador**:
+A página "Compilador" da caixa de diálogo de Propriedades permite que você defina parâmetros relacionados à compilação do projeto. You can directly open this page from the [compiler window](#compiler-window-features) by clicking on the **Compiler Settings** button:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -117,11 +117,11 @@ Essa área agrupa as opções genéricas usadas durante o processo de compilaç�
 
 #### Gerar ficheiro symbol
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The error file is created in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_symbols.txt`.
 
 #### Gerar ficheiro de erros
 
-You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](Project/architecture.md#logs) of the project.
+You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_errors.xml`.
 
 #### Caminho de compilação
 
@@ -181,7 +181,7 @@ Você pode renomear cada um desses métodos nas áreas correspondentes, mas eles
 
 ### Ficheiro Symbol
 
-Se você marcar a opção [**Gerar o arquivo de símbolos**](#generate-the-symbol-file) nas configurações do compilador, um arquivo de símbolos chamado `ProjectName_symbols.txt` será criado na [pasta Logs](Project/architecture.md#logs) do projeto durante a compilação. Está dividido en varias partes:
+If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project during compilation. Está dividido en varias partes:
 
 #### Lista das variáveis processo e interprocesso
 
@@ -228,7 +228,7 @@ tipo resultado, número de chamadas, Thread Safe ou Thread Unsafe
 
 ### Arquivo de erros
 
-Você pode escolher se deseja ou não gerar um arquivo de erro durante a compilação usando a opção [**Gerar arquivo de erro**](#generate-error-file) nas configurações do compilador. O arquivo de erro é automaticamente denominado `projectName_errors.xml` sendo colocado na [pasta Logs](Project/architecture.md#logs) do projeto.
+Você pode escolher se deseja ou não gerar um arquivo de erro durante a compilação usando a opção [**Gerar arquivo de erro**](#generate-error-file) nas configurações do compilador. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs-folder) of the project.
 
 Embora os erros possam ser acessados diretamente pela [janela do compilador](#compile), pode ser útil ter um arquivo de erros que possa ser transmitido de uma máquina para outra. O arquivo de erro é gerado no formato XML para facilitar a análise automática de seu conteúdo. Também permite a criação de interfaces customizadas de exibição de erros.
 
@@ -290,13 +290,13 @@ Ambos os compiladores estão integrados em 4D. O compilador apropriado é seleci
 
 O compilador clássico gera código compilado nativo para processadores Intel/AMD em qualquer máquina. Não necessita de qualquer configuração específica.
 
-O código compilado resultante é armazenado na pasta [DerivedData](architecture.md#deriveddata) do projeto.
+Resulting compiled code is stored in the [DerivedData](./architecture.md#deriveddata-folder) folder of the project.
 
 ### Compilador Silicon
 
 O compilador Silicon gera código compilado nativo para processadores Apple Silicon, como o *Apple M1*.
 
-O código compilado resultante é armazenado na pasta [Bibliotecas](architecture.md#libraries) do projeto.
+Resulting compiled code is stored in the [Libraries](./architecture.md#libraries-folder) folder of the project.
 
 #### Requisitos
 

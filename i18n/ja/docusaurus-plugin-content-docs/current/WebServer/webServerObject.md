@@ -112,7 +112,7 @@ Webサーバーオブジェクトには、Webサーバーを構成する [さま
 | `WEB CLOSE SESSION`             | リクエストを受け取った Webサーバー |
 | `WEB GET BODY PART`             | リクエストを受け取った Webサーバー |
 | `WEB Get body part count`       | リクエストを受け取った Webサーバー |
-| `WEB Get Current Session ID`    | リクエストを受け取った Webサーバー |
+| `WEB Get current session ID`    | リクエストを受け取った Webサーバー |
 | `WEB GET HTTP BODY`             | リクエストを受け取った Webサーバー |
 | `WEB GET HTTP HEADER`           | リクエストを受け取った Webサーバー |
 | `WEB GET OPTION`                | ホストアプリケーション Webサーバー |

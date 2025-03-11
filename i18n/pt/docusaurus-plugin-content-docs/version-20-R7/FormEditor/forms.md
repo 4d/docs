@@ -10,7 +10,7 @@ Os formulários constituem a interface através da qual a informação é introd
 Os formulários também podem conter outros formulários através das seguintes funcionalidades:
 
 - [objetos de subformulário](FormObjects/subform_overview.md)
-- [formulários herdados](properties_FormProperties.md#inherited-forms)
+- [inherited forms](./properties_FormProperties.md#inherited-form-name)
 
 ## Criar formulários
 

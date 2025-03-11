@@ -27,7 +27,7 @@ Puede:
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md)  - [Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md#overview) - [Lista jerárquica](list_overview.md#overview) - [Encabezado de lista de List Box](listbox_overview.md#list-box-headers) - [Pie de lista de List Box](listbox_overview.md#list-box-footers) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Botón de opción](radio_overview.md)
+[Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md)  - [Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista jerárquica](list_overview.md) - [Encabezado de lista de List Box](listbox_overview.md#list-box-headers) - [Pie de lista de List Box](listbox_overview.md#list-box-footers) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Botón de opción](radio_overview.md)
 
 #### Otras funcionalidades de ayuda
 

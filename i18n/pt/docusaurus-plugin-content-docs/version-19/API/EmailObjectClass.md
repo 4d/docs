@@ -130,17 +130,17 @@ A propriedade `.bodyStructure` contém a <!-- REF #EmailObjectClass.bodyStructur
 
 O objeto `.bodyStructure` contém as seguintes propriedades:
 
-| Propriedade | Tipo                   | Valor                                                                                                                                                                    |
-| ----------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| partID      | Text                   | Identifica a parte de maneira única dentro do email                                                                                                                      |
-| type        | Text                   | (obrigatório) Valor do campo de cabeçalho Content-Type da parte                                                                                                          |
-| charset     | Text                   | Valor do parâmetro charset do campo de cabeçalho Content-Type                                                                                                            |
-| encoding    | Text                   | Se `isEncodingProblem=true`, o valor de Content-Transfer-Encoding é adicionado (por padrão indefinido)                                                                   |
-| disposition | Text                   | Valor do campo de cabeçalho Conteúdo - Disposição da parte                                                                                                               |
-| Línguagem   | Coleção de textos      | Lista de tags de idioma, conforme definido em [RFC3282](https://tools.ietf.org/html/rfc3282), no campo de cabeçalho Content-Language da parte, se presente.              |
-| location    | Text                   | URI, como definido em [RFC2557](https://tools.ietf.org/html/rfc2557), no campo de cabeçalho Content-Location da parte, se estiver presente.                              |
-| subParts    | Uma coleção de objetos | Partes do corpo de cada filho (coleção de objetos*EmailBodyPart* )                                                                                                       |
-| headers     | Uma coleção de objetos | Lista de todos os campos de cabeçalho da parte, na ordem que eles aparecem na mensagem (coleção de objetos de *EmailHeader* , ver a propriedade [cabeçalhos](#headers-)) |
+| Propriedade | Tipo                   | Valor                                                                                                                                                               |
+| ----------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| partID      | Text                   | Identifica a parte de maneira única dentro do email                                                                                                                 |
+| type        | Text                   | (obrigatório) Valor do campo de cabeçalho Content-Type da parte                                                                                                     |
+| charset     | Text                   | Valor do parâmetro charset do campo de cabeçalho Content-Type                                                                                                       |
+| encoding    | Text                   | Se `isEncodingProblem=true`, o valor de Content-Transfer-Encoding é adicionado (por padrão indefinido)                                                              |
+| disposition | Text                   | Valor do campo de cabeçalho Conteúdo - Disposição da parte                                                                                                          |
+| Línguagem   | Coleção de textos      | Lista de tags de idioma, conforme definido em [RFC3282](https://tools.ietf.org/html/rfc3282), no campo de cabeçalho Content-Language da parte, se presente.         |
+| location    | Text                   | URI, como definido em [RFC2557](https://tools.ietf.org/html/rfc2557), no campo de cabeçalho Content-Location da parte, se estiver presente.                         |
+| subParts    | Uma coleção de objetos | Partes do corpo de cada filho (coleção de objetos*EmailBodyPart* )                                                                                                  |
+| headers     | Uma coleção de objetos | Lista de todos os campos de cabeçalho da parte, na ordem que eles aparecem na mensagem (coleção de objetos de *EmailHeader*, ver a propriedade [headers](#headers)) |
 
 ## .bodyValues
 

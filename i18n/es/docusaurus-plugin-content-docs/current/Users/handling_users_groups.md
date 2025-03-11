@@ -43,7 +43,7 @@ El administrador no puede:
 - modificar el usuario Diseñador
 - por defecto, el acceso a las partes protegidas de la aplicación. En particular, el administrador no puede acceder al modo Diseño si está restringido. En particular, el administrador no puede acceder al modo Diseño si está restringido. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.
 
-Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. En la [caja de diálogo de gestión de usuarios](#users-and-groups-editor), los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:
+Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. In the user management dialog box, the icons of the Designer and Administrator are displayed in red and green respectively:
 
 - Icono Diseñador: ![](../assets/en/Users/iconDesigner.png)
 - Icono Administrador: ![](../assets/en/Users/iconAdmin.png)
@@ -90,7 +90,7 @@ La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el 
 5. Defina el grupo o los grupos a los que pertenece el usuario mediante la tabla "Miembro de los grupos".
   Puede añadir o eliminar el usuario seleccionado a un grupo marcando la opción correspondiente en la columna Miembro.
 
-La pertenencia de los usuarios a los distintos grupos también puede definirse por grupos en la página [Grupos](#configuring-access-groups).
+La pertenencia de los usuarios a los distintos grupos también puede definirse por grupos en la página [Grupos](#configuring-groups).
 
 ### Eliminar un usuario
 
@@ -204,7 +204,7 @@ Los usuarios, grupos, así como sus derechos de acceso se almacenan en un archiv
 Este archivo puede ser almacenado en las siguientes ubicaciones, dependiendo de sus necesidades:
 
 - Si desea utilizar el mismo directorio para todos los archivos de datos (o si utiliza un único archivo de datos), almacene el archivo **directory.json** en la carpeta de configuración del usuario, es decir, en la carpeta "Settings" [en el mismo nivel que la carpeta "Project"](Project/architecture.md#project-folder) (ubicación predeterminada).
-- Si desea utilizar un archivo directorio específico para archivar datos, almacene el archivo **directory.json** en la carpeta["Settings" de la carpeta "Data"](Project/architecture.md#settings). Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. Esta configuración personalizada/local de los usuarios y de los grupos no se verá afectada por una actualización de la aplicación.
+- Si desea utilizar un archivo directorio específico para archivar datos, almacene el archivo **directory.json** en la carpeta ["Settings" de la carpeta "Data"](../Project/architecture.md#settings-user-data). Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. Esta configuración personalizada/local de los usuarios y de los grupos no se verá afectada por una actualización de la aplicación.
 
 > Para permitir cambios seguros de contraseñas y pertenencias a grupos en un entorno desplegado, puede incluir su archivo **directory.json** en la aplicación del servidor durante la creación, utilizando la [opción correspondiente a la aplicación de creación](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
 

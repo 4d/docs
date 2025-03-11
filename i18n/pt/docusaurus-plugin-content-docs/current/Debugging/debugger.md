@@ -118,7 +118,7 @@ The current state of the debugger window is automatically saved in the project. 
 - the size and position of the window,
 - the position of the division lines,
 - o [modo de exibição](#display-mode),
-- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. Você pode [**fixar uma expressão**](#pin-an-expression) para mantê-la exibida em todos os contextos.
+- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pinning-an-expression) to keep it displayed in all contexts.
 
 The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
 

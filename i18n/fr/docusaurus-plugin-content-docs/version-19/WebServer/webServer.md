@@ -25,7 +25,7 @@ La sécurité des données est présente à tous les stades d'implémentation du
 * **Authentification**: [fonctions d'authentification](authentication.md) souples et personnalisables basées sur des paramètres intégrés ainsi que sur des méthodes base "fallback" ([`On Web Authentication`](authentication.md#on-web-authentication) pour le serveur web et [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
 
 * **Contrôle du contenu exposé** : Seul le contenu que vous exposez explicitement est disponible via des requêtes web directes ou des requêtes REST. Vous devez déclarer :
-  * [Les méthodes projet](templates.md#allowing-project-methods) exposées via requêtes HTTP
+  * [Project methods](templates.md#accessing-4d-methods-via-the-web) exposed through HTTP requests
   * [Fonctions ORDA](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposées par le biais de requêtes REST
   * [Les tables et champs](REST/configuration.md#exposing-tables-and-fields) que vous ne voulez pas rendre disponibles via requêtes REST
 

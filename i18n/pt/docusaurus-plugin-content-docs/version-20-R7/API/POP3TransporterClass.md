@@ -42,7 +42,7 @@ POP3 Transporter objects are instantiated with the [`POP3 New transporter`](../c
 
 #### Descrição
 
-The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summary -->creates and returns a new object of the `4D.POP3Transporter` type<!-- END REF -->. É idêntico ao comando [`POP3 New transporter`](../commands/pop3-new-transporter.md) (atalho).
+A função `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary --> cria e retorna um novo objeto do tipo `4D.POP3Transporter`<!-- END REF -->. É idêntico ao comando [`POP3 New transporter`](../commands/pop3-new-transporter.md) (atalho).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -99,7 +99,7 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 ##### Descrição
 
-The `.delete( )` function <!-- REF #POP3TransporterClass.delete().Summary -->flags the *msgNumber* email for deletion from the POP3 server<!-- END REF -->.
+A função `.delete( )` <!-- REF #POP3TransporterClass.delete().Summary -->flags do e-mail *msgNumber* para exclusão do servidor POP3 <!-- END REF -->.
 
 No parâmetro *msgNumber*, passe o número do email a apagar. Esse número é retornado na propriedade number pelo método [`.getMailInfoList()`](#getmailinfolist).
 
@@ -146,7 +146,7 @@ Executar esse método não remove de verdade qualquer email. The flagged email w
 
 ##### Descrição
 
-The `.getBoxInfo()` function <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
+A função `.getBoxInfo()` <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->retorna um objeto `boxInfo` correspondente à caixa de correio designada pelo [`transporter POP3 `](#pop3-transporter-object)<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
 
 O objeto `boxInfo` retornado contém as seguintes propriedades:
 
@@ -198,7 +198,7 @@ O objeto `boxInfo` retornado contém as seguintes propriedades:
 
 ##### Descrição
 
-The `.getMail()` function <!-- REF #POP3TransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
+A função `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->retorna o objeto `Email` correspondente ao *msgNumber* na caixa de correio designada pelo [`transporter POP3`](#pop3-transporter-object)<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
 Pass in *msgNumber* the number of the message to retrieve. Esse número é retornado na propriedade `number` pela função [`.getMailInfoList()`](#getmailinfolist).
 
@@ -263,7 +263,7 @@ Se quiser saber o emissário do primeiro email da mailbox:
 
 ##### Descrição
 
-The `.getMailInfo()` function <!-- REF #POP3TransporterClass.getMailInfo().Summary -->returns a `mailInfo` object corresponding  corresponding to the *msgNumber* in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Essa função permite que recupere informação sobre o email.
+A função `.getMailInfo()` <!-- REF #POP3TransporterClass.getMailInfo().Summary -->retorna um objeto `mailInfo` correspondente ao *msgNumber* na caixa de correio designada pelo [`transporter POP3`](#pop3-transporter-object)<!-- END REF -->. Essa função permite que recupere informação sobre o email.
 
 In *msgNumber*, pass the number of the message to retrieve. Esse número é retornado na propriedade number pelo método [`.getMailInfoList()`](#getmailinfolist).
 
@@ -285,7 +285,7 @@ O método retorna **Null** se:
  var $server; $mailInfo : Object
  var $mailNumber : Integer
 
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" //Obrigatório
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -293,8 +293,8 @@ O método retorna **Null** se:
  var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
 
-  //message info
- $mailInfo:=$transporter.getMailInfo(1) //get the first mail
+  //informações da mensagem
+ $mailInfo:=$transporter.getMailInfo(1) //receber a primeira correspondência
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
  End if
@@ -322,7 +322,7 @@ O método retorna **Null** se:
 
 ##### Descrição
 
-The `.getMailInfoList()` function <!-- REF #POP3TransporterClass.getMailInfoList().Summary -->returns a collection of `mailInfo` objects describing all messages in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Essa função permite gerenciar localmente a lista de mensagens localizadas no servidor POP3.
+A função `.getMailInfoList()` <!-- REF #POP3TransporterClass.getMailInfoList().Summary --> retorna uma coleção de objetos `mailInfo` descrevendo todas as mensagens na caixa de correio designada pelo [`transporter POP3 `](#pop3-transporter-object)<!-- END REF -->. Essa função permite gerenciar localmente a lista de mensagens localizadas no servidor POP3.
 
 Each `mailInfo` object in the returned collection contains the following properties:
 

@@ -54,7 +54,7 @@ Les balises 4D sont interprétées de manière récursive : 4D tente toujours de
 
 Si le champ de texte `[Mail]Letter_type` contient lui-même une balise, telle que `<!--#4DSCRIPT/m_Gender-->`, cette balise sera évaluée récursivement après l'interprétation de la balise 4DHTML.
 
-Ce principe puissant répond à la plupart des besoins liés à la transformation des textes. Notez toutefois que, dans certains cas, cela peut également permettre l'insertion d'un code malveillant dans le contexte web, [ce qui peut être évité](WebServer/templates.md#prevention-of-malicious-code-insertion).
+Ce principe puissant répond à la plupart des besoins liés à la transformation des textes. Note, however, that in some cases this can also allow malicious code to be inserted in the web context, [which can be avoided](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ### Identifiants avec tokens
 
@@ -319,7 +319,7 @@ Par exemple, vous pouvez exécuter :
 
 En cas d'erreur lors de l'interprétation, le texte inséré sera de la forme : `<!--#4DEVAL expr-->: ## error # code d'erreur`.
 
-> Pour des raisons de sécurité, il est recommandé d'utiliser la balise [`4DTEXT`](#4dtext) lors du traitement de données introduites depuis l'extérieur de l'application, afin d'éviter l'[insertion de code malveillant](#prevention-of-malicious-code-insertion).
+> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DHTML
 
@@ -338,7 +338,7 @@ Par exemple, voici les résultats du traitement de la variable texte 4D myvar av
 
 En cas d'erreur d'interprétation, le texte inséré sera `<!--#4DHTML myvar--> : ## error # error code`.
 
-> Pour des raisons de sécurité, il est recommandé d'utiliser la balise [`4DTEXT`](#4dtext) lors du traitement de données introduites depuis l'extérieur de l'application, afin d'éviter l'[insertion de code malveillant](#prevention-of-malicious-code-insertion).
+> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DIF, 4DELSE, 4DELSEIF et 4DENDIF
 
@@ -649,7 +649,7 @@ La valeur de la variable 4D `vtSiteName` sera insérée dans la page HTML lors d
 
 Vous pouvez également insérer des expressions 4D. Par exemple, vous pouvez insérer directement le contenu d'un champ (`<!--#4DTEXT [tableName]fieldName-->`), un élément de tableau (`<!--#4DTEXT tabarr{1}-->`) ou une méthode retournant une valeur (`<!--#4DTEXT mymethod-->`). La conversion des expressions suit les mêmes règles que celles des variables. De plus, l'expression doit respecter les règles de syntaxe 4D.
 
-> Pour des raisons de sécurité, il est recommandé d'utiliser cette balise lors du traitement de données introduites en dehors de l'application, afin d'éviter [l'insertion de code malveillant](#prevention-of-malicious-code-insertion).
+> For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 En cas d'erreur d'évaluation, le texte inséré apparaîtra sous la forme `<!--#4DTEXT myvar-->: ## erreur # code d'erreur`.
 
@@ -704,7 +704,7 @@ En utilisant la syntaxe $, le code suivant est validé par le parseur :
 
 A noter que `$4dtag` et `<--#4dtag -->` ne sont pas strictement équivalents : contrairement à `<--#4dtag -->`, le traitement de `$4dtag` n'interprète pas les balises 4D [de manière récursive](#recursive-processing). Les balises `$` sont toujours évaluées une fois et le résultat est considéré comme du texte brut.
 
-Cette différence consiste à empêcher l'injection de code malveillant. Comme [expliqué ci-dessous](#prevention-of-malicious-code-insertion), il est fortement recommandé d'utiliser les balises `4DTEXT` au lieu des balises `4DHTML` lorsque vous manipulez du texte utilisateur, afin de se protéger contre une réinterprétation indésirable des balises : avec `4DTEXT`, les caractères spéciaux tels que "<" sont échappés, ainsi toute balise 4D utilisant la syntaxe `<!--#4dtag expression -->` perdra sa signification particulière. Cependant, étant donné que `4DTEXT` n'échappe pas le symbole `$`, nous avons choisi de ne pas prendre en charge la récursion afin d'empêcher toute injection malveillante utilisant la syntaxe `$4dtag (expression)`.
+Cette différence consiste à empêcher l'injection de code malveillant. As [explained below](../WebServer/templates.md#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. Cependant, étant donné que `4DTEXT` n'échappe pas le symbole `$`, nous avons choisi de ne pas prendre en charge la récursion afin d'empêcher toute injection malveillante utilisant la syntaxe `$4dtag (expression)`.
 
 Les exemples suivants illustrent le résultat du traitement en fonction de la syntaxe et de la balise  utilisées :
 

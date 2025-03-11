@@ -132,7 +132,7 @@ TCPConnection objects provide the following properties and functions:
 | --------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #4D.TCPConnection.closed.Syntax -->](#closed)<br/><!-- INCLUDE #4D.TCPConnection.closed.Summary -->           |
 | [<!-- INCLUDE #4D.TCPConnection.errors.Syntax -->](#errors)<br/><!-- INCLUDE #4D.TCPConnection.errors.Summary -->           |
-| [<!-- INCLUDE #4D.TCPConnection.noDelay.Syntax -->](#noDelay)<br/><!-- INCLUDE #4D.TCPConnection.noDelay.Summary -->        |
+| [<!-- INCLUDE #4D.TCPConnection.noDelay.Syntax -->](#nodelay)<br/><!-- INCLUDE #4D.TCPConnection.noDelay.Summary -->        |
 | [<!-- INCLUDE #4D.TCPConnection.send().Syntax -->](#send)<br/><!-- INCLUDE #4D.TCPConnection.send().Summary -->             |
 | [<!-- INCLUDE #4D.TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #4D.TCPConnection.shutdown().Summary --> |
 | [<!-- INCLUDE #4D.TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #4D.TCPConnection.wait().Summary -->             |
@@ -156,7 +156,7 @@ TCPConnection objects provide the following properties and functions:
 
 #### Descripción
 
-The `4D.TCPConnection.new()` function <!-- REF #4D.TCPConnection.new().Summary -->creates a new TCP connection to the specified *serverAddress* and *serverPort*, using the defined *options*, and returns a `4D.HTTPRequest` object<!-- END REF -->.
+La función `4D.TCPConnection.new()` <!-- REF #4D.TCPConnection.new().Summary -->crea una nueva conexión TCP a la *serverAddress* y *serverPort* especificados, usando las *opciones* definidas, y devuelve un objeto `4D.HTTPRequest`<!-- END REF -->.
 
 #### Parámetro *options*
 
@@ -203,7 +203,7 @@ Un objeto [`TCPEvent`](TCPEventClass.md) es devuelto cuando se llama una [funci�
 
 #### Descripción
 
-The `.closed` property contains <!-- REF #4D.TCPConnection.closed.Summary -->whether the connection is closed<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
+La propiedad `.closed` contiene <!-- REF #4D.TCPConnection.closed.Summary -->si la conexión está cerrada<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
 
 <!-- END REF -->
 
@@ -234,7 +234,7 @@ La propiedad `.errors` contiene <!-- REF #4D.TCPConnection.errors.Summary -->una
 
 #### Descripción
 
-The `.noDelay` property contains <!-- REF #4D.TCPConnection.noDelay.Summary -->whether Nagle's algorithm is disabled (`true`) or enabled (`false`)<!-- END REF -->. Esta propiedad es de **solo lectura**.
+La propiedad `.noDelay` contiene <!-- REF #4D.TCPConnection.noDelay.Summary -->si el algoritmo de Nagle está deshabilitado (`true`) o habilitado (`false`)<!-- END REF -->. Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
@@ -274,7 +274,7 @@ La función `send()` <!-- REF #4D.TCPConnection.send().Summary -->envía datos a
 
 #### Descripción
 
-The `shutdown()` function <!-- REF #4D.TCPConnection.shutdown().Summary -->closes the *write* channel of the connection (client to server stream)<!-- END REF --> while keeping the *read* channel (server to client stream) open, allowing you to continue receiving data until the connection is fully closed by the server or an error occurs.
+La función `shutdown()` <!-- REF #4D.TCPConnection.shutdown().Summary -->cierra el canal *write* de la conexión (cliente a servidor)<!-- END REF --> mientras se mantiene abierto el canal *read* (servidor al flujo del cliente) permitiéndole continuar recibiendo datos hasta que la conexión sea completamente cerrada por el servidor o se produzca un error.
 
 <!-- END REF -->
 

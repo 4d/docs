@@ -124,7 +124,7 @@ Les clés de chiffrement successives peuvent être sauvegardées sur le même ap
 
 :::caution
 
-Le stockage du fichier de clés de chiffrement des données au premier niveau de l'appareil est obligatoire lorsque vous utilisez la [fonctionnalité de restitution et d'intégration automatique](../Backup/settings.md#automatic-restore-and-log-integration). Lorsque la séquence de restitution est déclenchée, 4D doit avoir accès au fichier de la clé de cryptage, sinon une erreur se produit.
+Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#). Lorsque la séquence de restitution est déclenchée, 4D doit avoir accès au fichier de la clé de cryptage, sinon une erreur se produit.
 
 :::
 

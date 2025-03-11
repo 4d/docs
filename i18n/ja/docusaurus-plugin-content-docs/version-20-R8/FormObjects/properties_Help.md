@@ -27,17 +27,7 @@ title: ヘルプ
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) -
-[ボタングリッド](buttonGrid_overview.md) -
-[チェックボックス](checkbox_overview.md) -
-[ドロップダウンリスト](dropdownList_Overview.md) -
-[コンボボックス](comboBox_overview.md) -
-[階層リスト](list_overview.md) -
-[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) -
-[リストボックスフッター](listbox_overview.md#リストボックスフッター) -
-[ピクチャーボタン](pictureButton_overview.md) -
-[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
-[ラジオボタン](radio_overview.md)
+[Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md)  - [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up menu](picturePopupMenu_overview.md) - [Radio Button](radio_overview.md)
 
 #### 追加のヘルプ機能
 

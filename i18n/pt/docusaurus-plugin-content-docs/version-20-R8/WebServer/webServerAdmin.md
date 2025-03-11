@@ -45,7 +45,7 @@ Quando seleciona este comando, a página de início do site web publicado pela a
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. La página se llama utilizando la URL *localhost*, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
+Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. La página se llama utilizando la URL *localhost*, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. The command takes into account the [TCP publication port](./webServerConfig.md#http-port) number specified in the settings.
 
 ## Limpar a cache
 
@@ -58,7 +58,7 @@ Para o fazer, pode:
 
 A cache é então imediatamente limpa.
 
-> También puede utilizar la URL [/4DCACHECLEAR](#cacheclear).
+> You can also use the [/4DCACHECLEAR](#4dcacheclear) URL.
 
 ## Explorador de execução
 

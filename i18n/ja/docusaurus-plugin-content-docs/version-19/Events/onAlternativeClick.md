@@ -22,7 +22,7 @@ title: On Alternative Click
 
 ### リストボックス
 
-このイベントは [オブジェクト配列型のリストボックス](FormObjects/listbox_overview.md#オブジェクト配列カラムの設定) のカラムにおいて、ユーザーがウィジェットのエリプシスボタン ("alternateButton" 属性) をクリックしたときに生成されます。
+このイベントは [オブジェクト配列型のリストボックス](../FormObjects/listbox_overview.md#オブジェクト配列カラムの設定) のカラムにおいて、ユーザーがウィジェットのエリプシスボタン ("alternateButton" 属性) をクリックしたときに生成されます。
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 

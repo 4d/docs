@@ -126,7 +126,7 @@ Vous pouvez utiliser les raccourcis suivants dans la liste des Propriétés:
 
 Vous pouvez ajouter des objets dans un formulaire de nombreuses manières :
 
-- Par traçage d'un objet après sélection dans la barre d'objets (cf. paragraphe [Utiliser la barre d’objets](#using-the-object-bar))
+- By drawing the object directly in the form after selecting its type in the object bar (see [Using the object bar](#object-bar))
 - Par glisser-déposer depuis la barre d'objets
 - Par glisser-déposer ou copier-coller depuis la [bibliothèque d'objets](objectLibrary.md) préconfigurés
 - Par glisser-déposer depuis un autre formulaire,

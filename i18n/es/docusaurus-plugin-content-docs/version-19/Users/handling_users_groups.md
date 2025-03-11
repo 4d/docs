@@ -28,7 +28,7 @@ El administrador no puede:
 - modificar el usuario Diseñador
 - por defecto, el acceso a las partes protegidas de la aplicación. En particular, el administrador no puede acceder al modo Diseño si está restringido. En particular, el administrador no puede acceder al modo Diseño si está restringido. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.
 
-Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. En la [caja de diálogo de gestión de usuarios](#users-and-groups-editor), los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:
+Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. In the user management dialog box, the icons of the Designer and Administrator are displayed in red and green respectively:
 
 - Icono Diseñador: ![](../assets/en/Users/iconDesigner.png)
 - Icono del Administrador: ![](../assets/en/Users/iconAdmin.png)
@@ -67,7 +67,7 @@ La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el 
 
 5. Defina el grupo o los grupos a los que pertenece el usuario mediante la tabla "Miembro de los grupos". Puede añadir o eliminar el usuario seleccionado a un grupo marcando la opción correspondiente en la columna Miembro.
 
-La pertenencia de los usuarios a los distintos grupos también puede definirse por grupos en la página [Grupos](#configuring-access-groups).
+La pertenencia de los usuarios a los distintos grupos también puede definirse por grupos en la página [Grupos](#configuring-groups).
 
 ### Eliminar un usuario
 

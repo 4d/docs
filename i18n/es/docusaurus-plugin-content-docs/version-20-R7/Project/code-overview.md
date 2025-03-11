@@ -106,7 +106,7 @@ Para más información sobre esta opción, consulte [Atributo Ejecutar en el ser
 
 ### Modo Ejecución
 
-Esta opción permite declarar el método elegible para la ejecución en modo apropiativo. Se describe en la [sección Procesos apropiativos](../Develop/processes.md#preemptive-processes).
+Esta opción permite declarar el método elegible para la ejecución en modo apropiativo. It is described in the [Preemptive processes section](../Develop/preemptive.md).
 
 ### Disponibilidad
 

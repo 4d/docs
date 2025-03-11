@@ -1517,7 +1517,7 @@ Retorna:
 <!-- END REF -->
 
 <!-- REF EntityClass.touched().Desc -->
-## .touched( )
+## .touched()
 
 <details><summary>Histórico</summary>
 
@@ -1562,7 +1562,7 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 <!-- END REF -->
 
 <!-- REF EntityClass.touchedAttributes().Desc -->
-## .touchedAttributes( )
+## .touchedAttributes()
 
 <details><summary>Histórico</summary>
 

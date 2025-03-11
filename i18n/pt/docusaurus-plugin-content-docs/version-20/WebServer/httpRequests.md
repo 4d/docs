@@ -48,7 +48,7 @@ Estes parâmetros devem ser declarados como se indica a seguir:
 //Código do método
 ```
 
-Como alternativa, você pode usar a sintaxe de [parâmetros nomeados](Concepts/parameters.md#named-parameters):
+Alternatively, you can use the [named parameters](../Concepts/parameters.md) syntax:
 
 ```4d
 // Método banco de dados On Web Connection 
@@ -160,7 +160,7 @@ Um formulário pode ser enviado por dois métodos (ambos podem ser usados com 4D
 
 > Quando o servidor web recebe um formulário publicado, ele chama o método banco de dados `On Web Authentication` (se existir).
 
-No método chamado, você usa o comando `WEB GET VARIABLES` para [recuperar os nomes e os valores](#getting-values-from-the-requests) de todos os campos incluídos em uma página HTML enviada ao servidor.
+In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-http-requests) of all the fields included in an HTML page submitted to the server.
 
 Exemplo para definir a ação de um formulário:
 

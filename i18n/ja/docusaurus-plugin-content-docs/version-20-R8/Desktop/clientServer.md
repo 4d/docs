@@ -87,7 +87,7 @@ title: クライアント/サーバー管理
 
 ## リモートユーザーセッション
 
-On the server, the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
+サーバー上では、[`Session`](../commands/session.md) コマンドはカレントユーザーセッションの情報を格納する `Session` オブジェクトを返します。 このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
 
 ### 効果
 

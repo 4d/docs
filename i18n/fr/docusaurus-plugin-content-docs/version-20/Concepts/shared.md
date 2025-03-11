@@ -31,7 +31,7 @@ Les modifications suivantes peuvent être effectuées sur les objets partagés e
 - ajout ou suppression de propriétés d'objets,
 - ajout ou modification de valeurs (prises en charge par les objets/collections partagé(e) s), y compris d'autres objets et collections partagé(s) (ce qui crée un groupe partagé, cf. ci-dessous).
 
-Toute instruction de modification dans un objet partagé ou une collection partagée doit être protégée à l'intérieur d'un bloc \[`Use...End use`\](#use-end-use), sinon une erreur est générée.
+All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#useend-use) block, otherwise an error is generated.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")

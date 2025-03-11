@@ -50,7 +50,7 @@ Si vous modifiez l'un des attributs de l'entité dans l'entity set, les valeurs 
 
 Si l'entity set ne se trouve plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. L'ensemble d'entités sera actualisé (certaines entités peuvent être incluses tandis que d'autres peuvent être supprimées) depuis la dernière fois qu'il a été créé, s'il n'existait plus avant de le recréer.
 
-En utilisant [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), vous pouvez combiner deux entity sets que vous avez précédemment créés. Vous pouvez combiner les résultats dans les deux, retourner uniquement ce qui est commun aux deux, ou renvoyer ce qui n'est pas commun aux deux.
+Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`](./$entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. Vous pouvez combiner les résultats dans les deux, retourner uniquement ce qui est commun aux deux, ou renvoyer ce qui n'est pas commun aux deux.
 
 Une nouvelle entity selection est renvoyée; vous pouvez néanmoins créer un nouvel entity set en appelant [`$method=entityset`]($method.md#methodentityset) à la fin de la requête REST.
 

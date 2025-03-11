@@ -47,7 +47,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
 - copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
+- または、プロジェクトの **dependencies.json** ファイルでコンポーネントを宣言します。これは、[**依存関係インターフェースを使用して依存関係を追加**](#github依存関係の追加) するときに、ローカルファイルに対して自動的におこなわれます。
 
 **dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
 
@@ -159,7 +159,7 @@ flowchart TB
 
 :::note
 
-If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the *Not found* [status](#dependency-status), even if a version of the component exists next to the project's package folder.
+**environment4d.json** ファイルで定義されたコンポーネントのパスが、プロジェクトの開始時に見つからない場合、コンポーネントは読み込まれず、*Not found* [ステータス](#依存関係のステータス) が表示されます。
 
 :::
 
@@ -175,7 +175,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 ### GitHub に保存されたコンポーネント
 
-4D components available as GitHub releases can be referenced and automatically loaded and updated in your 4D projects.
+GitHubリリースとして利用可能な 4Dコンポーネントを参照して、4Dプロジェクトに自動で読み込んで更新することができます。
 
 :::note
 
@@ -303,7 +303,7 @@ You then need to [provide your connection token](#providing-your-github-access-t
 
 ## プロジェクトの依存関係の監視
 
-In an opened project, you can add, remove, update, and get information about dependencies and their current loading status in the **Dependencies** panel.
+開かれているプロジェクトでは、**依存関係** パネルで依存関係の追加・削除・更新ができるほか、現在の読み込み状態に関する情報を取得することができます。
 
 依存関係パネルを表示するには:
 
@@ -319,7 +319,7 @@ In an opened project, you can add, remove, update, and get information about dep
 
 The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server).
 
-### Filtering dependencies
+### 依存関係のフィルタリング
 
 デフォルトでは、依存関係マネージャーによって識別されたすべての依存関係は、それらの [ステータス](#依存関係のステータス) に関係なくリストされます。 依存関係パネル上部のタブを選択することで、依存関係のステータスに応じてリストの表示をフィルタリングできます:
 
@@ -329,7 +329,7 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 - **非アクティブ**: プロジェクトに読み込まれておらず、利用できない依存関係。 このステータスには様々な理由が考えられます: ファイルの欠落、バージョンの非互換性など…
 - **コンフリクト**: プロジェクトに読み込まれてはいるものの、先に読み込まれた [優先度](#優先順位) の高い依存関係と競合している依存関係。 *Overloaded* な依存関係も表示されるため、競合の原因を確認し、適切に対処することができます。
 
-### Dependency status
+### 依存関係のステータス
 
 デベロッパーの注意を必要とする依存関係は、行の右側の **ステータスラベル** と背景色で示されます。
 
@@ -342,7 +342,7 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 - **Not found**: dependencies.jsonファイルで依存関係が宣言されていますが、見つかりません。
 - **Inactive**: プロジェクトと互換性がないため、依存関係は読み込まれていません (例: 現在のプラットフォーム用にコンポーネントがコンパイルされていない、など)。
 - **Duplicated**: 依存関係は読み込まれていません。同じ名前を持つ別の依存関係が同じ場所に存在し、すでに読み込まれています。
-- **Available after restart**: The dependency reference has just been added or updated [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.
+- **Available after restart**: [インターフェースによって](#プロジェクトの依存関係の監視) 依存関係の参照が追加・更新されました。この依存関係は、アプリケーションの再起動後に読み込まれます。
 - **Unloaded after restart**: [インターフェースによって](#プロジェクトの依存関係の監視) 依存関係の参照が削除されました。この依存関係は、アプリケーションの再起動時にアンロードされます。
 - **Update available \<version\>**: A new version of the GitHub dependency matching your [component version configuration](#defining-a-github-dependency-version-range) has been detected.
 - **Refreshed after restart**: The [component version configuration](#defining-a-github-dependency-version-range) of the GitHub dependency has been modified, it will be adjusted the next startup.
@@ -352,7 +352,7 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 
 ![dependency-tips](../assets/en/Project/dependency-tip1.png)
 
-### Dependency origin
+### 依存関係のオリジン
 
 依存関係パネルには、各依存関係のオリジン (由来) にかかわらず、プロジェクトの依存関係すべてがリストされます。 依存関係のオリジンは、名前の下に表示されるタグによって判断することができます: 依存関係のオリジンは、名前の下に表示されるタグによって判断することができます:
 
@@ -437,7 +437,7 @@ Define the [dependency version range](#tags-and-versions) to use for this projec
 
 #### Defining a GitHub dependency version range
 
-You can define the [tag or version](#tags-and-versions) option for a dependency:
+依存関係の [タグとバージョン](#タグとバージョン) オプションを定義することができます:
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 

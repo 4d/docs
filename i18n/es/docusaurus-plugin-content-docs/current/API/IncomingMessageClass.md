@@ -3,7 +3,7 @@ id: IncomingMessageClass
 title: IncomingMessage
 ---
 
-The `4D.IncomingMessage` class allows you to handle the object received by a custom [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Parameters given directly in the request with GET verb are handled by the [`.urlQuery`](#urlquery) property, while parameters passed in the body of the request are available through functions such as [`.getBlob()`](#getblob) or [`getText()`](#gettext).
+The `4D.IncomingMessage` class allows you to handle the object received by a custom [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Los parámetros dados directamente en la petición con el verbo GET son manejados por la propiedad [`.urlQuery`](#urlquery), mientras que los parámetros pasados en el cuerpo de la solicitud están disponibles a través de funciones como [`.getBlob()`](#getblob) o [`getText()`](#gettext).
 
 The HTTP request handler can return any value (or nothing). It usually returns an instance of the [`4D.OutgoingMessage`](OutgoingMessageClass.md) class.
 
@@ -87,8 +87,8 @@ There are 2 url parts - Url parts are: start - example
 | [<!-- INCLUDE #IncomingMessageClass.getText().Syntax -->](#gettext)<br/><!-- INCLUDE #IncomingMessageClass.getText().Summary -->          |
 | [<!-- INCLUDE #IncomingMessageClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #IncomingMessageClass.headers.Summary -->              |
 | [<!-- INCLUDE #IncomingMessageClass.url.Syntax -->](#url)<br/><!-- INCLUDE #IncomingMessageClass.url.Summary -->                          |
-| [<!-- INCLUDE #IncomingMessageClass.urlPath.Syntax -->](#urlPath)<br/><!-- INCLUDE #IncomingMessageClass.urlPath.Summary -->              |
-| [<!-- INCLUDE #IncomingMessageClass.urlQuery.Syntax -->](#urlQuery)<br/><!-- INCLUDE #IncomingMessageClass.urlQuery.Summary -->           |
+| [<!-- INCLUDE #IncomingMessageClass.urlPath.Syntax -->](#urlpath)<br/><!-- INCLUDE #IncomingMessageClass.urlPath.Summary -->              |
+| [<!-- INCLUDE #IncomingMessageClass.urlQuery.Syntax -->](#urlquery)<br/><!-- INCLUDE #IncomingMessageClass.urlQuery.Summary -->           |
 | [<!-- INCLUDE #IncomingMessageClass.verb.Syntax -->](#verb)<br/><!-- INCLUDE #IncomingMessageClass.verb.Summary -->                       |
 
 :::note
@@ -192,7 +192,7 @@ If the body has not been given as JSON valid content, an error is raised.
 
 #### Descripción
 
-The `.getPicture()` function <!-- REF #IncomingMessageClass.getPicture().Summary -->returns the body of the request as a picture (in case of a body sent as a picture)<!-- END REF -->.
+La función `.getPicture()` <!-- REF #IncomingMessageClass.getPicture().Summary -->devuelve el cuerpo de la petición como una imagen (en caso de que un cuerpo enviado como una imagen)<!-- END REF -->.
 
 The content-type must be given in the headers to indicate that the body is a picture.
 
@@ -236,7 +236,7 @@ If the body has not been given as a string value, the function tries to convert 
 
 #### Descripción
 
-The `.headers` property contains <!-- REF #IncomingMessageClass.headers.Summary -->the current headers of the incoming message as key/value pairs (strings)<!-- END REF -->.
+La propiedad `.headers` contiene <!-- REF #IncomingMessageClass.headers.Summary -->los encabezados actuales del mensaje entrante como pares llave/valor (cadenas)<!-- END REF -->.
 
 La propiedad `.headers` es de sólo lectura.
 
@@ -274,7 +274,7 @@ La parte "host" de la petición (*IP:port*) es suministrada por el [encabezado `
 
 #### Descripción
 
-The `.urlPath` property contains <!-- REF #IncomingMessageClass.urlPath.Summary -->the URL of the request without the *IP:port* part and as a collection of strings<!-- END REF -->.
+La propiedad `.urlPath` contiene <!-- REF #IncomingMessageClass.urlPath.Summary -->la URL de la solicitud sin la parte *IP:port* y como una colección de cadenas<!-- END REF -->.
 
 For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.urlPath` property is ["docs", "invoices" ,"today"].
 
@@ -290,7 +290,7 @@ The `.urlPath` property is read-only.
 
 #### Descripción
 
-The `.urlQuery` property contains <!-- REF #IncomingMessageClass.urlQuery.Summary -->the parameters of the request when they have been given in the URL as key/value pairs<!-- END REF -->.
+La propiedad `.urlQuery` contiene <!-- REF #IncomingMessageClass.urlQuery.Summary -->los parámetros de la petición cuando se han dado en la URL como pares llave/valor<!-- END REF -->.
 
 The `.urlQuery` property is read-only.
 
@@ -326,7 +326,7 @@ $test:=Length($r.urlQuery.mdcode) //5
 
 :::note
 
-Parameters given in the body of the request using POST or PUT verbs are handled through dedicated functions: [`getText()`](#gettext), [`getPicture()`](#getpicture), [`getBlob()`](#getblob), [`getJSON()`](#getjson).
+Los parámetros dados en el cuerpo de la petición utilizando los verbos POST o PUT son manejados a través de funciones dedicadas: [`getText()`](#gettext), [`getPicture()`](#getpicture), [`getBlob()`](#getblob), [`getJSON()`](#getjson).
 
 :::
 
@@ -340,7 +340,7 @@ Parameters given in the body of the request using POST or PUT verbs are handled 
 
 #### Descripción
 
-The `.verb` property contains <!-- REF #IncomingMessageClass.verb.Summary -->the verb used by the request<!-- END REF -->.
+La propiedad `.verb` contiene <!-- REF #IncomingMessageClass.verb.Summary -->el verbo usado por la petición<!-- END REF -->.
 
 HTTP and HTTPS request verbs include for example "get", "post", "put", etc.
 

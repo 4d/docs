@@ -237,7 +237,7 @@ title: Index
 [`DOM Get next sibling XML element`](../commands-legacy/dom-get-next-sibling-xml-element.md)<br/>
 [`DOM Get parent XML element`](../commands-legacy/dom-get-parent-xml-element.md)<br/>
 [`DOM Get previous sibling XML element`](../commands-legacy/dom-get-previous-sibling-xml-element.md)<br/>
-[`DOM Get Root XML element`](../commands-legacy/dom-get-root-xml-element.md)<br/>
+[`DOM Get root XML element`](../commands-legacy/dom-get-root-xml-element.md)<br/>
 [`DOM GET XML ATTRIBUTE BY INDEX`](../commands-legacy/dom-get-xml-attribute-by-index.md)<br/>
 [`DOM GET XML ATTRIBUTE BY NAME`](../commands-legacy/dom-get-xml-attribute-by-name.md)<br/>
 [`DOM GET XML CHILD NODES`](../commands-legacy/dom-get-xml-child-nodes.md)<br/>
@@ -357,7 +357,7 @@ title: Index
 [`Get adjusted index cache priority`](../commands-legacy/get-adjusted-index-cache-priority.md)<br/>
 [`Get adjusted table cache priority`](../commands-legacy/get-adjusted-table-cache-priority.md)<br/>
 [`GET ALLOWED METHODS`](../commands-legacy/get-allowed-methods.md)<br/>
-[`Get application color scheme`](../commands-legacy/get-application-color-scheme.md)<br/>
+[`Get Application color scheme`](../commands-legacy/get-application-color-scheme.md)<br/>
 [`Get assert enabled`](../commands-legacy/get-assert-enabled.md)<br/>
 [`GET AUTOMATIC RELATIONS`](../commands-legacy/get-automatic-relations.md)<br/>
 [`Get cache size`](../commands-legacy/get-cache-size.md)<br/>
@@ -382,7 +382,7 @@ title: Index
 [`GET HIGHLIGHT`](../commands-legacy/get-highlight.md)<br/>
 [`GET HIGHLIGHTED RECORDS`](../commands-legacy/get-highlighted-records.md)<br/>
 [`Get indexed string`](../commands-legacy/get-indexed-string.md)<br/>
-[`Get last update log path`](../commands-legacy/last-update-log-path.md)<br/>
+[`Last update log path`](../commands-legacy/last-update-log-path.md)<br/>
 [`GET LIST ITEM`](../commands-legacy/get-list-item.md)<br/>
 [`Get list item font`](../commands-legacy/get-list-item-font.md)<br/>
 [`GET LIST ITEM ICON`](../commands-legacy/get-list-item-icon.md)<br/>
@@ -1046,7 +1046,7 @@ title: Index
 [`SELECT LIST ITEMS BY POSITION`](../commands-legacy/select-list-items-by-position.md)<br/>
 [`SELECT LIST ITEMS BY REFERENCE`](../commands-legacy/select-list-items-by-reference.md)<br/>
 [`SELECT LOG FILE`](../commands-legacy/select-log-file.md)<br/>
-[`Select RGB Color`](../commands-legacy/select-rgb-color.md)<br/>
+[`Select RGB color`](../commands-legacy/select-rgb-color.md)<br/>
 [`Selected list items`](../commands-legacy/selected-list-items.md)<br/>
 [`Selected record number`](../commands-legacy/selected-record-number.md)<br/>
 [`SELECTION RANGE TO ARRAY`](../commands-legacy/selection-range-to-array.md)<br/>
@@ -1060,7 +1060,7 @@ title: Index
 [`SEND VARIABLE`](../commands-legacy/send-variable.md)<br/>
 [`Sequence number`](../commands-legacy/sequence-number.md)<br/>
 [`Session`](session.md)<br/>
-[`Session info`](session-info.md) - **nouveau 4D 20 R7**<br/>
+[`Session info`](session-info.md) - **new 4D 20 R7**<br/>
 [`Session storage`](session-storage.md)<br/>
 [`SET ABOUT`](../commands-legacy/set-about.md)<br/>
 [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md)<br/>
@@ -1130,7 +1130,7 @@ title: Index
 [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md)<br/>
 [`SET USER ALIAS`](../commands-legacy/set-user-alias.md)<br/>
 [`Set user properties`](../commands-legacy/set-user-properties.md)<br/>
-[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **nouveau 4D 20 R7**<br/>
+[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **new 4D 20 R7**<br/>
 [`SET WINDOW RECT`](../commands-legacy/set-window-rect.md)<br/>
 [`SET WINDOW TITLE`](../commands-legacy/set-window-title.md)<br/>
 [`Shift down`](../commands-legacy/shift-down.md)<br/>
@@ -1302,7 +1302,7 @@ title: Index
 [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md)<br/>
 [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md)<br/>
 [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md)<br/>
-[`WEB Get Current Session ID`](../commands-legacy/web-get-current-session-id.md)<br/>
+[`WEB Get current session ID`](../commands-legacy/web-get-current-session-id.md)<br/>
 [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md)<br/>
 [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md)<br/>
 [`WEB GET OPTION`](../commands-legacy/web-get-option.md)<br/>

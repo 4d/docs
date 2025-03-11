@@ -58,7 +58,7 @@ var $myFile : 4D.File  // File クラスオブジェクト変数
 var $myVar // バリアント型変数
 ```
 
-`varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。    
+`varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。   
 このシンタックスは [ローカル変数とプロセス変数](#local-process-and-interprocess-variables) の宣言のみサポートしています。 [インタープロセス変数](#interprocess-variables) および [配列](Concepts/arrays.md) には使用できません。
 
 `varType` には次が指定できます:
@@ -154,7 +154,7 @@ MyNumber:=3
 
 は変数 _MyNumber_ を作成し、数値 3を代入します。 MyNumber が既に存在していれば、そこに数値 3が代入されます。
 
-> [データ型の宣言](#変数の作成) をせずに変数を作成することは通常推奨されません。
+> [データ型の宣言](#変数の宣言) をせずに変数を作成することは通常推奨されません。
 
 もちろん、変数からデータを取り出すことができなければ、便利とはいえません。 再度代入演算子を使用します。 [Products]Size というフィールドに _MyNumber_ 変数の値を代入するには、代入演算子の右側に MyNumber を書きます:
 

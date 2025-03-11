@@ -5,13 +5,13 @@ title: リモートデータストア
 
 **リモートデータストア** とは、ローカルの 4Dアプリケーション (4D または4D Server) 上で使用される、別の 4Dアプリケーションの [データストア](dsMapping.md#データストア) への参照です。
 
-The local 4D application connects to and references the remote datastore through a call to the [`Open datastore`](../commands/open-datastore.md) command.
+ローカルの 4Dアプリケーションは、[`Open datastore`](../commands/open-datastore.md) コマンドを呼び出すことで、リモートデータストアに接続し参照します。
 
 リモートマシン上で、4D は [セッション](../WebServer/sessions.md) を開いて、`Open datastore` を呼び出したアプリケーションからのリクエストを処理します。 リクエストは内部で [REST API](../REST/gettingStarted.md) を使用し、これには [利用可能なライセンス](../REST/authUsers.md) が必要な場合があります。 リクエストは内部で [REST API](../REST/gettingStarted.md) を使用し、これには [利用可能なライセンス](../REST/authUsers.md) が必要な場合があります。 リクエストは内部で [REST API](../REST/gettingStarted.md) を使用し、これには [利用可能なライセンス](../REST/authUsers.md) が必要な場合があります。 リクエストは内部で [REST API](../REST/gettingStarted.md) を使用し、これには [利用可能なライセンス](../REST/authUsers.md) が必要な場合があります。 リクエストは内部で [REST API](../REST/gettingStarted.md) を使用し、これには [利用可能なライセンス](../REST/authUsers.md) が必要な場合があります。 リクエストは内部で [REST API](../REST/gettingStarted.md) を使用し、これには [利用可能なライセンス](../REST/authUsers.md) が必要な場合があります。 リクエストは内部で [REST API](../REST/gettingStarted.md) を使用し、これには [利用可能なライセンス](../REST/authUsers.md) が必要な場合があります。 リクエストは内部で [REST API](../REST/gettingStarted.md) を使用し、これには [利用可能なライセンス](../REST/authUsers.md) が必要な場合があります。 リクエストは内部で [REST API](../REST/gettingStarted.md) を使用し、これには [利用可能なライセンス](../REST/authUsers.md) が必要な場合があります。
 
 ## Webセッションの使用
 
-When you work with a remote datastore referenced through calls to the [`Open datastore`](../commands/open-datastore.md) command, the connection with the requesting processes is handled via [web sessions](../WebServer/sessions.md) on the remote machine.
+[`Open datastore`](../commands/open-datastore.md) コマンドによって参照されるリモートデータストアの場合、リクエスト元プロセスとの接続はリモートマシン上では [Webセッション](../WebServer/sessions.md) により管理されます。
 
 リモートデータストア上で作成される Webセッションは内部的にセッションID によって識別され、4Dアプリケーション上では `localID` と紐づいています。 データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。 データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。 データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。 データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。 データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。 データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。 データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。 データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。 データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。
 

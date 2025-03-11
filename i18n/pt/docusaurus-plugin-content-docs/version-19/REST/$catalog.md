@@ -68,7 +68,7 @@ Devolve informação sobre todos os dataclasses do seu projecto e os seus atribu
 
 Chamando `$catalog/$all` pode reciber informação detalhada sobre os atributos de cada uma das classes de dados do modelo ativo de projeto.
 
-Para saber mais sobre o que se devolve para cada classe de dados e seus atributos, utilize [`$catalog/\{dataClass\}`](#catalogdataClass).
+For more information about what is returned for each dataclass and its attributes, use [`$catalog/\{dataClass\}`](#catalogdataclass).
 
 
 ### Exemplo

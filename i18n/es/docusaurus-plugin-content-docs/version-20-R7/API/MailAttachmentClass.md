@@ -85,7 +85,7 @@ La propiedad `.disposition` contiene <!-- REF #MailAttachmentClass.disposition.S
 
 #### Descripción
 
-La función `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->devuelve el contenido del objeto adjunto en un objeto `4D.Blob`<!-- END REF -->. Puede utilizar este método con objetos adjuntos recibidos por el comando [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime).
+La función `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->devuelve el contenido del objeto adjunto en un objeto `4D.Blob`<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) command.
 
 ## .name
 
