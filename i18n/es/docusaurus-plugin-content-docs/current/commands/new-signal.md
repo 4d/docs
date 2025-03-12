@@ -38,7 +38,7 @@ Dado que el objeto signal es un objeto compartido, también puede utilizarse par
 
 **Valor devuelto**
 
-A new [`4D.Signal` object](../API/SignalClass.md#signal-object).
+Un nuevo objeto [`4D.Signal`](../API/SignalClass.md#signal-object).
 
 #### Ejemplo
 
