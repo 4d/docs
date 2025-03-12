@@ -295,7 +295,7 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 Apple Silicon用コンパイラーは *Apple M1* などの Apple Silicon プロセッサー向けのネイティブコンパイルコードを生成します。
 
-Resulting compiled code is stored in the [Libraries](./architecture.md#libraries-folder) folder of the project.
+結果のコンパイルコードはプロジェクトの [Libraries](./architecture.md#libraries-folder) フォルダーに保存されます。
 
 #### 要件
 
