@@ -19,7 +19,7 @@ La palabra clave `Super` <!-- REF #_command_.Super.Summary -->permite llamar a l
 
 `Super` tiene dos propósitos diferentes:
 
-1. Dentro de un código [constructor]((../Concepts/classes.md#class-constructor), `Super` es un comando que permite llamar al constructor de la superclase. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
+1. Dentro de un código [constructor](../Concepts/classes.md#class-constructor), `Super` es un comando que permite llamar al constructor de la superclase. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
 
 - Si todos los class constructors en el árbol de herencia no son llamados correctamente, se genera el error -10748. Es responsabilidad del desarrollador 4D asegurarse de que las llamadas sean válidas.
 - Si el comando `This` es llamado en un objeto cuyas superclases no han sido construidas, se genera el error -10743.
@@ -32,7 +32,7 @@ Super($text1) //llamada del constructor de la superclase con un parámetro texto
 Este. aram:=$text2 // usar un segundo parámetro
 ```
 
-2. Inside a [class function](#class-function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
+2. Inside a [class function](../Concepts/classes.md#function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
 
 ```4d
 Super.doSomething(42) //llama a la función "doSomething"  
@@ -115,9 +115,9 @@ $message:=$square.description() //tengo 4 lados iguales
 
 #### Propiedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1706                            |
-| Hilo seguro       | &amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1706                        |
+| Hilo seguro       | &check; |
 
 
