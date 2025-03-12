@@ -52,7 +52,7 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 
 |                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebSocketClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #WebSocketClass.dataType.Summary -->        |
+| [<!-- INCLUDE #WebSocketClass.dataType.Syntax -->](#datatype)<br/><!-- INCLUDE #WebSocketClass.dataType.Summary -->        |
 | [<!-- INCLUDE #WebSocketClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketClass.handler.Summary -->           |
 | [<!-- INCLUDE #WebSocketClass.id.Syntax -->](#id)<br/><!-- INCLUDE #WebSocketClass.id.Summary -->                          |
 | [<!-- INCLUDE #WebSocketClass.send().Syntax -->](#send)<br/><!-- INCLUDE #WebSocketClass.send().Summary -->                |
@@ -77,7 +77,7 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 | Parâmetro                                         | Tipo                         |                             | Descrição                                           |
 | ------------------------------------------------- | ---------------------------- | :-------------------------: | --------------------------------------------------- |
 | url                                               | Text                         |              ->             | URL a que se deve ligar                             |
-| [connectionHandler](#connectionHandler-parameter) | Object                       |              ->             | Objeto que declara as chamadas de retorno WebSocket |
+| [connectionHandler](#connectionhandler-parameter) | Object                       |              ->             | Objeto que declara as chamadas de retorno WebSocket |
 | Resultados                                        | 4D.WebSocket | <- | Novo [objeto WebSocket](#websocket-object)          |
 
 <!-- END REF -->
