@@ -23,7 +23,7 @@ Hay diferentes maneras de configurar los parámetros del servidor web 4D, en fun
 | Puede ajustarse con           | Nombre                                                                           | Comentarios |
 | ----------------------------- | -------------------------------------------------------------------------------- | ----------- |
 | Caja de diálogo de parámetros | [Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache) |             |
-| Caja de diálogo de parámetros | [Options (I) page/Page Cache Size](../settings/web.md#page-cache-size)           |             |
+| Caja de diálogo de parámetros | [Options (I) page/Page Cache Size](../settings/web.md#pages-cache-size)          |             |
 
 Activa y configura la caché de las páginas web.
 
@@ -72,11 +72,11 @@ Lista de cifrado utilizada para el protocolo seguro; establece la prioridad de l
 
 ## Parámetros CORS
 
-| Puede ajustarse con           | Nombre                                                                                                                    | Comentarios                                                                            |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| objeto webServer              | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                      | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)       |
-| `WEB SET OPTION`              | `Web CORS settings`                                                                                                       | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)       |
-| Caja de diálogo de parámetros | [Página Options (II)/Nombres de dominio y Métodos HTTP autorizados](../settings/web.md#domain-names-HTTP-methods-allowed) | Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s) |
+| Puede ajustarse con           | Nombre                                                                                                                   | Comentarios                                                                            |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| objeto webServer              | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                     | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)       |
+| `WEB SET OPTION`              | `Web CORS settings`                                                                                                      | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)       |
+| Caja de diálogo de parámetros | [Página Options (II)/Nombres de dominio y Métodos HTTP autorizados](../settings/web.md#domain-nameshttp-methods-allowed) | Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s) |
 
 Lista de hosts y métodos permitidos para el servicio CORS.
 
