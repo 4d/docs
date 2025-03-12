@@ -11,7 +11,7 @@ Puede desarrollar componentes 4D para sus propias necesidades y mantenerlos en p
 
 - **Base proyecto**: proyecto 4D utilizado para desarrollar el componente. El proyecto matriz es una base estándar sin atributos específicos. Un proyecto matricial forma un único componente.
 - **Proyecto local**: proyecto aplicación en la que se instala y utiliza un componente.
-- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md) and whose contents are used in the host application.
+- **Componente**: proyecto matriz que puede compilarse y [crearse](Desktop/building.md#build-component), [instalarse en la aplicación principal](../Project/components.md) y cuyo contenido se utiliza en la aplicación principal.
 
 ## Básicos
 
