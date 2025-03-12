@@ -392,7 +392,7 @@ Todas las casillas de selección comparten un mismo conjunto de propiedades bás
 > (1) No soportado por los estilos [Regular](#regular) y [Flat](#flat).<br/>
 > (2) No soportado por los estilos [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) y [Collapse/Expand](#collapseexpanded).
 
-Additional specific properties are available, depending on the [button style](#check-box-button-styles):
+Propiedades específicas adicionales están disponibles en función del [estilo de botón](#check-box-button-styles):
 
 - Personalizado: [Ruta de fondo](properties_TextAndPicture.md#background-pathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalmargin) - [Desplazamiento del ícono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalmargin)
 - Plana, Regular: [Tres Estados](properties_Display.md#three-states)
