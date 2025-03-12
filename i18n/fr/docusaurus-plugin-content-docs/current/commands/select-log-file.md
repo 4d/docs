@@ -8,28 +8,28 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECT LOG FILE.Params-->
 
-| Paramètres | Type |                             | Description                |
-| ---------- | ---- | --------------------------- | -------------------------- |
-| logFile    | Text | &#8594; | Name of the log file       |
-| \*         |      | &#8594; | Close the current log file |
+| Paramètres | Type |                             | Description                       |
+| ---------- | ---- | --------------------------- | --------------------------------- |
+| logFile    | Text | &#8594; | Nom du fichier journal            |
+| \*         |      | &#8594; | Fermer le fichier journal courant |
 
 <!-- END REF-->
 
 #### Description
 
-<!--REF #_command_.SELECT LOG FILE.Summary-->The **SELECT LOG FILE** command creates, or closes the log file according to the value you pass in parameter<!-- END REF-->.
+<!--REF #_command_.SELECT LOG FILE.Summary-->La commande **SELECT LOG FILE** crée ou ferme le fichier d'historique (ou fichier journal) de la base de données, suivant la valeur que vous passez en paramètre.<!-- END REF-->.
 
-In *logFile*, pass the name or the full pathname of the log file to be created. If you only pass a name, the file will be created in the "Logs" folder of the database located next to the database structure file.
+Passez dans *logFile* le nom ou le chemin d'accès complet du fichier d'historique à créer. Si vous passez uniquement un nom, le fichier sera créé dans le dossier "Logs" de la base, à côte du fichier de structure de la base.
 
-If you pass an empty string in *logFile*, **SELECT LOG FILE** presents an Save File dialog box, allowing the user to choose the name and location of the log file to be created. If the file is created correctly, the OK variable is set to 1\. Otherwise, if the user clicks Cancel or if the log file could not be created, OK is set to 0.
+Si vous passez une chaîne vide, **SELECT LOG FILE** présente une boîte de dialogue standard d'enregistrement de fichier, permettant à l'utilisateur de choisir le nom et l'emplacement du fichier d'historique à créer. Si le fichier est correctement créé, la variable OK prend la valeur 1. Autrement, si l'utilisateur clique sur le bouton Annuler ou si le fichier d'historique ne peut pas être créé, OK prend la valeur 0.
 
-**Note:** The new log file is not generated immediately after execution of the command, but after the next backup (the parameter is kept in the data file and will be taken into account even if the database is closed in the meantime) or a call to the [New log file](new-log-file.md) command. You can call the [BACKUP](../commands-legacy/backup.md) command to trigger the creation of the log file.
+**Note :** Le nouveau fichier journal n'est pas généré immédiatement après l'exécution de la commande, mais après la sauvegarde suivante (le paramétrage est conservé dans le fichier de données et sera pris en compte même si la base de données est fermée entre-temps) ou un appel à la commande [`New log file`](new-log-file.md). Vous pouvez appeler la commande [BACKUP](../commands-legacy/backup.md) pour déclencher la création du fichier journal.
 
-If you pass *\** in *logFile*, **SELECT LOG FILE** closes the current log file for the database. The OK variable is set to 1 when the log file is closed.
+Si vous passez *\** dans *logFile*, **SELECT LOG FILE** ferme le fichier journal courant de la base de données. La variable OK prend la valeur 1 lorsque le fichier d'historique est refermé.
 
 #### Variables et ensembles système
 
-OK is set to 1 if the log file is correctly created, or closed.
+OK prend la valeur 1 si le fichier d'historique est correctement créé ou fermé.
 
 #### Voir également
 
