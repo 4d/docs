@@ -32,7 +32,7 @@ Super($text1) //appel du constructeur de la superclasse avec un paramètre text
 This.param:=$text2 // utilisation d'un second param
 ```
 
-2. Inside a [class function](#class-function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
+2. Inside a [class function](../Concepts/classes.md#function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
 
 ```4d
 Super.doSomething(42) //appelle la fonction "doSomething"   
@@ -115,9 +115,9 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 #### Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 1706                                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1706                        |
+| Thread safe        | &check; |
 
 
