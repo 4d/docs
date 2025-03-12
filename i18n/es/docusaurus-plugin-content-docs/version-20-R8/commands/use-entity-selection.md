@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-The `USE ENTITY SELECTION` command <!--REF #_command_.USE ENTITY SELECTION.Summary-->updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection<!-- END REF-->.
+El comando `USE ENTITY SELECTION` <!--REF #_command_.USE ENTITY SELECTION.Summary-->actualiza la selección actual de la tabla que coincide con el nivel de datos del parámetro *entitySelection*, de acuerdo al contenido de la selección de entidad<!-- END REF-->.
 
 Este comando no puede utilizarse con un [almacén de datos remoto](../ORDA/remoteDatastores.md).
 
