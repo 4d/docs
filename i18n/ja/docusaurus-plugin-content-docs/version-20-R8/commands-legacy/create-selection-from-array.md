@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->**CREATE SELECTION FROM ARRAY** コマンドは、以下の方法で*selectionName* 命名セレクションを作成します:
+<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->**CREATE SELECTION FROM ARRAY** コマンドは、以下の方法で*selectionName*<!-- END REF--> 命名セレクションを作成します:
 
 * *aTable*のレコード番号値を納めた配列、または
-* *aTable*のレコードごとに、レコードを含める ([True](true.md "True"))/含めない ([False](false.<!-- END REF-->md "False"))の値を納めたブール配列。
+* *aTable*のレコードごとに、レコードを含める ([True](true.md "True"))/含めない ([False](false.md "False"))の値を納めたブール配列。
 
 **警告:** 命名セレクションはメモリ内に作成、ロードされます。したがって、このコマンドを実行する前に十分なメモリがあることを確認してください。
 

@@ -18,10 +18,10 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get indexed string.Summary-->Get indexed string コマンドは以下の値を返します: 
+Get indexed string コマンドは以下の値を返します: 
 
-* ストリングリスト (“STR#”) リソースに格納された、IDが*resID*の文字列、または
-* 開かれたXLIFFファイル中、'group'要素の'id'属性が*resID*である文字列 (後述の"XLIFFアーキテクチャとの互換性"を参照)。<!-- END REF-->
+* <!--REF #_command_.Get indexed string.Summary-->ストリングリスト (“STR#”) リソースに格納された、IDが*resID*の文字列、または<!-- END REF-->
+* 開かれたXLIFFファイル中、'group'要素の'id'属性が*resID*である文字列 (後述の"XLIFFアーキテクチャとの互換性"を参照)。
 
 *strID*にストリングの番号を渡します。ストリングリストリソースのストリングは1からNの順に番号が振られます。ストリングリストリソースのすべてのストリング (およびそのストリング番号) を取得するには[STRING LIST TO ARRAY](string-list-to-array.md "STRING LIST TO ARRAY")を使用します。
 

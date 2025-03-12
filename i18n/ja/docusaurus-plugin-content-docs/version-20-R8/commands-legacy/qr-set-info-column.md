@@ -22,9 +22,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.QR SET INFO COLUMN.Summary-->##### リストモード 
+##### リストモード 
 
-QR SET INFO COLUMN コマンドを使用して、既存のカラムに関するパラメタを設定できます。<!-- END REF-->
+<!--REF #_command_.QR SET INFO COLUMN.Summary-->QR SET INFO COLUMN コマンドを使用して、既存のカラムに関するパラメタを設定できます。<!-- END REF-->
 
 *area*には、クイックレポートエリアの参照を指定します。
 

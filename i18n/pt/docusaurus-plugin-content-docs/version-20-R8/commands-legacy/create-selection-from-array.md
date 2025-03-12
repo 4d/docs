@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->O comando **CREATE SELECTION FROM ARRAY** cria a seleção selectionName a partir de:
+<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->O comando **CREATE SELECTION FROM ARRAY** cria a seleção selectionName<!-- END REF--> a partir de:
 
 * um array de números de registros absolutos *regArray* de *tabela*,
-* ou de um array de booleanos.<!-- END REF--> Neste caso, os valores do array indicam a associação ([True](true.md "True")) ou não ([False](false.md "False")) de cada registro de *tabela* à seleção selectionName.
+* ou de um array de booleanos. Neste caso, os valores do array indicam a associação ([True](true.md "True")) ou não ([False](false.md "False")) de cada registro de *tabela* à seleção selectionName.
 
 **Cuidado:** Uma seleção nomeada é criada e carregada na memória. Portanto, tenha certeza de ter memória suficiente antes de executar o comando.
 

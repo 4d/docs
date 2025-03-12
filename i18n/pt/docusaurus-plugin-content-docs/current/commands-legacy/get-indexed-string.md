@@ -18,9 +18,9 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get indexed string.Summary-->O comando Get indexed string devolve:   
+O comando Get indexed string devolve:   
 
-* Uma das cadeias guardadas no recurso lista de cadeias (“STR#”) cujo número de identificação for passada em *resNum*.<!-- END REF-->
+* Uma <!--REF #_command_.Get indexed string.Summary-->das cadeias guardadas no recurso lista de cadeias (“STR#”) cujo número de identificação for passada em *resNum*.<!-- END REF-->
 * Uma cadeia guardada em um arquivo XLIFF aberto cujo atributo "id" do elemento "grupo" se passa em *resNum* (ver a continuação "Compatibilidade com a arquitetura XLIFF ). Passe o número da cadeia em *cadeiaNum*. As cadeias de um recurso lista de cadeias estão numeradas de 1 a N. Para recuperar todas as cadeias (e seus números) de um recurso lista de cadeias, utilize o comando [STRING LIST TO ARRAY](string-list-to-array.md "STRING LIST TO ARRAY"). Se o recurso não for encontrado, ou se a cadeia não estiver no interior do recurso, uma cadeia vazia é devolvida e a variável sistema OK toma o valor 0 (zero). Se passa um número de referência de arquivo de recursos válido em *resArquivo*, o recurso é procurado nesse arquivo apenas. Se não passa *resArquivo*, a primeira ocorrência do recurso encontrada na cadeia de arquivos de recursos.
 
 **Nota:** uma cadeia de um recurso lista de cadeias pode conter até 255 caracteres.

@@ -19,10 +19,10 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.CREATE INDEX.Summary-->La commande **CREATE INDEX** permet de créer :
+La commande **CREATE INDEX** permet de créer :
 
-* un index standard sur un ou plusieurs champs (index composite) ou
-* un index de mots-clés sur un champ.<!-- END REF-->
+* un <!--REF #_command_.CREATE INDEX.Summary-->index standard sur un ou plusieurs champs (index composite)<!-- END REF--> ou
+* un index de mots-clés sur un champ.
 
 L’index est créé pour la table *laTable* en utilisant le ou les champ(s) désigné(s) par le tableau de pointeurs *tabChamps*. Ce tableau contient une seule ligne si vous souhaitez créer un index simple et deux ou plusieurs lignes si vous souhaitez créer un index composite (sauf index de mots-clés). Dans le cas d’index composites, l’ordre des champs dans le tableau est important lors de la construction de l’index.
 

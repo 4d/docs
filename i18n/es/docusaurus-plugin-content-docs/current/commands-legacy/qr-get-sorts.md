@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.QR GET SORTS.Summary-->El comando QR GET SORTS llenas dos arrays:
+<!--REF #_command_.QR GET SORTS.Summary-->El comando QR GET SORTS llenas dos arrays<!-- END REF-->:
 
 * *aColumnas*  
-Este array incluye todas las columnas que tienen un sentido de ordenación.<!-- END REF-->
+Este array incluye todas las columnas que tienen un sentido de ordenación.
 * *aOrden*  
 Cada elemento de este array contiene el sentido de ordenación de la columna correspondiente.  
 \- Si *aOrden{$i}* es igual a 1, el sentido de la ordenación es ascendente.  

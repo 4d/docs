@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.GET REGISTERED CLIENTS.Summary-->GET REGISTERED CLIENTS コマンドは2つの配列を作成します:
+<!--REF #_command_.GET REGISTERED CLIENTS.Summary-->GET REGISTERED CLIENTS コマンドは2つの配列を作成します<!-- END REF-->:
 
-* *clientLists*は、[REGISTER CLIENT](register-client.md "REGISTER CLIENT")コマンドを使って"登録された"クライアントの登録名の配列となります。<!-- END REF-->
+* *clientLists*は、[REGISTER CLIENT](register-client.md "REGISTER CLIENT")コマンドを使って"登録された"クライアントの登録名の配列となります。
 * *methods*は、各クライアントの"ワークロード"の配列となります。ワークロードとは、[EXECUTE ON CLIENT](execute-on-client.md "EXECUTE ON CLIENT") コマンドでスタックされた、4D Clientがこれから実行しなければならないメソッドの数です (より詳しい情報は、[EXECUTE ON CLIENT](execute-on-client.md "EXECUTE ON CLIENT")コマンドを参照してください)。
 
 **Note:** 処理に成功すると、OKシステム変数は1になります。

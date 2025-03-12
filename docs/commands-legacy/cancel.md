@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.CANCEL.Summary-->The **CANCEL** command is used in form or object methods (or in a subroutine) to:
+The **CANCEL** command is used in form or object methods (or in a subroutine) to:
 
-* cancel a new or modified record, for which data entry has been initiated using [ADD RECORD](add-record.md) or [MODIFY RECORD](modify-record.md).<!-- END REF-->
+* cancel a new or modified record, for which data entry has been initiated using [ADD RECORD](add-record.md) or [MODIFY RECORD](modify-record.md).
 * cancel a form displayed with the [DIALOG](../commands/dialog.md) command.
 * exit a form displaying a selection of records, using [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md).
 * cancel the printing of a form that is about to be printed using the [Print form](../commands/print-form.md) command (see below).
 
-In the context of data entry, **CANCEL** performs the same action as if the user had pressed the cancel key (**Esc**).
+<!--REF #_command_.CANCEL.Summary-->In the context of data entry, **CANCEL** performs the same action as if the user had pressed the cancel key (**Esc**).<!-- END REF-->
 
 **CANCEL** is commonly executed as a result of a menu command being chosen. **CANCEL** is also commonly used in the object method of a “no action” button.
 

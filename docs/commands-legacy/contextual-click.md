@@ -15,9 +15,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Contextual click.Summary-->The Contextual click command returns True if a contextual click has been made:
+<!--REF #_command_.Contextual click.Summary-->The Contextual click command returns True if a contextual click has been made<!-- END REF-->:
 
-* Under Windows and Mac OS, contextual clicks are made using the right button of the mouse.<!-- END REF-->
+* Under Windows and Mac OS, contextual clicks are made using the right button of the mouse.
 * Under Mac OS, contextual clicks can also be made using a **Control+click** combination.
 
 This command should be used only in the context of the On Clicked form event. It is therefore necessary to verify in Design mode that the event has been properly selected in the Form properties and/or in the specific object. 

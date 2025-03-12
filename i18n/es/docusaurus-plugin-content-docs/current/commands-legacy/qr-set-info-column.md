@@ -22,9 +22,9 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.QR SET INFO COLUMN.Summary-->##### Informes en lista 
+##### Informes en lista 
 
-El comando QR SET INFO COLUMN permite definir los parámetros de una columna existente.<!-- END REF--> 
+<!--REF #_command_.QR SET INFO COLUMN.Summary-->El comando QR SET INFO COLUMN permite definir los parámetros de una columna existente.<!-- END REF--> 
 
 *area* es la referencia del área del informe rápido.
 

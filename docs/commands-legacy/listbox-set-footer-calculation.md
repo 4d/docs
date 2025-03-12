@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->The **LISTBOX SET FOOTER CALCULATION** command sets the automatic calculation associated with the footer of the list box designated by the *object* and *\** parameters
+<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->The **LISTBOX SET FOOTER CALCULATION** command sets the automatic calculation associated with the footer of the list box designated by the *object* and *\** parameters<!-- END REF--> .
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string).<!-- END REF--> If you do not pass this parameter, this indicates that the object is a variable. In this case, you pass a variable reference instead of a string.  
+If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string).If you do not pass this parameter, this indicates that the object is a variable. In this case, you pass a variable reference instead of a string.  
 The *object* parameter can designate: 
 
 * the variable or name of a footer area. In this case, the command applies to this area.

@@ -22,9 +22,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.QR SET INFO COLUMN.Summary-->##### Etats en liste 
+##### Etats en liste 
 
-La commande **QR SET INFO COLUMN** vous permet de définir les paramètres d'une colonne existante de l'état présent dans la *zone*.<!-- END REF--> 
+<!--REF #_command_.QR SET INFO COLUMN.Summary-->La commande **QR SET INFO COLUMN** vous permet de définir les paramètres d'une colonne existante de l'état présent dans la *zone*.<!-- END REF--> 
 
 Passez dans *zone* la référence de la zone d'état rapide.
 

@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.STRING LIST TO ARRAY.Summary-->El comando STRING LIST TO ARRAY llena el array *cadenas* con: 
+<!--REF #_command_.STRING LIST TO ARRAY.Summary-->El comando STRING LIST TO ARRAY llena el array *cadenas*<!-- END REF--> con: 
 
-* las cadenas almacenadas en el recurso de tipo lista de cadenas ("STR#") cuyo número se pasa en *resNum*.<!-- END REF-->
+* las cadenas almacenadas en el recurso de tipo lista de cadenas ("STR#") cuyo número se pasa en *resNum*.
 * o con una cadena almacenada en un archivo XLIFF abierto cuyo atributo "id" del elemento "group" se pasa en *resNum* (ver a continuación "Compatibilidad con la arquitectura XLIFF").
 
 Si el recurso no se encuentra, el array *cadenas* no cambia y la variable OK toma el valor 0 (cero).

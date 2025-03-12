@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.STRING LIST TO ARRAY.Summary-->La commande **STRING LIST TO ARRAY** remplit le tableau *chaînes* avec : 
+<!--REF #_command_.STRING LIST TO ARRAY.Summary-->La commande **STRING LIST TO ARRAY** remplit le tableau *chaînes*<!-- END REF--> avec : 
 
-* soit les chaînes stockées dans la ressource de type liste de chaînes ("STR#") dont vous avez passé le numéro d'ID dans *resNum*.<!-- END REF-->
+* soit les chaînes stockées dans la ressource de type liste de chaînes ("STR#") dont vous avez passé le numéro d'ID dans *resNum*.
 * soit une chaîne stockée dans un fichier XLIFF ouvert dont vous avez passé l'attribut 'id' de l'élément 'group' dans *resNum* (cf. ci-dessous "Compatibilité avec l'architecture XLIFF").
 
 Si la ressource n'est pas trouvée, le tableau *chaînes* reste inchangé et la variable système OK prend la valeur 0 (zéro).
