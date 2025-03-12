@@ -179,7 +179,7 @@ Qodly で Qodlyページをレンダリングする方法の詳細について�
 
 Qodlyページのレンダリングを有効にするには、以下のオプションを設定する必要があります。
 
-- 4Dプロジェクトの **設定** > **Web** > **Web機能** > [**RESTサーバーとして公開**](../settings/web.md#restサーバーとして公開) オプションを有効にする必要があります。
+- The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#expose-as-rest-server) option must be activated.
 - [4D Webサーバー](webServer.md) を起動しておく必要があります。
 
 :::note
@@ -190,7 +190,7 @@ Qodlyページのレンダリングを有効にするには、以下のオプシ
 
 ### Qodlyフォームのスコープ
 
-Qodly Studio で Qodlyフォームをレンダリングする際、レンダラーは設定により、[4D WebAdmin Webサーバー](../Admin/webAdmin.md#ローカルホストでhttp接続を受け入れる) と同じ HTTP/HTTPS 接続パターンに従って、HTTP または HTTPS で 4D Webサーバーに接続します。 URLスキームとライセンスの使い方については、[この段落](#ライセンスの使用について) も参照ください。 URLスキームとライセンスの使い方については、[この段落](#ライセンスの使用について) も参照ください。 URLスキームとライセンスの使い方については、[この段落](#ライセンスの使用について) も参照ください。 URLスキームとライセンスの使い方については、[この段落](#ライセンスの使用について) も参照ください。
+Qodly Studio で Qodlyフォームをレンダリングする際、レンダラーは設定により、[4D WebAdmin Webサーバー](../Admin/webAdmin.md#ローカルホストでhttp接続を受け入れる) と同じ HTTP/HTTPS 接続パターンに従って、HTTP または HTTPS で 4D Webサーバーに接続します。 URLスキームとライセンスの使い方については、[この段落](#ライセンスの使用について) も参照ください。 URLスキームとライセンスの使い方については、[この段落](#ライセンスの使用について) も参照ください。 URLスキームとライセンスの使い方については、[この段落](#ライセンスの使用について) も参照ください。 See also [this paragraph](#about-license-usage-for-rendering) about URL schemes and license usage.
 
 Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに留意してください。 Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに留意してください。 デベロッパーとして Qodly Studio を使用する場合、Qodlyページをプレビューするには、4D WebAdmin Webサーバーを使用することになります。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。 Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに留意してください。 デベロッパーとして Qodly Studio を使用する場合、Qodlyページをプレビューするには、4D WebAdmin Webサーバーを使用することになります。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。 Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに留意してください。 デベロッパーとして Qodly Studio を使用する場合、Qodlyページをプレビューするには、4D WebAdmin Webサーバーを使用することになります。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。
 
@@ -305,7 +305,7 @@ End if
 
 ### ログアウト
 
-["強制ログイン" モードが有効](#強制ログインモードの設定) な場合、Qodly Studio for 4D を使って、アプリケーションにログアウト機能を実装できます。
+When the ["force login" mode is enabled](#force-login), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
 ユーザーをログアウトするには、Qodlyページから **Logout** 標準アクションを実行するだけです。 Qodly Studio では、この標準アクションをボタンなどに関連付けることができます: ユーザーをログアウトするには、Qodlyページから **Logout** 標準アクションを実行するだけです。 Qodly Studio では、この標準アクションをボタンなどに関連付けることができます: Qodly Studio では、この標準アクションをボタンなどに関連付けることができます: ユーザーをログアウトするには、Qodlyページから **Logout** 標準アクションを実行するだけです。 Qodly Studio では、この標準アクションをボタンなどに関連付けることができます: Qodly Studio では、この標準アクションをボタンなどに関連付けることができます:
 
@@ -325,7 +325,7 @@ Qodlyページのレンダリングはプロジェクトデータベースのメ
 
 Qodly Studio の URLスキーム設定 (HTTP および HTTPS) によって、Qodlyフォームのレンダリング時に使用されるライセンスの数が決まります。 適切な設定により、不要なライセンスの使用を回避できます。 適切な設定により、不要なライセンスの使用を回避できます。 適切な設定により、不要なライセンスの使用を回避できます。 適切な設定により、不要なライセンスの使用を回避できます。
 
-[設定](#設定) セクションで説明したように、WebAdmin Webサーバーは Qodly Studio へのセキュアな Webアクセスを提供します。 [設定](#設定) セクションで説明したように、WebAdmin Webサーバーは Qodly Studio へのセキュアな Webアクセスを提供します。 一方、[レンダラー](#レンダリングを有効化する) は RESTリクエストを使用してデータベースの 4D Webサーバーと通信します。 そのため、従来の 4Dクライアントと同じように動作します。 そのため、従来の 4Dクライアントと同じように動作します。
+[設定](#設定) セクションで説明したように、WebAdmin Webサーバーは Qodly Studio へのセキュアな Webアクセスを提供します。 On the other hand, the [renderer](#enabling-rendering) communicates with the 4D web server of the database using REST requests. そのため、従来の 4Dクライアントと同じように動作します。
 
 Qodly Studio からレンダラーを実行する際、これら 2つの Webサーバーに同じ URLスキーム (HTTP または HTTPS) 経由でアクセスしていない場合には、ライセンスのカウントが正しくおこなわれない可能性があります。
 
