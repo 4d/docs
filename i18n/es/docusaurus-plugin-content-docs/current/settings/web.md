@@ -74,7 +74,7 @@ Esta área le permite configurar cómo el servidor web manejará las sesiones us
 
 #### Sesiones extensibles (sesiones multiproceso)
 
-Cuando selecciona esta opción (recomendado), una sesión usuario se gestiona a través de un objeto **Session**. Ver la [página Sesiones usuario](../WebServer/sessions.md#enabling-sessions).
+Cuando selecciona esta opción (recomendado), una sesión usuario se gestiona a través de un objeto **Session**. See the [User sessions page](../WebServer/sessions.md#enabling-web-sessions).
 
 #### Sin sesiones
 
@@ -84,7 +84,7 @@ En este modo, puede configurar los parámetros del servidor web adicionales:
 
 - [Máximo de procesos web simultáneos](#maximum-concurrent-web-processes)
 - [Reutilización de contextos temporales (4D en modo remoto)](#reuse-temporary-contexts)
-- [Usar procesos apropiativos](#use-preemptive-web-processes)
+- [Use preemptive processes](#use-preemptive-processes)
 
 #### Sesiones antiguas (sesiones procesos únicos)
 
