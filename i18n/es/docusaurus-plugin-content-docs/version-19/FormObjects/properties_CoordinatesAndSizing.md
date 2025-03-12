@@ -64,7 +64,7 @@ Coordenadas de izquierda del objeto en el formulario.
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Regla](ruler.md) - [Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
 
 ---
 
@@ -80,7 +80,7 @@ Coordenadas de derecha del objeto en el formulario.
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Regla](ruler.md) - [Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
 
 ---
 
@@ -96,7 +96,7 @@ Coordenadas superiores del objeto en el formulario.
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Regla](ruler.md) - [Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
 
 ---
 
@@ -135,7 +135,7 @@ Esta propiedad designa el tamaño vertical de un objeto.
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Regla](ruler.md) - [Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
 
 ---
 
@@ -154,7 +154,7 @@ Esta propiedad designa el tamaño horizontal de un objeto.
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Regla](ruler.md) - [Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
 
 ---
 
@@ -204,7 +204,7 @@ Define la altura de las líneas del list box (excluyendo los encabezados y pies 
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 #### Ver también
 
@@ -237,7 +237,7 @@ Asumiendo que la unidad de las líneas es "líneas", entonces la quinta línea d
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 #### Ver también
 

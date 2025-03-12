@@ -32,7 +32,7 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-// サブフォーム "Cal2" のコンテキストにおいて // サブフォーム "Cal2" のコンテキストにおいて // サブフォーム "Cal2" のコンテキストにおいて // サブフォーム "Cal2" のコンテキストにおいて  SetCalendarDate を実行し
+// サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し  
 // その際に引数として日付リテラル !05/05/20! を渡します
 ```
 
@@ -350,7 +350,7 @@ method1(42) // 型間違い。 期待されるのはテキスト
 
 - [コンパイル済みプロジェクト](interpreted.md) では、可能な限りコンパイル時にエラーが生成されます。 それ以外の場合は、メソッドの呼び出し時にエラーが生成されます。
 - インタープリタープロジェクトでは:
-    + [名前付きシンタックス](#名前付き引数) (`#DECLARE` または `Function`) を使用して引数が宣言されている場合は、メソッドの呼び出し時にエラーが発生します。
+    + if the parameter was declared using the [standard named syntax](#declaring-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
     + `C_XXX` を使用して宣言されている場合、エラーは発生せず、呼び出されたメソッドは期待される型の空の値を受け取ります。
 
 

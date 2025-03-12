@@ -352,10 +352,10 @@ title: Índice
 [`Generate password hash`](../commands-legacy/generate-password-hash.md)<br/>
 [`Generate UUID`](../commands-legacy/generate-uuid.md)<br/>
 [`Get 4D file`](../commands-legacy/get-4d-file.md)<br/>
-[`Get 4D folder`](.../commands-legacy/get-4d-folder.md)<br/>
+[`Get 4D folder`](../commands-legacy/get-4d-folder.md)<br/>
 [`Get adjusted blobs cache priority`](../commands-legacy/get-adjusted-blobs-cache-priority.md)<br/>
 [`Get adjusted index cache priority`](../commands-legacy/get-adjusted-index-cache-priority.md)<br/>
-[`Get adjusted table-cache priority`](../commands-legacy/get-adjusted-table-cache-priority.md)<br/>
+[`Get adjusted table cache priority`](../commands-legacy/get-adjusted-table-cache-priority.md)<br/>
 [`GET ALLOWED METHODS`](../commands-legacy/get-allowed-methods.md)<br/>
 [`Get application color scheme`](../commands-legacy/get-application-color-scheme.md)<br/>
 [`Get assert enabled`](../commands-legacy/get-assert-enabled.md)<br/>
@@ -367,7 +367,7 @@ title: Índice
 [`Get default user`](../commands-legacy/get-default-user.md)<br/>
 [`GET DOCUMENT ICON`](../commands-legacy/get-document-icon.md)<br/>
 [`Get document position`](../commands-legacy/get-document-position.md)<br/>
-[`GET DOCUMENT PROPERTIES`](.../commands-legacy/get-document-properties.md)<br/>
+[`GET DOCUMENT PROPERTIES`](../commands-legacy/get-document-properties.md)<br/>
 [`Get document size`](../commands-legacy/get-document-size.md)<br/>
 [`Get edited text`](../commands-legacy/get-edited-text.md)<br/>
 [`Get external data path`](../commands-legacy/get-external-data-path.md)<br/>
@@ -685,7 +685,7 @@ title: Índice
 [`New collection`](new-collection.md)<br/>
 [`New data key`](../commands-legacy/new-data-key.md)<br/>
 [`New list`](../commands-legacy/new-list.md)<br/>
-[`New log file`](../commands-legacy/new-log-file.md)<br/>
+[`New log file`](new-log-file.md)<br/>
 [`New object`](../commands-legacy/new-object.md)<br/>
 [`New process`](../commands-legacy/new-process.md)<br/>
 [`New shared collection`](new-shared-collection.md)<br/>
@@ -1045,7 +1045,7 @@ title: Índice
 [`Select folder`](../commands-legacy/select-folder.md)<br/>
 [`SELECT LIST ITEMS BY POSITION`](../commands-legacy/select-list-items-by-position.md)<br/>
 [`SELECT LIST ITEMS BY REFERENCE`](../commands-legacy/select-list-items-by-reference.md)<br/>
-[`SELECT LOG FILE`](../commands-legacy/select-log-file.md)<br/>
+[`SELECT LOG FILE`](select-log-file.md)<br/>
 [`Select RGB Color`](../commands-legacy/select-rgb-color.md)<br/>
 [`Selected list items`](../commands-legacy/selected-list-items.md)<br/>
 [`Selected record number`](../commands-legacy/selected-record-number.md)<br/>

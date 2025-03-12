@@ -44,14 +44,14 @@ Al seleccionar este comando, la página de inicio del sitio web publicado por la
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-Este comando permite verificar que el servidor web, la visualización de la página de inicio, etc. funcionan correctamente. La página se llama utilizando la URL *localhost*, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
+Este comando permite verificar que el servidor web, la visualización de la página de inicio, etc. funcionan correctamente. La página se llama utilizando la URL *localhost*, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](./webServerConfig.md#http-port) especificado en los parámetros.
 
 ## Borrar la caché
 
 En cualquier momento, puede vacíar la caché de las páginas y de las imágenes que contiene (si, por ejemplo, ha modificado una página estática y quiere volver a cargarla en la caché).
 
 Para ello, basta con hacer clic en el botón **Vaciar la caché** de la página Web/Opciones (I) de la caja de diálogo de Parámetros. La caché se borra inmediatamente.
-> También puede utilizar la URL [/4DCACHECLEAR](#cacheclear).
+> También puede utilizar la URL [/4DCACHECLEAR](#4dcacheclear).
 
 ## Explorador de ejecución
 

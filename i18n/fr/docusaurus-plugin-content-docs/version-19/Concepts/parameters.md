@@ -467,7 +467,7 @@ ALERT("Temps écoulé") //1 paramètre
 
 Les méthodes projet 4D acceptent également des paramètres optionnels, en commençant par la droite. Cependant, il est difficile de gérer les paramètres optionnels lorsque certains d'entre eux sont manquants dans la méthode appelée - cela ne devrait jamais générer d'erreur. Une bonne pratique consisterait à assigner des valeurs par défaut aux paramètres non utilisés.
 
-> Lorsque les paramètres sont nécessaires dans vos méthodes, vous pouvez également envisager des [propriétés d'objet comme paramètres nommés](#using-objects-properties-as-named-parameters) pour gérer plusieurs paramètres de manière flexible.
+> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-object-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
 
 A l'aide de la commande `Count parameters` contenue dans la méthode appelée, vous pouvez détecter le nombre de paramètres et effectuer des opérations différentes en fonction de ce nombre.
 
@@ -544,7 +544,7 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
  ALERT($0)
 ```
 
-Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". Ceci est décrit dans le paragraphe [Valeurs retournées](#returning-values).
+Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". This is described in the [Returning values](#returned-value) paragraph.
 
 
 ### Cas particuliers : objets et collections

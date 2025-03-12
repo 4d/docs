@@ -261,7 +261,7 @@ La función `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().
 
 La función `.cancelTransaction()` cancela cualquier cambio realizado en los datos durante la transacción.
 
-Puede anidar varias transacciones (subtransacciones). Si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función [`.validateTransaction()`](#validatetransactions).
+Puede anidar varias transacciones (subtransacciones). Si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función [`.validateTransaction()`](#validatetransaction).
 
 #### Ejemplo
 
@@ -510,9 +510,9 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 La función `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->define todas las selecciones de entidades como alterables por defecto en los almacenes de datos de la aplicación actual<!-- END REF --> (incluyendo [datastores remotas](ORDA/remoteDatastores.md)). Está pensado para ser utilizado una vez, por ejemplo en el método base `On Startup`.
 
-Cuando no se llama a esta función, las nuevas selecciones de entidades pueden ser compartibles, dependiendo de la naturaleza de su "padre", o de [cómo se crean](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+Cuando no se llama a esta función, las nuevas selecciones de entidades pueden ser compartibles, dependiendo de la naturaleza de su "padre", o de [cómo se crean](../ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> Esta función no modifica las selecciones de entidades creadas por [`.copy()`](#copy) o `OB Copy` cuando se utiliza la opción explícita `ck shared`.
+> Esta función no modifica las selecciones de entidades creadas por [`.copy()`](./EntitySelectionClass.md#copy) o `OB Copy` cuando se utiliza la opción explícita `ck shared`.
 
 > **Compatibilidad**: esta función sólo debe utilizarse en proyectos convertidos desde versiones de 4D anteriores a 4D v18 R5 y que contengan llamadas [.add()](EntitySelectionClass.md#add). En este contexto, el uso de `.makeSelectionsAlterable()` puede ahorrar tiempo al restaurar instantáneamente el comportamiento anterior de 4D en los proyectos existentes. Por otro lado, utilizar este método en proyectos nuevos creados en 4D v18 R5 y superiores **no es recomendable**, ya que impide compartir las selecciones de entidades, lo que ofrece mayor rendimiento y escalabilidad.
 

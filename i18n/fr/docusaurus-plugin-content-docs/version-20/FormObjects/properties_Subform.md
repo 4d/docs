@@ -149,7 +149,7 @@ Spécifie la table à laquelle appartient le sous-formulaire Liste (le cas éch�
 ## Mode de sélection
 
 Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
-- **Aucun** : Les lignes ne peuvent pas être sélectionnées si ce mode est choisi. Cliquer sur la liste n'aura aucun effet à moins que l'option [Saisissable en liste](subform_overview.md#enterable-in-list) soit activée. Les touches de navigation ne font que faire défiler la liste ; l'événement formulaire " `On Selection Change"` n'est pas généré.
+- **Aucun** : Les lignes ne peuvent pas être sélectionnées si ce mode est choisi. Clicking on the list will have no effect unless the [Enterable in list](#enterable-in-list) option is enabled. Les touches de navigation ne font que faire défiler la liste ; l'événement formulaire " `On Selection Change"` n'est pas généré.
 - **Ligne unique** : Ce mode permet de sélectionner une ligne à la fois. Un clic sur une ligne la sélectionne. Un **Ctrl+clic** (Windows) ou **Command+clic** (macOS) sur une ligne fait basculer son état (sélectionnée ou non).  
   Les touches fléchées Haut et Bas permettent de sélectionner la ligne précédente/suivante dans la liste. Les autres touches de navigation font défiler la liste. L'événement formulaire `On Selection Change` est généré chaque fois que la ligne courante est modifié.
 - **Multilignes** : Ce mode permet de sélectionner simultanément plusieurs lignes.

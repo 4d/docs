@@ -68,7 +68,7 @@ title: '$catalog'
 
 `$catalog/$all` を呼び出すと、プロジェクトのデータストア内の各データクラスについて属性の情報を取得します。
 
-各データクラスと属性について取得される情報についての詳細は [`$catalog/\{dataClass\}`](#catalogdataClass) を参照ください。
+各データクラスと属性について取得される情報についての詳細は [`$catalog/\{dataClass\}`](#catalogdataclass) を参照ください。
 
 
 ### 例題

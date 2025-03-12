@@ -23,7 +23,7 @@ O funcionamento do sistema de acesso do servidor web 4D está resumido no diagra
 
 ### Personalizado (padrão)
 
-Basicamente, nesse modo, cabe ao desenvolvedor definir como autenticar os usuários. 4D sólo evalúa las peticiones HTTP [que requieren una autenticación](#method-calls).
+Basicamente, nesse modo, cabe ao desenvolvedor definir como autenticar os usuários. 4D only evaluates HTTP requests [that require an authentication](#database-method-calls).
 
 Este modo de autenticação é o mais flexível porque permite que você:
 
@@ -114,7 +114,7 @@ Estes parâmetros devem ser declarados da seguinte forma:
 
 :::note
 
-Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. La información recibida por el método base depende del [modo de autenticación](#authentication-mode) seleccionado).
+Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
 
 :::
 

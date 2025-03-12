@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[SELECT LOG FILE](select-log-file.md)  
+[SELECT LOG FILE](../commands/select-log-file.md)  
 
 #### プロパティ
 

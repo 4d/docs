@@ -19,7 +19,7 @@ This button can be used to launch the verification operation directly, without i
 
 All the records and all the indexes of the database are verified. If you want to be able to target the verification or have additional options available, you will need to use the [Maintenance and Security Center](MSC/overview.md) (MSC).
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs-folder) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
+After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
 
 ### Compact Data...
 
@@ -33,7 +33,7 @@ Once the compacting is finished, 4D Server automatically restarts the applicatio
 
 > If the request for compacting was carried out from a remote 4D remote machine, this machine is automatically reconnected by 4D Server.
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs-folder) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
+After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
 
 
 ## Uptime

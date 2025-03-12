@@ -71,7 +71,7 @@ The following dialog box is displayed:
 
 #### Launch WebAdmin server at startup
 
-Check this option if you want the `WebAdmin` web server to be automatically launched when the 4D or 4D Server application starts ([see above](#launching-at-startup)). By default, this option is not checked.
+Check this option if you want the `WebAdmin` web server to be automatically launched when the 4D or 4D Server application starts ([see above](#launch-at-startup)). By default, this option is not checked.
 
 #### Accept HTTP connections on localhost
 

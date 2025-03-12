@@ -66,7 +66,7 @@ This property is the name of the form itself and is used to refer to the form by
 
 #### JSON Grammar
 
-The form name is defined by the name of the folder that contains the form.4Dform file. See [project architecture](Project/architecture.md#sources-folder) for more information.
+The form name is defined by the name of the folder that contains the form.4Dform file. See [project architecture](Project/architecture#sources) for more information.
 
 ---
 

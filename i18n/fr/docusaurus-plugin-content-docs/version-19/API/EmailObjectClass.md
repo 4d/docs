@@ -140,7 +140,7 @@ L'objet `.bodyStructure` contient les propriété suivantes :
 | language    | Collection de textes | Liste de balises de langage, telles que définies dans la [RFC3282](https://tools.ietf.org/html/rfc3282), dans le champ d'en-tête Content-Language de la partie, le cas échéant. |
 | location    | Text                 | URI, tel que défini dans la [RFC2557](https://tools.ietf.org/html/rfc2557), dans le champ d'en-tête Content-Location de la partie, le cas échéant.                              |
 | subParts    | Collection d'objets  | Parties du corps de chaque enfant (collection d'objets *EmailBodyPart*)                                                                                                         |
-| headers     | Collection d'objets  | Liste de tous les champs d'en-tête de la partie, dans leur ordre d'apparition de l'email (collection d'objets *EmailHeader* voir propriété [headers](#headers-))                |
+| headers     | Collection d'objets  | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers) property)                          |
 
 ## .bodyValues
 

@@ -55,18 +55,18 @@ The following table lists the pages of settings found in the **User Settings** a
 | [General page](../settings/general.md) | N/a | N/a |
 | [Interface page](../settings/interface.md) | Identical to standard settings | Identical to standard settings |
 | [Compiler page](../settings/compiler.md) | N/a | N/a |
-| [Database/Data storage page](../settings/database.md#data-storage) | N/a | N/a |
-| [Database/Memory page](../settings/database.md#memory) | Identical to standard settings | Identical to standard settings |
-| [Backup/Scheduler page](../settings/backup.md#scheduler) | N/a | Identical to standard settings |
-| [Backup/Configuration page](../settings/backup.md#configuration) | N/a | Identical to standard settings |
-| [Backup/Backup & Restore page](../settings/backup.md#backup-restore) | N/a | Identical to standard settings |
-| [Client-server/Network options page](../settings/client-server.md#network-options) | Identical to standard settings | Identical to standard settings |
-| [Client-server/IP configuration page](../settings/client-server.md#ip-configuration) | Identical to standard settings | Identical to standard settings |
+| [Database/Data storage page](../settings/database.md#data-storage-page) | N/a | N/a |
+| [Database/Memory page](../settings/database.md#memory-page) | Identical to standard settings | Identical to standard settings |
+| [Backup/Scheduler page](../settings/../Backup/settings.md#scheduler) | N/a | Identical to standard settings |
+| [Backup/Configuration page](../settings/../Backup/settings.md#configuration) | N/a | Identical to standard settings |
+| [Backup/Backup & Restore page](../settings/../Backup/settings.md#backup--restore) | N/a | Identical to standard settings |
+| [Client-server/Network options page](../settings/client-server.md#network-options-page) | Identical to standard settings | Identical to standard settings |
+| [Client-server/IP configuration page](../settings/client-server.md#ip-configuration-page) | Identical to standard settings | Identical to standard settings |
 | [Web/Configuration page](../settings/web.md#configuration) | Identical to standard settings | Identical to standard settings |
-| [Web/Options (I) page](../settings/web.md#options) | Identical to standard settings | Identical to standard settings |
+| [Web/Options (I) page](../settings/web.md#options-i) | Identical to standard settings | Identical to standard settings |
 | [Web/Options (II) page](../settings/web.md#options-ii) | Identical to standard settings | Identical to standard settings |
-| [Web/Log (type) page](../settings/web.md#log) | Identical to standard settings | Identical to standard settings |
-| [Web/Log (backup) page](../settings/web.md#log) | Identical to standard settings | Identical to standard settings |
+| [Web/Log (type) page](../settings/web.md#log-type) | Identical to standard settings | Identical to standard settings |
+| [Web/Log (backup) page](../settings/web.md#log-backup) | Identical to standard settings | Identical to standard settings |
 | [Web/Web Services page](../settings/web.md#web-services) | Method prefixing option not available | Method prefixing option not available |
 | [SQL page](../settings/sql.md) | Identical to standard settings | Identical to standard settings |
 | [PHP page](../settings/php.md) | Identical to standard settings | Identical to standard settings |

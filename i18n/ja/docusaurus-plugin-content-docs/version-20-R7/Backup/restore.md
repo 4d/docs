@@ -12,7 +12,7 @@ title: 復元
 
 - アプリケーションファイルを失った。 この問題はアプリケーションが配置されたディスク上のセクターが読み書き不能になった、あるいはウィルス、操作ミス等により発生します。 最新のバックアップから復元をおこない、カレントのログファイルを統合する必要があります。 問題発生後にアプリケーションが損傷しているかどうかを見分けるには、4D でアプリケーションを起動します。 4Dは自己検証をおこない、必要な復元処理手順を示します。 自動モードの場合、この処理はユーザーのアクションなしで直接実行されます。 定期的なバックアップがおこなわれていれば、4D の復元ツールを使用して (ほとんどの場合) 問題が発生する直前の状態までアプリケーションを復旧することができます。
 
-> 問題発生後に、自動で 4Dのアプリケーション復旧処理を起動することができます。 このメカニズムは、ストラクチャー設定の **バックアップ/バックアップ＆復旧** ページで利用できるオプションを使用して管理します。 詳細は [自動復元](settings.md#自動復元とログの統合) を参照してください。\
+> 問題発生後に、自動で 4Dのアプリケーション復旧処理を起動することができます。 このメカニズムは、ストラクチャー設定の **バックアップ/バックアップ＆復旧** ページで利用できるオプションを使用して管理します。 For more information, refer to the [Automatic Restore](./settings.md##automatic-restore-and-log-integration) paragraph.\
 > 問題が、データに対しておこなわれた不適切な処理の結果引き起こされた場合 (たとえば誤ってレコードを削除した等)、ログファイルの "ロールバック" 機能を使用してデータファイルを復旧できます。 この機能は MSC の [ロールバック](MSC/rollback.md) ページから利用できます。
 
 ## 手動でバックアップから復元する (標準ダイアログ)
@@ -36,7 +36,7 @@ title: 復元
 **[...]** ボタンをクリックして異なる場所を指定することもできます。
 3. **復元** ボタンをクリックします。
 4D は指定されたすべてのバックアップファイルを展開します。
-カレントログファイル、または、バックアップファイルと同じ番号を持つログバックアップファイルが同じフォルダーに存在する場合、4D はその内容を検証します。 データファイル中に無い処理がログファイルに含まれていれば、その処理を統合するかどうか 4D が尋ねてきます。 **データベースが完全でない場合、最新のログを統合する** オプションが選択されている場合、統合処理は自動でおこなわれます ([自動復元](settings.md#自動復元) 参照)。
+カレントログファイル、または、バックアップファイルと同じ番号を持つログバックアップファイルが同じフォルダーに存在する場合、4D はその内容を検証します。 データファイル中に無い処理がログファイルに含まれていれば、その処理を統合するかどうか 4D が尋ねてきます。 Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore-and-log-integration)).
 
 4. (任意) **OK** をクリックして、復元したアプリケーションにログファイルを統合します。
     復元と統合が正しく実行されると、4D は処理が成功したことを通知するダイアログを表示します。
@@ -52,7 +52,7 @@ Maintenance and Security Center (MSC) の [復元](MSC/restore.md)ページか�
 
 ## 手動でログを統合する
 
-MSC の復元ページでログファイルの自動統合を選択していない場合 ([複数のログファイルを連続して統合する](MSC/restore.md#複数のログファイルを連続して統合する) 参照)、データファイルに保存されていない処理がログファイル中に見つかると、4D はアプリケーションを開く際に警告ダイアログボックスを表示します。
+If you have not checked the option for the automatic integration of the log file on the Restore page of the MSC (see [Successive integration of several log files](MSC/restore.md#successive-integration-of-several-data-log-files)), a warning dialog box appears during the opening of the application when 4D notices that the log file contains more operations than have been carried out in the data file.
 
 ![](../assets/en/Backup/backup08.png)
 

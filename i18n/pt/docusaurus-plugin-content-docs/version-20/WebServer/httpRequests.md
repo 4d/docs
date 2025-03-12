@@ -48,7 +48,7 @@ Estes parâmetros devem ser declarados como se indica a seguir:
 //Código do método
 ```
 
-Como alternativa, você pode usar a sintaxe de [parâmetros nomeados](Concepts/parameters.md#named-parameters):
+Como alternativa, você pode usar a sintaxe de [parâmetros temporais](../Concepts/parameters.md):
 
 ```4d
 // Método banco de dados On Web Connection 
@@ -118,7 +118,7 @@ Os parâmetros $5 e $6 recebem o nome de usuário e a senha inseridos pelo usuá
 Este URL permite que você chame o método projeto *MethodName* 4D com um parâmetro de texto opcional *Param*. O método receberá este parâmetro em *$1*.
 
 - O método projeto 4D deve ter sido [permitido para solicitações web](allowProject.md): a "Disponível através de etiquetas 4D e URLs (4DACTION...)" o valor do atributo deve ter sido verificado nas propriedades do método. Se o atributo não for verificado, o pedido Web é rejeitado.
-- When 4D receives a `/4DACTION/MethodName/Param` request, the `On Web Authentication` database method (if it exists) is called.
+- Quando 4D recebe um pedido `/4DACTION/MethodName/Param`, o método banco de dados `No Web Authentication` (se existir) é chamado.
 
 `4DACTION/` pode ser associado a um URL em uma página Web estática:
 
@@ -160,7 +160,7 @@ Um formulário pode ser enviado por dois métodos (ambos podem ser usados com 4D
 
 > Quando o servidor web recebe um formulário publicado, ele chama o método banco de dados `On Web Authentication` (se existir).
 
-No método chamado, você usa o comando `WEB GET VARIABLES` para [recuperar os nomes e os valores](#getting-values-from-the-requests) de todos os campos incluídos em uma página HTML enviada ao servidor.
+No método chamado, você usa o comando `WEB GET VARIABLES` para [recuperar os nomes e os valores](#getting-values-from-http-requests) de todos os campos incluídos em uma página HTML enviada ao servidor.
 
 Exemplo para definir a ação de um formulário:
 

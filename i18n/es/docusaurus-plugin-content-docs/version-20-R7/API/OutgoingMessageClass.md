@@ -19,7 +19,7 @@ An instance of this class is built on 4D Server and can be sent to the browser b
 
 ### Ejemplo
 
-In this example, a `getFile()` function is implemented in the [Datastore class](../ORDA/ordaClasses.md#datastore-class) and [can be called](../ORDA/ordaClasses.md#onhttpget-keyword) by a REST request. The purpose is to return a **testFile.pdf** file as a response to the request:
+En este ejemplo, una función `getFile()` es implementada en la [Datastore class](../ORDA/ordaClasses.md#datastore-class) y [puede ser llamada](../ORDA/ordaClasses.md#onhttpget-keyword) por una petición REST. The purpose is to return a **testFile.pdf** file as a response to the request:
 
 ```4d
 Class extends DataStoreImplementation
@@ -104,7 +104,7 @@ La propiedad `.headers` es de sólo lectura. Para definir un encabezado, use la 
 
 #### Descripción
 
-The `.setBody()` function <!-- REF #OutgoingMessageClass.setBody().Summary -->sets the outgoing message *body*<!-- END REF -->.
+La función `.setBody()` <!-- REF #OutgoingMessageClass.setBody().Summary -->define el mensaje saliente *body*<!-- END REF -->.
 
 The following data types are supported in the *body*:
 
@@ -147,7 +147,7 @@ When returning a 4D.OutgoingMessage object instance, 4D automatically sets some 
 
 :::note
 
-If you set a *value* for the "Content-Type" header *key*, make sure you call this function after the call to [`setBody()`](#setbody), because `setBody()` automatically fills this header. For a list of "Content-Type" header values, please refer to the [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) documentation.
+Si define un *value* para la *key* el encabezado "Content-Type", asegúrese de llamar a esta función después de la llamada a [`setBody()`](#setbody), porque `setBody()` llena automáticamente este encabezado. For a list of "Content-Type" header values, please refer to the [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) documentation.
 
 :::
 

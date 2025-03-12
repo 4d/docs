@@ -154,7 +154,7 @@ Especifica a tabela a que pertence o subformulário Lista (se existir).
 
 Designa a opção que permite aos utilizadores selecionar linhas:
 
-- **Nenhum**: Linhas não podem ser selecionadas se esse modo for escolhido. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Editable en lista](subform_overview.md#enterable-in-list) esté activada. As teclas de navegação só fazem a lista rolar, o evento de formulário `Ao selecionar mudança` não é gerado.
+- **Nenhum**: Linhas não podem ser selecionadas se esse modo for escolhido. Clicking on the list will have no effect unless the [Enterable in list](#enterable-in-list) option is enabled. As teclas de navegação só fazem a lista rolar, o evento de formulário `Ao selecionar mudança` não é gerado.
 - **Simples**: Uma linha de cada vez pode ser selecionada neste modo. Ao clicar em uma linha, ela será selecionada. Um **Ctrl+clique** (Windows) ou **Command+clique** (macOS) em uma linha alterna seu estado (entre selecionado ou não).\
     As teclas de seta para cima e para baixo selecionam a linha anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. O evento de formulário `On Selection Change` é gerado sempre que a linha atual é alterada.
 - **Multiplique**: Várias linhas podem ser selecionadas simultaneamente neste modo.

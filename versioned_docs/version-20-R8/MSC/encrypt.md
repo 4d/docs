@@ -114,7 +114,7 @@ Successive encryption keys can be stored on the same device.
 
 :::caution
 
-Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore). When the restoring sequence is triggered, 4D must have access to the encryption key file, otherwise an error occurs.
+Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#). When the restoring sequence is triggered, 4D must have access to the encryption key file, otherwise an error occurs.
 
 :::
 

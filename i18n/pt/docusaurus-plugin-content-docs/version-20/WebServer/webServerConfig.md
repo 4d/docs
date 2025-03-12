@@ -20,10 +20,10 @@ Há diferentes maneiras de configurar as definições do servidor web 4D, depend
 
 ## Cache
 
-| Pode ser definido com              | Nome                                                                             | Comentários |
-| ---------------------------------- | -------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache) |             |
-| Caixa de diálogos de configurações | [Options (I) page/Page Cache Size](../settings/web.md#page-cache-size)           |             |
+| Pode ser definido com              | Nome                                                                                 | Comentários |
+| ---------------------------------- | ------------------------------------------------------------------------------------ | ----------- |
+| Caixa de diálogos de configurações | [Página Opções (I) /usar o cache da Web 4D](../settings/web.md#use-the-4d-web-cache) |             |
+| Caixa de diálogos de configurações | [Página Opções (I) - Tamanho do cache da página](../settings/web.md#page-cache-size) |             |
 
 Ativa e configura a cache da página Web.
 
@@ -264,7 +264,7 @@ Passa o tamanho expresso em bytes como valor. Por defeito, o limite de compress�
 
 Número da porta IP (TCP) de escuta para HTTP. Por padrão, 4D publica uma aplicação web na porta Web HTTP normal (porta TCP), que é a porta 80. Se essa porta já for usada por outro serviço da web, você precisa alterar a porta HTTP usada pelo 4D para esse banco de dados.
 
-> No macOS, a modificação da porta HTTP permite iniciar o servidor web 4D sem ser o usuário raiz da máquina (consulte [macOS HelperTool](#macos-helpertool)).
+> No macOS, a modificação da porta HTTP permite iniciar o servidor web 4D sem ser o usuário raiz da máquina (consulte macOS HelperTool).
 
 Em um navegador da Web, é necessário incluir o número da porta HTTP não padrão no endereço inserido para se conectar ao aplicativo da Web. O endereço deve ter um sufixo constituído por dois pontos seguidos pelo número do porto. Por exemplo, se você estiver usando a porta HTTP número 8080, você irá especificar "123.4.567.89:8080".
 > **Aviso**: Se você usar números de porta TCP diferentes dos números padrão (80 para HTTP padrão e 443 para HTTPS), tome cuidado para não usar números de porta que sejam padrão para outros serviços que você possa querer usar simultaneamente. Por exemplo, se você também planeja usar o protocolo FTP em seu servidor web, não use a porta TCP 20 e 21, que são as portas padrão para esse protocolo. Os números de portas abaixo de 256 são reservados para serviços conhecidos e números de portas de 256 a 1024 são reservados para serviços específicos originários das plataformas UNIX. Para segurança máxima, especifique o número de portas para além destes intervalos (por exemplo, nos anos 2000 ou 3000).
@@ -303,7 +303,7 @@ Número da porta IP de escuta para conexões HTTPS via TLS. Por padrão, o valor
 | `WEB SET OPTION`                   | `Web inactive process timeout`                                                                       |             |
 | Caixa de diálogos de configurações | [Página Opções (I)/Tempo limite dos processos inativos](../settings/web.md#inactive-process-timeout) | Slider      |
 
-Life duration (in minutes) of inactive processes associated with legacy sessions. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the session context is destroyed.
+Duração da vida (em minutos) dos processos inativos associados às sessões legadas. No final do timeout, o processo é terminado no servidor, o método de database `On Web Legacy Close Session` é chamado, e então o contexto sessão é destruído.
 
 Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
@@ -425,7 +425,7 @@ Valores possíveis: 500 000 a 2 147 483 648.
 | objeto webServer      | [`maxSessions`](API/WebServerClass.md#maxsessions) |             |
 | `WEB SET OPTION`      | `Web max sessions`                                 |             |
 
-Maximum number of simultaneous legacy sessions. When you reach the limit set, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the Web server needs to create a new one. O número de sessões legadas simultâneas não pode exceder o [número máximo de processos Web](#maximum-concurrent-web-processes) (100 por padrão).
+Número máximo de sessões legadas simultâneas. Quando você atingir o limite, a sessão legada mais antiga é fechada (e o método banco de dados `On Web Legacy Close Session` é chamado) se o servidor web precisa criar um. O número de sessões legadas simultâneas não pode exceder o [número máximo de processos Web](#maximum-concurrent-web-processes) (100 por padrão).
 
 Valor padrão: 100 (passe 0 para restaurar o valor padrão).
 
@@ -479,9 +479,9 @@ Verdadeiro se o PFS está disponível no servidor web (consulte a seção TLS [T
 
 ## Reutilizar contextos temporários (em modo remoto)
 
-| Pode ser definido com              | Nome                                                                                     | Comentários |
-| ---------------------------------- | ---------------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Options (I) page/Reuse Temporary Contexts](../settings/web.md#reuse-temporary-contexts) |             |
+| Pode ser definido com              | Nome                                                                                              | Comentários |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | [Página Opções (I)/Reutilizar contextos temporários](../settings/web.md#reuse-temporary-contexts) |             |
 
 > Essa opção só está disponível quando a opção **No sessions** está marcada.
 
@@ -565,7 +565,7 @@ Por exemplo, se você quiser que a pasta raiz HTML seja a subpasta "Web" na past
 | `WEB SET OPTION`                   | `Sessão escalável Web`                                                                                       |             |
 | Caixa de diálogos de configurações | [Options (I) page/Automatic Session Management](../settings/web.md#scalable-sessions-multi-process-sessions) |             |
 
-Session management enabling status for the 4D web server. Web server sessions are detailed in the [Web sessions](sessions.md) page.
+Session management enabling status for the 4D web server. As sessões do servidor da Web são detalhadas na página [Sessões Web](sessions.md).
 
 
 
@@ -622,9 +622,9 @@ O valor do atributo `Secure` do cookie de sessão é automaticamente definido co
 
 ## Utilizar processos preemptivos
 
-| Pode ser definido com              | Nome                                                                                     | Comentários |
-| ---------------------------------- | ---------------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Options (I) page/Use Preemptive Processes](../settings/web.md#use-preemptive-processes) |             |
+| Pode ser definido com              | Nome                                                                                        | Comentários |
+| ---------------------------------- | ------------------------------------------------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | [Página Opções (I)/Usar processos preemptivos](../settings/web.md#use-preemptive-processes) |             |
 
 Essa opção ativa o modo preemptivo para o código do servidor Web do seu aplicativo quando a opção **No sessions** é selecionada (o modo preemptivo é sempre ativado com **scalable sessions**). Quando essa opção estiver marcada nesse contexto, o compilador 4D avaliará automaticamente a propriedade de segurança de thread de cada parte do código relacionado à Web [](preemptiveWeb.md#thread-safety-of-4d-web-code) e retornará erros em caso de incompatibilidade.
 
@@ -635,7 +635,7 @@ Essa opção ativa o modo preemptivo para o código do servidor Web do seu aplic
 
 As configurações a seguir ainda são compatíveis, mas dependem de recursos ou tecnologias obsoletos. Em geral, é recomendável manter os valores padrão.
 
-#### Allow database access through 4DSYNC URLs
+#### Permitir acesso ao banco de dados através de URLs 4DSYNC
 
 Essa opção controla o suporte de solicitações de sincronização HTTP que contêm URLs obsoletos */4DSYNC* .
 

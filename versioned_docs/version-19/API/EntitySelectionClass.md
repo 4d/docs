@@ -67,7 +67,7 @@ In the optional *settings* parameter, you can pass an object containing the foll
 
 |Property|Type|Description|
 |---|---|---|
-|context|Text|Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection.|
+|context|Text|Label for the [optimization context](../ORDA/entities.md#clientserver-optimization) applied to the entity selection.|
 
 #### Example
 

@@ -565,7 +565,7 @@ Super($text1) //llamada del constructor de la superclase con un parámetro texto
 Este. aram:=$text2 // usar un segundo parámetro
 ```
 
-2. Dentro de una [función de clase](#class-function), `Super` designa el prototipo de la superclase y permite llamar a una función de la jerarquía de superclases.
+2. Dentro de una [función de clase](#function), `Super` designa el prototipo de la superclase y permite llamar a una función de la jerarquía de superclases.
 
 ```4d
 Super.doSomething(42) //llama a la función "doSomething"  

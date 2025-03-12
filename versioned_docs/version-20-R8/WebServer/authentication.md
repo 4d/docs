@@ -89,7 +89,7 @@ The `On Web Authentication` database method is therefore called:
 The `On Web Authentication` database method is NOT called:
 
 - when the web server receives a URL requesting a valid static page.
-- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the `On REST Authentication` database method or Structure settings.
 - when the web server receives a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md). 
 
 

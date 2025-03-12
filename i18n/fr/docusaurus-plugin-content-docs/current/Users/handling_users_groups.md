@@ -43,7 +43,7 @@ L'Administrateur ne peut pas :
 - modifier l'utilisateur Super_Utilisateur
 - par défaut, accéder à des objets protégés de l'application. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. Il est placé dans tous les nouveaux groupes, mais vous pouvez cependant l'exclure de ces groupes.
 
-Par défaut, le Super_Utilisateur et l'Administrateur se trouvent dans toutes les applications. Dans la [boîte de dialogue de gestion des utilisateurs](#users-and-groups-editor), les icônes du Super_Utilisateur et de l’Administrateur ont des icônes respectivement rouge et verte :
+Par défaut, le Super_Utilisateur et l'Administrateur se trouvent dans toutes les applications. In the user management dialog box, the icons of the Designer and Administrator are displayed in red and green respectively:
 
 - Icône Super_Utilisateur : ![](../assets/en/Users/iconDesigner.png)
 - Icône Administrateur : ![](../assets/en/Users/iconAdmin.png)
@@ -91,7 +91,7 @@ La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Uti
 5. Définissez le ou les groupe(s) d’appartenance de l’utilisateur à l’aide du tableau “Membre des groupes”.
   Vous pouvez ajouter l’utilisateur sélectionné à un groupe en cochant l’option correspondante dans la colonne Membre.
 
-L’appartenance des utilisateurs aux groupes peut également être définie par groupe dans la [page Groupes](#configuring-access-groups).
+The membership of users to different groups can also be set by group on the [Groups page](#configuring-groups).
 
 ### Supprimer un utilisateur
 
@@ -207,7 +207,7 @@ Les utilisateurs, les groupes ainsi que leurs droits d'accès sont stockés dans
 Ce fichier peut être stocké aux emplacements suivants, en fonction de vos besoins :
 
 - Si vous souhaitez utiliser le même répertoire pour tous les fichiers de données (ou si vous utilisez un seul fichier de données), stockez le fichier **directory.json** dans le dossier des paramètres de l'utilisateur, c'est-à-dire dans le dossier "Settings" au [même niveau que le dossier "Project"](Project/architecture.md#project-folder) (emplacement par défaut).
-- Si vous souhaitez utiliser un fichier répertoire spécifique par fichier de données, stockez le fichier **directory.json** dans le dossier des paramètres des données, c'est-à-dire dans le dossier ["Settings" du dossier "Data"](Project/architecture.md#setti Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
+- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](../Project/architecture.md#settings-user-data). Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
 
 > Pour permettre des changements sûrs de mots de passe et d'appartenance à des groupes dans un environnement déployé, vous pouvez inclure votre fichier **directory.json** dans l'application serveur pendant le build, en utilisant l'[option correspondante du build application](../Desktop/building.md#incorporer-les-utilisateurs-et-les-groupes-du-projet-dans-l'application-serveur-construite).
 

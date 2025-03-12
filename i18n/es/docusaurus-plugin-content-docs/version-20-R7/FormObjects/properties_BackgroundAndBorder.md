@@ -17,7 +17,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -63,7 +63,7 @@ También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PRO
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -79,7 +79,7 @@ Permite definir un estilo estándar para el borde del objeto.
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Áreas 4D Write Pro](writeProArea_overview.md) - [Botones](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Lista jerárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md#overview) - [Indicador de progreso](progressIndicator.md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md#overview) - [Área de texto](text.md) - [Área web](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Áreas 4D Write Pro](writeProArea_overview.md) - [Botones](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md#overview) - [Área de texto](text.md) - [Área web](webArea_overview.md)
 
 ---
 
@@ -117,7 +117,7 @@ Puede eliminar estas líneas vacías seleccionando esta opción. La parte inferi
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -216,7 +216,7 @@ Define el fondo del list box como "Transparent". Cuando se define, se ignora cua
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 #### Ver también
 

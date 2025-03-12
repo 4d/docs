@@ -21,7 +21,7 @@ The application builder allows you to:
 Building a project package can be carried out using:
 
 * either the [`BUILD APPLICATION`](../commands-legacy/build-application.md) command,
-* or the [Build Application dialog](#application-builder).
+* or the [Build Application dialog](#build-application-dialog).
 
 :::tip
 
@@ -44,7 +44,7 @@ Building can only be carried out once the project is compiled. If you select thi
 
 ### buildApp.4DSettings
 
-Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the [`Settings` folder of the project](../Project/architecture.md#settings-1).
+Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the [`Settings` folder of the project](../Project/architecture.md#settings-user).
 
 Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [`BUILD APPLICATION`](../commands-legacy/build-application.md) command.
 
@@ -88,7 +88,7 @@ This feature creates a *.4dz* file within a `Compiled Database/<project name>` f
 
 A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume Desktop (merged applications), and 4D. The compact and optimized size of .4dz files makes project packages easy to deploy.  
 
-> When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual).
+> When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#buildapp4dsettings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual).
 
 #### Include related folders
 
@@ -98,7 +98,7 @@ When you check this option, any folders related to the project are copied into t
 
 Builds a compiled component from the structure.
 
-A [component](../Extensions/develop-components.md) is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and [installed in another 4D project](../Project/components.md#basics) (the host application project), its functionalities are accessible from the host project.
+A [component](../Extensions/develop-components.md) is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and [installed in another 4D project](../Project/components.md) (the host application project), its functionalities are accessible from the host project.
 
 If you have named your application *MyComponent*, 4D will automatically create a *Components* folder with the following structure:
 
@@ -170,7 +170,7 @@ If you have specified "MyProject" as the name of the application, you will find 
   * MyProject.exe  - Your executable and a MyProject.rsr (the application resources)
   * 4D Extensions folder, Resources folder, various libraries (DLL), Native Components folder, SASL Plugins folder - Files necessary for the operation of the application
   * Database folder - Includes a Resources folder and  MyProject.4DZ file. They make up the compiled structure of the project as well as the project Resources folder.
-**Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#data-file-management-in-final-applications).
+**Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#management-of-data-files).
   * (Optional) Components folder and/or Plugins folder - Contains any components and/or plug-in files included in the project. For more information about this, refer to the [Plugins and components](#plugins--components-page) section.
   * (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. For more information about this, refer to the [Licenses & Certificate](#licenses--certificate-page) section.
   * Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
@@ -247,9 +247,9 @@ Used to indicate the current version number for the application generated. You m
 
 |Name| Definition |
 | --- | --- |  
-| Project directory file | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-1) of the project |
-| Application directory file | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-1) of the built 4D Server |
-| Data directory file | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file in the [Data > Settings folder](../Project/architecture.md#settings) |
+| Project directory file | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the project |
+| Application directory file | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the built 4D Server |
+| Data directory file | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file in the [Data > Settings folder](../Project/architecture.md#settings-user-data) |
 
 When you check this option, the project directory file is copied to the application directory file at build time.
 
@@ -551,8 +551,8 @@ As soon as the "Build an evaluation application" option is enabled, deployment l
 :::note Notes
 
 - The [`License info`](../commands/license-info.md) command allows you to know the application license type (*.attributes* collection) and its expiration date (*.expirationDate* object).
-- The BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) and [`EvaluationName`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationName.300-7542474.en.html) xml keys allow you to handle evaluation versions.
-- The [`CHANGE LICENCES`] command does nothing when called from an evaluation version. 
+- The BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) xml key allows you to manage evaluation versions.
+- The [`CHANGE LICENCES`](../commands-legacy/change-licenses.md) command does nothing when called from an evaluation version. 
 
 :::
 
@@ -614,7 +614,7 @@ To obtain a developer certificate from Apple, Inc., you can use the commands of 
 
 Gatekeeper is a security feature of macOS that controls the execution of applications downloaded from the Internet. If a downloaded application does not come from the Apple Store or is not signed, it is rejected and cannot be launched.
 
-> On Apple Silicon machines, 4D [components](#components) need to be actually signed. An unsigned component will generate an error at application startup ("lib4d-arm64.dylib can't be opened...").
+> On Apple Silicon machines, 4D [components](../Project/components.md) need to be actually signed. An unsigned component will generate an error at application startup ("lib4d-arm64.dylib can't be opened...").
 
 The **Sign application** option of the 4D application builder lets you generate applications and components that are compatible with this option by default.
 

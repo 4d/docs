@@ -121,7 +121,7 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 
 :::caution
 
-[自動復元とログの統合](../Backup/settings.md#自動復元とログの統合) 機能を使用する場合、デバイスの一番上の階層にデータ暗号化キーファイルを保存することが必須となります。 復元処理がトリガーされるとき、4D は暗号化キーファイルにアクセスできなくてはなりません。できない場合には、エラーが発生します。
+Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#). 復元処理がトリガーされるとき、4D は暗号化キーファイルにアクセスできなくてはなりません。できない場合には、エラーが発生します。
 
 :::
 

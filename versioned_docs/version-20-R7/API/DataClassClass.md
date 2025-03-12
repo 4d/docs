@@ -66,7 +66,7 @@ Returned attribute objects contain the following properties:
 |path|Text|Path of [an alias attribute](../ORDA/ordaClasses.md#alias-attributes-1) based upon a relation|
 |readOnly|Boolean|True if the attribute is read-only. For example, computed attributes without [`set` function](../ORDA/ordaClasses.md#function-set-attributename) are read-only.|
 |relatedDataClass|Text|Name of the dataclass related to the attribute. Returned only when `.kind` = "relatedEntity" or "relatedEntities".|
-|type|Text|Conceptual value type of the attribute, useful for generic programming. Depends on the attribute `kind`. Possible values: <li>if `.kind` = "storage": "blob", "bool", "date", "image", "number", "object", or "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-type).</li><li>if `.kind` = "relatedEntity": related dataClass name</li><li>if `.kind` = "relatedEntities": related dataClass name + "Selection" suffix</li><li>if `.kind` = "calculated" or "alias": same as above, depending on the result</li>|
+|type|Text|Conceptual value type of the attribute, useful for generic programming. Depends on the attribute `kind`. Possible values: <li>if `.kind` = "storage": "blob", "bool", "date", "image", "number", "object", or "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-types).</li><li>if `.kind` = "relatedEntity": related dataClass name</li><li>if `.kind` = "relatedEntities": related dataClass name + "Selection" suffix</li><li>if `.kind` = "calculated" or "alias": same as above, depending on the result</li>|
 |unique|Boolean|True if the attribute value must be unique. Not returned if `.kind` = "relatedEntity" or "relatedEntities".|
 
 :::tip
@@ -902,7 +902,7 @@ where:
 * **formula**: a valid formula passed as `Text` or `Object`. The formula will be evaluated for each processed entity and must return a boolean value. Within the formula, the entity is available through the `This` object.  
 
   * **Text**: the formula string must be preceeded by the `eval()` statement, so that the query parser evaluates the expression correctly. For example: *"eval(length(This.lastname) >=30)"*
-  * **Object**: the [formula object](FunctionClass.md) is passed as a **placeholder** (see below). The formula must have been created using the [`Formula`](FunctionClass.md#formula) or [`Formula from string`](FunctionClass.md#formula-from-string) command.
+  * **Object**: the [formula object](FunctionClass.md) is passed as a **placeholder** (see below). The formula must have been created using the [`Formula`](../commands/formula.md) or [`Formula from string`](../commands/formula-from-string.md) command.
 
  >* Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
  >* If the formula is not the only search criteria, the query engine optimizer could prior process other criteria (e.g. indexed attributes) and thus, the formula could be evaluated for only a subset of entities.
@@ -1182,7 +1182,7 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 
 As an alternative to formula insertion within the *queryString* parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is **recommended** since you benefit from tokenization, and code is easier to search/read.  
 
-The formula must have been created using the [`Formula`](FunctionClass.md#formula) or [`Formula from string`](FunctionClass.md#formula-from-string) command. In this case:
+The formula must have been created using the [`Formula`](../commands/formula.md) or [`Formula from string`](../commands/formula-from-string.md) command. In this case:
 
 * the *formula* is evaluated for each entity and must return true or false. During the execution of the query, if the formula's result is not a boolean, it is considered as false.
 * within the *formula*, the entity is available through the `This` object.  

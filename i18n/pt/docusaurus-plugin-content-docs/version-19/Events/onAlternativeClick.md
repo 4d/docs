@@ -22,7 +22,7 @@ Alguns estilos de botões podem ser [ligados a um menu pop-up](FormObjects/prope
 
 ### List box
 
-Esse evento é gerado nas colunas das caixas de listagem do tipo matriz de objetos [](FormObjects/listbox_overview.md#object-arrays-in-columns-4d-view-pro), quando o usuário clica em um botão de reticências do widget (atributo "alternateButton").
+This event is generated in columns of [object array type list boxes](../FormObjects/listbox_overview.md#object-arrays-in-columns), when the user clicks on a widget ellipsis button ("alternateButton" attribute).
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 

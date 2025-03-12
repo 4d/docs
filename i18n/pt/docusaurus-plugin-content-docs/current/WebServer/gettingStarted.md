@@ -273,5 +273,5 @@ As credenciais incorretas serão rejeitadas:
 
 ![](../assets/en/WebServer/login2.png)
 
-Una vez que un usuario se registra, puede manejar la sesión asociada utilizando el método `WEB Get Current Session ID`. Ver la página [Sesiones de usuario](sessions.md).
+Once a user is logged, you can handle the associated session using the `WEB Get current session ID` method. Ver la página [Sesiones de usuario](sessions.md).
 

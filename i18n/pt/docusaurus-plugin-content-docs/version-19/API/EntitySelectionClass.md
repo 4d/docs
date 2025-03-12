@@ -6,13 +6,13 @@ title: EntitySelection
 
 Uma seleção de entidades é um objeto que contém uma ou mais referencias a [entidades](ORDA/dsMapping.md#entity) pertencentes à mesma [Dataclass](ORDA/dsMapping.md#dataclass). Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
 
-As seleções de entidades podem ser criadas a partir de seleções existentes utilizando varias funções da classe [`DataClass` class](DataClassClass.md) tais como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou da classe `EntityClass` mesma, tal como [`.and()`](#and) ou [`orderBy()`](#orderby). Também pode criar seleções de entidades em branco utilizando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create new selection`](#create-new-selection).
+As seleções de entidades podem ser criadas a partir de seleções existentes utilizando varias funções da classe [`DataClass` class](DataClassClass.md) tais como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou da classe `EntityClass` mesma, tal como [`.and()`](#and) ou [`orderBy()`](#orderby). Você também pode criar seleções em branco das entidades usando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create entity selection`](#create-entity-selection).
 
 ### Resumo
 
 |                                                                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->|
+| [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#index)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->|
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->|
@@ -67,9 +67,9 @@ Se a tabela *dsTable* não estiver exposta em [`ds`](API/DataStoreClass.md#ds), 
 
 No parâmetro opcional*settings* pode passar um objeto contendo as propriedades abaixo:
 
-| Propriedade | Tipo | Descrição                                                                                                         |
-| ----------- | ---- | ----------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para  [contexto de optimização](ORDA/entities.md#clientserver-optimization) aplicado a entity selection. |
+| Propriedade | Tipo | Descrição                                                                                                            |
+| ----------- | ---- | -------------------------------------------------------------------------------------------------------------------- |
+| context     | Text | Label for the [optimization context](../ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
 
 #### Exemplo
 
@@ -1679,7 +1679,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tenta devolver entidades do índice 9 a
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.sum().Desc -->
-## .sum( )
+## .sum()
 
 <details><summary>Histórico</summary>
 
@@ -1728,7 +1728,7 @@ $sum:=$sel.sum("salary")
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.toCollection().Desc -->
-## .toCollection( )
+## .toCollection()
 
 <details><summary>Histórico</summary>
 

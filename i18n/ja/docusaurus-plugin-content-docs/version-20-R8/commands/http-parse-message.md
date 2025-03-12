@@ -26,11 +26,11 @@ displayed_sidebar: docs
 
 #### 説明
 
-The `HTTP Parse message` command <!--REF #_command_.HTTP Parse message.Summary-->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. 戻り値のオブジェクトの各プロパティは、マルチパートの各データに対応します<!-- END REF -->。
+`HTTP Parse message` コマンドは、<!--REF #_command_.HTTP Parse message.Summary-->multipart/form-*data* のテキストまたは Blob (HTTP "response" メッセージ) をパースし、コンテンツをオブジェクトに抽出します。 戻り値のオブジェクトの各プロパティは、マルチパートの各データに対応します<!-- END REF -->。
 
 :::info
 
-HTTP 自体はステートレスな通信プロトコルです。 このフレームワークの中で、クライアントは、メソッド・ターゲット・ヘッダー・コンテンツなどの詳細を指定した "request" メッセージをサーバーに送ることによって通信を開始します。 サーバーは、同じ詳細を含む "response" メッセージで応答します。 `HTTP Parse message` コマンドは、"request" または "response" メッセージを解析し、オブジェクトの形式に整えます。 このフレームワークの中で、クライアントは、メソッド・ターゲット・ヘッダー・コンテンツなどの詳細を指定した "request" メッセージをサーバーに送ることによって通信を開始します。 サーバーは、同じ詳細を含む "response" メッセージで応答します。 `HTTP Parse message` コマンドは、"request" または "response" メッセージを解析し、オブジェクトの形式に整えます。
+HTTP 自体はステートレスな通信プロトコルです。  このフレームワークの中で、クライアントは、メソッド・ターゲット・ヘッダー・コンテンツなどの詳細を指定した "request" メッセージをサーバーに送ることによって通信を開始します。 サーバーは、同じ詳細を含む "response" メッセージで応答します。 `HTTP Parse message` コマンドは、"request" または "response" メッセージを解析し、オブジェクトの形式に整えます。
 
 :::
 

@@ -3,7 +3,7 @@ id: comboBoxOverview
 title: Combo Box
 ---
 
-Une combo box est semblable à une [liste déroulante](dropdownList_Overview.md#overview), hormis le fait que cet objet accepte la saisie de texte par l’utilisateur et qu'elle dispose d'options supplémentaires.
+A combo box is similar to a [drop-down list](dropdownList_Overview.md), except that it accepts text entered from the keyboard and has additional options.
 
 ![](../assets/en/FormObjects/combo_box.png)
 
@@ -13,7 +13,7 @@ Fondamentalement, vous devez considérer l’objet combo box comme une zone sais
 
 Utilisez l’événement formulaire [`On Data Change`](Events/onDataChange.md) pour gérer les valeurs saisies, comme pour toute zone de saisie.
 
-L'initialisation d'une combo box se fait exactement de la même manière que celle d'une [liste déroulante](dropdownList_Overview.md#overview) : en utilisant un objet, un tableau ou une liste de choix.
+You initialize a combo box in exactly the same way as a [drop-down list](dropdownList_Overview.md): using an object, an array, or a choice list.
 
 ### Utiliser un objet
 
@@ -53,7 +53,7 @@ Les objets de type combo box acceptent deux options spécifiques :
 
 - [Insertion automatique](properties_DataSource.md#automatic-insertion) : permet d'ajouter automatiquement une valeur à la source de données lorsque l'utilisateur saisit une valeur qui ne se trouve pas dans la liste associée à la combo box.
 - [Exclusion ](properties_RangeOfValues.md#excluded-list) (liste de valeurs exclues) : permet d'établir une liste dont les valeurs ne peuvent pas être saisies dans la combo box. Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
-> > > La possibilité d’associer [une liste de valeurs obligatoires](properties_RangeOfValues.md#required-list) n’est pas disponible pour les combo box. Dans une interface, si un objet doit proposer une liste finie de valeurs obligatoires, il faut utiliser un objet de type [liste déroulante](dropdownList_Overview.md#overview).
+> > > La possibilité d’associer [une liste de valeurs obligatoires](properties_RangeOfValues.md#required-list) n’est pas disponible pour les combo box. In an interface, if an object must propose a finite list of required values, then you must use a [drop-down list](dropdownList_Overview.md) object.
 
 ## Propriétés prises en charge
 

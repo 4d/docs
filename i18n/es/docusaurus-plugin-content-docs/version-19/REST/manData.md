@@ -50,7 +50,7 @@ Si se modifica alguno de los atributos de la entidad en el conjunto de entidades
 
 Si el conjunto de entidades ya no existe en la caché de 4D Server, se recreará con un nuevo tiempo de espera por defecto de 10 minutos. El conjunto de entidades se refrescará (pueden incluirse ciertas entidades y eliminarse otras) desde la última vez que se creó, si ya no existía antes de recrearlo.
 
-Utilizando [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), puede combinar dos conjuntos de entidades que haya creado previamente. Puede combinar los resultados en ambos, devolver sólo lo que es común entre los dos, o devolver lo que no es común entre los dos.
+Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`](./$entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. Puede combinar los resultados en ambos, devolver sólo lo que es común entre los dos, o devolver lo que no es común entre los dos.
 
 Se devuelve una nueva selección de entidades; sin embargo, también se puede crear un nuevo conjunto de entidades llamando [`$method=entityset`]($method.md#methodentityset) al final de la petición REST.
 

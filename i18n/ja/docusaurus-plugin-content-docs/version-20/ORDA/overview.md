@@ -7,7 +7,7 @@ ORDA とは **オブジェクト・リレーショナル・データアクセス
 
 この概念には、[レイジーローディング](glossary.md#レイジーローディング) と合わせてリレーションが暗示的に織り込まれており、デベロッパーはありがちなデータセレクションや転送の煩わしさから解放されます。
 
-ORDA では、[データストア](dsMapping.md#データストア) と呼ばれる抽象化レイヤーを通してデータにアクセスします。 データストアとは、データベースモデルとデータへの、オブジェクトやクラスを介したインターフェースを提供するオブジェクトです。 たとえば、テーブルは [データクラス](dsMapping.md#データクラス) オブジェクトにマップされ、フィールドはデータクラスの [属性](dsMapping.md#属性)で、レコードは [エンティティ](dsMapping.md#entity) および [エンティティセレクション](dsMapping.md#エンティティセレクション) を介してアクセスされます。
+ORDA では、[データストア](dsMapping.md#データストア) と呼ばれる抽象化レイヤーを通してデータにアクセスします。 データストアとは、データベースモデルとデータへの、オブジェクトやクラスを介したインターフェースを提供するオブジェクトです。 For example, a table is mapped to a [dataclass](dsMapping.md#dataclass) object, a field is an [attribute](dsMapping.md#attribute) of a dataclass, and records are accessed through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection).
 
 
 ## ORDAを使う理由

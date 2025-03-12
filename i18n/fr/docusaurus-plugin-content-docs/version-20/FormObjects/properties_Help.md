@@ -26,7 +26,7 @@ Vous pouvez soit :
 
 #### Objets pris en charge
 
-[Bouton](button_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Check Box](checkbox_overview.md)  - [Liste déroulante](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md#overview) - [Liste hiérarchique ](list_overview.md#overview) - [En-tête List Box](listbox_overview.md#list-box-headers) - [Pied List Box](listbox_overview.md#list-box-footers) - [Bouton image](pictureButton_overview.md) - [Pop-up menu image](picturePopupMenu_overview.md) - [Bouton Radio](radio_overview.md)
+[Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md)  - [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up menu](picturePopupMenu_overview.md) - [Radio Button](radio_overview.md)
 
 #### Autres fonctionnalités d'aide
 

@@ -23,7 +23,7 @@ El funcionamiento del sistema de acceso del servidor web 4D se resume en el sigu
 
 ### Personalizado (por defecto)
 
-Básicamente, en este modo, depende del desarrollador definir cómo autenticar a los usuarios. 4D sólo evalúa las peticiones HTTP [que requieren una autenticación](#method-calls).
+Básicamente, en este modo, depende del desarrollador definir cómo autenticar a los usuarios. 4D sólo evalúa las peticiones HTTP [que requieren una autenticación](#database-method-calls).
 
 Este modo de autenticación es el más flexible porque permite:
 
@@ -119,7 +119,7 @@ Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/pa
   -> $RequestAccepted : Boolean
 
 ```
-> Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. La información recibida por el método base depende del [modo de autenticación](#authentication-mode) seleccionado).
+> Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. La información recibida por el método base depende del [modo de autenticación](#authentication-modes) seleccionado).
 
 #### $1 - URL
 

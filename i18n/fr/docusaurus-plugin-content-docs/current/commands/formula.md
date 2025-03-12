@@ -33,8 +33,8 @@ Le fait d'avoir une formule en tant qu'objet permet de la passer en tant que par
 
 La formule retournée peut être appelée avec :
 
-- les méthodes [`call()`](#call) ou [`apply()`](#apply), ou
-- la syntaxe de la notation objet (voir [objet formula](#formula-object)).
+- [`.call()`](../API/FunctionClass.md#call) or [`.apply()`](../API/FunctionClass.md#apply) methods, or
+- object notation syntax (see [formula object](../commands/formula.md-object)).
 
 ```4d
  var $f : 4D.Function
@@ -47,7 +47,7 @@ La formule retournée peut être appelée avec :
  $o.myFormula() //retourne 3
 ```
 
-Vous pouvez passer des [paramètres](#passing-parameters) à `Formula`, comme le montre l'[exemple 4](#example-4) ci-dessous.
+You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
 
 Vous pouvez indiquer l'objet sur lequel la formule est exécutée, comme le montre l'[exemple 5](#example-5). Les propriétés de l'objet sont alors accessibles via la commande `This`.
 
@@ -142,9 +142,9 @@ Appeler une formule à l'aide de la notation objet :
 
 #### Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 1597                                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1597                        |
+| Thread safe        | &check; |
 
 

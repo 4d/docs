@@ -470,7 +470,7 @@ ALERT("Time is over") //1 parámetro
 
 Los métodos proyecto 4D también aceptan estos parámetros opcionales, empezando por la derecha. El problema con los parámetros opcionales es cómo manejar el caso en que algunos de ellos falten en el método llamado, nunca debería producir un error. Una buena práctica es asignar valores por defecto a los parámetros no utilizados.
 
-> Cuando los parámetros opcionales son necesarios en sus métodos, también puede considerar el uso de [propiedades de objeto como parámetros con nombre](#using-objects-properties-as-named-parameters) que ofrecen una forma flexible de manejar un número variable de parámetros.
+> Cuando los parámetros opcionales son necesarios en sus métodos, también puede considerar el uso de [propiedades de objeto como parámetros con nombre](#using-object-properties-as-named-parameters) que ofrecen una forma flexible de manejar un número variable de parámetros.
 
 Utilizando el comando `Count parameters` desde dentro del método llamado, puede detectar el número real de parámetros y realizar diferentes operaciones dependiendo de lo que haya recibido.
 
@@ -547,7 +547,7 @@ Aquí el parámetro no es el campo, sino un puntero al mismo. Por lo tanto, dent
  ALERT($0)
 ```
 
-Esta segunda técnica de retornar un valor por una subrutina se llama " utilizar una función" Se describe en el párrafo [Funciones](#functions). Se describe en el párrafo [Valores devueltos](#returning-values).
+Esta segunda técnica de retornar un valor por una subrutina se llama " utilizar una función" Se describe en el párrafo [Funciones](#functions). Se describe en el párrafo [Valores devueltos](#returned-value).
 
 
 ### Casos particulares: objetos y colecciones

@@ -38,7 +38,7 @@ Las funciones son llamadas en el objeto correspondiente en el almacén de datos 
 
 > `/rest/\{dataClass\}/Función` puede utilizarse para llamar a una clase de datos o a una función de selección de entidades (`/rest/\{dataClass\}` devuelve todas las entidades de la DataClass como una selección de entidades). La función se busca primero en la clase de selección de entidades. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
 
-> Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
+> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
 
 ## Parámetros
 
@@ -51,7 +51,7 @@ Se aplican las siguientes reglas:
 - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
 - La selección de entidades y la entidad se pueden pasar como parámetros. El objeto JSON debe contener atributos específicos utilizados por el servidor REST para asignar datos a los objetos ORDA correspondientes: __DATACLASS,__ENTITY, __ENTITIES,__DATASET.
 
-Ver [este ejemplo](#request-receiving-an-entity-as-parameter) y [este ejemplo](#request-receiving-an-entity-selection-as-parameter).
+Ver [este ejemplo](#receiving-an-entity-selection-as-parameter).
 
 ### Parámetro de valor escalar
 
@@ -77,7 +77,7 @@ Las entidades pasadas en los parámetros son referenciadas en el servidor a trav
 - Si no se proporciona __KEY, se crea una nueva entidad en el servidor con los atributos dados.
 - Si se suministra __KEY, la entidad correspondiente a__KEY se carga en el servidor con los atributos dados
 
-Ver los ejemplos de [creación](#creating-an-entity) o de [actualización](#updating-an-entity) de las entidades.
+Ver ejemplos para crear o actualizar entidades.
 
 #### Parámetro de entidad asociado
 

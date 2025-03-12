@@ -136,7 +136,7 @@ Para un list box array, la propiedad **Variable o Expresión** normalmente conti
 
 ## Tipo de expresión
 
-> Esta propiedad se denomina [**Data Type**](properties_DataSource.md#data-type-expression-type) en la Lista de propiedades para las columnas de list box de tipo [selección](listbox_overview.md#selection-list-boxes) y [colección](listbox_overview.md#collection-or-entity-selection-list-boxes) y para las [Listas desplegables](dropdownList_Overview.md) asociadas a un [objeto](FormObjects/dropdownList_Overview.md#using-an-object) o a un [array](FormObjects/dropdownList_Overview.md#using-an-array).
+> This property is called [**Data Type**](properties_DataSource.md#data-type-list-expression-type) in the Property List for [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns and for [Drop-down Lists](dropdownList_Overview.md) associated to an [object](FormObjects/dropdownList_Overview.md#using-an-object) or an [array](FormObjects/dropdownList_Overview.md#using-an-array).
 
 Especifique el tipo de datos para la expresión o variable asociada al objeto. Tenga en cuenta que el objetivo principal de este ajuste es configurar las opciones (como los formatos de visualización) disponibles para el tipo de datos. En realidad, no escribe la variable en sí. De cara a la compilación del proyecto, debe [declarar la variable](Concepts/variables.md#declaring-variables).
 
@@ -154,7 +154,7 @@ Sin embargo, esta propiedad tiene una función tipográfica en los siguientes ca
 
 #### Objetos soportados
 
-[Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Entrada](input_overview.md) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Área de plug-in](pluginArea_overview.md#overview) - [Indicador de progreso](progressIndicator.md) - [Botón de radio](radio_overview.md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md)
+[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab Control](tabControl.md)
 
 ---
 
@@ -170,7 +170,7 @@ Lista de palabras separadas por espacios que se utilizan como selectores de clas
 
 #### Objetos soportados
 
-[Área 4D View Pro](writeProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Caja de grupo](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Botón de imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md#overview) - [Botón radio](radio_overview.md) - [Imagen estática](staticPicture.md) - [Subformulario](subform_overview.md#overview) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[Área 4D View Pro](writeProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Caja de grupo](groupBox.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Botón de imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Botón radio](radio_overview.md) - [Imagen estática](staticPicture.md) - [Subformulario](subform_overview.md#overview) - [Área de texto](text.md) - [Área Web](webArea_Overview.md)
 
 ---
 

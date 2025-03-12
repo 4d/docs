@@ -23,7 +23,7 @@ There are different ways to configure the 4D web server settings, depending on t
 |Can be set with|Name|Comments|
 |---|---|---|
 |Settings dialog box|[Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache)||
-|Settings dialog box|[Options (I) page/Page Cache Size](../settings/web.md#page-cache-size)||
+|Settings dialog box|[Options (I) page/Page Cache Size](../settings/web.md#pages-cache-size)||
 
 Enables and configures the web page cache. 
 
@@ -78,7 +78,7 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 |---|---|---|
 |webServer object|[`CORSSettings`](API/WebServerClass.md#corssettings)|Collection of objects (List of allowed hosts and methods for the CORS service)|
 |`WEB SET OPTION`|`Web CORS settings`|Collection of objects (List of allowed hosts and methods for the CORS service)|
-|Settings dialog box|[Options (II) page/Domain names and HTTP methods allowed](../settings/web.md#domain-names-HTTP-methods-allowed)|Click on the [+] button to add an allowed domain name and its method(s)|
+|Settings dialog box|[Options (II) page/Domain names and HTTP methods allowed](../settings/web.md#domain-nameshttp-methods-allowed)|Click on the [+] button to add an allowed domain name and its method(s)|
 
 List of allowed hosts and methods for the CORS service. 
 

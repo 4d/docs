@@ -113,7 +113,7 @@ In this case, the first line contains the **prototype** of the method, automatic
 
 :::note
 
-Otherwise, the code editor displays [the block comment at the top of the method code](../code-editor/write-class-method.md#using-help-tips).
+Otherwise, the code editor displays [the block comment at the top of the method code](../code-editor/write-class-method.md#help-tips).
 
 :::
 

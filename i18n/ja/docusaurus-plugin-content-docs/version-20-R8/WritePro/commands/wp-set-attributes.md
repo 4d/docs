@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 *targetObj* 引数で指定したターゲット内で設定したい属性は、2通りの方法で指定することができます:
 
-- *attribName* および *attribValue* 引数を使用する。 *attribName* 引数にはターゲット内で設定したい属性の名前を渡し、*attribValue* 引数には設定したい新しい値を渡します。 一度の呼び出しで*attribName*/*attribValue* のペアを好きなだけ渡すことができます。
+- *attribName* および*attribValue* 引数を使用する。 *attribName* 引数にはターゲット内で設定したい属性の名前を渡し、*attribValue* 引数には設定したい新しい値を渡します。 一度の呼び出しで*attribName*/*attribValue* のペアを好きなだけ渡すことができます。
 
 - *attribObj* 引数を使用して、属性の名前と対応する値をオブジェクトのプロパティとして格納した一つのオブジェクトを渡すことができます。
 
@@ -92,7 +92,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict3514231.en.png)
 
-背景画像を、印刷可能エリア全体に対して設定したい場合を考えます。 全ての属性は単一のオブジェクトを使用して渡されます:
+背景画像を、印刷可能エリア全体 に対して設定したい場合を考えます。 全ての属性は単一のオブジェクトを使用して渡されます:
 
 ```4d
  var WParea : Object

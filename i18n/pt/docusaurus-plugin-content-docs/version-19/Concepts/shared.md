@@ -31,7 +31,7 @@ As modificações podem ser aplicadas a objetos partilhados e coleções partilh
 - adicionar ou remover propriedades de objectos,
 - adicionar ou editar valores (desde que sejam suportados em objetos partilhados), incluindo outros objetos partilhados ou coleções (que criam um grupo partilhado, ver abaixo).
 
-Todas as instruções de modificação num objeto ou coleção partilhados têm de ser protegidas dentro de um bloco [`Use...End use`](#use-end-use) , caso contrário é gerado um erro.
+Todas as instruções de modificação num objeto ou coleção partilhados têm de ser protegidas dentro de um bloco [`Use...End use`](#useend-use), caso contrário é gerado um erro.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")

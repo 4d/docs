@@ -5,7 +5,7 @@ title: Ação
 
 ## Métodos
 
-Reference of a method attached to the object. Pode-se utilizar um método de formulário para gerir dados e objectos, mas é geralmente mais simples e mais eficiente utilizar um método de objecto para estes fins. Ver [Métodos especializados](Concepts/methods.md#specialized-methods).
+Reference of a method attached to the object. Pode-se utilizar um método de formulário para gerir dados e objectos, mas é geralmente mais simples e mais eficiente utilizar um método de objecto para estes fins. See [methods](../Concepts/methods.md).
 
 You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
 

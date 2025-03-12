@@ -11,6 +11,7 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 
 De plus, les objets fichier et dossier prennent en charge les `fileSystems`, fournissant un chemin contextuel aux principaux dossiers de l'application.
 
+## Chemins des filesystem
 
 4D accepte plusieurs chemins de `filesystem` qui désignent des dossiers 4D spécifiques avec un emplacement variable sur macOS et Windows. Un chemin d'accès filesystem est évalué par rapport au contexte et est renvoyé sous forme de chemin absolu.
 

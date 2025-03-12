@@ -60,7 +60,7 @@ WebSocket objects provide the following properties and functions:
 
 ||
 |---|
-|[<!-- INCLUDE #WebSocketClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #WebSocketClass.dataType.Summary -->|
+|[<!-- INCLUDE #WebSocketClass.dataType.Syntax -->](#datatype)<br/><!-- INCLUDE #WebSocketClass.dataType.Summary -->|
 |[<!-- INCLUDE #WebSocketClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketClass.handler.Summary -->|
 |[<!-- INCLUDE #WebSocketClass.id.Syntax -->](#id)<br/><!-- INCLUDE #WebSocketClass.id.Summary -->|
 |[<!-- INCLUDE #WebSocketClass.send().Syntax -->](#send)<br/><!-- INCLUDE #WebSocketClass.send().Summary -->|
@@ -88,7 +88,7 @@ WebSocket objects provide the following properties and functions:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |url|Text|->|URL to which to connect|
-|[connectionHandler](#connectionHandler-parameter)|Object|->|Object declaring WebSocket callbacks|
+|[connectionHandler](#connectionhandler-parameter)|Object|->|Object declaring WebSocket callbacks|
 |Result|4D.WebSocket|<-|New [WebSocket object](#websocket-object)|
 <!-- END REF -->
 

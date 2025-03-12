@@ -273,5 +273,5 @@ Les informations d'identification erronées seront rejetées :
 
 ![](../assets/en/WebServer/login2.png)
 
-Une fois qu'un utilisateur est connecté, vous pouvez gérer la session associée en utilisant la commande `WEB Get Current Session ID`. Voir la page [Sessions Web](sessions.md) .
+Once a user is logged, you can handle the associated session using the `WEB Get current session ID` method. Voir la page [Sessions Web](sessions.md) .
 

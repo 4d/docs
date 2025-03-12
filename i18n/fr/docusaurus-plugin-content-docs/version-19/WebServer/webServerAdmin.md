@@ -44,14 +44,14 @@ Lorsque vous sélectionnez cette commande, la page d'accueil du site Web publié
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-Cette commande vous permet de vérifier que le serveur web, l'affichage de la page d'accueil, etc. fonctionnent correctement. La page est appelée en utilisant l'URL *localhost*, qui est le raccourci standard désignant l'adresse IP de la machine sur laquelle le navigateur web est exécuté. Cette commande prend en compte le numéro du [port de publication TCP](#http-port) spécifié dans les paramètres.
+Cette commande vous permet de vérifier que le serveur web, l'affichage de la page d'accueil, etc. fonctionnent correctement. La page est appelée en utilisant l'URL *localhost*, qui est le raccourci standard désignant l'adresse IP de la machine sur laquelle le navigateur web est exécuté. The command takes into account the [TCP publication port](./webServerConfig.md#http-port) number specified in the settings.
 
 ## Vider le cache
 
 À tout moment, vous pouvez vider le cache des pages et des images qu'il contient (si, par exemple, vous avez modifié une page statique et que vous souhaitez la recharger dans le cache).
 
 4D : cliquez sur le bouton **Vider le cache** dans la page Web/Options (I) de la boîte de dialogue des Paramètres. Le cache est alors immédiatement effacé.
-> Vous pouvez aussi utiliser l'url [/4DCACHECLEAR](#cacheclear).
+> You can also use the [/4DCACHECLEAR](#4dcacheclear) URL.
 
 ## Explorateur d'exécution
 

@@ -33,7 +33,7 @@ title: 入力
 - **最近使用したフォント**: セッション中に最近使用されたフォント名を表示します。 リストには最大で 10フォントまで表示されます (それ以上は古いものから置き換えられていきます)。 デフォルトではリストは空になっているので、このオプションは表示されません。 このリストは `SET RECENT FONTS` と `FONT LIST` コマンドを使用して管理することができます。
 - スタイルの変更をおこなうためのコマンド: スタイル、サイズ、カラー、背景色。 このポップアップメニューを使用してユーザーがスタイル属性を編集する と、4D は `On After Edit` フォームイベントを生成します。
 
-[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
+[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 `WA SET PREFERENCE` コマンドを使用することでコンテキストメニューへのアクセスがコントロールすることが可能です。
 
 #### JSON 文法
 
@@ -219,7 +219,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
  :xliff:PH_Lastname
 
 この場合、"プレースホルダー" のフィールドには参照のみを渡します。 参照と静的なテキストを組み合わせることはできません。
-> You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
+> `OBJECT SET PLACEHOLDER` および `OBJECT Get placeholder` コマンドを使用することで、プレースホルダーのテキストをプログラミングによって設定あるいは取得することができます。
 
 #### JSON 文法
 
@@ -260,9 +260,9 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 ショートカットの設定をおこなうには、プロパティリストのショートカットプロパティの [...] ボタンをクリックします:
 
 ![](../assets/en/FormObjects/property_shortcut.png)
-> カスタムメニューコマンドにもショートカットを割り当てることができます。 2つのショートカットに衝突がある場合には、アクティブオブジェクトが優先されます。 For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
+> カスタムメニューコマンドにもショートカットを割り当てることができます。 2つのショートカットに衝突がある場合には、アクティブオブジェクトが優先されます。 メニューにショートカットを割り当てる方法の詳細については、[メニュープロパティの設定](../Menus/properties.md) を参照して下さい。
 
-To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](../Preferences/shortcuts.md) in the Preferences dialog box.
+4D のデザイン環境で使用できるショートカットの一覧は、環境設定ダイアログの [ショートカットページ](../Preferences/shortcuts.md) にて確認できます。
 
 #### JSON 文法
 

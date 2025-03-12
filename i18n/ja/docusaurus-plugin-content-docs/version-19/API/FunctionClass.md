@@ -15,7 +15,7 @@ title: Function
 
 ### Formula オブジェクト
 
-[Formula](#formula) あるいは [Formula from string](#formula-from-string) コマンドを使用すると、[`4D.Function`オブジェクト](#4dfunction-オブジェクトについて) を作成することができ、それによってあらゆる 4D式やテキストとして表されたコードを実行することが可能です。
+[Formula](#formula) あるいは [Formula from string](#formula-from-string) コマンドを使用すると、`4D.Function` オブジェクトを作成することができ、それによってあらゆる 4D式やテキストとして表されたコードを実行することが可能です。
 
 Formulaオブジェクトは、オブジェクトプロパティに格納することができます。
 

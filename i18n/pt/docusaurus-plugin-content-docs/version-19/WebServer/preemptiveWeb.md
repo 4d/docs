@@ -31,7 +31,7 @@ A tabela a seguir indica se o modo preventivo está utilizado ou está disponív
 - Servidor de serviços Web: trata dos pedidos SOAP
 - REST herdado: peticiones diretas a métodos 4D (`/rest/{table}/{methodName}`)
 - ***parâmetro web*** significa que o modo preventivo depende de um valor de configuração:
-  - quando [**Sessões escalonáveis**](sessions.md#enabling-sessions) estiver selecionada, o [modo preemptivo será usado automaticamente](sessions.md#preemptive-mode) para os processos Web.
+  - when [**Scalable sessions**](sessions.md#enabling-sessions) option is selected, the preemptive mode is automatically used for web processes.
   - caso contrário, o opção [**usa processos preventivos**](webServerConfig.md#use-preemptive-processes) é levado em conta.
   - sobre processos de serviço Web (servidor ou cliente), modo preventivo é suportado no nível do método. Você só precisa selecionar "Pode ser executado em processos preventivos" para métodos de servidor SOAP publicados (consulte [publicar um Serviço Web com 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) ou os métodos de cliente proxy (veja [Inscrevendo um Serviço Web em 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) e certifique-se de que eles são confirmados pelo compilador.
 

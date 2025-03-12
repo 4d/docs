@@ -177,7 +177,7 @@ No hay palabra clave final para el código de una función. There is no ending k
 :::
 
 
-Las funciones de clase son propiedades específicas de la clase. Son objetos de la clase [4D.Function](API/FunctionClass.md#about-4dfunction-objects).
+Las funciones de clase son propiedades específicas de la clase. Son objetos de la clase [4D.Function](../API/FunctionClass.md#about-function-objects).
 
 En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function`, y el nombre de la función. El nombre de la función debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 
@@ -202,7 +202,7 @@ Function getFullname()->$fullname : Text
 
 Para una función clase, el comando `Current method name` devuelve: `<ClassName>.<FunctionName>`, por ejemplo "MyClass.myMethod".
 
-En el código de la aplicación, las funciones de clases se llaman como los métodos miembros de las instancias de objetos y pueden recibir [parámetros](#class-function-parameters) si los hay. Se soportan las siguientes sintaxis:
+En el código de la aplicación, las funciones de clases se llaman como los métodos miembros de las instancias de objetos y pueden recibir [parámetros](#parameters) si los hay. Se soportan las siguientes sintaxis:
 
 - utilización del operador `()`. Por ejemplo, `myObject.methodName("hello")`
 - utilización de un método miembro de la clase "4D.Function":
@@ -393,7 +393,7 @@ Super($text1) //llamada del constructor de la superclase con un parámetro texto
 Este. aram:=$text2 // usar un segundo parámetro
 ```
 
-2. Dentro de una [función de clase](#class-function), `Super` designa el prototipo de la superclase y permite llamar a una función de la jerarquía de superclases.
+2. Dentro de una [función de clase](#function), `Super` designa el prototipo de la superclase y permite llamar a una función de la jerarquía de superclases.
 
 ```4d
 Super.doSomething(42) //llama a la función "doSomething"  

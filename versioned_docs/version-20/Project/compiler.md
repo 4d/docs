@@ -60,7 +60,7 @@ Syntax checking can also be launched directly using the **Check Syntax** command
 
 ### Generate Typing
 
-The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler_methods-method). These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times. 
+The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler-method). These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times. 
 
 The name of these methods must begin with `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-methods-for). The compiler methods that are generated and maintained by 4D automatically have the `Invisible` attribute:
 
@@ -123,11 +123,11 @@ This area groups the generic options used during the compilation process.
 
 #### Generate the symbol file
 
-Used to generate the symbol file (see [symbol file](#symbol-file)). The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_symbols.txt`. 
+Used to generate the symbol file (see [symbol file](#symbol-file)). The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`. 
 
 #### Generate error file
 
-Used to generate the error file (see [error file](#error-file)) at the time of syntax checking. The error file is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_errors.xml`.
+Used to generate the error file (see [error file](#error-file)) at the time of syntax checking. The error file is created in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
 
 
 #### Compilation Path
@@ -179,7 +179,7 @@ Up to 5 compiler methods may be generated; a compiler method is only generated i
 - **Interprocess Variables**: Groups together interprocess variable declarations;
 - **Arrays**: Groups together process array declarations;
 - **Interprocess Arrays**: Groups together interprocess array declarations;
-- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler-method).
 
 You can rename each of these methods in the corresponding areas, but they will always be preceded by the label `Compiler_` (non-modifiable). The name of each method (prefix included) must be no longer than 31 characters. It must also be unique and comply with [4D rules for naming methods](Concepts/identifiers.md#project-methods). 
 
@@ -188,7 +188,7 @@ You can rename each of these methods in the corresponding areas, but they will a
 
 ### Symbol file
 
-If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project during compilation. It is divided into several parts:
+If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs) of the project during compilation. It is divided into several parts:
 
 #### List of process and interprocess variables
 
@@ -236,7 +236,7 @@ result data type, number of calls, Thread Safe or Thread Unsafe
 
 ### Error file
 
-You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs-folder) of the project. 
+You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs) of the project. 
 
 Although the errors can be accessed directly via the [compiler window](#compile), it can be useful to have an error file that can be transmitted from one machine to another. The error file is generated in XML format in order to facilitate automatic parsing of its contents. It also allows the creation of customized error display interfaces.
 
@@ -307,14 +307,14 @@ Both compilers are integrated into 4D. The appropriate compiler is automatically
 
 The classic compiler generates native compiled code for Intel/AMD processors on any machines. It does not require any specific configuration. 
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata-folder) folder of the project.  
+Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.  
 
 
 ### Silicon Compiler
 
 The Silicon compiler generates native compiled code for Apple Silicon processors, such as *Apple M1*. 
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries-folder) folder of the project.
+Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
 
 
 #### Requirements

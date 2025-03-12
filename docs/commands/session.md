@@ -28,7 +28,7 @@ The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Sessio
 
 Depending on the process from which the command is called, the current user session can be:
 
-- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions)),
+- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions)),
 - a remote client session,
 - the stored procedures session,
 - the *designer* session in a standalone application.

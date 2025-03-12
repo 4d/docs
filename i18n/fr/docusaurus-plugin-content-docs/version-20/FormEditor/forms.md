@@ -11,7 +11,7 @@ Les formulaires fournissent l'interface par laquelle les informations sont saisi
 Les formulaires peuvent également contenir d'autres formulaires grâce aux fonctionnalités suivantes :
 
 - [les objets sous-formulaires](FormObjects/subform_overview.md)
-- [les formulaires hérités](properties_FormProperties.md#inherited-forms)
+- [les formulaires hérités](./properties_FormProperties.md#inherited-form-name)
 
 ## Création de formulaires
 

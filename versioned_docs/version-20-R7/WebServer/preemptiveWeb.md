@@ -28,7 +28,7 @@ The following table indicates whether the preemptive mode is used or is availabl
 - Web Server: handles [web templates](templates.md), [4DACTION and database methods](httpRequests.md)
 - Web Service Server: handles SOAP requests
 - ***web setting*** means that the preemptive mode depends on a setting value:
-	- when [**Scalable sessions**](sessions.md#enabling-sessions) option is selected, the preemptive mode is automatically used for web processes.
+	- when [**Scalable sessions**](sessions.md#enabling-web-sessions) option is selected, the preemptive mode is automatically used for web processes.
 	- otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
 	- regarding Web service processes (server or client), preemptive mode is supported at method level. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) and make sure they are confirmed thread-safe by the compiler. 
 
@@ -42,7 +42,7 @@ All 4D code executed by the web server must be thread-safe if you want your web 
 *	All web-related database methods:
 	*	[`On Web Authentication`](authentication.md#on-web-authentication)
 	*	[`On Web Connection`](httpRequests.md#on-web-connection)
-	*	[`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method)
+	*	`On REST Authentication`
 	*	[`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
 *	The `compiler_web` project method (regardless of its actual "Execution mode" property);

@@ -117,7 +117,7 @@ No parâmetro *folderConstant* , passe uma pasta 4D incorporada ou de sistema, u
 
 Se o comando for chamado a partir de um componente, passe o parâmetro opcional *para obter o caminho da base de dados anfitriã. Caso contrário, se omitir o parâmetro* , um objeto nulo é sempre devolvido.
 
-> `No Windows, em clientes fusionados, a localização das pastas incorporadas é modificada se for utilizada a tecla ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) .
+> On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#build-application-settings) is used.
 
 ## 4D. Folder.new()
 

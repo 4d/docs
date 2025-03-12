@@ -115,7 +115,7 @@ Supported properties depend on the list box type.
 
 |Property|Array list box|Selection list box|Collection or Entity Selection list box|
 |---|----|---|---|  
-|[Alternate Background Color](properties_BackgroundAndBorder.md##alternate-background-color)|X|X|X|  
+|[Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color)|X|X|X|  
 |[Background Color](properties_BackgroundAndBorder.md#background-color--fill-color)|X|X|X|
 |[Bold](properties_Text.md#bold)|X|X|X|
 |[Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)||X|X|

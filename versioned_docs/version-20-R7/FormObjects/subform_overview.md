@@ -46,7 +46,7 @@ The page subform uses the input form indicated by the [Detail Form](properties_S
 
 You can bind [a variable or an expression](properties_Object.md#variable-or-expression) to a subform container object. This is very useful to synchronize values from the parent form and its subform(s). 
 
-By default, 4D creates a variable or expression of [object type](properties_Object.md#expression-type) for a subform container, which allows you to share values in the context of the subform using the `Form` command ([see below](#using-the-subform-bound-object)). However, you can use a variable or expression of any scalar type (time, integer, etc.) especially if you only need to share a single value:
+By default, 4D creates a variable or expression of [object type](properties_Object.md#expression-type) for a subform container, which allows you to share values in the context of the subform using the `Form` command. However, you can use a variable or expression of any scalar type (time, integer, etc.) especially if you only need to share a single value:
 
 - Define a bound variable or expression of a scalar type and call the `OBJECT Get subform container value` and `OBJECT SET SUBFORM CONTAINER VALUE` commands to exchange values when [On Bound Variable Change](../Events/onBoundVariableChange.md) or [On Data Change](../Events/onDataChange.md) form events occur. This solution is recommended to synchronize a single value.
 - Define a bound variable or expression of the **object** type and use the `Form` command to access its properties from the subform. This solution is recommended to synchronize several values.
@@ -63,7 +63,7 @@ In the parent form, both objects (input area and subform container) **have the s
 
 :::info
 
-To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-list-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
+To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
 
 - If you use a variable (e.g. `parisTime`), it must be of the `text` or `time` type.
 - If you use an expression (e.g. `Form.myValue`), it must contain a `text` value.

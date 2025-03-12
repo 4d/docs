@@ -22,7 +22,7 @@ Data security is present at every stage of the 4D web server implementations. Se
 
 * Extended support of the [**TLS Protocol (HTTPS)**](../Admin/tls.md),
 
-* **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
+* **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and `On REST Authentication` for the REST server),
 
 * **Control of exposed contents**: only elements that you expose explicitely can be available from direct web or REST requests. You must declare:
   * [Project methods](templates.md#accessing-4d-methods-via-the-web) exposed through HTTP requests

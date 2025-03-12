@@ -252,7 +252,7 @@ Passa o tamanho expresso em bytes como valor. Por defeito, o limite de compress�
 
 Número da porta IP (TCP) de escuta para HTTP. Por padrão, 4D publica uma aplicação web na porta Web HTTP normal (porta TCP), que é a porta 80. Se essa porta já for usada por outro serviço da web, você precisa alterar a porta HTTP usada pelo 4D para esse banco de dados.
 
-> En macOS, la modificación del puerto HTTP permite iniciar el servidor web 4D sin ser el usuario raíz de la máquina (ver [macOS HelperTool](#macos-helpertool)).
+> In macOS, modifying the HTTP port allows you to start the 4D web server without being the root user of the machine (see macOS HelperTool).
 
 Em um navegador da Web, é necessário incluir o número da porta HTTP não padrão no endereço inserido para se conectar ao aplicativo da Web. O endereço deve ter um sufixo constituído por dois pontos seguidos pelo número do porto. Por exemplo, se você estiver usando a porta HTTP número 8080, você irá especificar "123.4.567.89:8080".
 
@@ -597,7 +597,7 @@ Esta opción activa el modo apropiativo para el código del servidor web de su a
 
 As configurações a seguir ainda são compatíveis, mas dependem de recursos ou tecnologias obsoletos. Em geral, é recomendável manter os valores padrão.
 
-#### Allow database access through 4DSYNC URLs
+#### Permitir acesso ao banco de dados através de URLs 4DSYNC
 
 Esta opción controla el soporte de las peticiones de sincronización HTTP que contienen las URLs obsoletas */4DSYNC*.
 

@@ -12,7 +12,7 @@ title: Restore
 
 - The loss of application file(s). This incident can occur because of defective sectors on the disk containing the application, a virus, manipulation error, etc. The last backup must be restored and then the current log file must be integrated. To find out if an application was damaged following an incident, simply relaunch the application using 4D. The program performs a self-check and details the necessary restore operations to perform. In automatic mode, these operations are performed directly without any intervention on the part of the user. If a regular backup strategy was put into place, the 4D restore tools will allow you to recover (in most cases) the application in the exact state it was in before the incident.
 
-> 4D can launch procedures automatically to recover applications following incidents. These mechanisms are managed using two options available on the **Backup/Backup & Restore** page of the Settings. For more information, refer to the [Automatic Restore](settings.md#automatic-restore) paragraph.  
+> 4D can launch procedures automatically to recover applications following incidents. These mechanisms are managed using two options available on the **Backup/Backup & Restore** page of the Settings. For more information, refer to the [Automatic Restore](settings.md#automatic-restore-and-log-integration) paragraph.  
 > If the incident is the result of an inappropriate operation performed on the data (deletion of a record, for example), you can attempt to repair the data file using the "rollback" function in the log file. This function is available on the [Rollback](MSC/rollback.md) page of the MSC.
 
 
@@ -37,7 +37,7 @@ A dialog box appears, which allows you to specify the location where files will 
 You can also click on the **[...]** button to specify a different location.
 3. Click on the **Restore** button. 
 4D extracts all backup files from the specified location. 
-If the current log file or a log backup file with the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not present in the data file, the program asks you if you want to integrate these operations. Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore)).
+If the current log file or a log backup file with the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not present in the data file, the program asks you if you want to integrate these operations. Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore-and-log-integration)).
 
 4.(Optional) Click **OK** to integrate the log file into the restored application. 
 If the restore and integration were carried out correctly, 4D displays a dialog box indicating that the operation was successful.

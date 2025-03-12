@@ -16,6 +16,7 @@ After [creating an entity set]($method.md#methodentityset) by using `$method=ent
 
 Retrieves an existing entity set (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
+
 ### Description
 
 This syntax allows you to execute any operation on a defined entity set.

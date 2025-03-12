@@ -94,7 +94,7 @@ Dans une méthode de gestion d'erreur personnalisée, vous avez accès à plusie
 
 :::info
 
-4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs.
+4D gère automatiquement un certain nombre de variables appelées [**variables système**](variables.md#system-variables), répondant à différents besoins.
 :::
 
 - la commande [`Last errors`](https://doc.4d.com/4dv20/help/command/fr/page1799.html) qui renvoie une collection contenant la pile courante des erreurs survenues dans l'application 4D. You can also use the [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1015.html) command that returns the same information as arrays.

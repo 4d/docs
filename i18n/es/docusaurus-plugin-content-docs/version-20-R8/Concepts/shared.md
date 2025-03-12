@@ -33,7 +33,7 @@ Tenga en cuenta que los objetos o colecciones definidas como el contenido de un 
 
 :::
 
-Todas las instrucciones de modificación en un objeto compartido o colección requieren estar protegidas dentro de un bloque [`Use...End use`](#use-end-use), de lo contrario se genera un error.
+All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#useend-use) block, otherwise an error is generated.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")

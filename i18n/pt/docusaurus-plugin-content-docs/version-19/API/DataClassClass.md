@@ -150,9 +150,9 @@ Se aplica carregamento diferido/lazy loading.
 
 No  parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                  |
-| ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. Essa funcionalidade foi criada para processamento cliente/servidor de ORDA [](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                   |
+| ----------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. Esta funcionalidade é [desenhada para o processamento cliente/servidor ORDA](../ORDA/entities.md#clientserver-optimization). |
 
 #### Exemplo
 
@@ -224,9 +224,9 @@ Se um atributo \_\_STAMP for dado, se realiza uma comprovação com o selo no ar
 
 No  parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                  |
-| ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. Essa funcionalidade foi criada para processamento cliente/servidor de ORDA [](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                   |
+| ----------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. Esta funcionalidade é [desenhada para o processamento cliente/servidor ORDA](../ORDA/entities.md#clientserver-optimization). |
 
 #### Exemplo 1
 
@@ -356,7 +356,7 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 #### Veja também
 
-[**.toCollection()**](EntitySelectionClass.md#tocollection)
+[**.toCollection()**](./EntitySelectionClass.md#tocollection)
 
 <!-- END REF -->
 
@@ -397,9 +397,9 @@ Se nenhuma entidade for encontrada com *primaryKey*, uma entidade **Null** é re
 
 No  parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                               |
-| ----------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para o contexto de otimização automático aplicados à entidade. Esse contexto será usado pelo código subsequente que carrega a entidade para que se possa beneficiar da otimização. Essa funcionalidade foi criada para processamento cliente/servidor de ORDA [](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                |
+| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| context     | Text | Etiqueta para o contexto de otimização automático aplicados à entidade. Esse contexto será usado pelo código subsequente que carrega a entidade para que se possa beneficiar da otimização. Esta funcionalidade é [desenhada para o processamento cliente/servidor ORDA](../ORDA/entities.md#clientserver-optimization). |
 
 #### Exemplo 1
 
@@ -630,7 +630,7 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 
 A função `.newSelection( )` <!-- REF #DataClassClass.newSelection().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
 
-> Para mais informação sobre as seleçõees de entidades não compartilháveis, consulte [esta seção](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+> For information on non-shareable entity selections, please refer to [this section](../ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 Se quiser uma seleção de entidades ordenada, passe o seletor `dk keep ordered` no parâmetro *keepOrder*. Como padrão se omitir este parâmetro ou se passar o seletor `dk non ordered`, o método cria uma seleção de entidades não ordenada. As seleções de entidades desordenadas são mais rápidas mas não se pode confiar nas posições das entidades. Para mas informação, consulte [Seleções de entidades ordenadas e desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 

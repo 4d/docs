@@ -28,7 +28,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4
 
 #### Objetos soportados
 
-[Áreas 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md) - [Lista jerárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de Plug-in](pluginArea_overview.md#overview)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md) - [Lista Jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Área de Plug-in](pluginArea_overview.md)
 
 
 
@@ -59,7 +59,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4
 
 #### Objetos soportados
 
-[Áreas 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Entrada](input_overview.md) - [Lista jerárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de Plug-in](pluginArea_overview.md#overview)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Entrada](input_overview.md) - [Lista Jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Área de Plug-in](pluginArea_overview.md)
 
 
 #### Ver también
@@ -112,7 +112,7 @@ Se soportan varios tipos de referencias de métodos:
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Formularios](FormEditor/forms.md) - [Lista jerárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área web](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botón](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Formularios](FormEditor/forms.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Botón Imagen](pictureButton_overview.md) - [Menú Pop up imagen](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área Web](webArea_Overview.md)
 
 
 
@@ -131,7 +131,7 @@ Autoriza el desplazamiento de líneas durante la ejecución. Esta opción está 
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 

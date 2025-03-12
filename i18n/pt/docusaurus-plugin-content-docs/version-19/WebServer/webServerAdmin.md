@@ -44,14 +44,14 @@ Quando seleciona este comando, a página de início do site web publicado pela a
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. A página se chama utilizando o URL *Localhost*, o atalho padrão que designa o endereço IP da máquina onde se executa o navegador. O comando considera o número da [porta de publicação TCP](#http-port) especificado nos parâmetros.
+Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. Este comando permite verificar o funcionamento do servidor web, a visualização da página de inicio, etc. A página se chama utilizando o URL *Localhost*, o atalho padrão que designa o endereço IP da máquina onde se executa o navegador. The command takes into account the [TCP publication port](./webServerConfig.md#http-port) number specified in the settings.
 
 ## Limpar a cache
 
 A qualquer momento, você pode limpar o cache das páginas e imagens que ele contém (se, por exemplo, você tiver modificado uma página estática e quiser recarregá-la no cache).
 
 Para o fazer, basta clicar no botão **Clear Cache** na página Web/Opções (I) da caixa de diálogo Parâmetros. A cache é então imediatamente limpa.
-> Você também pode usar o URL [/4DCACHECLEAR](#cacheclear).
+> You can also use the [/4DCACHECLEAR](#4dcacheclear) URL.
 
 ## Explorador de execução
 

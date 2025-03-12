@@ -11,7 +11,7 @@ Los formularios ofrecen la interfaz a través de la cual se introduce, modifica 
 Los formularios también pueden contener otros formularios a través de las siguientes funcionalidades:
 
 - [los objetos subformularios](FormObjects/subform_overview.md)
-- [los formularios heredados](properties_FormProperties.md#inherited-forms)
+- [los formularios heredados](./properties_FormProperties.md#inherited-form-name)
 
 ## Creación de formularios
 

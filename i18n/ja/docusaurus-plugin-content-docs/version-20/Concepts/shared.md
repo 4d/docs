@@ -31,7 +31,7 @@ title: 共有オブジェクトと共有コレクション
 - オブジェクトプロパティの追加・削除
 - 値の追加・編集 (共有オブジェクトがサポートしている範囲内で)。これには、他の共有オブジェクトやコレクションの追加・編集も含まれます (この場合、共有グループを作成します。後述参照)
 
-共有オブジェクトあるいは共有コレクションを編集するコードは、必ず [`Use...End use`](#use-end-use) 構文で保護されている必要があり、そうでない場合にはエラーが返されます。
+共有オブジェクトあるいは共有コレクションを編集するコードは、必ず [`Use...End use`](#useend-use) 構文で保護されている必要があり、そうでない場合にはエラーが返されます。
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -111,7 +111,7 @@ End Use
 
 :::note
 
-[Collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed, making an explicit call to the structure unnecessary. It's also the case for `ARRAY TO COLLECTION` and `OB REMOVE` commands.
+共有コレクションを編集する[コレクション関数](../API/CollectionClass.md)は関数が実行される際に内部的な**Use** をその共有コレクションに対してトリガーするため、明示的にこの構造を呼び出す必要はありません。 これは `ARRAY TO COLLECTION` および `OB REMOVE` コマンドに対しても同じことが言えます。
 
 :::
 

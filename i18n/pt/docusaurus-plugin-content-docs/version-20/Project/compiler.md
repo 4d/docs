@@ -60,7 +60,7 @@ A verificação de sintaxe também pode ser iniciada diretamente usando o comand
 
 ### Gerar digitação
 
-O botão **Gerar digitação** cria ou atualiza os métodos do compilador de digitação. Os métodos do Compilador são métodos do projeto que agrupam todas as declarações de digitação de variável e matriz (processo e interprocesso), assim como os parâmetros do [método](../Concepts/parameters.md#compiler_methods-method). Esses métodos, quando eles existem, são usados diretamente pelo compilador durante a compilação de código, resultando em tempos de compilação mais rápidos.
+O botão **Gerar digitação** cria ou atualiza os métodos do compilador de digitação. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler-method). Esses métodos, quando eles existem, são usados diretamente pelo compilador durante a compilação de código, resultando em tempos de compilação mais rápidos.
 
 O nome desses métodos deve começar com `Compiler_`. Você pode definir o nome padrão para cada um dos 5 métodos do compilador na [janela de parâmetros do compilador](#compiler-methods-for). Os métodos do compilador que são gerados e mantidos pelo 4D automaticamente têm o atributo `Invisível`:
 
@@ -112,7 +112,7 @@ Apenas os avisos com números podem ser desactivados. Os números de aviso são 
 
 ## Parâmetros do compilador
 
-A página "Compilador" da caixa de diálogo de Propriedades permite que você defina parâmetros relacionados à compilação do projeto. Você pode abrir diretamente esta página a partir da janela do compilador [](#compiler-window) clicando no botão **Parâmetros do Compilador**:
+A página "Compilador" da caixa de diálogo de Propriedades permite que você defina parâmetros relacionados à compilação do projeto. You can directly open this page from the [compiler window](#compiler-window-features) by clicking on the **Compiler Settings** button:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -123,11 +123,11 @@ Essa área agrupa as opções genéricas usadas durante o processo de compilaç�
 
 #### Gerar o arquivo de símbolo
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The error file is created in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
 
 #### Gerar ficheiro de erros
 
-Usado para gerar o arquivo de erro (consulte \[arquivo de erro\](#error-file)) no momento da verificação de sintaxe. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](Project/architecture.md#logs) of the project.
+Usado para gerar o arquivo de erro (consulte \[arquivo de erro\](#error-file)) no momento da verificação de sintaxe. The error file is created in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
 
 
 #### Caminho de compilação
@@ -179,7 +179,7 @@ Podem ser gerados até 5 métodos de compilação; um método de compilação s�
 - **Variáveis de interprocessos**: agrupa as declarações de variáveis interprocessuais;
 - **Arrays**: agrupa as declarações de arrays de processos;
 - **Arrays de interprocessos**: agrupa declarações de arrays interprocessos;
-- **Métodos**: agrupa as declarações de parâmetro do método (por exemplo, `C_LONGINT(mymethod;$1;$2)`). Para obter mais informações, consulte [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+- **Métodos**: agrupa as declarações de parâmetro do método (por exemplo, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler-method).
 
 Você pode renomear cada um desses métodos nas áreas correspondentes, mas eles sempre serão precedidos pela etiqueta `Compiler_` (não modificável). O nome de cada método (prefixo incluído) não deve ter mais de 31 caracteres. Ele também deve ser único e cumprir as [regras 4D para nomear métodos](Concepts/identifiers.md#project-methods).
 
@@ -188,7 +188,7 @@ Você pode renomear cada um desses métodos nas áreas correspondentes, mas eles
 
 ### Ficheiro Symbol
 
-Se você marcar a opção [**Gerar o arquivo de símbolos**](#generate-the-symbol-file) nas configurações do compilador, um arquivo de símbolos chamado `ProjectName_symbols.txt` será criado na [pasta Logs](Project/architecture.md#logs) do projeto durante a compilação. Está dividido en varias partes:
+If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs) of the project during compilation. Está dividido en varias partes:
 
 #### Lista das variáveis processo e interprocesso
 
@@ -235,7 +235,7 @@ tipo resultado, número de chamadas, Thread Safe ou Thread Unsafe
 
 ### Arquivo de erros
 
-Você pode escolher se deseja ou não gerar um arquivo de erro durante a compilação usando a opção [**Gerar arquivo de erro**](#generate-error-file) nas configurações do compilador. O arquivo de erro é automaticamente denominado `projectName_errors.xml` sendo colocado na [pasta Logs](Project/architecture.md#logs) do projeto.
+Você pode escolher se deseja ou não gerar um arquivo de erro durante a compilação usando a opção [**Gerar arquivo de erro**](#generate-error-file) nas configurações do compilador. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs) of the project.
 
 Embora os erros possam ser acessados diretamente pela [janela do compilador](#compile), pode ser útil ter um arquivo de erros que possa ser transmitido de uma máquina para outra. O arquivo de erro é gerado no formato XML para facilitar a análise automática de seu conteúdo. Também permite a criação de interfaces customizadas de exibição de erros.
 
@@ -306,14 +306,14 @@ Ambos os compiladores estão integrados em 4D. O compilador apropriado é seleci
 
 O compilador clássico gera código compilado nativo para processadores Intel/AMD em qualquer máquina. Não necessita de qualquer configuração específica.
 
-O código compilado resultante é armazenado na pasta [DerivedData](architecture.md#deriveddata) do projeto.
+Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
 
 
 ### Compilador Silicon
 
 O compilador Silicon gera código compilado nativo para processadores Apple Silicon, como o *Apple M1*.
 
-O código compilado resultante é armazenado na pasta [Bibliotecas](architecture.md#libraries) do projeto.
+Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
 
 
 #### Requisitos

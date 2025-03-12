@@ -11,7 +11,7 @@ title: 4D フォームについて
 また、以下の機能により、フォームは他のフォームを含むことができます:
 
 - [サブフォームオブジェクト](FormObjects/subform_overview.md)
-- [継承フォーム](properties_FormProperties.md#継承フォーム)
+- [継承フォーム](./properties_FormProperties.md#inherited-form-name)
 
 ## フォームを作成する
 
@@ -88,7 +88,7 @@ title: 4D フォームについて
 
 - もっとも重要な情報を最初のページに配置し、他の情報を後ろのページに配置する。
 - トピックごとに、専用ページにまとめる。
-- Reduce or eliminate scrolling during data entry by setting the [entry order](formEditor.md#data-entry-order).
+- [入力順](formEditor.md#データの入力順)を設定して、データ入力中のスクロール動作を少なくしたり、または不要にする。
 - フォーム要素の周りの空間を広げ、洗練された画面をデザインする。
 
 複数ページは入力フォームとして使用する場合にのみ役立ちます。 印刷出力には向きません。 マルチページフォームを印刷すると、最初のページしか印刷されません。
@@ -112,7 +112,7 @@ title: 4D フォームについて
 3. 開かれたフォームの 0ページ
 4. 開かれたフォームのカレントページ
 
-This order determines the default [entry order](formEditor.md#data-entry-order) of objects in the form.
+この順序により、フォームにおけるオブジェクトの [入力順](formEditor.md#データの入力順) が決まります。
 
 > 継承フォームの 0ページと 1ページだけが他のフォームに表示可能です。
 

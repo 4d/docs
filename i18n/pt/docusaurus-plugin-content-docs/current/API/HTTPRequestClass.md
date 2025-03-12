@@ -202,7 +202,7 @@ An authentication object handles the `options.serverAuthentication` or `options.
 
 #### Descrição
 
-The `.agent` property contains <!-- REF #HTTPRequestClass.agent.Summary -->the `agent`object passed in [`options`](#options-parameter) or the global agent object if it was omitted<!-- END REF -->.
+A propriedade `.agent` contém <!-- REF #HTTPRequestClass.agent.Summary --> o objeto `agent`passado em [`options`](#options-parameter) ou o objeto agente global se ele foi omitido<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -214,7 +214,7 @@ The `.agent` property contains <!-- REF #HTTPRequestClass.agent.Summary -->the `
 
 #### Descrição
 
-The `.dataType` property contains <!-- REF #HTTPRequestClass.dataType.Summary -->the `dataType` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew), "auto" if it was omitted<!-- END REF -->.
+A propriedade `.dataType` contém <!-- REF #HTTPRequestClass.dataType.Summary -->o `dataType` passado no objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew), "auto" se foi omitido<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -226,7 +226,7 @@ The `.dataType` property contains <!-- REF #HTTPRequestClass.dataType.Summary --
 
 #### Descrição
 
-The `.encoding` property contains <!-- REF #HTTPRequestClass.encoding.Summary -->the `encoding` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew), "UTF-8" if it was omitted<!-- END REF -->.
+A propriedade `.encoding` contém <!-- REF #HTTPRequestClass.encoding.Summary -->o `encoding` passado no objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew), "UTF-8" se ele foi omisso<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -238,7 +238,7 @@ The `.encoding` property contains <!-- REF #HTTPRequestClass.encoding.Summary --
 
 #### Descrição
 
-The `.errors` property contains <!-- REF #HTTPRequestClass.errors.Summary -->the collection of all the errors if at least one error has been triggered<!-- END REF -->.
+A propriedade `.errors` contém <!-- REF #HTTPRequestClass.errors.Summary --> a coleção de todos os erros se pelo menos um erro tiver sido acionado<!-- END REF -->.
 
 Aqui está o conteúdo da propriedade `.errors`:
 
@@ -259,7 +259,7 @@ Aqui está o conteúdo da propriedade `.errors`:
 
 #### Descrição
 
-The `.headers` property contains <!-- REF #HTTPRequestClass.headers.Summary -->the `headers` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém um objecto vazio.
+A propriedade `.headers` contém <!-- REF #HTTPRequestClass.headers.Summary -->o `headers` passado no objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém um objecto vazio.
 
 <!-- END REF -->
 
@@ -271,7 +271,7 @@ The `.headers` property contains <!-- REF #HTTPRequestClass.headers.Summary -->t
 
 #### Descrição
 
-The `.method` property contains <!-- REF #HTTPRequestClass.method.Summary -->the `method` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém "GET".
+A propriedade `.method` contém <!-- REF #HTTPRequestClass.method.Summary -->o `método` passado no objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém "GET".
 
 <!-- END REF -->
 
@@ -283,7 +283,7 @@ The `.method` property contains <!-- REF #HTTPRequestClass.method.Summary -->the
 
 #### Descrição
 
-The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary -->the `protocol` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido ou se "auto" foi utilizado, contém a versão do protocolo utilizado.
+A propriedade `.protocol` contém <!-- REF #HTTPRequestClass.protocol.Summary -->o `protocolo` passado no objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido ou se "auto" foi utilizado, contém a versão do protocolo utilizado.
 
 <!-- END REF -->
 
@@ -303,7 +303,7 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 
 #### Descrição
 
-The `.response` property contains <!-- REF #HTTPRequestClass.response.Summary -->the response to the request if it has received at least the status code, undefined otherwise<!-- END REF -->.
+A propriedade `.response` contém <!-- REF #HTTPRequestClass.response.Summary --> a resposta à solicitação se ela tiver recebido pelo menos o código de estado, indefinido caso contrário<!-- END REF -->.
 
 Um objeto `response` é um objeto não compartilhável. Contém as seguintes propriedades:
 
@@ -325,7 +325,7 @@ Um objeto `response` é um objeto não compartilhável. Contém as seguintes pro
 
 #### Descrição
 
-The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->the `returnResponseBody` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém True.
+A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnResponseBody.Summary --> o `returnResponseBody` passado em o objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém True.
 
 <!-- END REF -->
 
@@ -359,7 +359,7 @@ A função `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->abor
 
 #### Descrição
 
-The `.terminated` property contains <!-- REF #HTTPRequestClass.terminated.Summary -->True if the request is terminated (after the call to `onTerminate`), false otherwise<!-- END REF -->.
+A propriedade `.terminated` contém <!-- REF #HTTPRequestClass.terminated.Summary -->True se a solicitação for encerrada (após a chamada para `onTerminate`), false caso contrário<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -371,7 +371,7 @@ The `.terminated` property contains <!-- REF #HTTPRequestClass.terminated.Summar
 
 #### Descrição
 
-The `.timeout` property contains <!-- REF #HTTPRequestClass.timeout.Summary -->the `timeout` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém Indefinido.
+A propriedade `.timeout` contém <!-- REF #HTTPRequestClass.timeout.Summary -->o `timeout` passado no objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém Indefinido.
 
 <!-- END REF -->
 
@@ -406,7 +406,7 @@ A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary --> a URL da
 
 > Esta função é thread segura.
 
-The `wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->waits waits for a response from the server or until the specified `timeout` is reached<!-- END REF -->.
+A função `wait()` <!-- REF #HTTPRequestClass.wait().Summary --> espera por uma resposta do servidor ou até o `timeout` especificado ser alcançado<!-- END REF -->.
 
 If a *timeout* is provided, the function waits for the specified duration in this parameter. Decimals are accepted.
 

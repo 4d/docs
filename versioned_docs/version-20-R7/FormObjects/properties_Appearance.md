@@ -91,7 +91,7 @@ Available values:
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
 #### See also
 
@@ -349,7 +349,7 @@ Available values:
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
 #### See also
 

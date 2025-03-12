@@ -261,10 +261,10 @@ End if
 Ao criar ou editar classes de modelo de dados, é necessário preste atenção às seguintes regras:
 
 - Como eles são usados para definir nomes automáticos de classe de DataClass nos **cs** [loja de classe](Concepts/classes.md#class-stores), tabelas 4D devem ser nomeadas para evitar qualquer conflito no namespace **cs**. Em particular:
- - Não dê o mesmo nome a uma tabela 4D e a um [nome de classe de usuário](Concepts/classes.md#class-names). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
+ - Do not give the same name to a 4D table and to a [user class name](../Concepts/classes.md#class-definition). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
  - Não use um nome reservado para uma tabela 4D (por exemplo, "DataClass").
 
-- Ao definir uma classe, verifique se a instrução [`class extends`](Concepts/classes.md#class-extends-classnameclass) corresponde exatamente ao nome da classe pai (lembre-se de que são sensíveis a maiúsculas e minúsculas). Por exemplo, 'Classe amplia EntitySelection' para uma classe de seleção de entidade.
+- When defining a class, make sure the [`Class extends`](../Concepts/classes.md#class-extends-classname) statement exactly matches the parent class name (remember that they're case sensitive). Por exemplo, 'Classe amplia EntitySelection' para uma classe de seleção de entidade.
 
 - Você não pode instanciar um objeto de classe de modelo de dados com a palavra-chave `new()` (um erro é retornado). Você deve usar um método regular, como listado na [coluna `Instantiated by` da tabela da classe da ORDA](#architecture).
 
@@ -979,7 +979,7 @@ If ($status.success)
 
 ### Ficheiros de classe (class files)
 
-Uma classe de usuário do modelo de dados ORDA é definida por adicionar, no [mesmo local dos arquivos de classes normais](Concepts/classes.md#class-files) (*e.* na pasta `/Sources/Classes` da pasta do projeto), um arquivo .4dm com o nome da classe. Por exemplo, uma classe de entidade para o dataclass `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm`.
+An ORDA data model user class is defined by adding, at the [same location as regular class files](../Concepts/classes.md#class-definition) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. Por exemplo, uma classe de entidade para o dataclass `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm`.
 
 ### Criação de classes
 

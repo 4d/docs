@@ -50,7 +50,7 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 4D Server のキャッシュからエンティティセットが消えていた場合、10分のデフォルトタイムアウトで再作成されます。 エンティティセットが消えていた場合、再作成されるエンティティセットの内容は更新されたものです (新しくエンティティが追加されていたり、存在していたエンティティが削除されていたりする場合がありえます)。
 
-[`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection) を使って、事前に作成した 2つのセンティティセットを統合できます。 両セットの内容を統合する (集合の和) ほか、共通のエンティティのみを返したり (集合の積) 、共通でないエンティティのみを返したり (集合の対称差) することができます。
+Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`](./$entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. 両セットの内容を統合する (集合の和) ほか、共通のエンティティのみを返したり (集合の積) 、共通でないエンティティのみを返したり (集合の対称差) することができます。
 
 この場合m新規のエンティティセレクションが返されます。 RESTリクエストの最後に [`$method=entityset`]($method.md#methodentityset) を追加することで新規のエンティティセットを作成することもできます。
 

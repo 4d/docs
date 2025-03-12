@@ -111,8 +111,8 @@ Las propiedades soportadas dependen del tipo de list box.
 
 | Propiedad                                                                                 | List box array | List box selección | List box colección o entity selection |
 | ----------------------------------------------------------------------------------------- | -------------- | ------------------ | ------------------------------------- |
-| [Color de fondo alternado](properties_BackgroundAndBorder.md#alternate-background-color)  | X              | X                  | X                                     |
-| [Color de fondo](properties_BackgroundAndBorder.md#background-color)                      | X              | X                  | X                                     |
+| [Color de fondo alternado](properties_BackgroundAndBorder.md##alternate-background-color) | X              | X                  | X                                     |
+| [Color de fondo](properties_BackgroundAndBorder.md#background-color--fill-color)          | X              | X                  | X                                     |
 | [Negrita](properties_Text.md#bold)                                                        | X              | X                  | X                                     |
 | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) |                | X                  | X                                     |
 | [Estilo del borde](properties_BackgroundAndBorder.md#border-line-style)                   | X              | X                  | X                                     |
@@ -297,7 +297,7 @@ Además, tiene acceso a las propiedades específicas de los encabezados. En part
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
-Al momento de la ejecución, los eventos que se producen en un encabezado se generan en el [método objeto de la columna de list box](#object-methods).
+At runtime, events that occur in a header are generated in the list box column object method.
 
 Cuando el comando `OBJECT SET VISIBLE` se utiliza con un encabezado, se aplica a todos los encabezados, independientemente del elemento individual definido por el comando. Por ejemplo, `OBJECT SET VISIBLE(*; "header3";False)` ocultará todos los encabezados del objeto list box al que pertenece *header3* y no simplemente este encabezado.
 
@@ -316,7 +316,7 @@ Cuando se muestran los pies, puede hacer clic para seleccionar un pie de list bo
 
 Para cada pie de columna de list box, puede definir propiedades de texto estándar: en este caso, estas propiedades tienen prioridad sobre las de la columna o del list box. También puede acceder a propiedades específicas para los pies de página. En particular, puede insertar un [cálculo personalizado o automático](properties_Object.md#variable-calculation).
 
-Al momento de la ejecución, los eventos que se producen en un pie de página se generan en el [método objeto de la columna de list box](#object-methods).
+At runtime, events that occur in a footer are generated in the list box column object method.
 
 Cuando el comando `OBJECT SET VISIBLE` se utiliza con un pie de página, se aplica a todos los pies, independientemente del elemento individual definido por el comando. Por ejemplo, `OBJECT SET VISIBLE(*; "footer3";False)` ocultará todos los pies de página del objeto list box al que pertenece *footer3* y no simplemente este pie de página.
 
@@ -519,7 +519,7 @@ El desarrollador puede configurar ordenaciones personalizadas, por ejemplo utili
 Los ordenamientos personalizados le permiten:
 
 * efectuar las ordenaciones multinivel en varias columnas, gracias al comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html),
-* utilizar funciones tales como [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) o [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) para ordenar las columnas según criterios complejos.
+* usar funciones como [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) o [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) para ordenar columnas según criterios complejos.
 
 #### Ejemplo
 

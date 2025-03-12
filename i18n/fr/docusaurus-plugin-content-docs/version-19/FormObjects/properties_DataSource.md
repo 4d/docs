@@ -47,7 +47,7 @@ Vous pouvez également associer des listes de choix à des objets à l'aide des 
 
 #### Objets pris en charge
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -82,7 +82,7 @@ Indique une variable ou une expression qui se verra attribuer l'élément/l'enti
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -167,7 +167,7 @@ L'utilisation de l'option **Référence élément sélectionné** nécessite le 
 
 Liste des valeurs qui seront utilisées comme valeurs par défaut pour la colonne de la list box (type tableau uniquement). Ces valeurs seront automatiquement accessibles dans la [variable tableau](properties_Object.md#variable-or-expression) associée à la colonne lors de l’exécution du formulaire. En utilisant le langage, vous pouvez gérer l'objet en vous référant à ce tableau.
 
-> Ne pas confondre cette propriété avec la propriété["default value](properties_RangeOfValues.md#default-list-of-values)" qui permet de définir la valeur d'un champ dans les nouveaux enregistrements.
+> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-value)" property that allows to define a field value in new records.
 
 Vous devez saisir une liste de valeurs. Dans l'éditeur de formulaires, une boîte de dialogue spécifique vous permet de saisir des valeurs séparées par des retours à la ligne :
 
@@ -246,7 +246,7 @@ Toutes les tables de la base de données peuvent être utilisées, que le formul
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -299,7 +299,7 @@ Spécifie une variable ou une expression qui sera assignée aux éléments ou en
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -319,4 +319,4 @@ Spécifie la sélection temporaire à utiliser. Vous devez entrer le nom d'une s
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)

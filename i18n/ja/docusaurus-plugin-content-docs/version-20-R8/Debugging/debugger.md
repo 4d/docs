@@ -118,7 +118,7 @@ The method that is executing when you click the **Abort and Edit** button opens 
 - ウィンドウのサイズと位置
 - 分割線の位置
 - [表示モード](#表示モード)
-- カスタムのウォッチエリアに現在表示されている式 デフォルトでは、カレントメソッドと関数に対しては式は保存されています。 [**式を固定**](#pin-an-expression) することで、全てのコンテキストにおいてその式を表示させることができます。
+- カスタムのウォッチエリアに現在表示されている式 デフォルトでは、カレントメソッドと関数に対しては式は保存されています。 You can [**pin an expression**](#pinning-an-expression) to keep it displayed in all contexts.
 
 **デフォルトウィンドウ設定** ボタンを使用するとカレントウィンドウのデフォルトの位置とサイズを復元します(これには分割線とウィンドウ自体を含みます)。
 
@@ -333,7 +333,7 @@ $c:=$a+$b
 
 ### 新しい式の挿入
 
-評価したい任意の式を入力することができます。 カスタムの式は [式を固定化](#pin-an-expression) した場合を除き、カレントのデバッガのウィンドウにしか表示されません。
+評価したい任意の式を入力することができます。 A custom expression is only displayed in the current debugger window, except if you [pin it](#pinning-an-expression).
 
 リストに式を追加する方法は複数あります:
 

@@ -63,7 +63,7 @@ In the parent form, both objects (input area and subform container) **have the s
 
 :::info
 
-To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-list-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
+To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
 
 - If you use a variable (e.g. `parisTime`), it must be of the `text` or `time` type.
 - If you use an expression (e.g. `Form.myValue`), it must contain a `text` value.

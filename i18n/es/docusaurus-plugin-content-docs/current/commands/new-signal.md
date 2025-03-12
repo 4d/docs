@@ -38,7 +38,7 @@ Dado que el objeto signal es un objeto compartido, también puede utilizarse par
 
 **Valor devuelto**
 
-Un nuevo objeto [`4D.Signal`](#signal-object).
+A new [`4D.Signal` object](../API/SignalClass.md#signal-object).
 
 #### Ejemplo
 
@@ -72,9 +72,9 @@ El método ***doSomething*** puede ser como:
 
 #### Propiedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1641                            |
-| Hilo seguro       | &amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1641                        |
+| Hilo seguro       | &check; |
 
 

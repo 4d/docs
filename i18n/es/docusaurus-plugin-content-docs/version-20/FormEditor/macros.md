@@ -76,7 +76,7 @@ Cuando las macros están definidas en su proyecto 4D, puede llamar una macro uti
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-Este menú se crea sobre el [archivo de definición de macros](#location-of-macros) `formMacros.json`. Los elementos de la macro se clasifican en orden alfabético.
+Este menú se crea sobre el [archivo de definición de macros](#location-of-macro-file) `formMacros.json`. Los elementos de la macro se clasifican en orden alfabético.
 
 Este menú puede ser llamado en un área vacía o en una selección en el formulario. El objeto seleccionado se pasa a `$editor.currentSelection` o `$editor.target` en la función [`onInvoke`](#oninvoke) de la macro.
 
@@ -144,7 +144,7 @@ Las propiedades personalizadas, cuando se utilizan, se pasan a la función [cons
 
 Cada macro que quiera instanciar en su proyecto o componente debe ser declarada como una [clase 4D](Concepts/classes.md).
 
-El nombre de la clase debe coincidir con el nombre definido mediante el atributo [class](#creating-macros) del archivo `formMacros.json`.
+El nombre de la clase debe coincidir con el nombre definido mediante el atributo [class](#declaring-macros) del archivo `formMacros.json`.
 
 Las macros se instancian al iniciar la aplicación. Por lo tanto, si se modifica la estructura de la clase de macro (añadir una función, modificar un parámetro... o el [constructor ](#class-constructor), tendrá que reiniciar la aplicación para aplicar los cambios.
 

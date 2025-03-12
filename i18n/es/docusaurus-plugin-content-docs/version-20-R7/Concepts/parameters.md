@@ -442,7 +442,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Muestra el mensaje y lo escribe en $wpArea
 
 :::tip
 
-Cuando los parámetros opcionales son necesarios en sus métodos, también puede considerar el uso de [propiedades de objeto como parámetros con nombre](#using-objects-properties-as-named-parameters) que ofrecen una forma flexible de manejar un número variab
+When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-object-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
 
 :::
 
@@ -493,7 +493,7 @@ Aquí el parámetro no es el campo, sino un puntero al mismo. Therefore, within 
  ALERT($result)
 ```
 
-This second technique of returning a value by a subroutine is called "using a function". Se describe en el párrafo [Valores devueltos](#returning-values).
+This second technique of returning a value by a subroutine is called "using a function". This is described in the [Returning values](#returned-value) paragraph.
 
 ### Casos particulares: objetos y colecciones
 

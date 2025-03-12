@@ -2152,7 +2152,7 @@ Cet exemple permet de réduire plusieurs éléments de collection en un seul él
 
 #### Exemple 2
 
-Cet exemple permet de réduire plusieurs éléments de collection à un seul :
+Cet exemple permet de réduire plusieurs éléments de collections en une seule :
 
 ```4d
  var $c;$r : Collection

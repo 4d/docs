@@ -17,7 +17,7 @@ Um nome de processo pode conter até 31 caracteres.
 
 O nome de uma classe deve estar em conformidade com as [regras normais de nomeação de propriedades](#object-properties) para notação de pontos.
 
-> Não se recomenda dar o mesmo nome a uma classe e a uma [tabela de base de dados](#tables), a fim de evitar qualquer conflito.
+> Não se recomenda dar o mesmo nome a uma classe e a uma [tabela de banco de dados](#tables-and-fields), de modo a evitar qualquer conflito.
 
 ## Funções
 
