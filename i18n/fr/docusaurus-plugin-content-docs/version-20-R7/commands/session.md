@@ -29,7 +29,7 @@ La commande `Session` <!-- REF #_command_.Session.Summary -->retourne l'objet `S
 
 Selon le process à partir duquel la commande est appelée, la session utilisateur courante peut être :
 
-- une session web (lorsque les [sessions évolutives sont activées](WebServer/sessions.md#enabling-sessions)),
+- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions)),
 - une session de client distant,
 - la session des procédures stockées.
 
@@ -98,9 +98,9 @@ IP:port/4DACTION/action_Session
 
 #### Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 1714                                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1714                        |
+| Thread safe        | &check; |
 
 
