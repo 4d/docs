@@ -546,7 +546,7 @@ As soon as the "Build an evaluation application" option is enabled, deployment l
 :::note Notas
 
 - The [`License info`](../commands/license-info.md) command allows you to know the application license type (*.attributes* collection) and its expiration date (*.expirationDate* object).
-- The BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) and [`EvaluationName`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationName.300-7542474.en.html) xml keys allow you to handle evaluation versions.
+- The BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) xml key allows you to manage evaluation versions.
 - The [`CHANGE LICENCES`](../commands-legacy/change-licenses.md) command does nothing when called from an evaluation version.
 
 :::
