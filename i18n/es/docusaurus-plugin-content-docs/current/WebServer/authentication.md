@@ -115,7 +115,7 @@ Debe declarar estos parámetros de la siguiente manera:
 
 :::note
 
-Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
+Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. La información recibida por el método base depende del [modo de autenticación](#authentication-modes) seleccionado).
 
 :::
 
