@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 コマンドを呼び出したプロセスによって、カレントユーザーセッションは次のいずれかです:
 
-- Webセッション ([スケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合)
+- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions)),
 - リモートクライアントセッション
 - ストアドプロシージャセッション
 - スタンドアロンアプリケーションの*designer* セッション
@@ -104,9 +104,9 @@ IP:port/4DACTION/action_Session
 
 #### プロパティ
 
-|         |                                 |
-| ------- | ------------------------------- |
-| コマンド番号  | 1714                            |
-| スレッドセーフ | &amp;check; |
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1714                        |
+| スレッドセーフ | &check; |
 
 
