@@ -14,9 +14,9 @@ Lisez [**Les nouveautés de 4D 20**](https://blog.4d.com/fr-whats-new-in-4d-v20/
 
 #### Points forts
 
-:::info Evaluation applications
+:::info Applications d'évaluation
 
-Starting with nightly build **101734**, the Build application dialog box has a new option allowing to build evaluation applications. See [description in the 4D Rx documentation](../../../docs/Desktop/building.md#build-an-evaluation-application).
+À partir de la "nightly build" **101734**, la boîte de dialogue Build application comporte une nouvelle option permettant de construire des applications d'évaluation. Voir sa[description dans la documentation 4D Rx](../../../docs/Desktop/building.md#build-an-evaluation-application).
 
 :::
 
