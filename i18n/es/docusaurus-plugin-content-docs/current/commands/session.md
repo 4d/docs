@@ -30,7 +30,7 @@ El comando `Session` <!-- REF #_command_.Session.Summary -->devuelve el objeto `
 
 Dependiendo del proceso desde el que se llame al comando, la sesión de usuario actual puede ser:
 
-- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions)),
+- una sesión web (cuando las [sesiones escalables están activadas](WebServer/sessions.md#enabling-web-sessions)),
 - una sesión de cliente remoto,
 - the stored procedures session,
 - the *designer* session in a standalone application.
