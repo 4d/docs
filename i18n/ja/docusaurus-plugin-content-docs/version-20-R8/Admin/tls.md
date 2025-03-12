@@ -108,7 +108,7 @@ HTTPサーバーで TLS接続を受け入れるには、HTTPS を有効化しな
 
 サーバー上で TLS が有効化されているとき、PFS は自動的に有効されます。 *dhparams.pem* ファイル (サーバーの DH非公開鍵を含むドキュメント) がまだ存在していない場合、4D は 2048 の鍵サイズで自動的にそれを生成します。 このファイルの生成には数分間かかる可能性があります。 このファイルは、[*key.pem* および *cert.pem* ファイル](#証明書ファイルのインストール)と同じ場所に置きます。
 
-[カスタムの暗号リスト](WebServer/webServerConfig.md#暗号リスト) を使用していて、PFS を有効化したい場合、DH あるいは ECDH (Elliptic-curve Diffie–Hellman) アルゴリズムのエントリーがそのリストに含まれている必要があります。
+If you use a [custom cipher list](WebServer/webServerConfig.md#cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
 
 ## 他のサーバーで TLS を有効にする
 
