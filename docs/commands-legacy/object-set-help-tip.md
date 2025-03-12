@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET HELP TIP.Summary-->The **OBJECT SET HELP TIP** command sets or dynamically modifies the help tip associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
@@ -34,7 +34,7 @@ When a help tip is already displayed, calling the **OBJECT SET HELP TIP** comman
 * Help tip contents can also be set using the Form editor (see *Data entry controls and assistance*) and the Structure editor (see *Field properties*) in Design mode.
 * Help tips can be globally disabled for the application using the Tips enabled selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
 
-#### Example 1 
+## Example 1 
 
 In this form, a help tip is displayed and changes dynamically when the mouse hovers over different parts of a picture button:
 
@@ -85,7 +85,7 @@ In this form, a help tip is displayed and changes dynamically when the mouse hov
  End case
 ```
 
-#### Example 2 
+## Example 2 
 
 You have a list box, "Commands List", containing a list and you want to set a help tip displaying the description for each list item. The description is in the \[Documentation\] table. 
 
@@ -124,12 +124,12 @@ The result is...
 
 ![](../assets/en/commands/pict3529022.en.png)
 
-#### See also 
+## See also 
 
 [OBJECT Get help tip](object-get-help-tip.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -23,7 +23,7 @@ La segunda sintaxis, RELATE MANY(campo1), establece la relación Uno a Muchos pa
 
 **Nota:** si la selección actual de la tabla Uno está vacía en el momento de la ejecución de RELATE MANY, el comando no hace nada.
 
-##### 
+### 
 
 **Nota:** este comando no soporta campos de tipo Objeto.
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Startup database method.Summary-->The On Startup database method is called once when you open a database.<!-- END REF-->
 
@@ -36,17 +36,17 @@ The On Startup database method is the perfect place to:
 
 However, we strongly recommend that you do NOT launch print jobs from the **On Startup database method**. 
 
-#### Example 
+## Example 
 
 See the example in the [Semaphore](semaphore.md) section.  
 
-#### See also 
+## See also 
 
 *Database Methods*  
 [On Exit database method](on-exit-database-method.md)  
 [QUIT 4D](quit-4d.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

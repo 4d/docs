@@ -14,7 +14,7 @@ title: VP Get names
 |scope  |Integer|->|Target scope (default= current sheet)|
 |Result  |Collection|<-|Existing names in the defined scope|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get names` command <!-- REF #_method_.VP Get names.Summary -->returns a collection of all defined "names" in the current sheet or in the scope designated by the *scope* parameter<!-- END REF -->.
 
@@ -25,7 +25,7 @@ You can define where to get the names in *scope* using either the sheet index (c
 * `vk current sheet`
 * `vk workbook`
 
-##### Returned collection
+### Returned collection
 
 The returned collection contains one object per name. The following object properties can be returned:
 
@@ -37,7 +37,7 @@ The returned collection contains one object per name. The following object prope
 
 Available properties depend on the type of the named element (named cell, named range, or named formula).
 
-#### Example
+## Example
 
 ```4d
 var $list : Collection
@@ -46,7 +46,7 @@ var $list : Collection
 $list:=VP Get names("ViewProArea";2) //names in 3rd sheet
 ```
 
-#### See also
+## See also
 
 [VP ADD FORMULA NAME](vp-add-formula-name.md)<br/>
 [VP ADD RANGE NAME](vp-add-range-name.md)<br/>

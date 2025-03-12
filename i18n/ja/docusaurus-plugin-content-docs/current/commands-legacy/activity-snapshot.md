@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ACTIVITY SNAPSHOT.Summary-->**ACTIVITY SNAPSHOT**コマンドは、4D 上で進行中のデータ操作の詳細を記載した配列を、一つまたは複数の配列に返します。<!-- END REF-->これらの操作は、通常進捗ウィンドウが表示されます。
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 * オブジェクト配列のみを使用するシンタックス
 * 複数の配列を使用するシンタックス
 
-##### 第一シンタックス: ACTIVITY SNAPSHOT ( arrActivities {; \*}) 
+### 第一シンタックス: ACTIVITY SNAPSHOT ( arrActivities {; \*}) 
 
 この記法では、リアルタイムモニターの全てのオペレーションが構造化された形式で4D オブジェクト配列( *arrActivities* 引数で指定）に返されます。配列の各要素は、以下の様に構築されたオブジェクトになっています:
 
@@ -70,7 +70,7 @@ displayed_sidebar: docs
    * ...
 * *subOperations* (配列): カレントのオペレーションのサブオペレーション(あれば)を含んだオブジェクトの配列。それぞれのサブ要素のストラクチャはメインオブジェクトないのものと同じです。カレントオペレーションにサブオペレーションが何もない場合、*subOperations* は空の配列になります。
 
-##### 第二シンタックス: ACTIVITY SNAPSHOT ( arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} {; \*}) 
+### 第二シンタックス: ACTIVITY SNAPSHOT ( arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} {; \*}) 
 
 この記法では、リアルタイムモニターの全てのオペレーションが、同期した複数の配列に返されます(オペレーションがあるたび、全ての配列に要素が追加されていきます)。返される配列は以下の通りです:
 
@@ -84,7 +84,7 @@ displayed_sidebar: docs
    * *"dbOperationDetails"* (オブジェクト): 上記を参照のこと  
    * "subOperations": このプロパティの値は、カレントオペレーションに対するサブオペレーションを全て含んだオブジェクト配列です。もしカレントのオペレーションにサブオペレーションが何もない場合、*subOperations* プロパティの値は空の配列となります(*arrActivities* オブジェクトの *subOperations* プロパティと対応します)
 
-#### 例題 
+## 例題 
 
 4D か 4Dサーバーにおける個別のプロセスにおいて以下のメソッドを実行した場合、下図の様にオペレーションのスナップショットを返します:
 
@@ -107,7 +107,7 @@ displayed_sidebar: docs
 ![](../assets/en/commands/pict1213741.en.png)
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

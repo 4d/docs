@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.COPY BLOB.Summary-->El comando COPY BLOB copia el número de bytes especificado por *nombre* del BLOB *srcBLOB* al BLOB *dstBLOB*.<!-- END REF-->
 
@@ -25,12 +25,12 @@ La copia comienza en la posición (expresada con relación al comienzo del BLOB 
 
 **Nota:** el BLOB de destino puede redimensionarse si es necesario.
 
-#### Ver también 
+## Ver también 
 
 [DELETE FROM BLOB](delete-from-blob.md)  
 [INSERT IN BLOB](insert-in-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

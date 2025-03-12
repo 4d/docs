@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DELETE RECORD.Summary-->DELETE RECORD apaga o registro atual de *tabela* no processo.<!-- END REF--> Se não houver registro atual para *tabela* no processo, DELETE RECORD não tem efeito. Em um formulário, pode criar um botão Apagar registro em lugar de utilizar este comando.
 
@@ -26,7 +26,7 @@ A eliminação de registros é uma operação permanente e não pode ser desfeit
   
 Se um registro for apagado, o número do registro será reutilizado quando novos registros forem criados. Não utilize o número do registro como identificador do registro se seu banco permite a eliminação de registros.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo apaga um registro de um empregado. O código pergunta ao usuário o número do empregado a apagar, procura o registro correspondente e o a apaga:
 
@@ -38,12 +38,12 @@ O exemplo apaga um registro de um empregado. O código pergunta ao usuário o n�
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Locked](locked.md)  
 *Triggers*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

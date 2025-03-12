@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get number of columns.Summary-->LISTBOX Get number of columns コマンドは、*object*引数および *\** で指定されたリストボックスに存在する列（表示または非表示）の合計数を返します。<!-- END REF-->
 
 オプションの引数 *\** を渡すことにより、*object*引数がオブジェクト名（文字列）であることを示します。この引数を渡さない場合、*object*引数が変数であることを示します。この場合、文字列ではなく変数参照を指定します。オブジェクト名についての詳細はの節を参照してください。
 
-#### 参照 
+## 参照 
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

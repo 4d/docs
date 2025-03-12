@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Summary-->O comando **OBJECT SET KEYBOARD LAYOUT** permite definir ou modificar dinamicamente a configuração de teclado associada ao objeto ou aos objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->  
   
@@ -23,11 +23,11 @@ Passa-se o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome
   
 Em *codigoLing*, passe uma cadeia indicando o código de linguagem a utilizar, baseado em RFC3066, ISO639 e ISO3166\. Para maior informação, consulte a descrição do comando [SET DATABASE LOCALIZATION](set-database-localization.md). 
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get keyboard layout](object-get-keyboard-layout.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

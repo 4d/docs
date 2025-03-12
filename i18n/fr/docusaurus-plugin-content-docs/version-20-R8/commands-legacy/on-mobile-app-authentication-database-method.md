@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.On Mobile App Authentication database method.Summary-->**Documentation déplacée**
 
 La documentation de cette méthode base a été mise à jour et déplacée vers [developer.<!-- END REF-->4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication).
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [MOBILE APP REFRESH SESSIONS](mobile-app-refresh-sessions.md)  

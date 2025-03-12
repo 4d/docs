@@ -30,7 +30,7 @@ The current process “pokes” the variables of the destination process—the d
 
 **Tip:** If you do not know the ID number of the server process, you can still use the interprocess variables of the server. To do so, use any negative value in *process*. In other words, it is not necessary to know the ID number of the process to be able to use the **SET PROCESS VARIABLE** command with the interprocess variables of the server. This is useful when a stored procedure is launched using the [On Server Startup database method](on-server-startup-database-method.md). As client machines do not automatically know the ID number of that process, any negative value can be passed in the *process* parameter.
 
-##### Restrictions 
+### Restrictions 
 
 SET PROCESS VARIABLE does not accept local variables as destination variables. 
 

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET FIELD PROPERTIES.Summary-->GET FIELD PROPERTIESコマンドは、*tableNum*と*fieldNum*または*fieldPtr*で指定したフィールドの情報を返します。<!-- END REF-->
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 * 引数*unique*には、フィールドが重複不可に設定されているときはTrueが、そうでないときにはFalseが返されます。
 * 引数*invisible*には、フィールドが非表示に設定されているときにはTrueが、そうでないときにはFalseが返されます。非表示設定は4D標準の（ラベルやチャートなど）エディタで所定のフィールドを隠すために使うことができます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、変数*vType*、*vLength*、*vIndex*、*vUnique*、*vInvisible*にテーブル番号=1、フィールド番号=3のフィールドの属性を設定します。
 
@@ -60,7 +60,7 @@ displayed_sidebar: docs
  GET FIELD PROPERTIES(1;3;vType;vLength;vIndex;vUnique;vInvisible)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、変数*vType*、*vLength*、*vIndex*、*vUnique*、*vInvisible*に\[Table3\]Field2という名前のフィールドの属性を設定します。
 
@@ -68,13 +68,13 @@ displayed_sidebar: docs
  GET FIELD PROPERTIES(->[Table3]Field2;vType;vLength;vIndex;vUnique;vInvisible)
 ```
 
-#### 参照 
+## 参照 
 
 [Field](field.md)  
 [Field name](field-name.md)  
 [SET INDEX](set-index.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

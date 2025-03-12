@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Summary-->The **LISTBOX SET STATIC COLUMNS** command sets *numColumns* columns as static (starting from the first on the left) in the list box designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -23,12 +23,12 @@ Static columns cannot be moved within the list box.
 
 **Note:** Static columns and locked columns are two independent functions. For more information, refer to the *Design Reference* manual.
 
-#### See also 
+## See also 
 
 [LISTBOX Get static columns](listbox-get-static-columns.md)  
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Create menu.Summary-->The **Create menu** command creates a new menu in memory.<!-- END REF--> This menu will only exist in memory and will not be added in the Menu editor in Design mode. Any changes made to this menu during the session will be immediately carried over to all the instances of this menu and in all the processes of the database.
 
@@ -31,17 +31,17 @@ A menu created by this command can be used as the menu bar using the [SET MENU B
 
 When you no longer need the menu created by [Create menu](create-menu.md), remember to call the [RELEASE MENU](release-menu.md) command in order to free up the memory being used. 
 
-#### Example 
+## Example 
 
 Refer to the example of the [SET MENU BAR](set-menu-bar.md) command.
 
-#### See also 
+## See also 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [SET MENU BAR](set-menu-bar.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

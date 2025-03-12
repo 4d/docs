@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->El comando **CONVERT COORDINATES**convierte las coordenadas (x,y) de un punto de un sistema de coordenadas a otro.<!-- END REF--> Los sistemas de coordenadas de entrada y salida soportados son los formularios (y subformularios), las ventanas y la pantalla. Por ejemplo, puede utilizar este comando para obtener las coordenadas en el formulario principal de un objeto perteneciente a un subformulario. Este principio facilita la creación de menús contextuales en cualquier posición personalizada.
 
@@ -43,7 +43,7 @@ Cuando *de* es XY Current form y el punto se encuentra en la sección del cuerpo
 * Si el comando se llama fuera de un evento On Display Detail pero mientras se está editando un registro, el punto resultante se encuentra en el perímetro de visualización del registro que se está editando.
 * De lo contrario, el punto resultante se encuentra en la pantalla del primer registro.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted quiere abrir un menú emergente situado en la esquina inferior izquierda del objeto "MyObject".  
   
@@ -64,7 +64,7 @@ Usted quiere abrir un menú emergente situado en la esquina inferior izquierda d
 
 ![](../assets/en/commands/pict2678144.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted quiere abrir una ventana emergente en la posición del cursor del ratón. En Windows, es necesario convertir las coordenadas desde [MOUSE POSITION](mouse-position.md) (con el parámetro \*) devolviendo valores basados en la posición de la ventana MDI:
 
@@ -78,14 +78,14 @@ Usted quiere abrir una ventana emergente en la posición del cursor del ratón. 
  CLOSE WINDOW($window)
 ```
 
-#### Ver también 
+## Ver también 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

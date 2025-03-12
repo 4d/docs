@@ -22,12 +22,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->El comando ST SET ATTRIBUTES permite modificar uno o más atributos de estilo en el(los) objeto(s) de formulario designado(s) por *objeto*.<!-- END REF--> 
 
-##### 
+### 
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (una cadena). Durante la ejecución, si el objeto tiene el foco, el comando sólo se aplica al objeto que se está editando y no a su fuente de datos (campo o variable). Los cambios sólo se transfieren a la fuente (y a cualquier otro objeto con esta misma fuente) cuando el objeto que se está editando se valida, ya sea por perder el foco o con la tecla **Intro**. Si el objeto no tiene el foco, el comando se aplica directamente a la fuente de datos y los cambios son inmediatamente trasladados a otros objetos con la misma fuente.  
 Si se omite el parámetro *\**, indica que el parámetro *objeto* es un campo o una variable y se pasa una referencia de campo o variable en lugar de una cadena. El comando se aplica directamente al campo o a la variable y los cambios son transferidos inmediatamente a todos los objetos que utilizan esta fuente, incluyendo el objeto con el foco.
 
-##### 
+### 
 
 **Nota**: sólo puede utilizar los atributos de estilo con campos de tipo texto. Dado que los campos de tipo Alfa tienen una longitud predefinida, la adición de etiquetas de estilo podría producir una pérdida de datos.   
   

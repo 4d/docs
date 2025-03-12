@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY OBJECT.Summary-->La commande **ARRAY OBJECT** crée et/ou redimensionne un tableau d’éléments de type Objet de langage en mémoire.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Lorsque vous appliquez la commande **ARRAY OBJECT** à un tableau existant :
 * Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont indéfinis. Vous pouvez tester si un élément est défini à l’aide de la commande [OB Is defined](ob-is-defined.md).
 * Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-#### Exemple 1 
+## Exemple 1 
 
 Création d’un tableau process de 100 éléments de type Objet :
 
@@ -38,7 +38,7 @@ Création d’un tableau process de 100 éléments de type Objet :
  ARRAY OBJECT(tabObjets;100)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Création d’un tableau local de 100 lignes contenant chacune 50 éléments de type Objet :
 
@@ -46,7 +46,7 @@ Création d’un tableau local de 100 lignes contenant chacune 50 éléments de 
  ARRAY OBJECT($tabObjets;100;50)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Création et remplissage d’un tableau local d’objets :
 
@@ -64,13 +64,13 @@ Création et remplissage d’un tableau local d’objets :
      //$arrayChildren{3}  -> {"nom":"James","age":3}
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *C\_OBJECT*  
 *Créer des tableaux*  
 *Objets (Langage)*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

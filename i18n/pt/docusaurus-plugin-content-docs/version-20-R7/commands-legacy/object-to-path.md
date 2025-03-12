@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Object to path.Summary-->O comando **Object to path** devolve um nome de rota (string) em função da informação de rota que passou no parâmetro *objRota*.<!-- END REF--> As rotas abaixo são suportadas:
 
@@ -32,7 +32,7 @@ Em *objRota*, passe um objeto que define a rota que deseja gerar. Deve conter as
 
 Geralmente, *objRota* será gerado com o comando [Path to object ](path-to-object.md), entretanto, o objeto pode ser gerado com qualquer meio. Lembre que **Object to path** só maneja strings. Tampouco comprova se a rota é válida com respeito ao tipo de rota, nem a existência real de nenhum arquivo ou pasta.
 
-#### Exemplo 
+## Exemplo 
 
 Se quisermos duplicar e mudar o nome de um arquivo em sua própria pasta
 
@@ -47,7 +47,7 @@ Se quisermos duplicar e mudar o nome de um arquivo em sua própria pasta
  COPY DOCUMENT($path;Object to path($o))
 ```
 
-#### Ver também 
+## Ver também 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
@@ -56,7 +56,7 @@ Se quisermos duplicar e mudar o nome de um arquivo em sua própria pasta
 [Path to object ](path-to-object.md)  
 [Test path name](test-path-name.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

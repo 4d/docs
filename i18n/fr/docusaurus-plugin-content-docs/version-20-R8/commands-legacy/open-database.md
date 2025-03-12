@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Note 
+## Note 
 
 <!--REF #_command_.OPEN DATABASE.Summary-->La commande **OPEN DATABASE** referme la base de données 4D courante et ouvre à la volée la base désignée par le paramètre *cheminFichier*.<!-- END REF--> Cette commande est utile dans le cadre de tests automatiques, pour rouvrir une base après compilation, ou pour permettre à une application 4D fusionnée de sélectionner le serveur de la base auquel se connecter.
 
@@ -36,13 +36,13 @@ La commande est exécutée de manière asynchrone : après son appel, 4D continu
 
 Si le fichier de base cible n'est pas trouvé ou est invalide, une erreur système standard du gestionnaire de fichiers est retournée et 4D ne fait rien.
 
-#### Exemple 1 
+## Exemple 1 
 
 ```4d
  OPEN DATABASE("C:\\databases\\Invoices\\Invoices.4db")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez sélectionner un serveur au démarrage, à partir d'une application monoposte. Vous pouvez exécuter ce code avec un process lancé par la [On Startup database method](on-startup-database-method.md) :
 
@@ -71,7 +71,7 @@ Vous souhaitez sélectionner un serveur au démarrage, à partir d'une applicati
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

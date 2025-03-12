@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->La commande **CREATE SELECTION FROM ARRAY** construit la sélection temporaire *nom* à partir :
 
@@ -34,11 +34,11 @@ Lorsque vous utilisez la commande avec un tableau de booléens, le Nième élém
 
 **Attention** : N'oubliez pas qu'un numéro d'enregistrement peut être réutilisé si l'enregistrement est supprimé et qu'un autre enregistrement est créé (voir *A propos des numéros d'enregistrements*).
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Si un numéro d'enregistrement est invalide (enregistrement non créé), l’erreur -10503 est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
@@ -47,7 +47,7 @@ Si un numéro d'enregistrement est invalide (enregistrement non créé), l’err
 [SELECTION TO ARRAY](selection-to-array.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 The `This` command <!--REF #_command_.This.Summary-->returns a reference to the currently processed object.<!-- END REF-->
 
@@ -22,7 +22,7 @@ This command can be used in different contexts, described below. Within these co
 
 In any other context, the command returns **Null**.
 
-#### Class function
+## Class function
 
 When a [class constructor](../Concepts/classes.md#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
 
@@ -69,7 +69,7 @@ In this example, the object assigned to the variable $o doesn't have its own *f*
 
 
 
-#### Formula object
+## Formula object
 
 In the context of the execution of a formula object created by the [Formula](formula.md) or [Formula from string](formula-from-string.md) commands, `This` returns a reference to the object currently processed by the formula.
 
@@ -91,7 +91,7 @@ With the *Greeting* project method:
  return $greeting+" "+This.firstName+" "+This.lastName
 ```
 
-#### List box
+## List box
 
 In the context of a list box associated to a collection or an entity selection, during the [`On Display Detail`](../Events/onDisplayDetail.md) or the [`On Data Change`](../Events/onDataChange.md) events, `This` returns a reference to the collection element or entity accessed by the list box to display the current row.  
 
@@ -102,7 +102,7 @@ If you use a collection of scalar values in a list box, 4D creates an object for
 ::: 
 
 
-#### Example 1 
+## Example 1 
 
 A collection of objects, each with this structure:
 
@@ -149,7 +149,7 @@ Once the form is executed, you can see the result:
 
 ![](../assets/en/commands/pict3783169.en.png)
 
-#### Example 2 
+## Example 2 
 
 You want to display entities from the following structure in a list box:
 
@@ -179,12 +179,12 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 
 
-#### See also 
+## See also 
 
 [Self](../commands-legacy/self.md)  
 [Super](super.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

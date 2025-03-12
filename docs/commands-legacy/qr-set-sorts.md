@@ -26,7 +26,7 @@ displayed_sidebar: docs
 * If *aOrders{$i}* is 1, the sort order is ascending.
 * If *aOrders{$i}* is -1, the sort order is descending.
 
-##### Cross-table mode 
+### Cross-table mode 
 
 In the case of cross-table mode, you cannot have more than two items in the array. You can only sort columns (1) and rows (2). The data (that are the intersection of columns and rows) cannot be sorted.
 

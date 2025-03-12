@@ -19,7 +19,7 @@ displayed_sidebar: docs
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get frame.Summary-->La commande **WP Get frame** retourne le cadre de la zone 4D Write Pro *zoneWP* dans lequel se trouve actuellement le curseur.<!-- END REF-->
 
@@ -44,7 +44,7 @@ La valeur retournée peut être comparée à l'une des constantes suivantes du t
 
 Si le curseur est placé dans un élément de zone de texte, l'**id** de l'élément de la zone de texte est retourné dans le paramètre *textBoxID*. Dans tous les autres cas, ce paramètre est retourné vide.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez vous assurer que l'utilisateur a placé le curseur dans un cadre d'en-tête ou de pied de page :
 
@@ -56,7 +56,7 @@ Vous souhaitez vous assurer que l'utilisateur a placé le curseur dans un cadre 
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get footer](wp-get-footer.md)  
 [WP SET FRAME](wp-set-frame.md)  

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.IMPORT DIF.Summary-->O comando IMPORT DIF lê dados de *documento*, um documento DIF Windows ou Macintosh e os escreve em *tabela* criando novos registros para essa tabela.<!-- END REF-->
 
@@ -32,7 +32,7 @@ O comando utiliza por padrão o conjunto de caracteres UTF-8\. Os documentos com
 
 Durante a utilização de [EXPORT DIF](export-dif.md "EXPORT DIF"), o delimitador de campos automaticamente é o caractere de tabulação (código 9). O delimitador do registro por padrão é o retorno de carro (código 13). Pode modificar estes valores atribuindo novos valores às duas variáveis sistema FldDelimit e RecDelimit. O usuário pode mudar estes valores na caixa de diálogo de exportação do ambiente Desenho. Como os campos Texto podem conter retornos de carro, seja cuidadoso se utilizar o retorno de carro como delimitador entre os campos a exportar.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir importa dados de um documento DIF. O método começa definindo o formulário de entrada de maneira que os dados sejam importados pelo formulário correto, depois realiza a importação:
 
@@ -41,18 +41,18 @@ O exemplo a seguir importa dados de um documento DIF. O método começa definind
  IMPORT DIF([Pessoas];"Novas_Pessoas.dif") // Importação do documento “Novas_Pessoas.dif”
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 OK toma o valor 1 se la importação termina com sucesso; do contrário, toma o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [EXPORT DIF](export-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -17,17 +17,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ST Get text.Summary-->O comando *OBJECT Get styled text* devolve o texto com estilo encontrado no campo ou variável de texto designado pelo parâmetro *objeto*.<!-- END REF-->   
 
-##### 
+### 
 
 Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (cadeia). Durante a execução se o objeto tem o foco, o comando devolve informação sobre o objeto que está sendo editado, no entanto, quando o objeto não tem o foco, o comando devolve informação sobre a fonte de dados (campo ou variável) do objeto.
 
 Se omite o parâmetro *\**, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, passe uma referencia campo ou variável em vez de uma cadeia e durante a execução, o comando devolve informação sobre este campo ou variável.
 
-##### 
+### 
 
 O comando devolve o texto com as etiquetas de estilo associadas, o que significa, por exemplo, que pode copiar e colar texto, conservando os estilos.  
 
@@ -50,19 +50,19 @@ Os parâmetros opcionais *inicioSel* e *fimSel* permitem designar uma seleção 
 
 Se os valores de *inicioSel* e *fimSel* são iguais ou se *inicioSel* é maior que *fimSel*, um erro é devolvido.
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Depois de executar este comando, a variável OK toma o valor 1 se não é apresento nenhum erro; do contrário, toma o valor 0\. Este é o caso particularmente quando as etiquetas de estilo não são avaliados corretamente (etiquetas incorretas ou faltantes).   
 
 No caso de erro, não modifica a variável. Quando ocorre um erro em uma variável quando se está avaliando o texto, 4D transforma o texto em texto plano; como resultado, os caracteres <, > e & são convertidas em entidades HTML.
 
-#### Ver também 
+## Ver também 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

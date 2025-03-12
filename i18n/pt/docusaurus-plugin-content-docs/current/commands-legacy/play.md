@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PLAY.Summary-->O comando PLAY permite reproduzir arquivos de som ou multimídia.<!-- END REF--> Passe a rota de acesso completa do arquivo que deseja reproduzir em *nomeObjeto*. Em Mac OS, o comando também pode ser utilizado para reproduzir uma fonte de som ou um som sistema. 
 
@@ -33,7 +33,7 @@ Para parar um som assincrônico, utilize a próxima instrução:
 ```
 
   
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo abaixo mostra como reproduzir um arquivo WAV em Windows:  
   
@@ -46,7 +46,7 @@ O exemplo abaixo mostra como reproduzir um arquivo WAV em Windows:
 ```
 
   
-#### Exemplo 2 
+## Exemplo 2 
 
 O código de exemplo abaixo reproduz um som do sistema em macOS:
 
@@ -54,11 +54,11 @@ O código de exemplo abaixo reproduz um som do sistema em macOS:
  PLAY("Submarine.aiff")
 ```
 
-#### Ver também 
+## Ver também 
 
 [BEEP](beep.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

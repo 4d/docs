@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SHOW ON DISK.Summary-->The SHOW ON DISK command displays the file or folder whose pathname was passed in the *pathname* parameter in a standard window of the operating system.<!-- END REF-->  
 In a user interface, this command lets you designate the location of a specific file or folder.
 
 By default, if *pathname* designates a folder, the command displays the level of the folder itself. If you pass the optional *\** parameter, the command opens the folder and displays its contents in the window. If *pathname* designates a file, the *\** parameter is ignored. 
 
-#### Example 
+## Example 
 
 The following examples illustrate the operation of this command:
 
@@ -43,12 +43,12 @@ The following examples illustrate the operation of this command:
 
 ![](../assets/en/commands/pict35009.en.png)
 
-#### System variables and sets 
+## System variables and sets 
 
 The system variable OK is set to 1 if the command is executed correctly. 
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

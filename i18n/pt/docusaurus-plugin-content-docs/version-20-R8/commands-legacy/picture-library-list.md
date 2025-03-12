@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PICTURE LIBRARY LIST.Summary-->O comando PICTURE LIBRARY LIST devolve os números de referência e os nomes das imagens armazenadas na biblioteca de imagens do banco de dados.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Se a biblioteca de imagens estiver vazia, os dois arrays devolvidos estarão vaz
 
 Para obter o número de imagens armazenadas atualmente na biblioteca de imagens, utilize o comando [Size of Array](size-of-array.md "Size of Array") para obter o tamanho de um dos dois arrays.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O código a seguir devolve o catálogo da biblioteca de imagens nos arrays *alRefImag* e *asNomImag*: 
 
@@ -36,7 +36,7 @@ O código a seguir devolve o catálogo da biblioteca de imagens nos arrays *alRe
  PICTURE LIBRARY LIST(alRefImag;asNomImag)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir prova se a biblioteca de imagens está vazia ou não: 
 
@@ -49,7 +49,7 @@ O exemplo a seguir prova se a biblioteca de imagens está vazia ou não:
  End if
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo a seguir exporta a biblioteca de imagens a um documento armazenado no disco:  
 
@@ -87,13 +87,13 @@ O exemplo a seguir exporta a biblioteca de imagens a um documento armazenado no 
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

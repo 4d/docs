@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET ABOUT.Summary-->O comando SET ABOUT muda o comando de menu Sobre 4D do menu **Ajuda** (Windows) ou do menu **Aplicação** (macOS) em *textoItem*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Este comando é utilizado com 4D (local e remoto), 4D Desktop e 4D Server. Um no
 
 Nota: em Windows, este comando modifica a linhaa "Sobre 4D" no menu Ajuda criado pelo comando [SET HELP MENU](set-help-menu.md).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo abaixo substitui o comando de menu Sobre 4D pelo comando de menu Sobre o programador. O método SOBRE mostra uma caixa personalizada "Sobre": 
 
@@ -32,7 +32,7 @@ O exemplo abaixo substitui o comando de menu Sobre 4D pelo comando de menu Sobre
  SET ABOUT(“Sobre o programador…”;“Sobre”)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo abaixo reinicializa o comando de menu Sobre 4D: 
 
@@ -40,11 +40,11 @@ O exemplo abaixo reinicializa o comando de menu Sobre 4D:
  SET ABOUT("Sobre 4D";"")
 ```
 
-#### Ver também 
+## Ver também 
 
 [SET HELP MENU](set-help-menu.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

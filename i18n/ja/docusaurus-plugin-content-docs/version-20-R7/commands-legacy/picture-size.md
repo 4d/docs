@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Picture size.Summary-->Picture sizeコマンドは指定したピクチャのサイズをバイト単位で返します。<!-- END REF-->
 
-#### 参照 
+## 参照 
 
 [PICTURE PROPERTIES](picture-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

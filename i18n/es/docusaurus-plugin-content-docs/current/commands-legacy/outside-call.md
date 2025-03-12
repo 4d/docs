@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Outside call.Summary-->**Outside call** devuelve True para el ciclo de ejecución After.<!-- END REF--> 
 
@@ -21,12 +21,12 @@ Para que se genere el ciclo de ejecución **Outside call**, asegúrese de que la
 
 **Nota:** este comando es equivalente a utilizar [Form event code](../commands/form-event-code.md) y probar si devuelve el evento On Outside call.
 
-#### Ver también 
+## Ver también 
 
 [Form event code](../commands/form-event-code.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Get text.Summary-->El comando **WP Get text** recupera el contenido de texto de un documento 4D Write Pro dentro del *objRango* especificado.<!-- END REF-->
 
@@ -47,7 +47,7 @@ El parámetro opcional *expresiones* da instrucciones para la evaluación de exp
 * Si *objRango* contiene imágenes, las imágenes se ignoran y se devuelven como caracteres espaciales (" ").
 * Si *objRango* contiene tablas, el contenido de cada celda se trata como párrafos individuales y se devuelve como texto separado por pestañas. Las filas están separadas por retornos de carro.
 
-#### Ejemplo 
+## Ejemplo 
 
 Para recuperar el texto en este documento:
 
@@ -62,7 +62,7 @@ puede escribir:
  vText3:=WP Get text($range;wk expressions as space) //devuelve "Hola mundo! Hoy es:  ."
 ```
 
-#### Ver también 
+## Ver también 
 
 *Gestión de fórmulas*  
 [WP SET TEXT](wp-set-text.md)  

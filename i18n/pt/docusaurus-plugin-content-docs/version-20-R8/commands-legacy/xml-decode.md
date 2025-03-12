@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.XML DECODE.Summary-->O comando XML DECODE converte um valor salvado como uma string XML em um valor 4D.<!-- END REF--> A conversão se realiza automaticamente dependendo das seguintes regras: 
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 Se o parâmetro tipo *4Dvar* não for definido, o tipo texto é usado como padrão. 
 
-#### Exemplo 
+## Exemplo 
 
 Importação de dados desde um documento XML no qual os valores são guardados como atributos.  
 Exemplo do documento XML:  
@@ -72,12 +72,12 @@ Exemplo do documento XML:
  Until(MyEvent=XML End Document)
 ```
 
-#### Ver também 
+## Ver também 
 
 [BASE64 DECODE](base64-decode.md)  
 [BASE64 ENCODE](base64-encode.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

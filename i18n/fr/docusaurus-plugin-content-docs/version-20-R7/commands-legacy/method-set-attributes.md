@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->La commande **METHOD SET ATTRIBUTES** vous permet de définir les valeurs des *attributs* pour la ou les méthode(s) spécifiée(s) dans le paramètre *chemin*.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Si la commande est exécutée depuis un composant, elle s’applique par défaut
 
 **Note :** La commande existante [METHOD SET ATTRIBUTE](method-set-attribute.md) reste prise en charge, toutefois comme elle ne peut retourner que des valeurs booléennes, elle ne peut pas être utilisée pour les attributs étendus tels que les propriétés 4D Mobile.
 
-##### 
+### 
 
 ```json
 {
@@ -48,7 +48,7 @@ Si la commande est exécutée depuis un composant, elle s’applique par défaut
 }
 ```
 
-#### Exemple 
+## Exemple 
 
 Vous souhaiter modifier un seul attribut :
 
@@ -58,12 +58,12 @@ Vous souhaiter modifier un seul attribut :
  METHOD SET ATTRIBUTES("aMethod";$attributes) //seul l'attribut "executedOnServer" est modifié
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [METHOD GET ATTRIBUTES](method-get-attributes.md)  
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

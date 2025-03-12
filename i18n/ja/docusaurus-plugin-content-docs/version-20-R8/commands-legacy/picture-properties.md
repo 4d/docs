@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PICTURE PROPERTIES.Summary-->PICTURE PROPERTIES コマンドは、*picture*に渡したピクチャに関する情報を返します。<!-- END REF-->
 
@@ -26,11 +26,11 @@ displayed_sidebar: docs
 
 オプション引数*hOffset*、*vOffset*、*mode*には、フォーム上でバックグラウンド 表示フォーマットで表示された際のピクチャの水平、垂直位置と転送モードを返します。
 
-#### 参照 
+## 参照 
 
 [Picture size](picture-size.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

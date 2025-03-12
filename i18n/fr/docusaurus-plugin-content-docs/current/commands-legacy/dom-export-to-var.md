@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM EXPORT TO VAR.Summary-->La commande **DOM EXPORT TO VAR** permet de sauvegarder un arbre XML dans une variable texte ou BLOB.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ Attention, en mode Non unicode si vous utilisez une variable Texte pour stocker 
 
 En mode Unicode, l'encodage d'origine est conservé dans la variable.
 
-##### Notes sur le traitement des caractères de fin de ligne et des BOM 
+### Notes sur le traitement des caractères de fin de ligne et des BOM 
 
 En XML, les sauts de ligne ne sont pas significatifs, qu'ils soient présents à l'intérieur ou entre des éléments XML. En interne, le XML utilise des caractères normalisés LF comme séparateurs de lignes.
 
@@ -40,7 +40,7 @@ Vous pouvez contrôler le traitement des fins de ligne XML et du BOM à l'aide d
 
 **Note de compatibilité** : Dans les bases /projets créés avec des versions de 4D allant jusqu'à la v19.x, 4D utilise par défaut CR comme caractère de fin de ligne sur macOS et ainsi qu'un BOM. Pour activer les nouveaux paramètres par défaut, vérifiez les paramètres de compatibilité (voir la page Compatibilité) ou utilisez la commande [XML SET OPTIONS](xml-set-options.md). 
 
-#### Exemple 
+## Exemple 
 
 Cet exemple sauvegarde l’arbre vRefElem dans une variable texte : 
 
@@ -49,16 +49,16 @@ Cet exemple sauvegarde l’arbre vRefElem dans une variable texte :
  DOM EXPORT TO VAR(vRefElem;vtMonTexte)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée (par exemple, si la référence de l’élément n’est pas valide).
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

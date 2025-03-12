@@ -18,7 +18,7 @@ displayed_sidebar: docs
 *Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP New text box.Summary-->O comando **WP New text box** cria e retorna um novo objeto caixa de texto na página *pageNum* de *wpDoc*.<!-- END REF-->
 
@@ -48,7 +48,7 @@ A nova caixa de texto é renderizada só na página *pageNum,* então não pode 
 
 Entretanto, a caixa de texto ainda existe e é propriedade do documento mesmo se não renderizada. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser criar uma caixa de texto padrão:
 
@@ -60,7 +60,7 @@ Resultado:
 
 ![](../../assets/en/WritePro/commands/pict6196750.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser adicionar uma caixa de texto em um modelo de carta, para exibir o endereço do destinatário (que está armazenado no contexto):
 
@@ -93,6 +93,6 @@ Result:
 
 ![](../../assets/en/WritePro/commands/pict6196766.en.png)
 
-#### Ver também 
+## Ver também 
 
 [WP DELETE TEXT BOX](wp-delete-text-box.md)  

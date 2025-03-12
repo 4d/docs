@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Summary-->The REMOVE PICTURE FROM LIBRARY command removes from the Picture Library the picture whose reference number is passed in *picRef* or whose name is passed in *picName*.<!-- END REF--> 
 
@@ -23,7 +23,7 @@ If there is no picture with that reference number or name, the command does noth
 
 **Warning:** Design objects (hierarchical list items, menu items, etc.) may refer to Picture Library graphics. Use caution when deleting a Picture Library graphic programmatically.
 
-#### Example 1 
+## Example 1 
 
 The following example deletes the picture #4444 from the Picture Library.
 
@@ -31,7 +31,7 @@ The following example deletes the picture #4444 from the Picture Library.
  REMOVE PICTURE FROM LIBRARY(4444)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example deletes from the Picture Library any pictures whose names begin with a dollar sign (*$*):
 
@@ -44,13 +44,13 @@ The following example deletes from the Picture Library any pictures whose names 
  End for
 ```
 
-#### See also 
+## See also 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

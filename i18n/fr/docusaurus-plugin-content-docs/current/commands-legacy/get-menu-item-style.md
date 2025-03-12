@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get menu item style.Summary-->La commande **Get menu item style** retourne le style de police de la ligne de menu dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*.
 
@@ -33,7 +33,7 @@ Si vous omettez le paramètre *process*, **Get menu item style** s'applique à l
 | Plain     | Entier long | 0      |
 | Underline | Entier long | 4      |
 
-#### Exemple 
+## Exemple 
 
 Si, par exemple, vous voulez tester si une ligne de menu est affichée en gras, vous écrivez :
 
@@ -43,11 +43,11 @@ Si, par exemple, vous voulez tester si une ligne de menu est affichée en gras, 
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET MENU ITEM STYLE](set-menu-item-style.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -22,7 +22,7 @@ Si ningún formulario es mostrado o cargado por el comando [FORM LOAD](../comman
 
 El parámetro *\** es útil cuando el comando se llama en el contexto de un subformulario en página que contiene varias páginas. En este caso, cuando pase este parámetro, el comando cambia la página del subformulario actual (el que llamó al comando). Por defecto, si se omite el parámetro *\**, el comando se aplica siempre al formulario padre.
 
-##### Acerca de los comandos de gestión de páginas 
+### Acerca de los comandos de gestión de páginas 
 
 Los botones de acción automática realizan las mismas tareas que los comandos [FORM FIRST PAGE](form-first-page.md), [FORM LAST PAGE](form-last-page.md), [FORM NEXT PAGE](form-next-page.md), [FORM PREVIOUS PAGE](form-previous-page.md) y [FORM GOTO PAGE](form-goto-page.md) que puede asociar a los objetos tales como pestañas, list box desplegables, etc. Siempre que sea posible, utilice botones de acción automática en lugar de los comandos. 
 

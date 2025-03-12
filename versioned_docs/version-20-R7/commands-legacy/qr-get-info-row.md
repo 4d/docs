@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get info row.Summary-->The **QR Get info row** command retrieves the display status of the row whose reference was passed in *row*.<!-- END REF-->
 
@@ -34,13 +34,13 @@ The value returned by **QR Get info row** indicates whether the contents of the 
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *row* value, the error -9852 will be generated.
 
-#### See also 
+## See also 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

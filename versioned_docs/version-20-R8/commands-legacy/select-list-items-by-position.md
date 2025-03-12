@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Summary-->The **SELECT LIST ITEMS BY POSITION** command selects the item(s) whose position is passed in *itemPos* and, optionally, in *positionsArray* within the list whose reference number or object name is passed in *list*.<!-- END REF-->
 
@@ -34,7 +34,7 @@ When you pass this parameter, the item designated by the *itemPos* parameter set
 
 **Note:** In order for several items to be selected simultaneously in a hierarchical list (manually or by programming), the *multiSelections* property must have been enabled for this list. This property is set using the [SET LIST PROPERTIES](set-list-properties.md) command. 
 
-#### Example 
+## Example 
 
 Given the hierarchical list named *hList,* shown here in the Application environment:
 
@@ -67,13 +67,13 @@ After execution of the following lines of code:
 
 ![](../assets/en/commands/pict22760.en.png)
 
-#### See also 
+## See also 
 
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [Selected list items](selected-list-items.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

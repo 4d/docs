@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ST GET OPTIONS.Summary-->**ST GET OPTIONS**コマンドは、 *object* 引数で指定されたスタイル付テキストフィールドまたはテキスト変数内で動作中のオプションのカレントの値を取得します。<!-- END REF-->
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 | ST References               | 倍長整数 | 1 | 式のソースの文字列を表示します。                                |
 | ST Values                   | 倍長整数 | 0 | 4D式の、計算された値を表示します。                              |
 
-#### 参照 
+## 参照 
 
 [ST SET OPTIONS](st-set-options.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

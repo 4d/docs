@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HIDE WINDOW.Summary-->La commande **HIDE WINDOW** permet de masquer la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, la fenêtre de premier plan du process courant.<!-- END REF--> Cette commande vous permet, par exemple, dans un process comportant plusieurs fenêtres, de ne conserver à l'écran que la fenêtre active. 
 
@@ -26,7 +26,7 @@ Pour réafficher une fenêtre masquée par **HIDE WINDOW** :
 
 Si vous souhaitez cacher toutes les fenêtres d'un process, utilisez la commande [HIDE PROCESS](hide-process.md).
 
-#### Exemple 
+## Exemple 
 
 Cet exemple est la méthode d'un bouton placé dans un formulaire entrée. Ce bouton ouvre une boîte de dialogue dans une nouvelle fenêtre du même process. Vous souhaitez masquer les autres fenêtres du process (un formulaire de saisie et une palette d'outils) afin de ne présenter que la boîte de dialogue. Une fois que celle-ci a été validée, vous réaffichez les fenêtres du process.
 
@@ -42,11 +42,11 @@ Cet exemple est la méthode d'un bouton placé dans un formulaire entrée. Ce bo
  SHOW WINDOW(Palette) // Réafficher les autres fenêtres du process
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SHOW WINDOW](show-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

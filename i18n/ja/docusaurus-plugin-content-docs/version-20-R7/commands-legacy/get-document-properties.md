@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Summary-->GET DOCUMENT PROPERTIESコマンドは、引数*document*に渡した名前またはパス名を持つドキュメントに関する情報を返します。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 * *created on*と*created at*にはドキュメントが作成された日付と時間が返されます。
 * *modified on*と*modified at*にはドキュメントが最後に修正された日付と時間が返されます。
 
-#### 例題 
+## 例題 
 
 ドキュメントデータベースを作成し、そのデータベースに作成したすべてのレコードをディスク上のドキュメントに書き出す場合を想定します。データベースは定期的に更新されているため、ドキュメントが存在しなかったり、ドキュメントが最後に保存された後に、対応するレコードが修正されてしまった場合には、各ドキュメントを作成、再作成するようなデータ書き出しのアルゴリズムを記述します。そのため、ドキュメント(存在する場合には) を修正した日付と時間をそれに対応するレコードと比較する必要があります。これを図解するために、以下のテーブルを使用してその定義を表します。
 
@@ -201,11 +201,11 @@ displayed_sidebar: docs
  ALERT("Number of documents processed: "+String($vlNbRecords)+"\rNumber of documents updated: "+String($vlNbDocs)+"\rNumber of documents deleted: "+String(Size of array($asDocument)))
 ```
 
-#### 参照 
+## 参照 
 
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

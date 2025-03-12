@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.INTERSECTION.Summary-->**INTERSECTION** compare *ensemble1* et *ensemble2* et sélectionne uniquement les enregistrements se trouvant à la fois dans *ensemble1* et dans *ensemble2*.<!-- END REF--> Le tableau suivant liste les résultats possibles d'une opération d'intersection d'ensembles.
 
@@ -34,7 +34,7 @@ L'ensemble *résultat* est créé par **INTERSECTION**. Il remplace tout ensembl
 
 **4D Server :** En mode client/serveur, les ensembles sont "visibles" en fonction de leur type (interprocess, process et local) et de leur lieu de création (serveur ou client). **INTERSECTION** requiert que les trois ensembles soient visibles sur la même machine. Pour plus d'informations sur ce point, reportez-vous à la section *4D Server, ensembles et sélections* dans le manuel de référence de 4D Server.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant recherche les clients en contact avec deux représentants, Jean et Grégoire. Chaque représentant dispose d'un ensemble regroupant ses clients. Les clients se trouvant dans les deux ensembles sont en contact avec Jean et Grégoire :
 
@@ -45,12 +45,12 @@ L'exemple suivant recherche les clients en contact avec deux représentants, Jea
  DISPLAY SELECTION([Clients]) // Affichage des clients en contact avec les deux commerciaux
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DIFFERENCE](difference.md)  
 [UNION](union.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

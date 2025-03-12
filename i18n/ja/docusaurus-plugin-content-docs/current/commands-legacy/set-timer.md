@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET TIMER.Summary-->**SET TIMER** コマンドは、On Timerフォームイベントを有効にし、カレントプロセスのカレントフォームでOn Timerフォームイベント間の間隔Tick数を設定します。<!-- END REF--> 
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 On Timerフォームイベントの生成を取り消すには、*tickCount*に0をセットした**SET TIMER** をもう一度実行してください。
 
-#### 例題 
+## 例題 
 
 フォームが画面に表示されている時に、コンピュータが3秒毎に警告音を鳴らすようにしたいと仮定します。これを実行するには、下記のようにフォームメソッドを書きます:
 
@@ -41,12 +41,12 @@ On Timerフォームイベントの生成を取り消すには、*tickCount*に0
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Form event code](../commands/form-event-code.md)  
 [REDRAW](redraw.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

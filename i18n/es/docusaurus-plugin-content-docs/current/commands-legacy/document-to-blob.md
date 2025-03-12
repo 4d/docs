@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOCUMENT TO BLOB.Summary-->**DOCUMENT TO BLOB** carga el contenido de *documento* en *blob*.<!-- END REF--> Debe pasar el nombre de un documento existente que no esté abierto, de lo contrario se generará un error. Para dejar que el usuario seleccione el documento a cargar en el BLOB, utilice el comando [Open document](open-document.md) y la variable sistema *document* (ver ejemplo).
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted escribe un Sistema de información que le permite guardar y buscar rápidamente documentos. En un formulario de entrada de datos, usted crea un botón que le permite cargar un documento en un campo tipo BLOB. El método para este botón puede ser:
 
@@ -34,11 +34,11 @@ Usted escribe un Sistema de información que le permite guardar y buscar rápida
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 1 si el documento se carga correctamente, de lo contrario OK toma el valor 0 y se genera un error.
 
-#### Manejo de errores 
+## Manejo de errores 
 
 * Si trata de cargar (en un BLOB) un documento que no existe o que ya ha sido abierto por otro proceso o aplicación, se genera un error File Manager.
 * Un error de E/S puede ocurrir si el documento está bloqueado, si está ubicado en un volumen bloqueado, o si hay un problema en la lectura del documento.
@@ -46,12 +46,12 @@ La variable sistema OK toma el valor 1 si el documento se carga correctamente, d
 
 En todos los casos, puede interceptar el error utilizando un método de interrupción [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver también 
+## Ver también 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [Open document](open-document.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

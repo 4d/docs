@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BLOB to text.Summary-->BLOB to text コマンドはBLOB *blob*からテキストを読みだして、返します。<!-- END REF-->引数は、読み込むテキスト値の内部フォーマットと文字セットを指定します。4Dバージョン11以降で作成されたデータベースでは、4Dはテキストの処理にデフォルトでUnicode (UTF-8) を使用します。互換性を保つため、このコマンドに、以前のバージョンの4Dで使用されていたMac Roman文字セットへの変換を強制することもできます。文字セットは*textFormat* 引数で指定します。これを行うには、*BLOB* テーマの以下の定数のうちいずれかを*textFormat* 引数に渡します:
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 呼び出し後、*offset*変数は、読み込まれたバイト数分だけインクリメントされます。したがって、同じ*offset*変数を別のBLOB読み込みコマンドにも使用し、別の値をBLOBから読みだすことができます。
 
-#### 参照 
+## 参照 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current time.Summary-->The **Current time** command returns the current time from the system clock.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ The current time is always between *00:00:00* and *23:59:59*. Use [String](strin
 
 **4D Server:** If you use the asterisk (\*) parameter when executing this function on a 4D Client machine, it returns the current time from the server.
 
-#### Example 1 
+## Example 1 
 
 The following example shows you how to time the length of an operation. Here, LongOperation is a method that needs to be timed:
 
@@ -33,7 +33,7 @@ The following example shows you how to time the length of an operation. Here, Lo
  ALERT("The operation took "+String($vhEndTime-$vhStartTime)+" seconds.") //Display how long it took
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example extracts the hours, minutes, and seconds from the current time:
 
@@ -44,13 +44,13 @@ The following example extracts the hours, minutes, and seconds from the current 
  ALERT("Current second is: "+String($vhNow%60))
 ```
 
-#### See also 
+## See also 
 
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Tickcount](tickcount.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP DELETE PICTURE.Summary-->**WP DELETE PICTURE** コマンドは、*imgObj* 引数によって定義された画像を削除します。<!-- END REF-->
 
 画像が存在しない場合、コマンドは何もしません。
 
-#### 例題 
+## 例題 
 
 画像を、そのID を使用して削除したい場合を考えます:
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
  WP DELETE PICTURE($myPicture)
 ```
 
-#### 参照 
+## 参照 
 
 [WP Add picture](wp-add-picture.md)  
 *ピクチャーを管理する*  

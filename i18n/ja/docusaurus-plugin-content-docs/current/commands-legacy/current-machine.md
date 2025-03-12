@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Current machine.Summary-->Current machineコマンドは、オペレーティングシステムのネットワークパラメタに設定されたマシンの名前を返します。<!-- END REF--> 
 
-#### 例題 
+## 例題 
 
 クライアント/サーバのバージョンの4D環境で実行していない場合でも、アプリケーションに含まれている幾つかのネットワークサービスが、マシンが正しく構成されていることを必要とする可能性があります。アプリケーションのでは、以下のように記述します。
 
@@ -27,11 +27,11 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Current system user](current-system-user.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

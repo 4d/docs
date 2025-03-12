@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get value.Summary-->**OBJECT Get value** コマンドは、*objectName* 引数で指定されたフォームオブジェクトのデータソースのカレント値を返します。<!-- END REF-->
 
@@ -31,15 +31,15 @@ displayed_sidebar: docs
 * データソースが配列の場合、コマンドは配列のインデックスを返します。
 * データソースが式の場合、コマンドは最後の実行サイクルから計算された値を返します。
 
-#### 例題 
+## 例題 
 
 [OBJECT SET VALUE](object-set-value.md) コマンドの例題を参照してください。
 
-#### 参照 
+## 参照 
 
 [OBJECT SET VALUE](object-set-value.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

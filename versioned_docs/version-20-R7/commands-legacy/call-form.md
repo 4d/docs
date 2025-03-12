@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Error management 
+## Error management 
 
 <!--REF #_command_.CALL FORM.Summary-->The **CALL FORM** command executes the 4D code designated in *formula* with the optional *param*(s) in the context of a form displayed in a *window*, regardless of the process owning the window.<!-- END REF-->
 
@@ -34,7 +34,7 @@ You can also pass parameters to the formula using one or more *param* parameters
 * Pointers to variables, particularly local and process variables, are not recommended since these variables may be undefined at the moment they are being accessed by the process method.
 * If you pass an Object or a Collection type parameter, 4D creates a copy of the object or the collection in the destination process (instead of a reference) if the form is in a process different from the one calling the **CALL FORM** command.
 
-#### Example 1 
+## Example 1 
 
 You can use the **CALL FORM** command to pass custom settings to a form, for example configuration values, without having to use process variables:
 
@@ -44,7 +44,7 @@ You can use the **CALL FORM** command to pass custom settings to a form, for exa
  DIALOG("form")
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to open two different dialog windows from the same form, but with different background colors and different messages. You also want to send messages afterwards and display them in each dialog window.
 
@@ -96,13 +96,13 @@ You can then add other messages by executing the **CALL FORM** command again:
 
 ![](../assets/en/commands/pict2896833.en.png)
 
-#### See also 
+## See also 
 
   
 [CALL WORKER](call-worker.md)  
 [DIALOG](dialog.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

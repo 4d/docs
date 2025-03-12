@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Summary-->DOM REMOVE XML ATTRIBUTE コマンドは*elementRef*で指定されたXML要素に*attrName*で指定された属性が存在すれば、それを取り除きます。<!-- END REF--> 
 
 属性が正しく取り除かれると、OKシステム変数に1が設定されます。*elementRef*要素に*attrName*という名前の属性が存在しない場合、エラーが返され、OKシステム変数に0が設定されます。
 
-#### 例題 
+## 例題 
 
 以下のXML構造において:
 
@@ -38,14 +38,14 @@ displayed_sidebar: docs
  DOM REMOVE XML ATTRIBUTE($xml_Child_Ref;"N")
 ```
 
-#### 参照 
+## 参照 
 
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
 [DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

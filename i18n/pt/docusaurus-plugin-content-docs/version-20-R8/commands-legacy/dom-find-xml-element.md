@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM Find XML element.Summary-->O comando DOM Find XML element permite buscar os elementos XML específicos em uma estrutura XML.<!-- END REF--> A pesquisa começa pelo elemento determinado pelo parâmetro *refElemento*.
 
@@ -50,7 +50,7 @@ O nó XML a buscar está definido pelo parâmetro *xPath*, expresso em notação
 
 O comando devolve a referência XML dos elementos encontrados. Quando passar o array de strings *arrRefElement*, o comando o preenche com a lista de referências XML encontradas. Neste caso, o comando devolve o primeiro elemento de array *arrRefElement* como resultado. Este parâmetro é útil quando existirem vários elementos com o mesmo nome no local especificado pelo parâmetro *xRuta*.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo permite buscar rapidamente um elemento XML e mostrar seu valor: 
 
@@ -71,7 +71,7 @@ A mesma pesquisa também pode ser realizada desta forma:
 
 **Nota:** Como é mostrado no exemplo anterior, a rota XPath deve sempre começar pelo nome do elemento atual. Esta precisão é importante quando maneja rotas XPath relativas.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Dada a seguinte estrutura XML: 
 
@@ -87,7 +87,7 @@ O código abaixo permite recuperar a referência de cada elemento Elem2 no array
  vFound:=DOM Find XML element(vElemRef;"/Root/Elem1/Elem2";arrAfound)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Se quiser selecionar todos os elementos "rect" com atributos "class" que contenham a string "bgcontainer":
 
@@ -95,23 +95,23 @@ Se quiser selecionar todos os elementos "rect" com atributos "class" que contenh
  $node:=DOM Find XML element($root;" //rect[contains(@class,'bgcontainer')")
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando for executado corretamente, a variável sistema OK assume o valor1\. Do contrário, assume o valor 0 e um erro é gerado.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Um erro é gerado quando:
 
 * O elemento de referência é inválido
 * A rota xPath especificada é inválida.
 
-#### Ver também 
+## Ver também 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 [DOM Create XML element](dom-create-xml-element.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

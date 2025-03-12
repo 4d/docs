@@ -26,7 +26,7 @@ Chaque élément de ce tableau fournit l'ordre de tri courant de la colonne corr
 \- si *tabTris{$i}* vaut 1, le tri est croissant.  
 \- si *tabTris{$i}* vaut -1, le tri est décroissant.
 
-##### Etats tableaux croisés 
+### Etats tableaux croisés 
 
 Avec ce type d'état, les tableaux ne peuvent pas comporter plus de deux éléments puisque les tris ne peuvent être effectués que sur les colonnes (1) et les lignes (2) (valeurs pour *tabColonnes*).   
   

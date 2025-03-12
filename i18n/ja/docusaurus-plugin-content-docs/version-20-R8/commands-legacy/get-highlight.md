@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET HIGHLIGHT.Summary-->**GET HIGHLIGHT**コマンドは、*object*中で現在反転表示されているテキストを検出するために使用します。<!-- END REF--> 
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 *object*引数で指定されたオブジェクトがフォーム中で見つからなかった場合、コマンドは *startSel* に-1を、*endSel* に-2を返します。 
 
-#### 例題 1 
+## 例題 1 
 
 以下の例題を使用して、フィールド \[Products\]Comments から反転表示された部分を検出します。 
 
@@ -44,11 +44,11 @@ If(vFirst < vlast)
 End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 [FILTER KEYSTROKE](filter-keystroke.md "FILTER KEYSTROKE") コマンドの例題を参照してください。
 
-#### 例題 3 
+## 例題 3 
 
 ハイライトされたテキストのスタイルを変更する:
 
@@ -57,13 +57,13 @@ End if
  ST SET ATTRIBUTES(*;"myText";$startsel,$endsel;Attribute underline style;1;Attribute bold style;1)
 ```
 
-#### 参照 
+## 参照 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

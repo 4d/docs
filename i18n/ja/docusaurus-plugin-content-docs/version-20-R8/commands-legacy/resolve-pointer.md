@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RESOLVE POINTER.Summary-->RESOLVE POINTER コマンドは、*pointer*式によって参照されるオブジェクトの情報を取得し、引数*varName*、*tableNum*、*fieldNum*に返します。<!-- END REF-->
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 * *pointer*に渡す値がポインタ式でない場合には、シンタックスエラーが発生します。
 * RESOLVE POINTER コマンドは、ローカル変数のポインタには使用できません。何故なら、ローカル変数は、同じ名前で異なる場所で定義できるため、目的のローカル変数を特定することができないからです。
 
-#### 例題 1 
+## 例題 1 
 
 フォーム内で、v1, v2... v100という名前で入力可能な変数100個を作成します。これを実行するには、以下のような手順を実行します: 
 
@@ -63,7 +63,7 @@ e. DoSomethingメソッド内で、このメソッドが呼び出される変数
 
 この方法でフォームを作成することによって、100個の変数のためのメソッドを一度書くだけで済むことに注目してください。DoSomething (1), DoSomething (2)...,DoSomething (100)を作成する必要はありません。  
 
-#### 例題 2 
+## 例題 2 
 
 デバッグのために、メソッドへの2番目の引数 ($2) がテーブルへのポインタであることを確認する必要があるとします。この場合、メソッドの最初で、以下のように記述します: 
 
@@ -80,11 +80,11 @@ e. DoSomethingメソッド内で、このメソッドが呼び出される変数
 ```
 
   
-#### 例題 3 
+## 例題 3 
 
 DRAG AND DROP PROPERTIES コマンドの例を参照.
 
-#### 例題 4 
+## 例題 4 
 
 以下に二次元配列の例があります:
 
@@ -102,7 +102,7 @@ DRAG AND DROP PROPERTIES コマンドの例を参照.
   //$colNum="5"
 ```
 
-#### 参照 
+## 参照 
 
 [Field](field.md)  
 [Get pointer](get-pointer.md)  
@@ -110,7 +110,7 @@ DRAG AND DROP PROPERTIES コマンドの例を参照.
 [Is nil pointer](is-nil-pointer.md)  
 [Table](table.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -33,7 +33,7 @@ The *settingsType* parameter is taken into account in databases configured in "U
 
 If you pass an invalid key, the first page of the Database Settings dialog box is displayed. 
 
-##### Path keys (standard mode) 
+### Path keys (standard mode) 
 
 Here are the keys that can be used in the *selector* parameter in standard mode, in other words with the "Structure settings": 
 
@@ -76,7 +76,7 @@ Here are the keys that can be used in the *selector* parameter in standard mode,
 
 **Compatibility note:** You can still use keys defined for 4D versions 11.x or previous using this command; 4D automatically establishes the correspondence. However, we recommend that you replace the former calls with the keys listed above.
 
-##### Path keys (User settings mode) 
+### Path keys (User settings mode) 
 
 Here are the keys that can be used in the *selector* parameter in "User settings" and "User settings for data" modes:
 

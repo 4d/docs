@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Substring.Summary-->La fonction **Substring** retourne la partie de *source* délimitée par les paramètres *àPartirDe* et *nbCars*.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ Si *nbCars* n'est pas défini ou si le total de *àPartirDe* plus *nbCars* est s
 
 **Attention :** Si vous utilisez cette commande dans un contexte de texte multistyle, il est nécessaire de convertir les éventuels caractères de fin de ligne Windows ('\\r\\n') en caractères de fin de ligne simples ('\\r') afin que les traitements soient valides. Ce principe est lié au mécanisme de normalisation des fins de lignes de 4D assurant la compatibilité de multi-plate-forme des textes. Pour plus d'informations, reportez-vous au paragraphe *Normalisation automatique des fins de lignes*.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant illustre l'utilisation de **Substring**. Les résultats sont assignés à la variable *vRésultat*. Les commentaires fournissent la valeur de *vRésultat* :
 
@@ -36,7 +36,7 @@ L'exemple suivant illustre l'utilisation de **Substring**. Les résultats sont a
  vRésultat:=Substring(var;2) // vRésultat retourne tous les caractères sauf le premier
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 La méthode projet suivante ajoute au tableau de type texte ou alpha, dont le pointeur est passé en second paramètre, les paragraphes tirés du texte passé en premier paramètre :
 
@@ -62,11 +62,11 @@ La méthode projet suivante ajoute au tableau de type texte ou alpha, dont le po
  Until($1="")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Position](position.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

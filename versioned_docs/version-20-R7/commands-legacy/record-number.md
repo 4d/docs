@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Record number.Summary-->**Record number** returns the physical record number for the current record of *aTable*.<!-- END REF--> If there is no current record, such as when the record pointer is before or after the current selection, **Record number** returns –1\. If the record is a new record that has not been saved, **Record number** returns –3.
 
@@ -24,7 +24,7 @@ Record numbers can change. The record numbers of deleted records are reused.
 
 **Note:** It is recommended to use the [Is new record](is-new-record.md) command to check whether a record is in the process of being created. 
 
-#### Example 
+## Example 
 
 The following example saves the current record number and then searches for any other records that have the same data:
 
@@ -36,7 +36,7 @@ The following example saves the current record number and then searches for any 
  GOTO RECORD([People];$RecNum) // Go back to the same record
 ```
 
-#### See also 
+## See also 
 
 *About Record Numbers*  
 [GOTO RECORD](goto-record.md)  
@@ -44,7 +44,7 @@ The following example saves the current record number and then searches for any 
 [Selected record number](selected-record-number.md)  
 [Sequence number](sequence-number.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

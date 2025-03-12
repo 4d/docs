@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WEB SET OPTION.Summary-->O comando WEB SET OPTION modifica o valor atual das diferentes opções de funcionamento do servidor web de 4D.<!-- END REF-->
 
@@ -62,7 +62,7 @@ Ao utilizar o *selector* Web debug log, pode passar uma das constantes abaixo no
 | wdl enable with response body  | Inteiro longo | 3     | O arquivo de histórico de petições HTTP Web está ativado com o corpo da resposta unicamente                   |
 | wdl enable without body        | Inteiro longo | 1     | O arquivo de histórico de petições Web está desativado sem o corpo (o tamanho do corpo é entregue neste caso) |
 
-#### Exemplo 
+## Exemplo 
 
 A ativação do arquivo de histórico de depuração das petições HTTP sem as partes body:
 
@@ -79,12 +79,12 @@ Uma entrada registrada se vê dessa maneira:
 `  
 [Body Size: 3555]`
 
-#### Ver também 
+## Ver também 
 
 [WEB GET OPTION](web-get-option.md)  
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

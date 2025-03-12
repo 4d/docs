@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Std deviation.Summary-->Std deviation devolve o desvio padrão de *series*.<!-- END REF--> Se *series* for um campo indexado, o índice é utilizado para calcular o desvio padrão.  
   
 Você pode passar um array (uma ou duas dimensões) em *series*. Neste caso, o array deve ser do tipo inteiro, inteiro longo ou real.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir é um método de objeto para a variável *vDesv*. O método de objeto atribui o desvio padrão de uma série de dados a *vDesv*:
 
@@ -41,7 +41,7 @@ O método a seguir é chamado para imprimir os registros na seleção e ativar o
 
 **Nota:** o parâmetro do comando [BREAK LEVEL](break-level.md) deve ser igual ao número de quebras de seu relatório. Para maior informação sobre quebras, consulte os comandos do capítulo *Imprimir*. 
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo obtém o desvio padrão de uma série de valores localizados num array: 
 
@@ -52,14 +52,14 @@ Este exemplo obtém o desvio padrão de uma série de valores localizados num ar
  vStdDev:=Std deviation($ArrGrades)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Average](average.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 [Variance](variance.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

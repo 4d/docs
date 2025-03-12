@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SEND PACKET.Summary-->**SEND PACKET** sends a packet to a serial port or to a document.<!-- END REF--> If *docRef* is specified, the packet is written to the document referenced by *docRef*. If *docRef* is not specified, the packet is written to the serial port or document previously opened by the [SET CHANNEL](set-channel.md) command. 
 
@@ -29,7 +29,7 @@ When writing to a document, the first SEND PACKET begins writing at the beginnin
 
 **Note:** This command is useful for a document opened with [SET CHANNEL](set-channel.md). On the other hand, for a document opened with [Open document](open-document.md), [Create document](create-document.md) or [Append document](append-document.md), you can use the commands [Get document position](get-document-position.md) and [SET DOCUMENT POSITION](set-document-position.md) to get and change the location in the document where the next writing (SEND PACKET) or reading ([RECEIVE PACKET](receive-packet.md)) will occur.
 
-#### Example 1 
+## Example 1 
 
 The following example writes data from fields to a document. It writes the fields as fixed-length fields. Fixed-length fields are always of a specific length. If a field is shorter than the specified length, the field is padded with spaces. (That is, spaces are added to make up the specified length.) Although the use of fixed-length fields is an inefficient method of storing data, some computer systems and applications still use them:
 
@@ -50,7 +50,7 @@ The following example writes data from fields to a document. It writes the field
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 This example illustrates the sending and retrieval of extended characters via a BLOB in a document:
 
@@ -76,13 +76,13 @@ This example illustrates the sending and retrieval of extended characters via a 
  End if
 ```
 
-#### See also 
+## See also 
 
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

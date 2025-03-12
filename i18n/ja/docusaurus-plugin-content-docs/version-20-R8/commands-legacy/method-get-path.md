@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD Get path.Summary-->**METHOD Get path**コマンドはメソッドの完全な内部パス名を返します。<!-- END REF-->
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 コマンドがコンポーネントから実行された場合、デフォルトでコンポーネントメソッドのパスが返されます。*\** 引数を渡すと配列にはホストデータベースのメソッドパス名が返されます。
 
-#### 例題 
+## 例題 
 
 ```4d
   // "On Startup"データベースメソッドのパス名を取得:
@@ -59,13 +59,13 @@ displayed_sidebar: docs
  $path:=METHOD Get path(Path table form;[Employees];"input";"OK")
 ```
 
-#### 参照 
+## 参照 
 
 [Current method path](current-method-path.md)  
 [METHOD OPEN PATH](method-open-path.md)  
 [METHOD RESOLVE PATH](method-resolve-path.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

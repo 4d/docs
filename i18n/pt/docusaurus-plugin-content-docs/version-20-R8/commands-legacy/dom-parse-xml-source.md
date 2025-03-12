@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM Parse XML source.Summary-->O comando DOM Parse XML source analisa um documento que contém uma estrutura XML e retorna uma referência para este documento.<!-- END REF--> O comando pode validar ou não o documento através de uma DTD ou de um esquema XML (documento XSD, XML Schema Definitiom).  
   
@@ -52,7 +52,7 @@ O comando retorna uma cadeia de 16 caracteres (RefElement) constituindo a refer�
   
 **Importante**: Quando não precisar mais dele, lembre de chamar ao comando [DOM CLOSE XML](dom-close-xml.md) com esta referência com o objetivo de liberar memória.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Abertura sem validação de um documento XML em disco: 
 
@@ -60,7 +60,7 @@ Abertura sem validação de um documento XML em disco:
  $xml_Ref_Estruct:=DOM Parse XML source("C:\\importar.xml")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Abertura sem validação de um documento XML localizado junto ao arquivo de estrutura do banco: 
 
@@ -68,7 +68,7 @@ Abertura sem validação de um documento XML localizado junto ao arquivo de estr
  $xml_Ref_Estruct:=DOM Parse XML source("importar.xml")
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Abertura de um documento XML localizado no disco e validação utilizando um DTD que fica no disco: 
 
@@ -76,7 +76,7 @@ Abertura de um documento XML localizado no disco e validação utilizando um DTD
  $xml_Ref_Estruct:=DOM Parse XML source("C:\\importar.xml";True;"C:\\importar_dtd.xml")
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Abertura sem validação de um documento XML localizado em uma URL específica:  
 
@@ -84,16 +84,16 @@ Abertura sem validação de um documento XML localizado em uma URL específica:
  $xml_Ref_Estruct:=DOM Parse XML source("http://www.4DHispano.com/xml/importar.xml")
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando tiver sido executado corretamente, a variável sistema Ok assume o valor 1\. Se ocorrer um erro, assume o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

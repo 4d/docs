@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Open resource file.Summary-->O comando **Open resource file** abre o arquivo de recursos cujo nome ou rota de acesso completa se passa em *resNomArquivo*.<!-- END REF-->  
   
@@ -45,7 +45,7 @@ Ao contrário do comando [Open document](open-document.md), que abre por padrão
 
 Quando tiver aberto um arquivo de recursos, pode analizar seu conteúdo utilizando os comandos [RESOURCE TYPE LIST](resource-type-list.md) e [RESOURCE LIST](resource-list.md).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir abre, em Windows, o arquivo de recursos “MyPrefs.res” localizado na pasta do banco: 
 
@@ -55,7 +55,7 @@ O exemplo a seguir abre, em Windows, o arquivo de recursos “MyPrefs.res” loc
 
 Em Macintosh, o exemplo trata de abrir o arquivo “MinhasPrefs”.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir tenta abrir em Windows o arquivo de recursos “MinhasPrefs.rsr” localizado na pasta do banco: 
 
@@ -65,7 +65,7 @@ O exemplo a seguir tenta abrir em Windows o arquivo de recursos “MinhasPrefs.r
 
 Em Mac OS, o exemplo tentará abrir o arquivo “MnhasPrefs”.
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo a seguir mostra a caixa de diálogo padrão de abertura de arquivos, na qual são mostradas todos os tipos de documentos: 
 
@@ -73,7 +73,7 @@ O exemplo a seguir mostra a caixa de diálogo padrão de abertura de arquivos, n
  $vhResArchivo:=Open resource file("")
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 O exemplo a seguir mostra a caixa de diálogo padrão de abertura de arquivos, na qual apenas são mostrados os documentos criados com a ajuda da função Create resource file, e que são utilizadas o tipo padrão: 
 
@@ -85,22 +85,22 @@ O exemplo a seguir mostra a caixa de diálogo padrão de abertura de arquivos, n
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o arquivo de recursos for aberto corretamente, a variável sistema OK assume o valor 1\. Se o arquivo de recursos não puder ser aberto ou se o usuário clicar em Cancelar na caixa de diálogo padrão de abertura de arquivos, a variável OK assume o valor 0 (zero).
 
 Se o arquivo de recursos for aberto corretamente usando a caixa de diálogo padrão de abertura de arquivos, a variável sistema Document contém a rota de acesso ao arquivo.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Se o arquivo de recursos não puder ser aberto por um problema do recurso ou de E/S, um erro é gerado. Pode interceptar esse erro com um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver também 
+## Ver também 
 
 [CLOSE RESOURCE FILE](close-resource-file.md)  
 *Recursos*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.TRIGGER PROPERTIES.Summary-->O comando TRIGGER PROPERTIES retorna a informação sobre o nível de execução do trigger que se passa em *nivelTrigger*.<!-- END REF--> Pode utilizar [Trigger level](trigger-level.md) junto com Trigger level para realizar diferentes ações em função da cascada do trigger. Para maior informação, consulte .  
 
@@ -33,14 +33,14 @@ A natureza do evento de banco de dados para o nível de execução do trigger é
   
 O número de tabela e de registro para o registro relacionado pelo evento de banco de dados para o nível de execução do trigger se retornan em *numTabela* e *numRegistro*.
 
-#### Ver também 
+## Ver também 
 
 *Sobre Números de Registros*  
 [Trigger event](trigger-event.md)  
 [Trigger level](trigger-level.md)  
 *Triggers*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

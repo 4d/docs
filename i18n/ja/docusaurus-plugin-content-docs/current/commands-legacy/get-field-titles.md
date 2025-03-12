@@ -15,19 +15,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET FIELD TITLES.Summary-->GET FIELD TITLES コマンドを使用して、目的の *table* に対してデータベースフィールドの名前と番号を配列 *fieldTitles* と *fieldNums* に受け取ります。<!-- END REF-->これら2つの配列内容は同期化されています。
 
 セッション中に [SET FIELD TITLES](set-field-titles.md "SET FIELD TITLES") コマンドが呼び出されると、GET FIELD TITLES コマンドは "修正された" 名前と、このコマンドによって定義されたフィールド番号のみを返します。そうでない場合、GET FIELD TITLES コマンドはストラクチャウィンドウで定義されているすべてのデータベースフィールドの名前を返します。   
 これら両方の場合で、コマンドは非表示フィールドを返しません。 
 
-#### 参照 
+## 参照 
 
 [GET TABLE TITLES](get-table-titles.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

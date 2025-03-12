@@ -24,7 +24,7 @@ title: VP SET DATA CONTEXT
 |options |Object|->|Additional options|
 |sheet|Integer|->|Sheet index|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET DATA CONTEXT` command <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->sets the data context of a sheet<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](vp-set-binding-path.md) method. On the other hand, the [VP Get data context](vp-get-data-context.md) command can return a context containing user modifications.
 
@@ -50,7 +50,7 @@ In *sheet*, pass the index of the sheet that will receive the data context. If n
 
 If you export your document to an object using [VP Export to object](vp-export-to-object.md), or to a 4DVP document using [VP EXPORT DOCUMENT](vp-export-document.md), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. For more details, refer to the description of those methods.
 
-#### Example
+## Example
 
 Pass an object and bind the context data to cells in the first row:
 
@@ -71,7 +71,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 ![](../../assets/en/ViewPro/vp-set-data-context-bind.png)
 
-#### Example 2
+## Example 2
 
 Pass a collection of objects and generate columns automatically:
 
@@ -91,7 +91,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 
 ![](../../assets/en/ViewPro/vp-set-data-context-2.png)
 
-#### Example 3
+## Example 3
 
 The *data* passed as a parameter is a collection that contains subcollections. Each subcollection defines the contents of a row:
 
@@ -112,7 +112,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 
 ![](../../assets/en/ViewPro/vp-set-data-context-3.png)
 
-#### Example 4 - Date and time syntax
+## Example 4 - Date and time syntax
 
 ```4d
 var $data : Collection
@@ -138,7 +138,7 @@ Here's the result once the columns are generated:
 
 ![](../../assets/en/ViewPro/vp-set-data-context-date-time.png)
 
-#### See also
+## See also
 
 [VP SET BINDING PATH](vp-set-binding-path.md)<br/>
 [VP Get binding path](vp-get-binding-path.md)<br/>

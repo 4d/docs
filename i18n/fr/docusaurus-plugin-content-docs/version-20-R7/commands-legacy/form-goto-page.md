@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** change la page courante du formulaire pour afficher la page désignée par *numéroPage*.<!-- END REF-->
 
@@ -22,7 +22,7 @@ Si aucun formulaire n'est affiché ou chargé via la commande [FORM LOAD](form-l
 
 Le paramètre *\** est utile lorsque la commande est appelée dans le contexte d’un sous-formulaire en page contenant plusieurs pages. Dans ce cas, si vous passez ce paramètre, la commande change la page du sous-formulaire courant (celui qui a appelé la commande). Par défaut, si le paramètre *\** est omis, la commande s’applique toujours au formulaire parent. 
 
-##### A propos des commandes de gestion des pages 
+### A propos des commandes de gestion des pages 
 
 4D vous fournit des actions automatiques pour les boutons qui effectuent les mêmes tâches que les commandes [FORM FIRST PAGE](form-first-page.md), [FORM LAST PAGE](form-last-page.md), [FORM NEXT PAGE](form-next-page.md), [FORM PREVIOUS PAGE](form-previous-page.md), [FORM GOTO PAGE](form-goto-page.md) que vous pouvez associer aux objets tels que les onglets, les listes déroulantes, etc. A chaque fois que c'est possible, utilisez les actions automatiques pour les boutons plutôt que ces commandes.   
 Les commandes de gestion des pages peuvent être utilisées avec des formulaires entrée ou des formulaires affichés dans des boîtes de dialogue. Les formulaires sortie n'utilisent que la première page. Un formulaire comprend toujours au minimum une page, la première. Notez bien que quel que soit le nombre de pages qu'il contient, un formulaire ne peut être associé qu'à une seule méthode formulaire. 
@@ -32,7 +32,7 @@ Les commandes de gestion des pages peuvent être utilisées avec des formulaires
 
 **Note :** Pendant que vous construisez un formulaire, vous pouvez utiliser les pages 1 à N du formulaire ainsi que la page 0 (zéro), dans laquelle vous placez les objets que vous voulez faire apparaître sur toutes les pages. Lors de l'utilisation du formulaire, et donc lorsque les commandes de gestion des pages sont appelées, seules les pages 1 à N sont accessibles : la page 0 est automatiquement combinée à la page affichée à l'écran.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant est la méthode objet d'un bouton affichant la page 3 du formulaire :
 
@@ -40,7 +40,7 @@ L'exemple suivant est la méthode objet d'un bouton affichant la page 3 du formu
  FORM GOTO PAGE(3)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM Get current page](form-get-current-page.md)  
@@ -48,7 +48,7 @@ L'exemple suivant est la méthode objet d'un bouton affichant la page 3 du formu
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

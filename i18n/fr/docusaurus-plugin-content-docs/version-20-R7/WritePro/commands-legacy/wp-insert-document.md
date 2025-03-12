@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP INSERT DOCUMENT.Summary-->La commande **WP INSERT DOCUMENT** insère le document *docWP* dans la plage *objCible* selon le *mode* d'insertion spécifié et le paramètre *miseAJourPlage*.<!-- END REF-->
 
@@ -53,7 +53,7 @@ Vous pouvez combiner une des constantes ci-dessus avec les options d'insertion s
 Si vous ne passez pas le paramètre *miseAJourPlage*, par défaut, le contenu inséré sera inclus dans la plage de sélection résultante.
 * Si objCible n'est pas une plage, miseAJourPlage est ignoré.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez remplacer le contenu d'un document par le texte sélectionné d'un autre document :
 
@@ -63,7 +63,7 @@ Vous souhaitez remplacer le contenu d'un document par le texte sélectionné d'u
  WP INSERT DOCUMENT(WPDoc;$doctoCopy;wk replace) //on remplace le contenu de WPDoc par le contenu du nouveau document
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous avez défini un document modèle (*template*) comportant différentes parties préformatées, chacune d'elles étant stockée en tant que signet. Lorsque vous produisez un document final à partir du *template*, vous pouvez traiter chaque signet en tant que nouveau document et l'insérer dans le document final. 
 
@@ -80,7 +80,7 @@ Vous avez défini un document modèle (*template*) comportant différentes parti
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [WP INSERT BREAK](wp-insert-break.md)  

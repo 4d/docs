@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Document to text.Summary-->O comando **Document to text** le permite recuperar o conteúdo de um arquivo diretamente no disco em uma variável texto 4D ou campo texto.<!-- END REF-->
 
@@ -51,7 +51,7 @@ Nota de Compatibidade: opções de compatibilidade estão disponíveis para gere
   
 **Nota**: Este comando não modifica a variável OK. Em caso de falha, é gerado um erro que pode interceptar utilizando um método instalado pelo comando [ON ERR CALL](on-err-call.md).
 
-#### Exemplo 
+## Exemplo 
 
 Dado o documento texto seguinte (os campos estão separados por tabulações):
 
@@ -73,12 +73,12 @@ Quando executa este código:
   // \r = CR
 ```
 
-#### Ver também 
+## Ver também 
 
 *Documentos Sistema*  
 [TEXT TO DOCUMENT](text-to-document.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

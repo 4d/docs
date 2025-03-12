@@ -24,7 +24,7 @@ Les actions disponibles sont listées dans la section *Actions standard* du manu
 
 **Note** : Des actions spécifiques sont également fournies pour les documents 4D Write Pro. Elles sont détaillées dans la section *Utiliser les actions standard 4D Write Pro* du manuel de référence 4D Write Pro.
 
-##### 
+### 
 
 Dans *cible*, vous pouvez passer le contexte formulaire dans lequel l'*action* doit être exécutée. Vous pouvez utiliser une des constantes suivantes, du thème *Action standard* :
 

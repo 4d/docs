@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Table name.Summary-->**Table name** retourne le nom de la table dont le numéro ou le pointeur a été passé dans *numTable* ou *ptrTable*.<!-- END REF-->
 
-#### Exemple 
+## Exemple 
 
 La méthode suivante est un exemple de méthode générique qui affiche les enregistrements d'une table. La référence à la table est passée en tant que pointeur vers la table. La commande **Table name** est utilisée pour inclure le nom de la table dans la barre de titre de la fenêtre :
 
@@ -31,7 +31,7 @@ La méthode suivante est un exemple de méthode générique qui affiche les enre
  DISPLAY SELECTION($1->) // Afficher la sélection
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Field name](field-name.md)  
 [Last table number](last-table-number.md)  
@@ -39,7 +39,7 @@ La méthode suivante est un exemple de méthode générique qui affiche les enre
 [SET TABLE TITLES](set-table-titles.md)  
 [Table](table.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

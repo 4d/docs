@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get font style.Summary-->OBJECT Get font style コマンドは、*object*で指定されたフォームオブジェクトで使用されている文字フォントの現在のスタイルを返します。<!-- END REF-->. 
 
@@ -30,11 +30,11 @@ displayed_sidebar: docs
 | Italic    | 倍長整数 | 2 |
 | Underline | 倍長整数 | 4 |
 
-#### 参照 
+## 参照 
 
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

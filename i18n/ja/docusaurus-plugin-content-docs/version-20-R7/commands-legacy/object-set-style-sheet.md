@@ -38,7 +38,7 @@ displayed_sidebar: docs
 セッション中、 [ST SET ATTRIBUTES](st-set-attributes.md) コマンド、 [ST SET TEXT](st-set-text.md) コマンド、 [OBJECT SET FONT](object-set-font.md) コマンド、または [OBJECT SET FONT SIZE](object-set-font-size.md) コマンド等をオブジェクトに使用してフォントやフォントサイズを変更した場合、スタイルシートへの参照はオブジェクトから自動的に削除されます。元からあったスタイルシートと同じ設定を適用しようとした場合でも同様に削除されます。  
 しかしながら、例えば [ST SET ATTRIBUTES](st-set-attributes.md) コマンドや [OBJECT SET FONT STYLE](object-set-font-style.md) コマンド等を使用してスタイル(太字、イタリック等)のみを変更した場合、 スタイルシートへの参照は削除されず、これらのプロパティはセッションの間スタイルシートへと追加されます。
 
-##### 互換性に関する注意 
+### 互換性に関する注意 
 
 **プロジェクトアーキテクチャー**においては、このコマンドがサポートするのは3つの自動スタイルシートだけです。
 

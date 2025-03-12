@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP EXPORT VARIABLE.Summary-->O comando **WP EXPORT VARIABLE** exporta o objeto 4D Write Pro *docWP* na variável 4D *destino* com o *format* *o* especificado.<!-- END REF-->
 
@@ -46,7 +46,7 @@ No parâmetro *format* *o*, passe uma constante de tema *Constantes 4D Write Pro
 * Quando exportar ao formato SVG com esse comando, imagens estão embebidas no formato base64.
 * Para saber mais sobre exportar ao formato SVG, veja *Exportar para formato SVG*.
 
-##### Parâmetro option 
+### Parâmetro option 
 
 Passe um [objeto](# "Estruturas de dados como objetos 4D nativos") na *opção* que contenha os valores para definir as propriedades de documento exportado. As propiedades abaixo estão disponíveis:
 
@@ -90,7 +90,7 @@ A tabela abaixo indica a *opção* disponível por *formato* de exportação:
 
 **Compatibility Note:** Passing a *longint* value in *option* is supported for compatibility reasons, but it is recommended to use an object parameter. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser exportar o conteúdo de objeto 4D Write Pro *myArea* ao formato MIME e agregar "gmail.com" como dominio host:
 
@@ -103,7 +103,7 @@ Se quiser exportar o conteúdo de objeto 4D Write Pro *myArea* ao formato MIME e
 
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser enviar um email texto com estilo, referências 4D e imagens. Pode utilizar uma área 4D Write Pro exportada ao formato MIME e enviá-la utilizando SMTP:
 
@@ -135,7 +135,7 @@ Se quiser enviar um email texto com estilo, referências 4D e imagens. Pode util
  End if
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Para exportar a primeira página de um 4D Write Pro como SVG em u ma variável Texto e esconder os cabeçalhos:
 
@@ -152,7 +152,7 @@ var $destination Text
 
 ```
 
-#### Ver também 
+## Ver também 
 
   
   

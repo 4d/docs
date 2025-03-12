@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Table get cells.Summary-->La commande **WP Table get cells** retourne un nouvel objet cellule contenant la sélection de cellules de objCible ou de *refTableau* (définies par *debutCol*, *debutLigne*, *nbCols* et *nbLignes*).<!-- END REF-->
 
@@ -41,7 +41,7 @@ Si *nbLignes* est omis, une seule ligne est retounée. Si *nbCols* et *nbLignes*
 
 Si *debutCol* plus *nbCols* ou *debutLigne* plus *nbLignes* excède le nombre de colonnes/lignes dans *refTableau*, ou si *debutCol* ou *debutLigne* est plus grand que le nombre de colonnes/lignes dans *refTableau*, la plage retournée contient le maximum de colonnes/lignes.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous voulez modifier les attributs d'une plage de cellules :
 
@@ -67,7 +67,7 @@ Résultat :
 
 ![](../../assets/en/WritePro/commands/pict3307320.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Obtenir une plage de cellules à partir de la cellule "5x7" et jusqu'à la fin de la ligne :
 
@@ -87,7 +87,7 @@ Obtenir une plage de cellules à partir de la cellule "5x7" et jusqu'à la fin d
  $cellRange:=WP Table get cells(tableRef;5;7;MAXLONG;MAXLONG)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez récupérer les cellules sélectionnées par un utilisateur :
 
@@ -99,7 +99,7 @@ Vous souhaitez récupérer les cellules sélectionnées par un utilisateur :
  $cells:=WP Table get cells($userSelection)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Table get columns](wp-table-get-columns.md)  
 [WP Table get rows](wp-table-get-rows.md)  

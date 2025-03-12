@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Get XML element.Summary-->La commande **DOM Get XML element** retourne une référence XML vers l’élément “enfant” dépendant des paramètres *nomElément* et *index*.<!-- END REF--> 
 
@@ -25,16 +25,16 @@ La valeur de l’élément est également retournée dans le paramètre *valeurE
 
 **Note :** Par défaut, **DOM Get XML element** tient compte de la casse des caractères lors de l'évaluation du paramètre *nomElément* (par conformité avec le xml). Vous pouvez contrôler la sensibilité à la casse de cette commande à l'aide du sélecteur XML DOM case sensitivity de la commande [XML SET OPTIONS](xml-set-options.md).
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Si une erreur se produit, elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

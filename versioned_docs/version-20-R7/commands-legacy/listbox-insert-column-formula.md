@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->The **LISTBOX INSERT COLUMN FORMULA** command inserts a column into the list box designated by the *object* and *\** parameters.<!-- END REF--> 
 
@@ -68,7 +68,7 @@ In the *footerName* and *footerVar* parameters, you can also pass the object nam
 
 **Note:** Object names must be unique in a form. You need to make sure that the names passed in the *colName*, *headerName* and *footerName* parameters are not already used. Otherwise, the column is not created and an error is generated.
 
-##### Dynamic insertion 
+### Dynamic insertion 
 
 Starting with 4D v14 R3, you can use this command to insert columns into list boxes dynamically when the form is executed. 4D will automatically handle the definition of the necessary variables (footer and header).
 
@@ -76,7 +76,7 @@ To do this, **LISTBOX INSERT COLUMN FORMULA** accepts a Nil pointer (**\->\[\]**
 
 Note that header and footer variables are always created with a specific type (longint and text, respectively).
 
-#### Example 1 
+## Example 1 
 
 We want to add a new column to the right of the list box that will contain a formula which calculates an empolyee's age:
 
@@ -86,7 +86,7 @@ We want to add a new column to the right of the list box that will contain a for
  LISTBOX INSERT COLUMN FORMULA(*;"ListBox1";$last;"ColFormula";vAge;Is real;"Age";HeaderVar)
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to add column to a list box of collection type:
 
@@ -115,11 +115,11 @@ The column is added to the list box:
 
 ![](../assets/en/commands/pict3814850.en.png)
 
-#### See also 
+## See also 
 
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

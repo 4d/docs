@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Position.Summary-->**Position** retourne la position de la première occurrence de *àChercher* dans *laChaîne*.<!-- END REF--> 
 
@@ -68,7 +68,7 @@ Pour plus d'informations sur la définition de la langue des données, consultez
 
 **Attention :** Vous ne pouvez pas utiliser le caractère joker (@) avec **Position**. Si, par exemple, vous passez *"abc@"* dans *àChercher*, la fonction recherchera effectivement la chaîne *"abc@"* et non pas "abc suivi de toute valeur".
 
-#### Exemple 1 
+## Exemple 1 
 
 Les exemples suivants illustrent l'utilisation de **Position**. Les résultats sont assignés à la variable *vRésultat*. Les commentaires fournissent la valeur de *vRésultat* :
 
@@ -81,7 +81,7 @@ Les exemples suivants illustrent l'utilisation de **Position**. Les résultats s
  vRésultat:=Position("oe";"Nœud";1;$long) // vRésultat =2, $long = 1
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Dans l'exemple suivant, le paramètre *longTrouvée* permet de rechercher toutes les occurrences de "fluss" dans un texte, quelle que soit l'orthographe du mot :
 
@@ -93,7 +93,7 @@ Dans l'exemple suivant, le paramètre *longTrouvée* permet de rechercher toutes
  Until(vRésultat=0)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Dans l'exemple suivant, vous souhaitez recherchez toutes les instances d'une chaîne et la remplacer :
 
@@ -114,12 +114,12 @@ Dans l'exemple suivant, vous souhaitez recherchez toutes les instances d'une cha
  Until($p<=0) //résultat : $string -> Bonjour Joëlle et Joël!
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Compare strings](compare-strings.md)  
 [Substring](substring.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

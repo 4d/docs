@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Summary-->**Note :** Cette commande fonctionne uniquement avec les list box de type tableau.<!-- END REF-->
 
@@ -49,7 +49,7 @@ Si des propriétés de style contradictoires sont définies pour la colonne ou l
 
 **Note :** Comme les tableaux de style des colonnes ont priorité sur le tableau de style de la list box, la commande, si elle est appliquée à une list box, n’aura d’effet que si aucun tableau de style n’a été affecté aux colonnes.
 
-#### Exemple 
+## Exemple 
 
 Soit une list box tableau ayant les caractéristiques suivantes :
 
@@ -73,12 +73,12 @@ Soit une list box tableau ayant les caractéristiques suivantes :
 
 Après la deuxième instruction, toutes les cellules de la troisième ligne passent en italique et souligné sauf celle de la colonne 5, qui reste en gras uniquement (les tableaux de colonnes sont prioritaires sur les tableaux de list box). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get row font style](listbox-get-row-font-style.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

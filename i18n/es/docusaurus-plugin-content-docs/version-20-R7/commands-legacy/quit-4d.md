@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 El proceso del comando es diferente si se ejecuta en 4D (modo local o remoto) o en 4D Server. 
 
-##### Con 4D modo local y 4D modo remoto 
+### Con 4D modo local y 4D modo remoto 
 
 Después de llamar QUIT 4D, se detiene la ejecución del proceso actual, luego 4D efectúa las siguientes operaciones:
 
@@ -36,7 +36,7 @@ También es posible una tercera estrategia. Antes de llamar QUIT 4D, pruebe si u
 
 **Nota:** el parámetro *tiempo* no puede utilizarse con 4D en modo local o remoto.
 
-##### Con 4D Server (procedimiento almacenado) 
+### Con 4D Server (procedimiento almacenado) 
 
 El comando QUIT 4D puede ejecutarse en el equipo servidor, en un proceso almacenado. En este caso, acepta el parámetro opcional *tiempo*.  
   

@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibility Note 
+## Compatibility Note 
 
 <!--REF #_command_.Self.Summary-->This command is kept only for compatibility reasons.<!-- END REF--> Starting with version 12 of 4D, it is recommended to use the [OBJECT Get pointer](object-get-pointer.md) command.
 
-#### Description 
+## Description 
 
 The **Self**  command returns a pointer to the object whose object method is currently being executed. 
 
@@ -29,17 +29,17 @@ If **Self** is called out of context, it returns a [Is nil pointer](is-nil-point
 
 **Note:** When it is used in the context of a list box, the function returns a pointer to the list box or the column of the list box depending on the context. For more information, please refer to the *Managing List Box Objects* section.
 
-#### Example 
+## Example 
 
 See the example for the [RESOLVE POINTER](resolve-pointer.md) command.
 
-#### See also 
+## See also 
 
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 [This](../commands/this.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Summary-->**CLOSE RESOURCE FILE**コマンドは、引数*resFile*に渡された参照番号を持つリソースファイルを閉じます。<!-- END REF-->
 
@@ -25,11 +25,11 @@ displayed_sidebar: docs
 
 [Open resource file](open-resource-file.md)を使って開いたリソースファイルに対し、**CLOSE RESOURCE FILE**コマンドを呼び出すことを忘れないでください。また、アプリケーションを終了する (または他のデータベースを開く) 場合、4Dは開かれたリソースファイルを自動的に閉じる点にも注目してください。
 
-#### 参照 
+## 参照 
 
 [Open resource file](open-resource-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

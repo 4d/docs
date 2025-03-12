@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CREATE INDEX.Summary-->El comando **CREATE INDEX** permite crear: 
 
@@ -45,11 +45,11 @@ Si el comando **CREATE INDEX** encuentra registros bloqueados, estos no se index
 
 Si ocurre un problema durante la ejecución del comando (campo no indexable, intento de creación de un índice de palabras claves de más de un campo, etc.), se genera un error. Este error puede interceptarse utilizando un método de gestión de errores.
 
-#### Nota para despliegue 
+## Nota para despliegue 
 
 Dado que este comando modifica la estructura de la base de datos, no puede utilizarse en el contexto de una aplicación empaquetada de sólo lectura (archivo .4dc instalado en la carpeta Archivos de programa o archivo .4dz). 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Creación de dos índices estándar en los campos “Apellido” y “Teléfono” de la tabla \[Clientes\]:
 
@@ -61,7 +61,7 @@ Creación de dos índices estándar en los campos “Apellido” y “Teléfono�
  CREATE INDEX([Clientes];arrayPtrCampo;Standard BTree Index;"CustTelIdx")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Creación de un índice de palabras claves en el campo “Observaciones” de la tabla \[Clientes\]:
 
@@ -71,7 +71,7 @@ Creación de un índice de palabras claves en el campo “Observaciones” de la
  CREATE INDEX([Clientes];arrayPtrCampo;Keywords Index;"CustObsIdx")
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Creación de un índice compuesto en los campos “Ciudad” y “CodigoPostal” de la tabla \[Clientes\]:
 
@@ -82,13 +82,13 @@ Creación de un índice compuesto en los campos “Ciudad” y “CodigoPostal�
  CREATE INDEX([Clientes];arrayPtrCampo;Standard BTree Index;"CityZip")
 ```
 
-#### Ver también 
+## Ver también 
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 [SET INDEX](set-index.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

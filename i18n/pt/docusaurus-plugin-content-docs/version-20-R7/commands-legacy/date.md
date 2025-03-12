@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Date.Summary-->O comando Date avalia *dataCadeia* e retorna uma data.<!-- END REF-->
 
@@ -43,7 +43,7 @@ Nota: a partir de 4D v16 R6, datas podem ser armazenadas em atributos de objeto 
 **Expressão tipo data**  
 Se a *expresao for* do tipo de data, **Date** devolve a dataa passada no parâmetro 'tal como está'. Isto é particularmente útil no contexto da programação genérica utilizando ponteiros ou atributos de objeto.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir utiliza uma caixa para que o usuário introduza uma data. A string introduzida pelo usuário é convertida em uma data e é guardada na variável *reqData*: 
 
@@ -54,7 +54,7 @@ O exemplo a seguir utiliza uma caixa para que o usuário introduza uma data. A s
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Os exemplos abaixo mostram vários casos:
 
@@ -68,7 +68,7 @@ Os exemplos abaixo mostram vários casos:
  vdDate5:=Date($vobj.creationDate) //00/00/00
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Data de avaliação baseada em uma data em formato ISO:
 
@@ -78,7 +78,7 @@ Data de avaliação baseada em uma data em formato ISO:
   //$vDate representa o 5 de junho de 2013 sem importar a linguagem do sistema
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Se quiser obter uma data de um atributo de objeto, qualquer que seja a opção atual de atributo de armazenamento de data:
 
@@ -90,12 +90,12 @@ Se quiser obter uma data de um atributo de objeto, qualquer que seja a opção a
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Bool](bool.md)  
 [String](string.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

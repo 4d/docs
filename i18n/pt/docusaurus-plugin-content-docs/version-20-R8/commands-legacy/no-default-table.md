@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.NO DEFAULT TABLE.Summary-->O comando NO DEFAULT TABLE permite cancelar o efeito do comando [DEFAULT TABLE](default-table.md).<!-- END REF--> Depois da execução deste comando, não há tabela padrão definida para o processo.  
 Este comando não tenrá efeito se o comando [DEFAULT TABLE](default-table.md) não tiver sido chamado anteriormente.
@@ -28,7 +28,7 @@ Em um banco que contiver um formulário de projeto chamado “MeuFormulário” 
   
 Entretanto, este principio é nulo e inválido se o comando [DEFAULT TABLE](default-table.md) for executado quando a banco contiver um formulário de projeto e um formulário de tabela com o mesmo nome. Na verdade, neste caso 4D utilizará o formulário de tabela por padrão, mesmo se não for passado o parâmetro *tabela*. Para garantir o uso de formulários de projeto, simplesmente utilize o comando NO DEFAULT TABLE .
 
-#### Exemplo 
+## Exemplo 
 
 Em um banco que contenha um formulário de projeto chamado "oFormulário" e um formulário de tabela com o mesmo nome para a tabela \[Tabela1\]: 
 
@@ -39,11 +39,11 @@ Em um banco que contenha um formulário de projeto chamado "oFormulário" e um f
  DIALOG("oFormulário") //4D utiliza o formulário de projeto
 ```
 
-#### Ver também 
+## Ver também 
 
 [DEFAULT TABLE](default-table.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

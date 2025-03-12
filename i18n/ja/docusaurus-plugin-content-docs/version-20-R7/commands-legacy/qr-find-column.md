@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR Find column.Summary-->QR Find column コマンドは、*expression*引数で渡された表現式に一致する内容を持つ最初のカラムの番号を返します。<!-- END REF-->
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。
 
-#### 例題 
+## 例題 
 
 次のコードは、\[G.NQR Tests\]Quarterフィールドが格納されているカラム番号を取得し、そのカラムを削除します:
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Square root.Summary-->**Square root** retourne la racine carrée de *nombre*.<!-- END REF-->
 
-#### Exemple 1 
+## Exemple 1 
 
 La ligne :
 
@@ -28,7 +28,7 @@ La ligne :
 
 affecte la valeur *1,414213562373* à la variable *$vrRacineDeDeux*.
 
-#### Exemple 2 
+## Exemple 2 
 
 La méthode listée ci-dessous retourne l'hypoténuse du triangle rectangle dont les deux côtés sont passés en paramètres : 
 
@@ -43,7 +43,7 @@ La méthode listée ci-dessous retourne l'hypoténuse du triangle rectangle dont
 Par exemple, Hypoténuse (4;3) retourne 5.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

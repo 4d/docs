@@ -31,7 +31,7 @@ Attention, la communication process “intermachine” permise par les commandes
 **Astuce :** Si vous ne connaissez pas le numéro du process serveur de destination, vous pouvez tout de même écrire dans les variables interprocess du serveur. Pour cela, il vous suffit de passer toute valeur négative dans *process*. En d'autres termes, il n'est pas nécessaire de connaître précisément le numéro d'un process exécuté sur le serveur pour utiliser **SET PROCESS VARIABLE** avec des variables interprocess du serveur.   
 Cette possibilité s'avère particulièrement utile dans le cas d'une procédure stockée lancée sur le serveur par l'intermédiaire de la [On Server Startup database method](on-server-startup-database-method.md). Comme les postes clients ne connaissent pas automatiquement le numéro de ce process serveur, il vous suffit de passer une valeur négative (n'importe laquelle) dans le paramètre *process*.
 
-##### Restrictions 
+### Restrictions 
 
 **SET PROCESS VARIABLE** n'accepte pas de variables locales comme variables de destination. 
 

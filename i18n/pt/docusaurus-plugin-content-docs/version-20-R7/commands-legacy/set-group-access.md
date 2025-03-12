@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET GROUP ACCESS.Summary-->O comando **SET GROUP ACCESS** modifica o nível de filiação da conte de usuário 4D para a sesão atual.<!-- END REF--> Restabelece toda filiação a um grupo anterior e define as novas filiações aos *grupos* listados.
 
@@ -29,7 +29,7 @@ Se omitir o parâmetro *grupos*, as filiações da conta de usuário 4D são res
 **Nota:**   
 quando uma filiação grupal oferece acesso a uma funcionalidade "serializada" (por exemplo, um plug-in), se utilizar uma licença correspondente e permanecerá anexa à conta de usuário 4D até o final da sessão, mesmo se chamar o comando **SET GROUP ACCESS** e é cancelado ao se chamar ao grupo.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser promover o usuário atual aos grupos "admin" e "plugins" durante a sessão:
 
@@ -38,14 +38,14 @@ Se quiser promover o usuário atual aos grupos "admin" e "plugins" durante a ses
  SET GROUP ACCESS($groups)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get group access](get-group-access.md)  
 [Get plugin access](get-plugin-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 [SET USER ALIAS](set-user-alias.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

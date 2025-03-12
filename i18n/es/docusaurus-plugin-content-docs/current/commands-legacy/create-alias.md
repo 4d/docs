@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CREATE ALIAS.Summary-->El comando CREATE ALIAS crea un alias (llamado “atajo” en Windows) del archivo o carpeta objetivo pasado en *rutaObjetivo*.<!-- END REF--> El nombre y la ubicación son definidos por el parámetro *rutaAlias*. 
 
@@ -26,7 +26,7 @@ Este comando no asigna un nombre por defecto, el nombre tiene que pasarse en el 
 
 Si se pasa una cadena vacía en *rutaObjetivo*, el comando no hace nada.
 
-#### Ejemplo 
+## Ejemplo 
 
 Su base genera archivos de texto llamados “InformeNúmero” almacenados en la carpeta de la base. El usuario quiere crear atajos a estos informes y almacenarlos en una ubicación conveniente:
 
@@ -60,15 +60,15 @@ Su base genera archivos de texto llamados “InformeNúmero” almacenados en la
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 1 si el comando se ejecuta correctamente, si no toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [RESOLVE ALIAS](resolve-alias.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

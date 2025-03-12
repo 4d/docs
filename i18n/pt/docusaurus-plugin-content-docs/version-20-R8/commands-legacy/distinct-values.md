@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DISTINCT VALUES.Summary-->O comando **DISTINCT VALUES** cria e preenche o array *array* com valores não-repetidos (únicos) do campo *campo* para a seleção atual da tabela que pertence ao campo ou subcampo.<!-- END REF-->
 
@@ -41,11 +41,11 @@ O comando aceita um array *contArray* como um parâmetro opcional. Quando se pas
 
 **4D Server:** o comando é otimizado para 4D Server. O array é criado e os valores são calculados na maquina do servidor. O array é então enviado, em sua integridade, ao cliente.
 
-##### 
+### 
 
 **Nota:** Este comando não é compatível com campos tipo Objeto
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir cria uma lista de cidades a partir da seleção atual e indica ao usuário o número de cidades nas quais a empresa tem filiais: 
 
@@ -55,7 +55,7 @@ O exemplo a seguir cria uma lista de cidades a partir da seleção atual e indic
  ALERT("A empresa tem filiais em "+String(Size of array(asCidades))+" cidades.")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Você deseja obter uma lista completa de palavras-chaves contidas no índice de palavras-chave do campo "Pictures":
 
@@ -65,7 +65,7 @@ Você deseja obter uma lista completa de palavras-chaves contidas no índice de 
  DISTINCT VALUES([PICTURES]Photos;<>_MyKeywords)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Para calcular as estatísticas, se quiser ordenar o número de valores distintos em um campo em ordem descendente:
 
@@ -76,7 +76,7 @@ Para calcular as estatísticas, se quiser ordenar o número de valores distintos
  SORT ARRAY($_issue_type_instances;$_issue_type;<)
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [GET TEXT KEYWORDS](get-text-keywords.md)  
@@ -84,7 +84,7 @@ Para calcular as estatísticas, se quiser ordenar o número de valores distintos
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

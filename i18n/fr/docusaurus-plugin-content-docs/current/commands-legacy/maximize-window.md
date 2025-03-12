@@ -23,7 +23,7 @@ Un clic ultérieur sur la case de zoom ou l'appel de la commande [MINIMIZE WINDO
 
 Si *fenêtre* est déjà maximisée, la commande ne fait rien.
 
-##### Sous Windows 
+### Sous Windows 
 
 La fenêtre est agrandie et s'adapte à la taille courante de la fenêtre de l'application (mode MDI) ou de l'écran (mode SDI). Si vous ne passez pas le paramètre *fenêtre*, toutes les fenêtres de l'application sont maximisées. La fenêtre maximisée est passée au premier plan. 
 
@@ -35,7 +35,7 @@ Dans le cas où la commande est appliquée à une fenêtre dont la taille est so
 * Si aucune des containtes de taille n'est en conflit avec la taille cible, la fenêtre est placée dans son état "maximisé" : elle est redimensionnée à la taille de la fenêtre de l'application parente (mode MDI) ou de l'écran (mode SDI) ; sa barre de titre et ses bordures sont cachées et ses boutons de contrôle - minimiser, restaurer et fermer - sont déplacés à droite de la barre de menus de l'application.
 * Si au moins une des contraintes de taille est en conflit (par exemple, si la largeur de la fenêtre MDI est de 100 et que la largeur maximale de la fenêtre formulaire est 80), la fenêtre n'est pas placée dans son état "maximisé", mais uniquement redimensionnée à sa taille maximale autorisée. Cette taille est définie soit par la fenêtre MDI, soit par la contrainte. Avec ce fonctionnement, l'interface reste cohérente lorsque les fenêtres avec contraintes sont redimensionnées.
 
-##### Sous Mac OS 
+### Sous Mac OS 
 
 La fenêtre est agrandie de manière à afficher la totalité de son contenu. Si vous ne passez pas le paramètre *fenêtre*, la fenêtre du premier plan du process courant est maximisée. 
 

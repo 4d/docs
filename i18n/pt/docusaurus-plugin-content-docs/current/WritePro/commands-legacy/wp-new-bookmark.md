@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP NEW BOOKMARK.Summary-->O comando **WP NEW BOOKMARK** \[#/descv\]cria uma nova bookmark ou marcador de página chamado *nomeBookm* baseado na *FaixaObj* 4D Write Pro na faixa do documento pai.<!-- END REF--> \[#/descv\]
 
@@ -31,7 +31,7 @@ Em *nomeBookm*, passe o nome para a nova bookmark. O nome da bookmark deve segui
 
 É possível criar tantas bookmarks quantas desejadas dentro do mesmo documento. Bookmarks múltiplas podem ser criadas usando exatamente a mesma range. Quando criada, uma bookmark é automaticamente armazenada no documento pai e salv com o documento.. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Pode criar uma nova bookmark referenciando o texto selecionado atual no documento. Pode escrever:
 
@@ -41,7 +41,7 @@ Pode criar uma nova bookmark referenciando o texto selecionado atual no document
  WP NEW BOOKMARK($range;"my_bookmark")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser renomear uma bookmark existente, precisa criar uma nova bookmark com a mesma faixa, e então apagar a antiga:
 
@@ -65,7 +65,7 @@ Se quiser renomear uma bookmark existente, precisa criar uma nova bookmark com a
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [WP Bookmark range](wp-bookmark-range.md)  

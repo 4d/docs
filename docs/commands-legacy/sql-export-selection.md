@@ -29,7 +29,7 @@ If the current selection is empty, the command does nothing. Note that in this c
 
 If the export is carried out correctly, the *OK* variable is set to 1\. Otherwise, it is set to 0\. 
 
-##### 
+### 
 
 **Note:** This command does not support Object type fields.
 

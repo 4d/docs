@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Refresh license.Summary-->O comando **Refresh license** atualiza a licença atual de servidor 4D.<!-- END REF--> Conecta o servidor com o banco de dados de clientes 4D e ativa automaticamente qualquer licença nova ou atualizada (por exemplo, clientes comprados adicionais) relacionada com a licença atual.
 
@@ -30,7 +30,7 @@ O objeto devolvido por **Refresh license** contém as propriedades abaixo:
 
 **Nota**: este comando só pode ser executado em 4D Server. Se o método que chamar ao comando for executado localmente em um cliente remoto ou em um só usuário 4D, **Refresh license** não faz nada.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser atualizar sua licença e receber uma mensagem quando se completar:
 
@@ -46,7 +46,7 @@ Se quiser atualizar sua licença e receber uma mensagem quando se completar:
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->The **QR SET HTML TEMPLATE** command sets the HTML template currently used for the Quick Report *area*.<!-- END REF--> The template will be used when building the report in HTML format. 
 
@@ -22,7 +22,7 @@ The template uses a set of tags to process the data in order to either retain a 
 
 **Note:** You first need to call [QR SET DESTINATION](qr-set-destination.md) to set the output to HTML file.
 
-#### HTML Tags 
+## HTML Tags 
 
 *<!--#4DQRheader--> ... <!--/#4DQRheader-->*  
 The HTML contents that are included between these tags come from the column titles. You will typically use these tags to define the title row of the report.
@@ -65,11 +65,11 @@ These tags will be replaced respectively by the data in the left, center or righ
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
-#### See also 
+## See also 
 
 [QR Get HTML template](qr-get-html-template.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota de compatibilidad 
+## Nota de compatibilidad 
 
 <!--REF #_command_.Focus object.Summary-->Este comando sólo se conserva por razones de compatibilidad.<!-- END REF--> A partir de la versión 12 de 4D, se recomienda utilizar el comando [OBJECT Get pointer](object-get-pointer.md "OBJECT Get pointer").
 
-#### Descripción 
+## Descripción 
 
 Focus object devuelve un puntero al objeto que tiene el foco en el formulario actual. Si ningún objeto tiene el foco, el comando devuelve Nil. Puede utilizar Focus object para realizar una acción en un área de formulario sin saber cuál objeto está seleccionado actualmente. Asegúrese de probar si el objeto es del tipo correcto, utilizando [Type](type.md "Type"), antes de realizar una acción. 
 
@@ -31,7 +31,7 @@ Este comando no puede utilizarse con campos en subformularios.
 
 **Nota:** este comando se utiliza únicamente en el contexto de entrada de datos, de lo contrario se produce un error.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo es un método de objeto para un botón. El método de objeto cambia los datos en el objeto actual a mayúsculas. El objeto debe ser del tipo texto o alfa (tipo 0 ó 24):
 
@@ -45,11 +45,11 @@ El siguiente ejemplo es un método de objeto para un botón. El método de objet
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get pointer](object-get-pointer.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

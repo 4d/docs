@@ -52,7 +52,7 @@ Para mayor información, consulte la sección .
 
 **Recordatorio**: las referencias a las variables locales no son posibles en modo compilado. Para mayor información sobre la programación SQL en 4D, consulte la sección *Presentación de los comandos del tema SQL*
 
-##### Acerca de relaciones 
+### Acerca de relaciones 
 
 QUERY BY SQL no utiliza relaciones entre tablas definidas en el editor de estructura 4D. Si quiere utilizar los datos relacionados, tendrá que añadir JOIN a la búsqueda. Por ejemplo, asumiendo que tenemos la siguiente estructura, en la cual una relación Muchos a Uno está relacionado los campos \[Personas\]Ciudad con \[Ciudades\]Nombre: 
 

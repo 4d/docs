@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->O comando FORM SET OUTPUT define o formulário de salida atual de *formulario* ou *formUsuario*.<!-- END REF--> O formulário deve pertencer a *tabela*.
 
@@ -39,7 +39,7 @@ Para maior informação sobre formulários usuário, consulte a seção .
 
 Os formulários de saída são utilizados por três grupos de comandos. Um grupo mostra uma lista de registros em tela, outro grupo gera relatórios, e o terceiro grupo exporta dados. Os comandos [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION") e [MODIFY SELECTION](modify-selection.md "MODIFY SELECTION") mostram uma lista de registros utilizando um formulário de saída. Utilize o formulário de saída durante a criação de relatórios com os comandos [PRINT LABEL](print-label.md "PRINT LABEL") e [PRINT SELECTION](print-selection.md "PRINT SELECTION"). Cada um dos comandos de exportação ([EXPORT DIF](export-dif.md "EXPORT DIF"), [EXPORT SYLK](export-sylk.md "EXPORT SYLK") e [EXPORT TEXT](export-text.md "EXPORT TEXT")) utiliza também o formulário de saída.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir mostra um uso típico de **FORM SET OUTPUT**.. Note que mesmo que o comando **FORM SET OUTPUT**. aparece imediatamente antes de que o formulário seja utilizado, não é obrigatório. Realmente, o comando poderia ser executado em um método completamente diferente, sempre e quando seja executado antes deste método:
 
@@ -49,7 +49,7 @@ O exemplo a seguir mostra um uso típico de **FORM SET OUTPUT**.. Note que mesmo
  MODIFY SELECTION([Partes]) // Este comando utiliza ambos formulários
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Os exemplos abaixo usam a rota a um formulário json para imprimir os registros em uma lista de empregados: 
 
@@ -59,7 +59,7 @@ Os exemplos abaixo usam a rota a um formulário json para imprimir os registros 
  PRINT SELECTION([Personnel])
 ```
 
-#### Ver também 
+## Ver também 
 
 [DISPLAY SELECTION](display-selection.md)  
 [EXPORT DIF](export-dif.md)  
@@ -70,7 +70,7 @@ Os exemplos abaixo usam a rota a um formulário json para imprimir os registros 
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

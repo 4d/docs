@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Deactivated.Summary-->**Deactivated**コマンドはプロセスの最前面のウインドウが後ろに移動すると、そのフォームメソッドでTrue を返します。<!-- END REF--> 
 
@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 **注:** このコマンドは、[Form event code](../commands/form-event-code.md) コマンドを用いてOn Deactivate イベントを返すかどうかをテストするのと同等と言えます。
 
-#### 参照 
+## 参照 
 
 [Activated](activated.md)  
 [Form event code](../commands/form-event-code.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

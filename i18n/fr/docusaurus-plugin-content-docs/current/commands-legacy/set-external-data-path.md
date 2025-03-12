@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Summary-->La commande **SET EXTERNAL DATA PATH** permet de définir ou de modifier, pour l’enregistrement courant, l’emplacement de stockage externe du champ *leChamp* passé en paramètre.<!-- END REF-->
 
@@ -42,7 +42,7 @@ Une fois la commande exécutée, 4D maintient automatiquement le lien entre le c
 
 **Note :** La commande **SET EXTERNAL DATA PATH** peut uniquement être exécutée sur 4D local ou 4D Server. Si elle est exécutée sur un 4D distant, elle ne fait rien.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez enregistrer dans le champ image un fichier existant, stocké à l'extérieur des données, dans le dossier de la base :
 
@@ -54,12 +54,12 @@ Vous souhaitez enregistrer dans le champ image un fichier existant, stocké à l
  SAVE RECORD([Photos])
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

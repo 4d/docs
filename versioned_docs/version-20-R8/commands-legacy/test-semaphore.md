@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Test semaphore.Summary-->The **Test semaphore** command tests for the existence of a semaphore.<!-- END REF-->
 
 The difference between the [Semaphore](semaphore.md) function and the **Test semaphore** function is that **Test semaphore** doesn’t create the *semaphore* if it doesn’t exist. If the *semaphore* exists, the function returns **True**. Otherwise, it returns **False**. 
 
-#### Example 
+## Example 
 
 The following example allows you to know the state of a process (in our case, while modifying the code) without modifying *semaphore*:
 
@@ -38,12 +38,12 @@ The following example allows you to know the state of a process (in our case, wh
  CLOSE WINDOW
 ```
 
-#### See also 
+## See also 
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 [Semaphore](semaphore.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

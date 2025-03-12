@@ -41,7 +41,7 @@ Cuando se pasa el parámetro opcional asterisco (\*), indica que el valor del el
 
 **Nota:** si el elemento designado por *refElement* es de tipo BLOB procesado por este comando, lo codifica automáticamente en base64\. Sin embargo, el comando [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md) realiza automáticamente la operación inversa.
 
-##### Nota sobre el procesamiento de caracteres de fin de línea 
+### Nota sobre el procesamiento de caracteres de fin de línea 
 
 Para cumplir con las reglas de procesamiento XML, todas las secuencias de caracteres de fin de línea CR y CRLF se convierten en caracteres LF.
 

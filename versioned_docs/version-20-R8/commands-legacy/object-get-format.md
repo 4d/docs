@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get format.Summary-->The **OBJECT Get format** command returns the current display format applied to the object specified in the *object* parameter.<!-- END REF-->
 
@@ -27,7 +27,7 @@ This command returns the current display format of the object; in other words, t
 
 When the **OBJECT Get format** command is applied to objects whose format has been set using a longint constant (date, time or picture objects), the string returned corresponds to the character code of the constant. To obtain the value of the constant, simply apply the [Character code](character-code.md) function to the result (see below).
 
-#### Example 1 
+## Example 1 
 
 This example allows you to obtain the value of the format constant applied to the picture variable named “myphoto”: 
 
@@ -40,7 +40,7 @@ This example allows you to obtain the value of the format constant applied to th
   //Display value "3"
 ```
 
-#### Example 2 
+## Example 2 
 
 This example allows you to obtain the format applied to the Boolean field \[Members\]Marital\_status: 
 
@@ -50,7 +50,7 @@ This example allows you to obtain the format applied to the Boolean field \[Memb
  ALERT($format) //Display format, for example "Married;Single"
 ```
 
-#### Example 3 
+## Example 3 
 
 Customized formats are returned untouched:
 
@@ -60,11 +60,11 @@ Customized formats are returned untouched:
  $format:=OBJECT Get format(*;"timeinput") // ":m"
 ```
 
-#### See also 
+## See also 
 
 [OBJECT SET FORMAT](object-set-format.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

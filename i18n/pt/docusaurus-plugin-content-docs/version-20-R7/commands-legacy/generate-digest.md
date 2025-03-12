@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Generate digest.Summary-->O comando **Generate digest** retorna a chave digest (ou chave de resumo) de um BLOB ou texto depois da aplicação de um algoritmo de criptografia.<!-- END REF-->
 
@@ -40,7 +40,7 @@ O valor retornado para o mesmo objeto é o mesmo em todas as plataformas (MacOS/
 
 **Nota:** se usar o comando com um texto/BLOB vazio, não retorna void, e sim um valor de string (por exemplo "d41d8cd98f00b204e9800998ecf8427e" para MD5).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo compara duas imagens utilizando o algoritmo MD5: 
 
@@ -66,7 +66,7 @@ Este exemplo compara duas imagens utilizando o algoritmo MD5:
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Esses exemplos ilustram como recuperar a chave digest de um texto:
 
@@ -77,7 +77,7 @@ Esses exemplos ilustram como recuperar a chave digest de um texto:
   // $key2 is "408d94384216f890ff7a0c3528e8bed1e0b01621"
 ```
 
-#### Ver também 
+## Ver também 
 
 [BASE64 DECODE](base64-decode.md)  
 [BASE64 ENCODE](base64-encode.md)  
@@ -85,7 +85,7 @@ Esses exemplos ilustram como recuperar a chave digest de um texto:
 *Protocolo de segurança*  
 [WEB Validate digest](web-validate-digest.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

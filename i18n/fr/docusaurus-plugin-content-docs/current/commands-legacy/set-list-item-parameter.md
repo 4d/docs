@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->La commande **SET LIST ITEM PARAMETER** permet de modifier le paramètre *sélecteur* pour l’élément *réfElément* de la liste hiérarchique dont vous avez passé la référence ou le nom d’objet dans le paramètre *liste*.<!-- END REF-->
 
@@ -36,7 +36,7 @@ Dans le paramètre *sélecteur*, vous pouvez passer :
 | Associated standard action | Chaîne | 4D\_standard\_action\_name | Associe une action standard à l'élément *refElément*. Dans ce cas, vous devez passer dans le paramètre *valeur* un nom d'action standard avec un paramètre, par exemple "fontSize?value=10pt". Pour plus d'informations, veuillez vous reporter à la section *Actions standard* dans le manuel *Mode Développement*.  |
 * ou une **valeur personnalisée** : vous pouvez passer dans *sélecteur* tout texte personnalisé et lui associer une valeur de type texte, numérique ou booléen. Cette valeur sera stockée avec l’élément et pourra être récupérée via la commande [GET LIST ITEM PARAMETER](get-list-item-parameter.md). Ce principe permet de mettre en place tout type d’interface associée aux listes hiérarchiques. Par exemple, dans une liste stockant des noms de personnes, vous pouvez stocker l’âge de chaque personne et ne l’afficher que lorsque l’élément correspondant est sélectionné.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez définir comme énumération d'un pop up menu hiérarchique une liste personnalisée de valeurs de tailles de police, à l'aide de la fonctionnalité des actions standard :
 
@@ -53,7 +53,7 @@ Vous souhaitez définir comme énumération d'un pop up menu hiérarchique une l
 
 ![](../assets/en/commands/pict3372004.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [APPEND TO LIST](append-to-list.md)  
 [Action info](action-info.md)  
@@ -61,7 +61,7 @@ Vous souhaitez définir comme énumération d'un pop up menu hiérarchique une l
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

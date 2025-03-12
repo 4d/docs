@@ -30,7 +30,7 @@ Pour chaque association *varDestination;varSource*, le type de la variable sourc
 
 Lorsque le process courant écrit les variables du process de destination, ce dernier n'est averti en aucune manière de l'écriture de l'instance de ses variables par un autre process.
 
-##### Restrictions 
+### Restrictions 
 
 **VARIABLE TO VARIABLE** n'accepte pas de variables locales comme variables de destination. 
 

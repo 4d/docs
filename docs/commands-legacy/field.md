@@ -20,13 +20,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Field.Summary-->The **Field** command has two forms:
 
 * If you pass a table number in *tableNum* and a field number in fieldNum, **Field** returns a pointer to the field.<!-- END REF-->returns the field number of the field.
 
-#### Example 1 
+## Example 1 
 
 The following example sets the *fieldPtr* variable to a pointer to the second field in the third table:
 
@@ -34,7 +34,7 @@ The following example sets the *fieldPtr* variable to a pointer to the second fi
  FieldPtr:=Field(3;2)
 ```
 
-#### Example 2 
+## Example 2 
 
 Passing *fieldPtr* (a pointer to the second field of a table) to **Field** returns the number 2\. The following line sets *FieldNum* to 2:
 
@@ -42,7 +42,7 @@ Passing *fieldPtr* (a pointer to the second field of a table) to **Field** retur
  FieldNum:=Field(FieldPtr)
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example sets the *FieldNum* variable to the field number of \[Table3\]Field2:
 
@@ -50,14 +50,14 @@ The following example sets the *FieldNum* variable to the field number of \[Tabl
  FieldNum:=Field(->[Table3]Field2)
 ```
 
-#### See also 
+## See also 
 
 [Field name](field-name.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last field number](last-field-number.md)  
 [Table](table.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

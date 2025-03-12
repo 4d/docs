@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->La commande **OBJECT SET LIST BY REFERENCE** définit ou remplace l’énumération associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**, avec la liste hiérarchique référencée dans le paramètre *liste*.<!-- END REF-->
 
@@ -42,7 +42,7 @@ La liste de valeurs existante est remplacée en fonction de la manière dont la 
 
 Cette commande est particulièrement intéressante dans le cas d'une liste déroulante ou d'une combo box associée à une variable ou à un champ. Dans ce cas, l'association est dynamique et toute modification apportée à la liste est copiée dans le formulaire. Lorsque l'objet est associé à un tableau ou à un objet, la liste est copiée dans le tableau ou l'objet et les modifications apportées à la liste ne sont pas disponibles automatiquement (voir exemple 5).
 
-#### Exemple 1 
+## Exemple 1 
 
 Association d’une énumération simple (type de liste par défaut) à un champ texte :
 
@@ -54,7 +54,7 @@ Association d’une énumération simple (type de liste par défaut) à un champ
  OBJECT SET LIST BY REFERENCE([Contact]Country;vListCountries)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Associer la liste "vColor" en tant qu’énumération simple au pop up/Liste déroulante "CoulPorte" :
 

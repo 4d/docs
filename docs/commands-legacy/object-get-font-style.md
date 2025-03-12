@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get font style.Summary-->The OBJECT Get font style command returns the current style of the character font used by the form object(s) designated by *object*.<!-- END REF--> 
 
@@ -30,11 +30,11 @@ You can compare the value returned with the value of one or more of the followin
 | Italic    | Integer | 2     |
 | Underline | Integer | 4     |
 
-#### See also 
+## See also 
 
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

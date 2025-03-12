@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.QR GET TOTALS DATA.Summary-->##### List Mode 
+<!--REF #_command_.QR GET TOTALS DATA.Summary-->### List Mode 
 
 The **QR GET TOTALS DATA** command retrieves the details of a specific break.<!-- END REF-->  
 
@@ -46,7 +46,7 @@ If the value returned is 0, there is no operator.
 
 **Note:** *operator* and *text* are mutually exclusive, so you either have a result returned through *operator* or through *text*.
 
-##### Cross-table Mode 
+### Cross-table Mode 
 
 The **QR GET TOTALS DATA** command retrieves the details of a specific cell. 
 
@@ -69,11 +69,11 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 If you pass an invalid *colNum* number, the error -9852 will be generated.  
 If you pass an invalid *breakNum* number, the error -9853 will be generated.
 
-#### See also 
+## See also 
 
 [QR SET TOTALS DATA](qr-set-totals-data.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

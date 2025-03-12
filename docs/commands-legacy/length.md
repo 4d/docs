@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Length.Summary-->**Length** is used to find the length of *aString*.<!-- END REF-->returns the number of characters that are in *aString*.
 
 **Note:** In Unicode mode, when you want to check whether a string contains any characters, including ignorable characters, you must use the test If(Length(vtAnyText)=0) rather than If(vtAnyText=""). If the string contains for example Char(1), which is an ignorable character, Length(vtAnyText) does return 1 but vtAnyText="" returns True.
 
-#### Example 
+## Example 
 
 This example illustrates the use of **Length**. The results, described in the comments, are assigned to the variable *vlResult*.
 
@@ -30,7 +30,7 @@ This example illustrates the use of **Length**. The results, described in the co
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

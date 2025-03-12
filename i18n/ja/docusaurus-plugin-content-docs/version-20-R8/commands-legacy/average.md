@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Average.Summary-->**Average**は、*series*の平均値を返します。<!-- END REF-->*series*がインデックスフィ－ルドの場合には、平均値を求めるためにインデックスが使用されます。
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 このコマンドが正しく実行されると、OKシステム変数は1に設定されます。ユーザが進捗サーモメータの**停止**ボタンをクリックするなどして処理が中断されると、OK変数は0に設定されます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、出力フォームのB0ブレークエリアにある変数*vAverage*に値を代入します。このコードは変数*vAverage*のオブジェクトメソッドです。オブジェクトメソッドは、レベル0のブレークが発生したときに実行されます:
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 **Note:** [BREAK LEVEL](break-level.md)コマンドの引数は、印刷するレポートのブレーク数と同じ数でなければなりません。ブレーク処理に関する詳細は*印刷*コマンドを参照してください。
 
-#### 例題 2 
+## 例題 2 
 
 この例題ではセレクション中トップ15の平均点を計算します:
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
  vAverage:=Average($ArrGrades)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 \[Customer\]テーブル内に、以下のようなデータを含む"full\_Data"オブジェクトフィールドが格納されている場合を考えます:
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
   //$vTot は 105
 ```
 
-#### 参照 
+## 参照 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
@@ -91,7 +91,7 @@ displayed_sidebar: docs
 [Subtotal](subtotal.md)  
 [Sum](sum.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

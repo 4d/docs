@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DELETE FROM LIST.Summary-->O comando DELETE FROM LIST apaga o elemento designado pelo parâmetro *refElem* da lista cujo número de referência se passa em *lista*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Se trabalhar com os números de referência dos elementos, construa uma lista na
 
 Sem importar que elemento apague, deve especificar o parâmetro opcional *\** para permitir a 4D apagar automaticamente a sub-lista associada ao elemento, se as houver. Se não especificar o parâmetro *\**, é uma boa idéia obter previamente o número de referência da sub-lista (se houver) associada ao elemento, de maneira que pode ser apagado, se for necessário, utilizando o comando [CLEAR LIST](clear-list.md "CLEAR LIST").
 
-#### Exemplo 
+## Exemplo 
 
 O código a seguir apaga o elemento selecionado da lista *hList*. Se o elemento tiver uma sub-lista associada for apagada (como também toda sub-sub lista):
 
@@ -38,12 +38,12 @@ O código a seguir apaga o elemento selecionado da lista *hList*. Se o elemento 
  DELETE FROM LIST(hList;*;*)
 ```
 
-#### Ver também 
+## Ver também 
 
 [CLEAR LIST](clear-list.md)  
 [GET LIST ITEM](get-list-item.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

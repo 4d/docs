@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.APPEND MENU ITEM.Summary-->**APPEND MENU ITEM** コマンドは、*menu*引数に渡されたメニュー番号または参照を持つメニューに新規メニュー項目を追加します。<!-- END REF-->
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 **重要**: 新しいメニュー項目にはメソッドやアクションが割り当てられていません。これらは[SET MENU ITEM PROPERTY](set-menu-item-property.md) あるいは [SET MENU ITEM METHOD](set-menu-item-method.md) コマンドを使用して項目に割り当てるか、[Menu selected](menu-selected.md) コマンドを使ってフォームメソッドからこれを管理しなくてはなりません。
 
-#### 例題 
+## 例題 
 
 この例題ではカレントメニューバー6番目の項目のFontメニューに、利用可能なフォント名を追加します:
 
@@ -74,13 +74,13 @@ displayed_sidebar: docs
  APPEND MENU ITEM(6;<>atFontMenuItems)
 ```
 
-#### 参照 
+## 参照 
 
 [DELETE MENU ITEM](delete-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

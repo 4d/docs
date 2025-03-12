@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET MULTILINE.Summary-->**OBJECT SET MULTILINE**コマンドは、引数 *object* と *\** で指定したオブジェクトの"複数行"のプロパティを変更します。<!-- END REF-->
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 | Multiline No   | 倍長整数 | 2 | 改行は禁止されます。テキストは必ず単独行として表示されます。文字列かテキストフィールドか変数に改行が含まれていたとしても、改行は行われません。                                                              |
 | Multiline Yes  | 倍長整数 | 1 | 単独行のエリアでは、テキストは最初の改行までか、単語全体を表示できる最後の単語までが表示されます。その後改行が挿入されるので、↓キーを押すことによってエリアの内容をスクロールすることができます。<br/>複数行のエリアでは、自動で改行が行われます。 |
 
-#### 例題 
+## 例題 
 
 入力エリアにおいて、改行を禁止したい場合:
 
@@ -39,11 +39,11 @@ displayed_sidebar: docs
  OBJECT SET MULTILINE(*;"vEntry";Multiline No)
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT Get multiline](object-get-multiline.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

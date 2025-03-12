@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUIT 4D.Summary-->La commande **QUIT 4D**  vous permet de quitter l'application 4D courante et de retourner sur le Bureau du système d'exploitation.<!-- END REF--> 
 
 Le mécanismes mis en jeu par la commande sont différents suivant qu'elle est exécutée sur 4D (mode local ou distant) ou 4D Server (procédure stockée). 
 
-##### Avec 4D en mode local ou distant 
+### Avec 4D en mode local ou distant 
 
 Après un appel à **QUIT 4D**, l'exécution du process courant est stoppée, puis 4D effectue les opérations suivantes :
 
@@ -36,7 +36,7 @@ Une troisième stratégie est également possible. Avant d'appeler **QUIT 4D**, 
 
 **Note :** Le paramètre *délai* n'est pas utilisable avec 4D en mode local ou distant.
 
-##### Avec 4D Server (procédure stockée) 
+### Avec 4D Server (procédure stockée) 
 
 La commande **QUIT 4D** peut être exécutée sur le poste serveur, dans une procédure stockée.   
 Dans ce cas, elle admet le paramètre optionnel *délai*. Ce paramètre permet d’allouer à 4D Server un délai d’attente avant que l’application ne quitte réellement, laissant ainsi aux postes clients le temps de se déconnecter. Vous devez passer dans *délai* une valeur en secondes.   
@@ -48,7 +48,7 @@ Si une *On Server Shutdown Database Method* existe, elle est exécutée à l’i
 
 L’action de la commande **QUIT 4D** utilisée dans une procédure stockée est équivalente à celle de la commande **Quitter** du menu **Fichier** de 4D Server : elle provoque l’apparition, sur chaque poste client, d’une boîte de dialogue signalant que le serveur est sur le point de quitter. 
 
-#### Exemple 
+## Exemple 
 
 La méthode projet suivante est associée à la commande **Quitter** du menu **Fichier**.
 
@@ -61,11 +61,11 @@ La méthode projet suivante est associée à la commande **Quitter** du menu **F
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [On Exit database method](on-exit-database-method.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

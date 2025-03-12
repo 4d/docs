@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RELEASE MENU.Summary-->O comando RELEASE MENU apaga da memória o menu cuja referência se passa em *menu*.<!-- END REF-->. A regra é a seguinte: a cada [Create menu](create-menu.md) deve corresponder um [RELEASE MENU](release-menu.md). 
 
@@ -23,7 +23,7 @@ Este comando pode ser utilizado com menus usados como barras de menus.
 
 Os submenus utilizados por *menu* não são apagados se foram criados utilizando o comando [Create menu](create-menu.md). Neste caso, devem ser eliminados individualmente (ver a regra mencionada anteriormente). Entretanto, se os submenus vêm da duplicação de um menu existente, não chame [RELEASE MENU](release-menu.md) com suas instâncias porque 4D as apagará automaticamente.
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo mostra as diferentes formas de utilizar este comando:
 
@@ -51,11 +51,11 @@ Este exemplo mostra as diferentes formas de utilizar este comando:
   //A regra a seguir é: cada Create menu deve ter um RELEASE MENU correspondente
 ```
 
-#### Ver também 
+## Ver também 
 
 [Create menu](create-menu.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

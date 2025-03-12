@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.COMPONENT LIST.Summary-->O comando COMPONENT LIST dimensiona e preenche a matriz *arrayComponentes* com os nomes dos componentes carregados pela aplicação 4D para o banco de dados atual.<!-- END REF--> 
 
@@ -30,11 +30,11 @@ Os nomes dos componentes são os nomes dos arquivos de estrutura dos bancos de d
 
 Para maiores informações sobre componentes 4D, por favor consulte o Manual de Desenho.
 
-#### Ver também 
+## Ver também 
 
 [PLUGIN LIST](plugin-list.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

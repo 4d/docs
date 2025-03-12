@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Summary-->The OBJECT GET RGB COLORS command returns the foreground and background colors of the object or group of objects designated by *object*.<!-- END REF-->
 
@@ -32,11 +32,11 @@ The RGB color values returned in the *foregroundColor*, *backgroundColor*, and *
 
 For more information about the format of the *foregroundColor*, *backgroundColor*, and *altBackgrndColor* parameters, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command.
 
-#### See also 
+## See also 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

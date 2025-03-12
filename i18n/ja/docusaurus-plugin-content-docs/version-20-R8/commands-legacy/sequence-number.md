@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Sequence number.Summary-->**Sequence number** は、*aTable*の次のシーケンス番号を返します。<!-- END REF-->シーケンス番号は、各テーブルにおいて固有のものです。この番号は、*aTable*に対して新しいレコードが追加されるたびに加算される、決して重複することのない番号です。
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
  [Table1]SeqField :=Sequence number([Table1])+999
 ```
 
-#### 例題 
+## 例題 
 
 以下の例は、フォームメソッドの一部です。このステートメントは、まずレコードが新しいものかどうか検査（請求書番号が空の文字列であるかどうかで判断）します。新しいレコードであれば、請求書番号を設定します。この請求書番号は、2つの情報から成り立っています。それは、シーケンス番号号とデータベースを開くときに入力された操作番号です。シーケンス番号を、5桁の文字列として扱います:
 
@@ -53,13 +53,13 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Record number](record-number.md)  
 [Selected record number](selected-record-number.md)  
 *レコード番号について*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

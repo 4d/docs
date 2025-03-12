@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RELOAD EXTERNAL DATA.Summary-->**RELOAD EXTERNAL DATA**コマンドはBLOB、ピクチャー、およびテキスト型フィールドに割り当てられた外部ストレージの内容をメモリにリロードします。<!-- END REF-->
 
@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 **注:** **RELOAD EXTERNAL DATA**コ マンドは4Dローカルモードおよび4D Server上でのみ動作します。4Dリモートモードで個々にフィールドをリロードすることはできません。4Dリモートモードの場合 (例えば[LOAD RECORD](load-record.md)コマンドを使用して) レコード全体をリロードしなければなりません。
 
-#### 参照 
+## 参照 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

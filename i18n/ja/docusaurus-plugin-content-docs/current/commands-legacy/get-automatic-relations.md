@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Summary-->GET AUTOMATIC RELATIONS コマンドにより、データベースのすべてのマニュアルn対1リレートおよび1対nリレートに関する自動/マニュアルのステータスがカレントプロセスにおいて変更されたかどうかを知ることができます。<!-- END REF-->
 
@@ -23,17 +23,17 @@ displayed_sidebar: docs
 * *many*: 前回の[SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS")コマンドの呼び出しにより、すべてのマニュアル1対nリレートが自動に設定された場合、この引数は[True](true.md "True")を返します - 例えばSET AUTOMATIC RELATIONS(True;True)。  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS")コマンドが呼び出されなかった場合や、前回の実行によりマニュアル1対nリレートが変更されなかった場合には[False](false.md "False")を返します - SET AUTOMATIC RELATIONS(True;False)。
 
-#### 例題 
+## 例題 
 
 [GET FIELD RELATION](get-field-relation.md "GET FIELD RELATION") コマンドの例題を参照
 
-#### 参照 
+## 参照 
 
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

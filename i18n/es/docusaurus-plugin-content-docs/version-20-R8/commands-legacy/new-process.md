@@ -24,13 +24,13 @@ displayed_sidebar: docs
 
 Si no se pudo crear el proceso (por ejemplo, si no hay suficiente memoria), New process devuelve cero (0) y se genera un error. Puede interceptar este error utilizando un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-##### Método de proceso 
+### Método de proceso 
 
  En *metodo*, se pasa el nombre del método de gestión del nuevo proceso. Una vez que 4D haya definido el contexto para el nuevo proceso, comienza la ejecución de este método que se convierte en el método de proceso.
 
 Si el contexto de ejecución soporta el modo apropiativo y si el *metodo* se declara "hilo seguro", el nuevo proceso 4D se ejecutará en un hilo seguro apropiativo cuando la aplicación se ejecute en modo compilado. Para más información, consulte la página *Procesos 4D apropiativos*. 
 
-##### Pila del proceso 
+### Pila del proceso 
 
 El parámetro *pila*, le permite indicar la cantidad de memoria asignada para la pila del proceso. Este valor representa el espacio en memoria utilizado para “apilar” las llamadas de métodos, las variables locales, los parámetros de subrutinas y los registros apilados.
 
@@ -39,13 +39,13 @@ El parámetro *pila*, le permite indicar la cantidad de memoria asignada para la
 
 **Nota:** la pila NO es la memoria total reservada para el proceso. Los procesos comparten memoria para los registros, las variables interproceso, etc. Un proceso utiliza igualmente la memoria extra para almacenar sus variables proceso. La pila contiene diferente información 4D: la cantidad de información depende del número de llamadas de métodos anidados, el número de formularios que abrirá antes de cerrarlos y el número y tamaño de variables locales utilizadas en cada llamada de método anidado.
 
-##### Nombre del proceso 
+### Nombre del proceso 
 
  Pase el nombre del nuevo proceso en *nombre*. Este nombre aparecerá en la lista de procesos del Explorador de ejecución y será devuelto por el comando [Process info](../commands/process-info.md) cuando se aplica a este nuevo proceso. Puede omitir este parámetro; si lo hace, el nombre del proceso será una cadena vacía. Puede crear un proceso local colocando como prefijo el símbolo dólar (*$*). 
 
 **Importante:** Recuerde que en cliente/servidor, los procesos locales no deben acceder a los datos. Para más información, consulte la sección *Procesos globales y locales*. 
 
-##### Parámetros del método proceso 
+### Parámetros del método proceso 
 
  Puede pasar parámetros al método proceso utilizando uno o más parámetros *param*. Puede pasar parámetros de la misma manera que para las subrutinas (ver la sección ). Una vez que haya comenzado la ejecución en el contexto del nuevo proceso, el método proceso recibe los valores de los parámetros en *$1*, *$2* , etc. Recuerde que los arrays no pueden pasarse como parámetros a un método. Además, estas consideraciones adicionales deben ser tomadas en cuenta en el contexto del comando **New process**:
 
@@ -55,7 +55,7 @@ El parámetro *pila*, le permite indicar la cantidad de memoria asignada para la
 
 **Nota**: si pasa los parámetros al método proceso, debe pasar el parámetro *nombre*; no puede omitirse en este caso. 
 
-##### Parámetro opcional \* 
+### Parámetro opcional \* 
 
 Le indica a 4D que debe verificar primero si se está ejecutando un proceso con el nombre que usted pasó en *nombre*. Si es así, 4D no inicia un nuevo proceso y devuelve el número del proceso con ese nombre.
 

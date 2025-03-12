@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is editing text.Summary-->The **Is editing text** command returns **True** if the user is entering values in an input form object, and **False** in all other cases.<!-- END REF--> 
 
@@ -27,7 +27,7 @@ The **Is editing text** command can only be used with the following form objects
 
 With other objects, the command always returns **False**. In particular, it cannot be used with 4D Write Pro and 4D View Pro areas.
 
-#### Example 
+## Example 
 
 You want to allow the user to select a row beginning with the typed letter or number in an enterable listbox:
 
@@ -53,13 +53,13 @@ You want to allow the user to select a row beginning with the typed letter or nu
  End case
 ```
 
-#### See also 
+## See also 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Get edited text](get-edited-text.md)  
 [Type ahead made easy (blog post)](https://blog.4d.com/type-ahead-made-easy/)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

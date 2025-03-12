@@ -31,7 +31,7 @@ Después de llamar el comando, si la lista se ha guardado correctamente, la vari
 
 **Nota sobre la independencia de plataforma:** LIST TO BLOB y [BLOB to list](blob-to-list.md "BLOB to list") utilizan un formato interno 4D para administrar listas almacenadas en BLOBs. La ventaja es que usted no tiene que preocuparse por la conversión de bytes (byte swapping) entre plataformas cuando utiliza estos dos comandos. En otras palabras, un BLOB creado en Windows utilizando estos comandos puede ser reutilizado en Macintosh, y viceversa.
 
-##### Nota 
+### Nota 
 
 **Nota de compatibilidad**: como este comando altera el blob pasado como parámetro, no soporta objetos blob (tipo 4D.Blob). Ver *Pasar blobs y objetos blob a comandos 4D* en developer.4d.com.
 

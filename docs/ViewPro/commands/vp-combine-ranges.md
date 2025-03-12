@@ -15,7 +15,7 @@ title: VP Combine ranges
 |otherRangeObj| Object|->|Range object|
 |Result| Object|<-|Object containing a combined range|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Combine Ranges` command <!-- REF #_method_.VP Combine ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. All of the ranges must be from the same 4D View Pro area.
 
@@ -25,7 +25,7 @@ In *otherRangeObj*, pass another range object(s) to combine with *rangeObj*.
 
 >The command incorporates *rangeObj* and *otherRangeObj* objects by reference.
 
-#### Example  
+## Example  
 
 You want to combine cell, column, and row range objects in a new, distinct range object:
 
@@ -37,7 +37,7 @@ You want to combine cell, column, and row range objects in a new, distinct range
  $combine:=VP Combine ranges($cell;$column;$row)
 ```
 
-#### See also
+## See also
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>

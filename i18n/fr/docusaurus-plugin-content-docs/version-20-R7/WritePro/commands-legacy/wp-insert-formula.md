@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP INSERT FORMULA.Summary-->La commande **WP INSERT FORMULA** insère une *formule* dans *objCible* en fonction du *mode* d'insertion spécifié.<!-- END REF-->
 
@@ -58,7 +58,7 @@ Si vous ne passez pas un paramètre *rangeUpdate*, la *formule* insérée est in
 
 **Note:** N'oubliez pas que, lorsqu'il est appelé, l'objet *formule* est évalué dans le contexte de la base de données ou du composant qui l'a créé.
 
-#### Exemple 1 
+## Exemple 1 
 
 Pour remplacer les formules Date courante avec les chaines formatées :
 
@@ -86,7 +86,7 @@ Pour remplacer les formules Date courante avec les chaines formatées :
 
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez utiliser un nom de formule pour le nom du client :  
   
@@ -110,7 +110,7 @@ Résultat :
 
 ![](../../assets/en/WritePro/commands/pict6433508.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 *Gérer des formules*  
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  

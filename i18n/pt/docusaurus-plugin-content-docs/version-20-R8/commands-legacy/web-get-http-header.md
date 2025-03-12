@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->O comando **WEB GET HTTP HEADER** retorna uma string ou dois arrays, que contém o cabeçalho HTTP utilizado na petição em processo.<!-- END REF-->
 
@@ -55,7 +55,7 @@ Esta é uma lista de alguns campos HTTP que podem ser utilizados em uma petiçã
 * **Referer**: origem da petição (por exemplo http://meuservidorweb/minhapagina1.html), ou seja a página que o usuário mostra quando clicar no botão **Anterior**.
 * **User-Agent**: nome e versão do navegador ou do proxy.
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte método permite recuperar o conteúdo de todo campo de cabeçalho de petição HTTP:  
 
@@ -113,12 +113,12 @@ O seguinte método permite recuperar o conteúdo de todo campo de cabeçalho de 
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB SET HTTP HEADER](web-set-http-header.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

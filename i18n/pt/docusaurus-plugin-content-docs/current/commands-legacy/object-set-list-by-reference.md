@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->O comando **OBJECT SET LIST BY REFERENCE** define ou substitui a lista associada com o objeto ou objetos definidos pelos parâmetros *objeto* e *\**, com a lista hierárquica definida no parâmetro *lista*.<!-- END REF-->
 
@@ -43,7 +43,7 @@ Lista de valores existentes são substituidas dependendo de como a lista é asso
   
 Este comando é especialmente interessante no contexto de um pop-up ou combo box associado a uma variável ou um campo (ver o Manual de *Desenho*). Neste caso, a associação é dinâmica e qualquer mudança na lista é copiada no formulário. Quando o objeto está associado a um array, a lista é copiada no array e qualquer mudança na lista não está disponível de forma automática (ver o exemplo 5).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Associar uma lista de opções simples (tipo de lista pré determinado) a um campo de texto:
 
@@ -55,7 +55,7 @@ Associar uma lista de opções simples (tipo de lista pré determinado) a um cam
  OBJECT SET LIST BY REFERENCE([Contact]Country;vCountriesList)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Associar a lista "vColor" como uma lista de seleção simples com o pop-up/lista deslocável "DoorColor":
 
@@ -68,7 +68,7 @@ Associar a lista "vColor" como uma lista de seleção simples com o pop-up/lista
  OBJECT SET LIST BY REFERENCE(*;"DoorColor";Choice list;vColor)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Agora deseja associar a lista "vColor" com um combo box denominado "WallColor". Como este combo box é editável, você quer ter a certeza de que certas cores, como "preto", "roxo", etc, não podem ser utilizados. Estas cores são colocadas na lista "vReject":
 
@@ -81,7 +81,7 @@ Agora deseja associar a lista "vColor" com um combo box denominado "WallColor". 
  OBJECT SET LIST BY REFERENCE(*;"WallColor";Excluded list;vReject)
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Você deseja eliminar as associações de listas:
 
@@ -91,7 +91,7 @@ Você deseja eliminar as associações de listas:
  OBJECT SET LIST BY REFERENCE(*;"WallColor";Excluded list;0)
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Este exemplo ilustra a diferença na forma em que funciona o comando quando se aplica a um menu pop-up associado a um array texto ou a uma variável texto. Há dois menus pop-up em um formulário:
 
@@ -124,12 +124,12 @@ Só o menu associado ao campo texto se atualiza (por meio da referência dinâmi
   
 Com o propósito de atualizar a lista associada ao pop-up gerenciado por array, é necessário chamar de novo ao comando **OBJECT SET LIST BY REFERENCE** para copiar o conteúdo da lista.
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

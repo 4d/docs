@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CREATE SET FROM ARRAY.Summary-->O comando CREATE SET FROM ARRAY cria *nomConj* a partir de:   
 
@@ -31,16 +31,16 @@ Quando utilize este comando e passa um array inteiro longo em *arrayReg*, todos 
   
  Se não passar o parâmetro *nomConjunto* ou se passar uma string vazia, o comando é aplicado ao conjunto sistema Userset.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Em um array de inteiros longos, se um número de registro não for válido (registro não criado), se gera o erro -10503.  
 
-#### Ver também 
+## Ver também 
 
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

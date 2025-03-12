@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR BLOB TO REPORT.Summary-->O comando QR BLOB TO REPORT coloca o relatório contido no *BLOB* na área de relatório rápido passada em *area*.<!-- END REF--> 
 
 Se passa um número de *area* incorreto, se gera o erro -9850.  
 Se o parâmetro *BLOB* for incorreto, se gera o erro -9852.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O código a seguir mostra na área MinhaArea, um arquivo de relatório chamado “report.4qr” localizado junto à estrutura do banco. O arquivo de relatório pode ter sido criado com uma versão anterior:
 
@@ -32,7 +32,7 @@ O código a seguir mostra na área MinhaArea, um arquivo de relatório chamado �
  QR BLOB TO REPORT(MinhaArea;$doc)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 A instrução a seguir recupera o relatório rápido armazenado em Campo4 e o mostra em MinhaArea: 
 
@@ -40,11 +40,11 @@ A instrução a seguir recupera o relatório rápido armazenado em Campo4 e o mo
  QR BLOB TO REPORT(MinhaArea;[Tabela 1]Campo4)
 ```
 
-#### Ver também 
+## Ver também 
 
 [QR REPORT TO BLOB](qr-report-to-blob.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

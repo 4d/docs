@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get drop column.Summary-->The QR Get drop column command returns a value depending on where the drop was performed:
 
@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
-#### See also 
+## See also 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

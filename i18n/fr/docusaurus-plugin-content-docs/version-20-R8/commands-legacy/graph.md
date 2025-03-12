@@ -35,7 +35,7 @@ Le paramètre *xCatégories* définit les valeurs qui seront utilisées pour l'a
 
 Le paramètre *zValeurs* définit les valeurs à représenter graphiquement. Elles doivent être de type numérique. Vous pouvez passer jusqu'à huit ensembles de données. Les graphes en secteurs ne représentent que le premier *zValeurs*.
 
-##### IDs automatiques 
+### IDs automatiques 
 
 Des IDs spécifiques sont automatiquement attribués aux éléments présents dans le graphe SVG :
 
@@ -59,7 +59,7 @@ Des IDs spécifiques sont automatiquement attribués aux éléments présents da
 | ID\_y\_grid                                 | Grille sur l’axe des Y                                   |
 | ID\_y\_grid\_shadow                         | Ombre de la grille sur l’axe des Y                       |
 
-##### Attributs graphParams 
+### Attributs graphParams 
 
 Lorsque vous utilisez le paramètre *graphParams*, vous devez passer un objet qui contient les diverses propriétés du graphe que vous souhaitez définir. Pour cela, vous pouvez utiliser les constantes suivantes, placées dans le thème "*Paramètre des graphes*" : 
 

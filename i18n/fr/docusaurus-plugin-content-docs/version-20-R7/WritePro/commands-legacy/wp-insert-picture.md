@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP INSERT PICTURE.Summary-->La commande **WP INSERT PICTURE** insère *image* dans la plage de sélection *objCible* selon le *mode* d'insertion spécifié.<!-- END REF--> L'image sera insérée en tant que caractère dans la plage de sélection *objCible*.
 
@@ -52,7 +52,7 @@ Dans le paramètre *mode*, passez une des constantes suivantes pour indiquer le 
 Si vous ne passez pas le paramètre *miseAJourPlage*, par défaut l'image insérée est incluse dans la plage mise à jour.
 * Si *objCible* n'est pas une plage, *miseAJourPlage* est ignoré.
 
-#### Exemple 
+## Exemple 
 
 Dans l'exemple suivant, un utilisateur choisit une image qu'il souhaite insérer dans une plage de sélection de l'objet 4D Write Pro, et obtiendra une alerte si l'image ne peut pas être insérée :
 
@@ -83,7 +83,7 @@ Dans l'exemple suivant, un utilisateur choisit une image qu'il souhaite insérer
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [WP INSERT DOCUMENT](wp-insert-document.md)  

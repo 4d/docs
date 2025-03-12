@@ -20,7 +20,7 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP SELECT.Summary-->The **WP SELECT** command creates a new selection in the 4D Write Pro *wpArea* area, based upon the *targetObj* or a new range defined by *startRange* and *endRange*.<!-- END REF-->
 
@@ -47,7 +47,7 @@ where *startRange* and *endRange* are allowed only for the following elements: b
 
 In *startRange* and *endRange*, pass values corresponding to the position of the first and last characters to select in the area. You can pass wk start text in *startRange* to define the beginning of the area, and wk end text in *endRange* to define the end of the area. Keep in mind that a 4D Write Pro document not only contains visible text but also formatting tags that are included in the range.
 
-#### Example 
+## Example 
 
 The following code:
 
@@ -62,6 +62,6 @@ The following code:
  WP SELECT(*;"WParea";wk start text;12)
 ```
 
-#### See also 
+## See also 
 
 [WP Text range](wp-text-range.md)  

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD GET PATHS.Summary-->El comando **METHOD GET PATHS** llena el array *arrRutas* con las rutas de acceso internas y los nombres de los métodos de la aplicación del tipo definido por el parámetro *tipoMetodo*.<!-- END REF-->  
   
@@ -46,7 +46,7 @@ Si se ejecuta este comando desde un componente, devuelve por defecto las rutas d
 
 Si el comando detecta un nombre de método duplicado, se genera el error -9802 ("Object path not unique"). En este caso, es aconsejable utilizar el CSM con el fin de verificar la estructura de la base de datos.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Recuperación de los métodos de proyecto ubicados en una carpeta "web":
 
@@ -54,7 +54,7 @@ Recuperación de los métodos de proyecto ubicados en una carpeta "web":
  METHOD GET PATHS("web";Path project method;arrPaths)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Recuperación de los métodos base y de los triggers:
 
@@ -62,7 +62,7 @@ Recuperación de los métodos base y de los triggers:
  METHOD GET PATHS(Path trigger+Path database method;arrPaths)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Recuperación de los métodos de proyecto modificados desde el último backup:
 
@@ -76,16 +76,16 @@ Recuperación de los métodos de proyecto modificados desde el último backup:
  SAVE RECORD([Backups])
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Consulte el ejemplo del comando [METHOD SET CODE](method-set-code.md).
 
-#### Ver también 
+## Ver también 
 
 [Current method path](current-method-path.md)  
 [METHOD GET FOLDERS](method-get-folders.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

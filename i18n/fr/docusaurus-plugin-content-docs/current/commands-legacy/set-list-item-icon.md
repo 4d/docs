@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST ITEM ICON.Summary-->La commande **SET LIST ITEM ICON** permet de modifier l’icône associée à l’élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d’objet dans *liste*.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s�
 
 Passez dans le paramètre *icône* une expression image 4D valide (champ, variable, pointeur, etc.). L’image sera placée à gauche de l’élément. 
 
-#### Exemple 
+## Exemple 
 
 Affectation d'une même image à deux éléments différents. Ce code est optimisé car l'image est chargée une seule fois en mémoire :
 
@@ -40,13 +40,13 @@ Affectation d'une même image à deux éléments différents. Ce code est optimi
  SET LIST ITEM ICON(maliste;ref2;$image)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

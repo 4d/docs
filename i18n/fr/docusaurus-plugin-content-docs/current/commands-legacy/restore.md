@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESTORE.Summary-->La commande **RESTORE** permet restituer le ou les fichier(s) inclus dans une archive 4D.<!-- END REF--> Cette commande est utile dans le cadre d’interfaces personnalisées pour la gestion des sauvegardes. 
 
@@ -29,12 +29,12 @@ La commande **RESTORE** modifie la valeur des variables *OK* et *Document* : si 
 
 **Note :** Dans le cadre d'une application 4D compilée et fusionnée avec 4D Volume Desktop, la commande **RESTORE** provoque l’affichage d'une boîte de dialogue système standard d'ouverture de fichiers, proposant par défaut les fichiers d'extension “4BK”.
 
-#### Voir aussi 
+## Voir aussi 
 
 [BACKUP](backup.md)  
 [RESTORE INFO](restore-info.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

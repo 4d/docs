@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MESSAGE.Summary-->The **MESSAGE** command is usually used to inform the user of some activity.<!-- END REF--> It displays *message* on the screen in a special message window that opens and closes each time you call **MESSAGE**, unless you work with a window you previously opened using [Open window](open-window.md) (see the following details). The message is temporary and is erased as soon as a form is displayed or the method stops executing. If another **MESSAGE** is executed, the old message is erased.
 
@@ -30,7 +30,7 @@ If a window is opened with [Open window](open-window.md), all subsequent calls t
 
 **Note:** **MESSAGE** is compatible with the [Open form window](open-form-window.md) command; however, in this context the second *\** parameter of [Open form window](open-form-window.md), which saves the window's size and position, is not supported. 
 
-#### Example 1 
+## Example 1 
 
 The following example processes a selection of records and calls MESSAGE to inform the user about the progress of the operation:
 
@@ -46,7 +46,7 @@ The following window appears and disappears at each MESSAGE call:
 
 ![](../assets/en/commands/pict25453.en.png)
 
-#### Example 2 
+## Example 2 
 
 In order to avoid this "blinking" window, you can display the messages in a window opened using [Open window](open-window.md), as in this example:
 
@@ -64,7 +64,7 @@ This provides the following result (shown here on Windows):
 
 ![](../assets/en/commands/pict25454.en.png)
 
-#### Example 3 
+## Example 3 
 
 Adding a carriage return makes a better presentation:
 
@@ -82,7 +82,7 @@ This provides the following result (shown here on Windows):
 
 ![](../assets/en/commands/pict25455.en.png)
 
-#### Example 4 
+## Example 4 
 
 Using [GOTO XY](goto-xy.md) and writing some additional lines:
 
@@ -106,14 +106,14 @@ This provides the following result (shown here on Windows):
 
 ![](../assets/en/commands/pict25456.en.png)
 
-#### See also 
+## See also 
 
 [CLOSE WINDOW](close-window.md)  
 [ERASE WINDOW](erase-window.md)  
 [GOTO XY](goto-xy.md)  
 [Open window](open-window.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Compact data file.Summary-->O comando **Compact data file** \[# descv\] compacta o arquivo de dados designado pelo parâmetro *endereçoDados* associado com o arquivo de estrutura *endereçoEstrutura*.<!-- END REF--> \[#/ descv\] Para mais informações sobre compactação, consulte o manual de Design. 
 
@@ -50,7 +50,7 @@ Por padrão, o comando **Compact data file** cria um arquivo de log no formato X
 
 Se tiver passado a opção Timestamp o nome do arquivo de histórico inclui a data e a hora de sua criação na forma "AAAA-MM-DD HH-MM-SS", o que nos dá, por exemplo: “myDB\_Compact\_Log\_2015-09-27 15-20-35.xml”. Isto significa que cada novo arquivo de histórico não substitui ao anterior, mas poderia exigir ação manual posterior para eliminar arquivos desnecessários. Independentemente da opção selecionada, logo que for gerado um arquivo de histórico, sua trajetória se devolve na variável sistema Document depois da execução do comando.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir (Windows) efetua a compactação de um arquivo de dados:
 
@@ -61,17 +61,17 @@ O exemplo a seguir (Windows) efetua a compactação de um arquivo de dados:
  $pastaArqu:=Compact data file($arquivoEstrutura;$arquivoDados;$arquivoOrig)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se a operação de compactação foi realizada corretamente, a variável sistema OK recebe o valor 1, caso contrário, recebe o valor 0\.   
 Se um arquivo de histórico for gerado, seu nome de caminho completo é retornado na variável de sistema Document.   
 
-#### Ver também 
+## Ver também 
 
 [Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

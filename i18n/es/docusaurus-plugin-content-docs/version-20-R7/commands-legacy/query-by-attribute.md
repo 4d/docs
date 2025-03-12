@@ -70,7 +70,7 @@ Esta es la estructura de una consulta por atributos:
 
 **Nota**: un criterio implícito para todos los operadores (excepto #) es que el campo Objeto contiene un atributo. Sin embargo, para el operador #, puede definirse (ver más adelante).
 
-##### Uso del operador # 
+### Uso del operador # 
 
 Al consultar por atributo utilizando el operador **#**, debe tener en cuenta los casos en que un atributo puede no estar presente en un registro. Por ejemplo, considere la siguiente afirmación:
 
@@ -100,7 +100,7 @@ Este principio también aplica a los atributos array. Por ejemplo, la búsqueda 
 
 **Nota:** Para obtener específicamente los registros donde el atributo no está definido, puede utilizar un objeto vacío (ver ejemplo 2). Note sin embargo que la búsqueda de valores NULL en elementos array no es soportada.
 
-##### Crear búsquedas múltiples 
+### Crear búsquedas múltiples 
 
 Aquí están las reglas a seguir para la construcción de varias búsquedas por atributo:
 
@@ -117,7 +117,7 @@ No importa la forma en que una búsqueda se haya definido:
 * Si la operación de búsqueda va a tomar algún tiempo para llevarse a cabo, 4D muestra automáticamente un mensaje que contiene un termómetro de progreso. Estos mensajes se pueden activar y desactivar mediante el uso de los comandos [MESSAGES ON](messages-on.md) y [MESSAGES OFF](messages-off.md). Si se muestra un termómetro de progreso, el usuario puede hacer clic en el botón Detener para interrumpir la búsqueda. Si se completa la consulta, OK toma el valor 1\. De lo contrario, si la consulta se interrumpe, OK toma el valor 0 (cero).
 * Si no se especifica ningún campo objeto indexado, la búsqueda se optimiza cada vez que es posible (los campos indexados se buscan primero), resultando en una búsqueda que toma la menor cantidad de tiempo posible.
 
-##### Valores fecha en el objeto 
+### Valores fecha en el objeto 
 
 Las fechas se almacenan en los objetos en función de los parámetros de la base; por defecto, se tiene en cuenta la zona horaria (ver el selector JSON use local time en el comando [SET DATABASE PARAMETER](set-database-parameter.md)). 
 
@@ -144,11 +144,11 @@ Tenga en cuenta que el alcance de este parámetro está limitado al process. Si 
  QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1976-11-27!)
 ```
 
-##### Utilización de la propiedad virtual longitud 
+### Utilización de la propiedad virtual longitud 
 
 Puede utilizar la propiedad virtual "longitud" con este comando. Esta propiedad está disponible automáticamente para todos los atributos de tipo array y devuelve el tamaño del array, es decir, el número de elementos que contiene. Se puede utilizar en el contexto de la ejecución del comando **QUERY BY ATTRIBUTE** (ver ejemplo 4).
 
-##### Asociar los criterios para las búsquedas en los elementos de array 
+### Asociar los criterios para las búsquedas en los elementos de array 
 
 (Nuevo en 4D v16 R2) Al buscar en atributos array con varios argumentos de búsqueda unidos por el operador AND, puede que quiera asegurarse de que sólo se devuelvan los registros que contengan elementos que coincidan con todos los argumentos y no los registros donde se pueden encontrar argumentos en diferentes elementos. Para ello, debe vincular los argumentos de búsqueda a elementos del array, de modo que solo se encuentren elementos únicos que contengan argumentos vinculados.  
 

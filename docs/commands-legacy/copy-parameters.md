@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Copy parameters.Summary-->The Copy parameters command returns a new collection containing all parameters actually passed to a method or a function.<!-- END REF--> This command is useful when you need to forward a various number of parameters from a method or function to another method or function. 
 
@@ -27,7 +27,7 @@ When called inside a formula, **Copy parameters** returns the parameters passed 
 * it is not called in a method or function that has been called by another method or function,
 * no parameter was passed to the parent method or function.
 
-#### Example 1 
+## Example 1 
 
 Calling a different function depending on the first parameter and passing other parameters to this function:
 
@@ -48,7 +48,7 @@ Or, calling another function on another object with **apply()** and pass the par
  This.delegate.doSomething.apply(This.delegate;Copy parameters)
 ```
 
-#### Example 2 
+## Example 2 
 
 Since the command returns a collection, it can be used with **.join()** to build for example a html list:
 
@@ -77,11 +77,11 @@ Since the command returns a collection, it can be used with **.join()** to build
 
 ```
 
-#### See also 
+## See also 
 
 [Count parameters](count-parameters.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

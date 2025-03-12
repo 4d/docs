@@ -54,7 +54,7 @@ En outre, le script lui-même peut générer des erreurs PHP. Dans ce cas, vous 
 
 **Note :** PHP permet de configurer la gestion d’erreurs. Pour plus d’informations, reportez-vous par exemple à la page <http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting>.
 
-##### Conversion des données retournées 
+### Conversion des données retournées 
 
 Le tableau suivant précise comment 4D interprète et convertit les données retournées en fonction du type du paramètre *résultatPHP*.
 
@@ -74,11 +74,11 @@ Le tableau suivant précise comment 4D interprète et convertit les données ret
 
 **Note :** Si vous devez récupérer de gros volumes de données via PHP, il est généralement plus efficace de passer par le canal du buffer *stdOut* (commande **echo** ou similaire) que par le retour de fonction. Pour plus d'informations, reportez-vous à la description de la commande [PHP GET FULL RESPONSE](php-get-full-response.md). 
 
-##### Utiliser les variables d’environnement 
+### Utiliser les variables d’environnement 
 
 Vous pouvez utiliser la commande [SET ENVIRONMENT VARIABLE](set-environment-variable.md) pour définir des variables d’environment utilisées par le script. Attention : après un appel à [LAUNCH EXTERNAL PROCESS](launch-external-process.md) ou **PHP Execute**, l’ensemble des variables d’environment est effacé.
 
-##### Fonctions spéciales 
+### Fonctions spéciales 
 
 4D propose les fonctions spéciales suivantes :
 

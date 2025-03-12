@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Day of.Summary-->Day of コマンドは、*date*から日を返します。<!-- END REF-->Day of は1から31までの値を返します。日付から曜日を取得するには、[Day number](day-number.md "Day number")コマンドを使用します。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、Day ofの使用方法を示しています。結果は変数vResultに代入されます。変数vResultに代入される内容はコメントで説明されています:   
   
@@ -27,17 +27,17 @@ displayed_sidebar: docs
  vResult:=Day of(Current date) // vResult 現在の日が代入されます
 ```
 
-#### 例題 2 
+## 例題 2 
 
 [Current date](current-date.md "Current date")コマンドの例を参照。
 
-#### 参照 
+## 参照 
 
 [Day number](day-number.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Open window.Summary-->Open window abre uma nova janela cujas dimensões são definidas pelos quatro primeiros parâmetros:  
 
@@ -50,7 +50,7 @@ Os formulários são mostrados ao interior de uma janela aberta. O texto passado
   
 Open window devolve uma referência de janela de tipo WinRef, utilizável pelos comandos de gestão de janelas (ver seção "*WinRef*"). 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O método de projeto abaixo abre uma janela centrada na janela principal (Windows) ou na tela principal (Macintosh). Note que pode aceitar dois, três, ou quatro parâmetros: 
 
@@ -85,7 +85,7 @@ Quando tiver escrito o método de projeto, pode utilizá-lo desta forma:
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo abaixo abre uma janela flutuante que tenha uma caixa de menu Control (Windows) ou uma caixa de fechar (Macintosh). A janela é aberta na esquina superior direita da janela da aplicação. 
 
@@ -100,7 +100,7 @@ O método CloseColorPalette chama ao comando [CANCEL](cancel.md):
  CANCEL
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo abaixo abre uma janela cujo tamanho e título provém das propriedades do formulário mostrado na janela:   
   
@@ -120,7 +120,7 @@ O exemplo abaixo abre uma janela cujo tamanho e título provém das propriedades
 
 //``
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Este exemplo ilustra o mecanismo de “atraso” de mostrar janelas em macOS: 
 
@@ -131,13 +131,13 @@ Este exemplo ilustra o mecanismo de “atraso” de mostrar janelas em macOS:
   //O evento On Load é gerado e depois a janela é exibida; "descende" de debaixo da barra de título
 ```
 
-#### Ver também 
+## Ver também 
 
 [CLOSE WINDOW](close-window.md)  
 *Criar janela*  
 [Open form window](open-form-window.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

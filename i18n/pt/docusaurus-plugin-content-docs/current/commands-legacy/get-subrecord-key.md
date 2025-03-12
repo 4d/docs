@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get subrecord key.Summary-->El comando [Get subrecord key](get-subrecord-key.md) facilita la migración del código 4D utilizando subtablas convertidas al código estándar de manipulación de tablas.<!-- END REF-->a partir de la versión 11 de 4D, no se soportan subtablas. Cuando se convierte una base antigua, las subtablas existentes se transforman automáticamente en tablas estándar relacionadas con las tablas originales por una relación automática. La subtabla anterior se convierte en la tabla Muchos y la tabla original es la tabla Uno. En la tabla Uno, el campo subtabla anterior se transforma en un campo especial de tipo "Relación subtabla" y en la tabla Muchos, se añade un campo especial, de tipo "Relación subtabla", llamado "id\_anadido\_por\_convertidor".
 
@@ -58,7 +58,7 @@ En el parámetro *campoID*, el comando acepta un campo de tipo Relación subtabl
 
 Esto le permite escribir el código de transición. Durante la fase final de actualización de la aplicación, puede eliminar las llamadas a este comando.
 
-#### Atribuir o campo id\_added\_by\_converter 
+## Atribuir o campo id\_added\_by\_converter 
 
 A partir de 4D v14 R3, puede asignar un valor al campo "id\_added\_by\_converter". Anteriormente, este valor sólo podía ser asignado por 4D, lo que obligaba a los desarrolladores a utilizar comandos obsoletos como *\_o\_CREATE SUBRECORD* para poder añadir registros en subtablas convertidas. 
 
@@ -80,7 +80,7 @@ Por ejemplo, con la estructura anterior puede escribir:
 Este código funcionará tanto con una relación especial como con una estándar.
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

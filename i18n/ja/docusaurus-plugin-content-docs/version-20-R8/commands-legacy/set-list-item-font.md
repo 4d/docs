@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET LIST ITEM FONT.Summary-->SET LIST ITEM FONT コマンドは、リスト参照またはオブジェクト名を*list*に指定したリスト中、*itemRef*引数で指定した項目の文字フォントを設定します。<!-- END REF-->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 *font* 引数には、使用するフォントの名前または番号を渡します。デフォルトフォントを設定するには空の文字列を渡します。
 
-#### 例題 
+## 例題 
 
 リストのカレント項目にTimesフォントを適用します:
 
@@ -36,14 +36,14 @@ displayed_sidebar: docs
  SET LIST ITEM FONT(*;"Mylist";*;"Times")
 ```
 
-#### 参照 
+## 参照 
 
 [Get list item font](get-list-item-font.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

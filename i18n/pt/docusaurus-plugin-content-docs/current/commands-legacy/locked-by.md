@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LOCKED BY.Summary-->LOCKED BY devolve a informação sobre o usuário e o processo que tem bloqueado um registro.<!-- END REF--> O número do processo(\*), o nome de usuário, o nome do equipo assim como o nome do processo são devolvidos nas variáveis *processo, usuario4D, usuarioSessao*, e *nomeProcesso*. Pode utilizar esta informação em uma caixa de diálogo personalizada para advertir al usuário quando um registro está bloqueado.  
 (\*) Este é o número do processo na máquina onde se executa o código que origina o bloqueio de registro. No caso de um trigger ou um método que seja executado no servidor, se devolve o número de processo "gemeo" na máquina servidor. No caso de un método que se executa em uma aplicañáo remota, se devolve o número de processo na máquina remota.
@@ -35,12 +35,12 @@ usuario4D devolve ""
 sessaoUsuario devolve ""  
 nomeProcesso devolve o endereço IP do locker, p. ex. "127.0.0.1"
 
-#### Ver também 
+## Ver também 
 
 [Locked](locked.md)  
 *Record Locking*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

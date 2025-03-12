@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DELETE RECORD.Summary-->DELETE RECORD borra el registro actual de *tabla* en el proceso.<!-- END REF--> Si no hay registro actual para *tabla* en el proceso, DELETE RECORD no tiene efecto. En un formulario, puede crear un botón Borrar registro y asignarle la acción automática correspondiente, en lugar de utilizar este comando.
 
@@ -26,7 +26,7 @@ La eliminación de registros es una operación permanente y no puede deshacerse 
 
 Si se borra un registro, el número del registro se reutilizará cuando se creen nuevos registros. No utilice el número del registro como identificador del registro si su base permite la eliminación de registros.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo borra un registro de un empleado. El código pregunta al usuario el número del empleado a borrar, busca el registro correspondiente y lo borra:
 
@@ -38,12 +38,12 @@ El siguiente ejemplo borra un registro de un empleado. El código pregunta al us
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Locked](locked.md)  
 *Triggers*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

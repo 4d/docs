@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Summary-->The **LISTBOX SET FOOTERS HEIGHT** command modifies by programming the height of the footer row in the list box designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -31,11 +31,11 @@ Pass the height to set in the *height* parameter. By default, if you omit the *u
 
 **Note:** For more information about the calculation of row heights, refer to the *Design Reference* manual.
 
-#### See also 
+## See also 
 
 [LISTBOX Get footers height](listbox-get-footers-height.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

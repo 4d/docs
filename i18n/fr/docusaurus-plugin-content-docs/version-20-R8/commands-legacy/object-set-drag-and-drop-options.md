@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Summary-->La commande **OBJECT SET DRAG AND DROP OPTIONS** permet de définir ou de modifier dynamiquement les options de glisser-déposer pour l’objet ou les objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
 
@@ -31,7 +31,7 @@ Passez dans chaque paramètre un booléen indiquant si l’option correspondante
 * *déposable* \= Vrai : objet acceptant le déposer en mode programmé.
 * *déposableAuto* \= Vrai (utilisable uniquement avec les champs et variables image, texte, combo box et list box) : objet acceptant le déposer en mode automatique.
 
-#### Exemple 
+## Exemple 
 
 Définition d’une zone de texte en glisser-déposer auto : 
 
@@ -39,11 +39,11 @@ Définition d’une zone de texte en glisser-déposer auto :
  OBJECT SET DRAG AND DROP OPTIONS(*;"Comments";False;True;False;True)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT GET DRAG AND DROP OPTIONS](object-get-drag-and-drop-options.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

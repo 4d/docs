@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->The **SET DATABASE PARAMETER** command allows you to modify various internal parameters of the 4D database.<!-- END REF-->
 
@@ -91,7 +91,7 @@ The *selector* designates the database parameter to modify. 4D offers predefined
 * The *table* parameter is only used by selectors 31, 46 and 47\. In all other cases, it is ignored if it is passed.
 * If a setting is not kept between sessions, but you want to ensure that it's always applied, you can execute it in the [On Startup database method](on-startup-database-method.md) or [On Server Startup database method](on-server-startup-database-method.md).
 
-#### Thread-safe selectors 
+## Thread-safe selectors 
 
 The **SET DATABASE PARAMETER** command can be used in preemptive processes when calling the following selectors:
 
@@ -106,7 +106,7 @@ The **SET DATABASE PARAMETER** command can be used in preemptive processes when 
 * IMAP Log
 * Pause logging
 
-#### Example 1 
+## Example 1 
 
 The following statement will avoid any unexpected timeout:
 
@@ -119,7 +119,7 @@ The following statement will avoid any unexpected timeout:
  ...
 ```
 
-#### Example 2 
+## Example 2 
 
 This example temporarily forces the execution of a query by formula command on the client machine:
 
@@ -130,7 +130,7 @@ This example temporarily forces the execution of a query by formula command on t
  SET DATABASE PARAMETER([table1];Query By Formula On Server;curVal) //Re-establish current setting
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to export data in JSON that contains a converted 4D date. Note that conversion occurs when the date is saved in the object, so you must call the [SET DATABASE PARAMETER](set-database-parameter.md) command before calling [OB SET](ob-set.md): 
 
@@ -142,13 +142,13 @@ You want to export data in JSON that contains a converted 4D date. Note that con
  SET DATABASE PARAMETER(Dates inside objects;1)
 ```
 
-#### See also 
+## See also 
 
 [Get database parameter](get-database-parameter.md)  
 [LOG EVENT](log-event.md)  
 [QUERY SELECTION](query-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

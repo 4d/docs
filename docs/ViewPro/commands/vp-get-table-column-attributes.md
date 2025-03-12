@@ -24,7 +24,7 @@ title: VP Get column attributes
 |Result |Object|<-|Attributes of the *column*|<!-- END REF -->
 
 
-#### Description
+## Description
 
 The `VP Get table column attributes` command <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the specified *column* in the *tableName*<!-- END REF -->.
 
@@ -46,7 +46,7 @@ The command returns an object describing the current attributes of the *column*:
 
 If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**. 
 
-#### Example
+## Example
 
 ```4d
 var $attributes : Object
@@ -56,7 +56,7 @@ If ($attributes.dataField#"")
 End if
 ```
 
-#### See also
+## See also
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Find table](vp-find-table.md)<br/>

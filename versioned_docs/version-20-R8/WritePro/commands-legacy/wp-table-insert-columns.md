@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Table insert columns.Summary-->The **WP Table insert columns** command inserts one or several column(s) into a 4D Write Pro table.<!-- END REF-->
 
@@ -37,7 +37,7 @@ The optional *numColumns* parameter defines the number of columns to insert into
   
 The command returns a column range representing inserted column(s), or Null if nothing was inserted. 
 
-#### Example 
+## Example 
 
 You want to insert three columns after first column in the *Invoice* table. This code:
 
@@ -54,6 +54,6 @@ Will insert the new columns at the correct location:
 
 ![](../../assets/en/WritePro/commands/pict4680283.en.png)
 
-#### See also 
+## See also 
 
 [WP Table insert rows](wp-table-insert-rows.md)  

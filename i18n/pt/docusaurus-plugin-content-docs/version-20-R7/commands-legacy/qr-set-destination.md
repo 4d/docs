@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR SET DESTINATION.Summary-->O comando QR SET DESTINATION permite definir o tipo de saída do relatório rápido em *area*.<!-- END REF-->  
   
@@ -40,7 +40,7 @@ Por padrão, o delimitador do campo é o caractere tab (ASCII 9). O delimitador 
 Se passar um número de *area* inválido, é gerado o erro -9850.  
 Se o valor do destino *tipo* é incorreto, é gerado o erro -9852.
 
-#### Exemplo 
+## Exemplo 
 
 O código a seguir define o arquivo texto Midoc.txt como tipo de destino do relatório rápido e o executa: 
 
@@ -49,11 +49,11 @@ O código a seguir define o arquivo texto Midoc.txt como tipo de destino do rela
  QR RUN(MinhaArea)
 ```
 
-#### Ver também 
+## Ver também 
 
 [QR GET DESTINATION](qr-get-destination.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

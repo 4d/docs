@@ -54,7 +54,7 @@ L'objet retourné contient les propriétés suivantes (les noms des propriétés
 | *webMaxConcurrentProcesses* | Numérique             | **Non significatif en mode sessions Web évolutives, voir *Gestion des sessions Web*.** Nombre maximum de process web simultanés (correspond à l'option web Web max concurrent processes) |
 | webPortID                   | Numérique             | Port TCP utilisé par le serveur Web (correspond à l'option web Web port ID)                                                                                                              |
 
-##### Propriété Cache 
+### Propriété Cache 
 
 Si vous passez **Vrai** dans le paramètre *avecCache*, la commande retourne les propriétés de l'objet "cache" avec le contenu suivant :
 

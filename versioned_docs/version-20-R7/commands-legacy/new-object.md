@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New object.Summary-->The **New object** command creates a new empty or prefilled object and returns its reference.<!-- END REF-->
 
@@ -45,7 +45,7 @@ Note that:
 * dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting (see *Compatibility page*). When converting 4D dates into text prior to storing them in the object, by default the program takes the local time zone into account. You can modify this behavior using the Dates inside objects selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
 * if you pass a time, it is stored as a number of milliseconds (Real).
 
-#### Example 1 
+## Example 1 
 
 This command can create empty of filled objects:
 
@@ -61,7 +61,7 @@ This command can create empty of filled objects:
   // $obj3 = {name:Smith,age:40}
 ```
 
-#### Example 2 
+## Example 2 
 
 Creating a new object with an object as parameter value: 
 
@@ -80,7 +80,7 @@ Creating a new object with an object as parameter value:
   // $Contact = {FirstName:Alan,LastName:Parker,age:30,Children:{Children:[Richard,Susan,James]}}
 ```
 
-#### Example 3 
+## Example 3 
 
 This command is useful to pass objects as parameters:
 
@@ -89,7 +89,7 @@ This command is useful to pass objects as parameters:
  $measures:=Database measures(New object("path";"DB.cacheReadBytes";"withHistory";True;"historyLength";120))
 ```
 
-#### Example 4 
+## Example 4 
 
 With this command, you can easily handle objects in loops:
 
@@ -102,12 +102,12 @@ With this command, you can easily handle objects in loops:
  End for
 ```
 
-#### See also 
+## See also 
 
   
 [New shared object](new-shared-object.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

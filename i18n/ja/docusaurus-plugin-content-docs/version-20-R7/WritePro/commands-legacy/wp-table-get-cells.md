@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Table get cells.Summary-->**WP Table get cells** コマンドは、 *targetObj* または(*startCol*、*startRow*、*numCols*、および *numRows* 引数で定義された)*tableRef* で指定した表から、セルのセレクションを格納した新しいレンジオブジェクトを返します。<!-- END REF-->
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 *startCol* と *numCols* を足した数、もしくは*startRow* と *numRows* を足した数が*tableRef* 引数で指定した表のカラム数/行数より多い場合、または*startCol* or *startRow* 引数そのものが*tableRef* 引数で指定した表のカラム数/行数より多い場合、返されるレンジには取得可能なカラム/行が全て格納されます。
 
-#### 例題 1 
+## 例題 1 
 
 特定のセル範囲の属性を変更します:
 
@@ -67,7 +67,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict3307320.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 "5x7"のセルから行の最後までのセルのレンジを取得する場合を考えます:
 
@@ -87,7 +87,7 @@ displayed_sidebar: docs
  $cellRange:=WP Table get cells(tableRef;5;7;MAXLONG;MAXLONG)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 ユーザーが選択したセルを取得したい場合を考えます:
 
@@ -99,7 +99,7 @@ displayed_sidebar: docs
  $cells:=WP Table get cells($userSelection)
 ```
 
-#### 参照 
+## 参照 
 
 [WP Table get columns](wp-table-get-columns.md)  
 [WP Table get rows](wp-table-get-rows.md)  

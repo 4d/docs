@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB GET STATISTICS.Summary-->La commande **WEB GET STATISTICS** vous permet d’obtenir des informations sur les pages les plus consultées, chargées dans le cache du serveur Web.<!-- END REF--> Par conséquent, ces statistiques concernent uniquement les pages statiques, les images GIF, les images JPEG <100 ko et les feuilles de style (.css). 
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 La commande remplit le tableau texte *pages* avec les noms des pages les plus consultées. Le tableau entier long *hits* reçoit le nombre de “hits” pour chaque page. La variable numérique *usage* reçoit le pourcentage du cache Web utilisé par chaque page.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez générer une page semi-dynamique affichant les statistiques d’utilisation du cache Web. Pour cela, dans une page HTML statique appelée “stats.shtm” (les pages suffixées .shtm sont automatiquement analysées par le serveur Web), vous placez la balise *<!––#4DSCRIPT/STATS––>* ainsi que des références aux variables *vPages* et *vUsage*, par exemple :
 
@@ -62,7 +62,7 @@ Dans la méthode projet STATS, écrivez le code suivant :
 Vous pouvez envoyer la page "stats.shtm" via un lien URL ou à l'aide de commande [WEB SEND FILE](web-send-file.md).
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -23,7 +23,7 @@ Esse comando é mantido apenas por motivos de compatibilidade. Agora é recomend
 
 :::
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.HTTP AUTHENTICATE.Summary-->O comando **HTTP AUTHENTICATE** permite fazer petições HTTP aos servidores que necessitam a autenticação da aplicação cliente.<!-- END REF--> Os métodos BASIC e DIGEST são compatíveis, assim como também a presença de um proxy.  
   
@@ -43,7 +43,7 @@ Se passado o parâmetro *\**, indica que a informação de autenticação é dir
   
 Como padrão, informação de autenticação é armazaneada e reutilizada para cada requisição no processo atual. Entretanto, é possível resetar esta informação depois de cada requisição usando uma opção do comando [HTTP SET OPTION](http-set-option.md). Neste caso, terá que executar o comando **HTTP AUTHENTICATE** antes de cada chamada [HTTP Request](http-request.md) ou [HTTP Get](http-get.md).
 
-#### Exemplo 
+## Exemplo 
 
 Exemplos de petições com autenticação:
 
@@ -55,11 +55,11 @@ Exemplos de petições com autenticação:
  $httpStatus:=HTTP Get(...)
 ```
 
-#### Ver também 
+## Ver também 
 
 [HTTP SET OPTION](http-set-option.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

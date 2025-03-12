@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.READ PICTURE FILE.Summary-->READ PICTURE FILE コマンドを使用してディスクファイル*fileName* に保存されたピクチャを開き、これを*picture* 引数に指定した4Dフィールドまたは変数へロードすることができます。<!-- END REF-->には読み込むファイルのフルパス名またはファイル名のみを渡すことができます。ファイル名のみを渡した場合、そのファイルはデータベースストラクチャと同階層になければなりません。Windowsではファイル拡張子が必要です。  
 空の文字列 ("") が*fileName* に渡されると、標準のファイルを開くダイアログボックスが表示され、ユーザは読み込むファイルやフォーマットを指定できます。 
@@ -28,18 +28,18 @@ displayed_sidebar: docs
 
 オプションの *\** 引数を渡すと、コマンドはすべてのタイプのファイルを受け入れます。この方法では、適切なcodecなしでもピクチャを扱うことができます ([BLOB TO PICTURE](blob-to-picture.md) コマンドの説明を参照してください)。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されると、システム変数Documentには開かれたファイルのフルパスが格納され、システム変数OKは1に設定されます。そうでなければOKに0が設定されます。
 
-#### 参照 
+## 参照 
 
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
 *ピクチャ*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

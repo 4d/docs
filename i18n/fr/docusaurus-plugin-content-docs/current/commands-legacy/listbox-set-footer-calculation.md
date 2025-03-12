@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->La commande **LISTBOX SET FOOTER CALCULATION** permet de définir le calcul automatique associé à la zone de pied de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -46,11 +46,11 @@ Si le type de données de la colonne ou d’au moins une colonne de la list box 
 
 **Note :** Les variables de zone de pied sont automatiquement typées (lorsqu'elles ne sont pas typées par programmation) en fonction du type de calcul défini dans la Liste des propriétés (cf. *Propriétés spécifiques des pieds de List box*). Si le type de la variable diffère du résultat attendu par la commande **LISTBOX SET FOOTER CALCULATION**, une erreur de type est générée. Par exemple, pour une colonne affichant des dates, si le pied effectue un calcul 'Maximum', la variable *pied* sera typée en date. Si vous exécutez alors l'instruction **LISTBOX SET FOOTER CALCULATION**(footer;lk footer count), une erreur est générée car le type du résultat attendu (entier long) est différent du type de la variable. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get footer calculation](listbox-get-footer-calculation.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

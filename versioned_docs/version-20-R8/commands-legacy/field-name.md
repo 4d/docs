@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Field name.Summary-->The Field name command returns the name of the field whose pointer you pass in *fieldPtr* or whose table and field number you pass in *tableNum* and *fieldNum*.<!-- END REF-->
 
-#### Example 1 
+## Example 1 
 
 This example sets the second element of the array FieldArray{1} to the name of the second field in the first table. FieldArray is a two-dimensional array:
 
@@ -27,7 +27,7 @@ This example sets the second element of the array FieldArray{1} to the name of t
  FieldArray{1}{2}:=Field name(1;2)
 ```
 
-#### Example 2 
+## Example 2 
 
 This example sets the second element of the array FieldArray{1} to the name of the field *\[MyTable\]MyField*. FieldArray is a two-dimensional array:
 
@@ -35,7 +35,7 @@ This example sets the second element of the array FieldArray{1} to the name of t
  FieldArray{1}{2}:=Field name(->[MyTable]MyField)
 ```
 
-#### Example 3 
+## Example 3 
 
 This example displays an alert. This method passes a pointer to a field: 
 
@@ -43,13 +43,13 @@ This example displays an alert. This method passes a pointer to a field:
  ALERT("The ID number for the field "+Field name($1)+" in the table "+Table name(Table($1))+" has to be longer than five characters.")
 ```
 
-#### See also 
+## See also 
 
 [Field](field.md)  
 [Last field number](last-field-number.md)  
 [Table name](table-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibility Note 
+## Compatibility Note 
 
 <!--REF #_command_.POST OUTSIDE CALL.Summary-->This command was named **CALL PROCESS** in previous 4D releases.<!-- END REF--> 
 
-#### 説明 
+## 説明 
 
 **POST OUTSIDE CALL**は、*process*の最前面のウィンドウに表示されたフォームを呼び出します。
 
@@ -35,17 +35,17 @@ displayed_sidebar: docs
 
 ****Tip: POST OUTSIDE CALL**には**POST OUTSIDE CALL** **(-1)**というもう一つの構文があります。メソッドの実行速度が遅くならないように、4Dはインタープロセス変数が変更されるたびに再描画することはしません。プロセス参照番号の代わりに-1を*process*引数に渡すと、4Dは外部呼び出しをポストせず、その代わりに、同一マシン上で実行されているプロセス内のすべてのウィンドウに表示されているインタプロセス変数をすべて更新します。
 
-#### 例題 
+## 例題 
 
 の例題参照
 
-#### 参照 
+## 参照 
 
 [Form event code](../commands/form-event-code.md)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Find all.Summary-->El comando **WP Find all** busca en *objTarget* después del rango *buscarValor* basado en la *condicionBusq*.<!-- END REF--> Se puede utilizar un parámetro opcional para reemplazar los resultados encontrados.
 
@@ -74,7 +74,7 @@ El orden se invierte si se utiliza wk find reverse.
 
 Se devuelve una colección vacía si no se encuentran resultados.
 
-#### Ejemplo 
+## Ejemplo 
 
 ```4d
  var $userSel ;$target ;$alphaRanges : Object
@@ -94,7 +94,7 @@ Se devuelve una colección vacía si no se encuentran resultados.
  $bravoRanges:=WP Find all($target;"alpha";$options;"bravo")
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Find next](wp-find-next.md)  
 [WP Find previous ](wp-find-previous.md)  

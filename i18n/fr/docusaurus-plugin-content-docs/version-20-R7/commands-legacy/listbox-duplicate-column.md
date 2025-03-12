@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Summary-->La commande **LISTBOX DUPLICATE COLUMN** permet de dupliquer la colonne désignée par le(s) paramètre(s) *objet* et *\** dans le contexte du formulaire en cours d’exécution (mode Application).<!-- END REF--> Le formulaire d’origine, généré en mode Développement, n’est pas modifié. 
 
@@ -49,7 +49,7 @@ Passez dans les paramètres *nomEntête* et *variableEntête* le nom d’objet e
 
 Cette commande doit être utilisée dans le contexte de l’affichage d’un formulaire. Elle sera généralement appelée dans l’événement On Load du formulaire ou suite à une action utilisateur (événement On Clicked).
 
-##### Duplication dynamique 
+### Duplication dynamique 
 
 Vous pouvez dupliquer dynamiquement des colonnes de list box, 4D prenant automatiquement en charge les définitions de variables nécessaires (colonne, pied et en-tête).
 
@@ -57,7 +57,7 @@ Pour cela, **LISTBOX DUPLICATE COLUMN** accepte un pointeur **Nil** (**\->\[\]**
 
 A noter que les variables d'en-tête et de pied sont toujours créées avec un type spécifique (respectivement entier long et texte). A l'inverse, les variables de colonne ne peuvent pas être typées à la création car les list box acceptent différents types de tableaux pour ces variables (tableau texte, tableau entier, etc.). Vous devez donc définir manuellement le type du tableau (cf. exemple 2). Il est important d'effectuer ce typage avant d'appeler des commandes telles que [LISTBOX INSERT ROWS](listbox-insert-rows.md) pour insérer des nouveaux éléments dans le tableau. Ou bien, il est possible d'utiliser [APPEND TO ARRAY](append-to-array.md) pour à la fois typer le tableau et insérer des éléments. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans une list box de type tableau, on souhaite dupliquer la colonne "Prénom", prête pour la saisie :
 
@@ -76,7 +76,7 @@ Lorsque vous cliquez sur le bouton, la list box apparaît ainsi :
 
 ![](../assets/en/commands/pict1205359.fr.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez dupliquer dynamiquement une colonne booléenne et modifier son titre :
 
@@ -89,11 +89,11 @@ Vous souhaitez dupliquer dynamiquement une colonne booléenne et modifier son ti
  OBJECT SET TITLE(headprt->;"Nouvelle colonne dupliquée")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX MOVE COLUMN](listbox-move-column.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM SET INPUT.Summary-->**FORM SET INPUT** désigne *formulaire* ou *formUtilisateur* comme formulaire entrée courant de *laTable* pour le process courant.<!-- END REF--> *formulaire* doit appartenir à *laTable*.
 
@@ -51,7 +51,7 @@ Le paramètre optionnel *\** est destiné à être utilisé conjointement avec l
 
 **Note :** Que vous passiez ou non le paramètre \*, **FORM SET INPUT** change le formulaire entrée pour la table. 
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant illustre une utilisation typique de **FORM SET INPUT**. A noter que, si dans cet exemple **FORM SET INPUT** est appelé juste avant que le formulaire soit utilisé, cela n'est absolument pas nécessaire. **FORM SET INPUT** peut en fait être exécuté dans une tout autre méthode, du moment qu'elle est exécutée avant celle-ci : 
 
@@ -60,7 +60,7 @@ L'exemple suivant illustre une utilisation typique de **FORM SET INPUT**. A note
  ADD RECORD([Sociétés]) // Ajout d'une nouvelle société
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Dans une base de facturation gérant plusieurs sociétés, la création d’une facture doit s’effectuer dans le formulaire utilisateur correspondant : 
 
@@ -76,7 +76,7 @@ Dans une base de facturation gérant plusieurs sociétés, la création d’une 
  ADD RECORD([Factures])
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant utilise un fichier .json de description de formulaire pour la saisie des enregistrements des employés :
 
@@ -89,7 +89,7 @@ Résultat :
 
 ![](../assets/en/commands/pict3687432.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [ADD RECORD](add-record.md)  
 [DISPLAY RECORD](display-record.md)  
@@ -103,7 +103,7 @@ Résultat :
 [Open window](open-window.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

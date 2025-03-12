@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET PATHS FORM.Summary-->The **METHOD GET PATHS FORM** command fills the *arrPaths* array with the internal pathnames and names of the methods for all form objects as well as form methods.<!-- END REF--> Form methods are labeled {formMethod}.
 
@@ -38,7 +38,7 @@ If the command is executed from a component, it returns by default the paths of 
 
 If the command detects a duplicated method name, the error -9802 is generated ("Object path not unique"). In this case, it is advisable to use the MSC in order to verify the database structure. 
 
-#### Example 1 
+## Example 1 
 
 List of all objects of the "input" form for the \[Employees\] table. Note that table form methods (and project form methods) are processed as objects belonging to the form:
 
@@ -50,7 +50,7 @@ List of all objects of the "input" form for the \[Employees\] table. Note that t
   // [tableForm]/input/bCancel -> Object method
 ```
 
-#### Example 2 
+## Example 2 
 
 List of objects of the "dial" project form:
 
@@ -58,7 +58,7 @@ List of objects of the "dial" project form:
  METHOD GET PATHS FORM(arrPaths;"dial")
 ```
 
-#### Example 3 
+## Example 3 
 
 List of all objects of the "input" form for the \[Employees\] table from a component:
 
@@ -66,11 +66,11 @@ List of all objects of the "input" form for the \[Employees\] table from a compo
  METHOD GET PATHS FORM(([Employees];arrPaths;"input@";*)
 ```
 
-#### See also 
+## See also 
 
 [FORM GET NAMES](form-get-names.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FONT STYLE LIST.Summary-->O comando **FONT STYLE LIST** devolve a lista de estilos e a lista de nomes completos suportados pela familia de fonte designada pelo parámetro *familiaFonte*.<!-- END REF--> Este comando lhe permite criar interfaces de manejo de fontes e estilos, em particular no contexto das áreas 4D Write Pro (ver *Referência 4D Write Pro*).
 
@@ -27,7 +27,7 @@ Em *listaNomsFuente*, passe um array texto para ser preenchido com a lista compl
 
  Se a *familiaFonte* não são encontradas na máquina, os arrays são devolvidos vazios. Para obter a lista de familias de fontes disponíveis na máquina, utilize o comando [FONT LIST](font-list.md).
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser selecionar estilos da familia de fontes "Verdana" (se estiver disponível):
 
@@ -55,11 +55,11 @@ Se quiser selecionar estilos da familia de fontes "Verdana" (se estiver disponí
   // $aTnames{1}="Verdana Bold Italic"
 ```
 
-#### Ver também 
+## Ver também 
 
 [FONT LIST](font-list.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

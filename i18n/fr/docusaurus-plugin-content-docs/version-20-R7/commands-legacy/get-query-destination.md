@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET QUERY DESTINATION.Summary-->La commande **GET QUERY DESTINATION** retourne la destination courante des résultats des recherches pour le process en cours.<!-- END REF--> Par défaut, les résultats des recherches modifient la sélection courante, mais vous pouvez modifier ce fonctionnement l’aide de la commande [SET QUERY DESTINATION](set-query-destination.md).
 
@@ -39,7 +39,7 @@ La valeur retournée dans le paramètre *destinationObjet* dépend de la valeur 
 
 Lorsque la destination des recherches est une variable (*destinationType* retourne 3), 4D retourne dans le paramètre *destinationPtr* un pointeur vers cette variable.
 
-#### Exemple 
+## Exemple 
 
 Nous souhaitons modifier temporairement la destination de recherche, et rétablir ensuite les paramètres précédents :
 
@@ -53,11 +53,11 @@ Nous souhaitons modifier temporairement la destination de recherche, et rétabli
   //rétablissement des paramètres
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET QUERY DESTINATION](set-query-destination.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

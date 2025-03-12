@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB GET VARIABLES.Summary-->La commande **WEB GET VARIABLES** remplit les tableaux texte *tabNoms* et *tabValeurs* avec, respectivement, les noms et les valeurs des variables contenues dans un formulaire Web “soumis” (c’est-à-dire envoyé) au serveur Web.<!-- END REF-->   
 Cette commande récupère la valeur de toutes les variables pouvant être incluses dans des pages HTML : zones de saisie, boutons, cases à cocher, boutons radio, pop up menus, listes d’options... 
@@ -24,7 +24,7 @@ Cette commande récupère la valeur de toutes les variables pouvant être inclus
 La commande fonctionne quel que soit le type d’URL ou de formulaire (méthode POST ou GET) envoyé au serveur Web.   
 Cette commande peut être appelée, selon les besoins, dans la [QR SET DESTINATION](qr-set-destination.md) ou toute autre méthode 4D qui résulte de la soumission d’un formulaire.
 
-##### Précisions sur les formulaires Web et les actions associées 
+### Précisions sur les formulaires Web et les actions associées 
 
 Un formulaire est composé de “zones de saisie” (zones de texte, boutons, cases à cocher), chacune ayant un nom. Lorsqu’un formulaire est “soumis” au serveur Web (une requête est envoyée au serveur), la requête comporte, entre autres, la liste des zones de saisie et leurs valeurs respectives.  
 Il y a deux “méthodes” pour soumettre un formulaire (4D accepte indifféremment l’une ou l’autre) : 
@@ -32,7 +32,7 @@ Il y a deux “méthodes” pour soumettre un formulaire (4D accepte indifférem
 * POST, généralement utilisée pour l’insertion de données dans le serveur Web — vers une base de données,
 * GET, généralement utilisée pour l’interrogation du serveur Web — données en provenance d’une base de données.
 
-#### Exemple 
+## Exemple 
 
 Un formulaire contient deux champs, vNOM et vVILLE, qui reçoivent les valeurs “MARTIN” et “PARIS”. L’action associée au formulaire est “*/4DACTION/WEBFORM*”.
 
@@ -56,11 +56,11 @@ On obtient alors :
  $tvaleurs{2}="PARIS"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WEB GET BODY PART](web-get-body-part.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

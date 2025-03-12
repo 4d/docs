@@ -13,13 +13,13 @@ title: VP Get sheet count
 |vpAreaName| Text|->|4D View Pro area form object name|
 |Function result|Integer|<-|Number of sheets|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get sheet count` command <!-- REF #_method_.VP Get sheet count.Summary -->returns the number of sheets in the document loaded in *vpAreaName*.<!-- END REF -->
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
-#### Example
+## Example
 
 In the following document:
 
@@ -35,7 +35,7 @@ Get the sheet count and set the current sheet to the last sheet:
 
 ![](../../assets/en/ViewPro/vp-sheet-3-select.png)
 
-#### See also
+## See also
 
 [VP Get sheet index](vp-get-sheet-index.md)<br/>
 [VP SET SHEET COUNT](vp-set-sheet-count.md)

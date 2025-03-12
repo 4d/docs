@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get corner radius.Summary-->La commande **OBJECT Get corner radius** retourne la valeur courante du rayon d'angles pour l'objet désigné par le paramètre *objet*.<!-- END REF--> Cette valeur peut avoir été définie au niveau du formulaire en utilisant la propriété (cf. *Rayon d'arrondi (rectangles)*), ou via la commande [OBJECT SET CORNER RADIUS](object-set-corner-radius.md) pour le process courant.
 
@@ -31,7 +31,7 @@ Cette commande renvoie le rayon des angles arrondis en pixels.
 
 Remarque : La commande renvoie 0 lorsqu'elle est appliquée à un objet qui ne prend pas en charge la propriété de rayon arrondis.
 
-#### Exemple 
+## Exemple 
 
 Le code suivant peut être associé à la méthode d'un bouton :
 
@@ -43,11 +43,11 @@ Le code suivant peut être associé à la méthode d'un bouton :
   // le bouton n'a plus d'effet
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET CORNER RADIUS](object-set-corner-radius.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

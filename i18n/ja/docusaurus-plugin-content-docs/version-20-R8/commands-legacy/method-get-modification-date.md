@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->**METHOD GET MODIFICATION DATE**コマンドは*path*引数で指定されたメソッドの更新日と時刻をそれぞれ*modDate*と*modTime*引数に返します。<!-- END REF-->
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 コマンドがコンポーネントから実行されると、デフォルトでコンポーネントメソッドに適用されます。*\** 引数を渡すとホストデータベースのメソッドにアクセスします。
 
-#### 例題 1 
+## 例題 1 
 
 複数のメソッドの変更日時を探したい場合を考えます:
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
  METHOD GET MODIFICATION DATE(arrPaths;arrDates;arrTimes)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 モジュール内にある、"Web\_"の接頭辞がつくメソッドの変更日を取得したい場合を考えます。パスに"@"記号を使用することはできませんが、以下のように書くことができます:
 
@@ -69,7 +69,7 @@ displayed_sidebar: docs
   
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

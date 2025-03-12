@@ -32,7 +32,7 @@ Bajo Windows, el parámetro *\** no tiene efecto. El comando devuelve siempre la
 
 **Nota:** bajo Mac OS, si utiliza el resultado de este comando con el comando [ST SET ATTRIBUTES](st-set-attributes.md) en un área de texto multiestilo, no debe pasar el parámetro *\** (sólo familias de fuentes soportadas como Attribute font name). Esta limitación no aplica a áreas 4D Write Pro, que aceptan fuentes o nombres de familias de fuentes. 
 
-##### Fuentes vectoriales 
+### Fuentes vectoriales 
 
 Este comando devuelve sólo las fuentes escalables. No se recomienda el uso de fuentes no vectoriales (es decir, fuentes de mapa de bits) para el diseño de interfaces, ya que se basan en una tecnología obsoleta y sufren de limitaciones en cuanto a las variaciones de tamaño. No son compatibles con las funcionalidades más recientes de 4D como las áreas 4D Write Pro.
 

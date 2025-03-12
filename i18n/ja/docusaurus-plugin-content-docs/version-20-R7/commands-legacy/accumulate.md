@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ACCUMULATE.Summary-->ACCUMULATEは、[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドを使ってプリントするフォームレポート中で累計するフィールドまたは変数を指定します。<!-- END REF-->
 
@@ -25,18 +25,18 @@ displayed_sidebar: docs
 
 フォームメソッドかオブジェクトメソッドで[Subtotal](subtotal.md "Subtotal")コマンドを使用して、*data*引数の1つの小計を求めます。
 
-#### 例題 
+## 例題 
 
 [BREAK LEVEL](break-level.md "BREAK LEVEL") コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [BREAK LEVEL](break-level.md)  
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

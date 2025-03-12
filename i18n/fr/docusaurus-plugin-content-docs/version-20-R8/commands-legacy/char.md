@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Char.Summary-->La fonction **Char** retourne le caractère dont le code est *codeCaractère*.<!-- END REF-->
 
@@ -22,7 +22,7 @@ Passez une valeur UTF-16 (comprise entre 1 et 65535) dans *codeCaractère*.
 
 **Astuce :** La fonction **Char** est généralement utilisée pour insérer dans l'éditeur de méthodes des caractères qui ne peuvent être saisis au clavier ou des caractères de contrôle.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant utilise la fonction **Char** pour insérer un retour chariot dans une boîte de dialogue d'alerte afin de séparer deux lignes d'information :
 
@@ -30,13 +30,13 @@ L'exemple suivant utilise la fonction **Char** pour insérer un retour chariot d
  ALERT("Employés : "+String(Enregistrements dans table([Employés]))+Caractere(Retour chariot)+"Cliquez sur OK pour continuer.")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Character code](character-code.md)  
 *Codes Unicode*  
 *Symboles d'indice de chaîne*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

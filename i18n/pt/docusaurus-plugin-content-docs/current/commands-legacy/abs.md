@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Abs.Summary-->Abs retorna o valor absoluto (positivo e sem sinal) de *numero*.<!-- END REF--> Se *numero* for negativo, é retornado seu valor positivo. Se *numero* for positivo, ele é retornado sem alterações.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir retorna o valor absoluto de –10.3, que é de 10.3:
 
@@ -27,7 +27,7 @@ O exemplo a seguir retorna o valor absoluto de –10.3, que é de 10.3:
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

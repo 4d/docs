@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->El comando **FORM GET NAMES** llena el array *arrayNoms* con los nombres de los formularios de la aplicación.<!-- END REF--> 
 
@@ -35,7 +35,7 @@ Si el comando se ejecuta desde un componente, devuelve por defecto los nombres d
 
 **Nota:** los formularios ubicados en la papelera no se listan. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Ejemplos de uso típicos:
 
@@ -63,12 +63,12 @@ Ejemplos de uso típicos:
 
 ```
 
-#### Ver también 
+## Ver también 
 
 *Formularios*  
 [METHOD GET PATHS FORM](method-get-paths-form.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

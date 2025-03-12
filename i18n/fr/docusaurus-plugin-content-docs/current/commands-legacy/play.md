@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PLAY.Summary-->La commande **PLAY** vous permet de jouer des fichiers de son ou multimedia.<!-- END REF--> Sous macOS, la commande permet également de jouer un son système. 
 
@@ -33,7 +33,7 @@ Pour stopper un son asynchrone, il faut exécuter l'instruction suivante :
  PLAY("";0)
 ```
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant montre comment jouer un fichier WAV de votre choix sous Windows :
 
@@ -45,7 +45,7 @@ L'exemple suivant montre comment jouer un fichier WAV de votre choix sous Window
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Exemple de son système sous macOS :
 
@@ -53,11 +53,11 @@ Exemple de son système sous macOS :
  PLAY("Submarine.aiff") //Jouer le son système
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [BEEP](beep.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

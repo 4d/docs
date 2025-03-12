@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Count XML attributes.Summary-->The **DOM Count XML attributes** command returns the number of XML attributes present in the XML element designated by *elementRef*.<!-- END REF--> For more information about XML attributes, refer to the *Overview of XML DOM Commands* section. 
 
-#### Example 
+## Example 
 
 Before retrieving the values of elements in an array, you want to know the number of attributes in the following XML element:
 
@@ -45,15 +45,15 @@ In the above example, $numAttributes equals 3, tAttrib{1} contains “Font”, t
 
 **Note:** The index number does not correspond to the location of the attribute in the XML file displayed in text form. In XML, the index of an attribute indicates its position among the attributes arranged in alphabetical order (according to their name).
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
 
-#### See also 
+## See also 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

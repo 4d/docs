@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL EXECUTE.Summary-->The SQL EXECUTE command executes an SQL command and binds the result to 4D objects (arrays, variables or fields).<!-- END REF--> 
 
@@ -38,7 +38,7 @@ With a 4D variable, one record is fetched at a time. The other results are ignor
 
 **Note:** For more information about referencing 4D expressions in SQL queries, refer to the *Overview of SQL Commands* section.
 
-#### Example 1 
+## Example 1 
 
 In this example, we will get the ename column of the emp table of the data source. The result is stored in the \[Employee\]Name 4D field. 4D records will be created automatically: 
 
@@ -48,7 +48,7 @@ In this example, we will get the ename column of the emp table of the data sourc
  SQL LOAD RECORD(SQL all records)
 ```
 
-#### Example 2 
+## Example 2 
 
 To check the creation of records, it is possible to include code within a transaction and to validate it only if the operation proves to be satisfactory:
 
@@ -64,7 +64,7 @@ To check the creation of records, it is possible to include code within a transa
  VALIDATE TRANSACTION //Validation of the transaction
 ```
 
-#### Example 3 
+## Example 3 
 
 In this example, we want to get the ename column of the emp table of the data source. The result will be stored in an *aName* array. We fetch records 10 at a time. 
 
@@ -77,7 +77,7 @@ In this example, we want to get the ename column of the emp table of the data so
  End while
 ```
 
-#### Example 4 
+## Example 4 
 
 In this example, we want to get the ename and job of the emp table for a specific ID (WHERE clause) of the data source. The result will be stored in the *vName* and *vJob* 4D variables. Only the first record is fetched.
 
@@ -87,7 +87,7 @@ In this example, we want to get the ename and job of the emp table for a specifi
  SQL LOAD RECORD
 ```
 
-#### Example 5 
+## Example 5 
 
 In this example, we want to get the Blob\_Field column of the Test table in the data source. The result will be stored in a BLOB variable whose value is updated each time a record is loaded.
 
@@ -102,7 +102,7 @@ In this example, we want to get the Blob\_Field column of the Test table in the 
  End while
 ```
 
-#### Example 6 
+## Example 6 
 
 You want to retrieve data locally from a remote 4D Server database where it is stored. To do this, you must use intermediary arrays:
 
@@ -151,15 +151,15 @@ You want to retrieve data locally from a remote 4D Server database where it is s
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK returns 1\. Otherwise, it returns 0.
 
-#### See also 
+## See also 
 
 [SQL LOAD RECORD](sql-load-record.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY TO SELECTION.Summary-->The **ARRAY TO SELECTION** command copies one or more arrays into a selection of records.<!-- END REF--> All fields listed must belong to the same table.
 
@@ -36,7 +36,7 @@ As with the [QUERY](query.md) command, this lets you break up a complex statemen
 
 **4D Server:** The command is optimized for 4D Server. Arrays are sent by the client machine to the server, and the records are modified or created on the server machine. As such a request is handled synchronously, the client machine must wait for the operation to be completed successfully. In the multi-user or multi-process environment, any records that are locked will not be overwritten.
 
-#### Example 1 
+## Example 1 
 
 In the following example, the two arrays *asLastNames* and *asCompanies* place data in the *\[People\]* table. The values from the array *asLastNames* area placed in the field *\[People\]Last Name* and the values from the array *asCompanies* are placed in the field *\[People\]Company*:
 
@@ -44,7 +44,7 @@ In the following example, the two arrays *asLastNames* and *asCompanies* place d
  ARRAY TO SELECTION(asLastNames;[People]Last Name;asCompanies;[People]Company)
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to copy a selection of records to an archive table by selecting the fields according to the option value:
 
@@ -76,12 +76,12 @@ You want to copy a selection of records to an archive table by selecting the fie
  ARRAY TO SELECTION
 ```
 
-#### See also 
+## See also 
 
 [SELECTION TO ARRAY](selection-to-array.md)  
 *System Variables*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

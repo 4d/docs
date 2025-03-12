@@ -13,7 +13,7 @@ title: VP SET WORKBOOK OPTIONS
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |optionObj |Object|->|Object containing the workbook options to be set|<!-- END REF -->
 
-#### Description
+## Description
 
 `VP SET WORKBOOK OPTIONS` <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Summary -->
 sets the workbook options in *vpAreaName*<!-- END REF -->.
@@ -89,7 +89,7 @@ The following table lists the available workbook options:
 | tabStripWidth | number | Width of the tab strip when position is left or right. Default and minimum is 80. |
 | useTouchLayout | boolean | Whether to use touch layout to present the Spread component. |
 
-#### Example
+## Example
 
 To set the allowExtendpasteRange option in "ViewProArea":
 
@@ -102,7 +102,7 @@ $workbookOptions.allowExtendPasteRange:=True
 VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 ```
 
-#### See also
+## See also
 
 [VP Get workbook options](vp-get-workbook-options.md)
 

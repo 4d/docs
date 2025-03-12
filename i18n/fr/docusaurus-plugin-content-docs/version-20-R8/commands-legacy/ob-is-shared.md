@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Is shared.Summary-->La commande **OB Is shared** retourne **Vrai** si l'objet ou la collection *toCheck* est partagé , sinon **Faux** (voir *Objets partagés et collections partagées*).<!-- END REF-->
 
 Cette commande retourne **Vrai** si vous passez une sélection d'entité partageable dans *toCheck* (voir ). 
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

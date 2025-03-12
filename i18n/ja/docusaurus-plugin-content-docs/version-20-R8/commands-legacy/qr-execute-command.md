@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR EXECUTE COMMAND.Summary-->**QR EXECUTE COMMAND** コマンドは、*command*に渡された参照番号のツールバーボタンコマンドを実行します。<!-- END REF-->このコマンドの最も一般的な使い方は、[QR ON COMMAND](qr-on-command.md) コマンド経由でコード内で受け取った、ユーザーが選択したコマンドを実行することです。
 
@@ -33,12 +33,12 @@ displayed_sidebar: docs
 
 無効な*command* 引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR Get command status](qr-get-command-status.md)  
 [QR ON COMMAND](qr-on-command.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

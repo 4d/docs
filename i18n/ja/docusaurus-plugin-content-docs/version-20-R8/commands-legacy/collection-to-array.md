@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.COLLECTION TO ARRAY.Summary-->**COLLECTION TO ARRAY** コマンドは、*collection* 引数のコレクションの要素あるいは*propertyName* 引数で指定したプロパティの値を、*array* 引数で指定した一つまたはそれ以上の配列へと渡します。<!-- END REF-->
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 どちらの場合においても、4D はコレクションの要素あるいは値を*array* 引数で指定した配列の型に合わせて変換します(必要であれば)。変換に際してのルールは*コレクションと4D配列間での型の変換* のページに詳細な説明があります。
 
-#### 例題 1 
+## 例題 1 
 
 文字列のコレクションをテキスト配列へとコピーしたい場合を考えます:
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
   //...
 ```
 
-#### 例題 2 
+## 例題 2 
 
 オブジェクトのコレクションの異なるプロパティ値を、異なる配列へとコピーしたい場合を考えます:
 
@@ -61,12 +61,12 @@ displayed_sidebar: docs
   //...
 ```
 
-#### 参照 
+## 参照 
 
 [ARRAY TO COLLECTION](array-to-collection.md)  
 *コレクションと4D配列間での型の変換*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

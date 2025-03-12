@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Is macOS.Summary-->El comando **Is macOS** devuelve True si el sistema operativo actual es macOS.<!-- END REF-->
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea determinar si el sistema operativo actual es macOS:
 
@@ -29,12 +29,12 @@ Usted desea determinar si el sistema operativo actual es macOS:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [System info](system-info.md)  
 [Is Windows](is-windows.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

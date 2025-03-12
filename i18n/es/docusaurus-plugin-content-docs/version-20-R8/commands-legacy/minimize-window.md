@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 Este comando tiene el mismo efecto que un clic en la casilla de reducción de la aplicación 4D: 
 
-##### En Windows 
+### En Windows 
 
 La ventana vuelve a su tamaño inicial, es decir, su tamaño antes de ser maximizada. Si se omite el parámetro *ventana*, todas las ventanas de la aplicación son redimensionadas a su tamaño inicial. 
 
@@ -28,7 +28,7 @@ La ventana vuelve a su tamaño inicial, es decir, su tamaño antes de ser maximi
   
 Casilla de reducción en Windows
 
-##### Bajo Mac OS 
+### Bajo Mac OS 
 
 El tamaño de la ventana se reduce a su tamaño inicial (su tamaño antes de ser maximizada). Si el parámetro ventana se omite, la ventana del primer plano del proceso actual retorna a su tamaño inicial. 
 

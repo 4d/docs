@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->O comando **CONVERT COORDINATES**converte as coordenadas (x;y) de um ponto de um sistema de coordenadas para outro.<!-- END REF--> Os sistemas de coordenada de entrada e saída compatíveis são formulários e subformulários, janelas e a tela. Por exemplo, pode usar este comando para obter as coordenadas no formulário principal de um objeto que pertence a um subformulário. Isso faz com que seja fácil criar um menu contextual para qualquer posição personalizada. 
 
@@ -43,7 +43,7 @@ Quando *de* for XY Current form e o ponto estiver na seção corpo do formulári
 * Se o comando for chamado fora de um evento On Display Detail mas enquanto um registro estiver sendo editado, o ponto resultante estará localizado na exibição do registro sendo editado
 * De outra forma, o ponto resultate estará localizado na exibição do primeiro registro
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser abrir um menu pop-up no canto esquerdo inferior do objeto "MyObject".
 
@@ -64,7 +64,7 @@ Se quiser abrir um menu pop-up no canto esquerdo inferior do objeto "MyObject".
 
 ![](../assets/en/commands/pict2678144.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser abrir uma janela pop-up na posição do cursor do mouse, em Windows, precisa converter as coordenadas desde [MOUSE POSITION](mouse-position.md) (com o parâmetro \*) retorna valores baseados na posição da janela MDI:
 
@@ -78,14 +78,14 @@ Se quiser abrir uma janela pop-up na posição do cursor do mouse, em Windows, p
  CLOSE WINDOW($window)
 ```
 
-#### Ver também 
+## Ver também 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

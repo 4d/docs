@@ -42,7 +42,7 @@ Un usuario introducido LLC@ para ver la lista de todas las empresas cuyos nombre
 
 Especificar un campo en *discriminante* es lo mismo que definir un campo discriminante en la caja de diálogo de definición de las propiedades de una relación en el entorno Diseño. Para mayor información sobre la definición de un campo discriminante, consulte el *Manual de Diseño* de 4D.
 
-##### 
+### 
 
 **Nota:** este comando no soporta campos de tipo Objeto.
 

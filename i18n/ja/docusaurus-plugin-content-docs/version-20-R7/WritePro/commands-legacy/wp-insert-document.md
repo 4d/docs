@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP INSERT DOCUMENT.Summary-->**WP INSERT DOCUMENT** コマンドは *mode* や *rangeUpdate* で指定した方法で、*targetObj* で指定したターゲットに *wpDoc* のドキュメントを挿入します。<!-- END REF-->
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 *rangeUpdate* 引数を渡さない場合、デフォルトでは挿入されたコンテンツは返されるレンジに含まれます。
 * *targetObj* 引数がレンジではない場合、*rangeUpdate* 引数は無視されます。
 
-#### 例題 1 
+## 例題 1 
 
 ドキュメントの内容を、他のドキュメント内で選択されたテキストで置き換える場合を考えます:
 
@@ -63,7 +63,7 @@ displayed_sidebar: docs
  WP INSERT DOCUMENT(WPDoc;$doctoCopy;wk replace) //新しいドキュメントの中身でWPDocの中身を置き換え
 ```
 
-#### 例題 2 
+## 例題 2 
 
 あらかじめフォーマットされ、それぞれがブックマークとして保存された複数のパーツで構成された、テンプレートドキュメントを定義しました。このテンプレートから任意のブックマークを新規ドキュメントとして抽出し、作成中のドキュメントに挿入することができます。
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
   
 [WP INSERT BREAK](wp-insert-break.md)  

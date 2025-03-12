@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get string resource.Summary-->Get string resource コマンドは、*resID*に渡されるIDを持つストリング ("STR ") リソースに格納されている文字列を返します。<!-- END REF-->
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 **Note:** ストリングリソースは、最大255バイトの文字を含めることができます。
 
-#### 例題 
+## 例題 
 
 以下の例は、ストリングリソースID=20911の内容を表示します。このリソースは現在開かれているリソースファイルの少なくとも1つに配置されている必要があります:
 
@@ -33,17 +33,17 @@ displayed_sidebar: docs
  ALERT(Get string resource(20911))
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 リソースが見つかればOK変数は1に、そうでなければ0に設定されます。
 
-#### 参照 
+## 参照 
 
 [Get indexed string](get-indexed-string.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

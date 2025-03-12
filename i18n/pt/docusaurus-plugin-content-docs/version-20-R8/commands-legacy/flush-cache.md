@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FLUSH CACHE.Summary-->O comando FLUSH CACHE salva imediatamente os buffers de dados em disco.<!-- END REF--> Todas as alterações que foram feitas no banco de dados são armazenados no disco.
 
@@ -26,12 +26,12 @@ Como padrão, a memória cache atual é deixada sem mexer, ou seja, os dados con
 
 Geralmente não precisa chamar este comando, já que 4D salva modificações de dados regularmente. A opção **Flush Cache every X Seconds (Minutes) em** [Database page](../settings/database.md) das configurações de banco de dados, que especifica quão frequente vai salvar, é tipicamente usado para controlar o esvaziamento da cache.Nós recomendamos usar o valor padrão de 20 segundos. Note que o parâmetro Cache flush periodicity pode ser estabelecido e lido usando os comandos [SET DATABASE PARAMETER](set-database-parameter.md) e [Get database parameter](get-database-parameter.md). 
 
-#### Ver também 
+## Ver também 
 
 [Get database parameter](get-database-parameter.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

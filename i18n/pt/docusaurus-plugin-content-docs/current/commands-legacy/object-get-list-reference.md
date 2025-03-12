@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get list reference.Summary-->O comando **OBJECT Get list reference** devolve o número de referência (*RefList*) da lista hierárquica associada ao objeto ou grupo de objetos designados pelos parâmetros *objeto* e *\** .<!-- END REF-->  
   
@@ -33,12 +33,12 @@ Por padrão, se omite o parâmetro *tipoLista*, o comando devolve o nome da list
   
 Se não há uma lista hierárquica associada ao objeto para o *tipoLista* definido, o comando devolve 0.
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.Metodo base On Backup Shutdown.Summary-->El Método base On Backup Shutdown se llama cada vez que termina un backup de la base.<!-- END REF--> Las razones para detener un backup pueden ser el fin de la copia, la interrupción por parte del usuario o un error.  
 Esto concierne a todos los entornos 4D (todos los modos), 4D Server así como las aplicaciones 4D compiladas y fusionadas con 4D Volume Desktop. 

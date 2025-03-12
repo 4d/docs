@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->La commande **QR GET HEADER AND FOOTER** vous permet de récupérer le contenu et la taille de l'en-tête et du pied de page de la *zone*.<!-- END REF--> 
 
@@ -43,7 +43,7 @@ Le paramètre *alignementImage* retourne la propriété d'alignement de l'image 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *sélecteur* est incorrect, l’erreur -9852 est générée.
 
-#### Exemple 
+## Exemple 
 
 La méthode suivante affiche le contenu et la hauteur des libellés des en-têtes :
 
@@ -62,11 +62,11 @@ La méthode suivante affiche le contenu et la hauteur des libellés des en-tête
  ALERT("Hauteur des en-têtes : "+String($Hauteur))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

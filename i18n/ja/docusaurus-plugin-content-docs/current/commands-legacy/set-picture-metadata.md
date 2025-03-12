@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET PICTURE METADATA.Summary-->SET PICTURE METADATA コマンドを使用すると、picture (4Dピクチャフィールドまたは変数) 内のメタデータ (またはメタタグ) の内容を書き込んだり更新したりできます。<!-- END REF-->
 
@@ -43,7 +43,7 @@ Windowsではコマンド実行時にエラーが発生すると、*OK* 変数�
 * 特定のピクチャーフォーマット (特にJPEGとTIFF) だけがメタデータをサポートします。逆にGIFやBMPなどのフォーマットはメタデータを受け入れません。メタデータ付きのピクチャーを、それをサポートしないフォーマットに変換すると、情報は失われます。
 * macOS 10.7 (Lion)では、ピクチャーのメタデータをエンコード・デコードするために使用されるネイティブフレームワーク内のバグによって、GPS座標が不正確になることがあります。この場合、OSをOS X 10.8 (Mountain Lion)または 10.9 (Maverick)にアップデートすることが強く推奨されます。
 
-#### 例題 1 
+## 例題 1 
 
 配列を使用して"Keywords"メタデータの値を複数設定します:
 
@@ -54,7 +54,7 @@ Windowsではコマンド実行時にエラーが発生すると、*OK* 変数�
  SET PICTURE METADATA(vPicture;IPTC keywords;$arrTkeywords)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 DOM参照を使用してGPSブロックを設定します:
 
@@ -71,18 +71,18 @@ DOM参照を使用してGPSブロックを設定します:
  DOM CLOSE XML($domMetas)
 ```
 
-#### 注 
+## 注 
 
 すべてのメタデータがDOM要素参照で処理されるとき、タグは名前がブロック名 (TIFF, IPTC等)である要素に付加される属性として格納されます (参照された要素の子)。特定のメタデータブロックが操作されると、ブロックタグは、コマンドにより参照される要素に直接、属性として格納されます。
 
-#### 参照 
+## 参照 
 
 [GET PICTURE KEYWORDS](get-picture-keywords.md)  
 [GET PICTURE METADATA](get-picture-metadata.md)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

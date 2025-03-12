@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Backup Startup database method.Summary-->The **On Backup Startup database method** is called every time a database backup is about to start (manual backup, scheduled automatic backup, or using the [BACKUP](backup.md) command).<!-- END REF-->   
 This concerns all 4D environments: 4D (all modes), 4D Server and databases merged with 4D Volume Desktop.

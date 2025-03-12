@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Summary-->O comando LONGINT ARRAY FROM SELECTION preenche o array *arrReg* com os números (absolutos) dos registros que estão em *seleçao*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Se você não passar o parâmetro *seleçao*, o comando utiliza a seleção atua
 
 **Nota:** o elemento número 0 do array é inicializado em -1.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser recuperar os números dos registros da seleção atual:
 
@@ -32,11 +32,11 @@ Se quiser recuperar os números dos registros da seleção atual:
  LONGINT ARRAY FROM SELECTION([Clients];$_arrRecNum)
 ```
 
-#### Ver também 
+## Ver também 
 
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

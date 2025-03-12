@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
-<!--REF #_command_.QR SET INFO COLUMN.Summary-->##### List mode 
+<!--REF #_command_.QR SET INFO COLUMN.Summary-->### List mode 
 
 O comando QR SET INFO COLUMN permite definir os parâmetros de uma coluna existente.<!-- END REF-->  
   
@@ -53,7 +53,7 @@ O comando QR SET INFO COLUMN permite definir os parâmetros de uma coluna existe
  QR SET INFO COLUMN(area;1;"Titulo";"[Tabela 1]Campo2";0;150;0;"###,##")
 ```
 
-##### Relatório de tabela cruzada 
+### Relatório de tabela cruzada 
 
 O comando QR SET INFO COLUMN permite definir globalmente os mesmos parâmetros mas a referencia das áreas as quais aplica é diferente e varia dependendo do parâmetro que queira definir.  
   
@@ -103,13 +103,13 @@ Se gera a seguinte área de relatório:
 Se passa um número de *area* inválido, se gera o erro -9850.  
 Se o parâmetro *numColuna* for incorreto, se gera o erro -9852.
 
-#### Ver também 
+## Ver também 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

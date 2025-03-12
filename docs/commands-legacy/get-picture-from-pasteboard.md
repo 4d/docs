@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Summary-->GET PICTURE FROM PASTEBOARD returns the picture present in the pasteboard in the *picture* field or variable.<!-- END REF-->
 
 **Note:** In the case of copy/paste operations, the pasteboard is equivalent to the Clipboard.
 
-#### Example 
+## Example 
 
 The following button’s object method assigns the picture (jpeg or gif format) present in the pasteboard (if any) to the field \[Employees\]Photo:
 
@@ -31,17 +31,17 @@ The following button’s object method assigns the picture (jpeg or gif format) 
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the picture is correctly extracted, OK is set to 1; otherwise OK is set to 0.
 
-#### See also 
+## See also 
 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

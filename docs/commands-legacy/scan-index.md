@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 If you specify more records than exist in the table, **SCAN INDEX** will return all the records.
 
-##### 
+### 
 
 **Note:** This command does not support Object type fields.
 

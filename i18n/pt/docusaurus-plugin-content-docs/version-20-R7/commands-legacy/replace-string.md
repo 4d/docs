@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Replace string.Summary-->Replace string substitui um número *quantasVezes* de ocorrências, em *fonte,* de *obsoleto* por *novo* .<!-- END REF-->  
   
@@ -40,7 +40,7 @@ Deve passar o parâmetro *\**:
 
 **Nota**: Em 4D v15 R3 e superior, uma otimização significativa foi feita ao algoritmo usado pelo comando quando substituir uma string por outra de um tamanho diferente, independente da sintaxe usada. Isto resulta em uma considerável aceleração do processamento. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo abaixo ilustra o uso de Replace string. Os resultados, descritos nos comentários, são atribuídos a variável *vtResult*. 
 
@@ -50,7 +50,7 @@ O exemplo abaixo ilustra o uso de Replace string. Os resultados, descritos nos c
  vtResult:=Replace string(vtOutraVar;Char(Tab);",";*) // Substitui todas as tabulações em vtOutraVar por vírgulas
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo abaixo elimina os retornos de carro e as tabulações do texto na variável *vtResult*: 
 
@@ -58,7 +58,7 @@ O exemplo abaixo elimina os retornos de carro e as tabulações do texto na vari
  vtResult:=Replace string(Replace string(vtResult;Char(Carriage return);"";*);Char(Tab);"")
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo abaixo ilustra o uso do parâmetro \* no caso de uma avaliação diacrítica: 
 
@@ -67,13 +67,13 @@ O exemplo abaixo ilustra o uso do parâmetro \* no caso de uma avaliação diacr
  vtResult:=Replace string("Crème brûlée";"Brulee";"caramel";*) //vtResult é igual a "Crème brûlée"
 ```
 
-#### Ver também 
+## Ver também 
 
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

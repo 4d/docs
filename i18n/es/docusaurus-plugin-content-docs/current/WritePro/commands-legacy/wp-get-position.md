@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Get position.Summary-->El comando **WP Get position** devuelve un objeto que describe la posición actual de *objRango*.<!-- END REF-->
 
@@ -65,7 +65,7 @@ Si se omite *layout*, el diseño de 4D Write Pro se usa de forma predeterminada.
 Si *objRango* se muestra en un área de formulario 4D Write Pro, asegúrese de que la configuración de visualización del área coincida con la configuración de visualización del comando para obtener información consistente. Tenga en cuenta también que si estas configuraciones son diferentes en el área, 4D Write Pro tendrá que "clonar" el documento para calcular el diseño en cada llamada del comando, lo que puede tomar mucho tiempo. Por motivos de rendimiento, en este caso, se recomienda construir el documento fuera de línea y copiarlo en el área de objetos de formulario solo cuando se complete la compilación.
 * No se debe llamar a este comando dentro de los eventos que se generan con frecuencia (como On After Edit) ya que *result.rangeHeight* por ejemplo, puede requerir cálculos de renderización que requieren mucho tiempo y que deben realizarse en cada llamada de evento.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea saber el número de página de un rango:
 
@@ -76,7 +76,7 @@ Desea saber el número de página de un rango:
  ALERT("First page number in selection is "+String($rangePosition.page))
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea definir en color azul el texto en la primera y última página del documento:
 
@@ -99,7 +99,7 @@ Desea definir en color azul el texto en la primera y última página del documen
 ```
   
   
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Mientras crea un documento, desea evitar divisiones de párrafo:
 
@@ -133,7 +133,7 @@ Mientras crea un documento, desea evitar divisiones de párrafo:
  End for each
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Los siguientes ejemplos ilustran las coordenadas del rectángulo delimitador devueltas, según el *objRango*.
 
@@ -154,6 +154,6 @@ Los siguientes ejemplos ilustran las coordenadas del rectángulo delimitador dev
 
 ![](../../assets/en/WritePro/commands/pict4096411.en.png)  
 
-#### Ver también 
+## Ver también 
 
 [WP PRINT](wp-print.md)  

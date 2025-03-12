@@ -13,20 +13,20 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Tickcount.Summary-->**Tickcount** retourne le nombre de ticks (1 tick = 1/60ème de seconde) écoulés depuis le démarrage de la machine.<!-- END REF-->**Tickcount** retourne une valeur de type Entier long.
 
-#### Exemple 
+## Exemple 
 
 Référez-vous à l'exemple de la fonction [Milliseconds](milliseconds.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Current time](current-time.md)  
 [Milliseconds](milliseconds.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

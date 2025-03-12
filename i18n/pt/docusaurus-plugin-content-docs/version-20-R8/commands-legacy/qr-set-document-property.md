@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->O comando QR SET DOCUMENT PROPERTY permite mostrar a caixa de diálogo de impressão ou definir a unidade utilizada pelo documento.<!-- END REF-->  
   
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 se passa um número de área incorreto, se gera o erro -9850.  
 Se passa um valor incorreto do parâmetro propriedade, se gera o erro -9852 ou -9853.
 
-#### Ver também 
+## Ver também 
 
 [QR Get document property](qr-get-document-property.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

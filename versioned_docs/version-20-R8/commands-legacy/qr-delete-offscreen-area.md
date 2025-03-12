@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Summary-->The QR DELETE OFFSCREEN AREA command deletes in memory the Quick Report offscreen *area* whose reference was passed as parameter.<!-- END REF-->
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
-#### See also 
+## See also 
 
 [QR New offscreen area](qr-new-offscreen-area.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD OPEN PATH.Summary-->**METHOD OPEN PATH**コマンドは内部パス名が*path* 引数であるメソッドを4Dメソッドエディターで開きます。<!-- END REF-->
 
@@ -27,12 +27,12 @@ displayed_sidebar: docs
 
 コマンドをコンポーネントから実行することもできますが、この場合 (コンポーネントコードには書き込みアクセスができないため) *\** 引数を渡さなければなりません。この状況で *\** 引数を省略するとエラー-9763が生成されます。
 
-#### 参照 
+## 参照 
 
 [METHOD Get path](method-get-path.md)  
 *デザインオブジェクトアクセスコマンド*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

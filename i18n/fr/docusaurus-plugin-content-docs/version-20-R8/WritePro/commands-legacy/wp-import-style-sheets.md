@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Summary-->La commande **WP IMPORT STYLE SHEETS** importe toutes les feuilles de style du *docSource* vers *docCible*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Dans le paramètre *docSource*, passez le document 4D Write Pro contenant les fe
 
 **Note** : Si une feuille de style provenant de *docSource* possède le même nom qu'une feuille de style de docCible, la feuille de style importée écrasera (remplacera) la feuille de style dans docCible.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez importer une feuille de style nommée template et recevoir une notification avec le numéro de chaque type de feuille de style importée :
 
@@ -39,7 +39,7 @@ Vous souhaitez importer une feuille de style nommée template et recevoir une no
  ALERT(String($nb1)+" feuille(s) de style de paragraphe "+chaine($nb2)+"feuille(s) de style de caractère importée(s)))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
 [WP Get style sheet](wp-get-style-sheet.md)  

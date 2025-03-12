@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Get type.Summary-->La commande **OB Get type** retourne le type de la valeur associée à la *propriété* de l'*objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
@@ -36,7 +36,7 @@ La commande retourne un entier long indiquant le type de valeur. Vous pouvez com
 
 **Note :** Pour les propriétés d'une image, la commande retourne Est un objet. 
 
-#### Exemple 
+## Exemple 
 
 On souhaite obtenir le type de valeurs standard :
 
@@ -47,12 +47,12 @@ On souhaite obtenir le type de valeurs standard :
  $type2:=OB Get type($ref;"age") //$type2 retourne 1
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OB GET PROPERTY NAMES](ob-get-property-names.md)  
 [Value type](value-type.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

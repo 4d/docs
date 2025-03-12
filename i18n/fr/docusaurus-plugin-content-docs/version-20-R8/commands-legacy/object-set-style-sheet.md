@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->La commande **OBJECT SET STYLE SHEET** vous permet de modifier, pour le process courant, la feuille de style associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> Une feuille de style modifie la police, la taille de police et (hormis pour les feuilles de style automatique) le style de police.
 
@@ -37,18 +37,18 @@ Si une feuille de style avait déjà été associée à l’objet en mode Dével
 
 Si vous utilisez au cours de la session les commandes [ST SET ATTRIBUTES](st-set-attributes.md), [ST SET TEXT](st-set-text.md), [OBJECT SET FONT](object-set-font.md) ou [OBJECT SET FONT SIZE](object-set-font-size.md) sur l’*objet* afin de modifier sa police ou sa taille de police, la référence à la feuille de style est automatiquement supprimée de l’objet -- même si vous affectez des attributs identiques à ceux de la feuille de style. En revanche, si vous modifiez le style (gras, italique...), par exemple avec les commandes [ST SET ATTRIBUTES](st-set-attributes.md) ou [OBJECT SET FONT STYLE](object-set-font-style.md), ces nouvelles propriétés s’ajoutent à la feuille de style pour la durée de la session.
 
-##### Note de compatibilité 
+### Note de compatibilité 
 
 Dans **l'architecture Projet**, seules les trois feuilles de style automatiques sont prises en charge par cette commande.
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT Get style sheet](object-get-style-sheet.md)  
 *Styles de caractères*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

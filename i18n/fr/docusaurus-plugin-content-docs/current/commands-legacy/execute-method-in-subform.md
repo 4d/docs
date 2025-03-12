@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->La commande **EXECUTE METHOD IN SUBFORM** permet d’exécuter le code désigné dans *formule* dans le contexte de l’objet de sous-formulaire *objetSousForm*.<!-- END REF--> 
 
@@ -34,7 +34,7 @@ Cette commande doit être appelée dans le contexte du formulaire parent (conten
 
 **Note :** Le code n'est pas exécuté si *objetSousForm* ne se trouve pas dans la page courante ou n'est pas encore instancié.
 
-#### Exemple 1 
+## Exemple 1 
 
 Soit le formulaire "ContactDétail" utilisé comme sous-formulaire dans le formulaire parent "Société". L’objet sous-formulaire qui contient le formulaire ContactDétail est nommé "ContactSousForm". Imaginons que nous souhaitions modifier l’apparence de certains éléments du sous-formulaire en fonction de la valeur de champ(s) de la société (par exemple, "nomcontact" doit passer en rouge lorsque \[Société\]Ville="New York" et en bleu lorsque \[Société\]Ville="San Diego"). Ce mécanisme est mis en oeuvre via la méthode SetToColor. Pour pouvoir obtenir ce résultat, la méthode SetToColor ne peut pas être appelée directement depuis le process de l’événement formulaire "Sur chargement" du formulaire parent Société car l’objet "nomcontact" n’appartient pas au formulaire courant, mais au formulaire affiché dans l’objet sous-formulaire "ContactSousForm". La méthode doit donc être exécutée à l’aide de **EXECUTE METHOD IN SUBFORM** pour pouvoir fonctionner correctement.
 
@@ -53,7 +53,7 @@ Soit le formulaire "ContactDétail" utilisé comme sous-formulaire dans le formu
  End case
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous développez une base de données qui sera utilisée comme composant. Elle comporte un formulaire projet partagé (nommé par exemple Calendrier) contenant des *variables dynamiques* ainsi qu’une méthode projet publique permettant de régler le calendrier : SetCalendarDate(varDate).   
 Si cette méthode était utilisée directement dans la méthode du formulaire Calendrier, vous pourriez l’appeler directement dans l’événement "Sur chargement" : 
@@ -69,12 +69,12 @@ Si cette méthode était utilisée directement dans la méthode du formulaire Ca
  EXECUTE METHOD IN SUBFORM(SetCalendarDate);*;!05/05/20!)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si cette commande est exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

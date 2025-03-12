@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PICTURE CODEC LIST.Summary-->La commande **PICTURE CODEC LIST** remplit le tableau *tabCodecs* avec la liste des identifiants des codecs d’images disponibles sur la machine où elle est exécutée.<!-- END REF--> Cette liste comporte les codecs des formats d’images gérés en natif par 4D.
 
@@ -31,12 +31,12 @@ La forme renvoyée par la commande dépend du mode de déclaration du codec au n
 Par défaut, si vous ne passez pas le paramètre *\**, la commande retourne uniquement les codecs utilisables pour encoder (écrire) les images. Ces identifiants peuvent être utilisés dans le paramètre *format* des commandes d’exportation d’images [WRITE PICTURE FILE](write-picture-file.md) et [PICTURE TO BLOB](picture-to-blob.md).  
  Si vous passez le paramètre *\**, la commande retourne également la liste des codecs utilisables pour décoder (lire) les images. Les deux listes ne sont pas exclusives, certains codecs de lecture et d’écriture sont identiques. Les codecs destinés à l’encodage des images pourront généralement être utilisés pour le décodage. En revanche, les codecs de décodage ne permettent pas forcément l’encodage. Par exemple, le codec ".jpg" sera présent dans les deux listes, tandis que le codec ".xbmp" sera présent dans la liste des codecs de lecture mais dans celle d’écriture.
 
-#### Voir aussi 
+## Voir aussi 
 
 *Introduction aux images*  
 [Is picture file](is-picture-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

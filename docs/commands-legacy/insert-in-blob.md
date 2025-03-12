@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.INSERT IN BLOB.Summary-->The INSERT IN BLOB command inserts the number of bytes specified by *len* into the BLOB *blob* at the position specified by *offset*.<!-- END REF--> The BLOB then becomes *len* bytes larger.
 
@@ -24,15 +24,15 @@ If you do not specify the optional *filler* parameter, the bytes inserted into t
 
 Before the call, you pass in the *offset* parameter the position of the insertion relative to the beginning of the BLOB. 
 
-##### Note 
+### Note 
 
 **Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 
-#### See also 
+## See also 
 
 [DELETE FROM BLOB](delete-from-blob.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

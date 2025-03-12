@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP DELETE STYLE SHEET.Summary-->La commande **WP DELETE STYLE SHEET** retire la feuille de style de paragraphe ou de caractère désignée du document courant.<!-- END REF--> Lorsqu'une feuille de style est retirée, chaque caractère ou paragraphe auquel elle s'appliquait reprend le style original (*i.e.* par défaut).
 
@@ -26,7 +26,7 @@ Cette commande offre deux manières de retirer une feuille de style. Vous pouvez
 
 **Note** : La feuille de style par défaut ("Normal") ne peut pas être supprimée.
 
-#### Voir aussi 
+## Voir aussi 
 
 *Accéder au contenu des documents par programmation*  
 [WP Get style sheet](wp-get-style-sheet.md)  

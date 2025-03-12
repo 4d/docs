@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Clickcount.Summary-->The **Clickcount** command returns, in the context of a mouse click event, the number of times the user has clicked in rapid succession with the same mouse button.<!-- END REF--> Typically, this command returns 2 for a double-click. 
 
@@ -29,7 +29,7 @@ When both On Clicked and On Double Clicked form events are enabled, the followin
 * 2 in On Double Clicked event
 * 2+n in On Clicked event
 
-#### Example 1 
+## Example 1 
 
 The following code structure can be placed in a listbox header to handle single- and double-clicks:
 
@@ -45,7 +45,7 @@ The following code structure can be placed in a listbox header to handle single-
  End case
 ```
 
-#### Example 2 
+## Example 2 
 
 Labels are not enterable but they become so after a triple-click. If you want to allow users to edit labels, you can write the following in the object method:
 
@@ -60,7 +60,7 @@ Labels are not enterable but they become so after a triple-click. If you want to
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

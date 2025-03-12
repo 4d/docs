@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Summary-->**SPELL SET CURRENT DICTIONARY**コマンドは、現在の辞書を引数*dictionary*に よって指定された辞書で置き換えます。<!-- END REF-->カレント辞書は、4Dに内蔵されているスペルチェック機能に使用されています(詳細については、 4D Design Referenceマニュアルや4D Write Proドキュメントを参照してください) 。設定された現在の辞書は即座にセッションを通して、データベースのすべてのプロセス、および4D Writeや4D Viewプラグインエリアに反映されます。
 
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 
 **Compatibility note:** 旧バージョンの4Dでは、"コーディアル" 辞書はサポートされていました。互換性のために、"コーディアル"辞書の番号を *dictionary* 引数に渡す事は可能です(値もしくは "*Dictionaries*" テーマ内の定数)。しかしながらこの場合、辞書は4D内部でそれに相当するハンスペル辞書(またはMacの場合はシステムの辞書)へとリダイレクトされます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 *dictionary*が正しくロードされるとシステム変数OKに1が設定されます。そうでなければ0が設定されエラーが返されます。
 
-#### 例題 
+## 例題 
 
 Hunspellフォルダーに配置した"fr-classic"辞書をロードする:
 
@@ -45,13 +45,13 @@ Hunspellフォルダーに配置した"fr-classic"辞書をロードする:
   // SPELL SET CURRENT DICTIONARY ("FR-classic.dic") も使用できます
 ```
 
-#### 参照 
+## 参照 
 
 [SPELL CHECKING](spell-checking.md)  
 [SPELL Get current dictionary](spell-get-current-dictionary.md)  
 [SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Font file.Summary-->La commande **Font file** retourne un objet décrivant le fichier de polices de votre système d'exploitation correspondant à *famillePolice* et, éventuellement, à *stylePolice* que vous avez passé dans le paramètre.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Le paramètre optionnel *stylePolice* permet de définir une variation de style.
 | Italic    | Entier long | 2      |
 | Plain     | Entier long | 0      |
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez vérifier que la police utilisée dans une zone de texte est intégrée à votre systeme pour qu'elle soit affichée correctement :
 
@@ -46,11 +46,11 @@ Vous souhaitez vérifier que la police utilisée dans une zone de texte est int�
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET FONT](object-set-font.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET FILTER.Summary-->OBJECT SET FILTER reemplaza el filtro de entrada para los objetos especificados por *objeto* por *filtroEntrada*.<!-- END REF--> 
 
@@ -29,19 +29,19 @@ Al pasar una cadena vacía en *filtroEntrada* se elimina el filtro de entrada ac
 
 **Nota:** en *filtroEntrada*, para utilizar filtros de entrada predefinidos utilizando la Caja de herramientas, coloque un prefijo en el filtro de entrada, una barra vertical (|). 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo define el filtro de entrada para el campo código postal. Si la dirección es de España, el filtro se define para los códigos postales españoles. De lo contrario, puede aceptar todo valor de entrada: 
 
 ```4d
  If([Empresas]Pais ="ES") // Definir el filtro para un formato del código postal español
-    OBJECT SET FILTER([Empresas]Codigo Postal;"&9#####")
+    OBJECT SET FILTER([Empresas]Codigo Postal;"&9###")
  Else // Definir el filtro para aceptar todo valor alfanumérico y mayúsculas
     OBJECT SET FILTER([Empresas]Codigo Postal;"~@")
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo permite únicamente la entrada de las letras “a,” “b,” “c,” o “g” en un campo de dos letras: 
 
@@ -51,12 +51,12 @@ El siguiente ejemplo permite únicamente la entrada de las letras “a,” “b,
 
 **Nota:** este ejemplo define el filtro de entrada *&"a;b;c;g"##*.
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get filter](object-get-filter.md)  
 [OBJECT SET FORMAT](object-set-format.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

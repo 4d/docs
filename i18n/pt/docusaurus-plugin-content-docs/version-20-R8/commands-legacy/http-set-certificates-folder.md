@@ -19,7 +19,7 @@ Esse comando é mantido apenas por motivos de compatibilidade. Agora é recomend
 
 :::
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Summary-->O comando **HTTP SET CERTIFICATES FOLDER** permite modificar a pasta de certificados cliente ativa para o conjunto dos processos na sessão atual.<!-- END REF-->
 
@@ -36,11 +36,11 @@ Uma vez executado este comando, a nova rota é levada em conta imediatamente (n�
 
 Se a pasta especificada não existe na localização definida, ou se a rota de acesso passada em *pastaCertificados* não é válida, é gerado um erro. Pode interceptar este erro utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md).
 
-#### Sobre certificados SSL 
+## Sobre certificados SSL 
 
 [Como descrito nesta página](../Admin/tls.md), certificados SSL gerenciado por 4D deve ser no **PEM format**. Se seu provedor de certificado (por exemplo, [startssl](https://www.startssl.com/)) enviar para você um certificado que esteja no formato binário, como .crt, .pfx ou .p12 (o formato também depende de seu navegador), você terá que converter o formato para o PEM format antes de poder utilizã-lo. Há web sites como *sslshopper* onde se pode fazer essa conversão on-line.
 
-#### Exemplo 
+## Exemplo 
 
 Você quer mudar temporalmente a pasta de certificados:
 
@@ -52,12 +52,12 @@ Você quer mudar temporalmente a pasta de certificados:
  HTTP SET CERTIFICATES FOLDER($certifFolder) //restabelecer a pasta anterior
 ```
 
-#### Ver também 
+## Ver também 
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 [HTTP Get certificates folder](http-get-certificates-folder.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

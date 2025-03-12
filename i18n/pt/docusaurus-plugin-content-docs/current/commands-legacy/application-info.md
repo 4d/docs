@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Application info.Summary-->O comando **Application info** retorna um objeto que traz informação detalhada sobre a atividade da aplicação ativa e da configuração de rede.<!-- END REF-->
 
@@ -45,7 +45,7 @@ O objeto retornado contém as propriedades abaixo:
 
 (\*) Em Windows, deve ser iniciado previamente este contador, por exemplo, mediante uma chamada ao comando **Application info** em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md).
 
-#### Exemplo
+## Exemplo
 
 O código abaixo retorna um objeto que contém informação sobre a aplicação que está rodando:
 
@@ -125,14 +125,14 @@ Se o código for executado em 4D Server, o objeto contém (por exemplo):
 }
 ```
 
-#### Ver também 
+## Ver também 
 
 [Execute on server](execute-on-server.md)  
 [Get database parameter](get-database-parameter.md)  
 [System info](system-info.md)  
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get menu item modifiers.Summary-->La commande **Get menu item modifiers** retourne le ou les modificateur(s) additionnel(s) associé(s) au raccourci standard de la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->   
 Le raccourci standard est composé de la touche **Commande** (Mac OS) ou **Ctrl** (Windows) et d’une touche personnalisée. Le raccourci standard est géré via les commandes [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md) et [Get menu item key](get-menu-item-key.md).
@@ -38,16 +38,16 @@ Vous pouvez passer dans *menu* un identifiant unique de menu ([RefMenu](# "Réf�
 Si vous passez un identifiant unique, le paramètre *process* est inutile et sera ignoré s’il est passé.  
 Si vous passez un numéro de menu, la commande prendra en compte le menu correspondant dans la barre de menus principale du process courant. Si vous souhaitez désigner un autre process, passez son numéro dans le paramètre facultatif *process*.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [Get menu item key](get-menu-item-key.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

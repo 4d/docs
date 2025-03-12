@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->The **SQL EXECUTE SCRIPT** command is used to execute a series of SQL statements placed in the script file designated by *scriptPath*.<!-- END REF--> This command can only be executed on a local machine (local 4D or stored procedure on 4D Server). It works with the current database (internal or external database).
 
@@ -58,7 +58,7 @@ If the script is executed correctly (no error occurs), the *OK* system variable 
 **Note:** If you use this command to execute memory-consuming actions such as massive data imports, you can consider calling the *ALTER DATABASE* SQL command in order to temporarily disable the SQL options.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

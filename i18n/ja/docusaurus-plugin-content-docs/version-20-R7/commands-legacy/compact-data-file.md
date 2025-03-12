@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Compact data file.Summary-->**Compact data file**コマンドは、ストラクチャー*structurePath*に関連付けられている、*dataPath* 引数で指定されたデータファイルを圧縮します。<!-- END REF-->圧縮に関する詳細は4D Design Referenceマニュアルを参照してください。
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 Timestamp log file nameオプションを渡していた場合、ログファイル名には"YYYY-MM-DD HH-MM-SS"という形式で作成時の日時の情報が含まれます。ファイル名は例として次のような形になりま す:“myDB\_Compact\_Log\_2015-09-27 15-20-35.xml” これはつまりそれぞれの新しいログファイルは以前のものを置き換える事はない一方、不要なファイルを削除するためにはいくつかのファイルを手動で削除しな ければならない可能性があることを意味します。  
 選択されたオプションに関わらず、ログファイルが生成されるとそのファイルへのパスはコマンド実行後に*Document*システム変数へと返されます。
 
-#### 例題 
+## 例題 
 
 以下の例題 (Windows) は、データファイルの圧縮を実行します:
 
@@ -60,16 +60,16 @@ Timestamp log file nameオプションを渡していた場合、ログファイ
  $archFolder:=Compact data file($structFile;$dataFile;$origFile)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 圧縮処理が正しく終了したら、OKシステム変数に１が設定されます。そうでなければ0が設定されます。ログファイルが生成されていた場合、その完全パス名がDocumentシステム変数へと返されます。
 
-#### 参照 
+## 参照 
 
 [Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

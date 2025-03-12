@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->La commande **INVOKE ACTION** déclenche l'action standard définie par le paramètre *action*, optionnellement dans le contexte de la *cible*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Les actions disponibles sont listées dans la section *Actions standard* du manu
 
 **Note** : Des actions spécifiques sont également fournies pour les documents 4D Write Pro. Elles sont détaillées dans la section *Utiliser les actions standard 4D Write Pro* du manuel de référence 4D Write Pro.
 
-##### 
+### 
 
 Dans *cible*, vous pouvez passer le contexte formulaire dans lequel l'*action* doit être exécutée. Vous pouvez utiliser une des constantes suivantes, du thème *Action standard* :
 
@@ -44,7 +44,7 @@ En fonction de la *cible*, l'exécution de la commande **INVOKE ACTION** sera sy
 
 La commande **INVOKE ACTION** ne génère pas une erreur, par exemple, si la commande requise n'est pas disponible dans le contexte courant. Vous devez valider l'action attendue en utilisant la commande [Action info](action-info.md). 
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez exécuter l'action standard **Copier** dans le formulaire courant :
 
@@ -52,7 +52,7 @@ Vous souhaitez exécuter l'action standard **Copier** dans le formulaire courant
  INVOKE ACTION(ak copy;ak current form)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez exécuter l'action standard **Aller a page** (page 3) dans le formulaire principal :
 
@@ -60,11 +60,11 @@ Vous souhaitez exécuter l'action standard **Aller a page** (page 3) dans le for
  INVOKE ACTION(ak goto page+"?value=3";ak main form)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Action info](action-info.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

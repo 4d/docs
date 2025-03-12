@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Insert table.Summary-->**WP Insert table** コマンドは*targetObj* 引数で指定したレンジに、*mode* 引数で指定した挿入モード新しいテーブルを挿入し、それに対応した新しいテーブルオブジェクトを返します。<!-- END REF-->オプションとして、*rangeUpdate* 引数や、規定のカラム数や行数を指定する*nbCols* や *nbRows* 引数を渡すことができます。
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 
 このコマンドは新しいテーブルをテーブルオブジェクトとして返し、これはその後他のWP tableコマンドへと渡すことができます。テーブルはデフォルトのフォント、境界線、カラーで作成されますが、これらは[WP SET ATTRIBUTES](wp-set-attributes.md) コマンドを使用してカスタマイズすることが可能です。
 
-#### 例題 
+## 例題 
 
 空のドキュメントに、3つのカラムと2つの行を持つ新しいテーブルを作成したい場合を考えます:
 
@@ -75,7 +75,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict3306926.en.png)
 
-#### 参照 
+## 参照 
 
 [WP Table append row](wp-table-append-row.md)  
 [WP Table get rows](wp-table-get-rows.md)  

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET FIELD PROPERTIES.Summary-->O comando GET FIELD PROPERTIES retorna informação sobre o campo designado por *pontCampo* ou por *numTabela* e *campoNum*.<!-- END REF-->  
   
@@ -52,7 +52,7 @@ Depois da chamada:
 * O parâmetro *único* retorna True se o campo estiver definido como “único”, do contrário False.
 * O parâmetro *invisível* retorna True se o campo estiver definido como “Invisible”, do contrário False. O atributo invisível pode ser utilizado para ocultar um campo no editor padrão de 4D (etiquetas, gráficos...).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Neste exemplo, as variáveis *vTipo*, *vTamanho*, *vIndice*, *vUnico* e *vInvisivel* assumem as propriedades do terceiro campo da primeira tabela: 
 
@@ -60,7 +60,7 @@ Neste exemplo, as variáveis *vTipo*, *vTamanho*, *vIndice*, *vUnico* e *vInvisi
  GET FIELD PROPERTIES(1;3;vTipo;vTamanho;vIndice;vUnico;vInvisivel)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo recupera nas variáveis *vTipo*, *vTamanho*, *vIndice*, *vUnico* e *vInvisivel* as propriedades do campo \[Tabela3\]Campo2: 
 
@@ -68,13 +68,13 @@ Este exemplo recupera nas variáveis *vTipo*, *vTamanho*, *vIndice*, *vUnico* e 
  GET FIELD PROPERTIES(->[Tabela3]Campo2;vTipo;vTamanho;vIndice;vUnico;vInvisivel)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Field](field.md)  
 [Field name](field-name.md)  
 [SET INDEX](set-index.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

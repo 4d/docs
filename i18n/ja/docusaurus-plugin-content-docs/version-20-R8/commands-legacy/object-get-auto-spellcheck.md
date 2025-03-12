@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get auto spellcheck.Summary-->**OBJECT Get auto spellcheck**コマンドは*object*と*\** 引数で指定したオブジェクトのカレントプロセスの自動スペルチェックオプションに関する設定値を返します。<!-- END REF-->
 
@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 このコマンドは自動スペルチェックが*object*に対し有効になっていれば**True**、そうでなければ**False**を返します。
 
-#### 参照 
+## 参照 
 
 [OBJECT SET AUTO SPELLCHECK](object-set-auto-spellcheck.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

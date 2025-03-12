@@ -19,7 +19,7 @@ displayed_sidebar: docs
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP SET FRAME.Summary-->La commande **WP SET FRAME** place le curseur dans le cadre désigné par le paramètre *sélecteurCadre* et, facultativement, textBoxID, de la zone 4D Write Pro *wpZone*.<!-- END REF-->
 
@@ -52,7 +52,7 @@ Si *sélecteurCadre* \= wk text box, vous devez passer le paramètre *textBoxID*
 
 Le paramètre *textBoxID* est ignoré si sélecteurCadre \# wk text box.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez placer le curseur dans le pied de page gauche de la section courante :
 
@@ -60,6 +60,6 @@ Vous souhaitez placer le curseur dans le pied de page gauche de la section coura
  WP SET FRAME(*;"WPArea";wk current section left footer)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get frame](wp-get-frame.md)  

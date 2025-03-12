@@ -51,7 +51,7 @@ Note : Si vous passez Field attribute with name dans le paramètre *attribChamp*
 ...      "fields": {            "ID": 9,            "Field_2": "test value",            "Date_Field": "2003-03-03T00:00:00.000Z",            "Field_4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",            "Field_8": "BlobID: 2"       },...
 ```
 
-##### 
+### 
 
 La liste effective des propriétés dépend du type d'opération (i.e.: création, suppression ou modification de l'enregistrement, créer Blob, etc.). Les principales propriétés sont les suivantes :
 

@@ -20,13 +20,13 @@ displayed_sidebar: docs
 :::
 
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.HTTP Get certificates folder.Summary-->**HTTP Get certificates folder**コマンドは、アクティブなクライアント証明書フォルダの完全なパス名を返します。<!-- END REF--> 
 
 デフォルトでは、4D はストラクチャーファイルのとなりに作成された "ClientCertificatesFolder" というフォルダを使用します(必要がある場合にのみ作成されます)。 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md) コマンドを使用することによって、カレントプロセスにおいてユーザー定義のフォルダを作成することができます。
 
-#### 例題 
+## 例題 
 
 証明書フォルダを一時的に変更したい場合を考えます:
 
@@ -38,11 +38,11 @@ displayed_sidebar: docs
  HTTP SET CERTIFICATES FOLDER($certifFolder) //以前のフォルダを復元
 ```
 
-#### 参照 
+## 参照 
 
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

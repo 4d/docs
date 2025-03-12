@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.JSON Stringify.Summary-->**JSON Stringify**コマンドは、 *value* 引数を、JSON文字列へと変換します。<!-- END REF-->このコマンドは[JSON Parse](json-parse.md) コマンドと逆の挙動をします。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 任意の*\** 演算子を渡すことによって、戻り値の文字列にフォーマット文字を含めることができます。これによりJSONデータの表示が改善されます(いわゆる整形フォーマティングです)。
 
-#### 例題 1 
+## 例題 1 
 
 スカラー値の変換:
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
  $vdd:=JSON Stringify(!28/08/2013!) // "2013-08-28T00:00:00.000Z"
 ```
 
-#### 例題 2 
+## 例題 2 
 
 特殊文字を含む文字列の変換:
 
@@ -64,7 +64,7 @@ displayed_sidebar: docs
   // $p={"name":"john"}
 ```
 
-#### 例題 3 
+## 例題 3 
 
 4Dオブジェクトを、*\** 演算子ありとなしでシリアライズした場合の例:
 
@@ -88,7 +88,7 @@ displayed_sidebar: docs
 * 整形フォーマティング:  
 ![](../assets/en/commands/pict1205011.fr.png)
 
-#### 例題 4 
+## 例題 4 
 
 変数へのポインターの使用例:
 
@@ -107,7 +107,7 @@ displayed_sidebar: docs
   //$jsonstring = "{"name" : "Smith"}"
 ```
 
-#### 例題 5 
+## 例題 5 
 
 4Dオブジェクトのシリアライズ:
 
@@ -125,7 +125,7 @@ displayed_sidebar: docs
   // 555-0120]","age":40,"firstname":"Alan"}"
 ```
 
-#### 例題 6 
+## 例題 6 
 
 日付値(パリ時間)を含んでいる4Dオブジェクトのシリアライズの例を考えます。結果の文字列は、カレントのデータベース設定によります。
 
@@ -147,7 +147,7 @@ displayed_sidebar: docs
 
 **注:** この設定についての詳細は、*互換性ページ*を参照して下さい。
 
-#### 例題 7 
+## 例題 7 
 
 コレクション(パリ時間)の変換の例を考えます。結果の文字列はカレントのデータベース設定によります:
 
@@ -169,12 +169,12 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 
 **注:** このオプションについての詳細な情報については、*互換性ページ*を参照して下さい。
 
-#### 参照 
+## 参照 
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

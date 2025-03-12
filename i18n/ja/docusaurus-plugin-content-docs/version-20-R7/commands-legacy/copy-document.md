@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.COPY DOCUMENT.Summary-->**COPY DOCUMENT**コマンドを使用して、*sourceName*によって指定されたファイルやフォルダーを*destinationName*によって指定された場所にコピーします。<!-- END REF--> 
 この場合*sourceName*引数には以下のどちらかを渡す事ができます。  
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 任意の *newName* 引数を渡した場合、コピーした場所のドキュメント(ファイルまたはフォルダー)を改名します。ファイルのコピーの際に渡した場合は、この引数は *destinationName* 引数に渡された名前を置き換えます。
 
-#### 例題 1 
+## 例題 1 
 
 次の例を使用して、そのドキュメントがあるフォルダ内でドキュメントを複製します。
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
  COPY DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\DocName2")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 次の例を使用して、ドキュメントをデータベースフォルダにコピーします(表示されているC:\\\\FOLDERは、データベースフォルダではありません) 。
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
  COPY DOCUMENT("C:\\FOLDER\\DocName";"DocName")
 ```
 
-#### 例題 3 
+## 例題 3 
 
 次の例を使用して、ドキュメントを一つのボリュームから他のボリュームへコピーします。
 
@@ -60,7 +60,7 @@ displayed_sidebar: docs
  COPY DOCUMENT("C:\\FOLDER\\DocName";"F:\\Archives\\DocName.OLD")
 ```
 
-#### 例題 4 
+## 例題 4 
 
 次の例を使用して、そのドキュメントがあるフォルダ内で既存のコピーを上書きして、ドキュメントを複製します。
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
  COPY DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\DocName2";*)
 ```
 
-#### 例題 5 
+## 例題 5 
 
 指定したフォルダーに同じ名前でファイルをコピー:
 
@@ -76,7 +76,7 @@ displayed_sidebar: docs
  COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\")
 ```
 
-#### 例題 6 
+## 例題 6 
 
 指定したフォルダーに同じ名前でファイルをコピー。既存のファイルは上書きする:
 
@@ -84,7 +84,7 @@ displayed_sidebar: docs
  COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\"; *)
 ```
 
-#### 例題 7 
+## 例題 7 
 
 フォルダーを他のフォルダーにコピー (両フォルダーは既に存在しなければなりません):
 
@@ -92,7 +92,7 @@ displayed_sidebar: docs
  COPY DOCUMENT("C:\\Projects\\";"C\\Archives\\2011\\")
 ```
 
-#### 例題 8 
+## 例題 8 
 
 以下の例はデータベースフォルダー内に異なるファイルやフォルダーを作成します(ただしこれはWindows用の例題です)。どの場合においても、"folder2"というフォルダーが先に存在していなければなりません。
 
@@ -116,12 +116,12 @@ displayed_sidebar: docs
   //"folder2/new/" という名前のファイルを作成します。
 ```
 
-#### 参照 
+## 参照 
 
 [MOVE DOCUMENT](move-document.md)  
 *システムドキュメント*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Export structure file.Summary-->O comando **Export structure file** divide a estrutura atual do banco de dados 4D em um conjunto de arquivos de texto ou arquivos de imagem nativos e os armazena na *rotaPastta* especificada.<!-- END REF--> Como padrão, se exporta a totalidade da estrutura do banco de dados (métodos, formulários, catálogo, etc.). Pode filtrar os conteúdos a exportar utilizando o parâmetro *opções* (ver abaixo).
 
@@ -65,7 +65,7 @@ O parâmetro *opções* lhe permite personalizar o processo de conversão. O obj
 
 **Atenção**: quando for passado o parâmetro *opções e* for usado o objeto "filtro", deve declarar explicitamente cada propriedade para exportar com o valor **true**. Quando for passado este objeto, 4D assume que todas as propriedades estão em **false** como padrão.
 
-##### Result 
+### Result 
 
 O comando devolve um objeto que oferece o estado final da exportação, assim como informação sobre problemas encontrados ou erros, se houver São devolvidas as propriedades abaixo:
 
@@ -83,7 +83,7 @@ Os erros possíveis incluem:
 * elementos duplicados
 * erros de gestão de arquivos (o arquivo já existe, arquivo bloqueado, disco cheio, etc.)
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser exportar o arquivo de estrutura do banco de dados em uma pasta "Export" com a configuração pré-determinada:
 
@@ -97,7 +97,7 @@ Se quiser exportar o arquivo de estrutura do banco de dados em uma pasta "Export
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser exportar apenas os métodos projeto e banco de dados, e um arquivo de registro:
 
@@ -110,11 +110,11 @@ Se quiser exportar apenas os métodos projeto e banco de dados, e um arquivo de 
  $result:=Export structure file("exportWithLog";$option)
 ```
 
-#### Ver também 
+## Ver também 
 
 [FORM Convert to dynamic](form-convert-to-dynamic.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Summary-->La commande **GET FIELD ENTRY PROPERTIES** retourne les propriétés relatives à la saisie de données du champ désigné par *numTable* et *numChamp* ou par *ptrChp*.<!-- END REF-->   
 Vous pouvez passer :
@@ -36,13 +36,13 @@ Si aucune énumération n’est associée au champ, ou si son type n’admet pas
 * Le paramètre *nonSaisissable* retourne Vrai si le champ dispose de l’attribut “Non saisissable”, Faux sinon. Un champ non saisissable ne peut qu’être lu, il n’accepte aucune saisie de données. L’attribut “Non saisissable” peut être associé aux champs de tous types, hormis BLOB.
 * Le paramètre *nonModifiable* retourne Vrai si le champ dispose de l’attribut “Non modifiable”, Faux sinon. Un champ non modifiable n’accepte qu’une seule saisie, et ne peut plus être modifié par la suite. L’attribut “Non modifiable” peut être associé aux champs de tous types, hormis BLOB.
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [GET TABLE PROPERTIES](get-table-properties.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

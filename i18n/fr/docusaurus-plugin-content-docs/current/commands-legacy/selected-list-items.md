@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Selected list items.Summary-->La fonction **Selected list items** retourne la **position** ou la **référence** de l'élément sélectionné dans la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF--> 
 
@@ -41,7 +41,7 @@ Si la liste comporte des sous-listes, appliquez la fonction à la liste principa
 
 Dans tous les cas, si aucun élément n'est sélectionné, la fonction retourne 0.
 
-#### Exemple 
+## Exemple 
 
 Voici la liste *hList* telle qu'elle apparaît en mode Application :
 
@@ -79,12 +79,12 @@ Voici la liste *hList* telle qu'elle apparaît en mode Application :
   // $tabRefs{1} vaut 101, $tabRefs{2} vaut 203 (par exemple)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

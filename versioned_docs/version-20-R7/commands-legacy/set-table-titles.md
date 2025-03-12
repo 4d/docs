@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET TABLE TITLES.Summary-->**SET TABLE TITLES** lets you mask, rename, and reorder the tables of your database that appear in standard 4D dialog boxes within the Application environment (i.e. when the startup mode is **Application**, or after you select **Test application** in the **Run** menu).<!-- END REF--> For example, this command can modify the display of tables in the Query editor in Application mode.
 
@@ -47,7 +47,7 @@ Use the **SET TABLE TITLES** command for:
 
 Executing **SET TABLE TITLES** without any parameters will reset the whole database virtual structure for the session (custom table and field names).
 
-#### Example 1 
+## Example 1 
 
 You are building a 4D application that you plan to sell internationally. Therefore, you must carefully consider localization issues. Regarding the standard 4D dialog boxes that can appear in the Application environment and your forms that use dynamic names, you can address localization needs by using a \[Translations\] table and a few project methods to create and use fields localized for any number of countries.  
   
@@ -171,7 +171,7 @@ with the project method LOCALIZED TABLES AND FIELDS:
   
 Note that new localizations can be added to the database without modifying or recompiling the code.
 
-#### Example 2 
+## Example 2 
 
 You want to remove all defined custom field and table names:
 
@@ -179,7 +179,7 @@ You want to remove all defined custom field and table names:
  SET TABLE TITLES //remove all custom names
 ```
 
-#### See also 
+## See also 
 
 [Last table number](last-table-number.md)  
 [GET TABLE TITLES](get-table-titles.md)  
@@ -187,7 +187,7 @@ You want to remove all defined custom field and table names:
 [SET FIELD TITLES](set-field-titles.md)  
 [Table name](table-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

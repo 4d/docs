@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibility 
+## Compatibility 
 
 <!--REF #_command_.WP Bookmark range.Summary-->**WP Bookmark range** was named **WP Get bookmark range** in previous versions of 4D Write Pro.<!-- END REF--> It has been renamed for clarity. 
 
-#### Description 
+## Description 
 
 The **WP Bookmark range** command returns a text range object (rangeObj) containing the range for the bookmark with the specified *bkName* in *wpDoc*.
 
 If the *bkName* bookmark does not exist in *wpDoc*, an empty rangeObj object is returned.
 
-#### Example 
+## Example 
 
 You want to show the range of the "MyBookmark" bookmark in your document:
 
@@ -35,7 +35,7 @@ You want to show the range of the "MyBookmark" bookmark in your document:
  WP SELECT(WParea;$wpRange)
 ```
 
-#### See also 
+## See also 
 
 [WP DELETE BOOKMARK](wp-delete-bookmark.md)  
 [WP GET BOOKMARKS](wp-get-bookmarks.md)  

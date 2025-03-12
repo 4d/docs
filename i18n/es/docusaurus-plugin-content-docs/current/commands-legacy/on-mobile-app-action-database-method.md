@@ -14,12 +14,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Metodo base On Mobile App Action.Summary-->**Documentación trasladada**
 
 La documentación de este método base ha sido actualizada y trasladada a [developer.<!-- END REF-->4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action).
 
-#### Ver también 
+## Ver también 
 
 [Método base On Mobile App Authentication](metodo-base-on-mobile-app-authentication.md)  

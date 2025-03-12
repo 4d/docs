@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->O comando SET LIST PROPERTIES define a aparência da lista hierárquica cuja referência é passada no parâmetro *lista*.<!-- END REF-->  
   
@@ -47,7 +47,7 @@ Se passa 0 e omite o parâmetro *multiSeleçao*, se aplicará o comportamento pa
 O parâmetro opcional *editavel* lhe permite indicar se a lista deve ser editável pelo usuário quando é mostrada como uma lista de seleção associada a um campo ou a uma variável durante a entrada de dados. Quando a lista é editável, um botão **Modificar** é adicionado na janela da lista e o usuário pode adicionar, apagar e ordenar os valores através de um editor específico.   
 Se passa 1 ou omite o parâmetro *editavel* , a lista será editável; se passa 0, não será editável.
 
-#### Exemplo 
+## Exemplo 
 
 Se deseja recusar a sublista de expandir/contrair ao dar duplo clique, pode escrever no método de formulário:
 
@@ -59,13 +59,13 @@ Se deseja recusar a sublista de expandir/contrair ao dar duplo clique, pode escr
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [GET LIST PROPERTIES](get-list-properties.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

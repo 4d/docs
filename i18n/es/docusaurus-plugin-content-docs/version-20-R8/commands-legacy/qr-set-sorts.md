@@ -26,7 +26,7 @@ displayed_sidebar: docs
 * Si *aOrden{$i}* es igual a 1, el sentido de la ordenación es ascendente.
 * Si *aOrden{$i}* es igual a - 1, el sentido de la ordenación es descendiente.
 
-##### Informes tablas cruzadas 
+### Informes tablas cruzadas 
 
 En el caso de este tipo de informes, el array no puede tener más de dos elementos. Únicamente puede ordenar las columnas (1) y las filas (2). Los datos (situados en la intersección de las columnas y las líneas) no pueden ordenarse con este comando.
 

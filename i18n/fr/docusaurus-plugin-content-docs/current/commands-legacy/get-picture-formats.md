@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PICTURE FORMATS.Summary-->La commande **GET PICTURE FORMATS** remplit le tableau *tabCodecs* de tous les identifiants des codecs (formats image) de l'image contenue dans le paramètre *image*.<!-- END REF--> Une image 4D (champ ou variable) peut contenir la même image encodée dans différents formats, comme PNG, BMP, GIF, etc.
 
@@ -33,7 +33,7 @@ Les identifiants des codecs sont établis par 4D exactement de la même façon q
 
 Pour plus d'information sur les identifiants des Codecs des images, référez-vous à la section *Introduction aux images*.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez connaître les formats de l'image stockée dans un champ Image de l'enregistrement courant :
 
@@ -43,11 +43,11 @@ Vous souhaitez connaître les formats de l'image stockée dans un champ Image de
  GET PICTURE FORMATS([Employees]Photo;$aTPictureFormats)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

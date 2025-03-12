@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Localized document path.Summary-->La commande **Localized document path** retourne le chemin d’accès complet (absolu) d’un document désigné par *cheminRelatif* et situé dans un dossier xxx.<!-- END REF-->lproj.
 
@@ -45,7 +45,7 @@ Le chemin d’accès absolu retourné par la commande est toujours exprimé en s
 
 Si *cheminRelatif* n’est trouvé à aucun de ces emplacements, la commande retourne une chaîne vide. 
 
-#### Exemple 
+## Exemple 
 
 Dans le but de transformer un fichier xml en html, vous souhaitez utiliser un fichier de transformation "log.xsl". Ce fichier diffère suivant la langue courante. Vous souhaitez donc connaître le chemin du fichier "log.xsl" à utiliser.   
 Voici le contenu du dossier Resources :
@@ -63,11 +63,11 @@ Si la langue courante est, par exemple, le français canadien (fr-ca), la comman
 * sous Windows : C:\\users\\…\\…\\…\\resources\\fr\_ca.lproj\\xsl\\log.xsl"
 * sous Mac OS : "HardDisk:users:…:…:…:resources:fr\_ca.lproj:xsl:log.xsl"
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get database localization](get-database-localization.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

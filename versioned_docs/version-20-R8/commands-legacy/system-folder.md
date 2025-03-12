@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.System folder.Summary-->The **System folder** command returns the pathname to a particular folder of the operating system or to the active Windows or macOS System folder itself.<!-- END REF-->
 
@@ -45,12 +45,12 @@ You pass in the optional *type* parameter a value indicating the type of system 
 
 If you omit the *type* parameter, the function will return the pathname to active System folder (= constant System).
 
-#### See also 
+## See also 
 
 [Get 4D folder](get-4d-folder.md)  
 [Temporary folder](temporary-folder.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

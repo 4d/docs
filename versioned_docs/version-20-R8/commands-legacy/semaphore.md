@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Semaphore.Summary-->A semaphore is a flag shared among workstations or among processes on the same workstation.<!-- END REF--> A semaphore simply exists or does not exist. The methods that each user is running can test for the existence of a semaphore. A semaphore can only be removed by the client workstation or process that created it. By creating and testing semaphores, methods can communicate between workstations. You do not use semaphores to protect record access. This is automatically done by 4D and 4D Server. Use semaphores to prevent several users from performing the same operation at the same time.
 
@@ -40,7 +40,7 @@ In 4D, global or local semaphores have the same scope because you are the only u
 
 **Note:** We recommend using local semaphores when you need a semaphore to manage a local aspect for a client of the application, such as the interface or an array of interprocess variables. If you use a global semaphores in this case, it would not only cause unnecessary network exchanges but could also affect other client machines unnecessarily. Using a local semaphore would avoid these undesirable side effects.
 
-#### Example 1 
+## Example 1 
 
 Here is typical code for using a semaphore:
 
@@ -52,7 +52,7 @@ Here is typical code for using a semaphore:
  CLEAR SEMAPHORE("MySemaphore")
 ```
 
-#### Example 2 
+## Example 2 
 
 In this example, you want to prevent two users from doing a global update of the prices in a Products table. The following method uses semaphores to manage this:
 
@@ -65,7 +65,7 @@ In this example, you want to prevent two users from doing a global update of the
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example uses a local semaphore. In a database with several processes, you want to maintain a To Do list. You want to maintain the list in an interprocess array and not in a table. You use a semaphore to prevent simultaneous access. In this situation, you only need to use a local semaphore, because your To Do list is only for your use.
 
@@ -93,7 +93,7 @@ Here is the method used for adding items to the To Do list:
 
 You can call the above method from any process.
 
-#### Example 4 
+## Example 4 
 
 This method allows you to not execute a method when a semaphore is present; the method alerts the calling method with an error code and plain text.
 
@@ -145,13 +145,13 @@ Syntax:
  $1->:=$T_Message  // The calling method receives an error code and an explanation in plain text
 ```
 
-#### See also 
+## See also 
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 *Semaphores and signals*  
 [Test semaphore](test-semaphore.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

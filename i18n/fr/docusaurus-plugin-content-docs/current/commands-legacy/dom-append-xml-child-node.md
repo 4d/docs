@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Append XML child node.Summary-->La commande **DOM Append XML child node** permet d’ajouter la valeur *valeurEnfant* au noeud XML désigné par *refElément*.<!-- END REF--> 
 
@@ -35,7 +35,7 @@ Passez dans *valeurEnfant* les données à insérer. Vous pouvez passer une cha�
 
 **Note :** Si le paramètre *refElément* désigne le noeud Document (noeud de plus haut niveau), la commande insère un noeud "Doctype" avant tout autre noeud. Il en va de même pour les instructions de traitement et les commentaires, qui sont toujours insérés avant le noeud racine (mais après le noeud Doctype). 
 
-#### Exemple 1 
+## Exemple 1 
 
 Ajout d’un noeud de type texte :
 
@@ -54,7 +54,7 @@ Résultat :
 <monElement>Bonjour<br/>La<br/>France</monElement> 
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Ajout d’un noeud de type instruction de traitement :
 
@@ -69,7 +69,7 @@ Résultat (inséré avant le premier élément) :
 <?xml-stylesheet type="text/xsl" href="style.xsl"?> 
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Ajout d’un noeud de type commentaire :
 
@@ -83,7 +83,7 @@ Résultat :
 <!--Hello world-->
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Ajout d’un noeud de type CDATA :
 
@@ -97,7 +97,7 @@ Résultat :
 <element><![CDATA[12 < 18]]></element>
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Ajout ou remplacement d’un noeud de type déclaration Doctype :
 
@@ -111,7 +111,7 @@ Résultat (inséré avant le premier élément) :
 <!DOCTYPE Books SYSTEM "Book.DTD">
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 Ajout ou remplacement d’un noeud de type Elément.
 
@@ -141,12 +141,12 @@ Résultat :
 
 Si le contenu de *valeurEnfant* est invalide, une erreur est retournée. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

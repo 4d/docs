@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PLAY.Summary-->The **PLAY** command plays sound or multimedia files.<!-- END REF--> You pass the full pathname of the file you want to play in *objectName*. On macOS, the command can also be used to play a system sound. 
 
@@ -33,7 +33,7 @@ To stop playing an asynchronous sound, use the following statement:
  PLAY("";0)
 ```
 
-#### Example 1 
+## Example 1 
 
 The following example shows how to play a WAV file on Windows:
 
@@ -45,7 +45,7 @@ The following example shows how to play a WAV file on Windows:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example code plays a system sound on macOS:
 
@@ -53,11 +53,11 @@ The following example code plays a system sound on macOS:
  PLAY("Submarine.aiff")
 ```
 
-#### See also 
+## See also 
 
 [BEEP](beep.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET ACTION.Summary-->La commande **OBJECT SET ACTION** vous permet de modifier l’action standard associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -27,7 +27,7 @@ Pour plus d'informations sur les noms d'actions, veuillez vous reporter à la se
 
 **Note de compatibilité :** Les anciennes constantes (préfixées \_o\_ dans le thème "*Action standard*") sont obsolètes depuis 4D v16 R3\. Elles sont toutefois toujours prises en charge par soucis de compatibilité. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez associer l’action standard de validation à un bouton : 
 
@@ -35,11 +35,11 @@ Vous souhaitez associer l’action standard de validation à un bouton :
  OBJECT SET ACTION(*;"bValidate";ak accept)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get action](object-get-action.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

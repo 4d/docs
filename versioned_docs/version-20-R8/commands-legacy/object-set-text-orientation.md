@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Summary-->The **OBJECT SET TEXT ORIENTATION** command modifies the orientation of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
@@ -35,7 +35,7 @@ In the *orientation* parameter, you pass the absolute orientation that you want 
 
 **Note:** Only angles corresponding to these values are supported. If you pass any other value, it will be ignored. 
 
-#### Example 
+## Example 
 
 You want to apply an orientation of 270° to a variable in your form: 
 
@@ -45,11 +45,11 @@ You want to apply an orientation of 270° to a variable in your form:
  OBJECT SET TEXT ORIENTATION(*;"myVar";Orientation 90° left)
 ```
 
-#### See also 
+## See also 
 
 [OBJECT Get text orientation](object-get-text-orientation.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

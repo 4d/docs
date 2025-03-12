@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 :::
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PHP GET FULL RESPONSE.Summary-->O comando PHP GET FULL RESPONSE permite obter informação adicional sobre a resposta devolvida pelo intérprete PHP.<!-- END REF--> Este comando é especialmente útil no caso de que ocorra um erro durante a execução do script.   
   
@@ -33,12 +33,12 @@ Os arrays texto sincronizados *etiquetasErr* e *valoresErr* se preenchem quando 
   
 Dado que os intercâmbios entre 4D e o intérprete PHP se realizam através de FastCGI, o intérprete PHP funciona como se fosse chamado por um servidor HTTP e portanto, envia cabeçalhos HTTP. Pode recuperar estes cabeçalhos e seus valores nos arrays *camposCabHttp* e *valoresCabHttp*.
 
-#### Ver também 
+## Ver também 
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

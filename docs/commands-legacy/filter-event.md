@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FILTER EVENT.Summary-->You call the **FILTER EVENT** command from within an event-handling project method installed using the [ON EVENT CALL](on-event-call.md) command.<!-- END REF-->
 
@@ -33,15 +33,15 @@ To do this, place the following lines in the output form method:
  End if
 ```
 
-#### Example 
+## Example 
 
 See example for the [ON EVENT CALL](on-event-call.md) command.
 
-#### See also 
+## See also 
 
 [ON EVENT CALL](on-event-call.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

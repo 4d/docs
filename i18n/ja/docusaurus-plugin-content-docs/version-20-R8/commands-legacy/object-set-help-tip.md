@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET HELP TIP.Summary-->**OBJECT SET HELP TIP**コマンドは*object* と*\** 引数で指定したオブジェクトに割り当てられたヘルプをカレントプロセス内で動的に変更します。<!-- END REF-->
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 * ヘルプTipsの中身はデザインモードのフォームエディター(*データ入力の制御と補助*参照)およびストラクチャーエディター(*フィールドプロパティ*参照)を使用しても設定することができます。
 * ヘルプTipsは、[SET DATABASE PARAMETER](set-database-parameter.md) コマンドのTips enabled セレクターを使用することで、アプリケーション全体に対して有効化あるいは無効化することができます。
 
-#### 例題 1 
+## 例題 1 
 
 フォーム内に、ヘルプTipsが表示され、マウスがピクチャーボタンの異なる部分をホバーすると内容が動的に変わるようにしたい場合を考えます:
 
@@ -85,7 +85,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 2 
+## 例題 2 
 
 "Commands List"という名前の一覧を含んだリストボックスがあり、それぞれのリスト項目に対して詳細を表示するヘルプTipを設定したい場合を考えます。詳細の文章は\[Documentation\] テーブルにあるとします。
 
@@ -124,12 +124,12 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict3529022.en.png)
 
-#### 参照 
+## 参照 
 
 [OBJECT Get help tip](object-get-help-tip.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->La commande **SQL EXECUTE SCRIPT** vous permet d’exécuter une suite d’instructions SQL placées dans le fichier de script désigné par *cheminScript*.<!-- END REF--> Cette commande ne peut être exécutée que sur un poste local (4D local ou procédure stockée sur 4D Server). Elle fonctionne avec la base courante (base interne ou base externe). 
 
@@ -58,7 +58,7 @@ Si le script est correctement exécuté (aucune erreur rencontrée), la variable
 **Note :** Si vous utilisez cette commande pour exécuter des actions consommatrices de mémoire telles que l’importation massive de données, vous pouvez envisager de faire appel à la nouvelle commande SQL *ALTER DATABASE* afin de désactiver temporairement des options SQL.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

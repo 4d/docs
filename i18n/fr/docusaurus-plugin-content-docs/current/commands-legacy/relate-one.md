@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RELATE ONE.Summary-->**RELATE ONE** accepte deux syntaxes.<!-- END REF-->
 
@@ -40,11 +40,11 @@ L'utilisateur a saisi SARL@ pour visualiser la liste de toutes les sociétés do
 
 Spécifier un champ dans *discriminant* est la même opération que celle qui consiste à définir un champ discriminant dans la boîte de dialogue de définition des propriétés d'un lien en mode Développement. Pour plus d'informations sur la définition d'un champ discriminant, reportez-vous au manuel *Mode Développement* de 4D.
 
-##### 
+### 
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-#### Exemple 
+## Exemple 
 
 Dans l'exemple suivant, la table \[Factures\] est reliée à la table \[Clients\] par deux liens manuels. Un lien part du champ \[Factures\]AuNomDe et va vers le champ \[Clients\]Numéro, l'autre lien va de \[Factures\]ExpédierA à \[Clients\]Numéro.
 
@@ -76,16 +76,16 @@ Voici la méthode objet du champ \[Factures\]ExpédierA :
  vCP2:=[Clients]Code postal
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée et si les enregistrements liés ont bien été chargés, la variable système OK prend la valeur 1\. Si l'utilisateur a cliqué sur le bouton **Annuler** dans la boîte de dialogue de choix d'enregistrement (qui apparaît si l'enregistrement lié avait été modifié), la variable OK prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

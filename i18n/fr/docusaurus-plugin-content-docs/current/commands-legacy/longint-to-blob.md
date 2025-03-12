@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LONGINT TO BLOB.Summary-->La commande **LONGINT TO BLOB** écrit la valeur de type Entier long (4 octets) *entierLong* dans le BLOB *blob*.<!-- END REF-->
 
@@ -39,11 +39,11 @@ Si vous passez une variable dans le paramètre *offset*, l'entier long est écri
 
 Après l'exécution de la commande, la variable du paramètre *offset* est incrémentée du nombre d'octets ayant été écrits. Vous pouvez par conséquent réutiliser la même variable avec une autre commande d'écriture de BLOB afin de placer une autre valeur juste après celle que vous venez d'écrire.
 
-##### Note 
+### Note 
 
 **Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
-#### Exemple 1 
+## Exemple 1 
 
 Après l'exécution de ce code :
 
@@ -55,7 +55,7 @@ Après l'exécution de ce code :
 * Sur plate-forme PowerPC *vxBLOB{0}=$01*, *vxBLOB{1}=$02*, *vxBLOB{2}=$03*, *vxBLOB{3}=$04*
 * Sur plate-forme Intel *vxBLOB{0}=$04*, *vxBLOB{1}=$03*, *vxBLOB{2}=$02*, *vxBLOB{3}=$01*
 
-#### Exemple 2 
+## Exemple 2 
 
 Après l'exécution de ce code :
 
@@ -66,7 +66,7 @@ Après l'exécution de ce code :
 * La taille de *vxBlob* est 4 octets
 * Sur toutes les plates-formes *vxBLOB{0}=$01*, *vxBLOB{1}=$02*, *vxBLOB{2}=$03*, *vxBLOB{3}=$04*
 
-#### Exemple 3 
+## Exemple 3 
 
 Après l'exécution de ce code :
 
@@ -77,7 +77,7 @@ Après l'exécution de ce code :
 * La taille de *vxBlob* est 4 octets
 * Sur toutes les plates-formes *vxBLOB{0}=$04*, *vxBLOB{1}=$03*, *vxBLOB{2}=$02*, *vxBLOB{3}=$01*
 
-#### Exemple 4 
+## Exemple 4 
 
 Après l'exécution de ce code :
 
@@ -90,7 +90,7 @@ Après l'exécution de ce code :
 * Sur toutes les plates-formes *vxBLOB{100}=$04*, *vxBLOB{101}=$03*, *vxBLOB{102}=$02*, *vxBLOB{103}=$01*
 * Les autres octets du BLOB sont inchangés
 
-#### Exemple 5 
+## Exemple 5 
 
 Après l'exécution de ce code :
 
@@ -105,7 +105,7 @@ Après l'exécution de ce code :
 * Les autres octets du BLOB restent inchangés
 * La variable *vlOffset* a été incrémentée de 4 (et est alors égale à 54)
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -115,7 +115,7 @@ Après l'exécution de ce code :
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

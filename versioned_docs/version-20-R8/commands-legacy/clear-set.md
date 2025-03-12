@@ -13,21 +13,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CLEAR SET.Summary-->**CLEAR SET** clears *set* from memory and frees the memory used by *set*.<!-- END REF--> The command does not affect tables, selections, or records. To save a set before clearing it, use the [SAVE SET](save-set.md) command. Since sets use memory, it is good practice to clear them when they are no longer needed.
 
-#### Example 
+## Example 
 
 See the example for [USE SET](use-set.md).
 
-#### See also 
+## See also 
 
 [CREATE EMPTY SET](create-empty-set.md)  
 [CREATE SET](create-set.md)  
 [LOAD SET](load-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

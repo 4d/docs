@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PUSH RECORD.Summary-->PUSH RECORDは、*aTable*のカレントレコード (それに付随するサブレコードも含めて) を、そのテーブルのレコードスタックにプッシュします。<!-- END REF-->PUSH RECORDは、レコードがディスクに保存される前でも実行することができます。
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **互換性に関する注意:** 4Dバージョン11より、このコマンドはサブテーブルをサポートしません。
 
-#### 例題 
+## 例題 
 
 以下の例は、\[Customer\]テーブルのレコードをレコードスタックにプッシュします:
 
@@ -29,12 +29,12 @@ displayed_sidebar: docs
  PUSH RECORD([Customer]) // 顧客レコードをスタックにプッシュする
 ```
 
-#### 参照 
+## 参照 
 
 [POP RECORD](pop-record.md)  
 *レコードスタックの使用*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

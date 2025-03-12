@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE INDEX.Summary-->La commande **DELETE INDEX** permet de supprimer un ou plusieurs index existant dans la base.<!-- END REF--> Vous pouvez passer en paramètre soit un pointeur vers un champ, soit un nom d’index :
 
@@ -25,11 +25,11 @@ Le paramètre facultatif *\**, lorsqu’il est passé, permet d’effectuer la d
 
 S’il n’existe pas d’index correspondant à *ptrChp* ou à *nomIndex*, la commande ne fait rien.
 
-#### Note pour le déploiement 
+## Note pour le déploiement 
 
 Étant donné que cette commande modifie la structure de la base de données, elle ne peut pas être utilisée dans une application packagée en lecture seule (fichier .4dc installé dans le dossier Program Files ou fichier .4dz).
 
-#### Exemple 
+## Exemple 
 
 Cet exemple illustre les deux syntaxes de la commande : 
 
@@ -40,13 +40,13 @@ Cet exemple illustre les deux syntaxes de la commande :
  DELETE INDEX("CPVille")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
 [SET INDEX](set-index.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

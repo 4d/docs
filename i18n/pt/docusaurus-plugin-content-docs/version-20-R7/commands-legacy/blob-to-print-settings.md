@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.BLOB to print settings.Summary-->O comando **BLOB to print settings** substitui a configuração de impressão 4D atual pelos parâmetros armazenados no BLOB *confImpr*.<!-- END REF--> Este BLOB deve ter sido gerado pelo comando [Print settings to BLOB](print-settings-to-blob.md) ou pelo comando 4D Pack  4D Pack (ver abaixo).
 
@@ -38,16 +38,16 @@ O comando devolve um dos seguintes códigos de estado:
 
 (\*) As configurações dependem da impressora selecionada no momento em que o BLOB foi guardado. A aplicação destes valores em outra impressora é compatível se ambas as impressoras forem do mesmo modelo. Se as impressoras forem diferentes, só os parâmetros comuns serão restaurados
 
-##### Windows / macOS 
+### Windows / macOS 
 
 O BLOB *confImp*  pode ser salvado e lido em ambas plataformas. Entretanto, mesmo se alguns ajustes de impressão são idênticos, alguns outros são específicos para a plataforma e dependem dos controladores e as versões de sistema. Se o mesmo BLOB *confImp* for compartido entre ambas plataformas, é possível que perda partes de informação.  
 Quando for utilizada em um ambiente heterogêneo, com o fim de restaurar a máxima configuração disponível para cada plataforma (e não só a parte comum), se recomenda que maneje dois BLOBs *confImp*, um para cada plataforma.
 
-##### Compatibilidade com comandos 4D Pack 
+### Compatibilidade com comandos 4D Pack 
 
 Os ajustes de impressão BLOB gerados pelo comando  legacy 4D podem ser carregados e utilizados pelo comando **BLOB to print settings**. Lembre que se são salvos por [Print settings to BLOB](print-settings-to-blob.md), são convertidos e não serão abertos mais por . O comando**BLOB to print settings** armazena mais informação sobre a impressão que . 
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser aplicar a configuração de impressão salva no disco para o contexto de impressão 4D atual: 
 
@@ -71,11 +71,11 @@ Se quiser aplicar a configuração de impressão salva no disco para o contexto 
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [Print settings to BLOB](print-settings-to-blob.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

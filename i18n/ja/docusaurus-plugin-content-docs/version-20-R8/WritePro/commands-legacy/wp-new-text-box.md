@@ -18,7 +18,7 @@ displayed_sidebar: docs
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
 
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP New text box.Summary-->**WP New text box** コマンドは、*wpDoc* 引数で指定したドキュメントの*pageNum* 引数で指定したページ内に、新しいテキストボックスオブジェクトを作成してそれを返します。<!-- END REF-->
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 しかしながら、テキストボックスがレンダリングされていない場合でも、テキストボックスそのものは存在し、ドキュメントに属しています。
 
-#### 例題 1 
+## 例題 1 
 
 デフォルトの、空のテキストボックスを作成したい場合を考えます:
 
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict6196750.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 手紙のテンプレート内に、(コンテキストに保存されている)受取人の住所を表示するテキストボックスを追加したい場合を考えます:
 
@@ -93,6 +93,6 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict6196766.en.png)
 
-#### 参照 
+## 参照 
 
 [WP DELETE TEXT BOX](wp-delete-text-box.md)  

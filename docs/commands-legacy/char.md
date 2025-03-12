@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Char.Summary-->The **Char** command returns the character whose code is *charCode*.<!-- END REF-->
 
@@ -22,7 +22,7 @@ Pass a UTF-16 value (included between 1 and 65535) in *charCode*.
 
 **Tip:** In editing a method, the command **Char** is commonly used to specify characters that cannot be entered from the keyboard or that would be interpreted as an editing command in the Method editor.
 
-#### Example 
+## Example 
 
 The following example uses **Char** to insert a carriage return within the text of an alert message:
 
@@ -30,13 +30,13 @@ The following example uses **Char** to insert a carriage return within the text 
  ALERT("Employees: "+String(Records in table([Employees]))+Char(Carriage return)+"Press OK to continue.")
 ```
 
-#### See also 
+## See also 
 
 [Character code](character-code.md)  
 *Character Reference Symbols*  
 *Unicode Codes*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

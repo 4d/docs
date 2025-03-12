@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.POST KEY.Summary-->The **POST KEY** command simulates a keystroke.<!-- END REF--> Its effect is as if the user actually entered a character on the keyboard.
 
@@ -50,18 +50,18 @@ If you pass the *modifiers* parameter, you pass one or a combination of the *Eve
 
 If you specify the *process* parameter, the keystroke is sent to the process whose process number you pass in *process*. If you pass *0* (zero) or if you omit the parameter, the keystroke is sent at the application level, and the 4D scheduler will dispatch it to the appropriate process.
 
-#### Example 
+## Example 
 
 See example for the [Process number](../commands/process-number.md) command.
 
-#### See also 
+## See also 
 
 *ASCII Codes*  
 *Function Key Codes*  
 [POST CLICK](post-click.md)  
 [POST EVENT](post-event.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

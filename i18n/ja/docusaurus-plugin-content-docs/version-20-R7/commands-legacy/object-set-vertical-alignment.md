@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Summary-->**OBJECT SET VERTICAL ALIGNMENT**コマンドは*object* と*\** 引数で指定されたオブジェクトに適用される行揃えのタイプを変更します。<!-- END REF-->
 
@@ -36,13 +36,13 @@ displayed_sidebar: docs
 * リストボックス列
 * リストボックスヘッダーやフッター
 
-#### 参照 
+## 参照 
 
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

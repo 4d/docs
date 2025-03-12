@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REDUCE SELECTION.Summary-->La commande **REDUCE SELECTION** crée une nouvelle sélection d'enregistrements pour *laTable*.<!-- END REF--> La commande réduit la sélection de *laTable* aux *nombre* premiers enregistrements. **REDUCE SELECTION** s'applique à la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection courante devient l'enregistrement courant.
 
 **Note :** Si l'instruction **REDUCE SELECTION**(laTable;0) est exécutée, il n'y a plus de sélection ni d'enregistrement courants dans la table. 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant établit des statistiques pour une compétition mondiale parmi les revendeurs dans plus de 20 pays. Pour chaque pays, les trois meilleurs revendeurs qui ont vendu plus de 50 000 Euros de produits font partie des 100 meilleurs revendeurs dans le monde et sont recompensés. Avec peu de lignes de code, cette requête complexe peut être effectuée en utilisant des recherches indexées :
 
@@ -52,14 +52,14 @@ L'exemple suivant établit des statistiques pour une compétition mondiale parmi
  PRINT SELECTION([Revendeurs]) // Imprimer les lettres
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ORDER BY](order-by.md)  
 *Présentation des ensembles*  
 [QUERY](query.md)  
 [SCAN INDEX](scan-index.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

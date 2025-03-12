@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->The **CREATE SELECTION FROM ARRAY** command creates the named selection *selectionName* from:
 
@@ -36,11 +36,11 @@ When you use a Boolean array with this command, the Xth element of the array ind
 
 **Warning:** Keep in mind that a record number can be reused if the record is deleted and another record is created (see *About Record Numbers*). 
 
-#### Error management 
+## Error management 
 
 If a record number is invalid (record not created), the error -10503 is generated. You can intercept this error using a method installed by the [ON ERR CALL](on-err-call.md) command.
 
-#### See also 
+## See also 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
@@ -49,7 +49,7 @@ If a record number is invalid (record not created), the error -10503 is generate
 [SELECTION TO ARRAY](selection-to-array.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

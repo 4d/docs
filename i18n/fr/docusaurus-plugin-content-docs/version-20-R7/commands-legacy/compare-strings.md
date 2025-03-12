@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Compare strings.Summary-->La commande **Compare strings** retourne une valeur négative, zéro, ou une valeur positive, en fonction du paramètre *aString* selon qu'il soit évalué comme étant inférieur, égal ou supérieur au paramètre *bString*.<!-- END REF--> 
 
@@ -49,7 +49,7 @@ La commande retourne les valeurs *entier long* suivantes :
 | 0          | *aString* est égal à *bString*      |
 | 1          | *aString* est supérieur à *bString* |
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez comparer les chaînes suivantes :
 
@@ -66,7 +66,7 @@ Vous souhaitez comparer les chaînes suivantes :
   // $result = 0
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Les exemples suivants illustrent l'incidence des options dans le **contexte de la langue de données japonaise** :
 
@@ -102,11 +102,11 @@ Les exemples suivants illustrent l'incidence des options dans le **contexte de l
  $result:=Compare strings("ラーメン"; "ﾗｰﾒﾝ") // non identique si le paramètre est désactivé
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Position](position.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

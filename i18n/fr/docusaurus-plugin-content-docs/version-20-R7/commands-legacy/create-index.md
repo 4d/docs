@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE INDEX.Summary-->La commande **CREATE INDEX** permet de créer :
 
@@ -45,11 +45,11 @@ Si la commande **CREATE INDEX** rencontre des enregistrements verrouillés, elle
 
 Si une erreur se produit durant l’exécution de la commande (champ non indexable, tentative de création d’index de mots-clés sur plusieurs champs, etc.), une erreur est générée. Cette erreur peut être interceptée à l’aide d’une méthode d’appel sur erreur.
 
-#### Note pour le déploiement 
+## Note pour le déploiement 
 
 Étant donné que cette commande modifie la structure de la base de données, elle ne peut pas être utilisée dans une application packagée en lecture seule (fichier .4dc installé dans le dossier Program Files ou fichier .4dz).
 
-#### Exemple 1 
+## Exemple 1 
 
 Création de deux index standard sur les champs “Nom” et “Téléphone” de la table \[Clients\] :
 
@@ -61,7 +61,7 @@ Création de deux index standard sur les champs “Nom” et “Téléphone” d
  CREATE INDEX([Clients];tabPtrChp;Standard BTree Index;"IdxCltTel")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Création d’un index de mots-clés sur le champ “Observations” de la table \[Clients\] :
 
@@ -71,7 +71,7 @@ Création d’un index de mots-clés sur le champ “Observations” de la table
  CREATE INDEX([Clients];tabPtrChp;Keywords Index;"IdxCltObs")
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Création d’un index composite sur les champs “CodePostal” et “Ville” de la table \[Clients\] :
 
@@ -82,13 +82,13 @@ Création d’un index composite sur les champs “CodePostal” et “Ville” 
  CREATE INDEX([Clients];tabPtrChp;Standard BTree Index;"CPVille")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 [SET INDEX](set-index.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

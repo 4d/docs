@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP SET LINK.Summary-->**WP SET LINK** aplica una referencia de hipervínculo al *objRango*.<!-- END REF--> Se soportan enlaces a URL, métodos 4D y marcadores. El enlace activa una acción cuando el usuario hace clic en él (o utiliza **Ctrl+clic** en Windows o **Cmd+clic** en macOS si el texto no es de solo lectura para abrir URL).  
   
@@ -46,7 +46,7 @@ En el parámetro *objEnlace*, pase un objeto que describa el hipervínculo. Debe
 * Los enlaces a los métodos 4D se eliminan de los documentos 4D Write Pro cuando se exportan en formato HTML, MIME HTML o .docx.
 * Si desea eliminar un enlace de *objRango*, consulte el párrafo *Gestión de URLs*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea agregar un enlace a su sitio web en el área del pie de página de su documento:  
 
@@ -57,7 +57,7 @@ Desea agregar un enlace a su sitio web en el área del pie de página de su docu
  WP SET LINK($footer;New object("url";"http://www.4d.com"))
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea crear una tabla de contenido con enlaces utilizando todos los marcadores en su documento:
 
@@ -88,7 +88,7 @@ Desea crear una tabla de contenido con enlaces utilizando todos los marcadores e
  End if
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Desea definir un enlace a un método 4D en cada cadena "4D" en el documento:
 
@@ -114,7 +114,7 @@ Desea definir un enlace a un método 4D en cada cadena "4D" en el documento:
 
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [WP Get links](wp-get-links.md)  

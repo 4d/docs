@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR GET BORDERS.Summary-->QR GET BORDERS コマンドを使用し、指定したセルの罫線スタイルを取得できます。<!-- END REF-->
 
@@ -64,11 +64,11 @@ displayed_sidebar: docs
 無効な*row*引数を渡した場合、エラー番号-9853が生成されます。  
 無効な*border*引数を渡した場合、エラー番号-9854が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR SET BORDERS](qr-set-borders.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

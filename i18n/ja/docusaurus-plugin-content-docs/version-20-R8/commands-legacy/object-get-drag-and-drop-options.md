@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Summary-->**OBJECT GET DRAG AND DROP OPTIONS**コマンドは*object*と*\** 引数で指定したオブジェクトのカレントプロセスのドラッグ＆ドロップオプションを返します。<!-- END REF-->
 
@@ -35,11 +35,11 @@ displayed_sidebar: docs
 * *droppable* \= True: プログラムモードでオブジェクトのドロップが可能
 * *automaticDrop* \= True (テキストフィールドや変数、コンボボックス、リストボックスでのみ使用): 自動モードでオブジェクトのドロップが可能
 
-#### 参照 
+## 参照 
 
 [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

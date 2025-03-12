@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Create XML element.Summary-->**DOM Create XML element** コマンドは、*elementRef* で参照されるXML中の*xPath* 引数で指定された位置に新しい要素を作成し、また必要であれば属性を追加します。<!-- END REF-->にはルートの要素参照 (例えば[DOM Create XML Ref](dom-create-xml-ref.md) コマンドで作成された) を渡します。
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 コマンドは作成された要素のXML参照を返します。
 
-#### 例題 1 
+## 例題 1 
 
 以下の要素を作成したいとします: 
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
  vElemRef:=DOM Create XML element(vRootRef;vxPath)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の要素を作成したいとします (属性付き): 
 
@@ -118,7 +118,7 @@ $aAttrName1:="Font"
                                                 
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の構造を作成して書き出したいとします:  
 
@@ -142,24 +142,24 @@ $aAttrName1:="Font"
  DOM CLOSE XML($root)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されエラーが生成されます。
 
-#### エラー管理 
+## エラー管理 
 
 エラーは以下の場合に生成されます:
 
 * ルート要素参照が無効の場合。
 * 作成する要素の名前が無効の場合 (例えば名前が数字で始まる場合)。
 
-#### 参照 
+## 参照 
 
 [DOM Create XML element arrays](dom-create-xml-element-arrays.md)  
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

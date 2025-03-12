@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Asserted.Summary-->O comando Asserted tem um funcionamento similar ao do comando [ASSERT](assert.md), com a diferença de que retorna um valor que é o resultado da avaliação do parâmetro *expressaoBool*.<!-- END REF--> Permite utilizar uma asserção durante a avaliação de uma condição (ver o exemplo). Para maior informação sobre o funcionamento das asserções e os parâmetros deste comando, consulte a descrição do comando [ASSERT](assert.md).
 
@@ -23,7 +23,7 @@ Asserted aceita uma expressão Booleana como parâmetro e retorna o resultado da
 
 Nota: Como o comando [ASSERT](assert.md), Asserted funciona em modo interpretado e compilado. 
 
-#### Exemplo 
+## Exemplo 
 
 Inserir uma asserção na avaliação de uma expressão:
 
@@ -36,13 +36,13 @@ Inserir uma asserção na avaliação de uma expressão:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [ASSERT](assert.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

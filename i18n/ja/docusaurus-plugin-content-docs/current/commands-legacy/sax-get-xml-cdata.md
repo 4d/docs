@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX GET XML CDATA.Summary-->**SAX GET XML CDATA**コマンドを使用して、*document* 引数で参照されるXMLドキュメント中に存在するXML要素のCDATA *value* を取得できます。<!-- END REF-->このコマンドはXML CDATA SAX イベント内で呼び出さなければなりません。SAXイベントに関する詳細は[SAX Get XML node](sax-get-xml-node.md)コマンドの説明を参照してください。
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 **互換性に関する注記:** 4D v12以降、base64でエンコードされたCDATAの内容は**SAX GET XML CDATA**コマンドにより自動でデコードされるようになりました。[BASE64 DECODE](base64-decode.md)コマンドを呼び出す必要はありません。
 
-#### 例題 
+## 例題 
 
 以下のXMLコードがあります:
 
@@ -41,16 +41,16 @@ displayed_sidebar: docs
  vTextData:=BLOB to text(vData;UTF8 C string)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されてエラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [SAX ADD XML CDATA](sax-add-xml-cdata.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

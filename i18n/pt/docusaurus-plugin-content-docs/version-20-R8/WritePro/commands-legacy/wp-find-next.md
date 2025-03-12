@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Find next.Summary-->O comando **WP Find next** pesquisa *objAlvo*, depois da range/faixa de seleção *pesquisarDepois*, pesquisando por *valorPesquisa* baseado na *condiçãoPesquisa*.<!-- END REF--> Um parâmetro opcional pode ser usado para substituir os resultados encontrados. 
 
@@ -75,7 +75,7 @@ Se *objAlvo* for uma range ou elemento, valores encontrados são retornados na o
 
 Uma range/intervalo vazia é retornada se nenhum resultado for encontrado.
 
-#### Exemplo 
+## Exemplo 
 
 ```4d
  var $userSel ;$target ;$alphaRanges ;$nextRange : object
@@ -94,7 +94,7 @@ Uma range/intervalo vazia é retornada se nenhum resultado for encontrado.
  $nextRange:=WP Find next($target;$userSel;"alpha";$options)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Find all](wp-find-all.md)  
 [WP Find previous ](wp-find-previous.md)  

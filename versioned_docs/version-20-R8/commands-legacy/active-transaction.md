@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Active transaction.Summary-->The **Active transaction** command returns **True** if the current process is in transaction, and this transaction is not suspended.<!-- END REF--> It returns **False** if there is no current transaction, or if the current transaction is suspended. A transaction can be suspended using the [SUSPEND TRANSACTION](suspend-transaction.md) command. 
 
@@ -21,7 +21,7 @@ Since the command will also return **False** if the current process is not in tr
 
 For more information, please refer to *Suspending transactions*. 
 
-#### Description 
+## Description 
 
 You want to know the current transaction status:
 
@@ -37,14 +37,14 @@ You want to know the current transaction status:
  End if
 ```
 
-#### See also 
+## See also 
 
 [In transaction](in-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
 *Suspending transactions*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

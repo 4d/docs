@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MOBILE APP REFRESH SESSIONS.Summary-->La commande **MOBILE APP REFRESH SESSIONS** vérifie tous les fichiers de session d'application mobile situés dans le dossier MobileApps du serveur et met à jour le contenu de la session existante en mémoire pour tous les fichiers modifiés.<!-- END REF-->
 
@@ -31,7 +31,7 @@ La commande peut renvoyer l'une des erreurs suivantes, qui peuvent être traité
 | mobi                 | 3                 | Le fichier json ne valide pas le shéma json                         |
 | mobi                 | 4                 | Le jeton de connexion n'est pas conforme aux informations courantes |
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez réinitialiser toutes les sessions en cours pour toutes les applications mobiles :
 
@@ -42,11 +42,11 @@ Vous souhaitez réinitialiser toutes les sessions en cours pour toutes les appli
  MOBILE APP REFRESH SESSIONS
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

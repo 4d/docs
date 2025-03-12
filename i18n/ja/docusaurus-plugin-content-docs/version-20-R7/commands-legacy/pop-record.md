@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.POP RECORD.Summary-->POP RECORDは、*aTable*に属するレコードを、そのテーブルのレコードスタックからポップし、そのレコードをカレントレコードにします。<!-- END REF-->
 
 レコードをプッシュした後に、プッシュしたレコードを含まないようにカレントセレクションを変更した場合、レコードをポップしてもカレントレコードはカレントセレクションに含まれません。ポップしたレコードをカレントセレクションのレコードにするには、[ONE RECORD SELECT](one-record-select.md "ONE RECORD SELECT")を使用します。レコードを保存する前にレコードポインタを移動するようなコマンドを実行した場合、メモリ上のコピーを失います。
 
-#### 例題 
+## 例題 
 
 以下の例はCustomers”テーブルのレコードをレコードスタックからポップします:
 
@@ -27,12 +27,12 @@ displayed_sidebar: docs
  POP RECORD([Customers]) // Pop customer’s record onto stack
 ```
 
-#### 参照 
+## 参照 
 
 [PUSH RECORD](push-record.md)  
 *レコードスタックの使用*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

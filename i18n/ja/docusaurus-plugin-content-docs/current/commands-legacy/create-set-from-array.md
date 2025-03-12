@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CREATE SET FROM ARRAY.Summary-->CREATE SET FROM ARRAY コマンドは、セット*setName*を下記の情報から作成します:
 
@@ -30,16 +30,16 @@ displayed_sidebar: docs
 
 *setName* 引数を渡さないか空の文字列を渡すと、コマンドは**Userset**システムセットに適用されます。
 
-#### エラー管理 
+## エラー管理 
 
 倍長整数配列を渡した場合で、レコード番号が無効 (レコードが作成されていない) のとき、エラー-10503が生成されます。
 
-#### 参照 
+## 参照 
 
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAVE LIST.Summary-->The SAVE LIST command saves the list whose reference number you pass in *list*, within the Design environment List Editor, under the name you pass in *listName*.<!-- END REF-->
 
@@ -22,11 +22,11 @@ If there is already a list with this name, its contents are replaced.
 
 **Note:** This command cannot be used in a structure loaded in **read only**, such as a .4dz project or a component.
 
-#### See also 
+## See also 
 
 [Load list](load-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

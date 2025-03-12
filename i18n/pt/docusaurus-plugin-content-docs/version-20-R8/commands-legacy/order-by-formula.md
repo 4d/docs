@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ORDER BY FORMULA.Summary-->**ORDER BY FORMULA** ordena (reordena) os registros da seleção atual de *tabela* para o processo atual.<!-- END REF--> Una vez efetuada a ordenação, o primeiro registro da nova seleção atual é convertido no novo registro atual. **Nota**: deve especificar a *tabela*. Não pode utilizar uma tabela por padrão.
 
@@ -34,7 +34,7 @@ Sem importar a maneira em que se define uma ordenação, se a operação de orde
 
 > **Nota de Compatibilidade:** Até 4D Server v11, esse comando era executado na máquina cliente. Para compatibilidade reversa, essa operação é mantida em bancos de dados convertidos. Entretanto, uma propriedade de compatibilidade ou um seletor do comando [SET DATABASE PARAMETER](set-database-parameter.md) ativa execução do lado do servidor em bancos de dados convertidos.
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo ordena os registros da tabela \[Pessoas\] em ordem descendente, baseado na longitude do sobrenome de cada pessoa. O registro da pessoa com o sobrenome mais longo será o primeiro registro da seleção atual:
 
@@ -42,11 +42,11 @@ Este exemplo ordena os registros da tabela \[Pessoas\] em ordem descendente, bas
  ORDER BY FORMULA([Pessoas];Length([Pessoas]Sobrenome);<)
 ```
 
-#### Ver também 
+## Ver também 
 
 [ORDER BY](order-by.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

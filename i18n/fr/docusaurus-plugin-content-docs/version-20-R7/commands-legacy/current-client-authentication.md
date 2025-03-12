@@ -32,7 +32,7 @@ Optionnellement, la commande peut retourner deux paramètres de type texte :
 
  Ces paramètres peuvent être utilisés pour accepter ou rejeter les connexions si vous souhaitez filtrer les accès en fonction du domaine du client ou du protocole utilisé. 
 
-##### Niveau de sécurité de l'authentification 
+### Niveau de sécurité de l'authentification 
 
 Le niveau de sécurité de l'authentification (c'est-à-dire le degré de confiance que vous pouvez avoir dans le nom d'utilisateur récupéré par la commande) dépend de la manière dont l'utilisateur a été identifié. Les valeurs retournées dans les différents paramètres de la commande **Current client authentication** vous permettent de savoir quelles informations ont été utilisées pour l'identification et donc, le niveau de sécurité :
 

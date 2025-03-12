@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB REMOVE.Summary-->The **OB REMOVE** command removes the *property* of the language object designated by the *object* parameter.<!-- END REF--> This command removes the *property* as well as its current value.
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 In the *property* parameter, pass the label of the property to be read. Note that the *property* parameter is case sensitive.
 
-#### Example 
+## Example 
 
 You want to remove the "age" property of an object:
 
@@ -34,11 +34,11 @@ You want to remove the "age" property of an object:
   // $Object={"name":"smith","client":true}
 ```
 
-#### See also 
+## See also 
 
 [OB SET](ob-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

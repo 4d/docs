@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COPY BLOB.Summary-->**COPY BLOB** copie le nombre d'octets spécifié par *nombre* du BLOB *srcBLOB* vers le BLOB *dstBLOB*.<!-- END REF-->
 
@@ -25,12 +25,12 @@ La copie commence à la position (exprimée par rapport à l'origine du BLOB sou
 
 Notez que le BLOB de destination peut être redimensionné si nécessaire.
 
-#### Voir aussi 
+## Voir aussi 
 
 [DELETE FROM BLOB](delete-from-blob.md)  
 [INSERT IN BLOB](insert-in-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.BASE64 ENCODE.Summary-->O comando **BASE64 ENCODE** codifica o texto ou BLOB passado no parâmetro em *aDecodificar* em formato base64 ou Base64URL.<!-- END REF-->
 
@@ -31,14 +31,14 @@ Se omitir o parâmetro *textoEncode*, o comando modifica diretamente o BLOB pass
   
 Por padrão, se omitir o parâmetro *\**, o comando utiliza uma codificação Base64\. Se passa o parâmetro *\**, o comando utiliza uma codificação Base64URL.
 
-#### Ver também 
+## Ver também 
 
 [BASE64 DECODE](base64-decode.md)  
 [Generate digest](generate-digest.md)  
 *Visão Geral dos comandos XML DOM*  
 [XML DECODE](xml-decode.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

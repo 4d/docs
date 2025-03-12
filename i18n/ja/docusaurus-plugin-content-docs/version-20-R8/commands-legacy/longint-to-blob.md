@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LONGINT TO BLOB.Summary-->LONGINT TO BLOB コマンドは、*blob*に4バイトの*longint*値を書き込みます。<!-- END REF-->
 
@@ -41,11 +41,11 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 
 呼び出し後、*offset*変数引数は、書き込まれたバイト数分だけインクリメントされます。したがって、同じ*offset*変数引数を別のBLOB書き込みコマンドにも使用し、別の値をBLOBに追加できます。
 
-##### 注 
+### 注 
 
 **互換性に関する注意:** このコマンドは引数として渡されたBlob を変更するため、Blob オブジェクト(4D.Blob 型)はサポートしません。developer.4d.com でのの *Passing blobs and blob objects to 4D commands* のページを参照して下さい。
 
-#### 例題 1 
+## 例題 1 
 
 以下のコードを実行すると: 
 
@@ -57,7 +57,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 * Power PCプラットフォーム: *vxBLOB{0}=$01*, *vxBLOB{1}=$02*, *vxBLOB{2}=$03*, *vxBLOB{3}=$04*
 * Intelプラットフォーム: *vxBLOB{0}=$04*, *vxBLOB{1}=$03*, *vxBLOB{2}=$02*, *vxBLOB{3}=$01*
 
-#### 例題 2 
+## 例題 2 
 
 以下のコードを実行すると:
 
@@ -68,7 +68,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 * *vxBlob*のサイズは4バイトになります。
 * すべてのプラットフォーム: *vxBLOB{0}=$01*, *vxBLOB{1}=$02*, *vxBLOB{2}=$03*, *vxBLOB{3}=$04*
 
-#### 例題 3 
+## 例題 3 
 
 以下のコードを実行すると:
 
@@ -79,7 +79,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 * *vxBlob*のサイズは4バイトになります。
 * すべてのプラットフォーム: *vxBLOB{0}=$04*, *vxBLOB{1}=$03*, *vxBLOB{2}=$02*, *vxBLOB{3}=$01*
 
-#### 例題 4 
+## 例題 4 
 
 以下のコードを実行すると:
 
@@ -92,7 +92,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 * すべてのプラットフォーム: *vxBLOB{100}=$04*, *vxBLOB{101}=$03*, *vxBLOB{102}=$02*, *vxBLOB{103}=$01*
 * BLOBの他のバイトは変更されない
 
-#### 例題 5 
+## 例題 5 
 
 以下のコードを実行すると: 
 
@@ -107,7 +107,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 * BLOBの他のバイトは変更されない
 * 変数*vlOffset*は4インクリメントされ54となる
 
-#### 参照 
+## 参照 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -117,7 +117,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

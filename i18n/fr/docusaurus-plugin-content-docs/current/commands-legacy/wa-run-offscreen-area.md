@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA Run offscreen area.Summary-->La commande **WA Run offscreen area** crée une zone web dans la mémoire qui peut être utilisée pour charger et parser automatiquement des pages web.<!-- END REF-->
 
@@ -60,7 +60,7 @@ Les commandes suivantes peuvent être utilisées dans la méthode callback :
 * [WA REFRESH CURRENT URL](wa-refresh-current-url.md)
 * [WA STOP LOADING URL](wa-stop-loading-url.md)
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez créer et gérer une zone web hors écran à l'aide d'une fonction de votre classe OffscreenArea :
 
@@ -86,17 +86,17 @@ dans la **classe OffscreenArea** :
  End case
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK est définie sur 0 si le timeout a été atteint ou si la commande [CANCEL](cancel.md) a été appelée dans onEvent, sinon elle est définie sur 1.
 
-#### Voir aussi 
+## Voir aussi 
 
 [FORM Event](../commands/form-event.md)  
 *Gestion programmée des zones Web*  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

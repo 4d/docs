@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->O comando LISTBOX INSERT COLUMN insere uma coluna no list box designado pelos parâmetros *objeto* e *\**.<!-- END REF--> 
 
@@ -48,7 +48,7 @@ Pode passar nos parâmetros *nomRodapé* e *nomVar*, o nome do objeto e a variá
 
 **Nota:** os nomes dos objetos devem ser únicos em um formulário. Deve ter certeza de que os nomes passados nos parâmetros *nomCol,* *nomTitulo* e *nomRodapé* não tenham sido utilizados. Do contrário, a coluna não é criada e é gerado um erro. 
 
-##### Dynamic insertion 
+### Dynamic insertion 
 
 Pode utilizar este comando para inserir columnas nos list box de forma dinâmica durante a execução do formulário. 4D irá gerenciar automaticamente a definição das variáveis necessárias (rodapé de página e cabeçalho).  
   
@@ -56,7 +56,7 @@ Para isso, **LISTBOX INSERT COLUMN** aceita um ponteiro **Nil (->\[\])** como va
   
 Note que as variáveis de cabeçalho e de rodapé de página sempre são criados com um tipo específico (texto e inteiro longo, respectivamente). Pelo contrário, as variáveis de coluna não podem ser escritas durante a criação porque os list boxes aceitam diferentes tipos de arrays para estas variáveis (array texto, array inteiro, etc.). Isto significa que você tem que definir o tipo de array manualmente (ver o exemplo 3). É importante realizar esta escrevendo antes de chamar a comandos como \[# cmd id = "913" /\] para inserir novos elementos no array. Ou bem, pode utilizar [APPEND TO ARRAY](append-to-array.md) tanto para definir o tipo do array como para a inserção de elementos.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Imagine que queira adicionar uma coluna ao final do list box:   
 
@@ -70,7 +70,7 @@ Imagine que queira adicionar uma coluna ao final do list box:
  LISTBOX INSERT COLUMN(*;"ListBox1";$Ultimo;"ColumnImagem";Imagem;"imagemTitulo";NomVarTitulo)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Imagine que gostaria de adicionar uma coluna à direita do list box e associar-lhe os valores do campo \[Transporte\]Tarifas:  
 
@@ -79,7 +79,7 @@ Imagine que gostaria de adicionar uma coluna à direita do list box e associar-l
  LISTBOX INSERT COLUMN(*;"ListBox1";$Ultimo;"CampoCol";[Transporte]Tarifas;"nomTitulo";varTitulo)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Você deseja inserir uma coluna de forma dinâmica em um array de tipo list box e definir seu cabeçalho:
 
@@ -93,12 +93,12 @@ Você deseja inserir uma coluna de forma dinâmica em um array de tipo list box 
  OBJECT SET TITLE(headprt->;"Inserted header")
 ```
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
 [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

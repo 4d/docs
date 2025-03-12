@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Summary-->El comando **CLOSE RESOURCE FILE** cierra el archivo de recursos cuyo número de referencia se pasa en *resArchivo*.<!-- END REF--> 
 
@@ -25,11 +25,11 @@ Si pasa un número de referencia de archivo de recursos incorrecto, el comando n
 
 Recuerde llamar finalmente **CLOSE RESOURCE FILE** para un archivo de recursos que haya abierto utilizando [Open resource file](open-resource-file.md). Note que cuando sale de la aplicación (o abre otra base de datos), 4D cierra automáticamente todos los archivos de recursos abiertos.
 
-#### Ver también 
+## Ver también 
 
 [Open resource file](open-resource-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

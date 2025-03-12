@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX INSERT ROWS.Summary-->La commande **LISTBOX INSERT ROWS** insère une ou plusieurs nouvelle(s) ligne(s) dans l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -30,11 +30,11 @@ La ou les ligne(s) est (sont) insérée(s) à l’emplacement défini par le par
 
 Si le paramètre *positionLigne* est supérieur au nombre de lignes des tableaux de la list box, la commande effectue l'ajout à la fin de chaque tableau. S'il est égal à 0, la commande effectue l'ajout au début de chaque tableau. S'il contient une valeur négative, la commande ne fait rien.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

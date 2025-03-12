@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Method called on error.Summary-->O comando **Method called on error** retorna o nome do método instalado pelo comando [ON ERR CALL](on-err-call.md) para o processo atual ou o e*scope definido*.<!-- END REF-->
 
@@ -28,7 +28,7 @@ No parâmetro *scope*, passe o contexto de execução ao qual dseja obter o nome
 
 Se nenhum método tiver sido instalado para *scope*, uma string vazia é retornada ("").
 
-#### Exemplo 
+## Exemplo 
 
 Este comando é particularmente útil no contexto de componentes porque lhe permite modificar temporariamente e depois restaurar os métodos de gestão de erros:
 
@@ -41,12 +41,12 @@ Este comando é particularmente útil no contexto de componentes porque lhe perm
  ON ERR CALL($metAtual)
 ```
 
-#### Ver também 
+## Ver também 
 
 *Error Handler*  
 [ON ERR CALL](on-err-call.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXPORT STRUCTURE.Summary-->La commande **EXPORT STRUCTURE** exporte la définition de la structure de la base 4D courante dans exportedStructure.<!-- END REF-->
 
@@ -33,7 +33,7 @@ La commande génère le même code XML ou HTML que la commande de menu **Exporte
 Une définition de structure exportée au format XML peut être importée dans une autre base de données (voir [IMPORT STRUCTURE](import-structure.md)).
 * **format html** : la commande génère un code HTML brut qui inclut des références à un dossier contenant des ressources externes telles que des images ou du css, nécessaires à la représentation HTML. Si vous souhaitez enregistrer ce code dans une page HTML à afficher dans un navigateur, vous pouvez réutiliser le dossier créé par l'option de menu **Exporter > Définition de structure vers le fichier HTML**..., ou créer votre propre dossier de ressources.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous voulez exporter la structure de la base courante dans un fichier texte :
 
@@ -43,7 +43,7 @@ Vous voulez exporter la structure de la base courante dans un fichier texte :
  TEXT TO DOCUMENT("myStructure.xml";$vTStruc)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous voulez exporter la structure de la base courante au format html :
 
@@ -53,11 +53,11 @@ Vous voulez exporter la structure de la base courante au format html :
  File("/PACKAGE/myProject Structure Export/myProject.html").setText($vHtml)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [IMPORT STRUCTURE](import-structure.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

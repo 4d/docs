@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Exp.Summary-->Expは自然対数の底（e = 2.<!-- END REF-->71828...）の*number*乗の値を計算します。ExpはLogの逆の関数です。
 
 **Note:** 4Dは定義済み定数e number (2.71828...) を提供しています。
 
-#### 例題 
+## 例題 
 
 以下の例では、*vrE*に2.71828...が代入されます:
 
@@ -28,11 +28,11 @@ displayed_sidebar: docs
  vrE:=Exp(1) // vrE gets 2.17828...
 ```
 
-#### 参照 
+## 参照 
 
 [Log](log.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

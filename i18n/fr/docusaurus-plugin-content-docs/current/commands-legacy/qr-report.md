@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR REPORT.Summary-->La commande **QR REPORT** imprime un état pour *laTable*, à l'aide de l'Editeur d'états rapides de 4D.<!-- END REF--> Cet éditeur permet à l'utilisateur de construire en totalité son propre état. Pour plus d'informations sur la création d'états à l'aide de l'Editeur d'états rapides, reportez-vous à la section *Etats rapides* dans le manuel *Mode Développement* de 4D.
 
@@ -56,7 +56,7 @@ Lorsque l'Editeur d'états rapides n'est pas affiché, la variable système OK p
 * La syntaxe faisant apparaître l‘éditeur d'états rapide ne fonctionne pas avec 4D Server, dans ce cas la variable système OK prend la valeur 0.
 * En cas de problème sur l’imprimante (plus de papier, imprimante déconnectée, etc.), aucun message d'erreur n'est généré.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant permet à l'utilisateur d'effectuer une recherche dans la table \[Personnes\], puis imprime automatiquement l'état "Liste détaillée" :
 
@@ -67,7 +67,7 @@ L'exemple suivant permet à l'utilisateur d'effectuer une recherche dans la tabl
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant permet à l'utilisateur d'effectuer une recherche dans la table \[Personnes\], puis de sélectionner le document d'état qui sera ensuite utilisé pour l'impression :
 
@@ -78,7 +78,7 @@ L'exemple suivant permet à l'utilisateur d'effectuer une recherche dans la tabl
  End if
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant permet à l'utilisateur d'effectuer une recherche dans la table \[Personnes\], puis affiche l'Editeur d'états rapides afin que l'utilisateur puisse construire, charger, sauvegarder ou imprimer tout état :
 
@@ -89,11 +89,11 @@ L'exemple suivant permet à l'utilisateur d'effectuer une recherche dans la tabl
  End if
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Reportez-vous à l'exemple de la commande [SET FIELD RELATION](set-field-relation.md). 
 
-#### Exemple 5 
+## Exemple 5 
 
 Vous souhaitez convertir le jeu de caractères utilisé dans un état rapide appelé via **QR REPORT** en Mac Roman :
 
@@ -125,13 +125,13 @@ La méthode maCallbackMeth convertit l’état lorsqu’il est généré :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

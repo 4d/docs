@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description 
+## Description 
 
 The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) object. The returned transporter object will then usually be used to send emails.
 
@@ -53,11 +53,11 @@ In the *server* parameter, pass an object containing the following properties:
 |[<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](../API/SMTPTransporterClass.md#sendtimeout)<br/><!-- INCLUDE #transporter.sendTimeOut.Summary -->|100|
 |[<!-- INCLUDE #transporter.user.Syntax -->](../API/SMTPTransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->|none|
 
-#### Result
+## Result
 
 The function returns a [**SMTP transporter object**](../API/SMTPTransporterClass.md#smtp-transporter-object). All returned properties are **read-only**.
 
-#### Example
+## Example
 
 ```4d
  $server:=New object
@@ -86,7 +86,7 @@ The function returns a [**SMTP transporter object**](../API/SMTPTransporterClass
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

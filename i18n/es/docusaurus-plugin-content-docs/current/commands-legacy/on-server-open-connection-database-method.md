@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### ¿Cuándo se llama el método base On Server Open Connection? 
+## ¿Cuándo se llama el método base On Server Open Connection? 
 
 <!--REF #_command_.Metodo base On Server Open Connection.Summary-->El **Método base On Server Open Connection** se llama una vez en el equipo servidor cada vez que un equipo 4D remoto inicia un proceso de conexión.<!-- END REF--> El **Método base On Server Open Connection** NO se invoca por otro entorno 4D diferente de 4D Server.
 
@@ -44,7 +44,7 @@ Cuando 4D Server recibe una petición SQL, se llama el [Método base On SQL Auth
 
 **Importante**: cuando se inicia un procedimiento almacenado, el **Método base On Server Open Connection** NO se llama. Los *Procedimientos almacenados* son procesos servidor y no procesos 4D Client. Ellos ejecutan el código en el equipo servidor, pero no responden a las peticiones intercambiadas por 4D client (u otros clientes) y 4D Server.
 
-#### ¿Cómo se llama al método base On Server Open Connection? 
+## ¿Cómo se llama al método base On Server Open Connection? 
 
 El Método base On Server Open Connection se ejecuta en el equipo servidor en el proceso 4D Client que provocó la llamada del método. 
 
@@ -74,7 +74,7 @@ Esta tabla detalla la información ofrecida por los tres parámetros pasados en 
 
 Estos números de referencia no son utilizables directamente como fuentes de información a pasar, por ejemplo, como parámetros a un comando 4D. Sin embargo, ofrecen una manera única de identificar un proceso 4D Client entre el Método base On Server Open Connection y el [Método base On Server Close Connection](metodo-base-on-server-close-connection.md). La combinación de estos valores es única en cualquier momento de una sesión 4D Server. Al guardar esta información en una tabla o en un array interproceso, los dos métodos base pueden intercambiar información. En el ejemplo al final de esta sección, los dos métodos base utilizan esta información para almacenar la fecha y hora de inicio y fin de una conexión en el mismo registro de una tabla.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo muestra cómo mantener un historial de las conexiones a la base de datos utilizando el Método base On Server Open Connection y utilizando el [Método base On Server Close Connection](metodo-base-on-server-close-connection.md). La tabla *\[Server Log\]* (mostrada a continuación) se utiliza para hacer seguimiento a los procesos de conexión: 
 
@@ -119,7 +119,7 @@ Estas son algunas entradas en \[Server Log\] mostrando varias conexiones remotas
 
 ![](../assets/en/commands/pict69174.es.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo evita una nueva conexión entre las 2 y 4 A.M. 
 

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is field value Null.Summary-->La commande **Is field value Null** retourne Vrai si le champ désigné par le paramètre *leChamp* contient la valeur NULL, et Faux sinon.<!-- END REF-->
 
@@ -24,12 +24,12 @@ La valeur retournée par cette commande n'a de sens que si l'option "*Traduire l
 
 **Note :** Cette commande ne peut pas être utilisée avec des objets et des propriétés d'objets. Les valeurs Null contenues dans les champs objet sont gérées à l'aide de la commande [Null](null.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Null](null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

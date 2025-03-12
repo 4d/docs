@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX GET GRID.Summary-->O comando **LISTBOX GET GRID** devolve o estado visível/oculto das linhas horizontais e verticais que compõem a grade do objeto list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
 
@@ -24,11 +24,11 @@ Se passado o parâmetro opcional *\**, indica que el parâmetro *objeto* é um n
 
 O comando devolve nos parâmetros *horizontal* e *vertical*, o valor **True** ou **False** dependendo se as linhas correspondentes são mostradas (True) ou se ocultadas (False). Por defeito, a grade é mostrada.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX SET GRID](listbox-set-grid.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

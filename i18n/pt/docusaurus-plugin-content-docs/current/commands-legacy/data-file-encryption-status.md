@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Data file encryption status.Summary-->O comando **Data file encryption status** devolve um objeto que fornece o estado de cifrado para o arquivo de dados designado pelos parâmetros *rotaEstruta* e *rotaDados*.<!-- END REF--> Também se proporciona o estado de cada tabela.
 
@@ -46,7 +46,7 @@ O objeto devolvido contém as propriedades abaixo:
    * depois de abrir o arquivo de dados, con o comando [Discover data key](discover-data-key.md)
 * utilizando o comando [Register data key](register-data-key.md)
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser conhecer o estado de criptografia de um arquivo de dados que corresponda ao arquivo de estrutura atual:
 
@@ -64,12 +64,12 @@ Se quiser conhecer o estado de criptografia de um arquivo de dados que correspon
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [Encrypt data file](encrypt-data-file.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

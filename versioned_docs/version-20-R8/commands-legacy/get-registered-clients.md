@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Summary-->The **GET REGISTERED CLIENTS** command fills two arrays:
 
 * *clientLists* contains the list of clients who were “registered” by using the [REGISTER CLIENT](register-client.md) command.<!-- END REF-->
 * *methods* supplies the list of each client’s “workload”. The workload is the number of methods that a 4D Client must still execute by calling the [EXECUTE ON CLIENT](execute-on-client.md) command (for more information, please refer to the description of the [EXECUTE ON CLIENT](execute-on-client.md) command).
 
-#### Example 1 
+## Example 1 
 
 Let’s assume that you want to obtain a list of all the registered clients and the methods that remain to be executed: 
 
@@ -31,21 +31,21 @@ Let’s assume that you want to obtain a list of all the registered clients and 
  GET REGISTERED CLIENTS($clients;$methods)
 ```
 
-#### Example 2 
+## Example 2 
 
 Refer to the example of the [REGISTER CLIENT](register-client.md) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the operation was successful, the OK system variable is equal to 1.
 
-#### See also 
+## See also 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

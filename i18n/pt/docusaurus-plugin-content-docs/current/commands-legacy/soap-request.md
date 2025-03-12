@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SOAP request.Summary-->O comando SOAP request devolve True se o código em execução for parte de uma petição SOAP.<!-- END REF-->  
 
 Este comando pode ser utilizado por razões de segurança no *On Web Authentication Database Method* para determinar a natureza das petições recebidas.
 
-#### Ver também 
+## Ver também 
 
 [SOAP DECLARATION](soap-declaration.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

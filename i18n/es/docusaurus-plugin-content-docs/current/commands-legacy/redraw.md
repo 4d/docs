@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.REDRAW.Summary-->Cuando utiliza un método para modificar el contenido de un campo o subcampo mostrado en un subformulario, debe ejecutar REDRAW para asegurar que el formulario esté correctamente actualizado.<!-- END REF--> .
 
 En el contexto de los list boxes en modo selección, la instrucción REDRAW aplicada a un objeto de tipo list box provoca la actualización de los datos mostrados en el objeto. Esta instrucción debe llamarse típicamente después de una modificación de los datos en los registros de la selección.
 
-#### Ver también 
+## Ver también 
 
 [SET TIMER](set-timer.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

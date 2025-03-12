@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DUPLICATE RECORD.Summary-->**DUPLICATE RECORD** duplique l'enregistrement courant de *laTable*.<!-- END REF--> Ce nouvel enregistrement devient l'enregistrement courant. S'il n'y a pas d'enregistrement courant, **DUPLICATE RECORD** ne fait rien. Appelez la commande [SAVE RECORD](save-record.md) pour sauvegarder le nouvel enregistrement.
 
@@ -21,11 +21,11 @@ displayed_sidebar: docs
 
 **Note de compatibilité :** A compter de la version 11 de 4D, cette commande ne prend plus en charge les sous-tables. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [SAVE RECORD](save-record.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

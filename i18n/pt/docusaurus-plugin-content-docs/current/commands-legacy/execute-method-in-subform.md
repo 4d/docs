@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->O comando EXECUTE METHOD IN SUBFORM pode ser utilizado para executar o método de projeto *nomeMetodo no* contexto do sub formulário *objetoSubform*.<!-- END REF-->
 
@@ -35,7 +35,7 @@ Este comando deve ser chamado no contexto do formulário pai (contém o objeto *
   
 **Nota:** O método *nomeMetodo* não é executado se *objetoSubForm* não se encontra na página atual ou se não foi instanciado.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Dado o formulário "ContactDetail" utilizado como subformulário no formulário pai "Empresa". O objeto subformulário que contém o formulário ContactDetail é chamada "ContactSubform". Imagine que queremos modificar a aparência de certos elementos do subformulário de acordo ao valor dos campos da empresa (por exemplo, "nomcontact" deve passar a vermelho quando \[Empresa\]Cidad="Nova York" e a azul quando \[Empresa\]Cidade="San Diego"). Este mecanismo é implementado através do método SetToColor. Para poder obter este resultado, o método SetToColor não pode ser chamado diretamente desde o processo do evento de formulário "On Load" do formulário pai Empresa porque o objeto "contactname" não pertence ao formulário atual, mas ao formulário mostrado no objeto subformulário "ContactSubform". O método deve portanto ser executado utilizando o comando EXECUTE METHOD IN SUBFORM para que funcione corretamente.
 
@@ -54,7 +54,7 @@ Dado o formulário "ContactDetail" utilizado como subformulário no formulário 
  End case
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Suponha que esteja desenvolvendo um banco que será utilizado como componente. Inclui um formulário projeto compartilhado (chamado, por exemplo Calendar) que contém *variáveis dinâmicas* além de um método projeto público que permite ajustar o calendário: SetCalendarDate(varDate).
 
@@ -71,12 +71,12 @@ Se este método foi utilizado diretamente no método do formulário Calendar, po
  EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se este comando é executado corretamente, a variável sistema OK toma o valor 1; do contrário toma o valor 0.
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RESOLVE POINTER.Summary-->O comando RESOLVE POINTER recupera a informação do objeto referenciado pela expressão de ponteiro *ponteiro* e a devolve nos parâmetros *nomVar*, *numTabela,* e *numCamp*.<!-- END REF-->
 
@@ -37,7 +37,7 @@ Dependendo da natureza do objeto referenciado, RESOLVE POINTER devolve os seguin
 * Se o valor que passa em *ponteiro* não for uma expressão de tipo ponteiro, será gerado um erro de sintaxe.
 * O comando RESOLVE POINTER não funciona com ponteiros a variáveis locais. Na verdade, por definição muitas variáveis locais com o mesmo nome poderiam existir em diferentes lugares, de maneira que não é possível para o comando encontrar a variável correta.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Em um formulário, você cria um grupo de 100 variáveis editáveis chamadas v1, v2... v100\. Para fazer isto, você realiza os seguintes passos: 
 
@@ -63,7 +63,7 @@ e. No método FazerAlgo, é necessário conhecer o índice da variável para a q
 
 Note que construindo seu formulário desta maneira, você escreve os métodos para as 100 variáveis apenas uma vez; não necessita escrever FazerAlgo (1), FazerAlgo (2)...,FazerAlgo (100).
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Por propósitos de depuração, necessita verificar que o segundo parâmetro ($2) de um método é um ponteiro a uma tabela. Ao começo deste método, escreve: 
 
@@ -79,11 +79,11 @@ Por propósitos de depuração, necessita verificar que o segundo parâmetro ($2
   // ...
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Ver o exemplo do comando DRAG AND DROP PROPERTIES.
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Este é um exemplo de ponteiro a um array 2D:
 
@@ -101,7 +101,7 @@ Este é um exemplo de ponteiro a um array 2D:
   //$colNum="5"
 ```
 
-#### Ver também 
+## Ver também 
 
 [Field](field.md)  
 [Get pointer](get-pointer.md)  
@@ -109,7 +109,7 @@ Este é um exemplo de ponteiro a um array 2D:
 [Is nil pointer](is-nil-pointer.md)  
 [Table](table.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

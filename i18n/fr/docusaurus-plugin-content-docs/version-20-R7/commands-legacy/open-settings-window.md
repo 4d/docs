@@ -33,7 +33,7 @@ Le paramètre *typePropriétés* est pris en compte dans les bases configurées 
 
 Si vous passez une clé invalide, la première page de la boîte de dialogue des Propriétés de la base est affichée. 
 
-##### Clés de chemins (mode standard) 
+### Clés de chemins (mode standard) 
 
 Voici la liste des clés utilisables dans le paramètre *sélecteur* en mode standard, c'est-à-dire avec les "propriétés structure" : 
 
@@ -76,7 +76,7 @@ Voici la liste des clés utilisables dans le paramètre *sélecteur* en mode sta
 
 **Note de compatibilité :** La commande continue de fonctionner avec les clés définies pour les versions 11.x et précédentes de 4D, la correspondance est établie automatiquement par le programme 4D. Il est toutefois conseillé de remplacer les anciens appels par les clés décrites ci-dessus.
 
-##### Clés de chemins (mode Propriétés utilisateur) 
+### Clés de chemins (mode Propriétés utilisateur) 
 
 Voici la liste des clés utilisables dans le paramètre *sélecteur* en mode "propriétés utilisateur" :
 

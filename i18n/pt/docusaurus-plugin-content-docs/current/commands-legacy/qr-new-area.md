@@ -13,15 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR NEW AREA.Summary-->O comando **QR NEW AREA** cria uma nova área de relatório rápido e armazena seu número de referência na variável de tipo Inteiro longo referenciada pelo ponteiro *ptr*.<!-- END REF-->
 
-#### Ver também 
+## Ver também 
 
 [QR New offscreen area](qr-new-offscreen-area.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA Evaluate JavaScript.Summary-->La commande **WA Evaluate JavaScript** exécute dans la zone Web désignée par les paramètres *\** et *objet* le code JavaScript passé dans *codeJS* et retourne le résultat.<!-- END REF--> Cette commande doit être appelée après le chargement complet de la page (l'événement formulaire On End URL Loading doit avoir été généré).
 
@@ -36,7 +36,7 @@ Par défaut, la commande retourne le résultat sous forme de chaîne. Vous pouve
 
 **Attention :** L'utilisation de cette commande pour appeler directement une fonction JavaScript qui affiche un dialogue (**alert()**, **print().**..) n'est pas recommandée car l'utilisateur ne peut pas interagir avec la zone Web pendant l'exécution du code 4D. Si vous devez implémenter une telle interface, vous pouvez par exemple appeler **setTimeout(function(){alert();}, 50))** pour laisser l'exécution du code 4D se terminer et permettre l'interaction de l'utilisateur. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple de code JavaScript provoque l'affichage de l'url précédent : 
 
@@ -44,7 +44,7 @@ Cet exemple de code JavaScript provoque l'affichage de l'url précédent :
  $résultat:=WA Evaluate JavaScript(MaZoneW;"history.back()")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple montre quelques évaluations avec conversion des valeurs reçues.
 
@@ -98,11 +98,11 @@ Vous pouvez alors évaluer le code JavaScript depuis 4D :
      //$Eval4 = "2013-06-21T14:45:09.694Z" si le type est omis
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA EXECUTE JAVASCRIPT FUNCTION](wa-execute-javascript-function.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

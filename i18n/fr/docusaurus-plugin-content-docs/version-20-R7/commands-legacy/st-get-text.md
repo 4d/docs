@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get text.Summary-->La commande **ST Get text** retourne le texte multistyle présent dans le champ ou la variable de texte désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
-##### 
+### 
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). A l'exécution, si l'objet a le focus, la commande retourne les informations de l'objet en cours d'édition ; si l'objet n'a pas le focus, la commande retourne les informations de la source de données de l'objet (variable ou champ).  
 Si vous omettez le paramètre *\**, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable. A l'exécution, la commande retourne les informations de la variable ou du champ.
 
-##### 
+### 
 
 La commande retourne le texte avec les éventuelles balises de style qui lui sont associées, ce qui permet par exemple de copier et coller du texte en conservant les styles. 
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET TEXT KEYWORDS.Summary-->La commande **GET TEXT KEYWORDS** découpe la totalité du *texte* en mots et crée, pour chaque mot obtenu, un élément dans le tableau texte *tabMotsClés*.<!-- END REF--> 
 
@@ -33,7 +33,7 @@ Si vous passez le paramètre optionnel *\**, la commande ne stockera chaque mot-
 
 Cette commande permet d’effectuer de façon simple des recherches parmi des enregistrements contenant des textes de grande taille, en ayant la garantie d’utiliser les mêmes mots-clés que 4D. Par exemple, soit un texte contenant "10.000 Jean-Pierre BC45". Si le découpage en mots-clés donne "10.000" + "Jean" + "Pierre" + "BC45", le tableau contiendra 4 éléments. Par programmation, il est alors facile d’effectuer une boucle dans ce tableau afin de trouver les enregistrements contenant un ou plusieurs de ces mots-clés à l’aide de l’opérateur % (voir exemples).
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans un formulaire contenant une zone de recherche, l’utilisateur peut saisir un ou plusieurs mot(s). Lorsqu’il valide, on recherche les enregistrements dont le champ *MonChamp* contient au moins un des mots saisis par l’utilisateur. 
 
@@ -51,7 +51,7 @@ Dans un formulaire contenant une zone de recherche, l’utilisateur peut saisir 
  USE SET("Globaltrouve")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Dans le même formulaire que précédemment, on recherche les enregistrements dont le champ *MonChamp* contient tous les mots saisis par l’utilisateur. 
 
@@ -68,7 +68,7 @@ Dans le même formulaire que précédemment, on recherche les enregistrements do
  QUERY([MaTable]) //recherche
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Pour compter les mots d’un texte :
 
@@ -80,11 +80,11 @@ Pour compter les mots d’un texte :
  ALERT("Ce texte contient "+String($n)+" mots distincts parmi "+Chaine($m))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DISTINCT VALUES](distinct-values.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

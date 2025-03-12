@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RECEIVE VARIABLE.Summary-->RECEIVE VARIABLE recebe a *variavel*, que anteriormente foi enviada pelo [SEND VARIABLE](send-variable.md "SEND VARIABLE") do documento ou porta serial aberta anteriormente pelo [SET CHANNEL](set-channel.md "SET CHANNEL").<!-- END REF--> 
 
@@ -27,22 +27,22 @@ No modo interpretado, se a variável não existe antes da chamada a RECEIVE VARI
 
 3\. Durante a execução das RECEIVE VARIABLE, o usuário pode interromper a recepção pressionando Ctrl-Alt-Shift (Windows) ou Command + Option + Shift (Macintosh). Esta interrupção gera um erro -9994, que você pode pegar com um método de tratamento de erros instalado usando [ON ERR CALL](on-err-call.md "ON ERR CALL"). Normalmente, você só precisa manipular a interrupção de uma recepção ao comunicar-se através de uma porta serial.
 
-#### Exemplo 
+## Exemplo 
 
 Veja o exemplo para o comando [RECEIVE RECORD](receive-record.md "RECEIVE RECORD").
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável de sistema OK é definida como 1 se a variável for recebida. Caso contrário, a variável de sistema OK é definido como 0.
 
-#### Ver também 
+## Ver também 
 
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE RECORD](receive-record.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

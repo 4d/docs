@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Summary-->The **OBJECT SET VERTICAL ALIGNMENT** command modifies the type of vertical alignment applied to the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -36,13 +36,13 @@ Vertical alignment can be applied to the following form objects:
 * list box columns,
 * list box headers and footers.
 
-#### See also 
+## See also 
 
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

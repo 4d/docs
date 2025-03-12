@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Generate UUID.Summary-->The Generate UUID returns a new 32-character UUID identifier in non-canonical form.<!-- END REF-->
 
@@ -21,7 +21,7 @@ An UUID is a 16-byte number (128 bits). It contains 32 hexadecimal characters. I
 
 In 4D, UUID numbers can be stored in fields. For more information, please refer to the *UUID format* section of the Design Reference manual.
 
-#### Example 
+## Example 
 
 Generation of a UUID in a variable: 
 
@@ -31,7 +31,7 @@ Generation of a UUID in a variable:
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

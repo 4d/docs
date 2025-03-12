@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Application type.Summary-->O comando Application type retorna um valor numérico que representa o tipo de ambiente 4D que você está utilizando.<!-- END REF--> 4D oferece as seguintes constantes pré-definidas:
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 **Nota:** *4D Desktop* incorpora certas ofertas de deslocamento, como por exemplo,"4D SQL Desktop".
 
-#### Exemplo 
+## Exemplo 
 
 Em alguma parte do seu código, diferente do método de banco de dados *Método banco de dados On Server Startup*, necessita verificar se 4D Server está sendo executado. Você pode escrever:
 
@@ -38,12 +38,12 @@ Em alguma parte do seu código, diferente do método de banco de dados *Método 
     'End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Application version](application-version.md)  
 [Version type](version-type.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

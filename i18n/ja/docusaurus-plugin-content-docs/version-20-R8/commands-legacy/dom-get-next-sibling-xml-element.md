@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Get next sibling XML element.Summary-->DOM Get next sibling XML element コマンドは参照として渡したXML要素の次の兄弟要素の参照を返します。<!-- END REF--> この参照は他のXML解析コマンドで使用できます。
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 最後の兄弟要素の後、システム変数は0に設定されます。
 
-#### 例題 1 
+## 例題 1 
 
 引数として渡した要素の次の兄弟要素の参照を取得します:
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict40038.ja.png)
 
-#### 例題 2 
+## 例題 2 
 
 引数で渡した親要素のすべての子要素をループで参照します:
 
@@ -53,15 +53,15 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict40039.ja.png)
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行され、解析された要素が参照された要素の最後の兄弟要素でない場合、システム変数OKに1が設定されます。エラーが発生したり、解析された要素が参照された要素の最後の兄弟要素である場合、0が設定されます。
 
-#### 参照 
+## 参照 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

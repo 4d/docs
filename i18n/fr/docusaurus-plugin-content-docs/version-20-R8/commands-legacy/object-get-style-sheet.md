@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get style sheet.Summary-->La commande **OBJECT Get style sheet** retourne le nom de la feuille de style associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -37,16 +37,16 @@ La commande peut retourner soit :
 
 Si la commande désigne plusieurs objets, la feuille de style retournée n’est significative que si elle est affectée à tous les objets. 
 
-#### Note de compatibilité 
+## Note de compatibilité 
 
 Dans **l'architecture Projet**, seules les trois feuilles de style automatiques sont prises en charge par cette commande.
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 *Styles de caractères*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

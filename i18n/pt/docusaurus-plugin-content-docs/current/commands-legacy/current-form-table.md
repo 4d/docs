@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Current form table.Summary-->O comando Current form table retorna o ponteiro para a tabela do formulário em tela ou impresso no processo atual.<!-- END REF-->  
   
@@ -27,7 +27,7 @@ Se o formulário mostrado atualmente é o formulário detalhado de uma área de 
 * O ponteiro em direção a tabela mostrada no área do subformulário, se o subformulário mostra uma tabela.
 * Um ponteiro não significativo, se a área de subformulário mostrar uma subtabela.
 
-#### Exemplo 
+## Exemplo 
 
 Em su aplicação, utiliza a seguinte convenção quando visualiza um registro:  
 Se a variável *vsCurrentRecord* estiver presente em um formulário, mostra “Novo registro” se estiver trabalhando com um novo registro. Se estiver trabalhando com o registro 56 de uma seleção composta por 5200 registros, mostra “56 de 5200”.  
@@ -55,14 +55,14 @@ Para isso, utilize o método de objeto para criar a variável *vstRegistroAtual*
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [DIALOG](../commands/dialog.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [FORM SET INPUT](form-set-input.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Compile project.Summary-->**Compile project** は、カレントのホストプロジェクト、または*projectFile* 引数で指定したプロジェクトをコンパイルします。<!-- END REF-->コンパイルについてのより詳細な情報については、*Compilation page on developer.4d.com* を参照してください。
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 **注:** 他のコンパイルの実行中に、このコマンドを呼び出すことはできません(例えば、コンパイルウィンドウからローンチしたコンパイルが実行中である場合など)。
 
-##### options 引数 
+### options 引数 
 
 *options* 引数はオブジェクト型です。利用可能なコンパイルオプションは以下の通りです。
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 | \[\].minor             | 数値               | 指定する警告の2つ目の番号、ドットの後                                                                                                                                            |
 | \[\].enabled           | ブール              | 警告の有効化状態                                                                                                                                                       |
 
-##### 戻り値 
+### 戻り値 
 
 **Compile project** によって返されるオブジェクトには、最大で以下3つのプロパティが格納されています:
 
@@ -91,7 +91,7 @@ displayed_sidebar: docs
 
 詳細な情報については、*Compilation tools* を参照してください。
 
-###### 変数オブジェクト 
+## 変数オブジェクト 
 
 interprocessVariables.variables および processVariables.variables には以下の構造を持ったオブジェクトが格納されます:
 
@@ -102,7 +102,7 @@ interprocessVariables.variables および processVariables.variables には以�
 | arrayDimension | 数値     | 配列のみ: 1 は1次元配列を、2 は2次元配列を意味します       |
 | code           | Object | プロセス変数とインタープロセス変数のみ: 変数がどこで定義されたかの詳細 |
 
-###### コードオブジェクト 
+## コードオブジェクト 
 
 **methods\[ \].code** および **errors\[ \].code** 内の*code* プロパティは、以下のプロパティを持ったオブジェクトです:
 
@@ -120,7 +120,7 @@ interprocessVariables.variables および processVariables.variables には以�
 | functionName                                              | 文字列     | クラスのファンクション名                                                                                                                                                                                                                                                                                                     |
 | databaseMethod                                            | Number  | データベースメソッドのインデックス                                                                                                                                                                                                                                                                                                |
 
-#### 警告 
+## 警告 
 
  シンタックスチェックのみを実行したい場合、targets 引数には空のコレクションを渡します:  
   
@@ -177,11 +177,11 @@ $options.warnings.push({major: 518; minor: 2; enabled: False})
 var $result:=Compile project($options)
 ```
 
-#### 参照 
+## 参照 
 
 [BUILD APPLICATION](build-application.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

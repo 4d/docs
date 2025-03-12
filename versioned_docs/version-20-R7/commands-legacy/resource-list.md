@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESOURCE LIST.Summary-->The **RESOURCE LIST** command populates the arrays *resIDs* and *resNames* with the resource IDs and names of the resources whose type is passed in *resType*.<!-- END REF-->
 
@@ -28,7 +28,7 @@ If you predeclare the arrays before calling **RESOURCE LIST**, you must predecla
 
 After the call, you can test the number of resources found by applying the [Size of array](size-of-array.md) command to the array *resIDs* or *resNames*.
 
-#### Example 1 
+## Example 1 
 
 The following example populates the arrays *$alResID* and *$atResName* with the IDs and names of the string list resources present in the structure file of the database:
 
@@ -43,7 +43,7 @@ The following example populates the arrays *$alResID* and *$atResName* with the 
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example copies the picture resources present in all currently open resource files into the Picture Library of the database:
 
@@ -66,11 +66,11 @@ The following example copies the picture resources present in all currently open
  CLOSE WINDOW
 ```
 
-#### See also 
+## See also 
 
 [RESOURCE TYPE LIST](resource-type-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

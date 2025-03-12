@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Structure file.Summary-->La fonction **Structure file** retourne le chemin d'accès du fichier de structure de la base en cours d'utilisation.<!-- END REF-->* Avec les bases projets, la commande retourne le chemin d'accès du fichier **.4dproject.**
 
@@ -32,7 +32,7 @@ Le paramètre facultatif *\** est utile dans le cadre d'une architecture utilisa
          * dans le cas d’un composant installé sous forme de dossier/package .4dbase, la commande retourne le chemin d’accès du fichier à l’intérieur de ce dossier/package.
 * Lorsque la commande est appelée depuis une méthode d’une base hôte, elle retourne toujours le chemin d'accès du fichier de structure/projet de la base hôte, que le paramètre *\** soit passé ou non.
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple affiche le nom et l'emplacement du fichier de structure que vous utilisez :
 
@@ -49,7 +49,7 @@ Cet exemple affiche le nom et l'emplacement du fichier de structure que vous uti
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L’exemple suivant permet de savoir si la méthode est appelée depuis un composant :
 
@@ -59,13 +59,13 @@ L’exemple suivant permet de savoir si la méthode est appelée depuis un compo
   // $0=Vrai si la méthode est appelée depuis un composant
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

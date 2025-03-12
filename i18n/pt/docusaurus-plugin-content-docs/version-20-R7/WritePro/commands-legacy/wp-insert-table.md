@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Insert table.Summary-->O comando **WP Insert table**insere uma nova tabela em *objRango* de acordo com o *modo* de inserçao especificado e retorna o novo objeto de tabela correspondente.<!-- END REF--> Opcionalmente, pode passar um parametro *actRango* assim como um número predefinido de colunas e filas em *numCol* e *numFilas*.
 
@@ -52,7 +52,7 @@ Pode passar em *numCol* e *numFilas* o número de colunas e filas a definir na t
 
 O comando devolve a nova tabela como um objeto de tabela, que pode passar a seguir aos demais comandos de tabela WP. A tabela foi criada com os atributos predeterminados de fonte, borda e cor que pode personalizar utilizando o comando [WP SET ATTRIBUTES](wp-set-attributes.md).
 
-#### Exemplo 
+## Exemplo 
 
 Em um documento em branco, se desejar agregar uma nova tabela com 3 colunas e 2 filas:
 
@@ -66,7 +66,7 @@ Resultado:
 
 ![](../../assets/en/WritePro/commands/pict3306926.en.png)
 
-#### Ver também 
+## Ver também 
 
 [WP Table append row](wp-table-append-row.md)  
 [WP Table get rows](wp-table-get-rows.md)  

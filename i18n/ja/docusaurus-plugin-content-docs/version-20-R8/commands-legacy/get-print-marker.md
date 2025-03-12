@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get print marker.Summary-->Get print marker コマンドを使用し、印刷中にマーカの現在位置を取得することができます。<!-- END REF-->
 
@@ -53,16 +53,16 @@ displayed_sidebar: docs
 | Form header8  | 倍長整数 | 208 |
 | Form header9  | 倍長整数 | 209 |
 
-#### 例題 
+## 例題 
 
 [SET PRINT MARKER](set-print-marker.md "SET PRINT MARKER")コマンドの例を参照 
 
-#### 参照 
+## 参照 
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

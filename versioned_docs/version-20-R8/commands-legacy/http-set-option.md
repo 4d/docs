@@ -20,7 +20,7 @@ This command is maintained for compatibility reasons only. It is now recommended
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HTTP SET OPTION.Summary-->The **HTTP SET OPTION** command sets different options that are used during the next HTTP request triggered by the [HTTP Get](http-get.md) or [HTTP Request](http-request.md) commands.<!-- END REF--> You call this command as many times as there are options to set.
 
@@ -40,12 +40,12 @@ In the *option* parameter, pass the number of the option to be set and in the *v
 
 You can call options in any order. If the same option is set more than once, only the value of the last call is taken into account.
 
-#### See also 
+## See also 
 
 [HTTP AUTHENTICATE](http-authenticate.md)  
 [HTTP GET OPTION](http-get-option.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

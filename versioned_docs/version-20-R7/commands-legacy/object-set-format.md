@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** sets the display format for the objects specified by *object* to the format you pass in *displayFormat*.<!-- END REF--> The new format is only used for the current display; it is not stored with the form.
 
@@ -25,14 +25,14 @@ If you specify the optional *\** parameter, you indicate an object name (a strin
 
 Naturally, you must use a display format compatible with the type of data found in the object or with the object itself.
 
-##### Boolean 
+### Boolean 
 
 To format Boolean fields:
 
 * (all versions) you can pass a single value in *displayFormat*. In this case, the field will be displayed as a checkbox and its label will be the value specified.
 * (binary databases only) you can pass two values, separated by a semicolon (*;*), in *displayFormat*. In this case, the field will be displayed as two radio buttons.
 
-##### Date and Time 
+### Date and Time 
 
 To format Date or Time fields or variables, you can use:
 
@@ -89,7 +89,7 @@ See also example 2.
  OBJECT SET FORMAT(*;"timeinput";":m")  
 ```
 
-##### Picture 
+### Picture 
 
 To format Picture fields or variables, pass Char(n) in *displayFormat*, where *n* is one of the following predefined constants provided by 4D: 
 
@@ -103,7 +103,7 @@ To format Picture fields or variables, pass Char(n) in *displayFormat*, where *n
 | Truncated centered          | Integer | 1     |
 | Truncated non centered      | Integer | 4     |
 
-##### Alpha and Number 
+### Alpha and Number 
 
 To format fields or variables of the Alpha or Number type, pass the label of the format directly in the *displayFormat* parameter.
 
@@ -111,7 +111,7 @@ For more information about display formats, see the *Number formats* and *Alpha 
 
 **Note:** In *displayFormat*, to use custom display formats that you may have created in the tool box, prefix the name of the format with a vertical bar (|).
 
-##### Picture buttons 
+### Picture buttons 
 
 To format picture buttons, in the *displayFormat* parameter, pass a character string respecting the following syntax:  
 *cols;lines;picture;flags{;ticks}*
@@ -139,7 +139,7 @@ To format picture buttons, in the *displayFormat* parameter, pass a character st
    This mode allows you to set the last thumbnail as the thumbnail to display when the button is disabled. When this mode is selected, 4D displays the last thumbnail when the button is disabled. When this mode is used in addition to the modes 0, 1 and 2, the last thumbnail is not taken into account in the sequence of the other modes. It will appear only when the button is disabled.
 * *ticks* \= activates the “Switch every n Ticks” mode and sets the time interval between the display of each picture. When this optional parameter is passed, it allows you to cycle through the contents of the picture button at the specified speed. For example, if you enter "2;3;?16807;0;10", the picture button will display a different picture every 10 ticks. When this mode is active, only the Transparent mode can be used (64).
 
-##### Picture pop-up menus 
+### Picture pop-up menus 
 
 To format picture pop-up menus, in the *displayFormat* parameter, pass a character string respecting the following syntax:  
 *cols;lines;picture;hMargin;vMargin;flags*  
@@ -155,7 +155,7 @@ To format picture pop-up menus, in the *displayFormat* parameter, pass a charact
    * *flags* \= 0: the picture pop-up menu is not transparent,  
    * *flags* \= 64: the picture pop-up menu is transparent.
 
-##### Thermometers and rulers 
+### Thermometers and rulers 
 
 To format objects of the thermometer or ruler type, in the *displayFormat* parameter, pass a character string respecting the following syntax:  
 *min;max;unit;step;flags{;format{;display}}*  
@@ -177,7 +177,7 @@ Keep in mind that the units and graduations are automatically hidden if the size
    * *display* \= 0 (or is omitted): displays a standard ruler / displays a thermometer in continuous animation of the "barber shop" type.  
    * *display* \= 1 : activates "Stepper" mode for a ruler / activates the "Asynchronous progress" mode for a thermometer. For more information about these options, please refer to the *Design Reference* manual.
 
-##### Dials 
+### Dials 
 
 To format objects of the dial type, in the *displayFormat* parameter, pass a character string respecting the following syntax:  
 *min;max;unit;step{;flags}*  
@@ -188,7 +188,7 @@ To format objects of the dial type, in the *displayFormat* parameter, pass a cha
 * *step* \= minimum interval of cursor movement in the indicator.
 * *flags* \= operation mode of the dial (optional). This parameter only accepts the value 32: On Data Change is executed while the user is adjusting the indicator. If this value is not used, On Data Change occurs only after the user is finished adjusting the indicator.
 
-##### Button grids 
+### Button grids 
 
 To format button grids, in the *displayFormat* parameter, pass a character string respecting the following syntax:  
 *cols;lines*  
@@ -198,7 +198,7 @@ To format button grids, in the *displayFormat* parameter, pass a character strin
 
 **Note:** For more information about the display formats for form objects, refer to the 4D Design Reference manual.
 
-##### 3D buttons 
+### 3D buttons 
 
 To format 3D buttons, in the *displayFormat* parameter, pass a character string respecting the following syntax:  
 *title;picture;background;titlePos;titleVisible;iconVisible;style;horMargin;vertMargin;* *iconOffset;popupMenu* *;* *hyperlink;numStates;imageHugsTitle*
@@ -257,7 +257,7 @@ Certain options are not taken into account for all 3D button styles. Also, in ce
  OBJECT SET FORMAT(myVar;"NiceButton;?256;:562;1;;1;4;5;;5;0;;2")
 ```
 
-##### List box headers 
+### List box headers 
 
 To format the icon in a list box header, pass a character string in the *displayFormat* parameter, which respects the following syntax:  
 *picture;iconPos*
@@ -272,7 +272,7 @@ To format the icon in a list box header, pass a character string in the *display
 
 This feature is useful, for example, when you want to work with a customized sort icon. 
 
-#### Example 1 
+## Example 1 
 
 The following line of code formats the *\[Employee\]Date Hired* field to the fifth format (Internal date long). 
 
@@ -280,7 +280,7 @@ The following line of code formats the *\[Employee\]Date Hired* field to the fif
  OBJECT SET FORMAT([Employee]Date Hired;Char(Internal date long))
 ```
 
-#### Example 2 
+## Example 2 
 
 This example formats a date variable and a time variable using [customized formats](https://developer.4d.com/docs/Project/date-time-formats.md): 
 
@@ -289,19 +289,19 @@ This example formats a date variable and a time variable using [customized forma
  OBJECT SET FORMAT(*;"mytime";"hh'h' mm'mn' ss'sec.'") // 15h 12mn 17sec.
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example changes the format for a *\[Company\]ZIP Code* field according to the length of the value stored in the field: 
 
 ```4d
  If(Length([Company]ZIP Code)=9)
-    OBJECT SET FORMAT([Company]ZIP Code;"#####–####")
+    OBJECT SET FORMAT([Company]ZIP Code;"###–##")
  Else
-    OBJECT SET FORMAT([Company]ZIP Code;"#####")
+    OBJECT SET FORMAT([Company]ZIP Code;"###")
  End if
 ```
 
-#### Example 4 
+## Example 4 
 
 The following example formats the value of the \[Stats\]Results field depending on whether it is a positive, negative, or null number:
 
@@ -309,7 +309,7 @@ The following example formats the value of the \[Stats\]Results field depending 
  OBJECT SET FORMAT([Stats]Results;"### ##0.00;(### ##0.00);")
 ```
 
-#### Example 5 
+## Example 5 
 
 The following example sets the format of a Boolean field to display Married and Unmarried, instead of the default Yes and No: 
 
@@ -317,7 +317,7 @@ The following example sets the format of a Boolean field to display Married and 
  OBJECT SET FORMAT([Employee]Marital Status;"Married;Unmarried")
 ```
 
-#### Example 6 
+## Example 6 
 
 Provided that you have stored a picture file named "envelope\_open.png" in the Resources folder of the database, you can write:
 
@@ -329,7 +329,7 @@ Provided that you have stored a picture file named "envelope\_open.png" in the R
 
 ![](../assets/en/commands/pict2878245.en.png)
 
-#### Example 7 
+## Example 7 
 
 The following example sets the format of a Boolean field to display a checkbox labelled “Classified”: 
 
@@ -337,7 +337,7 @@ The following example sets the format of a Boolean field to display a checkbox l
  OBJECT SET FORMAT([Folder]Classification;"Classified")
 ```
 
-#### Example 8 
+## Example 8 
 
 You have a table of thumbnails containing 1 row and 4 columns, intended to display a picture button (“default”, “clicked”, “roll over” and “disabled”). You want to associate the Switch when Roll Over, Switch back when Released and Use Last Frame as Disabled options with it: 
 
@@ -345,7 +345,7 @@ You have a table of thumbnails containing 1 row and 4 columns, intended to displ
  OBJECT SET FORMAT(*;"PictureButton";"4;1;?15000;176")
 ```
 
-#### Example 9 
+## Example 9 
 
 Switching a thermometer to "Barber shop" mode: 
 
@@ -354,14 +354,14 @@ Switching a thermometer to "Barber shop" mode:
  $Mythermo:=1 //Start animation
 ```
 
-#### See also 
+## See also 
 
 [Example database (v15 R5)](https://download.4d.com/Demos/4D%5Fv15%5FR5/HDI%5FListBox%5FOBJECT%5FSET%5FFORMAT.zip)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [OBJECT Get format](object-get-format.md)  
 [OBJECT SET FILTER](object-set-filter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

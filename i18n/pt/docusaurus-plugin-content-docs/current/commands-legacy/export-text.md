@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.EXPORT TEXT.Summary-->O comando EXPORT TEXT escreve os dados dos registros da seleção atual de *tabela* no processo atual.<!-- END REF--> Os dados são escritos em *documento*, um documento de texto Windows ou Macintosh, no disco.
 
@@ -30,7 +30,7 @@ Em modo Unicode (modo padrão), o comando utiliza por padrão o conjunto de cara
 
 Durante a utilização de EXPORT TEXT, o delimitador de campos padrão é o caractere de tabulação (código 9). O delimitador do registro por padrão é o retorno de carro (código 13). Pode modificar estes valores atribuindo novos valores às *Variáveis sistema* **FldDelimit** e **RecDelimit**. O usuário pode mudar estes valores na caixa de diálogo de exportação do ambiente Aplicação. Note que os campos exportados contêm caracteres definidos como campo ou delimitadores de registros, estes caracteres são automaticamente substituidos com espaço no arquivo exportado, de modo a evitar problemas ocm o processo de importação.
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo exporta dados a um documento texto. O método primeiro começa por definir o formulário de saída de maneira que os dados sejam exportados pelo formulário correto, modifica os delimitadores, depois realiza a exportação:
 
@@ -41,18 +41,18 @@ Este exemplo exporta dados a um documento texto. O método primeiro começa por 
  EXPORT TEXT([Pessoas];"Novas_Pessoas.txt") // Exportação do documento "Novas_Pessoas.txt"
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 OK toma o valor 1 se a exportação termina com sucesso; do contrário, toma o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

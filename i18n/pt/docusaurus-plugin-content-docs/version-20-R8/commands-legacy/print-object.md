@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Print object.Summary-->O comando **Print object** permite imprimir ele ou os objetos de formulário designado(s) pelos parâmetros *objeto* e *\**, na localização definida pelos parâmetros *posX* e *posY*.<!-- END REF-->  
   
@@ -43,7 +43,7 @@ O comando **Print object** só pode ser utilizado no contexto de um trabalho de 
   
 **Nota**: as listas hierárquicas, os sub formulários e as áreas web não podem ser impressas.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Exemplo de impressão de dez objetos em um formulário:
 
@@ -70,7 +70,7 @@ Exemplo de impressão de dez objetos em um formulário:
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Exemplo de impressão de um list box completo:
 
@@ -92,11 +92,11 @@ Exemplo de impressão de um list box completo:
  ON ERR CALL("")
 ```
 
-#### Ver também 
+## Ver também 
 
 [FORM LOAD](../commands/form-load.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

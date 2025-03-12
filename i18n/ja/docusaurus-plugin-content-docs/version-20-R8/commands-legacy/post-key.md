@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.POST KEY.Summary-->POST KEY コマンドはキーストロークをシミュレートします。<!-- END REF-->これは、ユーザが実際にキーボード上で文字を入力した場合と同様の結果を生じます。
 
@@ -25,18 +25,18 @@ displayed_sidebar: docs
 
 引数 *process* を指定すると、 キーストロークは、*process* に渡したプロセス番号を持つプロセスへと送られます。 0 (ゼロ) を渡したり、この引数を省略すると、キーストロークはアプリケーションレベルに送られます。そして、4Dスケジューラーはそれを適切なプロセスにディスパッチします。
 
-#### 例題 
+## 例題 
 
 [Process number](process-number.md "Process number") コマンドの例題を参照してください。
 
-#### 参照 
+## 参照 
 
 *ASCII Codes*  
 [POST CLICK](post-click.md)  
 [POST EVENT](post-event.md)  
 *ファンクションキーコード*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

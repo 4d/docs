@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OB Is defined.Summary-->O comando**OB Is defined** devolve **True** se *objeto* ou *propriedade* se definem e **False** em caso contrário.<!-- END REF-->deve ter sido criado com o comando *C\_OBJECT* ou designar um campo objeto 4D..  
   
@@ -25,7 +25,7 @@ Por padrão, se omitir o parâmetro *propriedade*, o comando comprova que *objet
   
 Se passar o parâmetro *propriedade*, o comando comprova se existe esta propriedade em *objeto*. Tenha em conta que o parâmetro *propriedade* é sensível as maiúsculas e minúsculas.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Sintaxe provando a inicialização de um objeto:
 
@@ -38,7 +38,7 @@ Sintaxe provando a inicialização de um objeto:
  $def2:=OB Is defined($object) // $def2=true já que $object está vazio {} mas foi inicializado
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Prova da existência de uma propriedade:
 
@@ -57,11 +57,11 @@ Esta prova é equivalente a:
  If(OB Get type($Object;"name")#Is undefined)
 ```
 
-#### Ver também 
+## Ver também 
 
 [OB Is empty](ob-is-empty.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

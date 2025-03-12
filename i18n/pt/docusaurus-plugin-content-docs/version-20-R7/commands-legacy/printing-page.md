@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Printing page.Summary-->Printing page devolvido o número da página em impressão.<!-- END REF--> Pode ser utilizado só quando esteja imprimindo com [PRINT SELECTION](print-selection.md) ou com o menu Impressão no ambiente Usuário.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir muda a posição dos números de página em um relatório de modo a que o relatório possa ser reproduzido em um formato de dois lados. O formulário para o relatório tem duas variáveis que mostram os números de página. Uma variável na esquina inferior esquerda (*vNumPagEsq*) imprimirá os números de páginas pares. Uma variável na esquina inferior direita (*vNumPagDir*) imprimirá os números das páginas ímpares. O exemplo testa se o número da página é par ou ímpar, depois apaga e utiliza as variáveis apropriadas:
 
@@ -34,11 +34,11 @@ O exemplo a seguir muda a posição dos números de página em um relatório de 
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

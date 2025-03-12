@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REJECT.Summary-->**REJECT** accepte deux syntaxes.<!-- END REF--> Dans la première syntaxe, **REJECT** n'a pas de paramètre. Dans ce cas, la commande rejette la totalité de la saisie et force l'utilisateur à rester dans le formulaire. La seconde syntaxe permet de ne refuser que *leChamp* et force l'utilisateur à rester dans le champ. 
 
@@ -30,7 +30,7 @@ Avec cette syntaxe, la commande **REJECT** doit impérativement être appelée d
 
 Vous pouvez utiliser la commande [HIGHLIGHT TEXT](highlight-text.md) pour sélectionner, à l'intérieur du champ, les valeurs qui ont été refusées.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant illustre la première syntaxe de **REJECT**, placée dans la méthode objet d'un bouton Valider. La touche **Entrée** a été définie comme équivalent clavier pour ce bouton. Cela signifie que même si l'utilisateur appuie sur cette touche pour valider l'enregistrement, la méthode objet du bouton sera exécutée. L'enregistrement est une transaction bancaire. Si la transaction est un chèque, un numéro de chèque doit être saisi. S'il n'y a pas de numéro, la validation est refusée : 
 
@@ -43,7 +43,7 @@ L'exemple suivant illustre la première syntaxe de **REJECT**, placée dans la m
  End case
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant est une partie de la méthode objet d'un champ *\[Employés\]Salaire*. La méthode objet teste si la valeur de ce champ est inférieure à 10 000 Euros et la refuse si c'est le cas. Vous pourriez effectuer le même contrôle en spécifiant une valeur minimum pour le champ, dans l'éditeur de formulaires du mode Développement :
 
@@ -57,13 +57,13 @@ L'exemple suivant est une partie de la méthode objet d'un champ *\[Employés\]S
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
 [GOTO OBJECT](goto-object.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

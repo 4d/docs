@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET MACRO PARAMETER.Summary-->The **GET MACRO PARAMETER** command returns, in the *paramText* parameter, all or part of the text of the method from which it was called.<!-- END REF-->
 
@@ -27,15 +27,15 @@ The *selector* parameter can be used to set the type of information to be return
 
 If you pass Full method text in *selector*, all of the text of the method will be returned in *paramText*. If you pass Highlighted method text in *selector*, only the text selected in the method will be returned in *paramText*.
 
-#### Example 
+## Example 
 
 Refer to the example of the [SET MACRO PARAMETER](set-macro-parameter.md) command.
 
-#### See also 
+## See also 
 
 [SET MACRO PARAMETER](set-macro-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

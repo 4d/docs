@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### When is the On Server Open Connection Database Method Called? 
+## When is the On Server Open Connection Database Method Called? 
 
 <!--REF #_command_.On Server Open Connection database method.Summary-->The **On Server Open Connection database method** is called once on the Server machine each time a connection process is started by a 4D remote workstation.<!-- END REF--> The **On Server Open Connection database method** is NOT invoked by any 4D environment other than 4D Server.
 
@@ -43,7 +43,7 @@ In each case with a remote 4D, several processes are started—One on the client
 
 **Important**: When a Stored Procedure is started, the **On Server Open Connection database method** is NOT invoked. *Stored Procedures* are server processes, not 4D Client processes. They execute code on the Server machine, but do not reply to requests exchanged by a 4D client (or other clients) and 4D Server. 
 
-#### How is the On Server Open Connection Database Method Called? 
+## How is the On Server Open Connection Database Method Called? 
 
 The **On Server Open Connection database method** is executed on the 4D Server machine within the 4D Client process that provoked the call to the method.
 
@@ -73,7 +73,7 @@ This table details the information provided by the three parameters passed to th
 
 These ID numbers are not directly usable as sources of information to be passed as, for example, parameters to a 4D command. However, they provide a way to uniquely identify a 4D Client process between the **On Server Open Connection database method** and the [On Server Close Connection database method](on-server-close-connection-database-method.md). At any moment of a 4D Server session, the combination of these values is unique. By storing this information in an interprocess array or a table, the two database methods can exchange information. In the example at the end of this section, the two database methods use this information to store the date and time of the beginning and end of a connection in the same record of a table.
 
-#### Example 1 
+## Example 1 
 
 The following example shows how to maintain a log of the connections to the database using the **On Server Open Connection database method** and the **On Server Close Connection Database Method**. The *\[Server Log\]* table (shown below) is used to keep track of the connection processes:
 
@@ -117,7 +117,7 @@ Here are some entries in the \[Server Log\] showing several remote connections:
 
 ![](../assets/en/commands/pict69174.en.png)
 
-#### Example 2 
+## Example 2 
 
 The following example prevents any new connection from 2 to 4 A.M.
 
@@ -129,7 +129,7 @@ The following example prevents any new connection from 2 to 4 A.M.
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

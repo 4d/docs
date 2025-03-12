@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Command name.Summary-->El comando **Command name** devuelve el nombre y (opcionalmente) las propiedades del comando cuyo número se pasa en *comando*.<!-- END REF-->el número de cada comando está indicado en el Explorador, así como también en el área de Propiedades de esta documentación.
 
@@ -29,7 +29,7 @@ Dos parámetros opcionales están disponibles:
 
 El comando **Command name** define la *variable* *OK* en 1 si *comando* corresponde a un número de comando existente y a 0 en caso contrario. Tenga en cuenta, sin embargo, que algunos comandos existentes han sido desactivados, en cuyo caso **Command name** devuelve una cadena vacía (ver el último ejemplo).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente código le permite cargar todos los comandos 4D válidos en un array:
 
@@ -51,7 +51,7 @@ El siguiente código le permite cargar todos los comandos 4D válidos en un arra
  Until(OK=0) //fin de los comandos existentes
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 En un formulario, usted quiere mostrar una lista desplegable que contenga los comandos estándar de generación de informes. En el método de objeto de esta lista desplegable, usted escribe:
 
@@ -71,7 +71,7 @@ En la versión inglesa de 4D, la lista desplegable contendrá: Sum, Average, Min
 
 \*con la aplicación 4D configurada para ser utilizada en idioma francés (ver nota de compatibilidad).
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Desea crear un método que devuelva **True** si el comando, cuyo número se pasa como parámetro, es hilo seguro y en caso contrario **False**.   
 
@@ -97,12 +97,12 @@ Luego, para el comando "SAVE RECORD" (53) por ejemplo, puede escribir:
   // devuelveTrue
 ```
 
-#### Ver también 
+## Ver también 
 
 [EXECUTE FORMULA](execute-formula.md)  
 *Procesos 4D apropiativos*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

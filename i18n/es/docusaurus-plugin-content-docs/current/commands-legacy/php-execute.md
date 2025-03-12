@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 :::
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.PHP Execute.Summary-->El comando **PHP Execute** permite ejecutar un script o una función PHP.<!-- END REF-->
 
@@ -53,7 +53,7 @@ Además, el script mismo puede generar errores PHP. En este caso, debe utilizar 
 
 **Nota:** PHP permite configurar la gestión de errores. Para mayor información, consulte por ejemplo la página: <http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting>.
 
-##### Conversión de los datos devueltos 
+### Conversión de los datos devueltos 
 
 La siguiente tabla especifica cómo 4D interpreta y convierte los datos devueltos en función del tipo del parámetro *resultPHP*.
 
@@ -73,11 +73,11 @@ La siguiente tabla especifica cómo 4D interpreta y convierte los datos devuelto
 
 **Nota:** si debe recuperar grandes volúmenes de datos utilizando PHP, es más eficiente pasar por el canal del buffer *stdOut* (comando **echo** o similar) que por el retorno de función. Para mayor información, consulte la descripción del comando [PHP GET FULL RESPONSE](php-get-full-response.md). 
 
-##### Using environment variables 
+### Using environment variables 
 
 Puede utilizar el comando [SET ENVIRONMENT VARIABLE](set-environment-variable.md "SET ENVIRONMENT VARIABLE") para definir las variables de entorno utilizadas por el script. Atención: después de llamar [LAUNCH EXTERNAL PROCESS](launch-external-process.md "LAUNCH EXTERNAL PROCESS") o PHP Execute, el conjunto de las variables entorno se borra.
 
-##### Special functions 
+### Special functions 
 
 4D ofrece las siguientes funciones especiales:
 
@@ -86,7 +86,7 @@ Puede utilizar el comando [SET ENVIRONMENT VARIABLE](set-environment-variable.md
 
 Note que el intérprete se relanza automáticamente cuando la primera petición se envía por PHP Execute. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Llamada del script "myPhpFile.php" sin función. Este es el contenido del script:
 
@@ -105,7 +105,7 @@ El siguiente código 4D:
 
 ...mostrará la versión PHP actual.
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Llamada de la función *myPhpFunction* en el script "myNewScript.php" con parámetros. Este es el contenido del script:
 
@@ -126,7 +126,7 @@ Llamada con función:
  ALERT($result) // Muestra "¡Hola mundo 4D!"
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Salir del intérprete PHP:
 
@@ -134,7 +134,7 @@ Salir del intérprete PHP:
  $ifOk:=PHP Execute("";"quit_4d_php")
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Gestión de errores:
 
@@ -174,7 +174,7 @@ El método PHP\_errHandler es el siguiente:
  End for
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Creación dinámica por 4D de un script antes de su ejecución:
 
@@ -201,7 +201,7 @@ Se ejecuta el script:
  $err:=PHP Execute("C:\Scripts\MyScript.php";"function2Rename_v2";*)
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Recuperación directa de un valor de tipo fecha y hora. Este es el contenido del script:
 
@@ -221,7 +221,7 @@ Recepción de la fecha del lado 4D:
   //$phpResult_time is ?01 :02 :03 ?
 ```
 
-#### Ejemplo 7 
+## Ejemplo 7 
 
 Distribución de datos en arrays:
 
@@ -237,7 +237,7 @@ Distribución de datos en arrays:
   // $arLong contiene los números, 11, 22, 33, etc.
 ```
 
-#### Ejemplo 8 
+## Ejemplo 8 
 
 Inicialización de un array:
 
@@ -248,7 +248,7 @@ Inicialización de un array:
   // Llene el array $arText con 50 elementos "indefinido"
 ```
 
-#### Ejemplo 9 
+## Ejemplo 9 
 
 Paso de parámetros vía un array:
 
@@ -259,7 +259,7 @@ Paso de parámetros vía un array:
   // Llene el array con los valores iniciales
 ```
 
-#### Ejemplo 10 
+## Ejemplo 10 
 
 Este es un ejemplo de la utilización básica de la función trim, para eliminar espacios adicionales y/o caracteres invisibles de principio a fin de una cadena:
 
@@ -272,13 +272,13 @@ Este es un ejemplo de la utilización básica de la función trim, para eliminar
 
 Para obtener más información acerca de la función trim, por favor, consulte la documentación de PHP.
 
-#### Ver también 
+## Ver también 
 
 *Ejecutar scripts PHP en 4D*  
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

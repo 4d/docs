@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Menu bar height.Summary-->Menu bar height returns the height of the menu bar, expressed in pixels.<!-- END REF-->
 
@@ -24,13 +24,13 @@ The command returns 0:
 
 **Note:** When the application is running in SDI mode on Windows, **Menu bar height** returns the height of a single menu bar line even if the window is narrowed and the menu bar has been wrapped on two or more lines. 
 
-#### See also 
+## See also 
 
 [HIDE MENU BAR](hide-menu-bar.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

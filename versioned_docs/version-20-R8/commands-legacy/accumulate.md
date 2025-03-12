@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ACCUMULATE.Summary-->**ACCUMULATE** specifies the fields or variables to be accumulated during a form report performed using [PRINT SELECTION](print-selection.md).<!-- END REF-->
 
@@ -25,18 +25,18 @@ Execute **ACCUMULATE** before printing the report with [PRINT SELECTION](print-s
 
 Use the [Subtotal](subtotal.md) function in the form method or an object method to return the subtotal of one of the *data* arguments.
 
-#### Example 
+## Example 
 
 See the example for the [BREAK LEVEL](break-level.md) command.
 
-#### See also 
+## See also 
 
 [BREAK LEVEL](break-level.md)  
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

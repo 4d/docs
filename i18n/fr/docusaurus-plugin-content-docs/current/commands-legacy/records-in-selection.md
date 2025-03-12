@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Records in selection.Summary-->**Records in selection** retourne le nombre d'enregistrements constituant la sélection courante de *laTable* (par opposition, [Records in table](records-in-table.md) retourne le nombre total d'enregistrements d'une table).<!-- END REF-->
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant propose une technique de boucle couramment utilisée pour se déplacer parmi les enregistrements de la sélection courante. La même opération peut être réalisée à l'aide de la commande [APPLY TO SELECTION](apply-to-selection.md) :
 
@@ -30,11 +30,11 @@ L'exemple suivant propose une technique de boucle couramment utilisée pour se d
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Records in table](records-in-table.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

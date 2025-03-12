@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ORDER BY.Summary-->**ORDER BY** は、カレントプロセスの*aTable*のカレントレコードセレクションをソートします。<!-- END REF-->ソートが終了すると、セレクションの先頭レコードがカレントレコードとなります。 
 
@@ -41,11 +41,11 @@ displayed_sidebar: docs
 
 並べ替えが中止されることなく実行された場合、OK変数は*1*に設定されます。ユーザーがキャンセルあるいは中止をクリックした場合、**ORDER BY**は実際には何の並べ替えを実行することなく終了し、OK変数を*0* (ゼロ)に設定します。
 
-##### 
+### 
 
 **注:** このコマンドはオブジェクト型フィールドをサポートしません。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は\[Products\]テーブルを対象とした並び替えエディタを表示します:
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
  ORDER BY([Products])
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、デフォルトテーブルを対象とした並び替えエディタを表示します (デフォルトテーブルが設定されていた場合):  
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
  ORDER BY
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例は\[Products\]テーブルのカレントセレクションをnameフィールドで昇順に並べ替えます:
 
@@ -69,7 +69,7 @@ displayed_sidebar: docs
  ORDER BY([Products];[Products]Name;>)
 ```
 
-#### 例題 4 
+## 例題 4 
 
 以下の例は\[Products\]テーブルのカレントセレクションをnameフィールドで降順に並べ替えます:
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
  ORDER BY([Products];[Products]Name;<)
 ```
 
-#### 例題 5 
+## 例題 5 
 
 以下の例は\[Products\]テーブルのカレントセレクションをtypeとpriceフィールドで、両レベルとも昇順に並べ替えます:
 
@@ -85,7 +85,7 @@ displayed_sidebar: docs
  ORDER BY([Products];[Products]Type;>;[Products]Price;>)
 ```
 
-#### 例題 6 
+## 例題 6 
 
 以下の例は\[Products\]テーブルのカレントセレクションをtypeとpriceフィールドで、両レベルとも降順に並べ替えます:
 
@@ -93,7 +93,7 @@ displayed_sidebar: docs
  ORDER BY([Products];[Products]Type;<;[Products]Price;<)
 ```
 
-#### 例題 7 
+## 例題 7 
 
 以下の例は\[Products\]テーブルのカレントセレクションをtypeの昇順およびpriceの降順で並べ替えます:
 
@@ -101,7 +101,7 @@ displayed_sidebar: docs
  ORDER BY([Products];[Products]Type;>;[Products]Price;<)
 ```
 
-#### 例題 8 
+## 例題 8 
 
 以下の例は\[Products\]テーブルのカレントセレクションをtypeの降順およびpriceの昇順で並べ替えます:
 
@@ -109,7 +109,7 @@ displayed_sidebar: docs
  ORDER BY([Products];[Products]Type;<;[Products]Price;>)
 ```
 
-#### 例題 9 
+## 例題 9 
 
 以下の例は、\[Products\]Nameフィールドにインデックスが設定されている場合は、インデックスソートを実行します: 
 
@@ -117,7 +117,7 @@ displayed_sidebar: docs
  ORDER BY([Products];[Products]Name;>)
 ```
 
-#### 例題 10 
+## 例題 10 
 
 以下の例は\[Products\]テーブルをnameフィールドで昇順にソートします: 
 
@@ -125,7 +125,7 @@ displayed_sidebar: docs
  ORDER BY([Products];[Products]Name)
 ```
 
-#### 例題 11 
+## 例題 11 
 
 以下の例は、フィールドにインデックスが設定されていてもいなくても、シーケンシャルソートを実行します: 
 
@@ -133,7 +133,7 @@ displayed_sidebar: docs
  ORDER BY([Products];[Products]type;>;[Products]Price;>)
 ```
 
-#### 例題 12 
+## 例題 12 
 
  以下のコードは、リレートフィールドを使用してシーケンシャルソートを実行します:
 
@@ -143,7 +143,7 @@ displayed_sidebar: docs
  SET FIELD RELATION([Employee]Company_ID;Structure configuration;Do not modify)
 ```
 
-#### 例題 13 
+## 例題 13 
 
 データベースに\[Contacts\]LastName + \[Contacts\]FirstNameの複合インデックスが設定されている場合、以下の例題は2レベルのソートをインデックスを使用して行います:
 
@@ -151,7 +151,7 @@ displayed_sidebar: docs
  ORDER BY([Contacts];[Contacts]LastName;>;[Contacts]FirstName;>)
 ```
 
-#### 例題 14 
+## 例題 14 
 
 アプリケーションモードで表示される出力フォームで、ユーザが列ヘッダをクリックすると昇順にソートが行われるようにします。
 
@@ -196,11 +196,11 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [ORDER BY FORMULA](order-by-formula.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

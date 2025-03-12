@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Summary-->The **SELECT LIST ITEMS BY REFERENCE** command selects the item(s) whose item reference number is passed in *itemRef* and, optionally, in *refArray*, within the list whose reference number is passed in *list*.<!-- END REF-->
 
@@ -33,7 +33,7 @@ In this case, the item designated by the *itemRef* parameter sets the new curren
 
 If you work with item reference numbers, be sure to build a list in which the items have unique reference numbers; otherwise you will not be able to distinguish them. For more information, see the description of the [APPEND TO LIST](append-to-list.md) command.
 
-#### Example 
+## Example 
 
 *hList* is a list whose items have unique reference numbers. The following object method for a button selects the parent item (if any) of the currently selected item:
 
@@ -48,13 +48,13 @@ If you work with item reference numbers, be sure to build a list in which the it
  End if
 ```
 
-#### See also 
+## See also 
 
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [Selected list items](selected-list-items.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

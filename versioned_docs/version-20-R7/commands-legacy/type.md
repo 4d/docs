@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Type.Summary-->The Type command returns a numeric value that indicates the type of field or variable you have passed in the *fieldVar* parameter.<!-- END REF-->
 
@@ -62,7 +62,7 @@ You can apply the Type function to fields, interprocess variables, process varia
 * You can not apply the **Type** function to scalar expressions such as object properties (*emp.name*) or collection elements (*myColl\[5\]*). To do this, you must use the [Value type](value-type.md) command.
 * In compiled mode, calling **Type** on a method parameter declared as variant does not return Is variant but the actual data type (same as calling [Value type](value-type.md)).
 
-#### Example 1 
+## Example 1 
 
 The following project method empties some or all of the fields for the current record of the table whose a pointer is passed as parameter. It does this without deleting or changing the current record:
 
@@ -123,7 +123,7 @@ After this project method is implemented in your database, you can write:
  EMPTY RECORD(->[Things To Do];-1?-Is alpha field)
 ```
 
-#### Example 2 
+## Example 2 
 
 In certain cases, for example when writing generic code, you may need to find out whether an array is a standard independent array or the “row” of a 2D array. In this case, you can use the following code:
 
@@ -137,17 +137,17 @@ In certain cases, for example when writing generic code, you may need to find ou
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
 
-#### See also 
+## See also 
 
 [Is a variable](is-a-variable.md)  
 [Undefined](undefined.md)  
 [Value type](value-type.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

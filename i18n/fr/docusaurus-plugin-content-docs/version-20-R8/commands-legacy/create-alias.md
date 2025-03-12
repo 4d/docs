@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE ALIAS.Summary-->La commande **CREATE ALIAS** crée un alias (appelé “raccourci” sous Windows) du fichier ou dossier cible désigné par le paramètre *cheminCible*, avec le nom et l’emplacement définis dans le paramètre *cheminAlias*.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ La commande n’affecte pas de libellé par défaut à l’alias, vous devez pas
 
 Si vous passez une chaîne vide dans *cheminCible*, la commande ne fait rien.
 
-#### Exemple 
+## Exemple 
 
 Votre base génère des fichiers texte intitulés “RapportNuméro”, stockés dans le dossier de la base. Vous souhaitez permettre à l’utilisateur de créer des raccourcis vers ces rapports et de les stocker où il le souhaite :
 
@@ -60,15 +60,15 @@ Votre base génère des fichiers texte intitulés “RapportNuméro”, stockés
  End if
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si la commande a été correctement exécutée, sinon elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [RESOLVE ALIAS](resolve-alias.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

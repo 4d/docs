@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CLOSE WINDOW.Summary-->CLOSE WINDOW はカレントプロセスで[Open window](open-window.md "Open window") や [Open form window](open-form-window.md "Open form window") コマンドで開かれたアクティブウィンドウを閉じます。<!-- END REF-->カスタムウィンドウが開かれていない場合、CLOSE WINDOWは効果を持ちません (システムウィンドウは閉じられません)。CLOSE WINDOW はウィンドウ中でフォームがアクティブであるときに呼び出されても効力を持ちません。CLOSE WINDOWは[Open window](open-window.md "Open window") や [Open form window](open-form-window.md "Open form window") で開いたウィンドウの利用が終了したときに呼び出します。
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 *WinRef*には外部ウィンドウ参照番号を渡すことができます。この引数を渡すと指定した外部ウィンドウが閉じられます。外部ウィンドウに関する詳細は*Open external window*を参照してください。
 
-#### 例題 
+## 例題 
 
 以下の例題はフォームウィンドウを開き、[ADD RECORD](add-record.md) コマンドでレコードを追加します。処理が終了したら**CLOSE WINDOW** でウィンドウを閉じます:
 
@@ -34,12 +34,12 @@ displayed_sidebar: docs
  CLOSE WINDOW //ウィンドウを閉じる
 ```
 
-#### 参照 
+## 参照 
 
 [Open form window](open-form-window.md)  
 [Open window](open-window.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

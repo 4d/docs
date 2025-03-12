@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REAL TO BLOB.Summary-->La commande **REAL TO BLOB** écrit la valeur de type Réel *réel* dans le BLOB *blob*.<!-- END REF-->
 
@@ -41,11 +41,11 @@ Si vous passez une variable dans le paramètre *offset*, le réel est écrit à 
 
 Après l'exécution de la commande, la variable du paramètre *offset* est incrémentée du nombre d'octets ayant été écrits. Vous pouvez par conséquent réutiliser la même variable avec une autre commande d'écriture de BLOB afin de placer une autre valeur juste après celle que vous venez d'écrire.
 
-##### Note 
+### Note 
 
 **Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
-#### Exemple 1 
+## Exemple 1 
 
 Après l'exécution de ce code :
 
@@ -57,7 +57,7 @@ Après l'exécution de ce code :
 
 * Sur toutes les plates-formes, la taille de *vxBlob* est 10 octets
 
-#### Exemple 2 
+## Exemple 2 
 
 Après l'exécution de ce code :
 
@@ -69,7 +69,7 @@ Après l'exécution de ce code :
 
 * Sur toutes les plates-formes, la taille de *vxBlob* est 8 octets
 
-#### Exemple 3 
+## Exemple 3 
 
 Après l'exécution de ce code :
 
@@ -82,7 +82,7 @@ Après l'exécution de ce code :
 
 * Sur toutes les plates-formes, la taille de *vxBlob* est 8 octets
 
-#### Exemple 4 
+## Exemple 4 
 
 Après l'exécution de ce code :
 
@@ -99,7 +99,7 @@ Après l'exécution de ce code :
 * Les autres octets du BLOB restent inchangés
 * La variable *vlOffset* est incrémentée de 8 (et est alors égale à 58)
 
-#### Exemple 5 
+## Exemple 5 
 
 Après l'exécution de ce code :
 
@@ -111,7 +111,7 @@ Après l'exécution de ce code :
 
 * Sur toutes les plates-formes, la taille de *vxBlob* est 8 octets
 
-#### Exemple 6 
+## Exemple 6 
 
 Après l'exécution de ce code :
 
@@ -124,7 +124,7 @@ Après l'exécution de ce code :
 * Sur toutes les plates-formes, la valeur numérique est stockée dans les octets #100 à #109
 * Les autres octets du BLOB restent inchangés
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -134,7 +134,7 @@ Après l'exécution de ce code :
 [LONGINT TO BLOB](longint-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

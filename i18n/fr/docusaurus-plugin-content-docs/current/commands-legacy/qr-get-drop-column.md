@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get drop column.Summary-->La commande **QR Get drop column** retourne une valeur indiquant l'emplacement auquel un “déposer” a été effectué dans *zone* :
 
@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

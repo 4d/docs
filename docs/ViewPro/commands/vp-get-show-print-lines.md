@@ -14,7 +14,7 @@ title: VP Get show print lines
 |sheet|Integer|<-|Sheet index|
 |Function result|Boolean|<-|True if print lines are visible, False otherwise|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines.Summary -->returns `True` if the print preview lines are visible and `False` if they are hidden.<!-- END REF -->
 
@@ -24,7 +24,7 @@ In *sheet*, pass the index of the target sheet. If *sheet* is omitted, the comma
 
 > Indexing starts at 0.
 
-#### Example
+## Example
 
 The following code checks if preview lines are displayed or hidden in the document:
 
@@ -33,6 +33,6 @@ The following code checks if preview lines are displayed or hidden in the docume
  $result:=VP Get show print lines("ViewProArea";1)
 ```
 
-#### See also
+## See also
 
 [VP SET SHOW PRINT LINES](vp-set-show-print-lines.md)

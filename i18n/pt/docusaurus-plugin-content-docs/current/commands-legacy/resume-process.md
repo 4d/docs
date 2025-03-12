@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESUME PROCESS.Summary-->RESUME PROCESS reativa um *processo* cuja execução foi atrasada ou suspendida.<!-- END REF--> Se *processo* não está atrasado ou suspendido, RESUME PROCESS não faz nada.
 
@@ -21,12 +21,12 @@ Se *processo* foi atrasado anteriormente, consulte os comandos [PAUSE PROCESS](p
 
 **Nota:** não pode utilizar este comando para adicionar um procedimento armazenado na máquina servidor de uma máquina cliente. (*processo*<0).
 
-#### Ver também 
+## Ver também 
 
 [DELAY PROCESS](delay-process.md)  
 [PAUSE PROCESS](pause-process.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

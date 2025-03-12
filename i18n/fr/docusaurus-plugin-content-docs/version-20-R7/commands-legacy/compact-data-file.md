@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Compact data file.Summary-->La commande **Compact data file** effectue un compactage du fichier de données désigné par le paramètre *cheminDonnées* associé au fichier de structure *cheminStructure*.<!-- END REF--> Pour plus d’informations sur le compactage, reportez-vous au manuel Mode Développement.
 
@@ -49,7 +49,7 @@ Par défaut, la commande **Compact data file** crée un fichier d'historique au 
 Si vous avez passé l'option Timestamp log file name, le nom du fichier d'historique inclut la date et l'heure de sa création sous la forme "AAAA-MM-JJ HH-MM-SS", ce qui donne par exemple : “myDB\_Compact\_Log\_2015-09-27 15-20-35.xml”. Ce principe permet d'éviter que chaque nouveau fichier d'historique écrase le précédent, mais pourra nécessiter ultérieurement une action manuelle afin de supprimer les fichiers superflus.   
 Quelle que soit l'option sélectionnée, dès lors qu'un fichier d'historique est généré, son chemin est retourné dans la variable système *Document* à l'issue de l'exécution de la commande.
 
-#### Exemple 
+## Exemple 
 
 L’exemple suivant (Windows) effectue le compactage d’un fichier de données :
 
@@ -60,16 +60,16 @@ L’exemple suivant (Windows) effectue le compactage d’un fichier de données 
  $dossierArch:=Compact data file($ficStruc;$ficDonnées;$ficOrig)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si l’opération de compactage s’est déroulée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Si un fichier d'historique a été généré, son chemin complet est retourné dans la variable système Document. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

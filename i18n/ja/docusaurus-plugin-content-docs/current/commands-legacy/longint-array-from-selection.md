@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Summary-->LONGINT ARRAY FROM SELECTION コマンドは、*selection*の（絶対）レコード番号を*recordArray*に返します。<!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 **Note:** 配列要素0は-1に初期化されます。 
 
-#### 例題 
+## 例題 
 
 カレントセレクションのレコード番号を配列の形で取得します:
 
@@ -32,11 +32,11 @@ displayed_sidebar: docs
  LONGINT ARRAY FROM SELECTION([Clients];$_arrRecNum)
 ```
 
-#### 参照 
+## 参照 
 
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

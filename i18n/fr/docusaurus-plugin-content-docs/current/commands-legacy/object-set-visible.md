@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET VISIBLE.Summary-->La commande **OBJECT SET VISIBLE** affiche ou masque le ou les objet(s) défini(s) par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 Si vous passez la valeur **VRAI** dans le paramètre *visible*, le ou les objet(s) sont affichés. Si vous passez **FAUX** dans *visible*, les objets sont masqués.
 
-#### Exemple 
+## Exemple 
 
 Voici un formulaire tel qu'il apparaît en mode Développement :
 
@@ -53,12 +53,12 @@ ou ainsi :
 
 ![](../assets/en/commands/pict27190.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get visible](object-get-visible.md)  
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

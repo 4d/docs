@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY PICTURE.Summary-->The ARRAY PICTURE command creates and/or resizes an array of [Picture](# "Can be any Windows or Macintosh picture") elements in memory.<!-- END REF-->parameter is the name of the array.
 * The *size* parameter is the number of elements in the array.The *size2* parameter is optional; if *size2* is specified, the command creates a two-dimensional array. In this case, *size* specifies the number of rows and *size2* specifies the number of columns in each array. Each row in a two-dimensional array can be treated as both an element and an array. This means that while working with the first dimension of the array, you can use other array commands to insert and delete entire arrays in a two-dimensional array.
@@ -25,7 +25,7 @@ While applying to an existing array:
 * If you enlarge the array size, the existing elements are left unchanged, and the new elements are initialized to empty pictures. This means that [Picture size](picture-size.md) applied to one of these elements will return *0*.
 * If you reduce the array size, the last elements deleted from the array are lost.
 
-#### Example 1 
+## Example 1 
 
 This example creates a process array of 100 [Picture](# "Can be any Windows or Macintosh picture") elements:
 
@@ -33,7 +33,7 @@ This example creates a process array of 100 [Picture](# "Can be any Windows or M
  ARRAY PICTURE(agValues;100)
 ```
 
-#### Example 2 
+## Example 2 
 
 This example creates a local array of 100 rows of 50 [Picture](# "Can be any Windows or Macintosh picture") elements:
 
@@ -41,7 +41,7 @@ This example creates a local array of 100 rows of 50 [Picture](# "Can be any Win
  ARRAY PICTURE($agValues;100;50)
 ```
 
-#### Example 3 
+## Example 3 
 
 This example creates an interprocess array of [Picture](# "Can be any Windows or Macintosh picture") elements and loads each picture into one of the elements of the array. The array’s size is equal to the number of *'PICT'* resources available to the database. The array’s resource name starts with *"User Intf/"*:
 
@@ -60,7 +60,7 @@ This example creates an interprocess array of [Picture](# "Can be any Windows or
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

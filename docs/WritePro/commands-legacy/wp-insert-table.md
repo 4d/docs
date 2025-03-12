@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Insert table.Summary-->The **WP Insert table** command inserts a new table in the *targetObj* according to the specified insertion *mode* and returns the corresponding new table object.<!-- END REF--> Optionally, you can pass a *rangeUpdate* parameter as well as a predefined number of columns and rows in *nbCols* and *nbRows*.
 
@@ -52,7 +52,7 @@ You can pass in *nbCols* and *nbRows* the number of columns and rows to define i
 
 The command returns the new table as a table object, that you can pass thereafter to the other WP table commands. The table is created with default font, border, and color attributes that you can customize using the [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) command.
 
-#### Example 
+## Example 
 
 In a blank document, you want to add a new table with 3 columns and 2 rows:
 
@@ -66,7 +66,7 @@ Result:
 
 ![](../../assets/en/WritePro/commands/pict3306926.en.png)
 
-#### See also 
+## See also 
 
 [WP Table append row](../commands/wp-table-append-row.md)  
 [WP Table get rows](wp-table-get-rows.md)  

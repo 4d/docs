@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get filter.Summary-->OBJECT Get filter コマンドは *object*で指定されたオブジェクトまたはオブジェクトグループに割り当てられたフィルターの名前を返します。<!-- END REF-->.
 
 オプションの *\** 引数を渡すと、*object*引数はオブジェクト名 (文字) です。この引数を渡さないと、*object*はフィールドまたは変数です。この場合、文字ではなくフィールドまたは変数への参照 (フィールドまたは変数オブジェクトのみ) を渡します。
 
-#### 参照 
+## 参照 
 
 [OBJECT SET FILTER](object-set-filter.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Open resource file.Summary-->The **Open resource file** command opens the resource file whose name or pathname you pass in *resFileName*.<!-- END REF-->
 
@@ -43,7 +43,7 @@ However, if you access and intend to programmatically add, delete or modify its 
 
 After you have opened a resource file, you can analyze the contents of the file using the [RESOURCE TYPE LIST](resource-type-list.md) and [RESOURCE LIST](resource-list.md) commands.
 
-#### Example 1 
+## Example 1 
 
 The following example tries to open, on Windows, the resource file “MyPrefs.res” located in the database folder:
 
@@ -53,7 +53,7 @@ The following example tries to open, on Windows, the resource file “MyPrefs.re
 
 On Macintosh, the example tries to open the file “MyPrefs”.
 
-#### Example 2 
+## Example 2 
 
 The following example tries to open, on Windows. the resource file “MyPrefs.rsr” located in the database folder:
 
@@ -63,7 +63,7 @@ The following example tries to open, on Windows. the resource file “MyPrefs.rs
 
 On Macintosh, the example tries to open the file “MyPrefs”.
 
-#### Example 3 
+## Example 3 
 
 The following example displays the Open file dialog box showing all types of files:
 
@@ -71,7 +71,7 @@ The following example displays the Open file dialog box showing all types of fil
  $vhResFile:=Open resource file("")
 ```
 
-#### Example 4 
+## Example 4 
 
 The following example displays the Open file dialog box showing files created by the  command, using the default file type:
 
@@ -83,22 +83,22 @@ The following example displays the Open file dialog box showing files created by
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the resource file is successfully opened, the OK variable is set to 1\. If the resource file could not be opened or if the user clicked Cancel in the Open file dialog box, the OK variable is set to 0 (zero).
 
 If the resource file is successfully opened using the Open file dialog box, the Document variable is set to the pathname of the file.
 
-#### Error management 
+## Error management 
 
 If the resource file could not be opened due to a resource or I/O problem, an error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
 
-#### See also 
+## See also 
 
 [CLOSE RESOURCE FILE](close-resource-file.md)  
 *Resources*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

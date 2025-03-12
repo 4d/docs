@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD GET ATTRIBUTES.Summary-->**METHOD GET ATTRIBUTES** コマンドは、*path* で指定されたメソッドのすべての属性のカレント値を *attributes* に返します。<!-- END REF-->
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 **互換性に関する注記:** 4D v18 以降、*published4DMobile* プロパティは廃止予定です。
 
-#### 例題 
+## 例題 
 
 *sendMail* プロジェクトメソッドの属性を取得したい場合を考えます。以下の用にコードを書くことができます:
 
@@ -59,11 +59,11 @@ displayed_sidebar: docs
 }
 ```
 
-#### 参照 
+## 参照 
 
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

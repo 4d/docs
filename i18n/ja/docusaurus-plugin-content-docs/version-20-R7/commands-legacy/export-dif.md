@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.EXPORT DIF.Summary-->EXPORT DIF コマンドは、カレントプロセスにおける*aTable*のカレントセレクションのレコードをディスクに書き出します。<!-- END REF-->このデータは*document*に書き込まれます。*document*は、WindowsまたはMacintoshの標準的なDIF形式のドキュメントです。 
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 EXPORT DIF を使用する際、デフォルトのフィールド区切り文字はタブ文字 (コード 9) です。デフォルトのレコード区切り文字はキャリッジリターン (コード 13) です。これらの値は2つの *システム変数*、 FldDelimit と RecDelimit に新しい値を代入することによって変更できます。ユーザはこれらのデフォルト値をデザインモードの書き出しダイアログで変更できます。テキストフィールドにはタブやキャリッジリターンを含めることができるので、これらの値を区切り文字として使用する際は注意が必要です。
 
-#### 例題 
+## 例題 
 
 以下の例は、データをDIFドキュメントファイルに書き出します。まず、メソッドの最初で書き出しに使用する出力フォームを設定し、次にデータ書き出しを実行します:
 
@@ -39,18 +39,18 @@ EXPORT DIF を使用する際、デフォルトのフィールド区切り文字
  EXPORT DIF([People];"NewPeople.dif"")  // "NewPeople.dif" ドキュメントに書き出しを行う
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT DIF](import-dif.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,16 +14,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Frontmost window.Summary-->Frontmost window コマンドは最前面のウィンドウの参照番号を返します。<!-- END REF-->
 
-#### 参照 
+## 参照 
 
 [Frontmost process](frontmost-process.md)  
 [Next window](next-window.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

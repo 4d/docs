@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET FONT STYLE.Summary-->OBJECT SET FONT STYLE は*object* で指定したフォームオブジェクトが、*styles*に渡したフォントスタイルを使用して表示されるよう設定します。<!-- END REF-->
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 | Underline | 倍長整数 | 4 |
 
   
-#### 例題 1 
+## 例題 1 
 
 以下の例は*bAddNew*ボタンのスタイルを設定します。フォントスタイルは太字のイタリックになります:   
   
@@ -39,7 +39,7 @@ displayed_sidebar: docs
  OBJECT SET FONT STYLE(bAddNew;Bold+Italic)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、オブジェクト名が"vt"で始まるすべてのフォームオブジェクトのフォントスタイルをスタイルなしにします:   
   
@@ -47,7 +47,7 @@ displayed_sidebar: docs
  OBJECT SET FONT STYLE(*;"vt@";Plain)
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT Get font style](object-get-font-style.md)  
 [OBJECT SET FONT](object-set-font.md)  
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 *プログラミングに関する注意*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

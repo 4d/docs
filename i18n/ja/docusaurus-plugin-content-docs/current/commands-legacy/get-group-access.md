@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get group access.Summary-->**Get group access** コマンドはカレントセッションにおける4D ユーザーアカウントの所属情報を返します。<!-- END REF-->ユーザーがセッション内においてどのグループにも所属していない場合、空のコレクションが返されます。
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 文字列のコレクション: 4D ユーザーアカウントが所属しているグループの名前
 
-#### 例題 
+## 例題 
 
 カレントのユーザーが"plugins" グループに所属しているかどうかをチェックしたい場合を考えます:
 
@@ -32,11 +32,11 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [SET GROUP ACCESS](set-group-access.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

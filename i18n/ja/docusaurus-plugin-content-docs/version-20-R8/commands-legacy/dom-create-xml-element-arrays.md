@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Create XML element arrays.Summary-->DOM Create XML element arrays コマンドを使用して*elementRef*要素に新しい要素を追加したり、さらに配列形式で渡された属性とその値も追加できます。<!-- END REF-->
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 配列は事前に作成されていなければなあらず、またペアで動作します。必要なだけ配列のペアを渡すことができ、またそれぞれのペアごとに必要なだけ要素を渡すことができます。
 
-#### 例題 
+## 例題 
 
 以下の要素を作成します:
 
@@ -58,11 +58,11 @@ displayed_sidebar: docs
  vElementRef:=DOM Create XML element arrays(vRootRef;vxPath;arrAttNames;arrAttValues)
 ```
 
-#### 参照 
+## 参照 
 
 [DOM Create XML element](dom-create-xml-element.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

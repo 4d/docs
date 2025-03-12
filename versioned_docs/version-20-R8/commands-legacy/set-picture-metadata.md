@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PICTURE METADATA.Summary-->The SET PICTURE METADATA command lets you set or modify the contents of the metadata (or meta-tags) found in the *picture* (4D picture field or variable), when they are modifiable.<!-- END REF--> 
 
@@ -43,7 +43,7 @@ Under Windows, if an error occurs during execution of the command, the *OK* vari
 * Only certain picture formats (more specifically, JPEG and TIFF) support metadata. Conversely, formats such as GIF or BMP do not accept metadata. When you convert a picture with metadata to a format that does not support it, then information is lost.
 * Under macOS version 10.7 (Lion), a bug in the native framework used for encoding and decoding picture metadata may cause inaccuracies in GPS coordinates. In this case, updating to macOS 10.8 (Mountain Lion) or 10.9 (Maverick) is strongly recommended.
 
-#### Example 1 
+## Example 1 
 
 Setting several values of the "Keywords" metadata via arrays:
 
@@ -54,7 +54,7 @@ Setting several values of the "Keywords" metadata via arrays:
  SET PICTURE METADATA(vPicture;IPTC keywords;$arrTkeywords)
 ```
 
-#### Example 2 
+## Example 2 
 
 Setting of GPS block via a DOM reference:
 
@@ -71,18 +71,18 @@ Setting of GPS block via a DOM reference:
  DOM CLOSE XML($domMetas)
 ```
 
-#### Note 
+## Note 
 
 When all the metadata are handled via a DOM element reference, the tags are stored as attributes attached to an element (a child of the referenced element) whose name is the block name (TIFF, IPTC, etc.). When a specific metadata block is manipulated, the block tags are stored as attributes that are directly attached to the element referenced by the command. 
 
-#### See also 
+## See also 
 
 [GET PICTURE KEYWORDS](get-picture-keywords.md)  
 [GET PICTURE METADATA](get-picture-metadata.md)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

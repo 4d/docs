@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Std deviation.Summary-->**Std deviation** returns the standard deviation of *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the standard deviation.
 
 You can pass an array (one or two dimensions) in *series*. In this case, the array must be of the Integer, Longint or Real type.
 
-#### Example 1 
+## Example 1 
 
 The following example is an object method for the variable *vDeviate*. The object method assigns the standard deviation for a data series to *vDeviate*:
 
@@ -41,7 +41,7 @@ The following method is called to print the records in the selection and to acti
 
 **Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the printing commands.
 
-#### Example 2 
+## Example 2 
 
 This example gets the standard deviation of a series of values placed in an array: 
 
@@ -52,14 +52,14 @@ This example gets the standard deviation of a series of values placed in an arra
  vStdDev:=Std deviation($ArrGrades)
 ```
 
-#### See also 
+## See also 
 
 [Average](average.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 [Variance](variance.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

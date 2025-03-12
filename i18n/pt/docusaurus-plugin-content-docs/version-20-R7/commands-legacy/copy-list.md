@@ -14,19 +14,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Copy list.Summary-->O comando Copy list duplica a lista cujo número de referência é passado no parâmetro *lista* e retorna o número de referência da nova lista.<!-- END REF-->
 
 Quando tiver terminado de utilizar a nova lista, chame a [CLEAR LIST](clear-list.md "CLEAR LIST") para apagá-la.
 
-#### Ver também 
+## Ver também 
 
 [CLEAR LIST](clear-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

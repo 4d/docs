@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get picture file name.Summary-->La commande **Get picture file name** retourne le nom par défaut courant de l’image passée en paramètre.<!-- END REF--> 
 
@@ -22,11 +22,11 @@ Le nom par défaut est utilisé lors de l’exportation de l’image dans un fic
 
 Si l’image n’a pas de nom par défaut, la commande retourne une chaîne vide. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

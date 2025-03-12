@@ -49,7 +49,7 @@ Opcionalmente, puede pasar el parámetro *tipoElemento* para especificar los tip
 * Si un rango pasado en *targetObj* contiene un elemento que no está completamente contenido dentro del rango, el elemento completo se incluirá en los resultados. Por ejemplo, si el rango incluye parte de una tabla (pero no de toda la tabla), se devuelve la referencia para todo el elemento de la tabla, sin embargo, solo se incluyen las referencias de celda (párrafo) dentro del rango.
 * Si pasa wk type text box en el parámetro *tipoElemento*, *targetObj* puede contener un documento 4D Write Pro. Se devuelve un error si se pasa cualquier cosa que no sea un objeto documento en *targetObj* en este caso.
 
-##### Cómo se ordenan los elementos 
+### Cómo se ordenan los elementos 
 
 Los elementos en la colección devuelta se ordenan de forma diferente en función del contenido de *objRango*:
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->CLEAR PASTEBOARD コマンドは、クリップボードの内容をすべて消去します。<!-- END REF-->クリップボードに同じデータの複数のインスタンスが含まれる場合には、すべてのインスタンスが消去されます。CLEAR PASTEBOARDコマンドを呼び出した後、クリップボードは空になります。
 
@@ -22,7 +22,7 @@ CLEAR PASTEBOARDを1回呼び出してから、[APPEND DATA TO PASTEBOARD](appen
 
 一方[SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md "SET TEXT TO PASTEBOARD")と[SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md "SET PICTURE TO PASTEBOARD")コマンドは、クリップボードにデータを追加する前に自動的にクリップボードを消去します。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例はクリップボードを消去し、次にデータをペーストボードに追加します:
 
@@ -32,15 +32,15 @@ CLEAR PASTEBOARDを1回呼び出してから、[APPEND DATA TO PASTEBOARD](appen
  APPEND DATA TO PASTEBOARD("com.4d.private.text.rtf";$vxSylkData) // RTFテキストを追加
 ```
 
-#### 例題 2 
+## 例題 2 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD") コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

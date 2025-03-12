@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->O comando **INVOKE ACTION** ativa a ação padrão definida pelo parâmetro ação, opcionalmente no contexto objetivo.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Todas as ações disponíveis são listadas na seção *Ações padrões* do man
 
 **Nota**: também se oferecem ações específicas adicionais para os documentos 4D Write Pro. São detalhadas na seção *Usando ações padrão* do manual de referencia de 4D Write Pro.
 
-##### 
+### 
 
 Em *objetivo*, pode passar o contexto de formulário no que se deve executar a *ação*. Pode utilizar uma das seguintes constantes de tema *Ação estandarte*:
 
@@ -44,7 +44,7 @@ Dependendo do *objetivo*, a execução do comando **INVOKE ACTION** é sincrôni
 
 O comando **INVOKE ACTION** não gera um erro, por exemplo, se a ação solicitada não estiver disponível no contexto atual. Deve validar a ação esperada utilizando o comando [Action info](action-info.md). 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser executar a ação padrão **Copiar** no formulário atual:
 
@@ -52,7 +52,7 @@ Se quiser executar a ação padrão **Copiar** no formulário atual:
  INVOKE ACTION(ak copy;ak current form)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser executar uma ação padrão **Goto page** (página 3) no formulário principal:
 
@@ -60,11 +60,11 @@ Se quiser executar uma ação padrão **Goto page** (página 3) no formulário p
  INVOKE ACTION(ak goto page+"?value=3";ak main form)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Action info](action-info.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

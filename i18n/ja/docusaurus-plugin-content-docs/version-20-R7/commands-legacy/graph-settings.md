@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS はフォームに表示されるグラフの設定を変更します。<!-- END REF-->グラフは [GRAPH](graph.md) コマンドで定義済みでなければなりません。 GRAPH SETTINGS は円グラフには効果ありません。このコマンドはフォームと同じプロセスで呼び出されていなければなりません。
 
@@ -35,15 +35,15 @@ displayed_sidebar: docs
 
 引数*title*は、指定した文字列を凡例のラベルとして表示します。
 
-#### 例題 
+## 例題 
 
 [GRAPH](graph.md "GRAPH") コマンドの例題を参照。
 
-#### 参照 
+## 参照 
 
 [GRAPH](graph.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

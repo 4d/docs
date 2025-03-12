@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOG EVENT.Summary-->The **LOG EVENT** command sets up a customized system for recording internal events that occur during the use of your application.<!-- END REF-->
 
@@ -50,7 +50,7 @@ The *importance* parameter is only used with *outputType* `Into Windows log even
 
 :::
 
-#### Example 
+## Example 
 
 If you want to have keep track of when your database is opened under Windows, you could write the following line of code in the [On Startup database method](on-startup-database-method.md):
 
@@ -60,11 +60,11 @@ If you want to have keep track of when your database is opened under Windows, yo
 
 Each time the database is opened, this information will be written in Windows’ log events and its level of importance will be 0.
 
-#### See also 
+## See also 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

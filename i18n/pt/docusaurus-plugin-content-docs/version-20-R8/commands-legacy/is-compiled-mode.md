@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is compiled mode.Summary-->Is compiled mode testa se você está executando no modo compilado (True) ou no modo interpretado (False).<!-- END REF-->   
 
@@ -25,7 +25,7 @@ O parâmetro \* é opcional e útil no caso de uma arquitetura usando componente
    * Se o parâmetro *\** não for passado, o comando retorna *True* ou *False*, dependendo do modo em que o componente está sendo executado.
 * Quando o comando é chamado a partir de um método de banco de dados do host, ele retorna *True* ou *False*, dependendo do modo em que o banco de dados host está executando.
 
-#### Exemplo 
+## Exemplo 
 
 Em uma de suas rotinas, você inclui a depuração do código apenas quando você está executando no modo interpretado, desta forma rodear este código de depuração com um teste que chama Is compiled mode:
 
@@ -37,12 +37,12 @@ Em uma de suas rotinas, você inclui a depuração do código apenas quando voc�
   // ...
 ```
 
-#### Ver também 
+## Ver também 
 
 [IDLE](idle.md)  
 [Undefined](undefined.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Current time.Summary-->O comando Current time retorna a hora atual do relógio de sistema.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ A hora atual sempre está entre *00:00:00* e *23:59:59*. Utilize [String](string
 
 **4D Server:** se utilizar o parâmetro (\*) quando executa esta função em uma máquina 4D Client, a função devolve a hora atual do servidor.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir lhe mostra como medir a duração de uma operação. Aqui, OperaçãoLonga é um método que necessita ser cronometrado:  
   
@@ -33,7 +33,7 @@ O exemplo a seguir lhe mostra como medir a duração de uma operação. Aqui, Op
  ALERT("The operation took "+String($vhEndTime-$vhStartTime)+" seconds.") //Mostrar a duração da operação
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir extrai as horas, minutos e segundos da hora atual: 
 
@@ -44,13 +44,13 @@ O exemplo a seguir extrai as horas, minutos e segundos da hora atual:
  ALERT("O segundo atual é: "+String($vhAgora%60))
 ```
 
-#### Ver também 
+## Ver também 
 
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Tickcount](tickcount.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

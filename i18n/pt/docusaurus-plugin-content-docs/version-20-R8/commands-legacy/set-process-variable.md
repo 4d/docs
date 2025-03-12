@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET PROCESS VARIABLE.Summary-->O comando SET PROCESS VARIABLE escreve as variáveis processo *dstVar* (*dstVar2*, etc.) do processo de destino cujo número se passa em *processo* utilizando os valores passados em *expr1* (*expr2*, etc.).<!-- END REF-->  
 
@@ -30,7 +30,7 @@ A comunicação processo “Intermachine”, oferecida pelos comandos [GET PROCE
   
 **Dica**: em outras palavras, não é necessário conhecer o número de identificação do processo para poder utilizar o comando SET PROCESS VARIABLE com as variáveis inter-processo do servidor. Esta possibilidade é muito útil particularmente quando um procedimento armazenado se lança utilizando o método base On server startup. Como as máquinas cliente não conhecem automaticamente o número de identificação desse processo, todo valor negativo pode ser passado no parâmetro *processo*.
 
-##### Restrições 
+### Restrições 
 
 SET PROCESS VARIABLE não aceita variáveis locais como variáveis de destino. 
 
@@ -42,7 +42,7 @@ SET PROCESS VARIABLE aceita todo tipo de processo de variável processo ou inter
 
 O processo de destino deve ser um processo usuário; não pode ser um processo kernel. Se o processo de destino não existe, é gerado um erro. Pode encontrar este erro utilizando um método de gestão de erros instalado com [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Exemplo 1 
+## Exemplo 1 
 
 A seguinte linha de código atribui (à cadeia vazia) o texto da variável *vtEstadoAtual* do processo cujo número é *$vlProcesso*: 
 
@@ -50,7 +50,7 @@ A seguinte linha de código atribui (à cadeia vazia) o texto da variável *vtEs
  SET PROCESS VARIABLE($vlProcesso;vtEstadoAtual;"")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Esta linha de código atribui a variável texto *vtEstadoAtual* do processo cujo número é *$vlProcesso* o valor da variável *$vtInfo* desde o método de execução no processo atual: 
 
@@ -58,7 +58,7 @@ Esta linha de código atribui a variável texto *vtEstadoAtual* do processo cujo
  SET PROCESS VARIABLE($vlProcesso;vtEstadoAtual;$vtInfo)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Esta linha de código define o texto da variável *vtEstadoAtual* do processo cujo número for *$vlProcesso* ao valor da mesma variável no processo atual: 
 
@@ -68,7 +68,7 @@ Esta linha de código define o texto da variável *vtEstadoAtual* do processo cu
 
 **Nota:** o primeiro *vtEstadoAtual* atribui a instância da variável no processo de destino. O segundo *vtEstadoAtual* atribui a instância da variável no processo atual.
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Este exemplo transforma sequencialmente todos os elementos de um array processo em maiúsculas, desde o processo indicado por *$vlProceso*: 
 
@@ -82,7 +82,7 @@ Este exemplo transforma sequencialmente todos os elementos de um array processo 
 
 **Nota:** neste exemplo, a variável processo *vl\_IPCom\_Array* contém o tamanho do array *at\_IPCom\_Array* e deve ser mantida pelo processo fonte/destino.
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Este exemplo escreve a instância das variáveis *v1*, *v2* e *v3* utilizando a instância das mesmas variáveis desde o processo atual: 
 
@@ -90,14 +90,14 @@ Este exemplo escreve a instância das variáveis *v1*, *v2* e *v3* utilizando a 
  SET PROCESS VARIABLE($vlProcesso;v1;v1;v2;v2;v3;v3)
 ```
 
-#### Ver também 
+## Ver também 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
 *Processos*  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

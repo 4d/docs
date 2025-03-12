@@ -16,13 +16,13 @@ displayed_sidebar: docs
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
 
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP DELETE TEXT BOX.Summary-->**WP DELETE TEXT BOX** コマンドは*textBox* 引数で定義したテキストボックスを削除します。<!-- END REF-->
 
 *textBox* 引数で指定したテキストボックスが存在しない場合、コマンドは何もしません。
 
-#### 例題 
+## 例題 
 
 IDを使用してテキストボックスを削除したい場合を考えます:
 
@@ -36,6 +36,6 @@ IDを使用してテキストボックスを削除したい場合を考えます
  WP DELETE TEXT BOX($myTextBox)
 ```
 
-#### 参照 
+## 参照 
 
 [WP New text box](wp-new-text-box.md)  

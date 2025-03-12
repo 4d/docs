@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB GET OPTION.Summary-->**WEB GET OPTION** コマンドは4D Webサーバー処理に関するオプションの現在の設定値を取得するために使用します。<!-- END REF-->引数には取得するWebオプションを指定する値を渡します。*Web Server*テーマの以下の定数を使用できます:
 
@@ -58,11 +58,11 @@ displayed_sidebar: docs
 | wdl enable with response body  | 倍長整数 | 3 | Web HTTP debug log はレスポンスのボディー部のみを含めた状態で有効化されています。        |
 | wdl enable without body        | 倍長整数 | 1 | Web HTTP debug log はボディ部なしで有効化されています(この場合ボディ部のサイズは提供されます) |
 
-#### 参照 
+## 参照 
 
 [WEB SET OPTION](web-set-option.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

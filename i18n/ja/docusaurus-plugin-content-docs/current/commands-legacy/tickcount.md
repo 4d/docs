@@ -13,20 +13,20 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Tickcount.Summary-->Tickcount はマシンが起動されてから経過したTick (1/60秒) 数を返します。<!-- END REF-->Tickcount は倍長整数型の値を返します。
 
-#### 例題 
+## 例題 
 
 [Milliseconds](milliseconds.md "Milliseconds")コマンドの例題を参照。
 
-#### 参照 
+## 参照 
 
 [Current time](current-time.md)  
 [Milliseconds](milliseconds.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

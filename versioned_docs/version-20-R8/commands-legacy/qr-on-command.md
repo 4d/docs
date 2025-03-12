@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR ON COMMAND.Summary-->The **QR ON COMMAND** command executes the 4D method passed in *methodName* when a Quick Report command is invoked by the user, by the selection of a menu command or by a click on a button.<!-- END REF-->
 
@@ -37,13 +37,13 @@ If you want the initial command to be executed, you need to include the followin
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
-#### See also 
+## See also 
 
 *QR Commands*  
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR Get command status](qr-get-command-status.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

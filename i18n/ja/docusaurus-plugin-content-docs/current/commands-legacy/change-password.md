@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CHANGE PASSWORD.Summary-->CHANGE PASSWORD コマンドを使用して、カレントユーザのパスワードを変更できます。<!-- END REF-->このコマンドは現在のパスワードを、引数 *password* に渡した新しいパスワードに置き換えます。 
 
 **警告:** パスワードでは大文字小文字が区別されます。
 
-#### 例題 
+## 例題 
 
 以下の例題を使用して、ユーザがパスワードの変更を行います。
 
@@ -38,12 +38,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [OBJECT SET FONT](object-set-font.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

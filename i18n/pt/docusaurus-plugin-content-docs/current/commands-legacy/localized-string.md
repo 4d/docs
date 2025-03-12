@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Localized string.Summary-->O comando Localized string devolve o valor da string designada pelo atributo *resNome* para a linguagem atual.<!-- END REF-->
 
@@ -26,7 +26,7 @@ Passe em *recNome* o nome do recurso da string na qual deseja obter a tradução
   
 Lembre que XLIFF é diacrítica.
 
-#### Exemplo 
+## Exemplo 
 
 Este é um extrato do arquivo .xlf: 
 
@@ -47,15 +47,15 @@ Depois da execução do seguinte comando:
 
 ... se a linguagem atual for Português, , $valorPT contém “Mostrar no disco”.
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando for executado corretamente, a variável OK assume o valor 1\. Se *recNome* não for encontrado, o comando retorna uma string vazia e a variável OK assume o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [Get database localization](get-database-localization.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PICTURE RESOURCE.Summary-->La commande **GET PICTURE RESOURCE** retourne dans le champ ou la variable image désigné(e) par *resDonnées* l'image stockée dans la ressource image ("PICT") dont vous passé le numéro dans *resNum*.<!-- END REF-->
 
@@ -26,23 +26,23 @@ Si vous passez un numéro de référence de fichier de ressources valide dans *r
 
 **Note :** La taille d'une ressource image peut atteindre plusieurs méga-octets, voire davantage.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [RESOURCE LIST](resource-list.md).
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 (zéro).
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 S'il n'y a pas assez de mémoire disponible pour charger l'image, une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [ON ERR CALL](on-err-call.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

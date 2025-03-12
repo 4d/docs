@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM GET XML CHILD NODES.Summary-->DOM GET XML CHILD NODES コマンドは*elementRef*で指定したXML要素のすべての子ノードのタイプと参照または値を返します。<!-- END REF-->
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 *nodeRefsArr* 配列には、(内容または指示命令に基づき) 要素の値または参照が返されます。 
 
-#### 例題 
+## 例題 
 
 以下のXML構造があるとき:  
 
@@ -58,12 +58,12 @@ $typeArrと$textArr配列には以下の値が含まれます:
 | $typeArr{4}=11 | $textArr{4} = "AEF1237897734568" (<br/>の要素参照) |
 | $typeArr{5}=6  | $textArr{5} = "York"                          |
 
-#### 参照 
+## 参照 
 
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

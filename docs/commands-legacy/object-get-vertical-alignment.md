@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get vertical alignment.Summary-->The **OBJECT Get vertical alignment** command returns a value indicating the type of vertical alignment applied to the object designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -37,13 +37,13 @@ Vertical alignment can be applied to the following types of form objects:
 * list box columns,
 * list box headers and footers.
 
-#### See also 
+## See also 
 
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.QR SET INFO COLUMN.Summary-->##### Informes en lista 
+<!--REF #_command_.QR SET INFO COLUMN.Summary-->### Informes en lista 
 
 El comando QR SET INFO COLUMN permite definir los parámetros de una columna existente.<!-- END REF--> 
 
@@ -54,7 +54,7 @@ La siguiente instrucción define el título para la columna #1, el contenido del
  QR SET INFO COLUMN(area;1;"Titulo";"[Tabla 1]Campo2";0;150;0;"###,##")
 ```
 
-##### Informes tablas cruzadas 
+### Informes tablas cruzadas 
 
 El comando QR SET INFO COLUMN permite definir globalmente los mismos parámetros pero la referencia de las áreas a las cuales aplica es diferente y varia dependiendo del parámetro que quiera definir. 
 

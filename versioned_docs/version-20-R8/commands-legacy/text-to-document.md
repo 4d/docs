@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.TEXT TO DOCUMENT.Summary-->The **TEXT TO DOCUMENT** command lets you write the *text* directly to a disk file.<!-- END REF-->
 
@@ -50,7 +50,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 **Note:** This command does not modify the OK variable. In case of failure, an error is generated that you can intercept using a method installed by the [ON ERR CALL](on-err-call.md) command.
 
-#### Example 1 
+## Example 1 
 
 Here are some typical examples of using this command:
 
@@ -59,7 +59,7 @@ Here are some typical examples of using this command:
  TEXT TO DOCUMENT("myTest.xml";"This is a test")
 ```
 
-#### Example 2 
+## Example 2 
 
 Example allowing the user to indicate the location of the file to create:
 
@@ -78,12 +78,12 @@ Example allowing the user to indicate the location of the file to create:
  End if
 ```
 
-#### See also 
+## See also 
 
 [Document to text](document-to-text.md)  
 *System Documents*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

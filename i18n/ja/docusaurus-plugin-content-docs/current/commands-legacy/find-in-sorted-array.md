@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Find in sorted array.Summary-->**Find in sorted array** コマンドは *array* 引数で指定した配列内に、*value* 引数で指定した値と合致する要素が少なくとも一つある場合には**true**を返します。<!-- END REF-->また、合致した要素の位置を返す事もできます(任意)。[Find in array](find-in-array.md) コマンドとは異なり、*array* 引数で指定した配列が既にソート済みで、値の順番(位置)についての情報がある場合にのみ有効です(これにより、必要であればその個所に値を挿入することも可能です)。
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 *posLast* 引数に返された値と*posFirst* 引数に返された値を組み合わせることによって、*value* 引数と合致する配列内のそれぞれの要素に対して([ARRAY TO LIST](array-to-list.md) ループを使用して)繰り返したり、同じ値が何個合致するかを探す事もできます([Count in array](count-in-array.md)コマンドと同じですが、こちらの方が速いです)。
 
-#### 例題 1 
+## 例題 1 
 
 配列のソートを崩さないまま、必要であれば値を挿入したいという場合を考えます:
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
  "test"で始まる文字列の合致件数を探し、それらを全て連鎖させた文字列を作成したい場合を考えます:
 
@@ -66,13 +66,13 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 参照 
+## 参照 
 
 [Count in array](count-in-array.md)  
 [Find in array](find-in-array.md)  
 [SORT ARRAY](sort-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

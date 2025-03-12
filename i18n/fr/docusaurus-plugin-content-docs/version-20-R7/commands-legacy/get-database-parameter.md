@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get database parameter.Summary-->La commande **Get database parameter** permet de lire la valeur courante d'un paramètre de la base 4D.<!-- END REF--> Lorsque la valeur du paramètre est une chaîne de caractères, elle est retournée dans le paramètre *valeurAlpha*.
 
@@ -87,7 +87,7 @@ Le paramètre *sélecteur* désigne le paramètre à lire. 4D vous propose les c
 | Libzip version                      | Entier long | 120    | **Portée :** Machine 4D courante<br/>**Conservé entre deux sessions :** n/a<br/>**Description :** Retourne le numéro de version de la bibliothèque libzip dans l'application 4D sur la machine courante. (Lecture seule)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | Pause logging                       | Entier long | 121    | **Portée :** Application 4D<br/>**Conservé entre deux sessions :** Non<br/>**Valeurs possibles :** 0 (reprise des journaux), 1 (pause des journaux)<br/>Ce sélecteur permet de suspendre/reprendre toutes les opérations de journalisation lancées sur l'application (à l'exception des journaux ORDA). Cette fonction peut être utile pour alléger temporairement les tâches de l'application 4D ou pour planifier les opérations des journaux.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-#### Sélecteurs thread-safe 
+## Sélecteurs thread-safe 
 
 La commande **Get database parameter** peut être utilisée dans des processus préemptifs lors de l'appel des sélecteurs suivants :
 
@@ -102,7 +102,7 @@ La commande **Get database parameter** peut être utilisée dans des processus p
 * IMAP Log
 * Pause logging
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez que votre application redémarre après un premier lancement. L'application est lancée avec, par exemple, une ligne de commande sur Windows :
 
@@ -126,14 +126,14 @@ Dans la [On Startup database method](on-startup-database-method.md), vous pouvez
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DISTINCT VALUES](distinct-values.md)  
 [Application info](application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

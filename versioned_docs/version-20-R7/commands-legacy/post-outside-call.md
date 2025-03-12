@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibility Note 
+## Compatibility Note 
 
 <!--REF #_command_.POST OUTSIDE CALL.Summary-->This command was named **CALL PROCESS** in previous 4D releases.<!-- END REF--> 
 
-#### Description 
+## Description 
 
 **POST OUTSIDE CALL** calls the form displayed in the frontmost window of *process*. 
 
@@ -35,17 +35,17 @@ To communicate between processes that do not display forms, use the [GET PROCESS
 
 **Tip:** **POST OUTSIDE CALL** accepts the alternate syntax **POST OUTSIDE CALL**(-1). In order not to slow down the execution of methods, 4D does not redraw interprocess variables each time they are modified. If you pass -1 instead of a process reference number in the *process* parameter, 4D does not post any outside call. Instead, it redraws all the interprocess variables currently displayed in all windows of any process running on the same machine.
 
-#### Example 
+## Example 
 
 See example for [Semaphore](semaphore.md).
 
-#### See also 
+## See also 
 
 [Form event code](../commands/form-event-code.md)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

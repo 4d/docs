@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RELATE MANY.Summary-->RELATE MANY has two forms.<!-- END REF-->
 
@@ -23,11 +23,11 @@ The second form, RELATE MANY(oneField), establishes the One-to-Many relation for
 
 **Note:** If the current selection in the One table is empty while the RELATE MANY command is executed, it has no effect.
 
-##### 
+### 
 
 **Note:** This command does not support Object type fields.
 
-#### Example 
+## Example 
 
 In the following example, three tables are related with automatic relations. Both the \[People\] table and the \[Parts\] table have a Many-to-One relation to the \[Companies\] table.
 
@@ -60,12 +60,12 @@ Note that the RELATE MANY command is needed, even though the relations are autom
  End for
 ```
 
-#### See also 
+## See also 
 
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

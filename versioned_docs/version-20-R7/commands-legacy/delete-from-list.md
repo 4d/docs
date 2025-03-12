@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE FROM LIST.Summary-->The **DELETE FROM LIST** command deletes the item designated by the *itemRef* parameter of the list whose reference number or object name is passed in *list*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ If you work with item reference numbers, build a list in which the items have un
 
 No matter which item you delete, you should specify the optional *\** parameter to let 4D automatically delete the sublist attached to the item, if any. If you do not specify the *\** parameter, it is a good idea to have previously obtained the list reference number of the sublist (if any) attached to the item, so that you can delete it, if necessary, using the [CLEAR LIST](clear-list.md) command.
 
-#### Example 
+## Example 
 
 The following code deletes the currently selected item of the list *hList*. If the item has an attached sublist, the sublist (as well as any sub-sublist) is deleted:
 
@@ -38,12 +38,12 @@ The following code deletes the currently selected item of the list *hList*. If t
  DELETE FROM LIST(hList;*;*)
 ```
 
-#### See also 
+## See also 
 
 [CLEAR LIST](clear-list.md)  
 [GET LIST ITEM](get-list-item.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

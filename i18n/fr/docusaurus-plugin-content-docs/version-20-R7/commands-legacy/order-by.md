@@ -39,7 +39,7 @@ Pour indiquer que le tri ne doit pas être immédiatement effectué, passez en d
 
 Quelle que soit la manière dont le tri est défini, si l'opération risque de prendre un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Vous pouvez décider d'afficher ou de ne pas afficher ce message pour le process à l'aide des commandes [MESSAGES OFF](messages-off.md) et [MESSAGES ON](messages-on.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre l'opération. Si le tri s'est correctement déroulé, la variable système OK prend la valeur 1\. Sinon, si le tri est interrompu, OK prend la valeur 0 (zéro).
 
-##### 
+### 
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 

@@ -63,7 +63,7 @@ Una vez finalizada la ejecución, el parámetro *obj* *Error* lista todos los re
 
 **Atención:** el modo de reparación auto debe ser utilizado en casos específicos, ya que pasa por alto las funcionalidades de comprobación de integridad de datos internas de 4D. Se puede utilizar, por ejemplo, cuando un archivo de registro intermedio se ha perdido o dañado y que desea recuperar tantas operaciones como sea posible. En cualquier caso, es necesario prestar atención a la integridad de los datos específicos al utilizar este modo.
 
-##### 
+### 
 
 La lista actual de propiedades disponibles depende del tipo de operación (por ejemplo: crear registros, eliminar registros, modificar registros, etc.). Estas son las principales propiedades:
 

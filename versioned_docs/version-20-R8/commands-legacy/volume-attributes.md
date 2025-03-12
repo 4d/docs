@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.VOLUME ATTRIBUTES.Summary-->The VOLUME ATTRIBUTES command returns, expressed in bytes, the size, the used space and the free space for the volume whose name you pass in *volume*.<!-- END REF-->If *volume* indicates a non-mounted remote volume, the OK variable is set to 0 and the three parameters return -1\. 
 
-#### Example 
+## Example 
 
 Your application includes some batch operations running the night or the week-end that store huge temporary files on disk. To make this process as automatic and flexible as possible, you write a routine that will automatically find the first volume whose free space is sufficient for your temporary files. You might write the following project method:
 
@@ -92,11 +92,11 @@ Once this project method is added to your application, you can for instance writ
  End if
 ```
 
-#### See also 
+## See also 
 
 [VOLUME LIST](volume-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

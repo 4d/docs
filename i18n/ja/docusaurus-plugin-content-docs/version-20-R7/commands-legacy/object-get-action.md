@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get action.Summary-->**OBJECT Get action** コマンドは*object* 引数と*\** 引数によって指定されたオブジェクトに割り当てられた標準アクションの名前と引数(あれば)を返します。<!-- END REF-->
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 標準アクションの全体的な一覧については、*デザインリファレンス*マニュアルの*標準アクション*の章を参照してください。
 
-#### 例題 
+## 例題 
 
 フォーム内にあるオブジェクトのうち、まだ関連付けられたアクションがないもの全てに対して、"キャンセル"アクションを割り当てたい場合を考えます:
 
@@ -40,11 +40,11 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT SET ACTION](object-set-action.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get text.Summary-->The ST Get text command returns the styled text found in the text field or variable designated by the *object* parameter.<!-- END REF--> 
 
-##### 
+### 
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (string). During execution, if the object has the focus, the command returns information about the object being edited; however, when the object does not have the focus, the command returns information about the data source (field or variable) of the object.  
 If you omit the *\** parameter, this indicates that the *object* parameter is a field or a variable. In this case, you pass a field or variable reference instead of a string and during execution, the command returns information about this field or variable.
 
-##### 
+### 
 
 The command returns the text with any style tags that are associated with it, which means, for example, that you can copy and paste text while keeping its style. 
 

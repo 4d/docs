@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ADD TO SET.Summary-->**ADD TO SET** ajoute l'enregistrement courant de *laTable* à *ensemble*.<!-- END REF--> L'ensemble doit avoir déjà été créé ; si *ensemble* n'existe pas, une erreur est retournée. S'il n'y a pas d'enregistrement courant pour *laTable*, **ADD TO SET** ne fait rien.
 
-#### Voir aussi 
+## Voir aussi 
 
 [REMOVE FROM SET](remove-from-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

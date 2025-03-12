@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get section.Summary-->**WP Get section** コマンドは、*targetObj* 引数のレンジと交差する最初のセクションまたは要素、あるいは*wpDoc* 引数のドキュメント内で*sectionIndex* 引数で指定されたセクションを返します。<!-- END REF-->
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 **注:** セクションあるはレンジからサブセクションを取得したい場合には、[WP Get subsection](wp-get-subsection.md) コマンドを使用してください。
 
-#### 例題 
+## 例題 
 
 最初のセクションを取得したい場合を考えます:
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
  $section:=WP Get section(wpDoc;1)
 ```
 
-#### 参照 
+## 参照 
 
 [WP Get sections](wp-get-sections.md)  
 [WP Get subsection](wp-get-subsection.md)  

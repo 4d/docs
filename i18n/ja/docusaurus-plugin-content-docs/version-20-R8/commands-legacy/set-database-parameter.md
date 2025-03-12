@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->**SET DATABASE PARAMETER**コマンドを使用して、4Dデータベース内部の様々なパラメーターを変更することができます。<!-- END REF-->
 
@@ -92,7 +92,7 @@ displayed_sidebar: docs
 * *table* 引数はセレクター31, 46, そして47で使用されます。それ以外の場合、この引数は無視されます。
 * 異なるセッション間で値が保持されない定数について、その値を確実に適用したい場合には、[On Startupデータベースメソッド](on-startup-database-method.md) あるいは [On Server Startupデータベースメソッド](on-server-startup-database-method.md). 内において実行して下さい。
 
-#### スレッドセーフなセレクター 
+## スレッドセーフなセレクター 
 
 **SET DATABASE PARAMETER** コマンドは、以下のセレクターを使用する場合にはプリエンプティブプロセスで使用することができます:
 
@@ -107,7 +107,7 @@ displayed_sidebar: docs
 * IMAP Log
 * Pause logging
 
-#### 例題 1 
+## 例題 1 
 
 以下の文は予期しないタイムアウトを避けます:
 
@@ -120,7 +120,7 @@ displayed_sidebar: docs
  ...
 ```
 
-#### 例題 2 
+## 例題 2 
 
 この例題は、一時的にクライアントマシン上でフォーミュラによるクエリを実行するよう強制します:  
   
@@ -131,7 +131,7 @@ displayed_sidebar: docs
  SET DATABASE PARAMETER([table1];Query By Formula On Server;curVal) //設定を元に戻す
 ```
 
-#### 例題 3 
+## 例題 3 
 
 変換された4D date を含む JSON形式のデータを書き出したい場合を考えます。変換が起きるのは日付がオブジェクトに保存されたときなので、 [OB SET](ob-set.md)コマンドが呼び出される前に [SET DATABASE PARAMETER](set-database-parameter.md)コマンドを使用する必要があることに注意して下さい: 
 
@@ -143,13 +143,13 @@ displayed_sidebar: docs
  SET DATABASE PARAMETER(Dates inside objects;1)
 ```
 
-#### 参照 
+## 参照 
 
 [Get database parameter](get-database-parameter.md)  
 [LOG EVENT](log-event.md)  
 [QUERY SELECTION](query-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

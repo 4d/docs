@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->La commande **GENERATE CERTIFICATE REQUEST** permet de générer une demande de certificat au format PKCS, directement exploitable par des autorités de certification telles que Verisign® ou Thawthe®.<!-- END REF--> Le certificat est une pièce essentielle du fonctionnement du protocole SSL dans le cadre d’un serveur Web. Il est envoyé à chaque browser se connectant en mode SSL. Il contient la “carte d’identité” du site Web (reprenant les informations que vous saisissez dans la commande), ainsi que sa clé publique — permettant aux browsers de décrypter les informations reçues. En outre, le certificat contient diverses informations ajoutées par l’autorité de certification.
 
@@ -44,7 +44,7 @@ Les codes et les libellés attendus peuvent varier en fonction de l’autorité 
 
 L’ordre dans lequel les codes et les informations sont insérés dans les tableaux n’a pas d’importance, en revanche les deux tableaux doivent être “synchronisés” : si l’élément {3} du tableau *tabCodes* contient la valeur 15 (nom de la ville), l’élément {3} du tableau *tabLibellés* doit contenir cette information, dans notre exemple Clichy.
 
-#### Exemple 
+## Exemple 
 
 Un formulaire “Demande de certificat” comporte les six champs nécessaires à l’établissement d’une demande de certificat standard. Le bouton **Générer** crée un document sur disque contenant la demande de certificat. Le document “Cléprivée.txt” contient la clé privée (générée à l’aide la commande [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)) doit déjà être présent sur le disque.
 
@@ -78,12 +78,12 @@ Un formulaire “Demande de certificat” comporte les six champs nécessaires �
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

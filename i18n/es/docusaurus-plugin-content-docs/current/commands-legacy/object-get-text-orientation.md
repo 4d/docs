@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get text orientation.Summary-->El comando **OBJECT Get text orientation** devuelve el valor de orientación actual aplicado al texto del objeto o de los objetos designado(s) por los parámetros *objeto* y *\**.<!-- END REF-->
 
@@ -32,7 +32,7 @@ El valor que se devuelve corresponde a una de las siguientes constantes, que se 
 | Orientation 90° left  | Entero largo | 270   | Orientación del texto a 90° en el sentido antihorario |
 | Orientation 90° right | Entero largo | 90    | Orientación del texto a 90° en el sentido horario     |
 
-#### Ejemplo 
+## Ejemplo 
 
 Dado el siguiente objeto (donde se aplicó una orientación "90 ° a la izquierda" en el editor de formularios):
 
@@ -52,11 +52,11 @@ Cuando se ejecuta el formulario, si se llama a la siguiente declaración:
  $vOrt:=OBJECT Get text orientation(*;"myText") //$vOrt=180
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET TEXT ORIENTATION](object-set-text-orientation.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

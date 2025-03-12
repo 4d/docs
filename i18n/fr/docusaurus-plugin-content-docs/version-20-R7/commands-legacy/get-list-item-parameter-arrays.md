@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->La commande **GET LIST ITEM PARAMETER ARRAYS** permet de récupérer en un seul appel l’ensemble des paramètres (ainsi que, optionnellement, leurs valeurs) associés à l’élément *refElément* de la liste hiérarchique dont vous avez passé la référence ou le nom d’objet dans le paramètre *liste*.<!-- END REF--> 
 
@@ -29,7 +29,7 @@ Si vous passez le premier paramètre optionnel *\**, vous indiquez que le param�
 
 Le tableau *tabValeur* doit être de type texte. Si vous avez associé des valeurs non-textuelles (type numérique ou booléen), elles sont converties en chaînes (vrai="1", faux="0").
 
-#### Exemple 
+## Exemple 
 
 Soit la liste hiérarchique suivante : 
 
@@ -71,11 +71,11 @@ Si on souhaite récupérer également les valeurs des paramètres, on peut écri
      // tValeursParams{5} contient "Nantes"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HIDE PROCESS.Summary-->**HIDE PROCESS** hides all windows that belong to *process*.<!-- END REF--> All interface elements of *process* are hidden until the next [SHOW PROCESS](show-process.md). The menu bar of the process is also hidden. This means that opening a window while the process is hidden does not make the screen redraw or display. If the process is already hidden, the command has no effect.
 
@@ -23,7 +23,7 @@ If you do not want a *process* to be displayed when it is created, **HIDE PROCES
 
 Even though a process may be hidden, the process is still executing.
 
-#### Example 
+## Example 
 
 The following example hides all the windows belonging to the current process:
 
@@ -31,12 +31,12 @@ The following example hides all the windows belonging to the current process:
  HIDE PROCESS(Current process)
 ```
 
-#### See also 
+## See also 
 
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

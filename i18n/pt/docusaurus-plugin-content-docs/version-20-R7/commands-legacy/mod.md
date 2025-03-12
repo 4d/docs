@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Mod.Summary-->O comando Mod retorna o resto da divisão inteira de *numero1* por *numero2*.<!-- END REF-->  
 • Mod aceita expressões de tipo Inteiro, Inteiro longo e Reais. Entretanto, se *numero1* ou *numero2* são números reais, os números são arredondados primeiro e depois Mod é calculado.   
@@ -25,7 +25,7 @@ Igualmente pode utilizar o operador *%* para calcular o resto (ver *C\_TIME*).
 
 **Advertência:** o operador *%* retorna resultados válidos com expressões de tipo Inteiro e Inteiro longo. Para calcular o módulo de valores reais, deve utilizar o comando Mod.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir ilustra o funcionamento de Mod com diferentes argumentos. Cada linha atribui um número a variável *vlResult*. Os comentários descrevem os resultados:
 
@@ -36,7 +36,7 @@ O exemplo a seguir ilustra o funcionamento de Mod com diferentes argumentos. Cad
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

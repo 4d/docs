@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MESSAGES OFF.Summary-->The MESSAGES OFF and [MESSAGES ON](messages-on.md) commands turn on and off the progress meters displayed by 4D while executing time-consuming operations.<!-- END REF--> By default, messages are on. 
 
@@ -54,7 +54,7 @@ The following table lists the commands that display the progress meter:
 
 **Note for 4D Server:** Progress message windows are not shown on the server since these operations are automatically listed on the *\_o\_PAGE SETUP* of the administration window. If you want to force these progress windows to be displayed, you must call the [MESSAGES ON](messages-on.md) command on the server. 
 
-#### Example 
+## Example 
 
 The following example turns off the progress meter before doing a sort, and then turns it back on after completing the sort:
 
@@ -64,11 +64,11 @@ The following example turns off the progress meter before doing a sort, and then
  MESSAGES ON
 ```
 
-#### See also 
+## See also 
 
 [MESSAGES ON](messages-on.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

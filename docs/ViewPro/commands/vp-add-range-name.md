@@ -15,7 +15,7 @@ title: VP ADD RANGE NAME
 |name|Text|->|Name for the fomula|
 |options|Object|->|Options for the named formula|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP ADD RANGE NAME` command <!-- REF #_method_.VP ADD RANGE NAME.Summary -->creates or modifies a named range in the open document<!-- END REF -->.
 
@@ -33,7 +33,7 @@ You can pass an object with additional properties for the named range in *option
 >* A named range is actually a named formula containing coordinates. `VP ADD RANGE NAME` facilitates the creation of named ranges, but you can also use the [`VP ADD FORMULA NAME`](vp-add-formula-name.md) method to create named ranges.
 > * Formulas defining named ranges can be retrieved with the [`VP Get formula by name`](vp-get-formula-by-name.md) method.
 
-#### Example  
+## Example  
 
 You want to create a named range for a cell range:
 
@@ -42,7 +42,7 @@ $range:=VP Cell("ViewProArea";2;10)
 VP ADD RANGE NAME($range;"Total1")
 ```
 
-#### See also
+## See also
 
 [VP Get names](vp-get-names.md)<br/>
 [VP Name](vp-name.md)

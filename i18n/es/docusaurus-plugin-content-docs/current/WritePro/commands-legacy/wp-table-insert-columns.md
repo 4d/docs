@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Table insert columns.Summary-->El comando **WP Table insert columns** inserta una o varias columnas en una tabla 4D Write Pro.<!-- END REF-->.
 
@@ -38,7 +38,7 @@ El parámetro opcional *numColumns* define el número de columnas a insertar en 
   
 El comando devuelve un rango de columnas que representa las columnas insertadas, o Null si no se insertó nada.  
   
-#### Ejemplo 
+## Ejemplo 
 
 Desea insertar tres columnas después de la primera columna en la tabla *Invoice*. Este código:
 
@@ -57,6 +57,6 @@ Insertará las nuevas columnas en la ubicación correcta:
   
   
 
-#### Ver también 
+## Ver también 
 
 [WP Table insert rows](wp-table-insert-rows.md)  

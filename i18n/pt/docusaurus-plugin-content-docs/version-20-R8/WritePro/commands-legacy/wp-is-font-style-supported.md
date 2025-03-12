@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Is font style supported.Summary-->O novo comando **WP Is font style supported**  devolve True se o estilo *estiloFonteWP* for suportado por alguma parte do texto em *faixaObj*.<!-- END REF-->
 

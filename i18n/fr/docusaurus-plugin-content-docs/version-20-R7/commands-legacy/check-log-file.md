@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->La commande **CHECK LOG FILE** affiche la boîte de dialogue de visualisation du fichier d’historique courant de la base (également accessible via la fenêtre du Centre de sécurité et de maintenance) :
 
@@ -24,18 +24,18 @@ Cette boîte de dialogue comporte le bouton **Revenir en arrière**, permettant 
 
 Cette commande est utilisable dans le contexte d’une application monoposte uniquement. Elle permet notamment d'accéder à la fonction de retour en arrière depuis les applications 4D Volume Desktop (applications sans mode Développement). Si elle est appelée dans une application client/serveur, elle ne fait rien et l’erreur 1421 est retournée.
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 * Si cette commande est exécutée dans une base de données fonctionnant sans fichier d’historique, elle ne fait rien et l’erreur 1403 est retournée.
 * Si cette commande est exécutée sur une base client/serveur, elle ne fait rien et l’erreur 1421 est retournée.  
 Vous pouvez intercepter ces erreurs à l’aide d’une méthode de gestion d’erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 *Erreurs du gestionnaire de sauvegarde (1401 -> 1421)*  
 [RESTORE](restore.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

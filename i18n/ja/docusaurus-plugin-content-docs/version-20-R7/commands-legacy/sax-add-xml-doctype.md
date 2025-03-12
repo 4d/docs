@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX ADD XML DOCTYPE.Summary-->SAX ADD XML DOCTYPE コマンドは、*document*で参照されるXMLドキュメントに*docType* 引数で指定されたDocType文を追加します。<!-- END REF-->
 
 DocType文は書かれたXMLのタイプを示し、使用される Document Type Declaration (DTD) を指定するために使用されます。DocType文は通常以下の形式です: 
 
-#### 例題 
+## 例題 
 
 以下のコードは:
 
@@ -35,19 +35,19 @@ DocType文は書かれたXMLのタイプを示し、使用される Document Typ
 <<!DOCTYPE SYSTEM Books "Book.DTD">
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、エラーが発生すると0が設定されます。
 
-#### エラー管理 
+## エラー管理 
 
 エラーが発生した場合、コマンドはエラー処理メソッドでとらえることのできるエラーを返します。
 
-#### 参照 
+## 参照 
 
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

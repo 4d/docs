@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.KILL WORKER.Summary-->El comando **KILL WORKER** envía un mensaje al proceso worker cuyo nombre o número que pasa en *proceso*, pidiéndole hacer caso omiso de los mensajes pendientes y poner fin a su ejecución tan pronto como termine la tarea actual.<!-- END REF-->
 
@@ -26,7 +26,7 @@ Si **KILL WORKER** se aplica a un worker que no fue creado explícitamente utili
 
 Si se llama al comando [CALL WORKER](call-worker.md) para enviar un mensaje a un worker que acaba de ser finalizado por **KILL WORKER**, se inicia un nuevo proceso. Para asegurarse de que solo hay un proceso que se ejecuta a la vez para un worker, el nuevo proceso se iniciará una vez que el anterior haya finalizado. Sin embargo, tenga en cuenta que si [CALL WORKER](call-worker.md) es llamado por un worker para enviarse un mensaje, mientras que acaba de ser eliminado por **KILL WORKER**, el comando no hace nada.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente código (ejecutado desde un formulario, por ejemplo) dará lugar a la terminación del worker:
 
@@ -48,13 +48,13 @@ En el método (*theWorker*), se añade código para manejar esta situación:
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [CALL WORKER](call-worker.md)  
 [Current process name](current-process-name.md)  
 *Sobre workers*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

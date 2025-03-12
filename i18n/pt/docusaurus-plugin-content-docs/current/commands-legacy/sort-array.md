@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SORT ARRAY.Summary-->O comando SORT ARRAY ordena um ou mais arrays em ordem ascendente ou descendente.<!-- END REF--> 
 Você não pode ordenar arrays *Ponteiro* ou *imagem*. Você pode classificar os elementos de um array bidimensional (i.e., a2DArray{$*vlThisElem*}), mas você não pode classificar o array bidimensional em si (i.e., *a2DArray*).  
@@ -26,7 +26,7 @@ Se mais de um array for especificado, os arrays são classificados segundo a ord
 
 No seu lugar pode utilizar o comando [MULTI SORT ARRAY](multi-sort-array.md) se deseja ordenar arrays sincronizados.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir cria duas matrizes e, em seguida, ordena-as pela empresa:
 
@@ -44,7 +44,7 @@ No entanto, devido a que SORT ARRAY não realiza ordenação multi-nível, você
  SELECTION TO ARRAY([Pessoas]Nome;asNomes;[Pessoas]Empresa;asEmpresas)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Você exibe os nomes da tabela *\[Pessoas\]* em uma janela flutuante. Quando você clicar nos botões na janela, você pode classificar essa lista de nomes de A a Z ou de Z a A. Como várias pessoas podem ter o mesmo nome, você também pode usar um campo de número *\[Pessoas\]ID*, que é índice único. Quando você clicar na lista de nomes, você irá recuperar o registro para o nome que você clicou. Por manter um array sincronizado e escondido de números de identificação, você terá certeza que vai acessar o registro correspondente ao nome que você clicou:
 
@@ -75,14 +75,14 @@ Você exibe os nomes da tabela *\[Pessoas\]* em uma janela flutuante. Quando voc
  SORT ARRAY(asNomes;todosIDs;<)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Find in sorted array](find-in-sorted-array.md)  
 [MULTI SORT ARRAY](multi-sort-array.md)  
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

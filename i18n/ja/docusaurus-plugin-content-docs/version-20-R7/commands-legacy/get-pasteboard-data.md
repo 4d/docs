@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET PASTEBOARD DATA.Summary-->GET PASTEBOARD DATA コマンドはペーストボード中*dataType*で指定したタイプのデータを、BLOB フィールドまたは変数 *data* に返します。<!-- END REF--> (例えばペーストボードに4D内でコピーされたテキストが含まれている場合、BLOBの文字コードはUTF-16です) 
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 **注:** このコマンドではファイル型のデータを読み出すことは出来ません。それをするためには[Get file from pasteboard](get-file-from-pasteboard.md) コマンドを使用する必要があります。
 
-#### 例題 
+## 例題 
 
 以下の2つのオブジェクトメソッドはそれぞれフォーム上の*asOptions* 配列 (ポップアップメニューあるいはドロップダウンリスト) からデータをコピーあるいは配列へデータをペーストします:
 
@@ -44,17 +44,17 @@ displayed_sidebar: docs
  End if
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 データが正しく取り出せるとOKシステム変数は1に設定されます。そうでなければ0が設定されエラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

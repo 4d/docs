@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**Nota preliminar:** este comando só funciona com 4D Server.<!-- END REF--> Só pode ser executado através do comando [Execute on server](execute-on-server.md) ou em um procedimento armazenado.
 
@@ -68,7 +68,7 @@ O diagrama seguinte (pseudo código) detalha o processo de integração dependen
   
 Aviso: o modo auto-reparo pode ser usado em casos específicos já que ultrapassa as propriedades de checagem de integridade interna de dados de 4D. Pode ser usado, por exemplo, com um arquivo de histórico intermediário que foi perdido ou corrompido e queira recuperar tantas operações quantas possíveis. Neste caso é necessário rpestar atenção à integridade dos dados quando usar este modo.
 
-##### 
+### 
 
 A lista atual de propriedades disponíveis depende do tipo de operação (por exemplo: criar registros, apagar registros, modificar registros, etc.). Aqui estão algumas das propriedades principais:
 
@@ -84,7 +84,7 @@ A lista atual de propriedades disponíveis depende do tipo de operação (por ex
 * *fields*: array dos valores campo
 * *sequenceNumber*: número de sequência.
 
-#### Exemplo 
+## Exemplo 
 
 Para integrar um arquivo mirror de log no servidor em modo autoreparo:
 
@@ -95,15 +95,15 @@ Para integrar um arquivo mirror de log no servidor em modo autoreparo:
  INTEGRATE MIRROR LOG FILE("c:\\mirror\\logNew.journal";$num;Auto repair mode;$err)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se a integração é efetuada corretamente, a variável sistema OK recebe o valor 1; caso contrário, recebe o valor 0\. 
 
-#### Ver também 
+## Ver também 
 
 [LOG FILE TO JSON](log-file-to-json.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

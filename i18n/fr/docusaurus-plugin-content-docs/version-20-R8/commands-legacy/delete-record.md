@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE RECORD.Summary-->**DELETE RECORD** supprime de *laTable* l'enregistrement courant du process en cours.<!-- END REF--> S'il n'y a pas d'enregistrement courant pour *laTable* dans le process, **DELETE RECORD** ne fait rien. Dans un formulaire, vous pouvez créer un bouton 'Supprimer enregistrement' et lui assigner l'action automatique correspondante, plutôt que d'utiliser cette commande.
 
@@ -26,7 +26,7 @@ La suppression d'enregistrements est une opération définitive et ne peut être
 
 Lorsqu'un enregistrement est supprimé, son numéro interne est réutilisé lors de la création de nouveaux enregistrements. Par conséquent, n'utilisez pas ces numéros comme identifiants de vos enregistrements si votre base permet la suppression d'enregistrements.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant permet de supprimer l'enregistrement d'un employé. La méthode demande à l'utilisateur le numéro de l'employé à supprimer, recherche l'enregistrement correspondant puis le supprime :
 
@@ -38,12 +38,12 @@ L'exemple suivant permet de supprimer l'enregistrement d'un employé. La méthod
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Locked](locked.md)  
 *Présentation des triggers*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

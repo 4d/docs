@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DELETE SELECTION.Summary-->DELETE SELECTION apaga a seleção atual de registros de *tabela*.<!-- END REF--> Se a seleção atual estiver vazia, DELETE SELECTION não faz nada. Depois de apagar os registros, a seleção atual fica vazia. Os registros que são apagados durante uma transação estão bloqueados para os outros usuários e processos até que a transação seja confirmada ou cancelada.  
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Desmarcar a opção **Registros apagados definitivamente** no Inspetor de tabelas lhe permite aumentar a velocidade das eliminações durante o uso de DELETE SELECTION (ver *Registros eliminados definitivamente* no manual *Modo Desenho*).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O seguinte exemplo mostra todos os registros da tabela \[Pessoas\] e permite ao usuário selecionar quais apagar. O exemplo tem duas partes. A primeira é um método para mostrar os registros. A segunda é um método de objeto para um botão Apagar. Este é o primeiro método: 
 
@@ -43,7 +43,7 @@ Abaixo há o método de objeto do botão Apagar, que aparece no rodapé do formu
     &NBSP;ALL RECORDS([Pessoas]) // Seleção de todos os registros
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se for encontrado um registro bloqueado durante a execução de DELETE SELECTION, esse registro não se apaga. Todos os registros bloqueados são colocados em um conjunto sistema chamado LockedSet. Depois da execução de DELETE SELECTION, pode testar LockedSet para verificar se os registros estavam bloqueados. O seguinte loop será executado até que todos os registros são apagados:  
   
@@ -55,7 +55,7 @@ Se for encontrado um registro bloqueado durante a execução de DELETE SELECTION
     &NBSP;End if Until(Records in set("LockedSet")=0) // Até que não haja mais registros bloqueados
 ```
 
-#### Ver também 
+## Ver também 
 
 *Conjuntos*  
 [DISPLAY SELECTION](display-selection.md)  
@@ -63,7 +63,7 @@ Se for encontrado um registro bloqueado durante a execução de DELETE SELECTION
 *Record Locking*  
 [TRUNCATE TABLE](truncate-table.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

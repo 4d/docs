@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ARRAY OBJECT.Summary-->O comando **ARRAY OBJECT** cria e/ou redimensiona um array de elementos de tipo Objeto de linguagem em memória.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Quando se aplica o comando **ARRAY OBJECT** a um array existente:
 * Se amplia seu tamanho, os elementos existentes não se mudam e os novos elementos não estão definidos. Pode provar se um elemento se define utilizando o comando [OB Is defined](ob-is-defined.md).
 * Se reduzir seu tamanho, se eliminam e perdem os elementos ao "fundo" do array.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Criação de um array de processo de 100 elementos de tipo objeto:
 
@@ -38,7 +38,7 @@ Criação de um array de processo de 100 elementos de tipo objeto:
  ARRAY OBJECT(arrObjects;100)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Criação de um array local de 100 filas, contendo cada um 50 elementos de tipo de objeto:
 
@@ -46,7 +46,7 @@ Criação de um array local de 100 filas, contendo cada um 50 elementos de tipo 
  ARRAY OBJECT($arrObjects;100;50)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Criação e cheio de um array local de objetos:
 
@@ -64,13 +64,13 @@ Criação e cheio de um array local de objetos:
   // $arrayChildren{3} -> {"name":"James","age":3}
 ```
 
-#### Ver também 
+## Ver também 
 
 *C\_OBJECT*  
 *Criando arrays*  
 *Objetos (Linguagem)*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

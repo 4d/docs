@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PICTURE METADATA.Summary-->La commande **GET PICTURE METADATA** permet de lire le contenu de métadonnées (ou méta-balises) présentes dans *image* (champ ou une variable image 4D).<!-- END REF--> Pour plus d’informations sur les métadonnées, reportez-vous à la description de la commande [SET PICTURE METADATA](set-picture-metadata.md).
 
@@ -30,7 +30,7 @@ Passez dans le paramètre *contenuMeta* la variable destinée à recevoir les m�
 * Si vous avez passé un chemin de balise dans *nomMeta*, *contenuMeta* contient directement la valeur à lire. La valeur sera convertie dans le type de la variable (si le type de la variable n'est pas défini, le type texte est utilisé par défaut). Les variables de type texte seront formatées en XML (norme XMP). Vous pouvez passer un tableau lorsque la métadonnée contient plus d’une valeur (c’est le cas notamment pour les balises IPTC keywords).
 * Si vous avez passé un nom de bloc ou une chaîne vide dans *nomMeta*, *contenuMeta* doit être une référence d’élément DOM XML valide. Dans ce cas, le contenu du bloc désigné (ou de tous les blocs si vous avez passé une chaîne vide dans *nomMeta*) est recopié dans l’élément référencé.
 
-#### Exemple 1 
+## Exemple 1 
 
 Utilisation d’arbres DOM
 
@@ -46,7 +46,7 @@ Utilisation d’arbres DOM
  GET PICTURE METADATA(vPicture;"GPS";$_Xml_GPS)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Utilisation de variables
 
@@ -61,7 +61,7 @@ Utilisation de variables
  GET PICTURE METADATA(vImage;IPTC urgency;$urgency)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Réception de balises à valeurs multiples dans des tableaux
 
@@ -77,7 +77,7 @@ Après exécution de la commande, tTkeywords contient par exemple :
  $tTkeywords{2}="europe"
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Réception de balises à valeurs multiples dans une variable texte
 
@@ -88,18 +88,18 @@ Réception de balises à valeurs multiples dans une variable texte
 
 Après exécution de la commande, *vTmots* contient par exemple "france;europe".
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK retourne 1 si la récupération des métadonnées s’est bien passée, et 0 si une erreur se produit ou si au moins une des balises n’est pas trouvée. Dans tous les cas, les valeurs lisibles sont retournées.
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET PICTURE KEYWORDS](get-picture-keywords.md)  
 *Noms des métadonnées images*  
 [SET PICTURE METADATA](set-picture-metadata.md)  
 *Valeurs des métadonnées images*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

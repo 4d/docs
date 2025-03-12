@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM SET SIZE.Summary-->The **FORM SET SIZE** command allows you to change the size of the current form by programming.<!-- END REF--> The new size is defined for the current process; it is not saved with the form.  
   
@@ -59,7 +59,7 @@ In this case, you must pass the width and height (in pixels) of the form in *hor
 The **FORM SET SIZE** command changes the size of the form, but also takes into account the resizing properties. For example, if the minimum width of a form is 500 pixels and if the command sets a width of 400 pixels, the new form width will be 500 pixels.   
 Also note that this command does not change the size of the form window (you can resize a form without changing the size of the window and vice versa). To change the size of the form window, refer to the [RESIZE FORM WINDOW](resize-form-window.md) command. 
 
-#### Example 
+## Example 
 
 The following example shows how an Explorer type window is set up. The following form is created in the Design environment :
 
@@ -118,12 +118,12 @@ The object method associated with this button is as follows:
  End case
 ```
 
-#### See also 
+## See also 
 
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET TIMEOUT.Summary-->La commande **SET TIMEOUT** vous permet de définir le temps d'attente maximum pour l'exécution d'une commande de communication série.<!-- END REF--> Si la commande ne se termine pas dans le temps *secondes* qui lui est imparti, la communication série est annulée, l'erreur –9990 est générée, et la variable système OK prend la valeur 0\. Vous pouvez intercepter cette erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md).
 
@@ -25,7 +25,7 @@ Les commandes de communication série affectées par ce paramétrage sont les su
 * [RECEIVE RECORD](receive-record.md)
 * [RECEIVE VARIABLE](receive-variable.md)
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant fixe le port série devant recevoir des données et le timeout. Les données sont lues à l'aide de [RECEIVE PACKET](receive-packet.md). Si les données ne sont pas bien reçues dans le temps défini, une erreur survient :
 
@@ -42,7 +42,7 @@ L'exemple suivant fixe le port série devant recevoir des données et le timeout
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
@@ -50,7 +50,7 @@ L'exemple suivant fixe le port série devant recevoir des données et le timeout
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

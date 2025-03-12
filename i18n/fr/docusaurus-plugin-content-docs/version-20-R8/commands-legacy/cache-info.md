@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Cache info.Summary-->La commande **Cache info** retourne un objet contenant des informations détaillées sur le contenu actuel du cache (mémoire utilisée, tables et index chargés, etc.)
 
@@ -33,7 +33,7 @@ La commande **Cache info** retourne un objet unique qui contient toutes les info
 
 Les éléments du tableau *objects* sont des objets racine (tables, index, Blobs, etc.) qui sont actuellement chargés dans le cache. Chaque élément contient les attributs spécifiques qui décrivent son statut courant. Pour plus d'informations sur l'interprétation avancée de ces données, veuillez contacter les services techniques de 4D. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez obtenir des informations sur la base de données courante : 
 
@@ -50,11 +50,11 @@ Vous souhaitez obtenir des informations sur la base courante et tous les composa
  $cache:=Cache info($dbFilter)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [MEMORY STATISTICS](memory-statistics.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Summary-->**SET AUTOMATIC RELATIONS** は、カレントプロセスで、データベース全体のマニュアルリレートを一時的に自動リレートに変更します。<!-- END REF-->リレートは、次に**SET AUTOMATIC RELATIONS** コマンドを使用するまで自動リレートのままになります。
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 * **SET AUTOMATIC RELATIONS**コマンドに [True](true.md "True") を渡すと、全ての手動リレートがセッション中に自動モードが"ロック"されます。この場合、 [SET FIELD RELATION](set-field-relation.md) コマンドは**SET AUTOMATIC RELATIONS** の前にあっても後ろにあっても、同じセッション中は呼び出しが無視されます。自動モードを解除して[SET FIELD RELATION](set-field-relation.md) の呼び出しを有効化する際には、**SET AUTOMATIC RELATIONS** に [False](false.md "False")を渡します。
 * 自動リレーション機能はリレートされたテーブルが[DISPLAY SELECTION](display-selection.md) 、[MODIFY SELECTION](modify-selection.md) 、あるいはサブフォームを使用して表示されたリストフォーム内で表示されている場合には、無効化されているということに注意してください。詳細については*自動およびマニュアルリレーション* を参照してください。
 
-#### 例題 
+## 例題 
 
 以下の例は、すべてのn対1のマニュアルリレートを自動リレートに設定し、前もって自動リレートにした1対nリレートを手動リレートに戻します:
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
  SET AUTOMATIC RELATIONS(True;False)
 ```
 
-#### 参照 
+## 参照 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 [SET FIELD RELATION](set-field-relation.md)  
 *リレーションについて*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

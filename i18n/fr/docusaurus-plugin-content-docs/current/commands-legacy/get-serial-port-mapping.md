@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET SERIAL PORT MAPPING.Summary-->La commande **GET SERIAL PORT MAPPING** retourne deux tableaux *tabNums* et *tabLibellés* contenant respectivement la liste des numéros et des noms des ports série de la machine courante.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ Cette commande est utile sous macOS car le système alloue dynamiquement les num
 
 **Note :** Cette commande ne retourne pas de valeurs significatives avec les ports standard. Si vous souhaitez adresser un port standard, vous devez passer directement sa valeur (0 ou 1) à la commande [SET CHANNEL](set-channel.md) (ancien mode de fonctionnement de 4D). 
 
-#### Exemple 
+## Exemple 
 
 Cette méthode projet permet d'adresser le même port série (sans protocole), quel que soit le numéro qui lui a été attribué : 
 
@@ -46,11 +46,11 @@ Cette méthode projet permet d'adresser le même port série (sans protocole), q
  SET CHANNEL(11) //Fermeture du port
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET CHANNEL](set-channel.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

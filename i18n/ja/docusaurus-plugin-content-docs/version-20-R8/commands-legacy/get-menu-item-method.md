@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get menu item method.Summary-->Get menu item method コマンドは、*menu*と*menuItem*引数で指定されたメニュー項目に関連付けられた4Dプロジェクトメソッド名を返します。<!-- END REF-->  
 *menuItem*に-1を渡して*menu*に最後に追加された項目を指定することもできます。
@@ -25,11 +25,11 @@ displayed_sidebar: docs
 
 コマンドは4Dメソッド名を文字列 (式) で返します。メニュー項目にメソッドが割り当てられていない場合、コマンドは空の文字列を返します。
 
-#### 参照 
+## 参照 
 
 [SET MENU ITEM METHOD](set-menu-item-method.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

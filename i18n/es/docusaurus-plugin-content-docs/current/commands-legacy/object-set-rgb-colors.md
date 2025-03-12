@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Summary-->El comando **OBJECT SET RGB COLORS** cambia los colores de fondo y primer plano de los objetos especificados por *objeto* y el parámetro opcional *\**.<!-- END REF--> Cuando el comando se aplica a un objeto list box, un parámetro adicional le permite modificar el color alterno de las filas.
 
@@ -39,7 +39,7 @@ Los valores de los colores RGB se indican en los parámetros *colorPrimerPlano* 
 | 4-byte RGB value                    | Entero largo | Entero largo de 4 bytes (formato 0x00rrggbb). Valores hexadecimales:<br/> rr = componente rojo del color gg = componente verde del color bb = componente azul del color                                                                                                                                                                                                                                                                                   | 0x00000000, 0x00FF7F7F                                                                            |
 | 4D "system" color constant          | Entero largo | Colores utilizados por 4D para dibujar objetos con colores automáticos. Constantes disponibles (del tema *DEFINIR COLORES RVA*):<br/> Background color Background color none (solo puede utilizasrse con los parámetros *colorFondo* y *colorFondoAlt*) Dark shadow color Disable highlight item color Foreground color Highlight menu background color Highlight menu text color Highlight text background color Highlight text color Light shadow color | **Nota:** *los colores automáticos dependen del sistema y del tipo de objeto al cual se asignan.* |
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este formulario contiene dos variables editables, *vsColorValor* y *vsColor* así como tres termómetros: *thRojo*, *thVerde*, y *thAzul*.
 
@@ -87,7 +87,7 @@ En ejecución, el formulario se ve así:
 
 ![](../assets/en/commands/pict26193.es.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Cambia a fondo transparente con un color de fuente claro:
 
@@ -99,12 +99,12 @@ Cambia a fondo transparente con un color de fuente claro:
 
 ![](../assets/en/commands/pict1210702.en.png)
 
-#### Ver también 
+## Ver también 
 
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
 [Select RGB color](select-rgb-color.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

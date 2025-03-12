@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LOG EVENT.Summary-->O comando **LOG EVENT** permite configurar um sistema personalizado de registro de eventos internos que ocorrem durante o uso de sua aplicação.<!-- END REF-->
 
@@ -50,7 +50,7 @@ O parâmetro *importancia* só é usado com *tipoSaida* `Into Windows log events
 
 :::
 
-#### Exemplo 
+## Exemplo 
 
 Caso queiras realizar um seguimento das aberturas de sua base baixo Windows, pode escrever a seguinte linha de código no [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md):
 
@@ -60,12 +60,12 @@ Caso queiras realizar um seguimento das aberturas de sua base baixo Windows, pod
 
 Cada vez que se abre o banco de dados, esta informação será escrita no visor de eventos de Windows e seu nível de importância será 0.
 
-#### Ver também 
+## Ver também 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

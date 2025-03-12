@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET COORDINATES.Summary-->La commande **OBJECT GET COORDINATES** retourne dans les variables ou champs *gauche*, *haut*, *droite* et *bas* les coordonnées (en points) du ou des objet(s) du formulaire courant défini(s) par les paramètres *\** et *objet*.<!-- END REF-->
 
@@ -43,7 +43,7 @@ Par exemple, examinez le schéma suivant, dans lequel les coordonnées de la col
 
 Comme vous pouvez le voir dans la première image, la colonne est plus grande que la list box, donc ses coordonnées dépassent la limite basse de la list box, pied inclus. Dans la seconde image, la list box a défilé, et donc la colonne a également été déplacée "sous" les zones de la colonne *Language* et d'en-tête. Dans tous les cas, pour calculer la partie réellement visible de la colonne (représentée par la zone verte), vous devez soustraire les zones rouges. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez obtenir les coordonnées du rectangle formé par tous les objets dont le nom commence par “bouton” : 
 
@@ -51,7 +51,7 @@ Vous souhaitez obtenir les coordonnées du rectangle formé par tous les objets 
  OBJECT GET COORDINATES(*;"bouton@";gauche;haut;droite;bas)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Pour les besoins de votre interface, vous souhaitez entourer d'un rectangle rouge la zone sur laquelle l'utilisateur a cliqué :
 
@@ -78,14 +78,14 @@ La méthode retourne les coordonnées théoriques. Si la list box est redimensio
 
 ![](../assets/en/commands/pict1740929.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

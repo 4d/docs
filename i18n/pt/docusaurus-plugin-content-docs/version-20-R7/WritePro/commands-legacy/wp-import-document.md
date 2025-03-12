@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Import document.Summary-->O comando **WP Import document** \[#descv\] converte um documento 4D Write ou 4D Write Pro existente (,4wp, .4w7 ou .4wt) ou documento MS Word (.docx) a um novo objeto 4D Write Pro \[#descv\].<!-- END REF-->
 
@@ -61,14 +61,14 @@ Pode passar um objeto para definir como os atributos a seguir são manejados dur
 * *As folhas de estilo de caracteres em documentos herdados de 4D WRite usam um mecanismo patenteado, que não é compatível mais com 4D Write Pro. Para obter os melhores resultados para textos importados, atributos de folha de estilo devem ser convertidos para atributos de estilo "hard coded/codificados". Folhas de estilo de caractere "legado" não são importadas e não são mais referenciadas no documento.*
 * A *Compatibilidde para importação em formato .docx só é ce* *rtificada para Microsoft Word 2010 ou mais recentes. Versões anteriores, Microsoft Word 2007 especialmente, podem ter problemas na importação*
 
-#### Exemplo 1 
+## Exemplo 1 
 
 ```4d
  var WPDoc : Object
  WPDoc:=WP Import document("C:\\documents\\4DWriteDocs\\Letter.4w7")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser importar um documento .docx e quiser que as bordas do parágrafo estejam colapsadas como estão em MS Word:
 
@@ -97,6 +97,6 @@ Se quiser importar um documento .docx cujo texto é principalmente em japonês:
  wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP New](wp-new.md)  

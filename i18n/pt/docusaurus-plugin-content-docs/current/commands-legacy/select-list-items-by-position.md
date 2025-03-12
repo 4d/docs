@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Summary-->O comando SELECT LIST ITEMS BY POSITION seleciona os elementos cuja posição se passa em *posiçaoElem* e opcionalmente em *posiçao* *Array* na lista cujo número de referência ou nome de objeto é passada em *lista*.<!-- END REF-->
 
@@ -34,7 +34,7 @@ Quando passa este parâmetro, o elemento designado pelo parâmetro *posiçao* *E
 
 **Nota:** para que vários elementos possam ser selecionados simultaneamente em uma lista hierárquica (manualmente ou por programação), a propriedade *multi-selecionavel* deve ter sido ativada para a lista. Esta propriedade se define utilizando o comando [SET LIST PROPERTIES](set-list-properties.md "SET LIST PROPERTIES").
 
-#### Exemplo 
+## Exemplo 
 
 Dada a lista hierárquica chamada *hList,* mostrada no ambiente Aplicação:
 
@@ -67,13 +67,13 @@ São selecionados os elementos segundo, terceiro e quinto da lista hierárquica
 
 ![](../assets/en/commands/pict22760.en.png)
 
-#### Ver também 
+## Ver também 
 
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [Selected list items](selected-list-items.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

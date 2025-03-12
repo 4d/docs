@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP DELETE HEADER.Summary-->La commande **WP DELETE HEADER** supprime l'élément en-tête associé à la section ou à la sous-section définie par le paramètre *wpSection*.<!-- END REF--> 
 
 S'il n'existe pas d'élément en-tête associé à la section ou à la sous-section, la commande ne fait rien. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez supprimer l'en-tête des pages de droite d'une section :
 
@@ -34,7 +34,7 @@ Vous souhaitez supprimer l'en-tête des pages de droite d'une section :
  WP DELETE HEADER($subsection)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get header](wp-get-header.md)  
 [WP New header](wp-new-header.md)  

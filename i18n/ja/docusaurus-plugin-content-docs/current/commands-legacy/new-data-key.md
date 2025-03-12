@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.New data key.Summary-->**New data key** コマントは、*passPhrase* 引数に渡されたパスフレーズのテキストからバイナリーデータの暗号化キーを生成します。<!-- END REF-->
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 *passPhrase* 引数に空の文字列が渡された場合、コマンドは*null* を返します。
 
-#### 例題 
+## 例題 
 
 暗号化キーを.4DKeyChain ファイルに保存したい場合を考えます:
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
   
 [Decrypt data BLOB](decrypt-data-blob.md)  
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 [Encrypt data file](encrypt-data-file.md)  
 [Register data key](register-data-key.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

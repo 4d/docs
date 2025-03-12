@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Last errors.Summary-->El comando **Last errors** devuelve la pila actual de errores de la aplicación 4D como una colección de objetos de error, o **null** si no se ha producido ningún error.<!-- END REF--> La pila de errores incluye los objetos enviados por el comando [throw](throw.md), si los hay.
 
@@ -29,12 +29,12 @@ Cada objeto de error contiene los siguientes atributos:
 Este comando debe ser llamado desde un método de llamada de error instalado por el comando [ON ERR CALL](on-err-call.md). 
 
 
-#### Ver también 
+## Ver también 
 
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

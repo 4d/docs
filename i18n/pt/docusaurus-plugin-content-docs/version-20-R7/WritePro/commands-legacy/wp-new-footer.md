@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP New footer.Summary-->O comando **WP New footer** cria e devolve um rodapé associado à seção ou subseção definida pelo paâmetro *wpSection*.<!-- END REF-->
 
 Se um elemento de rodapé já estive definido para a seção ou subseção, um objeto indefinido é devolvido e se gera um erro.
 
-#### Exemplo 
+## Exemplo 
 
 Deseja criar um rodapé para as páginas da esquerda de uma seção:
 
@@ -37,7 +37,7 @@ Deseja criar um rodapé para as páginas da esquerda de uma seção:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP DELETE FOOTER](wp-delete-footer.md)  
 [WP Get footer](wp-get-footer.md)  

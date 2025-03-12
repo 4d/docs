@@ -30,7 +30,7 @@ La comunicación proceso “Intermachine”, ofrecida por los comandos [GET PROC
 
 **Tip:** en otras palabras, no es necesario conocer el número de identificación del proceso para poder utilizar el comando SET PROCESS VARIABLE con las variables interproceso del servidor. Esta posibilidad es muy útil particularmente cuando un procedimiento almacenado se lanza utilizando el método base On server startup. Como los equipos cliente no conocen automáticamente el número de identificación de ese proceso, todo valor negativo puede pasarse en el parámetro *proceso*.
 
-##### Restricciones 
+### Restricciones 
 
 SET PROCESS VARIABLE no acepta variables locales como variables de destino. 
 

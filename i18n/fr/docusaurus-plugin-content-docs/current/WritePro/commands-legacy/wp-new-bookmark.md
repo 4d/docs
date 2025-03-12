@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP NEW BOOKMARK.Summary-->La commande **WP NEW BOOKMARK** crée un nouveau signet nommé *nomSignet* basé sur *objPlage* du document parent.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Dans *nomSignet*, passez le nom du nouveau signet. Un nom de signet doit être c
 
 Vous pouvez créer autant de signets que vous voulez dans un même document. Plusieurs signets peuvent être créés avec la même plage. Une fois créé, un signet est automatiquement stocké dans le document parent et est sauvegardé en même temps que le document lui-même. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez créer un nouveau signet référençant le texte couramment sélectionné dans le document. Vous pouvez écrire :
 
@@ -41,7 +41,7 @@ Vous souhaitez créer un nouveau signet référençant le texte couramment séle
  WP NEW BOOKMARK($range;"my_bookmark")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez renommer un signet existant. Pour cela, vous devez créer un nouveau signet basé sur la même plage puis supprimer l'ancien :
 
@@ -65,7 +65,7 @@ Vous souhaitez renommer un signet existant. Pour cela, vous devez créer un nouv
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [WP Bookmark range](wp-bookmark-range.md)  

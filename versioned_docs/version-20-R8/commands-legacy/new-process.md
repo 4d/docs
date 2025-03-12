@@ -18,19 +18,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New process.Summary-->The **New process** command starts a new process (on the same machine) and returns the process number for that process.<!-- END REF-->
 
 If the process could not be created (for example, if there is not enough memory), **New process** returns zero (0) and an error is generated. You can catch this error using an error-handling method installed using [ON ERR CALL](on-err-call.md).
 
-##### Process Method 
+### Process Method 
 
  In *method*, you pass the name of the process method for the new process. After 4D has set up the context for the new process, it starts executing this method, which therefore becomes the process method.
 
 If the execution context supports preemptive mode and if *method* is declared "thread-safe", the new 4D process will be executed in a preemptive thread when the application will run in compiled mode. For more information, please reter to the *Preemptive 4D processes* page. 
 
-##### Process Stack 
+### Process Stack 
 
 The *stack* parameter allows you to indicate the amount of memory allocated for the stack of the process. This is the space in memory used to “pile up” method calls, local variables, parameters in subroutines, and stacked records.
 
@@ -39,13 +39,13 @@ The *stack* parameter allows you to indicate the amount of memory allocated for 
 
 **Note:** The stack is NOT the total memory for the process. Processes share memory for records, interprocess variables, and so on. A process also uses extra memory for storing its process variables. The stack contains various items of 4D information; the amount of information kept on the stack depends on the number of nested method calls the process will employ, the number of forms that it will open before closing them and the number and size of local variables used in each nested method call.
 
-##### Process Name 
+### Process Name 
 
  You pass the name of the new process in *name*. This name will appear in the list of processes of the Runtime Explorer and will be returned by the [Process info](../commands/process-info.md) command when applied to this new process. You can omit this parameter; if you do so, the name of the process will be the empty string. You can make a process local in scope by prefixing its name with the dollar sign (*$*). 
 
 **Important:** Remember that local processes should not access data in Client/Server. For more information, please refer to the *Global and Local Processes* section. 
 
-##### Parameters to Process Method 
+### Parameters to Process Method 
 
  You can pass parameters to the process method using one or more *param* parameters. You pass parameters in the same way as you would pass them to a subroutine (see the section). Upon starting execution in the context of the new process, the process method receives the parameters values in *$1*, *$2*, etc. Remember that arrays cannot be passed as parameters to a method. Furthermore, these additional considerations are to be taken into account in the context of the **New process** command:
 
@@ -55,11 +55,11 @@ The *stack* parameter allows you to indicate the amount of memory allocated for 
 
 **Note:** If you pass parameters to the process method, you must pass the *name* parameter; it cannot be omitted in this case.
 
-##### Optional \* Parameter 
+### Optional \* Parameter 
 
 Specifying this last parameter tells 4D to first check whether or not a process with the name you passed in *name* is already running. If it is, 4D does not start a new process and returns the process number of the process with that name.
 
-#### Example 
+## Example 
 
 Given the following project method:
 
@@ -101,13 +101,13 @@ The object method of the *bAddCustomers* becomes:
 
 In the Menu Bar editor, you replace the method ADD CUSTOMERS with the method START ADD CUSTOMERS, and you deselect the **Start a New Process** property for the menu item.
 
-#### See also 
+## See also 
 
 [Execute on server](execute-on-server.md)  
 *Preemptive 4D processes*  
 *Processes*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

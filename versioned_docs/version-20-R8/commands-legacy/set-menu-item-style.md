@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU ITEM STYLE.Summary-->The **SET MENU ITEM STYLE** command changes the font style of the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem* according to the font style passed in *itemStyle*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
 
@@ -35,11 +35,11 @@ You specify the font style of the item in the *itemStyle* parameter. You pass a 
 
   
 
-#### See also 
+## See also 
 
 [Get menu item style](get-menu-item-style.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

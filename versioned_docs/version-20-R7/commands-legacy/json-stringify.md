@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.JSON Stringify.Summary-->The **JSON Stringify** command converts the *value* parameter into a JSON string.<!-- END REF--> This command performs the opposite action of the [JSON Parse](json-parse.md) command.
 
@@ -36,7 +36,7 @@ In the case of an object or a collection, you can include all types of values (s
 
 You can pass the optional *\** parameter to include formatting characters in the resulting string. This improves the presentation of JSON data (known as pretty formatting).
 
-#### Example 1 
+## Example 1 
 
 Conversion of scalar values:
 
@@ -53,7 +53,7 @@ Conversion of scalar values:
  $vdd:=JSON Stringify(!28/08/2013!) // "2013-08-28T00:00:00.000Z"
 ```
 
-#### Example 2 
+## Example 2 
 
 Conversion of a string containing special characters:
 
@@ -64,7 +64,7 @@ Conversion of a string containing special characters:
   // $p={"name":"john"}
 ```
 
-#### Example 3 
+## Example 3 
 
 Examples of serializing a 4D object with and without the *\** parameter:
 
@@ -88,7 +88,7 @@ The advantage of this formatting is clear when the JSON is shown in a Web area:
 * Pretty formatting:  
 ![](../assets/en/commands/pict1205011.fr.png)
 
-#### Example 4 
+## Example 4 
 
 Example using a pointer to a variable:
 
@@ -107,7 +107,7 @@ Example using a pointer to a variable:
   //$jsonstring = "{"name" : "Smith"}"
 ```
 
-#### Example 5 
+## Example 5 
 
 Serialization of a 4D object:
 
@@ -125,7 +125,7 @@ Serialization of a 4D object:
   // 555-0120]","age":40,"firstname":"Alan"}"
 ```
 
-#### Example 6 
+## Example 6 
 
 Serialization of a 4D object containing a date value (Paris time zone). The resulting string depends on the current database date settings.
 
@@ -147,7 +147,7 @@ Serialization of a 4D object containing a date value (Paris time zone). The resu
 
 **Note:** For more information on this setting, please refer to the *Compatibility page*.
 
-#### Example 7 
+## Example 7 
 
 Conversion of a collection (Paris time zone). The resulting string depends on the current database date settings.
 
@@ -169,12 +169,12 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 
 **Note:** For more information on this option, please refer to the *Compatibility page*.
 
-#### See also 
+## See also 
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

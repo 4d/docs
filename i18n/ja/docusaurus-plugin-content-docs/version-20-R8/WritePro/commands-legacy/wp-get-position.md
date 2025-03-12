@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get position.Summary-->**WP Get position** コマンドは、*targetObj* 引数で指定したターゲットのカレントの位置を説明するオブジェクトを返します。<!-- END REF-->
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
 *targetObj* が4D Write Pro フォームエリアに表示されている場合、必ずエリアのビュー設定とコマンドのビュー設定が同じ情報を返すように設定が一致しているようにしてください。また、これらの情報がエリア内で異なっていた場合、4D Write Pro はコマンドを呼び出すたびにレイアウトを計算するためにドキュメントを"クローン"しなければならず、そのため時間がかかる可能性があることに注意してください。パフォーマンス上の理由から、こういった場合にはドキュメントをオフラインでビルドし、ビルドが完成したあとにドキュメントをフォームオブジェクトにコピーすることが推奨されます。
 * このコマンドは、頻繁に生成されるようなイベント内(例えばOn After Edit など)内から呼び出されるべきではありません。何故なら例えば*result.rangeHeight* などは、毎回イベントごとに時間のかかるレンダリング計算をする必要があるからです。
 
-#### 例題 1 
+## 例題 1 
 
 レンジのページ番号を調べたい場合を考えます:
 
@@ -76,7 +76,7 @@ displayed_sidebar: docs
  ALERT("First page number in selection is "+String($rangePosition.page))
 ```
 
-#### 例題 2 
+## 例題 2 
 
 ドキュメントの最初のページと最後のページにおいて、テキストカラーを青に設定したい場合を考えます:
 
@@ -98,7 +98,7 @@ displayed_sidebar: docs
  End for each
 ```
 
-#### 例題 3 
+## 例題 3 
 
 ドキュメントをビルドする際、段落がページで分割されることを避けたい場合を考えます:
 
@@ -132,7 +132,7 @@ displayed_sidebar: docs
  End for each
 ```
 
-#### 例題 4 
+## 例題 4 
 
 以下の例題では、*targetObj* 引数に応じて返される、境界線の四角形の座標について説明しています。
 
@@ -153,6 +153,6 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict4096411.en.png)
 
-#### 参照 
+## 参照 
 
 [WP PRINT](wp-print.md)  

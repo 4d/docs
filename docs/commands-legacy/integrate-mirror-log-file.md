@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**Preliminary note:** This command only works with 4D Server.<!-- END REF--> It can only be executed via the [Execute on server](execute-on-server.md) command or in a stored procedure.
 
@@ -60,7 +60,7 @@ When one of these anomalies occurs in auto-repair mode, the record concerned is 
 
 **Warning:** The auto-repair mode must be used in specific cases since it bypasses 4D's internal data integrity checking features. It can be used, for example, when an intermediary log file has been lost or corrupted and you want to recover as many operations as possible. In any case, you need to pay particular attention to data integrity when using this mode.
 
-##### 
+### 
 
 The actual list of available properties depends on the operation type (i.e.: create record, delete record, modify record, create Blob, etc.). Here are the main properties:
 
@@ -81,7 +81,7 @@ In case of Blob or picture values, different information is provided based on th
 * *sequenceNumber*: current number within auto-increment sequence.
 * *primaryKey*: primary key value.
 
-#### Example 
+## Example 
 
 You want to integrate a log file on the mirror server in auto-repair mode:
 
@@ -92,15 +92,15 @@ You want to integrate a log file on the mirror server in auto-repair mode:
  INTEGRATE MIRROR LOG FILE("c:\\mirror\\logNew.journal";$num;Auto repair mode;$err)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the integration is carried out correctly, the system variable OK is set to 1; otherwise, it is set to 0\. 
 
-#### See also 
+## See also 
 
 [LOG FILE TO JSON](log-file-to-json.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

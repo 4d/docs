@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get subsection.Summary-->**WP Get subsection** コマンドは、*targetObj* 引数で指定したレンジまたは要素と交差する最初のサブセクション、あるいは*wpSection* 引数のセクション内の*subSectionType* 型のサブセクションを返します。<!-- END REF-->
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
     
 *wpSection* 引数で指定したセクションに*subSectionType* 引数のタイプのサブセクションが定義されていない場合、 コマンドは未定義のオブジェクトを返します(エラーは返されません)。
 
-#### 例題 
+## 例題 
 
 左ページに青い背景を適用したい場合を考えます:
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
 [WP Get section](wp-get-section.md)  

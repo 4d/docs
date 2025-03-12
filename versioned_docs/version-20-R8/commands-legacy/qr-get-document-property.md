@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get document property.Summary-->The **QR Get document property** command retrieves the display status for the print dialog box or the unit used for the document that are present in *area*.<!-- END REF-->
 
@@ -31,11 +31,11 @@ In *property*, you can use the following constants, located in the *QR Document 
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *property* value, the error -9852 will be generated.
 
-#### See also 
+## See also 
 
 [QR SET DOCUMENT PROPERTY](qr-set-document-property.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

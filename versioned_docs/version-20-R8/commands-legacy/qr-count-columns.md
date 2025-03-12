@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Count columns.Summary-->The QR Count columns command returns the number of columns present in the Quick Report *area*.<!-- END REF-->
 
 If you pass an invalid area number, the error -9850 will be generated.
 
-#### Example 
+## Example 
 
 The following code retrieves the column count and inserts a column to the right of the rightmost existing column:
 
@@ -29,12 +29,12 @@ The following code retrieves the column count and inserts a column to the right 
  QR INSERT COLUMN(MyArea;$ColNb+1;->[Table 1]Field2)
 ```
 
-#### See also 
+## See also 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
 [QR INSERT COLUMN](qr-insert-column.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

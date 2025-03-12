@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get view properties.Summary-->La commande **WP Get view properties** retourne les attributs vue courants de la zone 4D Write Pro identifiés par *zoneWP*.<!-- END REF--> 
 
@@ -50,7 +50,7 @@ L'objet retourné contient tous les attributs vue de la zone 4D Write Pro ainsi 
 | wk visible vertical ruler    | visibleVerticalRuler   | Affiche la règle verticale (effet visible uniquement en mode d'affichage Page). Valeurs possibles : True/False                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | wk zoom                      | zoom                   | Pourcentage de zoom pour l'affichage du contenu de la zone 4D Write Pro. Valeur possible : Nombre supérieur à 1                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
-#### Exemple 
+## Exemple 
 
 Dans la zone 4D Write Pro, vous souhaitez afficher les règles uniquement en mode page :
 
@@ -66,6 +66,6 @@ Dans la zone 4D Write Pro, vous souhaitez afficher les règles uniquement en mod
  WP FIXER ATTRIBUTS VUE(*;"4DWPArea";$viewProps)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP SET VIEW PROPERTIES](wp-set-view-properties.md)  

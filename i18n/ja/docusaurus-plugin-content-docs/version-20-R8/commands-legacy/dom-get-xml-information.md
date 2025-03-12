@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Get XML information.Summary-->DOM Get XML information コマンドを使用して、*elementRef*で指定したXML要素に関する様々な情報を取得できます。<!-- END REF-->
 
@@ -30,11 +30,11 @@ displayed_sidebar: docs
 | SYSTEM ID    | 倍長整数 | 2 | システム識別子。                                               |
 | Version      | 倍長整数 | 5 | 受け入れられたXMLバージョン。                                       |
 
-#### 参照 
+## 参照 
 
 [XML GET ERROR](xml-get-error.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

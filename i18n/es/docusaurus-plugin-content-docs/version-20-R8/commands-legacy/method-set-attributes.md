@@ -31,7 +31,7 @@ Si el comando se ejecuta desde un componente, por defecto se aplica a los métod
 
 **Nota:** el comando existente [METHOD SET ATTRIBUTE](method-set-attribute.md) aún se soporta pero ya que sólo puede manejar valores booleanos, no se puede utilizar para atributos extendidos tales como propiedades 4D Mobile.
 
-##### 
+### 
 
 Los atributos soportados son:
 

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->The FORM GET OBJECTS command returns the list of all objects present in the current form in the form of (an) array(s).<!-- END REF--> This list can be restricted to the current form page and can exclude objects of inherited forms. The command can be used with both input and output forms.
 
@@ -44,7 +44,7 @@ The optional *formPageOption* parameter allows you to specify the form part(s) f
 
 **Compatibility note:** Passing the *\** parameter is equivalent to passing Form current page+Form inherited. The syntax using the *\** parameter is now deprecated and should no longer be used.
 
-#### Example 1 
+## Example 1 
 
 You want to get information on all pages including objects from the inherited form (if any):
 
@@ -61,7 +61,7 @@ Or:
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to get information on the current page only, with page 0 of the loaded form and inherited form objects (if any):
 
@@ -71,7 +71,7 @@ You want to get information on the current page only, with page 0 of the loaded 
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form current page+Form inherited)
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to get information on all objects in the inherited form (if any). If there is no inherited form, arrays will be returned empty.
 
@@ -80,7 +80,7 @@ You want to get information on all objects in the inherited form (if any). If th
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form inherited)
 ```
 
-#### Example 4 
+## Example 4 
 
 You want to get information on page 4 objects, including page 0 objects, but without inherited form objects (if any):
 
@@ -90,7 +90,7 @@ You want to get information on page 4 objects, including page 0 objects, but wit
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form current page)
 ```
 
-#### Example 5 
+## Example 5 
 
 You want to get information on objects on all pages, but without inherited form objects (if any):
 
@@ -99,7 +99,7 @@ You want to get information on objects on all pages, but without inherited form 
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages)
 ```
 
-#### Example 6 
+## Example 6 
 
 You want to load a form and get a list of all the objects of list boxes that it contains.
 
@@ -118,13 +118,13 @@ You want to load a form and get a list of all the objects of list boxes that it 
  FORM UNLOAD
 ```
 
-#### See also 
+## See also 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 *Form Objects (Access)*  
 *Objects (Forms)*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.IMPORT STRUCTURE.Summary-->**IMPORT STRUCTURE** コマンドは、カレントデータベース内に、 *xmlStructure* に渡した4D XMLストラクチャー定義を読み込みます。<!-- END REF-->
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 また、ストラクチャーは4D リモートアプリケーションから呼び出すことはできません。
 
-#### 配布に関する注意 
+## 配布に関する注意 
 
 このコマンドはデータベースストラクチャーを変更するため、読み出し専用のパッケージアプリ(*Program Files* フォルダ内にまたは.4dz ファイル内にインストールされている.4dc ファイル)のコンテキストにおいては使用することができません。
 
-#### 例題 
+## 例題 
 
 保存されたストラクチャー定義を、カレントデータベースに読み込む場合を考えます:
 
@@ -44,11 +44,11 @@ displayed_sidebar: docs
  IMPORT STRUCTURE($struc)
 ```
 
-#### 参照 
+## 参照 
 
 [EXPORT STRUCTURE](export-structure.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER.Summary-->O comandoGET LIST ITEM PARAMETER retorna o nome da fonte do caractere atual do elemento especificado pelo parâmetro *refElem* da lista cujo número de referência o nome de objeto se passa em *lista*.<!-- END REF--> 
 
@@ -31,12 +31,12 @@ Finalmente, pode passar \* em *refElem*: neste caso, o comando se aplicará ao e
 
 Em *seletor*, pode passar a constante Additional text ou a constante de ação padrão (localizada no tema “*Listas hierárquicas*”) ou qualquer valor personalizado. Para maior informação sobre os parâmetros *seletor* e *valor*, consulte a descrição do comando [SET LIST ITEM PARAMETER](set-list-item-parameter.md).
 
-#### Ver também 
+## Ver também 
 
 *Listas hierárquicas*  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HIGHLIGHT TEXT.Summary-->La commande **HIGHLIGHT TEXT** sélectionne une partie du texte dans *objet*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Le paramètre *débutSél* représente la position du premier caractère à sél
 
 Si *finSél* est supérieur au nombre de caractères présents dans l'objet, tous les caractères compris entre *débutSél* et la fin du texte sont sélectionnés.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant sélectionne tous les caractères dans le champ saisissable *\[Produits\]Notes* :
 
@@ -38,7 +38,7 @@ L'exemple suivant sélectionne tous les caractères dans le champ saisissable *\
  HIGHLIGHT TEXT([Produits]Notes;1;Length([Produits]Notes)+1)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant place le point d'insertion au début du champ *\[Produits\]Notes* :
 
@@ -46,7 +46,7 @@ L'exemple suivant place le point d'insertion au début du champ *\[Produits\]Not
  HIGHLIGHT TEXT([Produits]Notes;1;1)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant place le point d'insertion à la fin du champ *\[Produits\]Notes* :
 
@@ -55,15 +55,15 @@ L'exemple suivant place le point d'insertion à la fin du champ *\[Produits\]Not
  HIGHLIGHT TEXT([Produits]Notes;$vLen;$vLen)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Reportez-vous à l'exemple de la commande [FILTER KEYSTROKE](filter-keystroke.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET HIGHLIGHT](get-highlight.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Asserted.Summary-->La commande **Asserted** a un fonctionnement semblable à celui de la commande [ASSERT](assert.md), à la différence près qu’elle retourne une valeur issue de l’évaluation du paramètre *expressionBool*.<!-- END REF--> Elle permet donc d’utiliser une assertion lors de l’évaluation d’une condition (cf. exemple). Pour plus d’informations sur le fonctionnement des assertions et sur les paramètres de cette commande, reportez-vous à la description de la commande [ASSERT](assert.md).
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 **Note :** Comme la commande [ASSERT](assert.md), **Asserted** fonctionne en mode interprété et en mode compilé. 
 
-#### Exemple 
+## Exemple 
 
 Insertion d’une assertion dans l’évaluation d’une expression :
 
@@ -36,13 +36,13 @@ Insertion d’une assertion dans l’évaluation d’une expression :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ASSERT](assert.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

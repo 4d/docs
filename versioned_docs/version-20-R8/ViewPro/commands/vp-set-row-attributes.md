@@ -14,7 +14,7 @@ title: VP SET ROW ATTRIBUTES
 |rangeObj |Object|->|Range of rows|
 |propertyObj |Object|->|Object containing row properties|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET ROW ATTRIBUTES` command <!-- REF #_method_.VP SET ROW ATTRIBUTES.Summary -->applies the attributes defined in the *propertyObj* to the rows in the *rangeObj*<!-- END REF -->.
 
@@ -30,7 +30,7 @@ The *propertyObj* parameter lets you specify the attributes to apply to the rows
 |resizable|  boolean|  True if the row can be resized, else false |
 |header | text | Row header text|
 
-#### Example
+## Example
 
 You want to change the size of the second row and set the header:
 
@@ -45,7 +45,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 
 ![](../../assets/en/ViewPro/cmd_vpSetRowAttributes.PNG)
 
-#### See also
+## See also
 
 [VP Get row attributes](vp-get-row-attributes.md)<br/>
 [VP get column attributes](vp-get-column-attributes.md)<br/>

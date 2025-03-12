@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Parse XML variable.Summary-->**DOM Parse XML variable**コマンドはXML構造を格納するBLOBまたはテキスト型変数を解析し、XML構造への参照を返します。<!-- END REF-->コマンドはDTDやXMLスキーマ (XML Schema Definition (XSD) ドキュメント) を使用してドキュメントの検証を行うこともできます。
 
@@ -47,7 +47,7 @@ DTDやXSDが存在しなかったり、URLが正しくない場合など検証�
 
 **重要**: 参照の利用が終了したら、[DOM CLOSE XML](dom-close-xml.md)コマンドを使用してこの参照が使用しているメモリを解放することを忘れないでください。
 
-#### 例題 1 
+## 例題 1 
 
 検証なしで、4Dテキスト変数に格納されたXMLを開きます: 
 
@@ -64,7 +64,7 @@ DTDやXSDが存在しなかったり、URLが正しくない場合など検証�
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
  検証なしで、4D BLOBに格納されたXMLを開きます:   
 
@@ -76,16 +76,16 @@ DTDやXSDが存在しなかったり、URLが正しくない場合など検証�
  $xml_Struct_Ref:=DOM Parse XML variable(myBlobVar)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
  コマンドが正しく実行されるとシステム変数OKに1が設定され、エラーが発生すると0が設定されます。
 
-#### 参照 
+## 参照 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML source](dom-parse-xml-source.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

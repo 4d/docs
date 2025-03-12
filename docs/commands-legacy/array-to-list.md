@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->The ARRAY TO LIST command creates or replaces the hierarchical list or the choice list (created in the List editor) that is specified in *list* using the elements of the array *array.<!-- END REF-->*
 
@@ -31,7 +31,7 @@ The optional *itemRefs* parameter, if specified, must be a numeric array synchro
 
 You can use ARRAY TO LIST to build a list based on the elements of an array. However, to free yourself from these restrictions and make full use of the lists of values, we recommend using the commands of the *Hierarchical Lists* theme.
 
-#### Example 
+## Example 
 
 The following example copies the array *atRegions* to the list called “Regions:”
 
@@ -39,7 +39,7 @@ The following example copies the array *atRegions* to the list called “Regions
  ARRAY TO LIST(atRegions;"Regions")
 ```
 
-#### Example 
+## Example 
 
 You want to put the distinct values of a field into a list, for example to create a hierarchical pop-up menu. You can write:
 
@@ -50,18 +50,18 @@ You want to put the distinct values of a field into a list, for example to creat
  ARRAY TO LIST($arrCountries;CountryList)
 ```
 
-#### Error management 
+## Error management 
 
 An error *\-9957* is generated when ARRAY TO LIST is applied to a list that is currently being edited in the Design environment List Editor. You can catch this error using an [ON ERR CALL](on-err-call.md "ON ERR CALL") project method.
 
-#### See also 
+## See also 
 
 [LIST TO ARRAY](list-to-array.md)  
 [Load list](load-list.md)  
 [ON ERR CALL](on-err-call.md)  
 [SAVE LIST](save-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

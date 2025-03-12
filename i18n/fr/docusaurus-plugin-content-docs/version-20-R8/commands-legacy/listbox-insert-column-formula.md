@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->La commande **LISTBOX INSERT COLUMN FORMULA** insère une colonne dans la list box désignée par les paramètres *objet* et *\** .<!-- END REF-->   
 La commande **LISTBOX INSERT COLUMN FORMULA** est semblable à la commande [LISTBOX INSERT COLUMN](listbox-insert-column.md), à la différence près qu’elle permet la saisie d’une formule comme contenu de la colonne.  
@@ -66,7 +66,7 @@ Vous pouvez également passer dans les paramètres *nomPied* et *variablePied* l
 
 **Note :** Les noms d’objets doivent être uniques dans un formulaire. Vous devez veiller à ce que les noms passés dans les paramètres *nomCol*, *nomEntête* et *nomPied* ne soient pas déjà utilisés. Sinon, la colonne n’est pas créée et une erreur est générée.
 
-##### Insertion dynamique 
+### Insertion dynamique 
 
 A compter de 4D v14 R3, vous pouvez utiliser cette commande pour insérer dynamiquement des colonnes dans les list box à l'exécution du formulaire, 4D prenant automatiquement en charge les définitions de variables nécessaires (pied et en-tête).
 
@@ -74,7 +74,7 @@ Pour cela, **LISTBOX INSERT COLUMN FORMULA** accepte un pointeur **Nil** (**\->\
 
 A noter que les variables d'en-tête et de pied sont toujours créées avec un type spécifique (respectivement entier long et texte).
 
-#### Exemple 1 
+## Exemple 1 
 
 Nous souhaitons ajouter une nouvelle colonne à la droite de la list box qui contiendra une formule calculant l’âge de l’employé :
 
@@ -84,7 +84,7 @@ Nous souhaitons ajouter une nouvelle colonne à la droite de la list box qui con
  LISTBOX INSERT COLUMN FORMULA(*;"ListBox1";$der;"ColFormule";vAge;Is real;"Age";VarEntete)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous voulez ajouter une colonne à une list box de type collection :
 
@@ -113,11 +113,11 @@ La colonne est ajoutée à la list box :
 
 ![](../assets/en/commands/pict3814850.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

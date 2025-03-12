@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->La commande **GET HIGHLIGHTED RECORDS** stocke dans l’ensemble désigné par le paramètre *nomEnsemble* les enregistrements marqués (c'est-à-dire, les enregistrements “surlignés” par l'utilisateur dans le formulaire liste) de *laTable* passée en paramètre.<!-- END REF--> Si le paramètre *laTable* est omis, la table du formulaire ou du sous-formulaire courant est utilisée.
 
@@ -25,7 +25,7 @@ L’ensemble désigné par le paramètre *nomEnsemble* peut être local/client, 
 
 **Note :** Dans le cadre des sous-formulaires inclus, la commande **GET HIGHLIGHTED RECORDS** retourne un ensemble vide si le sous-formulaire ne dispose pas de la propriété de sélection **Multilignes**. Dans ce contexte, pour connaître la ligne sélectionnée, vous devez utiliser la commande [Selected record number](selected-record-number.md). 
 
-#### Exemple 
+## Exemple 
 
 Cette méthode indique combien d’enregistrements sont sélectionnés dans le sous-formulaire affichant les enregistrements de la table \[CDs\] :
 
@@ -35,15 +35,15 @@ Cette méthode indique combien d’enregistrements sont sélectionnés dans le s
  CLEAR SET("$highlight")
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [HIGHLIGHT RECORDS](highlight-records.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

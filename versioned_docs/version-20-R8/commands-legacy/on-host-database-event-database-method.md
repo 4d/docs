@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.On Host Database Event database method.Summary-->The **On Host Database Event database method** allows 4D components to execute code when the host database is opened and closed.<!-- END REF-->
 
@@ -32,7 +32,7 @@ To process an event, you must test the value of the *$1* parameter inside the me
 
 This allows 4D components to load and save preferences or user states related to the operation of the host database. 
 
-#### Example 
+## Example 
 
 Example of typical structure of an On Host Database Event database method:
 

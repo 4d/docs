@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB TO VARIABLE.Summary-->The BLOB TO VARIABLE command rewrites the variable *variable* with the data stored within the BLOB *blob* at the byte offset (starting at zero) specified by *offset*.<!-- END REF-->
 
@@ -30,19 +30,19 @@ After the call, if the variable has been successfully rewritten, the OK variable
 
 **Note regarding Platform Independence:** BLOB TO VARIABLE and [VARIABLE TO BLOB](variable-to-blob.md) use a 4D internal format for handling variables stored in BLOBs. As a benefit, you do not need to worry about byte swapping between platforms while using these two commands. In other words, a BLOB created on Windows using either of these commands can be reused on Macintosh, and vice-versa.
 
-#### Example 
+## Example 
 
 See the examples for the [VARIABLE TO BLOB](variable-to-blob.md) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 The OK variable is set to 1 if the variable has been successfully rewritten, otherwise it is set to 0.
 
-#### See also 
+## See also 
 
 [VARIABLE TO BLOB](variable-to-blob.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

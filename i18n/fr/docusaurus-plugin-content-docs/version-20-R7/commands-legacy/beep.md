@@ -12,13 +12,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BEEP.Summary-->La commande **BEEP** provoque l'émission d'un bip sonore.<!-- END REF--> Votre PC ou votre Macintosh peut émettre un autre son qu'un bip en fonction du son sélectionné dans le tableau de bord de contrôle du son.
 
 **ATTENTION :** N'appelez pas la commande **BEEP** à partir d'un process de connexion Web car le bip sonore se produira sur le poste serveur Web 4D et non sur le poste du navigateur Web. 
 
-#### Exemple 
+## Exemple 
 
 Dans l'exemple suivant, un bip est émis et une alerte affichée lorsqu'aucun enregistrement n'est trouvé par une recherche :
 
@@ -30,11 +30,11 @@ Dans l'exemple suivant, un bip est émis et une alerte affichée lorsqu'aucun en
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [PLAY](play.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

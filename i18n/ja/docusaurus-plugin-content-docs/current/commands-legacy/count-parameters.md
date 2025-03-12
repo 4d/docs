@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Count parameters.Summary-->Count parameters コマンドは、プロジェクトメソッドに渡された引数の数を返します。<!-- END REF-->Count parametersは、他のメソッド（プロジェクトメソッド、その他）から呼び出されるプロジェクトメソッド内でのみ意味を持ちます。Count parametersを呼び出すプロジェクトメソッドがメニューに割り当てられている場合、Count parametersは0を返します。
 
-#### 例題 1 
+## 例題 1 
 
 4Dプロジェクトメソッドは右側から始まるオプションの引数を受け付けます。  
 例えば、メソッドMyMethod(a;b;c;d)は以下のように呼び出すことができます:
@@ -59,7 +59,7 @@ MyMethod内でCount parametersを使用し、実際の引数の数を取得し�
  APPEND TEXT(vtSomeText;0;$vhDocRef) // テキストメッセージを表示して$vhDocRefに書き込む
 ```
 
-#### 例題 2 
+## 例題 2 
 
 4Dのプロジェクトメソッドは、右側から始めて、可変数の同タイプの引数を受け付けます。これらの引数を宣言するには、コンパイル命令を使用し、変数として*${N}*を渡します。Nは最初の引数を示します。Count parametersを使い、Forループと引数の間接参照構文を用いてこれらの引数にアクセスすることができます。この例は関数で、引数として受け取った最も大きな数値を返します:
 
@@ -89,12 +89,12 @@ MyMethod内でCount parametersを使用し、実際の引数の数を取得し�
  vrResult:=Max of(r1;r2;r3;r4;r5;r6)
 ```
 
-#### 参照 
+## 参照 
 
 [Copy parameters](copy-parameters.md)  
 *コンパイラコマンド*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

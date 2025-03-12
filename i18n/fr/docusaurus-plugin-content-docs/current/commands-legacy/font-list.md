@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FONT LIST.Summary-->La commande   **FONT LIST** remplit le tableau Texte *polices* avec les noms des polices vectorielles disponibles dans votre système.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Sous Windows, le paramètre *\** n’a aucun effet. La commande retourne toujour
 
 **Note :** Sous macOS, si vous utilisez le résultat de cette commande avec la commande [ST SET ATTRIBUTES](st-set-attributes.md) dans une zone de texte multistyle, il est impératif de ne pas passer le paramètre *\** (seuls les noms de familles sont acceptés comme Attribute font name). Cette limitation ne s'applique pas aux zones 4D Write Pro, qui acceptent des noms de polices ou des noms de familles. 
 
-##### A propos des polices vectorielles 
+### A propos des polices vectorielles 
 
 Cette commande ne retourne que les polices vectorielles. En effet, l'utilisation de polices non vectorielles (i.e. polices bitmap) pour dessiner des interfaces est déconseillé car elles sont basées sur une technologie dépassée et souffrent de limitations quant aux variations de taille. Elles ne sont pas prises en charge dans les fonctionnalités les plus récentes de 4D telles que les zones 4D Write Pro.
 
@@ -44,7 +44,7 @@ Sous Windows, ce principe est appliqué à compter de 4D v15 R4 afin d'aider les
 * Les polices bitmap peuvent toujours être utilisées dans vos formulaires 4D (à l'exception des zones 4D Write Pro). Elles sont uniquement supprimées de la liste retournée par cette commande. Cependant, pour assurer la compatibilité de vos applications avec les versions futures de 4D et de Windows, nous recommandons dès à présent d'utiliser uniquement les familles de police DirectWrite.
 * Comme les polices bitmap sont filtrées dans le paramètre *polices* sous Windows, la liste résultante est différente dans les applications 4D v15 R4 et suivantes par rapport aux versions précédentes. Pensez à adapter votre code si vous utilisiez cette commande pour sélectionner une police non vectorielle.
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans un formulaire, vous voulez obtenir une liste déroulante qui affiche les polices disponibles dans le système. Ecrivez la méthode suivante pour votre objet liste déroulante :
 
@@ -57,7 +57,7 @@ Dans un formulaire, vous voulez obtenir une liste déroulante qui affiche les po
  End case
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez obtenir la liste des polices récentes :
 
@@ -65,7 +65,7 @@ Vous souhaitez obtenir la liste des polices récentes :
  FONT LIST($tabPolices;Recent fonts)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [FONT STYLE LIST](font-style-list.md)  
 [OBJECT SET FONT](object-set-font.md)  
@@ -73,7 +73,7 @@ Vous souhaitez obtenir la liste des polices récentes :
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 *Type de liste des polices*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX Get XML node.Summary-->The **SAX Get XML node** command returns a long integer that indicates the type of SAX event returned while the XML document referenced in *document* is parsed.<!-- END REF-->
 
@@ -32,7 +32,7 @@ Events that can be returned are available as “*XML*” theme constants:
 | XML Start Document         | Integer | 1     |
 | XML Start Element          | Integer | 4     |
 
-#### Example 
+## Example 
 
 The following example processes an event: 
 
@@ -52,12 +52,12 @@ The following example processes an event:
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

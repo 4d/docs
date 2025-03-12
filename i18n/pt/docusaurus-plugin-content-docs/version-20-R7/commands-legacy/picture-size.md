@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Picture size.Summary-->A função Picture size devolve o tamanho de imagem em bytes.<!-- END REF-->
 
-#### Ver também 
+## Ver também 
 
 [PICTURE PROPERTIES](picture-properties.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

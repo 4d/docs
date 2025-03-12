@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.STRING LIST TO ARRAY.Summary-->La commande **STRING LIST TO ARRAY** remplit le tableau *chaînes* avec : 
 
@@ -32,22 +32,22 @@ Si vous ne pré-déclarez pas le tableau *chaînes* avant d'appeler **STRING LIS
 
 **Conseil :** Lorsque vous utilisez des ressources listes de chaînes, limitez-vous à des ressources de 32 Ko maximum et quelques centaines de chaînes par ressource.
 
-#### Compatibilité avec l'architecture XLIFF 
+## Compatibilité avec l'architecture XLIFF 
 
 La commande **STRING LIST TO ARRAY** est compatible avec l’architecture XLIFF de 4D v11 : la commande recherche dans un premier temps la valeur correspondant à *resNum* dans tous les fichiers XLIFF ouverts (si le paramètre *resFichier* est omis) et remplit le tableau *chaînes* avec les valeurs correspondantes. Dans ce cas, *resNum* désigne l’attribut **id** de l’élément **group** et le tableau *chaînes* contient toutes les chaînes de l’élément. Si la valeur n’est pas trouvée, la commande poursuit la recherche dans les fichiers de ressources ouverts.  
 Pour plus d'informations sur l'architecture XLIFF dans 4D, reportez-vous au manuel Mode Développement.
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 (zéro).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

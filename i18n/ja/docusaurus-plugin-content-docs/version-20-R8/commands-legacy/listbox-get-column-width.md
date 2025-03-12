@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get column width.Summary-->LISTBOX Get column width コマンドは、*object*引数および *\** で指定された列の幅（ピクセル単位）を返します。<!-- END REF-->*object*引数には、リストボックスの列や列ヘッダを渡すことができます。
 
@@ -26,11 +26,11 @@ displayed_sidebar: docs
 LISTBOX Get column width は列サイズ変更の制限値を *minWidth* と *maxWidth* に返すことができます。これらの制限は [LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md "LISTBOX SET COLUMN WIDTH") コマンドで設定できます。   
 列の最小や最大サイズが設定されていない場合、対応する引数には0が返されます。
 
-#### 参照 
+## 参照 
 
 [LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

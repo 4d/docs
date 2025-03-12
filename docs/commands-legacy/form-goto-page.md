@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** changes the currently displayed form page to the form page specified by *pageNumber*.<!-- END REF-->
 
@@ -22,7 +22,7 @@ If no form is displayed or loaded by the [FORM LOAD](../commands/form-load.md) c
 
 The *\** parameter is useful when the command is called in the context of a page type subform containing several pages. In this case, when you pass this parameter, the command changes the page of the current subform (the one that called the command). By default, when the *\** parameter is omitted, the command is always applied to the parent form.
 
-##### About form page management commands 
+### About form page management commands 
 
 Automatic action buttons perform the same tasks as the [FORM FIRST PAGE](form-first-page.md), [FORM LAST PAGE](form-last-page.md), [FORM NEXT PAGE](form-next-page.md), [FORM PREVIOUS PAGE](form-previous-page.md) and **FORM GOTO PAGE** commands that you can apply to objects such as tab controls, drop-down list boxes, and so on. Whenever appropriate, use automatic action buttons instead of commands. 
 
@@ -33,7 +33,7 @@ Page commands can be used with input forms or with forms displayed in dialogs. O
 
 **Note:** When **designing** a form, you can work with pages 1 through X, as well as with page 0, in which you put objects that will appear in all of the pages. When **using** a form, and therefore when calling page commands, you work with pages 1 through X; page 0 is automatically combined with the page being displayed.
 
-#### Example 
+## Example 
 
 The following example is an object method for a button. It displays a specific page, page 3: 
 
@@ -41,7 +41,7 @@ The following example is an object method for a button. It displays a specific p
  FORM GOTO PAGE(3)
 ```
 
-#### See also 
+## See also 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM Get current page](form-get-current-page.md)  
@@ -49,7 +49,7 @@ The following example is an object method for a button. It displays a specific p
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

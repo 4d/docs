@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.EXPAND BLOB.Summary-->O comando EXPAND BLOB expande o BLOB blob que anteriormente foi compactado usando o comando [COMPRESS BLOB](compress-blob.md "COMPRESS BLOB").<!-- END REF-->  
   
@@ -24,7 +24,7 @@ Em qualquer outro caso (ou seja, o BLOB não tenha sido comprimido ou está dani
 
 Para verificar se o BLOB foi compactado, use o comando [BLOB PROPERTIES](blob-properties.md "BLOB PROPERTIES").
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo testa se o BLOB *vxMyBlob* é comprimido e, em caso afirmativo, expande-lo: 
 
@@ -35,7 +35,7 @@ Este exemplo testa se o BLOB *vxMyBlob* é comprimido e, em caso afirmativo, exp
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo testa se o BLOB vxMyBlob é comprimido e, em caso afirmativo, expande-lo:
 
@@ -56,16 +56,16 @@ Este exemplo testa se o BLOB vxMyBlob é comprimido e, em caso afirmativo, expan
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável OK é definida como 1 se o BLOB foi expandido com êxito, caso contrário, é definido como 0.
 
-#### Ver também 
+## Ver também 
 
 [BLOB PROPERTIES](blob-properties.md)  
 [COMPRESS BLOB](compress-blob.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -34,7 +34,7 @@ El comando **ACTIVITY SNAPSHOT**  acepta dos sintaxis:
 * sintaxis usando solamente un array de objetos.
 * sintaxis utilizando varios arrays.
 
-##### Primera sintaxis: ACTIVITY SNAPSHOT ( {\* ;} arrActivities ) 
+### Primera sintaxis: ACTIVITY SNAPSHOT ( {\* ;} arrActivities ) 
 
 Con esta sintaxis, todas las operaciones se devuelven en un formulario estructurado en el array objetos 4D (*arrActividades*). Cada elemento del array es un objeto construido de la siguiente manera:
 
@@ -70,7 +70,7 @@ Esta es un descripción de cada propiedad devuelta:
    * ...
 * *subOperations* (array): array de objetos que contienen sub-operaciones de la operación actual (si existe). La estructura de cada sub-elemento es idéntica a la del objeto principal. Si la operación actual no tiene sub-operaciones, entonces subOperations está vacío.
 
-##### Segunda sintaxis: ACTIVITY SNAPSHOT ( {\* ;} arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} ) 
+### Segunda sintaxis: ACTIVITY SNAPSHOT ( {\* ;} arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} ) 
 
 Con esta sintaxis, todas las operaciones se devuelven en varios arrays sincronizados (cada operación provoca que un elemento se añada a todos los arrays). Los siguientes arrays se devuelven:
 

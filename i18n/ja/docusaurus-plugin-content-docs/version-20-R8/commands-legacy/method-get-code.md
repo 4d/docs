@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->**METHOD GET CODE**コマンドは*path*引数で指定したメソッドの内容を*code*に返します。<!-- END REF-->このコマンドはデータベースメソッド、クラス定義、トリガー、プロジェクトメソッド、フォームメソッド、そしてオブジェクトメソッド等すべてのタイプのメソッドコードを返すことができます。
 
@@ -65,11 +65,11 @@ displayed_sidebar: docs
 
 コマンドがコンポーネントから実行されると、デフォルトでコンポーネントメソッドに適用されます。*\** 引数を渡すとホストデータベースにアクセスします。
 
-#### 例題 1 
+## 例題 1 
 
 [METHOD SET CODE](method-set-code.md)コマンドの例題参照。
 
-#### 例題 2 
+## 例題 2 
 
 この例では、*option*引数を使用した際の影響について説明します。
 
@@ -114,12 +114,12 @@ displayed_sidebar: docs
   //%attributes = {"lang":"en"} 4Dによってコメント追加・保存されたコメントCase of    : (Form event code:C388=On Load:K2:1)        ALL RECORDS:C47([Customer:1])End case
 ```
 
-#### 参照 
+## 参照 
 
 [METHOD SET CODE](method-set-code.md)  
 *フォーミュラ内でのトークンの使用*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

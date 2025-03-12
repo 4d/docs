@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Summary-->GET FIELD ENTRY PROPERTIESコマンドは、*tableNum*および*fieldNum*、または*fieldPtr*で指定したフィールドのデータ入力プロパティを返します。<!-- END REF-->  
 次のいずれかの引数を指定することができます。
@@ -36,13 +36,13 @@ displayed_sidebar: docs
 * 引数*nonEnterable*には、フィールドが表示のみであればTrueが、そうでない場合にはFalseが返されます。入力不可のフィールドは読み取りのみであり、データの入力はできません。この表示のみ属性は、BLOBを除くあらゆるフィールドタイプに設定することができます。
 * 引数*nonModifiable*には、フィールドが修正不可であればTrueが、そうでない場合にはFalseが返されます。修正不可のフィールドへの入力は一度しか行えず、以後修正はできません。この修正不可属性は、BLOBを除くあらゆるフィールドタイプに設定することができます。
 
-#### 参照 
+## 参照 
 
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [GET TABLE PROPERTIES](get-table-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

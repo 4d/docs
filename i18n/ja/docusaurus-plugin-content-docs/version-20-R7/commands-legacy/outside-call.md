@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Outside call.Summary-->**Outside call** は、実行サイクルのあとにTrueを返します。<!-- END REF-->
 
@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 **注:** このコマンドは、[Form event code](../commands/form-event-code.md) コマンドを使用して、On Outside call イベントを返すかどうかを試すのと同じであると言えます。
 
-#### 参照 
+## 参照 
 
 [Form event code](../commands/form-event-code.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

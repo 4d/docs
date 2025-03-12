@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Level.Summary-->La fonction **Level** sert à déterminer le niveau de rupture ou d'en-tête courant.<!-- END REF--> Elle retourne le numéro du niveau de rupture pendant les événements On Header et On Printing Break.
 
 Le niveau 0 est le dernier niveau à être imprimé et convient à l'impression d'un total général. **Level** retourne 1 lorsque 4D imprime une rupture sur le premier champ trié, 2 lorsque 4D imprime une rupture sur le deuxième champ trié, et ainsi de suite.
 
-#### Exemple 
+## Exemple 
 
 Cet exemple est une maquette de méthode formulaire. Il traite chaque événement possible lorsqu'un état est imprimé dans un formulaire sortie. **Level** est appelé lorsqu'un en-tête ou une rupture est imprimé(e) :
 
@@ -60,14 +60,14 @@ Cet exemple est une maquette de méthode formulaire. Il traite chaque événemen
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Form event code](../commands/form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

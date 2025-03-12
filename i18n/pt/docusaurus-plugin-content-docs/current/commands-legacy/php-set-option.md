@@ -22,7 +22,7 @@ displayed_sidebar: docs
 :::
 
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PHP SET OPTION.Summary-->O comando PHP SET OPTION se utiliza para definir opções específicas antes de chamar o comando [PHP Execute](php-execute.md).<!-- END REF--> O escopo deste comando é o processo atual.
 
@@ -34,12 +34,12 @@ Passe no parâmetro *opção* uma constante do tema "*PHP*" para designar a opç
 
 Como padrão, PHP SET OPTION define a opção para todas as chamadas a [PHP Execute](php-execute.md) posteriores do processo. Se quiser definir para a próxima chamada unicamente passe o parâmetro estrela (*\**).
 
-#### Ver também 
+## Ver também 
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

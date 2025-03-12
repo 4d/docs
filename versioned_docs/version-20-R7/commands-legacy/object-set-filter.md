@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET FILTER.Summary-->**OBJECT SET FILTER** sets the entry filter for the objects specified by *object* to the filter you pass in *entryFilter*.<!-- END REF-->
 
@@ -29,19 +29,19 @@ Passing an empty string in *entryFilter* removes the current entry filter for th
 
 **Note:** In *entryFilter*, to use entry filters you may have predefined using the Tool Box, prefix the name of the filter with a vertical bar (|). 
 
-#### Example 1 
+## Example 1 
 
 The following example sets the entry filter for a postal code field. If the address is in the U.S., the filter is set to ZIP codes. Otherwise, it is set to allow any entry: 
 
 ```4d
  If([Companies]Country="US") // Set the filter to a ZIP code format
-    OBJECT SET FILTER([Companies]ZIP Code;"&9#####")
+    OBJECT SET FILTER([Companies]ZIP Code;"&9###")
  Else // Set the filter to accept alpha and numeric and uppercase the alpha
     OBJECT SET FILTER([Companies]ZIP Code;"~@")
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example allows only the letters “a,” “b,” “c,” or “g” to be entered in two places in the field Field: 
 
@@ -51,12 +51,12 @@ The following example allows only the letters “a,” “b,” “c,” or “g
 
 **Note:** This example sets the entry filter to *&"a;b;c;g"##*.
 
-#### See also 
+## See also 
 
 [OBJECT Get filter](object-get-filter.md)  
 [OBJECT SET FORMAT](object-set-format.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

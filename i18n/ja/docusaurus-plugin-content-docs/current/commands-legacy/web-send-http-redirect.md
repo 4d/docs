@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Summary-->**WEB SEND HTTP REDIRECT**コマンドを使用すると、 URLをほかのURLへ転送することができます。<!-- END REF--> 
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 このコマンドが送信するHTTPステータスコードは**302: Moved Temporarily**です。"301 Moved Permanently"ステータスを送信したい場合は、[WEB SET HTTP HEADER](web-set-http-header.md)を使用して、"*X-STATUS"フィールドに”301”*を設定します。 
 
-#### 例題 
+## 例題 
 
 このコマンドを使用して、4D上でスタティックページを用いてカスタムリクエストを実行します。以下の要素をスタティックなHTMLページに設定するとします。
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP GET BOOKMARKS.Summary-->**WP GET BOOKMARKS** コマンドは*wpDoc* 引数で指定した4D Write Proドキュメント内で定義されている全てのブックマーク名を含む配列を返します。<!-- END REF-->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 同じ位置から始まる複数のブックマークが存在する場合、それらはアルファベット順に並べられます。
 
-#### 例題 
+## 例題 
 
 ドキュメント内で定義されているブックマークの数を知りたい場合を考えます:
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
  ALERT("The document contains "+Size of array($_bookmarks)+" bookmarks.")
 ```
 
-#### 参照 
+## 参照 
 
 [WP Bookmark range](wp-bookmark-range.md)  
 [WP DELETE BOOKMARK](wp-delete-bookmark.md)  

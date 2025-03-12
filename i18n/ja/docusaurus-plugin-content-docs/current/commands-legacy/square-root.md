@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Square root.Summary-->Square root は*number*の平方根を返します。<!-- END REF-->
 
-#### 例題 1 
+## 例題 1 
 
 以下の行は、値*1.414213562373*を*$vrSquareRootOfTwo*に代入します:
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
  $vrSquareRootOfTwo :=Square root(2)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下のメソッドは三角形の斜辺長を返します。この三角形の2つの斜辺以外の辺は引数として渡されます:
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 例えば、Hypotenuse (4;3) は5を返します。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

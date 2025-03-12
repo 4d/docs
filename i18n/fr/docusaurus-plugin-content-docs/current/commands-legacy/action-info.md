@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Action info.Summary-->La commande **Action info** retourne plusieurs informations, incluant la disponibilité et le statut à propos de l'*action* définie dans la *cible*, selon le contexte de l'application courante.<!-- END REF--> 
 
@@ -46,7 +46,7 @@ La commande **Action info** retourne les informations sous la forme d'un Objet c
 
 Si le statut de l'action ne peut pas être déterminé (par exemple si elle n'est affectée à aucun objet ou à aucune ligne de menu), la commande retourne un objet null (indéfini). 
 
-#### Exemple 
+## Exemple 
 
 Vous voulez savoir si l'action standard **Copier** est disponible (c'est-à-dire si des données sont sélectionnées) :
 
@@ -61,12 +61,12 @@ Vous voulez savoir si l'action standard **Copier** est disponible (c'est-à-dire
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [INVOKE ACTION](invoke-action.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

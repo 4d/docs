@@ -22,12 +22,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->The ST GET ATTRIBUTES command is used to recover the current value of a style attribute in a selection of text of the form object(s) designated by *object*.<!-- END REF--> 
 
-##### 
+### 
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (string). During execution, if the object has the focus, the command returns information about the object being edited; however, when the object does not have the focus, the command returns information about the data source (field or variable) of the object.  
 If you omit the *\** parameter, this indicates that the *object* parameter is a field or a variable. In this case, you pass a field or variable reference instead of a string and during execution, the command returns information about this field or variable.
 
-##### 
+### 
 
 The *startSel* and *endSel* parameters are used to designate the text selection of the object from which the style attribute is to be read. Pass the position of the first character of the selection in *startSel* and the position plus one of the last character of the selection in *endSel*. You can pass 0 in *endSel* to designate automatically the last character of the text (pass 1 in *startSel* to designate the first character of the text).  
 If the values of *startSel* and *endSel* are equal or if *startSel* is greater than *endSel* (except if *endSel* value is 0, see above), an error is returned.   

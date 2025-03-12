@@ -35,7 +35,7 @@ El parámetro *xCategorias* define las etiquetas que serán utilizadas por el ej
 
 Los datos especificados por *yValores* son los datos a graficar. Los datos deben ser de tipo numérico. Se puede graficar hasta ocho conjuntos de datos. Los gráficos por sectores sólo representan los primeros *yValores*.
 
-##### IDs automáticos 
+### IDs automáticos 
 
 Los IDs específicos se asignan automáticamente a los elementos presentes en el gráfico SVG:
 
@@ -59,7 +59,7 @@ Los IDs específicos se asignan automáticamente a los elementos presentes en el
 | ID\_y\_grid                                  | Rejilla en el eje Y                                           |
 | ID\_y\_grid\_shadow                          | Sombra de la rejilla en el eje Y                              |
 
-##### Atributos grafParams 
+### Atributos grafParams 
 
 Cuando se utiliza el parámetro *grafParams*, se pasa un objeto que contiene las diferentes propiedades del gráfico a definir. Puede utilizar las siguientes constantes, que se encuentran en el tema de constantes "*Parámetros Gráficos*":
 

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Test path name.Summary-->The **Test path name** function checks if a document or folder whose name or pathname you pass in *pathname* is present on the disk.<!-- END REF--> You can pass either a relative or absolute pathname, expressed in the syntax of the current system.
 
@@ -29,7 +29,7 @@ The following predefined constants are provided by 4D:
 
 If no document nor folder is found, **Test path name** returns a negative value (i.e. -43 for File not found).
 
-#### Example 
+## Example 
 
 The following tests if the document “Journal” is present in the folder of the database, then creates it if it was not found: 
 
@@ -42,7 +42,7 @@ The following tests if the document “Journal” is present in the folder of th
  End if
 ```
 
-#### See also 
+## See also 
 
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Create document](create-document.md)  
@@ -50,7 +50,7 @@ The following tests if the document “Journal” is present in the folder of th
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

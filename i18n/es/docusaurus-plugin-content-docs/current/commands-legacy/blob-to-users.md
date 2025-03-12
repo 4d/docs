@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BLOB TO USERS.Summary-->El comando BLOB TO USERS remplaza las cuentas usuarios y los grupos presentes en el BLOB *usuarios* en la base actual.<!-- END REF--> El BLOB *usuarios* está encriptado y debe haber sido creado utilizando el comando [USERS TO BLOB](users-to-blob.md).
 
@@ -40,15 +40,15 @@ Este comando hace que se remplacen todas las cuentas y grupos creados por el Adm
  BLOB TO USERS(blob)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [USERS TO BLOB](users-to-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

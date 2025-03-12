@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->O comando QUERY BY SQL permite aproveitar diretamente o motor SQL integrado de 4D.<!-- END REF--> Este comando pode executar um pedido simples SELECT que pode ser escrito desta forma: 
 
@@ -50,7 +50,7 @@ O parâmetro*sqlFormula* pode utilizar referências a expressões 4D. A Sintaxe 
   
 **Lembrete:** as referências às variáveis locais não são possíveis em modo compilado. Para maior informação sobre a programação SQL em 4D, consulte a seção *Introdução aos comandos SQL*.   
 
-##### Sobre relações 
+### Sobre relações 
 
 QUERY BY SQL não utiliza relações entre tabelas definidas no editor de estrutura 4D. Se deseja utilizar os dados relacionados, terá que adicionar um JOIN á pesquisa. Por exemplo, assumindo que temos a seguinte estrutura, com uma relação Muitos-a-Um entre os campos \[Pessoas\]Cidade e \[Cidades\]Nome: 
 
@@ -76,7 +76,7 @@ Utilizando QUERY BY SQL, deve escrever a seguinte instrução, independente de s
   
 **Nota**: QUERY BY SQL trata as relações Um-a-Muitos e Muitos-a-Um de uma maneira diferente que [QUERY BY FORMULA](query-by-formula.md).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo mostra os escritórios com vendas superiores a 100\. A pesquisa SQL é:   
 
@@ -93,7 +93,7 @@ Utilizando o comando QUERY BY SQL:
  QUERY BY SQL([Escritorios];$formulaPesquisa)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo mostra as ordens entre 3.000 e 4.000\. A pesquisa SQL é:   
 
@@ -109,7 +109,7 @@ Utilizando o comando QUERY BY SQL:
  QUERY BY SQL([Ordens];$formulaPesquisa)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este exemplo mostra como obter o resultado da pesquisa ordenado com um critério específico. A pesquisa SQL é:   
 
@@ -125,7 +125,7 @@ Utilizando o comando QUERY BY SQL:
  QUERY BY SQL([Pessoas];$formulaPesquisa)
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Este exemplo mostra uma pesquisa utilizando tabelas relacionadas em 4D. Em SQL deve utilizar um JOIN para simular esta relação. Suponha que temos as duas tabelas abaixo:   
   
@@ -156,15 +156,15 @@ Quando utilizar o comando QUERY BY SQL:
  C_STRING(40;$formulaPesquisa)$formulaPesquisa:="Linhas_Faturas.ID_Fat=Faturas.ID_FatAND Linhas_Faturas.Codigo=’FX-200’ AND MONTH(Faturas.Data_Fat)=4" 
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o formato da condição de pesquisa for correto, a variável Sistema OK assume o valor 1\. Do contrário, assume o valor 0, e o resultado do comando será uma seleção vazia e um erro é devolvido. Este erro pode ser interceptado por um método instalado utilizando o comando [ON ERR CALL](on-err-call.md).
 
-#### Ver também 
+## Ver também 
 
 [QUERY BY FORMULA](query-by-formula.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

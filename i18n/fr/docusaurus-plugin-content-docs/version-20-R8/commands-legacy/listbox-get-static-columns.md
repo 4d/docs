@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get static columns.Summary-->La commande **LISTBOX Get static columns** retourne le nombre de colonnes statiques dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -27,11 +27,11 @@ Si une colonne a été insérée ou supprimée par programmation à l’intérie
 
 **Note :** Les colonnes statiques et les colonnes verrouillées sont deux fonctionnalités indépendantes. Pour plus d’informations, reportez-vous au manuel *Mode Développement*. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

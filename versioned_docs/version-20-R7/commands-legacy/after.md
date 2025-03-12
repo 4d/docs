@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.After.Summary-->**After** returns True for the After execution cycle.<!-- END REF-->
 
@@ -21,11 +21,11 @@ In order for the **After** execution cycle to be generated, make sure that the O
 
 **Note:** This command is equivalent to using [Form event code](../commands/form-event-code.md) and testing whether it returns the On Validate event.
 
-#### See also 
+## See also 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

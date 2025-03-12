@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Semaphore.Summary-->Um semáforo é uma bandeira compartihada entre estações de trabalho (o computador de cada usuário) ou entre processos na mesma estação de trabalho.<!-- END REF--> Um semáforo simplesmente existe ou não existe. Os métodos que cada usuário executa podem provar a existência de um semáforo. Criando e provando semáforos, os métodos podem ser comunicados entre estações de trabalho.  
 
@@ -42,7 +42,7 @@ Recomendamos usar semáforos locais quando precisar de um semáforo para gerenci
   
  Os semáforos não são utilizados para proteger o acesso aos registros. Esta gestão é realizada automaticamente 4D e 4D Server. Utilize semáforos para evitar que vários usuários realizem a mesma operação ao mesmo tempo.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Abaixo um código típico para usar um semáforo:
 
@@ -54,7 +54,7 @@ Abaixo um código típico para usar um semáforo:
  CLEAR SEMAPHORE("MySemaphore")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
  Neste exemplo, você quer evitar que dois usuários realizem simultâneamente uma atualização global dos preços em uma tabela Produtos. O seguinte método utiliza semáforos para fazer isto: 
 
@@ -67,7 +67,7 @@ Abaixo um código típico para usar um semáforo:
  End if
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo a seguir utiliza um semáforo local. Em um banco de dados com vários processos, você pode querer manter uma lista de "Coisas a fazer". Você deseja manter a lista em um array interprocesso e não em uma tabela. Você utiliza um semáforo para evitar o acesso simultâneo. Nesta situação, só necessita utilizar um semáforo local, porque sua lista "Coisas a fazer" serve apenas para seu uso pessoal.
 
@@ -97,7 +97,7 @@ Pode chamar este método desde qualquer processo.
 
 *Close*
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Este método permite não executar um método se o semáforo está presente; o método informa o método de chamada com um código de erro e um texto plano.
 
@@ -149,13 +149,13 @@ Sintaxe:
  $1->:=$T_Message  // O método chamado recebe um código de erro e uma explicação em texto plano
 ```
 
-#### Ver também 
+## Ver também 
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 *Semáforos e Sinais*  
 [Test semaphore](test-semaphore.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

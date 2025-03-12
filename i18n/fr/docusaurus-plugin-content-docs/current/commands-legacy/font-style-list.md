@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FONT STYLE LIST.Summary-->La commande **FONT STYLE LIST** retourne la liste des styles et la liste des noms complets pris en charge par la famille de police désignée par le paramètre *famillePolice*.<!-- END REF--> Cette commande vous permet de concevoir des interfaces manipulant les familles de polices et les styles de police, en particulier dans le contexte des zones *4D Write Pro*. 
 
@@ -27,7 +27,7 @@ Dans *listeNomsPolice*, passez un tableau texte qui sera rempli avec la liste co
 
  Si la *famillePolice* n'est pas trouvée sur la machine, les tableaux sont retournés vides. Pour connaître la liste des familles de police disponibles sur la machine, utilisez la commande [FONT LIST](font-list.md).
 
-#### Exemple 
+## Exemple 
 
 Vous voulez sélectionner les styles de la famille de police "Verdana" (si elle est disponible) :
 
@@ -55,11 +55,11 @@ Vous voulez sélectionner les styles de la famille de police "Verdana" (si elle 
   // $aTnames{1}="Verdana Bold Italic"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [FONT LIST](font-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

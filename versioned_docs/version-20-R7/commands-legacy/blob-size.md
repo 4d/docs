@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB size.Summary-->BLOB sizereturns the size of *blob* expressed in bytes.<!-- END REF-->
 
-#### Example 
+## Example 
 
 The line of code adds 100 bytes to the BLOB *myBlob*:
 
@@ -26,11 +26,11 @@ The line of code adds 100 bytes to the BLOB *myBlob*:
  SET BLOB SIZE(myBlob;BLOB size(myBlob)+100)
 ```
 
-#### See also 
+## See also 
 
 [SET BLOB SIZE](set-blob-size.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

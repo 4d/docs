@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Expert mode 
+## Expert mode 
 
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Summary-->This command is reserved for specific needs.<!-- END REF--> It must be used with care since it can affect database performance.
 
-#### Description 
+## Description 
 
 The **ADJUST TABLE CACHE PRIORITY** command modifies the *priority* value of the data related to *aTable* in cache for the current process. A call to this command replaces any priority value previously adjusted through the same command in the same process. This command adjusts the priority for a temporary need, for example during a query or an import. 
 
@@ -36,7 +36,7 @@ In the *priority* parameter, pass one of the following constants from the "*Cach
 | Cache priority high      |                                              |
 | Cache priority very high |                                              |
 
-#### Example 
+## Example 
 
 You want to temporarily change the cache priority for the \[Docs\] scalar fields:
 
@@ -46,12 +46,12 @@ You want to temporarily change the cache priority for the \[Docs\] scalar fields
  ADJUST TABLE CACHE PRIORITY([Docs];Cache priority normal)
 ```
 
-#### See also 
+## See also 
 
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

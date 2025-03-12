@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 詳細 
+## 詳細 
 
 <!--REF #_command_.Encrypt data BLOB.Summary-->**Encrypt data BLOB** コマンドは、*blobToEncrypt* 引数のBLOB を、4D がデータの暗号化に使用するのと同じアルゴリズム(AES-256) を使用して暗号化し、その結果を*encryptedBlob* 引数に返します。<!-- END REF-->
 
@@ -34,7 +34,7 @@ BLOB を暗号化するのには、*keyObject* または *passPhrase* のいづ�
 
 **注:** **Encrypt data BLOB** を使用してBLOB を暗号化する場合、返される*encryptedBlob* 引数内のBLOB は、16 バイトの整数倍になります。これは暗号化アルゴリズムによるものです。結果として、もし*blobToEncrypt* 引数に渡すBLOB が16 バイトの整数倍でなかった場合、コマンドは自動的に末尾にnull バイトを追加してBLOB を16バイトの整数倍に変換します。BLOB を[Decrypt data BLOB](decrypt-data-blob.md) で復号化する際にエラーが起きるのを避けるため、テキストファイルではないファイルを使用する際には*blobToEncrypt* 引数のサイズを管理する必要があります。これの詳細なやり方については、[こちらのブログ記事(英文)](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/) を参照して下さい。
 
-#### 例題 
+## 例題 
 
 データベースのRESOURCES フォルダ内にあるテキストファイルを暗号化する場合を考えます:
 
@@ -52,7 +52,7 @@ BLOB を暗号化するのには、*keyObject* または *passPhrase* のいづ�
  $encryptedFile.setContent($encryptedBlob)
 ```
 
-#### 参照 
+## 参照 
 
   
 [Decrypt data BLOB](decrypt-data-blob.md)  
@@ -60,7 +60,7 @@ BLOB を暗号化するのには、*keyObject* または *passPhrase* のいづ�
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

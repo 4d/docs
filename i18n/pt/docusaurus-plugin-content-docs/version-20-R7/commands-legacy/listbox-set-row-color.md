@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX SET ROW COLOR.Summary-->**Nota:** Este comando só funciona com listboxes de tipo array.<!-- END REF-->
 
@@ -42,7 +42,7 @@ Este comando modifica os valores que se encontram no array de cores que podem te
   
 Se os valores de cor em conflito se definem usando as propriedades para os listboxes ou colunas do listbox, se aplica uma ordem de prioridade. Para obter mais informação, consulte o manual de *Desenho*.
 
-#### Exemplo 
+## Exemplo 
 
 Em um array de tipo list box, queremos estabelecer as cores de uma fila e para uma célula desta fila:
 
@@ -57,14 +57,14 @@ Em um array de tipo list box, queremos estabelecer as cores de uma fila e para u
 
 ![](../assets/en/commands/pict1205393.fr.png)
 
-#### Ver também 
+## Ver também 
 
 *List box*  
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX Get row color as number](listbox-get-row-color-as-number.md)  
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

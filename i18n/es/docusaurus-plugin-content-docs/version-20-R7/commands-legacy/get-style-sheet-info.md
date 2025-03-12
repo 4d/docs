@@ -46,7 +46,7 @@ El comando devuelve en *estilos*, un valor que corresponde al estilo(s) asociado
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario (por ejemplo, si *nomHojaEstilo* no existe), toma el valor 0.
 
-##### Nota de compatibilidad 
+### Nota de compatibilidad 
 
 En la **arquitectura proyecto**, este comando sólo soporta las tres hojas de estilo automáticas.   
   

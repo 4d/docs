@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Append document.Summary-->Append documentコマンドは[Open document](open-document.md "Open document")コマンドと同じ機能を提供します。<!-- END REF-->このコマンドを使用してディスクにあるドキュメントを開くことができます。
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 Append documentの使用についての詳細は、[Open document](open-document.md "Open document")を参照してください。
 
-#### 例題 
+## 例題 
 
 次の例を使用して、Noteという名称の既存のドキュメントを開きます。文字列“ また会いましょう” とキャリッジリターンをドキュメントの最後に付加し、ドキュメントを閉じます。例えば、ドキュメントが既に文字列"さようなら" を含んでいると、ドキュメントは文字列"さようなら また、会いましょう"を含み、その後にキャリッジリターンが続きます。
 
@@ -34,12 +34,12 @@ Append documentの使用についての詳細は、[Open document](open-document
  CLOSE DOCUMENT(vhDocRef) //ドキュメントを閉じる。
 ```
 
-#### 参照 
+## 参照 
 
 [Create document](create-document.md)  
 [Open document](open-document.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR DELETE COLUMN.Summary-->El comando QR DELETE COLUMN borra del *area* la columna cuyo número se pasó en *numColumna*.<!-- END REF--> Este comando no aplica a los informes de tablas cruzadas.
 
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *numcolumn*a es incorrecto, se genera el error -9852.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo se asegura de que el informe sea listado y borra la tercera columna: 
 
@@ -31,11 +31,11 @@ El siguiente ejemplo se asegura de que el informe sea listado y borra la tercera
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [QR INSERT COLUMN](qr-insert-column.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CONVERT FROM TEXT.Summary-->O comando CONVERT FROM TEXT permite converter um texto expresso no conjunto de caracteres atual de 4D em um texto expresso em outro conjunto de caracteres.<!-- END REF--> 
 
@@ -179,15 +179,15 @@ Para maior informação sobre os nomes dos conjuntos de caracteres, por favor co
   
 Depois da execução do comando, o texto convertido será retornado no BLOB *blobConvertido*. Este BLOB poderá ser lido pelo comando [Convert to text](convert-to-text.md).
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando tiver sido executado corretamente, a variável OK assume o valor 1\. Do contrário, assume o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [Convert to text](convert-to-text.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

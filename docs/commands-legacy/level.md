@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Level.Summary-->Level is used to determine the current header or break level.<!-- END REF--> It returns the level number during the On Header and On Printing Break events.
 
 Level 0 is the last level to be printed and is appropriate for printing a grand total. Level returns 1 when 4D prints a break on the first sorted field, 2 when 4D prints a break on the second sorted field, and so on.
 
-#### Example 
+## Example 
 
 This example is a template for a form method. It shows each of the possible events that can occur while a summary report uses a form as an output form. Level is called when a header or a break is printed:
 
@@ -60,14 +60,14 @@ This example is a template for a form method. It shows each of the possible even
  End case
 ```
 
-#### See also 
+## See also 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Form event code](../commands/form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

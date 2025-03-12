@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 Le mécanismes mis en jeu par la commande sont différents suivant qu'elle est exécutée sur 4D (mode local ou distant) ou 4D Server (procédure stockée). 
 
-##### Avec 4D en mode local ou distant 
+### Avec 4D en mode local ou distant 
 
 Après un appel à **QUIT 4D**, l'exécution du process courant est stoppée, puis 4D effectue les opérations suivantes :
 
@@ -36,7 +36,7 @@ Une troisième stratégie est également possible. Avant d'appeler **QUIT 4D**, 
 
 **Note :** Le paramètre *délai* n'est pas utilisable avec 4D en mode local ou distant.
 
-##### Avec 4D Server (procédure stockée) 
+### Avec 4D Server (procédure stockée) 
 
 La commande **QUIT 4D** peut être exécutée sur le poste serveur, dans une procédure stockée.   
 Dans ce cas, elle admet le paramètre optionnel *délai*. Ce paramètre permet d’allouer à 4D Server un délai d’attente avant que l’application ne quitte réellement, laissant ainsi aux postes clients le temps de se déconnecter. Vous devez passer dans *délai* une valeur en secondes.   

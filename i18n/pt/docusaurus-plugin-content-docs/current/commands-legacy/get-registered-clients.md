@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Summary-->O comando GET REGISTERED CLIENTS preenche dois arrays:
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 **Nota:** se a operação foi bem sucedida, a variável sistema OK é igual a 1.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Vamos supor que você quer obter uma lista de todos os clientes registrados e os métodos que faltam por executar: 
 
@@ -33,21 +33,21 @@ Vamos supor que você quer obter uma lista de todos os clientes registrados e os
  GET REGISTERED CLIENTS($clientes;$metodos)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Consulte o exemplo do comando [REGISTER CLIENT](register-client.md).
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
  Se a operação foi bem sucedida, a variável do sistema OK, tem valor 1.
 
-#### Ver também 
+## Ver também 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

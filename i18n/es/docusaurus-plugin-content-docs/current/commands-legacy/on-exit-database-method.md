@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.Metodo base On Exit.Summary-->El Método base On Exit se llama una vez cuando sale de la base.<!-- END REF-->
 
@@ -56,7 +56,7 @@ El Método base On Exit es perfecto para:
 **Nota**: en un entorno cliente/servidor, **Método base On Exit** se comporta de manera diferente dependiendo de si el usuario sale manualmente (vía el comando de menú **Salir** o una llamada al comando [QUIT 4D](quit-4d.md)) o que 4D Server se cierre, lo que obliga a todos los clientes a salir.  
 Cuando se sale de 4D Server y se da un tiempo de corte (por ejemplo, 10 minutos), cada cliente conectado muestra un mensaje de advertencia y si el usuario sale durante el período de tiempo determinado, el **Método base On Exit** se ejecuta normalmente. Sin embargo, en otros casos (por ejemplo, el usuario no responde a tiempo, el servidor solicita salir inmediatamente o el administrador desconecta manualmente al cliente), el **Método base On Exit** se ejecuta al mismo tiempo que la conexión al servidor se cierra. Como resultado, el código en **Método base On Exit** no puede iniciar otro proceso local o de servidor y no puede esperar a que se cancelen otros procesos (ni estos procesos pueden seguir accediendo al servidor). Si intenta hacerlo, se genera un error de red (como 10001 o 10002) ya que la conexión al servidor ya está cerrada.
 
-#### Nota 
+## Nota 
 
 El siguiente ejemplo muestra un caso típico en el que se lanzan uno o más procesos en segundo plano que realizan trabajos regulares, que se ejecutan sin fin, en el [Método base On Startup](metodo-base-on-startup.md) (o en el [Método base On Server Startup](metodo-base-on-server-startup.md)). Una bandera en el objeto [Storage](storage.md) de la aplicación se utiliza para decirles que terminen y para comprobar si han terminado.
 
@@ -102,7 +102,7 @@ El siguiente ejemplo muestra un caso típico en el que se lanzan uno o más proc
  End while
 ```
 
-#### Ver también 
+## Ver también 
 
 [Método base On Startup](metodo-base-on-startup.md)  
 [QUIT 4D](quit-4d.md)  

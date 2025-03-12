@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Summary-->**SET EXTERNAL DATA PATH**コマンドは*aField*引数に渡したフィールドの、カレントレコードの、外部ストレージの場所を設定あるいは変更します。<!-- END REF-->
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 **注:** **SET EXTERNAL DATA PATH**コマンドは4Dローカルモードまたは4D Serverでのみ実行できます。リモートモードの4Dではなにも行いません。
 
-#### 例題 
+## 例題 
 
 ピクチャーフィールド内の既存のファイルを、データベースのデータファイル外に相対パスを使って保存したい場合を考えます:
 
@@ -55,12 +55,12 @@ displayed_sidebar: docs
  SAVE RECORD([Photos])
 ```
 
-#### 参照 
+## 参照 
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

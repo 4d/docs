@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Euro converter.Summary-->El comando Euro converter permite efectuar todo tipo de conversión de valores entre las diferentes monedas de países que pertenecen a la “Zona Euro” y al Euro mismo.<!-- END REF-->
 
@@ -67,7 +67,7 @@ Las tasas de conversión entre el Euro y 12 de las monedas de los países miembr
 | Escudo portugués    | 200.482               |
 | Peseta española     | 166.386               |
 
-#### Ejemplo 
+## Ejemplo 
 
 Estos son algunos ejemplos de conversiones que pueden realizarse con este comando:
 
@@ -80,7 +80,7 @@ Estos son algunos ejemplos de conversiones que pueden realizarse con este comand
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

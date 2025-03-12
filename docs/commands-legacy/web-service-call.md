@@ -69,7 +69,7 @@ The five configurations described below can therefore be implemented. In all cas
 
 **Note:** Despite the fact that they are complex XML types, data arrays are handled by 4D as simple types. 
 
-##### RPC mode, simple input and output 
+### RPC mode, simple input and output 
 
 This configuration is the easiest to use. In this case, the *complexType* contains the Web Service dynamic constant or is omitted.   
   
@@ -77,7 +77,7 @@ The parameters sent and responses received can be handled directly, without prio
   
 Refer to the example of the command [WEB SERVICE GET RESULT](web-service-get-result.md).
 
-##### RPC mode, complex input and simple output 
+### RPC mode, complex input and simple output 
 
 In this case, the *complexType* parameter contains the Web Service manual in constant. With this configuration, you must “manually” pass each XML source element in the form of a BLOB to the Web Service, using the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) command.   
   
@@ -94,7 +94,7 @@ It is up to you to format the initial BLOB as a valid XML element. As its first 
  WEB SERVICE GET RESULT($0;"MyOutputVar";*)
 ```
 
-##### RPC mode, simple input and complex output 
+### RPC mode, simple input and complex output 
 
 In this case, the *complexType* parameter contains the Web Service manual out constant. Each output parameter will be returned by the Web Service in the form of an XML element stored in a BLOB. You retrieve this parameter using the [WEB SERVICE GET RESULT](web-service-get-result.md) command. You can then parse the contents of the BLOB received using the XML commands of 4D.   
   
@@ -109,7 +109,7 @@ In this case, the *complexType* parameter contains the Web Service manual out co
  WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
 ```
 
-##### RPC mode, complex input and output 
+### RPC mode, complex input and output 
 
 In this case, the *complexType* parameter contains the Web Service manual constant. Each input and output parameter must be stored in the form of XML elements in BLOBs, as described in the two previous configurations.   
   
@@ -124,7 +124,7 @@ In this case, the *complexType* parameter contains the Web Service manual consta
  WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
 ```
 
-##### DOC mode 
+### DOC mode 
 
 A proxy calling method for a DOC Web Service is similar to a proxy calling method for an RPC Web Service using complex type input and output parameters.  
   

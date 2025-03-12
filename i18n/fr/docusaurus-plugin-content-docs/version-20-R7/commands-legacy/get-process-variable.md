@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PROCESS VARIABLE.Summary-->La commande **GET PROCESS VARIABLE** lit la valeur de la ou des variable(s) process *varSource* (*varSource2*, etc.) depuis le process source dont le numéro est passé dans *process* et la retourne dans la ou les variables(s) *varDestination* ( *varDestination2*, etc.) du process courant.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Attention, la communication process “intermachine” permise par les commandes
 **Astuce :** Si vous ne connaissez pas le numéro du process serveur source, vous pouvez tout de même lire les variables interprocess du serveur. Pour cela, il vous suffit de passer toute valeur négative dans *process*. En d'autres termes, il n'est pas nécessaire de connaître précisément le numéro d'un process exécuté sur le serveur pour utiliser **GET PROCESS VARIABLE** avec les variables interprocess du serveur.   
 Cette possibilité s'avère particulièrement utile dans le cas d'une procédure stockée lancée sur le serveur par l'intermédiaire de la [On Server Startup database method](on-server-startup-database-method.md). Comme, par défaut, les postes clients ne connaissent pas le numéro de ce process serveur, il vous suffit de passer une valeur négative (n'importe laquelle) dans le paramètre *process*.
 
-##### Restrictions 
+### Restrictions 
 
 **GET PROCESS VARIABLE** n'accepte pas de variables locales comme variables sources.   
 En revanche, les variables de destination peuvent être interprocess, process ou locales. Vous pouvez "recevoir" les valeurs uniquement dans des variables, pas dans des champs.
@@ -46,7 +46,7 @@ Le process source doit être un process utilisateur, ce ne peut être un des pro
 
 **Note :** En mode interprété, si une variable source n'existe pas, la valeur indéfinie est retournée. Vous pouvez le détecter en testant la variable de destination correspondante à l'aide de la fonction [Type](type.md). 
 
-#### Exemple 1 
+## Exemple 1 
 
 La ligne de code suivante lit la valeur de la variable Texte *vtCurStatus* dans le process dont le numéro est *$vlProcess* et retourne le résultat dans la variable process *vtInfo* du process courant :
 
@@ -54,7 +54,7 @@ La ligne de code suivante lit la valeur de la variable Texte *vtCurStatus* dans 
  GET PROCESS VARIABLE($vlProcess;vtCurStatus;vtInfo)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 La ligne de code suivante fait la même chose mais retourne la valeur dans la variable locale *$vtInfo* de la méthode s'exécutant dans le process courant :
 
@@ -62,7 +62,7 @@ La ligne de code suivante fait la même chose mais retourne la valeur dans la va
  GET PROCESS VARIABLE($vlProcess;vtCurStatus;$vtInfo)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 La ligne de code suivante fait la même chose mais retourne la valeur dans la même variable *vtCurStatus* du process courant :
 
@@ -72,7 +72,7 @@ La ligne de code suivante fait la même chose mais retourne la valeur dans la m�
 
 **Note :** La première *vtCurStatus* désigne l'instance de la variable dans le process source, la seconde *vtCurStatus* désigne l'instance de la variable dans le process courant.
 
-#### Exemple 4 
+## Exemple 4 
 
 L'exemple suivant lit séquentiellement les éléments d'un tableau process depuis le process indiqué par *$vlProcess* :
 
@@ -86,7 +86,7 @@ L'exemple suivant lit séquentiellement les éléments d'un tableau process depu
 
 **Note :** Dans cet exemple, la variable process *vl\_IPCom\_Array* doit être gérée par le process source et contient la taille du tableau *at\_IPCom\_Array*.
 
-#### Exemple 5 
+## Exemple 5 
 
 L'exemple suivant fait la même chose que le précédent mais lit le tableau dans son intégralité au lieu de le faire élément par élément :
 
@@ -97,7 +97,7 @@ L'exemple suivant fait la même chose que le précédent mais lit le tableau dan
  End for
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 L'exemple suivant lit l'instance des variables *v1*,*v2*,*v3* dans le process source et retourne leurs valeurs dans l'instance des mêmes variables du process courant :
 
@@ -105,11 +105,11 @@ L'exemple suivant lit l'instance des variables *v1*,*v2*,*v3* dans le process so
  GET PROCESS VARIABLE($vlProcess;v1;v1;v2;v2;v3;v3)
 ```
 
-#### Exemple 7 
+## Exemple 7 
 
 Reportez-vous à l'exemple de la commande *\_o\_DRAG AND DROP PROPERTIES*.
 
-#### Voir aussi 
+## Voir aussi 
 
 *Introduction aux process*  
 [POST OUTSIDE CALL](post-outside-call.md)  
@@ -117,7 +117,7 @@ Reportez-vous à l'exemple de la commande *\_o\_DRAG AND DROP PROPERTIES*.
 [SET PROCESS VARIABLE](set-process-variable.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

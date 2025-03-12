@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ARRAY BOOLEAN.Summary-->ARRAY BOOLEANコマンドは、メモリ上にブール要素の配列を作成またはリサイズします。<!-- END REF-->  
   
@@ -32,7 +32,7 @@ ARRAY BOOLEANを既存の配列に適用する場合、
   
 **Tip**: コンテキストによっては、ブール配列の代わりに整数配列を使用し、要素が非0値の場合はTrue、0の場合はFalseとすることもできます。
 
-#### 例題 1 
+## 例題 1 
 
 この例は、100要素のブールプロセス配列を作成します:  
 
@@ -40,7 +40,7 @@ ARRAY BOOLEANを既存の配列に適用する場合、
  ARRAY BOOLEAN(abValues;100)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 この例は、100行50列要素のブールローカル配列を作成します:  
 
@@ -48,7 +48,7 @@ ARRAY BOOLEANを既存の配列に適用する場合、
  ARRAY BOOLEAN($abValues;100;50)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 この例は、50要素のブールインタープロセス配列を作成し、それぞれの偶数要素にTrueを格納します:  
 
@@ -59,11 +59,11 @@ ARRAY BOOLEANを既存の配列に適用する場合、
  End for
 ```
 
-#### 参照 
+## 参照 
 
 [ARRAY INTEGER](array-integer.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

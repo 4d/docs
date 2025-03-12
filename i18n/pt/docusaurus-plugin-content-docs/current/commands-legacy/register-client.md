@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.REGISTER CLIENT.Summary-->O comando REGISTER CLIENT “registra” uma máquina cliente com o nome especificado em *nomeCliente* no 4D Server, a fim de permitir outros clientes ou eventualmente 4D server (utilizando métodos armazenados) executar métodos fazendo uso do comando [EXECUTE ON CLIENT](execute-on-client.md).<!-- END REF--> Uma vez registrado, um cliente 4D pode executar um ou vários métodos para outros clientes.
 
@@ -31,7 +31,7 @@ Quando este comando é executado, um processo chamado *nomeCliente*, é criado n
 
 Uma vez executado o comando, não é possível modificar rapidamente o nome do cliente 4D. Para poder fazê-lo, deve chamar o comando [UNREGISTER CLIENT](unregister-client.md) e depois o comando REGISTER CLIENT.
 
-#### Exemplo 
+## Exemplo 
 
 No seguinte exemplo, vamos a criar um sistema de mensagens pequeno que permita aos clientes comunicar-se entre eles desde suas estações.
 
@@ -103,17 +103,17 @@ No seguinte exemplo, vamos a criar um sistema de mensagens pequeno que permita a
  UNREGISTER CLIENT
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se um cliente 4D está registrado corretamente, a variável do sistema OK é igual a 1\. Se o cliente 4D já está registrado, o comando não faz nada e OK é igual a 0.
 
-#### Ver também 
+## Ver também 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

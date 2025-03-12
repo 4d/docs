@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is license available.Summary-->The Is license available command lets you find out the availability of a plug-in.<!-- END REF--> It is useful, for instance, for displaying or hiding functions requiring the presence of a plug-in.
 
@@ -39,7 +39,7 @@ In this case, the command returns [True](true.md "True") if the corresponding pl
 Is license available returns [False](false.md "False") if the plug-in is operating in demo mode.
 * You pass the ID number of the plug-in “4BNX” resource directly in the license parameter. In this case, the command behaves as described above.
 
-#### See also 
+## See also 
 
 [CHANGE LICENSES](change-licenses.md)  
 [License info](../commands/license-info.md)  
@@ -47,7 +47,7 @@ Is license available returns [False](false.md "False") if the plug-in is operati
 [PLUGIN LIST](plugin-list.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

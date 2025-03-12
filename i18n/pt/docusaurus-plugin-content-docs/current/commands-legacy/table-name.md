@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Table name.Summary-->O comando Table name retorna o nome da tabela cujo número ou ponteiro é passado em *numTabela* ou *pontTabela*.<!-- END REF-->
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte é um exemplo de um método genérico que mostra os registros de uma tabela. A referência à tabela é passada como um ponteiro para a tabela. O comando Table name é utilizado para incluir o nome da tabela na barra de títulos da janela: 
 
@@ -31,7 +31,7 @@ O seguinte é um exemplo de um método genérico que mostra os registros de uma 
  DISPLAY SELECTION($1->) // Mostrar a seleção
 ```
 
-#### Ver também 
+## Ver também 
 
 [Field name](field-name.md)  
 [Last table number](last-table-number.md)  
@@ -39,7 +39,7 @@ O seguinte é um exemplo de um método genérico que mostra os registros de uma 
 [SET TABLE TITLES](set-table-titles.md)  
 [Table](table.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

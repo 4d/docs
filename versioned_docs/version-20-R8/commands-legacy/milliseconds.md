@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Milliseconds.Summary-->Milliseconds returns the number of milliseconds (1000th of a second) elapsed since the machine was started.<!-- END REF-->
 
@@ -21,7 +21,7 @@ The returned value is a signed longint, up to 2^31 (around 2 billion millisecond
 
 The purpose of the command is to measure short periods of time with a high precision. A 24-day range is more than large enough for comparisons, but you need to be careful. When comparing values, always work with the difference between two values. Never compare the values directly since one could be negative and the other positive.
 
-#### Example 
+## Example 
 
 The following code waits up to 5 seconds for a locked record to become unlocked or it ends:
 
@@ -42,13 +42,13 @@ The following code waits up to 5 seconds for a locked record to become unlocked 
  (Milliseconds>($starttime+5000)) //never do it like this, as one could be positive, one negative
 ```
 
-#### See also 
+## See also 
 
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
 [Timestamp](timestamp.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

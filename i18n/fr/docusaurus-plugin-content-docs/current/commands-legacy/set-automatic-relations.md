@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Summary-->La commande **SET AUTOMATIC RELATIONS** transforme tous les liens manuels en liens automatiques pour toute la base dans le process courant.<!-- END REF--> Cette modification est temporaire et peut à tout moment être remise en cause par un nouvel appel à **SET AUTOMATIC RELATIONS**.
 
@@ -28,7 +28,7 @@ Les liens définis comme automatiques en mode Développement ne sont pas affect�
 * Lorsque vous passez Vrai à la commande **SET AUTOMATIC RELATIONS**, le mode automatique est "verrouillé" pour tous les liens manuels au cours de la session. Dans ce cas, les éventuels appels à la commande [SET FIELD RELATION](set-field-relation.md) dans la même session sont ignorés, qu'ils soient placés avant ou après **SET AUTOMATIC RELATIONS**. Pour "déverrouiller" le mode automatique et prendre en compte les appels à [SET FIELD RELATION](set-field-relation.md), passez Faux à **SET AUTOMATIC RELATIONS**.
 * Les automatismes sont désactivés lorsque les tables liées sont visualisées dans un formulaire liste affiché à l'aide de [DISPLAY SELECTION](display-selection.md), [MODIFY SELECTION](modify-selection.md) ou d'un sous-formulaire. Voir *Liens manuels et automatiques*.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant rend tous les liens N vers 1 automatiques et rétablit en manuel tous les liens 1 vers N qui étaient précédemment modifiés :
 
@@ -36,7 +36,7 @@ L'exemple suivant rend tous les liens N vers 1 automatiques et rétablit en manu
  SET AUTOMATIC RELATIONS(True;False)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
@@ -45,7 +45,7 @@ L'exemple suivant rend tous les liens N vers 1 automatiques et rétablit en manu
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -12,13 +12,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.BEEP.Summary-->O comando BEEP faz com que o PC ou Macintosh gerem um beep.<!-- END REF--> Seu computador (em Windows ou Macintosh) pode emitir um som diferente a um beep, dependendo do som selecionado no painel de controle de som.  
 
 **Advertência**: não chame BEEP desde um processo de conexão Web, porque o beep será produzido na máquina servidor Web 4D e não a máquina do navegador Web.
 
-#### Exemplo 
+## Exemplo 
 
 No exemplo abaixo, se uma pesquisa não encontrar nenhum registro, um bip é emitido, e aparece uma mensagem de alerta:
 
@@ -30,11 +30,11 @@ No exemplo abaixo, se uma pesquisa não encontrar nenhum registro, um bip é emi
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [PLAY](play.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

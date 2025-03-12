@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Not.Summary-->The Not function returns the negation of *boolean*, changing True to False or False to True.<!-- END REF-->
 
-#### Example 
+## Example 
 
 This example first assigns True to a variable, then changes the variable value to False, and then back to True.
 
@@ -28,12 +28,12 @@ This example first assigns True to a variable, then changes the variable value t
  vResult:=Not(vResult) // vResult is set to True
 ```
 
-#### See also 
+## See also 
 
 [False](false.md)  
 [True](true.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

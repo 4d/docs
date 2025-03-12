@@ -17,20 +17,20 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.MODIFY SELECTION.Summary-->MODIFY SELECTIONは、[DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION")とほぼ同じ機能を提供します。<!-- END REF-->詳細については[DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION")の説明を参照してください。2つのコマンドの違いを以下にあげます:
 
 1. [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION")とMODIFY SELECTIONはカレントレコードセレクションをリストモードで表示し、ユーザがレコードをダブルクリックすると、そのレコードは入力フォーム上に表示されます。MODIFY SELECTIONを使用した場合は、別のプロセスやユーザ、またはリスト更新可モード (許可されている場合) でレコードが既に使用されていなければ、ダブルクリックしてそのレコードを修正することができます。
 2. [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION")はカレントプロセスでレコードを読み込み専用でロードします。つまり、レコードは他のプロセスに対しロックされません。MODIFY SELECTIONはカレントプロセスでテーブルが読み書きに設定されているばあい、レコードを読み書き状態でロードします。つまり他のプロセスがレコードをロックしていなければ、そのレコードはこのプロセス用に他のプロセスに対しロックされます。MODIFY SELECTION実行が終了後、レコードは解放されます。
 
-#### 参照 
+## 参照 
 
 [DISPLAY SELECTION](display-selection.md)  
 [Form event code](../commands/form-event-code.md)  
 *セット*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

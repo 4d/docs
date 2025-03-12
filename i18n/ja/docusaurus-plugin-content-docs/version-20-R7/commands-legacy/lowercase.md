@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Lowercase.Summary-->Lowercaseは、*aString*を取りアルファベット文字列をすべて英小文字に変換して返します。<!-- END REF--> 
 
 オプションの*\** 引数が渡されると、*aString*に存在するアクセント符号付きの文字は、アクセント符号付きの英小文字で返されます。この引数が省略され、変換が実行されると、アクセント符号付きの文字は、デフォルトでそのアクセント記号を失います。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、Capsという名前の関数です。与えられた文字列の最初の文字を大文字にして返すものです。例えば、Caps("john") の結果は、"John" となります。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 この例では、引数が渡されたか、渡されないかに応じて取得された結果を比較します。
 
@@ -45,11 +45,11 @@ displayed_sidebar: docs
  $thestring:=Lowercase("DEJA VU";*) // $thestringは"deja vu"
 ```
 
-#### 参照 
+## 参照 
 
 [Uppercase](uppercase.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

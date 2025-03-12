@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET HIGHLIGHT.Summary-->The GET HIGHLIGHT command is used to determine what text is currently highlighted in *object*.<!-- END REF--> 
 
@@ -34,7 +34,7 @@ If *startSel* and *endSel* are returned equal, the insertion point is positioned
 
 If the object designated by the *object* parameter is not found in the form, the command returns -1 in *startSel* and -2 in *endSel*. 
 
-#### Example 1 
+## Example 1 
 
 The following example gets the highlighted selection from the field called *\[Products\]Comments*: 
 
@@ -45,11 +45,11 @@ If(vFirst < vlast)
 End if
 ```
 
-#### Example 2 
+## Example 2 
 
 See example for the [FILTER KEYSTROKE](filter-keystroke.md) command.
 
-#### Example 3 
+## Example 3 
 
 Modification of highlighted text style:
 
@@ -58,13 +58,13 @@ Modification of highlighted text style:
  ST SET ATTRIBUTES(*;"myText";$startsel,$endsel;Attribute underline style;1;Attribute bold style;1)
 ```
 
-#### See also 
+## See also 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

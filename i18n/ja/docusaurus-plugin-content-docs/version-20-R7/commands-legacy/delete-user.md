@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DELETE USER.Summary-->DELETE USER コマンドは、引数 *userID* に渡したユニークなユーザID番号を持つユーザを削除します。<!-- END REF--> この場合、必ず[GET USER LIST](get-user-list.md "GET USER LIST") コマンドによって返された有効なユーザID番号を渡さなければなりません。 
 
@@ -23,18 +23,18 @@ DesignerとAdministratorのみがユーザを削除できます。Administrator�
 
 削除されたユーザー名は、[EDIT ACCESS](edit-access.md "EDIT ACCESS")コマンドやデザインモードで表示されるユーザーエディターに表示されなくなります。削除されたユーザーの番号は、新しいユーザーアカウントが作成される際に再割り当てされることがあることに留意してください。
 
-#### エラー管理 
+## エラー管理 
 
  コマンドを呼び出すための特定のアクセス権を持っていない場合や、パスワードシステムが他のプロセスによって既にアクセスされている場合は、アクセス権エラーが生成されます。ON ERR CALL コマンドを使ってインストールされたエラー処理メソッドでこのエラーを受け取ることができます。
 
-#### 参照 
+## 参照 
 
 [GET USER LIST](get-user-list.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Is user deleted](is-user-deleted.md)  
 [Set user properties](set-user-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

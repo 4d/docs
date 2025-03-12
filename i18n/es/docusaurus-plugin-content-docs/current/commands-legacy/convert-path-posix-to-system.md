@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Convert path POSIX to system.Summary-->El comando Convert path POSIX to system convierte una ruta de acceso expresada con la sintaxis POSIX (Unix) en una ruta expresada con la sintaxis sistema.<!-- END REF--> 
 
@@ -25,7 +25,7 @@ El comando devuelve la ruta de acceso completa del archivo o del archivo expresa
 
 El parámetro opcional *\** permite indicar si el parámetro *rutaPosix* está codificado. Si este es el caso, debe pasar este parámetro, de lo contrario la conversión no será válida. El comando devuelve la ruta de acceso sin codificación. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Ejemplos bajo Mac OS:
 
@@ -38,7 +38,7 @@ Ejemplos bajo Mac OS:
   //devuelve "machd:file 2.txt" si machd es el disco de inicio
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Ejemplos bajo Windows:
 
@@ -49,13 +49,13 @@ Ejemplos bajo Windows:
   //devuelve "c:\\docs\\file 2.txt"
 ```
 
-#### Ver también 
+## Ver también 
 
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Object to path](object-to-path.md)  
 [Path to object ](path-to-object.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

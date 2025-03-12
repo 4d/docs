@@ -36,7 +36,7 @@ Moreover, if the optional recipient’s public key has been used to encrypt the 
 
 **Note:** The cipher contains a checksum functionality in order to avoid any BLOB content modification (deliberately or not). Consequently, an encrypted BLOB should not be modified otherwise it might not be decrypted.
 
-##### Optimizing Encryption Commands 
+### Optimizing Encryption Commands 
 
 Data encryption slows down the execution of your applications, especially if a pair of keys is used. However, you can consider the following optimization tips: 
 

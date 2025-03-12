@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CALL WORKER.Summary-->**CALL WORKER** コマンドは、*process* に受け渡した名称または ID のワーカープロセスを作成、または呼び出して、任意の *param* パラメーターを使って *formula* 引数で指定されたコードの実行をそのコンテキスト内において要求します。<!-- END REF-->コマンドは *params* をカプセル化し、メッセージの形でワーカーが持つメッセージボックスに受け渡します。ワーカープロセスについての詳細は*ワーカーについて* を参照ください。
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 ワーカープロセスは、アプリケーションが終了するか、あるいは [KILL WORKER](kill-worker.md) をコールされるまで存続します。必要ないワーカーにはこのコマンドを使い、メモリを解放するのがよいでしょう。
 
-#### 例題 
+## 例題 
 
 フォーム上に、選択年の統計などの算出をおこなうボタンを設置します。
 
@@ -68,14 +68,14 @@ displayed_sidebar: docs
  CALL FORM($window;Formula(displayStats);$vStatResults)
 ```
 
-#### 参照 
+## 参照 
 
 [CALL FORM](call-form.md)  
 [Current process name](current-process-name.md)  
 [KILL WORKER](kill-worker.md)  
 *ワーカーについて*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is record loaded.Summary-->The Is record loaded command returns True if *aTable*’s current record is loaded in the current process.<!-- END REF-->command will return False in remote mode (it returns True in local mode). 
 
-#### Example 
+## Example 
 
 Instead of using the “Next record” or “Previous record” automatic actions, you can write object methods for these buttons to improve their operation. The “Next” button will display the beginning of the selection if the user is at the end of the selection and the “Previous” button will show the end of the selection when the user is at the beginning of the selection.
 
@@ -43,7 +43,7 @@ Instead of using the “Next record” or “Previous record” automatic action
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE FROM ARRAY.Summary-->La commande **DELETE FROM ARRAY** supprime un ou plusieurs élément(s) de *tableau*.<!-- END REF--> Les éléments sont supprimés à partir de l'élément spécifié par *positionDépart*.
 
 Le paramètre *combien* est le nombre d'éléments à supprimer. Si *combien* n'est pas spécifié, un seul élément est supprimé. La taille du tableau est réduite de *combien*.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant supprime trois éléments en commençant à l'élément 5 :
 
@@ -29,7 +29,7 @@ L'exemple suivant supprime trois éléments en commençant à l'élément 5 :
  DELETE FROM ARRAY(unTableau;5;3)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant supprime le dernier élément d'un tableau, s'il existe :
 
@@ -40,12 +40,12 @@ L'exemple suivant supprime le dernier élément d'un tableau, s'il existe :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

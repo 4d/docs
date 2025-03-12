@@ -13,16 +13,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Current method path.Summary-->O comando **Current method path** devolve o caminho de acesso interna do método base, trigger, método de projeto, método formulário ou método objeto em execução.<!-- END REF-->no contexto dos macro comandos 4D, a etiqueta *<method\_path>* é substituída pelo caminho de acesso completa do código em execução.
 
-#### Ver também 
+## Ver também 
 
 [METHOD Get path](method-get-path.md)  
 [METHOD GET PATHS](method-get-paths.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current machine.Summary-->The Current machine command returns the name of the machine as set in the network parameters of the operating system.<!-- END REF-->
 
-#### Example 
+## Example 
 
 Even if you are not running with the Client/Server version of the 4D environment, your application can include some network services that require your machine to be correctly configured. In the of your application, you write:
 
@@ -27,11 +27,11 @@ Even if you are not running with the Client/Server version of the 4D environment
  End if
 ```
 
-#### See also 
+## See also 
 
 [Current system user](current-system-user.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

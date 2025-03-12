@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB GET OPTION.Summary-->The **WEB GET OPTION** command gets the current value of an option for the 4D Web server operation.<!-- END REF-->
 
@@ -60,11 +60,11 @@ When you use the Web debug log *selector*, you can receive one of the following 
 | wdl enable with response body  | Integer | 3     | Web HTTP debug log is enabled with body part in response only                         |
 | wdl enable without body        | Integer | 1     | Web HTTP debug log is enabled without body parts (body size is provided in this case) |
 
-#### See also 
+## See also 
 
 [WEB SET OPTION](web-set-option.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

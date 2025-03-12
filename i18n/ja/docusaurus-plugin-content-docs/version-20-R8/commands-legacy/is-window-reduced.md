@@ -14,16 +14,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Is window reduced.Summary-->**Is window reduced** コマンドは*window* 引数に参照を渡したウィンドウがタスクバー(Windows)またはDock(macOS)に収納されている場合には**True** を、それ以外の場合には**False** を返します。<!-- END REF-->
 
-#### 参照 
+## 参照 
 
 [Is window maximized](is-window-maximized.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

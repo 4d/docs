@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Position.Summary-->Position devolve a posição da primeira ocorrência de *pesquisar* em *cadeia*.<!-- END REF-->
 
@@ -67,7 +67,7 @@ Para informação sobre a definição da linguagem de dados, ver em *Referência
 
 **Advertência**: não pode utilizar o caractere arroba @ com Position. Por exemplo, se passa "*abc@*" em *pesquisar*, o comando pesquisará a cadeia "*abc@*" e não por "*abc*" seguido de outros caracteres.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo ilustra o uso de Position. Os resultados, descritos nos comentários, são atribuídos à variável *vlResult*. 
 
@@ -80,7 +80,7 @@ Este exemplo ilustra o uso de Position. Os resultados, descritos nos comentário
  vlResult:=Position("œ";"Bœuf";1;$comprimento) // vlResult =2, $comprimento= 1
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 No exemplo abaixo, o parâmetro *comprEncont* permite pesquisar todas as ocorrências de "aegis" em um texto, sem importar como está escrito: 
 
@@ -92,7 +92,7 @@ No exemplo abaixo, o parâmetro *comprEncont* permite pesquisar todas as ocorrê
  Until(vlResult=0)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 No exemplo abaixo, se quiser encontrar todas as instâncias de uma string e substituí-la:
 
@@ -113,12 +113,12 @@ No exemplo abaixo, se quiser encontrar todas as instâncias de uma string e subs
  Until($p<=0) //resultado: $string -> Hello Joëlle and Joël!
 ```
 
-#### Ver também 
+## Ver também 
 
 [Compare strings](compare-strings.md)  
 [Substring](substring.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

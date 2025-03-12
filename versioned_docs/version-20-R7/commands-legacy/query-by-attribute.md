@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** looks for records matching the query string defined using the *objectField*, *attributePath*, *queryOp* and *value* parameters, and returns a selection of records for *aTable*.<!-- END REF-->changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record. If the *aTable* parameter is omitted, the command applies to the default table. If no default table has been set, an error occurs.
 
@@ -68,7 +68,7 @@ Here is the structure of a query by attribute:
 
 **Note:** An implicit criteria for all operators (except #) is that the Object field contains an attribute. However, for the # operator, it can be undefined (see below). 
 
-##### The # operator and Null values 
+### The # operator and Null values 
 
 When querying by attribute using the **#** operator, you must take into account cases where an attribute may not be present in a record. For example, consider the following statement:
 
@@ -98,7 +98,7 @@ This principle also applies to array attributes. For example, the query will ret
 
 **Note:** To specifically obtain records where the attribute is undefined, you can use an empty object (see example 2). Note however that searching for NULL values in array elements is not supported.
 
-##### Building multiple queries 
+### Building multiple queries 
 
 Here are the rules for building multiple queries by attribute:
 
@@ -115,7 +115,7 @@ No matter which way a query has been defined:
 * If the actual query operation is going to take some time to be performed, 4D automatically displays a message containing a progress meter. These messages can be turned on and off by using the [MESSAGES ON](messages-on.md) and [MESSAGES OFF](messages-off.md)  commands. If a progress meter is displayed, the user can click on the **Stop** button to interrupt the query. If the query is completed, OK is set to 1\. Otherwise, if the query is interrupted, OK is set to 0 (zero).
 * If any indexed object fields are specified, the query is optimized every time that it is possible (indexed fields are searched first) resulting in a query that takes the least amount of time possible.
 
-##### Date values in the object 
+### Date values in the object 
 
 Dates are stored in objects according to database settings; by default, the time zone is taken into account (see the JSON use local time selector in the [SET DATABASE PARAMETER](set-database-parameter.md) command). 
 
@@ -142,11 +142,11 @@ Keep in mind that the scope of this setting is the process only. If you execute 
  QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1976-11-27!)
 ```
 
-##### Using the virtual length property 
+### Using the virtual length property 
 
 You can use the virtual "length" property with this command. This property is available automatically for all array type attributes and returns the size of the array, i.e. the number of elements it contains. It can be used in the context of executing the **QUERY BY ATTRIBUTE** command (see example 4).
 
-##### Linking array attribute query arguments 
+### Linking array attribute query arguments 
 
 (New in 4D v16 R2) When searching in array attributes with multiple query arguments joined by the AND operator, you may want to make sure that only records containing elements that match all arguments are returned, and not records where arguments can be found in different elements. To do this, you need to *link* query arguments to array elements, so that only single elements containing linked arguments are found. 
 
@@ -196,7 +196,7 @@ With the above records, if you write:
 
 **Note:** Using a linked syntax in a single query line will give the same results as a standard query, except when using the "#" operator: in this case, invalid results may be returned. This specific syntax is therefore not supported. 
 
-#### Example 1 
+## Example 1 
 
 In this example, the "age" attribute is either a string or an integer and we want to find people whose age is between 20 and 29\. The first two lines query the attribute as an integer (>=20 and < 30) and the last ones query the field as a string (starts with "2" but is different from "2".)
 
@@ -207,7 +207,7 @@ In this example, the "age" attribute is either a string or an integer and we wan
  QUERY BY ATTRIBUTE([Persons];&;[Persons]OB_Info;"age";#;"2") //no final * to launch execution
 ```
 
-#### Example 2 
+## Example 2 
 
 The **QUERY BY ATTRIBUTE** command can be used to find records where certain attributes are defined (or are not defined). To do this, you have to use an empty object.
 
@@ -225,7 +225,7 @@ The **QUERY BY ATTRIBUTE** command can be used to find records where certain att
 
 **Note:** This specific syntax is not supported with array type attributes. Searching for NULL values in array elements will give invalid results.
 
-#### Example 3 
+## Example 3 
 
 You want to search a field containing array attributes. With the following two records:
 
@@ -264,7 +264,7 @@ You want to search a field containing array attributes. With the following two r
   //selects "smith"
 ```
 
-#### Example 4 
+## Example 4 
 
 This example illustrates the use of the virtual "length" property. Your database has a \[Customer\]full\_Data object field with the following data:
 
@@ -276,7 +276,7 @@ You want to get the records for any customers who have two or more children. To 
  QUERY BY ATTRIBUTE([Customer];[Customer]full_Data;"Children.length";>=;2)
 ```
 
-#### Example 5 
+## Example 5 
 
 These examples illustrate the various available combinations of linked query arguments on arrays. Assuming you have the following records:
 
@@ -393,7 +393,7 @@ To find people who have a 15 year-old child named "Harry" who has a "blue car" t
   //returns "Sam" and "Louis"
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the query is carried out correctly, the OK system variable is set to 1.  
 The OK variable is set to 0 if:
@@ -401,13 +401,13 @@ The OK variable is set to 0 if:
 * the user clicks on the **Cancel**/**Stop** button,
 * in 'query and lock' mode (see the [SET QUERY AND LOCK](set-query-and-lock.md) command), the query has found at least one locked record. In this case as well, the LockedSet system set is updated.
 
-#### See also 
+## See also 
 
   
 [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
 *Structure of 4D language objects*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

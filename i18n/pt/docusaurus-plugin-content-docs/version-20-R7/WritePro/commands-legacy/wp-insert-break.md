@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP INSERT BREAK.Summary-->O comando **WP INSERT BREAK** \[#descv\] insere uma nova ruptura de tipo *tipoRuptura* na faixa de seleção *objFaixa* segundo o modo de inserção *modo* e o parâmetro *AtualizFaixa*.<!-- END REF--> \[#descv\]
 
@@ -55,7 +55,7 @@ No parâmetro *modo*, passe uma constante para indicar o modo de inserção que 
 Se não passar o parâmetro *ActFaixa*, como padrão os conteúdos inseridos estão incluidos na faixa resultante.
 * Se *objRange* não for uma range, *ActRange*  é ignorado.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Ao criar faturas, se deseja inserir quebras de página, exceto na última página:  
   
@@ -69,7 +69,7 @@ Ao criar faturas, se deseja inserir quebras de página, exceto na última págin
  End for
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser inserir uma quebra de seção contínua para ter uma seção de uma coluna e uma seção de duas colunas na mesma página.
 
@@ -92,7 +92,7 @@ Se quiser inserir uma quebra de seção contínua para ter uma seção de uma co
     
 ![](../../assets/en/WritePro/commands/pict5562058.en.png)
 
-#### Ver também 
+## Ver também 
 
 [WP Get breaks](wp-get-breaks.md)  
 [WP INSERT DOCUMENT](wp-insert-document.md)  

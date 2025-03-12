@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET HIERARCHY.Summary-->The **LISTBOX SET HIERARCHY** command lets you configure the list box object designated by the *object* and *\** parameters in hierarchical or non-hierarchical mode.<!-- END REF--> 
 
@@ -37,7 +37,7 @@ The *hierarchy* parameter is used to designate the arrays of the list box to be 
 * if the list box is in non-hierarchical mode and has never been declared hierarchical, the first array is used as the hierarchy by default.
 * if the list box is in non-hierarchical mode but has previously been declared hierarchical, the last hierarchy is re-established.
 
-#### Example 
+## Example 
 
 Definition of the aCountry, aRegion and aCity arrays as the hierarchy of a list box:
 
@@ -49,11 +49,11 @@ Definition of the aCountry, aRegion and aCity arrays as the hierarchy of a list 
  LISTBOX SET HIERARCHY(*;"mylistbox";True;$ArrHierarch)
 ```
 
-#### See also 
+## See also 
 
 [LISTBOX GET HIERARCHY](listbox-get-hierarchy.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

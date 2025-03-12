@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Table get columns.Summary-->**WP Table get columns** コマンドは、*targetObj* または(*startCol* および *numCols* 引数で定義された)*tableRef* で指定した表から、カラムのセレクションを格納した新しいレンジオブジェクトを返します。<!-- END REF-->
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
     
 *startCol* 引数と *numCols* 引数を足した数が*tableRef* 引数で指定した表にあるカラムの数より多い場合、または*startCol* 引数そのものが*tableRef* 引数で指定した表にあるカラムの数より多い場合、返されるレンジには取得可能なカラム全てが格納されます。
 
-#### 例題 1 
+## 例題 1 
 
 テーブルの、最後の2列の属性を変更したい場合を考えます:
 
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict3307213.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 10列目のカラムから最後のカラムまでのレンジを取得したい場合を考えます:
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
  WP Table get columns(tableRef;10;MAXLONG)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 ユーザーが選択したカラムを取得したい場合を考えます:
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
  $columns:=WP Table get columns($userSelection)
 ```
 
-#### 参照 
+## 参照 
 
 [WP Table get cells](wp-table-get-cells.md)  
 [WP Table get rows](wp-table-get-rows.md)  

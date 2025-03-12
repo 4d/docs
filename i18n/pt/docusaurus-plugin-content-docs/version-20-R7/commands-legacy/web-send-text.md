@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WEB SEND TEXT.Summary-->O comando WEB SEND TEXT enviar diretamente os dados de texto com formato HTML.<!-- END REF-->  
 
@@ -26,7 +26,7 @@ Por padrão, se omite o parâmetro *tipo*, 4D assume que os dados enviados são 
 
 Também pode utilizar o parâmetro *tipo* para especificar o tipo MIME do texto a enviar. Para maior informação sobre os tipos MIME suportados, consulte a descrição do comando [WEB SEND BLOB](web-send-blob.md).
 
-#### Exemplo 
+## Exemplo 
 
 O método abaixo: 
 
@@ -41,11 +41,11 @@ O método abaixo:
  WEB SEND TEXT(""+String(Current time)+"")
 ```
 
-#### Ver também 
+## Ver também 
 
 [WEB SEND BLOB](web-send-blob.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

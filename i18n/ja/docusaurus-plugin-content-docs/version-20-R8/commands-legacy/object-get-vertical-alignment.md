@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get vertical alignment.Summary-->**OBJECT Get vertical alignment**コマンドは*object* と*\** 引数で指定したオブジェクトのテキスト縦位置タイプを示す値を返します。<!-- END REF-->
 
@@ -37,13 +37,13 @@ displayed_sidebar: docs
 * リストボックス列
 * リストボックスヘッダーおよびフッター
 
-#### 参照 
+## 参照 
 
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

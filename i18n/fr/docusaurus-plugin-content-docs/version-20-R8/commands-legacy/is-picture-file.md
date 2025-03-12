@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is picture file.Summary-->La commande **Is picture file** teste le fichier désigné par le paramètre *cheminFichier* et retourne Vrai s’il s’agit d’un fichier image valide.<!-- END REF--> La commande retourne Faux si le fichier n’est pas de type image ou s’il n’a pas été trouvé. 
 
@@ -25,11 +25,11 @@ Si vous ne passez pas le paramètre *\**, la commande teste le fichier en recher
 
 **Note :** La commande retourne Vrai pour les fichiers PDF sous Windows et les fichiers EMF sous Mac OS. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

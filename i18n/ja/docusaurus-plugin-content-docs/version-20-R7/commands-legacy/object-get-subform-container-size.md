@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->**OBJECT GET SUBFORM CONTAINER SIZE**コマンドは親フォーム中に表示されているカレントサブフォームオブジェクトの幅と高さをピクセル単位で返します。<!-- END REF-->
 
@@ -27,12 +27,12 @@ displayed_sidebar: docs
 * コマンドがサブフォームとして使用されていないフォームから呼び出された場合、コマンドはフォームウィンドウの現在のサイズを返します。
 * 画面表示が関連しない状況でコマンドが呼び出された場合 (例えば印刷時)、*width* と *height* には0が返されます。
 
-#### 参照 
+## 参照 
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Count screens.Summary-->El comando Count screens devuelve el número de pantallas conectadas a su equipo.<!-- END REF-->
 
-#### Ver también 
+## Ver también 
 
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN COORDINATES](screen-coordinates.md)  
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 [Screen height](screen-height.md)  
 [Screen width](screen-width.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

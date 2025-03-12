@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->El comando QR SET HTML TEMPLATE define la plantilla HTML a utilizar para el área de informe rápido referenciada por *area*.<!-- END REF--> Esta plantilla se utilizará durante la creación del informe en formato HTML. 
 
@@ -22,7 +22,7 @@ La plantilla utiliza un conjunto de etiquetas para procesar los datos. Este func
 
 **Nota:** primero debe llamar [QR SET DESTINATION](qr-set-destination.md "QR SET DESTINATION") para definir el formato HTML como destino de salida.
 
-#### Etiquetas HTML 
+## Etiquetas HTML 
 
 *<!--#4DQRheader--> ... <!--/#4DQRheader-->*  
 Los títulos de las columnas se insertarán entre las etiquetas. Estas etiquetas generalmente son utilizadas para definir la línea del título del informe.
@@ -70,11 +70,11 @@ Estas etiquetas se reemplazarán respectivamente por los datos del pie de págin
 
 Si pasa un número de *area* inválido, se genera el error -9850.
 
-#### Ver también 
+## Ver también 
 
 [QR Get HTML template](qr-get-html-template.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

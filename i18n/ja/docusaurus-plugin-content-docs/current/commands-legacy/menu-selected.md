@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Menu selected.Summary-->**Menu selected** はフォームが表示されているときのみ使用できます。<!-- END REF-->このコマンドはメニューから選択されたメニュー項目を検出し、階層サブメニューの場合はサブメニューの参照を返します。
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 メニューが選択されていない場合、**Menu selected** は0を返します。
 
-#### 例題 
+## 例題 
 
 以下の例は[SET MENU ITEM MARK](set-menu-item-mark.md) コマンドのメニューとメニュー項目引数を求めるためにMenu selected を使用しています:
 
@@ -56,11 +56,11 @@ displayed_sidebar: docs
 
 **Note:** 項目が選択されていなければ、On Menu Selectedフォームイベントは有効にされません。メニューが、メニューバー中のメニューの一つでない場合、*$refMenuIncludingItem* には常に値が与えられ、*$MenuNum* は0となります。
 
-#### 参照 
+## 参照 
 
 *メニューの管理*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

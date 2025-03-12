@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET PRINT OPTION.Summary-->**SET PRINT OPTION** コマンドを使用し、プログラムから印刷オプションの値を変更することができます。<!-- END REF-->プリントパラメーターを変更する他のコマンド ([PRINT SETTINGS](print-settings.md)、*\>* 引数を使用しない [PRINT SELECTION](print-selection.md)) が呼び出されない限り、このコマンドを使用して定義された各オプションは、[カレントの 4D 印刷設定](../settings/compatibility.md) に対して適用されます。印刷ジョブが(例えば[OPEN PRINTING JOB](open-printing-job.md) などによって)開かれている間は、ジョブが終わるまではこのオプションを変更することはできません(ただしOrientation option を除く、以下参照)。
 
-##### オプションおよび値 
+### オプションおよび値 
 
 *option* を使用することで、変更したいオプションを指定することができます。以下の一覧にある、“*Print Options*” テーマ内の定義済み定数のいずれか一つを渡すことができます。引数で指定したオプション用の新しい値を引数および(必要であれば)引数に渡してください。渡す値の数と種類は指定したオプションのタイプによって変わります。
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 * **SET PRINT OPTION** コマンドを用いて設定したプリントオプションがリセットされないように、[PRINT SELECTION](print-selection.md)、[PRINT RECORD](print-record.md)、[PAGE BREAK](page-break.md)コマンドでは、任意の引数 *\>* を必ず使用してください。
 * **SET PRINT OPTION**コマンドは主にPostScript プリンターをサポートします。このコマンドは他のタイプのプリンター、例えばPCLやlinkなどにも使用できますが、その場合一部のオプションが使用できない可能性があります。
 
-#### 例題 
+## 例題 
 
 Orientation option の値は同一印刷ジョブ内で変更することができます (特例)。[PAGE BREAK](page-break.md) コマンドの呼び出しより先に、このオプションがあらかじめ設定されている必要があることに留意ください:
 
@@ -63,15 +63,15 @@ Orientation option の値は同一印刷ジョブ内で変更することがで�
  End if
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されます。
 
-#### エラー管理 
+## エラー管理 
 
 *option*に渡した値が無効であるか、そのプリンタで*option*が利用できない場合、コマンドはエラーを返し ([ON ERR CALL](on-err-call.md "ON ERR CALL")コマンドでインストールされたエラー管理メソッドを用いて、このエラーをとらえることができます) 、オプションの現在の値がそのまま保持されます。
 
-#### 参照 
+## 参照 
 
 [GET PRINT OPTION](get-print-option.md)  
 [Print form](../commands/print-form.md)  
@@ -79,7 +79,7 @@ Orientation option の値は同一印刷ジョブ内で変更することがで�
 *Print Options*  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

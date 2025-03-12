@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Time string.Summary-->The **Time string** command returns the string form of the time expression you pass in *seconds*.<!-- END REF--> 
 
@@ -24,7 +24,7 @@ If you go beyond the number of seconds in a day (86,400), **Time string** contin
 
 **Note:** If you need the string form of a time expression in a variety of formats, use [String](string.md).
 
-#### Example 
+## Example 
 
 The following example displays an alert box with the message, “46800 seconds is 13:00:00.”
 
@@ -32,12 +32,12 @@ The following example displays an alert box with the message, “46800 seconds i
  ALERT("46800 seconds is "+Time string(46800))
 ```
 
-#### See also 
+## See also 
 
 [String](string.md)  
 [Time](time.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RELEASE MENU.Summary-->RELEASE MENU コマンドは*menu* に渡したIDを持つメニューをメモリから解放します。<!-- END REF-->このメニューは[Create menu](create-menu.md "Create menu") コマンドで作成されたものでなければなりません。以下のルールが適用されます: 各[Create menu](create-menu.md)に対応する[RELEASE MENU](release-menu.md)コマンドが呼び出されなければなりません。
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 *menu*により使用されるサブメニューが直接[Create menu](create-menu.md)コマンドで作成されていた場合は、取り除かれません。この場合個々に取り除く必要があります (先のルールが適用されます)。しかしサブメニューが既存のメニューの複製である場合、[RELEASE MENU](release-menu.md)で取り除くことはできません。4Dが自動で取り除きます。
 
-#### 例題 
+## 例題 
 
 この例題では、このコマンドの異なる用法を示します:
 
@@ -51,11 +51,11 @@ displayed_sidebar: docs
   // 従うべきルールは、各Create menuに対応するRELEASE MENUを呼び出すことです。
 ```
 
-#### 参照 
+## 参照 
 
 [Create menu](create-menu.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

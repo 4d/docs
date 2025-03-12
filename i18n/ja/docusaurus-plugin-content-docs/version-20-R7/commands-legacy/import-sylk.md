@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.IMPORT SYLK.Summary-->IMPORT SYLK コマンドは、WindowsまたはMacintoshの標準的なSYLK形式のドキュメント*document*から *aTable*にデータを読み込み、新しいレコードを作成します。<!-- END REF-->
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 IMPORT SYLK を使用する際、デフォルトのフィールド区切り文字はタブ文字 (コード 9) です。デフォルトのレコード区切り文字はキャリッジリターン (コード 13) です。これらの値は2つの*システム変数*、 FldDelimit と RecDelimit に新しい値を代入して変更できます。ユーザはこれらのデフォルト値をデザインモードの読み込みダイアログで変更できます。テキストフィールドにはタブやキャリッジリターンを含めることができるので、これらの値を区切り文字として使用する際は注意が必要です。
 
-#### 例題 
+## 例題 
 
 以下の例は、データをSYLKドキュメントファイルから読み込みます。まず、メソッドの最初で読み込みに使用する入力フォームを設定し、次にデータ読み込みを実行します:
 
@@ -41,18 +41,18 @@ IMPORT SYLK を使用する際、デフォルトのフィールド区切り文�
  IMPORT SYLK([People];"NewPeople.slk") // “NewPeople.slk” から読み込みを実行
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT DIF](import-dif.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

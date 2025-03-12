@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OB Values.Summary-->**OB Values** コマンドは、*object* 引数で指定したオブジェクトの内の列挙可能なプロパティの値を格納したバリアントのコレクションを返します。<!-- END REF-->
 
 返されるコレクション内での値の順番は、プロパティの定義順に対応します。
 
-#### 例題 
+## 例題 
 
 オブジェクトのプロパティ値を全て格納したコレクションを取得したい場合を考えます:
 
@@ -40,12 +40,12 @@ displayed_sidebar: docs
   //$col[2]={"Mary":12,"Mark":8}
 ```
 
-#### 参照 
+## 参照 
 
 [OB Entries](ob-entries.md)  
 [OB Keys](ob-keys.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

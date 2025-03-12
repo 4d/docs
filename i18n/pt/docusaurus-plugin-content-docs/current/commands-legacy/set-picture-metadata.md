@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET PICTURE METADATA.Summary-->O comando SET PICTURE METADATA permite escrever ou modificar o conteúdo dos metadados (ou meta-etiquetas) presentes em *imagem* (campo ou variável imagem 4D).<!-- END REF--> 
 
@@ -43,7 +43,7 @@ Em Windows, se ocorre um erro durante a execução do comando, a variável OK to
 * Só certos formatos de imagens (especificamente JPEG e TIFF) suportam os metadados. Pelo contrário, os formatos tais como GIF ou BMP não aceitam os metadados. Quando converte uma imagem com metadados a um formato que não os suporta, se perde a informação.
 * Em macOS versão 10.7 (Lion), um bug do framework nativo utilizado para a codificação e decodificação dos metadados pode causar erros de precisão nas coordenadas de GPS. Neste caso, se recomenda uma atualização a macOS 10.8 (Mountain Lion) ou 10.9 (Maverick).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Escritura do bloqueio GPS sob uma referência DOM:
 
@@ -60,7 +60,7 @@ Escritura do bloqueio GPS sob uma referência DOM:
  DOM CLOSE XML($domMetas)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Escrita do bloco GPS via uma referência DOM:
 
@@ -77,18 +77,18 @@ Escrita do bloco GPS via uma referência DOM:
  DOM CLOSE XML($domMetas)
 ```
 
-#### Nota 
+## Nota 
 
 Quanto todos os metadados são manipulados via uma referência de elementos DOM, as etiquetas são guardadas como atributos associados a um elemento (filho do elemento referenciado) cujo nome for o nome do bloco (TIFF, IPTC, etc.). Quando se manipula um bloco de metadados específico, as etiquetas do bloco são armazenados como atributos diretamente associados ao elemento referenciado pelo comando. 
 
-#### Ver também 
+## Ver também 
 
 [GET PICTURE KEYWORDS](get-picture-keywords.md)  
 [GET PICTURE METADATA](get-picture-metadata.md)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

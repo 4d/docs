@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 上級者向け 
+## 上級者向け 
 
 <!--REF #_command_.SET INDEX CACHE PRIORITY.Summary-->このコマンドは特定の用途のために用意されています。<!-- END REF-->データベースのパフォーマンスに影響するため、注意して使用しなければなりません。
 
-#### 説明 
+## 説明 
 
 コマンドは、カレントセッションにおいて、すべてのプロセスで、キャッシュ内にある*aField* 引数で指定されたフィールドに関連するインデックスに対し、*priority* 引数で指定した特定の優先度を設定します。このコマンドは、必ず**On Startup** あるいは **On Server Startup**データベースメソッド内で呼び出されなければなりません。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 | Cache priority high      |                    |
 | Cache priority very high |                    |
 
-#### 例題 
+## 例題 
 
 内において、\[Customer\]LastNameフィールドのインデックスに対して高い優先度を設定したい場合を考えます:
 
@@ -44,12 +44,12 @@ displayed_sidebar: docs
  SET INDEX CACHE PRIORITY([Customer]LastName;Cache priority very high)
 ```
 
-#### 参照 
+## 参照 
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

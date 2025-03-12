@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Trunc.Summary-->Truncは、指定された*places*の小数部を切り捨てた数値を返します。<!-- END REF-->Truncは、常に元の値よりも小さい値を返します。
 
 *places*が正の数の場合は、*number*の小数部を切り捨て、*places*が負の場合には、整数部（小数点の左側）を切り捨てます。
 
-#### 例題 
+## 例題 
 
 さまざまな引数を使用したTruncの機能を次に示します。結果を*vlResult*に代入します。コメントは、変数*vlResult*に代入される値についての説明です:
 
@@ -32,11 +32,11 @@ displayed_sidebar: docs
  vlResult:=Trunc(-216.897;-1) // vlResult gets -220
 ```
 
-#### 参照 
+## 参照 
 
 [Round](round.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

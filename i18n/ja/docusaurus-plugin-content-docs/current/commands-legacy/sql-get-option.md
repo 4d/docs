@@ -14,21 +14,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SQL GET OPTION.Summary-->SQL GET OPTIONコマンドは、*option*に渡したオプションの現在の*value*を返します。<!-- END REF-->
 
 各種オプションとその関連する値についての詳細は、[SQL SET OPTION](sql-set-option.md "SQL SET OPTION")コマンドを参照してください。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとOKシステム変数は1に、そうでなければ0に設定されます。
 
-#### 参照 
+## 参照 
 
 [SQL SET OPTION](sql-set-option.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

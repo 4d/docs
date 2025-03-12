@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 Macintosh command down retorna TRUE se a tecla Comando Macintosh estiver pressionada.  
 
 **Nota**: quando é chamada em Windows, Macintosh command down retorna TRUE se a tecla Ctrl Windows estiver pressionada.
 
-#### Exemplo 
+## Exemplo 
 
 Ver exemplo do comando [Shift down](shift-down.md).
 
-#### Ver também 
+## Ver também 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh control down](macintosh-control-down.md)  
@@ -32,7 +32,7 @@ Ver exemplo do comando [Shift down](shift-down.md).
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

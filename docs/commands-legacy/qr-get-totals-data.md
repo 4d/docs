@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.QR GET TOTALS DATA.Summary-->##### List Mode 
+<!--REF #_command_.QR GET TOTALS DATA.Summary-->### List Mode 
 
 The **QR GET TOTALS DATA** command retrieves the details of a specific break.<!-- END REF-->  
 
@@ -46,7 +46,7 @@ If the value returned is 0, there is no operator.
 
 **Note:** *operator* and *text* are mutually exclusive, so you either have a result returned through *operator* or through *text*.
 
-##### Cross-table Mode 
+### Cross-table Mode 
 
 The **QR GET TOTALS DATA** command retrieves the details of a specific cell. 
 

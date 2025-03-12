@@ -40,7 +40,7 @@ El comando acepta un array *contArray* como un parámetro opcional. Cuando se pa
 
 **4D Server:** este comando es optimizado por 4D Server. El array se crea y los valores son calculados en el servidor; luego el array se envía, en su totalidad, al cliente.
 
-##### 
+### 
 
 **Nota:** este comando no soporta campos de tipo Objeto.
 

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET RESOURCE.Summary-->El comando GET RESOURCE devuelve en el campo o la variable BLOB *resDatos* el contenido del recurso cuyo tipo y número se pasa en *resTipo* y *resNum*.<!-- END REF--> 
 
@@ -29,27 +29,27 @@ Si pasa un número de referencia de archivo de recursos válido en *resArchivo*,
 
 **Nota:** el tamaño de un recurso puede ser de varios megabytes.
 
-#### Independencia de plataforma 
+## Independencia de plataforma 
 
  Recuerde que trabaja con recursos basados en Mac OS. Sin importar la plataforma, los valores internos de los recursos como los Enteros largos son almacenados utilizando ordenación de bytes ("byte ordering") Macintosh. En Windows, para los datos de los recursos estándar (tales como los recursos listas de cadenas y los recursos imágenes) la ordenación de bytes es automáticamente inversa ("byte swapping") cuando es necesario. Por otra parte, si crea y utiliza sus propias estructuras de datos internas, usted decide si aplica la ordenación inversa a los datos que extrajo del BLOB (por ejemplo, al pasar Macintosh byte ordering a un comando como [BLOB to longint](blob-to-longint.md "BLOB to longint")).
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando SET RESOURCE.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 1 si se encuentra el recurso, de lo contrario toma el valor 0 (cero).
 
-#### Gestión de errores 
+## Gestión de errores 
 
 Si no hay suficiente memoria para cargar la imagen, se genera un error. Puede interceptar este error con la ayuda de un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver también 
+## Ver también 
 
 *Recursos*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

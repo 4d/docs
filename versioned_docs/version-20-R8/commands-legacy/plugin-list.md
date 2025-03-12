@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PLUGIN LIST.Summary-->The PLUGIN LIST command fills in the *numbersArray* and *namesArray* arrays with the numbers and names of the plug-ins loaded and usable by the 4D application.<!-- END REF--> These two arrays are automatically sized and synchronized by the command.
 
@@ -22,14 +22,14 @@ displayed_sidebar: docs
 
 PLUGIN LIST takes all plug-ins into account, including those that are integrated (for example, 4D Chart), and third-party plug-ins. 
 
-#### See also 
+## See also 
 
 [COMPONENT LIST](component-list.md)  
 [Get plugin access](get-plugin-access.md)  
 [Is license available](is-license-available.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

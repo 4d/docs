@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.System folder.Summary-->La fonction **System folder** retourne le chemin d'accès du dossier Système Windows ou macOS actif, ou le chemin d’accès d’un dossier particulier du système d'exploitation.<!-- END REF-->
 
@@ -44,12 +44,12 @@ Vous passez dans *type* un code représentant le type de dossier. 4D fournit les
 * Les constantes suffixées **Win** sont réservées à une utilisation sous Windows. Lorsqu’elles sont utilisées sous macOS, **System folder** retourne une chaîne vide.
 * L’emplacement de certains dossiers peut être différent suivant le type de session ouverte par l’utilisateur. Les constantes 2 à 9 permettent de choisir si vous souhaitez obtenir le chemin d’accès du dossier spécifique à l’utilisateur courant (constantes simples) ou commun à tous les utilisateurs (constantes suivies de “Tous”).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get 4D folder](get-4d-folder.md)  
 [Temporary folder](temporary-folder.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

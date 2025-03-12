@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM SET INPUT.Summary-->**FORM SET INPUT** コマンドは、*aTable*のカレント入力フォームを*form*または*userForm*に設定します。<!-- END REF-->フォームは*aTable*に属していなければなりません。
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 **注:** オプション引数 *\** を使用するしないに関係なく、**FORM SET INPUT** コマンドはテーブルの入力フォームを変更します。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、FORM SET INPUTコマンドの一般的な使用方法です: 
 
@@ -64,7 +64,7 @@ displayed_sidebar: docs
  ADD RECORD([Companies]) // 新しい会社の追加
 ```
 
-#### 例題 2 
+## 例題 2 
 
 複数の会社を処理する請求書データベースでは、対応するユーザフォームを用いて請求書を作成しなくてはなりません: 
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
  ADD RECORD([Factures])
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例では.json フォームへのパスを使用して従業員リストにレコードを入力する場合を考えます:
 
@@ -93,7 +93,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict3687432.en.png)
 
-#### 参照 
+## 参照 
 
 [ADD RECORD](add-record.md)  
 [DISPLAY RECORD](display-record.md)  
@@ -107,7 +107,7 @@ displayed_sidebar: docs
 [Open window](open-window.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

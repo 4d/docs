@@ -16,13 +16,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Get last child XML element.Summary-->The DOM Get last child XML element command returns an XML reference to the last “child” of the XML element passed as reference in *elementRef*.<!-- END REF--> This reference may be used with the other XML parsing commands.
 
 The optional *childElemName* and *childElemValue* parameters, when passed, receive respectively the name and value of the “child” element.
 
-#### Example 
+## Example 
 
 Recovery of the reference of the last XML element of the parent root. The XML structure (C:\\\\import.xml) is loaded into a BLOB beforehand: 
 
@@ -36,15 +36,15 @@ Recovery of the reference of the last XML element of the parent root. The XML st
  $ref_XML_Child:=DOM Get last child XML element($ref_XML_Parent;$childName;$childValue)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

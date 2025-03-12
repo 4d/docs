@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 **Nota:** una cadena de un recurso lista de cadenas puede contener hasta 255 caracteres.
 
-##### Compatibilidad con la arquitectura XLIFF 
+### Compatibilidad con la arquitectura XLIFF 
 
 El comando Get indexed string es compatible con la arquitectura XLIFF de 4D a partir de la versión 11: el comando busca primero por los valores correspondientes a *resNum* y *strNum* en todos los archivos XLIFF abiertos (si el parámetro *resArchivo* se omite). En este caso, *resNum* específica el atributo **id** del elemento **grupo y** *strNum* específica el atributo **id** del elemento **trans-unit**. Si no se encuentra el valor, el comando continua la búsqueda en los archivos de recursos abiertos. Para mayor información sobre la arquitectura XLIFF en 4D, consulte el Manual de Diseño.
 

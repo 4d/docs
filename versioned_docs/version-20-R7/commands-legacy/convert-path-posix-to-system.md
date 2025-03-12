@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Convert path POSIX to system.Summary-->The **Convert path POSIX to system** command converts a pathname expressed with the POSIX (Unix) syntax into a pathname expressed with the system syntax.<!-- END REF--> 
 
@@ -25,7 +25,7 @@ The command returns the complete pathname of the file or folder expressed in the
 
 The optional *\** parameters can be used to indicate whether the *posixPath* parameter is encoded. If this is the case, you must pass this parameter, otherwise the conversion will not be valid. The command returns the pathname without encoding. 
 
-#### Example 1 
+## Example 1 
 
 Examples under Mac OS:
 
@@ -38,7 +38,7 @@ Examples under Mac OS:
   //returns "machd:file 2.txt" if machd is the startup disk
 ```
 
-#### Example 2 
+## Example 2 
 
 Examples under Windows:
 
@@ -49,13 +49,13 @@ Examples under Windows:
   //returns "c:\\docs\\file 2.txt"
 ```
 
-#### See also 
+## See also 
 
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

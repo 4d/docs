@@ -60,7 +60,7 @@ Lorsqu'une anomalie se produit en mode réparation auto, l'enregistrement concer
 
 **Attention :** Le mode réparation auto doit être activé dans des cas spécifiques car il contourne les sécurités intégrées de 4D chargées de contrôler l'intégrité des données. Il peut être utilisé, par exemple, lorsqu'un fichier d'historique intermédiaire a été perdu ou corrompu et que vous souhaitez récupérer autant d'opérations que possible. Dans tous les cas, vous devez être particulièrement vigilant en ce qui concerne l'intégrité des données lorsque ce mode est activé.
 
-##### 
+### 
 
 La liste effective des propriétés présentes dans l'objet "operations" dépend du type d'opération (i.e.: création, suppression ou modification de l'enregistrement, créer Blob, etc.). Les principales propriétés sont les suivantes :
 

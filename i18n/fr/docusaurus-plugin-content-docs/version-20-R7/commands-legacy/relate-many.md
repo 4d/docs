@@ -26,7 +26,7 @@ La seconde syntaxe, **RELATE MANY**(champ1), active le lien 1 vers N pour *champ
 * Si la sélection courante de la table 1 est vide au moment de l'exécution de **RELATE MANY**, la commande ne fait rien.
 * Pour que la commande fonctionne, les champs clé d'appel (champs N) doivent être indexés.
 
-##### 
+### 
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 

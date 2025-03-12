@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.VARIABLE TO VARIABLE.Summary-->VARIABLE TO VARIABLEコマンドは、引数*srcVar1* *srcVar2*に渡す値を、*process*に渡す番号を持つ送り先プロセスの*dstVar* (*dstVar2*等) プロセス変数に書き込みます。<!-- END REF--> 
 
@@ -33,7 +33,7 @@ VARIABLE TO VARIABLEは、[SET PROCESS VARIABLE](set-process-variable.md "SET PR
 
 カレントプロセスは送り先プロセスの変数を"のぞき見"しています。送り先プロセスは別のプロセスが自分の変数のインスタンスに書き込んでいることについては何も警告されません。
 
-##### 制限事項 
+### 制限事項 
 
 VARIABLE TO VARIABLE は、送り先変数としてローカル変数を受け付けません。
 
@@ -45,7 +45,7 @@ VARIABLE TO VARIABLE は、任意のタイプの送り先プロセスまたは�
 
 送り先プロセスは、ユーザプロセスである必要があります。カーネルプロセスは、送り先プロセスにはなれません。送り先プロセスが存在しない場合には、エラーが生成されます。[ON ERR CALL](on-err-call.md "ON ERR CALL")コマンドでインストールされたエラー処理メソッドを使用すると、このエラーをとらえることができます。
 
-#### 例題 
+## 例題 
 
 以下の例は、ローカル変数*$vlProcess*で示されたプロセスからプロセス配列を読み込み、配列要素を順番に大文字に変換して、配列を全体として書き込みます:
 
@@ -57,13 +57,13 @@ VARIABLE TO VARIABLE は、任意のタイプの送り先プロセスまたは�
  VARIABLE TO VARIABLE($vlProcess;at_IPCom_Array;$anArray)
 ```
 
-#### 参照 
+## 参照 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 *プロセス*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

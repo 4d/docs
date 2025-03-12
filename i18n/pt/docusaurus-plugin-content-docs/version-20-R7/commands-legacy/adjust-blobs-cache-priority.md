@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Modo especialista 
+## Modo especialista 
 
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Summary-->Este comando está reservado para necessidades específicas.<!-- END REF--> Deve ser utilizado com cuidado, já que pode afetar o rendimento do banco de dados.
 
-#### Descrição 
+## Descrição 
 
 O comando **ADJUST BLOBS CACHE PRIORITY** modifica a *prioridade* dos dados "blobs" relacionados com *tabela n*a caché para o processo atual. Uma chamada a este comando substitui todas as prioridades previamente ajustadas através do mesmo comando no mesmo processo. Este comando ajusta a prioridade para uma necessidade temporária, por exemplo durante uma pesquisa ou uma importação.
 
@@ -37,7 +37,7 @@ Passe em *prioridad*e uma das constantes abaixo do tema "*Gestão de Cache*":
 | Cache priority very high | Inteiro longo | 30000 |                                                 |
 | Cache priority very low  | Inteiro longo | \-1   |                                                 |
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser mudar temporariamente a prioridade da cache dos campos de texto da tabela \[Docs\] armazenados no arquivo de dados ao executar uma pesquisa sequêncial:
 
@@ -49,12 +49,12 @@ Se quiser mudar temporariamente a prioridade da cache dos campos de texto da tab
  ADJUST BLOBS CACHE PRIORITY([Docs];Cache priority normal)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

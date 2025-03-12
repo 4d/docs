@@ -18,7 +18,7 @@ displayed_sidebar: docs
 *Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
 
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP New text box.Summary-->El comando **WP New text box** crea y devuelve un nuevo objeto caja de texto en la página *numPag* de *wpDoc*.<!-- END REF-->
 
@@ -48,7 +48,7 @@ La nueva caja de texto se renderiza sólo en la página *numPag* *,* por lo que 
 
 Sin embargo, la caja de texto sigue existiendo y es propiedad del documento aunque no se muestre.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea crear una caja de texto vacía por defecto:
 
@@ -60,7 +60,7 @@ Resultado:
 
 ![](../../assets/en/WritePro/commands/pict6196750.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 En una plantilla de una carta, desea añadir una caja de texto para mostrar la dirección del destinatario (que se almacena en el contexto):
 
@@ -93,6 +93,6 @@ Resultado:
 
 ![](../../assets/en/WritePro/commands/pict6196766.en.png)
 
-#### Ver también 
+## Ver también 
 
 [WP DELETE TEXT BOX](wp-delete-text-box.md)  

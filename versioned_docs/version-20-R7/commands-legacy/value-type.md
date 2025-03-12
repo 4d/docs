@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Value type.Summary-->The Value type command returns the type of the value resulting from the evaluation of the *expression* you passed as parameter.<!-- END REF-->
 
@@ -77,7 +77,7 @@ Other differences are related to arrays (evaluation of an array returns the curr
 
 **Compatibility Note:** Starting with 4D v16 R6, dates are stored in object properties either with date type or as text in ISO date format. For more information, please refer to the Dates inside objects selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
 
-#### Example 1 
+## Example 1 
 
 You want to handle the various possible types of an object property value:
 
@@ -93,7 +93,7 @@ You want to handle the various possible types of an object property value:
  End case
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to sum up all numeric values in a collection:
 
@@ -109,12 +109,12 @@ You want to sum up all numeric values in a collection:
  ALERT(String($sum)) //95
 ```
 
-#### See also 
+## See also 
 
 [OB Get type](ob-get-type.md)  
 [Type](type.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

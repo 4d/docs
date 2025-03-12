@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Summary-->The **LISTBOX MOVED COLUMN NUMBER** command returns two numbers in *oldPosition* and *newPosition* indicating respectively the previous position and the new position of the column moved in the list box, specified by the *object* and *\** parameters.<!-- END REF-->
 
@@ -26,12 +26,12 @@ This command must be used with the form event On Column Moved (see the [Form eve
 
 **Note:** This command takes invisible columns into account.
 
-#### See also 
+## See also 
 
 [Form event code](../commands/form-event-code.md)  
 [LISTBOX MOVED ROW NUMBER](listbox-moved-row-number.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

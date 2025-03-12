@@ -13,21 +13,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM REMOVE XML ELEMENT.Summary-->DOM REMOVE XML ELEMENT コマンドは*elementRef*で指定した要素を取り除きます。<!-- END REF-->
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されると、システム変数OKは1に設定されます。そうでなければ0に設定されエラーが生成されます。  
 エラーは要素参照が無効な場合に生成されます。
 
-#### 参照 
+## 参照 
 
 [DOM Create XML element](dom-create-xml-element.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

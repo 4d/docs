@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get static columns.Summary-->The **LISTBOX Get static columns** command returns the number of static columns in the list box designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -28,11 +28,11 @@ However, the command does not take into account the visible/invisible status of 
 
 **Note:** Static columns and locked columns are two independent functions. For more information, refer to the *Design Reference* manual. 
 
-#### See also 
+## See also 
 
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

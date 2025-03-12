@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.throw.Summary-->**throw** コマンドは、エラーを作成します。<!-- END REF-->エラーは即座に、あるいはカレントメソッドの終了時に (遅延モード) スローされます。
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 このコマンドは 3つのシンタックスをサポートしています:
 
-##### **throw(errorCode{; description})**
+### **throw(errorCode{; description})**
 
 このシンタックスでは、エラーコードと説明のテキスト (任意) を指定し、エラーは即座にスローされます。  
 description 引数を渡さなかった場合には、次の情報が提示されます:
@@ -37,7 +37,7 @@ description 引数を渡さなかった場合には、次の情報が提示さ�
 * ホストアプリケーションでは: Error code {errorCode}: (host)
 * コンポーネントでは: Error code {errorCode}: (C00x)
 
-##### **throw(errorObj)**
+### **throw(errorObj)**
 
 *errorObj* オブジェクト引数を使うことで、エラー情報をより詳細に指定し、エラー処理の管理をさらに強化できます。このオブジェクト引数には以下のプロパティのほか、**message**プロパティのプレースホルダーを置き換えるためのカスタムプロパティを含めることができます。
 
@@ -52,14 +52,14 @@ description 引数を渡さなかった場合には、次の情報が提示さ�
 
 **注記:** 同じプロジェクトメソッド内でこのコマンドを複数回呼び出して、複数のエラーを生成することができます。遅延モードを使って、これらのエラーを一度にスローできます。
 
-##### **throw** 
+### **throw** 
 
 このシンタックスは、カレントエラーをすべて**遅延モード**でスローします。つまり、これらのエラーはエラースタックに追加され、カレントメソッド終了時に処理されます。これは通常、[ON ERR CALL](on-err-call.md) コールバック内でおこなわれます。
 
 * **アプリケーションにおいて:** 発生したエラーはエラースタックに追加され、カレントメソッド終了時にアプリケーションの [ON ERR CALL](on-err-call.md) メソッドが呼び出されます。[Last errors](last-errors.md) 関数はエラースタックを返します。
 * **コンポーネントにおいて:** エラースタックはホストアプリケーションに送信され、ホストアプリケーションの [ON ERR CALL](on-err-call.md) メソッドが呼び出されます。
 
-#### 例題 1 
+## 例題 1 
 
 ```4d
  var $code : Integer
@@ -69,43 +69,43 @@ description 引数を渡さなかった場合には、次の情報が提示さ�
  throw($code ;$description) // "これはカスタムエラーです" というメッセージと errCode = 50042 でエラーをスローします
 ```
 
-#### 例題 2 
+## 例題 2 
 
 ```4d
 throw({errCode: 1; message: "これはエラーです"}) // "これはエラーです" というメッセージと errCode = 1 でエラーをスローします
 ```
 
-#### 例題 3 
+## 例題 3 
 
 ```4d
 throw({errCode: 1}) // "Error code: 1 (host)" というメッセージと errCode = 1 でエラーをスローします
 ```
 
-#### 例題 4 
+## 例題 4 
 
 ```4d
 throw({message: "これはエラーです"})  // "これはエラーです" というメッセージと errCode = -1 でエラーをスローします
 ```
 
-#### 例題 5 
+## 例題 5 
 
 ```4d
 throw({message: "これはエラーです"; deferred: True}) // "これはエラーです" というメッセージと errCode = -1 でエラーを遅延モードでスローします
 ```
 
-#### 例題 6 
+## 例題 6 
 
 ```4d
 throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFilePath"; deferred: True})// "ファイル myFileName が見つかりません (myFilePath)" というメッセージのエラーを遅延モードでスローします
 ```
 
-#### 参照 
+## 参照 
 
 [ASSERT](assert.md)  
 [Last errors](last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DISPLAY SELECTION.Summary-->DISPLAY SELECTION mostra a seleção de *tabela*, utilizando o formulário de saída.<!-- END REF--> Os registros se mostram em uma lista pela qual pode ser deslocada similar ao do modo Desenho. Se o usuário fizer duplo clique em um registro, por padrão é mostrado o registro no formulário de entrada atual. A lista é mostrada na janela do primeiro plano.  
   
@@ -54,7 +54,7 @@ Pode colocar botões personalizados na área de cabeçalho ou de rodapé do form
   
 Durante e depois da execução de DISPLAY SELECTION, os registros que o usuário selecionar serão conservados em um conjunto chamado UserSet. UserSet está disponível através de DISPLAY SELECTION aos métodos de objeto dos botões, aos métodos chamados pelos comandos de menu, assim como para o método de projeto que chamou DISPLAY SELECTION.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir seleciona todos os registros na tabela \[Pessoas\]. O comando DISPLAY SELECTION mostra os registros e permite ao usuário selecionar os registros a imprimir. Finalmente, seleciona os registros com [USE SET](use-set.md "USE SET"), e os imprime com [PRINT SELECTION](print-selection.md "PRINT SELECTION"): 
 
@@ -65,11 +65,11 @@ O exemplo a seguir seleciona todos os registros na tabela \[Pessoas\]. O comando
  PRINT SELECTION([Pessoas]) // Imprimir os registros que o usuário selecionou
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Ver o exemplo #6 do comando [Form event](../commands/form-event.md "Form event"). Este exemplo mostra todos os testes que pode necessitar para monitorar completamente os eventos que ocorrem durante a execução do comando DISPLAY SELECTION.
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Para reproduzir as funcionalidades oferecidas pelo menu Registros do ambiente Desenho quando utiliza DISPLAY SELECTION ou [MODIFY SELECTION](modify-selection.md) em modo Aplicação, aja da seguinte maneira:  
   
@@ -96,13 +96,13 @@ c. Associe os seguintes métodos de projeto aos seus comandos de menu:
 
 Também pode utilizar outros comandos, tais como [PRINT SELECTION](print-selection.md), [QR REPORT](qr-report.md), etc. para oferecer todas as opções de menu padrão que desejar cada vez que visualize ou modifique uma seleção no modo Aplicação. Graças ao comando [Current form table](current-form-table.md) , estes métodos são genéricos, e a barra de menus as quais são compatíveis podem ser associadas a todo formulário de saída de qualquer tabela.
 
-#### Ver também 
+## Ver também 
 
 *Conjuntos*  
 [Form event code](../commands/form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

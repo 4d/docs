@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET FIELD RELATION.Summary-->The **SET FIELD RELATION** command sets the automatic/manual status of each relation of the database separately for the current process, regardless of its initial status as specified in the Relation properties window in the Design environment.<!-- END REF--> 
 
@@ -36,7 +36,7 @@ In the *one* and *many* parameters, pass the values indicating the changing of t
 
 **Note:** If you passed [True](true.md "True") to the [SET AUTOMATIC RELATIONS](set-automatic-relations.md) command during the same session, calls to **SET FIELD RELATION** are ignored, regardless of whether they are placed before or after [SET AUTOMATIC RELATIONS](set-automatic-relations.md). To "lock" the automatic mode and take calls to **SET FIELD RELATION** into account, pass [False](false.md "False") to [SET AUTOMATIC RELATIONS](set-automatic-relations.md).
 
-#### Example 
+## Example 
 
 The following code allows setting only useful relations as automatic in the Quick Report editor:
 
@@ -48,14 +48,14 @@ The following code allows setting only useful relations as automatic in the Quic
  QR REPORT([Invoices];Char(1))
 ```
 
-#### See also 
+## See also 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

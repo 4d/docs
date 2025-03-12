@@ -23,7 +23,7 @@ Passez dans *cheminFichier* le chemin d’accès complet du fichier d’export �
 Si vous passez uniquement un nom de fichier (sans chemin d’accès), le fichier sera recherché ou créé à côté du fichier de structure.  
 Si vous passez une chaîne vide (*""*), une boîte de dialogue standard d’ouverture et de création de fichier apparaît.
 
-##### Notes sur le traitement des caractères de fin de ligne et des BOM 
+### Notes sur le traitement des caractères de fin de ligne et des BOM 
 
 En XML, les sauts de ligne ne sont pas significatifs, qu'ils soient présents à l'intérieur ou entre des éléments XML. En interne, le XML utilise des caractères normalisés LF comme séparateurs de lignes.
 

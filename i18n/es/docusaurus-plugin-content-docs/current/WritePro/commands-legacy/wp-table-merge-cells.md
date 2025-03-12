@@ -21,7 +21,7 @@ displayed_sidebar: docs
 *Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
 
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP TABLE MERGE CELLS.Summary-->El comando **WP TABLE MERGE CELLS** fusiona la selección de celdas en el *targetObj* o *tableRef* (definido por *startColumn*, *startRow*, *columnCount* y *rowCount*).<!-- END REF-->
 
@@ -45,7 +45,7 @@ Si se omite rowCount, equivale a pasar 1 (valor por defecto). Si se omiten tanto
 
 Si startColumn más ColumnCount o *startRow* más rowCount excede el número de columnas/líneas en *tableRef*, o si startColumn o *startRow* es mayor que el número de columnas/líneas en *tableRef*, el rango devuelto contiene el máximo posible de columnas/líneas lo que significa que toda la tabla se fusiona en una gran celda.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea designar un rango de celdas y fusionarlo:
 
@@ -65,7 +65,7 @@ Los datos existentes de las celdas originales se concatenan en la celda fusionad
 
 Para más detalles, consulte *Fusión y división de celdas*.
 
-#### Ver también 
+## Ver también 
 
 *Manejo de tablas*  
 [WP TABLE SPLIT CELLS](wp-table-split-cells.md)  

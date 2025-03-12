@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LDAP Search.Summary-->La commande **LDAP Search** recherche sur le serveur LDAP cible la première occurrence correspondant aux critères définis.<!-- END REF--> Cette commande doit être exécutée dans le contexte d'une connexion serveur LDAP ouverte par la commande [LDAP LOGIN](ldap-login.md) dans le process courant ; sinon une erreur 1003 est retournée.
 
@@ -43,7 +43,7 @@ Par défaut, la commande retourne les attributs sous forme de collection si plus
 * Lorsque vous passez **true** dans un élément, l'élément correspondant du paramètre *attributs* sera retourné en collection. Si une seule valeur est trouvée, la commande retourne une collection à un seul élément.
 * Lorsque vous passez **false** dans un élément, l'élément correspondant du paramètre *attributs* sera retourné en variable simple. Si plusieurs valeurs sont trouvées, la commande retourne uniquement le premier élément.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez obtenir le numéro de téléphone de l'utilisateur "smith" dans l'annuaire de l'entreprise :
 
@@ -57,7 +57,7 @@ Vous souhaitez obtenir le numéro de téléphone de l'utilisateur "smith" dans l
  LDAP LOGOUT
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous voulez obtenir un tableau de toutes les entrées trouvées pour l'attribut "memberOf" :
 
@@ -79,12 +79,12 @@ Vous voulez obtenir un tableau de toutes les entrées trouvées pour l'attribut 
   // $_arrMemberOf est un tableau contenant tous les groupes de l'entrée
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *LDAP*  
 [LDAP SEARCH ALL](ldap-search-all.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

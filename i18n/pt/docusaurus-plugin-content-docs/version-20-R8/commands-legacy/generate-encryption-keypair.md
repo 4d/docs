@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Summary-->O comando GENERATE ENCRYPTION KEYPAIR gera um novo apr de chaves RSA.<!-- END REF--> sistema de segurança oferecido em 4D está baseado em chaves destinadas a codificar/decodificar informação. As chaves podem ser usadas dentro do protocolo TLS, com o servidor web 4D (cifrado e segurança das comunicações) e em todos os bancos de dados (codificação de dados).
 
@@ -33,7 +33,7 @@ Este comando gera chaves em formato PKCS codificadas em base64, o que significa 
 
 **Advertência:** a chave privada sempre deve ser mantida em segredo.
 
-#### RSA, chaves privadas e chaves públicas 
+## RSA, chaves privadas e chaves públicas 
 
 O algoritmo de cifrado RSA utilizado por **GENERATE ENCRYPTION KEYPAIR** está baseado em um sistema de cifrado de chave dupla: uma chave privada e uma chave pública. Como seu nome o indica, a chave pública pode ser entregada a uma terceira pessoa e utilizada para decifrar a informação. A chave pública corresponde a uma chave privada única, utilizada para cifrar a informação. Desta forma, a chave privada se utiliza para o cifrado; a chave pública para decifrar (ou vice-versa). A informação cifrada com uma chave só pode ser decifrada com a outra.
 
@@ -43,17 +43,17 @@ Este modo de cifrado também o utiliza a primeira sintaxes dos comandos [ENCRYPT
 
 É possível combinar as chaves públicas e privadas de duas pessoas para cifrar informação de maneira que o receptor seja a única pessoa que possa decifrar os dados e o emissor a única pessoa que pode criptografá-los. É o principio da segunda sintaxes dos comandos [ENCRYPT BLOB](encrypt-blob.md) e [DECRYPT BLOB](decrypt-blob.md)
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo do comando [ENCRYPT BLOB](encrypt-blob.md).
 
-#### Ver também 
+## Ver também 
 
 [DECRYPT BLOB](decrypt-blob.md)  
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

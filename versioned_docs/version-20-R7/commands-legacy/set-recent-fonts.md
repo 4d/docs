@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET RECENT FONTS.Summary-->The **SET RECENT FONTS** command modifies the list of fonts displayed in the context menu of the "recent fonts".<!-- END REF-->
 
 This menu contains the names of the last fonts selected during the session. It is used in particular by *Programming Notes* areas. 
 
-#### Example 
+## Example 
 
 You want to add a font to the menu of recent fonts:
 
@@ -38,11 +38,11 @@ Then the menu contains:
 
 ![](../assets/en/commands/pict1202031.en.png)
 
-#### See also 
+## See also 
 
 [FONT LIST](font-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -20,7 +20,7 @@ displayed_sidebar: docs
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP SELECT.Summary-->La commande **WP SELECT** crée une nouvelle sélection dans la zone de 4D Write Pro *zoneWP*, basée sur l'*objCible* ou la plage définie par *débutPlage* et *finPlage*.<!-- END REF-->
 
@@ -46,7 +46,7 @@ où *débutPlage* et *finPlage* peuvent être uniquement utilisés avec les él�
 
 Dans *débutPlage* et *finPlage,* passez des valeurs correspondant à la position du premier et du dernier caractère à sélectionner dans le document. Vous pouvez passer wk start text dans *débutPlage* pour désigner le début du document et wk end text dans *finPlage* pour désigner la fin du document. N'oubliez pas qu'un document 4D Write Pro ne contient pas seulement du texte visible mais également des caractères de formatage et des balises qui sont inclus dans la plage.
 
-#### Exemple 
+## Exemple 
 
 Le code suivant :
 
@@ -61,6 +61,6 @@ Le code suivant :
  WP SELECT(*;"WParea";wk start text;12)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Text range](wp-text-range.md)  

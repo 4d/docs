@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BASE64 DECODE.Summary-->El comando **BASE64 DECODE** decodifica el texto o valor de blob codificado en formato Base64 o Base64URL pasado en el parámetro *aDecodificar*.<!-- END REF--> Para más información sobre los formatos Base64 y Base64URL, consulte la descripción del comando [BASE64 ENCODE](base64-encode.md). 
 
@@ -30,7 +30,7 @@ Por defecto, si se omite el parámetro *\**, el comando utiliza una decodificaci
 
 Si *aDecodificar* contiene un contenido base64 no válido, se devuelve un valor de tipo texto vacío o blob.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo le permite transferir una imagen vía un BLOB:
 
@@ -49,14 +49,14 @@ Este ejemplo le permite transferir una imagen vía un BLOB:
   // the binary encoded in base 64 is now available as a BLOB in $blobTarget
 ```
 
-#### Ver también 
+## Ver también 
 
 [BASE64 ENCODE](base64-encode.md)  
 [Generate digest](generate-digest.md)  
 *Presentación de los comandos XML DOM*  
 [XML DECODE](xml-decode.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

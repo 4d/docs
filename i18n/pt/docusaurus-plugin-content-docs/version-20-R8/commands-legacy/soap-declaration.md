@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SOAP DECLARATION.Summary-->O comando SOAP DECLARATION permite declarar explicitamente o tipo dos parâmetros utilizados em um método 4D publicado como serviço web.<!-- END REF-->
 
@@ -78,7 +78,7 @@ Em *entrada\_saída*, passe um valor indicando se o parâmetro processado for �
 | SOAP input  | Inteiro longo | 1     |
 | SOAP output | Inteiro longo | 2     |
 
-##### Uso de tipos XML 
+### Uso de tipos XML 
 
 Pode declarar as variáveis de tipo "estrutura XML" e "DOM reference", de entrada e saída, através das constantes Is XML e Is DOM reference. Quando os parâmetros deste tipo são definidos, não se aplica nenhum processo nem codificação e os dados são transmitidos "tal qual" (ver exemplo 5).
 
@@ -93,7 +93,7 @@ Pode declarar as variáveis de tipo "estrutura XML" e "DOM reference", de entrad
    * Is DOM reference indica que o parâmetro deve receber a referência DOM de uma estrutura XML correspondente ao argumento XML enviado pelo cliente SOAP.
 * Modificação do WSDL As estruturas XML serão declaradas por 4D como "anyType" (tipo indeterminado) no WSDL. Se desejar dar um tipo preciso a estrutura XML, deve guardar o arquivo WSDL e adicionar manualmente o esquema de dados que deseja na seção <types> do WSDL.
 
-##### método COMPILER\_WEB 
+### método COMPILER\_WEB 
 
 Os argumentos SOAP entrantes referenciados com a ajuda de variáveis 4D (e não pelos argumentos de métodos 4D) devem ser declarados primeiro no método de projeto COMPILER\_WEB. De fato, o uso de variáveis de processo nos métodos Web Services necessitam ser declaradas antes da chamada ao método. Se chama o método de projeto COMPILER\_WEB, se existir, para cada petição SOAP aceitada. Como padrão, o método COMPILER\_WEB não existe. Você deve criá-lo especificamente.  
 
@@ -108,7 +108,7 @@ Se for omitido o parâmetro *apelido*, 4D utilizará, como padrão, o nome da va
   
 **Nota**: o comando SOAP DECLARATION deve estar incluído no método publicado como serviço web. Não é possível chamá-lo desde outro método.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo especifica um nome de parâmetro: 
 
@@ -122,7 +122,7 @@ Este exemplo especifica um nome de parâmetro:
  SOAP DECLARATION($1;Is longint;SOAP input;"zipcode")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo é utilizado para recuperar um array de códigos postais na forma de inteiros longos: 
 
@@ -134,7 +134,7 @@ Este exemplo é utilizado para recuperar um array de códigos postais na forma d
  SOAP DECLARATION(codes;LongInt array;SOAP input;"in_codes")
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este exemplo se utiliza para referenciar dois valores devolvidos sem especificar um nome de argumento: 
 
@@ -143,7 +143,7 @@ Este exemplo se utiliza para referenciar dois valores devolvidos sem especificar
  SOAP DECLARATION(ret2;Is longint;SOAP output)
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Este exemplo permite ao servidor 4D SOAP devolver um argumento de um tamanho maior a 32 KB: 
 
@@ -155,7 +155,7 @@ Este exemplo permite ao servidor 4D SOAP devolver um argumento de um tamanho mai
   
 Note o tipo Is Text (e não Is BLOB). Isso permite que o argumento seja processado corretamente.
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Este exemplo illustra os resultados dos diferentes tipos de declarações: 
 
@@ -189,13 +189,13 @@ Este exemplo illustra os resultados dos diferentes tipos de declarações:
   //O XML se passa como una referência
 ```
 
-#### Ver também 
+## Ver também 
 
 [Is data file locked](is-data-file-locked.md)  
 [SOAP get info](soap-get-info.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

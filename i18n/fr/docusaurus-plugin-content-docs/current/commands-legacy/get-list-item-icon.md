@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET LIST ITEM ICON.Summary-->La commande **GET LIST ITEM ICON** retourne dans *icône* l’icône associée à l’élément dont vous avez passé le numéro de référence dans *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d’objet dans *liste*.<!-- END REF-->
 
@@ -33,12 +33,12 @@ Si aucune icône n’est associée à l’élément, la variable icône est reto
 
 **Note :** Lorsque l'icône associée à un élément a été définie via une référence statique (références de ressources ou images de la bibliothèque), il est possible de connaître son numéro à l’aide de la commande [GET LIST ITEM PROPERTIES](get-list-item-properties.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

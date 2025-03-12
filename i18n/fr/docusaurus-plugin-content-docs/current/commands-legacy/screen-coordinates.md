@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SCREEN COORDINATES.Summary-->La commande **SCREEN COORDINATES** retourne dans les paramètres *gauche*, *haut*, *droite* et *bas* les coordonnées de l'écran spécifié dans le paramètre *idEcran*.<!-- END REF-->
 
@@ -40,13 +40,13 @@ Les images suivantes illustrent les différences entre la zone de l'écran et la
 * Si la barre de tâches ou le Dock est automatiquement caché(e), **SCREEN COORDINATES** retourne toujours la taille de l'écran entier.
 * Si une valeur non valide est lue dans *idEcran* ou *zoneEcran*, une valeur zéro est retournée pour toutes les coordonnées.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Count screens](count-screens.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN DEPTH](screen-depth.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Action info.Summary-->The **Action info** command returns several information, including availability and status, about the defined *action* in the *target*, according to the current application context.<!-- END REF-->
 
@@ -46,7 +46,7 @@ The **Action info** command returns information in the form of an object contain
 
 If the action status cannot be determined (for example if it is not affected to any object or menu command), the command returns a null object (undefined). 
 
-#### Example 
+## Example 
 
 You want to know if the copy action is available (i.e. if some data is selected):
 
@@ -61,12 +61,12 @@ You want to know if the copy action is available (i.e. if some data is selected)
  End if
 ```
 
-#### See also 
+## See also 
 
 [INVOKE ACTION](invoke-action.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

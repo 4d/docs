@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.JSON TO SELECTION.Summary-->La commande **JSON TO SELECTION** copie le contenu du tableau d'objets JSON *jsonTab* vers la sélection d’enregistrements de *laTable*.<!-- END REF--> 
 
@@ -32,7 +32,7 @@ Si une sélection existe pour *laTable* au moment de l’appel, les éléments d
 
 Si un enregistrement est verrouillé par un autre process pendant l’exécution de la commande, il n’est pas modifié. Tous les enregistrements verrouillés sont placés dans l’*Ensemble système LockedSet*. Après l'exécution de **JSON TO SELECTION**, vous pouvez tester si l’ensemble *LockedSet* contient des enregistrements qui étaient verrouillés.
 
-#### Exemple 
+## Exemple 
 
 Utilisation de la commande **JSON TO SELECTION** pour ajouter des enregistrements dans la table \[Company\] : 
 
@@ -65,11 +65,11 @@ Utilisation de la commande **JSON TO SELECTION** pour ajouter des enregistrement
      //champs ID, Company name et city
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Selection to JSON](selection-to-json.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

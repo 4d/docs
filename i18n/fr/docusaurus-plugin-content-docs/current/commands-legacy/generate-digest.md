@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Generate digest.Summary-->La commande **Generate digest** retourne la clé digest d’un BLOB ou d’un texte après application d’un algorithme de cryptage.<!-- END REF-->
 
@@ -38,7 +38,7 @@ La valeur retournée pour un même objet sera identique sur toutes les plates-fo
 
 **Note :** Si vous utilisez la commande avec un texte/BLOB vide, elle ne retournera pas *void* mais une chaîne (par exemple "d41d8cd98f00b204e9800998ecf8427e" pour le MD5.
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple vous permet de comparer deux images à l’aide de l’algorithme MD5 : 
 
@@ -64,7 +64,7 @@ Cet exemple vous permet de comparer deux images à l’aide de l’algorithme MD
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Ces exemples illustrent comment récupérer la clé digest d’un texte :
 
@@ -75,7 +75,7 @@ Ces exemples illustrent comment récupérer la clé digest d’un texte :
   // $key2 vaut "408d94384216f890ff7a0c3528e8bed1e0b01621"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [BASE64 DECODE](base64-decode.md)  
 [BASE64 ENCODE](base64-encode.md)  
@@ -83,7 +83,7 @@ Ces exemples illustrent comment récupérer la clé digest d’un texte :
 *Protocole sécurisé*  
 [WEB Validate digest](web-validate-digest.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

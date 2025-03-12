@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Table get rows.Summary-->O comando **WP Table get rows** devolve um novo objeto de range de filas que contenha a seleção das filas de *objTarget* ou *refTabela* (definidas por *filaIni* e *numFilas*)
 
@@ -45,7 +45,7 @@ Ou
 
 Neste caso, o comando devolve um intervalo de linhas que contém as linhas de cabeçalho repetidas (se for passado, se ignora o parâmetro numFilas). O comando devolve Null se não houver linhas de cabeçalho definidas.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser estabelecer uma cor de fundo específico para as duas primeiras filas de uma tabela e modificar a borda da terceira fila:
 
@@ -73,7 +73,7 @@ $wpRange: :=WP Text range(WParea;wk start text;wk end text)
   
 ![](../../assets/en/WritePro/commands/pict3307142.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Para obter uma faixa de filas começando da décima até o fim:
 
@@ -81,7 +81,7 @@ Para obter uma faixa de filas começando da décima até o fim:
  WP Table get rows(tableRef;10;MAXLONG)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Se quiser recuperar as filas que um usuário tiver selecionado:
 
@@ -96,7 +96,7 @@ var $userSelection;$rows : Object
 
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 O exemplo abaixo:
 
@@ -117,7 +117,7 @@ O exemplo abaixo:
  
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Insert table](wp-insert-table.md)  
 [WP Table append row](../commands/wp-table-append-row.md)  

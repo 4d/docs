@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get menu item method.Summary-->La commande **Get menu item method** retourne le nom de la méthode projet 4D associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->  
 Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au menu. 
@@ -25,11 +25,11 @@ Vous pouvez passer dans *menu* un identifiant unique de menu ([RefMenu](# "Réf�
 
 La commande retourne le nom de la méthode 4D sous la forme d’une chaîne de caractères (expression). Si aucune méthode n’est associée à la ligne de menu, la commande retourne une chaîne vide.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET MENU ITEM METHOD](set-menu-item-method.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

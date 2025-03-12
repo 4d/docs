@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.KILL WORKER.Summary-->The **KILL WORKER** command posts a message to the worker process whose name or number you passed in *process*, asking it to ignore any pending messages and to terminate its execution as soon as the current task ends.<!-- END REF-->
 
@@ -26,7 +26,7 @@ If **KILL WORKER** is applied to a worker that was not created explicitly using 
 
 If the [CALL WORKER](call-worker.md) command is called to send a message to a worker that was just killed by **KILL WORKER**, a new process is started. To make sure that there is only one process running at a time for a worker, the new process will start after the previous one is actually terminated. Note however that if [CALL WORKER](call-worker.md) is called from a worker to send itself a message whereas it has just been killed by **KILL WORKER**, the command does nothing. 
 
-#### Example 
+## Example 
 
 The following code (executed from a form, for example) triggers the termination of a worker:
 
@@ -48,13 +48,13 @@ In the worker method (*theWorker*), you add some code to handle this situation:
  End case
 ```
 
-#### See also 
+## See also 
 
 *About workers*  
 [CALL WORKER](call-worker.md)  
 [Current process name](current-process-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

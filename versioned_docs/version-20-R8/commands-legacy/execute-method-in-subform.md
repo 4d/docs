@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->The EXECUTE METHOD IN SUBFORM command can be used to execute the code designated by *formula* in the context of the *subformObject* subform object.<!-- END REF--> 
 
@@ -34,7 +34,7 @@ This command must be called in the context of the parent form (containing the *s
 
 **Note:** The formula is not executed if the *subformObject* is not found in the current page or is not yet instantiated.
 
-#### Example 1 
+## Example 1 
 
 Given the "ContactDetail" form used as subform in the parent form "Company". The subform object that contains the ContactDetail form is named "ContactSubform". Imagine that we want to modify the appearance of certain elements of the subform according to the value of the field(s) of the company (for example, "contactname" must switch to red when \[Company\]City="New York" and to blue when \[Company\]City="San Diego"). This mechanism is implemented via the SetToColor method. To be able to get this result, the SetToColor method cannot be called directly from the process of the "On Load" form event of the Company parent form because the "contactname" object does not belong to the current form, but to the form displayed in the "ContactSubform" subform object. The method must therefore be executed using the EXECUTE METHOD IN SUBFORM command in order to function correctly.
 
@@ -53,7 +53,7 @@ Given the "ContactDetail" form used as subform in the parent form "Company". The
  End case
 ```
 
-#### Example 2 
+## Example 2 
 
 You are developing a database that will be used as a component. It includes a shared project form (named, for instance, Calendar) that contains *dynamic variables* as well as a public project method that is used to adjust the calendar: SetCalendarDate(varDate).   
 If this method was used directly in the Calendar form method, you could call it directly in the "On Load" event: 
@@ -69,12 +69,12 @@ If this method was used directly in the Calendar form method, you could call it 
  EXECUTE METHOD IN SUBFORM("Cal2";Formula(SetCalendarDate);*;!05/05/20!)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If this command is executed correctly, the system variable OK is set to 1; otherwise, it is set to 0.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

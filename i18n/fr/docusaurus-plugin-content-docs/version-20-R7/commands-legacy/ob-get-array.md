@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB GET ARRAY.Summary-->La commande **OB GET ARRAY** récupère dans *tableau* le tableau de valeurs stocké dans la *propriété* de l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
 Passez dans le paramètre *propriété* le libellé de la propriété à lire. Attention, le paramètre *propriété* tient compte des majuscules/minuscules. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Soit le tableau objet défini dans l’exemple de la commande [OB SET ARRAY](ob-set-array.md) :
 
@@ -36,7 +36,7 @@ On souhaite récupérer ces valeurs :
 
 ![](../assets/en/commands/pict1213151.fr.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 On souhaite changer une valeur dans le premier élément du tableau :
 
@@ -47,12 +47,12 @@ On souhaite changer une valeur dans le premier élément du tableau :
  OB SET($refs{1};"age";25)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Conversions de type entre les collections et les tableaux 4D*  
 [OB SET ARRAY](ob-set-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

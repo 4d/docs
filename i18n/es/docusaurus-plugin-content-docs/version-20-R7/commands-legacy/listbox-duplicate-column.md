@@ -48,7 +48,7 @@ En los parámetros *nomEncab* y *variableEncab*, pase el nombre del objeto y la 
   
 Este comando debe ser utilizado en el contexto de mostrar un formulario. Se le llama por lo general en el evento de formulario On Load o después de una acción usuario (evento On Clicked).
 
-##### Duplicación dinámica 
+### Duplicación dinámica 
 
 Puede duplicar dinámicamente las columnas de list box y 4D se encarga automáticamente de la definición de las variables necesarias (columna, pie de página y encabezado).   
   

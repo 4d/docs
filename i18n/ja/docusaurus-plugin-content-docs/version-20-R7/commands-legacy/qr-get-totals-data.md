@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.QR GET TOTALS DATA.Summary-->##### リストモード 
+<!--REF #_command_.QR GET TOTALS DATA.Summary-->### リストモード 
 
 QR GET TOTALS DATA コマンドを使用し、指定するブレークに関する詳細を取得できます。<!-- END REF--> 
 
@@ -49,7 +49,7 @@ QR GET TOTALS DATA コマンドを使用し、指定するブレークに関す�
 
 **Note:** *operator*と*text*は相互に排他的な引数です、したがって*operator*または*text*のいずれか一方にしか結果が返されません。
 
-##### クロステーブルモード 
+### クロステーブルモード 
 
 QR GET TOTALS DATA コマンドを使用し、指定したセルの詳細を取得できます。 
 
@@ -72,11 +72,11 @@ QR GET TOTALS DATA コマンドを使用し、指定したセルの詳細を取�
 無効な*colNum*引数を渡した場合、エラー番号-9852が生成されます。  
 無効な*breakNum*引数を渡した場合、エラー番号-9853が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR SET TOTALS DATA](qr-set-totals-data.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

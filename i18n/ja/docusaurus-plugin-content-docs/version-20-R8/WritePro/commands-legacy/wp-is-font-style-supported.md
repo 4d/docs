@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Is font style supported.Summary-->**WP Is font style supported**コマンドは引数で指定したレンジオブジェクトのどこかが*wpFontStyle*スタイルをサポートする場合、Trueを返します。<!-- END REF-->
 

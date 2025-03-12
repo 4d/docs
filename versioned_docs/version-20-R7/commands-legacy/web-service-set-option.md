@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Preliminary note 
+## Preliminary note 
 
 <!--REF #_command_.WEB SERVICE SET OPTION.Summary-->This command is designed for advanced Web Services users.<!-- END REF--> Its use is optional. 
 
-#### Description 
+## Description 
 
 The **WEB SERVICE SET OPTION** command sets different options to be used during the next SOAP request triggered using the [WEB SERVICE CALL](web-service-call.md) command.   
 You can call this command as many times as there are options to be set.
@@ -36,7 +36,7 @@ In the *option* parameter, pass the number of the option to set and in the *valu
 
 The order in which the options are called is not important. If the same *option* is set several times, only the value of the last call is taken into account. 
 
-#### Example 1 
+## Example 1 
 
 Inserting a customized header in the SOAP request: 
 
@@ -50,7 +50,7 @@ Inserting a customized header in the SOAP request:
  WEB SERVICE SET OPTION(Web Service SOAP header;vElemRef)
 ```
 
-#### Example 2 
+## Example 2 
 
 Using version 1.2 of the SOAP protocol:
 
@@ -58,11 +58,11 @@ Using version 1.2 of the SOAP protocol:
  WEB SERVICE SET OPTION(Web Service SOAP version;Web Service SOAP_1_2)
 ```
 
-#### See also 
+## See also 
 
 [WEB SERVICE CALL](web-service-call.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

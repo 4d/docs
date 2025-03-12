@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Mod.Summary-->The **Mod** command returns the remainder of the Integer division of *number1* by *number2*.<!-- END REF-->
 
@@ -26,7 +26,7 @@ You can also use the *%* operator to calculate the remainder.
 
 **WARNING:** The *%* operator returns valid results with Integer and Long Integer expressions. To calculate the modulo of real values, you must use the **Mod** command.
 
-#### Example 
+## Example 
 
 The following example illustrates how the Mod function works with different arguments. Each line assigns a number to the *vlResult* variable. The comments describe the results:
 
@@ -37,7 +37,7 @@ The following example illustrates how the Mod function works with different argu
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

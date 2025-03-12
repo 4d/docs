@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get formulas.Summary-->**WP Get formulas** コマンドは、*targetObj* 引数内で定義されている全てのフォーミュラをコレクションとして返します。<!-- END REF-->
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 * ターゲットとしてサブセクションを渡した場合、親セクションのフォーミュラが返されます。
 * 複数のフォーミュラが返された場合、コレクションはターゲット内のフォーミュラの順番に基づいて並べられます(ただしドキュメントとセクションがターゲットの場合を除く、この場合任意の順番となる)
 
-#### 例題 
+## 例題 
 
 ドキュメント内の全てのフォーミュラを取得したい場合を考えます:
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
  $formulas:=WP Get formulas(WriteProArea).query("anchoredID # null")
 ```
 
-#### 参照 
+## 参照 
 
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP FREEZE FORMULAS](wp-freeze-formulas.md)  

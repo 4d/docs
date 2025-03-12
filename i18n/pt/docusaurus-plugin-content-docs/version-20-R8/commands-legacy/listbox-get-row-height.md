@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX Get row height.Summary-->O comando **LISTBOX Get row height**  devolve a altura da *fila* especificada no objeto list box designado utilizando o *objeto* e os parâmetros *\**.<!-- END REF-->
 
@@ -29,13 +29,13 @@ O valor da altura da linha se expressa:
 * na unidade atual definida globalmente para as linhas de list box, seja na lista de Propriedades ou mediante uma chamada previa ao comando [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) quando a altura da linha for fixa,
 * em píxels quando a altura da línea for variável, ou seja, automática ( ver *Altura linha automática*) ou manejada por um array.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX Get auto row height ](listbox-get-auto-row-height.md)  
 [LISTBOX Get rows height](listbox-get-rows-height.md)  
 [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

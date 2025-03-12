@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SELECT ROWS.Summary-->**LISTBOX SELECT ROWS** コマンドはエンティティセレクション型リストボックス/コレクション型リストボックスにおいて、*selection* 引数で指定したエンティティまたはオブジェクトに対応する行を選択します。<!-- END REF-->
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 **注:** コマンドはそれぞれのオブジェクトまたはエンティティがリストボックス内において一度しか表示されていないという前提で実行されます。
 
-#### 例題 1 
+## 例題 1 
 
 以下のコードは、一回のサーバーリクエストだけでエンティティセレクション内にある請求書を選択することができます:
 
@@ -66,7 +66,7 @@ displayed_sidebar: docs
  LISTBOX SELECT ROWS(*;"Invoices";$cash;lk replace selection)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 オブジェクトのコレクションがあり、指定された名前の生徒を選択行に追加したい場合を考えます:
 
@@ -80,11 +80,11 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

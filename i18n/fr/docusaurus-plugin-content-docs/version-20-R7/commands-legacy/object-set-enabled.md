@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET ENABLED.Summary-->La commande **OBJECT SET ENABLED** permet d’activer ou d’inactiver l’objet ou le groupe d’objets désigné par *objet* dans le formulaire courant.<!-- END REF--> 
 
@@ -35,11 +35,11 @@ Cette commande peut être appliquée aux types d'objets suivants :
 
 **Note :** Cette commande est sans effet avec un objet auquel une action standard a été assignée (4D se charge de modifier l’état de cet objet lorsque c’est nécessaire), sauf dans le cas des actions **Valider** et **Annuler**.
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get enabled](object-get-enabled.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

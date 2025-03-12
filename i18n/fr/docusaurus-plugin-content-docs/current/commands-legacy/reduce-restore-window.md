@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REDUCE RESTORE WINDOW.Summary-->La commande **REDUCE RESTORE WINDOW** réduit/agrandit la fenêtre dont le numéro de référence a été transmis dans la fenêtre vers/depuis la barre des tâches sous Windows ou le dock sous macOS.<!-- END REF--> 
 
@@ -24,13 +24,13 @@ La commande permet de basculer l'état de la fenêtre :
 
 **Note :** Sur macOS, la commande est asynchrone.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Macintosh option down.Summary-->Macintosh option down retorna TRUE se a tecla Opção Macintosh estiver pressionada.<!-- END REF-->  
   
 **Nota**: quando é chamada em Windows, Macintosh option down retorna TRUE se a tecla Alt Windows estiver pressionada.
 
-#### Exemplo 
+## Exemplo 
 
 Ver exemplo do comando [Shift down](shift-down.md).
 
-#### Ver também 
+## Ver também 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -32,7 +32,7 @@ Ver exemplo do comando [Shift down](shift-down.md).
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

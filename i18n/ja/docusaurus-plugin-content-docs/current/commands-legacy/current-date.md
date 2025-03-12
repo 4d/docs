@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Current date.Summary-->Current date コマンドは、システムクロックに保持された日付を現在の日付として返します。<!-- END REF-->リモートモードの4Dでこの関数を実行する際にアスタリスク (\*) 引数を渡すと、サーバの現在の日付が返されます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、現在の日付を警告ダイアログに表示します。:
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
  ALERT("日付は "+String(Current date)+"です。")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 国際市場に向けたアプリケーションを作成する場合に、使用している4Dのバージョンが日付フォーマットMM/DD/YYYY（US版）やDD/MM/YYYY（フランス版）に対応するかどうかを知る必要があるとします。これはデータ入力フィールドのカスタマイズのために知っておくと便利な情報です。
 
@@ -91,13 +91,13 @@ displayed_sidebar: docs
   // この時点で、$0 はMM/DD/YYYYまたはDD/MM/YYYYまたは...
 ```
 
-#### 参照 
+## 参照 
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

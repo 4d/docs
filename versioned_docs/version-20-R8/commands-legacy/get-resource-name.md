@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get resource name.Summary-->The **Get resource name** command returns the name of the resource whose type is passed in *resType* and whose ID number is passed in *resID*.<!-- END REF-->
 
@@ -25,7 +25,7 @@ If you pass a valid resource file reference number in the parameter *resFile*, t
 If the resource does not exist, **Get resource name** returns an empty string.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

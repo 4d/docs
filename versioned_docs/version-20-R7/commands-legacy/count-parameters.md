@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Count parameters.Summary-->The Count parameters command returns the number of parameters passed to a project method.<!-- END REF-->Count parameters is meaningful only in a project method that has been called by another method (project method or other). If the project method calling this command is associated with a menu, it returns 0.
 
-#### Example 1 
+## Example 1 
 
 4D project methods accept optional parameters, starting from the right.   
 For example, you can call the method MyMethod(a;b;c;d) in the following ways:
@@ -59,7 +59,7 @@ After this project method has been added to your application, you can write:
  APPEND TEXT(vtSomeText;0;$vhDocRef) // Displays text message and writes it to $vhDocRef
 ```
 
-#### Example 2 
+## Example 2 
 
 4D project methods accept a variable number of parameters of the same type, starting from the right. To declare these parameters, you use a compiler directive to which you pass *${N}* as a variable, where N specifies the first parameter. Using Count parameters you can address those parameters with a For loop and the parameter indirection syntax. This example is a function that returns the greatest number received as parameter:
 
@@ -89,12 +89,12 @@ or:
  vrResult:=Max of(r1;r2;r3;r4;r5;r6)
 ```
 
-#### See also 
+## See also 
 
 *Compiler Commands*  
 [Copy parameters](copy-parameters.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

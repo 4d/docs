@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE FOLDER.Summary-->La commande **DELETE FOLDER** supprime le dossier dont vous avez passé le nom ou le chemin d’accès complet dans *dossier*.<!-- END REF--> 
 
@@ -38,12 +38,12 @@ Par défaut pour des raisons de sécurité, si vous omettez le paramètre *optio
 
 Vous pouvez intercepter ces erreurs à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md) .
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [DELETE DOCUMENT](delete-document.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

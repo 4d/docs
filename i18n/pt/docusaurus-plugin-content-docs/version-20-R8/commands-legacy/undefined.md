@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Undefined.Summary-->Undefined retorna True se não for definida *variavel* e False se *variavel* não for definida.<!-- END REF-->   
   
@@ -39,7 +39,7 @@ Em alguns casos, é possível que não queira que o parâmetro seja avaliado (po
 
 .
 
-#### Exemplo 
+## Exemplo 
 
 Abaixo os diferentes resultados do comando [Undefined](undefined.md) assim como do comando [Null](null.md) com propriedades de objeto, dependendo do contexto:
 
@@ -59,11 +59,11 @@ Abaixo os diferentes resultados do comando [Undefined](undefined.md) assim como 
  $null:=(vEmp.parent=Null) //True
 ```
 
-#### Ver também 
+## Ver também 
 
 [CLEAR VARIABLE](clear-variable.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

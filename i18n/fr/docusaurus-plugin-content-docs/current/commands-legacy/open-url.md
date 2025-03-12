@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN URL.Summary-->La commande **OPEN URL** ouvre le fichier ou l'URL passé dans le paramètre *chemin* avec l'application éventuellement désignée par *nomApp*.<!-- END REF-->
 
@@ -45,7 +45,7 @@ Si l'application *nomApp* n'est pas trouvée, aucune erreur n'est retournée ; l
 
 **Note :** Cette commande ne fonctionne pas dans le cadre d’un process Web.
 
-#### Exemple 1 
+## Exemple 1 
 
 Les exemples suivants illustrent les différents types de chaînes acceptées comme URLs par la commande :
 
@@ -56,7 +56,7 @@ Les exemples suivants illustrent les différents types de chaînes acceptées co
  OPEN URL("mailto:jean_martin@4d.fr")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple permet de lancer l'application la plus adaptée :
 
@@ -67,7 +67,7 @@ Cet exemple permet de lancer l'application la plus adaptée :
  End if
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous pouvez ouvrir un même fichier texte avec différentes applications en utilisant le paramètre *nomApp* :
 
@@ -77,11 +77,11 @@ Vous pouvez ouvrir un même fichier texte avec différentes applications en util
  OPEN URL("C:\\temp\\cookies.txt";"excel") //ouvre le fichier avec MS Excel (si installé)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

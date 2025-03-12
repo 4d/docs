@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXECUTE METHOD.Summary-->The EXECUTE METHOD command executes the *methodName* project method while passing any parameters in *param1.<!-- END REF-->..paramN*. You can pass the name of any method that can be called from the database or the component executing the command.
 
@@ -25,15 +25,15 @@ The execution context is preserved in the called method, which means that the cu
 
 If you call this command from a component and pass a method name belonging to the host database in *methodName* (or vice versa), the method must have been shared (“Shared by components and host database” option, in the Method properties).
 
-#### System variables and sets 
+## System variables and sets 
 
 If this command is executed correctly, the system variable OK is set to 1; otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [EXECUTE FORMULA](execute-formula.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

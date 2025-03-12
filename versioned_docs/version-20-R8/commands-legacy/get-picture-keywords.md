@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PICTURE KEYWORDS.Summary-->The **GET PICTURE KEYWORDS** command returns, in the *arrKeywords* array, the list of keywords associated with the picture passed as parameter.<!-- END REF-->
 
@@ -29,12 +29,12 @@ If the picture does not contain keywords or IPTC/Keywords metadata, the command 
 
 **Note:** Results returned by this command can differ according to the current value of the "Consider only non-alphanumeric chars for keywords" database setting (see the [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)). 
 
-#### See also 
+## See also 
 
 [GET PICTURE METADATA](get-picture-metadata.md)  
 [SET PICTURE METADATA](set-picture-metadata.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

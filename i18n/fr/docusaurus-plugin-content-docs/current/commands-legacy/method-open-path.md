@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD OPEN PATH.Summary-->La commande **METHOD OPEN PATH** ouvre, dans l’éditeur de méthodes de 4D, la méthode dont vous avez passé le chemin d’accès interne dans le paramètre *chemin*.<!-- END REF-->
 
@@ -25,12 +25,12 @@ Cette commande peut ouvrir tous les types de méthodes (objet, formulaire, trigg
 
 Vous pouvez exécuter cette commande depuis un composant, mais dans ce cas vous devez passer le paramètre *\** car l’accès en écriture au code du composant n’est pas possible. Si vous omettez le paramètre *\** dans ce contexte, l’erreur -9763 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 *Commandes du thème Accès objets développement*  
 [METHOD Get path](method-get-path.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

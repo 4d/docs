@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Method called on error.Summary-->**Method called on error** コマンドはカレントプロセス、または*scope* 引数で指定したスコープにおいて[ON ERR CALL](on-err-call.md) コマンドでインストールされたメソッドの名前を返します。<!-- END REF-->引数には、エラー処理メソッドの名前を取得したい実行コンテキストを渡します。以下の定数のいずれか1つを使用することができます:
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 *scope* 引数で指定したスコープにおいてエラー処理メソッドが何もインストールされていなかった場合、空の文字列("") が返されます。
 
-#### 例題 
+## 例題 
 
 このコマンドはコンポーネントでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
 
@@ -39,12 +39,12 @@ displayed_sidebar: docs
  ON ERR CALL($methCurrent)
 ```
 
-#### 参照 
+## 参照 
 
 *Error Handler*  
 [ON ERR CALL](on-err-call.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

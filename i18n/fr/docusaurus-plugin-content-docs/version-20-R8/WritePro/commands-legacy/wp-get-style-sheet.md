@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get style sheet.Summary-->La commande **WP Get style sheet** retourne l'objet feuille de style désigné par le *nomFeuilleStyle*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Dans *docWP*, passez le document 4D Write Pro qui contient la feuille de style.
 
 Le paramètre nomFeuilleStyle vous permet de renseigner le nom de la feuille de style à retourner. Si le nom de la feuille de style n'existe pas dans docWP, un objet null est retourné.
 
-#### Exemple 
+## Exemple 
 
 Pour récupérer la feuille de style "Titre principal" :
 
@@ -36,7 +36,7 @@ Pour récupérer la feuille de style "Titre principal" :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Accéder au contenu des documents par programmation*  
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  

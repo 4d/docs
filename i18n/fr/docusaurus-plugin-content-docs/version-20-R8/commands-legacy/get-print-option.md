@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PRINT OPTION.Summary-->La commande **GET PRINT OPTION** retourne la ou les valeur(s) courante(s) d’une option d’impression.<!-- END REF--> 
 
@@ -58,16 +58,16 @@ A noter les spécificités suivantes de la commande **GET PRINT OPTION** :
 
 **Note :** La commande **GET PRINT OPTION** prend principalement en charge les imprimantes PostScript. Elle peut être utilisée avec d'autres types d'imprimantes, telles que PCL ou Ink, mais dans ce cas il est possible que certaines options ne soient pas disponibles. 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si la commande a été exécutée correctement, sinon elle prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET PRINT OPTION](set-print-option.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

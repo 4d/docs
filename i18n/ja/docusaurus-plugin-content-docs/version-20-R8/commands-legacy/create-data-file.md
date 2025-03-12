@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CREATE DATA FILE.Summary-->**CREATE DATA FILE**コマンドは、オンザフライで新しいデータファイルをディスク上に作成し、4Dアプリケーションで開かれているデータファイルと置き換えます。<!-- END REF-->
 
@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 **4D Server:** 4D v13より、このコマンドを4D Serverで実行することができるようになりました。この場合コマンドは、指定されたファイルを作成する前に、まずサーバー上で[QUIT 4D](quit-4d.md)を呼び出します (結果各リモートマシン上にサーバーが終了する旨通知するダイアログボックスが表示されます)。 
 
-#### 参照 
+## 参照 
 
 [OPEN DATA FILE](open-data-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

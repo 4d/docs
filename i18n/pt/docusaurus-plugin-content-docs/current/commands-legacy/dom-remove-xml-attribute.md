@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Summary-->O comando DOM REMOVE XML ATTRIBUTE remove, se existir, o atributo designado por *nomAtrib* do elemento XML cuja referência é passada no parâmetro *refElement*.<!-- END REF-->   
   
 Se o atributo for eliminado corretamente, a variável sistema OK assume o valor 1\. Se não existir nenhum atributo chamado *nomAtrib* em *refElement*, um erro é retornado e a variável sistema OK assume o valor 0.
 
-#### Exemplo 
+## Exemplo 
 
 Dada a seguinte estrutura:
 
@@ -38,14 +38,14 @@ O código abaixo permite remover o primeiro atributo "N=1":
  DOM REMOVE XML ATTRIBUTE($xml_Child_Ref;"N")
 ```
 
-#### Ver também 
+## Ver também 
 
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
 [DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

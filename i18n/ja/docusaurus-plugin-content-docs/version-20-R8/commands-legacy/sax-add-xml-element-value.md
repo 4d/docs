@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Summary-->**SAX ADD XML ELEMENT VALUE** コマンドは、*document* で参照されるXMLドキュメントに*data* を変換せずに直接追加します。<!-- END REF-->このコマンドは例えば電子メールのボディに添付ファイルを挿入するのと同等です。
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 このコマンドが正しく実行するには、要素が開かれていなければなりません。そうでなければエラーが生成されます。
 
-#### 例題 
+## 例題 
 
 この例題は開かれたXML要素に*whitepaper.pdf*ファイルを挿入します:
 
@@ -43,16 +43,16 @@ displayed_sidebar: docs
  SAX ADD XML ELEMENT VALUE($DocRef;vBMyBLOB)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されてエラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [SAX GET XML ELEMENT VALUE](sax-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

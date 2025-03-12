@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR Get command status.Summary-->O comando QR Get command status devolve 0 se o *comando* estiver inativo ou 1 se estiver ativo.<!-- END REF-->  
   
@@ -32,12 +32,12 @@ Em *comando*, pode passar um valor o uma das constantes do tema *QR Comandos*.
 Se passa um número de *area* inválido, se gera o erro -9850.  
 Se o parâmetro *comando* for incorreto, se gera o erro -9852.
 
-#### Ver também 
+## Ver também 
 
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR ON COMMAND](qr-on-command.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

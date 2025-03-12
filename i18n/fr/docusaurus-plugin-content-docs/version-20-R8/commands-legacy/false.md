@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.False.Summary-->**False** retourne la valeur booléenne Faux.<!-- END REF-->
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant met la variable *vbOptions* à Faux :
 
@@ -25,12 +25,12 @@ L'exemple suivant met la variable *vbOptions* à Faux :
  vbOptions:=False
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Not](not.md)  
 [True](true.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

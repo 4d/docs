@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Change string.Summary-->Change stringは、*source*の中の文字グループを修正したものを返します。<!-- END REF-->*where*で指定された位置から、*newChars*で*source*を上書きします。  
   
@@ -24,7 +24,7 @@ displayed_sidebar: docs
   
 Change stringは、文字を挿入しないで上書きするという点が[Insert string](insert-string.md "Insert string")と異なります。
 
-#### 例題 
+## 例題 
 
 Change stringの使用例を次に示します。結果を変数*vtResult*に代入します。
 
@@ -33,13 +33,13 @@ Change stringの使用例を次に示します。結果を変数*vtResult*に代
  vtResult:=Change string("November";"Dec";1) // vtResultは"December"
 ```
 
-#### 参照 
+## 参照 
 
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

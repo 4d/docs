@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET DOCUMENT POSITION.Summary-->This command operates only on a document currently open whose document reference number you pass in *docRef*.<!-- END REF-->sets the position you pass in *offset* where the next read ([RECEIVE PACKET](receive-packet.md)) or write ([SEND PACKET](send-packet.md)) will occur.
 
@@ -23,13 +23,13 @@ If you omit the optional *anchor* parameter, the position is relative to the beg
 
 Depending on the anchor you can pass positive or negative values in *offset*.
 
-#### See also 
+## See also 
 
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

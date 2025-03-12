@@ -41,7 +41,7 @@ No matter what way a sort has been defined, if the actual sort operation is goin
 
 If the sort is performed without interruption, the OK variable is set to *1*. If the user clicks Cancel or Stop, the **ORDER BY** terminates with no sort actually performed, and sets the OK variable to *0* (zero).
 
-##### 
+### 
 
 **Note:** This command does not support Object type fields.
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET QUERY DESTINATION.Summary-->**GET QUERY DESTINATION**コマンドは実行中のプロセスのクエリ結果の格納先を返します。<!-- END REF-->デフォルトでクエリの結果はカレントセレクションとして反映されます。しかしこの動作は[SET QUERY DESTINATION](set-query-destination.md)コマンドを使用して変更できます。
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
  クエリの格納先がローカル変数の場合 (*destinationType* \= 3)、コマンドはこの変数へのポインターを *destinationPtr* 引数に返します。
 
-#### 例題 
+## 例題 
 
 一時的にクエリの格納先を変更し、後で元に戻す:
 
@@ -53,11 +53,11 @@ displayed_sidebar: docs
   // 元の設定に戻す
 ```
 
-#### 参照 
+## 参照 
 
 [SET QUERY DESTINATION](set-query-destination.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

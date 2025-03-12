@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Export structure file.Summary-->The **Export structure file** command breaks down the current 4D database structure into a set of text-based files or native picture files and stores them in the specified *folderPath*.<!-- END REF--> By default, the entirety of the database structure (methods, forms, catalog, etc.) is exported. You can filter the contents to export using the *options* parameter (see below).
 
@@ -64,7 +64,7 @@ The *options* parameter allows you to customize the conversion process. The *opt
 
 **Warning:** When the *options* parameter is passed and the "filter" object is used, you must explicitly declare each property to export with the **true** value. When this object is passed, 4D assumes all properties are set to **false** by default. 
 
-##### Result 
+### Result 
 
 The command returns an object providing the final status of the export as well as information on encountered issues or errors, if any. The following properties are returned:
 
@@ -84,7 +84,7 @@ Possible errors include:
 * file management errors (file already exists, file locked, disk full, etc.)
 * unsupported form object or property (see also ).
 
-#### Example 1 
+## Example 1 
 
 You want to export the database structure file in an "Export" folder with the default settings:
 
@@ -98,7 +98,7 @@ You want to export the database structure file in an "Export" folder with the de
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to export only project and database methods, and a log file:
 
@@ -111,11 +111,11 @@ You want to export only project and database methods, and a log file:
  $result:=Export structure file("exportWithLog";$option)
 ```
 
-#### See also 
+## See also 
 
 [FORM Convert to dynamic](form-convert-to-dynamic.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

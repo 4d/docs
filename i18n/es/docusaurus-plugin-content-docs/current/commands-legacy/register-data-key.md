@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Register data key.Summary-->El comando **Register data key** agrega la llave de cifrado de datos pasada en el parámetro al llavero 4D.<!-- END REF-->
 
@@ -30,7 +30,7 @@ En el primer parámetro, pase *curPassPhrase* o *curDataKey* que define la llave
 * **True** si la llave de cifrado se carga correctamente en el llavero 4D.
 * **False** si la misma llave de cifrado ya estaba presente en el llavero 4D.
 
-#### Ejemplo 
+## Ejemplo 
 
 ```4d
  var $passphrase : Text
@@ -44,12 +44,12 @@ En el primer parámetro, pase *curPassPhrase* o *curDataKey* que define la llave
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [New data key](new-data-key.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

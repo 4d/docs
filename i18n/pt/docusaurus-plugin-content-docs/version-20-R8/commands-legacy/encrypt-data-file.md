@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Encrypt data file.Summary-->O comando **Encrypt data file** se utiliza para cifrar ou cifrar novamente o arquivo de dados designado pelo parâmetro *rotaDados* associado ao parâmetro *rotaEstrutura*.<!-- END REF--> Também pode ser utilizado para eliminar o cifrado do banco de dados. O comando não modifica os arquivos originais, devolve o nome de rota completo da pasta criada para respaldar o arquivo de dados original.
 
@@ -64,7 +64,7 @@ O parâmetro *método* se utiliza para estabelecer um método de retro chamada q
 
 Rota real da pasta de destino dos arquivos originais.  
   
-#### Exemplo 1 
+## Exemplo 1 
 
 Criptografar um arquivo de dados pela primeira vez:
 
@@ -77,7 +77,7 @@ Criptografar um arquivo de dados pela primeira vez:
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Recriptografar um arquivo de dados já criptografado (mudar a frase passe):
 
@@ -94,7 +94,7 @@ Recriptografar um arquivo de dados já criptografado (mudar a frase passe):
  End if
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Remover a criptografia de um arquivo de dados criptografado:
 
@@ -109,7 +109,7 @@ Remover a criptografia de um arquivo de dados criptografado:
  End if
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Re-encriptar um arquivo de dados criptografado com a chave atual (por exemplo, quando o estado de criptografia foi mudado para algumas tabelas).
 
@@ -124,7 +124,7 @@ Re-encriptar um arquivo de dados criptografado com a chave atual (por exemplo, q
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [Data file encryption status](data-file-encryption-status.md)  
@@ -132,7 +132,7 @@ Re-encriptar um arquivo de dados criptografado com a chave atual (por exemplo, q
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [New data key](new-data-key.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

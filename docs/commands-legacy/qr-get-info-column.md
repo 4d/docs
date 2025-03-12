@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.QR GET INFO COLUMN.Summary-->##### List mode 
+<!--REF #_command_.QR GET INFO COLUMN.Summary-->### List mode 
 
 The **QR GET INFO COLUMN** command retrieves the parameters of an existing column.<!-- END REF-->
 
@@ -53,7 +53,7 @@ The **QR GET INFO COLUMN** command retrieves the parameters of an existing colum
 
 When passed, the optional *resultVar* parameter returns the name of the variable automatically assigned by the Quick Report editor to the formula column (if any): "C1" for the first formula column, "C2" for the second, and so on. 4D uses this variable to store the results from the last execution of the column's formula when generating the report. 
 
-##### Cross-table mode 
+### Cross-table mode 
 
 The QR GET INFO COLUMN command retrieves the same parameters but the reference of the areas to which it applies is different and varies depending on the parameter you want to set. First of all, the *title*, *hide*, and *repeatedValue* parameters are meaningless when this command is used in cross-table mode. The value to use for *colNum* varies depending on whether you want to retrieve the column size or the data source and display format.
 

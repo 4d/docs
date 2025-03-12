@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.EXPORT STRUCTURE.Summary-->O comando **EXPORT STRUCTURE** exporta, em *estruturaXML*, a definição da estrutura da base 4D atual ao formato XML.<!-- END REF--> Este comando utiliza os mesmos mecanismos que o comando de menu **Exportar > Definição de estrutura ao arquivo XML...** que se encontra na interface do modo Desenho de 4D (ver *Exportar e importar definições de estrutura*).
 
@@ -35,7 +35,7 @@ Uma definição de estrutura exportada em formato XML pode ser importada em outr
 
 html format: o comando gera código HTML raw que inclui referências a uma pasta contendo recursos externos tais como imagens ou css, exigido para a representação HTML. Se quiser salvar este código em uma página HTML a ser exibida no navegador, pode reutilizar a pasta criada pelo item de mneu Export > Structure definition to HTML file... , ou criar sua pasta de recursos própria. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser exportar a estrutura de banco de dados atual em um arquivo texto:
 
@@ -45,7 +45,7 @@ Se quiser exportar a estrutura de banco de dados atual em um arquivo texto:
  TEXT TO DOCUMENT("myStructure.xml";$vTStruc)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser exportar a estrutura atual do banco de dados em formato html:
 
@@ -55,11 +55,11 @@ Se quiser exportar a estrutura atual do banco de dados em formato html:
  File("/PACKAGE/myProject Structure Export/myProject.html").setText($vHtml)
 ```
 
-#### Ver também 
+## Ver também 
 
 [IMPORT STRUCTURE](import-structure.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

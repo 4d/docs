@@ -38,7 +38,7 @@ La commande accepte en paramètre optionnel un tableau *tabNbVal*. Lorsqu'il est
 
 **4D Server :** Cette commande est optimisée pour 4D Server. Le tableau est créé et les valeurs sont calculées sur le serveur. Seul le tableau est envoyé au client. 
 
-##### 
+### 
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 

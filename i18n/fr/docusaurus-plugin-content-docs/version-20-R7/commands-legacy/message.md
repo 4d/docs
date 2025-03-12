@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MESSAGE.Summary-->La commande **MESSAGE** affiche *message* à l'écran dans une fenêtre spéciale de message qui est ouverte et refermée à chaque fois que vous l'appelez (à moins que vous ne travailliez dans une fenêtre préalablement ouverte par la commande [Open window](open-window.md), cf.<!-- END REF--> ci-dessous). Le message est temporaire et est effacé dès qu'un formulaire est affiché ou dès que l'exécution de la méthode est stoppée. Si une autre commande **MESSAGE** est exécutée, le précédent message est effacé. 
 
@@ -32,7 +32,7 @@ Si une fenêtre a été ouverte par la commande [Open window](open-window.md), t
 
 **Note :** **MESSAGE** est compatible avec la commande [Open form window](open-form-window.md), toutefois dans ce contexte le second paramètre *\** de [Open form window](open-form-window.md), permettant de conserver la taille et position de la fenêtre, n'est pas pris en charge. 
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant traite une sélection d'enregistrements et appelle la commande **MESSAGE** pour informer l'utilisateur de la progression de l'opération :
 
@@ -48,7 +48,7 @@ La fenêtre suivante s'affiche puis disparaît à chaque appel de **MESSAGE** :
 
 ![](../assets/en/commands/pict25453.fr.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Afin d'éliminer le "clignotement" de la fenêtre, il est préférable, comme dans ce deuxième exemple, d'afficher les messages dans une fenêtre ouverte par l'intermédiaire de la commande [Open window](open-window.md) :
 
@@ -66,7 +66,7 @@ Le résultat est le suivant (sous Windows) :
 
 ![](../assets/en/commands/pict25454.fr.png)
 
-#### Exemple 3 
+## Exemple 3 
 
 En ajoutant un retour chariot, vous améliorez la présentation :
 
@@ -84,7 +84,7 @@ Voici le résultat (Sous Windows) :
 
 ![](../assets/en/commands/pict25455.fr.png)
 
-#### Exemple 4 
+## Exemple 4 
 
 A l'aide de la commande [GOTO XY](goto-xy.md) et de l'écriture de quelques lignes supplémentaires, la présentation s'améliore nettement : 
 
@@ -108,14 +108,14 @@ Voici le résultat (sous Windows) :
 
 ![](../assets/en/commands/pict25456.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLOSE WINDOW](close-window.md)  
 [ERASE WINDOW](erase-window.md)  
 [GOTO XY](goto-xy.md)  
 [Open window](open-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

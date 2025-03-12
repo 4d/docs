@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DIALOG.Summary-->O comandoDIALOG  apresenta o formulário *formulario* ao usuário.<!-- END REF--> Este comando se designa para trabalhar com interfaces de usuário avançadas e personalizadas baseadas em formulários. Pode utilizá-lo para mostrar informação do banco de dados ou de outras localizações, ou para oferecer funcionalidades de entrada de dados. Diferente de [ADD RECORD](add-record.md) o u [MODIFY RECORD](modify-record.md), **DIALOG** lhe dá controle total sobre o formulário, seu conteúdo e os botões de navegação e validação. 
 
@@ -61,7 +61,7 @@ Este formulário logo reage "normalmente" as ações do usuário e é fechado qu
 * deve criar uma janela antes de chamar a instrução **DIALOG**("form";*\**); se não for possível utilizar a janela de diálogo atual no processo nem a janela criada por padrão para cada processo. Do contrário, se gera o erro -9909.
 * Quando for utilizado o parâmetro *\**, a janela é fechada automaticamente depois de uma ação padrão ou uma chamada ao comando [CANCEL](cancel.md) ou [ACCEPT](accept.md). Não tem que gerenciar o fechamento da própria janela.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir pode ser usado para criar uma palheta de ferramentas 
 
@@ -74,7 +74,7 @@ O exemplo a seguir pode ser usado para criar uma palheta de ferramentas
  DIALOG("doc")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Em um formulário exibindo o registro de uma pessoa, um botão "Check children" abre um diálogo para verificar/modificar os nomes e idades dos filhos:
 
@@ -122,7 +122,7 @@ O formulário exibe informação para cada campo:
 
 Se os valores forem editados e o botão OK button for clicaod, o campo é atualizado (o registro pai deve ser salvo depois). 
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo abaixo usa a rota a um formulário json para exibir os registros em uma lista de empregados: 
 
@@ -136,7 +136,7 @@ o que retorna:
 
 ![](../assets/en/commands/pict3687439.en.png)
 
-#### Exemplo 4 
+## Exemplo 4 
 
 O exemplo abaixo utiliza um aquivo .json como um objeto e modifica algumas propriedades:
 
@@ -154,11 +154,11 @@ O formulário modificado é devolvido com o título, o logotipo e a borda modifi
 
 ![](../assets/en/commands/pict3688356.en.png)
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Depois de chamar a DIALOG, se o diálogo é aceito, a variável sistema OK toma o valor 1; se for cancelado toma o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [ACCEPT](accept.md)  
 [ADD RECORD](add-record.md)  
@@ -167,7 +167,7 @@ Depois de chamar a DIALOG, se o diálogo é aceito, a variável sistema OK toma 
 [Form](form.md)  
 [Open window](open-window.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

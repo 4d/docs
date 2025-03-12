@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SOAP SEND FAULT.Summary-->**SOAP SEND FAULT**コマンドを使用して、SOAPクライアントにエラーの発生元 (クライアントまたはサーバ) を示すエラーを送ることができます。<!-- END REF-->このコマンドを使用することで、結果を返さなくても、クライアントにエラー示すことができます。
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
   
 *description*にはエラーの説明を渡します。クライアントの実装が対応していれば、エラーを処理できます。
 
-#### 例題 
+## 例題 
 
 “Square\_root” Webサービスの例題において、負数が渡された場合にリクエストを処理するため、以下のコードを使用できます:
 
@@ -40,12 +40,12 @@ displayed_sidebar: docs
  SOAP SEND FAULT(SOAP client fault;"Positive values required")
 ```
 
-#### 参照 
+## 参照 
 
 [SOAP DECLARATION](soap-declaration.md)  
 [SOAP Get info](soap-get-info.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

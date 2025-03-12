@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SOAP SEND FAULT.Summary-->O comando SOAP SEND FAULT permite devolver um erro a um cliente SOAP indicando a origem do erro: cliente ou servidor.<!-- END REF--> Este comando permite indicar um erro a um cliente sem ter que devolver um resultado.  
 
@@ -32,7 +32,7 @@ Passe o origem do erro em *tipoErro*. Pode utilizar as seguintes constantes pred
   
 Passe em *descriçao* a descrição do erro. Se a implementação do cliente for correta, o erro pode ser processado.
 
-#### Exemplo 
+## Exemplo 
 
 Regresando ao exemplo do serviço Web “Raiz\_quadrada” da descrição do comando, a instrução abaixo pode ser utilizada para processar petições con números negativos: 
 
@@ -40,12 +40,12 @@ Regresando ao exemplo do serviço Web “Raiz\_quadrada” da descrição do com
  SEND SOAP FAULT(SOAP client fault;"Valores positivos exigidos")
 ```
 
-#### Ver também 
+## Ver também 
 
 [SOAP DECLARATION](soap-declaration.md)  
 [SOAP get info](soap-get-info.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

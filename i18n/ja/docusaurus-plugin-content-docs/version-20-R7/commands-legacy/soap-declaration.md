@@ -81,7 +81,7 @@ SOAP DECLARATION コマンドを使用すればこれらの制限から解放さ
 | SOAP input  | 倍長整数 | 1 |
 | SOAP output | 倍長整数 | 2 |
 
-##### XML タイプの利用 
+### XML タイプの利用 
 
 Is XML と Is DOM reference 定数を使用して、入出力共に変数を"XML structure" と "DOM reference" 型に宣言できます。このタイプの引数が指定されると、引数への処理やエンコードは行われず、データはそのまま送信されます (例題 5参照)。
 
@@ -96,7 +96,7 @@ Is XML と Is DOM reference 定数を使用して、入出力共に変数を"XML
    * Is DOM reference はSOAPクライアントから送信されたXML引数に対応するXML構造のDOM参照を受け取ることを示します。
 * WSDLの変更: これらのXML構造は4Dにより"anyType" 型 (不定) としてWSDL内で宣言されます。XML構造を明確に型宣言したい場合、WSDLファイルを保存して、手作業によりWSDLの<types>部に適切なデータスキーマを追加します。
 
-##### COMPILER\_WEB メソッド 
+### COMPILER\_WEB メソッド 
 
  4D変数を参照する入力SOAP引数 (4Dメソッド引数を除く) はまずCOMPILER\_WEBプロジェクトメソッド内で宣言されなければなりません。実際Webサービスメソッド内でプロセス変数を使用するには、メソッドが呼び出される前にそれらが宣言されていることを必要とします。COMPILER\_WEBプロジェクトメソッドは、存在すれば、SOAPリクエストが受け入れられるたびに呼び出されます。デフォルトでCOMPILER\_WEBメソッドは存在しません。明示的に作成する必要があります。
 

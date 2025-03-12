@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.APPEND TO ARRAY.Summary-->APPEND TO ARRAY コマンドは、*array*の最後に新規要素を追加し、その要素に*value*を代入します。<!-- END REF-->インタプリタモードでは、*array*が存在しない場合、コマンドは*value*の型に対応する配列を作成します。
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 * 文字列配列（テキストまたは文字列）はテキストや文字列タイプの*value*を受け入れます。
 * 数値配列（整数、倍長整数、実数）は、整数、倍長整数、実数、または時間タイプの*value*を受け入れます。
 
-#### 例題 
+## 例題 
 
 以下のコードは:
 
@@ -40,12 +40,12 @@ displayed_sidebar: docs
  APPEND TO ARRAY($myarray;$myvalue)
 ```
 
-#### 参照 
+## 参照 
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

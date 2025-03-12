@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET GROUP LIST.Summary-->GET GROUP LIST preenche os arrays *nomGrupos e numGrupos* com os nomes e os números de referência únicos dos grupos tais como aparecem no editor de senhas.<!-- END REF-->  
   
@@ -23,17 +23,17 @@ O array *numGrupos*, sincronizado com o array *nomGrupos*, se preenche com os n�
 * Nos bancos de dados projeto, esses números começam em 15001 e são atribuidos dinamicamente ao início e são mantidos durante a sessão.
 * Nos bancos de dados binários, esses números são armazenados e pertencem a uma faixa específica, segundo o criador do grupo. Para saber mais consulte o parágrafo *User and group ID ranges*.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Se não tiver privilégios de acesso para chamar ao comando GET GROUP LIST ou se outro processo já estiver aberto no sistema de senhas, um erro de privilégios de acesso é gerado. Pode interceptar este erro com um método de gestão de erros instalado por [ON ERR CALL](on-err-call.md).
 
-#### Ver também 
+## Ver também 
 
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

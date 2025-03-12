@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get style sheet.Summary-->O comando **OBJECT Get style sheet** devolve o nome da folha de estilos associada ao objeto ou aos objetos designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->  
   
@@ -37,17 +37,17 @@ O comando pode devolver:
 
 Se o comando atribuir vários objetos, a folha de estilo devolvida só tem sentido se lhe atribuir a todos os objetos.
 
-#### Nota de compatibilidade 
+## Nota de compatibilidade 
 
 Em **arquitetura de projeto**, só as três folhas de estilo automáticas são compatíveis com esse comando  
   
 
-#### Ver também 
+## Ver também 
 
 *Estilos de fonte*  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

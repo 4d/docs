@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.READ WRITE.Summary-->READ WRITE muda o estado de *tabela* a modo leitura/escrita para o processo no qual se chama ao comando.<!-- END REF--> Se passa o parâmetro opcional *\**, todas as tabelas passam a modo leitura/escrita.  
 
@@ -25,13 +25,13 @@ Utilize READ WRITE quando tenha que modificar um registro e guardar as mudanças
   
 **Nota**: este comando não é retroativo. Os privilégios de leitura/escrita para um registro são definidos pelos privilégios da tabela no momento em que se carrega o registro. Para carregar um registro em modo leitura/escrita de uma tabela apenas leitura, primeiro deve mudar o estado da tabela a leitura/escrita.
 
-#### Ver também 
+## Ver também 
 
 [READ ONLY](read-only.md)  
 [Read only state](read-only-state.md)  
 *Record Locking*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

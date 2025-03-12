@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Summary-->NOTIFY RESOURCES FOLDER MODIFICATION コマンドを使用して、接続されたすべての4D マシンに、**Resources**フォルダが更新された旨の通知の送信を、4D Server に強制することができます。<!-- END REF-->この結果、リモートの4Dマシンはローカル**Resources**フォルダを同期できます。
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 * データベース設定のを使用してデータベース全体を対象に設定します。この場合、すべてのマシンに設定が適用されます。
 * [SET DATABASE PARAMETER](set-database-parameter.md)コマンドを使用して各リモートマシンごとに設定します (Auto Synchro Resources Folder セレクター)。この場合、この設定はデータベース設定を上書きし、セッション中そのリモートマシンにのみ適用されます。
 
-#### 参照 
+## 参照 
 
 [Get 4D folder](get-4d-folder.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

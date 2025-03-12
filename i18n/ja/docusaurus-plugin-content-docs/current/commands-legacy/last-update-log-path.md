@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get last update log path.Summary-->**Get last update log path**コマンドは、呼び出されたマシン内の最近のアップデートログファイルへの完全なパスを返します。<!-- END REF-->
 
@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 このコマンドは、組み込みアプリ(サーバー用またはシングルユーザー用)における自動アップデートプロセスの中で使用されることを想定しています。詳細な情報に関しては、*デザインリファレンス* マニュアルの *アプリケーションの仕上げと展開* を参照して下さい。
 
-#### 参照 
+## 参照 
 
 [RESTART 4D](restart-4d.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR REPORT.Summary-->**QR REPORT**はクイックレポートエディターを用いて作成された、*aTable*のレポートを印刷します。<!-- END REF-->このエディターを使用するとユーザーは独自のレポートを作成できるようになります。クイックレポートエディターを使用してレポートを作成する事については、4D*デザインリファレンス*マニュアルの*クイックレポート* の章を参照して下さい。
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 * 4D Serverではクイックレポートエディターを表示させる構文は動作しません。これを行った場合、システム変数OKは0に設定されます。
 * プリンター関連の問題が発生しても（用紙切れ、プリンター接続切断など）、エラーメッセージは生成されません。
 
-#### 例題 1 
+## 例題 1 
 
 次の例では、ユーザが\[People\]テーブルを検索した後に、“Detailed Listing”というレポートが自動的に印刷されます:
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 次の例題では、ユーザは\[People\]テーブルを検索した後に、印刷するレポートを選択することができます:
 
@@ -79,7 +79,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 3 
+## 例題 3 
 
 次の例題では、ユーザが\[People\]テーブルを検索した後にクイックレポートエディタが表示され、レポートの設計、保存、ロード、印刷を行うことができます:
 
@@ -90,11 +90,11 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 4 
+## 例題 4 
 
 [SET FIELD RELATION](set-field-relation.md "SET FIELD RELATION") コマンドの例題参照
 
-#### 例題 5 
+## 例題 5 
 
 **QR REPORT** コマンドを使用して呼び出されたQuick Reportにて使用される文字コードを Mac Romanに変更したい場合:
 
@@ -126,13 +126,13 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FONT LIST.Summary-->O comando FONT LIST enche o array *fontes*, de tipo alfa ou texto, com os nomes das fontes disponíveis em seu sistema.<!-- END REF-->
 
@@ -32,7 +32,7 @@ Sob Windows, o parâmetro *\** não tem efeito. O comando devolve sempre as fam�
 
 **Nota:** Sob Mac OS, se utiliza o resultado deste comando com o comando [ST SET ATTRIBUTES](st-set-attributes.md), em uma área de texto multiestilo, não deve passar o parâmetro *\** (só famílias de fonte são compatíveis como Attribute font name). Essa limitação não aplica a áreas 4D Write Pro, que aceita tanto fontes quanto nomes de famílias de fonte. 
 
-##### Sobre fontes escaláveis 
+### Sobre fontes escaláveis 
 
 Este comando devolve só as fontes escaláveis. Não se recomenda o uso de fontes não vetoriais (ou seja, fontes de mapa de bits) para o desenho de interfaces, já que se baseiam em uma tecnologia obsoleta e sofrem de limitações em quanto as variações de tamanho. Não são compatíveis com as funcionalidades mais recentes de 4D como as áreas 4D Write Pro.
 
@@ -46,7 +46,7 @@ Em Windows, este principio se aplica começando com 4D v15 R4\. Com o fim de aju
 * As fontes de mapa de bits podem ser seguidas utilizando em seus formulários 4D (exceto nas áreas 4D Write Pro). Simplesmente se eliminam da lista devolvida por este comando. Entretanto, para assegurar a compatibilidade com futuras versões de 4D e Windows, se recomenda utilizar só as famílias de fontes DirectWrite.
 * Dado que as fontes de mapa de bits se filtran desde o parâmetro *fontes* em Windows, a lista resultante é diferente em aplicações 4D v15 R4 e superiores, em comparação com versões anteriores. Lembre de adaptar seu código se usar este comando para selecionar um tipo de letra não vetorial.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Em um formulário, você quer obter uma lista para baixo que mostre as fontes disponíveis no sistema. O método da lista para baixo é a seguinte:  
 
@@ -60,7 +60,7 @@ Em um formulário, você quer obter uma lista para baixo que mostre as fontes di
  End case
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Você quer obter uma lista de fontes recentes:
 
@@ -68,7 +68,7 @@ Você quer obter uma lista de fontes recentes:
  FONT LIST($arrFonts;Recent fonts)
 ```
 
-#### Ver também 
+## Ver também 
 
 [FONT STYLE LIST](font-style-list.md)  
 [OBJECT SET FONT](object-set-font.md)  
@@ -76,7 +76,7 @@ Você quer obter uma lista de fontes recentes:
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 *Tipo de lista das fontes*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

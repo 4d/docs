@@ -33,7 +33,7 @@ Finalmente, este comando puede ser utilizado en el evento de formulario On Print
 
 **Nota:** esta operación es diferente de la del comando [PAGE BREAK](page-break.md)(\*) que cancela TODOS los formularios que están en espera de impresión.
 
-##### Modo sin interfaz 
+### Modo sin interfaz 
 
 El comando **CANCEL** se permite en modo sin interfaz, en el contexto de las áreas fuera de pantalla creadas por *VP Run offscreen area* o [WA Run offscreen area](wa-run-offscreen-area.md). 
 

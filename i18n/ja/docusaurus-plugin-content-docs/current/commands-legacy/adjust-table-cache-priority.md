@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 上級者向け 
+## 上級者向け 
 
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Summary-->このコマンドは特定の用途のために用意されています。<!-- END REF-->データベースのパフォーマンスに影響するため、注意して使用しなければなりません。
 
-#### 説明 
+## 説明 
 
 **ADJUST TABLE CACHE PRIORITY**コマンドは、カレントプロセスにおいて、キャッシュ内にある*aTable* 引数で指定されたテーブルに関連付けられたデータに対し*priority* 引数で指定した特定の優先度値を設定します。このコマンドを呼び出すと、同じプロセスにおいて同じコマンドを通して以前調整された優先度値を上書きします。このコマンドはクエリや読み込みなどの一時的な用途において優先度を調整するのに向いています。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 | Cache priority high      |                    |
 | Cache priority very high |                    |
 
-#### 例題 
+## 例題 
 
 \[Docs\]スカラーフィールドのキャッシュ優先度を一時的に変更した場合を考えます:
 
@@ -46,12 +46,12 @@ displayed_sidebar: docs
  ADJUST TABLE CACHE PRIORITY([Docs];Cache priority normal)
 ```
 
-#### 参照 
+## 参照 
 
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

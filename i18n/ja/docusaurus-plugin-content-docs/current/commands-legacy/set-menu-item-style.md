@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET MENU ITEM STYLE.Summary-->SET MENU ITEM STYLE コマンドは、*menu*引数にメニュー番号またはメニュー参照で指定したメニュー中、*menuItem*引数にメニュー項目番号で指定したメニュー項目のフォントスタイルを、*itemStyle*に変更します。<!-- END REF-->
 
@@ -35,11 +35,11 @@ displayed_sidebar: docs
 
   
 
-#### 参照 
+## 参照 
 
 [Get menu item style](get-menu-item-style.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ARRAY TIME.Summary-->O comando **ARRAY TIME** cria ou redimensiona um array de tipo tempo em memória.<!-- END REF-->em 4D, as horas podem ser processadas ​​como valores numéricos. Nas versões de 4D anteriores a v14, tinham que combinar um array inteiro longo com um formato de visualização para gerenciar um array de horas.  
   
@@ -32,7 +32,7 @@ Quando aplica o comando **ARRAY TIME** a um array existente :
 
 Quando aplica [SELECTION TO ARRAY](selection-to-array.md) ou [SELECTION RANGE TO ARRAY](selection-range-to-array.md) a um campo de tipo Hora, tenha em conta que só são criados um array de tipo Hora se o array não foi definido como outro tipo, tal como Inteiro longo, por exemplo.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo cria um array processo que contém 100 elementos de tipo Hora:
 
@@ -40,7 +40,7 @@ Este exemplo cria um array processo que contém 100 elementos de tipo Hora:
  ARRAY TIME(arrTimes;100)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo cria um array local de 100 filas, contendo cada uma 50 elementos de tipo Hora:
 
@@ -48,7 +48,7 @@ Este exemplo cria um array local de 100 filas, contendo cada uma 50 elementos de
  ARRAY TIME($arrTimes;100;50)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Como os arrays de horas aceitam valores numéricos, o seguinte código é válido:
 
@@ -59,12 +59,12 @@ Como os arrays de horas aceitam valores numéricos, o seguinte código é válid
  $Found:=Find in array($arrTimeValues;$CurTime)
 ```
 
-#### Ver também 
+## Ver também 
 
 *Criando arrays*  
 [Time](time.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current date.Summary-->**Current date** retourne la date courante telle que définie dans l'horloge système de la machine.<!-- END REF-->**:** Si vous passez le paramètre astérisque (\*) — lors d'une exécution sur un poste 4D Client —, la fonction retourne la date du jour telle que définie dans l'horloge du poste serveur. 
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant fait apparaître une boîte de dialogue d'alerte affichant la date du jour :
 
@@ -26,7 +26,7 @@ L'exemple suivant fait apparaître une boîte de dialogue d'alerte affichant la 
  ALERT("Nous sommes le "+String(Date du jour)+".")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous développez une application pour le marché international. Vous souhaitez savoir si la version de 4D avec laquelle votre application est exécutée fonctionne avec des dates formatées en MM/JJ/AAAA (version US) ou JJ/MM/AAAA (version française). Cette information est nécessaire pour vous permettre, par exemple, de personnaliser correctement les zones de saisie.
 
@@ -91,13 +91,13 @@ La méthode projet suivante vous permet de traiter cette question :
   // A ce moment, $0 vaut soit MM/JJ/AAAA soit JJ/MM/AAAA, ou encore...
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

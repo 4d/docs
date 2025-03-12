@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PRINT OPTION.Summary-->The **SET PRINT OPTION** command is used to modify, by programming, the value of a print option.<!-- END REF--> Each option defined using this command is applied to the[ current 4D printing settings](../settings/compatibility.md) as long as no other command that modifies print parameters ([PRINT SETTINGS](print-settings.md), [PRINT SELECTION](print-selection.md) without the *\>* parameter, etc.) is called. If a print job has been opened (e.g. with [OPEN PRINTING JOB](open-printing-job.md)), the option is set for the job and cannot be modified as long as the job has not terminated (except for the Orientation option, see below).
 
-##### options and values 
+### options and values 
 
 The *option* parameter allows you to indicate the option to be modified. You can pass one of the predefined constants of the “*Print Options*” theme listed below. Pass the new value(s) of the specified *option* in the *value1* and (optionally) *value2* parameters. The number and nature of the values to be passed depend on the type of option specified. 
 

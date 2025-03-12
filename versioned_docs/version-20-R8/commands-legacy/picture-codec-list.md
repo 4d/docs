@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PICTURE CODEC LIST.Summary-->The **PICTURE CODEC LIST** command fills the *codecArray* array with the list of picture Codec IDs that are available on the machine where it is executed.<!-- END REF--> This list includes the Codec IDs of picture formats that are managed natively by 4D.
 
@@ -31,12 +31,12 @@ The form returned by the command will depend on the way the Codec is recorded at
 By default, if you do not pass the *\** parameter, the command returns only the Codecs that can be used to encode (write) pictures. These IDs can be used in the *format* parameter of the picture export commands [WRITE PICTURE FILE](write-picture-file.md) and [PICTURE TO BLOB](picture-to-blob.md).  
  If you pass the *\** parameter, the command also returns the list of codecs used for decoding (reading) the pictures. The two lists are not exclusive, certain reading and writing Codecs are identical. Codecs intended for encoding pictures may usually be used for decoding. On the other hand, decoding Codecs cannot necessarily be used for encoding. For example, the ".jpg" Codec will be found in both lists, whereas the ".xbmp" Codec will only be found in the list of reading (decoding) Codecs.
 
-#### See also 
+## See also 
 
 [Is picture file](is-picture-file.md)  
 *Pictures*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

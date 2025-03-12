@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD OPEN PATH.Summary-->O comando **METHOD OPEN PATH** abre, no editor de métodos de 4D, o método cuja rota de acesso interna é passada no parâmetro *rota*.<!-- END REF-->
 
@@ -25,12 +25,12 @@ Este comando pode abrir todo tipo de métodos (objeto, formulário, trigger, pro
   
 Pode executar este comando desde um componente, mas neste caso, deve passar o parâmetro *\** como o acesso ao código do componente é somente de leitura. Se omitido o parâmetro *\** neste contexto, é gerado o erro -9763.
 
-#### Ver também 
+## Ver também 
 
 *Design Object Access Commands*  
 [METHOD Get path](method-get-path.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

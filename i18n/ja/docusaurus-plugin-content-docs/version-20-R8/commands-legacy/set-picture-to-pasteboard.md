@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Summary-->SET PICTURE TO PASTEBOARD は、ペーストボードを消去し、*picture*に渡したピクチャのコピーをペーストボードに置きます。<!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 ペーストボードにピクチャを置いた後、[GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md "GET PICTURE FROM PASTEBOARD") コマンド または例えば [GET PASTEBOARD DATA](get-pasteboard-data.md "GET PASTEBOARD DATA")**("com.4d.private.picture.gif";...)** を使用して、そのピクチャを取り出すことができます。
 
-#### 例題 
+## 例題 
 
 以下の例はフローティングウィンドウを使用して、配列*asEmployeeName*を含むフォームを表示します。この配列は\[Employees\]テーブルの従業員名を一覧表示したものです。従業員の名字をクリックするたびに、その従業員の写真をペーストボードにコピーします。この配列用のオブジェクトメソッドを以下に示します:
 
@@ -38,17 +38,17 @@ displayed_sidebar: docs
  End if
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 ピクチャのコピーが正しくペーストボードに置かれると、OK変数は1に設定されます。  
 ペーストボードにピクチャを置くためのメモリが十分にない場合、OK変数は0に設定されますが、エラーは生成されません。
 
-#### 参照 
+## 参照 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

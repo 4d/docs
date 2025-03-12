@@ -24,7 +24,7 @@ Los valores son devueltos en píxeles con respecto al borde del papel.
 
 Es posible obtener el tamaño del papel como también calcular el área imprimible utilizando la función [GET PRINTABLE AREA](get-printable-area.md) .
 
-##### Gestión de márgenes de impresión 
+### Gestión de márgenes de impresión 
 
 Por defecto, en 4D el cálculo de las impresiones se efectúa sobre la base de los “márgenes de la impresora”. La ventaja de este sistema es que los formularios se adaptan automáticamente a las nuevas impresoras (ya que están situados en el área imprimible). Por otra parte, en el caso de los formularios pre-impresos, no era posible posicionar los elementos a imprimir de manera precisa porque un cambio de impresora podía modificar los márgenes de la impresora.
 

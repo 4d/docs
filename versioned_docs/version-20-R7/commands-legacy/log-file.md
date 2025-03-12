@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Log File.Summary-->The Log File command returns the long name (i.e. the complete pathname of the file, including its name) of the current log file of the open database.<!-- END REF--> 
 
@@ -23,16 +23,16 @@ If the database operates with a log file, the system variable OK is set to 1\. T
 
 **WARNING:** If you execute this command from a 4D Client machine, only the log file name is returned, not the long name
 
-#### System variables and sets 
+## System variables and sets 
 
 * If the database is operating without a log file, the system variable OK is set to 0; otherwise, it is set to 1.
 * If for some reason the log file becomes unavailable during a working session, error 1274 is generated and 4D Server does not allow users to write data anymore. When the log file is available again, it is necessary to do a backup.
 
-#### See also 
+## See also 
 
 [SELECT LOG FILE](select-log-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

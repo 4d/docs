@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->La commande [LISTBOX GET PRINT INFORMATION](listbox-get-print-information.md) retourne des informations courantes relatives à l’impression de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF--> Cette commande permet de contrôler l’impression du contenu de la list box.
 
@@ -35,7 +35,7 @@ Passez dans *sélecteur* une valeur indiquant l’information à connaître et d
 
 Pour plus d’informations sur les principes d’impression des list box, reportez-vous au paragraphe *Gestion des impressions*.
 
-#### Exemple 1 
+## Exemple 1 
 
 Impression jusqu’à ce que toutes les lignes soient imprimées :
 
@@ -53,7 +53,7 @@ Impression jusqu’à ce que toutes les lignes soient imprimées :
  CLOSE PRINTING JOB
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Impression d’au moins 500 lignes de la list box, sachant que certaines lignes sont masquées :
 
@@ -68,7 +68,7 @@ Impression d’au moins 500 lignes de la list box, sachant que certaines lignes 
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

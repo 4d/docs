@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PICTURE TO BLOB.Summary-->PICTURE TO BLOB コマンドは、4D変数やフィールドに格納されたピクチャを他のフォーマットに変換し、変換後のピクチャをBLOB内に納めます。<!-- END REF-->
 
@@ -28,7 +28,7 @@ Codecは拡張子 (例 “.gif”), または Mimeタイプ (例 “image/jpeg�
 
 変換が正常に終了すると、システム変数OKには1が代入されます。変換が失敗した(変換できない)場合、システム変数OKに0が代入され、生成されたBLOBは空です(0バイト)。
 
-#### 例題 
+## 例題 
 
 特定のフォーマットの画像をGIFフォーマットへと変換し、静的なWeb ページに表示したい場合を考えます。以下のようなコードを使用することが考えられます:
 
@@ -44,13 +44,13 @@ Codecは拡張子 (例 “.gif”), または Mimeタイプ (例 “image/jpeg�
  WEB SEND BLOB($BLOB;"image/gif")
 ```
 
-#### 参照 
+## 参照 
 
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

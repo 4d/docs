@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.POST EVENT.Summary-->The **POST EVENT** command simulates a keyboard or mouse event.<!-- END REF--> Its effect is as if the user actually acted on the keyboard or the mouse.
 
@@ -69,12 +69,12 @@ For example, to simulate the Shift key, pass Shift key bit.
 
 If you specify the *process* parameter, the event is sent to the process whose process number you pass in *process*. If you pass *0* (zero) or if you omit the parameter, the event is sent at the application level, and the 4D scheduler will dispatch it to the appropriate process.
 
-#### See also 
+## See also 
 
 [POST CLICK](post-click.md)  
 [POST KEY](post-key.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

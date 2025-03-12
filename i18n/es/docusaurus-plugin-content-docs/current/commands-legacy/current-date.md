@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Current date.Summary-->El comando Current date devuelve la fecha actual tal como está definida en el reloj del sistema.<!-- END REF-->si pasa el parámetro asterisco (\*) durante la ejecución de esta función en un equipo cliente 4D Client, la función devuelve la fecha actual del servidor.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo muestra una caja de diálogo de alerta con la fecha actual: 
 
@@ -26,7 +26,7 @@ El siguiente ejemplo muestra una caja de diálogo de alerta con la fecha actual:
  ALERT("The date is "+String(Current date)+".")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Si desarrolla una aplicación para el mercado internacional, usted necesita saber si la versión de 4D con la cual se ejecuta su aplicación funciona con las fechas con formato MM/DD/YYYY (versión US) o DD/MM/YYYY (versión francesa). Esta información es útil para la personalizar correctamente las áreas de entrada. 
 
@@ -91,13 +91,13 @@ El siguiente método de proyecto permite hacerlo:
   //En este momento $0 es igual a MM/DD/YYYY o DD/MM/YYYY o...
 ```
 
-#### Ver también 
+## Ver también 
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

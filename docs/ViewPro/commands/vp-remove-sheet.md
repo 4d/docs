@@ -14,7 +14,7 @@ title: VP REMOVE SHEET
 |vpAreaName |Text|->|4D View Pro area form object name|
 |index  |Integer|->|Index of the sheet to remove|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP REMOVE SHEET` command <!-- REF #_method_.VP REMOVE SHEET.Summary -->removes the sheet with the specified *index* from the document loaded in *vpAreaName*<!-- END REF -->.
 
@@ -24,7 +24,7 @@ In *index*, pass the index of the sheet to remove. If the passed *index* does no
 
 >Indexing starts at 0.
 
-#### Example
+## Example
 
 The document currently has three sheets:
 
@@ -38,6 +38,6 @@ VP REMOVE SHEET("ViewProArea";2)
 
 ![](../../assets/en/ViewPro/vp-sheet-2.png)
 
-#### See also
+## See also
 
 [VP ADD SHEET](vp-add-sheet.md)

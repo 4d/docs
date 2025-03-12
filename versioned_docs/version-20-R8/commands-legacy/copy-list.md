@@ -14,19 +14,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Copy list.Summary-->The **Copy list** command duplicates the list whose reference number you pass in *list,* and returns the list reference number of the new list.<!-- END REF-->
 
 After you have finished with the new list, call [CLEAR LIST](clear-list.md) to delete it.
 
-#### See also 
+## See also 
 
 [CLEAR LIST](clear-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

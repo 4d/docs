@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Sum squares.Summary-->**Sum squares**は、*series*の平方和を返します。<!-- END REF-->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 (一次元または二次元の) 配列を *series* に渡すことができます。この場合配列は整数、倍長整数、または実数型でなければなりません。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は変数*vSquares*のオブジェクトメソッドです。オブジェクトメソッドは*vSquares*に一連のデータの平方和を代入します。*vSquares*変数はレポートの最後のブレークで印刷されます:
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 **注:** [BREAK LEVEL](break-level.md)コマンドの引数は、印刷するレポートのブレーク数と同じ数でなければなりません。ブレーク処理に関する詳細は*印刷*コマンドを参照してください。
 
-#### 例題 2 
+## 例題 2 
 
 この例題では配列に格納された一連の値の平方和を取得します:
 
@@ -54,14 +54,14 @@ displayed_sidebar: docs
  vSumSquares:=Sum squares($ArrGrades)
 ```
 
-#### 参照 
+## 参照 
 
 [Average](average.md)  
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Variance](variance.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

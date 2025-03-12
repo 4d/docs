@@ -26,7 +26,7 @@ Si pasa únicamente un nombre de archivo (sin ruta de acceso), se buscará el ar
 
 Si pasa una cadena vacía (*""*), aparece una caja de diálogo estándar de apertura y creación de archivos.
 
-##### Gestión de los caracteres de fin de línea y de BOM 
+### Gestión de los caracteres de fin de línea y de BOM 
 
 En XML, los saltos de línea no son significativos, independientemente de si se encuentran dentro o entre los elementos XML. Internamente, XML utiliza caracteres estándar LF como separadores de líneas. Durante las operaciones de importación y exportación, los caracteres de salto de línea se pueden convertir. Durante una importación, el analizador XML reemplaza los caracteres CRLF (rupturas de línea estándar en Windows) por caracteres de LF. Durante la exportación, los caracteres LF se sustituyen por caracteres CRLF en Windows (sin remplazar en macOS).
 

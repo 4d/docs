@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->The **GET HIGHLIGHTED RECORDS** command stores in the set designated by the *setName* parameter the highlighted records (i.e., the records highlighted by the user in the list form) in the *aTable* passed as parameter.<!-- END REF--> If the *aTable* parameter is omitted, the table of the current form or subform is used.
 
@@ -25,7 +25,7 @@ The set designated by *setName* can be local/client, process or interprocess.
 
 **Note:** In included subforms, the **GET HIGHLIGHTED RECORDS** command returns an empty set if the subform does not have the **Multiple** Selection Mode property. In this case, to find out the selected row, you must use the [Selected record number](selected-record-number.md) command. 
 
-#### Example 
+## Example 
 
 This method indicates how many records are selected in the subform displaying the records of the \[CDs\] table:
 
@@ -35,15 +35,15 @@ This method indicates how many records are selected in the subform displaying th
  CLEAR SET("$highlight")
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command was executed properly, the system variable OK is set to 1\. Otherwise, it is set to 0\. 
 
-#### See also 
+## See also 
 
 [HIGHLIGHT RECORDS](highlight-records.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

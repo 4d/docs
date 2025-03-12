@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is nil pointer.Summary-->The **Is nil pointer** command returns True if the pointer you pass in *aPointer* is Nil (*\->\[\]*).<!-- END REF--> It returns False in all other cases (pointer to field, table or variable).
 
 If you want to find out the name of the variable or the number of the field that is being pointed to, you can use the [RESOLVE POINTER](resolve-pointer.md) command.
 
-#### Example 
+## Example 
 
 ```4d
  var $ptr : Pointer
@@ -32,12 +32,12 @@ If you want to find out the name of the variable or the number of the field that
  End if
 ```
 
-#### See also 
+## See also 
 
 [Is a variable](is-a-variable.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Create deployment license.Summary-->El comando **Create deployment license** crea un archivo de licencia anidado en la carpeta Licenses de la aplicación creada *mergedApp*.<!-- END REF--> Si la carpeta Licenses no existe en *mergedApp*, el comando la creará.
 
@@ -40,7 +40,7 @@ Si la compilación requiere una licencia OEM específica (*4D OEM XML Keys*) y s
 * La licencia generada debe utilizarse únicamente con la aplicación a la que hace referencia *mergedApp*.
 * Es necesario regenerar la licencia cada vez que se reconstruya la aplicación.
 
-#### Ejemplo 
+## Ejemplo 
 
 ```4d
  var $status : Object
@@ -51,11 +51,11 @@ Si la compilación requiere una licencia OEM específica (*4D OEM XML Keys*) y s
  $status:=Create deployment license($application;$license)
 ```
 
-#### Ver también 
+## Ver también 
 
   
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

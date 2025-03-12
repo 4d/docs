@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY TO SELECTION.Summary-->La commande **ARRAY TO SELECTION** copie un ou plusieurs tableau(x) vers une sélection d'enregistrements.<!-- END REF--> Tous les champs listés doivent appartenir à la même table.
 
@@ -34,7 +34,7 @@ A l’image de la commande [QUERY](query.md), ce principe vous permet de scinder
 
 **4D Server :** Cette commande est optimisée pour 4D Server. Le tableau est envoyé au serveur depuis le poste client. Les enregistrements sont modifiés ou créés sur le serveur. Comme une telle requête est gérée de façon synchrone, le poste client doit attendre que l'opération se soit correctement déroulée. Dans les environnements multi-utilisateurs et multi-process, aucun enregistrement verrouillé ne sera réécrit.
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans l'exemple suivant, les deux tableaux *tabNoms* et *tabSociétés* écrivent des données dans la table *\[Personnes\]*. Les valeurs du tableau *tabNoms* sont placées dans le champ *\[Personnes\]Nom* et les valeurs du tableau *tabSociétés* sont placées dans le champ *\[Personnes\]Société* :
 
@@ -42,7 +42,7 @@ Dans l'exemple suivant, les deux tableaux *tabNoms* et *tabSociétés* écrivent
  ARRAY TO SELECTION(tabNoms;[Personnes]Nom;tabSociétés;[Personnes]Société)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez recopier la sélection d'enregistrements vers une table d'archive en sélectionnant les champs en fonction de la valeur d'options :
 
@@ -74,12 +74,12 @@ Vous souhaitez recopier la sélection d'enregistrements vers une table d'archive
  ARRAY TO SELECTION
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SELECTION TO ARRAY](selection-to-array.md)  
 *Variables système*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

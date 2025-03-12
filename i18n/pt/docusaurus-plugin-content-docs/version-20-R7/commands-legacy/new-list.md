@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.New list.Summary-->New list cria uma nova lista hierárquica vazia em memória e retorna seu número de referência único.<!-- END REF--> 
 
@@ -30,11 +30,11 @@ Quando tiver criado uma lista hierárquica utilizando New list, pode:
 * Adicionar itens a essa lista, utilizando o comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST") ou [INSERT IN LIST](insert-in-list.md).
 * Apagar itens dessa lista, utilizando o comando [DELETE FROM LIST](delete-from-list.md "DELETE FROM LIST").
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo do comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST").
 
-#### Ver também 
+## Ver também 
 
 [APPEND TO LIST](append-to-list.md)  
 [BLOB to list](blob-to-list.md)  
@@ -45,7 +45,7 @@ Ver o exemplo do comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST").
 [LIST TO BLOB](list-to-blob.md)  
 [Load list](load-list.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

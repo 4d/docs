@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->**CREATE SELECTION FROM ARRAY** コマンドは、以下の方法で*selectionName* 命名セレクションを作成します:
 
@@ -36,11 +36,11 @@ displayed_sidebar: docs
 
 **警告:** レコードが削除されてその後再度作成された場合には、レコード番号が再利用されることがあるという点に注意してください(*レコード番号について* 参照)
 
-#### エラー管理 
+## エラー管理 
 
 レコード番号が不正 (レコードがまだ作成されていない) だった場合、エラー-10503が生成されます。このエラーは[ON ERR CALL](on-err-call.md "ON ERR CALL")でインストールされたエラー処理メソッドでとらえることができます。
 
-#### 参照 
+## 参照 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 [SELECTION TO ARRAY](selection-to-array.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

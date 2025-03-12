@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD SET CODE.Summary-->**METHOD SET CODE**コマンドは*path*引数で指定したメソッドのコードを*code*引数に渡した内容で置き換えます。<!-- END REF-->
 
@@ -64,7 +64,7 @@ displayed_sidebar: docs
 
 このコマンドをコンポーネントから実行することもできますが、この場合 (コンポーネントコードには書き込みアクセスができないため) *\** 引数を渡さなければなりません。この状況で *\** 引数を省略するとエラー-9763が生成されます。
 
-#### 例題 
+## 例題 
 
 この例題ではアプリケーションのすべてのメソッドを書き出し/読み込みします:
 
@@ -96,11 +96,11 @@ displayed_sidebar: docs
  SHOW ON DISK($root_t)
 ```
 
-#### 参照 
+## 参照 
 
 [METHOD GET CODE](method-get-code.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

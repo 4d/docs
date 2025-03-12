@@ -44,7 +44,7 @@ After the call, if the variable has been successfully stored, the OK variable is
 
 **Note regarding Platform Independence:** VARIABLE TO BLOB and [BLOB TO VARIABLE](blob-to-variable.md) use a 4D internal format for handling variables stored in BLOBs. As a benefit, you do not need to worry about byte swapping between platforms while using these two commands. In other words, a BLOB created on Windows using either of these commands can be reused on Macintosh, and vice-versa.
 
-##### Note 
+### Note 
 
 **Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 

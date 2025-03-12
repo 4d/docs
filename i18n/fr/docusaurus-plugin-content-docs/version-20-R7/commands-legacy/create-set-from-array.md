@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE SET FROM ARRAY.Summary-->La commande **CREATE SET FROM ARRAY** crée l’ensemble *nomEnsemble* à partir :
 
@@ -30,16 +30,16 @@ Lorsque vous utilisez la commande avec un tableau de booléens, le Nième élém
 
 Si vous ne passez pas le paramètre *nomEnsemble* ou si vous passez une chaîne vide, la commande s’applique à l’ensemble système Userset.
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Dans un tableau d'entier longs, si un numéro d'enregistrement est invalide (enregistrement non créé), l’erreur -10503 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

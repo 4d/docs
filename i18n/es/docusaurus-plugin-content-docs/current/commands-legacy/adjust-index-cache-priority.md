@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Modo experto 
+## Modo experto 
 
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Summary-->Este comando está reservado para necesidades específicas.<!-- END REF--> Debe utilizarse con cuidado, ya que puede afectar el rendimiento de la base.
 
-#### Descripción 
+## Descripción 
 
 El comando **ADJUST INDEX CACHE PRIORITY** modifica el valor de *prioridad* de los índices relacionados con campo en la caché para el proceso actual. Una llamada a este comando reemplaza cualquier valor de prioridad previamente ajustado a través del mismo comando en el mismo proceso. Este comando ajusta la prioridad para necesidades temporales, por ejemplo durante una búsqueda o una importación.
 
@@ -36,7 +36,7 @@ Pase en *prioridad* una de las siguientes constantes del tema "*Gestión*":
 | Cache priority high      |                                                        |
 | Cache priority very high |                                                        |
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea cambiar temporalmente la prioridad de la caché para el índice de campo \[Docs\]Comments:
 
@@ -48,12 +48,12 @@ Usted desea cambiar temporalmente la prioridad de la caché para el índice de c
  ADJUST INDEX CACHE PRIORITY([Docs]Comments;Cache priority normal)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

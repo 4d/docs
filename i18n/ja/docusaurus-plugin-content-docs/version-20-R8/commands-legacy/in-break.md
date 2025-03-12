@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.In break.Summary-->**In break** はIn break 実行サイクルでTrueを返します。<!-- END REF-->
 
@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 **注:** このコマンドは、[Form event code](../commands/form-event-code.md) コマンドを用いてOn Printing Break イベントを返すかどうかをテストするのと同等と言えます。
 
-#### 参照 
+## 参照 
 
 [In footer](in-footer.md)  
 [In header](in-header.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

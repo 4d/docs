@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Picture size.Summary-->Picture size returns the size of *picture* in bytes.<!-- END REF-->
 
-#### See also 
+## See also 
 
 [PICTURE PROPERTIES](picture-properties.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

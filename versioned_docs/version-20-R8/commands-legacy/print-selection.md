@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->**PRINT SELECTION** prints the current selection of *aTable*.<!-- END REF--> The records are printed with the current output form of the table in the current process. **PRINT SELECTION** performs the same action as the **Print** menu command in the Design environment. If the selection is empty, **PRINT SELECTION** does nothing.
 
@@ -43,7 +43,7 @@ After a call to **PRINT SELECTION**, the OK variable is set to 1 if the printing
 * Make sure that no dialog box appears on the server machine (except for a specific requirement). To do this, it is necessary to call the command with the *\** or *\>* parameter.
 * In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
 
-#### Example 
+## Example 
 
 The following example selects all the records in the \[People\] table. It then uses the [DISPLAY SELECTION](display-selection.md) command to display the records and allows the user to highlight the records to print. Finally, it uses the selected records with the [USE SET](use-set.md) command, and prints them with **PRINT SELECTION**:
 
@@ -54,14 +54,14 @@ The following example selects all the records in the \[People\] table. It then u
  PRINT SELECTION([People]) // Print the records that the user picked
 ```
 
-#### See also 
+## See also 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [Subtotal](subtotal.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

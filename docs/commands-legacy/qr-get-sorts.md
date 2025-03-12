@@ -26,7 +26,7 @@ Each element of this array contains the sort orders for the matching column.
 \- If *aOrders{$i}* equals 1, the sort order is ascending.  
 \- If *aOrders{$i}* equals -1, the sort order is descending.
 
-##### Cross-table mode 
+### Cross-table mode 
 
 In the case of cross-table mode, the resulting arrays cannot have more than two elements since sorts can only be performed on columns (1) and rows (2). (Values for *aColumns*).
 

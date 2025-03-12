@@ -28,11 +28,11 @@ Si llama Execute on server en un equipo cliente, el comando devuelve un número 
 
 Si el proceso no se pudo crear (por ejemplo, si no hay suficiente memoria), Execute on server devuelve (0) y se genera un error. Puede interceptar este error utilizando un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-##### Método de proceso 
+### Método de proceso 
 
 En *proced*, pase el nombre del método de proceso para el nuevo proceso. Una vez 4D haya definido el contexto para el nuevo proceso, comienza la ejecución de este método, el cual se convierte en el método de proceso. 
 
-##### Pila de proceso 
+### Pila de proceso 
 
 El parámetro *pila*, permite indicar la cantidad de memoria asignada para la pila del proceso. Este valor representa el espacio en memoria utilizado para “apilar” las llamadas de métodos, las variables locales, los parámetros en subrutinas y los registros apilados.
 
@@ -41,7 +41,7 @@ El parámetro *pila*, permite indicar la cantidad de memoria asignada para la pi
 
 **Nota:** la pila NO es la memoria total reservada para el proceso. Los procesos comparten memoria para los registros, las variables interproceso, etc. Un proceso utiliza igualmente la memoria extra para almacenar sus variables proceso. La pila contiene diferente información interna 4D; la cantidad de información guardada en la pila depende del número de llamadas a métodos anidados que el proceso emplee, el número de formularios que abrirá antes de cerrarlos y el número y tamaño de las variables locales utilizadas en cada llamada al método anidado.
 
-##### Nombre del proceso 
+### Nombre del proceso 
 
  El nombre del nuevo proceso se pasa en *nombre*. En monousuario, este nombre aparecerá en la lista de procesos del entorno Diseño, y será devuelto por el comando [PROCESS PROPERTIES](process-properties.md "PROCESS PROPERTIES") cuando se aplica a este nuevo proceso. En cliente/servidor, este nombre aparecerá en azul en la lista de **Procedimientos almacenado**s de la ventana principal de 4D Server.
 
@@ -49,7 +49,7 @@ Puede omitir este parámetro; si lo hace, el nombre del proceso será una cadena
 
 **Advertencia:** a diferencia del comando Nuevo Proceso, no intente crear un proceso local colocándole el signo dólares (*$*) como prefijo al nombre mientras utiliza Execute on server. Funcionará correctamente en monousuario, porque Execute on server actúa como [New Process](new-process.md "New Process") en este entorno. Por otra parte, en Cliente/Servidor, esto generará un error.
 
-##### Parámetros del método proceso 
+### Parámetros del método proceso 
 
  Puede pasar parámetros al método de proceso. Puede pasar parámetros de la misma forma como los pasaría a una subrutina. Sin embargo, hay una restricción, no puede pasar expresiones de tipo puntero. Igualmente, recuerde que los arrays no pueden ser pasados como parámetros a un método. Una vez comience la ejecución en el contexto del nuevo proceso, el método de proceso recibe los valores de los parámetros en *$1*, *$2*, etc.
 
@@ -57,7 +57,7 @@ Puede omitir este parámetro; si lo hace, el nombre del proceso será una cadena
 
 Si pasa un objeto (*C\_OBJECT*) o una colección (*C\_COLLECTION*) como *param*, se envía una copia (y no una referencia) y el formulario JSON se utiliza en UTF-8 para el servidor. Si el objeto o colección contiene punteros, se envían sus valores desreferenciados y no los punteros mismos.
 
-##### Parámetro opcional \* 
+### Parámetro opcional \* 
 
 Si pasa este último parámetro le pide a 4D verificar primero si se está ejecutando un proceso con el mismo nombre que pasó en *nombre*. Si es así, 4D no inicia un nuevo proceso y devuelve el número del proceso con ese nombre.
 

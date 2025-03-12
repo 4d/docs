@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get value.Summary-->The **OBJECT Get value** command returns the current value of the data source for the form object(s) designated by the *objectName* parameter.<!-- END REF-->
 
@@ -31,15 +31,15 @@ Current value of the form object's data source.
 * If the data source is an array, the command returns the index of the array
 * If the data source is an expression, the command returns the value evaluated value since the last execution cycle
 
-#### Example 
+## Example 
 
 See the example for the [OBJECT SET VALUE](object-set-value.md) command. 
 
-#### See also 
+## See also 
 
 [OBJECT SET VALUE](object-set-value.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

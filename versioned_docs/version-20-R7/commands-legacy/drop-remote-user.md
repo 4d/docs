@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DROP REMOTE USER.Summary-->The **DROP REMOTE USER** command disconnects a specific user remotely connected to the 4D Server.<!-- END REF--> 
 
@@ -21,7 +21,7 @@ In *userSession*, pass the session ID of the user you want to disconnect from th
 
 **Note:** This command is executed asynchronously and can only be executed on 4D Server. If the method calling the command is executed locally on a remote client or in 4D single user, **DROP REMOTE USER** does nothing.
 
-#### Example 
+## Example 
 
 You want to drop a specific remote user:
 
@@ -37,12 +37,12 @@ You want to drop a specific remote user:
  End for each
 ```
 
-#### See also 
+## See also 
 
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [SEND MESSAGE TO REMOTE USER](send-message-to-remote-user.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

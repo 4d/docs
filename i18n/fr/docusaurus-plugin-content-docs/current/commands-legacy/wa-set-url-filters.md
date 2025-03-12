@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->La commande **WA SET URL FILTERS** permet de mettre en place un ou plusieurs filtre(s) pour la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->
 
@@ -37,7 +37,7 @@ Une fois la commande exécutée, les filtres deviennent une propriété de la zo
 
 **Important :** Le filtrage des URLs effectué par cette commande s’applique à toute demande de changement de l'URL principal de la page, qu'elle provienne de l'utilisateur, du code javascript ou du code 4D, à l'exception de la commande [WA OPEN URL](wa-open-url.md) et des URLs commençant par "javascript:".
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez interdire l’accès à tous les sites web .org, .net et .fr :
 
@@ -53,7 +53,7 @@ Vous souhaitez interdire l’accès à tous les sites web .org, .net et .fr :
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez interdire l’accès à tous les sites web sauf les sites russes (.ru) :
 
@@ -67,7 +67,7 @@ Vous souhaitez interdire l’accès à tous les sites web sauf les sites russes 
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez donner accès aux sites Web 4D uniquement (.com, .fr, .es, etc.) :
 
@@ -81,7 +81,7 @@ Vous souhaitez donner accès aux sites Web 4D uniquement (.com, .fr, .es, etc.) 
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Vous souhaitez autoriser l’accès local à la documentation uniquement (située dans le dossier C://doc) :
 
@@ -95,7 +95,7 @@ Vous souhaitez autoriser l’accès local à la documentation uniquement (situé
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Vous souhaitez autoriser tous les sites sauf un, par exemple celui d’Elcaro :
 
@@ -109,7 +109,7 @@ Vous souhaitez autoriser tous les sites sauf un, par exemple celui d’Elcaro :
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 Vous souhaitez interdire des adresses IP spécifiques :
 
@@ -126,12 +126,12 @@ Vous souhaitez interdire des adresses IP spécifiques :
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

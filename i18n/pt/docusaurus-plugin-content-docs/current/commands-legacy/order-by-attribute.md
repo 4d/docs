@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ORDER BY ATTRIBUTE.Summary-->O comando **ORDER BY ATTRIBUTE** ordena (reordena) os registros da seleção atual de *tabela* para o processo atual baseado no conteúdo de *rotaAtrib* de *campoObjeto*.<!-- END REF--> Depois de terminada a ordenação, o novo primeiro registro da seleçãol se converte no registro atual. 
 
@@ -50,7 +50,7 @@ Para várias ordenações (ordenações em vários campos), pode chamar a **ORDE
 
 Não importa que forma de ordenação tenha sido definido, se a operação de ordenação for demorar algum tiempo, 4D mostra automaticamente uma mensagem que contém um termômetro de progresso. Esta mensagem pode ser ativada e desativada mediante o uso dos comandos [MESSAGES ON](messages-on.md) e [MESSAGES OFF](messages-off.md). Se o termômetro de progresso é exibido, o usuário pode clicar no botão Stop para interromper a ordenação. Ok é estabelecido em 1\. Se a ordenação é interrompida, Ok é estabelecido como 0 (zero).
 
-#### Exemplo 
+## Exemplo 
 
 Se desejar ordenar a seleção atual por idade (descendente) e depois por nome (ascendente), a ordem por padrão é:
 
@@ -109,11 +109,11 @@ Os registros estão na seguinte ordem:
 {"LastName":"Martin","client":true} //age (idade) é null (falta)
 ```
 
-#### Ver também 
+## Ver também 
 
   
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

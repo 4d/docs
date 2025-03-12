@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->O comando DESCRIBE QUERY EXECUTION permite ativar ou desativar o modo de análise da execução de pesquisas para o processo atual.<!-- END REF--> O comando funciona unicamente no contexto dos comandos de pesquisa da linguagem 4D tal como [QUERY](query.md).   
   
@@ -27,7 +27,7 @@ Geralmente, a descrição do plano de uma pesquisa e sua rota são idênticos, m
   
 Passe [False](false.md "False") no parâmetro *estado* quando não necessite analisar as pesquisas. O modo de análise da execução das pesquisas pode tornar lenta a aplicação.
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte exemplo ilustra o tipo de informação obtida utilizando estes comandos:
 
@@ -62,12 +62,12 @@ $vResultPath :
    </QueryExecution>
 ```
 
-#### Ver também 
+## Ver também 
 
 [Last query path](last-query-path.md)  
 [Last query plan](last-query-plan.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

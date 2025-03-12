@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Sum squares.Summary-->**Sum squares** retourne la somme des carrés de *séries*.<!-- END REF--> Si *séries* est un champ indexé, l'index est utilisé pour le calcul. 
 
 Vous pouvez passer dans *séries* un tableau (à une ou deux dimensions). Dans ce cas, le tableau doit être de type Entier, Entier long ou Réel.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant est la méthode objet d'une variable appelée Carrés. La méthode assigne la somme des carrés d'une série de valeurs à Carrés. La méthode est imprimée dans la dernière rupture de l'état :
 
@@ -41,7 +41,7 @@ La méthode suivante est appelée pour imprimer les enregistrements de la sélec
 
 **Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple vous permet d’obtenir la somme des carrés des valeurs placées dans un tableau : 
 
@@ -52,14 +52,14 @@ Cet exemple vous permet d’obtenir la somme des carrés des valeurs placées da
  vSommeCarres:=Sum squares($TabNote)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Average](average.md)  
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Variance](variance.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get default user.Summary-->The Get default user command returns the unique user ID of the user set as “Default user” in the database Settings dialog box:
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 If no default user has been set, the command returns 0.<!-- END REF-->
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

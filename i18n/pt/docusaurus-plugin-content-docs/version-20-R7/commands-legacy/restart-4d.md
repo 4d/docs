@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RESTART 4D.Summary-->O comando **RESTART 4D** reinicia a aplicação fundida 4D atual.<!-- END REF-->  
   
@@ -30,12 +30,12 @@ O parâmetro opcional *mensagem* mostra uma mensagem personalizado para as aplic
   
 Se o comando se executa corretamente, a variável sistema OK toma o valor 1, caso contrário, toma o valor 0 e se reinicia a aplicação. Pode interceptar os erros gerados pelo comando utilizando um método instalado utilizando o comando [ON ERR CALL](on-err-call.md).
 
-#### Ver também 
+## Ver também 
 
 [Get last update log path](get-last-update-log-path.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

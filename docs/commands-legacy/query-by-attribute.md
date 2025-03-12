@@ -68,7 +68,7 @@ Here is the structure of a query by attribute:
 
 **Note:** An implicit criteria for all operators (except #) is that the Object field contains an attribute. However, for the # operator, it can be undefined (see below). 
 
-##### The # operator and Null values 
+### The # operator and Null values 
 
 When querying by attribute using the **#** operator, you must take into account cases where an attribute may not be present in a record. For example, consider the following statement:
 
@@ -98,7 +98,7 @@ This principle also applies to array attributes. For example, the query will ret
 
 **Note:** To specifically obtain records where the attribute is undefined, you can use an empty object (see example 2). Note however that searching for NULL values in array elements is not supported.
 
-##### Building multiple queries 
+### Building multiple queries 
 
 Here are the rules for building multiple queries by attribute:
 
@@ -115,7 +115,7 @@ No matter which way a query has been defined:
 * If the actual query operation is going to take some time to be performed, 4D automatically displays a message containing a progress meter. These messages can be turned on and off by using the [MESSAGES ON](messages-on.md) and [MESSAGES OFF](messages-off.md)  commands. If a progress meter is displayed, the user can click on the **Stop** button to interrupt the query. If the query is completed, OK is set to 1\. Otherwise, if the query is interrupted, OK is set to 0 (zero).
 * If any indexed object fields are specified, the query is optimized every time that it is possible (indexed fields are searched first) resulting in a query that takes the least amount of time possible.
 
-##### Date values in the object 
+### Date values in the object 
 
 Dates are stored in objects according to database settings; by default, the time zone is taken into account (see the JSON use local time selector in the [SET DATABASE PARAMETER](set-database-parameter.md) command). 
 
@@ -142,11 +142,11 @@ Keep in mind that the scope of this setting is the process only. If you execute 
  QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1976-11-27!)
 ```
 
-##### Using the virtual length property 
+### Using the virtual length property 
 
 You can use the virtual "length" property with this command. This property is available automatically for all array type attributes and returns the size of the array, i.e. the number of elements it contains. It can be used in the context of executing the **QUERY BY ATTRIBUTE** command (see example 4).
 
-##### Linking array attribute query arguments 
+### Linking array attribute query arguments 
 
 (New in 4D v16 R2) When searching in array attributes with multiple query arguments joined by the AND operator, you may want to make sure that only records containing elements that match all arguments are returned, and not records where arguments can be found in different elements. To do this, you need to *link* query arguments to array elements, so that only single elements containing linked arguments are found. 
 

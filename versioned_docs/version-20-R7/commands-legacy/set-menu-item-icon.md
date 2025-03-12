@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU ITEM ICON.Summary-->The **SET MENU ITEM ICON** command modifies the icon associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->  
 You can pass -1 in *menuItem* in order to specify the last item added to *menu*.
@@ -32,7 +32,7 @@ In *iconRef*, you can pass the picture to be used as the icon. You can use a a p
 
 **Note:** Use of a picture file path is recommended since the Picture library is deprecated and is not supported in 4D project databases. In addition, the *file:<relativePathname>* pattern is deprecated, using *path:<filesystem>* pattern is recommended.
 
-#### Example 
+## Example 
 
 Use of a picture located in the Resources folder of the database:
 
@@ -40,11 +40,11 @@ Use of a picture located in the Resources folder of the database:
  SET MENU ITEM ICON($MenuRef;2;"Path:/RESOURCES/english.lproj/spot.png")
 ```
 
-#### See also 
+## See also 
 
 [GET MENU ITEM ICON](get-menu-item-icon.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

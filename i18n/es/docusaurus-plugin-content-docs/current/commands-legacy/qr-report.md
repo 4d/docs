@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR REPORT.Summary-->**QR REPORT** imprime un informe para *tabla*, con ayuda del editor de informes rápidos de 4D.<!-- END REF--> Este editor permite a los usuarios crear sus propios informes. Para mayor información sobre la creación de informes rápidos con la ayuda del editor de informes rápidos, consulte la sección *Informes rápidos* en el *Manual de Diseño* de 4D.
 
@@ -56,7 +56,7 @@ Si no se involucar al editor de informes rápidos, la variable sistema OK toma e
 * La sintaxis que hace aparecer el editor Quick Report no funciona con 4D Server; en este caso, la variable sistema OK toma el valor 0.
 * En el caso de un problema relacionado con la impresora (sin papel, impresora desconectada, etc.), no se genera un error.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo permite al usuario efectuar una búsqueda en la tabla \[Personas\], y luego imprime automáticamente el informe “Lista detallada”: 
 
@@ -67,7 +67,7 @@ El siguiente ejemplo permite al usuario efectuar una búsqueda en la tabla \[Per
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo permite al usuario efectuar una búsqueda en la tabla \[Personas\], y luego seleccionar el informe a imprimir:
 
@@ -78,7 +78,7 @@ El siguiente ejemplo permite al usuario efectuar una búsqueda en la tabla \[Per
  End if
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo permite al usuario efectuar una búsqueda en la tabla \[Personas\], y luego muestra el editor de informes rápidos de manera que el usuario pueda diseña, guardar, cargar e imprimir informes: 
 
@@ -89,11 +89,11 @@ El siguiente ejemplo permite al usuario efectuar una búsqueda en la tabla \[Per
  End if
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Consulte el ejemplo del comando [SET FIELD RELATION](set-field-relation.md "SET FIELD RELATION"). 
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Usted desea convertir el conjunto de caracteres utilizado en un informe rápido llamado utilizando **QR REPORT** en Mac Roman:
 
@@ -125,13 +125,13 @@ El método myCallbackMeth convierte el informe cuando se genera:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

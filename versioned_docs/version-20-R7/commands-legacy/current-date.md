@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current date.Summary-->The Current date command returns the current date as kept by the system clock.<!-- END REF-->If you use the asterisk (\*) parameter when executing this function on a 4D Client machine, it returns the current date from the server.
 
-#### Example 1 
+## Example 1 
 
 The following example displays an alert box containing the current date:
 
@@ -26,7 +26,7 @@ The following example displays an alert box containing the current date:
  ALERT("The date is "+String(Current date)+".")
 ```
 
-#### Example 2 
+## Example 2 
 
 If you write an application for the international market, you may need to know if the version of 4D that you run works with dates formatted as MM/DD/YYYY (US version) or DD/MM/YYYY (French version). This is useful to know for customizing data entry fields.
 
@@ -91,13 +91,13 @@ The following project method allows you to do so:
   // At this point $0 is equal to MM/DD/YYYY or DD/MM/YYYY or...
 ```
 
-#### See also 
+## See also 
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

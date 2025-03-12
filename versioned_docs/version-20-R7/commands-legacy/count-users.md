@@ -13,18 +13,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Count users.Summary-->The **Count users** command returns the number of users connected to the server.<!-- END REF-->
 
 When executed on a 4D single-user application, **Count users** returns 1.
 
-#### See also 
+## See also 
 
 [Count tasks](count-tasks.md)  
 [Count user processes](count-user-processes.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

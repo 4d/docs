@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE RECORD.Summary-->**CREATE RECORD** creates a new empty record for *aTable*, but does not display the new record.<!-- END REF--> Use [ADD RECORD](add-record.md) to create a new record and display it for data entry. 
 
@@ -23,7 +23,7 @@ The record exists in memory only until a [SAVE RECORD](save-record.md) command i
 
 **Note:** This command does not require *aTable* to be in read/write mode. It can be used even when the table is in read-only mode (see *Record Locking*). 
 
-#### Example 
+## Example 
 
 The following example archives records that are over 30 days old. It does does this by creating new records in an archival table. When the archiving is finished, the records that were archived are deleted from the \[Accounts\] table:
 
@@ -41,13 +41,13 @@ The following example archives records that are over 30 days old. It does does t
  DELETE SELECTION([Accounts]) // Delete the account records
 ```
 
-#### See also 
+## See also 
 
 [ADD RECORD](add-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

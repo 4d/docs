@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get links.Summary-->**WP Get links** は*targetObj* 引数内のターゲットオブジェクトで定義されている全てのリンクのコレクションを返します。<!-- END REF-->
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 | \[ \].bookmark  | テキスト       | リンクのブックマーク名                    | ブックマークリンク          |
 | \[ \].range     | オブジェクト     | リンクのラベルのレンジ。*セレクションレンジコマンド*参照。 | 全てのリンク             |
 
-#### 例題 
+## 例題 
 
 4D Write Pro ドキュメント内の全てのURL リンクラベルのカラーを変えたい場合を考えます:
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
  End for each
 ```
 
-#### 参照 
+## 参照 
 
   
 [WP Get formulas](wp-get-formulas.md)  

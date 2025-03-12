@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Cette fonction compare *motDePasse* à un *hash* généré par la commande [Generate password hash](generate-password-hash.md).
 
-##### Gestion des erreurs 
+### Gestion des erreurs 
 
 Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et analyser les erreurs à l'aide des commandes [Last errors](last-errors.md)  et [ON ERR CALL](on-err-call.md).
 

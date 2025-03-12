@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST ITEM.Summary-->The **SET LIST ITEM** command modifies the item designated by the *itemRef* parameter within the list whose reference number or object name is passed in *list*.<!-- END REF--> 
 
@@ -41,7 +41,7 @@ If you do not want to change the sublist property of the item, pass *\-1* in *su
 
 **Note:** Even if they are optional, both the *sublist* and *expanded* parameters must be passed jointly.
 
-#### Example 1 
+## Example 1 
 
 *hList* is a list whose items have unique reference numbers. The following object method for a button adds a child item to the current selected list item.
 
@@ -62,15 +62,15 @@ If you do not want to change the sublist property of the item, pass *\-1* in *su
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 See example for the [GET LIST ITEM](get-list-item.md) command.
 
-#### Example 3 
+## Example 3 
 
 See example for the [APPEND TO LIST](append-to-list.md) command.
 
-#### See also 
+## See also 
 
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
@@ -78,7 +78,7 @@ See example for the [APPEND TO LIST](append-to-list.md) command.
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Get view properties.Summary-->O comando **WP Get view properties** devolve as propriedades da vista atual para a área 4D Write Pro designada por *wpArea*.<!-- END REF--> 
 
@@ -50,7 +50,7 @@ O objeto devolvido contém todas as propriedades de vista da área 4D Write Pro,
 | wk visible vertical ruler    | visibleVerticalRuler   | Exibe a régua vertical (efeito visível no modo Página apenas). Valores possíveis: True/False                                                                                                                                                                                                                                                                                                                                       |
 | wk zoom                      | zoom                   | Porcentagem de Zoom para exibir os conteúdos da área 4D Write Pro. Valores possíveis: Número maior que 1                                                                                                                                                                                                                                                                                                                           |
 
-#### Exemplo 
+## Exemplo 
 
 Na área de 4D Write Pro, se quiser mostrar as regras só no modo página:
 
@@ -66,6 +66,6 @@ Na área de 4D Write Pro, se quiser mostrar as regras só no modo página:
  WP SET VIEW PROPERTIES(*;"4DWPArea";$viewProps)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP SET VIEW PROPERTIES](wp-set-view-properties.md)  

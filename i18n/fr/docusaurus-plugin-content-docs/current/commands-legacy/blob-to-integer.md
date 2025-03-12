@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB to integer.Summary-->BLOB to integer retourne une valeur entière (2 octets) lue dans le BLOB blob.<!-- END REF-->  
 
@@ -40,7 +40,7 @@ Note : Vous devez passer un offset compris entre 0 (zéro) et la taille du BLOB 
 
 Après l'exécution de la commande, la variable offset est incrémentée du nombre d'octets qui a été lu. Vous pouvez donc réutiliser la même variable avec une autre commande de lecture de BLOBs pour lire une autre valeur placée juste après celle que vous venez de lire.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant lit 20 valeurs entières d'un BLOB à partir de l'offset 0x200 :
 
@@ -69,7 +69,7 @@ L'exemple suivant lit 20 valeurs entières d'un BLOB à partir de l'offset 0x200
 
 [Page suiv.](blob-to-list.md) 
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB to longint](blob-to-longint.md)  
 [BLOB to real](blob-to-real.md)  
@@ -79,7 +79,7 @@ L'exemple suivant lit 20 valeurs entières d'un BLOB à partir de l'offset 0x200
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

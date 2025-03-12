@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ACTIVITY SNAPSHOT.Summary-->The **ACTIVITY SNAPSHOT** command returns a single or several arrays describing operations in progress on the 4D data.<!-- END REF--> These operations usually display a progress window. 
 
@@ -34,7 +34,7 @@ The **ACTIVITY SNAPSHOT** command accepts two syntaxes:
 * syntax using only an object array.
 * syntax using several arrays.
 
-##### First syntax: ACTIVITY SNAPSHOT ( arrActivities {; \*}) 
+### First syntax: ACTIVITY SNAPSHOT ( arrActivities {; \*}) 
 
 With this syntax, all the operations are returned in a structured form in the 4D object array (*arrActivities*). Each element of the array is an object built as follows:
 
@@ -70,7 +70,7 @@ Here is a description of each property returned:
    * ...
 * *subOperations* (array): array of objects containing sub-operations of the current operation (if any). The structure of each sub-element is identical to the one in the main object. If the current operation does not have any sub-operations, then *subOperations* is empty.
 
-##### Second syntax: ACTIVITY SNAPSHOT ( arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} {; \*}) 
+### Second syntax: ACTIVITY SNAPSHOT ( arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} {; \*}) 
 
 With this syntax, all the operations are returned in several synchronized arrays (each operation causes an element to be added to all of the arrays). The following arrays are returned:
 
@@ -83,7 +83,7 @@ With this syntax, all the operations are returned in several synchronized arrays
    * *"dbOperationDetails"* (object): see above  
    * "subOperations". The value of this property is an object array containing all the sub-operations for the current operation. If the current operation does not have any sub-operations, the value of the *subOperations* property is an empty array (corresponds to the *subOperations* property of the *arrActivities* object)
 
-#### Example 
+## Example 
 
 This method, executed in a separate process on 4D or 4D Server, provides a snapshot of the operations that are underway:
 
@@ -106,7 +106,7 @@ You get arrays such as:
 ![](../assets/en/commands/pict1213741.en.png)
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

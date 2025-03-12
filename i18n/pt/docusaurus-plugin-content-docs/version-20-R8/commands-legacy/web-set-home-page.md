@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WEB SET HOME PAGE.Summary-->O comando WEB SET HOME PAGE lhe permite modificar a página de início personalizada para o processo web atual.<!-- END REF-->  
 
@@ -28,7 +28,7 @@ Para não enviar *pagInicio* como página de inicio para o processo web atual, e
 **Nota**: a página de boas vindas por padrão do servidor web se definido nas Propriedades do banco.
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

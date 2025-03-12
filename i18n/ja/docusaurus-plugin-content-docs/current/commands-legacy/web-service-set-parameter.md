@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SERVICE SET PARAMETER.Summary-->**WEB SERVICE SET PARAMETER**コマンドはクライアントのSOAPリクエストで引数の定義を行います。<!-- END REF-->リクエスト中の引数毎にこのコマンドを呼び出します (このコマンドの呼び出し回数は引数の数に応じます)。
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
    * XMLデータタイプに関する詳細は、URL <http://www.w3.org/TR/xmlschema-2/> を参照してください。  
    * このコマンドはBlobオブジェクト(4D.Blob 型)をサポートしません。詳細はdeveloper.4d.com *Passing blobs and blob objects to 4D commands* を参照してください。
 
-#### 例題 
+## 例題 
 
 この例題は2つの引数を定義します: 
 
@@ -68,12 +68,12 @@ displayed_sidebar: docs
  WEB SERVICE SET PARAMETER("country";$2)
 ```
 
-#### 参照 
+## 参照 
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get keyboard layout.Summary-->El comando **OBJECT Get keyboard layout** devuelve la configuración del teclado actual asociada a los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  
   
@@ -23,11 +23,11 @@ Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nom
   
 El comando devuelve una cadena indicando el código del lenguaje utilizado, basado en RFC3066, ISO639 e ISO3166\. Para mayor información, consulte la descripción del comando [SET DATABASE LOCALIZATION](set-database-localization.md). 
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET KEYBOARD LAYOUT](object-set-keyboard-layout.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

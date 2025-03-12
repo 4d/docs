@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COMPRESS BLOB.Summary-->The **COMPRESS BLOB** command compresses the BLOB *blob* using a compression algorithm.<!-- END REF--> This command only compresses BLOB whose size is over 255 bytes.
 
@@ -41,7 +41,7 @@ To detect if a BLOB has been compressed, use the [BLOB PROPERTIES](blob-properti
 
 **WARNING:** A compressed BLOB is still a BLOB, so there is nothing to stop you from modifying its contents. However, if you do so, the [EXPAND BLOB](expand-blob.md) command will not be able to decompress the BLOB properly.
 
-#### Example 1 
+## Example 1 
 
 This example tests if the BLOB *vxMyBlob* is compressed, and, if it is not, compresses it:
 
@@ -54,7 +54,7 @@ This example tests if the BLOB *vxMyBlob* is compressed, and, if it is not, comp
 
 Note however, that if you apply COMPRESS BLOB to an already compressed BLOB, the command detects it and does nothing.
 
-#### Example 2 
+## Example 2 
 
 This example allows you to select a document and then compress it:
 
@@ -72,7 +72,7 @@ This example allows you to select a document and then compress it:
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 Sending of raw HTTP data compressed with GZIP:
 
@@ -84,16 +84,16 @@ Sending of raw HTTP data compressed with GZIP:
  WEB SEND RAW DATA($blob ;*)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 The OK variable is set to 1 if the BLOB has been successfully compressed; otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [BLOB PROPERTIES](blob-properties.md)  
 [EXPAND BLOB](expand-blob.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

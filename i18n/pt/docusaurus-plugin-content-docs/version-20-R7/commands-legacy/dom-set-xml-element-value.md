@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Summary-->O comando DOM SET XML ELEMENT VALUE lhe permite modificar o valor do elemento definido por *refElement*.<!-- END REF-->  
   
@@ -42,13 +42,13 @@ Quando for passado o parâmetro opcional asterisco (\*), indica que o valor do e
   
 **Nota**: Se o elemento designado por *refElemento* for de tipo BLOB, é codificado automaticamente em base64\. Entretanto, o comando [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md) realiza automaticamente a operação inversa.
 
-##### Note about processing end-of-line characters 
+### Note about processing end-of-line characters 
 
 Par conformité avec les règles de traitement XML, toutes les séquences de caractères de fin de ligne CR et CRLF sont converties en caractères LF.
 
 Para conformidade com as regras XML, todas as sequências de caracteres de final de linha CR e CRLF são convertidas para caracteres LF.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Na fonte XML abaixo: 
 
@@ -72,7 +72,7 @@ Obtemos:
 </Book>
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Na fonte XML abaixo: 
 
@@ -111,16 +111,16 @@ Obtemos:
 </Maths>
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando tiver sido executado corretamente, a variável sistema Ok assume o valor 1\. Se ocorrer um erro, assume o valor 0 e um erro é gerado (por exemplo, se a referência do elemento for inválida)
 
-#### Ver também 
+## Ver também 
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

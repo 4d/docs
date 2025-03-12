@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET DOCUMENT ICON.Summary-->O comando GET DOCUMENT ICON retorna no campo ou a variável imagem 4D ícone, o ícone do documento cujo nome ou rota de acesso se passa em *rotaDoc.<!-- END REF--> rotaDoc* pode especificar um arquivo de todo tipo (executável, documento, atalho ou alias, etc.) ou uma pasta.  
 
@@ -28,7 +28,7 @@ Passe em *ícone* um campo ou uma variável imagem 4D. Depois da execução do c
 O parâmetro opcional *tamanho* permite indicar as dimensões em píxels do ícone. Este valor representa o comprimento do quadrado incluindo o ícone. Geralmente, os ícones são definidos de 32x32 píxels (“ícones longos”) ou 16x16 píxels (“ícones pequenos”). Se passa 0 ou omite este parâmetro, o comando retorna o ícone mais grande disponível.
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->**LISTBOX GET CELL POSITION** コマンドは、*object*および *\** で指定されたリストボックスの最後にクリックされた位置に対応する位置、あるいはキーボードアクションで選択されたセルの位置、あるいはマウスの水平・垂直座標を*column* と*row* 引数に返します。<!-- END REF-->
 
@@ -49,12 +49,12 @@ displayed_sidebar: docs
 
 このコマンドは、マウスクリック、キーボード、(On Getting Focusを生成する)[EDIT ITEM](edit-item.md)コマンドによる選択または選択解除を考慮します。リストボックスの選択行がキーボードの矢印キーで変更された場合、*column*引数には0が返されます。この場合、*colVar*が渡されていれば[Is nil pointer](is-nil-pointer.md)が返されます。
 
-#### 参照 
+## 参照 
 
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [LISTBOX SELECT BREAK](listbox-select-break.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

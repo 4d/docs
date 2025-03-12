@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WEB SEND RAW DATA.Summary-->O comando \[**#current\_title\]** permite ao servidor web 4D enviar dados HTTP "brutos", os quais podem estar em pedaços.<!-- END REF-->  
   
@@ -63,7 +63,7 @@ Combinado com o novo comando [WEB GET HTTP BODY](web-get-http-body.md) e com os 
   
 ![](../assets/en/commands/pict856016.en.png)
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo ilustra o uso da opção chunked com o comando **WEB SEND RAW DATA**. Os dados (uma sequência de números) são enviadas em 100 pedaços gerados rapidamente em um loop. Lembre que o cabeçalho da resposta não está definido explicitamente: o comando o enviará automaticamente e inserirá o campo *transfer-encoding: chunked* nele se o parâmetro \* for utilizado.  
   
@@ -79,12 +79,12 @@ Este exemplo ilustra o uso da opção chunked com o comando **WEB SEND RAW DATA*
  End for
 ```
 
-#### Ver também 
+## Ver também 
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

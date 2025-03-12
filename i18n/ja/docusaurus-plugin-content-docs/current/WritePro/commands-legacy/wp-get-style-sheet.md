@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get style sheet.Summary-->**WP Get style sheet** コマンドは、*styleSheetName* 引数で指定された名前のスタイルシートオブジェクトを返します。<!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 *styleSheetName* 引数を使用すると、返すスタイルシートの名前を指定することができます。*wpDoc* 引数のドキュメント内に指定された名前のスタイルシートがない場合、null オブジェクトが返されます。
 
-#### 例題 
+## 例題 
 
 "Main title"スタイルシートを取得したい場合を考えます:
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
 [WP Get style sheets](wp-get-style-sheets.md)  

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->RESOURCE TYPE LIST コマンドは、現在開いているリソースファイルの中に存在するリソースのリソースタイプによる*resTypes*配列を作成します。<!-- END REF-->
 
@@ -24,7 +24,7 @@ RESOURCE TYPE LISTを呼び出す前に、*resTypes*配列を文字列配列ま�
 
 このコマンドの実行後、[Size of array](size-of-array.md "Size of array")を*resTypes*配列に対して実行し、見つかったリソースタイプの数を調べることができます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、現在開いているすべてのリソースファイルに存在するリソースのリソースタイプによる*atResType*配列を作成します:
 
@@ -32,7 +32,7 @@ RESOURCE TYPE LISTを呼び出す前に、*resTypes*配列を文字列配列ま�
  RESOURCE TYPE LIST(atResType)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例題では、Macintoshの4Dストラクチャファイルに古い4Dプラグインが含まれているかどうかをテストします。もし含まれていれば、これをWindowsで使用するためには更新が必要です。
 
@@ -47,7 +47,7 @@ RESOURCE TYPE LISTを呼び出す前に、*resTypes*配列を文字列配列ま�
 
 **Note:** 古いプラグインはストラクチャファイル以外にも存在する可能性があります。またデータベースにはProc.Extファイルが含まれているかもしれません。
 
-#### 例題 3 
+## 例題 3 
 
 以下のプロジェクトメソッドは、リソースファイルの中に存在するリソースの数を返します: 
 
@@ -77,11 +77,11 @@ RESOURCE TYPE LISTを呼び出す前に、*resTypes*配列を文字列配列ま�
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [RESOURCE LIST](resource-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

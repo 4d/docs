@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Table insert rows.Summary-->La commande **WP Table insert rows** insère une ou plusieurs lignes dans un tableau 4D Write Pro.<!-- END REF-->
 
@@ -37,7 +37,7 @@ Le paramètre optionnel nbLignes définit le nombre de lignes à insérer dans o
 
 La commande retourne une plage de ligne représentant un ou plusieurs ligne insérées, ou retourne Null si rien n'a été inséré. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez insérer deux lignes à la fin du tableau *Invoice* :
 
@@ -58,6 +58,6 @@ Cela insèrera les deux nouvelles lignes à l'emplacement souhaité :
 
 ![](../../assets/en/WritePro/commands/pict4680266.en.png) 
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Table insert columns](wp-table-insert-columns.md)  

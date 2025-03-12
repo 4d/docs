@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Convert path system to POSIX.Summary-->O comando Convert path system to POSIX converte uma rota expressa com a sintaxe sistema em uma rota expressa com a sintaxe POSIX (Unix).<!-- END REF-->  
 
@@ -25,7 +25,7 @@ O comando retorna a rota de acesso completa do arquivo ou da pasta expressa na s
   
 O parâmetro opcional *\** permite definir a codificação da rota POSIX. Por padrão, Convert path system to POSIX não codifica os caracteres especiais da rota POSIX. Se passa o parâmetro *\**, os caracteres especiais se traduzem (por exemplo, "My folder" se converte em "Minha%20pasta").
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Exemplos em Mac OS
 
@@ -44,7 +44,7 @@ Exemplos em Mac OS
   //devolve "/resources/images"
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Exemplo em Windows
 
@@ -55,14 +55,14 @@ Exemplo em Windows
   //returns "//srv/tempo/file.txt"
 ```
 
-#### Ver também 
+## Ver também 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Object to path](object-to-path.md)  
 [Path to object ](path-to-object.md)  
 [Test path name](test-path-name.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

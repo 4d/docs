@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Summary-->O comando **WP IMPORT STYLE SHEETS** importa todas as folhas de estilo de *sourceDoc* em *targetDoc*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ No parâmetro *sourceDoc*, passe o documento 4D Write Pro que contenha as folhas
 
 **Nota**: se uma folha de estilo de *sourceDoc* tiver o mesmo nome que uma folha de estilo em *targetDoc*, a folha de estilo importada sobre-escreverá (substituirá) a folha de estilo em *targetDoc*.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser importar uma folha de estilo de modelo e receber uma notificação com o número de cada tipo de folha de estilo importada:
 
@@ -39,7 +39,7 @@ Se quiser importar uma folha de estilo de modelo e receber uma notificação com
  ALERT(String($nb1)+" paragraph style sheet(s) and "+string($nb2)+" character style sheet(s) imported))
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
 [WP Get style sheet](wp-get-style-sheet.md)  

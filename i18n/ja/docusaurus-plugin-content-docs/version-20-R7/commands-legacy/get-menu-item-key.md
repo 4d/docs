@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get menu item key.Summary-->Get menu item key コマンドは、*menu*引数にメニュー番号またはメニュー参照で指定したメニュー中、*menuItem*引数にメニュー項目番号で指定したメニュー項目の、Ctrl (Windows) または Command (Macintosh) ショートカットコードを返します。<!-- END REF-->*menuItem*に-1を渡して*menu*に最後に追加された項目を指定することもできます。
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 メニュー項目に割り当てられたショートカットがないか、*menuItem* 引数が階層サブメニューを指す場合、Get menu item key は *0* を返します。
 
-#### 例題 
+## 例題 
 
 メニュー項目に割り当てられたショートカットを取得するために、以下のようなタイプのプログラミング構造を実装すると便利です:
 
@@ -46,12 +46,12 @@ displayed_sidebar: docs
  
 ```
 
-#### 参照 
+## 参照 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

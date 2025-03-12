@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET MISSING TABLE NAMES.Summary-->GET MISSING TABLE NAMES コマンドは カレントデータベース中ですべての失われたテーブルの名前を*missingTables*配列に返します。<!-- END REF-->
 
@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 **Note:** 失われたテーブルのデータは、テーブルが再生成されていないと、デーファイル圧縮時に失われます。
 
-#### 参照 
+## 参照 
 
 [REGENERATE MISSING TABLE](regenerate-missing-table.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -27,7 +27,7 @@ El array que pasó en *arrayValores* debe ser del mismo tipo que el atributo *ru
 
 Después de la llamada, el tamaño del array es igual al número de valores distintos que se encuentran en la selección. El comando no cambia la selección actual o el registro actual.
 
-##### Utilización de la propiedad virtual .length 
+### Utilización de la propiedad virtual .length 
 
 Puede utilizar la propiedad virtual "longitud" con este comando. Está disponible automáticamente para todos los atributos de tipo array, y ofrece el tamaño del array, es decir, el número de elementos que contiene. Esta propiedad está diseñada para ser utilizada en búsquedas (ver **QUERY BY ATTRIBUTE**[QUERY BY ATTRIBUTE](query-by-attribute.md)). También se puede utilizar con el comando **DISTINCT ATTRIBUTE VALUES** para obtener los diferentes tamaños de array para un atributo.
 

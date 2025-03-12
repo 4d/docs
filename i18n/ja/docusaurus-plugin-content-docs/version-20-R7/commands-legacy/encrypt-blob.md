@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ENCRYPT BLOB.Summary-->ENCRYPT BLOB コマンドは、*toEncrypt* BLOBの内容を送信者の秘密鍵*sendPrivKey*を使用して暗号化します。<!-- END REF-->オプションとして、同時に受信者の公開鍵*recipPubKey*も使用できます。これらの鍵は、[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) （セキュアプロトコルテーマ）を使用して生成します。 
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 **Note**: BLOB内容の変更（意図的かどうかに関わらず）を防ぐため、暗号にはチェックサム機能が含まれています。したがって、暗号化されたBLOBは変更しないでください。変更を行うと、解読できなくなるおそれがあります。 
 
-##### 暗号化コマンドの最適化 
+### 暗号化コマンドの最適化 
 
 データの暗号化を行うと、アプリケーションの実行速度が低下し、2つの鍵を使用した場合は特に遅くなります。しかし、以下の最適化に関するヒントを考慮してみることをお勧めします: 
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 メモリがそれ以下の場合、セキュリティ上の理由から、同期モードが使用されます。このモードでは他のプロセスを中断するため、速度はより低下します。
 * BLOBのサイズが大きい場合、BLOBの重要な小さな部分のみを暗号化して、処理しなければならないデータ量や時間を減らすことができます。
 
-#### 例題 
+## 例題 
 
 **一つのキーを使用する**  
   
@@ -174,14 +174,14 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
   
 [DECRYPT BLOB](decrypt-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

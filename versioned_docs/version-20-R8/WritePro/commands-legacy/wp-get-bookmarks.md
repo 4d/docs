@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP GET BOOKMARKS.Summary-->The **WP GET BOOKMARKS** command returns an array containing the names of all bookmarks defined in *wpDoc*.<!-- END REF--> 
 
 After the command is executed, the *arrBKNames* is filled with all the bookmark names in the document. In the array, names are sorted by bookmark position inside the document. If several bookmarks begin at the same position, they are sorted in alphabetical order. 
 
-#### Example 
+## Example 
 
 You want to know the number of bookmarks defined in your document:
 
@@ -30,7 +30,7 @@ You want to know the number of bookmarks defined in your document:
  ALERT("The document contains "+Size of array($_bookmarks)+" bookmarks.")
 ```
 
-#### See also 
+## See also 
 
 [WP Bookmark range](wp-bookmark-range.md)  
 [WP DELETE BOOKMARK](wp-delete-bookmark.md)  

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Summary-->**LIST OF STYLE SHEETS**コマンドは、*arrStyleSheets*配列にアプリケーション内のスタイルシートのリストを返します。<!-- END REF-->.
 
@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 **注:** 互換性の理由から、このコマンドは自動スタイルシート"\_\_automatic\_main\_text\_\_"と"\_\_automatic\_additional\_text\_\_" は返しません。しかしながら、これらのスタイルシートでのフォーム上での利用には問題はありません。
 
-##### 互換性に関する注意 
+### 互換性に関する注意 
 
 このコマンドは**バイナリーデータベース**でのみ利用可能です。**プロジェクトアーキテクチャー**においては、空の配列が返されます。
 
-#### 例題 
+## 例題 
 
 アプリケーション内に、以下のようにスタイルシートが定義されていたとします:
 
@@ -45,12 +45,12 @@ displayed_sidebar: docs
   // $arrStyles{6} には "Variables"
 ```
 
-#### 参照 
+## 参照 
 
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

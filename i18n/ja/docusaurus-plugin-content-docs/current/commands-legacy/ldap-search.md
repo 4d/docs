@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LDAP Search.Summary-->**LDAP Search** コマンドはターゲットとなるLDAPサーバー内にて、定義された条件に合致する最初のオカレンスを検索します。<!-- END REF-->このコマンドは*RuntimeVLIncludeIt* によって開かれたLDAPサーバーへの接続の中で実行される必要があります(それ以外の場合にはエラー1003が返されます)。
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 * 要素に**true**を渡した場合、対応する要素の*attributes* 引数はコレクションとして返されます。単一のエントリーが見つかった場合、コマンドは単一の要素を含むコレクションを返します。
 * 要素に**false** を渡した場合、対応する要素の*attributes* 引数は単純な変数として返されます。複数のエントリーが見つかった場合、コマンドは最初の要素のみを返します。
 
-#### 例題 1 
+## 例題 1 
 
 カンパニーディレクトリ内から、"smith"というユーザーの電話番号を取得したい場合を考えます:
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
  LDAP LOGOUT
 ```
 
-#### 例題 2 
+## 例題 2 
 
 "memberOf"属性で見つかった全てのエントリーを格納した配列を取得したい場合を考えます:
 
@@ -79,12 +79,12 @@ displayed_sidebar: docs
   // $_arrMemberOf 内には、全てのエントリーグループを格納した配列が入っています
 ```
 
-#### 参照 
+## 参照 
 
 *LDAP*  
 [LDAP SEARCH ALL](ldap-search-all.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

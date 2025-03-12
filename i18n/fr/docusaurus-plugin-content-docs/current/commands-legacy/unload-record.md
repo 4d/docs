@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.UNLOAD RECORD.Summary-->**UNLOAD RECORD** place l'enregistrement courant de *laTable* dans l'état non verrouillé.<!-- END REF-->
 
@@ -25,12 +25,12 @@ Si les enregistrements contiennent une quantité importante de données, de cham
 
 **Note :** Lorsqu'elle est utilisée dans une transaction, la commande **UNLOAD RECORD** libère l'enregistrement courant pour le process qui gère la transaction uniquement. Pour les autres process, l'enregistrement reste verrouillé tant que la transaction n'est pas validée (ou annulée).
 
-#### Voir aussi 
+## Voir aussi 
 
 [LOAD RECORD](load-record.md)  
 *Verrouillage d'enregistrements*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

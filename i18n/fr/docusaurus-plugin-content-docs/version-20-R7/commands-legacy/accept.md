@@ -28,7 +28,7 @@ Enfin, cette commande peut être placée dans la méthode de la case de fermetur
 
 Il n'est pas possible d'enchaîner plusieurs **ACCEPT**. En d'autres termes, l'exécution consécutive de deux commandes **ACCEPT** dans une méthode en réponse à un événement aura le même résultat que l'exécution d'une seule.
 
-##### Mode headless 
+### Mode headless 
 
 La commande **ACCEPT** est autorisée en mode headless, dans le contexte des zones hors écran créées par *VP Run offscreen area* ou [WA Run offscreen area](wa-run-offscreen-area.md). 
 

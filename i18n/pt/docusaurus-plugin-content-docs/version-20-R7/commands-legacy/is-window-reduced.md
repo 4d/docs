@@ -14,16 +14,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is window reduced.Summary-->O comando **Is window reduced** devolve **True** se a janela cujo número de referência se passar na *Janela* estiver atualmente reduzida na barra de tarefas (Windows) ou no dock (macOS), e **False** no caso contrário.<!-- END REF-->
 
-#### Ver também 
+## Ver também 
 
 [Is window maximized](is-window-maximized.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

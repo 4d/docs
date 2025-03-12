@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Summary-->**OBJECT SET ENTERABLE** コマンドは、*object* で指定したフォームオブジェクトを入力可または入力不可に設定するとともに、*フォーカス可能* 属性も設定します。<!-- END REF-->
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 **注:** リストボックスのセルを入力不可にするためには、On Before Data Entryイベント内の$0に-1の値を渡します。この点については、*入力の管理*を参照して下さい。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、船積みの重量に応じて、船積みフィールドを設定します。船積みが1オンス以下の場合は、shipperに米国郵便を設定しこのフィールドを入力不可にします。それ以外の場合には、入力可に設定します。 
 
@@ -59,7 +59,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 次の例は、リストのヘッダに配置されたチェックボックスのオブジェクトメソッドであり、リスト更新モードを制御します: 
 
@@ -68,12 +68,12 @@ displayed_sidebar: docs
  OBJECT SET ENTERABLE([Table1];bEnterable)
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT Get enterable](object-get-enterable.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

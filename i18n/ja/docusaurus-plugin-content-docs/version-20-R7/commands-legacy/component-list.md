@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.COMPONENT LIST.Summary-->**COMPONENT LIST**コマンドは、4Dがカレントのホストデータベースにロードしたコンポーネントの名前を、*componentsArray* 配列に返します。<!-- END REF-->
 
@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 4Dコンポーネントに関する詳細は、Design Referenceマニュアルを参照してください。
 
-#### 参照 
+## 参照 
 
 [PLUGIN LIST](plugin-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

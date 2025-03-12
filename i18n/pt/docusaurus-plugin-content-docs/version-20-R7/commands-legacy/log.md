@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Log.Summary-->Log retorna o logaritmo neperiano de *numero*.<!-- END REF--> Log é a função inversa de [Exp](exp.md).
 
 **Nota:** 4D oferece a constante pré-definida *e numero* (2.71828...).
 
-#### Exemplo 
+## Exemplo 
 
 A linha a seguir mostra 1:
 
@@ -28,11 +28,11 @@ A linha a seguir mostra 1:
  ALERT(String(Log(Exp(1)))
 ```
 
-#### Ver também 
+## Ver também 
 
 [Exp](exp.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

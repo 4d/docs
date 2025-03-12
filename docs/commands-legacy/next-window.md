@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Next window.Summary-->The Next window command returns the window reference number of the window “behind” the window you pass in *window* (based on the front-to-back order of the windows).<!-- END REF-->
 
-#### See also 
+## See also 
 
 [Frontmost window](frontmost-window.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

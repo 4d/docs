@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Drop database method.Summary-->**On Dropデータベースメソッド**はローカルおよびリモートモードの4Dで使用できます。<!-- END REF-->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 Macでは、このデータベースメソッドが呼び出されるためにはドロップ中**Option**+**Command** キーを押さえておく必要があります。
 
-#### 例題 
+## 例題 
 
 この例題は、フォーム外側にドロップされた4D Writeドキュメントを開きます:
 
@@ -41,6 +41,6 @@ Macでは、このデータベースメソッドが呼び出されるために�
  End if
 ```
 
-#### 参照 
+## 参照 
 
 *ドラッグ＆ドロップ*  

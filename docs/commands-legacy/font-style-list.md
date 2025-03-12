@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FONT STYLE LIST.Summary-->The **FONT STYLE LIST** command returns the list of font styles and the list of complete font names supported by the font family defined in the *fontFamily* parameter.<!-- END REF--> This command allows you to design interfaces handling fonts and font styles, particularly in the context of 4D Write Pro areas (see *4D Write Pro Reference*).
 
@@ -27,7 +27,7 @@ In *fontNameList*, you pass a text array to be filled with the complete list of 
 
  If the *fontFamily* is not found on the machine, arrays are returned empty. To get the list of font families available on the machine, use the [FONT LIST](font-list.md) command.
 
-#### Example 
+## Example 
 
 You want to select styles of the "Verdana" font family (if available):
 
@@ -55,11 +55,11 @@ You want to select styles of the "Verdana" font family (if available):
   // $aTnames{1}="Verdana Bold Italic"
 ```
 
-#### See also 
+## See also 
 
 [FONT LIST](font-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

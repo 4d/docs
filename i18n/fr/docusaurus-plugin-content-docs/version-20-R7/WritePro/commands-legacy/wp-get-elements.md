@@ -49,7 +49,7 @@ Vous pouvez passer le paramètre optionnel *typeElement* pour spécifier les typ
 * Si une plage indiquée dans *objCible* contient un élément qui n'est pas entièrement contenu dans la plage, l'élément entier sera inclus dans les résultats. Par exemple, si la plage inclut une partie d'un tableau (mais pas tout le tableau), la référence de l'élément tableau entier est renvoyée, en revanche seules les références de cellules (paragraphes) comprises dans la plage sont incluses.
 * Si vous passez wk type text box dans le paramètre typeElement, objCible ne pourra contenir qu'un document 4D Write Pro. Une erreur sera renvoyée si vous passez autre chose qu'un document objet dans objCible dans ce cas.
 
-##### Tri des éléments 
+### Tri des éléments 
 
 Les éléments contenus dans la collection retournée sont classés différemment selon le contenu d'*objCible :*
 

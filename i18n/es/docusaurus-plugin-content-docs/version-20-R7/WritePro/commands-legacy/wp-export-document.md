@@ -41,7 +41,7 @@ Puede omitir el parámetro *formato*, en cuyo caso deberá especificar la extens
 * Para mayor información sobre el formato 4D Write Pro, consulte *Formato del documento .4wp*
 * Para ver una lista de diferencias conocidas o incompatibilidad al utilizar el formato .docx, ver *Importar y Exportar al formato .docx*.
 
-##### Parámetro opcion 
+### Parámetro opcion 
 
 Pase un [objeto](# "Datos estructurados como forma de objeto nativo 4D") en la *opcion* que contiene los valores para definir las propiedades del documento exportado. Las siguientes propiedades están disponibles:
 
@@ -85,7 +85,7 @@ La siguiente tabla indica la *opcion* disponible por *formato* de exportación:
 | wk embedded pictures<br/>                        | \-                                                                         | \-                                                                            | \-                                                                                 | \-                                                                             | \-                                                                             | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (por defecto: true)             |
 | wk google fonts tag<br/>                         | \-                                                                         | \-                                                                            | \-                                                                                 | \-                                                                             | \-                                                                             | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (por defecto: false)            |
 
-##### colección wk files 
+### colección wk files 
 
 La propiedad wk files permite [exportar un PDF con archivos adjuntos](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures). Esta propiedad debe contener una colección de objetos que describan los archivos que se anidarán en el documento final. Cada objeto de la colección puede contener las siguientes propiedades:
 
@@ -102,7 +102,7 @@ Si el parámetro *opcion* también contiene una propiedad wk factur x, entonces 
 
 **Nota:** los archivos adjuntos en PDF solo son compatibles con la versión PDF/A-3\. Cuando pasa la propiedad wk files, la versión "PDF/A-3" se utiliza automáticamente.
 
-##### objectwk factur x 
+### objectwk factur x 
 
 La propiedad wk factur x es un objeto que puede contener hasta dos propiedades:
 

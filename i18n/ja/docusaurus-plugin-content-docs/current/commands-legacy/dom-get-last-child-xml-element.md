@@ -16,13 +16,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Get last child XML element.Summary-->DOM Get last child XML element コマンドは*elementRef*に渡した要素の最後の子要素への参照を返します。<!-- END REF-->この参照は他のXML解析コマンドで使用できます。
 
 *childElemName* と *childElemValue* 引数が渡されると、子要素の名前と値がそれぞれ返されます。
 
-#### 例題 
+## 例題 
 
 ルートの最後の子要素の参照を取得します。XML構造 (C:\\\\import.xml) はまずBLOBにロードされます: 
 
@@ -36,15 +36,15 @@ displayed_sidebar: docs
  $ref_XML_Child:=DOM Get last child XML element($ref_XML_Parent;$childName;$childValue)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、エラーが発生すると0が設定されます。
 
-#### 参照 
+## 参照 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

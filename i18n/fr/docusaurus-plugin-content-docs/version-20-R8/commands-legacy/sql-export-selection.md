@@ -29,7 +29,7 @@ Si la sélection courante est vide, la commande ne fait rien. A noter que dans c
 
 Si l’export s’est déroulé correctement, la variable *OK* prend la valeur 1\. Dans le cas contraire, elle prend la valeur 0\. 
 
-##### 
+### 
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->The **CHECK LOG FILE** command displays the dialog box for viewing the current log file of the database (which can also be accessed via the Maintenance Security Center window):
 
@@ -24,18 +24,18 @@ This dialog box includes the **Rollback** button that can be used to cancel oper
 
 This command can only be used in the context of single-user applications. More particularly, it allows access to the rollback function from 4D Volume Desktop applications (applications with no Design mode). If it is called within a client/server application, the command has no effect and the error 1421 is returned.
 
-#### Error Handling 
+## Error Handling 
 
 * If this command is executed in a database operating without a log file, it does nothing and the error 1403 is returned.
 * If this command is executed in a client/server database, it does nothing and the error 1421 is returned.  
 You can intercept these errors using an error-handling method installed with the [ON ERR CALL](on-err-call.md) command.
 
-#### See also 
+## See also 
 
 *Backup Manager Errors (1401 -> 1421)*  
 [RESTORE](restore.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

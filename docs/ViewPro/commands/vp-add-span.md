@@ -12,7 +12,7 @@ title: VP ADD SPAN
 |---|---|---|---|
 |rangeObj| Object|->|Range object|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP ADD SPAN` command combines the cells in *rangeObj* as a single span of cells.
 
@@ -21,7 +21,7 @@ In *rangeObj*, pass a range object of cells. The cells in the range are joined t
 > * Only the data in the upper-left cell is displayed. Data in the other combined cells is hidden until the span is removed.
 > * Hidden data in spanned cells is accessible via formulas (beginning with the upper-left cell).
 
-#### Example
+## Example
 
 To span the First quarter and Second quarter cells across the two cells beside them, and the South area cell across the two rows below it:
 
@@ -42,7 +42,7 @@ To span the First quarter and Second quarter cells across the two cells beside t
 
 ![vp-add-span-result](../../assets/en/ViewPro/vp-add-span-2.png)
 
-#### See also
+## See also
 
 [4D View Pro Range Object Properties](../getting-started.md#using-range-objects)<br/>
 [VP Get spans](vp-get-spans.md)<br/>

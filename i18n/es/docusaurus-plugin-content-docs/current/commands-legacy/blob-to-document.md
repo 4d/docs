@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BLOB TO DOCUMENT.Summary-->BLOB TO DOCUMENT escribe los datos de *documento* utilizando los datos almacenados en *blob*.<!-- END REF--> Puede pasar el nombre de un documento existente en *documento*. Si el documento no existe, el comando lo crea. Si pasa el nombre de un documento existente, asegúrese de que el documento no esté abierto, de lo contrario se generará un error. Si quiere permitir que el usuario elija el documento, utilice los comandos [Open document](open-document.md) o [Create document](create-document.md) y utilice la variable sistema *documento* (ver ejemplo).
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted escribe un sistema de información que le permite guardar y buscar rápidamente documentos. En un formulario de entrada de datos, usted crea un botón que le permite guardar un documento que contiene datos cargados previamente en un campo BLOB. El método para este botón puede ser el siguiente:
 
@@ -33,11 +33,11 @@ Usted escribe un sistema de información que le permite guardar y buscar rápida
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 1 si el documento está escrito correctamente, de lo contrario toma el valor 0 y se genera un error.
 
-#### Manejo de errores 
+## Manejo de errores 
 
 * Si trata de reescribir un documento que no existe o que ha sido abierto por otro proceso o aplicación, se genera un error File Manager.
 * El espacio del disco puede ser insuficiente para escribir los nuevos contenidos del documento.
@@ -45,13 +45,13 @@ La variable sistema OK toma el valor 1 si el documento está escrito correctamen
 
 En todos los casos, puede interceptar el error utilizando un método de interrupción [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver también 
+## Ver también 
 
 [Create document](create-document.md)  
 [DOCUMENT TO BLOB](document-to-blob.md)  
 [Open document](open-document.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

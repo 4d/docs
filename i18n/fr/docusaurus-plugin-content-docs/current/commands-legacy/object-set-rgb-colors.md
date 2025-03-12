@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Summary-->La commande **OBJECT SET RGB COLORS** modifie les couleurs d'avant-plan et d'arrière-plan du ou des objet(s) défini(s) par le paramètre *objet* et le paramètre optionnel *\**.<!-- END REF--> Lorsque la commande est appliquée à un objet de type list box, un paramètre supplémentaire permet de modifier la couleur alternée des lignes.
 
@@ -39,7 +39,7 @@ Vous passez des valeurs de couleurs RVB dans les paramètres *couleurAvantPlan* 
 | Valeur RVB de 4 octets                 | Entier long | Entier long de 4 octets (format 0x00rrggbb). Valeurs hexadécimales :<br/> rr = Composante rouge de la couleur gg = Composante verte de la couleur bb = Composante bleue de la couleur                                                                                                                                                                                                                                                                                                                     | 0x00000000, 0x00FF7F7F                                                                                      |
 | Constante couleur "système" 4D         | Entier long | Couleurs utilisées par 4D pour dessiner des objets avec des couleurs automatiques. Constantes disponibles (du thème *FIXER COULEUR RVB*):<br/> Background color Background color none (cette constante peut être utilisée uniquement avec les paramètres *couleurArrièrePlan* et couleurArrièrePlanAlt) Dark shadow color Disable highlight item color Foreground color Highlight menu background color Highlight menu text color Highlight text background color Highlight text color Light shadow color | **Note :* Les couleurs automatiques dépendent du système et du type d'objet auxquels elles sont affectées.* |
 
-#### Exemple 1 
+## Exemple 1 
 
 Voici un formulaire contenant deux variables non saisissables, *vsColorValue* et *vsColor* ainsi que trois thermomètres, *thRouge*, *thVert* et *thBleu* :
 
@@ -88,7 +88,7 @@ En exécution, le formulaire a l'aspect suivant :
 
 ![](../assets/en/commands/pict4278099.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Passage du fond en transparent avec couleur de police claire :
 
@@ -100,12 +100,12 @@ Passage du fond en transparent avec couleur de police claire :
 
 ![](../assets/en/commands/pict1210702.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
 [Select RGB color](select-rgb-color.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

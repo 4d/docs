@@ -12,26 +12,26 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.VALIDATE TRANSACTION.Summary-->**VALIDATE TRANSACTION** accepte la transaction ouverte par la commande [START TRANSACTION](start-transaction.md) de niveau correspondant dans le process courant.<!-- END REF-->sauvegarde toutes les modifications effectuées sur les données de la base pendant la transaction.
 
 A compter de la version 11 de 4D, vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transaction principale est annulée, toutes les sous-transactions sont annulées, même si elles ont été validées individuellement à l'aide de cette commande.
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si la transaction a été correctement validée, sinon elle prend la valeur 0\. 
 
 A noter que lorsque OK vaut 0, la transaction est automatiquement annulée en interne (équivaut à un [CANCEL TRANSACTION](cancel-transaction.md)). Par conséquent, notamment dans le contexte de transactions imbriquées, il ne faut pas appeler explicitement [CANCEL TRANSACTION](cancel-transaction.md) si OK=0 car l'annulation sera alors appliquée à la transaction du niveau supérieur. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [CANCEL TRANSACTION](cancel-transaction.md)  
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 *Utiliser des transactions*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

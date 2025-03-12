@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP New footer.Summary-->The **WP New footer** command creates and returns the footer associated to the section or subsection defined by the *wpSection* parameter.<!-- END REF--> 
 
 If a footer element is already defined for the section or subsection, an *undefined* object is returned and an error is generated. 
 
-#### Example 
+## Example 
 
 You want to create a footer for the left pages of a section:
 
@@ -37,7 +37,7 @@ You want to create a footer for the left pages of a section:
  End if
 ```
 
-#### See also 
+## See also 
 
 [WP DELETE FOOTER](wp-delete-footer.md)  
 [WP Get footer](wp-get-footer.md)  

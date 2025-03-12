@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Contextual click.Summary-->The Contextual click command returns True if a contextual click has been made:
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 This command should be used only in the context of the On Clicked form event. It is therefore necessary to verify in Design mode that the event has been properly selected in the Form properties and/or in the specific object. 
 
-#### Example 
+## Example 
 
 This method, combined with a scrollable area, enables you to change the value of an array element using a context menu: 
 
@@ -36,12 +36,12 @@ This method, combined with a scrollable area, enables you to change the value of
  End if
 ```
 
-#### See also 
+## See also 
 
 [Form event code](../commands/form-event-code.md)  
 [Right click](right-click.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

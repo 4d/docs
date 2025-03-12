@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Count columns.Summary-->La commande **QR Count columns** retourne le nombre de colonnes présentes dans l'état rapide désigné par le paramètre *zone*.<!-- END REF-->
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant permet d'ajouter une colonne supplémentaire à droite de la dernière colonne de la zone :
 
@@ -29,12 +29,12 @@ L'exemple suivant permet d'ajouter une colonne supplémentaire à droite de la d
  QR INSERT COLUMN(MaZone;$NbCol+1;->[Table 1]Noms)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
 [QR INSERT COLUMN](qr-insert-column.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

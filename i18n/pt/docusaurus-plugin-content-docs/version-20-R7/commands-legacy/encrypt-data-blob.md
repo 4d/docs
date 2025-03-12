@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Encrypt data BLOB.Summary-->O comando **Encrypt data BLOB** encripta o parâmetro *blobCriptografar* com o mesmo algoritmo que 4D usas para criptografia de dados (AES-256) e retorna o resultao em *blobCriptografado*.<!-- END REF-->
 
@@ -34,7 +34,7 @@ No caso de um erro, o BLOB é retornada vazia e o comando retorna False.
 
 **Nota:** Quando criptografar um blob usando **Encrypt data BLOB**, o resultado *blobCriptografado* é um múltiplo de 16 bytes por causa do algoritmo de criptografia. Como consequência, se *blobCriptografar* não for um múltiplo de 16 bytes, o comando automaticamente vira para um múltiplo de 16 bytes para adicionar null bytes no final. Para evitar erros quando decriptografar o blob com [Decrypt data BLOB](decrypt-data-blob.md), precisa manejar o tamanho de *blobCritpgrafar* quando trabalhar com arquivos que não forem arquivos de texto. Para um exemplo detalhado de como fazer isso, veja [esse artigo no blog](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/). 
 
-#### Exemplo 
+## Exemplo 
 
 Para criptografar um arquivo texto na pasta RESOURCES no banco de dados:
 
@@ -52,7 +52,7 @@ Para criptografar um arquivo texto na pasta RESOURCES no banco de dados:
  $encryptedFile.setContent($encryptedBlob)
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [Decrypt data BLOB](decrypt-data-blob.md)  
@@ -60,7 +60,7 @@ Para criptografar um arquivo texto na pasta RESOURCES no banco de dados:
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

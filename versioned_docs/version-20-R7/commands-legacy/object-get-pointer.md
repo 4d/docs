@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get pointer.Summary-->The **OBJECT Get pointer** command returns a pointer to the variable of a form object.<!-- END REF--> 
 
@@ -35,7 +35,7 @@ This command can be used to designate different objects according to the value o
 The optional *subformName* parameter lets you retrieve a pointer to an *objectName* object that does not belong to the current context, in other words, in the parent form. To be able to use this parameter, you must have passed the Object named selector.   
 When the *subformName* parameter is passed, the **OBJECT Get pointer** command first looks for the subform object named *subformName* in the current form, then looks inside this subform for an object named *objectName*. If this object is found, it returns a pointer to the variable of this object.
 
-#### Example 
+## Example 
 
 Given a form "SF" used twice as a subform in the same parent form. The subform objects are named "SF1" and "SF2". The "SF" form contains an object named *CurrentValue*. In the "On Load" form event of the form method of the parent form, we want to initialize the *CurrentValue* object of SF1 to "January" and that of SF2 to "February": 
 
@@ -47,7 +47,7 @@ Given a form "SF" used twice as a subform in the same parent form. The subform o
  $Ptr->:="February"
 ```
 
-#### See also 
+## See also 
 
 [Focus object](focus-object.md)  
 *Form Objects (Access)*  
@@ -56,7 +56,7 @@ Given a form "SF" used twice as a subform in the same parent form. The subform o
 *Objects (Forms)*  
 [Self](self.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

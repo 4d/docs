@@ -40,7 +40,7 @@ La fórmula puede incluir variables de proceso y variables entre procesos. Sin e
 
 Para garantizar que la *instrucción* se evalúe correctamente, independientemente del lenguaje 4D o la versión utilizada, se recomienda utilizar la sintaxis del *token* para los elementos cuyo nombre puede variar entre diferentes versiones (comandos, tablas, campos, constantes). Por ejemplo, para insertar el comando \[#cmd id="178"/\], introduzca '**Current time:C178**'. Para más información al respecto, consulte *Utilizar tokens en fórmulas*. 
 
-##### Caché para fórmulas en modo compilado 
+### Caché para fórmulas en modo compilado 
 
 Por optimización, cada fórmula ejecutada vía **EXECUTE FORMULA** en modo compilado se puede almacenar en una memoria caché en la memoria dedicada. La fórmula se almacena en caché en forma tokenizada. Una vez que se coloca en la caché, sus ejecuciones posteriores están altamente optimizadas ya que el paso de tokenización se evita.
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.EXPAND BLOB.Summary-->El comando EXPAND BLOB descomprime el BLOB *blob* que fue previamente comprimido utilizando el comando COMPRESS BLOB.<!-- END REF-->  
   
@@ -24,7 +24,7 @@ En otros casos, (el BLOB no ha sido comprimido o está dañado), se genera el er
 
 Para verificar si un BLOB ha sido comprimido, utilice el comando [BLOB PROPERTIES](blob-properties.md "BLOB PROPERTIES").
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo prueba si el BLOB *vxMiBlob* está comprimido, si es así lo descomprime: 
 
@@ -35,7 +35,7 @@ Este ejemplo prueba si el BLOB *vxMiBlob* está comprimido, si es así lo descom
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo le permite seleccionar un documento y descomprimirlo, si está comprimido:
 
@@ -56,16 +56,16 @@ Este ejemplo le permite seleccionar un documento y descomprimirlo, si está comp
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable OK toma el valor 1 si el BLOB ha sido descomprimido con éxito, de lo contrario toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [BLOB PROPERTIES](blob-properties.md)  
 [COMPRESS BLOB](compress-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

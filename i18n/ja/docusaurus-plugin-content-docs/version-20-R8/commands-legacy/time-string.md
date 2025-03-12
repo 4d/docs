@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Time string.Summary-->Time string コマンドは、*seconds*に渡した時間式の文字列を返します。<!-- END REF-->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 **Note:** 時間を様々なフォーマットの文字列に変換したい場合は、[String](string.md "String")を使用します。
 
-#### 例題 
+## 例題 
 
 以下の例題は警告ダイアログに“46800 seconds is 13:00:00.”というメッセージを表示します。
 
@@ -32,12 +32,12 @@ displayed_sidebar: docs
  ALERT("46800 seconds is "+Time string(46800))
 ```
 
-#### 参照 
+## 参照 
 
 [String](string.md)  
 [Time](time.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

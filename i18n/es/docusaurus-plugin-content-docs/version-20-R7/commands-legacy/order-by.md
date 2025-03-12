@@ -42,7 +42,7 @@ No importa c처mo se haya definido una ordenaci처n, si la operaci처n de ordenaci�
 
 Si la ordenaci처n se realiza correctamente, la variable OK toma el valor *1*. Si el usuario hace clic en Cancelar, ORDER BY termina sin efectuar la ordenaci처n, y la variable OK toma el valor *0* (cero).
 
-##### 
+### 
 
 **Nota:** este comando no soporta campos de tipo Objeto.
 

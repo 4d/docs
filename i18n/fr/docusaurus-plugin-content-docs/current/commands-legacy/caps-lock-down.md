@@ -13,15 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Caps lock down.Summary-->**Caps lock down** retourne Vrai si la touche **Verrouillage Majuscule** est enfoncée.<!-- END REF-->
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [Shift down](shift-down.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Macintosh command down](macintosh-command-down.md)  
 [Macintosh control down](macintosh-control-down.md)  
@@ -30,7 +30,7 @@ Reportez-vous à l'exemple de la commande [Shift down](shift-down.md).
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

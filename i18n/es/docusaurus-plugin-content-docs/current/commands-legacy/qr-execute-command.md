@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR EXECUTE COMMAND.Summary-->El comando **QR EXECUTE COMMAND** ejecuta el comando de botón de la barra de herramientas cuya referencia se pasa en *comando*.<!-- END REF--> Este comando se utiliza por lo general para ejecutar un comando seleccionado por el usuario e interceptado en su código a través del comando [QR ON COMMAND](qr-on-command.md).
 
@@ -33,12 +33,12 @@ Si pasa un número de *area* inválido, se genera el error -9850.
 
 Si pasa un número de *comando* incorrecto, se genera el error -9852.
 
-#### Ver también 
+## Ver también 
 
 [QR Get command status](qr-get-command-status.md)  
 [QR ON COMMAND](qr-on-command.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

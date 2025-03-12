@@ -42,7 +42,7 @@ A user entered LLC@ to see a list of companies whose names begin with LLC, as we
 
 Specifying *choiceField* is the same as specifying a wildcard choice when establishing the table relation. For information about specifying a wildcard choice, refer to the *4D Design Reference* manual.
 
-##### 
+### 
 
 **Note:** This command does not support Object type fields.
 

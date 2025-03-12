@@ -14,18 +14,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Screen width.Summary-->Sous Windows, **Screen width** retourne la largeur de la fenêtre d'application 4D (fenêtre MDI).<!-- END REF--> Si vous passez le paramètre optionnel \*, **Screen width** retourne la largeur de l'écran.
 
 Sous Mac OS, **Screen width** retourne la largeur de l'écran principal, c'est-à-dire celui qui contient la barre de menus.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen height](screen-height.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

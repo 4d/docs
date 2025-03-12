@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP COMPUTE FORMULAS.Summary-->**WP COMPUTE FORMULAS** コマンドは、*targetObj* 引数のターゲット内にあるフォーミュラを評価します。<!-- END REF-->
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 **注意:** *targetObj* 引数にセクションを渡す場合、画像フォーミュラ、またはそのセクションか全てのセクションにアンカーされたテキストボックス内のフォーミュラのみが計算されます。ページ、もしくは埋め込みビューにアンカーされていた場合、それらのフォーミュラは計算されません。アンカーされた要素の全てのフォーミュラを計算するためには、*targetObj* 引数にドキュメントを渡します。
 
-#### 例題 
+## 例題 
 
 ドキュメント内のフォーミュラを更新したい場合:
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
  WP COMPUTE FORMULAS(WP Get section(WriteProArea;1))
 ```
 
-#### 参照 
+## 参照 
 
 [WP FREEZE FORMULAS](wp-freeze-formulas.md)  
 [WP Get formulas](wp-get-formulas.md)  

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REDUCE RESTORE WINDOW.Summary-->The **REDUCE RESTORE WINDOW** command reduces/expands the window whose reference number was passed in *window* to/from the taskbar on Windows or the dock on macOS.<!-- END REF--> 
 
@@ -24,13 +24,13 @@ The command toggles the window state:
 
 **Note:** On macOS, the command is asynchronous.
 
-#### See also 
+## See also 
 
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

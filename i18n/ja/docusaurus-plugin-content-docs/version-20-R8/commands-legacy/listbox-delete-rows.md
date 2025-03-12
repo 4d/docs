@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->**LISTBOX DELETE ROWS**コマンドは、*object*引数および *\** で指定されたリストボックスから、*rowPosition* から始まるひとつ以上の行（表示または非表示）を削除します。<!-- END REF--> 
 
@@ -31,12 +31,12 @@ displayed_sidebar: docs
 
 **Note:** このコマンドはリストボックス行の表示/非表示状態を考慮しません。
 
-#### 参照 
+## 参照 
 
 [LISTBOX Get number of rows](listbox-get-number-of-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

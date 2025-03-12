@@ -14,16 +14,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Frontmost window.Summary-->O comando Frontmost window devolve o número de referência da janela localizada no primeiro plano.<!-- END REF-->
 
-#### Ver também 
+## Ver também 
 
 [Frontmost process](frontmost-process.md)  
 [Next window](next-window.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

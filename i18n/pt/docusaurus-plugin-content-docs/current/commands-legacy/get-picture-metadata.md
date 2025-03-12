@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET PICTURE METADATA.Summary-->O comando **GET PICTURE METADATA** permite ler o conteúdo dos metadados (ou meta-tags) presentes em *imagem* (campo ou variável imagem 4D).<!-- END REF--> Para maior informação sobre metadados, consulte a descrição do comando [SET PICTURE METADATA](set-picture-metadata.md).
 
@@ -30,7 +30,7 @@ Passe no parâmetro *ConteudoMeta* a variável destinada a receber os metadados.
 * Se passa uma rota de etiqueta em *nomMeta*, o parâmetro *ConteudoMeta* contém diretamente o valor a ser lido. O valor será convertido no tipo da variável. As variáveis de tipo texto serão formatadas em XML (padrão XMP). Pode passar um array quando o metadado contiver mais de um valor (este é o caso, particularmente, para as etiquetas IPTC Keywords).
 * Se passa um nome de bloco ou uma string vazia em *nomMeta*, o parâmetro *ConteudoMeta* deve ser uma referência válida do elemento DOM XML. Neste caso, o conteúdo do bloco designado (ou de todos os blocos se passou uma string vazia em *nomMeta*) se copia novamente no elemento de referência.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Uso de estruturas da árvore DOM
 
@@ -46,7 +46,7 @@ Uso de estruturas da árvore DOM
  GET PICTURE METADATA(vImagem;"GPS";$_Xml_GPS)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Uso de variáveis
 
@@ -63,7 +63,7 @@ Uso de variáveis
  GET PICTURE METADATA(vImagem;IPTC urgency;$urgência)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Recepção de etiquetas com valores múltiplos em arrays
 
@@ -79,7 +79,7 @@ Depois da execução do comando, arrTkeywords contém por exemplo:
  $arrTkeywords{2}="Europa"
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Recepção de etiquetas com valores múltiplos em uma variável Texto
 
@@ -90,18 +90,18 @@ Recepção de etiquetas com valores múltiplos em uma variável Texto
 
 Depois da execução do comando, *vTwords* contém por exemplo "França;Europa".
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 La variable sistema *OK* devolve 1 se a recuperación dos metadados es correta e 0 se for produzido um erro ou se não se encontra ao menos uma das etiquetas. Em todos os casos, se devolvem os valores legíveis.
 
-#### Ver também 
+## Ver também 
 
 [GET PICTURE KEYWORDS](get-picture-keywords.md)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
 [SET PICTURE METADATA](set-picture-metadata.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

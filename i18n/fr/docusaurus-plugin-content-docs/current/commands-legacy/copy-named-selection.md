@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COPY NAMED SELECTION.Summary-->**COPY NAMED SELECTION** copie la sélection courante de *laTable* dans une sélection temporaire *nom*.<!-- END REF--> La table par défaut du process courant est utilisée si le paramètre optionnel *laTable* n'est pas spécifié. La sélection temporaire *nom* contient une copie de la sélection. La sélection courante et l'enregistrement courant de *laTable* pour le process courant ne sont pas modifiés.
 
@@ -24,7 +24,7 @@ Une sélection temporaire ne contient pas les enregistrements, mais une liste tr
 
 Utilisez la commande [CLEAR NAMED SELECTION](clear-named-selection.md) pour libérer la mémoire utilisée par *nom*.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant permet de vérifier s'il y a des factures impayées dans la table \[Personnes\]. La sélection est triée puis sauvegardée. Nous cherchons toutes les factures qui n'ont pas été payées. Ensuite, nous réutilisons la sélection et effaçons la sélection temporaire en mémoire :
 
@@ -47,13 +47,13 @@ L'exemple suivant permet de vérifier s'il y a des factures impayées dans la ta
  CLEAR NAMED SELECTION("TriéeUtilisateur")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

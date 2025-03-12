@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP DELETE STYLE SHEET.Summary-->El comando **WP DELETE STYLE SHEET** elimina el párrafo designado o la hoja de estilo de caracteres del documento actual.<!-- END REF--> Cuando se elimina una hoja de estilo, el carácter o párrafo al que se aplicó vuelve a su estilo original (es decir, el predeterminado).
 
@@ -26,7 +26,7 @@ Este comando ofrece dos formas de eliminar una hoja de estilo. Puede especificar
 
 **Nota**: la hoja de estilo predeterminada ("Normal") no se puede eliminar.
 
-#### Ver también 
+## Ver también 
 
 *Acceder a contenidos de documentos por programación*  
 [WP Get style sheet](wp-get-style-sheet.md)  

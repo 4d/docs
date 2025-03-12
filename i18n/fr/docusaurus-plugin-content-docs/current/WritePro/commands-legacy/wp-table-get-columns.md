@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Table get columns.Summary-->La commande **WP Table get columns** retourne un nouvel objet plage cellule contenant la sélection de colonnes de objCible ou de *refTableau* (définies par *debutCol* et *nbCols*).<!-- END REF-->
 
@@ -38,7 +38,7 @@ Si objCible n'intersecte pas une plage de tableau ou de texte là où une sélec
 
 Si *debutCol* plus *nbCols* excède le nombre de colonnes dans *refTableau*, ou si *debutCol* est plus grand que le nombre de colonnes dans *refTableau*, la plage retournée contient le maximum de colonnes.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez modifier des attributs des deux dernières colonnes du tableau :
 
@@ -60,7 +60,7 @@ Résultat :
 
 ![](../../assets/en/WritePro/commands/pict3307213.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez obtenir une plage de colonnes à compter de la 10e jusqu'à la dernière :
 
@@ -68,7 +68,7 @@ Vous souhaitez obtenir une plage de colonnes à compter de la 10e jusqu'à la de
  WP Table get columns(tableRef;10;MAXLONG)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez récupérer les colonnes sélectionnées par un utilisateur :
 
@@ -80,7 +80,7 @@ Vous souhaitez récupérer les colonnes sélectionnées par un utilisateur :
  $columns:=WP Table get columns($userSelection)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Table get cells](wp-table-get-cells.md)  
 [WP Table get rows](wp-table-get-rows.md)  

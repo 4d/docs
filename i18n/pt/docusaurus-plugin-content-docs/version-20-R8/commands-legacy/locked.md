@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Locked.Summary-->Locked testa se o registro atual de *tabela* está bloqueado.<!-- END REF--> Utilize esta função para saber se um registro está bloqueado ou não; depois tome a ação mais conveniente, tal como dar ao usuário a opção de esperar que o registro seja liberado ou de anular a operação.  
 
@@ -28,14 +28,14 @@ Se carrega um registro que tenha sido apagado, Locked devolve TRUE. Para evitar 
   
 Durante uma transação, [LOAD RECORD](load-record.md) e Locked se utilizam com frequência para provar a disponibilidade dos registros. Se um registro estiver bloqueado, é comum cancelar a transação.
 
-#### Ver também 
+## Ver também 
 
 [Locked records info](locked-records-info.md)  
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
 *Record Locking*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

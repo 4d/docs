@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX Get footer calculation.Summary-->El nuevo comando **LISTBOX Get footer calculation** devuelve el tipo de cálculo asociado al área de pie de página del list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  
   
@@ -27,11 +27,11 @@ El parámetro *objeto* puede designar:
 * la variable o el nombre de una columna de list box. En este caso, el comando devuelve el cálculo asociado al área de pie de página de esta columna.
 Puede comparar el valor devuelto con las constantes del tema *List box cálculo pie*  (ver el comando [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)).
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

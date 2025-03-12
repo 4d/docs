@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SOAP Get info.Summary-->**SOAP Get info**コマンドを使用して、SOAPリクエストに関するさまざま情報を文字列で受け取ることができます。<!-- END REF-->
 
@@ -29,12 +29,12 @@ SOAPリクエストを処理する際、RPC引数のほかに、リクエスト�
 
 **Note:** またセキュリティのため、4Dに送信されるWebサービスリクエストの最大サイズを設定できます。この設定は[SET DATABASE PARAMETER](set-database-parameter.md)コマンドで行います。
 
-#### 参照 
+## 参照 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

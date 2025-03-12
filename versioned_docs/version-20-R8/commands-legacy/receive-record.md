@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RECEIVE RECORD.Summary-->RECEIVE RECORD receives a record into *table* from the serial port or document opened by the [SET CHANNEL](set-channel.md) command.<!-- END REF--> The record must have been sent with [SEND RECORD](send-record.md). When you execute RECEIVE RECORD, a new record is automatically created for *table*. If the record is received correctly, you must then use [SAVE RECORD](save-record.md) to save the new record.
 
@@ -26,7 +26,7 @@ The complete record is received. This means that pictures and BLOBs stored in or
 1. If you receive a record from a document using this command, the document must have been opened using the [SET CHANNEL](set-channel.md) command. You cannot use RECEIVE RECORD with a document opened with [Open document](open-document.md), [Create document](create-document.md) or [Append document](append-document.md).
 2. During the execution of RECEIVE RECORD, the user can interrupt the reception by pressing **Ctrl-Alt-Shift** (Windows) or **Command-Option-Shift** (Macintosh). This interruption generates an error -9994 that you can catch with an error-handling method installed using [ON ERR CALL](on-err-call.md). Usually, you only need to handle the interruption of a reception while communicating over a serial port.
 
-#### Example 
+## Example 
 
 A combined use of [SEND VARIABLE](send-variable.md), [SEND RECORD](send-record.md), [RECEIVE VARIABLE](receive-variable.md) and **RECEIVE RECORD** is ideal for archiving data or for exchanging data between identical single-user databases used in different places. You can exchange data between 4D databases using the import/export commands such as [EXPORT TEXT](export-text.md) and [IMPORT TEXT](import-text.md). However, if your data contains graphics and/or related tables, using [SEND RECORD](send-record.md) and RECEIVE RECORD is far more convenient.
 
@@ -142,17 +142,17 @@ Here is the (simplified) project method for importing the documentation:
 
 Note that we do not test the OK variable while receiving the data nor try to catch the errors. However, because we stored variables in the document that describes the document itself, if these variables, once received, made sense, the probability for an error is very low. If for instance a user opens a wrong document, the first test stops the operation right away.
 
-#### System variables and sets 
+## System variables and sets 
 
 The OK system variable is set to 1 if the record is received. Otherwise, the OK system variable is set to 0.
 
-#### See also 
+## See also 
 
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

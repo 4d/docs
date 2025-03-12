@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GOTO XY.Summary-->El comando GOTO XY se utiliza conjuntamente con el comando [MESSAGE](message.md "MESSAGE") cuando usted muestra mensajes en una ventana abierta por el comando [Open window](open-window.md "Open window").<!-- END REF-->  
   
@@ -24,15 +24,15 @@ La esquina superior izquierda representa las coordenadas 0,0\. El cursor se ubic
 
 Después de que GOTO XY defina la posición del cursor, puede utilizar [MESSAGE](message.md "MESSAGE") para mostrar los caracteres en la ventana. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Ver el ejemplo del comando [MESSAGE](message.md "MESSAGE").
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Ver el ejemplo del comando [Milliseconds](milliseconds.md "Milliseconds").
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo:
 
@@ -55,11 +55,11 @@ Muestra la siguiente ventana (en Macintosh) por 30 segundos:
 
 ![](../assets/en/commands/pict25419.es.png)
 
-#### Ver también 
+## Ver también 
 
 [MESSAGE](message.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

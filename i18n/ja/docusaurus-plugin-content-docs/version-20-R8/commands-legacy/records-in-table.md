@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Records in table.Summary-->Records in tableは、*aTable*中の総レコード数を返します。<!-- END REF-->[Records in selection](records-in-selection.md "Records in selection")は、カレントセレクションのレコード数のみを返します。Records in tableがトランザクション内で使用される場合、トランザクション中に作成されたレコードが考慮に入れられます。
 
-#### 例題 
+## 例題 
 
 以下の例は、テーブルのレコード数を表示します:
 
@@ -26,11 +26,11 @@ displayed_sidebar: docs
  ALERT("There are "+String(Records in table([People]))+" records in the テーブル.")
 ```
 
-#### 参照 
+## 参照 
 
 [Records in selection](records-in-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

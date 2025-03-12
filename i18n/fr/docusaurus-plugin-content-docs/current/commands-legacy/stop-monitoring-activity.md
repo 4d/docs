@@ -12,22 +12,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.STOP MONITORING ACTIVITY.Summary-->La commande **STOP MONITORING ACTIVITY** arrête le suivi des activités lancées avec la commande [START MONITORING ACTIVITY](start-monitoring-activity.md).<!-- END REF--> Une fois que cette commande est exécutée, toute activité enregistrée ne figure plus dans la mémoire.
 
 Cette commande peut être appelée et exécutée sur un 4D distant, un 4D Server et sur des applications 4D autonomes.
 
-#### Exemple 
+## Exemple 
 
 Voir l'exemple de **[START MONITORING ACTIVITY](start-monitoring-activity.md)**.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Monitored activity](monitored-activity.md)  
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

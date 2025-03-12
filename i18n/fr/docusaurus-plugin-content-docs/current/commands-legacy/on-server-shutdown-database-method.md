@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Server Shutdown database method.Summary-->La **On Server Shutdown database method** est appelée une fois sur le poste serveur lorsque la base courante est refermée sur 4D Server.<!-- END REF--> La **On Server Shutdown database method** n'est appelée dans aucun environnement 4D autre que 4D Server.
 

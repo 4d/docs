@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET FIELD TITLES.Summary-->**SET FIELD TITLES** vous permet de masquer, renommer et réordonner les champs d'une table de votre base lorsqu'ils apparaissent dans les éditeurs standard de 4D en mode Application (lorsque le mode de lancement est le mode **Application**, ou après avoir sélectionné "**Tester l'application**" dans le menu **Exécution**).<!-- END REF-->
 
@@ -46,11 +46,11 @@ La commande **SET FIELD TITLES** est utile dans les cas suivants :
 * Les plug-ins accèdent toujours à la structure "virtuelle" telle que définie par cette commande.
 * Lorsque la commande [SET TABLE TITLES](set-table-titles.md) est appelée sans aucun paramètre, la structure "virtuelle" (incluant les noms personnalisés de tables et de champs) est retirée de l'environnement d'Application.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [SET TABLE TITLES](set-table-titles.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Field name](field-name.md)  
 [GET FIELD TITLES](get-field-titles.md)  
@@ -58,7 +58,7 @@ Reportez-vous à l'exemple de la commande [SET TABLE TITLES](set-table-titles.md
 [Parse formula](parse-formula.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,18 +14,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is a list.Summary-->The Is a list command returns TRUE if the value you pass in *list* is a valid reference to a hierarchical list.<!-- END REF--> Otherwise, it returns FALSE.
 
-#### Example
+## Example
 
 See example for the [CLEAR LIST](clear-list.md) command.
 
 
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

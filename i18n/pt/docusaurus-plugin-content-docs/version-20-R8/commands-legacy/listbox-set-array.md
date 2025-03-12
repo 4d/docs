@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX SET ARRAY.Summary-->**Nota**: este comando só funciona com os list box de tipo array.<!-- END REF-->  
   
@@ -39,7 +39,7 @@ Em *tipoArray*, passe o tipo de array a associar ao list box ou a coluna. Pode u
   
 No parâmetro *proArray*, se passa um ponteiro ao array a utilizar para suportar o tipo de propriedade.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Usted quiere volver a utilizar el array de colores de fuente de la columna 4ta para la columna 10ma:
 
@@ -53,7 +53,7 @@ Usted quiere volver a utilizar el array de colores de fuente de la columna 4ta p
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser definir um array de altura de linha para um list box:
 
@@ -61,12 +61,12 @@ Se quiser definir um array de altura de linha para um list box:
  LISTBOX SET ARRAY(*;"LB";lk row height array;->RowHeightArray)
 ```
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

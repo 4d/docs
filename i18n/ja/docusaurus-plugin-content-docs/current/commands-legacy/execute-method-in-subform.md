@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->**EXECUTE METHOD IN SUBFORM** コマンドを使用して サブフォームオブジェクト*subformObject* のコンテキストにおいて*formula* 引数で指定したコードを実行できます。<!-- END REF-->
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 **注意:** formula メソッドは、*subformObject* がカレントページに見つからないか、インスタンス化されていない場合、実行されません。
 
-#### 例題 1 
+## 例題 1 
 
 親フォーム"Company"中にサブフォーム"ContactDetail"が置かれています。ContactDetailフォームが設定されたサブフォームオブジェクトの名前は"ContactSubform"です。ここでcompanyのフィールド値に基づき、サブフォーム内の特定の要素のアピアランスを変更したいとします (例えば\[Company\]City="New York"のときは"contactname"を赤に、\[Company\]City="San Diego"のときは青にするなど)。このメカニズムはSetToColor メソッドに実装されています。この結果を得るために、SetToColor メソッドをCompany親フォームの"On Load"フォームイベントのプロセスから直接呼び出すことはできません。なぜなら"contactname"オブジェクトはカレントフォームではなく、 "ContactSubform"サブフォームオブジェクト中に表示されているフォームに属しているからです。そのため正しく動作させるために、メソッドはEXECUTE METHOD IN SUBFORM コマンドを使用して実行されなければなりません。
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 2 
+## 例題 2 
 
 コンポーネントとして使用される予定のデータベースを開発しています。このデータベースには共有プロジェクトフォーム (例として"Calender"と名付けます) が含まれています。またこのフォームにはダイナミック変数やカレンダを調整するための公開プロジェクトメソッド (SetCalendarDate(varDate)) が含まれています。  
 このメソッドがCalenderフォームメソッドで直接使用される場合、開発者は直接このメソッドをフォームの"On Load"イベントで呼び出すことができます: 
@@ -69,12 +69,12 @@ displayed_sidebar: docs
  EXECUTE METHOD IN SUBFORM("Cal2";Formula(SetCalendarDate);*;!05/05/20!)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されます。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -12,13 +12,13 @@ title: VP SET SELECTION
 |---|---|---|---|
 |rangeObj |Object|->|Range object of cells|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET SELECTION` command <!-- REF #_method_.VP SET SELECTION.Summary -->defines the specified cells as the selection and the first cell as the active cell<!-- END REF -->.
 
 In *rangeObj*, pass a range object of cells to designate as the current selection.
 
-#### Example
+## Example
 
 ```4d
 $currentSelection:=VP Combine ranges(VP Cells("myVPArea";3;2;1;6);VP Cells("myVPArea";5;7;1;7))
@@ -27,7 +27,7 @@ VP SET SELECTION($currentSelection)
 
 ![](../../assets/en/ViewPro/cmd_vpSetSelection.PNG)
 
-#### See also
+## See also
 
 [VP Get active cell](vp-get-active-cell.md)<br/>
 [VP Get selection](vp-get-selection.md)<br/>

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET ENABLED.Summary-->OBJECT SET ENABLED コマンドは*object*で指定されたカレントフォーム中のオブジェクトあるいはオブジェクトグループを、有効または無効にするために使用します。<!-- END REF-->有効なオブジェクトはマウスクリックやキーボードショートカットに反応します。
 
@@ -33,11 +33,11 @@ displayed_sidebar: docs
 
 **Note:** このコマンドは**入力**と**キャンセル**アクションを除き、標準アクションが割り当てられているボタンには効果がありません (4Dが必要に応じて状態を変更します)。
 
-#### 参照 
+## 参照 
 
 [OBJECT Get enabled](object-get-enabled.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

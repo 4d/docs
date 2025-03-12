@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR RUN.Summary-->O comando QR RUN provoca a execução do relatório rápido designado pelo parâmetro *area*.<!-- END REF--> O relatório é gerado com seus parâmetros atuais, incluindo seu tipo de saída. Pode utilizar o comando [QR SET DESTINATION](qr-set-destination.md) para modificar o tipo de saída.  
 
@@ -24,7 +24,7 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 **4D Server:** este comando pode ser executado em 4D Server como parte de um procedimento armazenado. Neste contexto, tenha certeza de que não apareça nenhuma caixa de diálogo na equipe servidor (exceto para os requisitos específicos). Para isso, é necessário chamar pelo comando [QR SET DESTINATION](qr-set-destination.md) com o parâmetro "\*". Em caso de um problema da impressora (sem papel, impressora desconectada, etc), não é gerado nenhuma mensagem de erro.
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

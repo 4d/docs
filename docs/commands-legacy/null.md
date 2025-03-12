@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Null.Summary-->**Null** returns the Null type value **null**.<!-- END REF-->
 
@@ -31,7 +31,7 @@ This function allows you to assign or compare the **null** value to the followin
 
 **Note:** This command cannot be used with scalar database fields. Null values in database fields are managed by the SQL engine, and are handled through the [Is field value Null](is-field-value-null.md) and [SET FIELD VALUE NULL](set-field-value-null.md) commands,
 
-#### Example 1 
+## Example 1 
 
 You want to assign and test the **null** value to an object property:
 
@@ -51,7 +51,7 @@ You want to assign and test the **null** value to an object property:
 
 **Note:** This example requires that the object notation is activated in the database. 
 
-#### Example 2 
+## Example 2 
 
 You want to assign and compare the **null** value to a collection element:
 
@@ -65,7 +65,7 @@ You want to assign and compare the **null** value to a collection element:
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 These examples show the various ways to assign or compare the **null** value to variables: 
 
@@ -105,7 +105,7 @@ These examples show the various ways to assign or compare the **null** value to 
  End if
 ```
 
-#### Example 4 
+## Example 4 
 
 Here are the different results of the [Undefined](undefined.md) command as well as the [Null](null.md) command with object properties, depending on the context:
 
@@ -125,13 +125,13 @@ Here are the different results of the [Undefined](undefined.md) command as well 
  $null:=(vEmp.parent=Null) //True
 ```
 
-#### See also 
+## See also 
 
 [Is field value Null](is-field-value-null.md)  
 [OB SET NULL](ob-set-null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->**OBJECT SET LIST BY NAME**コマンドは、*object*引数で指定されたオブジェクトあるいはオブジェクトグループの選択リストを、*list*に渡したリスト (デザインモードのリストエディタで定義) に設定あるいは置き換えます。<!-- END REF--> *list* 引数に名前を渡すリストは、リストエディターまたはデザインモードを使用して予め作成されている必要があります。
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 * 配列を使用した場合: リストは配列要素にコピーされます
 * オブジェクトを使用した場合(*バイナリーデータベースではサポートされていません*): リストは、オブジェクト内の*values* プロパティのコレクション要素としてコピーされます
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、Shipperフィールドに選択項目リストを設定します。船積みを夜間に行う場合、夜間に船積みすることができる船積み業者のリストを選択項目リストに設定します。それ以外の場合は通常の船積み業者に設定します:
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 "color\_choice" というリストを、"DoorColor"という単純なポップアップ/ドロップダウンリストと関連付ける場合:
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
   // この場合、第3引数(定数)は省略することが出来ます。
 ```
 
-#### 例題 3 
+## 例題 3 
 
 "color\_choice" というリストを "WallColor" というコンボボックスと関連付けたい場合を考えます。コンボボックスは入力可能なので、 "black"や "purple" と言った色が入力されないようにしたい場合、これらの色を "excl\_colors" というリストに入れて以下の様に除外します:
 
@@ -74,7 +74,7 @@ displayed_sidebar: docs
  OBJECT SET LIST BY NAME(*;"WallColor";Excluded list;"excl_colors")
 ```
 
-#### 例題 4 
+## 例題 4 
 
 これらのリストの関連付けを解除したい場合:
 
@@ -85,12 +85,12 @@ displayed_sidebar: docs
  OBJECT SET LIST BY NAME(*;"WallColor";Excluded list;"")
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

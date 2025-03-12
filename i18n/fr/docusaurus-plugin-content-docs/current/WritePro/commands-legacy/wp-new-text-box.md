@@ -18,7 +18,7 @@ displayed_sidebar: docs
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP New text box.Summary-->La commande **WP New text box** crée et renvoie un nouvel objet zone de texte dans la page pageNum de wpDoc.<!-- END REF-->
 
@@ -53,7 +53,7 @@ La nouvelle zone texte n'est affichée que sur la page pageNum, il se peut donc 
 
 Toutefois, la zone de texte existe toujours et appartient au document, même si elle n'est pas rendue. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez créer une zone de texte vide par défaut :
 
@@ -65,7 +65,7 @@ Résultat :
 
 ![](../../assets/en/WritePro/commands/pict6196750.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Dans un modèle de lettre, on souhaite ajouter une zone de texte pour afficher l'adresse du destinataire (qui est stockée dans le contexte) :
 
@@ -102,6 +102,6 @@ Résultat :
 
 ![](../../assets/en/WritePro/commands/pict6196766.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP DELETE TEXT BOX](wp-delete-text-box.md)  

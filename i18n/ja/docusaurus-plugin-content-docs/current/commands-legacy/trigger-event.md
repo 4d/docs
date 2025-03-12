@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Trigger event.Summary-->**Trigger event**コマンドがトリガー内で呼び出されると、データベースイベントのタイプ、つまりそのトリガーが起動された理由を示す数値を返します。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 トリガーのカスケードを呼び出す場合、4Dには使用可能なメモリの容量以外に制限はありません。トリガーの実行を最適化するために、データベースイベントだけでなく、トリガーがカスケードされて起動される際の呼び出しのレベルに基づいて、トリガーのコードを記述することもできます。例えば\[Invoices\] テーブルに対する削除データベースイベントの中で、\[Invoices\] レコードの削除が、削除された \[Customers\] レコードに関連した**すべて**の送り状の削除にともなうものである場合には、\[Customers\] 総売上げフィールドの更新をスキップすることもできます。これを実行するには[Trigger level](trigger-level.md)と[TRIGGER PROPERTIES](trigger-properties.md)コマンドを使用します。
 
-#### 例題 
+## 例題 
 
 **Trigger event**コマンドを使用して、以下のようにトリガを作成します。
 
@@ -48,14 +48,14 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [In transaction](in-transaction.md)  
 [Trigger level](trigger-level.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 *トリガ*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

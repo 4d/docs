@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Summary-->**OBJECT SET FOCUS RECTANGLE INVISIBLE**コマンドは*object* と *\** 引数で指定したオブジェクトのフォーカス四角のカレントプロセスの表示オプションを変更します。<!-- END REF-->この設定は、フォームエディターのプロパティリストの入力可能オブジェクトで利用できる**フォーカスの四角を隠す**オプションに対応します。 
 
@@ -25,11 +25,11 @@ displayed_sidebar: docs
 
 *invisible* 引数に**True**を渡すとフォーカスの四角が隠され、**False**を渡すと表示されます。
 
-#### 参照 
+## 参照 
 
 [OBJECT Get focus rectangle invisible](object-get-focus-rectangle-invisible.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

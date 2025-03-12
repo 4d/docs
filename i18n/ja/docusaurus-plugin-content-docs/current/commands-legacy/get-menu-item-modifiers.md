@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get menu item modifiers.Summary-->Get menu item modifiers コマンドは、*menu*と*menuItem*引数で指定したメニュー項目の、標準ショートカットに割り当てられた追加のモディファイアキーを返します。<!-- END REF-->  
 標準ショートカットはCtrl (Windows) または Command (Macintosh) とカスタムキーの組み合わせで構成されます。標準ショートカットは[SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md "SET MENU ITEM SHORTCUT") と [Get menu item key](get-menu-item-key.md "Get menu item key")コマンドを使用して管理されます。
@@ -37,16 +37,16 @@ displayed_sidebar: docs
 
 *menu*にはメニュー参照 ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu")) またはメニュー番号を渡します。メニュー参照を渡す場合、*process* 引数は必要なく、渡されても無視されます。メニュー番号を渡す場合、コマンドはカレントプロセスのメインメニューバー中の対応するメニューを考慮します。他のプロセスを指定したい場合、オプションの*process* 引数にその番号を渡します。
 
-#### 例題 
+## 例題 
 
 [Get menu item key](get-menu-item-key.md "Get menu item key") コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

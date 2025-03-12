@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA GET LAST URL ERROR.Summary-->The WA GET LAST URL ERROR command recovers several items of information about the last error that occurred in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
 
@@ -32,11 +32,11 @@ This information is returned in three variables:
 
 It is recommended to call this command within the framework of the On URL Loading Error form event to find out the cause of the error that just occurred. 
 
-#### See also 
+## See also 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

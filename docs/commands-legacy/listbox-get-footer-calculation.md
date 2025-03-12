@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get footer calculation.Summary-->The **LISTBOX Get footer calculation** command returns the type of calculation associated with the footer area of the list box designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -28,11 +28,11 @@ The *object* parameter can designate:
 
 You can compare the value returned with the constants of the *Listbox Footer Calculation* theme (see the [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md) command). 
 
-#### See also 
+## See also 
 
 [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Timestamp.Summary-->**Timestamp** はカレントのUTC時刻をISOフォーマット、ミリ秒付きで返します。<!-- END REF-->具体的には yyyy-MM-ddTHH:mm:ss.SSSZ という形式です。最後の"Z"文字はGMTタイムゾーンを意味するという点に注意してください。
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **注:** この関数は計測目的には適していません。経過時間を計測したい場合には[Milliseconds](milliseconds.md) を使用してください。
 
-#### 例題 
+## 例題 
 
 ログファイル内で**Timestamp**を使用することによって、あるイベントがいつ起きたかということを正確に知ることができます。以下で示すように、同じ秒間内に複数の操作が発生していることがあるかもしれません:
 
@@ -37,13 +37,13 @@ displayed_sidebar: docs
 2016-12-12T13:31:29.477Z   Log with timestamp2016-12-12T13:31:29.478Z   Connection of user12016-12-12T13:31:29.486Z   ERROR - Exception of type 'System exception'2016-12-12T13:31:29.492Z   Click on button16842016-12-12T13:31:29.502Z   [SP_HELP- 1 rows] Command processed2016-12-12T13:31:29.512Z   [SP_HELP- 5 rows] Result set fetched
 ```
 
-#### 参照 
+## 参照 
 
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Time](time.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

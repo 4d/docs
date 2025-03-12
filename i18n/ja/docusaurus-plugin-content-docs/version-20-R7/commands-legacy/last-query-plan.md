@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Last query plan.Summary-->Last query plan コマンドは、データに対して行われた最後のクエリのクエリプランの説明を返します。<!-- END REF-->クエリの説明に関する詳細は、[DESCRIBE QUERY EXECUTION](describe-query-execution.md "DESCRIBE QUERY EXECUTION") コマンドの説明を参照してください。
 
@@ -30,12 +30,12 @@ displayed_sidebar: docs
 
 クエリプランの説明を ([Last query path](last-query-path.md "Last query path") コマンドで取得できる) クエリパスの説明と比較し、最適化を行うことができます。
 
-#### 参照 
+## 参照 
 
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
 [Last query path](last-query-path.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

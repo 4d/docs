@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** realiza as mesmas ações que [QUERY BY ATTRIBUTE](query-by-attribute.md).<!-- END REF--> A diferença entre os dois comandos é o alcance da pesquisa:
 
@@ -32,7 +32,7 @@ Para saber mais, veja a descrição do comando [QUERY BY ATTRIBUTE](query-by-att
 
 O comando **QUERY SELECTION BY ATTRIBUTE** é útil quando uma pesquisa não pode ser definida usando uma combinação de [QUERY BY ATTRIBUTE](query-by-attribute.md) (e [QUERY](query.md)) pode ser unidos com o parâmetro \* . Tipicamente, é o caso quando quiser pesquisar uma seleção atual que não resulta de uma pesquisa anterior, mas de comandos tais como [USE SET](use-set.md). 
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser encontrar pessoas com uma idade entre 20 e 30 nos registros que foram anteriormente ressaltados pelo usuário:
 
@@ -42,11 +42,11 @@ Se quiser encontrar pessoas com uma idade entre 20 e 30 nos registros que foram 
  QUERY SELECTION BY ATTRIBUTE([Persons];&;[Persons]OB_Info;"age";<;30) //ativa a pesquisa
 ```
 
-#### Ver também 
+## Ver também 
 
 [QUERY BY ATTRIBUTE](query-by-attribute.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

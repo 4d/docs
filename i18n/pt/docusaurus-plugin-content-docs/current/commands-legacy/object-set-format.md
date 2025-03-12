@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->OBJECT SET FORMAT substitui o formato de saída para os objetos especificados por *objeto* pelo formato que passa em *formatSaída*.<!-- END REF--> O novo formato é utilizado unicamente para a visualização atual, não se guarda com o formulário.
 
@@ -25,14 +25,14 @@ OBJECT SET FORMAT pode ser utilizado em formulários de entrada e de saída (vis
 
 Naturalmente, deve utilizar um formato de saída compatível com o tipo de dados presente no objeto ou com o mesmo objeto.
 
-##### Booleano 
+### Booleano 
 
 Para dar formato a campos booleanos, há duas possibilidades:
 
 * Pode passar um valor simples em *formatSaída*. Neste caso, o campo será mostrado como uma caixa de seleção e sua etiqueta será o valor especificado.
 * (só bancos de dados binários)Pode passar dois valores, separados por um ponto e vírgula (*;*), em *formatSaída*. Neste caso, o campo se mostrará como dois botões opção.
 
-##### Data 
+### Data 
 
 Para dar formato aos campos ou variáveis Data or Hora, é possível usar:
 
@@ -89,7 +89,7 @@ Veja exemplo 2.
  OBJECT SET FORMAT(*;"timeinput";":m")  
 ```
 
-##### Imagem 
+### Imagem 
 
 Para dar formato a campos ou variáveis de tipo Imagem, passe Char(n) em *formatSaída*, onde *n* é uma das seguintes constantes pré-definidas de 4D: 
 
@@ -104,7 +104,7 @@ Para dar formato a campos ou variáveis de tipo Imagem, passe Char(n) em *format
 | Replicated                  | Inteiro longo | 7     |
 
   
-##### Alfa ou numérico 
+### Alfa ou numérico 
 
 Para dar formato a campos ou variáveis de tipo alfa ou numérico, passe diretamente a etiqueta do formato no parâmetro *formatSaída*. 
 
@@ -112,7 +112,7 @@ Para maior informação sobre formatos de saída, consulte as seções *Formatos
 
 **Nota:** em *formatSaída*, para utilizar os formatos de saída personalizados que possa ter criado na caixa de diálogo Preferências, coloque um prefixo no nome do formato com uma barra vertical (|).
 
-##### Botões de Imagem 
+### Botões de Imagem 
 
 Para dar formato a botões imagem, passe no parâmetro *formatSaída* uma string de caracteres respeitando a seguinte sintaxe:  
 *cols;linhas;imagem;flags{;ticks}*
@@ -140,7 +140,7 @@ Utilizado para tornar transparente o fundo da imagem.
 Este modo lhe permite definir que a última miniatura deve ser mostrada quando o botão está inativo. Quando este modo é selecionado, 4D mostra a última miniatura quando o botão está desativado. Quando este modo é utilizado com os modos 0, 1 e 2, a última miniatura não é considerada na sequência dos outros modos. Aparecerá unicamente quando o botão estiver desativado.  
 • *ticks* \= ativação do modo “Mudar a cada x ticks” e define intervalo de tempo entre a visualização de cada imagem. Quando se passa este parâmetro opcional, lhe permite fazer ciclos através do conteúdo do botão imagem a velocidade especificada. Por exemplo, se introduz "2;3;?16807;0;10", o botão imagem mostrará uma imagem diferente cada 10 tics. Quando este modo está ativo, só o modo Transparente pode ser utilizado (64).
 
-##### Menus de pop up de Imagem 
+### Menus de pop up de Imagem 
 
 Para dar formato aos menus imagem pop up, passe no parâmetro *formatSaída* uma string de caracteres respeitando a seguinte sintaxe:  
 *cols;linhas;imagem;hMargem;vMargem;modo*  
@@ -156,7 +156,7 @@ Para dar formato aos menus imagem pop up, passe no parâmetro *formatSaída* uma
 \- *modo* \= 0: o menu imagem pop up não é transparente,  
 \- *modo* \= 64: o menu imagem pop up é transparente.
 
-##### Termômetros e réguas 
+### Termômetros e réguas 
 
 Para dar formato a objetos de tipo termômetro ou regúa, passe no parâmetro *formatSaída*, uma string de caracteres respeitando a seguinte sintaxe:  
 *min;max;unidade;passo;modo{;format{;visualização}}*  
@@ -177,7 +177,7 @@ Para dar formato a objetos de tipo termômetro ou regúa, passe no parâmetro *f
    * *visualização* \= 0 (ou é omitido): mostrar uma régua padrão/termômetro em animação continua "barber shop".  
    * *visualização* \= 1 : ativa o modo "Stepper" para uma régua / ativa o modo "Progressão assincrônica" para um termômetro. Para maior informação sobre estas opções consulte o manual de *Desenho*.
 
-##### Dial 
+### Dial 
 
 Para dar formato a objetos de tipo dial, no parâmetro *formatSaída*, passe uma string de caracteres respeitando a seguinte sintaxe:  
 *min;max;unid;interv{;modo}*  
@@ -188,7 +188,7 @@ Para dar formato a objetos de tipo dial, no parâmetro *formatSaída*, passe uma
 * *interv* \= intervalo mínimo do cursor de movimento no indicador.
 * *modo* \= modo de funcionamento do dial (opcional). Este parâmetro só aceita o valor 32: On Data Change é executado enquanto o usuário está ajustando o indicador. Se este valor não for utilizado, On Data Change ocorre só depois de que o usuário tenha terminado de ajustar o indicador.
 
-##### Grades de botões 
+### Grades de botões 
 
 Para dar formato a grades de botões, passe no parâmetro *formatSaída* uma string de caracteres respeitando a seguinte sintaxe:  
 *cols;linhas*  
@@ -198,7 +198,7 @@ Para dar formato a grades de botões, passe no parâmetro *formatSaída* uma str
 
 **Nota:** para maior informação sobre formatos de saída dos objetos de formulário, consulte o Manual de Desenho.
 
-##### Botões 3D 
+### Botões 3D 
 
 Para dar formato a botões 3D, passe no parâmetro *formatSaída* uma string de caracteres respeitando a seguinte sintaxe:  
 *titulo;imagem;fundo;tituloPos;tituloVisivel;iconeVisivel;estilo;horMargem;vertMargem;* *iconOffset;popupMenu, hyperlink;numStates*
@@ -263,7 +263,7 @@ Algumas opções não são consideradas para todos os estilos de botões 3D. Adi
  OBJECT SET FORMAT(myVar;"NiceButton;?256;:562;1;;1;4;5;;5;0;;2")
 ```
 
-##### Cabeçalhos de list box 
+### Cabeçalhos de list box 
 
 Para formatar o ícone em um cabeçalho de list box, passe uma string caractere no parâmetro *exibirFormato*, que segue a sintaxe abaixo:  
 *picture;iconPos*
@@ -278,7 +278,7 @@ Para formatar o ícone em um cabeçalho de list box, passe uma string caractere 
 
 Esta propriedade é útil, por exemplo, quando quiser trabalhar com um ícone personalizado
 
-#### Exemplo 1 
+## Exemplo 1 
 
 A linha de código a seguir dá formato ao campo *\[Empregados\]Data Contratado* ao quinto formato de data (Internal date long).
 
@@ -286,7 +286,7 @@ A linha de código a seguir dá formato ao campo *\[Empregados\]Data Contratado*
  OBJECT SET FORMAT([Empregados]Data Contratado;Char(Internal date long))
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo formata uma variável data e uma variável hora utilizando [formatos personalizados](../Project/date-time-formats.md): 
 
@@ -295,19 +295,19 @@ Este exemplo formata uma variável data e uma variável hora utilizando [formato
  OBJECT SET FORMAT(*;"mytime";"hh'h' mm'mn' ss'sec.'") // 15h 12mn 17sec.
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo a seguir modifica o formato de um campo *\[Empresa\]Código postal* de acordo com a longitude do valor no campo: 
 
 ```4d
  If(Length([Empresa]Código postal)=9)
-    OBJECT SET FORMAT([Empresa]Código postal;"#####–####")
+    OBJECT SET FORMAT([Empresa]Código postal;"###–##")
  Else
-    OBJECT SET FORMAT([Empresa]Código postal;"#####")
+    OBJECT SET FORMAT([Empresa]Código postal;"###")
  End if
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 O exemplo abaixo dá formato ao valor de um campo numérico dependendo de se for positivo, negativo, ou nulo:
 
@@ -315,7 +315,7 @@ O exemplo abaixo dá formato ao valor de um campo numérico dependendo de se for
  OBJECT SET FORMAT([Stats]Results;"### ##0.00;(### ##0.00);")
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 O exemplo a seguir define o formato de um campo Booleano para mostrar Casado e Solteiro, ao invés dos valores padrão Sim e Não: 
 
@@ -324,7 +324,7 @@ O exemplo a seguir define o formato de um campo Booleano para mostrar Casado e S
  
 ```
 
-#### Exemplo 6 
+## Exemplo 6 
 
 Se você armazenou um arquivo de imagen chamado "envelope\_open.png" na pasta Resources do seu banco de ados, pode escrever:
 
@@ -336,7 +336,7 @@ Se você armazenou um arquivo de imagen chamado "envelope\_open.png" na pasta Re
 
 ![](../assets/en/commands/pict2878245.en.png)
 
-#### Exemplo 7 
+## Exemplo 7 
 
 O exemplo a seguir define o formato de um campo booleano para mostrar uma caixa de seleção chamada “Classificado”: 
 
@@ -344,7 +344,7 @@ O exemplo a seguir define o formato de um campo booleano para mostrar uma caixa 
  OBJECT SET FORMAT([Pasta]Classificado;"Classificado")
 ```
 
-#### Exemplo 8 
+## Exemplo 8 
 
 Imagine que tenha uma tabela de miniaturas que contenha 1 linha e 4 colunas, destinada a mostrar um botão imagem (“ativa por padrão”, “ao clicar no botão”, “ao passar o cursor” e “inativo”). Você quer associar as opções Modificar ao passar o cursor acima, Voltar ao soltar o clique e Última imagem se desativado: 
 
@@ -352,7 +352,7 @@ Imagine que tenha uma tabela de miniaturas que contenha 1 linha e 4 colunas, des
  OBJECT SET FORMAT(*;"BotaoImagem";"4;1;?15000;176")
 ```
 
-#### Exemplo 9 
+## Exemplo 9 
 
 Passe um termômetro ao modo "Barber shop" 
 
@@ -361,14 +361,14 @@ Passe um termômetro ao modo "Barber shop"
  $Meutermo :=1 //Iniciar a animação
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [GET SYSTEM FORMAT](get-system-format.md)  
 [OBJECT Get format](object-get-format.md)  
 [OBJECT SET FILTER](object-set-filter.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

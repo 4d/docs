@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM EXPORT TO FILE.Summary-->The DOM EXPORT TO FILE command stores an XML tree in a file on disk.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ If you only pass a file name (without an access path), a search for the file wil
 
 If you pass an empty string (*""*), a standard open file and new file dialog box appears.
 
-##### About end-of-line characters and BOM management 
+### About end-of-line characters and BOM management 
 
 In XML, line breaks are not significant regardless of whether they are within or between XML elements. Internally, XML uses standard LF characters as line separators. During import and export operations, line break characters can be converted. During an import, the XML parser replaces CRLF characters (standard line breaks under Windows) with LF characters. During export, LF characters are replaced by CRLF characters on Windows (no replacement on macOS).
 
@@ -38,7 +38,7 @@ You can control the XML line ending and BOM management using the [XML SET OPTION
 
 **Compatibility Note:** In databases/projects created with 4D versions up to v19.x, by default 4D uses CR as end-of-line characters on macOS and a BOM. To enable the new default settings, check compatibility settings (see *Compatibility page*) or use the [XML SET OPTIONS](xml-set-options.md) command. 
 
-#### Example 
+## Example 
 
 This example stores the tree *vElemRef* in the file MyDoc.xml:
 
@@ -46,11 +46,11 @@ This example stores the tree *vElemRef* in the file MyDoc.xml:
  DOM EXPORT TO FILE(vElemRef;"C:\\folder\MyDoc.xml")
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
 
-#### Error management 
+## Error management 
 
 An error is generated when:
 
@@ -58,12 +58,12 @@ An error is generated when:
 * The specified access path is invalid,
 * The storage volume returns an error (insufficient disk space, etc.).
 
-#### See also 
+## See also 
 
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

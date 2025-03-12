@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.On 4D Mobile Authentication database method.Summary-->**On 4D Mobile Authentication database method** está obsoleto em projetos desde 4D 20 R6.<!-- END REF-->
 

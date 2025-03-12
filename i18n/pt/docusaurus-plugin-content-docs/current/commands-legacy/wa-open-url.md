@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA OPEN URL.Summary-->O comando **WA OPEN URL** carrega na área web designada pelos parâmetros *\** e *objeto* o URL passado no parâmetro *url*.<!-- END REF-->
 
@@ -40,13 +40,13 @@ Este comando tem o mesmo efeito que a modificação do valor da variável "URL" 
 
 ```
 
-#### Ver também 
+## Ver também 
 
 [OPEN URL](open-url.md)  
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

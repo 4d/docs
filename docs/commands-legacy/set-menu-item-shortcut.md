@@ -39,7 +39,7 @@ If you omit the *process* parameter, **SET MENU ITEM SHORTCUT** applies to the m
 
 **Note:** If you pass a Menu reference (16-character alphanumeric) in *menu*, the *process* parameter serves no purpose and will be ignored.
 
-##### Compatibility 
+### Compatibility 
 
 For compatibility reasons, the command also accepts a character code in the *itemKey* parameter (former syntax). In this case, the shortcut automatically includes the **Ctrl** (Windows) or **Cmd** (macOS) key and the *modifiers* parameter is not taken into account. 
 

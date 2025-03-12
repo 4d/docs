@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Summary-->**SELECTION RANGE TO ARRAY**コマンドは1つまたは複数の配列を作成し、その配列にカレントセレクションのフィールド値またはレコード番号を代入します。<!-- END REF--> 
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 コマンドが正常に実行されると、結果配列のサイズは*(end-start)+1*になります。ただし*end*引数がセレクションのレコード数より大きい場合、結果の配列は*(Records in selection(\[...\])-start)+1*個の要素を含みます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、*\[Invoices\]*テーブルのカレントセレクションの先頭から50レコードを選択します。そして、*\[Invoices\]Invoice ID*フィールドおよびリレートフィールドの*\[Customers\]Customer ID*から値をロードします:
 
@@ -66,7 +66,7 @@ displayed_sidebar: docs
  SELECTION RANGE TO ARRAY(1;50;[Invoices]Invoice ID;alInvoID;[Customers]Customer ID;alCustID)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、*\[Invoices\]*テーブルのカレントセレクションの最終50レコードを選択します。そして、*\[Invoices\]*レコードおよび*\[Customers\]*リレートレコードのレコード番号をロードします:
 
@@ -75,7 +75,7 @@ displayed_sidebar: docs
  SELECTION RANGE TO ARRAY(lSelSize-49;lSelSize;[Invoices];alInvRecN;[Customers];alCustRecN)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例は、配列に一度に全体をダウンロードできないかもしれない、大きなセレクションのレコードを、1000づつシーケンシャルに処理します:
 
@@ -89,7 +89,7 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 例題 4 
+## 例題 4 
 
 \[Invoices\]テーブルのカレントセレクション中1\~50番目のレコードのみを配列に取得します: 
 
@@ -102,13 +102,13 @@ displayed_sidebar: docs
  SELECTION RANGE TO ARRAY(1;50)
 ```
 
-#### 参照 
+## 参照 
 
 [ON ERR CALL](on-err-call.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

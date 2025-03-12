@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.COPY DOCUMENT.Summary-->O comando **COPY DOCUMENT** copia o documento especificado por *nomFonte* na localização especificada por *nomDest*.<!-- END REF--> 
 Este caso, o parâmetro *nomFonte* deve conter um caminho de arquivo completo, expressa em relação à raiz do volume.  
@@ -34,7 +34,7 @@ Note que você pode passar um arquivo no parâmetro *nomFonte* e uma pasta no pa
     
 O parâmetro opcional *novoNome*, se passar, permite renomear o documento copiado a sua localização de destino (arquivo ou pasta). Quando se passa no contexto de uma cópia de arquivo, este parâmetro substitui o nome (se existir) passado no parâmetro *nomDest*.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo abaixo duplica um documento em sua própria pasta: 
 
@@ -42,7 +42,7 @@ O exemplo abaixo duplica um documento em sua própria pasta:
  COPY DOCUMENT("C:\\PASTA\\DocNome";"C:\\PASTA\\DocNome2")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo abaixo copia um documento na pasta do banco (sempre e quando C:\\\\PASTA não seja a pasta do banco): 
 
@@ -50,7 +50,7 @@ O exemplo abaixo copia um documento na pasta do banco (sempre e quando C:\\\\PAS
  COPY DOCUMENT("C:\\PASTA \\DocNome";"DocNome")
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo abaixo copia um documento de um volume a outro: 
 
@@ -58,7 +58,7 @@ O exemplo abaixo copia um documento de um volume a outro:
  COPY DOCUMENT("C:\\PASTA \\DocNome";"F:\\Arquivos\\DocNome.OLD")
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 O exemplo abaixo duplica um documento em sua própria pasta, substituindo uma cópia existente: 
 
@@ -66,7 +66,7 @@ O exemplo abaixo duplica um documento em sua própria pasta, substituindo uma c�
  COPY DOCUMENT("C:\\PASTA \\DocNome";"C:\\PASTA \\DocNome2";*)
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Cópia de um arquivo em uma pasta específica, mantendo o mesmo nome:
 
@@ -74,7 +74,7 @@ Cópia de um arquivo em uma pasta específica, mantendo o mesmo nome:
  COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\")
 ```
 
-#### Exemplo 6 
+## Exemplo 6 
 
 Cópia de um arquivo em uma pasta específica, mantendo o mesmo nome e substituir o documento existente:
 
@@ -82,7 +82,7 @@ Cópia de um arquivo em uma pasta específica, mantendo o mesmo nome e substitui
  COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\"; *)
 ```
 
-#### Exemplo 7 
+## Exemplo 7 
 
 Copia de uma pasta para outra pasta (ambas as pastas já devem estar presentes no disco):
 
@@ -90,7 +90,7 @@ Copia de uma pasta para outra pasta (ambas as pastas já devem estar presentes n
  COPY DOCUMENT("C:\\Projects\\";"C\\Archives\\2011\\")
 ```
 
-#### Exemplo 8 
+## Exemplo 8 
 
 Os seguintes exemplos criam diferentes arquivos e pastas na pasta da base (exemplos em Windows). Em cada caso, a pasta "folder2" deve existir:
 
@@ -114,12 +114,12 @@ Os seguintes exemplos criam diferentes arquivos e pastas na pasta da base (exemp
   //Cria a pasta "folder2/new/"
 ```
 
-#### Ver também 
+## Ver também 
 
 *Documentos de Sistema*  
 [MOVE DOCUMENT](move-document.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Test semaphore.Summary-->Test semaphore コマンドは、セマフォの存在をテストします。<!-- END REF-->
 
 [Semaphore](semaphore.md "Semaphore")関数とTest semaphore関数の違いは、Test semaphoreはセマフォが存在しない場合には*semaphore*を作成しないということです。*semaphore*が存在している場合、関数は[True](true.md "True")を返します。そうでない場合は[False](false.md "False")を返します。
 
-#### 例題 
+## 例題 
 
 下記の例は、セマフォを変更せずにプロセスの状態 (この場合は、コードを変更して  
 いる最中かどうか) を知ることを可能にするものです:
@@ -39,12 +39,12 @@ displayed_sidebar: docs
  CLOSE WINDOW
 ```
 
-#### 参照 
+## 参照 
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 [Semaphore](semaphore.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RECEIVE PACKET.Summary-->RECEIVE PACKET コマンドは、シリアルポートまたはドキュメントから文字を読み込みます。<!-- END REF--> 
 
@@ -45,7 +45,7 @@ RECEIVE PACKET の実行中、利用者はCtrl＋Alt＋Shift (Windows) または
 
 ファイルの最後を越えて読み込もうとした場合、 RECEIVE PACKET は、そのポイントまでに読み込んだデータを返し、システム変数OKに1を代入します。その次の RECEIVE PACKET は空の文字列を返し、システム変数OKに0を代入します。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、20バイトのデータをシリアルポートから読み込み、変数*getTwenty*に格納します:
 
@@ -53,7 +53,7 @@ RECEIVE PACKET の実行中、利用者はCtrl＋Alt＋Shift (Windows) または
  RECEIVE PACKET(getTwenty;20)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、変数*myDoc*で参照されるドキュメントからデータを読み込み、変数*vData*に格納します。ここでは改行が見つかるまで読み込みます:
 
@@ -61,7 +61,7 @@ RECEIVE PACKET の実行中、利用者はCtrl＋Alt＋Shift (Windows) または
  RECEIVE PACKET(myDoc;vData;Char(Carriage return))
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例は、変数*myDoc*で参照されるドキュメントからデータを読み込み、変数*vData*に格納します。HTMLタグ*</TD>*（テーブルセルの終わり）が現われるまでデータを読み込みます:
 
@@ -69,7 +69,7 @@ RECEIVE PACKET の実行中、利用者はCtrl＋Alt＋Shift (Windows) または
  RECEIVE PACKET(myDoc;vData;"")
 ```
 
-#### 例題 4 
+## 例題 4 
 
 以下の例は、ドキュメントファイルから読み込んだデータをフィールドに格納します。データは、固定長で格納されています。このメソッドは、サブルーチンを呼び出してデータの後ろに付随する不要なスペースを取り除きます: 
 
@@ -101,11 +101,11 @@ RECEIVE PACKET の実行中、利用者はCtrl＋Alt＋Shift (Windows) または
  $0:=Delete string($1;-$i;Length($1)) // スペースを削除
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 RECEIVE PACKET呼び出し後、エラーなしでパケットを受信すればOKシステム変数に1が、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [Get document position](get-document-position.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
@@ -114,7 +114,7 @@ RECEIVE PACKET呼び出し後、エラーなしでパケットを受信すれば
 [SET TIMEOUT](set-timeout.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

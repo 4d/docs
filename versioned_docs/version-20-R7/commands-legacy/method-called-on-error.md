@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Method called on error.Summary-->The **Method called on error** command returns the name of the method installed by the [ON ERR CALL](on-err-call.md) command for the current process or the defined *scope*.<!-- END REF-->
 
@@ -28,7 +28,7 @@ In the *scope* parameter, pass the execution context for which you want to get t
 
 If no method has been installed for the *scope*, an empty string ("") is returned.
 
-#### Example 
+## Example 
 
 This command is particularly useful in the context of components because it enables you to temporarily change and then restore the error-catching methods:
 
@@ -41,12 +41,12 @@ This command is particularly useful in the context of components because it enab
  ON ERR CALL($methCurrent)
 ```
 
-#### See also 
+## See also 
 
 *Error Handler*  
 [ON ERR CALL](on-err-call.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

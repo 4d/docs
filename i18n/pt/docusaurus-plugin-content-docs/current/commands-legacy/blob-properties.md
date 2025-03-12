@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.BLOB PROPERTIES.Summary-->O comando **BLOB PROPERTIES** retorna informações sobre o *blob* BLOB.<!-- END REF-->diz se o BLOB é comprimido ou não, e retorna um dos seguintes valores.
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 * Seja qual for o estado de compressão do BLOB, o parâmetro expandedSize retorna o tamanho do BLOB quando não é comprimido.
 * O parâmetro *tamanhoAtual* retorna o tamanho atual do BLOB. Se o BLOB estiver compactado, você normalmente irá obter *tamanhoAtual* menor que *descompTam*. Se o BLOB não está compactado, você vai sempre obter *tamanhoAtual* igual descompTam.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Veja os exemplos para os comandos [COMPRESS BLOB](compress-blob.md "COMPRESS BLOB") e [EXPAND BLOB](expand-blob.md "EXPAND BLOB").
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Depois que um BLOB foi comprimido, o método de projeto obtém a porcentagem de espaço salvo por compressão:
 
@@ -71,12 +71,12 @@ Depois que este método tenha sido adicionado à sua aplicação, você pode us�
  " de espaço.")
 ```
 
-#### Ver também 
+## Ver também 
 
 [COMPRESS BLOB](compress-blob.md)  
 [EXPAND BLOB](expand-blob.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->QR SET HTML TEMPLATEコマンドは、クイックレポートエリアに使用されるHTMLテンプレートを設定します。<!-- END REF-->テンプレートは、HTML形式でレポートを作成する際に使用されます。
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 **Note:** 出力先をHTMLファイルに設定するため、まず初めに[QR SET DESTINATION](qr-set-destination.md "QR SET DESTINATION")コマンドを呼び出す必要がある点に注意してください。
 
-#### HTMLタグ 
+## HTMLタグ 
 
 *<!--#4DQRheader--> ... <!--/#4DQRheader-->*  
 これらのタグに挟まれたHTMLの内容を、カラムタイトルを元にして設定します。通常、これらのタグはレポートのタイトル行を定義するために使用します。 
@@ -66,11 +66,11 @@ displayed_sidebar: docs
 
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR Get HTML template](qr-get-html-template.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

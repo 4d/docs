@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET ASSERT ENABLED.Summary-->O comando SET ASSERT ENABLED é utilizado para desativar ou reativar as asserções inseridas no código 4D da aplicação.<!-- END REF--> Para maior informação sobre asserções, consulte a descrição do comando [ASSERT](assert.md). 
 
@@ -24,7 +24,7 @@ Normalmente, o comando SET ASSERT ENABLED afeta todos os processos da aplicaçã
 
 Por favor considere que quando as asserções estão desativadas, as expressões passadas aos comandos [ASSERT](assert.md) não são avaliadas. As linhas de código que chamam a [ASSERT](assert.md) não têm mais efeito no funcionamento da aplicação, nem en termos de comportamento nem em termos de rendimento. 
 
-#### Exemplo 
+## Exemplo 
 
 Desativação de asserções
 
@@ -33,13 +33,13 @@ Desativação de asserções
  ASSERT(TestMethod) // TestMethod não será chamada já que as asserções estão desativadas
 ```
 
-#### Ver também 
+## Ver também 
 
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

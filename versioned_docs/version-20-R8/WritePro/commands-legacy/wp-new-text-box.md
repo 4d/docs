@@ -18,7 +18,7 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP New text box.Summary-->The **WP New text box** command creates and returns a new text box object in the page *pageNum* of *wpDoc*.<!-- END REF-->
 
@@ -48,7 +48,7 @@ The new text box is rendered only on the page *pageNum,* so it may not be render
 
 However, the text box still exists and is owned by the document even if not rendered. 
 
-#### Example 1 
+## Example 1 
 
 You want to create a default, empty text box:
 
@@ -60,7 +60,7 @@ Result:
 
 ![](../../assets/en/WritePro/commands/pict6196750.en.png)
 
-#### Example 2 
+## Example 2 
 
 In a template of a letter, you want to add a text box to display the address of the recipient (which is stored in the context):
 
@@ -93,6 +93,6 @@ Result:
 
 ![](../../assets/en/WritePro/commands/pict6196766.en.png)
 
-#### See also 
+## See also 
 
 [WP DELETE TEXT BOX](wp-delete-text-box.md)  

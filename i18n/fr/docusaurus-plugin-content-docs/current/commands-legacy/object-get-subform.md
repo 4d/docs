@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET SUBFORM.Summary-->La commande **OBJECT GET SUBFORM** vous permet d’obtenir les noms du ou des formulaire(s) associé(s) à l’objet sous-formulaire désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -35,12 +35,12 @@ Dans les deux cas, si l'attribut "name" est indéfini, la commande retourne :
 
 S’il n’y a pas de formulaire liste, une chaîne vide est retournée dans le paramètre *sousFormListe*. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

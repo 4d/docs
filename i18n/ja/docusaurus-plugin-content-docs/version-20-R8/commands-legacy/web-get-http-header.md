@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->**WEB GET HTTP HEADER**コマンドは、 現在処理されているリクエストのHTTPヘッダーを含む2つの配列、または文字列のいずれかを返します。<!-- END REF--> 
 
@@ -51,7 +51,7 @@ HTTP標準に準拠するには、フィールド名を常に英語で記述し�
 * **Referer**: そのリクエストを発行した元のURL (例えば、http://mywebserver/mypage1.html)。つまりブラウザーの**戻る**ボタンをクリックした際に表示されるページ。
 * **User-Agent**: ブラウザーまたはプロキシの名前とバージョン。
 
-#### 例題 
+## 例題 
 
 次のメソッドを使用して、任意のHTTPリクエストヘッダーのコンテンツを取得できます。
 
@@ -111,12 +111,12 @@ HTTP標準に準拠するには、フィールド名を常に英語で記述し�
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB SET HTTP HEADER](web-set-http-header.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

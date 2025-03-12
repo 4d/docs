@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 **VARIABLE TO BLOB** と [BLOB TO VARIABLE](blob-to-variable.md) は4Dの内部フォーマットを使用してBLOBに格納された変数を取り扱います。この利点として、これら二つのコマンドを使用する際、プラットフォーム間の バイトスワップを気にする必要はありません。言い換えればこれらのコマンドを使用してWindowsで作成されたBLOBを Mac OS で使用す る、あるいはその逆を行うことができます。
 
-##### 注 
+### 注 
 
 **互換性に関する注意:** このコマンドは引数として渡されたBlob を変更するため、Blob オブジェクト(4D.Blob 型)はサポートしません。developer.4d.com でのの *Passing blobs and blob objects to 4D commands* のページを参照して下さい。
 

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP INSERT DOCUMENT.Summary-->O comando **WP INSERT DOCUMENT** insee o documento *docWP* na faixa *objFaixa* de acordo com o modo de inserção especificado e o parâmetro *atualizFaixa*.<!-- END REF-->
 
@@ -54,7 +54,7 @@ Po0de combinar uma das constantes anteriores com as seguintes opções de inser�
 
  Se *alvoObj* não for uma range, *rangeAtualiz* for ignorado.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se desejar substituir os conteúdos de um documento pelo texto selecionado de outro documento:
 
@@ -64,7 +64,7 @@ Se desejar substituir os conteúdos de um documento pelo texto selecionado de ou
  WP INSERT DOCUMENT(WPDoc;$doctoCopy;wk replace) //substituimos o conteúdo de WPDoc pelo conteúdo do novo documento
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se definir um documento modelo com partes pré-formatadas diferentemente, cada uma das quais sendo armazenadas como uma bookmark. Quando produzir um documento final do modelo, pode extrair qualquer bookmark como um novo documento e inserir a bookmark no documento final. 
 
@@ -81,7 +81,7 @@ Se definir um documento modelo com partes pré-formatadas diferentemente, cada u
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [WP INSERT BREAK](wp-insert-break.md)  

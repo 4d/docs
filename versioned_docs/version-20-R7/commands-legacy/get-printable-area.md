@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PRINTABLE AREA.Summary-->The **GET PRINTABLE AREA** command returns the size, in pixels, of the *height* and *width* parameters of the printable area.<!-- END REF--> This size depends on the current printing parameters, the paper orientation, etc. 
 
@@ -34,12 +34,12 @@ To know the total size of the page, you can:
  GET PRINTABLE AREA(hPaper;wPaper) // Paper size
 ```
 
-#### See also 
+## See also 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Print form](print-form.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

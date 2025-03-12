@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get elements.Summary-->La commande **WP Get elements** retourne une collection d'objets contenant des paragraphes, images, tableaux et/ou lignes de tableaux.<!-- END REF-->
 
@@ -49,7 +49,7 @@ Vous pouvez passer le paramètre optionnel *typeElement* pour spécifier les typ
 * Si une plage indiquée dans *objCible* contient un élément qui n'est pas entièrement contenu dans la plage, l'élément entier sera inclus dans les résultats. Par exemple, si la plage inclut une partie d'un tableau (mais pas tout le tableau), la référence de l'élément tableau entier est renvoyée, en revanche seules les références de cellules (paragraphes) comprises dans la plage sont incluses.
 * Si vous passez wk type text box dans le paramètre typeElement, objCible ne pourra contenir qu'un document 4D Write Pro. Une erreur sera renvoyée si vous passez autre chose qu'un document objet dans objCible dans ce cas.
 
-##### Tri des éléments 
+### Tri des éléments 
 
 Les éléments contenus dans la collection retournée sont classés différemment selon le contenu d'*objCible :*
 
@@ -58,7 +58,7 @@ Les éléments contenus dans la collection retournée sont classés différemmen
 
 Si vous souhaitez par exemple alterner la couleur de fond des paragraphes présents dans le corps d'un document, passez l'élément "body" (et non le document) dans l'*objCible*, afin de vous assurer que l'ordre des éléments de la collection corresponde à celui des paragraphes du document.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous voulez récupérer une collection de tous les paragraphes dans un document :
 
@@ -68,7 +68,7 @@ Vous voulez récupérer une collection de tous les paragraphes dans un document 
   //retourne une collection contenant seulement les éléments paragraphes
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
  Vous souhaitez alterner l'alignement et la couleur des paragraphes dans un document :
 
@@ -103,7 +103,7 @@ Vous voulez récupérer une collection de tous les paragraphes dans un document 
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get breaks](wp-get-breaks.md)  
 [WP Get element by ID](wp-get-element-by-id.md)  

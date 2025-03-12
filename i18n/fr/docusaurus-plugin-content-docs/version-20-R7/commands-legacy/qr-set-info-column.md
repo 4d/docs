@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.QR SET INFO COLUMN.Summary-->##### Etats en liste 
+<!--REF #_command_.QR SET INFO COLUMN.Summary-->### Etats en liste 
 
 La commande **QR SET INFO COLUMN** vous permet de définir les paramètres d'une colonne existante de l'état présent dans la *zone*.<!-- END REF--> 
 
@@ -55,7 +55,7 @@ La ligne suivante associe à la colonne 1 l'intitulé “Titre” et le champ Ch
  QR SET INFO COLUMN(zone;1;"Titre";"[Table 1]Champ2";0;150;0;"###,##")
 ```
 
-##### Etats tableaux croisés 
+### Etats tableaux croisés 
 
 Avec ce type d'état, la commande **QR SET INFO COLUMN** permet de définir globalement les mêmes paramètres que ceux décrits dans le paragraphe ci-dessus, toutefois les zones auxquelles ils s'appliquent sont différentes et varient en fonction du paramètre à fixer.   
 En outre, les paramètres *titre*, *cachée* et *valeursRépétées* ne sont pas utilisés lorsque vous travaillez avec des états tableaux croisés. La valeur à passer dans le paramètre *numColonne* dépend de l'opération que vous souhaitez effectuer : définir la taille de la colonne ou définir la source de données et le format d'affichage. 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOCUMENT LIST.Summary-->La commande **DOCUMENT LIST** remplit le tableau de type Texte *documents* avec les noms des documents situés à l'endroit que vous avez indiqué avec le paramètre *cheminAccès*.<!-- END REF-->Vous devez passer un chemin d'accès absolu dans le paramètre *cheminAccès*. 
 
@@ -36,7 +36,7 @@ Par défaut, si vous omettez le paramètre *options*, seuls les noms des documen
 
 S'il n'y pas de document à l'endroit défini, la commande retourne un tableau vide. Si le chemin d'accès que vous avez passé dans *cheminAccès* est invalide, **DOCUMENT LIST** génère une erreur de gestionnaire de fichier que vous pouvez intercepter à l'aide d'une méthode installée par [ON ERR CALL](on-err-call.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 Liste de tous les documents dans un dossier (syntaxe par défaut) :
 
@@ -48,7 +48,7 @@ Liste de tous les documents dans un dossier (syntaxe par défaut) :
  Texte1.txt  
  Texte2.txt
 
-#### Exemple 2 
+## Exemple 2 
 
 Liste de tous les documents dans un dossier en mode absolu : 
 
@@ -60,7 +60,7 @@ Liste de tous les documents dans un dossier en mode absolu :
  C:\\Texte1.txt  
  C:\\Texte2.txt
 
-#### Exemple 3 
+## Exemple 3 
 
 Liste de tous les documents en mode récursif (relatif) : 
 
@@ -77,7 +77,7 @@ Liste de tous les documents en mode récursif (relatif) :
  \\Dossier2\\Texte5.txt  
  \\Dossier2\\Dossier3\\Image1.png
 
-#### Exemple 4 
+## Exemple 4 
 
 Liste de tous les documents en mode récursif absolu : 
 
@@ -93,7 +93,7 @@ Liste de tous les documents en mode récursif absolu :
  C:\\MonDossier\\Dossier2\\MonTexte5.txt  
  C:\\MonDossier\\Dossier2\\Dossier3\\MonImage1.png
 
-#### Exemple 5 
+## Exemple 5 
 
 Liste de tous les documents en mode récursif POSIX (relatif) :
 
@@ -109,12 +109,12 @@ Liste de tous les documents en mode récursif POSIX (relatif) :
  Dossier2/MonTexte5.txt  
  Dossier2/Dossier3/MonImage1.png
 
-#### Voir aussi 
+## Voir aussi 
 
 [FOLDER LIST](folder-list.md)  
 [VOLUME LIST](volume-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

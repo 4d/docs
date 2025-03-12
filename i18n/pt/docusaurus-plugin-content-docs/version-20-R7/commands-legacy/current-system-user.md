@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Current system user.Summary-->O comando **Current system user** devolve o nome do dono de seu equipo, tal como está definido nos parâmetros de rede do sistema operativo.<!-- END REF-->
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo do comando [Current machine](current-machine.md "Current machine").
 
-#### Ver também 
+## Ver também 
 
 [Current machine](current-machine.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

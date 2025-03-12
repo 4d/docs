@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is new record.Summary-->O comando Is new record devolve [True](true.md "True") quando o registro atual de *tabela* estiver sendo criado e ainda não foi guardado no processo atual.<!-- END REF-->  
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
   
 **4D Server**: Este comando devolve um resultado diferente no contexto do evento de formulário On Validate dependendo se foi executado em 4D (mono-posto) ou 4D Client. Em versão mono-posto, o comando devolve [False](false.md "False") (o registro se considera como criado). Em versão cliente/servidor, o comando devolve *True* porque nesse caso, o registro já foi criado no servidor mas a informação não foi enviada ainda ao cliente.
 
-#### Exemplo 
+## Exemplo 
 
 As duas instruções a seguir são idênticas. A segunda é recomendada para que o código seja compatível com as próximas versões de 4D:
 
@@ -36,12 +36,12 @@ As duas instruções a seguir são idênticas. A segunda é recomendada para que
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Modified record](modified-record.md)  
 [Record number](record-number.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET FONT STYLE.Summary-->**OBJECT SET FONT STYLE** sets the form objects specified by *object* to be displayed using the font style you pass in *styles*.<!-- END REF-->
 
@@ -31,7 +31,7 @@ You pass in *styles* a sum of the constants describing your font style selection
 | Underline | Integer | 4     |
 
   
-#### Example 1 
+## Example 1 
 
 This example sets the font style for a button named *bAddNew*. The font style is set to bold italic: 
 
@@ -39,7 +39,7 @@ This example sets the font style for a button named *bAddNew*. The font style is
  OBJECT SET FONT STYLE(bAddNew;Bold+Italic)
 ```
 
-#### Example 2 
+## Example 2 
 
 This example sets the font style to Plain for all form objects with names starting with “vt”: 
 
@@ -47,7 +47,7 @@ This example sets the font style to Plain for all form objects with names starti
  OBJECT SET FONT STYLE(*;"vt@";Plain)
 ```
 
-#### See also 
+## See also 
 
 [OBJECT Get font style](object-get-font-style.md)  
 [OBJECT SET FONT](object-set-font.md)  
@@ -55,7 +55,7 @@ This example sets the font style to Plain for all form objects with names starti
 *Programming Notes*  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

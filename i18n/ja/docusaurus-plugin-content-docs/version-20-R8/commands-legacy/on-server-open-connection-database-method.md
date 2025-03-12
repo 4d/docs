@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### On Server Open Connection データベースメソッドはいつ呼び出されるか 
+## On Server Open Connection データベースメソッドはいつ呼び出されるか 
 
 <!--REF #_command_.On Server Open Connection database method.Summary-->**On Server Open Connectionデータベースメソッド**は、4Dリモートワークステーションが接続プロセスを開始するたびに、サーバーマシン上で一度、呼び出されます。<!-- END REF-->4D Server 以外の4D 環境では**On Server Open Connectionデータベースメソッド**が起動されることはありません。 
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 **重要**: ストアドプロシージャの開始時には、**On Server Open Connectionデータベースメソッド**は起動されません。 *ストアドプロシージャ* はサーバプロセスであり、4Dクライアントプロセスではありません。ストアドプロシージャはサーバマシン上でコードを実行しますが、 4Dクライアント (または他のクライアント) と4D Server によってやり取りされる要求に対して応答を返すことはありません。
 
-#### On Server Open Connection データベースメソッドはどのように呼び出されるか 
+## On Server Open Connection データベースメソッドはどのように呼び出されるか 
 
 **On Server Open Connectionデータベースメソッド** は4D Serverマシン上で、このメソッドを呼び出しを引き起こした4Dクライアントプロセス内で実行されます。 
 
@@ -74,7 +74,7 @@ displayed_sidebar: docs
 
 これらのID番号は、例えば4Dコマンドに渡す引数のように、情報ソースとして直接使用することはできません。しかしこれらのID番号は**On Server Open Connectionデータベースメソッド**と[On Server Close Connectionデータベースメソッド](on-server-close-connection-database-method.md)との間で、4Dクライアントプロセスを一意に識別するために利用できます。4D Server セッションのどの時点でも、これらの値の組み合わせはユニークです。インタープロセス配列やテーブルにこの情報を格納することによって、2つのデータベー スメソッド間で情報をやり取りできます。この節の最後に示された例では、2つのデータベースメソッドがこの情報を使用して、テーブルの同一レコードに接続 の開始と終了の日付と時間を格納しています。
 
-#### 例題 1 
+## 例題 1 
 
 次の例は**On Server Open Connectionデータベースメソッド**と**On Server Close Connection データベースメソッド**を使用して、データベースへの接続ログを管理する方法を示しています。**\[Server Log\]**テーブル (下図) は接続処理の記録を取るために使用されています: 
 
@@ -120,7 +120,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict69174.ja.png)
 
-#### 例題 2 
+## 例題 2 
 
 以下の例題は午前2時から4時の間の接続を拒否します。
 
@@ -132,7 +132,7 @@ displayed_sidebar: docs
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

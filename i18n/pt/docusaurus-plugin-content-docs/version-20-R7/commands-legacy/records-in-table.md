@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Records in table.Summary-->Records in table devolve o número total dos registros que contém tabela.<!-- END REF--> [Records in selection](records-in-selection.md "Records in selection") devolve unicamente o número de registros na seleção atual. Se Records in table for utilizado dentro de uma transação, os registros criados durante a transação serão considerados
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir mostra um alerta que indica o número de registros na tabela:
 
@@ -26,11 +26,11 @@ O exemplo a seguir mostra um alerta que indica o número de registros na tabela:
  ALERT("Há "+String(Records in table([Pessoas]))+" registros na tabela.")
 ```
 
-#### Ver também 
+## Ver também 
 
 [Records in selection](records-in-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

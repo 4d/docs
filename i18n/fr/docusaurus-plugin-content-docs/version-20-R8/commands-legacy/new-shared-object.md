@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New shared object.Summary-->La commande **New shared object** crée un objet partagé vide ou pré-rempli et retourne sa référence.<!-- END REF--> L'ajout et la modification de propriétés dans un objet partagé doivent être encadrés par une structure *Utiliser...Fin utiliser*, sinon une erreur est générée. La lecture d'une propriété hors *Utiliser...Fin utiliser* est toutefois possible. 
 
@@ -41,7 +41,7 @@ Optionnellement, vous pouvez pré-remplir le nouvel objet en passant une ou plus
     
 (\*)Lorsqu'un objet partagé ou une collection partagée est ajouté(e) à un objet partagé, l'objet ou la collection ajouté(e) hérite du *locking identifier* de l'objet parent. Pour plus d'informations sur ce point, reportez-vous à la section *A propos du locking identifier (comment fonctionnent les groupes partagés)*.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous voulez créer un nouvel objet partagé prérempli : 
 
@@ -50,7 +50,7 @@ Vous voulez créer un nouvel objet partagé prérempli :
  $contact:=New shared object("name";"Smith";"firstname";"John")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez créer et modifier un objet partagé. La structure *Utiliser...Fin utiliser* doit être appelée pour cet objet :
 
@@ -62,13 +62,13 @@ Vous souhaitez créer et modifier un objet partagé. La structure *Utiliser...Fi
  End use
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [New object](new-object.md)  
 [New shared collection](../commands/new-shared-collection.md)  
 *Objets partagés et collections partagées*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

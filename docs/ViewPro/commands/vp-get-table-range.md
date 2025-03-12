@@ -23,7 +23,7 @@ title: VP Get table range
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|
 |Result  |Object|<-|Range that contains the table|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get table range` command <!-- REF #_method_.VP Get table range.Summary -->returns the range of *tableName*<!-- END REF -->.
 
@@ -42,7 +42,7 @@ In *sheet*, pass the index of the target sheet. If no index is specified, the co
 
 If *tableName* is not found, the command returns **null**. 
 
-#### See also
+## See also
 
 [VP RESIZE TABLE](vp-resize-table.md)<br/>
 [VP Find table](vp-find-table.md)

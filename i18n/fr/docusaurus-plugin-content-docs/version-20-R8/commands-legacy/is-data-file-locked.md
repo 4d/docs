@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is data file locked.Summary-->La commande **Is data file locked** retourne Vrai si le fichier de données de la base ouverte ou l’un de ses segments au moins est verrouillé — c’est-à-dire, protégé en écriture.<!-- END REF--> 
 
 Placée par exemple dans la , cette commande permet de prévenir tout risque d’ouverture fortuite d’un fichier de données verrouillé. 
 
-#### Exemple 
+## Exemple 
 
 Cette méthode empêchera l’ouverture de la base si le fichier de données est verrouillé : 
 
@@ -31,7 +31,7 @@ Cette méthode empêchera l’ouverture de la base si le fichier de données est
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

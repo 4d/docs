@@ -16,18 +16,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA GET URL FILTERS.Summary-->La commande **WA GET URL FILTERS** retourne dans les tableaux *tabFiltres* et *tabAutorisRefus* les filtres actifs dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> Si aucun filtre n’est actif, les tableaux sont retournés vides. 
 
 Les filtres sont installés par la commande [WA SET URL FILTERS](wa-set-url-filters.md). Si les tableaux ont été réinitialisés au cours de la session, la commande **WA GET URL FILTERS** vous permet de connaître le paramétrage courant. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Table get rows.Summary-->La commande **WP Table get rows** retourne un nouvel objet plage de lignes contenant une sélection de lignes de *objCible* ou de *refTableau*.<!-- END REF-->
 
@@ -45,7 +45,7 @@ Si *debutLigne* plus *nbLignes* excède le nombre de lignes dans *refTableau*, o
     
 Dans ce cas, la commande retourne une plage de lignes contenant les lignes d'en-tête répétées (si elle est passée, le paramètre nbLignes est ignoré). La commande retourne Null s'il n'y a pas de lignes d'en-tête définies.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez fixer une couleur d'arrière-plan spécifique pour les deux premières lignes d'un tableau, et modifier la bordure de la troisième ligne :
 
@@ -69,7 +69,7 @@ Vous souhaitez fixer une couleur d'arrière-plan spécifique pour les deux premi
 
 ![](../../assets/en/WritePro/commands/pict3307142.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez obtenir une plage de lignes à compter de la 10e jusqu'à la dernière :
 
@@ -77,7 +77,7 @@ Vous souhaitez obtenir une plage de lignes à compter de la 10e jusqu'à la dern
  WP Table get rows(tableRef;10;MAXLONG)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez récupérer les lignes sélectionnées par un utilisateur :
 
@@ -89,7 +89,7 @@ Vous souhaitez récupérer les lignes sélectionnées par un utilisateur :
  $rows:=WP Table get rows($userSelection)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 L'exemple suivant permet :
 
@@ -110,7 +110,7 @@ L'exemple suivant permet :
  
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Insert table](wp-insert-table.md)  
 [WP Table append row](wp-table-append-row.md)  

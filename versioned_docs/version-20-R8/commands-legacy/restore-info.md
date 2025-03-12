@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESTORE INFO.Summary-->The RESTORE INFO command gets information related to the last automatic database restore.<!-- END REF--> 
 
@@ -33,11 +33,11 @@ The type and content of the *info1* and *info2* parameters depend on the value o
 
 **Note:** This command does not take manual database restores into account.
 
-#### See also 
+## See also 
 
 [RESTORE](restore.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

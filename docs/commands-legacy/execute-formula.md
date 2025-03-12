@@ -36,7 +36,7 @@ The formula can include process variables and interprocess variables. However, t
 
 To ensure that the *statement* will be evaluated correctly regardless of the 4D language or version used, we recommend using the *token* syntax for elements whose name might vary between different versions (commands, tables, fields, constants). For example, to insert the [Current time](current-time.md) command, enter '**Current time:C178**'. For more information about this, refer to *Using tokens in formulas*. 
 
-##### Cache for formulas in compiled mode 
+### Cache for formulas in compiled mode 
 
 For optimization purposes, each formula executed by **EXECUTE FORMULA** in compiled mode can be stored in a dedicated cache in memory. The formula is cached in tokenized form. Once it is placed in the cache, its subsequent executions are highly optimized since the tokenization step is bypassed. 
 

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get auto row height.Summary-->La commande **LISTBOX Get auto row height** retourne la limite minimum ou maximum de hauteur de ligne automatique définie pour l'objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -41,7 +41,7 @@ Par défaut, la commande retourne la valeur demandée en pixels. Vous pouvez pas
 | lk lines  | Entier long | 1      | La hauteur désigne un nombre de lignes. 4D calcule la hauteur d’une ligne en fonction de la police. |
 | lk pixels | Entier long | 0      | La hauteur est un nombre de pixels (défaut)                                                         |
 
-#### Exemple 
+## Exemple 
 
 Vous voulez connaître le nombre de lignes maximum pouvant être affichées dans une ligne de list box :
 
@@ -50,13 +50,13 @@ Vous voulez connaître le nombre de lignes maximum pouvant être affichées dans
  vhMax:=LISTBOX Get auto row height(*;"LB";lk row max height;lk lines)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX Get rows height](listbox-get-rows-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

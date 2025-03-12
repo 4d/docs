@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get database parameter.Summary-->O comando **Get database parameter** permite obter o valor atual de um parâmetro do banco 4D.<!-- END REF--> Quando o valor do parâmetro é uma cadeia de caracteres, é retornado o o parâmetro *valorAlfa*.
 
@@ -87,7 +87,7 @@ O parâmetro *seletor* designa o parâmetero a ser obtido. 4D oferece as seguint
 | Libzip version                      | Inteiro longo | 120   | **Alcance**: máquina 4D atual<br/>**Se conserva entre duas sessões**: n/a<br/>**Descrição**: devolve o número de versão da biblioteca libzip na aplicação 4D na máquina atual. (Só leitura)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Pause logging                       | Inteiro longo | 121   | **Escopo**: aplicação 4D<br/>**Mantido entre duas sessões**: Não<br/>**Valores possíveis**: 0 (continua históricos), 1 (pausa históricos)<br/>Esse seletor permite suspender/retomar todas as operações de histórico iniciadas na aplicação (exceto históricos ORDA). Essa funcionalidade pode ser útil para aliviar temporariamente a aplicação 4D ou agendar operações de histórico.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-#### seletores Thread-seguro 
+## seletores Thread-seguro 
 
 O comando **Get database parameter** pode ser usado em processos preemptivos ao chamar os seletores abaixo:
 
@@ -102,7 +102,7 @@ O comando **Get database parameter** pode ser usado em processos preemptivos ao 
 * IMAP Log
 * Pause logging
 
-#### Exemplo 
+## Exemplo 
 
 Imagine que queira que sua aplicação reinicie após a primeira execução. A aplicação é lançada, com, por exemplo, uma linha de comando em Windows:
 
@@ -126,14 +126,14 @@ Em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md), pod
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [DISTINCT VALUES](distinct-values.md)  
 [Application info](application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

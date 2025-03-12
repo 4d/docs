@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CANCEL.Summary-->The **CANCEL** command is used in form or object methods (or in a subroutine) to:
 
@@ -33,25 +33,25 @@ Finally, this command can be used in the On Printing Detail form event, when usi
 
 **Note:** This operation differs from that of the [PAGE BREAK](page-break.md)(\*) command that cancels ALL the forms waiting to be printed.
 
-##### Headless mode 
+### Headless mode 
 
 The **CANCEL** command is allowed in headless mode, in the context of offscreen areas created by *VP Run offscreen area* or [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### Example 
+## Example 
 
 Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 When the [CANCEL](cancel.md) command is executed (form or printing cancelled), the system variable OK is set to 0.
 
-#### See also 
+## See also 
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](print-form.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

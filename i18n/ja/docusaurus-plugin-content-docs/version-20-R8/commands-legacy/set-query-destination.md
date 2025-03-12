@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET QUERY DESTINATION.Summary-->**SET QUERY DESTINATION**を使い、カレントプロセスのクエリの結果を配置する場所を4Dに指示することができます。<!-- END REF-->
 
@@ -103,7 +103,7 @@ displayed_sidebar: docs
 
 これに対して**SET QUERY DESTINATION**は[ALL RECORDS](all-records.md)や[RELATE MANY](relate-many.md)等、テーブルのカレントセレクションを変更する他のコマンドには影響を与えません。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は*\[Phone Book\]*テーブルのレコードを表示するフォームを作成します。そのフォームに (アルファベット26文字の) *asRolodex*と名付けられたタブコントロールと*\[Phone Book\]*レコードを表示するサブフォームを作成します。タブコントロールから任意のタブを選択することにより、そのタブ上の文字で始まるレコードを表示することができます。 
 
@@ -157,7 +157,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 2 
+## 例題 2 
 
 この例題のUnique valuesプロジェクトメソッドは、テーブル中の任意の数のフィールドに対し、重複値がないことを検証するために使用できます。カレントレコードは新規あるいは既存のレコードを使用できます。  
   
@@ -240,7 +240,7 @@ displayed_sidebar: docs
   // ...
 ```
 
-#### 参照 
+## 参照 
 
 [GET QUERY DESTINATION](get-query-destination.md)  
 [QUERY](query.md)  
@@ -252,7 +252,7 @@ displayed_sidebar: docs
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY LIMIT](set-query-limit.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

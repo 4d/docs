@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Is macOS.Summary-->**Is macOS** コマンドは、カレントのOSがmacOS の場合にはTrue を返します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 カレントのOS がmacOS であるかどうかを調べたい場合を考えます:
 
@@ -29,12 +29,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [System info](system-info.md)  
 [Is Windows](is-windows.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

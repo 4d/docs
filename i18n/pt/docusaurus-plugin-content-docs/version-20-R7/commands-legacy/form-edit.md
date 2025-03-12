@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FORM EDIT.Summary-->**O comando FORM EDIT** abre o *formulário* associado a *Tabela* no editor 4D Form.<!-- END REF--> Note que deve ter acesso ao ambiente Design, senão ocorre o erro-9804 ("Cannot open form").
 
@@ -24,7 +24,7 @@ Se passar o parâmetro opcional *Tabela*, indica a tabela associada com *formul�
 
 No parâmetro *formulário*, passe o nome do formulário para abrir no editor 4D Form. Se passar um nome que não exista, o erro 81 é gerado ("Form not found). 
 
-#### Exemplo 
+## Exemplo 
 
 Para abrir a tabela *Contatos* *do formulário Address*:
 
@@ -38,11 +38,11 @@ Para abrir o formulário projeto *ContactList*:
  FORM EDIT("ContactList")
 ```
 
-#### Ver também 
+## Ver também 
 
 *Design Object Access Commands*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

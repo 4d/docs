@@ -23,7 +23,7 @@ This command is maintained for compatibility reasons only. It is now recommended
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HTTP AUTHENTICATE.Summary-->The **HTTP AUTHENTICATE** command enables HTTP requests to servers requiring authentication of the client application.<!-- END REF--> The BASIC and DIGEST methods are supported, as well as the presence of a proxy.
 
@@ -42,7 +42,7 @@ If you pass the *\** parameter, this indicates that the authentication informati
 
 By default, authentication information is stored temporarily and reused for each request in the current process. However, it is possible to reset this information after each request using an option set by the [HTTP SET OPTION](http-set-option.md) command. In this case, you will have to execute the **HTTP AUTHENTICATE** command before each call to [HTTP Request](http-request.md) or [HTTP Get](http-get.md).
 
-#### Example 
+## Example 
 
 Examples of requests with authentication:
 
@@ -54,11 +54,11 @@ Examples of requests with authentication:
  $httpStatus:=HTTP Get(...)
 ```
 
-#### See also 
+## See also 
 
 [HTTP SET OPTION](http-set-option.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -31,7 +31,7 @@ Si vous passez un numéro de référence de fichier de ressources valide dans *r
 
 **Note :** Chaque chaîne d'une ressource liste de chaînes peut contenir jusqu'à 255 caractères.
 
-##### Compatibilité avec l'architecture XLIFF 
+### Compatibilité avec l'architecture XLIFF 
 
 La commande **Get indexed string** est compatible avec l’architecture XLIFF de 4D à compter de la v11 : la commande recherche dans un premier temps les valeurs correspondant à *resNum* et *strNum* dans tous les fichiers XLIFF ouverts (si le paramètre *resFichier* est omis). Dans ce cas, *resNum* désigne l’attribut **id** de l’élément **group** et *strNum* désigne l’attribut **id** de l’élément **trans-unit**. Si la valeur n’est pas trouvée, la commande poursuit la recherche dans les fichiers de ressources ouverts. Pour plus d'informations sur l'architecture XLIFF dans 4D, reportez-vous au manuel Mode Développement.
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.IMPORT STRUCTURE.Summary-->La commande **IMPORT STRUCTURE** vous permet d'importer, dans la base courante, la définition XML de la structure de la base 4D passée dans le paramètre *structureXML*.<!-- END REF--> 
 
@@ -31,11 +31,11 @@ Une erreur est générée si la structure est en mode compilé ou en lecture seu
 
 Cette commande ne peut pas être appelée depuis une application 4D en mode distant.
 
-#### Note pour le déploiement 
+## Note pour le déploiement 
 
 Étant donné que cette commande modifie la structure de la base de données, elle ne peut pas être utilisée dans une application packagée en lecture seule (fichier .4dc installé dans le dossier Program Files ou fichier .4dz).
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez importer une définiton de structure stockée sur disque dans la base courante :
 
@@ -44,11 +44,11 @@ Vous souhaitez importer une définiton de structure stockée sur disque dans la 
  IMPORT STRUCTURE($struc)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [EXPORT STRUCTURE](export-structure.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

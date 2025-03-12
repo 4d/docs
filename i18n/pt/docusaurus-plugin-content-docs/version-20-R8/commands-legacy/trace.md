@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.TRACE.Summary-->O comando **TRACE** se utiliza para executar passo a passo métodos durante o desenvolvimento de um banco.<!-- END REF-->
 
@@ -24,7 +24,7 @@ O comando **TRACE** é ignorado quando o código executando for compilado.
 
 **Dica:** não chame **TRACE** quando utilize um formulário para o qual os eventos On Activate e On Deactivate tenham sido ativados. Cada vez que a janela do depurador apareça, estes eventos serão invocados; isto criará um loop infinito entre estes eventos e a janela do depurador. Se terminar nesta situação, utilize a combinação Shif**t+clique** no botão Continu**ar** do depurador para sair daí. Qualquer chamada posterior a **TRACE** dentro do processo será ignorada.
 
-#### Exemplo 
+## Exemplo 
 
 O código a seguir espera que a variável processo CREAR\_LENG seja igual a “US” ou “FR”. Se não for o caso, chama ao método de projeto DEBUG: 
 
@@ -61,7 +61,7 @@ O método de projeto DEBUG é listado aqui:
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

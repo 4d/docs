@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Summary-->**OBJECT GET MAXIMUM VALUE**コマンドは、引数 *object* と *\** で指定したオブジェクトのカレントの最大値を、 *maxValue* 変数の中に返します。<!-- END REF-->
 
@@ -23,12 +23,12 @@ displayed_sidebar: docs
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数でフィールドまたは変数を指定します。
 
-#### 参照 
+## 参照 
 
 [OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
 [OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

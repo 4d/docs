@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX GET XML ENTITY.Summary-->SAX GET XML ENTITY コマンドを使用して、*document* 引数で参照されるXMLドキュメント中に存在するXML実体の名前と値を*name*と*value*に取得できます。<!-- END REF-->このコマンドはXML Entity SAXイベントで呼び出されなければなりません。SAXイベントに関する詳細は[SAX Get XML node](sax-get-xml-node.md "SAX Get XML node") コマンドの説明を参照してください。
 
-#### 例題 
+## 例題 
 
 以下のXMLコードがあります:
 
@@ -41,15 +41,15 @@ displayed_sidebar: docs
  SAX GET XML ENTITY(DocRef;vName;vValue)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されてエラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [SAX Get XML node](sax-get-xml-node.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

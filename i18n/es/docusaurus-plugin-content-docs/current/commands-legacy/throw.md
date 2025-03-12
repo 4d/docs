@@ -28,7 +28,7 @@ Los errores lanzados utilizando el comando **throw** son gestionados por el runt
 
 El comando admite tres sintaxis:
 
-##### **throw(errorCode{; description})**
+### **throw(errorCode{; description})**
 
 Especifica el código de error y un texto de descripción opcional, el error se lanza inmediatamente.  
 Si no se indica ninguna descripción: se llena con:
@@ -36,7 +36,7 @@ Si no se indica ninguna descripción: se llena con:
 * Código de error (errorCode): (host) en la aplicación local
 * Código de error (errorCode): (C00x) en un componente
 
-##### **throw(errorObj)**
+### **throw(errorObj)**
 
 El objeto *errorObj* permite obtener información de error más detallada y controlar la gestión de errores. Puede contener las siguientes propiedades, así como toda propiedad personalizada a la que pueda hacer referencia la propiedad **message**.
 
@@ -53,7 +53,7 @@ Cuando se utiliza esta sintaxis, el objeto *errorObj* se devuelve en Últimos er
 
 **Nota:** es posible llamar al comando varias veces en el mismo método proyecto para generar varios errores. Puede utilizar la opción diferido para enviar todos los errores a la vez.
 
-##### **throw** 
+### **throw** 
 
 Lanza todos los errores actuales en **modo diferido**, lo que significa que se añadirán a una pila y se gestionarán cuando vuelva el método que los llama. Esto se hace típicamente desde dentro de una retrollamada [ON ERR CALL](on-err-call.md).
 

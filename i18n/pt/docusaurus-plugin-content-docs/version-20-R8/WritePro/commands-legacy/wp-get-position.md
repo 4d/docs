@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Get position.Summary-->O comando **WP Get position** devolve um objeto que descreve a posição atual de *objRange*.<!-- END REF-->
 
@@ -66,7 +66,7 @@ Se *objRango* mostrar em uma área de formulário 4D Write Pro, tenha certeza de
 
 * Este comando não deve ser chamado dentro de eventos que são frequentemente gerados (tais como On After Edit) já que *result.rangeHeight* por exemplo pode exigir cálculos que consumem muito tempo e que terão que ser feitos a cada chamada de evento
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser saber o número de página de uma range:
 
@@ -77,7 +77,7 @@ Se quiser saber o número de página de uma range:
  ALERT("First page number in selection is "+String($rangePosition.page))
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser definir na cor azul o texto na primeira e última página do documento:
 
@@ -100,7 +100,7 @@ Se quiser definir na cor azul o texto na primeira e última página do documento
 ```
 
   
-#### Exemplo 3 
+## Exemplo 3 
 
 Enquanto cria um documento, se quiser evitar divisões de parágrafo:
 
@@ -134,7 +134,7 @@ Enquanto cria um documento, se quiser evitar divisões de parágrafo:
  End for each
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Os exemplos abaixo ilustram as coordenadas do retângulo delimitador devolvidas, segundo o *objRange*.
 
@@ -155,6 +155,6 @@ Os exemplos abaixo ilustram as coordenadas do retângulo delimitador devolvidas,
 
 ![](../../assets/en/WritePro/commands/pict4096411.en.png)  
 
-#### Ver também 
+## Ver também 
 
 [WP PRINT](wp-print.md)  

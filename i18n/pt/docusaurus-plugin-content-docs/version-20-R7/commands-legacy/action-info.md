@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Action info.Summary-->O comando **Action info** devolve várias informações, incluida a disponibilidade e o estado, sobre a *ação* definida no *objetivo*, de acordo com o contexto da aplicação atual.<!-- END REF-->
 
@@ -48,7 +48,7 @@ O comando **Action info** devolve informação em forma de um objeto que contenh
 
 Se não pode ser determinado o estado da ação (por exemplo, se não afetar a nenhum objeto ou comando de menu), o comando devolve um objeto nulo (indefinido).
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser saber se a ação copiar está disponível (ou seja, se foram selecionados alguns dados):
 
@@ -63,12 +63,12 @@ Se quiser saber se a ação copiar está disponível (ou seja, se foram selecion
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [INVOKE ACTION](invoke-action.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

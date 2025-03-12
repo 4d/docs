@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Find previous.Summary-->The **WP Find previous** command searches the *targetObj*, prior to the *searchBefore* range, for the *searchValue* based on the *searchCondition*.<!-- END REF--> An optional parameter can be used to replace any results found. 
 
@@ -77,7 +77,7 @@ If *targetObj* is a range or element, found values are returned in the order the
 
 An empty range is returned if no results are found.
 
-#### Example 
+## Example 
 
 ```4d
  var $userSel ;$target ;$alphaRanges ;$previousRanges: object
@@ -96,7 +96,7 @@ An empty range is returned if no results are found.
  $previousRanges:=WP Find previous($target;"alpha";$options)
 ```
 
-#### See also 
+## See also 
 
 [WP Find all](wp-find-all.md)  
 [WP Find next](wp-find-next.md)  

@@ -15,7 +15,7 @@ title: VP ADD STYLESHEET
 |styleObj|Object|->|Object defining attribute settings|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP ADD STYLESHEET` command <!-- REF #_method_.VP ADD STYLESHEET.Summary -->creates or modifies the *styleName* style sheet based upon the combination of the properties specified in *styleObj* in the open document<!-- END REF -->. If a style sheet with the same name and index already exists in the document, this command will overwrite it with the new values.
 
@@ -36,7 +36,7 @@ If a *styleName* style sheet is defined at the workbook level and at a sheet lev
 
 To apply the style sheet, use the [VP SET DEFAULT STYLE](vp-set-default-style.md) or [VP SET CELL STYLE](vp-set-cell-style.md) commands.
 
-#### Example  
+## Example  
 
 The following code:
 
@@ -70,7 +70,7 @@ will create and apply the following style object named *GreenDashDotStyle*:
 }
 ```
 
-#### See also
+## See also
 
 [4D View Pro Style Objects and Style Sheets](../configuring.md#style-objects--style-sheets)<br/>
 [VP Get stylesheet](vp-get-stylesheet.md)<br/>

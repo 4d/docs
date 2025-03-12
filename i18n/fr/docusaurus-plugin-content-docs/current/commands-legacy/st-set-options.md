@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST SET OPTIONS.Summary-->La commande **ST SET OPTIONS** vous permet de modifier une ou plusieurs options de fonctionnement du champ ou de la variable de texte stylé désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
@@ -45,7 +45,7 @@ Affichage des expressions :
 
 ![](../assets/en/commands/pict1216065.fr.png)
 
-#### Exemple 
+## Exemple 
 
 Le code suivant vous permet de basculer le mode d’affichage de la zone : 
 
@@ -58,11 +58,11 @@ Le code suivant vous permet de basculer le mode d’affichage de la zone :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ST GET OPTIONS](st-get-options.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

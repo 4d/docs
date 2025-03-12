@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Count in array.Summary-->O comando Count in array retorna o número de ocorrências do *valor* no *array*.<!-- END REF-->
 
@@ -25,7 +25,7 @@ Este comando pode ser usado com os seguintes tipos de array: texto, alfanuméric
 
 Se nenhum elemento no *array* corresponde ao *valor*, o comando retorna 0.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O seguinte exemplo permite visualizar o número de linhas selecionados em um list box: 
 
@@ -34,7 +34,7 @@ O seguinte exemplo permite visualizar o número de linhas selecionados em um lis
  ALERT(String(Count in array(tBList;True))+" linha(s) selecionada(s) no list box")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Para contar referências de objeto em um array de objeto:
 
@@ -53,12 +53,12 @@ Para contar referências de objeto em um array de objeto:
  $n:=Count in array($objects;$o2) // n = 0
 ```
 
-#### Ver também 
+## Ver também 
 
 [Find in array](find-in-array.md)  
 [Find in sorted array](find-in-sorted-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

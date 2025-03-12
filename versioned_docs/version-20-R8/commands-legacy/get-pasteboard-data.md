@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PASTEBOARD DATA.Summary-->The **GET PASTEBOARD DATA** command returns, in the BLOB field or in the *data* variable, the data present in the pasteboard and whose type you pass in *dataType*.<!-- END REF--> (If the pasteboard contains text copied within 4D, then the BLOB’s character set is likely to be UTF-16.)
 
@@ -24,7 +24,7 @@ In *dataType*, pass a value specifying the type of data to be retrieved. You can
 
 **Note:** You cannot read file type data with this command; in order to do this, you have to use the [Get file from pasteboard](get-file-from-pasteboard.md) command. 
 
-#### Example 
+## Example 
 
 The following object methods for two buttons copy from and paste data to the array *asOptions* (pop-up menu, drop-down list,...) located in a form:
 
@@ -44,17 +44,17 @@ The following object methods for two buttons copy from and paste data to the arr
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the data is correctly extracted, OK is set to 1; otherwise OK is set to 0 and an error is generated.
 
-#### See also 
+## See also 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

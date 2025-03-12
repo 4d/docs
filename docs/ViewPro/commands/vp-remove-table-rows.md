@@ -24,7 +24,7 @@ title: VP REMOVE TABLE ROWS
 |count|Integer|->|Number of rows to remove (must be >0) |
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP REMOVE TABLE ROWS` command <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->removes one or *count* row(s) from the specified *tableName* at the specified *row* index<!-- END REF -->. The command removes values and styles.
 
@@ -35,7 +35,7 @@ If the *tableName* table is bound to a [data context](vp-set-data-context.md), t
 If *tableName* does not exist, nothing happens.
 
 
-#### Example
+## Example
 
 To remove two rows from 3rd row of the "dataTable" table:
 
@@ -43,7 +43,7 @@ To remove two rows from 3rd row of the "dataTable" table:
 VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
 ```
 
-#### See also
+## See also
 
 [VP INSERT TABLE ROWS](vp-insert-table-rows.md)<br/>
 [VP REMOVE TABLE COLUMNS](vp-remove-table-columns.md)

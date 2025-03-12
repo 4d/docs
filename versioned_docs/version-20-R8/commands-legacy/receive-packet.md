@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RECEIVE PACKET.Summary-->**RECEIVE PACKET** reads characters from a serial port or from a document.<!-- END REF-->
 
@@ -45,7 +45,7 @@ When reading a document, the first RECEIVE PACKET begins reading at the beginnin
 
 When attempting to read past the end of a file, RECEIVE PACKET will return with the data read up to that point and the variable OK will be set to 1\. Then, the next RECEIVE PACKET will return an empty string and set the OK variable to zero.
 
-#### Example 1 
+## Example 1 
 
 The following example reads 20 characters from a serial port into the variable *getTwenty*:
 
@@ -53,7 +53,7 @@ The following example reads 20 characters from a serial port into the variable *
  RECEIVE PACKET(getTwenty;20)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example reads data from the document referenced by the variable *myDoc* into the variable *vData*. It reads until it encounters a carriage return:
 
@@ -61,7 +61,7 @@ The following example reads data from the document referenced by the variable *m
  RECEIVE PACKET(myDoc;vData;Char(Carriage return))
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example reads data from the document referenced by the variable *myDoc* into the variable *vData*. It reads until it encounters the *</TD>* (end of table cell) HTML tag:
 
@@ -69,7 +69,7 @@ The following example reads data from the document referenced by the variable *m
  RECEIVE PACKET(myDoc;vData;"")
 ```
 
-#### Example 4 
+## Example 4 
 
 The following example reads data from a document into fields. The data is stored as fixed-length fields. The method calls a subroutine to strip any trailing spaces (spaces at the end of the string). The subroutine follows the method: 
 
@@ -101,11 +101,11 @@ The spaces at the end of the data are stripped by the following method, called S
  $0:=Delete string($1;-$i;Length($1)) // Delete the spaces
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 After a call to **RECEIVE PACKET**, the OK system variable is set to 1 if the packet is received without error. Otherwise, the OK system variable is set to 0.
 
-#### See also 
+## See also 
 
 [Get document position](get-document-position.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
@@ -114,7 +114,7 @@ After a call to **RECEIVE PACKET**, the OK system variable is set to 1 if the pa
 [SET TIMEOUT](set-timeout.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

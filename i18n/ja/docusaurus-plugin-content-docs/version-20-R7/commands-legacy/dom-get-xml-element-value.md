@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Summary-->**DOM GET XML ELEMENT VALUE** コマンドは *elementRef*に指定したXML要素の値を*elementValue* 引数に返します。<!-- END REF-->4Dは取得した値を渡した変数と同じ型に変換します。変数の型が定義されていない場合、値はデフォルトでテキスト型で返されます。
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 **Note:** *elementRef*で指定された要素が[DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md) コマンドで処理されたBLOBの場合、それは自動でBase64でエンコードされています。このコマンドは自動でBase64のデコードを試みます。
 
-#### 例題 
+## 例題 
 
 このメソッドは$xml\_Element\_Ref要素の値を返します:
 
@@ -34,17 +34,17 @@ displayed_sidebar: docs
  DOM GET XML ELEMENT VALUE($xml_Element_Ref;$value)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、エラーが発生すると0が設定されます。
 
-#### 参照 
+## 参照 
 
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
 [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

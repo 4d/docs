@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 
 
-#### Description 
+## Description 
 
 The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
 
@@ -64,7 +64,7 @@ The returned status object contains the following properties:
 |status|Integer|Status code|
 |success|Boolean|True if archive created successfully, else false|
 
-#### Example 1
+## Example 1
 
 To compress a `4D.File`:
 
@@ -78,7 +78,7 @@ To compress a `4D.File`:
  $status:=ZIP Create archive($file;$destination)
 ```
 
-#### Example 2
+## Example 2
 
 To compress a `4D.Folder` without the folder itself:
 
@@ -93,7 +93,7 @@ To compress a `4D.Folder` without the folder itself:
  $status:=ZIP Create archive($folder;$destination;ZIP Without enclosing folder)
 ```
 
-#### Example 3
+## Example 3
 
 To compress a ZIP archive structure with a password and progress bar:
 
@@ -123,7 +123,7 @@ To compress a ZIP archive structure with a password and progress bar:
  Progress SET PROGRESS(progID;Num($1/100))
 ```
 
-#### Example 4
+## Example 4
 
 You want to pass a collection of folders and files to compress to the *zipStructure* object:
 
@@ -140,7 +140,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
  $err:=ZIP Create archive($zip;$destination)
 ```
 
-#### Example 5
+## Example 5
 
 You want to use an alternative compression algorithm with a high compression level:
 
@@ -159,14 +159,14 @@ $err:=ZIP Create archive($zip; $destination)
 ```
 
 
-#### See also 
+## See also 
 
 [ZipArchive Class](../API/ZipArchiveClass.md)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Read archive`](zip-read-archive.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

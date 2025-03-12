@@ -16,13 +16,13 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP USE PAGE SETUP.Summary-->The **WP USE PAGE SETUP** command modifies the current printer page settings based on the 4D Write Pro document attributes for page size and orientation.<!-- END REF--> This command should be called just before [WP PRINT](wp-print.md) in order to synchronize the current printer page settings with the 4D Write Pro document page settings. 
 
 Other settings are defined by the 4D [PRINT SETTINGS](../../commands-legacy/print-settings.md) command. Current print settings are set for the whole 4D session.
 
-#### Example 
+## Example 
 
 Before printing a document, you want to reset its size and orientation to values stored in the document:
 
@@ -30,6 +30,6 @@ Before printing a document, you want to reset its size and orientation to values
  WP USE PAGE SETUP(writeProDoc)
 ```
 
-#### See also 
+## See also 
 
 [WP PRINT](wp-print.md)  

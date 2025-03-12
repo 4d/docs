@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB TO USERS.Summary-->La commande **BLOB TO USERS** remplace les comptes utilisateurs et les groupes présents dans le BLOB *utilisateurs* dans la base courante.<!-- END REF--> Le BLOB *utilisateurs* est crypté et doit impérativement avoir été créé par la commande [USERS TO BLOB](users-to-blob.md).
 
@@ -39,15 +39,15 @@ Cette commande provoque le remplacement des comptes et groupes créés par l'Adm
  BLOB TO USERS(blob)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande est exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [USERS TO BLOB](users-to-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

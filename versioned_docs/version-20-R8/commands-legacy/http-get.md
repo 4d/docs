@@ -26,7 +26,7 @@ This command is maintained for compatibility reasons only. It is now recommended
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HTTP Get.Summary-->The **HTTP Get** command sends an HTTP GET request directly to a specific URL and processes the HTTP server response.<!-- END REF-->
 
@@ -65,7 +65,7 @@ The *\** parameter enables the keep-alive mechanism for the server connection. B
 The command returns a standard HTTP status code (200=OK and so on) as returned by the server. The list of HTTP status codes is provided in *RFC 2616*.   
 If you are unable to connect to the server for a reason related to the network (DNS Failed, Server not reachable...), the command returns 0 and an error is generated. You can intercept errors using an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
 
-#### Example 1 
+## Example 1 
 
 Retrieval of the 4D logo on the 4D Web site:
 
@@ -78,7 +78,7 @@ Retrieval of the 4D logo on the 4D Web site:
  $httpResponse:=HTTP Get(URLPic_t;Pic_i;HeaderNames_at;HeaderValues_at)
 ```
 
-#### Example 2 
+## Example 2 
 
 Retrieval of an RFC:
 
@@ -91,7 +91,7 @@ Retrieval of an RFC:
  $httpResponse:=HTTP Get(URLText_t;Text_t;HeaderNames_at;HeaderValues_at)
 ```
 
-#### Example 3 
+## Example 3 
 
 Retrieval of a video:
 
@@ -101,11 +101,11 @@ Retrieval of a video:
  BLOB TO DOCUMENT("video.flv";vBlob)
 ```
 
-#### See also 
+## See also 
 
 [HTTP Request](http-request.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

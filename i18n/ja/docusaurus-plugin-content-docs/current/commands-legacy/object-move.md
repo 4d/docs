@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->OBJECT MOVEコマンドは、 *\** と*object*引数で指定されたカレントフォーム内のオブジェクトを、水平方向に*moveH*ピクセル、垂直方向に*moveV*ピクセル移動させます。<!-- END REF-->  
 またオプションで、オブジェクトを水平方向に*resizeH*ピクセル、垂直方向に*resizeV*ピクセル、サイズの変更をすることもできます。
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 * [MODIFY SELECTION](modify-selection.md "MODIFY SELECTION")や[DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION")コマンドで表示される出力フォームのヘッダとフッタ
 * フォーム印刷イベント
 
-#### 例題 1 
+## 例題 1 
 
 下記のコードは、"button\_1"を右に10ピクセル、上に20ピクセル移動させ、幅を30ピクセル、高さを40ピクセルサイズ変更します: 
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
  OBJECT MOVE(*;"button_1";10;-20;30;40)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 下記のコード=は、"button\_1"を座標(10;20)(30;40)に移動します:   
   
@@ -60,13 +60,13 @@ displayed_sidebar: docs
  OBJECT MOVE(*;"button_1";10;20;30;40;*)
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT DUPLICATE](object-duplicate.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

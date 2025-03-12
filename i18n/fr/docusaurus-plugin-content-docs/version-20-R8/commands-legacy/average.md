@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Average.Summary-->**Average** retourne la moyenne arithmétique de *séries*.<!-- END REF--> Si *séries* est un champ indexé, l'index est utilisé pour le calcul. 
 
@@ -26,7 +26,7 @@ Seules les valeurs numériques des attributs sont utilisées pour le calcul. Si 
 
 Si la commande est correctement exécutée, la variable système OK prend la valeur 1\. Si elle est interrompue (par exemple si l'utilisateur clique sur le bouton **Arrêt** dans le thermomètre de progression), la variable OK prend la valeur 0.
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans l'exemple suivant, une valeur est assignée à une variable se trouvant dans la zone de rupture R0 d'un formulaire sortie. La ligne de code ci-dessous constitue la méthode objet de la variable. Elle n'est exécutée qu'à l'impression du niveau de rupture 0 :
 
@@ -47,7 +47,7 @@ La méthode suivante est appelée pour imprimer les enregistrements de la sélec
 
 **Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple vous permet d’obtenir la moyenne des 15 premières notes de la sélection : 
 
@@ -60,7 +60,7 @@ Cet exemple vous permet d’obtenir la moyenne des 15 premières notes de la sé
  vAverage:=Average($TabNote)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Votre table \[Customer\] comporte un champ objet "full\_Data" contenant les données suivantes :
 
@@ -79,7 +79,7 @@ Vous pouvez effectuer les calculs suivants :
   //$vTot vaut 105
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
@@ -90,7 +90,7 @@ Vous pouvez effectuer les calculs suivants :
 [Subtotal](subtotal.md)  
 [Sum](sum.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

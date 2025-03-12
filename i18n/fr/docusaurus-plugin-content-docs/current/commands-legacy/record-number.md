@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Record number.Summary-->**Record number** retourne le numéro de l'enregistrement courant de *laTable*.<!-- END REF--> S'il n'y a pas d'enregistrement courant, par exemple si le pointeur d'enregistrement se trouve avant ou après la sélection courante, **Record number** retourne -1\. S'il s'agit d'un nouvel enregistrement qui n'a pas encore été sauvegardé, **Record number** retourne -3.
 
@@ -24,7 +24,7 @@ Les numéros d'enregistrements peuvent varier. Par exemple, les numéros des enr
 
 **Note :** Il est fortement conseillé d'utiliser la commande [Is new record](is-new-record.md) pour vérifier si un enregistrement est en cours de création. 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant sauvegarde le numéro d'enregistrement courant puis cherche dans la table si un autre enregistrement a la même valeur : 
 
@@ -37,7 +37,7 @@ L'exemple suivant sauvegarde le numéro d'enregistrement courant puis cherche da
  GOTO RECORD([Personnes];$NumEnreg) // Retourner à l'enregistrement original
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *A propos des numéros d'enregistrements*  
 [GOTO RECORD](goto-record.md)  
@@ -45,7 +45,7 @@ L'exemple suivant sauvegarde le numéro d'enregistrement courant puis cherche da
 [Selected record number](selected-record-number.md)  
 [Sequence number](sequence-number.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX EXPAND.Summary-->O comando LISTBOX EXPAND é utilizado para expandir as linhas de quebra do objeto list box designado pelos parâmetros objeto e \*.<!-- END REF-->  
   
@@ -42,7 +42,7 @@ O comando não seleciona linhas de quebra.
   
 Se a seleção ou o list box não conterem uma linha de quebra ou se todas as linhas de quebra já estão expandidas, o comando não faz nada.
 
-#### Exemplo 
+## Exemplo 
 
 Este ejemplo ilustra diferentes modos de utilizar el comando. Dados los siguientes arrays representados en un list box:
 
@@ -77,11 +77,11 @@ Este ejemplo ilustra diferentes modos de utilizar el comando. Dados los siguient
 
 ![](../assets/en/commands/pict175855.en.png)
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX COLLAPSE](listbox-collapse.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

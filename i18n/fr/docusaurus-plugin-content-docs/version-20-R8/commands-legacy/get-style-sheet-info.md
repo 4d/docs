@@ -46,7 +46,7 @@ La commande retourne dans *styles* une valeur correspondant au(x) style(s) assoc
 
 Si la commande est exécutée correctement, la variable système *OK* prend la valeur 1\. Dans le cas contraire (par exemple si *nomFeuilleStyle* n’existe pas), elle prend la valeur 0.
 
-##### Note de compatibilité 
+### Note de compatibilité 
 
 Dans **l'architecture Projet**, seules les trois feuilles de style automatiques sont prises en charge par cette commande.
 

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.COMBINE PICTURES.Summary-->COMBINE PICTURES コマンドは*pict1*と*pict2* ピクチャを、*operator*モードで結合させ、3つめの*resultingPict*ピクチャを得るために使用します。<!-- END REF-->結果のピクチャは複合型で、ソースピクチャのすべての特性を保持します。
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 **Note:** COMBINE PICTURES コマンドで実行される重ね合わせは、& と | 演算子で提供される (ORやXORの) 重ね合わせとは異なります。COMBINE PICTURES コマンドは結果ピクチャ中にソースピクチャの特性を保持しますが、& と | 演算子はそれぞれのピクセルを処理してビットマップピクチャを生成します。これらの演算子はもともと白黒画像を処理するためのものであり、現在は廃止予定です。
 
-#### 例題 
+## 例題 
 
 以下のピクチャがある時: 
 
@@ -48,11 +48,11 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict27794.ja.png)
 
-#### 参照 
+## 参照 
 
 [TRANSFORM PICTURE](transform-picture.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

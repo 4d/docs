@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Uppercase.Summary-->Uppercase takes *aString* and returns the string with all alphabetic characters in uppercase.<!-- END REF-->
 
 The optional *\** parameter, if passed, indicates that any accented characters present in *aString* must be returned as accented uppercase characters. By default, when this parameter is omitted, accented characters “lose” their accents after the conversion is carried out. 
 
-#### Example 1 
+## Example 1 
 
 This example compares the results obtained according to whether or not the *\** parameter has been passed:
 
@@ -30,15 +30,15 @@ This example compares the results obtained according to whether or not the *\** 
  $thestring:=Uppercase("hélène";*) // $thestring is "HÉLÈNE"
 ```
 
-#### Example 2 
+## Example 2 
 
 See the example for [Lowercase](lowercase.md).
 
-#### See also 
+## See also 
 
 [Lowercase](lowercase.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

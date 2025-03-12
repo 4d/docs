@@ -12,21 +12,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SHOW TOOL BAR.Summary-->La commande **SHOW TOOL BAR** permet de gérer l'affichage des barres d'outils personnalisées créées par la commande [Open form window](open-form-window.md) pour le process courant.<!-- END REF-->
 
 Si une fenêtre barre d'outils a été créée par la commande [Open form window](open-form-window.md) avec l'option Toolbar form window, la commande rend visible la fenêtre. Si la fenêtre barre d'outils était déjà visible ou si aucune fenêtre de ce type n'a été créée, la commande ne fait rien.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [HIDE TOOL BAR](hide-tool-bar.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [HIDE TOOL BAR](hide-tool-bar.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT GET COORDINATES.Summary-->O comando **OBJECT GET COORDINATES** devolve as coordenadas *esquerda*, *superior*, *direita* e *inferior* (em pontos) nas variáveis ou campos dos objetos do formulário atual definido pelos parâmetros *\** e *objeto*.<!-- END REF-->
 
@@ -43,7 +43,7 @@ Por exemplo, considere o seguinte gráfico, onde as coordenadas da coluna *Capit
 
 Como você pode ver na primeira imagem, a coluna é maior que o listbox, pelo que seus coordenadas vão além do limite inferior do listbox, incluindo o rodapé de página. Na segunda imagem, o listbox foi deslocado, sendo que a coluna também se moveu para "baixo" a coluna *Language* e a área de cabeçalho. Em qualquer caso, com o propósito de calcular a parte visível real (área verde), é necessário subtrair as áreas vermelhas.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Assumamos que quer obter as coordenadas de um retângulo formado por todos os objetos que começam por “botão”:
 
@@ -51,7 +51,7 @@ Assumamos que quer obter as coordenadas de um retângulo formado por todos os ob
  OBJECT GET COORDINATES(*;"botão@";esquerda;superior;direita;inferior)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Para as necessidades de sua interface, você deseja rodear a área na que o usuário fez clique com um retângulo vermelho:
 
@@ -78,14 +78,14 @@ O método devolve as coordenadas teóricas. Se o listbox é redimensionado, pode
 
 ![](../assets/en/commands/pict1740929.en.png)
 
-#### Ver também 
+## Ver também 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

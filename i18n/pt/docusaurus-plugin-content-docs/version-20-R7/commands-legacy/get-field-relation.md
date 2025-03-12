@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET FIELD RELATION.Summary-->O comando GET FIELD RELATION permite conhecer o estado automático/manual da relação começando desde o *campoN* para o processo atual.<!-- END REF--> Todas as relações podem ser consultadas, incluindo as relações automáticas na janela de Estrutura.
 
@@ -46,7 +46,7 @@ Pode comparar os valores recebidos nos parâmetros *um* e *muitos* com as consta
 
 * O parâmetro opcional *\** permite “forçar” a leitura do estado atual da relação, inclusive se não foi modificado por programação. Em outras palavras, quando passa o parâmetro opcional \*, só podem ser devolvidos os valores 2 ou 3 nos parâmetros *um* e *muitos*.
 
-#### Exemplo 
+## Exemplo 
 
 Dada a seguinte estrutura:
 
@@ -86,14 +86,14 @@ O código a seguir ilustra as diferentes possibilidades oferecidas pelos comando
  GET FIELD RELATION([Empregados]Empresa;um;muitos;*) //devolve 3,3
 ```
 
-#### Ver também 
+## Ver também 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

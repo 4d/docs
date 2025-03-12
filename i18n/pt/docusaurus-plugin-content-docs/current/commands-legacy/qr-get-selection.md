@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR GET SELECTION.Summary-->O comando QR GET SELECTION devolve as coordenadas da seleção atual de *area*.<!-- END REF-->  
   
@@ -35,11 +35,11 @@ displayed_sidebar: docs
   
 Se passa um número de *area* inválido, se gera o erro -9850.
 
-#### Ver também 
+## Ver também 
 
 [QR SET SELECTION](qr-set-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

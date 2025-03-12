@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Random.Summary-->Random retorna um valor inteiro aleatório entre 0 e 32 767 (inclusive).<!-- END REF-->
 
@@ -25,7 +25,7 @@ Para definir uma faixa de inteiros, utilize esta fórmula:
 
 O valor *vStart* é o primeiro número do intervalo, e o valor *vEnd* é o último.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir atribui um valor aleatório entre 10 e 30 à variável *vlResult*:
 
@@ -34,7 +34,7 @@ O exemplo a seguir atribui um valor aleatório entre 10 e 30 à variável *vlRes
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

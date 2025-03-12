@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.HIDE WINDOW.Summary-->O comando HIDE WINDOW permite ocultar a janela cujo número de referência se passa em *janela* ou, se for omitido este parâmetro, a janela do primeiro plano do processo atual.<!-- END REF--> Este comando permite, por exemplo, em um processo com várias janelas, mostrar apenas a janela ativa.  
 
@@ -26,7 +26,7 @@ Para mostrar uma janela oculta pelo comando HIDE WINDOW:
 
 Para ocultar todas as janelas de um processo, utilize o comando [HIDE PROCESS](hide-process.md).
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo corresponde a um método de um botão localizado em um formulário de entrada. Este botão abre uma caixa de diálogo em uma nova janela do mesmo processo. Neste exemplo, o usuário deseja ocultar as outras janelas do processo (um formulário de entrada e uma paleta de ferramentas) enquanto mostra a caixa de diálogo. Quando tiver confirmado a caixa de diálogo, outras janelas de processo são mostradas novamente.  
   
@@ -42,11 +42,11 @@ Este exemplo corresponde a um método de um botão localizado em um formulário 
  SHOW WINDOW(Paleta) // Mostrar as outras janelas do processo
 ```
 
-#### Ver também 
+## Ver também 
 
 [SHOW WINDOW](show-window.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |
