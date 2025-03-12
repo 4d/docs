@@ -29,7 +29,7 @@ El comando `Session` <!-- REF #_command_.Session.Summary -->devuelve el objeto `
 
 Dependiendo del proceso desde el que se llame al comando, la sesión de usuario actual puede ser:
 
-- una sesión web (cuando las [sesiones escalables están activadas](WebServer/sessions.md#enabling-sessions)),
+- una sesión web (cuando las [sesiones escalables están activadas](WebServer/sessions.md#enabling-web-sessions)),
 - una sesión de cliente remoto,
 - la sesión de procedimientos almacenados.
 
@@ -98,9 +98,9 @@ IP:port/4DACTION/action_Session
 
 #### Propiedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1714                            |
-| Hilo seguro       | &amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1714                        |
+| Hilo seguro       | &check; |
 
 
