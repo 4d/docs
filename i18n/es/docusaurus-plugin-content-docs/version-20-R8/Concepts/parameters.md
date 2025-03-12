@@ -133,7 +133,7 @@ Function myTransform ($x : Integer) -> $x : Integer
 
 ### Tipos de datos soportados
 
-Con los parámetros con nombre, puede utilizar los mismos tipos de datos que son [soportados por la palabra clave `var`](variables.md#utilizando-la-palabra-clave-var), incluidos los objetos de clase. Por ejemplo:
+With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md), including class objects. Por ejemplo:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -319,7 +319,7 @@ Este caso es tratado por 4D en función del contexto:
 
 - en [proyectos compilados](interpreted.md), se genera un error en el paso de compilación siempre que sea posible. En caso contrario, se genera un error cuando se llama al método.
 - en los proyectos interpretados:
- - si el parámetro se declaró utilizando la [sintaxis nombrada](#named-parameters) (`#DECLARE` o `Function`), se genera un error cuando se llama al método.
+ - si el parámetro se declaró utilizando la sintaxis nombrada (`#DECLARE` o `Function`), se genera un error cuando se llama al método.
  - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
 
 ## Utilización de las propiedades de objeto como parámetros con nombre
@@ -442,7 +442,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Muestra el mensaje y lo escribe en $wpArea
 
 :::tip
 
-When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-object-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
+Cuando los parámetros opcionales son necesarios en sus métodos, también puede considerar el uso de [propiedades de objeto como parámetros con nombre](#using-object-properties-as-named-parameters) que ofrecen una forma flexible de manejar un número de parámetros variable.
 
 :::
 
@@ -493,7 +493,7 @@ Aquí el parámetro no es el campo, sino un puntero al mismo. Therefore, within 
  ALERT($result)
 ```
 
-This second technique of returning a value by a subroutine is called "using a function". This is described in the [Returning values](#returned-value) paragraph.
+This second technique of returning a value by a subroutine is called "using a function". Se describe en el párrafo [Valores devueltos](#returned-value).
 
 ### Casos particulares: objetos y colecciones
 
