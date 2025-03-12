@@ -50,28 +50,28 @@ Las cajas de diálogo **Propiedades usuario** y **Propiedades usuario para el ar
 
 La siguiente tabla lista las páginas de parámetros que se encuentran en las cajas de diálogo **Parámetros usuario** y **Parámetros usuario para el archivo de datos** y describe sus principales diferencias con respecto a los parámetros estándar:
 
-| **Página de Propiedades estructura**                                                 | **Página de las Propiedades usuario**              | **Página de Propiedades usuario para archivo de datos** |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------- | ------------------------------------------------------- |
-| [Página general](../settings/general.md)                                             | N/a                                                | N/a                                                     |
-| [Página Interfaz](../settings/interface.md)                                          | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [Página Compilador](../settings/compiler.md)                                         | N/a                                                | N/a                                                     |
-| [Página Base de datos/Almacenamiento de datos](../settings/database.md#data-storage) | N/a                                                | N/a                                                     |
-| [Página Base de datos/Memoria](../settings/database.md#memory)                       | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [Página Backup/Periocidad](../settings/backup.md#scheduler)                          | N/a                                                | Idéntica a las Propiedades estándar                     |
-| [Página Backup/Configuración](../settings/backup.md#configuration)                   | N/a                                                | Idéntica a las Propiedades estándar                     |
-| [Página Backup/Backup y Restauración](../settings/backup.md#backup-restore)          | N/a                                                | Idéntica a las Propiedades estándar                     |
-| [Página Cliente-servidor/red](../settings/client-server.md#network-options)          | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [Página Cliente-servidor/IP](../settings/client-server.md#ip-configuration)          | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [Página Web/Configuración](../settings/web.md#configuration)                         | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [Página Web/Opciones (I)](../settings/web.md#opciones)            | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [Página Web/Opciones (III)](../settings/web.md#options-ii)        | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [Página Web/Historial(formato)](../settings/web.md#log)           | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [Página Web/Historial(backup)](../settings/web.md#log)            | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [Página Web/Servicios Web](../settings/web.md#web-services)                          | Opción de prefijación de los métodos no disponible | Opción de prefijación de los métodos no disponible      |
-| [SQL page](../settings/sql.md)                                                       | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [PHP page](../settings/php.md)                                                       | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [Página Seguridad](../settings/security.md)                                          | N/a                                                | N/a                                                     |
-| [Página Compatibilidad](../settings/compatibility.md)                                | N/a                                                | N/a                                                     |
+| **Página de Propiedades estructura**                                                                  | **Página de las Propiedades usuario**              | **Página de Propiedades usuario para archivo de datos** |
+| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------- |
+| [Página general](../settings/general.md)                                                              | N/a                                                | N/a                                                     |
+| [Página Interfaz](../settings/interface.md)                                                           | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Página Compilador](../settings/compiler.md)                                                          | N/a                                                | N/a                                                     |
+| [Database/Data storage page](../settings/database.md#data-storage-page)                               | N/a                                                | N/a                                                     |
+| [Database/Memory page](../settings/database.md#memory-page)                                           | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Backup/Scheduler page](../settings/../Backup/settings.md#scheduler)                                  | N/a                                                | Idéntica a las Propiedades estándar                     |
+| [Backup/Configuration page](../settings/../Backup/settings.md#configuration)                          | N/a                                                | Idéntica a las Propiedades estándar                     |
+| [Backup/Backup & Restore page](../settings/../Backup/settings.md#backup--restore) | N/a                                                | Idéntica a las Propiedades estándar                     |
+| [Client-server/Network options page](../settings/client-server.md#network-options-page)               | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Client-server/IP configuration page](../settings/client-server.md#ip-configuration-page)             | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Página Web/Configuración](../settings/web.md#configuration)                                          | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Web/Options (I) page](../settings/web.md#options-i)                               | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Página Web/Opciones (III)](../settings/web.md#options-ii)                         | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Web/Log (type) page](../settings/web.md#log-type)                                 | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Web/Log (backup) page](../settings/web.md#log-backup)                             | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Página Web/Servicios Web](../settings/web.md#web-services)                                           | Opción de prefijación de los métodos no disponible | Opción de prefijación de los métodos no disponible      |
+| [SQL page](../settings/sql.md)                                                                        | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [PHP page](../settings/php.md)                                                                        | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Página Seguridad](../settings/security.md)                                                           | N/a                                                | N/a                                                     |
+| [Página Compatibilidad](../settings/compatibility.md)                                                 | N/a                                                | N/a                                                     |
 
 Al editar los parámetros en esta caja de diálogo, se almacenan automáticamente en el archivo *settings.4DSettings* correspondiente (ver más abajo) o en el archivo *Backup.4DSettings* (consulte la página [Parámetros de backup](../Backup/settings.md) para o
 
