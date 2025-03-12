@@ -135,7 +135,7 @@ Having a formula as an object allows it to be passed as a parameter (calculated 
 The returned formula can be called with:
 
 *	[`.call()`](#call) or [`.apply()`](#apply) methods, or
-*	object notation syntax (see [formula object](#formula-object)).
+*	object notation syntax (see [formula objects](#formula-objects)).
 
 ```4d
  var $f : 4D.Function
