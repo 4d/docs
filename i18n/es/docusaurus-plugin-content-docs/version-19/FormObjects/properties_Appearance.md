@@ -93,7 +93,7 @@ Valores disponibles:
 
 #### Objetos soportados
 
-[Lista Jerárquica](list_overview.md) - [Subformulario](subform_overview.md#overview) - [Lista](listbox_overview.md) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
+[Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
 #### Ver también
 
@@ -365,7 +365,7 @@ Valores disponibles:
 
 #### Objetos soportados
 
-[Lista Jerárquica](list_overview.md) - [Subformulario](subform_overview.md#overview) - [Lista](listbox_overview.md) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
+[Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
 #### Ver también
 
