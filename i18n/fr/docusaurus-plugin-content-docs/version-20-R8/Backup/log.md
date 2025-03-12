@@ -67,7 +67,7 @@ Vous devrez créer un autre fichier d’historique si vous créez un nouveau fic
 
 ## Paramètres du fichier journal
 
-Les [paramètres du fichier journal](settings.md#log-file-management) sont basés sur deux informations : une valeur booléenne et un chemin d'accès.
+The [log file settings](settings.md#log-management) are based on two pieces of information: a boolean value and a path.
 
 1. **Valeur booléenne** : indique si la fonction "Use Log File" est activée ou désactivée dans l'application. Par défaut, la valeur booléenne est stockée dans *catalog.4DCatalog*. Toutefois, lorsque les [paramètres utilisateur](../Desktop/user-settings.md) sont activés, la configuration du fichier *catalog.4DCatalog* est remplacée, et la valeur booléenne peut alors être définie soit dans le fichier *Backup.4DSettings* [à côté du fichier de données](../Project/architecture.md#settings-user-data) ou dans le fichier *Backup.4DSettings* [dans le dossier du projet](../Project/architecture.md#settings-user) (voir également la documentation de la clé xml backup `JournalFileEnabled` sur [doc.4d.com](https://doc.4d.com)).
 
